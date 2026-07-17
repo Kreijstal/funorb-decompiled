@@ -503,9 +503,6 @@ class dl extends lh implements lm {
         field_N = null;
         field_H = null;
         field_I = null;
-        if (param0 != -19969) {
-            field_G = 67;
-        }
     }
 
     final StringBuilder a(Hashtable param0, StringBuilder param1, byte param2, int param3) {
@@ -629,7 +626,8 @@ class dl extends lh implements lm {
         if (param1 > -71) {
             field_N = null;
         }
-        this.f((byte) 45);
+        int discarded$0 = 45;
+        this.f();
     }
 
     final boolean b(lh param0, int param1) {
@@ -747,7 +745,7 @@ class dl extends lh implements lm {
         return stackIn_19_0 != 0;
     }
 
-    final static al g(byte param0) {
+    final static al g() {
         return (al) (Object) new gl();
     }
 
@@ -931,20 +929,12 @@ class dl extends lh implements lm {
                 }
               }
             }
-            L9: {
-              if (param3) {
-                break L9;
-              } else {
-                dl.g(64);
-                break L9;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var8, "dl.EC(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw ci.a((Throwable) (Object) var8, "dl.EC(" + param0 + 44 + param1 + 44 + param2 + 44 + 1 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -1245,7 +1235,8 @@ class dl extends lh implements lm {
         String stackOut_14_2 = null;
         try {
           L0: {
-            if (vk.a(param0, param1, param4, param3, -21)) {
+            int discarded$11 = -21;
+            if (vk.a(param0, param1, param4, param3)) {
               L1: {
                 if (param3 != 1) {
                   break L1;
@@ -1260,7 +1251,8 @@ class dl extends lh implements lm {
               bk.field_U = ui.a(1, var7);
               ti.field_p = param0;
               if (param2 < -113) {
-                var6 = um.a(ea.field_f, fb.field_l, pg.field_u, param1, -90);
+                int discarded$12 = -90;
+                var6 = um.a(ea.field_f, fb.field_l, pg.field_u, param1);
                 pa.a(12105, var6);
                 stackOut_8_0 = 1;
                 stackIn_9_0 = stackOut_8_0;
@@ -1501,7 +1493,7 @@ class dl extends lh implements lm {
         }
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         int var4 = SteelSentinels.field_G;
         jc var2 = new jc(((dl) this).field_K);
         lh var3 = (lh) (Object) var2.b(2);

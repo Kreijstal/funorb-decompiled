@@ -130,7 +130,7 @@ class vj extends eb {
         }
     }
 
-    final static void g(int param0) {
+    final static void g() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -473,15 +473,12 @@ class vj extends eb {
         if (!(0 == param2)) {
             return;
         }
-        if (param1 > -106) {
-            ((vj) this).field_N = null;
-        }
-        w var9 = (w) (Object) ((vj) this).field_l;
+        w var5 = (w) (Object) ((vj) this).field_l;
         hh var6 = ((vj) this).field_N;
         if (var6 == null) {
         } else {
-            var7 = var9.a((gl) this, -37, param0);
-            var8 = var9.a((gl) this, param3, (byte) -72);
+            var7 = var5.a((gl) this, -37, param0);
+            var8 = var5.a((gl) this, param3, (byte) -72);
             do {
                 ed.a(var6.field_q - -2, var6.field_h - -2, var8 + (var6.field_o - 2), 52, var7 - (-var6.field_n + 2));
                 var6 = var6.field_j;
@@ -496,17 +493,14 @@ class vj extends eb {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_L = null;
         field_O = null;
         field_K = null;
     }
 
-    final static fa a(boolean param0, boolean param1, int param2, byte param3, int param4) {
-        if (param3 != 62) {
-            field_L = null;
-        }
-        return jg.a(30, param4, false, param0, param2, param1);
+    final static fa a(boolean param0, boolean param1, int param2) {
+        return jg.a(30, 1, false, false, param2, true);
     }
 
     final void a(int param0, int param1, byte param2, int param3) {

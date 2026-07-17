@@ -50,7 +50,7 @@ final class ak {
         field_g = null;
     }
 
-    private final void c(byte param0) throws IOException {
+    private final void c() throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Terraphoenix.field_V;
@@ -86,40 +86,35 @@ final class ak {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = 0;
-        var17 = Terraphoenix.field_V;
-        if (param5 != 116) {
-          return;
-        } else {
-          L0: {
-            if (param14 > param4) {
-              if (param8 > param14) {
-                dl.a(true, param1, param0, l.field_i, param14, param6, param9, param12, param3, param11, param8, param13, param4, param10, param15, param2, param7);
+        L0: {
+          var17 = Terraphoenix.field_V;
+          if (param14 > param4) {
+            if (param8 > param14) {
+              dl.a(true, param1, param0, l.field_i, param14, param6, param9, param12, param3, param11, param8, param13, param4, param10, param15, param2, param7);
+              break L0;
+            } else {
+              if (param4 < param8) {
+                dl.a(true, param11, param10, l.field_i, param8, param12, param9, param6, param13, param1, param14, param3, param4, param0, param15, param2, param7);
                 break L0;
               } else {
-                if (param4 < param8) {
-                  dl.a(true, param11, param10, l.field_i, param8, param12, param9, param6, param13, param1, param14, param3, param4, param0, param15, param2, param7);
-                  break L0;
-                } else {
-                  dl.a(true, param11, param10, l.field_i, param4, param7, param0, param6, param13, param15, param14, param2, param8, param9, param1, param3, param12);
-                  break L0;
-                }
-              }
-            } else {
-              if (param4 >= param8) {
-                if (param14 < param8) {
-                  dl.a(true, param15, param9, l.field_i, param8, param12, param10, param7, param2, param1, param4, param3, param14, param0, param11, param13, param6);
-                  break L0;
-                } else {
-                  dl.a(true, param15, param9, l.field_i, param14, param6, param0, param7, param2, param11, param4, param13, param8, param10, param1, param3, param12);
-                  break L0;
-                }
-              } else {
-                dl.a(true, param1, param0, l.field_i, param4, param7, param10, param12, param3, param15, param8, param2, param14, param9, param11, param13, param6);
+                dl.a(true, param11, param10, l.field_i, param4, param7, param0, param6, param13, param15, param14, param2, param8, param9, param1, param3, param12);
                 break L0;
               }
             }
+          } else {
+            if (param4 >= param8) {
+              if (param14 < param8) {
+                dl.a(true, param15, param9, l.field_i, param8, param12, param10, param7, param2, param1, param4, param3, param14, param0, param11, param13, param6);
+                break L0;
+              } else {
+                dl.a(true, param15, param9, l.field_i, param14, param6, param0, param7, param2, param11, param4, param13, param8, param10, param1, param3, param12);
+                break L0;
+              }
+            } else {
+              dl.a(true, param1, param0, l.field_i, param4, param7, param10, param12, param3, param15, param8, param2, param14, param9, param11, param13, param6);
+              break L0;
+            }
           }
-          return;
         }
     }
 
@@ -332,7 +327,8 @@ final class ak {
                     break L4;
                   } else {
                     L6: {
-                      this.c((byte) -127);
+                      int discarded$2 = -127;
+                      this.c();
                       var10_int = param3;
                       if (var10_int <= ((ak) this).field_m) {
                         break L6;
@@ -371,9 +367,9 @@ final class ak {
                           if (var10_int <= param2) {
                             break L8;
                           } else {
-                            int incrementValue$1 = param2;
+                            int incrementValue$3 = param2;
                             param2++;
-                            param0[incrementValue$1] = (byte) 0;
+                            param0[incrementValue$3] = (byte) 0;
                             param3--;
                             ((ak) this).field_p = ((ak) this).field_p + 1L;
                             continue L10;
@@ -499,7 +495,7 @@ final class ak {
         }
     }
 
-    final static boolean a(String param0, String param1, boolean param2) {
+    final static boolean a(String param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_6_0 = 0;

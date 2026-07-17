@@ -45,18 +45,24 @@ final class tn extends qc {
                   break L1;
                 }
               }
-              ip.a(tg.b(8218), af.field_b, var4 != 0, cj.g(18006), 34);
+              int discarded$15 = 8218;
+              int discarded$16 = 18006;
+              int discarded$17 = 34;
+              ip.a(tg.b(), af.field_b, var4 != 0, cj.g());
               break L0;
             } else {
-              if (!gb.a(250)) {
+              int discarded$18 = 250;
+              if (!gb.a()) {
                 oo.b();
                 eh.a(320, 240, 122);
-                t.a(false, 0, param2, 0);
+                int discarded$19 = 0;
+                t.a(false, 0, param2);
                 return;
               } else {
                 if (a.field_b == 0) {
                   ec.a(false, param0, -126);
-                  t.a(false, 0, param2, 0);
+                  int discarded$20 = 0;
+                  t.a(false, 0, param2);
                   return;
                 } else {
                   ra.a(param2, -113);
@@ -112,7 +118,7 @@ final class tn extends qc {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_A = null;
         field_C = null;
     }
@@ -183,7 +189,8 @@ final class tn extends qc {
                     if (2 != param3) {
                       break L3;
                     } else {
-                      if (!pd.a(param1, param0, 2)) {
+                      int discarded$3 = 2;
+                      if (!pd.a(param1, param0)) {
                         break L2;
                       } else {
                         break L3;

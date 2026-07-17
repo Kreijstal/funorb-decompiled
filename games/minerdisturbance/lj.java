@@ -23,7 +23,7 @@ final class lj extends pi {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_s = null;
         field_v = null;
         field_o = null;
@@ -78,7 +78,7 @@ final class lj extends pi {
                   break L1;
                 } else {
                   var9 = null;
-                  pb discarded$2 = lj.a((ld) null, (byte) 35);
+                  pb discarded$4 = lj.a((ld) null, (byte) 35);
                   break L1;
                 }
               }
@@ -111,7 +111,7 @@ final class lj extends pi {
                 if (var4 == 0) {
                   break L3;
                 } else {
-                  int discarded$3 = param0.c((byte) -67, 16);
+                  int discarded$5 = param0.c((byte) -67, 16);
                   var5.field_s = gd.a(param0, 16, -66, var5.field_s);
                   var5.field_u = gd.a(param0, 16, -62, var5.field_u);
                   var5.field_i = gd.a(param0, 16, -84, var5.field_i);
@@ -132,7 +132,9 @@ final class lj extends pi {
                 if (!ql.a(param0, (byte) 100)) {
                   break L5;
                 } else {
-                  var5.field_x = sn.a(var5.field_x, param0, 16, -110);
+                  int discarded$6 = -110;
+                  int discarded$7 = 16;
+                  var5.field_x = sn.a(var5.field_x, param0);
                   var6 = 0;
                   var7 = 0;
                   L6: while (true) {

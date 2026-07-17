@@ -43,7 +43,8 @@ final class tl implements ug {
         ul.field_b = 0L;
         ((tl) this).field_n = !((tl) this).c((byte) 126) ? true : false;
         bb.field_a[param1] = true;
-        ep.c((byte) -50);
+        int discarded$0 = -50;
+        ep.c();
         return true;
     }
 
@@ -69,9 +70,11 @@ final class tl implements ug {
           if (aa.field_f == null) {
             break L1;
           } else {
-            gl.a(aa.field_f, 734);
+            int discarded$14 = 734;
+            gl.a(aa.field_f);
             aa.field_f = null;
-            ep.c((byte) -50);
+            int discarded$15 = -50;
+            ep.c();
             break L1;
           }
         }
@@ -84,13 +87,25 @@ final class tl implements ug {
             break L2;
           }
         }
-        a.field_h = pb.a(true, false, 2, true, 1);
+        int discarded$16 = 1;
+        int discarded$17 = 1;
+        a.field_h = pb.a(true, false, 2);
         ZombieDawn.field_H = mm.a(3, (byte) -115);
-        nm.field_e = pb.a(true, true, 8, true, 1);
-        gm.field_h = pb.a(true, false, 4, true, 1);
-        qn.field_i = pb.a(true, false, 5, true, 1);
-        an.field_B = pb.a(true, false, 6, true, 1);
-        ((tl) this).field_h = pb.a(true, false, 7, true, 1);
+        int discarded$18 = 1;
+        int discarded$19 = 1;
+        nm.field_e = pb.a(true, true, 8);
+        int discarded$20 = 1;
+        int discarded$21 = 1;
+        gm.field_h = pb.a(true, false, 4);
+        int discarded$22 = 1;
+        int discarded$23 = 1;
+        qn.field_i = pb.a(true, false, 5);
+        int discarded$24 = 1;
+        int discarded$25 = 1;
+        an.field_B = pb.a(true, false, 6);
+        int discarded$26 = 1;
+        int discarded$27 = 1;
+        ((tl) this).field_h = pb.a(true, false, 7);
         bp.field_h = new jk(50);
         var4 = nl.field_p;
         var3 = gj.field_i;
@@ -153,7 +168,7 @@ final class tl implements ug {
           if (param0 == 75) {
             break L0;
           } else {
-            boolean discarded$3 = ((tl) this).a(60, -55);
+            boolean discarded$19 = ((tl) this).a(60, -55);
             break L0;
           }
         }
@@ -169,7 +184,8 @@ final class tl implements ug {
               L2: while (true) {
                 if (~tc.field_t >= ~var4_int) {
                   rm.field_f = true;
-                  ep.c((byte) -50);
+                  int discarded$20 = -50;
+                  ep.c();
                   return;
                 } else {
                   L3: {
@@ -223,7 +239,8 @@ final class tl implements ug {
               break L5;
             } else {
               ti.field_a = true;
-              ep.c((byte) -50);
+              int discarded$21 = -50;
+              ep.c();
               return;
             }
           }
@@ -240,7 +257,8 @@ final class tl implements ug {
                 if (this.a("zombie dawn instructions loop", 0, 9)) {
                   sa.field_T = true;
                   this.a(0, 75.0f);
-                  ep.c((byte) -50);
+                  int discarded$22 = -50;
+                  ep.c();
                   return;
                 } else {
                   return;
@@ -276,9 +294,11 @@ final class tl implements ug {
               wd.field_y = hf.field_E;
               e.field_G = vm.a((byte) 126, "unachieved", "basic", var15)[0];
               hm.field_E = gf.a(var15, "orbcoin", 8, "basic");
-              bd.a(hm.field_E, false);
+              int discarded$23 = 0;
+              bd.a(hm.field_E);
               if (be.field_j <= 0) {
-                lc.a(var15, var3, (byte) 80);
+                int discarded$24 = 80;
+                lc.a(var15, var3);
                 break L8;
               } else {
                 break L8;
@@ -287,7 +307,8 @@ final class tl implements ug {
             gj.field_i = null;
             nl.field_p = null;
             ((tl) this).field_d = dh.field_g;
-            ep.c((byte) -50);
+            int discarded$25 = -50;
+            ep.c();
             return;
           } else {
             L9: {
@@ -299,13 +320,16 @@ final class tl implements ug {
                   var5 = 19.0f;
                   var6 = 29000;
                   this.a(var5, 0, var6, var4);
-                  sg.field_jb = hf.a(ZombieDawn.field_H, "basic", "font", a.field_h, (byte) -70);
+                  int discarded$26 = -70;
+                  sg.field_jb = hf.a(ZombieDawn.field_H, "basic", "font", a.field_h);
                   if (sg.field_jb != null) {
                     L10: {
                       b.field_j = ra.a(ZombieDawn.field_H, "basic", "font_title", 0, a.field_h);
                       bj.field_q = gb.a("font_medium", -1, ZombieDawn.field_H, "basic", a.field_h);
-                      rg.a(bj.field_q, false);
-                      tf.a((byte) 119);
+                      int discarded$27 = 0;
+                      rg.a(bj.field_q);
+                      int discarded$28 = 119;
+                      tf.a();
                       if (be.field_j > 0) {
                         break L10;
                       } else {
@@ -348,17 +372,19 @@ final class tl implements ug {
                     ah.field_tb = af.field_d;
                     kb.field_i = vm.a((byte) -18, "powerups", "basic", a.field_h);
                     nb.field_k = vm.a((byte) 127, "character_common", "basic", a.field_h);
-                    tp.a(vm.a((byte) -120, "hud", "basic", a.field_h), -10);
-                    w.a(vm.a((byte) 125, "popup", "basic", a.field_h), (byte) -97);
+                    int discarded$29 = -10;
+                    tp.a(vm.a((byte) -120, "hud", "basic", a.field_h));
+                    int discarded$30 = -97;
+                    w.a(vm.a((byte) 125, "popup", "basic", a.field_h));
                     this.a(var5, 0, var6, var4);
                     le.field_a = vm.a((byte) -124, "instructions_controls", "basic", a.field_h);
                     qn.field_k = vm.a((byte) -42, "instructions_survivors", "basic", a.field_h);
                     l.field_b = vm.a((byte) 2, "instructions_zombies", "basic", a.field_h);
                     this.a(var5, 0, var6, var4);
-                    vn[] discarded$4 = bj.a("basic", -118, a.field_h, "frame");
+                    vn[] discarded$31 = bj.a("basic", -118, a.field_h, "frame");
                     ca.field_b = bj.a("basic", -122, a.field_h, "button_frame");
                     ti.field_c = bj.a("basic", param0 + -201, a.field_h, "button_raised");
-                    vn[] discarded$5 = bj.a("basic", -120, a.field_h, "button_depressed");
+                    vn[] discarded$32 = bj.a("basic", -120, a.field_h, "button_depressed");
                     jb.field_a = vm.a((byte) -104, "pin_flags", "basic", a.field_h);
                     this.a(var5, param0 + -75, var6, var4);
                     ed.field_a = new vn[32];
@@ -396,7 +422,8 @@ final class tl implements ug {
                           var9 = 0;
                           L14: while (true) {
                             if (~var9 <= ~var8_ref_vn__.length) {
-                              bd.a(e.field_G, false);
+                              int discarded$33 = 0;
+                              bd.a(e.field_G);
                               ed.field_b = new vn[f.field_j.length];
                               var12 = 0;
                               var8 = var12;
@@ -405,14 +432,16 @@ final class tl implements ug {
                                   ZombieDawn.field_H = null;
                                   r.field_F = true;
                                   this.a(0, var5 + var4);
-                                  ep.c((byte) -50);
+                                  int discarded$34 = -50;
+                                  ep.c();
                                   return;
                                 } else {
                                   L16: {
                                     if (null == f.field_j[var12]) {
                                       break L16;
                                     } else {
-                                      ed.field_b[var12] = sn.a(var12, 1.0, (byte) -110);
+                                      int discarded$35 = -110;
+                                      ed.field_b[var12] = sn.a(var12, 1.0);
                                       break L16;
                                     }
                                   }
@@ -422,7 +451,8 @@ final class tl implements ug {
                               }
                             } else {
                               var10 = var8_ref_vn__[var9];
-                              bd.a(var10, false);
+                              int discarded$36 = 0;
+                              bd.a(var10);
                               var9++;
                               continue L14;
                             }
@@ -556,7 +586,8 @@ final class tl implements ug {
           }
           nm.field_e = null;
           this.a(param0 ^ 75, 78.0f);
-          ep.c((byte) -50);
+          int discarded$37 = -50;
+          ep.c();
           return;
         }
     }
@@ -568,64 +599,146 @@ final class tl implements ug {
     }
 
     public final boolean a(byte param0) {
-        int stackIn_25_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_24_0 = 0;
+        int stackIn_47_0 = 0;
+        int stackOut_45_0 = 0;
+        int stackOut_46_0 = 0;
         L0: {
-          if (!((tl) this).field_i) {
-            if (!((tl) this).field_c) {
-              if (this.b((byte) -110)) {
-                ((tl) this).field_c = true;
-                break L0;
-              } else {
-                if (((tl) this).field_c) {
-                  break L0;
+          L1: {
+            if (!((tl) this).field_i) {
+              int discarded$8 = 1;
+              if (vm.c()) {
+                ((tl) this).field_i = true;
+                if (!((tl) this).field_c) {
+                  if (this.b((byte) -110)) {
+                    ((tl) this).field_c = true;
+                    break L1;
+                  } else {
+                    if (((tl) this).field_m) {
+                      break L0;
+                    } else {
+                      if (!((tl) this).field_i) {
+                        break L0;
+                      } else {
+                        int discarded$9 = 1;
+                        if (!mm.a()) {
+                          break L0;
+                        } else {
+                          ((tl) this).field_m = true;
+                          break L0;
+                        }
+                      }
+                    }
+                  }
                 } else {
-                  if (!this.b((byte) -110)) {
+                  if (((tl) this).field_m) {
                     break L0;
                   } else {
+                    if (!((tl) this).field_i) {
+                      break L0;
+                    } else {
+                      int discarded$10 = 1;
+                      if (!mm.a()) {
+                        break L0;
+                      } else {
+                        ((tl) this).field_m = true;
+                        break L0;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if (!((tl) this).field_c) {
+                  if (this.b((byte) -110)) {
                     ((tl) this).field_c = true;
+                    break L1;
+                  } else {
+                    if (((tl) this).field_m) {
+                      break L0;
+                    } else {
+                      if (!((tl) this).field_i) {
+                        break L0;
+                      } else {
+                        int discarded$11 = 1;
+                        if (!mm.a()) {
+                          break L0;
+                        } else {
+                          ((tl) this).field_m = true;
+                          break L0;
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  if (((tl) this).field_m) {
                     break L0;
+                  } else {
+                    if (!((tl) this).field_i) {
+                      break L0;
+                    } else {
+                      int discarded$12 = 1;
+                      if (!mm.a()) {
+                        break L0;
+                      } else {
+                        ((tl) this).field_m = true;
+                        break L0;
+                      }
+                    }
                   }
                 }
               }
             } else {
-              if (((tl) this).field_c) {
-                break L0;
+              if (!((tl) this).field_c) {
+                if (this.b((byte) -110)) {
+                  ((tl) this).field_c = true;
+                  break L1;
+                } else {
+                  if (((tl) this).field_m) {
+                    break L0;
+                  } else {
+                    if (!((tl) this).field_i) {
+                      break L0;
+                    } else {
+                      int discarded$13 = 1;
+                      if (!mm.a()) {
+                        break L0;
+                      } else {
+                        ((tl) this).field_m = true;
+                        break L0;
+                      }
+                    }
+                  }
+                }
               } else {
-                if (!this.b((byte) -110)) {
+                if (((tl) this).field_m) {
                   break L0;
                 } else {
-                  ((tl) this).field_c = true;
-                  break L0;
+                  if (!((tl) this).field_i) {
+                    break L0;
+                  } else {
+                    int discarded$14 = 1;
+                    if (!mm.a()) {
+                      break L0;
+                    } else {
+                      ((tl) this).field_m = true;
+                      break L0;
+                    }
+                  }
                 }
               }
             }
-          } else {
-            if (((tl) this).field_c) {
-              break L0;
-            } else {
-              if (!this.b((byte) -110)) {
-                break L0;
-              } else {
-                ((tl) this).field_c = true;
-                break L0;
-              }
-            }
           }
-        }
-        L1: {
           if (((tl) this).field_m) {
-            break L1;
+            break L0;
           } else {
             if (!((tl) this).field_i) {
-              break L1;
+              break L0;
             } else {
-              if (!mm.a(true)) {
-                break L1;
+              int discarded$15 = 1;
+              if (!mm.a()) {
+                break L0;
               } else {
                 ((tl) this).field_m = true;
-                break L1;
+                break L0;
               }
             }
           }
@@ -649,18 +762,18 @@ final class tl implements ug {
                 if (!((tl) this).field_m) {
                   break L4;
                 } else {
-                  stackOut_23_0 = 1;
-                  stackIn_25_0 = stackOut_23_0;
+                  stackOut_45_0 = 1;
+                  stackIn_47_0 = stackOut_45_0;
                   break L3;
                 }
               }
             }
           }
-          stackOut_24_0 = 0;
-          stackIn_25_0 = stackOut_24_0;
+          stackOut_46_0 = 0;
+          stackIn_47_0 = stackOut_46_0;
           break L3;
         }
-        return stackIn_25_0 != 0;
+        return stackIn_47_0 != 0;
     }
 
     final boolean c(byte param0) {
@@ -795,9 +908,10 @@ final class tl implements ug {
               }
             }
             L2: {
-              eh.a(((tl) this).field_d, ((tl) this).field_b, -1);
+              int discarded$23 = -1;
+              eh.a(((tl) this).field_d, ((tl) this).field_b);
               if (param1 <= 122) {
-                boolean discarded$2 = this.b((byte) 10);
+                boolean discarded$24 = this.b((byte) 10);
                 sa.field_Y.c((byte) 81);
                 break L2;
               } else {
@@ -939,9 +1053,6 @@ final class tl implements ug {
         long var8 = 0L;
         float var10 = 0.0f;
         float var11 = 0.0f;
-        if (param3) {
-            return;
-        }
         try {
             if (!(0L != vj.field_n)) {
                 long dupTemp$0 = pd.a(-22826);
@@ -956,21 +1067,23 @@ final class tl implements ug {
             var11 = param2 + var10 * param4;
             this.a(var11, 124, param1);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "tl.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "tl.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 0 + 44 + param4 + 41);
         }
     }
 
     public final boolean a(boolean param0) {
-        ac.c(-32435);
+        int discarded$3 = -32435;
+        ac.c();
         if (!((tl) this).field_j) {
             this.c(75);
             return false;
         }
         if (param0) {
             Object var3 = null;
-            boolean discarded$0 = this.a((String) null, 113, -12);
+            boolean discarded$4 = this.a((String) null, 113, -12);
         }
-        ep.c((byte) -50);
+        int discarded$5 = -50;
+        ep.c();
         return true;
     }
 
@@ -979,7 +1092,9 @@ final class tl implements ug {
         if (param0 != 22833) {
             ((tl) this).b(-52);
         }
-        pm.a(gj.field_f, bd.field_f, ro.field_b, ui.field_d, sm.field_c, lc.field_h, a.field_m, 0, ca.field_b, hn.field_l, ti.field_c, (rb) (Object) sg.field_jb, ca.field_b, (byte) -63, 0);
+        int discarded$0 = 0;
+        int discarded$1 = -63;
+        pm.a(gj.field_f, bd.field_f, ro.field_b, ui.field_d, sm.field_c, lc.field_h, a.field_m, 0, ca.field_b, hn.field_l, ti.field_c, (rb) (Object) sg.field_jb, ca.field_b);
     }
 
     final void e(int param0) {
@@ -1134,14 +1249,14 @@ final class tl implements ug {
                           vb.field_D[tc.field_s[var5]] = var11.b();
                           break L2;
                         } else {
-                          boolean discarded$5 = gm.field_h.a(-1, var7_ref_String);
+                          boolean discarded$7 = gm.field_h.a(-1, var7_ref_String);
                           return false;
                         }
                       } else {
                         var10 = mb.a(qn.field_i, var7_ref_String, tc.field_x[var5]);
                         var8_ref = var10;
                         if (var8_ref == null) {
-                          boolean discarded$6 = qn.field_i.a(-1, var7_ref_String);
+                          boolean discarded$8 = qn.field_i.a(-1, var7_ref_String);
                           return false;
                         } else {
                           vb.field_D[tc.field_s[var5]] = var10.b();
@@ -1240,7 +1355,7 @@ final class tl implements ug {
               }
               L8: {
                 if (null == ld.field_l[0]) {
-                  boolean discarded$7 = a.field_h.a(-1, "game");
+                  boolean discarded$9 = a.field_h.a(-1, "game");
                   break L8;
                 } else {
                   break L8;
@@ -1249,7 +1364,7 @@ final class tl implements ug {
               if (var6 == 0) {
                 return false;
               } else {
-                boolean discarded$8 = a.field_h.a(-1, var5_ref_String);
+                boolean discarded$10 = a.field_h.a(-1, var5_ref_String);
                 return false;
               }
             } else {
@@ -1305,7 +1420,7 @@ final class tl implements ug {
                 ip.field_p = vm.a((byte) -43, "keycard", "gameuk", a.field_h);
                 break L4;
               } else {
-                boolean discarded$9 = a.field_h.a(-1, "gameuk");
+                boolean discarded$11 = a.field_h.a(-1, "gameuk");
                 return false;
               }
             } else {
@@ -1361,7 +1476,8 @@ final class tl implements ug {
                                       jo.field_Tb[1] = vm.a((byte) -106, "uk_level_select_icons_alt", "menusuk", a.field_h);
                                       break L4;
                                     } else {
-                                      ((tl) this).field_d = c.a(a.field_h, el.field_m, nb.field_o, "menusuk", (byte) -32);
+                                      int discarded$12 = -32;
+                                      ((tl) this).field_d = c.a(a.field_h, el.field_m, nb.field_o, "menusuk");
                                       this.a(((tl) this).field_b, 125, ((tl) this).field_d);
                                       return false;
                                     }
@@ -1459,7 +1575,8 @@ final class tl implements ug {
               var12 = stackIn_103_0;
               var5_ref_String = var12;
               ab.a(vm.a((byte) -104, we.field_Sb[param1] + "_floor", var12, a.field_h), (byte) 112, param1);
-              gk.a(param1, vm.a((byte) -18, we.field_Sb[param1] + "_tiles", var12, a.field_h), true);
+              int discarded$13 = 1;
+              gk.a(param1, vm.a((byte) -18, we.field_Sb[param1] + "_tiles", var12, a.field_h));
               qj.field_j[param1] = vm.a((byte) 107, "dimming" + param1, "basic", a.field_h);
               break L18;
             }

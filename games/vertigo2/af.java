@@ -23,7 +23,7 @@ abstract class af extends cj implements ik {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1, byte param2) {
+    final static boolean a(boolean param0, CharSequence param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -52,7 +52,7 @@ abstract class af extends cj implements ik {
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            if (jm.a(param1, 0, param0)) {
+            if (jm.a(param1, 0, false)) {
               var3_int = 0;
               L1: while (true) {
                 if (param1.length() <= var3_int) {
@@ -81,7 +81,7 @@ abstract class af extends cj implements ik {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("af.W(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("af.W(").append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -113,7 +113,7 @@ abstract class af extends cj implements ik {
 
     abstract boolean e(boolean param0);
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_G = null;
         field_H = null;
         field_F = null;
@@ -138,9 +138,9 @@ abstract class af extends cj implements ik {
         super(param0, param1, param2, param3, param4);
     }
 
-    final static void a(int param0, int param1, byte param2) {
-        kf.field_b = param1;
-        ni.field_a = param0;
+    final static void a() {
+        kf.field_b = 280;
+        ni.field_a = 320;
     }
 
     static {

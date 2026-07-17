@@ -15,12 +15,9 @@ final class ge extends no {
         try {
             param1.removeKeyListener((java.awt.event.KeyListener) (Object) gp.field_c);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) gp.field_c);
-            if (param0 != -2846) {
-                ge.c(91);
-            }
             pl.field_d = -1;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ge.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ge.F(" + -2846 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -40,7 +37,7 @@ final class ge extends no {
         this(param0, param1, param2, 0);
     }
 
-    final static pb a(int param0, int param1, int param2) {
+    final static pb a(int param0, int param1) {
         return so.a(0, param1, param0, ip.field_s);
     }
 

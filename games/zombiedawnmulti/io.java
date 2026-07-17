@@ -13,7 +13,7 @@ final class io {
     static String field_a;
     static String field_h;
 
-    private final void a(int param0, Object param1, long param2, int param3) {
+    private final void a(int param0, Object param1, long param2) {
         kk var6 = null;
         eg var6_ref = null;
         int var8 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -21,7 +21,8 @@ final class io {
             if (((io) this).field_i < param0) {
                 throw new IllegalStateException();
             }
-            this.a(param2, false);
+            int discarded$0 = 0;
+            this.a(param2);
             ((io) this).field_f = ((io) this).field_f - param0;
             while (((io) this).field_f < 0) {
                 var6 = (kk) (Object) ((io) this).field_c.a(false);
@@ -132,7 +133,7 @@ final class io {
               fh.field_m = ec.field_b;
               ec.field_b.field_xb = (8355711 & qq.field_f.field_xb >> 1) + wj.field_g + -(8355711 & wj.field_g >> 1);
               ec.field_b.field_Db = (8355711 & qq.field_f.field_Db >> 1) + (wj.field_g + -(8355711 & wj.field_g >> 1));
-              ec.field_b.field_ob = wj.field_g - (8355711 & wj.field_g >> 1) + (qq.field_f.field_ob >> 1 & param0);
+              ec.field_b.field_ob = wj.field_g - (8355711 & wj.field_g >> 1) + (qq.field_f.field_ob >> 1 & 8355711);
               lj.field_v = new cj(0L, param3);
               nq.field_t = new cj(0L, param2);
               re.field_a = new cj(0L, (cj) null);
@@ -159,7 +160,7 @@ final class io {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("io.G(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("io.G(").append(8355711).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -262,15 +263,11 @@ final class io {
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
-        Object var5 = null;
+        Object var4 = null;
         oi.a((String) null, param2, (byte) -67, param1);
-        if (param0 != -21113) {
-            Object var4 = null;
-            io.a(3, (cj) null, (cj) null, (cj) null, (cj) null);
-        }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_h = null;
         field_d = null;
@@ -371,7 +368,7 @@ final class io {
         return stackIn_8_0 != 0;
     }
 
-    private final void a(long param0, boolean param1) {
+    private final void a(long param0) {
         kk var4 = (kk) (Object) ((io) this).field_j.a(param0, 72);
         this.a(1, var4);
     }
@@ -396,15 +393,11 @@ final class io {
         String stackOut_7_2 = null;
         try {
           L0: {
-            if (param0 == 1) {
-              if (param1 != null) {
-                param1.a(true);
-                param1.a(param0 ^ -4563);
-                ((io) this).field_f = ((io) this).field_f + param1.field_t;
-                break L0;
-              } else {
-                return;
-              }
+            if (param1 != null) {
+              param1.a(true);
+              param1.a(-4564);
+              ((io) this).field_f = ((io) this).field_f + param1.field_t;
+              break L0;
             } else {
               return;
             }
@@ -414,7 +407,7 @@ final class io {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("io.J(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("io.J(").append(1).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -447,7 +440,8 @@ final class io {
 
     final void a(Object param0, long param1, int param2) {
         try {
-            this.a(param2, param0, param1, -107);
+            int discarded$0 = -107;
+            this.a(param2, param0, param1);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "io.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }

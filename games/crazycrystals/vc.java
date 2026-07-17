@@ -137,7 +137,8 @@ abstract class vc extends ij {
                 }
                 if (var2 == -1) {
                   L4: {
-                    var7 = (char)(dg.a((char) var7, 17176) & 255);
+                    int discarded$1 = 17176;
+                    var7 = (char)(dg.a((char) var7) & 255);
                     var4 = var4 + ((vc) this).field_G[var7];
                     if (((vc) this).field_F == null) {
                       break L4;
@@ -214,7 +215,7 @@ abstract class vc extends ij {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = pp.a(' ', field_x, 0, 5277);
+          StringBuilder discarded$6 = pp.a(' ', field_x, 0, 5277);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -250,9 +251,9 @@ abstract class vc extends ij {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_x.append(60);
-                        StringBuilder discarded$7 = field_x.append(var15);
-                        StringBuilder discarded$8 = field_x.append(62);
+                        StringBuilder discarded$7 = field_x.append(60);
+                        StringBuilder discarded$8 = field_x.append(var15);
+                        StringBuilder discarded$9 = field_x.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -439,8 +440,9 @@ abstract class vc extends ij {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_x.append(var14);
-                        var14 = (char)(dg.a((char) var14, 17176) & 255);
+                        StringBuilder discarded$10 = field_x.append(var14);
+                        int discarded$11 = 17176;
+                        var14 = (char)(dg.a((char) var14) & 255);
                         var4 = var4 + ((vc) this).field_G[var14];
                         if (((vc) this).field_F == null) {
                           break L15;
@@ -650,7 +652,9 @@ abstract class vc extends ij {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_E = gp.a(var7, (byte) 97, 16);
+                                    int discarded$8 = 16;
+                                    int discarded$9 = 97;
+                                    field_E = gp.a(var7);
                                     break L1;
                                   }
                                 } else {
@@ -663,7 +667,9 @@ abstract class vc extends ij {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_n = gp.a(var6, (byte) 97, 16);
+                              int discarded$10 = 16;
+                              int discarded$11 = 97;
+                              field_n = gp.a(var6);
                               break L1;
                             }
                           } else {
@@ -676,7 +682,9 @@ abstract class vc extends ij {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_m = gp.a(var5, (byte) 97, 16);
+                        int discarded$12 = 16;
+                        int discarded$13 = 97;
+                        field_m = gp.a(var5);
                         break L1;
                       }
                     } else {
@@ -694,7 +702,9 @@ abstract class vc extends ij {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_v = gp.a(var3, (byte) 97, 16);
+                int discarded$14 = 16;
+                int discarded$15 = 97;
+                field_v = gp.a(var3);
                 break L1;
               }
             }
@@ -710,7 +720,8 @@ abstract class vc extends ij {
     }
 
     final int a(char param0) {
-        return ((vc) this).field_G[dg.a(param0, 17176) & 255];
+        int discarded$0 = 17176;
+        return ((vc) this).field_G[dg.a(param0) & 255];
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
@@ -1144,7 +1155,8 @@ abstract class vc extends ij {
               }
               if (var4 == -1) {
                 L6: {
-                  var8 = (char)(dg.a((char) var8, 17176) & 255);
+                  int discarded$1 = 17176;
+                  var8 = (char)(dg.a((char) var8) & 255);
                   if (((vc) this).field_F == null) {
                     break L6;
                   } else {

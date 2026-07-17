@@ -166,7 +166,6 @@ final class pc extends we {
         String stackIn_50_1 = null;
         int stackIn_54_0 = 0;
         Object stackIn_95_0 = null;
-        Object stackIn_103_0 = null;
         Object stackIn_105_0 = null;
         RuntimeException decompiledCaughtException = null;
         gp stackOut_1_0 = null;
@@ -192,7 +191,6 @@ final class pc extends we {
         int stackOut_51_0 = 0;
         ak stackOut_94_0 = null;
         Object stackOut_104_0 = null;
-        Object stackOut_102_0 = null;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -247,7 +245,8 @@ final class pc extends we {
                     ma.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
                     break L4;
                   }
-                  wd.a(ma.field_z.field_Fb, false);
+                  int discarded$1 = 0;
+                  wd.a(ma.field_z.field_Fb);
                   if (var19 == 0) {
                     break L2;
                   } else {
@@ -525,20 +524,14 @@ final class pc extends we {
                 }
               }
             }
-            if (param2 >= 47) {
-              stackOut_104_0 = var5;
-              stackIn_105_0 = stackOut_104_0;
-              break L0;
-            } else {
-              stackOut_102_0 = null;
-              stackIn_103_0 = stackOut_102_0;
-              return (im) (Object) stackIn_103_0;
-            }
+            stackOut_104_0 = var5;
+            stackIn_105_0 = stackOut_104_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "pc.TA(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) var3, "pc.TA(" + param0 + 44 + param1 + 44 + 113 + 41);
         }
         return (im) (Object) stackIn_105_0;
     }
@@ -871,20 +864,12 @@ final class pc extends we {
         return stackIn_14_0;
     }
 
-    public static void m(int param0) {
+    public static void m() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_t = null;
-              if (param0 == 25208) {
-                break L1;
-              } else {
-                field_x = null;
-                break L1;
-              }
-            }
+            field_t = null;
             field_w = null;
             field_x = null;
             field_u = null;
@@ -893,7 +878,7 @@ final class pc extends we {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "pc.SA(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1, "pc.SA(" + 25208 + 41);
         }
     }
 

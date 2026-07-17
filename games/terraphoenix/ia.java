@@ -54,7 +54,8 @@ final class ia extends di {
               }
             }
             var4 = (CharSequence) (Object) param0;
-            if (!be.a(var4, 112)) {
+            int discarded$9 = 112;
+            if (!be.a(var4)) {
               stackOut_4_0 = qf.field_d;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
@@ -255,7 +256,7 @@ final class ia extends di {
             L0: {
               L1: {
                 var4 = param1.getGraphics();
-                k.field_f.a(param2, param0, var4, 101);
+                k.field_f.a(0, 0, var4, 101);
                 if (param3 > 103) {
                   break L1;
                 } else {
@@ -279,7 +280,7 @@ final class ia extends di {
           L2: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("ia.I(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("ia.I(").append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -302,28 +303,32 @@ final class ia extends di {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + param3 + 41);
+          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 44 + param3 + 41);
         }
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         if (jl.field_I == null) {
           if (vi.field_n != null) {
             vi.field_n.h((byte) -81);
-            wb.b(107);
+            int discarded$8 = 107;
+            wb.b();
             return;
           } else {
-            wb.b(107);
+            int discarded$9 = 107;
+            wb.b();
             return;
           }
         } else {
           jl.field_I.h((byte) -28);
           if (vi.field_n == null) {
-            wb.b(107);
+            int discarded$10 = 107;
+            wb.b();
             return;
           } else {
             vi.field_n.h((byte) -81);
-            wb.b(107);
+            int discarded$11 = 107;
+            wb.b();
             return;
           }
         }
@@ -594,17 +599,9 @@ final class ia extends di {
     }
 
     final static pd a(int param0, boolean param1) {
-        pd var2 = null;
-        if (param0 != 4) {
-          field_r = null;
-          var2 = new pd(true);
-          var2.field_a = false;
-          return var2;
-        } else {
-          var2 = new pd(true);
-          var2.field_a = false;
-          return var2;
-        }
+        pd var2 = new pd(true);
+        var2.field_a = param1 ? true : false;
+        return var2;
     }
 
     final static void a(int param0, cc param1, int param2) {
@@ -634,7 +631,7 @@ final class ia extends di {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_q = null;
         field_p = null;
         field_n = null;

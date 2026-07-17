@@ -11,17 +11,9 @@ abstract class ll {
         if (tm.field_h == kd.field_Fb[param0]) {
             tm.field_h = null;
         }
-        if (param1 != 4767999) {
-            return;
-        }
-        vn[][] var4 = ob.field_b;
-        vn[][] var2 = var4;
-        kd.field_Fb[param0] = null;
-        int var3 = param0;
-        var4[var3] = null;
     }
 
-    final static void a(dj param0, dj param1, dj param2, int param3) {
+    final static void a(dj param0, dj param1, dj param2) {
         RuntimeException var4 = null;
         v[] var5 = null;
         v[][] var6 = null;
@@ -99,7 +91,7 @@ abstract class ll {
             ia.field_e = (rb) (Object) ra.a(param0, "commonui", "arezzo14", 0, param1);
             rk.field_b = (rb) (Object) ra.a(param0, "commonui", "arezzo14bold", 0, param1);
             var17 = new vn(param2.a("", -89, "button.gif"), (java.awt.Component) (Object) cj.field_d);
-            v discarded$1 = vj.a(param1, "dropdown", "commonui", 4424743);
+            v discarded$3 = vj.a(param1, "dropdown", "commonui", 4424743);
             var5 = dd.a("commonui", "screen_options", -1864, param1);
             af.field_c = new v[4];
             ti.field_e = new v[4];
@@ -122,7 +114,8 @@ abstract class ll {
                 L2: while (true) {
                   if (3 <= var9) {
                     var9 = var17.field_t;
-                    hk.i(1584);
+                    int discarded$4 = 1584;
+                    hk.i();
                     var17.a();
                     bi.a(0, 0, bi.field_f, bi.field_a);
                     var15 = new vn(var9, var9);
@@ -147,7 +140,8 @@ abstract class ll {
                         var9++;
                         continue L2;
                       } else {
-                        var14[var11_int] = ud.a(var5[var9], var21[var11_int], -27837);
+                        int discarded$5 = -27837;
+                        var14[var11_int] = ud.a(var5[var9], var21[var11_int]);
                         var11_int++;
                         continue L3;
                       }
@@ -247,7 +241,7 @@ abstract class ll {
 
     abstract nk a(byte param0);
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

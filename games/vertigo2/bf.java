@@ -7,7 +7,7 @@ final class bf {
     static boolean field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }

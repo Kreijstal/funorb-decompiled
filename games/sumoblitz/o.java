@@ -14,8 +14,10 @@ final class o {
         if (!(nd.field_F != 3)) {
             up.field_g[oh.field_e] = true;
         }
-        of.a((byte) -104);
-        ju.g(123);
+        int discarded$4 = -104;
+        of.a();
+        int discarded$8 = 123;
+        ju.g();
         if (!og.a(-77)) {
             av.a(-7753, true, 10);
         }
@@ -39,12 +41,12 @@ final class o {
         il.field_a = in.field_z;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var3 = 0;
@@ -76,17 +78,9 @@ final class o {
               var3 = 0;
               L1: while (true) {
                 if (var3 >= 65536) {
-                  L2: {
-                    if (param0 == -56) {
-                      break L2;
-                    } else {
-                      field_b = null;
-                      break L2;
-                    }
-                  }
                   break L0;
                 } else {
-                  L3: {
+                  L2: {
                     var4 = (double)(var3 >> 10 & 63) / 64.0 + 0.0078125;
                     var6 = (double)(7 & var3 >> 7) / 8.0 + 0.0625;
                     var8 = (double)(127 & var3) / 128.0;
@@ -94,90 +88,90 @@ final class o {
                     var12 = var8;
                     var14 = var8;
                     if (0.0 == var6) {
-                      break L3;
+                      break L2;
                     } else {
-                      L4: {
+                      L3: {
                         if (var8 >= 0.5) {
                           var16_double = -(var6 * var8) + (var8 + var6);
-                          break L4;
+                          break L3;
                         } else {
                           var16_double = (1.0 + var6) * var8;
+                          break L3;
+                        }
+                      }
+                      L4: {
+                        var18_double = var8 * 2.0 - var16_double;
+                        var20 = 0.3333333333333333 + var4;
+                        if (1.0 >= var20) {
+                          break L4;
+                        } else {
+                          var20 = var20 - 1.0;
                           break L4;
                         }
                       }
                       L5: {
-                        var18_double = var8 * 2.0 - var16_double;
-                        var20 = 0.3333333333333333 + var4;
-                        if (1.0 >= var20) {
-                          break L5;
-                        } else {
-                          var20 = var20 - 1.0;
-                          break L5;
-                        }
-                      }
-                      L6: {
                         var22 = var4;
                         var24 = -0.3333333333333333 + var4;
                         if (var22 * 6.0 >= 1.0) {
                           if (var22 * 2.0 < 1.0) {
                             var12 = var16_double;
-                            break L6;
+                            break L5;
                           } else {
                             if (2.0 > 3.0 * var22) {
                               var12 = var18_double + (-var18_double + var16_double) * (0.6666666666666666 - var22) * 6.0;
-                              break L6;
+                              break L5;
                             } else {
                               var12 = var18_double;
-                              break L6;
+                              break L5;
                             }
                           }
                         } else {
                           var12 = var22 * (6.0 * (-var18_double + var16_double)) + var18_double;
-                          break L6;
+                          break L5;
                         }
                       }
-                      L7: {
+                      L6: {
                         if (var20 * 6.0 < 1.0) {
                           var10 = var18_double + var20 * ((-var18_double + var16_double) * 6.0);
-                          break L7;
+                          break L6;
                         } else {
                           if (1.0 > 2.0 * var20) {
                             var10 = var16_double;
-                            break L7;
+                            break L6;
                           } else {
                             if (var20 * 3.0 < 2.0) {
                               var10 = var18_double + (0.6666666666666666 - var20) * (var16_double - var18_double) * 6.0;
-                              break L7;
+                              break L6;
                             } else {
                               var10 = var18_double;
-                              break L7;
+                              break L6;
                             }
                           }
                         }
                       }
-                      L8: {
+                      L7: {
                         if (0.0 <= var24) {
-                          break L8;
+                          break L7;
                         } else {
                           var24 = var24 + 1.0;
-                          break L8;
+                          break L7;
                         }
                       }
                       if (6.0 * var24 < 1.0) {
                         var14 = var18_double + var24 * ((var16_double - var18_double) * 6.0);
-                        break L3;
+                        break L2;
                       } else {
                         if (var24 * 2.0 >= 1.0) {
                           if (2.0 <= 3.0 * var24) {
                             var14 = var18_double;
-                            break L3;
+                            break L2;
                           } else {
                             var14 = var18_double + (0.6666666666666666 - var24) * (-var18_double + var16_double) * 6.0;
-                            break L3;
+                            break L2;
                           }
                         } else {
                           var14 = var16_double;
-                          break L3;
+                          break L2;
                         }
                       }
                     }
@@ -199,7 +193,7 @@ final class o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "o.B(" + param0 + 41);
+          throw qo.a((Throwable) (Object) var1, "o.B(" + -56 + 41);
         }
     }
 

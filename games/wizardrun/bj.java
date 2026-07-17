@@ -16,7 +16,8 @@ final class bj {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
-            this.a(param0, 1);
+            int discarded$2 = 1;
+            this.a(param0);
             if (param4 == 0) {
               var6 = ((bj) this).field_b.getRefreshRate();
               var7 = ((bj) this).field_a.getDisplayModes();
@@ -84,7 +85,8 @@ final class bj {
             }
             ((bj) this).field_b = null;
         }
-        this.a((java.awt.Frame) null, 1);
+        int discarded$0 = 1;
+        this.a((java.awt.Frame) null);
     }
 
     public bj() throws Exception {
@@ -137,7 +139,7 @@ final class bj {
         return var2;
     }
 
-    private final void a(java.awt.Frame param0, int param1) {
+    private final void a(java.awt.Frame param0) {
         ((bj) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 

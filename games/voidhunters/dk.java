@@ -104,8 +104,8 @@ final class dk extends rqa {
         String stackOut_13_2 = null;
         var6 = VoidHunters.field_G;
         try {
-          var3 = hqb.a(param1, (byte) 43, param2);
-          var4 = 107 / ((param0 - -12) / 63);
+          var3 = hqb.a(false, (byte) 43, param2);
+          var4 = -107;
           if (var3 == null) {
             var5 = 0;
             L0: while (true) {
@@ -132,7 +132,7 @@ final class dk extends rqa {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("dk.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("dk.B(").append(-125).append(44).append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

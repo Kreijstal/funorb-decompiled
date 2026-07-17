@@ -24,7 +24,7 @@ final class oi extends gn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_e = null;
         field_f = null;

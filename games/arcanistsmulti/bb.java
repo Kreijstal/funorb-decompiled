@@ -92,13 +92,14 @@ final class bb {
                   break L1;
                 } else {
                   var8 = null;
-                  boolean discarded$2 = bb.a((String) null, (String) null, 89, (ln) null, 120, (String) null, false);
+                  boolean discarded$18 = bb.a((String) null, (String) null, 89, (ln) null, 120, (String) null, false);
                   break L1;
                 }
               }
               var9 = new ie(p.field_b, param3);
               p.field_b.b((qm) (Object) var9, 15637);
-              if (!jk.b(63)) {
+              int discarded$19 = 63;
+              if (!jk.b()) {
                 L2: {
                   ln.field_Q = param1;
                   i.field_i = null;
@@ -238,7 +239,7 @@ final class bb {
         return stackIn_12_0 != 0;
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] a(int param0) {
         int var2_int = 0;
         byte[] var2 = null;
         byte[] var3 = null;
@@ -491,7 +492,7 @@ final class bb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_b = null;
         field_c = null;
@@ -502,7 +503,7 @@ final class bb {
         field_g = null;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         int var1_int = 0;
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -519,40 +520,37 @@ final class bb {
                 }
               }
             }
-            boolean discarded$5 = lc.a((byte) 112);
+            int discarded$4 = 112;
+            boolean discarded$5 = lc.a();
             he.field_e.b((byte) -76, 68);
-            if (param0 < -116) {
-              var1_int = 0;
-              L2: while (true) {
-                if (var1_int >= 16) {
-                  break L0;
-                } else {
-                  L3: {
-                    b.field_f[var1_int] = var1_int;
-                    if (var1_int < 6) {
-                      var1_int++;
-                      break L3;
-                    } else {
-                      b.field_f[var1_int] = b.field_f[var1_int] + 6;
-                      break L3;
-                    }
+            var1_int = 0;
+            L2: while (true) {
+              if (var1_int >= 16) {
+                break L0;
+              } else {
+                L3: {
+                  b.field_f[var1_int] = var1_int;
+                  if (var1_int < 6) {
+                    var1_int++;
+                    break L3;
+                  } else {
+                    b.field_f[var1_int] = b.field_f[var1_int] + 6;
+                    break L3;
                   }
-                  var1_int++;
-                  continue L2;
                 }
+                var1_int++;
+                continue L2;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "bb.E(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1, "bb.E(" + -120 + 41);
         }
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         if (ih.field_f < 2) {
           return field_e;
         } else {
@@ -593,9 +591,6 @@ final class bb {
     }
 
     final static void a(String param0, int param1, String param2) {
-        if (param1 != -3) {
-            return;
-        }
         try {
             if (!(vf.field_k == null)) {
                 vf.field_k.h(77);
@@ -603,7 +598,7 @@ final class bb {
             wh.field_f = new e(param0, param2, false, true, true);
             g.field_e.a((byte) -92, (qm) (Object) wh.field_f);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "bb.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "bb.C(" + (param0 != null ? "{...}" : "null") + 44 + -3 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -11,7 +11,7 @@ final class pm {
     static sa field_b;
     static int field_c;
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         if (Character.isISOControl(param0)) {
           return false;
         } else {
@@ -39,7 +39,7 @@ final class pm {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_e = null;
         field_g = null;
@@ -61,34 +61,32 @@ final class pm {
         ri stackIn_11_0 = null;
         int stackIn_20_0 = 0;
         ri stackIn_25_0 = null;
-        Object stackIn_31_0 = null;
-        ri stackIn_42_0 = null;
-        ri stackIn_47_0 = null;
+        ri stackIn_41_0 = null;
+        ri stackIn_46_0 = null;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
-        RuntimeException stackIn_57_0 = null;
-        StringBuilder stackIn_57_1 = null;
-        String stackIn_57_2 = null;
+        String stackIn_56_2 = null;
         RuntimeException decompiledCaughtException = null;
         ri stackOut_6_0 = null;
-        ri stackOut_41_0 = null;
-        ri stackOut_46_0 = null;
-        Object stackOut_30_0 = null;
+        ri stackOut_40_0 = null;
+        ri stackOut_45_0 = null;
         int stackOut_19_0 = 0;
         int stackOut_18_0 = 0;
         ri stackOut_24_0 = null;
         ri stackOut_10_0 = null;
         ri stackOut_2_0 = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        RuntimeException stackOut_56_0 = null;
-        StringBuilder stackOut_56_1 = null;
-        String stackOut_56_2 = null;
+        RuntimeException stackOut_53_0 = null;
+        StringBuilder stackOut_53_1 = null;
         RuntimeException stackOut_55_0 = null;
         StringBuilder stackOut_55_1 = null;
         String stackOut_55_2 = null;
+        RuntimeException stackOut_54_0 = null;
+        StringBuilder stackOut_54_1 = null;
+        String stackOut_54_2 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var2_int = param1.length();
@@ -100,55 +98,49 @@ final class pm {
             } else {
               if (param1.charAt(0) != 34) {
                 var3 = 0;
-                if (param0 == -58) {
-                  var4 = 0;
-                  L0: while (true) {
-                    if (var2_int > var4) {
-                      L1: {
-                        var5 = param1.charAt(var4);
-                        if (var5 == 46) {
-                          L2: {
-                            if (var4 == 0) {
+                var4 = 0;
+                L0: while (true) {
+                  if (var2_int > var4) {
+                    L1: {
+                      var5 = param1.charAt(var4);
+                      if (var5 == 46) {
+                        L2: {
+                          if (var4 == 0) {
+                            break L2;
+                          } else {
+                            if (var4 == -1 + var2_int) {
                               break L2;
                             } else {
-                              if (var4 == -1 + var2_int) {
+                              if (var3 != 0) {
                                 break L2;
                               } else {
-                                if (var3 != 0) {
-                                  break L2;
-                                } else {
-                                  var3 = 1;
-                                  var4++;
-                                  break L1;
-                                }
+                                var3 = 1;
+                                var4++;
+                                break L1;
                               }
                             }
                           }
-                          stackOut_41_0 = n.field_b;
-                          stackIn_42_0 = stackOut_41_0;
-                          return stackIn_42_0;
+                        }
+                        stackOut_40_0 = n.field_b;
+                        stackIn_41_0 = stackOut_40_0;
+                        return stackIn_41_0;
+                      } else {
+                        if (tl.field_b.indexOf(var5) == -1) {
+                          stackOut_45_0 = n.field_b;
+                          stackIn_46_0 = stackOut_45_0;
+                          return stackIn_46_0;
                         } else {
-                          if (tl.field_b.indexOf(var5) == -1) {
-                            stackOut_46_0 = n.field_b;
-                            stackIn_47_0 = stackOut_46_0;
-                            return stackIn_47_0;
-                          } else {
-                            var3 = 0;
-                            var4++;
-                            break L1;
-                          }
+                          var3 = 0;
+                          var4++;
+                          break L1;
                         }
                       }
-                      var4++;
-                      continue L0;
-                    } else {
-                      return null;
                     }
+                    var4++;
+                    continue L0;
+                  } else {
+                    return null;
                   }
-                } else {
-                  stackOut_30_0 = null;
-                  stackIn_31_0 = stackOut_30_0;
-                  return (ri) (Object) stackIn_31_0;
                 }
               } else {
                 if (34 == param1.charAt(-1 + var2_int)) {
@@ -212,31 +204,31 @@ final class pm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_54_0 = (RuntimeException) var2;
-            stackOut_54_1 = new StringBuilder().append("pm.C(").append(param0).append(44);
-            stackIn_56_0 = stackOut_54_0;
-            stackIn_56_1 = stackOut_54_1;
-            stackIn_55_0 = stackOut_54_0;
-            stackIn_55_1 = stackOut_54_1;
+            stackOut_53_0 = (RuntimeException) var2;
+            stackOut_53_1 = new StringBuilder().append("pm.C(").append(-58).append(44);
+            stackIn_55_0 = stackOut_53_0;
+            stackIn_55_1 = stackOut_53_1;
+            stackIn_54_0 = stackOut_53_0;
+            stackIn_54_1 = stackOut_53_1;
             if (param1 == null) {
-              stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
-              stackOut_56_1 = (StringBuilder) (Object) stackIn_56_1;
-              stackOut_56_2 = "null";
-              stackIn_57_0 = stackOut_56_0;
-              stackIn_57_1 = stackOut_56_1;
-              stackIn_57_2 = stackOut_56_2;
-              break L7;
-            } else {
               stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
               stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
-              stackOut_55_2 = "{...}";
-              stackIn_57_0 = stackOut_55_0;
-              stackIn_57_1 = stackOut_55_1;
-              stackIn_57_2 = stackOut_55_2;
+              stackOut_55_2 = "null";
+              stackIn_56_0 = stackOut_55_0;
+              stackIn_56_1 = stackOut_55_1;
+              stackIn_56_2 = stackOut_55_2;
+              break L7;
+            } else {
+              stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
+              stackOut_54_1 = (StringBuilder) (Object) stackIn_54_1;
+              stackOut_54_2 = "{...}";
+              stackIn_56_0 = stackOut_54_0;
+              stackIn_56_1 = stackOut_54_1;
+              stackIn_56_2 = stackOut_54_2;
               break L7;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + 41);
         }
     }
 
@@ -312,7 +304,7 @@ final class pm {
         return stackIn_3_0;
     }
 
-    final static void a(uj[] param0, int param1) {
+    final static void a(uj[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -52,7 +52,8 @@ final class hg extends al {
         try {
           L0: {
             var4 = (CharSequence) (Object) param0;
-            if (qi.a(var4, 10)) {
+            int discarded$5 = 10;
+            if (qi.a(var4)) {
               var5 = (CharSequence) (Object) param0;
               var3_int = gf.a(param1 + -44, var5);
               if (param1 == 54) {
@@ -116,11 +117,12 @@ final class hg extends al {
         return stackIn_12_0;
     }
 
-    final static void h(byte param0) {
+    final static void h() {
         ja.field_b = jc.field_g.b(true);
         int var1 = 0;
         CharSequence var2 = (CharSequence) (Object) ja.field_b;
-        qe.field_e = ce.a(var2, 0);
+        int discarded$0 = 0;
+        qe.field_e = ce.a(var2);
     }
 
     final static byte[] a(byte param0, String param1) {
@@ -190,7 +192,7 @@ final class hg extends al {
         return stackIn_4_0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_j = null;
         field_k = null;
     }

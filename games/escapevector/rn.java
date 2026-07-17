@@ -13,16 +13,13 @@ final class rn extends RuntimeException {
     static int field_e;
 
     public static void a(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_b = null;
         field_f = null;
         field_c = null;
         field_d = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         if (pg.field_c == null) {
             return false;
         }
@@ -88,7 +85,8 @@ final class rn extends RuntimeException {
                   var5 = param1;
                   L1: while (true) {
                     if (~var4.length >= ~var5) {
-                      stackOut_17_0 = co.a(var3[var3.length - 1], 0);
+                      int discarded$2 = 0;
+                      stackOut_17_0 = co.a(var3[var3.length - 1]);
                       stackIn_18_0 = stackOut_17_0;
                       break L0;
                     } else {
@@ -194,12 +192,7 @@ final class rn extends RuntimeException {
                     break L3;
                   }
                 }
-                if (param1 != 30785) {
-                  rn.a(true);
-                  return;
-                } else {
-                  return;
-                }
+                return;
               }
             }
             om.field_c.field_m = 0;

@@ -114,8 +114,9 @@ final class kh extends cn {
                 break L5;
               }
             }
-            sl.a(((kh) this).field_y, param1.field_x, (param1.field_E - ((kh) this).field_y[0].field_B >> 1) + (param1.field_z + param4), param0 + param1.field_o, var7, (byte) -119);
-            int discarded$1 = ((kh) this).field_f.a(param1.field_y, param1.field_o + param0, -2 + param4 - -param1.field_z, param1.field_x, param1.field_E, var8, -1, 1, 1, ((kh) this).field_f.field_G);
+            int discarded$2 = -119;
+            sl.a(((kh) this).field_y, param1.field_x, (param1.field_E - ((kh) this).field_y[0].field_B >> 1) + (param1.field_z + param4), param0 + param1.field_o, var7);
+            int discarded$3 = ((kh) this).field_f.a(param1.field_y, param1.field_o + param0, -2 + param4 - -param1.field_z, param1.field_x, param1.field_E, var8, -1, 1, 1, ((kh) this).field_f.field_G);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -150,7 +151,7 @@ final class kh extends cn {
         }
     }
 
-    final static void a(gh param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
+    final static void a(gh param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         gh var10 = null;
         int var11 = 0;
@@ -191,51 +192,47 @@ final class kh extends cn {
         try {
           L0: {
             var13 = new gh((long)param3, field_s, param1);
-            if (param8) {
-              L1: {
-                var13.a(0, param4, 20, -7 + param7, 2 + param5 + -param7);
-                param0.a(var13, 122);
-                var10 = new gh((long)param3, (gh) null);
-                var10.a(0, 1, 12, 22, -20 + (param5 + -param7));
-                var10.field_Pb = new wk(var10.field_zb, var10.field_Lb);
-                var10.field_Pb.d();
-                pb.h(0, 0, var10.field_zb, var10.field_Lb, 1995681);
-                if (param2 > 0) {
-                  if (param2 <= param6) {
-                    pb.a(2, 2, param2 * (-4 + var10.field_zb) / param6, -4 + var10.field_Lb, 1995681);
-                    if (param6 <= 100) {
+            L1: {
+              var13.a(0, param4, 20, -7 + param7, 2 + param5 + -param7);
+              param0.a(var13, 122);
+              var10 = new gh((long)param3, (gh) null);
+              var10.a(0, 1, 12, 22, -20 + (param5 + -param7));
+              var10.field_Pb = new wk(var10.field_zb, var10.field_Lb);
+              var10.field_Pb.d();
+              pb.h(0, 0, var10.field_zb, var10.field_Lb, 1995681);
+              if (param2 > 0) {
+                if (param2 <= param6) {
+                  pb.a(2, 2, param2 * (-4 + var10.field_zb) / param6, -4 + var10.field_Lb, 1995681);
+                  if (param6 <= 100) {
+                    break L1;
+                  } else {
+                    if (param6 >= 2000) {
                       break L1;
                     } else {
-                      if (param6 >= 2000) {
-                        break L1;
-                      } else {
-                        var11 = 100;
-                        L2: while (true) {
-                          if (param6 <= var11) {
-                            break L1;
-                          } else {
-                            pb.f(var11 * (var10.field_zb - 4) / param6 + 2, 2, var10.field_Lb - 4, 4473924, 96);
-                            var11 += 100;
-                            continue L2;
-                          }
+                      var11 = 100;
+                      L2: while (true) {
+                        if (param6 <= var11) {
+                          break L1;
+                        } else {
+                          pb.f(var11 * (var10.field_zb - 4) / param6 + 2, 2, var10.field_Lb - 4, 4473924, 96);
+                          var11 += 100;
+                          continue L2;
                         }
                       }
                     }
-                  } else {
-                    pb.a(2, 2, -4 + var10.field_zb, var10.field_Lb - 4, 5157841);
-                    break L1;
                   }
                 } else {
-                  pb.h(0, 0, var10.field_zb, var10.field_Lb, 10367841);
+                  pb.a(2, 2, -4 + var10.field_zb, var10.field_Lb - 4, 5157841);
                   break L1;
                 }
+              } else {
+                pb.h(0, 0, var10.field_zb, var10.field_Lb, 10367841);
+                break L1;
               }
-              var13.a(var10, 121);
-              sb.field_bb.b((byte) 121);
-              break L0;
-            } else {
-              return;
             }
+            var13.a(var10, 121);
+            sb.field_bb.b((byte) 121);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -290,11 +287,11 @@ final class kh extends cn {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 1 + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_u = null;
         field_z = null;
         field_w = null;
@@ -309,9 +306,6 @@ final class kh extends cn {
     }
 
     final static cc a(boolean param0, long param1) {
-        if (param0) {
-            return null;
-        }
         return (cc) (Object) me.field_b.a(param1, (byte) -72);
     }
 

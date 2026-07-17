@@ -15,53 +15,45 @@ abstract class qr extends ae implements tpa {
     }
 
     final static boolean c(int param0, int param1, int param2) {
-        int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         L0: {
-          if (param0 == 458752) {
+          if ((458752 & param2) == 0) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           } else {
-            boolean discarded$2 = qr.a(95);
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
             break L0;
           }
         }
         L1: {
-          if ((458752 & param2) == 0) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
-            break L1;
-          } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
-            break L1;
-          }
-        }
-        L2: {
-          L3: {
-            if (stackIn_5_0 != 0 | cga.a(param2, -83, param1)) {
-              break L3;
+          L2: {
+            if (stackIn_3_0 != 0 | cga.a(param2, -83, param1)) {
+              break L2;
             } else {
               if (!uu.a(true, param2, param1)) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
-                break L2;
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                break L1;
               } else {
-                break L3;
+                break L2;
               }
             }
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
-          break L2;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L1;
         }
-        return stackIn_10_0 != 0;
+        return stackIn_8_0 != 0;
     }
 
-    private final boolean b(ae param0, int param1) {
+    private final boolean b(ae param0) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -365,6 +357,7 @@ abstract class qr extends ae implements tpa {
         iu[] var16 = null;
         iu[] var17 = null;
         int var18 = 0;
+        int[] var19 = null;
         L0: {
           var18 = TombRacer.field_G ? 1 : 0;
           var5 = tw.a((byte) -69, "crowns", "lobby", param4);
@@ -373,130 +366,60 @@ abstract class qr extends ae implements tpa {
             var6 = new hja[param2.length + csa.field_n];
             var7_int = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (var7_int >= csa.field_n) {
-                    break L3;
-                  } else {
-                    var6[var7_int] = var5[var7_int];
-                    var7_int++;
-                    if (var18 != 0) {
-                      break L2;
-                    } else {
-                      if (var18 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
+              if (var7_int >= csa.field_n) {
                 var7_int = 0;
-                break L2;
-              }
-              L4: while (true) {
-                L5: {
+                L2: while (true) {
                   if (param2.length <= var7_int) {
-                    break L5;
+                    var5 = var6;
+                    break L0;
                   } else {
                     var6[csa.field_n - -var7_int] = param2[var7_int];
                     var7_int++;
-                    if (var18 != 0) {
-                      break L0;
-                    } else {
-                      if (var18 == 0) {
-                        continue L4;
-                      } else {
-                        break L5;
-                      }
-                    }
+                    continue L2;
                   }
                 }
-                var5 = var6;
-                break L0;
+              } else {
+                var6[var7_int] = var5[var7_int];
+                var7_int++;
+                continue L1;
               }
             }
           } else {
             break L0;
           }
         }
-        var6_array = new int[var5.length];
+        var19 = new int[var5.length];
+        var6_array = var19;
         var7_int = 0;
-        L6: while (true) {
-          L7: {
-            L8: {
-              L9: {
-                L10: {
-                  if (var7_int >= csa.field_n) {
-                    break L10;
-                  } else {
-                    var6_array[var7_int] = 10;
-                    var7_int++;
-                    if (var18 != 0) {
-                      break L9;
+        L3: while (true) {
+          if (var7_int >= csa.field_n) {
+            L4: {
+              if (param2 != null) {
+                if (param1 == null) {
+                  var7_int = 0;
+                  L5: while (true) {
+                    if (param2.length <= var7_int) {
+                      break L4;
                     } else {
-                      if (var18 == 0) {
-                        continue L6;
-                      } else {
-                        break L10;
-                      }
+                      var6_array[csa.field_n - -var7_int] = param2[var7_int].field_f;
+                      var7_int++;
+                      continue L5;
                     }
                   }
-                }
-                if (param2 != null) {
-                  break L9;
-                } else {
-                  break L8;
-                }
-              }
-              L11: {
-                if (param1 == null) {
-                  break L11;
                 } else {
                   var7_int = 0;
-                  L12: while (true) {
-                    L13: {
-                      if (param2.length <= var7_int) {
-                        break L13;
-                      } else {
-                        var6_array[var7_int + csa.field_n] = param1[var7_int];
-                        var7_int++;
-                        if (var18 != 0) {
-                          break L7;
-                        } else {
-                          if (var18 == 0) {
-                            continue L12;
-                          } else {
-                            break L13;
-                          }
-                        }
-                      }
-                    }
-                    if (var18 == 0) {
-                      break L8;
+                  L6: while (true) {
+                    if (param2.length <= var7_int) {
+                      break L4;
                     } else {
-                      break L11;
+                      var6_array[var7_int + csa.field_n] = param1[var7_int];
+                      var7_int++;
+                      continue L6;
                     }
                   }
                 }
-              }
-              var7_int = 0;
-              L14: while (true) {
-                if (param2.length <= var7_int) {
-                  break L8;
-                } else {
-                  var6_array[csa.field_n - -var7_int] = param2[var7_int].field_f;
-                  var7_int++;
-                  if (var18 != 0) {
-                    break L7;
-                  } else {
-                    if (var18 == 0) {
-                      continue L14;
-                    } else {
-                      break L8;
-                    }
-                  }
-                }
+              } else {
+                break L4;
               }
             }
             pda.field_c = 2;
@@ -504,185 +427,188 @@ abstract class qr extends ae implements tpa {
             di.field_a = 15;
             wg.field_i = 2;
             mna.field_d = 4;
-            break L7;
+            var7 = jta.a((byte) 123, "largefont", param4, "lobby", param3);
+            qw.field_f = jta.a((byte) 118, "generalfont", param4, "lobby", param3);
+            kw.field_e = jta.a((byte) 127, "chatfont", param4, "lobby", param3);
+            var7.a((rka[]) (Object) var5, var6_array);
+            qw.field_f.a((rka[]) (Object) var5, var6_array);
+            kw.field_e.a((rka[]) (Object) var5, var6_array);
+            var8 = new jea(0L, (jea) null);
+            var8.field_P = di.field_a;
+            var8.field_ib = 16777215;
+            var8.field_H = (il) (Object) var7;
+            var8.field_bb = 1;
+            var9 = var8;
+            var9.field_z = 1;
+            var10 = new jea(0L, (jea) null);
+            var10.field_P = di.field_a;
+            var10.field_ib = 16777215;
+            var10.field_H = (il) (Object) qw.field_f;
+            var11 = var10;
+            var10.field_bb = 1;
+            var11.field_z = 1;
+            uda.field_s = new jea(0L, var8);
+            uda.field_s.field_w = rfa.a(uka.a(param4, "lobby", 5, "heading"), 126);
+            joa.field_d = new jea(0L, (jea) null);
+            joa.field_d.field_w = tba.a(-74, false, 120, 8421504, 4210752, false);
+            ji.field_g = new jea(0L, (jea) null);
+            ji.field_g.field_w = hca.c(114, 1, 3, 6316128, -111, 6316128);
+            lw.field_a = new jea(0L, (jea) null);
+            lw.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "popup"), 113);
+            var12 = rfa.a(uka.a(param4, "lobby", 5, "popup_mouseover"), 122);
+            var13 = uka.a(param4, "lobby", 5, "button");
+            var14 = rfa.a(uka.a(param4, "lobby", 5, "tab_active"), 113);
+            oba.field_f = new jea(0L, var8);
+            oba.field_f.field_w = var14;
+            cga.field_g = new jea(0L, (jea) null);
+            cga.field_g.field_R = nia.a(param4, "lobby", "closebutton", 125);
+            cga.field_g.field_rb = nia.a(param4, "lobby", "closebutton_mouseover", -112);
+            sm.field_r = new jea(0L, var8);
+            sm.field_r.field_w = tba.a(-67, true, 40, 3815994, 2039583, true);
+            ooa.field_f = new jea(0L, var10);
+            ooa.field_f.field_x = 2;
+            ooa.field_f.field_w = tba.a(-75, false, 30, 3815994, 2039583, true);
+            cs.field_a = new jea(0L, var10);
+            cs.field_a.field_x = 2;
+            cs.field_a.field_w = tba.a(-116, false, 30, 3815994, 2039583, false);
+            hma.field_b = new jea(0L, var10);
+            hma.field_b.field_x = 2;
+            hma.field_b.field_w = tba.a(-104, true, 30, 3815994, 2039583, false);
+            kua.field_i = new jea(0L, (jea) null);
+            kua.field_i.field_ib = 13421772;
+            kua.field_i.field_P = di.field_a;
+            kua.field_i.field_H = (il) (Object) qw.field_f;
+            kua.field_i.field_bb = 1;
+            dja.field_p = new jea(0L, kua.field_i);
+            dja.field_p.field_ab = 16777215;
+            dja.field_p.field_hb = 8421504;
+            dja.field_p.field_gb = 16777215;
+            dja.field_p.field_ib = 16764006;
+            dja.field_p.field_N = 16777215;
+            var15 = new jea(0L, dja.field_p);
+            var15.field_ib = 16777215;
+            var15.field_H = (il) (Object) var7;
+            var15.field_P = di.field_a;
+            tka.field_q = new jea(0L, kua.field_i);
+            tka.field_q.field_w = tba.a(-103, false, 16, 2236962, 2236962, false);
+            tka.field_q.field_x = 2;
+            una.field_j = new jea(0L, kua.field_i);
+            una.field_j.field_w = tba.a(-73, false, 16, 1513239, 1513239, false);
+            una.field_j.field_x = 2;
+            iea.field_g = new jea(0L, tka.field_q);
+            iea.field_g.a(false, dja.field_p);
+            lta.field_a = new jea(0L, una.field_j);
+            lta.field_a.a(false, dja.field_p);
+            var16 = uka.a(param4, "lobby", 5, "button_mouseover");
+            eq.field_n = new ola(lw.field_a, var12, kua.field_i, dja.field_p, 3, 2, pda.field_c, 3, di.field_a);
+            qi.field_M = new jea(0L, dja.field_p);
+            qi.field_M.field_fb = 1;
+            qi.field_M.field_ob = 1;
+            qi.field_M.field_v = 1;
+            qi.field_M.field_w = var13;
+            qi.field_M.field_C = var16;
+            qi.field_M.field_W = 1;
+            qi.field_M.field_db = uka.a(param4, "lobby", 5, "button_mouseheld");
+            qi.field_M.field_n = uka.a(param4, "lobby", 5, "button_active");
+            qi.field_M.field_M = uka.a(param4, "lobby", 5, "button_disabled");
+            qi.field_M.field_z = 1;
+            up.field_a = new jea(0L, dja.field_p);
+            up.field_a.field_z = 1;
+            up.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "tab_inactive"), 113);
+            up.field_a.field_C = rfa.a(uka.a(param4, "lobby", 5, "tab_mouseover"), 113);
+            up.field_a.field_n = var14;
+            js.field_d = new jea(0L, (jea) null);
+            js.field_d.field_w = hca.c(206, -1, 3, 1856141, -113, 1127256);
+            cfa.field_c = new jea(0L, (jea) null);
+            cfa.field_c.field_w = hca.c(290, -1, 3, 11579568, -120, 6052956);
+            hg.field_g = new jea(0L, var15);
+            hg.field_g.field_W = 1;
+            hg.field_g.field_v = 1;
+            hg.field_g.field_fb = 1;
+            hg.field_g.field_ob = 1;
+            hg.field_g.field_z = 1;
+            dp.field_i = new jea(0L, hg.field_g);
+            jk.field_g = new jea(0L, dja.field_p);
+            jk.field_g.field_W = 1;
+            jk.field_g.field_v = 1;
+            jk.field_g.field_fb = 1;
+            jk.field_g.field_ob = 1;
+            jk.field_g.field_z = 1;
+            bua.field_g = new jea(0L, jk.field_g);
+            kv.field_b = new jea(0L, jk.field_g);
+            ssa.field_g = new jea(0L, hg.field_g);
+            jq.field_o = new jea(0L, jk.field_g);
+            dn.field_a = new jea(0L, jk.field_g);
+            qja.field_j = new jea(0L, jk.field_g);
+            jk.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "smallbutton"), 124);
+            jk.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_mouseover"), 127);
+            iu[] dupTemp$4 = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_active"), 114);
+            jk.field_g.field_n = dupTemp$4;
+            jk.field_g.field_db = dupTemp$4;
+            jk.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_disabled"), 127);
+            dp.field_i.field_w = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton"), 125);
+            dp.field_i.field_C = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
+            dp.field_i.field_db = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
+            hg.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "bigbutton"), 127);
+            hg.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_mouseover"), 118);
+            hg.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_mouseheld"), 122);
+            hg.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_disabled"), 124);
+            bua.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "greenbutton"), 124);
+            bua.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "greenbutton_mouseover"), 116);
+            bua.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "greenbutton_mouseheld"), 123);
+            kv.field_b.field_w = rfa.a(uka.a(param4, "lobby", 5, "redbutton"), 113);
+            kv.field_b.field_C = rfa.a(uka.a(param4, "lobby", 5, "redbutton_mouseover"), 123);
+            kv.field_b.field_db = rfa.a(uka.a(param4, "lobby", 5, "redbutton_mouseheld"), 116);
+            ssa.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "backbutton"), 125);
+            ssa.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "backbutton_mouseover"), 117);
+            ssa.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "backbutton_mouseheld"), 123);
+            ssa.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "backbutton_disabled"), 116);
+            qja.field_j.field_w = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton"), 118);
+            qja.field_j.field_C = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_mouseover"), 113);
+            iu[] dupTemp$5 = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_active"), 118);
+            qja.field_j.field_n = dupTemp$5;
+            qja.field_j.field_db = dupTemp$5;
+            qja.field_j.field_M = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_disabled"), 125);
+            jq.field_o.field_w = rfa.a(uka.a(param4, "lobby", 5, "chatbutton"), 116);
+            jq.field_o.field_C = rfa.a(uka.a(param4, "lobby", 5, "chatbutton_mouseover"), 119);
+            iu[] dupTemp$6 = rfa.a(uka.a(param4, "lobby", 5, "chatbutton_active"), 119);
+            jq.field_o.field_n = dupTemp$6;
+            jq.field_o.field_db = dupTemp$6;
+            dn.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton"), 112);
+            dn.field_a.field_C = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
+            iu[] dupTemp$7 = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton_active"), 118);
+            dn.field_a.field_n = dupTemp$7;
+            dn.field_a.field_db = dupTemp$7;
+            var17 = uka.a(param4, "lobby", 5, "checkbox");
+            kt.field_F = new ta(0L, var17[1], var17[0], 1, dja.field_p, (String) null);
+            lr.field_b = new jea(0L, (jea) null);
+            lr.field_b.field_w = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion", 115));
+            lr.field_b.field_C = wpa.a((byte) -60, nia.a(param4, "lobby", "slideregion_mouseover", 75));
+            lr.field_b.field_db = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion_mouseheld", 123));
+            lr.field_b.field_M = wpa.a((byte) -87, nia.a(param4, "lobby", "slideregion_disabled", 106));
+            ie.field_h = new jea(0L, (jea) null);
+            ie.field_h.field_w = rfa.a(uka.a(param4, "lobby", 5, "dragbar"), 122);
+            ie.field_h.field_C = rfa.a(uka.a(param4, "lobby", 5, "dragbar_mouseover"), 121);
+            ie.field_h.field_db = rfa.a(uka.a(param4, "lobby", 5, "dragbar_mouseheld"), 113);
+            ie.field_h.field_M = rfa.a(uka.a(param4, "lobby", 5, "dragbar_disabled"), 116);
+            pk.field_s = new jea(0L, (jea) null);
+            pk.field_s.field_R = nia.a(param4, "lobby", "upbutton", -121);
+            pk.field_s.field_rb = nia.a(param4, "lobby", "upbutton_mouseover", -87);
+            pk.field_s.field_U = nia.a(param4, "lobby", "upbutton_mouseheld", 71);
+            pk.field_s.field_B = nia.a(param4, "lobby", "upbutton_disabled", 71);
+            jqa.field_b = new jea(0L, (jea) null);
+            jqa.field_b.field_R = nia.a(param4, "lobby", "downbutton", 119);
+            jqa.field_b.field_rb = nia.a(param4, "lobby", "downbutton_mouseover", -73);
+            jqa.field_b.field_U = nia.a(param4, "lobby", "downbutton_mouseheld", 56);
+            jqa.field_b.field_B = nia.a(param4, "lobby", "downbutton_disabled", 113);
+            fe.field_F = new oj(0L, pk.field_s, jqa.field_b, lr.field_b, ie.field_h);
+            aaa.field_d = new hla(0L, (jea) null, rfa.field_C, fe.field_F, jk.field_g, (String) null, (String) null);
+            return;
+          } else {
+            var19[var7_int] = 10;
+            var7_int++;
+            continue L3;
           }
-          var7 = jta.a((byte) 123, "largefont", param4, "lobby", param3);
-          qw.field_f = jta.a((byte) 118, "generalfont", param4, "lobby", param3);
-          kw.field_e = jta.a((byte) 127, "chatfont", param4, "lobby", param3);
-          var7.a((rka[]) (Object) var5, var6_array);
-          qw.field_f.a((rka[]) (Object) var5, var6_array);
-          kw.field_e.a((rka[]) (Object) var5, var6_array);
-          var8 = new jea(0L, (jea) null);
-          var8.field_P = di.field_a;
-          var8.field_ib = 16777215;
-          var8.field_H = (il) (Object) var7;
-          var8.field_bb = 1;
-          var9 = var8;
-          var9.field_z = 1;
-          var10 = new jea(0L, (jea) null);
-          var10.field_P = di.field_a;
-          var10.field_ib = 16777215;
-          var10.field_H = (il) (Object) qw.field_f;
-          var11 = var10;
-          var10.field_bb = 1;
-          var11.field_z = 1;
-          uda.field_s = new jea(0L, var8);
-          uda.field_s.field_w = rfa.a(uka.a(param4, "lobby", 5, "heading"), 126);
-          joa.field_d = new jea(0L, (jea) null);
-          joa.field_d.field_w = tba.a(-74, false, 120, 8421504, 4210752, false);
-          ji.field_g = new jea(0L, (jea) null);
-          ji.field_g.field_w = hca.c(114, 1, 3, 6316128, -111, 6316128);
-          lw.field_a = new jea(0L, (jea) null);
-          lw.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "popup"), 113);
-          var12 = rfa.a(uka.a(param4, "lobby", 5, "popup_mouseover"), 122);
-          var13 = uka.a(param4, "lobby", 5, "button");
-          var14 = rfa.a(uka.a(param4, "lobby", 5, "tab_active"), 113);
-          oba.field_f = new jea(0L, var8);
-          oba.field_f.field_w = var14;
-          cga.field_g = new jea(0L, (jea) null);
-          cga.field_g.field_R = nia.a(param4, "lobby", "closebutton", 125);
-          cga.field_g.field_rb = nia.a(param4, "lobby", "closebutton_mouseover", -112);
-          sm.field_r = new jea(0L, var8);
-          sm.field_r.field_w = tba.a(-67, true, 40, 3815994, 2039583, true);
-          ooa.field_f = new jea(0L, var10);
-          ooa.field_f.field_x = 2;
-          ooa.field_f.field_w = tba.a(-75, false, 30, 3815994, 2039583, true);
-          cs.field_a = new jea(0L, var10);
-          cs.field_a.field_x = 2;
-          cs.field_a.field_w = tba.a(-116, false, 30, 3815994, 2039583, false);
-          hma.field_b = new jea(0L, var10);
-          hma.field_b.field_x = 2;
-          hma.field_b.field_w = tba.a(-104, true, 30, 3815994, 2039583, false);
-          kua.field_i = new jea(0L, (jea) null);
-          kua.field_i.field_ib = 13421772;
-          kua.field_i.field_P = di.field_a;
-          kua.field_i.field_H = (il) (Object) qw.field_f;
-          kua.field_i.field_bb = 1;
-          dja.field_p = new jea(0L, kua.field_i);
-          dja.field_p.field_ab = 16777215;
-          dja.field_p.field_hb = 8421504;
-          dja.field_p.field_gb = 16777215;
-          dja.field_p.field_ib = 16764006;
-          dja.field_p.field_N = 16777215;
-          var15 = new jea(0L, dja.field_p);
-          var15.field_ib = 16777215;
-          var15.field_H = (il) (Object) var7;
-          var15.field_P = di.field_a;
-          tka.field_q = new jea(0L, kua.field_i);
-          tka.field_q.field_w = tba.a(-103, param0, 16, 2236962, 2236962, false);
-          tka.field_q.field_x = 2;
-          una.field_j = new jea(0L, kua.field_i);
-          una.field_j.field_w = tba.a(-73, false, 16, 1513239, 1513239, false);
-          una.field_j.field_x = 2;
-          iea.field_g = new jea(0L, tka.field_q);
-          iea.field_g.a(false, dja.field_p);
-          lta.field_a = new jea(0L, una.field_j);
-          lta.field_a.a(param0, dja.field_p);
-          var16 = uka.a(param4, "lobby", 5, "button_mouseover");
-          eq.field_n = new ola(lw.field_a, var12, kua.field_i, dja.field_p, 3, 2, pda.field_c, 3, di.field_a);
-          qi.field_M = new jea(0L, dja.field_p);
-          qi.field_M.field_fb = 1;
-          qi.field_M.field_ob = 1;
-          qi.field_M.field_v = 1;
-          qi.field_M.field_w = var13;
-          qi.field_M.field_C = var16;
-          qi.field_M.field_W = 1;
-          qi.field_M.field_db = uka.a(param4, "lobby", 5, "button_mouseheld");
-          qi.field_M.field_n = uka.a(param4, "lobby", 5, "button_active");
-          qi.field_M.field_M = uka.a(param4, "lobby", 5, "button_disabled");
-          qi.field_M.field_z = 1;
-          up.field_a = new jea(0L, dja.field_p);
-          up.field_a.field_z = 1;
-          up.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "tab_inactive"), 113);
-          up.field_a.field_C = rfa.a(uka.a(param4, "lobby", 5, "tab_mouseover"), 113);
-          up.field_a.field_n = var14;
-          js.field_d = new jea(0L, (jea) null);
-          js.field_d.field_w = hca.c(206, -1, 3, 1856141, -113, 1127256);
-          cfa.field_c = new jea(0L, (jea) null);
-          cfa.field_c.field_w = hca.c(290, -1, 3, 11579568, -120, 6052956);
-          hg.field_g = new jea(0L, var15);
-          hg.field_g.field_W = 1;
-          hg.field_g.field_v = 1;
-          hg.field_g.field_fb = 1;
-          hg.field_g.field_ob = 1;
-          hg.field_g.field_z = 1;
-          dp.field_i = new jea(0L, hg.field_g);
-          jk.field_g = new jea(0L, dja.field_p);
-          jk.field_g.field_W = 1;
-          jk.field_g.field_v = 1;
-          jk.field_g.field_fb = 1;
-          jk.field_g.field_ob = 1;
-          jk.field_g.field_z = 1;
-          bua.field_g = new jea(0L, jk.field_g);
-          kv.field_b = new jea(0L, jk.field_g);
-          ssa.field_g = new jea(0L, hg.field_g);
-          jq.field_o = new jea(0L, jk.field_g);
-          dn.field_a = new jea(0L, jk.field_g);
-          qja.field_j = new jea(0L, jk.field_g);
-          jk.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "smallbutton"), 124);
-          jk.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_mouseover"), 127);
-          iu[] dupTemp$4 = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_active"), 114);
-          jk.field_g.field_n = dupTemp$4;
-          jk.field_g.field_db = dupTemp$4;
-          jk.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_disabled"), 127);
-          dp.field_i.field_w = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton"), 125);
-          dp.field_i.field_C = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
-          dp.field_i.field_db = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
-          hg.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "bigbutton"), 127);
-          hg.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_mouseover"), 118);
-          hg.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_mouseheld"), 122);
-          hg.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_disabled"), 124);
-          bua.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "greenbutton"), 124);
-          bua.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "greenbutton_mouseover"), 116);
-          bua.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "greenbutton_mouseheld"), 123);
-          kv.field_b.field_w = rfa.a(uka.a(param4, "lobby", 5, "redbutton"), 113);
-          kv.field_b.field_C = rfa.a(uka.a(param4, "lobby", 5, "redbutton_mouseover"), 123);
-          kv.field_b.field_db = rfa.a(uka.a(param4, "lobby", 5, "redbutton_mouseheld"), 116);
-          ssa.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "backbutton"), 125);
-          ssa.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "backbutton_mouseover"), 117);
-          ssa.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "backbutton_mouseheld"), 123);
-          ssa.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "backbutton_disabled"), 116);
-          qja.field_j.field_w = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton"), 118);
-          qja.field_j.field_C = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_mouseover"), 113);
-          iu[] dupTemp$5 = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_active"), 118);
-          qja.field_j.field_n = dupTemp$5;
-          qja.field_j.field_db = dupTemp$5;
-          qja.field_j.field_M = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_disabled"), 125);
-          jq.field_o.field_w = rfa.a(uka.a(param4, "lobby", 5, "chatbutton"), 116);
-          jq.field_o.field_C = rfa.a(uka.a(param4, "lobby", 5, "chatbutton_mouseover"), 119);
-          iu[] dupTemp$6 = rfa.a(uka.a(param4, "lobby", 5, "chatbutton_active"), 119);
-          jq.field_o.field_n = dupTemp$6;
-          jq.field_o.field_db = dupTemp$6;
-          dn.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton"), 112);
-          dn.field_a.field_C = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
-          iu[] dupTemp$7 = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton_active"), 118);
-          dn.field_a.field_n = dupTemp$7;
-          dn.field_a.field_db = dupTemp$7;
-          var17 = uka.a(param4, "lobby", 5, "checkbox");
-          kt.field_F = new ta(0L, var17[1], var17[0], 1, dja.field_p, (String) null);
-          lr.field_b = new jea(0L, (jea) null);
-          lr.field_b.field_w = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion", 115));
-          lr.field_b.field_C = wpa.a((byte) -60, nia.a(param4, "lobby", "slideregion_mouseover", 75));
-          lr.field_b.field_db = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion_mouseheld", 123));
-          lr.field_b.field_M = wpa.a((byte) -87, nia.a(param4, "lobby", "slideregion_disabled", 106));
-          ie.field_h = new jea(0L, (jea) null);
-          ie.field_h.field_w = rfa.a(uka.a(param4, "lobby", 5, "dragbar"), 122);
-          ie.field_h.field_C = rfa.a(uka.a(param4, "lobby", 5, "dragbar_mouseover"), 121);
-          ie.field_h.field_db = rfa.a(uka.a(param4, "lobby", 5, "dragbar_mouseheld"), 113);
-          ie.field_h.field_M = rfa.a(uka.a(param4, "lobby", 5, "dragbar_disabled"), 116);
-          pk.field_s = new jea(0L, (jea) null);
-          pk.field_s.field_R = nia.a(param4, "lobby", "upbutton", -121);
-          pk.field_s.field_rb = nia.a(param4, "lobby", "upbutton_mouseover", -87);
-          pk.field_s.field_U = nia.a(param4, "lobby", "upbutton_mouseheld", 71);
-          pk.field_s.field_B = nia.a(param4, "lobby", "upbutton_disabled", 71);
-          jqa.field_b = new jea(0L, (jea) null);
-          jqa.field_b.field_R = nia.a(param4, "lobby", "downbutton", 119);
-          jqa.field_b.field_rb = nia.a(param4, "lobby", "downbutton_mouseover", -73);
-          jqa.field_b.field_U = nia.a(param4, "lobby", "downbutton_mouseheld", 56);
-          jqa.field_b.field_B = nia.a(param4, "lobby", "downbutton_disabled", 113);
-          fe.field_F = new oj(0L, pk.field_s, jqa.field_b, lr.field_b, ie.field_h);
-          aaa.field_d = new hla(0L, (jea) null, rfa.field_C, fe.field_F, jk.field_g, (String) null, (String) null);
-          return;
         }
     }
 
@@ -775,56 +701,42 @@ abstract class qr extends ae implements tpa {
     }
 
     ae b(boolean param0) {
-        ae var2 = null;
-        L0: {
-          var2 = ((qr) this).field_x;
-          if (var2 == null) {
-            break L0;
-          } else {
-            if (!var2.b((byte) -34)) {
-              break L0;
-            } else {
-              return var2;
+        ae var2 = ((qr) this).field_x;
+        if (var2 != null) {
+            if (var2.b((byte) -34)) {
+                return var2;
             }
-          }
         }
         if (!param0) {
-          return null;
-        } else {
-          field_v = null;
-          return null;
+            return null;
         }
+        field_v = null;
+        return null;
     }
 
     String d(byte param0) {
         String var3_ref_String = null;
-        int var3 = 0;
         String var2 = super.d((byte) 112);
         if (!(((qr) this).field_x == null)) {
             var3_ref_String = ((qr) this).field_x.d((byte) 51);
-            if (var3_ref_String == null) {
-                var3 = -32 / ((param0 - -58) / 60);
-                return var2;
+            if (var3_ref_String != null) {
+                return var3_ref_String;
             }
-            return var3_ref_String;
         }
-        var3 = -32 / ((param0 - -58) / 60);
+        int var3 = -32 / ((param0 - -58) / 60);
         return var2;
     }
 
-    final static void d(int param0) {
-        if (param0 != -7694) {
-            field_w = null;
-        }
+    final static void d() {
         rma.a(true, faa.field_g, osa.field_p, (byte) 119);
         bga.field_d = true;
     }
 
-    final static boolean a(int param0) {
-        return true;
+    final static boolean a() {
+        return vka.A(108) && (8 & pk.field_C) == 0;
     }
 
-    private final boolean a(ae param0, int param1) {
+    private final boolean a(ae param0) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -997,17 +909,21 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    final static boolean d(int param0, int param1, int param2) {
-        if (param2 != 32) {
-            field_v = null;
-        }
-        return 0 != (param0 & 32) ? true : false;
+    final static boolean d(int param0, int param1) {
+        return 0 != (param0 & 32);
     }
 
     final void a(Hashtable param0, int param1, StringBuilder param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -1015,14 +931,15 @@ abstract class qr extends ae implements tpa {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
@@ -1031,60 +948,66 @@ abstract class qr extends ae implements tpa {
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
         String stackOut_12_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            StringBuilder discarded$14 = param2.append(10);
+            StringBuilder discarded$15 = param2.append(10);
             var5_int = param3;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (param1 < var5_int) {
-                    if (((qr) this).field_x == null) {
-                      break L3;
-                    } else {
-                      StringBuilder discarded$15 = ((qr) this).field_x.a(param1 - -1, param0, param2, 0);
-                      if (var6 == 0) {
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
+              if (param1 < var5_int) {
+                L2: {
+                  if (((qr) this).field_x == null) {
+                    StringBuilder discarded$16 = param2.append("null");
+                    break L2;
                   } else {
-                    StringBuilder discarded$16 = param2.append(32);
-                    var5_int++;
-                    if (var6 != 0) {
-                      break L3;
-                    } else {
-                      continue L1;
-                    }
+                    StringBuilder discarded$17 = ((qr) this).field_x.a(param1 - -1, param0, param2, 0);
+                    break L2;
                   }
                 }
-                StringBuilder discarded$17 = param2.append("null");
-                break L2;
+                break L0;
+              } else {
+                StringBuilder discarded$18 = param2.append(32);
+                var5_int++;
+                continue L1;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("qr.J(");
+            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_1 = new StringBuilder().append("qr.J(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
-            if (param0 == null) {
+            if (param2 == null) {
               stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
               stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
               stackOut_13_2 = "null";
@@ -1102,32 +1025,7 @@ abstract class qr extends ae implements tpa {
               break L4;
             }
           }
-          L5: {
-            stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
-            if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L5;
-            } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L5;
-            }
-          }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 41);
         }
     }
 
@@ -1264,7 +1162,7 @@ abstract class qr extends ae implements tpa {
               if (param3) {
                 break L2;
               } else {
-                boolean discarded$2 = ((qr) this).b((byte) -68);
+                boolean discarded$7 = ((qr) this).b((byte) -68);
                 break L2;
               }
             }
@@ -1272,11 +1170,13 @@ abstract class qr extends ae implements tpa {
             if (var5_int == 80) {
               L3: {
                 if (!oj.field_tb[81]) {
-                  stackOut_12_0 = this.a(param1, 71);
+                  int discarded$8 = 71;
+                  stackOut_12_0 = this.a(param1);
                   stackIn_13_0 = stackOut_12_0;
                   break L3;
                 } else {
-                  stackOut_11_0 = this.b(param1, 3815994);
+                  int discarded$9 = 3815994;
+                  stackOut_11_0 = this.b(param1);
                   stackIn_13_0 = stackOut_11_0;
                   break L3;
                 }

@@ -9,7 +9,7 @@ final class qh {
     static String[] field_d;
     static int field_b;
 
-    final static void a(byte param0, int param1, ua param2, boolean param3) {
+    final static void a(byte param0, int param1, ua param2) {
         if (param0 > -50) {
             return;
         }

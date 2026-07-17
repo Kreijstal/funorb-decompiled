@@ -60,7 +60,8 @@ abstract class eg extends na implements nf {
             L2: {
               if (((eg) this).a(param0, param2, 105, param1)) {
                 ((eg) this).a(param3 ^ 372494831, param1, param0, param2);
-                this.b(param2, param1, param0, 0);
+                int discarded$2 = 0;
+                this.b(param2, param1, param0);
                 break L2;
               } else {
                 break L2;
@@ -231,7 +232,7 @@ abstract class eg extends na implements nf {
         super(param0, param1, param2, param3, param4, (dn) null);
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_K = null;
         field_N = null;
         field_O = null;
@@ -278,7 +279,7 @@ abstract class eg extends na implements nf {
         }
     }
 
-    private final void b(int param0, StringBuilder param1, Hashtable param2, int param3) {
+    private final void b(int param0, StringBuilder param1, Hashtable param2) {
         RuntimeException var5 = null;
         int var6 = 0;
         na var7 = null;
@@ -644,7 +645,7 @@ abstract class eg extends na implements nf {
               var4_int = 0;
               L1: while (true) {
                 if (var4_int >= ((eg) this).field_I.length) {
-                  var4_int = 59 / ((param0 - -32) / 38);
+                  var4_int = -29;
                   stackOut_18_0 = 0;
                   stackIn_19_0 = stackOut_18_0;
                   break L0;
@@ -694,7 +695,7 @@ abstract class eg extends na implements nf {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var4;
-            stackOut_20_1 = new StringBuilder().append("eg.G(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("eg.G(").append(-115).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -724,71 +725,61 @@ abstract class eg extends na implements nf {
 
     private final boolean a(int param0, na param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
-        boolean stackIn_3_0 = false;
+        boolean stackIn_1_0 = false;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
+        boolean stackOut_0_0 = false;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 1) {
-                break L1;
-              } else {
-                var4 = null;
-                boolean discarded$2 = ((eg) this).a((na) null, -49);
-                break L1;
-              }
-            }
-            stackOut_2_0 = this.a(true, 1, param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = this.a(true, 1, param1);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("eg.K(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("eg.K(").append(1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     final boolean a(int param0, na param1, int param2, int param3, int param4, int param5, int param6) {
@@ -908,122 +899,114 @@ abstract class eg extends na implements nf {
         na var5 = null;
         na var6 = null;
         int var7 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_21_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_16_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_14_0 = 0;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var7 = TetraLink.field_J;
         try {
           L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                field_N = null;
-                break L1;
-              }
-            }
             if (null == ((eg) this).field_I) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0 != 0;
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             } else {
               var4_int = -1 + ((eg) this).field_I.length;
-              L2: while (true) {
+              L1: while (true) {
                 if (0 > var4_int) {
-                  stackOut_20_0 = 0;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackOut_18_0 = 0;
+                  stackIn_19_0 = stackOut_18_0;
                   break L0;
                 } else {
-                  L3: {
+                  L2: {
                     var5 = ((eg) this).field_I[var4_int];
                     if (var5 == null) {
-                      break L3;
+                      break L2;
                     } else {
                       if (!var5.c(3)) {
-                        break L3;
+                        break L2;
                       } else {
-                        var4_int = var4_int - param1;
-                        L4: while (true) {
+                        var4_int = var4_int - 1;
+                        L3: while (true) {
                           if (var4_int < 0) {
-                            break L3;
+                            break L2;
                           } else {
-                            L5: {
+                            L4: {
                               var6 = ((eg) this).field_I[var4_int];
                               if (var6 != null) {
                                 if (!var6.a(param2, -384169950)) {
-                                  break L5;
+                                  break L4;
                                 } else {
-                                  stackOut_16_0 = 1;
-                                  stackIn_17_0 = stackOut_16_0;
-                                  return stackIn_17_0 != 0;
+                                  stackOut_14_0 = 1;
+                                  stackIn_15_0 = stackOut_14_0;
+                                  return stackIn_15_0 != 0;
                                 }
                               } else {
-                                break L5;
+                                break L4;
                               }
                             }
-                            var4_int = var4_int - param1;
-                            continue L4;
+                            var4_int = var4_int - 1;
+                            continue L3;
                           }
                         }
                       }
                     }
                   }
                   var4_int--;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var4;
-            stackOut_22_1 = new StringBuilder().append("eg.I(").append(param0).append(44).append(param1).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_20_0 = (RuntimeException) var4;
+            stackOut_20_1 = new StringBuilder().append("eg.I(").append(1).append(44).append(1).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L6;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L5;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L6;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L5;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
-        return stackIn_21_0 != 0;
+        return stackIn_19_0 != 0;
     }
 
     void a(int param0, int param1, int param2, int param3) {
@@ -1110,7 +1093,7 @@ abstract class eg extends na implements nf {
         }
     }
 
-    private final boolean a(na param0, byte param1) {
+    private final boolean a(na param0) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -1314,7 +1297,8 @@ abstract class eg extends na implements nf {
                           stackIn_21_0 = stackOut_20_0;
                           break L2;
                         } else {
-                          stackOut_19_0 = this.a(param3, (byte) 45);
+                          int discarded$3 = 45;
+                          stackOut_19_0 = this.a(param3);
                           stackIn_21_0 = stackOut_19_0;
                           break L2;
                         }

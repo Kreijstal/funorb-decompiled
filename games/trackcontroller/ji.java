@@ -57,12 +57,17 @@ final class ji {
                     break L2;
                   }
                 }
-                fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
+                int discarded$5 = 116;
+                int discarded$6 = -103;
+                fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a());
                 break L1;
               } else {
                 if (!ic.a(false)) {
                   ll.a();
-                  hi.b(320, -122, 240);
+                  int discarded$7 = 240;
+                  int discarded$8 = -122;
+                  int discarded$9 = 320;
+                  hi.b();
                   qd.a(param2, 0, 0, 2901);
                   break L1;
                 } else {
@@ -77,7 +82,7 @@ final class ji {
                 }
               }
             }
-            var3_int = -98 / ((7 - param0) / 51);
+            var3_int = -49;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,7 +90,7 @@ final class ji {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("ji.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("ji.B(").append(-128).append(44).append(param1).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

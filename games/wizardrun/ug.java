@@ -15,51 +15,43 @@ final class ug extends pl {
     static String field_F;
     static long field_N;
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              sg.field_b = new o[6][];
-              ok.field_e = new o[6][5][];
-              bd.field_c = new o[6];
-              ok.field_e[0][0] = pe.a("", mi.field_E, "monster00", 110);
-              ok.field_e[0][1] = pe.a("", mi.field_E, "monster01", 125);
-              ok.field_e[0][2] = pe.a("", mi.field_E, "monster02", 121);
-              ok.field_e[0][4] = pe.a("", mi.field_E, "monster04", 94);
-              sg.field_b[0] = pe.a("", mi.field_E, "level1blocks", 110);
-              bd.field_c[0] = vg.a(15, "level1background", mi.field_E, "");
-              bd.field_c[1] = vg.a(15, "level2background", mi.field_E, "");
-              sg.field_b[1] = pe.a("", mi.field_E, "level2blocks", 122);
-              ok.field_e[1][0] = pe.a("", mi.field_E, "monster10", 97);
-              ok.field_e[1][1] = pe.a("", mi.field_E, "monster11", 121);
-              ok.field_e[1][2] = pe.a("", mi.field_E, "monster12", 96);
-              ok.field_e[1][3] = pe.a("", mi.field_E, "monster13", 115);
-              ok.field_e[1][4] = pe.a("", mi.field_E, "monster14", 112);
-              bd.field_c[2] = vg.a(15, "level3background", mi.field_E, "");
-              sg.field_b[2] = pe.a("", mi.field_E, "level3blocks", 102);
-              ok.field_e[2][0] = pe.a("", mi.field_E, "monster20", 89);
-              ok.field_e[2][1] = pe.a("", mi.field_E, "monster21", 124);
-              ok.field_e[2][2] = pe.a("", mi.field_E, "monster22", 118);
-              ok.field_e[2][3] = pe.a("", mi.field_E, "monster23", 97);
-              ok.field_e[2][4] = pe.a("", mi.field_E, "monster24", 119);
-              bd.field_c[3] = vg.a(15, "level4background", mi.field_E, "");
-              sg.field_b[3] = pe.a("", mi.field_E, "level4blocks", 90);
-              ok.field_e[3][0] = pe.a("", mi.field_E, "monster30", 111);
-              ok.field_e[3][1] = pe.a("", mi.field_E, "monster31", 104);
-              ok.field_e[3][2] = pe.a("", mi.field_E, "monster32", 118);
-              ok.field_e[3][4] = pe.a("", mi.field_E, "monster34", 105);
-              bd.field_c[4] = vg.a(15, "level5background", mi.field_E, "");
-              sg.field_b[4] = pe.a("", mi.field_E, "level5blocks", 92);
-              ok.field_e[4][0] = pe.a("", mi.field_E, "monster40", 125);
-              if (param0 <= -27) {
-                break L1;
-              } else {
-                ug.a(false, (byte) -19, 6, -5, (le) null);
-                break L1;
-              }
-            }
+            sg.field_b = new o[6][];
+            ok.field_e = new o[6][5][];
+            bd.field_c = new o[6];
+            ok.field_e[0][0] = pe.a("", mi.field_E, "monster00", 110);
+            ok.field_e[0][1] = pe.a("", mi.field_E, "monster01", 125);
+            ok.field_e[0][2] = pe.a("", mi.field_E, "monster02", 121);
+            ok.field_e[0][4] = pe.a("", mi.field_E, "monster04", 94);
+            sg.field_b[0] = pe.a("", mi.field_E, "level1blocks", 110);
+            bd.field_c[0] = vg.a(15, "level1background", mi.field_E, "");
+            bd.field_c[1] = vg.a(15, "level2background", mi.field_E, "");
+            sg.field_b[1] = pe.a("", mi.field_E, "level2blocks", 122);
+            ok.field_e[1][0] = pe.a("", mi.field_E, "monster10", 97);
+            ok.field_e[1][1] = pe.a("", mi.field_E, "monster11", 121);
+            ok.field_e[1][2] = pe.a("", mi.field_E, "monster12", 96);
+            ok.field_e[1][3] = pe.a("", mi.field_E, "monster13", 115);
+            ok.field_e[1][4] = pe.a("", mi.field_E, "monster14", 112);
+            bd.field_c[2] = vg.a(15, "level3background", mi.field_E, "");
+            sg.field_b[2] = pe.a("", mi.field_E, "level3blocks", 102);
+            ok.field_e[2][0] = pe.a("", mi.field_E, "monster20", 89);
+            ok.field_e[2][1] = pe.a("", mi.field_E, "monster21", 124);
+            ok.field_e[2][2] = pe.a("", mi.field_E, "monster22", 118);
+            ok.field_e[2][3] = pe.a("", mi.field_E, "monster23", 97);
+            ok.field_e[2][4] = pe.a("", mi.field_E, "monster24", 119);
+            bd.field_c[3] = vg.a(15, "level4background", mi.field_E, "");
+            sg.field_b[3] = pe.a("", mi.field_E, "level4blocks", 90);
+            ok.field_e[3][0] = pe.a("", mi.field_E, "monster30", 111);
+            ok.field_e[3][1] = pe.a("", mi.field_E, "monster31", 104);
+            ok.field_e[3][2] = pe.a("", mi.field_E, "monster32", 118);
+            ok.field_e[3][4] = pe.a("", mi.field_E, "monster34", 105);
+            bd.field_c[4] = vg.a(15, "level5background", mi.field_E, "");
+            sg.field_b[4] = pe.a("", mi.field_E, "level5blocks", 92);
+            ok.field_e[4][0] = pe.a("", mi.field_E, "monster40", 125);
             ok.field_e[4][1] = pe.a("", mi.field_E, "monster41", 91);
             ok.field_e[4][2] = pe.a("", mi.field_E, "monster42", 119);
             ok.field_e[4][3] = pe.a("", mi.field_E, "monster43", 121);
@@ -78,7 +70,7 @@ final class ug extends pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "ug.EA(" + param0 + 41);
+          throw bd.a((Throwable) (Object) var1, "ug.EA(" + -94 + 41);
         }
     }
 
@@ -233,7 +225,7 @@ final class ug extends pl {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        boolean stackIn_10_0 = false;
+        int stackIn_10_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_31_1 = 0;
@@ -248,14 +240,14 @@ final class ug extends pl {
         StringBuilder stackIn_69_1 = null;
         String stackIn_69_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_9_0 = false;
+        int stackOut_9_0 = 0;
         int stackOut_27_0 = 0;
         int stackOut_25_0 = 0;
         int stackOut_30_0 = 0;
         int stackOut_30_1 = 0;
         int stackOut_38_0 = 0;
         int stackOut_38_1 = 0;
-        byte stackOut_48_0 = 0;
+        int stackOut_48_0 = 0;
         RuntimeException stackOut_65_0 = null;
         StringBuilder stackOut_65_1 = null;
         RuntimeException stackOut_68_0 = null;
@@ -271,14 +263,16 @@ final class ug extends pl {
               var5_int = dj.a(false, 3 * (param2 + -param3));
               var6 = 3 * param3;
               var7 = -10 + var5_int;
-              vj.b(0);
+              int discarded$2 = 0;
+              vj.b();
               if (0 >= param4.field_n) {
                 break L1;
               } else {
                 if (null == param4.field_x) {
                   break L1;
                 } else {
-                  of.c(45);
+                  int discarded$3 = 45;
+                  of.c();
                   break L1;
                 }
               }
@@ -294,15 +288,15 @@ final class ug extends pl {
                     var9 = param4.field_p[var8];
                     var10 = param4.field_C[var8];
                     var11 = param4.field_I[var8];
-                    stackOut_9_0 = param0;
-                    stackIn_49_0 = stackOut_9_0 ? 1 : 0;
+                    stackOut_9_0 = 0;
+                    stackIn_49_0 = stackOut_9_0;
                     stackIn_10_0 = stackOut_9_0;
                     if (var19 != 0) {
                       break L3;
                     } else {
                       L5: {
                         L6: {
-                          if (stackIn_10_0) {
+                          if (stackIn_10_0 != 0) {
                             var12 = nl.field_A[var9];
                             var13 = d.field_c[var9];
                             var14 = -var12 + nl.field_A[var10];
@@ -429,7 +423,7 @@ final class ug extends pl {
                     }
                   }
                 }
-                stackOut_48_0 = param1;
+                stackOut_48_0 = 11;
                 stackIn_49_0 = stackOut_48_0;
                 break L3;
               }
@@ -483,7 +477,7 @@ final class ug extends pl {
           L18: {
             var5 = decompiledCaughtException;
             stackOut_65_0 = (RuntimeException) var5;
-            stackOut_65_1 = new StringBuilder().append("ug.FA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_65_1 = new StringBuilder().append("ug.FA(").append(0).append(44).append(11).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_68_0 = stackOut_65_0;
             stackIn_68_1 = stackOut_65_1;
             stackIn_66_0 = stackOut_65_0;

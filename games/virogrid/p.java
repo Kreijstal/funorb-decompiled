@@ -78,7 +78,7 @@ final class p {
         if (df.field_f >= param1 + param3 + param2) {
             return param2 + param3;
         }
-        if (!(~(-param1 + param2) > param0)) {
+        if (!(-param1 + param2 < 0)) {
             return param2 - param1;
         }
         return -param1 + df.field_f;
@@ -143,18 +143,15 @@ final class p {
         md.field_e.a(true, (byte) -126);
         md.field_e.a(4, (int[]) null, 0);
         md.field_e.a((byte) -110);
-        if (param2) {
-            return;
-        }
         try {
             var7 = md.field_e;
             var8 = param1;
             var9 = param3;
-            var10 = param4;
-            var11 = param0;
+            var10 = 0;
+            var11 = 0;
             var7.field_a.a(var11, 0, var10, var8, var9);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "p.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "p.G(" + 0 + 44 + param1 + 44 + 0 + 44 + param3 + 44 + 0 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -375,9 +372,13 @@ final class p {
     final static eh a(int param0, int param1) {
         if (param0 < 32) {
           field_e = null;
-          return va.a(1, false, param1, -105, true, false);
+          int discarded$8 = 0;
+          int discarded$9 = 1;
+          return va.a(1, false, param1, -105);
         } else {
-          return va.a(1, false, param1, -105, true, false);
+          int discarded$10 = 0;
+          int discarded$11 = 1;
+          return va.a(1, false, param1, -105);
         }
     }
 

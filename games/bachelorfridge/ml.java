@@ -4,7 +4,7 @@
 final class ml {
     static ee field_a;
 
-    final static void a(lu param0, int param1) {
+    final static void a(lu param0) {
         int var2_int = 0;
         try {
             gk.field_b = param0.e((byte) 93) << 5;
@@ -25,55 +25,24 @@ final class ml {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 26;
         field_a = null;
     }
 
     final static boolean a(int param0, char param1) {
-        if (param0 == -130697146) {
-          if (param1 < 65) {
-            if (97 <= param1) {
-              if (122 < param1) {
-                return false;
-              } else {
-                return true;
-              }
+        if (param1 < 65) {
+          if (97 <= param1) {
+            if (122 >= param1) {
+              return true;
             } else {
               return false;
             }
           } else {
-            if (90 < param1) {
-              if (97 <= param1) {
-                if (122 < param1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
+            return false;
           }
         } else {
-          field_a = null;
-          if (param1 >= 65) {
-            if (90 < param1) {
-              if (97 <= param1) {
-                if (122 < param1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (90 < param1) {
             if (97 <= param1) {
               if (122 < param1) {
                 return false;
@@ -83,6 +52,8 @@ final class ml {
             } else {
               return false;
             }
+          } else {
+            return true;
           }
         }
     }

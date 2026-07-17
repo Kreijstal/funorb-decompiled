@@ -43,7 +43,7 @@ final class au extends je {
     je field_Vb;
     je field_Ib;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_Jb = null;
         field_Kb = null;
     }

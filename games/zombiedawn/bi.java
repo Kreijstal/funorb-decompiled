@@ -1283,11 +1283,11 @@ final class bi {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        bi.a(param0, param1, param2, param4, 32);
-        bi.a(param0, param1 + param3 - 1, param2, param4, 32);
+        bi.a(param0, param1, param2, param4, param5);
+        bi.a(param0, param1 + param3 - 1, param2, param4, param5);
         if (param3 >= 3) {
-            bi.g(param0, param1 + 1, param3 - 2, param4, 32);
-            bi.g(param0 + param2 - 1, param1 + 1, param3 - 2, param4, 32);
+            bi.g(param0, param1 + 1, param3 - 2, param4, param5);
+            bi.g(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
             return;
         }
     }

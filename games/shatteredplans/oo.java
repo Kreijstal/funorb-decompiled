@@ -22,7 +22,7 @@ final class oo {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         try {
             fr.field_H = param0;
             int var2_int = 0;
@@ -36,90 +36,40 @@ final class oo {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= param3) {
           if (param0 >= param2) {
-            if (param3 < param2) {
-              fp.a(param7, param1, -116, param5, param4, param2, gf.field_h, param3, param0);
-              if (!param6) {
-                field_c = null;
-                return;
-              } else {
-                return;
-              }
-            } else {
+            if (param3 >= param2) {
               fp.a(param7, param5, -92, param1, param4, param3, gf.field_h, param2, param0);
-              if (!param6) {
-                field_c = null;
-                return;
-              } else {
-                return;
-              }
+              return;
+            } else {
+              fp.a(param7, param1, -116, param5, param4, param2, gf.field_h, param3, param0);
+              return;
             }
           } else {
             fp.a(param1, param7, -99, param5, param4, param0, gf.field_h, param3, param2);
-            if (!param6) {
-              field_c = null;
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           if (param3 >= param2) {
-            if (param0 >= param2) {
-              fp.a(param5, param7, -98, param1, param4, param0, gf.field_h, param2, param3);
-              if (param6) {
-                return;
-              } else {
-                field_c = null;
-                return;
-              }
-            } else {
+            if (param0 < param2) {
               fp.a(param5, param1, -101, param7, param4, param2, gf.field_h, param0, param3);
-              if (param6) {
-                return;
-              } else {
-                field_c = null;
-                return;
-              }
+              return;
+            } else {
+              fp.a(param5, param7, -98, param1, param4, param0, gf.field_h, param2, param3);
+              return;
             }
           } else {
             fp.a(param1, param5, -113, param7, param4, param3, gf.field_h, param0, param2);
-            if (!param6) {
-              field_c = null;
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         }
     }
 
     final static boolean a(int param0, int param1, int param2, boolean param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        var5 = param0 * param0 - -(param1 * param1);
-        if (!param3) {
-          return true;
-        } else {
-          L0: {
-            var6 = param2 * param2 - -(param4 * param4);
-            if (var6 <= var5) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        int var5 = param0 * param0 - -(param1 * param1);
+        int var6 = param2 * param2 - -(param4 * param4);
+        return var6 > var5 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_f = null;

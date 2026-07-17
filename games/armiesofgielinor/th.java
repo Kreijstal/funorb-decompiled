@@ -6,7 +6,7 @@ final class th {
     static ko[] field_b;
     static int field_a;
 
-    final static boolean a(js param0, int param1) {
+    final static boolean a(js param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -84,12 +84,12 @@ final class th {
         return stackIn_11_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = param2 - param1 & param0 >> 31;
+        int var3 = param2 - 1 & param0 >> 31;
         return var3 + ((param0 >>> 31) + param0) % param2;
     }
 

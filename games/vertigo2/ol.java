@@ -25,9 +25,10 @@ final class ol extends ji {
     static int field_A;
     private int field_F;
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
-        ri.b(param1, 30834);
-        cj.b(param1, -1, param0, param2);
+    final static void a(int param0, boolean param1) {
+        int discarded$0 = 30834;
+        ri.b(param1);
+        cj.b(param1, -1, 15, 13);
     }
 
     final static wp a(String param0, int param1) {
@@ -40,25 +41,27 @@ final class ol extends ji {
         wp stackIn_4_0 = null;
         wp stackIn_8_0 = null;
         wp stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
+        wp stackIn_16_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         wp stackOut_7_0 = null;
         wp stackOut_13_0 = null;
+        wp stackOut_15_0 = null;
         wp stackOut_3_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         try {
           L0: {
             L1: {
@@ -80,18 +83,22 @@ final class ol extends ji {
                         break L2;
                       } else {
                         var6 = null;
-                        wp discarded$2 = ol.a((String) null, -122);
+                        wp discarded$6 = ol.a((String) null, -122);
                         break L2;
                       }
                     }
                     var4 = param0.substring(var2_int - -1);
-                    var5 = qn.a(var3, 0);
+                    int discarded$7 = 0;
+                    var5 = qn.a(var3);
                     if (var5 != null) {
                       stackOut_13_0 = (wp) var5;
                       stackIn_14_0 = stackOut_13_0;
-                      break L0;
+                      return stackIn_14_0;
                     } else {
-                      return ug.a(var4, (byte) -77);
+                      int discarded$8 = -77;
+                      stackOut_15_0 = ug.a(var4);
+                      stackIn_16_0 = stackOut_15_0;
+                      break L0;
                     }
                   }
                 }
@@ -105,40 +112,41 @@ final class ol extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("ol.B(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_17_0 = (RuntimeException) var2;
+            stackOut_17_1 = new StringBuilder().append("ol.B(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
         }
-        return stackIn_14_0;
+        return stackIn_16_0;
     }
 
     final void a(int param0) {
         if (param0 >= -98) {
             field_I = -9;
         }
-        this.g(-95);
+        int discarded$0 = -95;
+        this.g();
     }
 
     public ol() {
@@ -153,7 +161,7 @@ final class ol extends ji {
         ((ol) this).field_E = 0;
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -541,17 +549,17 @@ final class ol extends ji {
         }
     }
 
-    final static be a(int param0, int param1, int param2, int param3) {
+    final static be a() {
         be var4 = new be();
-        int var5 = 59 / ((param0 - 51) / 44);
-        var4.field_o = new int[param3];
-        var4.field_r = param2;
+        int var5 = 59;
+        var4.field_o = new int[1];
+        var4.field_r = 0;
         mb.field_v.a((li) (Object) var4, false);
-        ec.a(param1, (byte) 126, var4);
+        ec.a(5, (byte) 126, var4);
         return var4;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_H = null;
         field_D = null;
         field_z = null;

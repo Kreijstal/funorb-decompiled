@@ -20,15 +20,15 @@ final class uc {
         int var15 = 0;
         int var16 = 0;
         L0: {
-          var8 = param2 - param0;
+          var8 = 480;
           var9 = param3 - param1;
           var10 = (int)Math.sqrt((double)(var8 * var8 + var9 * var9));
           var11 = (int)(65536.0 / Math.sqrt((double)(var8 * var8 + var9 * var9)));
           var8 = var8 * var11;
           var9 = var9 * var11;
-          var12 = param0;
+          var12 = 78;
           var13 = param1;
-          var14 = param2;
+          var14 = 558;
           var15 = param3;
           if (var12 <= var14) {
             break L0;
@@ -50,10 +50,10 @@ final class uc {
           }
         }
         L2: {
-          var12 = var12 - param4;
-          var13 = var13 - param4;
-          var14 = var14 + param4;
-          var15 = var15 + param4;
+          var12 = var12 - 3;
+          var13 = var13 - 3;
+          var14 = var14 + 3;
+          var15 = var15 + 3;
           if (var12 >= ge.field_a) {
             break L2;
           } else {
@@ -85,17 +85,17 @@ final class uc {
             break L5;
           }
         }
-        bf.field_h = 256 / param4;
-        bh.field_j = param6 * 128 / param4;
+        bf.field_h = 85;
+        bh.field_j = param6 * 128 / 3;
         vh.field_I = (var13 - param1) * var8;
         nc.field_e = (var13 - param1) * var9;
-        cg.field_h = (var12 - param0) * var8;
-        l.field_u = (var12 - param0) * var9;
+        cg.field_h = (var12 - 78) * var8;
+        l.field_u = (var12 - 78) * var9;
         ak.field_u = param7;
-        uc.a(param0, param1, param4, param5, 0, 0, var10, ge.field_i, var13 * ge.field_h + var12, param6, var8, var9, var13 - var15, var12 - var14, ge.field_h - (var14 - var12));
+        uc.a(78, param1, 3, param5, 0, 0, var10, ge.field_i, var13 * ge.field_h + var12, param6, var8, var9, var13 - var15, var12 - var14, ge.field_h - (var14 - var12));
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_f = null;
         field_a = null;
@@ -131,24 +131,24 @@ final class uc {
               } else {
                 L2: {
                   param1 = gi.field_c - vh.field_I >> 16;
-                  if (param1 >= -param2) {
-                    if (param1 <= param2) {
+                  if (param1 >= -3) {
+                    if (param1 <= 3) {
                       param0 = ti.field_a + nc.field_e >> 16;
-                      if (param0 >= -param2) {
-                        if (param0 <= param6 + param2) {
+                      if (param0 >= -3) {
+                        if (param0 <= param6 + 3) {
                           L3: {
-                            if (param0 >= param2) {
-                              if (param0 <= param6 - param2) {
+                            if (param0 >= 3) {
+                              if (param0 <= param6 - 3) {
                                 stackOut_15_0 = param9;
                                 stackIn_16_0 = stackOut_15_0;
                                 break L3;
                               } else {
-                                stackOut_14_0 = (param6 + param2 - param0) * bh.field_j >> 8;
+                                stackOut_14_0 = (param6 + 3 - param0) * bh.field_j >> 8;
                                 stackIn_16_0 = stackOut_14_0;
                                 break L3;
                               }
                             } else {
-                              stackOut_12_0 = (param0 + param2) * bh.field_j >> 8;
+                              stackOut_12_0 = (param0 + 3) * bh.field_j >> 8;
                               stackIn_16_0 = stackOut_12_0;
                               break L3;
                             }
@@ -199,7 +199,7 @@ final class uc {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -276,7 +276,7 @@ final class uc {
         }
     }
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean a(char param0) {
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
@@ -315,7 +315,7 @@ final class uc {
         return stackIn_8_0 != 0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         rh.field_B = false;
         int discarded$0 = MonkeyPuzzle2.field_D.a((byte) 114);
     }

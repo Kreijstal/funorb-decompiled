@@ -92,7 +92,7 @@ final class wa extends pj implements kd, ke {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_Q = null;
         field_O = null;
     }
@@ -100,7 +100,8 @@ final class wa extends pj implements kd, ke {
     private final void g(byte param0) {
         L0: {
           L1: {
-            if (na.b(-1)) {
+            int discarded$6 = -1;
+            if (na.b()) {
               break L1;
             } else {
               if (0 >= ((wa) this).field_L.field_p.length()) {
@@ -256,7 +257,8 @@ final class wa extends pj implements kd, ke {
                   if (!bl.field_r.startsWith("win")) {
                     break L2;
                   } else {
-                    if (og.a(param0, 0)) {
+                    int discarded$8 = 0;
+                    if (og.a(param0)) {
                       return;
                     } else {
                       break L2;
@@ -616,7 +618,8 @@ final class wa extends pj implements kd, ke {
             }
             L13: {
               var8 = ij.field_b;
-              var9 = dg.a(nb.a(-117), (byte) -87);
+              int discarded$3 = -87;
+              var9 = dg.a(nb.a(-117));
               if (var9 == p.field_d) {
                 var8 = rc.field_c;
                 break L13;
@@ -630,13 +633,13 @@ final class wa extends pj implements kd, ke {
               }
             }
             L14: {
-              dh dupTemp$2 = new dh(10, ((wa) this).field_m, ((wa) this).field_w - 20, 25, (vg) (Object) ((wa) this).field_L, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((wa) this).b((vg) (Object) dupTemp$2, (byte) 53);
+              dh dupTemp$4 = new dh(10, ((wa) this).field_m, ((wa) this).field_w - 20, 25, (vg) (Object) ((wa) this).field_L, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((wa) this).b((vg) (Object) dupTemp$4, (byte) 53);
               ((wa) this).field_m = ((wa) this).field_m + (((vg) (Object) var12).field_k - -5);
-              dh dupTemp$3 = new dh(10, ((wa) this).field_m, -20 + ((wa) this).field_w, 25, (vg) (Object) ((wa) this).field_M, false, 80, 3, var7, 16777215, qf.field_a);
-              var13 = dupTemp$3;
-              ((wa) this).b((vg) (Object) dupTemp$3, (byte) 77);
+              dh dupTemp$5 = new dh(10, ((wa) this).field_m, -20 + ((wa) this).field_w, 25, (vg) (Object) ((wa) this).field_M, false, 80, 3, var7, 16777215, qf.field_a);
+              var13 = dupTemp$5;
+              ((wa) this).b((vg) (Object) dupTemp$5, (byte) 77);
               ((wa) this).field_m = ((wa) this).field_m + (((vg) (Object) var13).field_k + 5);
               ((wa) this).field_S.field_u = (fd) this;
               if (((wa) this).field_K == null) {
@@ -912,7 +915,8 @@ final class wa extends pj implements kd, ke {
                         gf.d((byte) 89);
                         break L1;
                       } else {
-                        oh.a((byte) 75);
+                        int discarded$305 = 75;
+                        oh.a();
                         break L1;
                       }
                     }
@@ -981,9 +985,19 @@ final class wa extends pj implements kd, ke {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int stackIn_60_0 = 0;
+        int stackIn_62_0 = 0;
+        int stackIn_65_0 = 0;
+        int stackIn_72_0 = 0;
+        int stackIn_75_0 = 0;
+        int stackIn_79_0 = 0;
+        int stackIn_81_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_59_0 = 0;
+        int stackOut_61_0 = 0;
+        int stackOut_64_0 = 0;
+        int stackOut_71_0 = 0;
+        int stackOut_74_0 = 0;
+        int stackOut_78_0 = 0;
+        int stackOut_80_0 = 0;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -1005,7 +1019,7 @@ final class wa extends pj implements kd, ke {
                   }
                 }
                 L3: {
-                  var3 = -10 / ((param0 - -62) / 33);
+                  var3 = -5;
                   if (var2_int != -1) {
                     L4: {
                       if (rd.field_D > la.field_b) {
@@ -1127,51 +1141,107 @@ final class wa extends pj implements kd, ke {
                         }
                       }
                     }
-                    L12: {
-                      if (var5 != 0) {
-                        break L12;
+                    if (var5 != 0) {
+                      break L9;
+                    } else {
+                      if (rd.field_F >= la.field_b) {
+                        break L9;
                       } else {
-                        if (rd.field_F >= la.field_b) {
-                          break L12;
+                        if (ob.field_g <= var4) {
+                          break L9;
                         } else {
-                          if (ob.field_g <= var4) {
-                            break L12;
+                          if (ob.field_g >= var4 + sc.field_c.field_w) {
+                            break L9;
                           } else {
-                            if (ob.field_g >= var4 + sc.field_c.field_w) {
-                              break L12;
-                            } else {
-                              L13: {
-                                if (~(-sc.field_c.field_y + 269) <= ~ck.field_c) {
-                                  break L13;
-                                } else {
-                                  if (ck.field_c >= 269) {
-                                    break L13;
-                                  } else {
-                                    la.field_b = rd.field_F;
-                                    break L13;
-                                  }
-                                }
-                              }
-                              if (ck.field_c <= 586) {
+                            L12: {
+                              if (~(-sc.field_c.field_y + 269) <= ~ck.field_c) {
                                 break L12;
                               } else {
-                                if (~(sc.field_c.field_y + 586) < ~ck.field_c) {
-                                  la.field_b = rd.field_F;
+                                if (ck.field_c >= 269) {
                                   break L12;
                                 } else {
-                                  return 0;
+                                  la.field_b = rd.field_F;
+                                  break L12;
                                 }
+                              }
+                            }
+                            if (ck.field_c <= 586) {
+                              break L9;
+                            } else {
+                              if (~(sc.field_c.field_y + 586) < ~ck.field_c) {
+                                la.field_b = rd.field_F;
+                                break L9;
+                              } else {
+                                break L9;
                               }
                             }
                           }
                         }
                       }
                     }
-                    break L9;
                   }
                 }
-                stackOut_59_0 = 0;
-                stackIn_60_0 = stackOut_59_0;
+                L13: {
+                  if (!param1) {
+                    break L13;
+                  } else {
+                    L14: {
+                      lb.field_w.a(0, ua.a(ob.field_g, -13412, ck.field_c), ua.a(ih.field_R, -13412, ae.field_gb));
+                      if (!lb.field_w.c((byte) -82)) {
+                        break L14;
+                      } else {
+                        if (lb.field_w.field_f == 0) {
+                          stackOut_61_0 = 3;
+                          stackIn_62_0 = stackOut_61_0;
+                          return stackIn_62_0;
+                        } else {
+                          if (1 != lb.field_w.field_f) {
+                            break L14;
+                          } else {
+                            stackOut_64_0 = 2;
+                            stackIn_65_0 = stackOut_64_0;
+                            return stackIn_65_0;
+                          }
+                        }
+                      }
+                    }
+                    L15: while (true) {
+                      if (!th.a(83)) {
+                        break L13;
+                      } else {
+                        L16: {
+                          lb.field_w.a(0, (byte) 123);
+                          if (!lb.field_w.c((byte) -82)) {
+                            break L16;
+                          } else {
+                            if (lb.field_w.field_f == 0) {
+                              stackOut_71_0 = 3;
+                              stackIn_72_0 = stackOut_71_0;
+                              return stackIn_72_0;
+                            } else {
+                              if (lb.field_w.field_f != 1) {
+                                break L16;
+                              } else {
+                                stackOut_74_0 = 1;
+                                stackIn_75_0 = stackOut_74_0;
+                                return stackIn_75_0;
+                              }
+                            }
+                          }
+                        }
+                        if (di.field_c == 13) {
+                          stackOut_78_0 = 1;
+                          stackIn_79_0 = stackOut_78_0;
+                          return stackIn_79_0;
+                        } else {
+                          continue L15;
+                        }
+                      }
+                    }
+                  }
+                }
+                stackOut_80_0 = 0;
+                stackIn_81_0 = stackOut_80_0;
                 break L0;
               } else {
                 k.field_L = k.field_L + 1;
@@ -1183,9 +1253,9 @@ final class wa extends pj implements kd, ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "wa.E(" + param0 + 44 + 0 + 41);
+          throw ie.a((Throwable) (Object) var2, "wa.E(" + 21 + 44 + param1 + 41);
         }
-        return stackIn_60_0;
+        return stackIn_81_0;
     }
 
     final void b(byte param0, String param1) {

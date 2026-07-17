@@ -8,7 +8,7 @@ final class gkb extends rqa {
     static int field_o;
     static String field_q;
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_q = null;
     }

@@ -108,7 +108,7 @@ final class jb extends nk implements wk {
         return ((jb) this).field_W;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -127,8 +127,10 @@ final class jb extends nk implements wk {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          ug.a(param0, 0);
-          da.a(false, qd.field_g, 22676);
+          int discarded$4 = 0;
+          ug.a(param0);
+          int discarded$5 = 22676;
+          da.a(false, qd.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

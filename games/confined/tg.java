@@ -205,7 +205,7 @@ final class tg extends ga implements el {
         field_R = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         eb.a((byte) -122);
     }
 

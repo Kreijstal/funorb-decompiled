@@ -76,7 +76,7 @@ final class psa extends rqa {
         return stackIn_3_0;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var3 = 0;
@@ -111,7 +111,7 @@ final class psa extends rqa {
               mpb.field_h = new int[65536];
               var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
               var3 = 0;
-              var4 = -119 % ((-10 - param0) / 52);
+              var4 = -1;
               var5 = 0;
               L1: while (true) {
                 if (var5 >= 512) {
@@ -202,11 +202,11 @@ final class psa extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "psa.C(" + param0 + 41);
+          throw rta.a((Throwable) (Object) var1, "psa.C(" + 127 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

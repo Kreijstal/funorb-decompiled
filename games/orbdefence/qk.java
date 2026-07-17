@@ -6,9 +6,10 @@ final class qk {
     static String field_b;
     static String field_c;
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         try {
-            pc.a(param0, true);
+            int discarded$0 = 1;
+            pc.a(param0);
             int var2_int = 0;
             vd.a(false, -536866817, ki.field_d);
         } catch (RuntimeException runtimeException) {
@@ -16,14 +17,15 @@ final class qk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
-    final static ki a(int param0, int param1) {
-        return al.a(true, 5200, param0, 1, false, false);
+    final static ki a(int param0) {
+        int discarded$0 = 0;
+        return al.a(true, 5200, param0, 1, false);
     }
 
     static {

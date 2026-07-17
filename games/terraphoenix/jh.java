@@ -13,7 +13,7 @@ final class jh extends uf {
     static String field_k;
     static String field_h;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_o = null;
         field_h = null;
         field_l = null;
@@ -34,7 +34,7 @@ final class jh extends uf {
         ok.field_h = true;
     }
 
-    final static void b(int param0, int param1) {
+    final static void b() {
         RuntimeException var2 = null;
         int var3 = 0;
         vi var4 = null;
@@ -46,26 +46,18 @@ final class jh extends uf {
             var4 = (vi) (Object) pd.field_g.d(9272);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  if (param1 == -31890) {
-                    break L2;
-                  } else {
-                    field_l = null;
-                    break L2;
-                  }
-                }
                 var5 = (me) (Object) ga.field_r.d(9272);
-                L3: while (true) {
+                L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    rj.a(param0, -119, var5);
+                    rj.a(5, -119, var5);
                     var5 = (me) (Object) ga.field_r.e((byte) -119);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                qd.a(param0, param1 ^ 24621, var4);
+                qd.a(5, -7357, var4);
                 var4 = (vi) (Object) pd.field_g.e((byte) -119);
                 continue L1;
               }
@@ -74,7 +66,7 @@ final class jh extends uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var2, "jh.B(" + param0 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) var2, "jh.B(" + 5 + 44 + -31890 + 41);
         }
     }
 

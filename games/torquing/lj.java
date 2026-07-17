@@ -9,7 +9,7 @@ final class lj implements Iterable {
     ta field_a;
     static int field_d;
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
         int var1 = 23;
@@ -43,7 +43,7 @@ final class lj implements Iterable {
         }
     }
 
-    final static String a(byte[] param0, boolean param1) {
+    final static String a(byte[] param0) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

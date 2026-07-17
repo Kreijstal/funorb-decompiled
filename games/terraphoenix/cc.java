@@ -8,7 +8,7 @@ final class cc extends uf {
     int field_k;
     static String field_j;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_l = null;
         field_i = null;
         field_j = null;

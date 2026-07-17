@@ -77,11 +77,8 @@ final class ek implements Iterable {
         }
     }
 
-    final static boolean a(int param0) {
-        if (param0 >= -44) {
-            return true;
-        }
-        return !qa.field_a.b(false) ? true : false;
+    final static boolean a() {
+        return !qa.field_a.b(false);
     }
 
     private ek() throws Throwable {

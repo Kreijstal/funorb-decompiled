@@ -8,7 +8,7 @@ class qe extends oh {
     static fg field_k;
     static bi field_j;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
         field_j = null;
         field_k = null;
@@ -18,58 +18,54 @@ class qe extends oh {
     }
 
     final static boolean a(byte param0, int param1) {
-        int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (param0 == -65) {
-          if (param1 >= 0) {
-            if (param1 >= 1582) {
-              if (0 == param1 % 4) {
-                if (param1 % 100 == 0) {
-                  if (0 == param1 % 400) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
+        int stackIn_4_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param1 >= 0) {
+          if (param1 >= 1582) {
+            if (0 == param1 % 4) {
+              if (param1 % 100 == 0) {
+                if (0 == param1 % 400) {
                   return true;
+                } else {
+                  return false;
                 }
               } else {
-                return false;
+                return true;
               }
             } else {
-              L0: {
-                if (0 != param1 % 4) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  break L0;
-                } else {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
-                  break L0;
-                }
-              }
-              return stackIn_11_0 != 0;
+              return false;
             }
           } else {
-            L1: {
-              if ((1 + param1) % 4 != 0) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                break L1;
+            L0: {
+              if (0 != param1 % 4) {
+                stackOut_8_0 = 0;
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
+                stackOut_7_0 = 1;
+                stackIn_9_0 = stackOut_7_0;
+                break L0;
               }
             }
-            return stackIn_6_0 != 0;
+            return stackIn_9_0 != 0;
           }
         } else {
-          return true;
+          L1: {
+            if ((1 + param1) % 4 != 0) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
         }
     }
 

@@ -10,12 +10,12 @@ final class qi extends hf {
     static int[] field_i;
     int field_j;
 
-    public static void c(int param0) {
+    public static void c() {
         field_h = null;
         field_i = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         int var1 = 0;
         return gb.field_b.b((byte) 126);
     }
@@ -57,7 +57,7 @@ final class qi extends hf {
         ((qi) this).field_f = false;
     }
 
-    final static String a(String param0, java.applet.Applet param1, int param2) {
+    final static String a(String param0, java.applet.Applet param1) {
         try {
             int var3_int = 0;
             RuntimeException var3 = null;
@@ -209,9 +209,6 @@ final class qi extends hf {
     }
 
     final static int b(int param0, int param1) {
-        if (param1 != 1) {
-            return 99;
-        }
         return sc.a((byte) -75, gk.field_d, param0);
     }
 

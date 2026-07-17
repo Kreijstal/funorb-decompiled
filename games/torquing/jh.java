@@ -349,10 +349,6 @@ abstract class jh extends gm implements cj {
         if (!(((jh) this).field_C == null)) {
             ((jh) this).field_C.a(param0, (byte) -107, ((jh) this).field_k + param2, param3 + ((jh) this).field_w);
         }
-        if (param1 > -7) {
-            Object var6 = null;
-            boolean discarded$0 = this.a(-5, (gm) null);
-        }
     }
 
     final int d(byte param0) {
@@ -408,7 +404,7 @@ abstract class jh extends gm implements cj {
           L0: {
             L1: {
               L2: {
-                var3_int = -115 % ((41 - param0) / 37);
+                var3_int = -1;
                 if (((jh) this).field_C == null) {
                   break L2;
                 } else {
@@ -436,7 +432,7 @@ abstract class jh extends gm implements cj {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("jh.C(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("jh.C(").append(119).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -495,26 +491,22 @@ abstract class jh extends gm implements cj {
         String stackOut_6_2 = null;
         try {
           L0: {
-            if (param3 > 109) {
-              L1: {
-                if (((jh) this).field_C == null) {
-                  break L1;
-                } else {
-                  ((jh) this).field_C.a(((jh) this).field_k + param0, param1 - -((jh) this).field_w, param2, (byte) 119, param4, param5);
-                  break L1;
-                }
+            L1: {
+              if (((jh) this).field_C == null) {
+                break L1;
+              } else {
+                ((jh) this).field_C.a(((jh) this).field_k + param0, param1 - -((jh) this).field_w, param2, (byte) 119, param4, param5);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) runtimeException;
-            stackOut_5_1 = new StringBuilder().append("jh.N(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_5_1 = new StringBuilder().append("jh.N(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(124).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -861,7 +853,7 @@ abstract class jh extends gm implements cj {
           L0: {
             L1: {
               L2: {
-                var3_int = -1 / ((-15 - param0) / 54);
+                var3_int = -1;
                 if (null == ((jh) this).field_C) {
                   break L2;
                 } else {
@@ -889,7 +881,7 @@ abstract class jh extends gm implements cj {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("jh.A(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("jh.A(").append(-69).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

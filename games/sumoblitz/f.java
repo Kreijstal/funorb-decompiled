@@ -14,6 +14,11 @@ final class f extends us {
     public static void d(boolean param0) {
         field_s = null;
         field_r = null;
+        if (param0) {
+            boolean discarded$0 = f.d((byte) 31);
+            field_t = null;
+            return;
+        }
         field_t = null;
     }
 
@@ -136,7 +141,8 @@ final class f extends us {
 
     final static boolean d(byte param0) {
         if (param0 != 63) {
-            String discarded$0 = f.e(false);
+            int discarded$0 = 0;
+            String discarded$1 = f.e();
             return wt.field_i.b((byte) 126);
         }
         return wt.field_i.b((byte) 126);
@@ -245,7 +251,7 @@ final class f extends us {
         }
     }
 
-    final static String e(boolean param0) {
+    final static String e() {
         return rb.field_c;
     }
 

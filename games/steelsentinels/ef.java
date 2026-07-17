@@ -7,21 +7,18 @@ final class ef {
     static int field_c;
     static boolean field_b;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_d = null;
     }
 
     final static void a(int param0, int param1) {
-        if (param0 != 1) {
-            ef.a((byte) -118);
-        }
         ll.field_q = param1;
         if (null != q.field_f) {
             q.field_f.a(param1, 1000000);
         }
         if (!(ja.field_g == null)) {
-            ja.field_g.a(param1, param0 + -2);
+            ja.field_g.a(param1, -1);
         }
     }
 
@@ -76,73 +73,65 @@ final class ef {
             var5 = 0;
             L1: while (true) {
               if (var5 >= var4) {
-                L2: {
-                  if (param1 == 12258) {
-                    break L2;
-                  } else {
-                    ef.a(-71);
-                    break L2;
-                  }
-                }
                 var3_int++;
                 stackOut_22_0 = var3_int;
                 stackIn_23_0 = stackOut_22_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   if (param2[var5] == 0) {
                     var3_int++;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (param2[var5] != 1) {
                     break L3;
                   } else {
+                    var3_int += 2;
                     break L3;
                   }
                 }
                 L4: {
-                  if (param2[var5] != 1) {
+                  if (2 != param2[var5]) {
                     break L4;
                   } else {
-                    var3_int += 2;
+                    var3_int += 3;
                     break L4;
                   }
                 }
                 L5: {
-                  if (2 != param2[var5]) {
+                  if (param2[var5] != 3) {
                     break L5;
                   } else {
-                    var3_int += 3;
+                    var3_int += 4;
                     break L5;
                   }
                 }
                 L6: {
-                  if (param2[var5] != 3) {
+                  if (param2[var5] == 4) {
+                    var3_int += 5;
                     break L6;
                   } else {
-                    var3_int += 4;
                     break L6;
                   }
                 }
                 L7: {
-                  if (param2[var5] == 4) {
-                    var3_int += 5;
+                  if (20 != param2[var5]) {
                     break L7;
                   } else {
+                    var3_int += 10;
                     break L7;
                   }
                 }
                 L8: {
-                  if (20 != param2[var5]) {
-                    break L8;
-                  } else {
-                    var3_int += 10;
-                    break L8;
-                  }
-                }
-                L9: {
                   if (param2[var5] != 34) {
-                    break L9;
+                    break L8;
                   } else {
                     var3_int += 25;
-                    break L9;
+                    break L8;
                   }
                 }
                 var5++;
@@ -152,7 +141,7 @@ final class ef {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
             stackOut_24_1 = new StringBuilder().append("ef.D(");
@@ -167,7 +156,7 @@ final class ef {
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L10;
+              break L9;
             } else {
               stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
               stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
@@ -175,12 +164,12 @@ final class ef {
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
               stackIn_27_2 = stackOut_25_2;
-              break L10;
+              break L9;
             }
           }
-          L11: {
+          L10: {
             stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(param1).append(44);
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(12258).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -192,7 +181,7 @@ final class ef {
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
-              break L11;
+              break L10;
             } else {
               stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
               stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
@@ -200,7 +189,7 @@ final class ef {
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
               stackIn_30_2 = stackOut_28_2;
-              break L11;
+              break L10;
             }
           }
           throw ci.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
@@ -334,7 +323,7 @@ final class ef {
             }
             L2: {
               vb.a((byte) stackIn_4_0, stackIn_4_1);
-              fg.field_Tb.a(-2 + (ql.field_ec.field_Lb + -40), 0, ql.field_ec.field_zb, param0 ^ 3, 0);
+              fg.field_Tb.a(-2 + (ql.field_ec.field_Lb + -40), 0, ql.field_ec.field_zb, 2, 0);
               uj.field_e.a(0, 0, db.field_b, 0, m.field_i.field_zb);
               stackOut_4_0 = gl.field_u;
               stackOut_4_1 = 0;
@@ -429,7 +418,7 @@ final class ef {
                 break L6;
               }
             }
-            bj.field_d.a(param0 + -1, 5, var4, 5, -10 + qa.field_L.field_zb);
+            bj.field_d.a(0, 5, var4, 5, -10 + qa.field_L.field_zb);
             var5 = 2 + (5 + var4);
             var6 = 0;
             L7: while (true) {
@@ -437,10 +426,11 @@ final class ef {
                 fb.field_r.a(0, 10, -134 + (pb.field_j - 10), pb.field_c - 360 >> 1, 360);
                 tf.field_a.a(0, 0, 24, 0, fb.field_r.field_zb);
                 nd.field_a.a(0, 24, fb.field_r.field_Lb - 24, 0, fb.field_r.field_zb);
-                nd.field_a.field_I = se.a(3, param0, 11579568, nd.field_a.field_Lb, 8421504, 13574);
+                nd.field_a.field_I = se.a(3, 1, 11579568, nd.field_a.field_Lb, 8421504, 13574);
                 fl.field_c.a(0, 5, -26 + (-10 + nd.field_a.field_Lb), 5, -10 + nd.field_a.field_zb);
                 ta.field_i.a(0, -29 + nd.field_a.field_Lb, 24, (-80 + nd.field_a.field_zb) / 2, 80);
-                ql.b(true);
+                int discarded$1 = 1;
+                ql.b();
                 break L0;
               } else {
                 L8: {
@@ -627,7 +617,7 @@ final class ef {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2, "ef.E(" + param0 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) var2, "ef.E(" + 1 + 44 + param1 + 41);
         }
     }
 
@@ -656,13 +646,10 @@ final class ef {
         if (param1 % 100 != 0) {
             return true;
         }
-        if (!(param1 % 400 == 0)) {
-            return false;
-        }
-        if (param0 != -15020) {
+        if (param1 % 400 == 0) {
             return true;
         }
-        return true;
+        return false;
     }
 
     static {

@@ -155,7 +155,7 @@ abstract class ip {
 
     abstract int b(int param0, int param1);
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;

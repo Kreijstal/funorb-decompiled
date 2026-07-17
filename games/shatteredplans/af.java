@@ -9,7 +9,7 @@ final class af extends java.awt.Canvas {
     static String field_d;
     static String field_c;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -86,9 +86,11 @@ final class af extends java.awt.Canvas {
         return stackIn_8_0 != 0;
     }
 
-    final static void b(int param0) {
-        qh.g(83);
-        ak.i(-751);
+    final static void b() {
+        int discarded$0 = 83;
+        qh.g();
+        int discarded$1 = -751;
+        ak.i();
     }
 
     public static void a(int param0) {
@@ -106,7 +108,7 @@ final class af extends java.awt.Canvas {
         }
     }
 
-    final static boolean b(String param0, int param1) {
+    final static boolean b(String param0) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

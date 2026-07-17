@@ -7,7 +7,7 @@ final class qa extends q {
     static String[] field_m;
     static int field_l;
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_j = null;
         field_k = null;

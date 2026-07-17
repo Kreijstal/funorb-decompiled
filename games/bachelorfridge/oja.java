@@ -10,7 +10,7 @@ final class oja {
     static kv[] field_f;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_b = null;
@@ -20,7 +20,7 @@ final class oja {
     }
 
     final static String a(byte param0, char param1) {
-        int var2 = 31 % ((-50 - param0) / 44);
+        int var2 = 0;
         return String.valueOf(param1);
     }
 

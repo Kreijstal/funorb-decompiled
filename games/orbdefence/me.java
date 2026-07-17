@@ -376,7 +376,7 @@ final class me extends ca {
         }
     }
 
-    final static int b(byte param0) {
+    final static int b() {
         return lc.field_q - ha.field_o;
     }
 
@@ -388,7 +388,7 @@ final class me extends ca {
         sj.field_u = null;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_i = null;
         field_f = null;
         field_g = null;

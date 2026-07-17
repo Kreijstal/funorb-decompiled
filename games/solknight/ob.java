@@ -13,13 +13,13 @@ final class ob extends gg {
         try {
             param1.removeKeyListener((java.awt.event.KeyListener) (Object) i.field_J);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) i.field_J);
-            fg.field_b = param0;
+            fg.field_b = -1;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ob.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ob.B(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_m = null;
     }
 

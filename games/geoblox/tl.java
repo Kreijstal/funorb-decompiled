@@ -16,7 +16,7 @@ final class tl extends hf {
     int field_i;
     int field_j;
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

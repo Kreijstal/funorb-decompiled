@@ -40,11 +40,12 @@ final class gg extends dr {
                 break L1;
               } else {
                 var4 = null;
-                nd discarded$2 = ((gg) this).a(-98, (nd[]) null);
+                nd discarded$4 = ((gg) this).a(-98, (nd[]) null);
                 break L1;
               }
             }
-            stackOut_2_0 = new nd((Object) (Object) rk.c(-29288));
+            int discarded$5 = -29288;
+            stackOut_2_0 = new nd((Object) (Object) rk.c());
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -57,7 +57,8 @@ final class ila {
             ((ila) this).g(0);
             break L0;
           } else {
-            this.b(false);
+            int discarded$2 = 0;
+            this.b();
             break L0;
           }
         }
@@ -193,7 +194,7 @@ final class ila {
               break L12;
             } else {
               rk.b(108, param1, aaa.a(false) >> 1, koa.b(0) >> 1);
-              String discarded$1 = fa.a((byte) -127);
+              String discarded$3 = fa.a((byte) -127);
               break L12;
             }
           }
@@ -292,11 +293,12 @@ final class ila {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         if (!(!((ila) this).field_c)) {
             return;
         }
-        aka.j(28191);
+        int discarded$0 = 28191;
+        aka.j();
         int var2 = 4;
         int var3 = 16;
         av.a(koa.b(0) >> 1, 20, var2, -5327, "", var2, var3, var3, aaa.a(false) >> 1);
@@ -470,7 +472,8 @@ final class ila {
                                 uca.field_d = -1;
                                 break L7;
                               } else {
-                                dea.a(60);
+                                int discarded$12 = 60;
+                                dea.a();
                                 uc.field_L = false;
                                 stackOut_30_0 = var6_int;
                                 stackIn_31_0 = stackOut_30_0;
@@ -493,7 +496,8 @@ final class ila {
                     if (eo.field_w != km.field_p) {
                       break L9;
                     } else {
-                      if (!cla.g(0)) {
+                      int discarded$13 = 0;
+                      if (!cla.g()) {
                         break L9;
                       } else {
                         L10: {
@@ -505,7 +509,8 @@ final class ila {
                           var6_ref = vc.field_q.c(param2 + -28740);
                           var7 = vc.field_q.h(255);
                           if ((var7 & 1) != 0) {
-                            rra.a(84);
+                            int discarded$14 = 84;
+                            rra.a();
                             break L10;
                           } else {
                             break L10;
@@ -575,9 +580,9 @@ final class ila {
                           if (!q.field_r) {
                             break L16;
                           } else {
-                            int discarded$5 = vc.field_q.h(255);
-                            int discarded$6 = vc.field_q.h(255);
-                            int discarded$7 = vc.field_q.e(-104);
+                            int discarded$15 = vc.field_q.h(255);
+                            int discarded$16 = vc.field_q.h(255);
+                            int discarded$17 = vc.field_q.e(-104);
                             kl.field_k = vc.field_q.d(121);
                             np.field_J = new byte[kl.field_k];
                             var8 = 0;
@@ -613,7 +618,8 @@ final class ila {
                         L19: {
                           uc.field_L = false;
                           if (var6_ref != null) {
-                            mp.a(var6_ref, di.a(41), -21407);
+                            int discarded$18 = -21407;
+                            mp.a(var6_ref, di.a(41));
                             break L19;
                           } else {
                             break L19;
@@ -627,7 +633,7 @@ final class ila {
                               if (!ai.field_a) {
                                 try {
                                   L22: {
-                                    Object discarded$8 = lb.b(di.a(26), 2864, "unzap");
+                                    Object discarded$19 = lb.b(di.a(26), 2864, "unzap");
                                     break L22;
                                   }
                                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -645,7 +651,7 @@ final class ila {
                           }
                           try {
                             L24: {
-                              Object discarded$9 = lb.a(param2 ^ -114, "zap", di.a(param2 + 43), new Object[1]);
+                              Object discarded$20 = lb.a(param2 ^ -114, "zap", di.a(param2 + 43), new Object[1]);
                               break L24;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -684,11 +690,13 @@ final class ila {
                   }
                   L28: {
                     if (bi.field_a == km.field_p) {
-                      if (!cla.g(0)) {
+                      int discarded$21 = 0;
+                      if (!cla.g()) {
                         break L28;
                       } else {
                         L29: {
-                          dea.a(60);
+                          int discarded$22 = 60;
+                          dea.a();
                           if (oka.field_z != 7) {
                             break L29;
                           } else {
@@ -724,7 +732,8 @@ final class ila {
                     if (null == oba.field_e) {
                       if (uc.field_L) {
                         L32: {
-                          if (rf.b((byte) -121) > 30000L) {
+                          int discarded$23 = -121;
+                          if (rf.b() > 30000L) {
                             io.field_b = hb.field_u;
                             break L32;
                           } else {
@@ -871,7 +880,7 @@ final class ila {
         L0: {
           var7 = TombRacer.field_G ? 1 : 0;
           var8 = vc.field_q;
-          var3 = var8.h(param0 + 19042);
+          var3 = var8.h(255);
           gja.field_x = 127 & var3;
           if ((128 & var3) == 0) {
             stackOut_2_0 = 0;
@@ -886,7 +895,7 @@ final class ila {
         L1: {
           sb.field_b = stackIn_3_0 != 0;
           jda.field_m = var8.h(255);
-          cca.field_z = var8.b(param0 ^ -290628099);
+          cca.field_z = var8.b(290646880);
           if (gja.field_x == 2) {
             gb.field_a = var8.d(127);
             ega.field_b = var8.a(-32768);
@@ -898,7 +907,7 @@ final class ila {
           }
         }
         L2: {
-          if (var8.h(param0 + 19042) != 1) {
+          if (var8.h(255) != 1) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -939,7 +948,9 @@ final class ila {
         }
         L6: {
           if (!param1) {
-            hi.field_p = dl.a((uia) (Object) var8, 80, -117);
+            int discarded$2 = -117;
+            int discarded$3 = 80;
+            hi.field_p = dl.a((uia) (Object) var8);
             qra.field_e = null;
             break L6;
           } else {
@@ -975,14 +986,6 @@ final class ila {
             break L6;
           }
         }
-        L10: {
-          if (param0 == -18787) {
-            break L10;
-          } else {
-            ila.a(true);
-            break L10;
-          }
-        }
         return new gqa(param1);
     }
 
@@ -996,13 +999,14 @@ final class ila {
 
     final void a(int param0) {
         ((ila) this).g(0);
-        this.c(false);
+        int discarded$0 = 0;
+        this.c();
         if (param0 >= -57) {
             ((ila) this).field_b = null;
         }
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         if (!(((ila) this).field_e)) {
             return;
         }
@@ -1044,7 +1048,8 @@ final class ila {
     }
 
     final void d(int param0) {
-        this.b(false);
+        int discarded$0 = 0;
+        this.b();
         ((ila) this).c(-59);
         int var2 = -75 / ((31 - param0) / 57);
     }

@@ -12,9 +12,6 @@ final class sga extends sna {
         ((sga) this).field_wb.field_sb = ((sga) this).field_sb - param2 + -param1;
         ((sga) this).field_vb.field_sb = -param2 + ((sga) this).field_sb - param1;
         ((sga) this).field_xb.a(param2, -((sga) this).field_vb.field_rb, ((sga) this).field_sb - param2, ((sga) this).field_wb.field_p, 0, false, ((sga) this).field_vb.field_p, ((sga) this).field_p);
-        if (param0 >= -117) {
-            ((sga) this).field_vb = null;
-        }
     }
 
     sga(long param0, sna param1, sna param2, cw param3) {
@@ -349,59 +346,30 @@ final class sga extends sna {
 
     private final boolean a(int param0, int param1, int param2, byte param3, int param4, boolean param5, boolean param6) {
         int var8 = 0;
-        if (param3 > 18) {
-          if (!param5) {
-            if (((sga) this).field_T) {
-              if (param6) {
-                var8 = 0;
-                ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
-                this.a((byte) -89, param0, param2, false, param4);
-                return var8 != 0;
-              } else {
-                var8 = 1;
-                ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
-                this.a((byte) -89, param0, param2, false, param4);
-                return var8 != 0;
-              }
-            } else {
+        if (!param5) {
+          if (((sga) this).field_T) {
+            if (param6) {
               var8 = 0;
+              ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
+              this.a((byte) -89, param0, param2, false, param4);
+              return var8 != 0;
+            } else {
+              var8 = 1;
               ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
               this.a((byte) -89, param0, param2, false, param4);
               return var8 != 0;
             }
           } else {
-            var8 = 1;
+            var8 = 0;
             ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
             this.a((byte) -89, param0, param2, false, param4);
             return var8 != 0;
           }
         } else {
-          boolean discarded$1 = ((sga) this).a(69, -104, -15, false, false, true);
-          if (!param5) {
-            if (((sga) this).field_T) {
-              if (param6) {
-                var8 = 0;
-                ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
-                this.a((byte) -89, param0, param2, false, param4);
-                return var8 != 0;
-              } else {
-                var8 = 1;
-                ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
-                this.a((byte) -89, param0, param2, false, param4);
-                return var8 != 0;
-              }
-            } else {
-              var8 = 0;
-              ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
-              this.a((byte) -89, param0, param2, false, param4);
-              return var8 != 0;
-            }
-          } else {
-            var8 = 1;
-            ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
-            this.a((byte) -89, param0, param2, false, param4);
-            return var8 != 0;
-          }
+          var8 = 1;
+          ((sga) this).field_vb.a(-24380, ((sga) this).field_wb.field_p, var8 != 0, param1);
+          this.a((byte) -89, param0, param2, false, param4);
+          return var8 != 0;
         }
     }
 

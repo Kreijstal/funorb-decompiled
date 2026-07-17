@@ -16,15 +16,12 @@ final class gq extends ana {
     private int field_w;
     private ad field_F;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_G = null;
         field_E = null;
     }
 
     final static void a(boolean param0, int param1) {
-        if (param1 != 19626) {
-            return;
-        }
         nw.a(false, param0, (byte) 85);
     }
 
@@ -137,9 +134,10 @@ final class gq extends ana {
         }
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         this.d(6);
-        this.f((byte) 107);
+        int discarded$0 = 107;
+        this.f();
         ((gq) this).field_F.field_o = 0;
         ((gq) this).field_F.field_k = 0;
         ((gq) this).field_F.field_r = 0;
@@ -155,15 +153,16 @@ final class gq extends ana {
             if (!((gq) this).field_v) {
               ((gq) this).field_v = true;
               aba.a((byte) 89, 34);
-              int fieldTemp$3 = ((gq) this).field_B - 1;
+              int fieldTemp$6 = ((gq) this).field_B - 1;
               ((gq) this).field_B = ((gq) this).field_B - 1;
-              if (fieldTemp$3 <= 0) {
+              if (fieldTemp$6 <= 0) {
                 if (-25 > ((gq) this).field_B) {
                   return true;
                 } else {
                   L0: {
                     if (((gq) this).field_B == 0) {
-                      this.e((byte) 49);
+                      int discarded$7 = 49;
+                      this.e();
                       break L0;
                     } else {
                       break L0;
@@ -193,15 +192,16 @@ final class gq extends ana {
                 }
               }
             } else {
-              int fieldTemp$4 = ((gq) this).field_B - 1;
+              int fieldTemp$8 = ((gq) this).field_B - 1;
               ((gq) this).field_B = ((gq) this).field_B - 1;
-              if (fieldTemp$4 <= 0) {
+              if (fieldTemp$8 <= 0) {
                 if (-25 > ((gq) this).field_B) {
                   return true;
                 } else {
                   L2: {
                     if (((gq) this).field_B == 0) {
-                      this.e((byte) 49);
+                      int discarded$9 = 49;
+                      this.e();
                       break L2;
                     } else {
                       break L2;
@@ -232,14 +232,15 @@ final class gq extends ana {
               }
             }
           } else {
-            int fieldTemp$5 = ((gq) this).field_B - 1;
+            int fieldTemp$10 = ((gq) this).field_B - 1;
             ((gq) this).field_B = ((gq) this).field_B - 1;
-            if (fieldTemp$5 <= 0) {
+            if (fieldTemp$10 <= 0) {
               if (-25 <= ((gq) this).field_B) {
                 if (((gq) this).field_B != 0) {
                   return false;
                 } else {
-                  this.e((byte) 49);
+                  int discarded$11 = 49;
+                  this.e();
                   return false;
                 }
               } else {
@@ -284,7 +285,7 @@ final class gq extends ana {
         }
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         aga var2 = null;
         int var5 = 0;
         var5 = BachelorFridge.field_y;

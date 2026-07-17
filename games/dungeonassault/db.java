@@ -20,8 +20,7 @@ final class db extends qe {
         int var8_int = 0;
         String var9 = null;
         int var10 = 0;
-        Object var11 = null;
-        String var12 = null;
+        String var11 = null;
         L0: {
           var10 = DungeonAssault.field_K;
           var2 = 241;
@@ -35,11 +34,12 @@ final class db extends qe {
           }
         }
         L1: {
-          var11 = null;
-          if (!o.a(gj.field_c, (int[]) null, var3, gm.field_d, true)) {
+          int discarded$13 = 1;
+          if (!o.a(gj.field_c, (int[]) null, var3, gm.field_d)) {
             L2: {
               var4 = ib.a((byte) -15, 16760960, pj.a((byte) 66, var3, tc.field_u));
-              var5 = jk.a(new String[1], dk.field_e, 30496);
+              int discarded$14 = 30496;
+              var5 = jk.a(new String[1], dk.field_e);
               var6 = 127 & var3;
               if (wh.field_a > var6) {
                 if (var6 >= cp.field_R) {
@@ -49,7 +49,8 @@ final class db extends qe {
                   } else {
                     var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                     var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
-                    var5 = jk.a(new String[3], uk.field_b, 30496);
+                    int discarded$15 = 30496;
+                    var5 = jk.a(new String[3], uk.field_b);
                     break L2;
                   }
                 } else {
@@ -59,10 +60,11 @@ final class db extends qe {
                       if (var7 < ci.field_s.length) {
                         var8_int = ci.field_s[var7];
                         var9 = ib.a((byte) 91, 16760960, Integer.toString(var8_int));
-                        var5 = jk.a(new String[2], ac.field_f, 30496);
+                        int discarded$16 = 30496;
+                        var5 = jk.a(new String[2], ac.field_f);
                         break L2;
                       } else {
-                        int discarded$3 = la.field_b.a(var5, 75, 338, 260, 180, 8421504, -1, 1, 0, la.field_b.field_E + la.field_b.field_H);
+                        int discarded$17 = la.field_b.a(var5, 75, 338, 260, 180, 8421504, -1, 1, 0, la.field_b.field_E + la.field_b.field_H);
                         break L1;
                       }
                     } else {
@@ -75,10 +77,12 @@ final class db extends qe {
                             var8_int = dc.field_p[var7];
                             var9 = ib.a((byte) -125, 16760960, Integer.toString(var8_int));
                             if (var8_int != 1) {
-                              var5 = jk.a(new String[2], vj.field_i, 30496);
+                              int discarded$18 = 30496;
+                              var5 = jk.a(new String[2], vj.field_i);
                               break L2;
                             } else {
-                              var5 = jk.a(new String[2], be.field_m, 30496);
+                              int discarded$19 = 30496;
+                              var5 = jk.a(new String[2], be.field_m);
                               break L2;
                             }
                           } else {
@@ -94,10 +98,12 @@ final class db extends qe {
                             var8_int = hb.field_m[var7];
                             var9 = ib.a((byte) -128, 16760960, Integer.toString(var8_int));
                             if (1 == var8_int) {
-                              var5 = jk.a(new String[2], tl.field_c, 30496);
+                              int discarded$20 = 30496;
+                              var5 = jk.a(new String[2], tl.field_c);
                               break L3;
                             } else {
-                              var5 = jk.a(new String[2], wf.field_y, 30496);
+                              int discarded$21 = 30496;
+                              var5 = jk.a(new String[2], wf.field_y);
                               break L2;
                             }
                           }
@@ -113,7 +119,8 @@ final class db extends qe {
                       } else {
                         var8_int = bl.field_n[var7];
                         var9 = ib.a((byte) 6, 16760960, ce.field_o[var8_int]);
-                        var5 = jk.a(new String[2], l.field_c, 30496);
+                        int discarded$22 = 30496;
+                        var5 = jk.a(new String[2], l.field_c);
                         break L4;
                       }
                     }
@@ -124,11 +131,12 @@ final class db extends qe {
                 break L2;
               }
             }
-            int discarded$4 = la.field_b.a(var5, 75, 338, 260, 180, 8421504, -1, 1, 0, la.field_b.field_E + la.field_b.field_H);
+            int discarded$23 = la.field_b.a(var5, 75, 338, 260, 180, 8421504, -1, 1, 0, la.field_b.field_E + la.field_b.field_H);
             break L1;
           } else {
-            var12 = jk.a(new String[1], DungeonAssault.field_G, 30496);
-            int discarded$5 = la.field_b.a(var12, 70, 338, 270, 180, 16760960, -1, 1, 0, la.field_b.field_H + la.field_b.field_E);
+            int discarded$24 = 30496;
+            var11 = jk.a(new String[1], DungeonAssault.field_G);
+            int discarded$25 = la.field_b.a(var11, 70, 338, 270, 180, 16760960, -1, 1, 0, la.field_b.field_H + la.field_b.field_E);
             break L1;
           }
         }
@@ -148,7 +156,7 @@ final class db extends qe {
         nf.field_y = param0;
     }
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void a(boolean param0, int param1) {
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
@@ -163,7 +171,8 @@ final class db extends qe {
           var4 = tg.field_f[3][param1];
           var5 = this.a(var4, 0);
           var6 = ne.field_c.b(var5);
-          var7 = bh.b(param1, 3, false);
+          int discarded$1 = 0;
+          var7 = bh.b(param1, 3);
           var8 = qd.a(param1, 380, 3);
           var9 = o.a(3, (byte) 101, param1);
           var10 = -var6 + (var7 + var8) >> 1;
@@ -299,9 +308,8 @@ final class db extends qe {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Object var7 = null;
-        bf[] var8 = null;
-        pk var9 = null;
+        bf[] var7 = null;
+        pk var8 = null;
         int stackIn_26_0 = 0;
         pp stackIn_27_0 = null;
         pp stackIn_28_0 = null;
@@ -320,11 +328,11 @@ final class db extends qe {
         int stackOut_30_1 = 0;
         var6 = DungeonAssault.field_K;
         super.c(param0);
-        var8 = wd.field_l;
-        var2 = var8;
+        var7 = wd.field_l;
+        var2 = var7;
         var3 = 0;
         L0: while (true) {
-          if (~var8.length >= ~var3) {
+          if (~var7.length >= ~var3) {
             L1: {
               L2: {
                 if (!kh.field_s) {
@@ -344,8 +352,8 @@ final class db extends qe {
                 } else {
                   if (hh.field_s.field_u instanceof Integer) {
                     var2_int = ((Integer) hh.field_s.field_u).intValue();
-                    var7 = null;
-                    if (!o.a(gj.field_c, (int[]) null, var2_int, gm.field_d, true)) {
+                    int discarded$3 = 1;
+                    if (!o.a(gj.field_c, (int[]) null, var2_int, gm.field_d)) {
                       break L3;
                     } else {
                       gm.field_d.field_w = var2_int;
@@ -359,7 +367,8 @@ final class db extends qe {
                 }
               }
               L4: while (true) {
-                if (!ha.b((byte) 47)) {
+                int discarded$4 = 47;
+                if (!ha.b()) {
                   break L1;
                 } else {
                   ((db) this).f();
@@ -376,11 +385,11 @@ final class db extends qe {
                 } else {
                   L6: {
                     if (((db) this).field_b instanceof pk) {
-                      var9 = (pk) (Object) ((db) this).field_b;
-                      if (!var9.field_r) {
+                      var8 = (pk) (Object) ((db) this).field_b;
+                      if (!var8.field_r) {
                         break L6;
                       } else {
-                        this.a((byte) 111, var9.field_u);
+                        this.a((byte) 111, var8.field_u);
                         break L6;
                       }
                     } else {
@@ -405,7 +414,8 @@ final class db extends qe {
                     var2_int = ((lk) (Object) mk.field_j.field_l).field_O;
                     var3 = gm.field_d.field_J[var2_int] - -gm.field_d.field_F[var2_int];
                     var4 = (var3 + 10) * fj.field_g[var2_int] / 10;
-                    if (!ve.a(false)) {
+                    int discarded$5 = 0;
+                    if (!ve.a()) {
                       break L9;
                     } else {
                       if (var3 < 5) {
@@ -468,7 +478,7 @@ final class db extends qe {
             }
             return;
           } else {
-            var4_ref_bf = var8[var3];
+            var4_ref_bf = var7[var3];
             var4_ref_bf.a(-87);
             var3++;
             continue L0;
@@ -519,11 +529,9 @@ final class db extends qe {
 
     private final void b(int param0, int param1) {
         int var3 = tg.field_f[3][param1];
-        int var4 = bh.b(param1, 3, false);
+        int discarded$0 = 0;
+        int var4 = bh.b(param1, 3);
         int var5 = qd.a(param1, 380, 3);
-        if (param0 < 60) {
-            this.b((byte) -57);
-        }
         int var6 = o.a(3, (byte) 110, param1);
         int var7 = kf.a(param1, 3, -114);
         if (ke.a(76, var3)) {
@@ -548,22 +556,17 @@ final class db extends qe {
         int var8 = 0;
         lk var9 = null;
         int var10 = 0;
-        Object var11 = null;
-        Object var12 = null;
-        Object var13 = null;
-        Object var14 = null;
-        Object var15 = null;
+        gd var11 = null;
+        gd var12 = null;
+        gd var13 = null;
+        gd var14 = null;
+        gd var15 = null;
         gd var16 = null;
         gd var17 = null;
         gd var18 = null;
         gd var19 = null;
         gd var20 = null;
         gd var21 = null;
-        gd var22 = null;
-        gd var23 = null;
-        gd var24 = null;
-        gd var25 = null;
-        gd var26 = null;
         int stackIn_5_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_24_0 = 0;
@@ -586,8 +589,8 @@ final class db extends qe {
         fo.field_d = new nn(true);
         eh.field_o = new ed(90, var2 - -7, 250, -var2 + 328);
         ((db) this).field_p.a((ne) (Object) eh.field_o, false);
-        var16 = this.a(var3, -1, -111, true);
-        var3 = var3 + (var16.field_x + 3);
+        var11 = this.a(var3, -1, -111, true);
+        var3 = var3 + (var11.field_x + 3);
         var5_int = 0;
         L0: while (true) {
           if (bl.field_n.length <= var5_int) {
@@ -599,8 +602,8 @@ final class db extends qe {
                 } else {
                   L3: {
                     var6_int = var5_int + wm.field_a;
-                    var12 = null;
-                    if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d, true)) {
+                    int discarded$5 = 1;
+                    if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d)) {
                       stackOut_13_0 = 0;
                       stackIn_14_0 = stackOut_13_0;
                       break L3;
@@ -612,11 +615,11 @@ final class db extends qe {
                   }
                   L4: {
                     var7 = stackIn_14_0;
-                    var19 = this.a(var3, var6_int, 2, var7 != 0);
-                    var3 = var3 + (var19.field_x - -3);
+                    var14 = this.a(var3, var6_int, 2, var7 != 0);
+                    var3 = var3 + (var14.field_x - -3);
                     if (!bh.a(117, var6_int).equals((Object) (Object) bh.a(122, rj.field_l + var6_int))) {
-                      var20 = this.a(var3, var6_int + rj.field_l, 99, var7 != 0);
-                      var3 = var3 + (3 + var20.field_x);
+                      var15 = this.a(var3, var6_int + rj.field_l, 99, var7 != 0);
+                      var3 = var3 + (3 + var15.field_x);
                       break L4;
                     } else {
                       break L4;
@@ -638,8 +641,8 @@ final class db extends qe {
                   } else {
                     L7: {
                       var6_int = uf.field_a + var5_int;
-                      var13 = null;
-                      if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d, true)) {
+                      int discarded$6 = 1;
+                      if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d)) {
                         stackOut_23_0 = 0;
                         stackIn_24_0 = stackOut_23_0;
                         break L7;
@@ -651,13 +654,13 @@ final class db extends qe {
                     }
                     L8: {
                       var7 = stackIn_24_0;
-                      var21 = this.a(var3, var6_int, -117, var7 != 0);
-                      var3 = var3 + (var21.field_x + 3);
+                      var16 = this.a(var3, var6_int, -117, var7 != 0);
+                      var3 = var3 + (var16.field_x + 3);
                       if (bh.a(120, var6_int).equals((Object) (Object) bh.a(120, var6_int - -rj.field_l))) {
                         break L8;
                       } else {
-                        var22 = this.a(var3, rj.field_l + var6_int, 47, var7 != 0);
-                        var3 = var3 + (var22.field_x - -3);
+                        var17 = this.a(var3, rj.field_l + var6_int, 47, var7 != 0);
+                        var3 = var3 + (var17.field_x - -3);
                         break L8;
                       }
                     }
@@ -677,8 +680,8 @@ final class db extends qe {
                     } else {
                       L11: {
                         var6_int = var5_int + gn.field_d;
-                        var14 = null;
-                        if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d, true)) {
+                        int discarded$7 = 1;
+                        if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d)) {
                           stackOut_32_0 = 0;
                           stackIn_33_0 = stackOut_32_0;
                           break L11;
@@ -690,11 +693,11 @@ final class db extends qe {
                       }
                       L12: {
                         var7 = stackIn_33_0;
-                        var23 = this.a(var3, var6_int, -112, var7 != 0);
-                        var3 = var3 + (var23.field_x - -3);
+                        var18 = this.a(var3, var6_int, -112, var7 != 0);
+                        var3 = var3 + (var18.field_x - -3);
                         if (!bh.a(120, var6_int).equals((Object) (Object) bh.a(119, rj.field_l + var6_int))) {
-                          var24 = this.a(var3, var6_int - -rj.field_l, 18, var7 != 0);
-                          var3 = var3 + (var24.field_x - -3);
+                          var19 = this.a(var3, var6_int - -rj.field_l, 18, var7 != 0);
+                          var3 = var3 + (var19.field_x - -3);
                           break L12;
                         } else {
                           break L12;
@@ -759,8 +762,8 @@ final class db extends qe {
                     } else {
                       L16: {
                         var6_int = cp.field_R - -var5_int;
-                        var15 = null;
-                        if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d, true)) {
+                        int discarded$8 = 1;
+                        if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d)) {
                           stackOut_42_0 = 0;
                           stackIn_43_0 = stackOut_42_0;
                           break L16;
@@ -772,11 +775,11 @@ final class db extends qe {
                       }
                       L17: {
                         var7 = stackIn_43_0;
-                        var25 = this.a(var3, var6_int, -121, var7 != 0);
-                        var3 = var3 + (3 + var25.field_x);
+                        var20 = this.a(var3, var6_int, -121, var7 != 0);
+                        var3 = var3 + (3 + var20.field_x);
                         if (!bh.a(122, var6_int).equals((Object) (Object) bh.a(121, rj.field_l + var6_int))) {
-                          var26 = this.a(var3, rj.field_l + var6_int, -111, var7 != 0);
-                          var3 = var3 + (3 + var26.field_x);
+                          var21 = this.a(var3, rj.field_l + var6_int, -111, var7 != 0);
+                          var3 = var3 + (3 + var21.field_x);
                           break L17;
                         } else {
                           break L17;
@@ -792,8 +795,8 @@ final class db extends qe {
           } else {
             L18: {
               var6_int = ok.field_z - -var5_int;
-              var11 = null;
-              if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d, true)) {
+              int discarded$9 = 1;
+              if (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L18;
@@ -805,13 +808,13 @@ final class db extends qe {
             }
             L19: {
               var7 = stackIn_5_0;
-              var17 = this.a(var3, var6_int, 32, var7 != 0);
-              var3 = var3 + (3 + var17.field_x);
+              var12 = this.a(var3, var6_int, 32, var7 != 0);
+              var3 = var3 + (3 + var12.field_x);
               if (bh.a(126, var6_int).equals((Object) (Object) bh.a(123, var6_int - -rj.field_l))) {
                 break L19;
               } else {
-                var18 = this.a(var3, rj.field_l + var6_int, -7, var7 != 0);
-                var3 = var3 + (3 + var18.field_x);
+                var13 = this.a(var3, rj.field_l + var6_int, -7, var7 != 0);
+                var3 = var3 + (3 + var13.field_x);
                 break L19;
               }
             }
@@ -827,9 +830,6 @@ final class db extends qe {
             return;
         }
         ((db) this).field_w.a(-7734, this.a(hm.field_k, lc.field_c, (byte) -117), this.a(eh.field_h, hj.field_S, (byte) -117));
-        if (param0 != -50) {
-            ((db) this).field_w = null;
-        }
         if (!(((db) this).field_w.field_b == -1)) {
             this.a(((db) this).field_w.field_b, -1, true);
         }
@@ -857,7 +857,8 @@ final class db extends qe {
         }
         ac.field_B.d((byte) -79, 73);
         ac.field_B.a(6, param1);
-        hi.b(1);
+        int discarded$0 = 1;
+        hi.b();
     }
 
     private final void a(int param0) {
@@ -888,19 +889,24 @@ final class db extends qe {
           var5 = kk.field_l.field_E + kk.field_l.field_H;
           var6 = 40;
           gf.b(var3 - 3, var4 + -16, 186, 70, 16777215, var6);
-          field_v.b(jk.a(new String[1], kk.field_s, 30496), var3, var4, 0, -1);
+          int discarded$8 = 30496;
+          field_v.b(jk.a(new String[1], kk.field_s), var3, var4, 0, -1);
           var4 += 16;
-          field_v.b(jk.a(new String[1], mm.field_j, 30496), var3, var4, 0, -1);
+          int discarded$9 = 30496;
+          field_v.b(jk.a(new String[1], mm.field_j), var3, var4, 0, -1);
           var4 += 16;
-          field_v.b(jk.a(new String[1], bp.field_h, 30496), var3, var4, 0, -1);
+          int discarded$10 = 30496;
+          field_v.b(jk.a(new String[1], bp.field_h), var3, var4, 0, -1);
           var4 += 16;
           var7 = 60 * (int)(0.5 + Math.pow(2.0, (double)(-var21.field_N) / 10000.0) * 250.0) / 60;
           var7 = var7 + 10 * gm.field_d.field_J[2];
-          kk.field_l.b(jk.a(new String[1], la.field_j, 30496), var3, var4, 0, -1);
+          int discarded$11 = 30496;
+          kk.field_l.b(jk.a(new String[1], la.field_j), var3, var4, 0, -1);
           var8 = 9;
           var4 = var4 + (var8 + 16);
           if (var21.field_B > 0) {
-            var9 = jk.a(new String[3], ip.field_k, 30496);
+            int discarded$12 = 30496;
+            var9 = jk.a(new String[3], ip.field_k);
             var10 = var9;
             var10 = var9;
             break L0;
@@ -911,10 +917,12 @@ final class db extends qe {
         }
         L1: {
           if (var21.field_y > 0) {
-            var10 = jk.a(new String[3], ip.field_k, 30496);
+            int discarded$13 = 30496;
+            var10 = jk.a(new String[3], ip.field_k);
             break L1;
           } else {
-            var10 = jk.a(new String[3], uh.field_V, 30496);
+            int discarded$14 = 30496;
+            var10 = jk.a(new String[3], uh.field_V);
             break L1;
           }
         }
@@ -966,7 +974,8 @@ final class db extends qe {
                 } else {
                   var15 = var21.field_t[var20];
                   if (var15 != -1L) {
-                    var17 = uj.a(var15, -1);
+                    int discarded$15 = -1;
+                    var17 = uj.a(var15);
                     kk.field_l.b(var17, var3 + 10, var4, 14352640, -1);
                     var4 = var4 + kk.field_l.field_H;
                     if (var4 <= 350) {
@@ -996,7 +1005,8 @@ final class db extends qe {
         ((db) this).field_w = new ae(tg.field_f[3].length);
         fk.a((byte) 121, lf.field_w);
         jh.a(((db) this).field_e);
-        bf.a(false, -128);
+        int discarded$0 = -128;
+        bf.a(false);
         int[] var7 = new int[4];
         int[] var6 = var7;
         int[] var5 = var6;
@@ -1014,7 +1024,8 @@ final class db extends qe {
         }
         ((db) this).field_r = new rh(58, 394, 80, 160, 255, 197376, 240);
         ((db) this).field_t = new rh(580, 394, 80, 160, 255, 197376, 240);
-        mh.b(-1);
+        int discarded$1 = -1;
+        mh.b();
     }
 
     private final gd a(int param0, int param1, int param2, boolean param3) {
@@ -1210,7 +1221,8 @@ final class db extends qe {
                             break L8;
                           }
                         }
-                        this.a(stackIn_19_1 != 0, var6, 123);
+                        int discarded$1 = 123;
+                        this.a(stackIn_19_1 != 0, var6);
                         break L7;
                       } else {
                         break L7;
@@ -1252,130 +1264,118 @@ final class db extends qe {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
         L0: {
           var9 = DungeonAssault.field_K;
           var2 = 461;
-          if (param0) {
-            break L0;
-          } else {
-            ((db) this).field_t = null;
-            break L0;
-          }
-        }
-        L1: {
           var3 = 170;
           if (null == mk.field_j.field_l) {
-            break L1;
+            break L0;
           } else {
-            L2: {
-              L3: {
+            L1: {
+              L2: {
                 gf.b(370, 110, 182, 124, 0, 208);
                 var4_int = ((lk) (Object) mk.field_j.field_l).field_O;
                 wd.field_l[var4_int].a(var3, var2, true, 100);
                 field_v.c(li.field_b[var4_int], var2, var3 - -90, 0, -1);
                 var5 = gm.field_d.field_J[var4_int] + gm.field_d.field_F[var4_int];
-                if (!ve.a(false)) {
-                  break L3;
+                int discarded$8 = 0;
+                if (!ve.a()) {
+                  break L2;
                 } else {
                   if (!hm.field_m[var4_int]) {
-                    break L3;
+                    break L2;
                   } else {
                     if (var5 < 5) {
-                      break L3;
-                    } else {
-                      stackOut_6_0 = 1;
-                      stackIn_8_0 = stackOut_6_0;
                       break L2;
+                    } else {
+                      stackOut_4_0 = 1;
+                      stackIn_6_0 = stackOut_4_0;
+                      break L1;
                     }
                   }
                 }
               }
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L2;
-            }
-            var6_int = stackIn_8_0;
-            if (var6_int != 0) {
-              int discarded$4 = la.field_b.a(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
               break L1;
+            }
+            var6_int = stackIn_6_0;
+            if (var6_int != 0) {
+              int discarded$9 = la.field_b.a(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
+              break L0;
             } else {
-              L4: {
+              L3: {
                 var7 = (10 + var5) * fj.field_g[var4_int] / 10;
                 if (var7 <= gm.field_d.field_s) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
-                  break L4;
+                  stackOut_9_0 = 0;
+                  stackIn_10_0 = stackOut_9_0;
+                  break L3;
                 } else {
-                  stackOut_10_0 = 16711680;
-                  stackIn_12_0 = stackOut_10_0;
-                  break L4;
+                  stackOut_8_0 = 16711680;
+                  stackIn_10_0 = stackOut_8_0;
+                  break L3;
                 }
               }
-              var8 = stackIn_12_0;
-              field_v.c(jk.a(new String[1], ho.field_c, 30496), var2, 105 + var3, var8, -1);
-              int discarded$5 = la.field_b.a(un.field_a[var4_int], -80 + var2, var3 - -120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
-              break L1;
+              var8 = stackIn_10_0;
+              int discarded$10 = 30496;
+              field_v.c(jk.a(new String[1], ho.field_c), var2, 105 + var3, var8, -1);
+              int discarded$11 = la.field_b.a(un.field_a[var4_int], -80 + var2, var3 - -120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
+              break L0;
             }
           }
         }
-        L5: {
+        L4: {
           var4 = ng.field_L;
           var5 = 16777215;
           if (0 < gm.field_d.field_e) {
-            L6: {
+            L5: {
               if (1 < gm.field_d.field_e) {
-                var4 = jk.a(new String[1], dg.field_G, 30496);
-                break L6;
+                int discarded$12 = 30496;
+                var4 = jk.a(new String[1], dg.field_G);
+                break L5;
               } else {
                 var4 = oc.field_v;
-                break L6;
+                break L5;
               }
             }
             var5 = 16711680;
-            var6 = jk.a(new String[1], fl.field_n, 30496);
-            int discarded$6 = la.field_b.a(var6, 80, 338, 250, 180, var5, -1, 1, 0, field_v.field_H);
-            break L5;
+            int discarded$13 = 30496;
+            var6 = jk.a(new String[1], fl.field_n);
+            int discarded$14 = la.field_b.a(var6, 80, 338, 250, 180, var5, -1, 1, 0, field_v.field_H);
+            break L4;
           } else {
-            break L5;
+            break L4;
           }
         }
-        int discarded$7 = la.field_b.a(var4, 80, -la.field_b.field_H + 211, 250, 45, var5, -1, 1, 2, field_v.field_H);
+        int discarded$15 = la.field_b.a(var4, 80, -la.field_b.field_H + 211, 250, 45, var5, -1, 1, 2, field_v.field_H);
     }
 
     private final void a(int param0, int param1, boolean param2) {
         int var4 = 0;
         L0: {
           var4 = tg.field_f[3][param0];
-          if (param1 == -1) {
-            break L0;
-          } else {
-            field_u = null;
-            break L0;
-          }
-        }
-        L1: {
           if (!((db) this).field_w.c(97)) {
-            break L1;
+            break L0;
           } else {
-            L2: {
+            L1: {
               if (!sg.a(3, 3, param0)) {
-                break L2;
+                break L1;
               } else {
-                if (rp.a(param1 ^ -15204377, var4)) {
+                if (rp.a(15204376, var4)) {
                   hm.a(var4, param0, param2, -64);
-                  break L2;
-                } else {
                   break L1;
+                } else {
+                  break L0;
                 }
               }
             }
-            break L1;
+            break L0;
           }
         }
     }
@@ -1436,7 +1436,8 @@ final class db extends qe {
         for (var4 = 0; ~tg.field_f[3].length < ~var4; var4++) {
             var5 = o.a(3, (byte) 95, var4);
             if (sg.a(3, 3, var4)) {
-                if (param1 >= bh.b(var4, 3, false)) {
+                int discarded$5 = 0;
+                if (param1 >= bh.b(var4, 3)) {
                     if (~qd.a(var4, 380, 3) < ~param1) {
                         if (param0 >= var5) {
                             if (~param0 > ~(var5 - -kf.a(var4, 3, -100))) {
@@ -1452,9 +1453,6 @@ final class db extends qe {
 
     public static void c(byte param0) {
         field_v = null;
-        if (param0 < 87) {
-            field_u = null;
-        }
         field_u = null;
     }
 

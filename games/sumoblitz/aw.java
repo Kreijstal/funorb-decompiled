@@ -343,7 +343,8 @@ abstract class aw extends ha {
     final void k(int param0) {
         ((aw) this).field_Lb.a(param0);
         ((aw) this).field_Db = true;
-        this.z(-29654);
+        int discarded$0 = -29654;
+        this.z();
     }
 
     abstract void f(boolean param0);
@@ -357,11 +358,8 @@ abstract class aw extends ha {
         return ((aw) this).field_Pb;
     }
 
-    final static String a(String param0, String param1, String param2, boolean param3) {
+    final static String a(String param0, String param1, String param2) {
         int var5 = Sumoblitz.field_L ? 1 : 0;
-        if (!param3) {
-            field_t = null;
-        }
         int var4 = param1.indexOf(param0);
         while (-1 != var4) {
             param1 = param1.substring(0, var4) + param2 + param1.substring(param0.length() + var4);
@@ -386,7 +384,8 @@ abstract class aw extends ha {
             var2 = ((aw) this).field_s;
             ((aw) this).field_s = mb.field_k;
             if (!(!var2.a(-20011))) {
-                this.W(16);
+                int discarded$0 = 16;
+                this.W();
             }
             ((aw) this).field_ic = ((aw) this).field_ic & -32;
             ((aw) this).field_A = ((aw) this).field_w;
@@ -398,7 +397,8 @@ abstract class aw extends ha {
         if (param0 != 0) {
             return;
         }
-        this.z(-29654);
+        int discarded$0 = -29654;
+        this.z();
     }
 
     abstract void bb(int param0);
@@ -422,7 +422,7 @@ abstract class aw extends ha {
 
     abstract float b(byte param0);
 
-    private final void z(int param0) {
+    private final void z() {
         float var2 = 0.0f;
         if (vu.field_h == ((aw) this).field_s) {
             var2 = ((aw) this).b((byte) 127);
@@ -483,7 +483,7 @@ abstract class aw extends ha {
 
     abstract void F(int param0);
 
-    public static void G(int param0) {
+    public static void G() {
         field_t = null;
         field_j = null;
     }
@@ -679,7 +679,7 @@ abstract class aw extends ha {
         return stackIn_23_0;
     }
 
-    private final void g(boolean param0) {
+    private final void g() {
         ((aw) this).a(0, 119, ((aw) this).field_Wb);
         ((aw) this).a(-77, ((aw) this).field_xc);
         ((aw) this).a(0, 0, 1, tc.field_g);
@@ -877,9 +877,9 @@ abstract class aw extends ha {
         try {
             ((aw) this).a(0, 86, ((aw) this).field_x);
             ((aw) this).a(125, ((aw) this).field_nb);
-            ((aw) this).a(param0, param0, param2, param1);
+            ((aw) this).a(0, 0, param2, param1);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "aw.VE(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "aw.VE(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -986,9 +986,10 @@ abstract class aw extends ha {
 
     abstract void a(java.awt.Canvas param0, Object param1, int param2);
 
-    private final void u(int param0) {
+    private final void u() {
         ((aw) this).field_Jb = false;
-        this.R(-61);
+        int discarded$0 = -61;
+        this.R();
         if (!(pd.field_m != ((aw) this).field_s)) {
             this.g(1);
         }
@@ -1011,7 +1012,7 @@ abstract class aw extends ha {
         return ((aw) this).field_V[((aw) this).field_mc];
     }
 
-    final static void C(int param0) {
+    final static void C() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -1067,7 +1068,7 @@ abstract class aw extends ha {
         }
     }
 
-    private final void W(int param0) {
+    private final void W() {
         ((aw) this).field_R = false;
         if (!(((aw) this).field_m == null)) {
             ((aw) this).field_m.b(-74);
@@ -1080,10 +1081,11 @@ abstract class aw extends ha {
     abstract boolean a(byte param0, io param1, iw param2);
 
     void D(int param0) {
-        this.T(-1);
+        int discarded$0 = -1;
+        this.T();
         if (param0 != 1) {
             Object var3 = null;
-            nh discarded$0 = ((aw) this).a(true, (iw) null, -62, 114, (byte[]) null, 71);
+            nh discarded$1 = ((aw) this).a(true, (iw) null, -62, 114, (byte[]) null, 71);
         }
     }
 
@@ -1116,7 +1118,8 @@ abstract class aw extends ha {
                 var2 = (java.awt.Canvas) var1_ref.nextElement();
                 ((aw) this).a(var2, ((aw) this).field_Q.get((Object) (Object) var2), 0);
             }
-            pt.a(false, true, -1);
+            int discarded$0 = -1;
+            pt.a(false, true);
             ((aw) this).field_nc.release();
             ((aw) this).field_H = true;
         }
@@ -1267,7 +1270,7 @@ abstract class aw extends ha {
         return true;
     }
 
-    private final void r(byte param0) {
+    private final void r() {
         ((aw) this).field_Wb = ((aw) this).a((byte) 51, true);
         boolean discarded$0 = ((aw) this).field_Wb.a(12, (byte) -35, 24);
         ((aw) this).field_xc = ((aw) this).a(new hu[1], (byte) 118);
@@ -1305,8 +1308,10 @@ abstract class aw extends ha {
           }
           ((aw) this).field_Yb = param1;
           ((aw) this).field_oc = param0;
-          this.u(2);
-          this.Q(13);
+          int discarded$4 = 2;
+          this.u();
+          int discarded$5 = 13;
+          this.Q();
           this.n((byte) -78);
           break L0;
         }
@@ -1358,7 +1363,8 @@ abstract class aw extends ha {
           ((aw) this).e(param5, 13);
           ((aw) this).k(1);
           ((aw) this).a(1, false);
-          this.g(false);
+          int discarded$1 = 0;
+          this.g();
           ((aw) this).a(1, true);
           ((aw) this).a(jq.field_a, 0, true);
           ((aw) this).a(jq.field_a, 0, 0);
@@ -1366,7 +1372,7 @@ abstract class aw extends ha {
         }
     }
 
-    private final void O(int param0) {
+    private final void O() {
         int var2 = 0;
         jaclib.memory.Buffer var3 = null;
         jaclib.memory.Stream var4 = null;
@@ -1473,15 +1479,7 @@ abstract class aw extends ha {
               }
             }
           }
-          L3: {
-            ((aw) this).field_nb = ((aw) this).a(new hu[1], (byte) 99);
-            if (param0 == 5) {
-              break L3;
-            } else {
-              this.j(-25);
-              break L3;
-            }
-          }
+          ((aw) this).field_nb = ((aw) this).a(new hu[1], (byte) 99);
           return;
         }
     }
@@ -1566,7 +1564,7 @@ abstract class aw extends ha {
         }
     }
 
-    private final void y(int param0) {
+    private final void y() {
         int var2 = 0;
         jaclib.memory.Buffer var3 = null;
         jaclib.memory.Stream var4 = null;
@@ -1629,7 +1627,7 @@ abstract class aw extends ha {
         }
     }
 
-    final static ha a(d param0, java.awt.Canvas param1, int param2, int param3) {
+    final static ha a(d param0, java.awt.Canvas param1, int param2) {
         RuntimeException var4 = null;
         fr stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -2110,15 +2108,16 @@ abstract class aw extends ha {
 
     abstract void s(int param0);
 
-    private final void Q(int param0) {
+    private final void Q() {
         ((aw) this).field_O = false;
-        this.Z(0);
+        int discarded$0 = 0;
+        this.Z();
         if (!(mo.field_w != ((aw) this).field_s)) {
             this.g(1);
         }
     }
 
-    private final void T(int param0) {
+    private final void T() {
         int var2 = 0;
         int var3 = Sumoblitz.field_L ? 1 : 0;
         ((aw) this).ab(7);
@@ -2674,8 +2673,10 @@ abstract class aw extends ha {
         ((aw) this).field_Hb = param1;
         ((aw) this).field_sc = param2;
         ((aw) this).field_rc = param3;
-        this.Q(13);
-        this.u(2);
+        int discarded$0 = 13;
+        this.Q();
+        int discarded$1 = 2;
+        this.u();
         ((aw) this).d(false);
         this.h((byte) -128);
     }
@@ -2755,7 +2756,8 @@ abstract class aw extends ha {
             var2 = ((aw) this).field_s;
             ((aw) this).field_s = vu.field_h;
             if (!(!var2.a(-20011))) {
-                this.W(16);
+                int discarded$1 = 16;
+                this.W();
             }
             this.c((byte) -88);
             ((aw) this).field_A = ((aw) this).field_fc;
@@ -2871,10 +2873,7 @@ abstract class aw extends ha {
 
     abstract void x(int param0);
 
-    private final void p(int param0) {
-        if (param0 != 5) {
-            ((aw) this).field_k = -39;
-        }
+    private final void p() {
     }
 
     final int v(int param0) {
@@ -2891,7 +2890,7 @@ abstract class aw extends ha {
         return ((aw) this).field_Ob;
     }
 
-    private final boolean o(byte param0) {
+    private final boolean o() {
         return ((aw) this).field_X[3].b((byte) -59);
     }
 
@@ -2901,114 +2900,107 @@ abstract class aw extends ha {
 
     private final void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5) {
         int var8 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         L0: {
           var8 = Sumoblitz.field_L ? 1 : 0;
-          if (param0 == 2147483647) {
-            break L0;
-          } else {
-            ((aw) this).field_m = null;
-            break L0;
-          }
-        }
-        L1: {
-          param3 = param3 & this.o((byte) 24);
+          int discarded$1 = 24;
+          param3 = param3 & this.o();
           if (param3) {
-            break L1;
+            break L0;
           } else {
-            L2: {
+            L1: {
               if (param5 == 4) {
-                break L2;
+                break L1;
               } else {
                 if (8 == param5) {
-                  break L2;
+                  break L1;
                 } else {
                   if (9 != param5) {
-                    break L1;
+                    break L0;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 }
               }
             }
-            L3: {
+            L2: {
               param5 = 2;
               if (param5 == 4) {
-                stackOut_9_0 = 1 & param4;
-                stackIn_10_0 = stackOut_9_0;
-                break L3;
+                stackOut_7_0 = 1 & param4;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
               } else {
-                stackOut_8_0 = 1;
-                stackIn_10_0 = stackOut_8_0;
-                break L3;
+                stackOut_6_0 = 1;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
               }
             }
-            param2 = stackIn_10_0;
+            param2 = stackIn_8_0;
             param4 = 0;
-            break L1;
+            break L0;
           }
         }
-        L4: {
+        L3: {
           if (param5 == 0) {
-            break L4;
+            break L3;
           } else {
             if (param1) {
               param5 = param5 | -2147483648;
-              break L4;
+              break L3;
             } else {
-              break L4;
+              break L3;
             }
           }
         }
-        L5: {
+        L4: {
           if (~param5 == ~((aw) this).field_L) {
             if (((aw) this).field_L != 0) {
-              L6: {
+              L5: {
                 ((aw) this).field_X[((aw) this).field_L & 2147483647].a(param1, (byte) -127);
                 if (~param4 != ~((aw) this).field_xb) {
-                  break L6;
+                  break L5;
                 } else {
                   if (((aw) this).field_ac != param2) {
-                    break L6;
-                  } else {
                     break L5;
+                  } else {
+                    break L4;
                   }
                 }
               }
               ((aw) this).field_X[2147483647 & ((aw) this).field_L].a(34023, param2, param4);
               ((aw) this).field_xb = param4;
               ((aw) this).field_ac = param2;
-              break L5;
+              break L4;
             } else {
-              break L5;
+              break L4;
             }
           } else {
-            L7: {
+            L6: {
               if (((aw) this).field_L != 0) {
                 ((aw) this).field_X[((aw) this).field_L & 2147483647].c(false);
-                break L7;
+                break L6;
               } else {
-                break L7;
+                break L6;
               }
             }
-            L8: {
+            L7: {
               if (param5 != 0) {
                 ((aw) this).field_m = ((aw) this).field_X[2147483647 & param5];
                 ((aw) this).field_m.a(param1, 20186);
                 ((aw) this).field_m.a(param1, (byte) -79);
-                ((aw) this).field_m.a(param0 ^ 2147449624, param2, param4);
-                break L8;
+                ((aw) this).field_m.a(34023, param2, param4);
+                break L7;
               } else {
                 ((aw) this).field_m = null;
-                break L8;
+                break L7;
               }
             }
             ((aw) this).field_L = param5;
             ((aw) this).field_ac = param2;
             ((aw) this).field_xb = param4;
-            break L5;
+            break L4;
           }
         }
     }
@@ -3291,7 +3283,7 @@ abstract class aw extends ha {
 
     abstract void V(int param0);
 
-    private final void m(byte param0) {
+    private final void m() {
         ((aw) this).field_ec[10] = ((aw) this).field_q;
         ((aw) this).field_ec[14] = ((aw) this).field_kb;
     }
@@ -3314,13 +3306,16 @@ abstract class aw extends ha {
             }
         }
         ((aw) this).field_Q = var2;
-        this.O(5);
-        this.r((byte) 121);
-        this.y(-101);
+        int discarded$1 = 5;
+        this.O();
+        int discarded$2 = 121;
+        this.r();
+        int discarded$3 = -101;
+        this.y();
         ((aw) this).field_yb.a(117, (aw) this);
     }
 
-    private final void Z(int param0) {
+    private final void Z() {
         float[] var2 = null;
         float var3 = 0.0f;
         float var4 = 0.0f;
@@ -3362,7 +3357,8 @@ abstract class aw extends ha {
                   var9[3] = 0.0f;
                   var9[4] = 0.0f;
                   var9[13] = (var8 + var5) / (-var5 + var8);
-                  this.p(5);
+                  int discarded$2 = 5;
+                  this.p();
                   ((aw) this).field_O = true;
                   break L0;
                 }
@@ -3384,7 +3380,8 @@ abstract class aw extends ha {
             var2[10] = 1.0f;
             var2[2] = 0.0f;
             var2[4] = 0.0f;
-            this.p(5);
+            int discarded$3 = 5;
+            this.p();
             ((aw) this).field_O = true;
             break L0;
           } else {
@@ -3445,7 +3442,7 @@ abstract class aw extends ha {
 
     abstract ru a(boolean param0, int param1, int[] param2, int param3, int param4, int param5, int param6);
 
-    private final void R(int param0) {
+    private final void R() {
         int var2 = 0;
         float[] var3 = null;
         float var4 = 0.0f;
@@ -3458,7 +3455,7 @@ abstract class aw extends ha {
         float[] var11 = null;
         float[] var12 = null;
         L0: {
-          var2 = 115 / ((39 - param0) / 47);
+          var2 = 57;
           if (((aw) this).field_Jb) {
             break L0;
           } else {
@@ -3520,7 +3517,8 @@ abstract class aw extends ha {
               var3[1] = 0.0f;
               break L1;
             }
-            this.m((byte) -83);
+            int discarded$1 = -83;
+            this.m();
             ((aw) this).field_Jb = true;
             break L0;
           }

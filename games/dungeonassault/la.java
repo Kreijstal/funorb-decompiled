@@ -18,7 +18,7 @@ final class la {
     private String field_e;
     int field_m;
 
-    final static int a(byte param0) {
+    final static int a() {
         int var1 = -66;
         return -bf.field_b + d.field_e;
     }
@@ -33,15 +33,16 @@ final class la {
             if (~((la) this).field_a != ~rk.field_l) {
               if (ke.field_d != 2) {
                 if (param0 < 94) {
-                  int discarded$4 = ((la) this).b((byte) -110);
+                  int discarded$6 = ((la) this).b((byte) -110);
                   return 0;
                 } else {
                   return 0;
                 }
               } else {
-                if (!mj.a(((la) this).field_e, (byte) -17)) {
+                int discarded$7 = -17;
+                if (!mj.a(((la) this).field_e)) {
                   if (param0 < 94) {
-                    int discarded$5 = ((la) this).b((byte) -110);
+                    int discarded$8 = ((la) this).b((byte) -110);
                     return 0;
                   } else {
                     return 0;
@@ -58,15 +59,16 @@ final class la {
               if (~((la) this).field_a != ~rk.field_l) {
                 if (ke.field_d != 2) {
                   if (param0 < 94) {
-                    int discarded$6 = ((la) this).b((byte) -110);
+                    int discarded$9 = ((la) this).b((byte) -110);
                     return 0;
                   } else {
                     return 0;
                   }
                 } else {
-                  if (!mj.a(((la) this).field_e, (byte) -17)) {
+                  int discarded$10 = -17;
+                  if (!mj.a(((la) this).field_e)) {
                     if (param0 < 94) {
-                      int discarded$7 = ((la) this).b((byte) -110);
+                      int discarded$11 = ((la) this).b((byte) -110);
                       return 0;
                     } else {
                       return 0;
@@ -91,7 +93,7 @@ final class la {
         return 1;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = -19;
         field_j = null;
         field_b = null;

@@ -138,22 +138,22 @@ final class tf {
         int var5_int = 0;
         int var6 = 0;
         String var7 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         try {
           L0: {
             L1: {
@@ -164,9 +164,9 @@ final class tf {
               sp.field_c.field_f = 0;
               sp.field_c.a(pj.field_r[0], -16384);
               sp.field_c.a(pj.field_r[1], -16384);
-              sp.field_c.a(pj.field_r[2], param1 + -16459);
+              sp.field_c.a(pj.field_r[2], -16384);
               sp.field_c.a(pj.field_r[3], -16384);
-              lo.a(param1 + -51, sp.field_c);
+              lo.a(24, sp.field_c);
               sp.field_c.c(-161478600, param3);
               param2.a(sp.field_c, (byte) 124);
               tp.field_f.field_f = 0;
@@ -217,29 +217,23 @@ final class tf {
             }
             L6: {
               tp.field_f.a(true, var6);
-              var7 = mf.a(le.b((byte) -20), -28697);
-              if (param1 == 75) {
+              int discarded$2 = -20;
+              int discarded$3 = -28697;
+              var7 = mf.a(le.b());
+              if (var7 == null) {
+                var7 = "";
                 break L6;
               } else {
-                field_a = null;
                 break L6;
               }
             }
             L7: {
-              if (var7 == null) {
-                var7 = "";
-                break L7;
-              } else {
-                break L7;
-              }
-            }
-            L8: {
               tp.field_f.b(var7, (byte) -23);
               if (null == ld.field_r) {
-                break L8;
+                break L7;
               } else {
                 tp.field_f.a(ld.field_r, (byte) -117);
-                break L8;
+                break L7;
               }
             }
             tg.a(sp.field_c, (ng) (Object) tp.field_f, gn.field_S, -107, lm.field_j);
@@ -249,33 +243,33 @@ final class tf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var5 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("tf.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_19_0 = (RuntimeException) var5;
+            stackOut_19_1 = new StringBuilder().append("tf.A(").append(param0).append(44).append(75).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L9;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
-              break L9;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L8;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param3 + 44 + param4 + 41);
+          throw dn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

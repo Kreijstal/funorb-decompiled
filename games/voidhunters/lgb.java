@@ -10,7 +10,7 @@ final class lgb extends rqa {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int var3 = -46 % ((-15 - param1) / 58);
+        int var3 = 0;
         return 0 != (2048 & param2) ? true : false;
     }
 
@@ -83,7 +83,7 @@ final class lgb extends rqa {
         return stackIn_3_0;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_p = null;
     }
 

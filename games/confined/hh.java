@@ -8,9 +8,6 @@ final class hh {
     static String field_b;
 
     final static boolean a(int param0) {
-        if (param0 != -13613) {
-            field_d = null;
-        }
         return rk.field_f;
     }
 
@@ -45,7 +42,7 @@ final class hh {
         var9 = Confined.field_J ? 1 : 0;
         try {
           if (param1 != null) {
-            var2_int = param0;
+            var2_int = 0;
             var3 = param1.length();
             L0: while (true) {
               L1: {
@@ -65,7 +62,7 @@ final class hh {
                   if (var3 <= var2_int) {
                     break L3;
                   } else {
-                    if (!bg.a(param0 + 175, param1.charAt(-1 + var3))) {
+                    if (!bg.a(175, param1.charAt(-1 + var3))) {
                       break L3;
                     } else {
                       var3--;
@@ -122,7 +119,7 @@ final class hh {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var2;
-            stackOut_27_1 = new StringBuilder().append("hh.D(").append(param0).append(44);
+            stackOut_27_1 = new StringBuilder().append("hh.D(").append(0).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -149,7 +146,7 @@ final class hh {
         }
     }
 
-    final static void a(oc param0, int param1) {
+    final static void a(oc param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -270,17 +267,14 @@ final class hh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
         field_d = null;
-        if (param0 > -77) {
-            field_d = null;
-        }
     }
 
-    final static tl[] a(df param0, int param1) {
+    final static tl[] a(df param0) {
         RuntimeException var2 = null;
         int[] var3 = null;
         tl[] var4 = null;

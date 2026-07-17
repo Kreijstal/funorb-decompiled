@@ -6,7 +6,7 @@ final class tp extends ge {
     static String field_J;
     static nh field_K;
 
-    final static la a(int param0, boolean param1, dt param2, int param3, byte param4) {
+    final static la a(int param0, boolean param1, dt param2, int param3) {
         Object var5 = null;
         g var5_ref = null;
         RuntimeException var5_ref2 = null;
@@ -97,46 +97,42 @@ final class tp extends ge {
     }
 
     final static boolean a(int param0, byte param1, int param2) {
-        int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        if (param1 == 3) {
-          L0: {
-            if ((458752 & param2) == 0) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
-            } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
-              break L0;
-            }
+        int stackIn_3_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        L0: {
+          if ((458752 & param2) == 0) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
           }
-          L1: {
-            L2: {
-              if (stackIn_5_0 != 0 | ir.a(param2, param0, (byte) -94)) {
-                break L2;
+        }
+        L1: {
+          L2: {
+            if (stackIn_3_0 != 0 | ir.a(param2, param0, (byte) -94)) {
+              break L2;
+            } else {
+              if (!uu.a(true, param2, param0)) {
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                break L1;
               } else {
-                if (!uu.a(true, param2, param0)) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L1;
-                } else {
-                  break L2;
-                }
+                break L2;
               }
             }
-            stackOut_8_0 = 1;
-            stackIn_10_0 = stackOut_8_0;
-            break L1;
           }
-          return stackIn_10_0 != 0;
-        } else {
-          return true;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L1;
         }
+        return stackIn_8_0 != 0;
     }
 
     final boolean n(byte param0) {
@@ -156,18 +152,10 @@ final class tp extends ge {
           L0: {
             var7_int = 0;
             L1: while (true) {
-              if (var7_int >= param4) {
-                L2: {
-                  if (param1 == -85) {
-                    break L2;
-                  } else {
-                    field_L = null;
-                    break L2;
-                  }
-                }
+              if (var7_int >= 2) {
                 break L0;
               } else {
-                ra.a(param6 + -(2 * var7_int), param3, param2 + var7_int, -(var7_int * 2) + param5, false, var7_int + param0);
+                ra.a(param6 + -(2 * var7_int), 5242880, param2 + var7_int, -(var7_int * 2) + param5, false, var7_int + param0);
                 var7_int++;
                 continue L1;
               }
@@ -176,7 +164,7 @@ final class tp extends ge {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var7, "tp.GC(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw tba.a((Throwable) (Object) var7, "tp.GC(" + param0 + 44 + -85 + 44 + param2 + 44 + 5242880 + 44 + 2 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -200,7 +188,7 @@ final class tp extends ge {
         }
     }
 
-    public static void t(byte param0) {
+    public static void t() {
         field_J = null;
         int var1 = 0;
         field_K = null;

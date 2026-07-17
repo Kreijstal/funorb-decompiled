@@ -6,7 +6,7 @@ final class pb extends wl {
     byte[] field_j;
     static String field_i;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_i = null;
     }
 

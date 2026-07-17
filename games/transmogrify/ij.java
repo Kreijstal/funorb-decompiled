@@ -183,7 +183,8 @@ final class ij implements ui {
                     if (var3_int <= var5) {
                       break L3;
                     } else {
-                      if (!dj.a(param0.charAt(var5), true)) {
+                      int discarded$5 = 1;
+                      if (!dj.a(param0.charAt(var5))) {
                         break L3;
                       } else {
                         var5++;
@@ -223,7 +224,8 @@ final class ij implements ui {
                           if (var5 >= var3_int) {
                             break L6;
                           } else {
-                            if (!dj.a(param0.charAt(var5), true)) {
+                            int discarded$6 = 1;
+                            if (!dj.a(param0.charAt(var5))) {
                               break L6;
                             } else {
                               var5++;
@@ -241,8 +243,8 @@ final class ij implements ui {
                             } else {
                               var5++;
                               var10 = aa.a(66, (CharSequence) (Object) var9);
-                              StringBuilder discarded$3 = var6.append(param0.substring(var7, var8));
-                              StringBuilder discarded$4 = var6.append(param1[var10]);
+                              StringBuilder discarded$7 = var6.append(param0.substring(var7, var8));
+                              StringBuilder discarded$8 = var6.append(param1[var10]);
                               var7 = var5;
                               continue L4;
                             }
@@ -252,7 +254,7 @@ final class ij implements ui {
                         }
                       }
                     } else {
-                      StringBuilder discarded$5 = var6.append(param0.substring(var7));
+                      StringBuilder discarded$9 = var6.append(param0.substring(var7));
                       stackOut_29_0 = var6.toString();
                       stackIn_30_0 = stackOut_29_0;
                       break L0;
@@ -338,7 +340,7 @@ final class ij implements ui {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_d = null;
     }

@@ -263,7 +263,7 @@ final class vd extends nv {
             var2 = var2 | 2;
             param1 = param1 >>> 2;
         }
-        if (param1 > param0) {
+        if (param1 > 1) {
             var2 = var2 | 1;
             param1 = param1 >>> 1;
         }
@@ -302,81 +302,73 @@ final class vd extends nv {
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
-        int stackIn_2_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        int stackOut_5_0 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             var7_int = 16;
-            if (!param0) {
-              var8 = hm.a(param4.field_a, (byte) -15, param2, param2 + param5, param1 + param3, var7_int, param4.field_e, param4.field_k, param4.field_d, param3);
-              if (var8 <= 0) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                var9 = wm.a(1 << var7_int, var8, -75);
-                param4.a(var9, (byte) 47);
-                stackOut_4_0 = 1;
-                stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0 != 0;
-              }
+            var8 = hm.a(param4.field_a, (byte) -15, param2, param2 + param5, param1 + param3, var7_int, param4.field_e, param4.field_k, param4.field_d, param3);
+            if (var8 <= 0) {
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
             } else {
-              stackOut_1_0 = 0;
-              stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              var9 = wm.a(1 << var7_int, var8, -75);
+              param4.a(var9, (byte) 47);
+              stackOut_3_0 = 1;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var7;
-            stackOut_8_1 = new StringBuilder().append("vd.NA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_7_0 = (RuntimeException) var7;
+            stackOut_7_1 = new StringBuilder().append("vd.NA(").append(0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param4 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L1;
-            } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L1;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param5 + 41);
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param5 + 41);
         }
-        return stackIn_7_0 != 0;
+        return stackIn_6_0 != 0;
     }
 
     private final boolean a(pc param0, int param1) {
@@ -509,7 +501,7 @@ final class vd extends nv {
         ((vd) this).field_v = param1;
     }
 
-    private final void c(int param0) {
+    private final void c() {
         qea var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -830,11 +822,13 @@ final class vd extends nv {
         ((vd) this).field_t = 2097152;
         try {
             ((vd) this).field_r = new fsa(param0, false);
-            wd.a((byte) -98, 1, true, param0, ((vd) this).field_r, false);
+            int discarded$0 = 0;
+            wd.a((byte) -98, 1, true, param0, ((vd) this).field_r);
             ((vd) this).field_r.b(false, 11468);
             ((vd) this).field_A = new fsa(param0, false);
             ((vd) this).field_o = new fsa(param0, false);
-            this.d(true);
+            int discarded$1 = 1;
+            this.d();
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "vd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -1124,7 +1118,8 @@ final class vd extends nv {
               ((vd) this).field_o = null;
               if (((vd) this).field_u) {
                 ((vd) this).field_r = new fsa(param0, false);
-                wd.a((byte) -120, 1, true, param0, ((vd) this).field_r, false);
+                int discarded$3 = 0;
+                wd.a((byte) -120, 1, true, param0, ((vd) this).field_r);
                 ((vd) this).field_A = new fsa(param0, false);
                 break L4;
               } else {
@@ -1143,16 +1138,17 @@ final class vd extends nv {
               }
             }
             L5: {
-              if (((vd) this).field_o == null) {
-                ((vd) this).field_o = new fsa(param0, false);
-                wd.a((byte) -93, 7, true, param0, ((vd) this).field_o, false);
-                this.d(true);
+              if (((vd) this).field_o != null) {
                 break L5;
               } else {
-                this.d(true);
+                ((vd) this).field_o = new fsa(param0, false);
+                int discarded$4 = 0;
+                wd.a((byte) -93, 7, true, param0, ((vd) this).field_o);
                 break L5;
               }
             }
+            int discarded$5 = 1;
+            this.d();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1212,7 +1208,7 @@ final class vd extends nv {
         }
     }
 
-    private final void d(boolean param0) {
+    private final void d() {
         if (1048576 > ((vd) this).field_t) {
             ((vd) this).field_t = 1048576;
         }
@@ -1366,7 +1362,7 @@ final class vd extends nv {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (!una.a((byte) 105)) {
             return;
         }
@@ -1389,7 +1385,8 @@ final class vd extends nv {
 
     final void n(byte param0) {
         super.n((byte) 105);
-        this.c(127);
+        int discarded$0 = 127;
+        this.c();
         if (param0 <= 68) {
             ((vd) this).field_r = null;
         }

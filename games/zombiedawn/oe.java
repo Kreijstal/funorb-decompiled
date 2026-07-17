@@ -40,14 +40,17 @@ final class oe {
     }
 
     final static void a(byte param0) {
-        int var1 = ma.d((byte) 78);
+        int discarded$0 = 78;
+        int var1 = ma.d();
         int var3 = 109 % ((param0 - 9) / 62);
-        int var2 = bj.a(true);
+        int discarded$1 = 1;
+        int var2 = bj.a();
         cl.field_b.a(var1 - -(pg.field_o << 1), el.field_k + -el.field_d, eb.field_c + -pg.field_o, (byte) -128, (el.field_d << 1) + var2);
-        ll.a(-67);
+        int discarded$2 = -67;
+        ll.a();
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_f = null;
         field_a = null;
         field_c = null;
@@ -56,19 +59,16 @@ final class oe {
 
     final static void a(int param0, int param1, mg param2) {
         am var3 = dp.field_e;
-        if (param1 != -19004) {
-            return;
-        }
         try {
-            var3.j(11, param0);
+            var3.j(11, 7);
             var3.i(param2.field_h, 70);
-            var3.i(param2.field_i, param1 + 19119);
+            var3.i(param2.field_i, 115);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "oe.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "oe.D(" + 7 + 44 + -19004 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -78,17 +78,17 @@ final class oe {
             ij.field_L[0] = new u(fb.field_w, 0, 0);
             var1_int = pb.a(so.field_a, 50, 1) - -30;
             var2 = 1;
-            for (var3 = param0; 15 > var3; var3++) {
+            for (var3 = 1; 15 > var3; var3++) {
                 ij.field_L[var3] = new u(cn.field_a, var2, var1_int);
-                var1_int = var1_int + (pb.a(so.field_a, 100, param0) + 75);
+                var1_int = var1_int + (pb.a(so.field_a, 100, 1) + 75);
                 if (!(var3 != 7)) {
                     var2 = 2;
-                    var1_int = pb.a(so.field_a, 10, param0);
+                    var1_int = pb.a(so.field_a, 10, 1);
                 }
             }
-            ip.c(param0 ^ -63);
+            ip.c(-64);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "oe.C(" + param0 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "oe.C(" + 1 + 41);
         }
     }
 
@@ -164,24 +164,16 @@ final class oe {
                   break L5;
                 }
               }
-              L6: {
-                if (param0 == 0) {
-                  break L6;
-                } else {
-                  field_c = null;
-                  break L6;
-                }
-              }
               jk.a((byte) -126, param1);
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2;
-            stackOut_20_1 = new StringBuilder().append("oe.B(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("oe.B(").append(0).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -193,7 +185,7 @@ final class oe {
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
-              break L7;
+              break L6;
             } else {
               stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
@@ -201,7 +193,7 @@ final class oe {
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
               stackIn_23_2 = stackOut_21_2;
-              break L7;
+              break L6;
             }
           }
           throw sh.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);

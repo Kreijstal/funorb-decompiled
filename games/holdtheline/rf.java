@@ -10,7 +10,7 @@ final class rf extends u implements pi {
     static String field_bb;
     static String[] field_Y;
 
-    private final rm a(tb param0, String param1, int param2) {
+    private final rm a(tb param0, String param1) {
         rm var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -151,7 +151,8 @@ final class rf extends u implements pi {
             if (param1 != ((rf) this).field_Z) {
               break L0;
             } else {
-              this.h((byte) 49);
+              int discarded$2 = 49;
+              this.h();
               return;
             }
           }
@@ -258,7 +259,8 @@ final class rf extends u implements pi {
             var4.field_k = 0;
             var4.field_l = (dh) (Object) new dk(mo.field_w, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((rf) this).a(true, var4);
-            ((rf) this).field_Z = this.a((tb) this, h.field_f, 25105);
+            int discarded$2 = 25105;
+            ((rf) this).field_Z = this.a((tb) this, h.field_f);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -318,20 +320,20 @@ final class rf extends u implements pi {
         }
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_bb = null;
         field_Y = null;
         field_ab = null;
     }
 
-    private final void h(byte param0) {
+    private final void h() {
         if (!((rf) this).field_F) {
             return;
         }
         ((rf) this).field_F = false;
     }
 
-    final static int a(int param0, Random param1, int param2) {
+    final static int a(int param0, Random param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -359,8 +361,8 @@ final class rf extends u implements pi {
         var5 = HoldTheLine.field_D;
         try {
           L0: {
-            if (~param0 < param2) {
-              if (bg.a(param2 ^ -6, param0)) {
+            if (param0 > 0) {
+              if (bg.a(5, param0)) {
                 stackOut_5_0 = (int)((long)param0 * (4294967295L & (long)param1.nextInt()) >> 32);
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
@@ -371,7 +373,7 @@ final class rf extends u implements pi {
                   if (var4 >= var3_int) {
                     continue L1;
                   } else {
-                    stackOut_9_0 = oa.a(param0, var4, param2 + -3247);
+                    stackOut_9_0 = oa.a(param0, var4, -3248);
                     stackIn_10_0 = stackOut_9_0;
                     break L0;
                   }
@@ -409,7 +411,7 @@ final class rf extends u implements pi {
               break L2;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + -1 + 41);
         }
         return stackIn_10_0;
     }

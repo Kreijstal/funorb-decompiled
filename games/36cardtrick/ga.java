@@ -15,7 +15,7 @@ final class ga implements Runnable {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_b = null;
     }
 
@@ -88,7 +88,7 @@ final class ga implements Runnable {
             if (256 != param1.length) {
               throw new IllegalArgumentException();
             } else {
-              var3_int = 81 % ((56 - param0) / 43);
+              var3_int = 0;
               var26 = new int[256];
               var21 = var26;
               var16 = var21;
@@ -137,7 +137,7 @@ final class ga implements Runnable {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("ga.B(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("ga.B(").append(121).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;

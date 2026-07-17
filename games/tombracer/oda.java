@@ -7,7 +7,7 @@ final class oda extends vg {
     static String field_h;
     static String field_i;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
         field_h = null;
     }

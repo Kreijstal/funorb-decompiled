@@ -5,7 +5,7 @@ final class i {
     static String field_b;
     static ak field_a;
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -64,7 +64,7 @@ final class i {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
     }

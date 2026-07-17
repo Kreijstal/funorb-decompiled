@@ -16,7 +16,8 @@ final class ce extends rr {
         if (Character.isISOControl(param0)) {
           return false;
         } else {
-          if (!ef.a(param0, false)) {
+          int discarded$6 = 0;
+          if (!ef.a(param0)) {
             if (param0 != 45) {
               if (160 != param0) {
                 if (param0 != 32) {
@@ -41,7 +42,7 @@ final class ce extends rr {
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
@@ -86,7 +87,8 @@ final class ce extends rr {
                 break L1;
               }
             }
-            stackOut_2_0 = ad.a('*', param1.field_s.length(), -34);
+            int discarded$2 = -34;
+            stackOut_2_0 = ad.a('*', param1.field_s.length());
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -127,7 +129,7 @@ final class ce extends rr {
         this(gn.field_u, param0);
     }
 
-    final static void a(String param0, String param1, byte param2) {
+    final static void a(String param0, String param1) {
         try {
             if (!(null == ji.field_G)) {
                 ji.field_G.i((byte) -104);
@@ -139,7 +141,7 @@ final class ce extends rr {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_x = null;
         field_w = null;
         field_u = null;

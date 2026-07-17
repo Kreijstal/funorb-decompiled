@@ -13,8 +13,8 @@ final class fh {
     static String field_d;
 
     final static ud a(int param0, String param1) {
-        String var2 = null;
-        RuntimeException var2_ref = null;
+        RuntimeException var2 = null;
+        String var2_ref = null;
         ud var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -45,56 +45,48 @@ final class fh {
         var5 = TetraLink.field_J;
         try {
           L0: {
-            L1: {
-              if (param0 == -32055) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
             if (sd.field_nb == null) {
               stackOut_7_0 = null;
               stackIn_8_0 = stackOut_7_0;
               return (ud) (Object) stackIn_8_0;
             } else {
-              L2: {
-                var2 = cc.a((CharSequence) (Object) param1, (byte) 118);
-                if (var2 == null) {
-                  var2 = param1;
-                  break L2;
+              L1: {
+                var2_ref = cc.a((CharSequence) (Object) param1, (byte) 118);
+                if (var2_ref == null) {
+                  var2_ref = param1;
+                  break L1;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
-              var3 = (ud) (Object) sd.field_nb.a((long)var2.hashCode(), 1);
-              L3: while (true) {
-                L4: {
-                  L5: {
+              var3 = (ud) (Object) sd.field_nb.a((long)var2_ref.hashCode(), 1);
+              L2: while (true) {
+                L3: {
+                  L4: {
                     if (null == var3) {
-                      break L5;
+                      break L4;
                     } else {
                       var4 = cc.a((CharSequence) (Object) var3.field_Mb, (byte) 124);
                       stackOut_15_0 = null;
                       stackIn_25_0 = stackOut_15_0;
                       stackIn_16_0 = stackOut_15_0;
                       if (var5 != 0) {
-                        break L4;
+                        break L3;
                       } else {
-                        L6: {
+                        L5: {
                           if (stackIn_16_0 != (Object) (Object) var4) {
-                            break L6;
+                            break L5;
                           } else {
                             var4 = var3.field_Mb;
-                            break L6;
+                            break L5;
                           }
                         }
-                        if (!var4.equals((Object) (Object) var2)) {
+                        if (!var4.equals((Object) (Object) var2_ref)) {
                           var3 = (ud) (Object) sd.field_nb.c(126);
                           if (var5 == 0) {
-                            continue L3;
+                            continue L2;
                           } else {
-                            break L5;
+                            break L4;
                           }
                         } else {
                           stackOut_21_0 = (ud) var3;
@@ -106,7 +98,7 @@ final class fh {
                   }
                   stackOut_24_0 = null;
                   stackIn_25_0 = stackOut_24_0;
-                  break L4;
+                  break L3;
                 }
                 break L0;
               }
@@ -114,10 +106,10 @@ final class fh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2_ref = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var2_ref;
-            stackOut_26_1 = new StringBuilder().append("fh.C(").append(param0).append(44);
+          L6: {
+            var2 = decompiledCaughtException;
+            stackOut_26_0 = (RuntimeException) var2;
+            stackOut_26_1 = new StringBuilder().append("fh.C(").append(-32055).append(44);
             stackIn_29_0 = stackOut_26_0;
             stackIn_29_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -129,7 +121,7 @@ final class fh {
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
-              break L7;
+              break L6;
             } else {
               stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
               stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
@@ -137,7 +129,7 @@ final class fh {
               stackIn_30_0 = stackOut_27_0;
               stackIn_30_1 = stackOut_27_1;
               stackIn_30_2 = stackOut_27_2;
-              break L7;
+              break L6;
             }
           }
           throw oi.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
@@ -148,11 +140,9 @@ final class fh {
     final static int a(byte param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        int stackIn_6_0 = 0;
         int stackIn_16_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_15_0 = 0;
-        int stackOut_5_0 = 0;
         try {
           L0: {
             L1: {
@@ -164,50 +154,48 @@ final class fh {
                 break L1;
               }
             }
-            if (param0 == 79) {
-              L2: {
-                if (param1 == 1) {
-                  var2_int = me.field_b;
-                  break L2;
-                } else {
-                  break L2;
-                }
+            L2: {
+              if (param1 == 1) {
+                var2_int = me.field_b;
+                break L2;
+              } else {
+                break L2;
               }
-              L3: {
-                if (param1 == 2) {
-                  var2_int = mc.field_f;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              stackOut_15_0 = var2_int;
-              stackIn_16_0 = stackOut_15_0;
-              break L0;
-            } else {
-              stackOut_5_0 = -50;
-              stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0;
             }
+            L3: {
+              if (param1 == 2) {
+                var2_int = mc.field_f;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            stackOut_15_0 = var2_int;
+            stackIn_16_0 = stackOut_15_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var2, "fh.D(" + param0 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) var2, "fh.D(" + 79 + 44 + param1 + 41);
         }
         return stackIn_16_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_b = null;
             field_d = null;
             field_f = null;
-            if (param0 != -48) {
-                String discarded$0 = fh.b((byte) -44);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "fh.E(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw oi.a((Throwable) (Object) var1, "fh.E(" + -48 + 41);
         }
     }
 
@@ -227,7 +215,7 @@ final class fh {
         }
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         Object var1 = null;
         int var2 = 0;
         Object var3 = null;
@@ -249,7 +237,7 @@ final class fh {
         try {
           L0: {
             L1: {
-              var2 = 55 % ((param0 - 21) / 59);
+              var2 = 0;
               var1 = null;
               var3 = null;
               if (sf.field_d != 0) {
@@ -267,7 +255,8 @@ final class fh {
               if (2 != sf.field_d) {
                 break L2;
               } else {
-                if (k.a(true)) {
+                int discarded$3 = 1;
+                if (k.a()) {
                   break L2;
                 } else {
                   L3: {
@@ -288,7 +277,8 @@ final class fh {
                   }
                   if (hi.field_a) {
                     fi.a(0, 0, (String) null, 2, (String) var3, (String) null);
-                    fk.e((byte) -8);
+                    int discarded$4 = -8;
+                    fk.e();
                     break L2;
                   } else {
                     break L2;
@@ -441,7 +431,8 @@ final class fh {
                         } else {
                           if (~var10 < ~in.field_g.field_Z) {
                             if (!cd.field_a) {
-                              em.d(-20715);
+                              int discarded$5 = -20715;
+                              em.d();
                               break L15;
                             } else {
                               break L15;
@@ -482,7 +473,7 @@ final class fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Object) (Object) decompiledCaughtException;
-          throw oi.a((Throwable) var1, "fh.B(" + param0 + 41);
+          throw oi.a((Throwable) var1, "fh.B(" + -62 + 41);
         }
         return (String) (Object) stackIn_95_0;
     }

@@ -11,7 +11,7 @@ final class cs implements mw {
     private fr field_c;
     private ft[] field_d;
 
-    final static int g(int param0) {
+    final static int g() {
         wt.field_i.c((byte) 66);
         if (jk.field_b.c((byte) 119)) {
             return 0;
@@ -41,10 +41,12 @@ final class cs implements mw {
         ((cs) this).field_h = ((cs) this).field_h & -2;
         if (param0 != -20745) {
           ((cs) this).c(-86);
-          ((cs) this).field_f = this.f(24909);
+          int discarded$4 = 24909;
+          ((cs) this).field_f = this.f();
           return;
         } else {
-          ((cs) this).field_f = this.f(24909);
+          int discarded$5 = 24909;
+          ((cs) this).field_f = this.f();
           return;
         }
     }
@@ -156,7 +158,7 @@ final class cs implements mw {
         }
     }
 
-    private final int f(int param0) {
+    private final int f() {
         if ((4 & ((cs) this).field_h) != 0) {
             return 36160;
         }
@@ -177,7 +179,8 @@ final class cs implements mw {
     public final void a(boolean param0) {
         jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
         ((cs) this).field_h = ((cs) this).field_h & -3;
-        ((cs) this).field_f = this.f(24909);
+        int discarded$0 = 24909;
+        ((cs) this).field_f = this.f();
         if (param0) {
             ((cs) this).field_d = null;
         }
@@ -228,7 +231,7 @@ final class cs implements mw {
                   throw new RuntimeException();
                 }
               }
-              param3.a(-90, wv.field_a[param2], param1, ((cs) this).field_f);
+              param3.a(-90, wv.field_a[param2], 0, ((cs) this).field_f);
               ((cs) this).field_d[param2] = (ft) (Object) param3;
               ((cs) this).field_g = ((cs) this).field_g | var5_int;
               break L0;
@@ -239,7 +242,7 @@ final class cs implements mw {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) runtimeException;
-            stackOut_11_1 = new StringBuilder().append("cs.I(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_11_1 = new StringBuilder().append("cs.I(").append(param0).append(44).append(0).append(44).append(param2).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -332,7 +335,8 @@ final class cs implements mw {
     public final void c(int param0) {
         jaggl.OpenGL.glBindFramebufferEXT(36008, ((cs) this).field_a);
         ((cs) this).field_h = ((cs) this).field_h | 1;
-        ((cs) this).field_f = this.f(24909);
+        int discarded$0 = 24909;
+        ((cs) this).field_f = this.f();
         if (param0 != 195) {
             ((cs) this).field_d = null;
         }
@@ -344,7 +348,8 @@ final class cs implements mw {
           return;
         } else {
           ((cs) this).field_h = ((cs) this).field_h & -5;
-          ((cs) this).field_f = this.f(24909);
+          int discarded$2 = 24909;
+          ((cs) this).field_f = this.f();
           return;
         }
     }
@@ -371,7 +376,8 @@ final class cs implements mw {
         } else {
           jaggl.OpenGL.glBindFramebufferEXT(36160, ((cs) this).field_a);
           ((cs) this).field_h = ((cs) this).field_h | 4;
-          ((cs) this).field_f = this.f(24909);
+          int discarded$2 = 24909;
+          ((cs) this).field_f = this.f();
           return;
         }
     }
@@ -382,7 +388,8 @@ final class cs implements mw {
         } else {
           jaggl.OpenGL.glBindFramebufferEXT(36009, ((cs) this).field_a);
           ((cs) this).field_h = ((cs) this).field_h | 2;
-          ((cs) this).field_f = this.f(24909);
+          int discarded$2 = 24909;
+          ((cs) this).field_f = this.f();
           return;
         }
     }

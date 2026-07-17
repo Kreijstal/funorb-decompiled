@@ -8,8 +8,13 @@ final class qf {
     static String field_a;
 
     final static boolean a(boolean param0) {
-        qf.a(94);
-        return rl.b(0);
+        if (!param0) {
+            qf.a(94);
+            int discarded$0 = 0;
+            return rl.b();
+        }
+        int discarded$1 = 0;
+        return rl.b();
     }
 
     public final String toString() {
@@ -19,7 +24,11 @@ final class qf {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
-        boolean discarded$0 = qf.a(false);
+        if (param0 <= 126) {
+            boolean discarded$0 = qf.a(false);
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
@@ -56,33 +65,15 @@ final class qf {
     final static String a(String param0, int param1, String param2, String param3) {
         int var4 = 0;
         int var5 = 0;
-        String stackIn_5_0 = null;
-        String stackIn_6_0 = null;
-        String stackOut_4_0 = null;
-        L0: {
-          var5 = Terraphoenix.field_V;
-          var4 = param0.indexOf(param2);
-          if (param1 == 0) {
-            break L0;
-          } else {
-            field_c = -116;
-            break L0;
-          }
-        }
-        L1: while (true) {
-          if (var4 != -1) {
-            param0 = param0.substring(0, var4) + param3 + param0.substring(var4 - -param2.length());
-            stackOut_4_0 = (String) param0;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
-            if (var5 == 0) {
-              var4 = ((String) (Object) stackIn_6_0).indexOf(param2, param3.length() + var4);
-              continue L1;
-            } else {
-              return stackIn_5_0;
-            }
-          } else {
+        var5 = Terraphoenix.field_V;
+        var4 = param0.indexOf(param2);
+        L0: while (true) {
+          if (var4 == -1) {
             return param0;
+          } else {
+            param0 = param0.substring(0, var4) + param3 + param0.substring(var4 - -param2.length());
+            var4 = param0.indexOf(param2, param3.length() + var4);
+            continue L0;
           }
         }
     }

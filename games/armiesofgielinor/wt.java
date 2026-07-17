@@ -79,12 +79,12 @@ final class wt extends dr {
         return stackIn_3_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_E = null;
         field_F = null;
     }
 
-    final static boolean a(CharSequence param0, byte param1, boolean param2) {
+    final static boolean a(CharSequence param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -114,7 +114,7 @@ final class wt extends dr {
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            var3_int = -83 % ((-9 - param1) / 39);
+            var3_int = 0;
             if (!wn.a(param0, 1, false)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
@@ -167,7 +167,7 @@ final class wt extends dr {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + 0 + 41);
+          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 65 + 44 + 0 + 41);
         }
         return stackIn_13_0 != 0;
     }
@@ -304,7 +304,8 @@ final class wt extends dr {
         int stackOut_12_9 = 0;
         int stackOut_12_10 = 0;
         L0: {
-          ad.a(-117);
+          int discarded$7 = -117;
+          ad.a();
           if (vu.field_M != null) {
             if (r.c(vu.field_M.field_Ub, 2)) {
               stackOut_4_0 = 1;
@@ -493,7 +494,8 @@ final class wt extends dr {
           break L2;
         }
         L4: {
-          hb.a(stackIn_14_0 != 0, stackIn_14_1, stackIn_14_2, stackIn_14_3 != 0, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8 != 0, stackIn_14_9, stackIn_14_10 != 0, param1, var2 != 0, 0);
+          int discarded$8 = 0;
+          hb.a(stackIn_14_0 != 0, stackIn_14_1, stackIn_14_2, stackIn_14_3 != 0, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8 != 0, stackIn_14_9, stackIn_14_10 != 0, param1, var2 != 0);
           if (!cp.field_h) {
             break L4;
           } else {
@@ -520,7 +522,7 @@ final class wt extends dr {
             break L6;
           }
         }
-        var3 = 121 / ((-20 - param0) / 45);
+        var3 = -60;
     }
 
     static {

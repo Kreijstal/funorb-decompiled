@@ -13,7 +13,7 @@ final class oh {
         field_b = null;
     }
 
-    final static void a(int param0, o param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
+    final static void a(int param0, o param1, int param2, int param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;
@@ -305,7 +305,7 @@ final class oh {
         try {
           L0: {
             if (param2.b(17820)) {
-              var5_int = -16 % ((-55 - param3) / 42);
+              var5_int = 0;
               stackOut_3_0 = param1 + " - " + param2.a(0, param4) + "%";
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -395,7 +395,7 @@ final class oh {
           }
           L4: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param3).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(-120).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

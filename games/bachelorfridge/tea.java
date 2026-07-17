@@ -11,7 +11,8 @@ final class tea extends mf implements lja {
         eq var2 = null;
         if (((tea) this).field_C) {
           if (!((tea) this).field_nb) {
-            var2 = nea.f((byte) 94);
+            int discarded$2 = 94;
+            var2 = nea.f();
             if (var2 == null) {
               if (param0 > -32) {
                 return false;
@@ -47,104 +48,97 @@ final class tea extends mf implements lja {
         String var4_ref = null;
         hc var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
+        String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
         RuntimeException stackOut_32_0 = null;
         StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        String stackOut_32_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
             L1: {
-              if (param0 == -12331) {
-                break L1;
-              } else {
-                ((tea) this).field_mb = false;
-                break L1;
-              }
-            }
-            L2: {
               ((tea) this).field_nb = true;
               if (!param2.field_e) {
                 if (param2.field_a == null) {
                   var4_ref = param2.field_g;
                   if (param2.field_d == 248) {
-                    L3: {
+                    L2: {
                       if (param1) {
-                        break L3;
+                        break L2;
                       } else {
-                        sa.c(-103);
-                        break L3;
+                        int discarded$3 = -103;
+                        sa.c();
+                        break L2;
                       }
                     }
                     var4_ref = lda.field_b;
                     ((tea) this).field_mb = true;
-                    break L2;
+                    break L1;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 } else {
                   var4_ref = uga.field_A;
                   if (((tea) this).field_ob != null) {
-                    ((tea) this).field_ob.a(param0 + 26653);
-                    break L2;
+                    ((tea) this).field_ob.a(14322);
+                    break L1;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 }
               } else {
                 var4_ref = dla.field_m;
-                break L2;
+                break L1;
               }
             }
-            L4: {
+            L3: {
               var5 = new hc((mf) this, qia.field_a, var4_ref);
               if (param2.field_e) {
                 if (param2.field_h) {
                   ((tea) this).e((wj) (Object) new ar((tea) this), 33);
                   return;
                 } else {
-                  hf discarded$2 = var5.a((pl) this, tj.field_a, 19528);
-                  break L4;
+                  hf discarded$4 = var5.a((pl) this, tj.field_a, 19528);
+                  break L3;
                 }
               } else {
-                L5: {
+                L4: {
                   if (!((tea) this).field_mb) {
                     if (5 != param2.field_d) {
                       var5.a(7, ina.field_s, -1);
-                      break L5;
+                      break L4;
                     } else {
                       var5.a(7, tt.field_h, 11);
                       var5.a(7, uda.field_ab, 17);
-                      break L5;
+                      break L4;
                     }
                   } else {
-                    hf discarded$3 = var5.a((pl) this, tj.field_a, 19528);
-                    break L5;
+                    hf discarded$5 = var5.a((pl) this, tj.field_a, 19528);
+                    break L4;
                   }
                 }
                 if (param2.field_d != 3) {
                   if (param2.field_d == 6) {
                     var5.a(7, wha.field_b, 9);
-                    break L4;
+                    break L3;
                   } else {
                     ((tea) this).e((wj) (Object) var5, 33);
                     return;
                   }
                 } else {
-                  var5.a(param0 ^ -12334, pr.field_c, 7);
-                  break L4;
+                  var5.a(7, pr.field_c, 7);
+                  break L3;
                 }
               }
             }
@@ -153,33 +147,33 @@ final class tea extends mf implements lja {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var4;
-            stackOut_32_1 = new StringBuilder().append("tea.NA(").append(param0).append(44).append(param1).append(44);
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackOut_30_0 = (RuntimeException) var4;
+            stackOut_30_1 = new StringBuilder().append("tea.NA(").append(-12331).append(44).append(param1).append(44);
+            stackIn_32_0 = stackOut_30_0;
+            stackIn_32_1 = stackOut_30_1;
+            stackIn_31_0 = stackOut_30_0;
+            stackIn_31_1 = stackOut_30_1;
             if (param2 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
-              break L6;
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "null";
+              stackIn_33_0 = stackOut_32_0;
+              stackIn_33_1 = stackOut_32_1;
+              stackIn_33_2 = stackOut_32_2;
+              break L5;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
-              break L6;
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "{...}";
+              stackIn_33_0 = stackOut_31_0;
+              stackIn_33_1 = stackOut_31_1;
+              stackIn_33_2 = stackOut_31_2;
+              break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
         }
     }
 
@@ -190,7 +184,7 @@ final class tea extends mf implements lja {
         this.a(-12331, true, wu.a(248, (byte) 80, lda.field_b));
     }
 
-    public static void q(int param0) {
+    public static void q() {
         field_lb = null;
     }
 
@@ -272,7 +266,7 @@ final class tea extends mf implements lja {
         }
     }
 
-    final static int a(CharSequence param0, char param1, int param2) {
+    final static int a(CharSequence param0, char param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

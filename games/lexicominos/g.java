@@ -107,15 +107,12 @@ final class g extends tj {
         return stackIn_12_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_m = null;
     }
 
-    final static boolean f(int param0) {
-        if (param0 != 256) {
-            field_m = null;
-        }
-        return gf.a(0, kk.c(param0 ^ -14303));
+    final static boolean f() {
+        return gf.a(0, kk.c(-14047));
     }
 
     final String a(byte param0, String param1) {
@@ -284,7 +281,7 @@ final class g extends tj {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         nc var4 = null;
@@ -301,13 +298,13 @@ final class g extends tj {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    uh.a(var5, (byte) -123, param0);
+                    uh.a(var5, (byte) -123, 3);
                     var5 = (sj) (Object) il.field_b.f(2);
                     continue L2;
                   }
                 }
               } else {
-                ga.a(var4, param0, 74);
+                ga.a(var4, 3, 74);
                 var4 = (nc) (Object) ok.field_b.f(2);
                 continue L1;
               }
@@ -316,7 +313,7 @@ final class g extends tj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "g.K(" + param0 + 44 + -39 + 41);
+          throw ld.a((Throwable) (Object) var2, "g.K(" + 3 + 44 + -39 + 41);
         }
     }
 

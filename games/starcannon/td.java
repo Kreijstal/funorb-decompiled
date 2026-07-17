@@ -106,35 +106,20 @@ final class td {
                   var5 = ((td) this).field_e + (long)((td) this).field_a;
                   break L5;
                 } else {
-                  L7: {
-                    if (var3 <= -1L) {
-                      break L7;
-                    } else {
-                      if (~var3 <= ~var5) {
-                        break L7;
-                      } else {
-                        var7 = (int)(-var3 + var5);
-                        ug.a(((td) this).field_i, (int)(var3 - ((td) this).field_d), ((td) this).field_g, (int)(var3 - ((td) this).field_e), var7);
-                        break L7;
-                      }
-                    }
-                  }
-                  ((td) this).field_d = -1L;
-                  ((td) this).field_c = 0;
-                  break L0;
+                  break L5;
                 }
               }
             }
-            L8: {
+            L7: {
               if (var3 <= -1L) {
-                break L8;
+                break L7;
               } else {
                 if (~var3 <= ~var5) {
-                  break L8;
+                  break L7;
                 } else {
                   var7 = (int)(-var3 + var5);
                   ug.a(((td) this).field_i, (int)(var3 - ((td) this).field_d), ((td) this).field_g, (int)(var3 - ((td) this).field_e), var7);
-                  break L8;
+                  break L7;
                 }
               }
             }
@@ -145,7 +130,7 @@ final class td {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int a(int param0, int param1) {
         if (null != bg.field_c) {
           L0: {
             if (param0 < nh.field_f) {
@@ -166,27 +151,20 @@ final class td {
               }
             }
           }
-          L1: {
-            if (param0 < qf.field_e) {
-              break L1;
-            } else {
-              if (qf.field_e + bg.field_c.field_u <= param0) {
-                break L1;
-              } else {
-                if (mf.field_d > param1) {
-                  break L1;
+          if (param0 >= qf.field_e) {
+            if (qf.field_e + bg.field_c.field_u > param0) {
+              if (mf.field_d <= param1) {
+                if (mf.field_d + bg.field_c.field_v > param1) {
+                  return 1;
                 } else {
-                  if (mf.field_d + bg.field_c.field_v <= param1) {
-                    break L1;
-                  } else {
-                    return 1;
-                  }
+                  return -1;
                 }
+              } else {
+                return -1;
               }
+            } else {
+              return -1;
             }
-          }
-          if (!param2) {
-            return 95;
           } else {
             return -1;
           }
@@ -419,7 +397,7 @@ final class td {
         }
     }
 
-    private final void a(boolean param0) throws IOException {
+    private final void a() throws IOException {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -461,14 +439,15 @@ final class td {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_o = null;
         field_j = null;
         field_f = null;
     }
 
-    final static void b(int param0) {
-        eh.field_j = oe.c(-5671);
+    final static void b() {
+        int discarded$0 = -5671;
+        eh.field_j = oe.c();
         ti.field_b = new tc();
         ba.a(true, true, 2);
     }
@@ -560,7 +539,8 @@ final class td {
                 if (((td) this).field_g.length >= param3) {
                   if (param3 > 0) {
                     L6: {
-                      this.a(false);
+                      int discarded$2 = 0;
+                      this.a();
                       var9_int = param3;
                       if (((td) this).field_a < var9_int) {
                         var9_int = ((td) this).field_a;
@@ -618,9 +598,9 @@ final class td {
                           if (var9_int <= param2) {
                             break L9;
                           } else {
-                            int incrementValue$1 = param2;
+                            int incrementValue$3 = param2;
                             param2++;
-                            param1[incrementValue$1] = (byte) 0;
+                            param1[incrementValue$3] = (byte) 0;
                             param3--;
                             ((td) this).field_l = ((td) this).field_l + 1L;
                             continue L11;

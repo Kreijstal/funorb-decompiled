@@ -187,7 +187,7 @@ final class u {
 
     final static void a(int param0, int param1) {
         ia var2 = d.field_b;
-        var2.d((byte) 61, param0);
+        var2.d((byte) 61, 4);
         var2.a(1, -109);
         var2.a(2, -120);
     }
@@ -259,7 +259,7 @@ final class u {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

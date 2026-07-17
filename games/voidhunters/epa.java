@@ -4,7 +4,7 @@
 final class epa extends rqa {
     static llb field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

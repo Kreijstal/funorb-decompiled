@@ -23,20 +23,20 @@ final class de {
         }
     }
 
-    final static void a(oi param0, int param1, int param2) {
+    final static void a(oi param0) {
         hj var3 = null;
         try {
             var3 = ff.field_D;
-            var3.a(false, param1);
+            var3.a(false, 5);
             var3.f(6389, 2);
             var3.f(6389, 0);
             var3.f(6389, param0.field_h);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "de.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 2 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "de.C(" + (param0 != null ? "{...}" : "null") + 44 + 5 + 44 + 2 + 41);
         }
     }
 
-    final static uj a(boolean param0, byte param1) {
+    final static uj a(boolean param0) {
         uj var2 = new uj(true);
         var2.field_a = param0 ? true : false;
         return var2;

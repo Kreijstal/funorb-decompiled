@@ -142,7 +142,7 @@ final class im extends aia {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_q = null;
     }
 

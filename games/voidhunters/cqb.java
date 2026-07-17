@@ -224,7 +224,7 @@ final class cqb extends wm implements ntb {
         return stackIn_5_0 != 0;
     }
 
-    final static rn d(int param0) {
+    final static rn d() {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         rn var2 = null;
@@ -269,7 +269,8 @@ final class cqb extends wm implements ntb {
     }
 
     final static void b(byte param0) {
-        pja.e(-110);
+        int discarded$0 = -110;
+        pja.e();
         int var1 = -25 / ((46 - param0) / 35);
     }
 

@@ -21,26 +21,14 @@ final class ns extends oj {
     static wk field_O;
     static String field_F;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_F = null;
-        if (param0) {
-          ns.b(false);
-          field_O = null;
-          field_K = null;
-          field_D = null;
-          field_E = null;
-          field_A = null;
-          field_y = null;
-          return;
-        } else {
-          field_O = null;
-          field_K = null;
-          field_D = null;
-          field_E = null;
-          field_A = null;
-          field_y = null;
-          return;
-        }
+        field_O = null;
+        field_K = null;
+        field_D = null;
+        field_E = null;
+        field_A = null;
+        field_y = null;
     }
 
     final String a(byte param0, boolean param1) {
@@ -290,7 +278,7 @@ final class ns extends oj {
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         if (!(fh.field_i)) {
             throw new IllegalStateException();
         }

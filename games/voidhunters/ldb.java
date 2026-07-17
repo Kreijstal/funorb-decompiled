@@ -11,7 +11,7 @@ final class ldb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_p = null;
     }
 

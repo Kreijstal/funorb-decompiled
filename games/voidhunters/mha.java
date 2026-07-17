@@ -46,16 +46,16 @@ final class mha {
           L0: {
             if (param1 != null) {
               var4_int = jaggl.OpenGL.glGenProgramARB();
-              jaggl.OpenGL.glBindProgramARB(param2, var4_int);
-              jaggl.OpenGL.glProgramRawARB(param2, 34933, param1);
+              jaggl.OpenGL.glBindProgramARB(34336, var4_int);
+              jaggl.OpenGL.glProgramRawARB(34336, 34933, param1);
               jaggl.OpenGL.glGetIntegerv(34379, VoidHunters.field_E, 0);
               if (-1 == VoidHunters.field_E[0]) {
-                jaggl.OpenGL.glBindProgramARB(param2, param0);
-                stackOut_6_0 = new gla(param3, param2, var4_int);
+                jaggl.OpenGL.glBindProgramARB(34336, 0);
+                stackOut_6_0 = new gla(param3, 34336, var4_int);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                jaggl.OpenGL.glBindProgramARB(param2, 0);
+                jaggl.OpenGL.glBindProgramARB(34336, 0);
                 stackOut_4_0 = null;
                 stackIn_5_0 = stackOut_4_0;
                 return (gla) (Object) stackIn_5_0;
@@ -69,7 +69,7 @@ final class mha {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("mha.A(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("mha.A(").append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -94,7 +94,7 @@ final class mha {
           }
           L2: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(34336).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;

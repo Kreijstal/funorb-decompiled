@@ -53,7 +53,7 @@ abstract class aba extends pk implements fca {
         }
     }
 
-    final static kv[] a(kv param0, boolean param1) {
+    final static kv[] a(kv param0) {
         kv[] var2 = null;
         RuntimeException var2_ref = null;
         kv[] var3 = null;
@@ -135,7 +135,8 @@ abstract class aba extends pk implements fca {
 
     final static void a(byte param0, int param1) {
         int var2 = 84 % ((param0 - -18) / 34);
-        cq discarded$0 = ol.a(jga.field_y[param1], true);
+        int discarded$0 = 1;
+        cq discarded$1 = ol.a(jga.field_y[param1]);
     }
 
     public final void a(lka param0, int param1) {

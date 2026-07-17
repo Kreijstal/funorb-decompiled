@@ -310,7 +310,7 @@ final class ki extends dg {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_n = null;
         field_p = null;
     }

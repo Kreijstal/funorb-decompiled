@@ -7,30 +7,22 @@ final class ok {
     static int[] field_d;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         int var1 = -1;
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, int param13) {
+    final static void a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11) {
         ko.field_S = null;
         hm.g(74);
-        if (param7 != 12423) {
-          field_a = null;
-          param11 = ve.a(param1, param0, param9, param7 + 9488, param11, param12, param2);
-          in.a(param8, param3, param6, param11, param5, param9, param10, 16777215, (byte) -66, param4);
-          ho.a(24285, param3, param10);
-          ko.a(param11, param10, param12, true);
-          return;
-        } else {
-          param11 = ve.a(param1, param0, param9, param7 + 9488, param11, param12, param2);
-          in.a(param8, param3, param6, param11, param5, param9, param10, 16777215, (byte) -66, param4);
-          ho.a(24285, param3, param10);
-          ko.a(param11, param10, param12, true);
-          return;
-        }
+        int discarded$0 = 13;
+        int discarded$1 = 0;
+        param11 = ve.a(14, 15, 11, 21911, param11);
+        in.a(param8, param3, 16777215, param11, true, 11, param10, 16777215, (byte) -66, param4);
+        ho.a(24285, param3, param10);
+        ko.a(param11, param10, 0, true);
     }
 
     static {

@@ -9,7 +9,7 @@ final class wd extends wf {
     byte[] field_h;
     static String field_i;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_k = null;
         field_l = null;
@@ -20,7 +20,8 @@ final class wd extends wf {
             if (param0 != 17099) {
                 field_j = -73;
             }
-            am.a(param1, 256, param2, (byte) 125);
+            int discarded$0 = 125;
+            am.a(param1, 256, param2);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "wd.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

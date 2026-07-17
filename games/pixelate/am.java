@@ -14,36 +14,27 @@ final class am {
     private rj field_g;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_b = null;
-        if (param0 >= -120) {
-            field_c = -67;
-        }
     }
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            if (param0 != -7749) {
-                field_b = null;
-            }
             param1.removeKeyListener((java.awt.event.KeyListener) (Object) mc.field_r);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) mc.field_r);
             ol.field_q = -1;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "am.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "am.I(" + -7749 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(fm param0, boolean param1, fm param2) {
         pb.field_n = param0;
-        if (!param1) {
-            return;
-        }
         try {
             kf.field_p = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "am.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "am.B(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -247,11 +238,12 @@ final class am {
           ((ak) (Object) stackIn_28_0).a(stackIn_28_1 != 0, 0);
           break L6;
         }
-        var2 = 127 / ((param0 - -31) / 55);
-        ia.a((byte) 92);
+        var2 = 127;
+        int discarded$2 = 92;
+        ia.a();
     }
 
-    final static void b(int param0) {
+    final static void b() {
     }
 
     final gg a(boolean param0, int param1, int param2, rn param3, rn param4) {
@@ -726,7 +718,8 @@ final class am {
             if (param0 != io.field_e) {
               io.field_e = param0;
               si.field_P = true;
-              ro.a(param3, true);
+              int discarded$3 = 1;
+              ro.a(param3);
               break L0;
             } else {
               break L0;
@@ -743,7 +736,8 @@ final class am {
               } else {
                 si.field_P = true;
                 ib.field_e = param0;
-                ro.a(param3, true);
+                int discarded$4 = 1;
+                ro.a(param3);
                 break L1;
               }
             }
@@ -756,18 +750,11 @@ final class am {
               } else {
                 si.field_P = true;
                 ib.field_e = param0;
-                ro.a(param3, true);
+                int discarded$5 = 1;
+                ro.a(param3);
                 break L1;
               }
             }
-          }
-        }
-        L2: {
-          if (param1 == -26931) {
-            break L2;
-          } else {
-            am.a((byte) -107);
-            break L2;
           }
         }
     }
@@ -777,7 +764,8 @@ final class am {
     }
 
     private static void $cfr$clinit() {
-        ol.e(2071);
+        int discarded$0 = 2071;
+        ol.e();
         field_c = 50;
     }
 }

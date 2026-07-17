@@ -43,7 +43,7 @@ final class fj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_f = null;
         field_h = null;
@@ -62,25 +62,24 @@ final class fj {
         try {
             eg.field_f.field_S = param3;
             eg.field_f.field_ib = param4;
-            if (param2 != -1) {
-                field_h = null;
-            }
             eg.field_f.field_M = eg.field_f.field_M + uc.field_c.field_M;
             eg.field_f.field_db = param0;
             uc.field_c.field_mb = uc.field_c.field_mb + uc.field_c.field_M;
-            uc.field_c.field_M = param1;
+            uc.field_c.field_M = 0;
             eg.field_f.field_M = eg.field_f.field_M - uc.field_c.field_M;
             uc.field_c.field_mb = uc.field_c.field_mb - uc.field_c.field_M;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "fj.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "fj.F(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + -1 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 
     final static void a(int param0) {
-        fi.a(param0 + -393711775);
-        bk.a(param0 ^ 16777215);
+        fi.a(-393711775);
+        int discarded$0 = 16777215;
+        bk.a();
         pj.field_h = null;
-        rc.b(param0);
+        int discarded$1 = 0;
+        rc.b();
     }
 
     final int a(boolean param0) {
@@ -251,7 +250,8 @@ final class fj {
                       if (var8_ref_ld.field_d) {
                         break L9;
                       } else {
-                        if (va.a(var8_ref_ld.field_i, -19554)) {
+                        int discarded$1 = -19554;
+                        if (va.a(var8_ref_ld.field_i)) {
                           break L8;
                         } else {
                           break L9;

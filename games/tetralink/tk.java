@@ -10,30 +10,26 @@ final class tk {
     static boolean field_b;
 
     final static boolean a(byte param0, char param1) {
-        int stackIn_9_0 = 0;
-        int stackOut_7_0 = 0;
-        if (param0 == 81) {
-          if (param1 != 160) {
-            if (param1 != 32) {
-              if (param1 != 95) {
-                if (param1 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
+        int stackIn_7_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param1 != 160) {
+          if (param1 != 32) {
+            if (param1 != 95) {
+              if (param1 == 45) {
+                return true;
               } else {
-                stackOut_7_0 = 1;
-                stackIn_9_0 = stackOut_7_0;
-                return stackIn_9_0 != 0;
+                return false;
               }
             } else {
-              return true;
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              return stackIn_7_0 != 0;
             }
           } else {
             return true;
           }
         } else {
-          return false;
+          return true;
         }
     }
 

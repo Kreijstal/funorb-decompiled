@@ -101,7 +101,8 @@ class oo extends dg implements dn {
           ((oo) this).field_z = false;
           if (!((oo) this).field_cb) {
             if (((oo) this).field_V) {
-              aa.b(87);
+              int discarded$2 = 87;
+              aa.b();
               return;
             } else {
               return;

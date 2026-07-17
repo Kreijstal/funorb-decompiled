@@ -155,7 +155,7 @@ final class mm extends jm {
         ((mm) this).field_x = param0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_r = null;
         field_t = null;
         field_v = null;

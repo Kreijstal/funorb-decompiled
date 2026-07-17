@@ -58,7 +58,7 @@ final class ia extends md {
             var2_int = 0;
             L1: while (true) {
               if (3 <= var2_int) {
-                var2_int = param0;
+                var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= ca.field_e) {
                     int dupTemp$4 = param1.a((byte) 102);
@@ -122,7 +122,7 @@ final class ia extends md {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("ia.I(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("ia.I(").append(0).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -150,7 +150,8 @@ final class ia extends md {
     }
 
     final long b(byte param0) {
-        ((ia) this).field_m = ((ia) this).field_m + this.a(true);
+        int discarded$0 = 1;
+        ((ia) this).field_m = ((ia) this).field_m + this.a();
         if (param0 != 66) {
             return -28L;
         }
@@ -160,7 +161,7 @@ final class ia extends md {
         return 0L;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -237,7 +238,7 @@ final class ia extends md {
         }
     }
 
-    private final long a(boolean param0) {
+    private final long a() {
         int var8 = 0;
         int var9 = wizardrun.field_H;
         long var2 = System.nanoTime();

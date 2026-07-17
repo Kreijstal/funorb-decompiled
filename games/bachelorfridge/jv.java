@@ -21,7 +21,7 @@ final class jv extends tia {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_i = null;
         field_m = null;
     }

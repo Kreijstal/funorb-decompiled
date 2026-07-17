@@ -13,7 +13,7 @@ final class ra extends ik {
     static String field_f;
     static fj field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_i = null;
         field_k = null;
@@ -290,17 +290,20 @@ final class ra extends ik {
                   }
                 }
                 ((bv) (Object) stackIn_33_0).b(stackIn_33_1, stackIn_33_2);
-                vl.field_n.a((byte) -108, km.a(-59));
-                vl.field_n.a((byte) -124, oq.a(false));
+                int discarded$4 = -59;
+                vl.field_n.a((byte) -108, km.a());
+                int discarded$5 = 0;
+                vl.field_n.a((byte) -124, oq.a());
                 vl.field_n.a((byte) -59, jr.a(false));
                 vl.field_n.a((byte) -50, rt.g(0));
                 break L1;
               }
-              qh.b((byte) 27);
+              int discarded$6 = 27;
+              qh.b();
               if (param0 == 4) {
                 break L0;
               } else {
-                int discarded$1 = ra.b(true);
+                int discarded$7 = ra.b(true);
                 return;
               }
             }
@@ -648,7 +651,7 @@ final class ra extends ik {
         }
     }
 
-    final static void a(long param0, int param1, int param2) {
+    final static void a(long param0, int param1) {
         bv var4 = vl.field_n;
         var4.h(32161, param1);
         var4.field_q = var4.field_q + 1;

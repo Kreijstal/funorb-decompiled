@@ -112,22 +112,15 @@ final class mi {
           L0: {
             L1: {
               if (!param3) {
+                param1.field_Eb = param2.j(-64);
                 break L1;
               } else {
                 param1.field_Lb = param2.j(-95);
+                param1.field_Eb = param2.j(-64);
                 break L1;
               }
             }
             L2: {
-              param1.field_Eb = param2.j(-64);
-              if (param0 == -89) {
-                break L2;
-              } else {
-                mi.a((byte) -67);
-                break L2;
-              }
-            }
-            L3: {
               param1.field_nc = param2.j(-123);
               var4_int = param2.j(-111);
               stackOut_5_0 = (fb) param1;
@@ -138,35 +131,35 @@ final class mi {
                 stackOut_7_1 = 0;
                 stackIn_8_0 = stackOut_7_0;
                 stackIn_8_1 = stackOut_7_1;
-                break L3;
+                break L2;
               } else {
                 stackOut_6_0 = (fb) (Object) stackIn_6_0;
                 stackOut_6_1 = 1;
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
-                break L3;
+                break L2;
               }
             }
-            L4: {
-              L5: {
+            L3: {
+              L4: {
                 stackIn_8_0.field_Qb = stackIn_8_1 != 0;
                 stackOut_8_0 = (fb) param1;
                 stackIn_11_0 = stackOut_8_0;
                 stackIn_9_0 = stackOut_8_0;
                 if (!param1.field_Qb) {
-                  break L5;
+                  break L4;
                 } else {
                   stackOut_9_0 = (fb) (Object) stackIn_9_0;
                   stackIn_11_0 = stackOut_9_0;
                   stackIn_10_0 = stackOut_9_0;
                   if (param1.field_Eb <= param1.field_Lb) {
-                    break L5;
+                    break L4;
                   } else {
                     stackOut_10_0 = (fb) (Object) stackIn_10_0;
                     stackOut_10_1 = 1;
                     stackIn_12_0 = stackOut_10_0;
                     stackIn_12_1 = stackOut_10_1;
-                    break L4;
+                    break L3;
                   }
                 }
               }
@@ -174,9 +167,9 @@ final class mi {
               stackOut_11_1 = 0;
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
-              break L4;
+              break L3;
             }
-            L6: {
+            L5: {
               stackIn_12_0.field_cc = stackIn_12_1 != 0;
               stackOut_12_0 = (fb) param1;
               stackIn_14_0 = stackOut_12_0;
@@ -186,16 +179,16 @@ final class mi {
                 stackOut_14_1 = 2;
                 stackIn_15_0 = stackOut_14_0;
                 stackIn_15_1 = stackOut_14_1;
-                break L6;
+                break L5;
               } else {
                 stackOut_13_0 = (fb) (Object) stackIn_13_0;
                 stackOut_13_1 = 1;
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
-                break L6;
+                break L5;
               }
             }
-            L7: {
+            L6: {
               stackIn_15_0.field_Fb = stackIn_15_1;
               stackOut_15_0 = (fb) param1;
               stackIn_17_0 = stackOut_15_0;
@@ -205,16 +198,16 @@ final class mi {
                 stackOut_17_1 = 0;
                 stackIn_18_0 = stackOut_17_0;
                 stackIn_18_1 = stackOut_17_1;
-                break L7;
+                break L6;
               } else {
                 stackOut_16_0 = (fb) (Object) stackIn_16_0;
                 stackOut_16_1 = 1;
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
-                break L7;
+                break L6;
               }
             }
-            L8: {
+            L7: {
               stackIn_18_0.field_ec = stackIn_18_1 != 0;
               stackOut_18_0 = (fb) param1;
               stackIn_20_0 = stackOut_18_0;
@@ -224,16 +217,16 @@ final class mi {
                 stackOut_20_1 = 0;
                 stackIn_21_0 = stackOut_20_0;
                 stackIn_21_1 = stackOut_20_1;
-                break L8;
+                break L7;
               } else {
                 stackOut_19_0 = (fb) (Object) stackIn_19_0;
                 stackOut_19_1 = 1;
                 stackIn_21_0 = stackOut_19_0;
                 stackIn_21_1 = stackOut_19_1;
-                break L8;
+                break L7;
               }
             }
-            L9: {
+            L8: {
               stackIn_21_0.field_mc = stackIn_21_1 != 0;
               stackOut_21_0 = (fb) param1;
               stackIn_23_0 = stackOut_21_0;
@@ -243,50 +236,50 @@ final class mi {
                 stackOut_23_1 = 0;
                 stackIn_24_0 = stackOut_23_0;
                 stackIn_24_1 = stackOut_23_1;
-                break L9;
+                break L8;
               } else {
                 stackOut_22_0 = (fb) (Object) stackIn_22_0;
                 stackOut_22_1 = 1;
                 stackIn_24_0 = stackOut_22_0;
                 stackIn_24_1 = stackOut_22_1;
-                break L9;
+                break L8;
               }
             }
-            L10: {
+            L9: {
               stackIn_24_0.field_Ab = stackIn_24_1 != 0;
               if (0 == (4 & var4_int)) {
                 stackOut_26_0 = 0;
                 stackIn_27_0 = stackOut_26_0;
-                break L10;
+                break L9;
               } else {
                 stackOut_25_0 = 1;
                 stackIn_27_0 = stackOut_25_0;
-                break L10;
+                break L9;
               }
             }
-            L11: {
+            L10: {
               var5 = stackIn_27_0;
               if ((2 & var4_int) == 0) {
                 stackOut_29_0 = 0;
                 stackIn_30_0 = stackOut_29_0;
-                break L11;
+                break L10;
               } else {
                 stackOut_28_0 = 1;
                 stackIn_30_0 = stackOut_28_0;
-                break L11;
+                break L10;
               }
             }
-            L12: {
+            L11: {
               var6 = stackIn_30_0;
               param2.a(param1.field_dc.length, 0, 17469032, param1.field_dc);
               param1.field_Zb = param2.f(-20976);
-              param1.field_Gb = pr.a(param0 + 14363) + -(long)param2.a(16711680);
+              param1.field_Gb = pr.a(14274) + -(long)param2.a(16711680);
               if (var5 == 0) {
                 param1.field_lc = -1;
-                break L12;
+                break L11;
               } else {
                 param1.field_lc = param2.a(16711680);
-                break L12;
+                break L11;
               }
             }
             param1.field_fc = param2.d(127);
@@ -299,23 +292,23 @@ final class mi {
               param2.field_j = var7;
               param1.field_jc = new String[param1.field_Lb];
               var8 = 0;
-              L13: while (true) {
+              L12: while (true) {
                 if (param1.field_Lb <= var8) {
                   break L0;
                 } else {
                   param1.field_jc[var8] = param2.e(-1);
                   var8++;
-                  continue L13;
+                  continue L12;
                 }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L14: {
+          L13: {
             var4 = decompiledCaughtException;
             stackOut_39_0 = (RuntimeException) var4;
-            stackOut_39_1 = new StringBuilder().append("mi.B(").append(param0).append(44);
+            stackOut_39_1 = new StringBuilder().append("mi.B(").append(-89).append(44);
             stackIn_41_0 = stackOut_39_0;
             stackIn_41_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
@@ -327,7 +320,7 @@ final class mi {
               stackIn_42_0 = stackOut_41_0;
               stackIn_42_1 = stackOut_41_1;
               stackIn_42_2 = stackOut_41_2;
-              break L14;
+              break L13;
             } else {
               stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
               stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
@@ -335,10 +328,10 @@ final class mi {
               stackIn_42_0 = stackOut_40_0;
               stackIn_42_1 = stackOut_40_1;
               stackIn_42_2 = stackOut_40_2;
-              break L14;
+              break L13;
             }
           }
-          L15: {
+          L14: {
             stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
             stackOut_42_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(44);
             stackIn_44_0 = stackOut_42_0;
@@ -352,7 +345,7 @@ final class mi {
               stackIn_45_0 = stackOut_44_0;
               stackIn_45_1 = stackOut_44_1;
               stackIn_45_2 = stackOut_44_2;
-              break L15;
+              break L14;
             } else {
               stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
               stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
@@ -360,21 +353,15 @@ final class mi {
               stackIn_45_0 = stackOut_43_0;
               stackIn_45_1 = stackOut_43_1;
               stackIn_45_2 = stackOut_43_2;
-              break L15;
+              break L14;
             }
           }
           throw r.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + param3 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
-        if (param0 < 95) {
-            field_a = null;
-            field_c = null;
-            field_b = null;
-            return;
-        }
         field_c = null;
         field_b = null;
     }

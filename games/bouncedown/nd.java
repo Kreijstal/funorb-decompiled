@@ -131,13 +131,14 @@ final class nd extends lc implements rc {
                   break L0;
                 } else {
                   var5 = null;
-                  boolean discarded$2 = nd.a(true, (java.applet.Applet) null);
+                  boolean discarded$7 = nd.a(true, (java.applet.Applet) null);
                   return false;
                 }
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  if (j.a((char) var3, (byte) 56)) {
+                  int discarded$8 = 56;
+                  if (j.a((char) var3)) {
                     break L2;
                   } else {
                     if (kf.a(-49, (char) var3)) {
@@ -196,7 +197,7 @@ final class nd extends lc implements rc {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -222,7 +223,8 @@ final class nd extends lc implements rc {
                 try {
                   L1: {
                     var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                    param0.getAppletContext().showDocument(ag.a(param0, var2, false), "_top");
+                    int discarded$2 = 0;
+                    param0.getAppletContext().showDocument(ag.a(param0, var2), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -272,7 +274,7 @@ final class nd extends lc implements rc {
         }
     }
 
-    final static int a(int param0) {
+    final static int a() {
         return ef.field_a;
     }
 
@@ -358,7 +360,8 @@ final class nd extends lc implements rc {
                         }
                       }
                     } else {
-                      ((nd) this).field_D[var4_int] = qa.a((CharSequence) (Object) param1[var4_int], true).replace(' ', ' ');
+                      int discarded$1 = 1;
+                      ((nd) this).field_D[var4_int] = qa.a((CharSequence) (Object) param1[var4_int]).replace(' ', ' ');
                       var4_int++;
                       continue L3;
                     }
@@ -403,15 +406,15 @@ final class nd extends lc implements rc {
 
     final static boolean a(boolean param0, java.applet.Applet param1) {
         try {
-            String var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
             Object var8 = null;
+            String var9 = null;
             int stackIn_3_0 = 0;
             int stackIn_10_0 = 0;
             int stackIn_19_0 = 0;
@@ -474,8 +477,9 @@ final class nd extends lc implements rc {
                     }
                     case 4: {
                         try {
-                            var2 = "tuhstatbut";
-                            var3 = (String) ac.a(param1, "getcookies", -31185);
+                            var9 = "tuhstatbut";
+                            int discarded$3 = -31185;
+                            var3 = (String) ac.a(param1, "getcookies");
                             var4 = di.a(-112, ';', var3);
                             var5 = 0;
                             statePc = 5;
@@ -517,7 +521,7 @@ final class nd extends lc implements rc {
                     }
                     case 7: {
                         try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
+                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var9)) {
                                 statePc = 9;
                             } else {
                                 statePc = 8;
@@ -567,7 +571,7 @@ final class nd extends lc implements rc {
                     }
                     case 13: {
                         try {
-                            var2_ref = caughtException;
+                            var2 = caughtException;
                             statePc = 14;
                             continue stateLoop;
                         } catch (Throwable stateCaught_13) {
@@ -593,7 +597,7 @@ final class nd extends lc implements rc {
                     case 15: {
                         try {
                             var8 = null;
-                            boolean discarded$1 = nd.a(true, (java.applet.Applet) null);
+                            boolean discarded$4 = nd.a(true, (java.applet.Applet) null);
                             statePc = 16;
                             continue stateLoop;
                         } catch (Throwable stateCaught_15) {
@@ -644,8 +648,8 @@ final class nd extends lc implements rc {
                         return stackIn_19_0 != 0;
                     }
                     case 20: {
-                        var2_ref2 = (RuntimeException) (Object) caughtException;
-                        stackOut_20_0 = (RuntimeException) var2_ref2;
+                        var2_ref = (RuntimeException) (Object) caughtException;
+                        stackOut_20_0 = (RuntimeException) var2_ref;
                         stackOut_20_1 = new StringBuilder().append("nd.G(").append(param0).append(44);
                         stackIn_22_0 = stackOut_20_0;
                         stackIn_22_1 = stackOut_20_1;

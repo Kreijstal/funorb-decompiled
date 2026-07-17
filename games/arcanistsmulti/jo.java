@@ -60,13 +60,13 @@ final class jo {
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         char[] var6 = new char[param2];
         char[] var3 = var6;
-        for (var4 = param0; var4 < param2; var4++) {
-            var6[var4] = param1;
+        for (var4 = 0; var4 < param2; var4++) {
+            var6[var4] = '*';
         }
         return new String(var6);
     }
 
-    final static boolean a(wk param0, int param1) {
+    final static boolean a(wk param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -95,7 +95,7 @@ final class jo {
           L0: {
             L1: {
               var2_int = param0.e((byte) -88);
-              if (param1 == ~var2_int) {
+              if (var2_int == 1) {
                 stackOut_2_0 = 1;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -138,7 +138,7 @@ final class jo {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -2 + 41);
         }
         return stackIn_4_0 != 0;
     }
@@ -155,7 +155,7 @@ final class jo {
         try {
           L0: {
             var3_int = 0;
-            var4 = -83 % ((15 - param1) / 62);
+            var4 = 0;
             L1: while (true) {
               if (0 >= param0) {
                 stackOut_4_0 = var3_int;
@@ -172,15 +172,12 @@ final class jo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "jo.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) var3, "jo.B(" + param0 + 44 + -73 + 44 + param2 + 41);
         }
         return stackIn_5_0;
     }
 
-    public static void a(int param0) {
-        if (param0 != 0) {
-            int discarded$0 = jo.a(68, (byte) 21, -121);
-        }
+    public static void a() {
         field_d = null;
         field_a = null;
     }

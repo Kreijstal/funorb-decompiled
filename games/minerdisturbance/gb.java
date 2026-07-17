@@ -36,7 +36,7 @@ final class gb implements Iterator {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         sa var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -79,7 +79,7 @@ final class gb implements Iterator {
                       if (var1.field_p.c(121)) {
                         break L5;
                       } else {
-                        var1.b(param0 + 6163);
+                        var1.b(34);
                         break L5;
                       }
                     }
@@ -91,32 +91,28 @@ final class gb implements Iterator {
                 break L1;
               }
             }
-            if (param0 == -6129) {
-              L6: {
-                if (null == km.field_a) {
+            L6: {
+              if (null == km.field_a) {
+                break L6;
+              } else {
+                if (!km.field_a.b((byte) -114)) {
+                  de.field_b = null;
                   break L6;
                 } else {
-                  if (!km.field_a.b((byte) -114)) {
-                    de.field_b = null;
-                    break L6;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "gb.D(" + param0 + 41);
+          throw lj.a((Throwable) (Object) var1_ref, "gb.D(" + -6129 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -150,7 +146,7 @@ final class gb implements Iterator {
         }
     }
 
-    private final void c(int param0) {
+    private final void c() {
         ((gb) this).field_c = null;
         ((gb) this).field_d = ((gb) this).field_f.field_b[0].field_f;
         ((gb) this).field_b = 1;
@@ -158,13 +154,11 @@ final class gb implements Iterator {
 
     final static void a(int param0, String param1) {
         lh.a(-18473, param1);
-        if (param0 > -110) {
-            return;
-        }
         try {
-            t.a(false, rf.field_a, 0);
+            int discarded$0 = 0;
+            t.a(false, rf.field_a);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "gb.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "gb.B(" + -126 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -172,7 +166,8 @@ final class gb implements Iterator {
         ((gb) this).field_c = null;
         try {
             ((gb) this).field_f = param0;
-            this.c(123);
+            int discarded$0 = 123;
+            this.c();
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) (Object) runtimeException, "gb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

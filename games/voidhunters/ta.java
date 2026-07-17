@@ -7,20 +7,12 @@ final class ta {
 
     final static void a(byte param0, int param1) {
         wp.field_a = maa.field_o;
-        if (param0 > -101) {
-            ta.a((byte) -35);
-            pw.field_a = 0;
-            return;
-        }
         pw.field_a = 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
-        if (param0 != -109) {
-            field_b = null;
-        }
     }
 
     final static void a(int[] param0, int param1, wfb param2) {

@@ -20,7 +20,8 @@ final class d extends ci {
 
     final static void a(vl param0, int param1, vl param2, jk param3, java.awt.Component param4, boolean param5, byte param6) {
         try {
-            md.a(param1, param5, 10);
+            int discarded$0 = 10;
+            md.a(param1, param5);
             mh.field_d = md.a(param3, param4, 0, 22050);
             kn.field_F = md.a(param3, param4, 1, 2048);
             h.field_s = new lb();
@@ -46,10 +47,10 @@ final class d extends ci {
         int var7 = 0;
         int var8 = 0;
         var7 = Chess.field_G;
-        var4 = param0;
+        var4 = 0;
         L0: while (true) {
           if (((d) this).field_Eb.length <= var4) {
-            ((d) this).field_Fb.a(0, ((d) this).field_M, param0 ^ -2147483648, ((d) this).field_pb + -param2, param2);
+            ((d) this).field_Fb.a(0, ((d) this).field_M, -2147483648, ((d) this).field_pb + -param2, param2);
             var8 = 0;
             var4 = var8;
             L1: while (true) {
@@ -326,7 +327,7 @@ final class d extends ci {
         }
     }
 
-    final static void l(int param0) {
+    final static void l() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -431,7 +432,7 @@ final class d extends ci {
                   break L5;
                 }
               }
-              var2_int = 79 / ((92 - param0) / 33);
+              var2_int = -79;
               ml.a((byte) 90, param1);
               break L0;
             } else {
@@ -443,7 +444,7 @@ final class d extends ci {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("d.F(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("d.F(").append(126).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -470,7 +471,7 @@ final class d extends ci {
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         int var1 = 0;
         field_Jb = null;
         field_Lb = null;

@@ -1164,7 +1164,7 @@ final class hh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_l = null;
     }

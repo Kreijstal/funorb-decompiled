@@ -142,7 +142,7 @@ final class ek implements dh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_n = null;
         field_c = null;
         field_u = null;
@@ -182,12 +182,12 @@ final class ek implements dh {
         try {
           L0: {
             if (param1 == 1024) {
-              dd.a(param0 + 7091, param5, param2, param3, param4);
+              dd.a(7090, param5, param2, param3, param4);
               return;
             } else {
               param5 = param5 - ((-1024 + param1) * param2.field_y >> 11);
               param3 = param3 - (param2.field_s * (-1024 + param1) >> 11);
-              var6_int = param0 + tc.field_j * param5 - -param3;
+              var6_int = -1 + tc.field_j * param5 - -param3;
               var8 = 0;
               var9 = 0;
               var10 = param1 * param2.field_y >> 10;
@@ -235,7 +235,7 @@ final class ek implements dh {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var6;
-            stackOut_17_1 = new StringBuilder().append("ek.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_17_1 = new StringBuilder().append("ek.B(").append(-1).append(44).append(param1).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

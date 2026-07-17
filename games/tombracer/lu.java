@@ -8,7 +8,7 @@ abstract class lu {
 
     abstract pl a(byte param0);
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         int var1 = 69;

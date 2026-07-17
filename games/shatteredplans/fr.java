@@ -339,13 +339,13 @@ final class fr extends qs {
               var4_int = param0.length();
               var5 = param3.length();
               var6 = var4_int;
-              var7 = var5 - param1;
+              var7 = var5 - 1;
               if (0 == var7) {
                 break L1;
               } else {
                 var8_int = 0;
                 L2: while (true) {
-                  var8_int = param0.indexOf((int) param2, var8_int);
+                  var8_int = param0.indexOf('_', var8_int);
                   if (0 <= var8_int) {
                     var6 = var6 + var7;
                     var8_int++;
@@ -359,7 +359,7 @@ final class fr extends qs {
             var8 = new StringBuilder(var6);
             var9 = 0;
             L3: while (true) {
-              var10 = param0.indexOf((int) param2, var9);
+              var10 = param0.indexOf('_', var9);
               if (var10 >= 0) {
                 StringBuilder discarded$3 = var8.append(param0.substring(var9, var10));
                 var9 = var10 + 1;
@@ -403,7 +403,7 @@ final class fr extends qs {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(1).append(44).append(95).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -573,7 +573,7 @@ final class fr extends qs {
         return stackIn_6_0;
     }
 
-    final static Boolean j(int param0) {
+    final static Boolean j() {
         Boolean var1 = sa.field_d;
         sa.field_d = null;
         return var1;
@@ -682,7 +682,7 @@ final class fr extends qs {
         return stackIn_15_0 != 0;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_H = null;
         field_D = null;
         field_F = null;

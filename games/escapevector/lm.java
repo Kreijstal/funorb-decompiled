@@ -10,7 +10,7 @@ final class lm {
     boolean field_e;
     static hh field_d;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_d = null;
     }

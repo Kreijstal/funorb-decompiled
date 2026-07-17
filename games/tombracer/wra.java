@@ -11,7 +11,7 @@ final class wra extends IOException {
         super(param0);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

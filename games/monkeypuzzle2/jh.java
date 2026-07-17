@@ -79,23 +79,15 @@ final class jh extends we {
         int stackOut_6_0 = 0;
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
         var14 = new le(((jh) this).field_v * 2, ((jh) this).field_p);
-        mc.a(param0 ^ -8551, var14);
+        mc.a(-8497, var14);
         var5 = ((jh) this).field_p >> 1;
         var6 = 0;
         L0: while (true) {
           if (((jh) this).field_p <= var6) {
-            L1: {
-              if (param0 == 86) {
-                break L1;
-              } else {
-                ((jh) this).field_x = -11;
-                break L1;
-              }
-            }
-            tj.b(param0 + 567);
+            tj.b(653);
             return var14;
           } else {
-            L2: {
+            L1: {
               var7 = (var6 >> 1) * (2 * ((jh) this).field_v - 1) % (((jh) this).field_v * 2);
               var8 = param2 & 16711935;
               var9 = 65280 & param2;
@@ -104,14 +96,14 @@ final class jh extends we {
               if (256 > var11) {
                 stackOut_4_0 = (var11 * var9 & 16711680 | -16711936 & var8 * var11) >>> 8;
                 stackIn_5_0 = stackOut_4_0;
-                break L2;
+                break L1;
               } else {
                 stackOut_3_0 = var9 | var8;
                 stackIn_5_0 = stackOut_3_0;
-                break L2;
+                break L1;
               }
             }
-            L3: {
+            L2: {
               var12 = stackIn_5_0;
               ge.a(var7, var6, ((jh) this).field_v, var12);
               var9 = 65280 & param1;
@@ -120,11 +112,11 @@ final class jh extends we {
               if (256 > var11) {
                 stackOut_7_0 = (var8 * var11 & -16711936 | var9 * var11 & 16711680) >>> 8;
                 stackIn_8_0 = stackOut_7_0;
-                break L3;
+                break L2;
               } else {
                 stackOut_6_0 = var9 | var8;
                 stackIn_8_0 = stackOut_6_0;
-                break L3;
+                break L2;
               }
             }
             var12 = stackIn_8_0;

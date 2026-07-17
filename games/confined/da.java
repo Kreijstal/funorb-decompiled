@@ -17,36 +17,38 @@ final class da {
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
         var9 = Confined.field_J ? 1 : 0;
-        if (param3 <= -75) {
-          if (param7 > param2) {
-            if (param7 >= param4) {
-              if (param2 < param4) {
-                mb.a(param7, param6, param4, param2, param1, fn.field_h, param5, param0, (byte) 112);
-                return;
-              } else {
-                mb.a(param7, param6, param2, param4, param0, fn.field_h, param5, param1, (byte) 112);
-                return;
-              }
+        if (param7 > param2) {
+          if (param7 >= param4) {
+            if (param2 < param4) {
+              int discarded$6 = 112;
+              mb.a(param7, param6, param4, param2, param1, fn.field_h, param5, param0);
+              return;
             } else {
-              mb.a(param4, param6, param7, param2, param1, fn.field_h, param0, param5, (byte) 112);
+              int discarded$7 = 112;
+              mb.a(param7, param6, param2, param4, param0, fn.field_h, param5, param1);
               return;
             }
           } else {
-            if (param4 <= param2) {
-              if (param4 > param7) {
-                mb.a(param2, param6, param4, param7, param5, fn.field_h, param1, param0, (byte) 112);
-                return;
-              } else {
-                mb.a(param2, param6, param7, param4, param0, fn.field_h, param1, param5, (byte) 112);
-                return;
-              }
-            } else {
-              mb.a(param4, param6, param2, param7, param5, fn.field_h, param0, param1, (byte) 112);
-              return;
-            }
+            int discarded$8 = 112;
+            mb.a(param4, param6, param7, param2, param1, fn.field_h, param0, param5);
+            return;
           }
         } else {
-          return;
+          if (param4 <= param2) {
+            if (param4 > param7) {
+              int discarded$9 = 112;
+              mb.a(param2, param6, param4, param7, param5, fn.field_h, param1, param0);
+              return;
+            } else {
+              int discarded$10 = 112;
+              mb.a(param2, param6, param7, param4, param0, fn.field_h, param1, param5);
+              return;
+            }
+          } else {
+            int discarded$11 = 112;
+            mb.a(param4, param6, param2, param7, param5, fn.field_h, param0, param1);
+            return;
+          }
         }
     }
 
@@ -89,7 +91,7 @@ final class da {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_j = null;
         field_g = null;
         field_a = null;
@@ -504,13 +506,13 @@ final class da {
     final static void a(int param0, int param1, bi param2, boolean param3, pm param4) {
         gk var5 = null;
         try {
-            var5 = new gk(param4, param2, param1);
+            var5 = new gk(param4, param2, 0);
             var5.field_m = param0;
             var5.field_o = param3 ? true : false;
             var5.e(6466);
             var5.field_t = null;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "da.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "da.G(" + param0 + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 

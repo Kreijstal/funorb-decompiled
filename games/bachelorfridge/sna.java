@@ -1240,7 +1240,7 @@ class sna extends tf {
             var10 = dg.field_h;
             var11 = dg.field_k;
             dg.c(((sna) this).field_D, ((sna) this).field_M, ((sna) this).field_sb + ((sna) this).field_D, ((sna) this).field_M - -((sna) this).field_p);
-            var12 = param2 ? 1 : 0;
+            var12 = 0;
             if (mu.field_k) {
               break L5;
             } else {

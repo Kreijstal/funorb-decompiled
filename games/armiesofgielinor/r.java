@@ -27,7 +27,7 @@ final class r extends vt {
     private tu field_C;
     static String field_w;
 
-    private final wk k(int param0) {
+    private final wk k() {
         int var2 = 0;
         if (((r) this).field_p) {
             var2 = 1;
@@ -142,8 +142,10 @@ final class r extends vt {
     }
 
     final void f(byte param0) {
-        this.b(false);
-        this.f(4);
+        int discarded$0 = 0;
+        this.b();
+        int discarded$1 = 4;
+        this.f();
         int var2 = -124 % ((75 - param0) / 49);
     }
 
@@ -163,7 +165,7 @@ final class r extends vt {
 
     private final void a(int param0, boolean param1) {
         int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
-        int var3 = 114 / ((44 - param0) / 34);
+        int var3 = 57;
         ((r) this).field_x = false;
         if (((r) this).field_F) {
             if (!param1) {
@@ -172,7 +174,8 @@ final class r extends vt {
                     ((r) this).field_L = ((r) this).field_z.b(78);
                     ((r) this).field_r = false;
                     ((r) this).field_z.l(0);
-                    this.m(10009);
+                    int discarded$0 = 10009;
+                    this.m();
                     ((r) this).field_x = true;
                 } else {
                     if (!((r) this).field_p) {
@@ -203,7 +206,7 @@ final class r extends vt {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         if (!((r) this).field_r) {
             return;
         }
@@ -288,14 +291,11 @@ final class r extends vt {
         }
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         int var2 = ((r) this).field_D[3].field_A;
         int var3 = ((r) this).field_C.a(' ');
         int var4 = ((r) this).field_A - (-var2 - var3);
         int var5 = ((r) this).field_D[1].field_x;
-        if (param0 != 108) {
-            ((r) this).field_L = -29;
-        }
         int var6 = 2;
         int var7 = ((r) this).field_C.field_H;
         int var8 = var5 + (((r) this).field_K - (-var6 + -var7));
@@ -376,11 +376,8 @@ final class r extends vt {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_E = null;
-        if (param0 != -11) {
-            return;
-        }
         field_J = null;
         field_I = null;
         field_w = null;
@@ -409,11 +406,13 @@ final class r extends vt {
     }
 
     private final void d(boolean param0) {
-        this.m(10009);
+        int discarded$0 = 10009;
+        this.m();
     }
 
-    private final void c(byte param0) {
-        wk var2 = this.k(3);
+    private final void c() {
+        int discarded$0 = 3;
+        wk var2 = this.k();
         int var3 = ((r) this).field_D[5].field_A;
         int var4 = var2.field_A;
         int var5 = -var3 + ((r) this).field_A - (-((r) this).field_t - -var4);
@@ -422,7 +421,7 @@ final class r extends vt {
         var2.g(var5, var7);
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void d(int param0, int param1) {
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
@@ -471,11 +470,13 @@ final class r extends vt {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         qn.f(((r) this).field_A, ((r) this).field_K, ((r) this).field_t, ((r) this).field_o, 7829367);
         i.a(((r) this).field_D, ((r) this).field_o, ((r) this).field_A, (byte) -47, ((r) this).field_K, ((r) this).field_t);
-        this.e((byte) 108);
-        this.c((byte) -36);
+        int discarded$0 = 108;
+        this.e();
+        int discarded$1 = -36;
+        this.c();
     }
 
     final void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
@@ -483,7 +484,8 @@ final class r extends vt {
             this.i(param1 ^ -18596);
             return;
         }
-        this.d(param2, param3, 4);
+        int discarded$0 = 4;
+        this.d(param2, param3);
         ((r) this).field_z.a(param2, param4, param0, 0, param3, param5);
         this.a(-34, param0);
         if (param1 != -18596) {
@@ -499,7 +501,7 @@ final class r extends vt {
         ((r) this).field_r = false;
     }
 
-    final static Boolean l(int param0) {
+    final static Boolean l() {
         Boolean var1 = cv.field_s;
         cv.field_s = null;
         return var1;
@@ -728,7 +730,7 @@ final class r extends vt {
         }
     }
 
-    private final void m(int param0) {
+    private final void m() {
         int var3 = 0;
         String var4_ref_String = null;
         int var5_int = 0;
@@ -741,7 +743,8 @@ final class r extends vt {
         }
         var3 = ((r) this).field_C.a(' ') << 1;
         int var4 = ((r) this).field_D[3].field_A - -((r) this).field_D[5].field_A;
-        wk var5 = this.k(3);
+        int discarded$0 = 3;
+        wk var5 = this.k();
         int var6 = var5.field_A;
         ((r) this).field_t = var6 + var4 + var2 - -var3;
         int var7 = ((r) this).field_C.field_L + ((r) this).field_C.field_H;

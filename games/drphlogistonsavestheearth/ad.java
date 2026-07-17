@@ -265,7 +265,8 @@ final class ad extends ei {
             var4 = param1.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
-              if (!kj.a(var5, (byte) 59)) {
+              int discarded$13 = 59;
+              if (!kj.a(var5)) {
                 if (oi.a(8975, var5)) {
                   stackOut_10_0 = (String) field_p;
                   stackIn_11_0 = stackOut_10_0;
@@ -282,7 +283,8 @@ final class ad extends ei {
                         stackIn_33_0 = stackOut_32_0;
                         break L0;
                       } else {
-                        if (!rb.a(var6, var5, -1)) {
+                        int discarded$14 = -1;
+                        if (!rb.a(var6, var5)) {
                           if (gk.a(-1, var6, var5)) {
                             stackOut_25_0 = vg.field_x;
                             stackIn_26_0 = stackOut_25_0;
@@ -659,7 +661,7 @@ final class ad extends ei {
         return stackIn_13_0 != 0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_t = null;
         field_r = null;
         field_q = null;

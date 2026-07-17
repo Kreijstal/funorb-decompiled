@@ -14,18 +14,12 @@ final class rg extends IOException {
     static int field_f;
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        var3 = param1 >> 31 & -1 + param2;
-        if (param0 < 32) {
-          field_a = true;
-          return var3 + (param1 - -(param1 >>> 31)) % param2;
-        } else {
-          return var3 + (param1 - -(param1 >>> 31)) % param2;
-        }
+        int var3 = param1 >> 31 & -1 + param2;
+        return var3 + (param1 - -(param1 >>> 31)) % param2;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ql.field_L.a(88, param0, param3, param2, 5);
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        ql.field_L.a(88, 640, param3, 0, 5);
         if (param4 != -4803) {
           return;
         } else {
@@ -48,7 +42,8 @@ final class rg extends IOException {
     final static void a(byte param0, boolean param1) {
         L0: {
           if (ko.field_S != null) {
-            oh.a(ko.field_S, false);
+            int discarded$2 = 0;
+            oh.a(ko.field_S);
             break L0;
           } else {
             break L0;
@@ -56,49 +51,29 @@ final class rg extends IOException {
         }
         if (null == un.field_Lb) {
           gd.a(3206, param1);
-          if (up.field_z == null) {
-            dc.a(param1, (byte) -110);
-            if (param0 != 53) {
-              field_g = null;
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (up.field_z != null) {
             up.field_z.b(param1, 0);
             dc.a(param1, (byte) -110);
-            if (param0 != 53) {
-              field_g = null;
-              return;
-            } else {
-              return;
-            }
+            return;
+          } else {
+            dc.a(param1, (byte) -110);
+            return;
           }
         } else {
           un.field_Lb.a(param1, -64);
           gd.a(3206, param1);
-          if (up.field_z != null) {
+          if (up.field_z == null) {
+            dc.a(param1, (byte) -110);
+            return;
+          } else {
             up.field_z.b(param1, 0);
             dc.a(param1, (byte) -110);
-            if (param0 == 53) {
-              return;
-            } else {
-              field_g = null;
-              return;
-            }
-          } else {
-            dc.a(param1, (byte) -110);
-            if (param0 != 53) {
-              field_g = null;
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_g = null;
         field_h = null;

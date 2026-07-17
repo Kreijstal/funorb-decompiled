@@ -7,7 +7,7 @@ final class dd {
     static String field_b;
     static int field_a;
 
-    final static jm a(String param0, int param1, int param2) {
+    final static jm a(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         cm var4 = null;

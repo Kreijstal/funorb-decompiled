@@ -10,14 +10,16 @@ final class pf implements hd {
     static String field_f;
     int field_a;
 
-    final static void a(boolean param0) {
+    final static void a() {
         ij.c(4);
         if (!(null == kd.field_b)) {
             om.a(-46342, kd.field_b);
         }
         co.a(false);
-        lg.b(true);
-        jk.a(27370);
+        int discarded$16 = 1;
+        lg.b();
+        int discarded$23 = 27370;
+        jk.a();
         if (!(!cm.a(-2043140287))) {
             da.field_p.c((byte) 33, 1);
             qn.a(0, 0);

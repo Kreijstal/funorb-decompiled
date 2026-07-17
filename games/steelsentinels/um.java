@@ -12,7 +12,7 @@ final class um extends oa {
     static String[] field_cb;
     int field_ab;
 
-    final static mg a(gh param0, gh param1, gh param2, int[] param3, int param4) {
+    final static mg a(gh param0, gh param1, gh param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String[] var6 = null;
@@ -240,7 +240,7 @@ final class um extends oa {
         return stackIn_9_0;
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[][] var2 = null;
@@ -594,7 +594,7 @@ final class um extends oa {
         return stackIn_23_0 != 0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_bb = null;
         field_cb = null;
         field_db = null;

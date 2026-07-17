@@ -46,13 +46,15 @@ final class db implements ml {
           if (var1 > 0) {
             if (var1 != 1) {
               rc.field_i = gg.a(new String[1], pj.field_d, true);
-              rc.field_i = vd.a(new CharSequence[3], (byte) -125);
+              int discarded$2 = -125;
+              rc.field_i = vd.a(new CharSequence[3]);
               me.field_f.g((byte) -75);
               hl.b(34);
               return;
             } else {
               rc.field_i = mc.field_i;
-              rc.field_i = vd.a(new CharSequence[3], (byte) -125);
+              int discarded$3 = -125;
+              rc.field_i = vd.a(new CharSequence[3]);
               me.field_f.g((byte) -75);
               hl.b(34);
               return;
@@ -87,13 +89,14 @@ final class db implements ml {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    w.a(-94, param0, var5);
+                    w.a(-94, 3, var5);
                     var5 = (de) (Object) qa.field_d.d((byte) 63);
                     continue L2;
                   }
                 }
               } else {
-                pj.a(param0, var3, true);
+                int discarded$2 = 1;
+                pj.a(3, var3);
                 var3 = (d) (Object) wk.field_b.d((byte) 63);
                 continue L1;
               }
@@ -102,7 +105,7 @@ final class db implements ml {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var2, "db.A(" + param0 + 44 + 126 + 41);
+          throw la.a((Throwable) (Object) var2, "db.A(" + 3 + 44 + 126 + 41);
         }
     }
 
@@ -219,12 +222,12 @@ final class db implements ml {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;

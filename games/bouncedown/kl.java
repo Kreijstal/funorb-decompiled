@@ -27,7 +27,7 @@ final class kl extends ai {
     static int field_t;
     int field_E;
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
     }
 

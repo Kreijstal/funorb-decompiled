@@ -55,10 +55,7 @@ final class se extends ps {
         }
     }
 
-    public static void c(int param0) {
-        if (param0 != -27982) {
-            return;
-        }
+    public static void c() {
         field_b = null;
     }
 

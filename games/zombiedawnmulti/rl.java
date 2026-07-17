@@ -74,7 +74,7 @@ final class rl {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         if (nb.field_a != null) {
             nb.field_a.g((byte) 118);
             return;
@@ -94,21 +94,24 @@ final class rl {
             var7.field_gb = param0;
             ((rl) this).field_m.field_d[var7.field_gb] = ((rl) this).field_m.field_d[var7.field_gb] + param3.o(-116);
             ((rl) this).field_u.a((br) (Object) var7, false);
-            this.a(param3, var7, param1, false);
+            int discarded$0 = 0;
+            this.a(param3, var7, param1);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "rl.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
     final void b(int param0) {
-        this.d(-32724);
+        int discarded$0 = -32724;
+        this.d();
         if (param0 != -198) {
             return;
         }
-        this.a(120);
+        int discarded$1 = 120;
+        this.a();
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_a = null;
         field_c = null;
         field_h = null;
@@ -118,18 +121,15 @@ final class rl {
 
     private final void a(int param0, ge param1) {
         pc var3 = null;
-        if (param0 != -2) {
-            ((rl) this).field_j = null;
-        }
         param1.field_eb = false;
         if (param1.field_Z) {
             return;
         }
         try {
             var3 = aq.a(((rl) this).field_m.field_H, false, param1.field_tb.field_x, param1.field_x);
-            this.a(param0 + -7735, (ae) (Object) var3);
+            this.a(-7737, (ae) (Object) var3);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "rl.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "rl.Q(" + -2 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -234,34 +234,30 @@ final class rl {
         lm var5 = null;
         var4 = this.a((byte) -125, param1);
         if (var4 != null) {
-          var4.b(false);
-          if (param0 == 4) {
-            L0: {
-              if (!(var4 instanceof ge)) {
-                if (!(var4 instanceof lm)) {
-                  break L0;
-                } else {
-                  var5 = (lm) (Object) var4;
-                  var5.n((byte) -100);
-                  break L0;
-                }
+          L0: {
+            var4.b(false);
+            if (!(var4 instanceof ge)) {
+              if (!(var4 instanceof lm)) {
+                break L0;
               } else {
-                var3 = (ge) (Object) var4;
-                var3.f(true);
-                var3.t(4);
-                var3.r((byte) -111);
-                if (var3.field_Q == 29) {
-                  var3.a(4, (byte) -89);
-                  break L0;
-                } else {
-                  break L0;
-                }
+                var5 = (lm) (Object) var4;
+                var5.n((byte) -100);
+                break L0;
+              }
+            } else {
+              var3 = (ge) (Object) var4;
+              var3.f(true);
+              var3.t(4);
+              var3.r((byte) -111);
+              if (var3.field_Q == 29) {
+                var3.a(4, (byte) -89);
+                break L0;
+              } else {
+                break L0;
               }
             }
-            return;
-          } else {
-            return;
           }
+          return;
         } else {
           return;
         }
@@ -285,13 +281,10 @@ final class rl {
             return;
         }
         try {
-            if (param0 != -2) {
-                ((rl) this).field_s = null;
-            }
-            var3 = ng.a(param1.field_N, param0 ^ -101, param1.field_Q, param1.field_x, param1.field_G, ((rl) this).field_m.field_H, param1.field_E, param1.field_db, param1.field_ab);
+            var3 = ng.a(param1.field_N, 101, param1.field_Q, param1.field_x, param1.field_G, ((rl) this).field_m.field_H, param1.field_E, param1.field_db, param1.field_ab);
             this.a(-7737, (ae) (Object) var3);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "rl.M(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "rl.M(" + -2 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -309,7 +302,7 @@ final class rl {
         return (pa) (Object) var3;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -629,7 +622,10 @@ final class rl {
                         var18 = 0;
                         L6: while (true) {
                           if (var18 >= 3) {
-                            sa.a(var17, ak.field_a, true, hl.field_c, (byte) -121, false, false);
+                            int discarded$3 = 0;
+                            int discarded$4 = 0;
+                            int discarded$5 = -121;
+                            sa.a(var17, ak.field_a, true, hl.field_c);
                             gh.a(var17, var7, (byte) 116, var12, var14, var9, var13, var8);
                             var15++;
                             continue L4;
@@ -702,23 +698,16 @@ final class rl {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            if (!((rl) this).field_q.f(param0 + 35850)) {
+            if (!((rl) this).field_q.f(28113)) {
               var3 = (ae) (Object) ((rl) this).field_q.a((byte) 76);
               L1: while (true) {
                 if (var3 == null) {
-                  L2: {
-                    ((rl) this).field_q.a(-25612, (br) (Object) param1);
-                    if (param0 == -7737) {
-                      break L2;
-                    } else {
-                      ((rl) this).field_d = null;
-                      break L2;
-                    }
-                  }
+                  ((rl) this).field_q.a(-25612, (br) (Object) param1);
                   break L0;
                 } else {
                   if (param1.field_f >= var3.field_f) {
-                    qc.a((br) (Object) param1, (br) (Object) var3, 0);
+                    int discarded$2 = 0;
+                    qc.a((br) (Object) param1, (br) (Object) var3);
                     return;
                   } else {
                     var3 = (ae) (Object) ((rl) this).field_q.c((byte) 123);
@@ -727,16 +716,16 @@ final class rl {
                 }
               }
             } else {
-              ((rl) this).field_q.a(param0 ^ 31283, (br) (Object) param1);
+              ((rl) this).field_q.a(-25612, (br) (Object) param1);
               return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("rl.CA(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("rl.CA(").append(-7737).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -748,7 +737,7 @@ final class rl {
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L3;
+              break L2;
             } else {
               stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
               stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
@@ -756,7 +745,7 @@ final class rl {
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L3;
+              break L2;
             }
           }
           throw fa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
@@ -782,22 +771,22 @@ final class rl {
         int var16 = 0;
         th var17 = null;
         sh var18 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
+        String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
         RuntimeException stackOut_42_0 = null;
         StringBuilder stackOut_42_1 = null;
         String stackOut_42_2 = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        String stackOut_41_2 = null;
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -825,118 +814,114 @@ final class rl {
                     break L2;
                   }
                 }
-                if (param1 == -6) {
-                  var8_ref_ek = (ek) (Object) ((rl) this).field_u.c(123);
-                  L3: while (true) {
-                    if (var8_ref_ek == null) {
-                      L4: {
-                        if (!param0) {
-                          break L4;
-                        } else {
-                          var8 = 0;
-                          L5: while (true) {
-                            if (((Object[]) var7).length <= var8) {
-                              break L4;
-                            } else {
-                              L6: {
-                                if (null == ((Object[]) var7)[var8]) {
-                                  break L6;
-                                } else {
-                                  ((lm) ((Object[]) var7)[var8]).p(95);
-                                  break L6;
-                                }
-                              }
-                              var8++;
-                              continue L5;
-                            }
-                          }
-                        }
-                      }
-                      L7: {
-                        ((rl) this).field_m.field_g = ((rl) this).field_m.field_I;
-                        ((rl) this).field_m.field_C = 9000 + 250 * ((rl) this).field_m.field_I;
-                        if (((rl) this).field_m.field_t != 1) {
-                          break L7;
-                        } else {
-                          ((rl) this).field_m.field_C = 64512;
-                          break L7;
-                        }
-                      }
-                      L8: {
-                        if (64512 >= ((rl) this).field_m.field_C) {
-                          break L8;
-                        } else {
-                          ((rl) this).field_m.field_C = 64512;
-                          break L8;
-                        }
-                      }
-                      break L0;
-                    } else {
-                      L9: {
-                        if (!(var8_ref_ek instanceof lm)) {
-                          if (!(var8_ref_ek instanceof ge)) {
-                            break L9;
+                var8_ref_ek = (ek) (Object) ((rl) this).field_u.c(123);
+                L3: while (true) {
+                  if (var8_ref_ek == null) {
+                    L4: {
+                      if (!param0) {
+                        break L4;
+                      } else {
+                        var8 = 0;
+                        L5: while (true) {
+                          if (((Object[]) var7).length <= var8) {
+                            break L4;
                           } else {
-                            break L9;
-                          }
-                        } else {
-                          ((rl) this).field_m.field_I = ((rl) this).field_m.field_I + 1;
-                          if (!param0) {
-                            break L9;
-                          } else {
-                            var9 = 2147483647;
-                            var10 = (Object) (Object) (sh) (Object) ((rl) this).field_f.c(73);
-                            L10: while (true) {
-                              if (var10 == null) {
-                                var10 = var10;
-                                var16 = 0;
-                                var11 = var16;
-                                L11: while (true) {
-                                  if (var16 >= ((Object[]) var6).length) {
-                                    break L9;
-                                  } else {
-                                    L12: {
-                                      if (var9 > ((int[]) var6)[var16]) {
-                                        var12 = ((Object[]) var7)[var16];
-                                        var13 = ((int[]) var6)[var16];
-                                        ((int[]) var6)[var16] = var9;
-                                        var9 = var13;
-                                        ((Object[]) var7)[var16] = var10;
-                                        var10 = var12;
-                                        break L12;
-                                      } else {
-                                        break L12;
-                                      }
-                                    }
-                                    var16++;
-                                    continue L11;
-                                  }
-                                }
+                            L6: {
+                              if (null == ((Object[]) var7)[var8]) {
+                                break L6;
                               } else {
-                                L13: {
-                                  var11 = ((sh) var10).e((byte) -112) - var8_ref_ek.e((byte) -112);
-                                  var12_int = ((sh) var10).g(1829947600) - var8_ref_ek.g(1829947600);
-                                  var13 = var11 * var11 + var12_int * var12_int;
-                                  if (var13 >= var9) {
-                                    break L13;
-                                  } else {
-                                    var9 = var13;
-                                    break L13;
-                                  }
-                                }
-                                var10 = (Object) (Object) (sh) (Object) ((rl) this).field_f.b(6);
-                                continue L10;
+                                ((lm) ((Object[]) var7)[var8]).p(95);
+                                break L6;
                               }
+                            }
+                            var8++;
+                            continue L5;
+                          }
+                        }
+                      }
+                    }
+                    L7: {
+                      ((rl) this).field_m.field_g = ((rl) this).field_m.field_I;
+                      ((rl) this).field_m.field_C = 9000 + 250 * ((rl) this).field_m.field_I;
+                      if (((rl) this).field_m.field_t != 1) {
+                        break L7;
+                      } else {
+                        ((rl) this).field_m.field_C = 64512;
+                        break L7;
+                      }
+                    }
+                    L8: {
+                      if (64512 >= ((rl) this).field_m.field_C) {
+                        break L8;
+                      } else {
+                        ((rl) this).field_m.field_C = 64512;
+                        break L8;
+                      }
+                    }
+                    break L0;
+                  } else {
+                    L9: {
+                      if (!(var8_ref_ek instanceof lm)) {
+                        if (!(var8_ref_ek instanceof ge)) {
+                          break L9;
+                        } else {
+                          break L9;
+                        }
+                      } else {
+                        ((rl) this).field_m.field_I = ((rl) this).field_m.field_I + 1;
+                        if (!param0) {
+                          break L9;
+                        } else {
+                          var9 = 2147483647;
+                          var10 = (Object) (Object) (sh) (Object) ((rl) this).field_f.c(73);
+                          L10: while (true) {
+                            if (var10 == null) {
+                              var10 = var10;
+                              var16 = 0;
+                              var11 = var16;
+                              L11: while (true) {
+                                if (var16 >= ((Object[]) var6).length) {
+                                  break L9;
+                                } else {
+                                  L12: {
+                                    if (var9 > ((int[]) var6)[var16]) {
+                                      var12 = ((Object[]) var7)[var16];
+                                      var13 = ((int[]) var6)[var16];
+                                      ((int[]) var6)[var16] = var9;
+                                      var9 = var13;
+                                      ((Object[]) var7)[var16] = var10;
+                                      var10 = var12;
+                                      break L12;
+                                    } else {
+                                      break L12;
+                                    }
+                                  }
+                                  var16++;
+                                  continue L11;
+                                }
+                              }
+                            } else {
+                              L13: {
+                                var11 = ((sh) var10).e((byte) -112) - var8_ref_ek.e((byte) -112);
+                                var12_int = ((sh) var10).g(1829947600) - var8_ref_ek.g(1829947600);
+                                var13 = var11 * var11 + var12_int * var12_int;
+                                if (var13 >= var9) {
+                                  break L13;
+                                } else {
+                                  var9 = var13;
+                                  break L13;
+                                }
+                              }
+                              var10 = (Object) (Object) (sh) (Object) ((rl) this).field_f.b(6);
+                              continue L10;
                             }
                           }
                         }
                       }
-                      var8_ref_ek = (ek) (Object) ((rl) this).field_u.b(6);
-                      continue L3;
                     }
+                    var8_ref_ek = (ek) (Object) ((rl) this).field_u.b(6);
+                    continue L3;
                   }
-                } else {
-                  return;
                 }
               } else {
                 L14: {
@@ -964,40 +949,36 @@ final class rl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var4 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) var4;
-            stackOut_41_1 = new StringBuilder().append("rl.K(").append(param0).append(44).append(param1).append(44);
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackOut_40_0 = (RuntimeException) var4;
+            stackOut_40_1 = new StringBuilder().append("rl.K(").append(param0).append(44).append(-6).append(44);
+            stackIn_42_0 = stackOut_40_0;
+            stackIn_42_1 = stackOut_40_1;
+            stackIn_41_0 = stackOut_40_0;
+            stackIn_41_1 = stackOut_40_1;
             if (param2 == null) {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
-              break L15;
-            } else {
               stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
               stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackOut_42_2 = "null";
+              stackIn_43_0 = stackOut_42_0;
+              stackIn_43_1 = stackOut_42_1;
+              stackIn_43_2 = stackOut_42_2;
+              break L15;
+            } else {
+              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
+              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_2 = "{...}";
+              stackIn_43_0 = stackOut_41_0;
+              stackIn_43_1 = stackOut_41_1;
+              stackIn_43_2 = stackOut_41_2;
               break L15;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 41);
         }
     }
 
     private final lm a(int param0, int param1) {
-        ek var3 = this.c(param1, param0 + -417600939);
-        if (param0 != 417600865) {
-            Object var4 = null;
-            this.a(-39, (pa) null);
-        }
+        ek var3 = this.c(param1, -74);
         if (!(var3 != null)) {
             throw new IllegalArgumentException("oid " + param1 + " invalid");
         }
@@ -1017,9 +998,6 @@ final class rl {
 
     private final void a(boolean param0, int param1) {
         ((rl) this).field_m.field_l = param1;
-        if (param0) {
-            boolean discarded$0 = this.b(-90, 117, 86, 71, -86, 91);
-        }
         int var3 = ((rl) this).field_m.field_l;
         if (!(var3 != 2)) {
             ((rl) this).field_m.field_C = ((rl) this).field_m.field_H + 3000;
@@ -1506,14 +1484,6 @@ final class rl {
                                               ((rl) this).field_m.field_z[param5] = ((rl) this).field_m.a((byte) 32, param5, 750);
                                               return true;
                                             } else {
-                                              L16: {
-                                                if (param3 <= -44) {
-                                                  break L16;
-                                                } else {
-                                                  this.b(19, 25, -67, 7);
-                                                  break L16;
-                                                }
-                                              }
                                               return false;
                                             }
                                           } else {
@@ -1521,27 +1491,27 @@ final class rl {
                                             return true;
                                           }
                                         } else {
-                                          L17: {
-                                            L18: {
+                                          L16: {
+                                            L17: {
                                               if (param4 == 65535) {
-                                                break L18;
+                                                break L17;
                                               } else {
                                                 if (-1 == param4) {
-                                                  break L18;
+                                                  break L17;
                                                 } else {
                                                   this.b(2, param5, param4, param2);
-                                                  break L17;
+                                                  break L16;
                                                 }
                                               }
                                             }
                                             this.b(4, var7);
-                                            break L17;
+                                            break L16;
                                           }
                                           return true;
                                         }
                                       }
                                     } else {
-                                      L19: {
+                                      L18: {
                                         stackOut_139_0 = this;
                                         stackIn_141_0 = stackOut_139_0;
                                         stackIn_140_0 = stackOut_139_0;
@@ -1550,13 +1520,13 @@ final class rl {
                                           stackOut_141_1 = 0;
                                           stackIn_142_0 = stackOut_141_0;
                                           stackIn_142_1 = stackOut_141_1;
-                                          break L19;
+                                          break L18;
                                         } else {
                                           stackOut_140_0 = this;
                                           stackOut_140_1 = 1;
                                           stackIn_142_0 = stackOut_140_0;
                                           stackIn_142_1 = stackOut_140_1;
-                                          break L19;
+                                          break L18;
                                         }
                                       }
                                       this.a(stackIn_142_1 != 0, (byte) -108, param5, param2, param4);
@@ -1583,7 +1553,7 @@ final class rl {
                               } else {
                                 var8 = this.b((byte) 68, var7);
                                 if (var8 != null) {
-                                  L20: {
+                                  L19: {
                                     stackOut_127_0 = (ge) var8;
                                     stackOut_127_1 = 47;
                                     stackIn_129_0 = stackOut_127_0;
@@ -1597,7 +1567,7 @@ final class rl {
                                       stackIn_130_0 = stackOut_129_0;
                                       stackIn_130_1 = stackOut_129_1;
                                       stackIn_130_2 = stackOut_129_2;
-                                      break L20;
+                                      break L19;
                                     } else {
                                       stackOut_128_0 = (ge) (Object) stackIn_128_0;
                                       stackOut_128_1 = stackIn_128_1;
@@ -1605,7 +1575,7 @@ final class rl {
                                       stackIn_130_0 = stackOut_128_0;
                                       stackIn_130_1 = stackOut_128_1;
                                       stackIn_130_2 = stackOut_128_2;
-                                      break L20;
+                                      break L19;
                                     }
                                   }
                                   boolean discarded$8 = ((ge) (Object) stackIn_130_0).a(stackIn_130_1, stackIn_130_2 != 0);
@@ -1627,7 +1597,7 @@ final class rl {
                         } else {
                           var8 = this.b((byte) 32, var7);
                           if (var8 != null) {
-                            L21: {
+                            L20: {
                               stackOut_114_0 = (ge) var8;
                               stackIn_116_0 = stackOut_114_0;
                               stackIn_115_0 = stackOut_114_0;
@@ -1636,13 +1606,13 @@ final class rl {
                                 stackOut_116_1 = 0;
                                 stackIn_117_0 = stackOut_116_0;
                                 stackIn_117_1 = stackOut_116_1;
-                                break L21;
+                                break L20;
                               } else {
                                 stackOut_115_0 = (ge) (Object) stackIn_115_0;
                                 stackOut_115_1 = 1;
                                 stackIn_117_0 = stackOut_115_0;
                                 stackIn_117_1 = stackOut_115_1;
-                                break L21;
+                                break L20;
                               }
                             }
                             boolean discarded$9 = ((ge) (Object) stackIn_117_0).b(stackIn_117_1 != 0, (byte) -127);
@@ -1669,7 +1639,7 @@ final class rl {
           var16 = this.b((byte) 32, var7);
           if (var16 != null) {
             if (~var16.field_gb == ~param5) {
-              L22: {
+              L21: {
                 stackOut_72_0 = (ge) var16;
                 stackIn_74_0 = stackOut_72_0;
                 stackIn_73_0 = stackOut_72_0;
@@ -1678,13 +1648,13 @@ final class rl {
                   stackOut_74_1 = 24;
                   stackIn_75_0 = stackOut_74_0;
                   stackIn_75_1 = stackOut_74_1;
-                  break L22;
+                  break L21;
                 } else {
                   stackOut_73_0 = (ge) (Object) stackIn_73_0;
                   stackOut_73_1 = 19;
                   stackIn_75_0 = stackOut_73_0;
                   stackIn_75_1 = stackOut_73_1;
-                  break L22;
+                  break L21;
                 }
               }
               ((ge) (Object) stackIn_75_0).a(stackIn_75_1, (byte) -89);
@@ -1716,7 +1686,7 @@ final class rl {
         return (ge) (Object) var3;
     }
 
-    private final void d(int param0) {
+    private final void d() {
         Object var3_ref2 = null;
         br var2_ref_br = null;
         int var2 = 0;
@@ -2299,7 +2269,7 @@ final class rl {
         }
     }
 
-    private final void a(lm param0, ge param1, ge param2, boolean param3) {
+    private final void a(lm param0, ge param1, ge param2) {
         sj var5 = null;
         try {
             var5 = new sj(((rl) this).field_m.field_H, param2 != null ? param2.field_x : -1, param0.field_x, param1.field_x, param0.field_G, param0.field_E, param1.field_gb);
@@ -2327,64 +2297,56 @@ final class rl {
         int[] var18 = null;
         int[] var19 = null;
         int[] var20 = null;
-        L0: {
-          var16 = null;
-          var14 = ZombieDawnMulti.field_E ? 1 : 0;
-          g.field_a.setSeed((long)((param4 << 5) + param3 + param2));
-          var17 = new pa[((rl) this).field_u.a(0)];
-          var6 = var17;
-          var20 = new int[((rl) this).field_u.a(0)];
-          var19 = var20;
-          var18 = var19;
-          var15 = var18;
-          var7 = var15;
-          d.a(var7, 0, var20.length, 32767);
-          if (param1 <= -36) {
-            break L0;
-          } else {
-            field_r = null;
-            break L0;
-          }
-        }
+        var16 = null;
+        var14 = ZombieDawnMulti.field_E ? 1 : 0;
+        g.field_a.setSeed((long)((param4 << 5) + param3 + param2));
+        var17 = new pa[((rl) this).field_u.a(0)];
+        var6 = var17;
+        var20 = new int[((rl) this).field_u.a(0)];
+        var19 = var20;
+        var18 = var19;
+        var15 = var18;
+        var7 = var15;
+        d.a(var7, 0, var20.length, 32767);
         var8 = 0;
         var9_ref_br = ((rl) this).field_u.c(111);
-        L1: while (true) {
+        L0: while (true) {
           if (!(var9_ref_br instanceof ek)) {
             vh.a(-7255, var20, (Object[]) (Object) var17);
             var9 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var8 <= var9) {
                 return;
               } else {
-                L3: {
+                L2: {
                   var10 = var17[var9];
                   if (!(var10 instanceof ge)) {
-                    break L3;
+                    break L2;
                   } else {
                     if (((rl) this).field_m.b(0, ((ge) (Object) var10).field_gb)) {
                       ((rl) this).a((byte) 100, (ge) (Object) var10);
                       var9++;
-                      continue L2;
+                      continue L1;
                     } else {
-                      break L3;
+                      break L2;
                     }
                   }
                 }
                 boolean discarded$1 = var17[var9].b(param2, -50);
                 var9++;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            L4: {
+            L3: {
               if (var9_ref_br instanceof pa) {
                 var16_ref = (pa) (Object) var9_ref_br;
                 var11 = var16_ref.e((byte) -112) + -param3;
                 var12 = -param4 + var16_ref.g(1829947600);
                 if (var11 * var11 - -(var12 * var12) <= 14400) {
-                  L5: {
+                  L4: {
                     if (!param0) {
-                      break L5;
+                      break L4;
                     } else {
                       if (var16_ref instanceof ge) {
                         var13 = (ge) (Object) var16_ref;
@@ -2392,33 +2354,33 @@ final class rl {
                           var6[var8] = (pa) (Object) var13;
                           var7[var8] = var13.field_x;
                           var8++;
-                          break L4;
+                          break L3;
                         } else {
                           var9_ref_br = ((rl) this).field_u.b(6);
-                          continue L1;
+                          continue L0;
                         }
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                   }
                   if (!(var16_ref instanceof lm)) {
-                    break L4;
+                    break L3;
                   } else {
                     var6[var8] = var16_ref;
                     var7[var8] = var16_ref.field_x;
                     var8++;
-                    break L4;
+                    break L3;
                   }
                 } else {
-                  break L4;
+                  break L3;
                 }
               } else {
-                break L4;
+                break L3;
               }
             }
             var9_ref_br = ((rl) this).field_u.b(6);
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -2432,38 +2394,37 @@ final class rl {
         og var7_ref_og = null;
         int var8 = 0;
         int var9 = 0;
-        Object var10 = null;
-        bf var11 = null;
-        sa var12 = null;
-        ce var13 = null;
+        bf var10 = null;
+        sa var11 = null;
+        ce var12 = null;
         int stackIn_32_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_43_0 = 0;
+        int stackIn_44_0 = 0;
+        int stackOut_42_0 = 0;
         int stackOut_41_0 = 0;
+        int stackOut_39_0 = 0;
         int stackOut_30_0 = 0;
         int stackOut_29_0 = 0;
         int stackOut_27_0 = 0;
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         var5 = null;
-        var11 = (bf) (Object) ((rl) this).field_m.field_A.c(64);
+        var10 = (bf) (Object) ((rl) this).field_m.field_A.c(64);
         L0: while (true) {
-          if (var11 == null) {
-            var12 = (sa) (Object) ((rl) this).field_m.field_G.c(109);
+          if (var10 == null) {
+            var11 = (sa) (Object) ((rl) this).field_m.field_G.c(109);
             L1: while (true) {
-              if (var12 == null) {
-                var13 = (ce) (Object) ((rl) this).field_m.field_s.c(98);
+              if (var11 == null) {
+                var12 = (ce) (Object) ((rl) this).field_m.field_s.c(98);
                 L2: while (true) {
                   L3: {
-                    if (var13 == null) {
+                    if (var12 == null) {
                       break L3;
                     } else {
                       var5_ref = ((rl) this).field_m.field_s.b(6);
-                      if (!var13.a(param3, param2, -1)) {
-                        var13 = (ce) (Object) var5_ref;
+                      if (!var12.a(param3, param2, -1)) {
+                        var12 = (ce) (Object) var5_ref;
                         continue L2;
                       } else {
-                        var13.c(param0 + -28190);
+                        var12.c(-28188);
                         break L3;
                       }
                     }
@@ -2478,18 +2439,9 @@ final class rl {
                           if (var6 != 0) {
                             return;
                           } else {
-                            L6: {
-                              var7 = 0;
-                              if (param0 == 2) {
-                                break L6;
-                              } else {
-                                var10 = null;
-                                ((rl) this).a((lm) null, (ge) null, -111, -126, (byte) -27);
-                                break L6;
-                              }
-                            }
+                            var7 = 0;
                             var8 = 0;
-                            L7: while (true) {
+                            L6: while (true) {
                               if (((rl) this).field_m.field_z.length <= var8) {
                                 if (var7 == 0) {
                                   return;
@@ -2497,46 +2449,46 @@ final class rl {
                                   return;
                                 }
                               } else {
-                                L8: {
+                                L7: {
                                   if (var7 == 0) {
                                     if (0 < ((rl) this).field_m.field_z[var8]) {
-                                      stackOut_44_0 = 1;
-                                      stackIn_46_0 = stackOut_44_0;
-                                      break L8;
+                                      stackOut_42_0 = 1;
+                                      stackIn_44_0 = stackOut_42_0;
+                                      break L7;
                                     } else {
-                                      stackOut_43_0 = 0;
-                                      stackIn_46_0 = stackOut_43_0;
-                                      break L8;
+                                      stackOut_41_0 = 0;
+                                      stackIn_44_0 = stackOut_41_0;
+                                      break L7;
                                     }
                                   } else {
-                                    stackOut_41_0 = 1;
-                                    stackIn_46_0 = stackOut_41_0;
-                                    break L8;
+                                    stackOut_39_0 = 1;
+                                    stackIn_44_0 = stackOut_39_0;
+                                    break L7;
                                   }
                                 }
-                                var7 = stackIn_46_0;
+                                var7 = stackIn_44_0;
                                 ((rl) this).field_m.field_z[var8] = 0;
                                 var8++;
-                                continue L7;
+                                continue L6;
                               }
                             }
                           }
                         } else {
-                          L9: {
+                          L8: {
                             if (var6 == 0) {
                               if (((rl) this).field_m.field_a[var7] > 0) {
                                 stackOut_30_0 = 1;
                                 stackIn_32_0 = stackOut_30_0;
-                                break L9;
+                                break L8;
                               } else {
                                 stackOut_29_0 = 0;
                                 stackIn_32_0 = stackOut_29_0;
-                                break L9;
+                                break L8;
                               }
                             } else {
                               stackOut_27_0 = 1;
                               stackIn_32_0 = stackOut_27_0;
-                              break L9;
+                              break L8;
                             }
                           }
                           var6 = stackIn_32_0;
@@ -2546,42 +2498,42 @@ final class rl {
                         }
                       }
                     } else {
-                      L10: {
+                      L9: {
                         if (var6_ref_br instanceof og) {
                           var7_ref_og = (og) (Object) var6_ref_br;
-                          if (var7_ref_og.b(param2, param3, param0 + -120)) {
+                          if (var7_ref_og.b(param2, param3, -118)) {
                             var7_ref_og.field_R = 1;
-                            break L10;
+                            break L9;
                           } else {
-                            break L10;
+                            break L9;
                           }
                         } else {
-                          break L10;
+                          break L9;
                         }
                       }
-                      var6_ref_br = ((rl) this).field_m.field_K.b(param0 + 4);
+                      var6_ref_br = ((rl) this).field_m.field_K.b(6);
                       continue L4;
                     }
                   }
                 }
               } else {
                 var5_ref = ((rl) this).field_m.field_G.b(6);
-                if (var12.a(param3, param0 + 17308, param2)) {
-                  var12.d(-110);
-                  var12.a(true);
+                if (var11.a(param3, 17310, param2)) {
+                  var11.d(-110);
+                  var11.a(true);
                   return;
                 } else {
-                  var12 = (sa) (Object) var5_ref;
+                  var11 = (sa) (Object) var5_ref;
                   continue L1;
                 }
               }
             }
           } else {
-            if (!var11.a(param3, param2, (byte) 29)) {
-              var11 = (bf) (Object) ((rl) this).field_m.field_A.b(6);
+            if (!var10.a(param3, param2, (byte) 29)) {
+              var10 = (bf) (Object) ((rl) this).field_m.field_A.b(6);
               continue L0;
             } else {
-              var11.a(-98);
+              var10.a(-98);
               return;
             }
           }

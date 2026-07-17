@@ -137,7 +137,7 @@ final class ao {
         String stackOut_10_2 = null;
         try {
           L0: {
-            var6 = new jg(param4, param3, param0, param5, param2);
+            var6 = new jg(2, param3, 0, param5, param2);
             vd.a(var6, (byte) -74);
             if (param1 > 68) {
               break L0;
@@ -151,7 +151,7 @@ final class ao {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var6_ref;
-            stackOut_3_1 = new StringBuilder().append("ao.F(").append(param0).append(44).append(param1).append(44);
+            stackOut_3_1 = new StringBuilder().append("ao.F(").append(0).append(44).append(param1).append(44);
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -201,7 +201,7 @@ final class ao {
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param4).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(2).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -228,27 +228,15 @@ final class ao {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void a(long param0) {
         if (0L < param0) {
-          if (param1 == 1) {
-            if (param0 % 10L == 0L) {
-              ng.a(true, -1L + param0);
-              ng.a(true, 1L);
-              return;
-            } else {
-              ng.a(true, param0);
-              return;
-            }
+          if (param0 % 10L == 0L) {
+            ng.a(true, -1L + param0);
+            ng.a(true, 1L);
+            return;
           } else {
-            field_a = null;
-            if (param0 % 10L == 0L) {
-              ng.a(true, -1L + param0);
-              ng.a(true, 1L);
-              return;
-            } else {
-              ng.a(true, param0);
-              return;
-            }
+            ng.a(true, param0);
+            return;
           }
         } else {
           return;
@@ -259,7 +247,7 @@ final class ao {
         return rf.field_o;
     }
 
-    final static void a(int param0) {
+    final static void a() {
     }
 
     final static void a(byte param0) {
@@ -456,62 +444,54 @@ final class ao {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_18_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_8_0 = 0;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             var3_int = 0;
-            if (param0 == 31128) {
-              var4 = qe.field_o;
-              L1: while (true) {
-                if (pm.field_f.length <= var3_int) {
-                  stackOut_17_0 = -1;
-                  stackIn_18_0 = stackOut_17_0;
-                  break L0;
-                } else {
-                  L2: {
-                    var5 = ln.field_M[var3_int];
-                    if (var5 < 0) {
-                      var4 = var4 + u.field_l;
+            var4 = qe.field_o;
+            L1: while (true) {
+              if (pm.field_f.length <= var3_int) {
+                stackOut_16_0 = -1;
+                stackIn_17_0 = stackOut_16_0;
+                break L0;
+              } else {
+                L2: {
+                  var5 = ln.field_M[var3_int];
+                  if (var5 < 0) {
+                    var4 = var4 + u.field_l;
+                    var3_int++;
+                    break L2;
+                  } else {
+                    var6 = lc.a(true, pm.field_f[var3_int], (byte) -97);
+                    var4 = var4 + ic.field_a;
+                    var7 = -(var6 >> 1) + af.field_Eb;
+                    if (bj.a(param2, 39, var4, var6 + (f.field_h << 1), tm.field_b + (uk.field_d << 1), param1, var7 + -f.field_h)) {
+                      stackOut_8_0 = var5;
+                      stackIn_9_0 = stackOut_8_0;
+                      return stackIn_9_0;
+                    } else {
+                      var4 = var4 + (tm.field_b + ((uk.field_d << 1) + ic.field_a));
                       var3_int++;
                       break L2;
-                    } else {
-                      var6 = lc.a(true, pm.field_f[var3_int], (byte) -97);
-                      var4 = var4 + ic.field_a;
-                      var7 = -(var6 >> 1) + af.field_Eb;
-                      if (bj.a(param2, 39, var4, var6 + (f.field_h << 1), tm.field_b + (uk.field_d << 1), param1, var7 + -f.field_h)) {
-                        stackOut_9_0 = var5;
-                        stackIn_10_0 = stackOut_9_0;
-                        return stackIn_10_0;
-                      } else {
-                        var4 = var4 + (tm.field_b + ((uk.field_d << 1) + ic.field_a));
-                        var3_int++;
-                        break L2;
-                      }
                     }
                   }
-                  var3_int++;
-                  continue L1;
                 }
+                var3_int++;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 73;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "ao.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) var3, "ao.A(" + 31128 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_18_0;
+        return stackIn_17_0;
     }
 
     public static void b(int param0) {

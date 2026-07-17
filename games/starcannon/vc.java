@@ -14,20 +14,10 @@ final class vc extends rf {
     int field_h;
 
     final static void a(int param0, byte param1, int param2) {
-        if (param1 != 60) {
-          vc.b((byte) 96);
-          ff.field_o = param0;
-          nh.field_e = 1;
-          jb.field_e = 0;
-          vj.field_ab = param2;
-          return;
-        } else {
-          ff.field_o = param0;
-          nh.field_e = 1;
-          jb.field_e = 0;
-          vj.field_ab = param2;
-          return;
-        }
+        ff.field_o = param0;
+        nh.field_e = 1;
+        jb.field_e = 0;
+        vj.field_ab = param2;
     }
 
     public static void b(byte param0) {
@@ -41,7 +31,7 @@ final class vc extends rf {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1) {
         a.field_e = param1;
         dg.field_n = param0;
     }

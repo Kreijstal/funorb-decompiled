@@ -188,7 +188,8 @@ class vk extends uj implements ch {
                           break L4;
                         } else {
                           hc.a((Throwable) null, "A1: " + oe.a(87), (byte) 72);
-                          ec.a((byte) 27);
+                          int discarded$4 = 27;
+                          ec.a();
                           if (var8 == 0) {
                             break L1;
                           } else {
@@ -208,14 +209,16 @@ class vk extends uj implements ch {
                           break L3;
                         }
                       } else {
-                        ec.a((byte) 27);
+                        int discarded$5 = 27;
+                        ec.a();
                         return;
                       }
                     }
                   }
                   var3_ref = (hb) (Object) hi.field_f.c(-3905);
                   if (var3_ref == null) {
-                    ec.a((byte) 27);
+                    int discarded$6 = 27;
+                    ec.a();
                     return;
                   } else {
                     var3_ref.b(4);
@@ -258,17 +261,10 @@ class vk extends uj implements ch {
                   var4_ref.b(4);
                   break L1;
                 } else {
-                  ec.a((byte) 27);
+                  int discarded$7 = 27;
+                  ec.a();
                   return;
                 }
-              }
-            }
-            L7: {
-              if (param0 < -25) {
-                break L7;
-              } else {
-                hl discarded$1 = vk.a((String) null, -7, (String) null, (ue) null);
-                break L7;
               }
             }
             break L0;
@@ -276,7 +272,7 @@ class vk extends uj implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "vk.SB(" + param0 + 41);
+          throw sd.a((Throwable) (Object) var1, "vk.SB(" + -96 + 41);
         }
     }
 
@@ -469,31 +465,23 @@ class vk extends uj implements ch {
         String stackOut_16_2 = null;
         try {
           L0: {
-            L1: {
-              var5 = new ba(((vk) this).field_u);
-              if (param0 == -36) {
-                break L1;
-              } else {
-                field_w = null;
-                break L1;
-              }
-            }
-            var6 = (uj) (Object) var5.a(param0 + 36);
-            L2: while (true) {
+            var5 = new ba(((vk) this).field_u);
+            var6 = (uj) (Object) var5.a(0);
+            L1: while (true) {
               if (null == var6) {
                 break L0;
               } else {
-                StringBuilder discarded$93 = param2.append(10);
+                StringBuilder discarded$3 = param2.append(10);
                 var7 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (~param3 > ~var7) {
-                    StringBuilder discarded$94 = var6.a(param1, param2, (byte) 39, 1 + param3);
-                    var6 = (uj) (Object) var5.b(param0 + 149);
-                    continue L2;
+                    StringBuilder discarded$4 = var6.a(param1, param2, (byte) 39, 1 + param3);
+                    var6 = (uj) (Object) var5.b(113);
+                    continue L1;
                   } else {
-                    StringBuilder discarded$95 = param2.append(32);
+                    StringBuilder discarded$5 = param2.append(32);
                     var7++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -501,10 +489,10 @@ class vk extends uj implements ch {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5_ref;
-            stackOut_11_1 = new StringBuilder().append("vk.WB(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("vk.WB(").append(-36).append(44);
             stackIn_14_0 = stackOut_11_0;
             stackIn_14_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -516,7 +504,7 @@ class vk extends uj implements ch {
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
-              break L4;
+              break L3;
             } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
@@ -524,10 +512,10 @@ class vk extends uj implements ch {
               stackIn_15_0 = stackOut_12_0;
               stackIn_15_1 = stackOut_12_1;
               stackIn_15_2 = stackOut_12_2;
-              break L4;
+              break L3;
             }
           }
-          L5: {
+          L4: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
             stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
             stackIn_18_0 = stackOut_15_0;
@@ -541,7 +529,7 @@ class vk extends uj implements ch {
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L5;
+              break L4;
             } else {
               stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
               stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
@@ -549,7 +537,7 @@ class vk extends uj implements ch {
               stackIn_19_0 = stackOut_16_0;
               stackIn_19_1 = stackOut_16_1;
               stackIn_19_2 = stackOut_16_2;
-              break L5;
+              break L4;
             }
           }
           throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param3 + 41);
@@ -906,7 +894,7 @@ class vk extends uj implements ch {
         return stackIn_8_0;
     }
 
-    final static void b(java.applet.Applet param0, int param1) {
+    final static void b(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -943,19 +931,11 @@ class vk extends uj implements ch {
                     break L2;
                   }
                 }
-                L3: {
-                  if (param1 == 32) {
-                    break L3;
-                  } else {
-                    field_w = null;
-                    break L3;
-                  }
-                }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
+              L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_7_0 = (RuntimeException) var2_ref2;
                 stackOut_7_1 = new StringBuilder().append("vk.AC(");
@@ -970,7 +950,7 @@ class vk extends uj implements ch {
                   stackIn_11_0 = stackOut_10_0;
                   stackIn_11_1 = stackOut_10_1;
                   stackIn_11_2 = stackOut_10_2;
-                  break L4;
+                  break L3;
                 } else {
                   stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
                   stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
@@ -978,10 +958,10 @@ class vk extends uj implements ch {
                   stackIn_11_0 = stackOut_8_0;
                   stackIn_11_1 = stackOut_8_1;
                   stackIn_11_2 = stackOut_8_2;
-                  break L4;
+                  break L3;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+              throw sd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 32 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1003,7 +983,6 @@ class vk extends uj implements ch {
         int stackIn_22_0 = 0;
         sk stackIn_30_0 = null;
         Object stackIn_34_0 = null;
-        Object stackIn_37_0 = null;
         sk stackIn_53_0 = null;
         sk stackIn_61_0 = null;
         Object stackIn_65_0 = null;
@@ -1023,7 +1002,6 @@ class vk extends uj implements ch {
         sk stackOut_52_0 = null;
         sk stackOut_60_0 = null;
         Object stackOut_64_0 = null;
-        Object stackOut_36_0 = null;
         sk stackOut_5_0 = null;
         sk stackOut_2_0 = null;
         RuntimeException stackOut_66_0 = null;
@@ -1109,69 +1087,63 @@ class vk extends uj implements ch {
                   }
                 } else {
                   var3 = 0;
-                  if (param0 == 63) {
-                    var4 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if (var2_int <= var4) {
-                          break L8;
-                        } else {
-                          L9: {
-                            L10: {
-                              var5 = param1.charAt(var4);
-                              if (var5 != 46) {
-                                break L10;
-                              } else {
-                                L11: {
-                                  if (var4 == 0) {
+                  var4 = 0;
+                  L7: while (true) {
+                    L8: {
+                      if (var2_int <= var4) {
+                        break L8;
+                      } else {
+                        L9: {
+                          L10: {
+                            var5 = param1.charAt(var4);
+                            if (var5 != 46) {
+                              break L10;
+                            } else {
+                              L11: {
+                                if (var4 == 0) {
+                                  break L11;
+                                } else {
+                                  if (-1 + var2_int == var4) {
                                     break L11;
                                   } else {
-                                    if (-1 + var2_int == var4) {
+                                    if (var3 != 0) {
                                       break L11;
                                     } else {
-                                      if (var3 != 0) {
-                                        break L11;
+                                      var3 = 1;
+                                      if (var6 == 0) {
+                                        break L9;
                                       } else {
-                                        var3 = 1;
-                                        if (var6 == 0) {
-                                          break L9;
-                                        } else {
-                                          break L10;
-                                        }
+                                        break L10;
                                       }
                                     }
                                   }
                                 }
-                                stackOut_52_0 = ra.field_t;
-                                stackIn_53_0 = stackOut_52_0;
-                                return stackIn_53_0;
                               }
-                            }
-                            if (-1 == oj.field_k.indexOf(var5)) {
-                              stackOut_60_0 = ra.field_t;
-                              stackIn_61_0 = stackOut_60_0;
-                              return stackIn_61_0;
-                            } else {
-                              var3 = 0;
-                              break L9;
+                              stackOut_52_0 = ra.field_t;
+                              stackIn_53_0 = stackOut_52_0;
+                              return stackIn_53_0;
                             }
                           }
-                          var4++;
-                          if (var6 == 0) {
-                            continue L7;
+                          if (-1 == oj.field_k.indexOf(var5)) {
+                            stackOut_60_0 = ra.field_t;
+                            stackIn_61_0 = stackOut_60_0;
+                            return stackIn_61_0;
                           } else {
-                            break L8;
+                            var3 = 0;
+                            break L9;
                           }
                         }
+                        var4++;
+                        if (var6 == 0) {
+                          continue L7;
+                        } else {
+                          break L8;
+                        }
                       }
-                      stackOut_64_0 = null;
-                      stackIn_65_0 = stackOut_64_0;
-                      break L0;
                     }
-                  } else {
-                    stackOut_36_0 = null;
-                    stackIn_37_0 = stackOut_36_0;
-                    return (sk) (Object) stackIn_37_0;
+                    stackOut_64_0 = null;
+                    stackIn_65_0 = stackOut_64_0;
+                    break L0;
                   }
                 }
               } else {
@@ -1190,7 +1162,7 @@ class vk extends uj implements ch {
           L12: {
             var2 = decompiledCaughtException;
             stackOut_66_0 = (RuntimeException) var2;
-            stackOut_66_1 = new StringBuilder().append("vk.UB(").append(param0).append(44);
+            stackOut_66_1 = new StringBuilder().append("vk.UB(").append(63).append(44);
             stackIn_69_0 = stackOut_66_0;
             stackIn_69_1 = stackOut_66_1;
             stackIn_67_0 = stackOut_66_0;
@@ -1219,13 +1191,17 @@ class vk extends uj implements ch {
     }
 
     final static void e(int param0) {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             fd.a(4, 0);
-            if (param0 >= -18) {
-                vk.b((java.applet.Applet) null, 53);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "vk.CB(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var1, "vk.CB(" + -59 + 41);
         }
     }
 
@@ -2184,7 +2160,7 @@ class vk extends uj implements ch {
         return stackIn_31_0 != 0;
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         RuntimeException var1 = null;
         ia var1_ref = null;
         int var2 = 0;
@@ -2208,7 +2184,7 @@ class vk extends uj implements ch {
         try {
           L0: {
             var1_ref = se.field_p;
-            var3 = 82 / ((-41 - param0) / 54);
+            var3 = -41;
             var2 = var1_ref.j(7909);
             if (var2 == 0) {
               L1: {
@@ -2235,7 +2211,7 @@ class vk extends uj implements ch {
                 var4_int = stackIn_11_0;
                 var5_ref_String = var1_ref.a(-120);
                 if (var4_int != 0) {
-                  String discarded$3 = var1_ref.a(-71);
+                  String discarded$5 = var1_ref.a(-71);
                   break L3;
                 } else {
                   break L3;
@@ -2269,9 +2245,9 @@ class vk extends uj implements ch {
                 if (null == var6) {
                   var6 = new ld();
                   td.field_o.a(2, (long)var8.hashCode(), (uh) (Object) var6);
-                  int fieldTemp$4 = hi.field_b;
+                  int fieldTemp$6 = hi.field_b;
                   hi.field_b = hi.field_b + 1;
-                  var6.field_hb = fieldTemp$4;
+                  var6.field_hb = fieldTemp$6;
                   ma.field_c.b(122, (rf) (Object) var6);
                   break L6;
                 } else {
@@ -2313,7 +2289,8 @@ class vk extends uj implements ch {
                       return;
                     } else {
                       hc.a((Throwable) null, "F1: " + oe.a(73), (byte) 106);
-                      ec.a((byte) 27);
+                      int discarded$7 = 27;
+                      ec.a();
                       break L0;
                     }
                   }
@@ -2357,9 +2334,9 @@ class vk extends uj implements ch {
                   if (null == var7_ref) {
                     var7_ref = new ld();
                     m.field_d.a(2, (long)ni.a(113, (CharSequence) (Object) var5_ref_String).hashCode(), (uh) (Object) var7_ref);
-                    int fieldTemp$5 = ec.field_b;
+                    int fieldTemp$8 = ec.field_b;
                     ec.field_b = ec.field_b + 1;
-                    var7_ref.field_hb = fieldTemp$5;
+                    var7_ref.field_hb = fieldTemp$8;
                     ti.field_a.b(121, (rf) (Object) var7_ref);
                     break L12;
                   } else {
@@ -2408,7 +2385,8 @@ class vk extends uj implements ch {
                         }
                       }
                     }
-                    fe.a((rf) (Object) var8_ref, (rf) (Object) var7_ref, false);
+                    int discarded$9 = 0;
+                    fe.a((rf) (Object) var8_ref, (rf) (Object) var7_ref);
                     break L16;
                   }
                   return;
@@ -2419,7 +2397,7 @@ class vk extends uj implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "vk.GB(" + param0 + 41);
+          throw sd.a((Throwable) (Object) var1, "vk.GB(" + 78 + 41);
         }
     }
 

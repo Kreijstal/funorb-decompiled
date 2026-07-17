@@ -29,14 +29,36 @@ final class mg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
     }
 
     final static boolean a(boolean param0) {
-        return hk.b(-18) || 0 >= mp.field_V;
+        int stackIn_7_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_6_0 = 0;
+        if (param0) {
+          L0: {
+            if (hk.b(-18)) {
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              break L0;
+            } else {
+              if (0 < mp.field_V) {
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                return true;
+              }
+            }
+          }
+          return stackIn_7_0 != 0;
+        } else {
+          return false;
+        }
     }
 
     static {

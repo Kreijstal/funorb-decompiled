@@ -39,7 +39,7 @@ final class gj extends kb {
         return stackIn_3_0;
     }
 
-    final static void a(String param0, java.applet.Applet param1, boolean param2) {
+    final static void a(String param0, java.applet.Applet param1) {
         try {
             Throwable throwable = null;
             String var3 = null;
@@ -106,7 +106,8 @@ final class gj extends kb {
                   break L2;
                 }
               }
-              ib.a(param1, false);
+              int discarded$2 = 0;
+              ib.a(param1);
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -313,13 +314,10 @@ final class gj extends kb {
     }
 
     private final void a(String param0, int param1, int param2, int param3, ng param4) {
-        if (param3 != 0) {
-            return;
-        }
         try {
             ep.field_b.b(param0, param2 + (param4.field_z - -(param4.field_E >> 1)), -5 + param4.field_p + param1, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "gj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "gj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 0 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -334,7 +332,7 @@ final class gj extends kb {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_T = null;
         field_W = null;
         field_R = null;

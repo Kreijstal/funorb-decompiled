@@ -176,11 +176,11 @@ final class aq {
         }
     }
 
-    final static void a(mp param0, byte param1, int param2, int param3) {
+    final static void a(mp param0) {
         try {
-            int var4_int = 57 / ((param1 - -27) / 53);
+            int var4_int = -57;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "aq.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "aq.A(" + (param0 != null ? "{...}" : "null") + 44 + -122 + 44 + 8 + 44 + 8 + 41);
         }
     }
 

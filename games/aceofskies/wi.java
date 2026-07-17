@@ -6,7 +6,7 @@ final class wi {
     static gk field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 88;
         field_a = null;
         field_b = null;

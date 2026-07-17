@@ -28,21 +28,18 @@ final class kd {
     final static hj[] a(int param0, int param1, int param2, int param3, int param4) {
         hj[] var6 = new hj[9];
         hj[] var5 = var6;
-        hj dupTemp$0 = af.a(param0, (byte) -50, param4);
+        hj dupTemp$0 = af.a(1, (byte) -50, param4);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        hj dupTemp$1 = af.a(param0, (byte) -95, param3);
+        hj dupTemp$1 = af.a(1, (byte) -95, param3);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param1 != 0) {
             var6[4] = af.a(64, (byte) -54, param1);
-        }
-        if (param2 < 20) {
-            kd.b((byte) 65);
         }
         return var5;
     }
@@ -566,19 +563,20 @@ final class kd {
 
     private final int a(int param0, byte param1) {
         if (param1 <= 38) {
-            jc discarded$0 = kd.a(false);
+            int discarded$0 = 0;
+            jc discarded$1 = kd.a();
         }
         return m.field_d[((kd) this).field_o[param0]] - -(!((kd) this).field_e[param0] ? 0 : 25000) - -((((kd) this).field_v[param0] + ((kd) this).field_g[param0]) * ((kd) this).field_n);
     }
 
-    public static void b(byte param0) {
-        int var1 = 87 / ((49 - param0) / 39);
+    public static void b() {
+        int var1 = -87;
         field_q = null;
         field_f = null;
         field_b = null;
     }
 
-    final static jc a(boolean param0) {
+    final static jc a() {
         if (!(null != ve.field_O)) {
             ve.field_O = new jc(pc.field_bb, 20, 0, 0, 0, 11579568, -1, 0, 0, pc.field_bb.field_H, -1, 2147483647, true);
         }

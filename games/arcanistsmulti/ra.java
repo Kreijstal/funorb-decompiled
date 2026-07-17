@@ -24,7 +24,7 @@ final class ra {
         return new Date().getYear() - -1900;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_k = null;
         field_a = null;
         field_f = null;
@@ -54,13 +54,10 @@ final class ra {
                 uc.field_c = new mo(64);
             }
             vd.field_d = param0.field_G;
-            if (param1 != 64) {
-                field_e = null;
-            }
             oo.field_B = param2.field_G;
             qn.i(65);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ra.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ra.C(" + (param0 != null ? "{...}" : "null") + 44 + 64 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

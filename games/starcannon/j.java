@@ -8,7 +8,7 @@ final class j {
     static vc field_a;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

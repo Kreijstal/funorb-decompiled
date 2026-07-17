@@ -11,7 +11,7 @@ final class be implements Iterable {
     static am field_d;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         int var1 = -11;
         field_e = null;
@@ -27,62 +27,54 @@ final class be implements Iterable {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_17_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_7_0 = 0;
         var8 = CrazyCrystals.field_B;
         try {
           L0: {
-            L1: {
-              if (param0 == -1013410975) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
             var3_int = 0;
             var4 = pf.field_n;
-            L2: while (true) {
+            L1: while (true) {
               if (je.field_i.length <= var3_int) {
-                stackOut_16_0 = -1;
-                stackIn_17_0 = stackOut_16_0;
+                stackOut_14_0 = -1;
+                stackIn_15_0 = stackOut_14_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = ub.field_b[var3_int];
                   if (var5 >= 0) {
                     var6 = vm.a((byte) 96, true, je.field_i[var3_int]);
                     var4 = var4 + a.field_a;
                     var7 = -(var6 >> 1) + oa.field_b;
                     if (wn.a(var6 - -(to.field_d << 1), param1, param2, var7 - to.field_d, (byte) -30, gh.field_w + (bn.field_c << 1), var4)) {
-                      stackOut_9_0 = var5;
-                      stackIn_10_0 = stackOut_9_0;
-                      return stackIn_10_0;
+                      stackOut_7_0 = var5;
+                      stackIn_8_0 = stackOut_7_0;
+                      return stackIn_8_0;
                     } else {
                       var4 = var4 + (gh.field_w + ((bn.field_c << 1) - -a.field_a));
                       var3_int++;
-                      break L3;
+                      break L2;
                     }
                   } else {
                     var4 = var4 + io.field_O;
                     var3_int++;
-                    break L3;
+                    break L2;
                   }
                 }
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var3, "be.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw dn.a((Throwable) (Object) var3, "be.A(" + -1013410975 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_17_0;
+        return stackIn_15_0;
     }
 
     public final Iterator iterator() {

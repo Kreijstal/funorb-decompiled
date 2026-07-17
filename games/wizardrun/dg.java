@@ -39,8 +39,8 @@ final class dg {
           return;
         } else {
           L0: {
-            var3 = -135 + param0;
-            var4 = param1 - 35;
+            var3 = 185;
+            var4 = 205;
             var5 = 256;
             if (jd.field_f >= 75) {
               break L0;
@@ -57,13 +57,15 @@ final class dg {
               break L1;
             }
           }
-          ud.a(s.field_a, false);
+          int discarded$3 = 0;
+          ud.a(s.field_a);
           cj.c();
           var6 = 0;
           ed.d();
           gf.k(-120);
           if (var5 >= 256) {
-            bb.b(4);
+            int discarded$4 = 4;
+            bb.b();
             if (jd.field_f < 150) {
               s.field_a.a(var3, var4);
               var7 = jd.field_f + -125;
@@ -298,7 +300,8 @@ final class dg {
           } else {
             L22: {
               ed.d(0, 0, ed.field_h, ed.field_d, 0, 256 + -var5);
-              bb.b(4);
+              int discarded$5 = 4;
+              bb.b();
               if (jd.field_f < 150) {
                 s.field_a.a(var3, var4);
                 break L22;
@@ -424,7 +427,7 @@ final class dg {
         }
     }
 
-    final static String a(int param0) {
+    final static String a() {
         if (fi.field_y == pl.field_E) {
           return we.field_a;
         } else {
@@ -525,7 +528,8 @@ final class dg {
                           var11 = var13;
                           var6 = var11;
                           if (1 == var3) {
-                            int discarded$1 = li.a(var17, var5, param0, var4, 9);
+                            int discarded$2 = 9;
+                            int discarded$3 = li.a(var6, var5, param0, var4);
                             break L5;
                           } else {
                             var7 = (Object) (Object) re.field_I;

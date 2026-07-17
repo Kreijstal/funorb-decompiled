@@ -131,7 +131,7 @@ final class fv extends rw {
         }
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         int var1_int = 0;
         RuntimeException var1 = null;
         dj var2 = null;

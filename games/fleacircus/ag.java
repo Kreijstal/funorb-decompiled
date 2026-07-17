@@ -33,7 +33,8 @@ final class ag {
         try {
           L0: {
             L1: {
-              this.a(1, param2, param0, -127);
+              int discarded$2 = -127;
+              this.a(1, param2, param0);
               if (param1 == -122) {
                 break L1;
               } else {
@@ -75,31 +76,32 @@ final class ag {
         }
     }
 
-    private final void a(int param0, long param1, Object param2, int param3) {
+    private final void a(int param0, long param1, Object param2) {
         cb var6 = null;
         pj var7 = null;
         int var8 = fleas.field_A ? 1 : 0;
         try {
-            if (!(param0 <= ((ag) this).field_g)) {
+            if (!(1 <= ((ag) this).field_g)) {
                 throw new IllegalStateException();
             }
-            this.a(param1, (byte) 94);
-            ((ag) this).field_d = ((ag) this).field_d - param0;
+            int discarded$0 = 94;
+            this.a(param1);
+            ((ag) this).field_d = ((ag) this).field_d - 1;
             while (((ag) this).field_d < 0) {
                 var6 = (cb) (Object) ((ag) this).field_c.d(-27593);
                 this.a(var6, 28);
             }
             int var6_int = -2;
-            var7 = new pj(param2, param0);
+            var7 = new pj(param2, 1);
             ((ag) this).field_b.a(param1, (lh) (Object) var7, (byte) 43);
             ((ag) this).field_c.a(-99, (pa) (Object) var7);
             ((cb) (Object) var7).field_j = 0L;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ag.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -127 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ag.C(" + 1 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -127 + 41);
         }
     }
 
-    private final void a(long param0, byte param1) {
+    private final void a(long param0) {
         cb var4 = (cb) (Object) ((ag) this).field_b.a(true, param0);
         this.a(var4, 13);
     }
@@ -108,14 +110,14 @@ final class ag {
         throw new Error();
     }
 
-    final static rh a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
+    final static rh a(boolean param0, int param1) {
         try {
             Object var6 = null;
             Object var7 = null;
             cg var8 = null;
-            rh stackIn_15_0 = null;
+            rh stackIn_10_0 = null;
             Throwable decompiledCaughtException = null;
-            rh stackOut_14_0 = null;
+            rh stackOut_9_0 = null;
             try {
               L0: {
                 L1: {
@@ -155,25 +157,9 @@ final class ag {
                     break L2;
                   }
                 }
-                L5: {
-                  if (param5 == 1) {
-                    break L5;
-                  } else {
-                    ag.a(7);
-                    break L5;
-                  }
-                }
-                L6: {
-                  var8 = gf.field_e.a(28742, param2, (ah) var7, (ah) var6, param1);
-                  if (param0) {
-                    var8.c(param5 + -78);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                stackOut_14_0 = new rh((gi) (Object) var8, param4, param3);
-                stackIn_15_0 = stackOut_14_0;
+                var8 = gf.field_e.a(28742, false, (ah) var7, (ah) var6, param1);
+                stackOut_9_0 = new rh((gi) (Object) var8, true, 1);
+                stackIn_10_0 = stackOut_9_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -181,7 +167,7 @@ final class ag {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_15_0;
+            return stackIn_10_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -44,9 +44,11 @@ final class hm extends ta implements ai {
         if (param0 != 48) {
           var6 = null;
           hm.a((String) null, (byte) 56, false, true);
-          return al.a(param1, 5200, param3, param4, param2, false);
+          int discarded$4 = 0;
+          return al.a(param1, 5200, param3, param4, param2);
         } else {
-          return al.a(param1, 5200, param3, param4, param2, false);
+          int discarded$5 = 0;
+          return al.a(param1, 5200, param3, param4, param2);
         }
     }
 
@@ -66,30 +68,13 @@ final class hm extends ta implements ai {
     }
 
     final static boolean a(int param0, char param1) {
-        Object var3 = null;
-        if (param0 == -20625) {
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (48 > param1) {
             return false;
-          }
-        } else {
-          var3 = null;
-          hm.a((String) null, (byte) -28, true, true);
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (param1 > 57) {
+            return false;
+        }
+        return true;
     }
 
     final boolean a(char param0, int param1, pj param2, int param3) {
@@ -175,12 +160,13 @@ final class hm extends ta implements ai {
         return stackIn_11_0 != 0;
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3) {
+    final static void a(int[] param0) {
         try {
-            pc.a((byte) 53, 0, 160, 0, param2, 120, ul.field_b, 0, 0, 3, 1920, param0);
-            jl.a(0, 160, param1, 0, -1, 120, 0, 0, ul.field_b, 0);
+            pc.a((byte) 53, 0, 160, 0, 0, 120, ul.field_b, 0, 0, 3, 1920, param0);
+            int discarded$0 = 0;
+            jl.a(0, 160, 3, 0, -1, 120, 0, 0, ul.field_b);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hm.K(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 3 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "hm.K(" + (param0 != null ? "{...}" : "null") + 44 + 3 + 44 + 0 + 44 + 3 + 41);
         }
     }
 
@@ -209,14 +195,16 @@ final class hm extends ta implements ai {
           L0: {
             L1: {
               if (param3 == ((hm) this).field_B) {
-                sg.k(-16);
+                int discarded$42 = -16;
+                sg.k();
                 break L1;
               } else {
                 if (((hm) this).field_D != param3) {
                   if (((hm) this).field_E != param3) {
                     break L1;
                   } else {
-                    kj.j(4);
+                    int discarded$43 = 4;
+                    kj.j();
                     break L1;
                   }
                 } else {

@@ -505,7 +505,8 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                                     }
                                   }
                                   var4 = var2.substring(6, var3);
-                                  if (!te.a((CharSequence) (Object) var4, true)) {
+                                  int discarded$4 = 1;
+                                  if (!te.a((CharSequence) (Object) var4)) {
                                     break L5;
                                   } else {
                                     if (10 <= ta.a((CharSequence) (Object) var4, 121)) {
@@ -610,7 +611,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                         if (null != var2_ref) {
                           try {
                             L17: {
-                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$5 = var2_ref.invoke(var1, new Object[1]);
                               break L17;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -625,7 +626,8 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                           break L16;
                         }
                       }
-                      oa.a((byte) -119);
+                      int discarded$6 = -119;
+                      oa.a();
                       ((eh) this).d(0);
                       k.field_f = bi.a(ja.field_j, -126, wc.field_p, (java.awt.Component) (Object) ae.field_G);
                       ((eh) this).f(-120);
@@ -675,7 +677,8 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                                 }
                               }
                             }
-                            this.b(0);
+                            int discarded$7 = 0;
+                            this.b();
                             cf.a(nj.field_l, false, (Object) (Object) ae.field_G);
                             break L23;
                           }
@@ -896,7 +899,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
             synchronized (var3_ref) {
               L1: {
                 if (!qi.field_f) {
-                  qi.field_f = param0;
+                  qi.field_f = true;
                   break L1;
                 } else {
                   return;
@@ -988,13 +991,13 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw qk.a((Throwable) (Object) runtimeException, "eh.O(" + param0 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) runtimeException, "eh.O(" + 1 + 44 + param1 + 41);
         }
     }
 
-    private final void b(int param0) {
-        RuntimeException runtimeException = null;
+    private final void b() {
         long var2_long = 0L;
+        RuntimeException var2 = null;
         long var4 = 0L;
         int var6_int = 0;
         java.awt.Insets var6 = null;
@@ -1002,7 +1005,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
         try {
           L0: {
             L1: {
-              var2_long = ll.a(param0 + 1000);
+              var2_long = ll.a(1000);
               var4 = bb.field_f[ck.field_b];
               bb.field_f[ck.field_b] = var2_long;
               if (var4 == 0L) {
@@ -1018,43 +1021,35 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
               }
             }
             L2: {
-              if (param0 == 0) {
-                break L2;
-              } else {
-                eh.a(108, (dh) null);
-                break L2;
-              }
-            }
-            L3: {
               ck.field_b = ck.field_b - -1 & 31;
-              int fieldTemp$2 = q.field_Db;
+              int fieldTemp$1 = q.field_Db;
               q.field_Db = q.field_Db + 1;
-              if (50 < fieldTemp$2) {
-                L4: {
+              if (50 < fieldTemp$1) {
+                L3: {
                   il.field_e = true;
                   q.field_Db = q.field_Db - 50;
                   ae.field_G.setSize(ja.field_j, wc.field_p);
                   ae.field_G.setVisible(true);
                   if (null == al.field_W) {
-                    break L4;
+                    break L3;
                   } else {
                     if (jb.field_e != null) {
-                      break L4;
+                      break L3;
                     } else {
                       var6 = al.field_W.getInsets();
                       ae.field_G.setLocation(var6.left + ng.field_v, uh.field_P + var6.top);
                       if (Terraphoenix.field_V == 0) {
-                        break L3;
+                        break L2;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
                 }
                 ae.field_G.setLocation(ng.field_v, uh.field_P);
-                break L3;
+                break L2;
               } else {
-                break L3;
+                break L2;
               }
             }
             ((eh) this).a((byte) -89);
@@ -1062,8 +1057,8 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) runtimeException, "eh.J(" + param0 + 41);
+          var2 = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var2, "eh.J(" + 0 + 41);
         }
     }
 

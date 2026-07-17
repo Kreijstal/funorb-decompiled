@@ -175,7 +175,7 @@ final class jg {
     private jg(int param0, int param1, int param2) {
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
     }

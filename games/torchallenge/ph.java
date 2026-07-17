@@ -18,7 +18,7 @@ final class ph implements j {
     static ka[] field_m;
     static String field_f;
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return gi.field_d != null ? true : m.field_d;
     }
 

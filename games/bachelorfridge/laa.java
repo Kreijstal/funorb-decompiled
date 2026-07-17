@@ -11,7 +11,7 @@ final class laa extends pv {
     private int field_k;
     private double field_l;
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_n = null;
     }
 
@@ -146,9 +146,9 @@ final class laa extends pv {
 
     final boolean b(boolean param0) {
         L0: {
-          int fieldTemp$2 = ((laa) this).field_g + 1;
+          int fieldTemp$4 = ((laa) this).field_g + 1;
           ((laa) this).field_g = ((laa) this).field_g + 1;
-          if (fieldTemp$2 > this.c((byte) 68)) {
+          if (fieldTemp$4 > this.c((byte) 68)) {
             break L0;
           } else {
             if (((laa) this).field_o == 0) {
@@ -176,16 +176,17 @@ final class laa extends pv {
             }
           }
         }
-        this.c(39);
+        int discarded$5 = 39;
+        this.c();
         return true;
     }
 
-    private final void c(int param0) {
+    private final void c() {
         ((laa) this).field_f.field_n = ((laa) this).field_f.c((byte) -120);
         ((laa) this).field_f.field_k = ((laa) this).field_f.b(true);
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, String param4, int param5) {
+    final static void a(int param0, byte param1, int param2, int param3, String param4) {
         try {
             param2 = param2 - (hfa.field_z.a(param4) >> 1);
             if (param1 > -44) {
@@ -214,20 +215,23 @@ final class laa extends pv {
             var2 = rja.field_o;
             if (0 >= var2) {
               oq.field_b.p(-97);
-              bi.o(2);
+              int discarded$75 = 2;
+              bi.o();
               break L0;
             } else {
               if (var2 != 1) {
                 at.field_i = lga.a(true, new String[1], ra.field_j);
                 at.field_i = rca.a(0, new CharSequence[3]);
                 oq.field_b.p(-97);
-                bi.o(2);
+                int discarded$76 = 2;
+                bi.o();
                 break L0;
               } else {
                 at.field_i = qw.field_a;
                 at.field_i = rca.a(0, new CharSequence[3]);
                 oq.field_b.p(-97);
-                bi.o(2);
+                int discarded$77 = 2;
+                bi.o();
                 break L0;
               }
             }

@@ -160,7 +160,7 @@ final class pj extends ct {
         }
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_C = null;
         field_E = null;
         field_A = null;

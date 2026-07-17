@@ -5,7 +5,7 @@ final class bc {
     static int field_a;
     static String field_b;
 
-    final static void a(int param0) {
+    final static void a() {
         da.field_b = false;
         int discarded$0 = rd.field_j.f(96);
     }
@@ -29,19 +29,16 @@ final class bc {
         sa.field_a = sa.field_a + (var2_int >> 6);
         pc.field_c = pc.field_c + (param1.f(-107) << 7);
         var2_int = param1.f(90);
-        if (param0) {
-            return;
-        }
         try {
             nl.field_b = 65536 & var2_int << 16;
             pc.field_c = pc.field_c + (var2_int >> 1);
             nl.field_b = nl.field_b + param1.d((byte) 72);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "bc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "bc.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static StringBuilder a(StringBuilder param0, char param1, int param2, int param3) {
+    final static StringBuilder a(StringBuilder param0) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -68,15 +65,15 @@ final class bc {
         try {
           L0: {
             var4_int = param0.length();
-            param0.setLength(param2);
+            param0.setLength(0);
             var5 = var4_int;
             L1: while (true) {
-              if (var5 >= param2) {
+              if (var5 >= 0) {
                 stackOut_4_0 = (StringBuilder) param0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                param0.setCharAt(var5, param1);
+                param0.setCharAt(var5, ' ');
                 var5++;
                 continue L1;
               }
@@ -110,7 +107,7 @@ final class bc {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + 2053368837 + 41);
+          throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 32 + 44 + 0 + 44 + 2053368837 + 41);
         }
         return stackIn_5_0;
     }

@@ -107,8 +107,9 @@ final class ko extends af {
         }
     }
 
-    final static boolean e(byte param0) {
-        return pp.a(ob.e((byte) -124), 0);
+    final static boolean e() {
+        int discarded$0 = 0;
+        return pp.a(ob.e((byte) -124));
     }
 
     final static boolean b(byte param0, int param1) {
@@ -175,26 +176,21 @@ final class ko extends af {
         return stackIn_3_0;
     }
 
-    public static void f(boolean param0) {
+    public static void f() {
         field_U = null;
         field_O = null;
         field_M = null;
-        if (param0) {
-            field_O = null;
-            field_S = null;
-            return;
-        }
         field_S = null;
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
+        tn var4_ref = null;
         cr var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        tn var9 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
@@ -224,7 +220,7 @@ final class ko extends af {
                   break L3;
                 } else {
                   if (pe.field_r) {
-                    boolean discarded$1 = lq.field_a.a(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
+                    boolean discarded$3 = lq.field_a.a(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
                     break L3;
                   } else {
                     lq.field_a = null;
@@ -239,20 +235,22 @@ final class ko extends af {
                     if (ea.field_c.field_tb == 0) {
                       break L5;
                     } else {
-                      up.field_z = new cb(ea.field_c.field_ob, ea.field_c.field_C, ea.field_c.field_Fb, ea.field_c.field_db, param2, hb.field_D, ji.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, (String) null, 0L);
+                      up.field_z = new cb(ea.field_c.field_ob, ea.field_c.field_C, ea.field_c.field_Fb, ea.field_c.field_db, 0, hb.field_D, ji.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, (String) null, 0L);
                       break L5;
                     }
                   }
                   L6: {
-                    var9 = qr.a(ia.field_G, 55, param1, r.field_f);
-                    if (var9 == null) {
+                    var4_ref = qr.a(ia.field_G, 55, param1, r.field_f);
+                    if (var4_ref == null) {
                       break L6;
                     } else {
-                      nd.a(var9, 32192);
+                      int discarded$4 = 32192;
+                      nd.a(var4_ref);
                       break L6;
                     }
                   }
-                  var8 = ui.b(-485);
+                  int discarded$5 = -485;
+                  var8 = ui.b();
                   if (var8 == null) {
                     break L0;
                   } else {
@@ -290,7 +288,7 @@ final class ko extends af {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var4, "ko.D(" + param0 + 44 + param1 + 44 + param2 + 44 + 1 + 41);
+          throw wn.a((Throwable) (Object) var4, "ko.D(" + param0 + 44 + param1 + 44 + 0 + 44 + 1 + 41);
         }
     }
 
@@ -369,12 +367,9 @@ final class ko extends af {
 
     private final void a(int param0, int param1, int param2, iq param3, String param4) {
         try {
-            if (param1 != -626) {
-                ((ko) this).a(true, -28, 21, -75, 109);
-            }
             bl.field_N.c(param4, (param3.field_n >> 1) + param2 - -param3.field_o, -5 + (param3.field_t + param0), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ko.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "ko.B(" + param0 + 44 + -626 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -82,7 +82,9 @@ abstract class hc extends wt {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_F = np.a(var7, 4, 16);
+                                    int discarded$9 = 16;
+                                    int discarded$10 = 4;
+                                    field_F = np.a(var7);
                                     break L1;
                                   }
                                 } else {
@@ -95,7 +97,9 @@ abstract class hc extends wt {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_q = np.a(var6, 4, 16);
+                              int discarded$11 = 16;
+                              int discarded$12 = 4;
+                              field_q = np.a(var6);
                               break L1;
                             }
                           } else {
@@ -108,7 +112,9 @@ abstract class hc extends wt {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_G = np.a(var5, 4, 16);
+                        int discarded$13 = 16;
+                        int discarded$14 = 4;
+                        field_G = np.a(var5);
                         break L1;
                       }
                     } else {
@@ -117,7 +123,8 @@ abstract class hc extends wt {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    field_x = td.a(var4, (byte) 38);
+                    int discarded$15 = 38;
+                    field_x = td.a(var4);
                     break L1;
                   }
                 } else {
@@ -126,7 +133,9 @@ abstract class hc extends wt {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_y = np.a(var3, 4, 16);
+                int discarded$16 = 16;
+                int discarded$17 = 4;
+                field_y = np.a(var3);
                 break L1;
               }
             }
@@ -501,7 +510,7 @@ abstract class hc extends wt {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = aq.a(' ', -2, 0, field_n);
+          StringBuilder discarded$6 = aq.a(' ', -2, 0, field_n);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -537,9 +546,9 @@ abstract class hc extends wt {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_n.append(60);
-                        StringBuilder discarded$7 = field_n.append(var15);
-                        StringBuilder discarded$8 = field_n.append(62);
+                        StringBuilder discarded$7 = field_n.append(60);
+                        StringBuilder discarded$8 = field_n.append(var15);
+                        StringBuilder discarded$9 = field_n.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -555,7 +564,8 @@ abstract class hc extends wt {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                var16_int = td.a(var18, (byte) 38);
+                                                int discarded$10 = 38;
+                                                var16_int = td.a(var18);
                                                 var4 = var4 + ((hc) this).field_u[var16_int].field_h;
                                                 var10 = 0;
                                                 break L4;
@@ -726,7 +736,7 @@ abstract class hc extends wt {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_n.append(var14);
+                        StringBuilder discarded$11 = field_n.append(var14);
                         var14 = (char)(ae.a((char) var14, 68) & 255);
                         var4 = var4 + ((hc) this).field_p[var14];
                         if (((hc) this).field_L == null) {
@@ -1007,7 +1017,8 @@ abstract class hc extends wt {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            var9_int = td.a(var10, (byte) 38);
+                                            int discarded$1 = 38;
+                                            var9_int = td.a(var10);
                                             var4 = var4 + ((hc) this).field_u[var9_int].field_h;
                                             var3 = 0;
                                             var6++;
@@ -1158,7 +1169,8 @@ abstract class hc extends wt {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            var10 = td.a(var13, (byte) 38);
+                                            int discarded$1 = 38;
+                                            var10 = td.a(var13);
                                             var11_ref_df = ((hc) this).field_u[var10];
                                             if (((hc) this).field_s == null) {
                                               stackOut_25_0 = var11_ref_df.field_a;

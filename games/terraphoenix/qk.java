@@ -109,11 +109,13 @@ final class qk {
         try {
           L0: {
             L1: {
-              this.a(param1, param2, 1, (byte) -107);
+              int discarded$6 = -107;
+              int discarded$7 = 1;
+              this.a(param1, param2);
               if (param0 == -3) {
                 break L1;
               } else {
-                Object discarded$2 = ((qk) this).a(19L, 96);
+                Object discarded$8 = ((qk) this).a(19L, 96);
                 break L1;
               }
             }
@@ -153,14 +155,11 @@ final class qk {
 
     private final void a(byte param0, long param1) {
         wc var4 = (wc) (Object) ((qk) this).field_c.a(param1, (byte) -21);
-        this.a(var4, 1);
-        if (param0 >= -54) {
-            qk.a(-85);
-            return;
-        }
+        int discarded$0 = 1;
+        this.a(var4);
     }
 
-    private final void a(wc param0, int param1) {
+    private final void a(wc param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -232,26 +231,27 @@ final class qk {
         return var2;
     }
 
-    private final void a(Object param0, long param1, int param2, byte param3) {
+    private final void a(Object param0, long param1) {
         wc var6 = null;
         be var6_ref = null;
         int var7 = Terraphoenix.field_V;
         try {
-            if (((qk) this).field_j < param2) {
+            if (((qk) this).field_j < 1) {
                 throw new IllegalStateException();
             }
             this.a((byte) -102, param1);
-            ((qk) this).field_h = ((qk) this).field_h - param2;
+            ((qk) this).field_h = ((qk) this).field_h - 1;
             while (((qk) this).field_h < 0) {
                 var6 = (wc) (Object) ((qk) this).field_d.c(0);
-                this.a(var6, 1);
+                int discarded$0 = 1;
+                this.a(var6);
             }
-            var6_ref = new be(param0, param2);
+            var6_ref = new be(param0, 1);
             ((qk) this).field_c.a((uf) (Object) var6_ref, (byte) -50, param1);
             ((qk) this).field_d.a((vh) (Object) var6_ref, (byte) 78);
             ((wc) (Object) var6_ref).field_m = 0L;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "qk.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + -107 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "qk.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 1 + 44 + -107 + 41);
         }
     }
 

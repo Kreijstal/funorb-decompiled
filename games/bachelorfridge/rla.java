@@ -92,7 +92,7 @@ final class rla extends pp {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_k = null;
         field_i = null;
     }
@@ -211,22 +211,11 @@ final class rla extends pp {
     }
 
     final static int a(boolean param0, int param1) {
-        if (param0) {
-            field_k = null;
-            return 255 & param1 >> 16;
-        }
         return 255 & param1 >> 16;
     }
 
     final static void a(byte param0, boolean param1) {
-        if (param0 != -1) {
-          int discarded$2 = rla.a(-108, -62, 102);
-          rda.a(param0 + 1, true, true);
-          return;
-        } else {
-          rda.a(param0 + 1, true, true);
-          return;
-        }
+        rda.a(0, param1, true);
     }
 
     static {

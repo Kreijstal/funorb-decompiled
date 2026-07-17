@@ -10,12 +10,13 @@ final class lb implements sm {
     int field_c;
     static String[] field_a;
 
-    final static int a(int param0) {
+    final static int a() {
         om.field_c.a((byte) 95);
-        if (ul.field_r.f(param0 + param0)) {
+        if (ul.field_r.f(0)) {
             return 0;
         }
-        return wl.t(19078);
+        int discarded$0 = 19078;
+        return wl.t();
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -56,7 +57,7 @@ final class lb implements sm {
                     break L2;
                   }
                 }
-                var2_int = -36 / ((-4 - param0) / 53);
+                var2_int = 36;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -64,7 +65,7 @@ final class lb implements sm {
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_5_0 = (RuntimeException) var2_ref2;
-                stackOut_5_1 = new StringBuilder().append("lb.C(").append(param0).append(44);
+                stackOut_5_1 = new StringBuilder().append("lb.C(").append(61).append(44);
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_7_1 = stackOut_5_1;
                 stackIn_6_0 = stackOut_5_0;
@@ -149,44 +150,37 @@ final class lb implements sm {
         try {
           L0: {
             L1: {
-              L2: {
-                if (param1 instanceof vh) {
-                  break L2;
+              if (param1 instanceof vh) {
+                var6 = (vh) (Object) param1;
+                ((lb) this).field_b = var6.field_p;
+                ((lb) this).field_c = var6.field_o;
+                ((lb) this).field_d = var6.field_E;
+                break L1;
+              } else {
+                if (param1 instanceof jg) {
+                  var5 = (jg) (Object) param1;
+                  ((lb) this).field_b = var5.field_p;
+                  ((lb) this).field_c = var5.field_o;
+                  ((lb) this).field_d = var5.field_E;
+                  break L1;
                 } else {
-                  if (param1 instanceof jg) {
-                    var5 = (jg) (Object) param1;
-                    ((lb) this).field_b = var5.field_p;
-                    ((lb) this).field_c = var5.field_o;
-                    ((lb) this).field_d = var5.field_E;
-                    if (!AceOfSkies.field_G) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    throw new RuntimeException();
-                  }
+                  throw new RuntimeException();
                 }
               }
-              var6 = (vh) (Object) param1;
-              ((lb) this).field_b = var6.field_p;
-              ((lb) this).field_c = var6.field_o;
-              ((lb) this).field_d = var6.field_E;
-              break L1;
             }
-            L3: {
+            L2: {
               if (param2 == null) {
-                break L3;
+                break L2;
               } else {
-                L4: {
+                L3: {
                   ((lb) this).field_f = param2;
                   if (((lb) this).field_f.field_a != ((lb) this).field_c) {
-                    break L4;
+                    break L3;
                   } else {
                     if (((lb) this).field_f.field_g == ((lb) this).field_b) {
-                      break L3;
+                      break L2;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
@@ -197,7 +191,7 @@ final class lb implements sm {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
             stackOut_11_1 = new StringBuilder().append("lb.<init>(");
@@ -212,7 +206,7 @@ final class lb implements sm {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L5;
+              break L4;
             } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
@@ -220,10 +214,10 @@ final class lb implements sm {
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L5;
+              break L4;
             }
           }
-          L6: {
+          L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
             stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
             stackIn_16_0 = stackOut_14_0;
@@ -237,7 +231,7 @@ final class lb implements sm {
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L6;
+              break L5;
             } else {
               stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
               stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
@@ -245,10 +239,10 @@ final class lb implements sm {
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L6;
+              break L5;
             }
           }
-          L7: {
+          L6: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
             stackIn_19_0 = stackOut_17_0;
@@ -262,7 +256,7 @@ final class lb implements sm {
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
-              break L7;
+              break L6;
             } else {
               stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
               stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
@@ -270,7 +264,7 @@ final class lb implements sm {
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
               stackIn_20_2 = stackOut_18_2;
-              break L7;
+              break L6;
             }
           }
           throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
@@ -278,27 +272,13 @@ final class lb implements sm {
     }
 
     final static void a(int param0, int param1) {
-        dl var2 = null;
-        if (param1 != 0) {
-          field_e = true;
-          var2 = q.field_p;
-          var2.g(109, param0);
-          var2.b(param1 + -1336879960, 1);
-          var2.b(-1336879960, 2);
-          return;
-        } else {
-          var2 = q.field_p;
-          var2.g(109, param0);
-          var2.b(param1 + -1336879960, 1);
-          var2.b(-1336879960, 2);
-          return;
-        }
+        dl var2 = q.field_p;
+        var2.g(109, param0);
+        var2.b(-1336879960, 1);
+        var2.b(-1336879960, 2);
     }
 
-    public static void b(int param0) {
-        if (param0 < 18) {
-            return;
-        }
+    public static void b() {
         field_a = null;
     }
 

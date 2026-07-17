@@ -48,7 +48,8 @@ final class dha {
                         var4 = 1;
                         ni.field_c = false;
                         if (13 == fna.field_h) {
-                          ufa.a(true);
+                          int discarded$10 = 1;
+                          ufa.a();
                           var4 = 1;
                           ni.field_c = false;
                           break L2;
@@ -62,7 +63,8 @@ final class dha {
                 }
                 L3: {
                   if (13 == fna.field_h) {
-                    ufa.a(true);
+                    int discarded$11 = 1;
+                    ufa.a();
                     var4 = 1;
                     ni.field_c = false;
                     break L3;
@@ -134,7 +136,8 @@ final class dha {
                           var4 = 1;
                           ni.field_c = false;
                           if (13 == fna.field_h) {
-                            ufa.a(true);
+                            int discarded$12 = 1;
+                            ufa.a();
                             var4 = 1;
                             ni.field_c = false;
                             break L6;
@@ -148,7 +151,8 @@ final class dha {
                   }
                   L7: {
                     if (13 == fna.field_h) {
-                      ufa.a(true);
+                      int discarded$13 = 1;
+                      ufa.a();
                       var4 = 1;
                       ni.field_c = false;
                       break L7;
@@ -191,7 +195,7 @@ final class dha {
             }
           }
         } else {
-          boolean discarded$1 = dha.a(38, -115, (byte) 27, 44);
+          boolean discarded$14 = dha.a(38, -115, (byte) 27, 44);
           if (era.field_d != null) {
             if (13 == fna.field_h) {
               era.field_d = null;
@@ -224,7 +228,8 @@ final class dha {
                           var4 = 1;
                           ni.field_c = false;
                           if (13 == fna.field_h) {
-                            ufa.a(true);
+                            int discarded$15 = 1;
+                            ufa.a();
                             var4 = 1;
                             ni.field_c = false;
                             break L10;
@@ -238,7 +243,8 @@ final class dha {
                   }
                   L11: {
                     if (13 == fna.field_h) {
-                      ufa.a(true);
+                      int discarded$16 = 1;
+                      ufa.a();
                       var4 = 1;
                       ni.field_c = false;
                       break L11;
@@ -302,7 +308,8 @@ final class dha {
                     var4 = 1;
                     ni.field_c = false;
                     if (13 == fna.field_h) {
-                      ufa.a(true);
+                      int discarded$17 = 1;
+                      ufa.a();
                       var4 = 1;
                       ni.field_c = false;
                       break L14;
@@ -315,7 +322,8 @@ final class dha {
                   if (fna.field_h != 84) {
                     L15: {
                       if (13 == fna.field_h) {
-                        ufa.a(true);
+                        int discarded$18 = 1;
+                        ufa.a();
                         var4 = 1;
                         ni.field_c = false;
                         break L15;
@@ -329,7 +337,8 @@ final class dha {
                       var4 = 1;
                       ni.field_c = false;
                       if (13 == fna.field_h) {
-                        ufa.a(true);
+                        int discarded$19 = 1;
+                        ufa.a();
                         var4 = 1;
                         ni.field_c = false;
                         break L16;

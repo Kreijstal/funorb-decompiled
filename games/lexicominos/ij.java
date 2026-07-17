@@ -85,7 +85,7 @@ final class ij extends kd {
                   break L5;
                 } else {
                   var5 = null;
-                  String discarded$2 = ij.a(5, 11, (wf) null);
+                  String discarded$4 = ij.a(5, 11, (wf) null);
                   break L5;
                 }
               }
@@ -96,7 +96,8 @@ final class ij extends kd {
                   break L6;
                 }
               }
-              r.a(param0, 0);
+              int discarded$5 = 0;
+              r.a(param0);
               break L0;
             } else {
               return;
@@ -556,7 +557,8 @@ final class ij extends kd {
           L0: {
             if (nb.a(param3, param0, (byte) 126, param2)) {
               var4_int = 19 / ((-51 - param1) / 53);
-              stackOut_3_0 = vi.b(23793);
+              int discarded$2 = 23793;
+              stackOut_3_0 = vi.b();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -674,7 +676,7 @@ final class ij extends kd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_o = null;
         field_n = null;
     }

@@ -29,15 +29,15 @@ final class oe {
         }
     }
 
-    final static void a(m param0, int param1, byte param2) {
+    final static void a(m param0) {
         hb var3 = null;
         try {
             var3 = gf.field_c;
-            var3.b(true, param1);
+            var3.b(true, 7);
             var3.b(param0.field_g, -49152);
             var3.b(param0.field_j, -49152);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "oe.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -95 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "oe.D(" + (param0 != null ? "{...}" : "null") + 44 + 7 + 44 + -95 + 41);
         }
     }
 
@@ -89,15 +89,16 @@ final class oe {
             return;
           } else {
             if (param0 < -40) {
-              int fieldTemp$1 = ((oe) this).field_k - 1;
+              int fieldTemp$2 = ((oe) this).field_k - 1;
               ((oe) this).field_k = ((oe) this).field_k - 1;
-              if (fieldTemp$1 <= 0) {
+              if (fieldTemp$2 <= 0) {
                 ((oe) this).field_k = ((oe) this).field_c;
                 if (((oe) this).field_h > gb.field_i) {
                   ((oe) this).field_n = false;
                   return;
                 } else {
-                  this.a(363);
+                  int discarded$3 = 363;
+                  this.a();
                   return;
                 }
               } else {
@@ -169,7 +170,7 @@ final class oe {
         field_l = null;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

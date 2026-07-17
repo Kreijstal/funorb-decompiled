@@ -25,7 +25,7 @@ final class vb {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         si.field_a = new ja();
     }
 

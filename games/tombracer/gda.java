@@ -36,7 +36,7 @@ abstract class gda {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void a(cn param0, int param1) {
+    final static void a(cn param0) {
         qg[] var10 = null;
         int var3 = 0;
         qg var4 = null;
@@ -83,7 +83,7 @@ abstract class gda {
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         L0: {
-          var3 = -120 % ((param0 - 65) / 42);
+          var3 = 0;
           stackOut_0_0 = mpa.a(false, param1, param2);
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
@@ -106,7 +106,8 @@ abstract class gda {
             if (stackIn_3_0 | stackIn_3_1 != 0) {
               break L2;
             } else {
-              if (!vua.e(param2, param1, 13650)) {
+              int discarded$3 = 13650;
+              if (!vua.e(param2, param1)) {
                 stackOut_7_0 = 0;
                 stackIn_8_0 = stackOut_7_0;
                 break L1;

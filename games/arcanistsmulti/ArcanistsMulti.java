@@ -26,7 +26,8 @@ public final class ArcanistsMulti extends ud {
             }
             L2: {
               L3: {
-                if (lc.a((byte) 112)) {
+                int discarded$2 = 112;
+                if (lc.a()) {
                   break L3;
                 } else {
                   if (ah.field_c > 0) {
@@ -64,11 +65,13 @@ public final class ArcanistsMulti extends ud {
               if (null == ka.field_m) {
                 break L1;
               } else {
-                u.b(6);
+                int discarded$4 = 6;
+                u.b();
                 break L1;
               }
             }
-            hg.a(false);
+            int discarded$5 = 0;
+            hg.a();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +81,7 @@ public final class ArcanistsMulti extends ud {
         }
     }
 
-    private final void e(boolean param0) {
+    private final void e() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -87,25 +90,18 @@ public final class ArcanistsMulti extends ud {
               if (null == va.field_c) {
                 break L1;
               } else {
-                rg.a(va.field_c, (byte) 22);
+                int discarded$2 = 22;
+                rg.a(va.field_c);
                 va.field_c = null;
                 bk.a(2);
                 break L1;
               }
             }
-            L2: {
-              hb.field_Fb = sd.a(6, (byte) 62);
-              ue.field_d = sd.a(1, (byte) 23);
-              so.field_k = sd.a(7, (byte) 11);
-              vg.field_l = sd.a(2, (byte) 55);
-              mg.field_E = sd.a(3, (byte) 36);
-              if (param0) {
-                break L2;
-              } else {
-                this.m(-126);
-                break L2;
-              }
-            }
+            hb.field_Fb = sd.a(6, (byte) 62);
+            ue.field_d = sd.a(1, (byte) 23);
+            so.field_k = sd.a(7, (byte) 11);
+            vg.field_l = sd.a(2, (byte) 55);
+            mg.field_E = sd.a(3, (byte) 36);
             ki.field_s = sd.a(4, (byte) 123);
             tc.field_x = sd.a(5, (byte) 121);
             ck.field_b = sd.a(10, (byte) 6);
@@ -116,7 +112,7 @@ public final class ArcanistsMulti extends ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2, "ArcanistsMulti.LA(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var2, "ArcanistsMulti.LA(" + 1 + 41);
         }
     }
 
@@ -146,7 +142,8 @@ public final class ArcanistsMulti extends ud {
               if (null == var2) {
                 break L1;
               } else {
-                if (be.a((CharSequence) (Object) var2, false) == 0L) {
+                int discarded$3 = 0;
+                if (be.a((CharSequence) (Object) var2) == 0L) {
                   break L1;
                 } else {
                   L2: {
@@ -335,9 +332,10 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 1: {
-                    int discarded$2 = be.a(1497225488);
+                    int discarded$38 = be.a(1497225488);
                     hk.field_o = ao.a(true);
-                    mo.e(200);
+                    int discarded$39 = 200;
+                    mo.e();
                     if (null == ka.field_m) {
                         statePc = 7;
                     } else {
@@ -354,7 +352,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 5: {
-                    u.b(6);
+                    int discarded$40 = 6;
+                    u.b();
                     statePc = 7;
                     continue stateLoop;
                 }
@@ -406,7 +405,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 14: {
-                    this.e(true);
+                    int discarded$41 = 1;
+                    this.e();
                     ja.field_y = false;
                     statePc = 15;
                     continue stateLoop;
@@ -438,7 +438,7 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 24: {
-                    boolean discarded$3 = this.a(123, false);
+                    boolean discarded$42 = this.a(123, false);
                     statePc = 25;
                     continue stateLoop;
                 }
@@ -470,7 +470,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 33: {
-                    if (!um.a((byte) -5)) {
+                    int discarded$43 = -5;
+                    if (!um.a()) {
                         statePc = 50;
                     } else {
                         statePc = 36;
@@ -486,7 +487,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 39: {
-                    var2_int = we.b(-3);
+                    int discarded$44 = -3;
+                    var2_int = we.b();
                     if (1 != var2_int) {
                         statePc = 46;
                     } else {
@@ -593,7 +595,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 71: {
-                    u.b(6);
+                    int discarded$45 = 6;
+                    u.b();
                     statePc = 72;
                     continue stateLoop;
                 }
@@ -615,7 +618,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 76: {
-                    ao.a(5623);
+                    int discarded$46 = 5623;
+                    ao.a();
                     statePc = 78;
                     continue stateLoop;
                 }
@@ -629,7 +633,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 79: {
-                    rn.m(0);
+                    int discarded$47 = 0;
+                    rn.m();
                     if (var27 == 0) {
                         statePc = 87;
                     } else {
@@ -652,7 +657,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 87: {
-                    if (!lc.a((byte) 112)) {
+                    int discarded$48 = 112;
+                    if (!lc.a()) {
                         statePc = 90;
                     } else {
                         statePc = 98;
@@ -685,7 +691,9 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 95: {
-                    ld.a((cm) var2, 118, 4);
+                    int discarded$49 = 4;
+                    int discarded$50 = 118;
+                    ld.a((cm) var2);
                     statePc = 97;
                     continue stateLoop;
                 }
@@ -769,7 +777,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 114: {
-                    lf.a((byte) 80);
+                    int discarded$51 = 80;
+                    lf.a();
                     kh.field_b = false;
                     mn.field_r = 9;
                     jm.field_b = df.field_z.l(-1);
@@ -789,9 +798,12 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 118: {
-                    lf.a((byte) 80);
-                    jn.a(150, dn.f((byte) -112), -13173, ql.a(1), li.field_E, wk.f((byte) -125), 1024, wh.a(1000, 678231216), wh.a(6, 678231216), jk.field_a.length);
-                    ra.a(v.b((byte) 115), 64, pa.c((byte) -122));
+                    int discarded$52 = 80;
+                    lf.a();
+                    int discarded$53 = -125;
+                    jn.a(150, dn.f((byte) -112), -13173, ql.a(1), li.field_E, wk.f(), 1024, wh.a(1000, 678231216), wh.a(6, 678231216), jk.field_a.length);
+                    int discarded$54 = 115;
+                    ra.a(v.b(), 64, pa.c((byte) -122));
                     mn.field_r = -2;
                     wa.field_Ob = true;
                     kh.field_b = false;
@@ -819,9 +831,11 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 125: {
-                    lf.a((byte) 80);
+                    int discarded$55 = 80;
+                    lf.a();
                     ho.a(0);
-                    cn.c(true);
+                    int discarded$56 = 1;
+                    cn.c();
                     hi.field_a = false;
                     wa.field_Ob = false;
                     mj.field_w = false;
@@ -829,7 +843,8 @@ public final class ArcanistsMulti extends ud {
                     wa.field_Kb = true;
                     io.field_A = false;
                     mn.field_r = 0;
-                    bc.a((byte) -50);
+                    int discarded$57 = -50;
+                    bc.a();
                     statePc = 126;
                     continue stateLoop;
                 }
@@ -860,7 +875,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 131: {
-                    u.a((byte) -108);
+                    int discarded$58 = -108;
+                    u.a();
                     if (var27 == 0) {
                         statePc = 98;
                     } else {
@@ -1005,7 +1021,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 156: {
-                    if (td.e(true)) {
+                    int discarded$59 = 1;
+                    if (td.e()) {
                         statePc = 160;
                     } else {
                         statePc = 157;
@@ -1072,7 +1089,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 169: {
-                    lf.a((byte) 80);
+                    int discarded$60 = 80;
+                    lf.a();
                     var2_int = df.field_z.e((byte) -124);
                     var3 = df.field_z.e((byte) -101);
                     if (0 == df.field_z.e((byte) 106)) {
@@ -1398,7 +1416,8 @@ public final class ArcanistsMulti extends ud {
                     jb.field_z = null;
                     System.gc();
                     var17 = new le(true, var2_int, var3, var4 != 0, var7, var8, var9, var10, var11, var14, var15, var5 != 0, var6, var12);
-                    mi.a(jh.field_c[var17.field_V.a(-31497) + 1], 3);
+                    int discarded$61 = 3;
+                    mi.a(jh.field_c[var17.field_V.a(-31497) + 1]);
                     var17.m(413355681);
                     if (var13 != 0) {
                         statePc = 216;
@@ -1467,13 +1486,16 @@ public final class ArcanistsMulti extends ud {
                 case 226: {
                     jb.field_z = var17;
                     hi.field_a = true;
-                    jg.a(-3);
-                    jk.a((byte) 121);
+                    int discarded$62 = -3;
+                    jg.a();
+                    int discarded$63 = 121;
+                    jk.a();
                     statePc = 228;
                     continue stateLoop;
                 }
                 case 228: {
-                    sc.i((byte) -53);
+                    int discarded$64 = -53;
+                    sc.i();
                     statePc = 229;
                     continue stateLoop;
                 }
@@ -1533,7 +1555,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 241: {
-                    lf.a((byte) 80);
+                    int discarded$65 = 80;
+                    lf.a();
                     if (!hi.field_a) {
                         statePc = 249;
                     } else {
@@ -1562,7 +1585,8 @@ public final class ArcanistsMulti extends ud {
                     mn.field_r = -2;
                     ao.field_d = true;
                     vh.field_t = 0;
-                    bc.a((byte) -50);
+                    int discarded$66 = -50;
+                    bc.a();
                     statePc = 250;
                     continue stateLoop;
                 }
@@ -1664,7 +1688,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 270: {
-                    if (!ka.c((byte) -44)) {
+                    int discarded$67 = -44;
+                    if (!ka.c()) {
                         statePc = 322;
                     } else {
                         statePc = 271;
@@ -1689,9 +1714,13 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 277: {
-                    ub.a((byte) 127, 4);
+                    int discarded$68 = 4;
+                    int discarded$69 = 127;
+                    ub.a();
                     jn.a((byte) -64, 6);
-                    of.b(7, 16);
+                    int discarded$70 = 16;
+                    int discarded$71 = 7;
+                    of.b();
                     ta.field_b = false;
                     if (nm.field_h != -1) {
                         statePc = 280;
@@ -1759,12 +1788,14 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 296: {
-                    lf.a((byte) 80);
+                    int discarded$72 = 80;
+                    lf.a();
                     tl.field_f[si.field_g].a(false, 0, (byte) -123);
                     mj.field_w = false;
                     wa.field_Ob = false;
                     hi.field_a = false;
-                    bc.a((byte) -50);
+                    int discarded$73 = -50;
+                    bc.a();
                     statePc = 297;
                     continue stateLoop;
                 }
@@ -1818,7 +1849,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 310: {
-                    if (!ka.c((byte) -44)) {
+                    int discarded$74 = -44;
+                    if (!ka.c()) {
                         statePc = 313;
                     } else {
                         statePc = 314;
@@ -1847,7 +1879,8 @@ public final class ArcanistsMulti extends ud {
                     continue stateLoop;
                 }
                 case 318: {
-                    ah.a(ve.field_t, tj.field_t.field_o, 8, 8, wd.field_h, (dj) (Object) tj.field_t, an.field_f / 2, an.field_j / 2, 2, tj.field_t.field_m + tj.field_t.field_o, -97);
+                    int discarded$75 = -97;
+                    ah.a(ve.field_t, tj.field_t.field_o, 8, 8, wd.field_h, (dj) (Object) tj.field_t, an.field_f / 2, an.field_j / 2, 2, tj.field_t.field_m + tj.field_t.field_o);
                     statePc = 322;
                     continue stateLoop;
                 }
@@ -1909,21 +1942,13 @@ public final class ArcanistsMulti extends ud {
         String stackOut_14_2 = null;
         try {
           L0: {
-            L1: {
-              if (!param4) {
-                break L1;
-              } else {
-                field_H = null;
-                break L1;
-              }
-            }
             param5[param1] = param2;
             param3[param1] = param0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var7 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var7;
             stackOut_5_1 = new StringBuilder().append("ArcanistsMulti.NA(").append(param0).append(44).append(param1).append(44);
@@ -1938,7 +1963,7 @@ public final class ArcanistsMulti extends ud {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L2;
+              break L1;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -1946,10 +1971,10 @@ public final class ArcanistsMulti extends ud {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L2;
+              break L1;
             }
           }
-          L3: {
+          L2: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
             stackIn_12_0 = stackOut_9_0;
@@ -1963,7 +1988,7 @@ public final class ArcanistsMulti extends ud {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L3;
+              break L2;
             } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
@@ -1971,12 +1996,12 @@ public final class ArcanistsMulti extends ud {
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
               stackIn_13_2 = stackOut_10_2;
-              break L3;
+              break L2;
             }
           }
-          L4: {
+          L3: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param4).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(0).append(44);
             stackIn_16_0 = stackOut_13_0;
             stackIn_16_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -1988,7 +2013,7 @@ public final class ArcanistsMulti extends ud {
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L4;
+              break L3;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -1996,7 +2021,7 @@ public final class ArcanistsMulti extends ud {
               stackIn_17_0 = stackOut_14_0;
               stackIn_17_1 = stackOut_14_1;
               stackIn_17_2 = stackOut_14_2;
-              break L4;
+              break L3;
             }
           }
           throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
@@ -2097,7 +2122,8 @@ public final class ArcanistsMulti extends ud {
             break L0;
           }
         }
-        ti.a((byte) -90);
+        int discarded$5 = -90;
+        ti.a();
         if (null != vg.field_l) {
           L9: {
             if (!rc.field_a.c(-10923)) {
@@ -2321,7 +2347,8 @@ public final class ArcanistsMulti extends ud {
                   wm.field_H[13].a();
                   vn.field_b.field_x = -(vn.field_b.field_n / 2) + 320;
                   vn.field_b.field_o = 16;
-                  rk.g(491697968);
+                  int discarded$6 = 491697968;
+                  rk.g();
                   kf.field_b = qe.a(ue.field_d, "frame2", "", 83);
                   uj.field_f = fj.a("", -22612, ue.field_d, "gamespell");
                   fe.field_g = fj.a("", -22612, ue.field_d, "gamebars");
@@ -2374,7 +2401,7 @@ public final class ArcanistsMulti extends ud {
                             rb.a(hi.field_c, false, 96.0f);
                             ((ArcanistsMulti) this).c((byte) -89);
                             ve.field_t = qe.a(ue.field_d, "button_frame_r", "", 94);
-                            qb[] discarded$1 = qe.a(ue.field_d, "button_frame_d", "", 44);
+                            qb[] discarded$7 = qe.a(ue.field_d, "button_frame_d", "", 44);
                             mo.field_a = qe.a(ue.field_d, "achievements_large", "", 98);
                             var4_int = 95;
                             L24: while (true) {
@@ -2443,7 +2470,8 @@ public final class ArcanistsMulti extends ud {
                                   qn.a(-24539, rc.field_a, ud.field_D);
                                   ud.field_D = null;
                                   so.field_k = null;
-                                  if (lc.a((byte) 112)) {
+                                  int discarded$8 = 112;
+                                  if (lc.a()) {
                                     break L28;
                                   } else {
                                     if (0 >= ah.field_c) {
@@ -2550,7 +2578,8 @@ public final class ArcanistsMulti extends ud {
                           ea.field_E[0] = null;
                           vn.field_b = null;
                           ce.field_m.a(true);
-                          dh.a(ue.field_d, (byte) -66);
+                          int discarded$9 = -66;
+                          dh.a(ue.field_d);
                           tj.field_t = rc.a(so.field_k, -24755, "", "font", ue.field_d);
                           mi.field_B = rc.a(so.field_k, -24755, "", "smallfont", ue.field_d);
                           bk.a(2);
@@ -2622,14 +2651,16 @@ public final class ArcanistsMulti extends ud {
                         fg.field_o = tj.a(param0 ^ -80, new String[1], sk.field_g);
                         break L5;
                       }
-                      fg.field_o = ua.a(new CharSequence[3], -93);
+                      int discarded$5 = -93;
+                      fg.field_o = ua.a(new CharSequence[3]);
                       break L4;
                     } else {
                       break L4;
                     }
                   }
                   vf.field_k.h(77);
-                  ba.c(0);
+                  int discarded$6 = 0;
+                  ba.c();
                   if (var2 == 0) {
                     break L2;
                   } else {
@@ -2889,66 +2920,105 @@ public final class ArcanistsMulti extends ud {
           L0: {
             L1: {
               ArcanistsMulti.h((byte) -91);
-              fn.a((byte) -60);
-              qa.a((byte) 92);
-              vn.e(true);
+              int discarded$206 = -60;
+              fn.a();
+              int discarded$207 = 92;
+              qa.a();
+              int discarded$208 = 1;
+              vn.e();
               cb.a((byte) 44);
               ik.a(0);
-              c.a(30);
-              to.c(false);
+              int discarded$209 = 30;
+              c.a();
+              int discarded$210 = 0;
+              to.c();
               kc.d(-21224);
-              ji.a(-733);
-              bh.a(-97);
+              int discarded$211 = -733;
+              ji.a();
+              int discarded$212 = -97;
+              bh.a();
               bc.a(1);
               ci.a(0);
-              uf.a((byte) -81);
-              ud.d(true);
-              p.a((byte) -46);
+              int discarded$213 = -81;
+              uf.a();
+              int discarded$214 = 1;
+              ud.d();
+              int discarded$215 = -46;
+              p.a();
               dc.a(false);
-              hn.a(66);
-              je.a(-10338);
-              hh.b(1);
+              int discarded$216 = 66;
+              hn.a();
+              int discarded$217 = -10338;
+              je.a();
+              int discarded$218 = 1;
+              hh.b();
               de.c();
               eg.a(false);
               dj.a();
               rg.a(35);
-              wk.b(true);
-              qj.c(-13019);
-              ra.b(64);
-              oj.a(1);
-              uc.a((byte) -58);
-              ck.b((byte) 85);
-              hm.a(124);
+              int discarded$219 = 1;
+              wk.b();
+              int discarded$220 = -13019;
+              qj.c();
+              int discarded$221 = 64;
+              ra.b();
+              int discarded$222 = 1;
+              oj.a();
+              int discarded$223 = -58;
+              uc.a();
+              int discarded$224 = 85;
+              ck.b();
+              int discarded$225 = 124;
+              hm.a();
               ub.a(-70);
               um.a(0);
-              ad.a(96);
-              jg.c(-25776);
+              int discarded$226 = 96;
+              ad.a();
+              int discarded$227 = -25776;
+              jg.c();
               mf.a(-1);
-              md.a((byte) 115);
-              hg.b((byte) -105);
-              dk.b(false);
-              rc.a(-1);
-              uk.a(115);
+              int discarded$228 = 115;
+              md.a();
+              int discarded$229 = -105;
+              hg.b();
+              int discarded$230 = 0;
+              dk.b();
+              int discarded$231 = -1;
+              rc.a();
+              int discarded$232 = 115;
+              uk.a();
               v.b(-18033);
-              gi.a((byte) 59);
+              int discarded$233 = 59;
+              gi.a();
               lc.c(true);
-              le.f((byte) 95);
-              pm.a(0);
-              kf.a((byte) -121);
+              int discarded$234 = 95;
+              le.f();
+              int discarded$235 = 0;
+              pm.a();
+              int discarded$236 = -121;
+              kf.a();
               hf.a(false);
               lk.d(11959);
-              pa.a(32336);
-              gk.a((byte) -90);
-              sd.b(-1);
-              k.c(11138);
+              int discarded$237 = 32336;
+              pa.a();
+              int discarded$238 = -90;
+              gk.a();
+              int discarded$239 = -1;
+              sd.b();
+              int discarded$240 = 11138;
+              k.c();
               nf.r(0);
               pg.c((byte) -115);
-              pn.b((byte) 122);
-              cc.a((byte) 107);
+              int discarded$241 = 122;
+              pn.b();
+              int discarded$242 = 107;
+              cc.a();
               so.a(param0);
               gh.d((byte) 115);
-              di.b(13);
-              o.c(true);
+              int discarded$243 = 13;
+              di.b();
+              int discarded$244 = 1;
+              o.c();
               en.b();
               if (param0) {
                 stackOut_3_0 = 0;
@@ -2965,35 +3035,48 @@ public final class ArcanistsMulti extends ud {
               lb.c();
               io.c(118);
               fo.a(0);
-              ec.b(0);
+              int discarded$245 = 0;
+              ec.b();
               kj.a(true);
               lf.a(-15);
               jk.a(0);
-              nb.a(-79);
-              tl.a((byte) -51);
+              int discarded$246 = -79;
+              nb.a();
+              int discarded$247 = -51;
+              tl.a();
               ml.h(false);
-              qc.a(54);
+              int discarded$248 = 54;
+              qc.a();
               tf.a(49);
               mi.g(2);
-              oc.b(false);
-              hi.a((byte) 60);
+              int discarded$249 = 0;
+              oc.b();
+              int discarded$250 = 60;
+              hi.a();
               jd.d((byte) -109);
               ai.b();
               ni.a();
               jj.a();
-              ah.a(false);
+              int discarded$251 = 0;
+              ah.a();
               r.a(8);
-              oi.a(103);
+              int discarded$252 = 103;
+              oi.a();
               vi.h((byte) 62);
-              h.h(1);
+              int discarded$253 = 1;
+              h.h();
               ie.m((byte) 25);
-              gd.g(103);
-              no.l((byte) -11);
+              int discarded$254 = 103;
+              gd.g();
+              int discarded$255 = -11;
+              no.l();
               ed.i(-29222);
-              ln.g(10);
+              int discarded$256 = 10;
+              ln.g();
               td.a((byte) 115);
               e.a(-1);
-              sn.g((byte) 127);
+              int discarded$257 = 127;
+              sn.g();
               hc.a((byte) -60);
               vh.b(-60);
               if (param0) {
@@ -3008,116 +3091,194 @@ public final class ArcanistsMulti extends ud {
             }
             L3: {
               fb.a(stackIn_8_0 != 0);
-              pc.a(false);
+              int discarded$258 = 0;
+              pc.a();
               dd.a(-5451);
-              ue.a((byte) 62);
+              int discarded$259 = 62;
+              ue.a();
               g.a(30586);
-              tm.b(-79);
-              cf.a((byte) 83);
-              nl.e(-10765);
+              int discarded$260 = -79;
+              tm.b();
+              int discarded$261 = 83;
+              cf.a();
+              int discarded$262 = -10765;
+              nl.e();
               dn.e(1);
-              af.e(93);
-              in.g((byte) -120);
-              pe.g(0);
-              hb.e(0);
-              ne.c(-14);
-              w.g((byte) 126);
+              int discarded$263 = 93;
+              af.e();
+              int discarded$264 = -120;
+              in.g();
+              int discarded$265 = 0;
+              pe.g();
+              int discarded$266 = 0;
+              hb.e();
+              int discarded$267 = -14;
+              ne.c();
+              int discarded$268 = 126;
+              w.g();
               cg.e(param0);
-              i.a((byte) 6);
-              na.g((byte) 120);
+              int discarded$269 = 6;
+              i.a();
+              int discarded$270 = 120;
+              na.g();
               jb.c(122);
-              we.c(120);
-              wj.a(0);
-              mo.c(0);
-              tg.c(-92);
+              int discarded$271 = 120;
+              we.c();
+              int discarded$272 = 0;
+              wj.a();
+              int discarded$273 = 0;
+              mo.c();
+              int discarded$274 = -92;
+              tg.c();
               mc.a(73);
               ao.b(0);
-              sb.c(-1);
+              int discarded$275 = -1;
+              sb.c();
               s.a((byte) -109);
               bm.a(false);
-              fc.a((byte) -71);
-              nm.a(-1);
+              int discarded$276 = -71;
+              fc.a();
+              int discarded$277 = -1;
+              nm.a();
               ph.a((byte) -42);
               fi.a((byte) 5);
               gj.a(false);
-              ch.a(false);
+              int discarded$278 = 0;
+              ch.a();
               bd.b(0);
               ab.q(21657);
               da.a(-121);
               u.a(1);
-              vm.a((byte) -75);
+              int discarded$279 = -75;
+              vm.a();
               ug.a(109);
               ic.a(0);
-              ge.a(-117);
-              cn.g((byte) 112);
-              qn.h(1);
+              int discarded$280 = -117;
+              ge.a();
+              int discarded$281 = 112;
+              cn.g();
+              int discarded$282 = 1;
+              qn.h();
               cj.a(param0);
-              sa.e(26820);
-              jn.a((byte) -99);
+              int discarded$283 = 26820;
+              sa.e();
+              int discarded$284 = -99;
+              jn.a();
               rj.a((byte) -94);
-              oh.a(-791);
-              kb.d(255);
-              ff.a((byte) 46);
-              si.b((byte) 36);
-              mj.a((byte) -95);
-              of.a(-56);
-              lh.a(2);
-              jm.c(63);
+              int discarded$285 = -791;
+              oh.a();
+              int discarded$286 = 255;
+              kb.d();
+              int discarded$287 = 46;
+              ff.a();
+              int discarded$288 = 36;
+              si.b();
+              int discarded$289 = -95;
+              mj.a();
+              int discarded$290 = -56;
+              of.a();
+              int discarded$291 = 2;
+              lh.a();
+              int discarded$292 = 63;
+              jm.c();
               qm.f((byte) -17);
-              wn.e(23123);
-              kh.a(6481);
-              kn.h(3);
-              uj.a(true);
-              qo.a(6);
+              int discarded$293 = 23123;
+              wn.e();
+              int discarded$294 = 6481;
+              kh.a();
+              int discarded$295 = 3;
+              kn.h();
+              int discarded$296 = 1;
+              uj.a();
+              int discarded$297 = 6;
+              qo.a();
               ob.f(false);
-              ti.k(0);
-              ag.e(-125);
+              int discarded$298 = 0;
+              ti.k();
+              int discarded$299 = -125;
+              ag.e();
               ua.f(-1);
-              df.c(true);
-              kl.a((byte) -90);
-              ae.a((byte) -125);
-              qf.a((byte) 92);
+              int discarded$300 = 1;
+              df.c();
+              int discarded$301 = -90;
+              kl.a();
+              int discarded$302 = -125;
+              ae.a();
+              int discarded$303 = 92;
+              qf.a();
               ef.g(-1);
-              vk.f((byte) 20);
-              be.a((byte) -60);
-              ea.f((byte) 78);
+              int discarded$304 = 20;
+              vk.f();
+              int discarded$305 = -60;
+              be.a();
+              int discarded$306 = 78;
+              ea.f();
               tj.b(107);
-              jo.a(0);
-              ve.d(2039583);
-              b.a(67);
+              int discarded$307 = 0;
+              jo.a();
+              int discarded$308 = 2039583;
+              ve.d();
+              int discarded$309 = 67;
+              b.a();
               id.c();
               gl.a((byte) 15);
               vg.a(40);
-              bo.a(120);
-              he.a(-31399);
-              oa.a((byte) 98);
-              wd.a(0);
-              rd.a(0);
-              lm.a(-888);
-              pi.a((byte) -68);
-              jh.a((byte) 87);
-              eo.a(-14449);
-              n.a(8577);
-              bg.a((byte) -79);
+              int discarded$310 = 120;
+              bo.a();
+              int discarded$311 = -31399;
+              he.a();
+              int discarded$312 = 98;
+              oa.a();
+              int discarded$313 = 0;
+              wd.a();
+              int discarded$314 = 0;
+              rd.a();
+              int discarded$315 = -888;
+              lm.a();
+              int discarded$316 = -68;
+              pi.a();
+              int discarded$317 = 87;
+              jh.a();
+              int discarded$318 = -14449;
+              eo.a();
+              int discarded$319 = 8577;
+              n.a();
+              int discarded$320 = -79;
+              bg.a();
               bf.a();
-              ul.a(4);
-              bb.a((byte) -127);
+              int discarded$321 = 4;
+              ul.a();
+              int discarded$322 = -127;
+              bb.a();
               fl.a(true);
-              wh.a((byte) -118);
-              sk.b(121);
-              la.a((byte) 49);
-              hd.a((byte) 107);
-              ij.g(12);
-              kg.a(0);
-              gn.a((byte) -122);
-              oo.e(31908);
-              tk.c(-1016755547);
-              ig.a(0);
-              go.a(false);
-              hj.a((byte) 111);
+              int discarded$323 = -118;
+              wh.a();
+              int discarded$324 = 121;
+              sk.b();
+              int discarded$325 = 49;
+              la.a();
+              int discarded$326 = 107;
+              hd.a();
+              int discarded$327 = 12;
+              ij.g();
+              int discarded$328 = 0;
+              kg.a();
+              int discarded$329 = -122;
+              gn.a();
+              int discarded$330 = 31908;
+              oo.e();
+              int discarded$331 = -1016755547;
+              tk.c();
+              int discarded$332 = 0;
+              ig.a();
+              int discarded$333 = 0;
+              go.a();
+              int discarded$334 = 111;
+              hj.a();
               lj.c(-80);
               ga.a((byte) -109);
-              vf.a(27494);
+              int discarded$335 = 27494;
+              vf.a();
               if (param0) {
                 stackOut_11_0 = 0;
                 stackIn_12_0 = stackOut_11_0;
@@ -3129,109 +3290,185 @@ public final class ArcanistsMulti extends ud {
               }
             }
             ia.a(stackIn_12_0 != 0);
-            rb.a(37);
-            oe.a(120);
-            rm.a(-6566);
+            int discarded$336 = 37;
+            rb.a();
+            int discarded$337 = 120;
+            oe.a();
+            int discarded$338 = -6566;
+            rm.a();
             fg.b(param0);
             ba.a((byte) 94);
             jc.a();
             ke.f(2);
-            bi.o(0);
-            rn.n(1);
-            qk.g(0);
-            om.a((byte) -127);
+            int discarded$339 = 0;
+            bi.o();
+            int discarded$340 = 1;
+            rn.n();
+            int discarded$341 = 0;
+            qk.g();
+            int discarded$342 = -127;
+            om.a();
             li.a(1313);
-            ej.f(20445);
-            mk.g((byte) -125);
+            int discarded$343 = 20445;
+            ej.f();
+            int discarded$344 = -125;
+            mk.g();
             sc.g(15428);
-            bk.f(0);
-            rl.c((byte) -114);
-            gg.b(28);
-            ng.a(40);
-            rk.h(-116);
+            int discarded$345 = 0;
+            bk.f();
+            int discarded$346 = -114;
+            rl.c();
+            int discarded$347 = 28;
+            gg.b();
+            int discarded$348 = 40;
+            ng.a();
+            int discarded$349 = -116;
+            rk.h();
             wg.d(param0);
             tn.f((byte) -97);
             dh.f((byte) 77);
-            fd.a(-1);
-            bl.c((byte) -79);
+            int discarded$350 = -1;
+            fd.a();
+            int discarded$351 = -79;
+            bl.c();
             wl.k(0);
-            nj.a((byte) -72);
-            mg.i(42);
+            int discarded$352 = -72;
+            nj.a();
+            int discarded$353 = 42;
+            mg.i();
             sl.g(123);
-            jl.c(-125);
-            re.b(0);
-            se.f(-114);
-            q.f(-1764031359);
-            bj.l((byte) -46);
-            gf.k((byte) -108);
-            wm.f(-5903);
-            ma.g((byte) 54);
+            int discarded$354 = -125;
+            jl.c();
+            int discarded$355 = 0;
+            re.b();
+            int discarded$356 = -114;
+            se.f();
+            int discarded$357 = -1764031359;
+            q.f();
+            int discarded$358 = -46;
+            bj.l();
+            int discarded$359 = -108;
+            gf.k();
+            int discarded$360 = -5903;
+            wm.f();
+            int discarded$361 = 54;
+            ma.g();
             wi.a(92);
             pk.a(-14987);
-            gb.b((byte) 33);
-            nn.c(63);
-            aj.a(20028);
-            nh.h((byte) -102);
+            int discarded$362 = 33;
+            gb.b();
+            int discarded$363 = 63;
+            nn.c();
+            int discarded$364 = 20028;
+            aj.a();
+            int discarded$365 = -102;
+            nh.h();
             ka.a(-1);
             sm.a(false);
-            jf.a((byte) -120);
-            fh.a((byte) 88);
+            int discarded$366 = -120;
+            jf.a();
+            int discarded$367 = 88;
+            fh.a();
             fk.a(-1333592895);
             nk.a(30025);
             ce.b(false);
-            mm.d(2188450);
+            int discarded$368 = 2188450;
+            mm.d();
             gm.a(-9922);
-            ib.a(true);
-            tc.b((byte) 25);
-            ii.b((byte) 106);
-            dm.c(true);
-            cd.a((byte) 99);
-            rf.a(85);
-            fj.a(90);
+            int discarded$369 = 1;
+            ib.a();
+            int discarded$370 = 25;
+            tc.b();
+            int discarded$371 = 106;
+            ii.b();
+            int discarded$372 = 1;
+            dm.c();
+            int discarded$373 = 99;
+            cd.a();
+            int discarded$374 = 85;
+            rf.a();
+            int discarded$375 = 90;
+            fj.a();
             on.a(3);
-            wa.f((byte) -121);
-            ta.a(5);
-            ol.b(-23971);
-            hl.a(-1513388336);
-            fe.a(32369);
-            cm.a(49);
-            pb.a((byte) 126);
-            f.a(-1);
-            qg.b(83);
-            co.b(-62);
+            int discarded$376 = -121;
+            wa.f();
+            int discarded$377 = 5;
+            ta.a();
+            int discarded$378 = -23971;
+            ol.b();
+            int discarded$379 = -1513388336;
+            hl.a();
+            int discarded$380 = 32369;
+            fe.a();
+            int discarded$381 = 49;
+            cm.a();
+            int discarded$382 = 126;
+            pb.a();
+            int discarded$383 = -1;
+            f.a();
+            int discarded$384 = 83;
+            qg.b();
+            int discarded$385 = -62;
+            co.b();
             ho.b(0);
-            km.b(400);
+            int discarded$386 = 400;
+            km.b();
             am.a(false);
-            qe.c(-100);
-            me.a((byte) 115);
-            uh.a(-69);
-            fm.a(0);
-            th.a((byte) -113);
-            ql.a((byte) -107);
+            int discarded$387 = -100;
+            qe.c();
+            int discarded$388 = 115;
+            me.a();
+            int discarded$389 = -69;
+            uh.a();
+            int discarded$390 = 0;
+            fm.a();
+            int discarded$391 = -113;
+            th.a();
+            int discarded$392 = -107;
+            ql.a();
             im.a((byte) -14);
-            ld.b((byte) 13);
-            an.a((byte) -104);
-            ih.a((byte) 48);
+            int discarded$393 = 13;
+            ld.b();
+            int discarded$394 = -104;
+            an.a();
+            int discarded$395 = 48;
+            ih.a();
             vc.b(202);
             vd.a(0);
-            va.a(121);
-            eb.a((byte) 49);
-            j.a((byte) -122);
-            mh.h((byte) 114);
-            mb.a(122);
-            aa.b(false);
-            ko.a(32);
+            int discarded$396 = 121;
+            va.a();
+            int discarded$397 = 49;
+            eb.a();
+            int discarded$398 = -122;
+            j.a();
+            int discarded$399 = 114;
+            mh.h();
+            int discarded$400 = 122;
+            mb.a();
+            int discarded$401 = 0;
+            aa.b();
+            int discarded$402 = 32;
+            ko.a();
             dg.d(-1);
-            ui.d(70);
-            ki.d((byte) 90);
-            ja.d(0);
-            lo.d(15672);
-            mn.d((byte) -119);
-            db.a(255);
-            vl.a((byte) -76);
-            eh.a((byte) 121);
+            int discarded$403 = 70;
+            ui.d();
+            int discarded$404 = 90;
+            ki.d();
+            int discarded$405 = 0;
+            ja.d();
+            int discarded$406 = 15672;
+            lo.d();
+            int discarded$407 = -119;
+            mn.d();
+            int discarded$408 = 255;
+            db.a();
+            int discarded$409 = -76;
+            vl.a();
+            int discarded$410 = 121;
+            eh.a();
             ee.c(true);
-            ri.a((byte) 76);
+            int discarded$411 = 76;
+            ri.a();
             ((ArcanistsMulti) this).field_q = null;
             break L0;
           }
@@ -3303,7 +3540,8 @@ public final class ArcanistsMulti extends ud {
         try {
           L0: {
             L1: {
-              if (bj.g(false)) {
+              int discarded$19 = 0;
+              if (bj.g()) {
                 param1 = true;
                 break L1;
               } else {
@@ -3314,13 +3552,13 @@ public final class ArcanistsMulti extends ud {
               if (b.field_a.b(12623) == null) {
                 break L2;
               } else {
-                int fieldTemp$5 = wi.field_h + 1;
+                int fieldTemp$20 = wi.field_h + 1;
                 wi.field_h = wi.field_h + 1;
-                if (fieldTemp$5 != 335) {
+                if (fieldTemp$20 != 335) {
                   break L2;
                 } else {
                   wi.field_h = 0;
-                  pg discarded$6 = b.field_a.c(true);
+                  pg discarded$21 = b.field_a.c(true);
                   break L2;
                 }
               }
@@ -3352,12 +3590,14 @@ public final class ArcanistsMulti extends ud {
                         }
                       }
                       L7: {
-                        if (lc.a((byte) 112)) {
+                        int discarded$22 = 112;
+                        if (lc.a()) {
                           break L7;
                         } else {
                           L8: {
                             mn.field_r = cj.field_b;
-                            vk.c(false);
+                            int discarded$23 = 0;
+                            vk.c();
                             if (w.field_Cb) {
                               w.field_Cb = false;
                               km.a(1, 10, 240, 16, (dj) (Object) mi.field_B, 320, (byte) 40, mi.field_B.field_o, false, wd.field_h, mi.field_B.field_m + mi.field_B.field_o, ve.field_t);
@@ -3378,7 +3618,8 @@ public final class ArcanistsMulti extends ud {
                           if (!ij.b(mn.field_r, 10)) {
                             break L7;
                           } else {
-                            lf.a((byte) 80);
+                            int discarded$24 = 80;
+                            lf.a();
                             break L7;
                           }
                         }
@@ -3400,7 +3641,8 @@ public final class ArcanistsMulti extends ud {
                         if (w.field_Cb) {
                           break L11;
                         } else {
-                          vn.a((byte) 4);
+                          int discarded$25 = 4;
+                          vn.a();
                           if (var13 == 0) {
                             break L10;
                           } else {
@@ -3408,7 +3650,8 @@ public final class ArcanistsMulti extends ud {
                           }
                         }
                       }
-                      am.a(3020);
+                      int discarded$26 = 3020;
+                      am.a();
                       break L10;
                     }
                     ii.field_a = sl.field_I;
@@ -3433,7 +3676,8 @@ public final class ArcanistsMulti extends ud {
                       } else {
                         km.field_c = km.field_c + 1;
                         if (km.field_c == 32) {
-                          lf.a((byte) 80);
+                          int discarded$27 = 80;
+                          lf.a();
                           if (var13 == 0) {
                             break L13;
                           } else {
@@ -3471,7 +3715,7 @@ public final class ArcanistsMulti extends ud {
                                   if (si.field_g == -2) {
                                     break L18;
                                   } else {
-                                    if (!ij.b(si.field_g, param0 ^ -83)) {
+                                    if (!ij.b(si.field_g, 10)) {
                                       break L13;
                                     } else {
                                       tl.field_f[si.field_g].b(91);
@@ -3501,7 +3745,7 @@ public final class ArcanistsMulti extends ud {
                             break L19;
                           }
                         }
-                        tl.field_f[si.field_g].b(param0 ^ -2);
+                        tl.field_f[si.field_g].b(89);
                         if (var13 == 0) {
                           break L13;
                         } else {
@@ -3570,7 +3814,8 @@ public final class ArcanistsMulti extends ud {
                         }
                       }
                       L24: {
-                        ae.a(var3_int != 0, 13);
+                        int discarded$28 = 13;
+                        ae.a(var3_int != 0);
                         if (mj.field_w) {
                           r.field_b.a(true, var4 != 0);
                           break L24;
@@ -3609,7 +3854,11 @@ public final class ArcanistsMulti extends ud {
                                       if (!hi.field_a) {
                                         break L30;
                                       } else {
-                                        if (!tg.a(12, 27, 15, 13)) {
+                                        int discarded$29 = 13;
+                                        int discarded$30 = 15;
+                                        int discarded$31 = 27;
+                                        int discarded$32 = 12;
+                                        if (!tg.a()) {
                                           break L29;
                                         } else {
                                           jb.field_z.field_O = true;
@@ -3621,7 +3870,7 @@ public final class ArcanistsMulti extends ud {
                                         }
                                       }
                                     }
-                                    boolean discarded$7 = pe.a(15, 12, (byte) 32, 13);
+                                    boolean discarded$33 = pe.a(15, 12, (byte) 32, 13);
                                     break L29;
                                   } else {
                                     break L29;
@@ -3636,7 +3885,7 @@ public final class ArcanistsMulti extends ud {
                                   }
                                 }
                                 if (hi.field_a) {
-                                  jb.field_z.k(param0 ^ -90);
+                                  jb.field_z.k(1);
                                   if (var13 == 0) {
                                     continue L26;
                                   } else {
@@ -3669,7 +3918,8 @@ public final class ArcanistsMulti extends ud {
                 if (wa.field_Ob) {
                   break L32;
                 } else {
-                  lf.b(-4);
+                  int discarded$34 = -4;
+                  lf.b();
                   break L32;
                 }
               }
@@ -3793,9 +4043,9 @@ public final class ArcanistsMulti extends ud {
                                           if (var12 >= 3) {
                                             break L46;
                                           } else {
-                                            int incrementValue$8 = var10;
+                                            int incrementValue$35 = var10;
                                             var10++;
-                                            var5_array[var9][incrementValue$8] = kg.field_d[var11][var12];
+                                            var5_array[var9][incrementValue$35] = kg.field_d[var11][var12];
                                             var12++;
                                             if (var13 != 0) {
                                               break L45;
@@ -3831,9 +4081,9 @@ public final class ArcanistsMulti extends ud {
                                   if (var11 >= 6) {
                                     break L49;
                                   } else {
-                                    int incrementValue$9 = var10;
+                                    int incrementValue$36 = var10;
                                     var10++;
-                                    var5_array[var9][incrementValue$9] = so.field_c[var11];
+                                    var5_array[var9][incrementValue$36] = so.field_c[var11];
                                     var11++;
                                     if (var13 != 0) {
                                       break L48;
@@ -3894,64 +4144,57 @@ public final class ArcanistsMulti extends ud {
               }
             }
             L53: {
-              if (param0 == -89) {
-                break L53;
-              } else {
-                ArcanistsMulti.h((byte) 78);
-                break L53;
-              }
-            }
-            L54: {
               if (-4 == mn.field_r) {
-                L55: {
+                L54: {
                   if (jh.field_c[0] == f.field_g) {
-                    mi.a(jh.field_c[0], param0 + 92);
-                    break L55;
+                    int discarded$37 = 3;
+                    mi.a(jh.field_c[0]);
+                    break L54;
                   } else {
-                    break L55;
+                    break L54;
                   }
                 }
                 he.field_e.b((byte) -59, 64);
                 var3_int = 0;
-                L56: while (true) {
-                  L57: {
-                    L58: {
+                L55: while (true) {
+                  L56: {
+                    L57: {
                       if (var3_int >= 4) {
-                        break L58;
+                        break L57;
                       } else {
                         stackOut_225_0 = 0;
                         stackIn_235_0 = stackOut_225_0;
                         stackIn_226_0 = stackOut_225_0;
                         if (var13 != 0) {
-                          break L57;
+                          break L56;
                         } else {
                           var4 = stackIn_226_0;
-                          L59: while (true) {
-                            L60: {
-                              L61: {
+                          L58: while (true) {
+                            L59: {
+                              L60: {
                                 if (var4 >= 3) {
-                                  break L61;
+                                  break L60;
                                 } else {
                                   he.field_e.f(kg.field_d[var3_int][var4], (byte) -60);
                                   var4++;
                                   if (var13 != 0) {
-                                    break L60;
+                                    break L59;
                                   } else {
                                     if (var13 == 0) {
-                                      continue L59;
+                                      continue L58;
                                     } else {
-                                      break L61;
+                                      break L60;
                                     }
                                   }
                                 }
                               }
                               var3_int++;
-                              break L60;
+                              break L59;
                             }
                             if (var13 == 0) {
-                              continue L56;
+                              continue L55;
                             } else {
-                              break L58;
+                              break L57;
                             }
                           }
                         }
@@ -3959,71 +4202,71 @@ public final class ArcanistsMulti extends ud {
                     }
                     stackOut_234_0 = 0;
                     stackIn_235_0 = stackOut_234_0;
-                    break L57;
+                    break L56;
                   }
                   var3_int = stackIn_235_0;
-                  L62: while (true) {
-                    L63: {
-                      L64: {
+                  L61: while (true) {
+                    L62: {
+                      L63: {
                         if (var3_int >= 6) {
-                          break L64;
+                          break L63;
                         } else {
                           he.field_e.f(so.field_c[var3_int], (byte) -81);
                           var3_int++;
                           if (var13 != 0) {
-                            break L63;
+                            break L62;
                           } else {
                             if (var13 == 0) {
-                              continue L62;
+                              continue L61;
                             } else {
-                              break L64;
+                              break L63;
                             }
                           }
                         }
                       }
                       var3_int = 0;
-                      break L63;
+                      break L62;
                     }
-                    L65: while (true) {
-                      L66: {
-                        L67: {
+                    L64: while (true) {
+                      L65: {
+                        L66: {
                           if (var3_int >= 16) {
-                            break L67;
+                            break L66;
                           } else {
                             he.field_e.f(b.field_f[var3_int], (byte) -47);
                             var3_int++;
                             if (var13 != 0) {
-                              break L66;
+                              break L65;
                             } else {
                               if (var13 == 0) {
-                                continue L65;
+                                continue L64;
                               } else {
-                                break L67;
+                                break L66;
                               }
                             }
                           }
                         }
                         he.field_e.b((byte) -127, 9);
                         mn.field_r = si.field_g;
-                        break L66;
+                        break L65;
                       }
                       kh.field_b = true;
-                      break L54;
+                      break L53;
                     }
                   }
                 }
               } else {
-                break L54;
+                break L53;
               }
             }
-            L68: {
+            L67: {
               if (mn.field_r == -5) {
                 qc.a(false, wi.field_f.h((byte) 72), 11);
                 oc.field_g = true;
                 mn.field_r = si.field_g;
-                break L68;
+                break L67;
               } else {
-                break L68;
+                break L67;
               }
             }
             break L0;
@@ -4031,7 +4274,7 @@ public final class ArcanistsMulti extends ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "ArcanistsMulti.RA(" + param0 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) var3, "ArcanistsMulti.RA(" + -89 + 44 + param1 + 41);
         }
     }
 
@@ -4047,7 +4290,8 @@ public final class ArcanistsMulti extends ud {
           L0: {
             ((ArcanistsMulti) this).a(true, 14, 19, 0, 5000, 9, 11, 8);
             ri.field_f = false;
-            gb.a((byte) -9);
+            int discarded$3 = -9;
+            gb.a();
             la.field_a = false;
             nm.field_h = -1;
             jf.field_j = 0;
@@ -4057,7 +4301,9 @@ public final class ArcanistsMulti extends ud {
             ta.field_b = false;
             var2_ref = new gh();
             var2_ref.b(128, 68, 9);
-            im.a(22050, var2_ref, fi.field_d, (java.awt.Component) (Object) on.field_c, -22836, true);
+            int discarded$4 = 1;
+            int discarded$5 = -22836;
+            im.a(22050, var2_ref, fi.field_d, (java.awt.Component) (Object) on.field_c);
             pn.field_d = 16728128;
             wm.field_I = 16777215;
             ql.field_a = 0;
@@ -4264,7 +4510,8 @@ public final class ArcanistsMulti extends ud {
                   if (-2 == mn.field_r) {
                     break L7;
                   } else {
-                    li.a((byte) 99);
+                    int discarded$9 = 99;
+                    li.a();
                     break L7;
                   }
                 }
@@ -4286,7 +4533,8 @@ public final class ArcanistsMulti extends ud {
                   var4 = -(rd.field_b * rd.field_b) + var3_int;
                   var5 = -120 + (an.field_j - -(120 * var4 / var3_int));
                   rc.a(var5, -30218);
-                  to.a(gj.a(29372), (byte) 119);
+                  int discarded$10 = 29372;
+                  to.a(gj.a(), (byte) 119);
                   if (si.field_g != -2) {
                     break L10;
                   } else {
@@ -4433,7 +4681,7 @@ public final class ArcanistsMulti extends ud {
                                   }
                                   var12 = 512;
                                   de.e(-4 + (-300 + var12) + var17, 78 + var13 + var18, 308, 64, 0, 192);
-                                  int discarded$3 = mi.field_B.a(io.field_x, var17 + (-300 + var12), var13 + (80 - -var18), 300, 64, 16777215, -1, 1, 1, mi.field_B.field_C);
+                                  int discarded$11 = mi.field_B.a(io.field_x, var17 + (-300 + var12), var13 + (80 - -var18), 300, 64, 16777215, -1, 1, 1, mi.field_B.field_C);
                                   var15.e(var12 + var17, var19);
                                   if (var20 == 0) {
                                     break L18;
@@ -4452,7 +4700,7 @@ public final class ArcanistsMulti extends ud {
                                   } else {
                                     var12 = 512;
                                     de.e(var17 + var12 - 304, var18 + 78 + var13, 308, 64, 0, 192);
-                                    int discarded$4 = mi.field_B.a(io.field_x, var17 + var12 - 300, var18 + (var13 - -80), 300, 64, 16777215, -1, 1, 1, mi.field_B.field_C);
+                                    int discarded$12 = mi.field_B.a(io.field_x, var17 + var12 - 300, var18 + (var13 - -80), 300, 64, 16777215, -1, 1, 1, mi.field_B.field_C);
                                     break L22;
                                   }
                                 }
@@ -4478,7 +4726,7 @@ public final class ArcanistsMulti extends ud {
                             break L23;
                           }
                         }
-                        int discarded$5 = mi.field_B.a("If you are playing with super mod powers, remember that the 'Mark of Fame' achievement is meant to be a CHALLENGE. Do not create games of over 3 players if you are not competent at the game. Never play with more than 4 players as you CANNOT win! Kill Seas and Nature players at ALL costs. Most of all, good luck!", -300 + var12 - -var17, 91 + var13 + var18, 424, 64, var19, -1, 1, 1, -2 + mi.field_B.field_C);
+                        int discarded$13 = mi.field_B.a("If you are playing with super mod powers, remember that the 'Mark of Fame' achievement is meant to be a CHALLENGE. Do not create games of over 3 players if you are not competent at the game. Never play with more than 4 players as you CANNOT win! Kill Seas and Nature players at ALL costs. Most of all, good luck!", -300 + var12 - -var17, 91 + var13 + var18, 424, 64, var19, -1, 1, 1, -2 + mi.field_B.field_C);
                         break L16;
                       } else {
                         break L16;
@@ -4488,8 +4736,10 @@ public final class ArcanistsMulti extends ud {
                     break L10;
                   }
                 }
-                uh.a(gj.a(29372), 115);
-                le.c(1, gj.a(29372));
+                int discarded$14 = 29372;
+                uh.a(gj.a(), 115);
+                int discarded$15 = 29372;
+                le.c(1, gj.a());
                 break L8;
               }
               L24: {
@@ -4560,7 +4810,8 @@ public final class ArcanistsMulti extends ud {
                     }
                   }
                 }
-                if (!um.a((byte) -5)) {
+                int discarded$16 = -5;
+                if (!um.a()) {
                   break L28;
                 } else {
                   de.b(0, 0, de.field_e, de.field_j);
@@ -4581,7 +4832,8 @@ public final class ArcanistsMulti extends ud {
                   break L31;
                 }
               }
-              ma.i(91);
+              int discarded$17 = 91;
+              ma.i();
               kn.a((java.awt.Canvas) var2, (byte) -126, 0, 0);
               return;
             }
@@ -4763,8 +5015,9 @@ public final class ArcanistsMulti extends ud {
               if (tc.field_x.a(true, "arcanists_titlescreen", "")) {
                 jh.field_c[0] = ha.a(tc.field_x, "", "arcanists_titlescreen");
                 jo.field_c = 1;
-                boolean discarded$10 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[0], -123);
-                mi.a(jh.field_c[0], 3);
+                boolean discarded$11 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[0], -123);
+                int discarded$12 = 3;
+                mi.a(jh.field_c[0]);
                 break L1;
               } else {
                 break L1;
@@ -6824,7 +7077,7 @@ public final class ArcanistsMulti extends ud {
                     if (jo.field_c != 2) {
                       break L144;
                     } else {
-                      boolean discarded$11 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[4], -105);
+                      boolean discarded$13 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[4], -105);
                       jo.field_c = 3;
                       if (var3 == 0) {
                         break L142;
@@ -6924,7 +7177,7 @@ public final class ArcanistsMulti extends ud {
                                             break L157;
                                           } else {
                                             jo.field_c = 13;
-                                            boolean discarded$12 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[6], param0 ^ -15414);
+                                            boolean discarded$14 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[6], param0 ^ -15414);
                                             if (var3 == 0) {
                                               break L142;
                                             } else {
@@ -6965,7 +7218,7 @@ public final class ArcanistsMulti extends ud {
                                                     break L163;
                                                   } else {
                                                     jo.field_c = 17;
-                                                    boolean discarded$13 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[8], 50);
+                                                    boolean discarded$15 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[8], 50);
                                                     if (var3 == 0) {
                                                       break L142;
                                                     } else {
@@ -6987,7 +7240,7 @@ public final class ArcanistsMulti extends ud {
                                                   }
                                                   if (jo.field_c == 18) {
                                                     jo.field_c = 19;
-                                                    boolean discarded$14 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[9], param0 + -15554);
+                                                    boolean discarded$16 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[9], param0 + -15554);
                                                     jl.field_h.c(125);
                                                     ki.field_s = null;
                                                     tc.field_x = null;
@@ -7019,7 +7272,7 @@ public final class ArcanistsMulti extends ud {
                                             }
                                           }
                                           jo.field_c = 15;
-                                          boolean discarded$15 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[7], -116);
+                                          boolean discarded$17 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[7], -116);
                                           if (var3 == 0) {
                                             break L142;
                                           } else {
@@ -7044,7 +7297,7 @@ public final class ArcanistsMulti extends ud {
                                     }
                                   }
                                   jo.field_c = 11;
-                                  boolean discarded$16 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[5], -109);
+                                  boolean discarded$18 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[5], -109);
                                   if (var3 == 0) {
                                     break L142;
                                   } else {
@@ -7061,7 +7314,7 @@ public final class ArcanistsMulti extends ud {
                               }
                             }
                             jo.field_c = 9;
-                            boolean discarded$17 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[3], 52);
+                            boolean discarded$19 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[3], 52);
                             if (var3 == 0) {
                               break L142;
                             } else {
@@ -7078,7 +7331,7 @@ public final class ArcanistsMulti extends ud {
                         }
                       }
                       jo.field_c = 7;
-                      boolean discarded$18 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[2], -115);
+                      boolean discarded$20 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[2], -115);
                       if (var3 == 0) {
                         break L142;
                       } else {
@@ -7087,7 +7340,7 @@ public final class ArcanistsMulti extends ud {
                     }
                   }
                   jo.field_c = 5;
-                  boolean discarded$19 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[1], param0 + -15553);
+                  boolean discarded$21 = jl.field_h.a(0, lo.field_w, ki.field_s, jh.field_c[1], param0 + -15553);
                   break L142;
                 }
                 return;

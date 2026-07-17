@@ -43,22 +43,22 @@ final class wg extends ag {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        RuntimeException stackIn_77_0 = null;
+        StringBuilder stackIn_77_1 = null;
+        RuntimeException stackIn_78_0 = null;
+        StringBuilder stackIn_78_1 = null;
         RuntimeException stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
-        RuntimeException stackIn_80_0 = null;
-        StringBuilder stackIn_80_1 = null;
-        RuntimeException stackIn_81_0 = null;
-        StringBuilder stackIn_81_1 = null;
-        String stackIn_81_2 = null;
+        String stackIn_79_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_76_0 = null;
+        StringBuilder stackOut_76_1 = null;
         RuntimeException stackOut_78_0 = null;
         StringBuilder stackOut_78_1 = null;
-        RuntimeException stackOut_80_0 = null;
-        StringBuilder stackOut_80_1 = null;
-        String stackOut_80_2 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
+        String stackOut_78_2 = null;
+        RuntimeException stackOut_77_0 = null;
+        StringBuilder stackOut_77_1 = null;
+        String stackOut_77_2 = null;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -98,17 +98,9 @@ final class wg extends ag {
                     }
                   }
                   L4: {
-                    if (param1 == 2973) {
-                      break L4;
-                    } else {
-                      wg.d(false);
-                      break L4;
-                    }
-                  }
-                  L5: {
                     var14 = param5 - param7;
                     if (param7 != param3) {
-                      L6: {
+                      L5: {
                         var10 = param2 << 16;
                         var9_int = param2 << 16;
                         var15 = param3 + -param7;
@@ -119,71 +111,71 @@ final class wg extends ag {
                           var16 = var11;
                           var11 = var12;
                           var12 = var16;
-                          break L6;
+                          break L5;
                         } else {
                           var13 = 0;
-                          break L6;
+                          break L5;
                         }
                       }
-                      L7: {
-                        L8: {
+                      L6: {
+                        L7: {
                           if (param7 < 0) {
                             if (param3 >= 0) {
                               param7 = -param7;
                               var10 = var10 + param7 * var12;
                               var9_int = var9_int + var11 * param7;
                               param7 = 0;
-                              break L8;
+                              break L7;
                             } else {
                               param7 = -param7 + param3;
                               var10 = var10 + var12 * param7;
                               var9_int = var9_int + var11 * param7;
                               param7 = param3;
-                              break L7;
+                              break L6;
                             }
                           } else {
-                            break L8;
+                            break L7;
                           }
                         }
                         var16 = id.field_f[param7];
-                        L9: while (true) {
+                        L8: while (true) {
                           if (~param7 <= ~param3) {
-                            break L7;
+                            break L6;
                           } else {
-                            L10: {
+                            L9: {
                               var17 = var9_int >> 16;
                               if (~id.field_d < ~var17) {
                                 var18 = -(var9_int >> 16) + (var10 >> 16);
                                 if (var18 == 0) {
                                   if (0 > var17) {
-                                    break L10;
+                                    break L9;
                                   } else {
                                     if (var17 < id.field_d) {
                                       ol.a(var16 + var17, param4, false, param6, var18);
-                                      break L10;
+                                      break L9;
                                     } else {
-                                      break L10;
+                                      break L9;
                                     }
                                   }
                                 } else {
-                                  L11: {
+                                  L10: {
                                     if (~(var17 + var18) <= ~id.field_d) {
                                       var18 = -1 + (id.field_d - var17);
-                                      break L11;
+                                      break L10;
                                     } else {
-                                      break L11;
+                                      break L10;
                                     }
                                   }
                                   if (var17 >= 0) {
                                     ol.a(var17 + var16, param4, false, param6, var18);
-                                    break L10;
+                                    break L9;
                                   } else {
                                     ol.a(var16, param4, false, param6, var18 + var17);
-                                    break L10;
+                                    break L9;
                                   }
                                 }
                               } else {
-                                break L10;
+                                break L9;
                               }
                             }
                             param7++;
@@ -191,7 +183,7 @@ final class wg extends ag {
                               var10 = var10 + var12;
                               var9_int = var9_int + var11;
                               var16 = var16 + de.field_e;
-                              continue L9;
+                              continue L8;
                             } else {
                               return;
                             }
@@ -200,32 +192,32 @@ final class wg extends ag {
                       }
                       var16 = param5 + -param3;
                       if (var16 != 0) {
-                        L12: {
+                        L11: {
                           var17 = param8 << 16;
                           if (var13 != 0) {
                             var10 = param0 << 16;
-                            break L12;
+                            break L11;
                           } else {
                             var9_int = param0 << 16;
-                            break L12;
+                            break L11;
                           }
                         }
                         var12 = (var17 + -var10) / var16;
                         var11 = (var17 + -var9_int) / var16;
-                        break L5;
+                        break L4;
                       } else {
                         var11 = 0;
                         var12 = 0;
-                        break L5;
+                        break L4;
                       }
                     } else {
-                      L13: {
+                      L12: {
                         if (param7 == param5) {
                           var10 = param0 << 16;
                           var11 = 0;
                           var12 = 0;
                           var9_int = param2 << 16;
-                          break L13;
+                          break L12;
                         } else {
                           var15 = -param3 + param5;
                           if (~param0 < ~param2) {
@@ -233,79 +225,79 @@ final class wg extends ag {
                             var11 = (param8 + -param2 << 16) / var14;
                             var12 = (param8 + -param0 << 16) / var15;
                             var9_int = param2 << 16;
-                            break L13;
+                            break L12;
                           } else {
                             var12 = (param8 - param2 << 16) / var14;
                             var10 = param2 << 16;
                             var9_int = param0 << 16;
                             var11 = (-param0 + param8 << 16) / var15;
-                            break L13;
+                            break L12;
                           }
                         }
                       }
-                      L14: {
+                      L13: {
                         if (0 > param7) {
                           param7 = Math.min(-param7, param3 + -param7);
                           var10 = var10 + param7 * var12;
                           var9_int = var9_int + var11 * param7;
                           param7 = 0;
-                          break L14;
+                          break L13;
                         } else {
-                          break L14;
+                          break L13;
                         }
                       }
                       var13 = 0;
-                      break L5;
+                      break L4;
                     }
                   }
-                  L15: {
+                  L14: {
                     if (param7 >= 0) {
-                      break L15;
+                      break L14;
                     } else {
                       param7 = -param7;
                       var10 = var10 + param7 * var12;
                       var9_int = var9_int + var11 * param7;
                       param7 = 0;
-                      break L15;
+                      break L14;
                     }
                   }
                   var15 = id.field_f[param7];
-                  L16: while (true) {
+                  L15: while (true) {
                     if (~param7 <= ~param5) {
                       break L0;
                     } else {
-                      L17: {
+                      L16: {
                         var16 = var9_int >> 16;
                         if (var16 >= id.field_d) {
-                          break L17;
+                          break L16;
                         } else {
                           var17 = -(var9_int >> 16) + (var10 >> 16);
                           if (var17 == 0) {
                             if (0 > var16) {
-                              break L17;
+                              break L16;
                             } else {
                               if (var16 < id.field_d) {
                                 ol.a(var16 - -var15, param4, false, param6, var17);
-                                break L17;
+                                break L16;
                               } else {
-                                break L17;
+                                break L16;
                               }
                             }
                           } else {
-                            L18: {
+                            L17: {
                               if (var16 + var17 >= id.field_d) {
                                 var17 = -var16 + id.field_d - 1;
-                                break L18;
+                                break L17;
                               } else {
-                                break L18;
+                                break L17;
                               }
                             }
                             if (var16 >= 0) {
                               ol.a(var16 + var15, param4, false, param6, var17);
-                              break L17;
+                              break L16;
                             } else {
                               ol.a(var15, param4, false, param6, var16 + var17);
-                              break L17;
+                              break L16;
                             }
                           }
                         }
@@ -315,7 +307,7 @@ final class wg extends ag {
                         var15 = var15 + de.field_e;
                         var10 = var10 + var12;
                         var9_int = var9_int + var11;
-                        continue L16;
+                        continue L15;
                       } else {
                         return;
                       }
@@ -330,33 +322,33 @@ final class wg extends ag {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L19: {
+          L18: {
             var9 = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) var9;
-            stackOut_78_1 = new StringBuilder().append("wg.I(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
-            stackIn_80_0 = stackOut_78_0;
-            stackIn_80_1 = stackOut_78_1;
-            stackIn_79_0 = stackOut_78_0;
-            stackIn_79_1 = stackOut_78_1;
+            stackOut_76_0 = (RuntimeException) var9;
+            stackOut_76_1 = new StringBuilder().append("wg.I(").append(param0).append(44).append(2973).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_78_0 = stackOut_76_0;
+            stackIn_78_1 = stackOut_76_1;
+            stackIn_77_0 = stackOut_76_0;
+            stackIn_77_1 = stackOut_76_1;
             if (param4 == null) {
-              stackOut_80_0 = (RuntimeException) (Object) stackIn_80_0;
-              stackOut_80_1 = (StringBuilder) (Object) stackIn_80_1;
-              stackOut_80_2 = "null";
-              stackIn_81_0 = stackOut_80_0;
-              stackIn_81_1 = stackOut_80_1;
-              stackIn_81_2 = stackOut_80_2;
-              break L19;
+              stackOut_78_0 = (RuntimeException) (Object) stackIn_78_0;
+              stackOut_78_1 = (StringBuilder) (Object) stackIn_78_1;
+              stackOut_78_2 = "null";
+              stackIn_79_0 = stackOut_78_0;
+              stackIn_79_1 = stackOut_78_1;
+              stackIn_79_2 = stackOut_78_2;
+              break L18;
             } else {
-              stackOut_79_0 = (RuntimeException) (Object) stackIn_79_0;
-              stackOut_79_1 = (StringBuilder) (Object) stackIn_79_1;
-              stackOut_79_2 = "{...}";
-              stackIn_81_0 = stackOut_79_0;
-              stackIn_81_1 = stackOut_79_1;
-              stackIn_81_2 = stackOut_79_2;
-              break L19;
+              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
+              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
+              stackOut_77_2 = "{...}";
+              stackIn_79_0 = stackOut_77_0;
+              stackIn_79_1 = stackOut_77_1;
+              stackIn_79_2 = stackOut_77_2;
+              break L18;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_81_0, stackIn_81_2 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw aa.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 

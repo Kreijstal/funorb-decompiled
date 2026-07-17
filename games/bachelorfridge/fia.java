@@ -77,7 +77,8 @@ final class fia extends bca {
     }
 
     final static void c(int param0, int param1) {
-        cq discarded$0 = ol.a(pja.field_a[param1][param0 + kla.a(3, m.field_a, -2147483648)], true);
+        int discarded$0 = 1;
+        cq discarded$1 = ol.a(pja.field_a[param1][3 + kla.a(3, m.field_a, -2147483648)]);
     }
 
     fia(int param0, nq param1) {

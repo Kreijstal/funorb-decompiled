@@ -19,164 +19,86 @@ final class tg {
     private int field_e;
 
     private final boolean b(int param0, byte param1, int param2) {
-        int var5 = 0;
-        L0: {
-          var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (param0 != 0) {
-            if (param0 != 1) {
-              if (param0 != 2) {
-                if (param0 == 3) {
-                  pq.a(-119, ((tg) this).field_c, param2);
-                  if (param1 == 101) {
-                    return true;
-                  } else {
-                    ((tg) this).field_f = -51L;
-                    return true;
-                  }
-                } else {
-                  if (param0 == 10) {
-                    ov.a(param2, 3, ((tg) this).field_c);
-                    if (param1 == 101) {
-                      return true;
-                    } else {
-                      ((tg) this).field_f = -51L;
-                      return true;
-                    }
-                  } else {
-                    if (param0 == 15) {
-                      bw.a(param2, ((tg) this).field_c, (byte) -116);
-                      if (param1 == 101) {
-                        return true;
-                      } else {
-                        ((tg) this).field_f = -51L;
-                        return true;
-                      }
-                    } else {
-                      if (param0 == 16) {
-                        bw.a(param2, 0, (byte) -116);
-                        if (param1 != 101) {
-                          ((tg) this).field_f = -51L;
-                          return true;
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return false;
-                      }
-                    }
-                  }
-                }
-              } else {
-                ag.a(param2, -48, ((tg) this).field_c);
-                if (param1 != 101) {
-                  ((tg) this).field_f = -51L;
-                  return true;
-                } else {
-                  return true;
-                }
-              }
-            } else {
-              te.a(param2, ((tg) this).field_f, (byte) 108);
-              break L0;
-            }
-          } else {
-            ra.a(((tg) this).field_f, param2, 6);
-            break L0;
-          }
-        }
-        if (param1 == 101) {
-          return true;
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        if (param0 == 0) {
+            int discarded$1 = 6;
+            ra.a(((tg) this).field_f, param2);
         } else {
-          ((tg) this).field_f = -51L;
-          return true;
+            if (param0 == 1) {
+                te.a(param2, ((tg) this).field_f, (byte) 108);
+                return true;
+            }
+            if (param0 == 2) {
+                ag.a(param2, -48, ((tg) this).field_c);
+                return true;
+            }
+            if (param0 != 3) {
+                if (param0 != 10) {
+                    if (param0 != 15) {
+                        if (param0 != 16) {
+                            return false;
+                        }
+                        bw.a(param2, 0, (byte) -116);
+                        return true;
+                    }
+                    bw.a(param2, ((tg) this).field_c, (byte) -116);
+                    return true;
+                }
+                ov.a(param2, 3, ((tg) this).field_c);
+                return true;
+            }
+            pq.a(-119, ((tg) this).field_c, param2);
+            return true;
         }
+        return true;
     }
 
     private final boolean a(int param0, boolean param1, int param2) {
         Object var4 = null;
         String var4_ref = null;
-        String var5 = null;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
         var4 = null;
-        if (!param1) {
-          if (param2 != 4) {
-            if (param2 != 5) {
-              if (param2 == 6) {
-                var9 = se.a(((tg) this).field_m, param0, -127);
-                if (var9 == null) {
-                  return true;
-                } else {
-                  ta.a((String) null, 2, -18119, ((tg) this).field_m, var9, 0);
-                  return true;
-                }
+        if (param2 != 4) {
+          if (param2 != 5) {
+            if (param2 == 6) {
+              var4_ref = se.a(((tg) this).field_m, param0, -127);
+              if (var4_ref != null) {
+                int discarded$4 = 0;
+                ta.a((String) null, 2, -18119, ((tg) this).field_m, var4_ref);
+                return true;
               } else {
-                if (param2 != 7) {
-                  return false;
-                } else {
-                  var8 = fq.a(param0, ((tg) this).field_h, false, ((tg) this).field_m);
-                  if (var8 == null) {
-                    return true;
-                  } else {
-                    ta.a((String) null, 2, -18119, ((tg) this).field_m, var8, 0);
-                    return true;
-                  }
-                }
+                return true;
               }
             } else {
-              var7 = nw.a(((tg) this).field_m, (byte) -27, param0);
-              if (var7 == null) {
-                return true;
+              if (param2 == 7) {
+                var4_ref = fq.a(param0, ((tg) this).field_h, false, ((tg) this).field_m);
+                if (var4_ref != null) {
+                  int discarded$5 = 0;
+                  ta.a((String) null, 2, -18119, ((tg) this).field_m, var4_ref);
+                  return true;
+                } else {
+                  return true;
+                }
               } else {
-                ta.a((String) null, 2, -18119, ((tg) this).field_m, var7, 0);
-                return true;
+                return false;
               }
             }
           } else {
-            var6 = op.a(20, ((tg) this).field_m, param0);
-            if (var6 != null) {
-              ta.a((String) null, 2, -18119, ((tg) this).field_m, var6, 0);
+            var4_ref = nw.a(((tg) this).field_m, (byte) -27, param0);
+            if (var4_ref == null) {
               return true;
             } else {
+              int discarded$6 = 0;
+              ta.a((String) null, 2, -18119, ((tg) this).field_m, var4_ref);
               return true;
             }
           }
         } else {
-          L0: {
-            ((tg) this).b((byte) 101);
-            if (param2 != 4) {
-              if (param2 != 5) {
-                if (param2 == 6) {
-                  var4_ref = se.a(((tg) this).field_m, param0, -127);
-                  break L0;
-                } else {
-                  if (param2 != 7) {
-                    return false;
-                  } else {
-                    var5 = fq.a(param0, ((tg) this).field_h, false, ((tg) this).field_m);
-                    if (var5 != null) {
-                      ta.a((String) null, 2, -18119, ((tg) this).field_m, var5, 0);
-                      return true;
-                    } else {
-                      return true;
-                    }
-                  }
-                }
-              } else {
-                var4_ref = nw.a(((tg) this).field_m, (byte) -27, param0);
-                break L0;
-              }
-            } else {
-              var4_ref = op.a(20, ((tg) this).field_m, param0);
-              break L0;
-            }
-          }
-          if (var4_ref != null) {
-            ta.a((String) null, 2, -18119, ((tg) this).field_m, var4_ref, 0);
+          var4_ref = op.a(20, ((tg) this).field_m, param0);
+          if (var4_ref == null) {
             return true;
           } else {
+            int discarded$7 = 0;
+            ta.a((String) null, 2, -18119, ((tg) this).field_m, var4_ref);
             return true;
           }
         }
@@ -273,7 +195,8 @@ final class tg {
           if (((tg) this).field_m != null) {
             if (((tg) this).field_f != oh.field_H) {
               if (null != vu.field_M) {
-                if (vu.b(false)) {
+                int discarded$2 = 0;
+                if (vu.b()) {
                   var11 = tr.a((byte) 121, ((tg) this).field_f);
                   var4 = hr.a(((tg) this).field_f, -86);
                   var5 = this.b(param0 + -24004);
@@ -337,7 +260,8 @@ final class tg {
           if (((tg) this).field_m != null) {
             if (((tg) this).field_f != oh.field_H) {
               if (null != vu.field_M) {
-                if (vu.b(false)) {
+                int discarded$3 = 0;
+                if (vu.b()) {
                   var10 = tr.a((byte) 121, ((tg) this).field_f);
                   var7 = var10;
                   var4 = hr.a(((tg) this).field_f, -86);
@@ -627,21 +551,11 @@ final class tg {
     }
 
     private final boolean a(int param0, byte param1, int param2) {
-        if (param1 > 38) {
-          if (param0 == 17) {
-            ik.field_b = new i(((tg) this).field_g.field_V, ((tg) this).field_g.field_D, ((tg) this).field_g.field_gb, ((tg) this).field_g.field_ob, param2, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, ((tg) this).field_m, ((tg) this).field_f);
-            return true;
-          } else {
-            return false;
-          }
+        if (param0 != 17) {
+          return false;
         } else {
-          tg.a(-18);
-          if (param0 != 17) {
-            return false;
-          } else {
-            ik.field_b = new i(((tg) this).field_g.field_V, ((tg) this).field_g.field_D, ((tg) this).field_g.field_gb, ((tg) this).field_g.field_ob, param2, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, ((tg) this).field_m, ((tg) this).field_f);
-            return true;
-          }
+          ik.field_b = new i(((tg) this).field_g.field_V, ((tg) this).field_g.field_D, ((tg) this).field_g.field_gb, ((tg) this).field_g.field_ob, param2, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, ((tg) this).field_m, ((tg) this).field_f);
+          return true;
         }
     }
 
@@ -723,7 +637,8 @@ final class tg {
                     var7 = this.b(-97);
                     var4_ref = var7;
                     var5 = lg.a(((tg) this).field_m, (byte) -34);
-                    var6 = si.a(((tg) this).field_m, -3404) ? 1 : 0;
+                    int discarded$2 = -3404;
+                    var6 = si.a(((tg) this).field_m) ? 1 : 0;
                     if (var5 != null) {
                       break L3;
                     } else {
@@ -799,7 +714,7 @@ final class tg {
               if (param1 == 7) {
                 break L7;
               } else {
-                String discarded$1 = this.b(-101);
+                String discarded$3 = this.b(-101);
                 break L7;
               }
             }

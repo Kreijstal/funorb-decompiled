@@ -57,7 +57,7 @@ final class tg implements Runnable {
         try {
           L0: {
             if (param3 == -256) {
-              var6_int = param5 - param2;
+              var6_int = param5;
               var7 = 0;
               L1: while (true) {
                 if (var6_int <= var7) {
@@ -68,7 +68,7 @@ final class tg implements Runnable {
                   L2: {
                     L3: {
                       L4: {
-                        var8 = param1.charAt(param2 + var7);
+                        var8 = param1.charAt(var7);
                         if (var8 <= 0) {
                           break L4;
                         } else {
@@ -271,7 +271,7 @@ final class tg implements Runnable {
           }
           L7: {
             stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-            stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(44).append(0).append(44).append(param3).append(44);
             stackIn_76_0 = stackOut_74_0;
             stackIn_76_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
@@ -324,10 +324,10 @@ final class tg implements Runnable {
           var6 = var15;
           var7 = oo.field_b;
           var8 = oo.field_l;
-          var9 = new ja(param3, -(param3 * 2) + param1);
+          var9 = new ja(3, -6 + param1);
           var9.a();
-          oo.a(0, 0, param3, -(param3 * 2) + param1, param4, param2);
-          var10 = new ja(param3, param3);
+          oo.a(0, 0, 3, -6 + param1, param4, param2);
+          var10 = new ja(3, 3);
           if (param5 > 25) {
             break L0;
           } else {
@@ -337,16 +337,16 @@ final class tg implements Runnable {
         }
         L1: {
           var10.a();
-          oo.e(0, 0, param3, param3, param4);
-          var11 = new ja(16, param3);
+          oo.e(0, 0, 3, 3, param4);
+          var11 = new ja(16, 3);
           var11.a();
-          oo.e(0, 0, 16, param3, param4);
-          var12 = new ja(param3, param3);
+          oo.e(0, 0, 16, 3, param4);
+          var12 = new ja(3, 3);
           var12.a();
-          oo.e(0, 0, param3, param3, param2);
-          var13 = new ja(16, param3);
+          oo.e(0, 0, 3, 3, param2);
+          var13 = new ja(16, 3);
           var13.a();
-          oo.e(0, 0, 16, param3, param2);
+          oo.e(0, 0, 16, 3, param2);
           var14 = null;
           if (param0 <= 0) {
             break L1;
@@ -362,7 +362,7 @@ final class tg implements Runnable {
         return new ja[]{var10, var11, var10, var9, (ja) var14, var9, var12, var13, var12};
     }
 
-    final static int b(int param0) {
+    final static int b() {
         if (fn.field_i < 2) {
           return 0;
         } else {
@@ -440,19 +440,11 @@ final class tg implements Runnable {
               }
             }
           }
-          L2: {
-            if (param0 == 8218) {
-              break L2;
-            } else {
-              field_i = null;
-              break L2;
-            }
-          }
           return 100;
         }
     }
 
-    final static uc a(String param0, boolean param1) {
+    final static uc a(String param0) {
         RuntimeException var2 = null;
         uc stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -474,7 +466,6 @@ final class tg implements Runnable {
         String stackOut_3_2 = null;
         try {
           L0: {
-            tg.a((byte) 33, false);
             stackOut_0_0 = new uc(param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -507,12 +498,12 @@ final class tg implements Runnable {
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
+          throw fa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 1 + 41);
         }
         return stackIn_1_0;
     }
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String a(CharSequence param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -585,14 +576,6 @@ final class tg implements Runnable {
                       var6 = var2_int;
                       L5: while (true) {
                         if (var3 <= var6) {
-                          L6: {
-                            if (!param1) {
-                              break L6;
-                            } else {
-                              int discarded$2 = tg.b(83);
-                              break L6;
-                            }
-                          }
                           if (var5.length() != 0) {
                             stackOut_29_0 = var5.toString();
                             stackIn_30_0 = stackOut_29_0;
@@ -603,18 +586,18 @@ final class tg implements Runnable {
                             return (String) (Object) stackIn_28_0;
                           }
                         } else {
-                          L7: {
+                          L6: {
                             var7 = param0.charAt(var6);
                             if (lo.a(8192, (char) var7)) {
                               var8 = qf.a(28233, (char) var7);
                               if (var8 == 0) {
-                                break L7;
+                                break L6;
                               } else {
-                                StringBuilder discarded$3 = var5.append(var8);
-                                break L7;
+                                StringBuilder discarded$1 = var5.append(var8);
+                                break L6;
                               }
                             } else {
-                              break L7;
+                              break L6;
                             }
                           }
                           var6++;
@@ -639,7 +622,7 @@ final class tg implements Runnable {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var2;
             stackOut_31_1 = new StringBuilder().append("tg.F(");
@@ -654,7 +637,7 @@ final class tg implements Runnable {
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
-              break L8;
+              break L7;
             } else {
               stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
               stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
@@ -662,10 +645,10 @@ final class tg implements Runnable {
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
               stackIn_34_2 = stackOut_32_2;
-              break L8;
+              break L7;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + 0 + 41);
         }
         return stackIn_30_0;
     }
@@ -754,7 +737,8 @@ final class tg implements Runnable {
               L2: {
                 gk.a(2, 1).b(0);
                 oo.f(0, 0, 640, 480, 0, 128);
-                var18 = vb.a(21262);
+                int discarded$6 = 21262;
+                var18 = vb.a();
                 if (var18 != null) {
                   L3: {
                     var4 = var18.field_zb / 2 + var18.field_w;
@@ -859,9 +843,10 @@ final class tg implements Runnable {
                   }
                   ((ja) (Object) stackIn_11_0).c(stackIn_11_1, stackIn_11_2, stackIn_11_3);
                   if (400 > wf.field_m % 1000) {
-                    int discarded$2 = qp.field_w.a(nq.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
+                    int discarded$7 = qp.field_w.a(nq.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
                     oo.c();
-                    tm.a(vk.i((byte) -39), false);
+                    int discarded$8 = 0;
+                    tm.a(vk.i((byte) -39));
                     br.a(vk.i((byte) -39), 2);
                     pm.a(false, vk.i((byte) -39));
                     break L0;
@@ -870,9 +855,10 @@ final class tg implements Runnable {
                       oo.c();
                       break L2;
                     } else {
-                      int discarded$3 = qp.field_w.a(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
+                      int discarded$9 = qp.field_w.a(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
                       oo.c();
-                      tm.a(vk.i((byte) -39), false);
+                      int discarded$10 = 0;
+                      tm.a(vk.i((byte) -39));
                       br.a(vk.i((byte) -39), 2);
                       pm.a(false, vk.i((byte) -39));
                       break L0;
@@ -882,7 +868,8 @@ final class tg implements Runnable {
                   break L2;
                 }
               }
-              tm.a(vk.i((byte) -39), false);
+              int discarded$11 = 0;
+              tm.a(vk.i((byte) -39));
               br.a(vk.i((byte) -39), 2);
               pm.a(false, vk.i((byte) -39));
               break L0;
@@ -971,8 +958,8 @@ final class tg implements Runnable {
                 de.a(((tg) this).field_b, (byte) 99, (Object) null);
             }
         } catch (Exception exception) {
-            Object var6 = null;
-            bd.a((String) null, (Throwable) (Object) exception, false);
+            int discarded$0 = 0;
+            bd.a((String) null, (Throwable) (Object) exception);
         } finally {
             ((tg) this).field_c = false;
         }
@@ -1134,7 +1121,8 @@ final class tg implements Runnable {
                             break L10;
                           } else {
                             L11: {
-                              if (!h.i(51603)) {
+                              int discarded$1 = 51603;
+                              if (!h.i()) {
                                 break L11;
                               } else {
                                 if (!jk.a((byte) -128, ll.field_k.field_s[var9_int])) {
@@ -1177,7 +1165,7 @@ final class tg implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
         field_d = null;

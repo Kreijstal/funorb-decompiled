@@ -8,13 +8,13 @@ final class qi {
     static volatile int field_b;
     static dn field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_a = null;
     }
 
-    final static short[] a(int param0, short[] param1, byte param2) {
+    final static short[] a(int param0, short[] param1) {
         short[] var3 = null;
         RuntimeException var3_ref = null;
         short[] var4 = null;

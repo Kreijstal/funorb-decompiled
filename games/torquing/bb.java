@@ -29,7 +29,8 @@ abstract class bb extends hn {
     }
 
     boolean a(byte param0) {
-        ((bb) this).field_B = this.i(256);
+        int discarded$2 = 256;
+        ((bb) this).field_B = this.i();
         if (param0 > 114) {
           if (0 == ((bb) this).field_B) {
             if (((bb) this).field_D) {
@@ -62,7 +63,7 @@ abstract class bb extends hn {
         return (gm) this;
     }
 
-    private final int i(int param0) {
+    private final int i() {
         return !((bb) this).field_D ? 0 : (Object) (Object) ((bb) this).field_C.a(0) == this ? 256 : 0;
     }
 
@@ -81,7 +82,8 @@ abstract class bb extends hn {
         int stackOut_18_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
-        var2 = this.i(256);
+        int discarded$1 = 256;
+        var2 = this.i();
         var3 = var2 - ((bb) this).field_B;
         if (var3 <= 0) {
           L0: {

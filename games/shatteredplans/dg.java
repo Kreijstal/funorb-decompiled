@@ -5,7 +5,7 @@ final class dg extends qr {
     static int[] field_yb;
     private qr field_xb;
 
-    final static va g(int param0) {
+    final static va g() {
         va var1 = new va();
         var1.field_k = false;
         var1.field_a = 1;
@@ -15,7 +15,7 @@ final class dg extends qr {
         return var1;
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_yb = null;
         int var1 = -9;
     }

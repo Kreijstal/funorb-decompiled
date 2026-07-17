@@ -64,7 +64,7 @@ final class fi extends oh implements ag {
                 } else {
                   if (8 != param0) {
                     if (9 != param0) {
-                      if (~param0 != param1) {
+                      if (param0 != 10) {
                         if (param0 == 11) {
                           stackOut_23_0 = gl.field_b;
                           stackIn_24_0 = stackOut_23_0;
@@ -102,7 +102,7 @@ final class fi extends oh implements ag {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var3;
-            stackOut_29_1 = new StringBuilder().append("fi.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_29_1 = new StringBuilder().append("fi.B(").append(param0).append(44).append(-11).append(44);
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -179,7 +179,7 @@ final class fi extends oh implements ag {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = 70 / ((param0 - -38) / 36);
+            var3_int = 70;
             var4 = new nk(0, 0, 0);
             var4.field_g = param1.field_g;
             var4.field_i = param1.field_i;
@@ -198,7 +198,7 @@ final class fi extends oh implements ag {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("fi.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("fi.C(").append(27).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

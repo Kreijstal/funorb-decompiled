@@ -181,7 +181,9 @@ final class qpb extends mc {
 
     public static void b(boolean param0) {
         field_w = null;
-        field_w = null;
+        if (!param0) {
+            field_w = null;
+        }
     }
 
     final void b(int param0, int param1, int param2, int param3) {

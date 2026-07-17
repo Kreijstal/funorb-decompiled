@@ -68,7 +68,8 @@ public final class AceOfSkies extends ct {
           L0: {
             L1: {
               var3_int = -35 / ((param0 - 1) / 48);
-              qq.a((byte) -100);
+              int discarded$5 = -100;
+              qq.a();
               if (jk.field_b != null) {
                 L2: {
                   if (!hg.field_x.b((byte) 95)) {
@@ -158,7 +159,8 @@ public final class AceOfSkies extends ct {
                                                       }
                                                     }
                                                   }
-                                                  fh.a(-117, 30.0f, qf.a(ff.field_a, 0, fn.field_b, ot.field_b, 81));
+                                                  int discarded$6 = 81;
+                                                  fh.a(-117, 30.0f, qf.a(ff.field_a, 0, fn.field_b, ot.field_b));
                                                   stackOut_46_0 = 0;
                                                   stackIn_47_0 = stackOut_46_0;
                                                   return stackIn_47_0 != 0;
@@ -232,7 +234,9 @@ public final class AceOfSkies extends ct {
                     iq.field_e = null;
                     hg.field_x = null;
                     wi.field_a = null;
-                    ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.field_a, so.field_b, rg.field_F, wt.field_h, sh.field_u >> 1, gp.field_w >> 1, 92, nl.field_t, 10, 20);
+                    int discarded$7 = 20;
+                    int discarded$8 = 10;
+                    ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.field_a, so.field_b, rg.field_F, wt.field_h, sh.field_u >> 1, gp.field_w >> 1, 92, nl.field_t);
                     te.a(62);
                     stackOut_111_0 = 0;
                     stackIn_112_0 = stackOut_111_0;
@@ -258,7 +262,7 @@ public final class AceOfSkies extends ct {
                       }
                     }
                     if (pk.field_wb.a((byte) 113) == null) {
-                      boolean discarded$1 = pk.field_wb.a(-23);
+                      boolean discarded$9 = pk.field_wb.a(-23);
                       stackOut_125_0 = 0;
                       stackIn_126_0 = stackOut_125_0;
                       return stackIn_126_0 != 0;
@@ -443,7 +447,8 @@ public final class AceOfSkies extends ct {
               }
               L6: {
                 q.field_p.b(-1336879960, var6);
-                var7 = ao.a(bm.m(114), false);
+                int discarded$1 = 0;
+                var7 = ao.a(bm.m(114));
                 if (null != var7) {
                   break L6;
                 } else {
@@ -551,11 +556,11 @@ public final class AceOfSkies extends ct {
               if (nk.field_g.d(param0 + 268426409) == null) {
                 break L3;
               } else {
-                int fieldTemp$2 = hp.field_h + 1;
+                int fieldTemp$7 = hp.field_h + 1;
                 hp.field_h = hp.field_h + 1;
-                if (fieldTemp$2 == 256) {
+                if (fieldTemp$7 == 256) {
                   hp.field_h = 0;
-                  wf discarded$3 = nk.field_g.e(param0 ^ 9001);
+                  wf discarded$8 = nk.field_g.e(param0 ^ 9001);
                   break L3;
                 } else {
                   break L3;
@@ -567,12 +572,15 @@ public final class AceOfSkies extends ct {
                 if (bg.field_b != 1) {
                   if (bg.field_b == 2) {
                     L5: {
-                      if (cn.b(true)) {
+                      int discarded$9 = 1;
+                      if (cn.b()) {
                         po.field_h = ru.field_b;
                         break L5;
                       } else {
                         L6: {
-                          fa.field_b = sc.a(false, 4);
+                          int discarded$10 = 4;
+                          int discarded$11 = 0;
+                          fa.field_b = sc.a();
                           if (sg.field_c != null) {
                             sg.field_c.g(-8);
                             break L6;
@@ -608,10 +616,12 @@ public final class AceOfSkies extends ct {
                   if (40 == ec.field_t) {
                     L7: {
                       if (!gi.a(true)) {
-                        qj.c((byte) 9);
+                        int discarded$12 = 9;
+                        qj.c();
                         break L7;
                       } else {
-                        mo.a(-1316);
+                        int discarded$13 = -1316;
+                        mo.a();
                         break L7;
                       }
                     }
@@ -729,341 +739,527 @@ public final class AceOfSkies extends ct {
         var3 = field_G ? 1 : 0;
         try {
           L0: {
-            iq.a((byte) -126);
+            int discarded$186 = -126;
+            iq.a();
             kp.f(param0 + -39323);
-            lp.a((byte) -70);
+            int discarded$187 = -70;
+            lp.a();
             bo.a(18598);
             ha.a(true);
             pd.a(62);
             l.a(true);
-            vl.b(8664);
-            ru.a((byte) 76);
-            jp.a(true);
+            int discarded$188 = 8664;
+            vl.b();
+            int discarded$189 = 76;
+            ru.a();
+            int discarded$190 = 1;
+            jp.a();
             oi.a(2801);
-            hu.a((byte) -118);
-            bs.a(127);
+            int discarded$191 = -118;
+            hu.a();
+            int discarded$192 = 127;
+            bs.a();
             tr.a(-79);
             ct.o(param0 ^ -31983);
-            ak.a(false);
+            int discarded$193 = 0;
+            ak.a();
             vb.b((byte) 104);
             cc.a(param0 ^ -19469);
             rq.a(param0 ^ 19471);
             qg.a(param0 ^ 19558);
             vp.c();
             gk.c((byte) -73);
-            nc.a(480);
+            int discarded$194 = 480;
+            nc.a();
             so.a((byte) -108);
-            rb.a(true);
-            qh.a(-92);
+            int discarded$195 = 1;
+            rb.a();
+            int discarded$196 = -92;
+            qh.a();
             hq.a(2483);
-            dt.c(13748);
-            uj.a((byte) 34);
-            ic.a((byte) -122);
-            ut.a((byte) 105);
+            int discarded$197 = 13748;
+            dt.c();
+            int discarded$198 = 34;
+            uj.a();
+            int discarded$199 = -122;
+            ic.a();
+            int discarded$200 = 105;
+            ut.a();
             ho.a((byte) -90);
-            kg.a(18567);
-            s.a((byte) 125);
+            int discarded$201 = 18567;
+            kg.a();
+            int discarded$202 = 125;
+            s.a();
             fj.a(param0 + -31434);
             at.a(-7978);
-            pj.a((byte) 48);
+            int discarded$203 = 48;
+            pj.a();
             ca.b(0);
-            ef.a(0);
-            ob.a(false);
+            int discarded$204 = 0;
+            ef.a();
+            int discarded$205 = 0;
+            ob.a();
             nk.c((byte) 85);
-            pk.i(32458);
-            ji.a(0);
+            int discarded$206 = 32458;
+            pk.i();
+            int discarded$207 = 0;
+            ji.a();
             wf.b(-45);
-            un.d(6);
+            int discarded$208 = 6;
+            un.d();
             dk.a(param0 + -19473);
             wq.b(param0 + -34460);
-            gh.b(0);
+            int discarded$209 = 0;
+            gh.b();
             vf.c((byte) -128);
-            da.a(5);
+            int discarded$210 = 5;
+            da.a();
             vs.a(126);
-            hk.e(-543142776);
-            ph.c(82);
+            int discarded$211 = -543142776;
+            hk.e();
+            int discarded$212 = 82;
+            ph.c();
             ft.a((byte) 101);
             k.b();
             um.a((byte) 113);
             tk.a();
-            rn.a(false);
-            gr.c(-126);
-            ou.e(108);
+            int discarded$213 = 0;
+            rn.a();
+            int discarded$214 = -126;
+            gr.c();
+            int discarded$215 = 108;
+            ou.e();
             mg.a(0);
-            mf.a((byte) -56);
+            int discarded$216 = -56;
+            mf.a();
             hc.a();
-            fd.a((byte) 89);
+            int discarded$217 = 89;
+            fd.a();
             mm.a((byte) 104);
-            ps.a(0);
+            int discarded$218 = 0;
+            ps.a();
             ei.a(false);
-            ip.a(-61);
+            int discarded$219 = -61;
+            ip.a();
             ln.a((byte) -109);
-            vu.a(true);
+            int discarded$220 = 1;
+            vu.a();
             ur.a(8192);
-            ks.a((byte) 109);
-            se.a((byte) 123);
+            int discarded$221 = 109;
+            ks.a();
+            int discarded$222 = 123;
+            se.a();
             lt.k(110);
             jq.m(85);
-            ng.j(11617);
-            ad.e(false);
+            int discarded$223 = 11617;
+            ng.j();
+            int discarded$224 = 0;
+            ad.e();
             oo.g((byte) 105);
             wd.h(11663);
-            tn.a((byte) -110);
-            ce.i(96);
-            ep.g(-33);
-            cd.c(0);
-            sa.a(-128);
-            ld.a((byte) 62);
+            int discarded$225 = -110;
+            tn.a();
+            int discarded$226 = 96;
+            ce.i();
+            int discarded$227 = -33;
+            ep.g();
+            int discarded$228 = 0;
+            cd.c();
+            int discarded$229 = -128;
+            sa.a();
+            int discarded$230 = 62;
+            ld.a();
             t.c();
-            qn.a(-122);
+            int discarded$231 = -122;
+            qn.a();
             eu.c(24);
             vc.a((byte) -44);
-            o.a(true);
-            md.b(20);
+            int discarded$232 = 1;
+            o.a();
+            int discarded$233 = 20;
+            md.b();
             wm.b(256);
-            qf.b(0);
-            fb.a((byte) 52);
+            int discarded$234 = 0;
+            qf.b();
+            int discarded$235 = 52;
+            fb.a();
             dl.l((byte) 122);
             we.b(param0 + -19469);
-            pu.a(240);
-            sg.a((byte) 110);
-            tt.a(20525);
+            int discarded$236 = 240;
+            pu.a();
+            int discarded$237 = 110;
+            sg.a();
+            int discarded$238 = 20525;
+            tt.a();
             gn.a((byte) -72);
-            eo.a((byte) 50);
+            int discarded$239 = 50;
+            eo.a();
             fn.a((byte) -5);
-            aa.a(0);
-            hn.a(0);
+            int discarded$240 = 0;
+            aa.a();
+            int discarded$241 = 0;
+            hn.a();
             pr.a(param0 + -19552);
-            mr.a(0);
-            ve.a((byte) 64);
-            hb.a(-12029);
-            pn.a(9);
+            int discarded$242 = 0;
+            mr.a();
+            int discarded$243 = 64;
+            ve.a();
+            int discarded$244 = -12029;
+            hb.a();
+            int discarded$245 = 9;
+            pn.a();
             th.a();
             ar.b();
             wt.a(14349);
-            df.a(-103);
-            er.d(-61);
+            int discarded$246 = -103;
+            df.a();
+            int discarded$247 = -61;
+            er.d();
             gp.c((byte) 78);
             bl.d(-126);
-            fg.b((byte) 122);
+            int discarded$248 = 122;
+            fg.b();
             fs.a((byte) 117);
             pb.a((byte) -53);
-            ag.a((byte) 34);
-            nu.a(false);
+            int discarded$249 = 34;
+            ag.a();
+            int discarded$250 = 0;
+            nu.a();
             re.c();
-            nh.a(-101);
-            me.a((byte) 127);
-            wu.a(true);
-            rr.a(6537);
-            qs.a((byte) 118);
-            wi.a(-80);
+            int discarded$251 = -101;
+            nh.a();
+            int discarded$252 = 127;
+            me.a();
+            int discarded$253 = 1;
+            wu.a();
+            int discarded$254 = 6537;
+            rr.a();
+            int discarded$255 = 118;
+            qs.a();
+            int discarded$256 = -80;
+            wi.a();
             b.a((byte) 28);
             dd.a(param0 ^ -14224);
-            v.a(32342);
-            td.a(-12546);
-            di.a(false);
-            es.a(1020);
-            gj.a(true);
-            qa.a(-7);
+            int discarded$257 = 32342;
+            v.a();
+            int discarded$258 = -12546;
+            td.a();
+            int discarded$259 = 0;
+            di.a();
+            int discarded$260 = 1020;
+            es.a();
+            int discarded$261 = 1;
+            gj.a();
+            int discarded$262 = -7;
+            qa.a();
             nm.a(88);
-            af.a(-124);
+            int discarded$263 = -124;
+            af.a();
             on.a();
-            bd.a(16);
-            bb.a(-15388);
-            kn.b(-1);
+            int discarded$264 = 16;
+            bd.a();
+            int discarded$265 = -15388;
+            bb.a();
+            int discarded$266 = -1;
+            kn.b();
             lj.a(true);
-            vi.a(false);
-            mi.g(111);
-            to.a(0);
+            int discarded$267 = 0;
+            vi.a();
+            int discarded$268 = 111;
+            mi.g();
+            int discarded$269 = 0;
+            to.a();
             rg.d(true);
-            gm.a((byte) -76);
-            ab.c(true);
-            an.b(32041);
-            bg.a(2334);
-            wc.a(false);
-            jr.a(false);
-            op.a(6337);
+            int discarded$270 = -76;
+            gm.a();
+            int discarded$271 = 1;
+            ab.c();
+            int discarded$272 = 32041;
+            an.b();
+            int discarded$273 = 2334;
+            bg.a();
+            int discarded$274 = 0;
+            wc.a();
+            int discarded$275 = 0;
+            jr.a();
+            int discarded$276 = 6337;
+            op.a();
             gq.a(6408);
             kq.a(param0 + -18291);
-            is.a(-92);
-            tg.a((byte) 109);
+            int discarded$277 = -92;
+            is.a();
+            int discarded$278 = 109;
+            tg.a();
             jm.a(105);
             dp.d((byte) -55);
-            rm.a((byte) 127);
+            int discarded$279 = 127;
+            rm.a();
             ub.a(false);
-            wb.a(true);
+            int discarded$280 = 1;
+            wb.a();
             ml.a(0);
-            dh.a((byte) -116);
-            bt.b(4);
+            int discarded$281 = -116;
+            dh.a();
+            int discarded$282 = 4;
+            bt.b();
             nq.a(true);
-            uh.a(-102);
-            bc.j(14912);
-            kk.c(true);
-            bm.d((byte) -106);
-            dg.k(12);
-            ek.d(false);
+            int discarded$283 = -102;
+            uh.a();
+            int discarded$284 = 14912;
+            bc.j();
+            int discarded$285 = 1;
+            kk.c();
+            int discarded$286 = -106;
+            bm.d();
+            int discarded$287 = 12;
+            dg.k();
+            int discarded$288 = 0;
+            ek.d();
             pi.a(4096);
             kb.h(param0 + 1927864887);
             vo.d(14695);
-            fk.a((byte) 28);
+            int discarded$289 = 28;
+            fk.a();
             rs.d((byte) 105);
-            cn.a(-96);
-            pf.b(true);
+            int discarded$290 = -96;
+            cn.a();
+            int discarded$291 = 1;
+            pf.b();
             ge.a();
-            rj.a(true);
+            int discarded$292 = 1;
+            rj.a();
             oe.a(param0 ^ 21630);
-            lb.b(24);
+            int discarded$293 = 24;
+            lb.b();
             ao.a(param0 + -19411);
             wl.y(32598);
             eb.b(64);
-            vr.a(116);
+            int discarded$294 = 116;
+            vr.a();
             lu.a((byte) -3);
-            hp.c((byte) -66);
+            int discarded$295 = -66;
+            hp.c();
             jk.a(param0 ^ 14407);
-            cs.a(true);
+            int discarded$296 = 1;
+            cs.a();
             tm.a(-128);
-            tj.b((byte) -95);
-            rt.c((byte) -63);
-            ee.a(false);
-            q.d(-107);
+            int discarded$297 = -95;
+            tj.b();
+            int discarded$298 = -63;
+            rt.c();
+            int discarded$299 = 0;
+            ee.a();
+            int discarded$300 = -107;
+            q.d();
             rl.a(param0 + -32254);
-            la.a((byte) -86);
-            em.a(true);
+            int discarded$301 = -86;
+            la.a();
+            int discarded$302 = 1;
+            em.a();
             ec.b(0);
-            qo.c((byte) 23);
-            st.b((byte) -112);
+            int discarded$303 = 23;
+            qo.c();
+            int discarded$304 = -112;
+            st.b();
             as.b(param0 + -19344);
-            sb.a(126);
-            sk.a((byte) 91);
-            hr.a(true);
+            int discarded$305 = 126;
+            sb.a();
+            int discarded$306 = 91;
+            sk.a();
+            int discarded$307 = 1;
+            hr.a();
             lm.b(-8192);
             fa.a(false);
             po.c(-30534);
             hd.a(30714);
             jb.a(param0 + -46603);
-            ia.a(-6411);
+            int discarded$308 = -6411;
+            ia.a();
             jc.W(param0 ^ 19581);
-            cg.g(-33);
+            int discarded$309 = -33;
+            cg.g();
             vg.b(0);
             ku.c(85);
-            ot.b((byte) -44);
+            int discarded$310 = -44;
+            ot.b();
             hg.j(65793);
-            sh.d((byte) -66);
-            ej.a(-29373);
+            int discarded$311 = -66;
+            sh.d();
+            int discarded$312 = -29373;
+            ej.a();
             lc.a(true);
-            hs.a((byte) -127);
+            int discarded$313 = -127;
+            hs.a();
             he.f(param0 ^ param0);
-            qj.d((byte) -122);
-            mb.g(255);
-            av.a((byte) -44);
-            iu.a((byte) 119);
-            ff.a((byte) 8);
+            int discarded$314 = -122;
+            qj.d();
+            int discarded$315 = 255;
+            mb.g();
+            int discarded$316 = -44;
+            av.a();
+            int discarded$317 = 119;
+            iu.a();
+            int discarded$318 = 8;
+            ff.a();
             ui.a();
-            ac.a(-28819);
-            ka.a((byte) -126);
-            r.f(27354);
+            int discarded$319 = -28819;
+            ac.a();
+            int discarded$320 = -126;
+            ka.a();
+            int discarded$321 = 27354;
+            r.f();
             du.j(param0 + -19583);
-            in.a(true);
-            eq.d(-118);
+            int discarded$322 = 1;
+            in.a();
+            int discarded$323 = -118;
+            eq.d();
             hh.a(30);
-            qe.a(5575);
+            int discarded$324 = 5575;
+            qe.a();
             nb.b(126);
             gt.e(param0 ^ -19569);
-            si.a(true);
+            int discarded$325 = 1;
+            si.a();
             or.a((byte) 63);
-            lk.c(34962);
-            fu.b((byte) 89);
-            om.b(-21649);
-            bk.b(66);
+            int discarded$326 = 34962;
+            lk.c();
+            int discarded$327 = 89;
+            fu.b();
+            int discarded$328 = -21649;
+            om.b();
+            int discarded$329 = 66;
+            bk.b();
             ud.a(false);
-            ql.a((byte) -58);
-            uf.a((byte) -77);
+            int discarded$330 = -58;
+            ql.a();
+            int discarded$331 = -77;
+            uf.a();
             ij.b(1822);
-            ju.d(122);
+            int discarded$332 = 122;
+            ju.d();
             rc.b(param0 ^ -15995);
-            np.c(9216);
+            int discarded$333 = 9216;
+            np.c();
             ne.b(param0 + -19447);
             g.b(103);
-            sd.b(0);
+            int discarded$334 = 0;
+            sd.b();
             ci.c((byte) -47);
             aq.a(32683);
-            pg.a(true);
+            int discarded$335 = 1;
+            pg.a();
             ke.a(param0 + -19345);
             gi.a(-12085);
-            ns.a(-24169);
-            ol.b(127);
+            int discarded$336 = -24169;
+            ns.a();
+            int discarded$337 = 127;
+            ol.b();
             rp.a(16523);
             cf.f(-95);
-            u.b(true);
+            int discarded$338 = 1;
+            u.b();
             ta.b(true);
             ae.c((byte) 15);
             lg.c((byte) -75);
             gg.a(true);
             qd.d(param0 + -12162);
-            ai.a(-28739);
+            int discarded$339 = -28739;
+            ai.a();
             na.a(param0 ^ 21852);
             ik.b(true);
             qp.b(true);
             mh.a(126);
             kf.g(param0 + 5851);
-            mo.b(39);
+            int discarded$340 = 39;
+            mo.b();
             lo.c((byte) 125);
             io.a(param0 + -52006);
             ua.d(107);
-            ro.d((byte) 80);
-            tq.b(400);
+            int discarded$341 = 80;
+            ro.d();
+            int discarded$342 = 400;
+            tq.b();
             pe.a(19592);
-            js.a((byte) 116);
+            int discarded$343 = 116;
+            js.a();
             nj.a((byte) -59);
             dc.c(param0 ^ -19509);
             qk.a(0);
-            vj.a(1);
-            mq.a(20370);
+            int discarded$344 = 1;
+            vj.a();
+            int discarded$345 = 20370;
+            mq.a();
             fo.a(25613);
-            uc.a((byte) 35);
-            gl.b(-11760);
+            int discarded$346 = 35;
+            uc.a();
+            int discarded$347 = -11760;
+            gl.b();
             rh.a(32081);
-            qb.a(true);
+            int discarded$348 = 1;
+            qb.a();
             wg.a(true);
-            sl.b(111);
-            ul.a((byte) -128);
-            jf.a((byte) -50);
-            hi.k(-86);
+            int discarded$349 = 111;
+            sl.b();
+            int discarded$350 = -128;
+            ul.a();
+            int discarded$351 = -50;
+            jf.a();
+            int discarded$352 = -86;
+            hi.k();
             cl.a((byte) -98);
-            ht.a(-91);
-            qq.b((byte) 116);
-            tb.a((byte) 117);
-            oc.a((byte) 121);
+            int discarded$353 = -91;
+            ht.a();
+            int discarded$354 = 116;
+            qq.b();
+            int discarded$355 = 117;
+            tb.a();
+            int discarded$356 = 121;
+            oc.a();
             mj.a(3);
             dq.a(122);
-            id.a((byte) 106);
+            int discarded$357 = 106;
+            id.a();
             m.a(256);
-            jn.h(-89);
-            jd.a(false);
+            int discarded$358 = -89;
+            jn.h();
+            int discarded$359 = 0;
+            jd.a();
             gu.a(false);
             pm.b(93);
-            ko.c(0);
+            int discarded$360 = 0;
+            ko.c();
             ki.b(64);
             lh.a(param0 ^ 18173);
-            wo.a(-125);
+            int discarded$361 = -125;
+            wo.a();
             uk.a(250);
             te.a(false);
-            ds.a(-93);
-            sc.b(126);
-            co.a(-13392);
+            int discarded$362 = -93;
+            ds.a();
+            int discarded$363 = 126;
+            sc.b();
+            int discarded$364 = -13392;
+            co.a();
             mp.c((byte) -11);
             fh.c(true);
-            ii.c((byte) -22);
-            vn.c((byte) 101);
+            int discarded$365 = -22;
+            ii.c();
+            int discarded$366 = 101;
+            vn.c();
             uu.e(param0 ^ 27864);
             jo.a((byte) -125);
-            pt.a(0);
-            li.b((byte) -90);
+            int discarded$367 = 0;
+            pt.a();
+            int discarded$368 = -90;
+            li.b();
             ah.c((byte) -27);
-            ms.a((byte) -15);
+            int discarded$369 = -15;
+            ms.a();
             od.d((byte) -96);
-            aj.c((byte) 113);
-            bi.a(false);
+            int discarded$370 = 113;
+            aj.c();
+            int discarded$371 = 0;
+            bi.a();
             ((AceOfSkies) this).field_w = null;
             break L0;
           }
@@ -1278,11 +1474,13 @@ public final class AceOfSkies extends ct {
             var10 = field_G ? 1 : 0;
             try {
               L0: {
-                var2_ref = fa.a(-8213);
+                int discarded$6 = -8213;
+                var2_ref = fa.a();
                 vp.a();
                 var3 = 0;
                 if (im.a(true)) {
-                  pu.a((byte) 21, var2_ref, lh.a((byte) -94));
+                  int discarded$7 = -94;
+                  pu.a((byte) 21, var2_ref, lh.a());
                   return;
                 } else {
                   if (gq.field_f) {
@@ -1344,7 +1542,8 @@ public final class AceOfSkies extends ct {
                         } else {
                           var3 = 1;
                           vp.f(0, 0, vp.field_i, vp.field_c);
-                          ee.c((byte) 14);
+                          int discarded$8 = 14;
+                          ee.c();
                           break L4;
                         }
                       }
@@ -1430,9 +1629,9 @@ public final class AceOfSkies extends ct {
                               break L11;
                             }
                           }
-                          int discarded$3 = rb.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-                          int discarded$4 = rb.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-                          int discarded$5 = rb.field_j.a(0, sh.field_u + -180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+                          int discarded$9 = rb.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+                          int discarded$10 = rb.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+                          int discarded$11 = rb.field_j.a(0, sh.field_u + -180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
                           break L9;
                         }
                       }
@@ -1547,7 +1746,8 @@ public final class AceOfSkies extends ct {
         try {
           L0: {
             L1: {
-              we.a(200);
+              int discarded$11 = 200;
+              we.a();
               if (param0 == 5883) {
                 break L1;
               } else {
@@ -1559,8 +1759,10 @@ public final class AceOfSkies extends ct {
                 break L2;
               } else {
                 if (jf.field_a.field_b) {
-                  tt.b(-32546);
-                  hi.j(8585);
+                  int discarded$12 = -32546;
+                  tt.b();
+                  int discarded$13 = 8585;
+                  hi.j();
                   break L2;
                 } else {
                   break L2;
@@ -1605,7 +1807,7 @@ public final class AceOfSkies extends ct {
                     if (!jr.a((byte) 32)) {
                       break L6;
                     } else {
-                      boolean discarded$1 = this.a((byte) 59, false);
+                      boolean discarded$14 = this.a((byte) 59, false);
                       break L6;
                     }
                   }
@@ -1618,7 +1820,8 @@ public final class AceOfSkies extends ct {
             L7: {
               if (gq.field_f) {
                 if (!b.b((byte) -119)) {
-                  jn.g(4);
+                  int discarded$15 = 4;
+                  jn.g();
                   if (b.b((byte) -127)) {
                     L8: {
                       hl.a(-1889);
@@ -1684,7 +1887,8 @@ public final class AceOfSkies extends ct {
                           if (jf.field_a == null) {
                             break L12;
                           } else {
-                            tt.b(-32546);
+                            int discarded$16 = -32546;
+                            tt.b();
                             break L12;
                           }
                         }
@@ -1708,12 +1912,14 @@ public final class AceOfSkies extends ct {
                       L13: {
                         var2_int = oj.f(5);
                         if (var2_int == 2) {
-                          tt.b(-32546);
+                          int discarded$17 = -32546;
+                          tt.b();
                           break L13;
                         } else {
                           if (var2_int != 3) {
                             if (var2_int == 4) {
-                              mo.a(-1316);
+                              int discarded$18 = -1316;
+                              mo.a();
                               break L13;
                             } else {
                               break L13;
@@ -1747,13 +1953,16 @@ public final class AceOfSkies extends ct {
               }
             }
             L15: {
-              if (cn.b(true)) {
+              int discarded$19 = 1;
+              if (cn.b()) {
                 break L15;
               } else {
                 L16: while (true) {
                   var2_ref = (oc) (Object) sb.field_c.e(121);
                   if (null != var2_ref) {
-                    pn.a(var2_ref, (byte) -117, 4);
+                    int discarded$20 = 4;
+                    int discarded$21 = -117;
+                    pn.a(var2_ref);
                     continue L16;
                   } else {
                     break L15;
@@ -1800,16 +2009,19 @@ public final class AceOfSkies extends ct {
         try {
           L0: {
             L1: {
-              dt.a(0);
+              int discarded$8 = 0;
+              dt.a();
               if (jf.field_a == null) {
                 break L1;
               } else {
-                tt.b(-32546);
+                int discarded$9 = -32546;
+                tt.b();
                 break L1;
               }
             }
             L2: {
-              vl.a(-26317);
+              int discarded$10 = -26317;
+              vl.a();
               if (param0 <= -95) {
                 break L2;
               } else {

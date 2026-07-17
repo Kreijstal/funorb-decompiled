@@ -74,11 +74,11 @@ final class fh extends vo {
         }
     }
 
-    final static boolean e(int param0) {
+    final static boolean e() {
         return nf.field_a;
     }
 
-    final static String c(byte param0) {
+    final static String c() {
         int var1 = 106;
         if (ht.field_g) {
             return null;
@@ -92,7 +92,7 @@ final class fh extends vo {
         return null;
     }
 
-    private final boolean b(String param0, int param1) {
+    private final boolean b(String param0) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -264,12 +264,14 @@ final class fh extends vo {
                   return stackIn_9_0;
                 } else {
                   if (!ul.a(var5, (byte) -115)) {
-                    if (kc.a(var5, 26035)) {
+                    int discarded$10 = 26035;
+                    if (kc.a(var5)) {
                       stackOut_15_0 = mh.field_j;
                       stackIn_16_0 = stackOut_15_0;
                       return stackIn_16_0;
                     } else {
-                      if (this.b(param0, -1)) {
+                      int discarded$11 = -1;
+                      if (this.b(param0)) {
                         stackOut_19_0 = fj.field_b;
                         stackIn_20_0 = stackOut_19_0;
                         return stackIn_20_0;
@@ -394,7 +396,8 @@ final class fh extends vo {
                 return stackIn_6_0;
               } else {
                 if (bu.a(118, var4, var3)) {
-                  if (!this.b(param0, -1)) {
+                  int discarded$2 = -1;
+                  if (!this.b(param0)) {
                     stackOut_13_0 = fd.field_a;
                     stackIn_14_0 = stackOut_13_0;
                     break L0;

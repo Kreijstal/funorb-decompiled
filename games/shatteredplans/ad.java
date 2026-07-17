@@ -10,7 +10,7 @@ final class ad implements jk {
     static String field_g;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -18,16 +18,13 @@ final class ad implements jk {
         field_g = null;
     }
 
-    final static String a(char param0, int param1, int param2) {
+    final static String a(char param0, int param1) {
         int var4 = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (param2 > -33) {
-            field_b = null;
-        }
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = 0; var4 < param1; var4++) {
-            var6[var4] = param0;
+            var6[var4] = '*';
         }
         return new String(var6);
     }

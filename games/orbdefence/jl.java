@@ -9,7 +9,7 @@ abstract class jl {
     static String field_f;
     static String field_e;
 
-    final static ba[] a(byte param0) {
+    final static ba[] a() {
         return new ba[]{rc.field_m, fb.field_i, ia.field_a, cj.field_a, aj.field_a, tl.field_c, hd.field_q, gl.field_j, id.field_a, jd.field_d, ol.field_f, ue.field_G, nd.field_e, bd.field_q};
     }
 
@@ -19,7 +19,7 @@ abstract class jl {
 
     abstract byte[] a(int param0, int param1);
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8) {
         RuntimeException var10 = null;
         int[] var10_array = null;
         int[] var11 = null;
@@ -123,16 +123,16 @@ abstract class jl {
                 if (null == field_c) {
                   break L2;
                 } else {
-                  if (~field_c.length > ~param1) {
+                  if (field_c.length < 160) {
                     break L2;
                   } else {
                     break L1;
                   }
                 }
               }
-              ef.field_j = new int[param1];
-              field_c = new int[param1];
-              tl.field_b = new int[param1];
+              ef.field_j = new int[160];
+              field_c = new int[160];
+              tl.field_b = new int[160];
               break L1;
             }
             L3: {
@@ -156,11 +156,11 @@ abstract class jl {
               var33 = var37;
               var29 = var33;
               var12 = var29;
-              mk.a(var39, 0, param1);
-              mk.a(var40, 0, param1);
-              mk.a(var41, 0, param1);
-              var13 = 16384 / (1 + 2 * param2);
-              var14 = param0 - param2;
+              mk.a(var39, 0, 160);
+              mk.a(var40, 0, 160);
+              mk.a(var41, 0, 160);
+              var13 = 2340;
+              var14 = -3;
               if (var14 >= 0) {
                 break L3;
               } else {
@@ -170,7 +170,7 @@ abstract class jl {
             }
             L4: {
               var15 = ul.field_f * var14;
-              var16 = param0 - -param2;
+              var16 = 3;
               var17 = 0;
               if (~ul.field_l >= ~var16) {
                 var17 = 1 + (var16 - ul.field_l);
@@ -186,11 +186,11 @@ abstract class jl {
                 var15 = var15 + ul.field_f * var17;
                 var19 = 0;
                 L6: while (true) {
-                  if (~var19 <= ~param1) {
+                  if (var19 >= 160) {
                     L7: {
-                      var14 = -param5 + 1;
-                      param3 = param3 + param6;
-                      var19 = -param5 + (param2 + 1) - param0;
+                      var14 = -119;
+                      param3 = param3;
+                      var19 = -116;
                       if (var19 > 0) {
                         var19 = 0;
                         break L7;
@@ -199,7 +199,7 @@ abstract class jl {
                       }
                     }
                     L8: {
-                      var20 = ul.field_f * (-param2 + param0);
+                      var20 = ul.field_f * -3;
                       if (var19 > var14) {
                         var20 = var20 + (-var14 + var19) * ul.field_f;
                         break L8;
@@ -210,8 +210,8 @@ abstract class jl {
                     L9: while (true) {
                       if (var14 >= var19) {
                         L10: {
-                          var19 = -param2 + -param0 + ul.field_l + -param5;
-                          if (~var19 < param4) {
+                          var19 = -3 + ul.field_l + -120;
+                          if (var19 > 0) {
                             var19 = 0;
                             break L10;
                           } else {
@@ -226,13 +226,13 @@ abstract class jl {
                               } else {
                                 var21 = 0;
                                 L13: while (true) {
-                                  if (var21 >= param1) {
-                                    var20 = var20 + param6;
+                                  if (var21 >= 160) {
+                                    var20 = var20;
                                     var18--;
                                     var21 = 0;
                                     L14: while (true) {
-                                      if (~param1 >= ~var21) {
-                                        param3 = param3 + param6;
+                                      if (var21 >= 160) {
+                                        param3 = param3;
                                         var14++;
                                         continue L12;
                                       } else {
@@ -301,16 +301,16 @@ abstract class jl {
                           } else {
                             var21 = 0;
                             L18: while (true) {
-                              if (param1 <= var21) {
+                              if (160 <= var21) {
                                 var21 = 0;
                                 L19: while (true) {
-                                  if (~param1 >= ~var21) {
-                                    var20 = var20 + param6;
+                                  if (var21 >= 160) {
+                                    var20 = var20;
                                     var21 = 0;
                                     L20: while (true) {
-                                      if (~var21 <= ~param1) {
-                                        var15 = var15 + param6;
-                                        param3 = param3 + param6;
+                                      if (var21 >= 160) {
+                                        var15 = var15;
+                                        param3 = param3;
                                         var14++;
                                         continue L11;
                                       } else {
@@ -452,14 +452,14 @@ abstract class jl {
                         }
                       } else {
                         L27: {
-                          if (param0 + (var14 + param5 + param2) >= ul.field_a) {
+                          if (var14 + 123 >= ul.field_a) {
                             var15 = var15 + ul.field_f;
                             break L27;
                           } else {
                             var21 = 0;
                             L28: while (true) {
-                              if (var21 >= param1) {
-                                var15 = var15 + param6;
+                              if (var21 >= 160) {
+                                var15 = var15;
                                 var18++;
                                 break L27;
                               } else {
@@ -477,8 +477,8 @@ abstract class jl {
                         }
                         var21 = 0;
                         L29: while (true) {
-                          if (~var21 <= ~param1) {
-                            param3 = param3 + param6;
+                          if (var21 >= 160) {
+                            param3 = param3;
                             var14++;
                             continue L9;
                           } else {
@@ -505,8 +505,8 @@ abstract class jl {
               } else {
                 var19 = 0;
                 L30: while (true) {
-                  if (param1 <= var19) {
-                    var15 = var15 + param6;
+                  if (160 <= var19) {
+                    var15 = var15;
                     var14++;
                     continue L5;
                   } else {
@@ -528,7 +528,7 @@ abstract class jl {
           L31: {
             var10 = decompiledCaughtException;
             stackOut_88_0 = (RuntimeException) var10;
-            stackOut_88_1 = new StringBuilder().append("jl.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_88_1 = new StringBuilder().append("jl.F(").append(0).append(44).append(160).append(44).append(3).append(44).append(param3).append(44).append(-1).append(44).append(120).append(44).append(0).append(44).append(param7).append(44);
             stackIn_90_0 = stackOut_88_0;
             stackIn_90_1 = stackOut_88_1;
             stackIn_89_0 = stackOut_88_0;
@@ -555,7 +555,7 @@ abstract class jl {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_e = null;
         field_c = null;

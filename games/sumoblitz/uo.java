@@ -33,11 +33,12 @@ final class uo extends rq {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$2 = uo.a(false, (CharSequence[]) null);
+                String discarded$4 = uo.a(false, (CharSequence[]) null);
                 break L1;
               }
             }
-            stackOut_2_0 = se.a(param1, 0, param1.length, 14156);
+            int discarded$5 = 14156;
+            stackOut_2_0 = se.a(param1, 0, param1.length);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -91,177 +92,24 @@ final class uo extends rq {
         int var2 = 0;
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (!param0) {
-          uo.d((byte) 83);
-          if (param1 > 0) {
-            if (param1 >= 128) {
-              if (param1 >= 160) {
-                L0: {
-                  if (param1 > 255) {
-                    if (8364 != param1) {
-                      if (param1 != 8218) {
-                        if (param1 == 402) {
-                          var2 = -125;
-                          break L0;
-                        } else {
-                          if (param1 != 8222) {
-                            if (param1 == 8230) {
-                              var2 = -123;
-                              return (byte) var2;
-                            } else {
-                              if (param1 == 8224) {
-                                var2 = -122;
-                                return (byte) var2;
-                              } else {
-                                if (8225 == param1) {
-                                  var2 = -121;
-                                  return (byte) var2;
-                                } else {
-                                  if (param1 != 710) {
-                                    if (param1 == 8240) {
-                                      var2 = -119;
-                                      return (byte) var2;
-                                    } else {
-                                      if (param1 == 352) {
-                                        var2 = -118;
-                                        return (byte) var2;
-                                      } else {
-                                        if (8249 == param1) {
-                                          var2 = -117;
-                                          return (byte) var2;
-                                        } else {
-                                          if (338 == param1) {
-                                            var2 = -116;
-                                            return (byte) var2;
-                                          } else {
-                                            if (param1 == 381) {
-                                              var2 = -114;
-                                              return (byte) var2;
-                                            } else {
-                                              if (param1 != 8216) {
-                                                if (param1 != 8217) {
-                                                  if (param1 == 8220) {
-                                                    var2 = -109;
-                                                    return (byte) var2;
-                                                  } else {
-                                                    if (8221 == param1) {
-                                                      var2 = -108;
-                                                      return (byte) var2;
-                                                    } else {
-                                                      if (8226 == param1) {
-                                                        var2 = -107;
-                                                        return (byte) var2;
-                                                      } else {
-                                                        if (param1 == 8211) {
-                                                          var2 = -106;
-                                                          return (byte) var2;
-                                                        } else {
-                                                          if (8212 != param1) {
-                                                            if (param1 != 732) {
-                                                              if (param1 == 8482) {
-                                                                var2 = -103;
-                                                                return (byte) var2;
-                                                              } else {
-                                                                if (param1 != 353) {
-                                                                  if (8250 == param1) {
-                                                                    var2 = -101;
-                                                                    return (byte) var2;
-                                                                  } else {
-                                                                    if (param1 != 339) {
-                                                                      if (param1 != 382) {
-                                                                        if (param1 != 376) {
-                                                                          var2 = 63;
-                                                                          return (byte) var2;
-                                                                        } else {
-                                                                          var2 = -97;
-                                                                          return (byte) var2;
-                                                                        }
-                                                                      } else {
-                                                                        var2 = -98;
-                                                                        return (byte) var2;
-                                                                      }
-                                                                    } else {
-                                                                      var2 = -100;
-                                                                      return (byte) var2;
-                                                                    }
-                                                                  }
-                                                                } else {
-                                                                  var2 = -102;
-                                                                  break L0;
-                                                                }
-                                                              }
-                                                            } else {
-                                                              var2 = -104;
-                                                              break L0;
-                                                            }
-                                                          } else {
-                                                            var2 = -105;
-                                                            break L0;
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                } else {
-                                                  var2 = -110;
-                                                  break L0;
-                                                }
-                                              } else {
-                                                var2 = -111;
-                                                break L0;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  } else {
-                                    var2 = -120;
-                                    break L0;
-                                  }
-                                }
-                              }
-                            }
-                          } else {
-                            var2 = -124;
-                            break L0;
-                          }
-                        }
-                      } else {
-                        var2 = -126;
-                        break L0;
-                      }
-                    } else {
-                      var2 = -128;
-                      break L0;
-                    }
-                  } else {
-                    var2 = (byte)param1;
-                    break L0;
-                  }
-                }
+        if (param1 > 0) {
+          if (param1 >= 128) {
+            if (param1 >= 160) {
+              if (param1 <= 255) {
+                var2 = (byte)param1;
                 return (byte) var2;
               } else {
-                L1: {
+                L0: {
                   if (8364 != param1) {
                     if (param1 != 8218) {
                       if (param1 != 402) {
                         if (param1 != 8222) {
                           if (param1 != 8230) {
                             if (param1 != 8224) {
-                              if (8225 == param1) {
-                                var2 = -121;
-                                return (byte) var2;
-                              } else {
+                              if (8225 != param1) {
                                 if (param1 != 710) {
-                                  if (param1 == 8240) {
-                                    var2 = -119;
-                                    return (byte) var2;
-                                  } else {
-                                    if (param1 == 352) {
-                                      var2 = -118;
-                                      return (byte) var2;
-                                    } else {
+                                  if (param1 != 8240) {
+                                    if (param1 != 352) {
                                       if (8249 == param1) {
                                         var2 = -117;
                                         return (byte) var2;
@@ -296,43 +144,43 @@ final class uo extends rq {
                                                           if (param1 != 732) {
                                                             if (param1 == 8482) {
                                                               var2 = -103;
-                                                              return (byte) var2;
+                                                              break L0;
                                                             } else {
                                                               if (param1 != 353) {
                                                                 if (8250 == param1) {
                                                                   var2 = -101;
-                                                                  return (byte) var2;
+                                                                  break L0;
                                                                 } else {
                                                                   if (param1 != 339) {
                                                                     if (param1 != 382) {
                                                                       if (param1 != 376) {
                                                                         var2 = 63;
-                                                                        return (byte) var2;
+                                                                        break L0;
                                                                       } else {
                                                                         var2 = -97;
-                                                                        return (byte) var2;
+                                                                        break L0;
                                                                       }
                                                                     } else {
                                                                       var2 = -98;
-                                                                      return (byte) var2;
+                                                                      break L0;
                                                                     }
                                                                   } else {
                                                                     var2 = -100;
-                                                                    return (byte) var2;
+                                                                    break L0;
                                                                   }
                                                                 }
                                                               } else {
                                                                 var2 = -102;
-                                                                break L1;
+                                                                break L0;
                                                               }
                                                             }
                                                           } else {
                                                             var2 = -104;
-                                                            break L1;
+                                                            break L0;
                                                           }
                                                         } else {
                                                           var2 = -105;
-                                                          break L1;
+                                                          break L0;
                                                         }
                                                       }
                                                     }
@@ -340,150 +188,11 @@ final class uo extends rq {
                                                 }
                                               } else {
                                                 var2 = -110;
-                                                break L1;
+                                                break L0;
                                               }
                                             } else {
                                               var2 = -111;
-                                              break L1;
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                } else {
-                                  var2 = -120;
-                                  break L1;
-                                }
-                              }
-                            } else {
-                              var2 = -122;
-                              return (byte) var2;
-                            }
-                          } else {
-                            var2 = -123;
-                            return (byte) var2;
-                          }
-                        } else {
-                          var2 = -124;
-                          break L1;
-                        }
-                      } else {
-                        var2 = -125;
-                        return (byte) var2;
-                      }
-                    } else {
-                      var2 = -126;
-                      break L1;
-                    }
-                  } else {
-                    var2 = -128;
-                    break L1;
-                  }
-                }
-                return (byte) var2;
-              }
-            } else {
-              var2 = (byte)param1;
-              return (byte) var2;
-            }
-          } else {
-            if (param1 >= 160) {
-              if (param1 > 255) {
-                L2: {
-                  if (8364 != param1) {
-                    if (param1 != 8218) {
-                      if (param1 != 402) {
-                        if (param1 != 8222) {
-                          if (param1 != 8230) {
-                            if (param1 != 8224) {
-                              if (8225 != param1) {
-                                if (param1 != 710) {
-                                  if (param1 != 8240) {
-                                    if (param1 != 352) {
-                                      if (8249 == param1) {
-                                        var2 = -117;
-                                        return (byte) var2;
-                                      } else {
-                                        if (338 == param1) {
-                                          var2 = -116;
-                                          break L2;
-                                        } else {
-                                          if (param1 == 381) {
-                                            var2 = -114;
-                                            break L2;
-                                          } else {
-                                            if (param1 != 8216) {
-                                              if (param1 != 8217) {
-                                                if (param1 == 8220) {
-                                                  var2 = -109;
-                                                  break L2;
-                                                } else {
-                                                  if (8221 == param1) {
-                                                    var2 = -108;
-                                                    break L2;
-                                                  } else {
-                                                    if (8226 == param1) {
-                                                      var2 = -107;
-                                                      break L2;
-                                                    } else {
-                                                      if (param1 == 8211) {
-                                                        var2 = -106;
-                                                        break L2;
-                                                      } else {
-                                                        if (8212 != param1) {
-                                                          if (param1 != 732) {
-                                                            if (param1 == 8482) {
-                                                              var2 = -103;
-                                                              break L2;
-                                                            } else {
-                                                              if (param1 != 353) {
-                                                                if (8250 == param1) {
-                                                                  var2 = -101;
-                                                                  break L2;
-                                                                } else {
-                                                                  if (param1 != 339) {
-                                                                    if (param1 != 382) {
-                                                                      if (param1 != 376) {
-                                                                        var2 = 63;
-                                                                        break L2;
-                                                                      } else {
-                                                                        var2 = -97;
-                                                                        break L2;
-                                                                      }
-                                                                    } else {
-                                                                      var2 = -98;
-                                                                      break L2;
-                                                                    }
-                                                                  } else {
-                                                                    var2 = -100;
-                                                                    break L2;
-                                                                  }
-                                                                }
-                                                              } else {
-                                                                var2 = -102;
-                                                                break L2;
-                                                              }
-                                                            }
-                                                          } else {
-                                                            var2 = -104;
-                                                            break L2;
-                                                          }
-                                                        } else {
-                                                          var2 = -105;
-                                                          break L2;
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              } else {
-                                                var2 = -110;
-                                                break L2;
-                                              }
-                                            } else {
-                                              var2 = -111;
-                                              break L2;
+                                              break L0;
                                             }
                                           }
                                         }
@@ -498,7 +207,7 @@ final class uo extends rq {
                                   }
                                 } else {
                                   var2 = -120;
-                                  break L2;
+                                  break L0;
                                 }
                               } else {
                                 var2 = -121;
@@ -514,7 +223,7 @@ final class uo extends rq {
                           }
                         } else {
                           var2 = -124;
-                          break L2;
+                          break L0;
                         }
                       } else {
                         var2 = -125;
@@ -522,20 +231,17 @@ final class uo extends rq {
                       }
                     } else {
                       var2 = -126;
-                      break L2;
+                      break L0;
                     }
                   } else {
                     var2 = -128;
-                    break L2;
+                    break L0;
                   }
                 }
                 return (byte) var2;
-              } else {
-                var2 = (byte)param1;
-                return (byte) var2;
               }
             } else {
-              L3: {
+              L1: {
                 if (8364 != param1) {
                   if (param1 != 8218) {
                     if (param1 != 402) {
@@ -546,92 +252,92 @@ final class uo extends rq {
                               if (param1 != 710) {
                                 if (param1 != 8240) {
                                   if (param1 != 352) {
-                                    if (8249 == param1) {
-                                      var2 = -117;
-                                      return (byte) var2;
-                                    } else {
-                                      if (338 == param1) {
-                                        var2 = -116;
-                                        break L3;
-                                      } else {
-                                        if (param1 == 381) {
-                                          var2 = -114;
-                                          break L3;
-                                        } else {
+                                    if (8249 != param1) {
+                                      if (338 != param1) {
+                                        if (param1 != 381) {
                                           if (param1 != 8216) {
                                             if (param1 != 8217) {
-                                              if (param1 == 8220) {
-                                                var2 = -109;
-                                                break L3;
-                                              } else {
-                                                if (8221 == param1) {
-                                                  var2 = -108;
-                                                  break L3;
-                                                } else {
-                                                  if (8226 == param1) {
-                                                    var2 = -107;
-                                                    break L3;
-                                                  } else {
+                                              if (param1 != 8220) {
+                                                if (8221 != param1) {
+                                                  if (8226 != param1) {
                                                     if (param1 == 8211) {
                                                       var2 = -106;
-                                                      break L3;
+                                                      return (byte) var2;
                                                     } else {
                                                       if (8212 != param1) {
                                                         if (param1 != 732) {
                                                           if (param1 == 8482) {
                                                             var2 = -103;
-                                                            break L3;
+                                                            break L1;
                                                           } else {
                                                             if (param1 != 353) {
                                                               if (8250 == param1) {
                                                                 var2 = -101;
-                                                                break L3;
+                                                                break L1;
                                                               } else {
                                                                 if (param1 != 339) {
                                                                   if (param1 != 382) {
                                                                     if (param1 != 376) {
                                                                       var2 = 63;
-                                                                      break L3;
+                                                                      break L1;
                                                                     } else {
                                                                       var2 = -97;
-                                                                      break L3;
+                                                                      break L1;
                                                                     }
                                                                   } else {
                                                                     var2 = -98;
-                                                                    break L3;
+                                                                    break L1;
                                                                   }
                                                                 } else {
                                                                   var2 = -100;
-                                                                  break L3;
+                                                                  break L1;
                                                                 }
                                                               }
                                                             } else {
                                                               var2 = -102;
-                                                              break L3;
+                                                              break L1;
                                                             }
                                                           }
                                                         } else {
                                                           var2 = -104;
-                                                          break L3;
+                                                          break L1;
                                                         }
                                                       } else {
                                                         var2 = -105;
-                                                        break L3;
+                                                        break L1;
                                                       }
                                                     }
+                                                  } else {
+                                                    var2 = -107;
+                                                    return (byte) var2;
                                                   }
+                                                } else {
+                                                  var2 = -108;
+                                                  return (byte) var2;
                                                 }
+                                              } else {
+                                                var2 = -109;
+                                                return (byte) var2;
                                               }
                                             } else {
                                               var2 = -110;
-                                              break L3;
+                                              break L1;
                                             }
                                           } else {
                                             var2 = -111;
-                                            break L3;
+                                            break L1;
                                           }
+                                        } else {
+                                          var2 = -114;
+                                          return (byte) var2;
                                         }
+                                      } else {
+                                        var2 = -116;
+                                        return (byte) var2;
                                       }
+                                    } else {
+                                      var2 = -117;
+                                      return (byte) var2;
                                     }
                                   } else {
                                     var2 = -118;
@@ -643,7 +349,7 @@ final class uo extends rq {
                                 }
                               } else {
                                 var2 = -120;
-                                break L3;
+                                break L1;
                               }
                             } else {
                               var2 = -121;
@@ -659,7 +365,7 @@ final class uo extends rq {
                         }
                       } else {
                         var2 = -124;
-                        break L3;
+                        break L1;
                       }
                     } else {
                       var2 = -125;
@@ -667,181 +373,170 @@ final class uo extends rq {
                     }
                   } else {
                     var2 = -126;
-                    break L3;
+                    break L1;
                   }
                 } else {
                   var2 = -128;
-                  break L3;
+                  break L1;
                 }
               }
               return (byte) var2;
             }
+          } else {
+            var2 = (byte)param1;
+            return (byte) var2;
           }
         } else {
-          L4: {
-            L5: {
-              L6: {
-                if (param1 <= 0) {
-                  break L6;
+          L2: {
+            L3: {
+              if (param1 < 160) {
+                break L3;
+              } else {
+                if (param1 > 255) {
+                  break L3;
                 } else {
-                  if (param1 < 128) {
-                    break L5;
-                  } else {
-                    break L6;
-                  }
+                  var2 = (byte)param1;
+                  break L2;
                 }
               }
-              L7: {
-                if (param1 < 160) {
-                  break L7;
-                } else {
-                  if (param1 > 255) {
-                    break L7;
-                  } else {
-                    break L5;
-                  }
-                }
-              }
-              if (8364 != param1) {
-                if (param1 != 8218) {
-                  if (param1 != 402) {
-                    if (param1 != 8222) {
-                      if (param1 != 8230) {
-                        if (param1 != 8224) {
-                          if (8225 != param1) {
-                            if (param1 != 710) {
-                              if (param1 != 8240) {
-                                if (param1 != 352) {
-                                  if (8249 == param1) {
-                                    var2 = -117;
-                                    return (byte) var2;
+            }
+            if (8364 != param1) {
+              if (param1 != 8218) {
+                if (param1 != 402) {
+                  if (param1 != 8222) {
+                    if (param1 != 8230) {
+                      if (param1 != 8224) {
+                        if (8225 != param1) {
+                          if (param1 != 710) {
+                            if (param1 != 8240) {
+                              if (param1 != 352) {
+                                if (8249 == param1) {
+                                  var2 = -117;
+                                  return (byte) var2;
+                                } else {
+                                  if (338 == param1) {
+                                    var2 = -116;
+                                    break L2;
                                   } else {
-                                    if (338 == param1) {
-                                      var2 = -116;
-                                      break L4;
+                                    if (param1 == 381) {
+                                      var2 = -114;
+                                      break L2;
                                     } else {
-                                      if (param1 == 381) {
-                                        var2 = -114;
-                                        break L4;
-                                      } else {
-                                        if (param1 != 8216) {
-                                          if (param1 != 8217) {
-                                            if (param1 == 8220) {
-                                              var2 = -109;
-                                              break L4;
+                                      if (param1 != 8216) {
+                                        if (param1 != 8217) {
+                                          if (param1 == 8220) {
+                                            var2 = -109;
+                                            break L2;
+                                          } else {
+                                            if (8221 == param1) {
+                                              var2 = -108;
+                                              break L2;
                                             } else {
-                                              if (8221 == param1) {
-                                                var2 = -108;
-                                                break L4;
+                                              if (8226 == param1) {
+                                                var2 = -107;
+                                                break L2;
                                               } else {
-                                                if (8226 == param1) {
-                                                  var2 = -107;
-                                                  break L4;
+                                                if (param1 == 8211) {
+                                                  var2 = -106;
+                                                  break L2;
                                                 } else {
-                                                  if (param1 == 8211) {
-                                                    var2 = -106;
-                                                    break L4;
-                                                  } else {
-                                                    if (8212 != param1) {
-                                                      if (param1 != 732) {
-                                                        if (param1 == 8482) {
-                                                          var2 = -103;
-                                                          break L4;
-                                                        } else {
-                                                          if (param1 != 353) {
-                                                            if (8250 == param1) {
-                                                              var2 = -101;
-                                                              break L4;
-                                                            } else {
-                                                              if (param1 != 339) {
-                                                                if (param1 != 382) {
-                                                                  if (param1 != 376) {
-                                                                    var2 = 63;
-                                                                    break L4;
-                                                                  } else {
-                                                                    var2 = -97;
-                                                                    break L4;
-                                                                  }
+                                                  if (8212 != param1) {
+                                                    if (param1 != 732) {
+                                                      if (param1 == 8482) {
+                                                        var2 = -103;
+                                                        break L2;
+                                                      } else {
+                                                        if (param1 != 353) {
+                                                          if (8250 == param1) {
+                                                            var2 = -101;
+                                                            break L2;
+                                                          } else {
+                                                            if (param1 != 339) {
+                                                              if (param1 != 382) {
+                                                                if (param1 != 376) {
+                                                                  var2 = 63;
+                                                                  break L2;
                                                                 } else {
-                                                                  var2 = -98;
-                                                                  break L4;
+                                                                  var2 = -97;
+                                                                  break L2;
                                                                 }
                                                               } else {
-                                                                var2 = -100;
-                                                                break L4;
+                                                                var2 = -98;
+                                                                break L2;
                                                               }
+                                                            } else {
+                                                              var2 = -100;
+                                                              break L2;
                                                             }
-                                                          } else {
-                                                            var2 = -102;
-                                                            break L4;
                                                           }
+                                                        } else {
+                                                          var2 = -102;
+                                                          break L2;
                                                         }
-                                                      } else {
-                                                        var2 = -104;
-                                                        break L4;
                                                       }
                                                     } else {
-                                                      var2 = -105;
-                                                      break L4;
+                                                      var2 = -104;
+                                                      break L2;
                                                     }
+                                                  } else {
+                                                    var2 = -105;
+                                                    break L2;
                                                   }
                                                 }
                                               }
                                             }
-                                          } else {
-                                            var2 = -110;
-                                            break L4;
                                           }
                                         } else {
-                                          var2 = -111;
-                                          break L4;
+                                          var2 = -110;
+                                          break L2;
                                         }
+                                      } else {
+                                        var2 = -111;
+                                        break L2;
                                       }
                                     }
                                   }
-                                } else {
-                                  var2 = -118;
-                                  return (byte) var2;
                                 }
                               } else {
-                                var2 = -119;
+                                var2 = -118;
                                 return (byte) var2;
                               }
                             } else {
-                              var2 = -120;
-                              break L4;
+                              var2 = -119;
+                              return (byte) var2;
                             }
                           } else {
-                            var2 = -121;
-                            return (byte) var2;
+                            var2 = -120;
+                            break L2;
                           }
                         } else {
-                          var2 = -122;
+                          var2 = -121;
                           return (byte) var2;
                         }
                       } else {
-                        var2 = -123;
+                        var2 = -122;
                         return (byte) var2;
                       }
                     } else {
-                      var2 = -124;
-                      break L4;
+                      var2 = -123;
+                      return (byte) var2;
                     }
                   } else {
-                    var2 = -125;
-                    return (byte) var2;
+                    var2 = -124;
+                    break L2;
                   }
                 } else {
-                  var2 = -126;
-                  break L4;
+                  var2 = -125;
+                  return (byte) var2;
                 }
               } else {
-                var2 = -128;
-                break L4;
+                var2 = -126;
+                break L2;
               }
+            } else {
+              var2 = -128;
+              break L2;
             }
-            var2 = (byte)param1;
-            break L4;
           }
           return (byte) var2;
         }
@@ -1179,12 +874,7 @@ final class uo extends rq {
         }
     }
 
-    public static void d(byte param0) {
-        if (param0 < 25) {
-            field_e = null;
-            field_e = null;
-            return;
-        }
+    public static void d() {
         field_e = null;
     }
 

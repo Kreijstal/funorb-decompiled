@@ -111,7 +111,7 @@ final class jh extends ge {
                         if (var8 != 32) {
                           break L4;
                         } else {
-                          var5_int = var5_int;
+                          var5_int = var5_int + param4;
                           break L4;
                         }
                       }
@@ -213,7 +213,7 @@ final class jh extends ge {
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 0 + 41);
+          throw tba.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param4 + 41);
         }
     }
 

@@ -186,7 +186,7 @@ final class qca extends k {
         }
     }
 
-    final static pia a(byte[] param0, int param1, boolean param2, ee[] param3, int param4, int param5) {
+    final static pia a(byte[] param0, int param1, boolean param2, ee[] param3) {
         RuntimeException var6 = null;
         int[] var6_array = null;
         int[] var7 = null;
@@ -231,84 +231,76 @@ final class qca extends k {
         int[] var53 = null;
         byte[][] var54 = null;
         int[] var55 = null;
-        pia stackIn_29_0 = null;
+        pia stackIn_27_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
+        String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pia stackOut_28_0 = null;
+        pia stackOut_26_0 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
         RuntimeException stackOut_32_0 = null;
         StringBuilder stackOut_32_1 = null;
         String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         var27 = BachelorFridge.field_y;
         try {
           L0: {
             if (param3.length == 256) {
-              L1: {
-                var52 = new int[256];
-                var45 = var52;
-                var38 = var45;
-                var31 = var38;
-                var6_array = var31;
-                var53 = new int[256];
-                var46 = var53;
-                var39 = var46;
-                var32 = var39;
-                var7 = var32;
-                var50 = new int[256];
-                var43 = var50;
-                var36 = var43;
-                var29 = var36;
-                var8 = var29;
-                var51 = new int[256];
-                var44 = var51;
-                var37 = var44;
-                var30 = var37;
-                var9 = var30;
-                var10 = new int[]{0, 0, param4};
-                var54 = new byte[256][];
-                var47 = var54;
-                var40 = var47;
-                var33 = var40;
-                var11 = var33;
-                var55 = dg.field_e;
-                var13 = dg.field_i;
-                var14 = dg.field_c;
-                if (!param2) {
-                  break L1;
-                } else {
-                  field_m = null;
-                  break L1;
-                }
-              }
+              var52 = new int[256];
+              var45 = var52;
+              var38 = var45;
+              var31 = var38;
+              var6_array = var31;
+              var53 = new int[256];
+              var46 = var53;
+              var39 = var46;
+              var32 = var39;
+              var7 = var32;
+              var50 = new int[256];
+              var43 = var50;
+              var36 = var43;
+              var29 = var36;
+              var8 = var29;
+              var51 = new int[256];
+              var44 = var51;
+              var37 = var44;
+              var30 = var37;
+              var9 = var30;
+              var10 = new int[]{0, 0, 0};
+              var54 = new byte[256][];
+              var47 = var54;
+              var40 = var47;
+              var33 = var40;
+              var11 = var33;
+              var55 = dg.field_e;
+              var13 = dg.field_i;
+              var14 = dg.field_c;
               var49 = new int[4];
               dg.a(var49);
               var16_int = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var16_int >= 256) {
                   var16 = new pia(param0, var52, var53, var50, var51, var10, var54);
                   var16.field_v = var16.field_v - param1;
@@ -316,8 +308,8 @@ final class qca extends k {
                   var16.field_u = var16.field_u - param1;
                   dg.a(var55, var13, var14);
                   dg.b(var49);
-                  stackOut_28_0 = (pia) var16;
-                  stackIn_29_0 = stackOut_28_0;
+                  stackOut_26_0 = (pia) var16;
+                  stackIn_27_0 = stackOut_26_0;
                   break L0;
                 } else {
                   var6_array[var16_int] = param3[var16_int].field_f - param1;
@@ -334,41 +326,41 @@ final class qca extends k {
                   dg.a(new int[var50[var16_int] * var51[var16_int]], var50[var16_int], var51[var16_int]);
                   var23 = 0;
                   var24 = 0;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (var24 >= var20) {
                       var23 = 0;
                       var24 = 0;
-                      L4: while (true) {
+                      L3: while (true) {
                         if (var17.length <= var24) {
                           var24 = param1 * (1 + var50[var16_int]);
                           var25 = 0;
-                          L5: while (true) {
+                          L4: while (true) {
                             if (var25 >= var20) {
                               var16_int++;
-                              continue L2;
+                              continue L1;
                             } else {
                               var26 = 0;
-                              L6: while (true) {
+                              L5: while (true) {
                                 if (var26 >= var19) {
                                   var24 = var24 + var22;
                                   var25++;
-                                  continue L5;
+                                  continue L4;
                                 } else {
-                                  L7: {
+                                  L6: {
                                     int incrementValue$3 = var23;
                                     var23++;
                                     if (var18[incrementValue$3] != 0) {
                                       int incrementValue$4 = var24;
                                       var24++;
                                       var17[incrementValue$4] = (byte) 1;
-                                      break L7;
+                                      break L6;
                                     } else {
                                       var24++;
-                                      break L7;
+                                      break L6;
                                     }
                                   }
                                   var26++;
-                                  continue L6;
+                                  continue L5;
                                 }
                               }
                             }
@@ -376,28 +368,28 @@ final class qca extends k {
                         } else {
                           var17[var24] = (byte)dg.field_e[var24];
                           var24++;
-                          continue L4;
+                          continue L3;
                         }
                       }
                     } else {
                       var25 = 0;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (var25 >= var19) {
                           var24++;
-                          continue L3;
+                          continue L2;
                         } else {
-                          L9: {
+                          L8: {
                             int incrementValue$5 = var23;
                             var23++;
                             if (var18[incrementValue$5] == 0) {
-                              break L9;
+                              break L8;
                             } else {
                               dg.b(var25 - -param1, param1 + var24, param1, 2);
-                              break L9;
+                              break L8;
                             }
                           }
                           var25++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -410,60 +402,60 @@ final class qca extends k {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
-            stackOut_30_1 = new StringBuilder().append("qca.D(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackOut_28_0 = (RuntimeException) var6;
+            stackOut_28_1 = new StringBuilder().append("qca.D(");
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
             if (param0 == null) {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L9;
+            } else {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L9;
+            }
+          }
+          L10: {
+            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44).append(param1).append(44).append(0).append(44);
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
+            if (param3 == null) {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L10;
+            } else {
               stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
               stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
-              break L10;
-            } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
               break L10;
             }
           }
-          L11: {
-            stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
-            if (param3 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
-              break L11;
-            } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
-              break L11;
-            }
-          }
-          throw pe.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param4 + 44 + 0 + 41);
+          throw pe.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + 0 + 44 + 0 + 41);
         }
-        return stackIn_29_0;
+        return stackIn_27_0;
     }
 
     final void a(byte param0, lu param1, int param2) {
@@ -560,10 +552,7 @@ final class qca extends k {
         }
     }
 
-    final static sna e(int param0) {
-        if (param0 != -117485887) {
-            field_l = null;
-        }
+    final static sna e() {
         return nr.field_w.field_wb;
     }
 
@@ -576,7 +565,7 @@ final class qca extends k {
         ((qca) this).field_k = 0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_m = null;
         field_l = null;
         field_p = null;

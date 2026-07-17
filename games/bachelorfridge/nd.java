@@ -105,7 +105,7 @@ final class nd extends kj {
         super(param0, param1, param2);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_i = null;
     }

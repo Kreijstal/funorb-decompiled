@@ -15,7 +15,7 @@ final class wm extends gn {
     int field_M;
     static String field_T;
 
-    public static void h(byte param0) {
+    public static void h() {
         field_P = null;
         field_S = null;
         field_Q = null;
@@ -44,16 +44,16 @@ final class wm extends gn {
         return ((wm) this).field_O;
     }
 
-    final static ul a(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
+    final static ul a(int param0, int param1, boolean param2, boolean param3, int param4) {
         try {
             int var6_int = 0;
             IOException var6 = null;
             Object var7 = null;
             Object var8 = null;
             cn var9 = null;
-            ul stackIn_12_0 = null;
+            ul stackIn_10_0 = null;
             Throwable decompiledCaughtException = null;
-            ul stackOut_11_0 = null;
+            ul stackOut_9_0 = null;
             try {
               L0: {
                 L1: {
@@ -94,17 +94,9 @@ final class wm extends gn {
                     break L2;
                   }
                 }
-                L5: {
-                  var9 = tj.field_a.a(param0, (bq) var7, -15893, (bq) var8, param3);
-                  if (!param5) {
-                    break L5;
-                  } else {
-                    var9.a(false);
-                    break L5;
-                  }
-                }
-                stackOut_11_0 = new ul((ng) (Object) var9, param2, param1);
-                stackIn_12_0 = stackOut_11_0;
+                var9 = tj.field_a.a(param0, (bq) var7, -15893, (bq) var8, false);
+                stackOut_9_0 = new ul((ng) (Object) var9, true, 1);
+                stackIn_10_0 = stackOut_9_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -112,7 +104,7 @@ final class wm extends gn {
               var6 = (IOException) (Object) decompiledCaughtException;
               throw new RuntimeException(var6.toString());
             }
-            return stackIn_12_0;
+            return stackIn_10_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -130,13 +122,10 @@ final class wm extends gn {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            if (param0 != -1) {
-                ul discarded$0 = wm.a(0, -46, true, false, 5, false);
-            }
             ra.a(param1, -89, "");
             em.a(false, param1);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "wm.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "wm.G(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

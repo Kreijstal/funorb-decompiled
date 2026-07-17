@@ -4,7 +4,7 @@
 final class waa {
     static int field_a;
 
-    final static String a(boolean param0) {
+    final static String a() {
         if (kq.field_j == ola.field_p) {
             return em.field_V;
         }
@@ -17,15 +17,12 @@ final class waa {
         return dk.field_p;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         aka.field_G.field_e = 0;
         aka.field_G.field_k = 0;
     }
 
     final static void a(int param0, int param1) {
-        if (param0 != 0) {
-            field_a = -53;
-        }
     }
 
     static {

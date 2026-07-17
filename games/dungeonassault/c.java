@@ -30,10 +30,10 @@ abstract class c {
         if (param3 < 26) {
             return;
         }
-        vd.a(param1, 0, -14561, 0, param0, param2);
+        vd.a(640, 0, -14561, 0, 0, param2);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_c = null;
         field_d = null;

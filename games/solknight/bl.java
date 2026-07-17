@@ -13,7 +13,7 @@ final class bl extends gg {
     int field_o;
     static int field_k;
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
     }
 
@@ -148,7 +148,8 @@ final class bl extends gg {
             if (c.field_H <= 0) {
                 return false;
             }
-            if (rd.b(6144)) {
+            int discarded$7 = 6144;
+            if (rd.b()) {
                 return false;
             }
             return true;
@@ -162,20 +163,22 @@ final class bl extends gg {
         if (c.field_H <= 0) {
             return false;
         }
-        if (rd.b(6144)) {
+        int discarded$11 = 6144;
+        if (rd.b()) {
             return false;
         }
         return true;
     }
 
-    final static od[] b(boolean param0) {
+    final static od[] b() {
         int var2 = 0;
         int var3 = SolKnight.field_L ? 1 : 0;
         od[] var1 = new od[nb.field_c];
         for (var2 = 0; nb.field_c > var2; var2++) {
             var1[var2] = new od(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], jc.field_c[var2], ig.field_H);
         }
-        og.a((byte) -97);
+        int discarded$0 = -97;
+        og.a();
         return var1;
     }
 

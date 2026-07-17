@@ -85,10 +85,12 @@ final class lka {
     final static void a(byte param0) {
         if (param0 >= -33) {
             lka.a((byte) 116);
-            sua.r((byte) 63);
+            int discarded$0 = 63;
+            sua.r();
             return;
         }
-        sua.r((byte) 63);
+        int discarded$1 = 63;
+        sua.r();
     }
 
     static {

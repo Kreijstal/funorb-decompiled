@@ -8,7 +8,7 @@ final class hf {
     static int[] field_d;
     static int field_a;
 
-    final static void a(String[][] param0, String[] param1, byte param2) {
+    final static void a(String[][] param0, String[] param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -155,7 +155,7 @@ final class hf {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
     }

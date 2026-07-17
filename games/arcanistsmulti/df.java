@@ -263,19 +263,16 @@ class df extends qm implements a {
         long var4 = 0L;
         try {
             cb.field_a = true;
-            if (param0 != 1) {
-                df.c(true);
-            }
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
             var4 = -1L;
-            sm.a(var4, var2, param1, param0 + -15368, var3);
+            sm.a(var4, var2, param1, -15367, var3);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "df.QB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "df.QB(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void a(Hashtable param0, int param1, StringBuilder param2, boolean param3) {
+    private final void a(Hashtable param0, int param1, StringBuilder param2) {
         oc var5 = null;
         RuntimeException var5_ref = null;
         qm var6 = null;
@@ -581,7 +578,7 @@ class df extends qm implements a {
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            var9 = 67 / ((-42 - param4) / 35);
+            var9 = 67;
             var8 = new oc(((df) this).field_B);
             var10 = (qm) (Object) var8.b(-46);
             L1: while (true) {
@@ -636,21 +633,22 @@ class df extends qm implements a {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw aa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 44 + -105 + 44 + param5 + 44 + param6 + 41);
         }
         return stackIn_10_0 != 0;
     }
 
     void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, -125);
-        this.f(-28475);
+        int discarded$0 = -28475;
+        this.f();
         if (param4 >= -49) {
             Object var7 = null;
-            StringBuilder discarded$0 = ((df) this).a((StringBuilder) null, 92, (Hashtable) null, (byte) 58);
+            StringBuilder discarded$1 = ((df) this).a((StringBuilder) null, 92, (Hashtable) null, (byte) 58);
         }
     }
 
-    final static void d(boolean param0) {
+    final static void d() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -688,8 +686,11 @@ class df extends qm implements a {
             L1: {
               if (var2 != 0) {
                 if (var2 != 1) {
-                  jh.a((Throwable) null, "HS1: " + nn.g((byte) -25), (byte) 20);
-                  ka.b(false);
+                  int discarded$8 = -25;
+                  int discarded$9 = 20;
+                  jh.a((Throwable) null, "HS1: " + nn.g());
+                  int discarded$10 = 0;
+                  ka.b();
                   break L1;
                 } else {
                   var3 = var27.n(-98);
@@ -708,7 +709,8 @@ class df extends qm implements a {
                       }
                     }
                     if (var4_ref == null) {
-                      ka.b(false);
+                      int discarded$11 = 0;
+                      ka.b();
                       return;
                     } else {
                       var4_ref.a(true);
@@ -733,7 +735,8 @@ class df extends qm implements a {
                     }
                   }
                   if (var4 == null) {
-                    ka.b(false);
+                    int discarded$12 = 0;
+                    ka.b();
                     return;
                   } else {
                     var5 = var27.e((byte) 112);
@@ -776,9 +779,9 @@ class df extends qm implements a {
                                         var12++;
                                         break L8;
                                       } else {
-                                        int incrementValue$3 = var15;
+                                        int incrementValue$13 = var15;
                                         var15++;
-                                        var35[0][incrementValue$3] = var27.d(-10674);
+                                        var35[0][incrementValue$13] = var27.d(-10674);
                                         var25++;
                                         continue L9;
                                       }
@@ -804,9 +807,9 @@ class df extends qm implements a {
                                         if (var7 <= var25) {
                                           break L10;
                                         } else {
-                                          int incrementValue$4 = var16;
+                                          int incrementValue$14 = var16;
                                           var16++;
-                                          var35[1][incrementValue$4] = var27.d(-10674);
+                                          var35[1][incrementValue$14] = var27.d(-10674);
                                           var25++;
                                           continue L11;
                                         }
@@ -832,9 +835,9 @@ class df extends qm implements a {
                                         if (var25 >= var7) {
                                           break L12;
                                         } else {
-                                          int incrementValue$5 = var17;
+                                          int incrementValue$15 = var17;
                                           var17++;
-                                          var35[2][incrementValue$5] = var27.d(-10674);
+                                          var35[2][incrementValue$15] = var27.d(-10674);
                                           var25++;
                                           continue L13;
                                         }
@@ -909,7 +912,7 @@ class df extends qm implements a {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         oc var2 = new oc(((df) this).field_B);
         qm var3 = (qm) (Object) var2.b(-97);
@@ -1059,7 +1062,8 @@ class df extends qm implements a {
                 break L1;
               } else {
                 ((df) this).a(param0, param1, param2, 1);
-                this.a(param2, param1, param0, true);
+                int discarded$2 = 1;
+                this.a(param2, param1, param0);
                 break L1;
               }
             }
@@ -1208,7 +1212,7 @@ class df extends qm implements a {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_x = null;
         field_A = null;
         field_z = null;

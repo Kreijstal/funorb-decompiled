@@ -77,7 +77,7 @@ final class uh {
         }
     }
 
-    private final int c(int param0, byte param1) {
+    private final int c(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -118,9 +118,10 @@ final class uh {
     }
 
     private final void a(int param0, int param1) {
-        int[] var4 = new int[this.c(param1, (byte) -81)];
+        int discarded$0 = -81;
+        int[] var4 = new int[this.c(param1)];
         int[] var3 = var4;
-        bc.a(((uh) this).field_a, 0, var4, param0, ((uh) this).field_a.length);
+        bc.a(((uh) this).field_a, 0, var4, 0, ((uh) this).field_a.length);
         ((uh) this).field_a = var4;
     }
 
@@ -137,13 +138,13 @@ final class uh {
 
     private final void a(int param0, int[] param1, int param2, int param3, int param4) {
         try {
-            if (!(((uh) this).field_b >= param3 + (param0 - param2))) {
+            if (!(((uh) this).field_b >= param3 + (param0 - 1))) {
                 ((uh) this).field_b = -1 + param3 + param0;
-                this.a(param2 ^ 1, param3 + (param0 - 1));
+                this.a(0, param3 + (param0 - 1));
             }
             bc.a(param1, param4, ((uh) this).field_a, param0, param3);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "uh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "uh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

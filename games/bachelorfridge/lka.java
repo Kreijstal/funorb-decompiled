@@ -24,7 +24,8 @@ class lka extends hf {
                 var3 = 0;
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.i(-12);
-                this.a(var2, (byte) -51);
+                int discarded$1 = -51;
+                this.a(var2);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -41,7 +42,7 @@ class lka extends hf {
         }
     }
 
-    private final int j(int param0) {
+    private final int j() {
         int var2 = 0;
         int var3 = 0;
         var3 = BachelorFridge.field_y;
@@ -64,13 +65,7 @@ class lka extends hf {
         }
     }
 
-    public static void g(byte param0) {
-        if (param0 >= -122) {
-            field_G = null;
-            field_E = null;
-            field_G = null;
-            return;
-        }
+    public static void g() {
         field_E = null;
         field_G = null;
     }
@@ -83,7 +78,7 @@ class lka extends hf {
         ((lka) this).i((byte) -118);
     }
 
-    private final int e(byte param0) {
+    private final int e() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -129,74 +124,66 @@ class lka extends hf {
 
     final static kv a(byte param0, kv param1) {
         RuntimeException var2 = null;
-        kv stackIn_3_0 = null;
+        kv stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kv stackOut_2_0 = null;
+        kv stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 54) {
-                break L1;
-              } else {
-                lka.g((byte) -47);
-                break L1;
-              }
-            }
             param1.g(2);
             param1.f(65793);
-            stackOut_2_0 = (kv) param1;
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = (kv) param1;
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("lka.C(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("lka.C(").append(54).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
-    private final void a(String param0, byte param1) {
+    private final void a(String param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -277,7 +264,8 @@ class lka extends hf {
     }
 
     private final void g(int param0) {
-        this.b(false);
+        int discarded$0 = 0;
+        this.b();
         this.i(115);
     }
 
@@ -389,8 +377,10 @@ class lka extends hf {
                     break L3;
                   } else {
                     L4: {
-                      ((lka) this).field_K = this.j(0);
-                      ((lka) this).field_H = this.e((byte) -26);
+                      int discarded$2 = 0;
+                      ((lka) this).field_K = this.j();
+                      int discarded$3 = -26;
+                      ((lka) this).field_H = this.e();
                       if (((lka) this).field_H <= 0) {
                         break L4;
                       } else {
@@ -449,16 +439,13 @@ class lka extends hf {
     }
 
     private final void a(boolean param0, int param1) {
-        if (!param0) {
-            return;
-        }
         ((lka) this).field_H = param1;
         if (!(wga.field_q[81])) {
             ((lka) this).field_K = ((lka) this).field_H;
         }
     }
 
-    private final void h(byte param0) {
+    private final void h() {
         if (!(!(((lka) this).field_k instanceof fca))) {
             ((fca) (Object) ((lka) this).field_k).a((lka) this, 0);
         }
@@ -480,13 +467,13 @@ class lka extends hf {
         }
     }
 
-    private final String f(byte param0) {
+    private final String f() {
         int var2 = ((lka) this).field_H > ((lka) this).field_K ? ((lka) this).field_K : ((lka) this).field_H;
         int var3 = ((lka) this).field_H > ((lka) this).field_K ? ((lka) this).field_H : ((lka) this).field_K;
         return ((lka) this).field_w.substring(var2, var3);
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         vv var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -583,7 +570,8 @@ class lka extends hf {
         try {
           L0: {
             super.a(param0, param1, param2, param3);
-            this.d((byte) -75);
+            int discarded$2 = -75;
+            this.d();
             if (param3 == 20) {
               if (((lka) this).field_u == 1) {
                 L1: {
@@ -744,10 +732,12 @@ class lka extends hf {
         }
     }
 
-    private final void b(boolean param0) {
-        String var2 = this.f((byte) -53);
+    private final void b() {
+        int discarded$0 = -53;
+        String var2 = this.f();
         if (!(var2.length() <= 0)) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.f((byte) -53)), (java.awt.datatransfer.ClipboardOwner) null);
+            int discarded$1 = -53;
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.f()), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -877,9 +867,9 @@ class lka extends hf {
                               break L6;
                             } else {
                               ((lka) this).field_w = ((lka) this).field_w + param2;
-                              int dupTemp$2 = ((lka) this).field_w.length();
-                              ((lka) this).field_H = dupTemp$2;
-                              ((lka) this).field_K = dupTemp$2;
+                              int dupTemp$6 = ((lka) this).field_w.length();
+                              ((lka) this).field_H = dupTemp$6;
+                              ((lka) this).field_K = dupTemp$6;
                               break L6;
                             }
                           }
@@ -954,7 +944,8 @@ class lka extends hf {
                                         break L9;
                                       } else {
                                         if (param1 == 66) {
-                                          this.b(false);
+                                          int discarded$7 = 0;
+                                          this.b();
                                           stackOut_58_0 = 1;
                                           stackIn_59_0 = stackOut_58_0;
                                           return stackIn_59_0 != 0;
@@ -976,7 +967,8 @@ class lka extends hf {
                                       }
                                     }
                                   } else {
-                                    this.h((byte) 52);
+                                    int discarded$8 = 52;
+                                    this.h();
                                     stackOut_44_0 = 1;
                                     stackIn_45_0 = stackOut_44_0;
                                     return stackIn_45_0 != 0;
@@ -1013,9 +1005,10 @@ class lka extends hf {
                                     stackIn_35_2 = stackOut_34_2;
                                     break L10;
                                   } else {
+                                    int discarded$9 = -26;
                                     stackOut_33_0 = this;
                                     stackOut_33_1 = stackIn_33_1;
-                                    stackOut_33_2 = this.e((byte) -26);
+                                    stackOut_33_2 = this.e();
                                     stackIn_35_0 = stackOut_33_0;
                                     stackIn_35_1 = stackOut_33_1;
                                     stackIn_35_2 = stackOut_33_2;
@@ -1040,9 +1033,10 @@ class lka extends hf {
                                 stackIn_26_0 = stackOut_25_0;
                                 stackIn_26_1 = stackOut_25_1;
                                 if (wga.field_q[82]) {
+                                  int discarded$10 = 0;
                                   stackOut_27_0 = this;
                                   stackOut_27_1 = stackIn_27_1;
-                                  stackOut_27_2 = this.j(0);
+                                  stackOut_27_2 = this.j();
                                   stackIn_28_0 = stackOut_27_0;
                                   stackIn_28_1 = stackOut_27_1;
                                   stackIn_28_2 = stackOut_27_2;
@@ -1078,7 +1072,7 @@ class lka extends hf {
                     break L0;
                   } else {
                     var6 = null;
-                    boolean discarded$3 = ((lka) this).b(-24, 51, -40, -52, -18, (wj) null, -94);
+                    boolean discarded$11 = ((lka) this).b(-24, 51, -40, -52, -18, (wj) null, -94);
                     return false;
                   }
                 }

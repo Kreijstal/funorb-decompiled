@@ -13,7 +13,7 @@ class bj extends hm implements ba {
     static ie field_C;
     static int[] field_F;
 
-    private final void f(byte param0) {
+    private final void f() {
         int var4 = EscapeVector.field_A;
         wf var2 = new wf(((bj) this).field_A);
         hm var3 = (hm) (Object) var2.c(15);
@@ -23,7 +23,7 @@ class bj extends hm implements ba {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_C = null;
         field_z = null;
         field_D = null;
@@ -360,7 +360,8 @@ class bj extends hm implements ba {
         if (!param3) {
             return;
         }
-        this.f((byte) 6);
+        int discarded$0 = 6;
+        this.f();
     }
 
     final boolean b(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {

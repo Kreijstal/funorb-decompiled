@@ -88,7 +88,7 @@ abstract class fc extends vh {
                     if (param5 == null) {
                       break L5;
                     } else {
-                      if (param5[var36] == param6) {
+                      if (!param5[var36]) {
                         break L5;
                       } else {
                         if (param0.field_p[var36] == 0) {
@@ -235,7 +235,7 @@ abstract class fc extends vh {
                       if (var26 == -1) {
                         break L16;
                       } else {
-                        var31 = param8 & param0.field_s[var26];
+                        var31 = 65535 & param0.field_s[var26];
                         if (var31 == 65535) {
                           ((fc) this).a(0, param0.field_q[var26], 0, 0, 0, param7);
                           break L16;
@@ -245,7 +245,7 @@ abstract class fc extends vh {
                         }
                       }
                     } else {
-                      var31 = param8 & param0.field_s[var21];
+                      var31 = 65535 & param0.field_s[var21];
                       if (var31 == 65535) {
                         ((fc) this).a(0, param0.field_q[var21], 0, 0, 0, param7);
                         break L16;
@@ -255,7 +255,7 @@ abstract class fc extends vh {
                       }
                     }
                   }
-                  var31 = param8 & param0.field_s[var36];
+                  var31 = 65535 & param0.field_s[var36];
                   if (var31 == 65535) {
                     ((fc) this).a(var17, param0.field_q[var36], var28, var29, var30, param7);
                     var36++;
@@ -282,7 +282,7 @@ abstract class fc extends vh {
               if (param5 == null) {
                 break L18;
               } else {
-                if (param5[var12] == param6) {
+                if (!param5[var12]) {
                   break L18;
                 } else {
                   if (param0.field_p[var12] == 0) {
@@ -299,7 +299,7 @@ abstract class fc extends vh {
               if (var13 == -1) {
                 break L19;
               } else {
-                var14 = param8 & param0.field_s[var13];
+                var14 = 65535 & param0.field_s[var13];
                 if (var14 == 65535) {
                   ((fc) this).a(0, param0.field_q[var13], 0, 0, 0, param7);
                   break L19;
@@ -309,7 +309,7 @@ abstract class fc extends vh {
                 }
               }
             }
-            var14 = param8 & param0.field_s[var12];
+            var14 = 65535 & param0.field_s[var12];
             if (var14 == 65535) {
               ((fc) this).a(param0.field_p[var12], param0.field_q[var12], (int) param1.field_l[var11], (int) param1.field_h[var11], (int) param1.field_c[var11], param7);
               var11++;

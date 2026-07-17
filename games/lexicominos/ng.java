@@ -7,14 +7,14 @@ final class ng {
 
     final static void a(int param0, le param1, byte param2, le param3) {
         try {
-            int var4_int = 88 % ((35 - param2) / 55);
-            nb.field_x = param0;
+            int var4_int = 0;
+            nb.field_x = 480;
             fb.field_m = param1;
             pb.field_i = param3;
             Lexicominos.a(lf.field_f / 2, 67, lf.field_a / 2);
             vc.a(-5094, param1.field_t, param1.field_t + param1.field_G, param3.field_t, param3.field_G + param3.field_t);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "ng.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "ng.E(" + 480 + 44 + (param1 != null ? "{...}" : "null") + 44 + 115 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -31,7 +31,7 @@ final class ng {
         }
     }
 
-    private final void a(kd param0, ng param1, byte param2) {
+    private final void a(kd param0, ng param1) {
         kd var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -141,7 +141,6 @@ final class ng {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
         int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -153,15 +152,6 @@ final class ng {
             var3_int = 1;
             L1: while (true) {
               if (1 >= param1) {
-                L2: {
-                  if (param0 == -11) {
-                    break L2;
-                  } else {
-                    var5 = null;
-                    ng.a(56, (le) null, (byte) 99, (le) null);
-                    break L2;
-                  }
-                }
                 if (param1 != 1) {
                   stackOut_12_0 = var3_int;
                   stackIn_13_0 = stackOut_12_0;
@@ -172,12 +162,12 @@ final class ng {
                   return stackIn_11_0;
                 }
               } else {
-                L3: {
+                L2: {
                   if (0 != (param1 & 1)) {
                     var3_int = var3_int * param2;
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 param2 = param2 * param2;
@@ -189,7 +179,7 @@ final class ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var3, "ng.D(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ld.a((Throwable) (Object) var3, "ng.D(" + -11 + 44 + param1 + 44 + param2 + 41);
         }
         return stackIn_13_0;
     }
@@ -213,7 +203,8 @@ final class ng {
     final void a(ng param0, int param1) {
         try {
             int var3_int = -10 / ((-70 - param1) / 50);
-            this.a(((ng) this).field_b.field_f, param0, (byte) -9);
+            int discarded$0 = -9;
+            this.a(((ng) this).field_b.field_f, param0);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "ng.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }

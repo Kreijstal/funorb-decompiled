@@ -29,7 +29,8 @@ final class qe {
         ((qe) this).field_f = dda.field_j;
         ((qe) this).field_j.a(((qe) this).field_b, (byte) 19, ((qe) this).field_m);
         daa.field_vb = false;
-        kg var2 = mfa.a(true, ((qe) this).field_m, 0, ((qe) this).field_b, ju.field_r, 0);
+        int discarded$0 = 0;
+        kg var2 = mfa.a(true, ((qe) this).field_m, 0, ((qe) this).field_b, ju.field_r);
         if (!(var2 != null)) {
             ((qe) this).a(true);
         }
@@ -70,7 +71,7 @@ final class qe {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_q = null;
         int var1 = 101;

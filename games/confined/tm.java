@@ -103,7 +103,8 @@ final class tm implements Iterator {
                           }
                           break L5;
                         } else {
-                          int discarded$1 = oa.a(var18, var6, param1, var5, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = oa.a(var7, var6, param1, var5);
                           break L5;
                         }
                       }
@@ -173,7 +174,7 @@ final class tm implements Iterator {
         return (Object) (Object) var1;
     }
 
-    final static al a(java.applet.Applet param0, int param1) {
+    final static al a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         al[] var3 = null;
@@ -207,7 +208,8 @@ final class tm implements Iterator {
           L0: {
             var2 = ml.a("jagex-last-login-method", (byte) 79, param0);
             if (var2 != null) {
-              var3 = nn.b(68);
+              int discarded$2 = 68;
+              var3 = nn.b();
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {
@@ -276,9 +278,6 @@ final class tm implements Iterator {
     final static void a(int param0, int param1) {
         ue.field_t = param1 >> 4 & 3;
         g.field_m = (12 & param1) >> 2;
-        if (param0 > -121) {
-            field_e = null;
-        }
         if (!(ue.field_t <= 2)) {
             ue.field_t = 2;
         }
@@ -295,7 +294,7 @@ final class tm implements Iterator {
         return ((tm) this).field_d.field_b != ((tm) this).field_c;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 12;
         field_e = null;

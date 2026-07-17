@@ -268,7 +268,7 @@ final class re implements gj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_o = null;
         field_c = null;
@@ -314,7 +314,8 @@ final class re implements gj {
                       if (ih.field_c != 2) {
                         break L3;
                       } else {
-                        var1 = k.b(-124);
+                        int discarded$8 = -124;
+                        var1 = k.b();
                         if (var1 != -1) {
                           jm.a(100, 9863, var1);
                           return;
@@ -324,7 +325,8 @@ final class re implements gj {
                       }
                     }
                   } else {
-                    var1 = ve.c(false);
+                    int discarded$9 = 0;
+                    var1 = ve.c();
                     if (var1 == -1) {
                       break L3;
                     } else {
@@ -348,7 +350,8 @@ final class re implements gj {
                       break L4;
                     }
                   } else {
-                    if (bl.a((byte) -94)) {
+                    int discarded$10 = -94;
+                    if (bl.a()) {
                       break L4;
                     } else {
                       jm.a(1, 9863, 0);
@@ -444,7 +447,9 @@ final class re implements gj {
                           if (rm.field_C != 2) {
                             break L11;
                           } else {
-                            in.a(true, 128);
+                            int discarded$11 = 128;
+                            int discarded$12 = 1;
+                            in.a();
                             break L11;
                           }
                         }
@@ -452,7 +457,9 @@ final class re implements gj {
                           if (rm.field_C != 3) {
                             break L12;
                           } else {
-                            mj.a((byte) -39, 128);
+                            int discarded$13 = 128;
+                            int discarded$14 = -39;
+                            mj.a();
                             break L12;
                           }
                         }
@@ -471,7 +478,8 @@ final class re implements gj {
                           if (ih.field_c != 1) {
                             break L14;
                           } else {
-                            eh.a((byte) -48);
+                            int discarded$15 = -48;
+                            eh.a();
                             break L14;
                           }
                         }
@@ -562,82 +570,74 @@ final class re implements gj {
                       break L3;
                     }
                   }
-                  L4: {
-                    vq.field_g.b(22997);
-                    var4_int = 0;
-                    if (param0 > 120) {
-                      break L4;
-                    } else {
-                      field_c = null;
-                      break L4;
-                    }
-                  }
+                  vq.field_g.b(22997);
+                  var4_int = 0;
                   var5 = 0;
                   var6 = param1;
                   var7 = param1;
-                  L5: while (true) {
+                  L4: while (true) {
                     if (var7 >= param2) {
-                      L6: {
+                      L5: {
                         if (var5 > 0) {
                           vq.field_g.a((gn) (Object) new es(param3, var6, var5), 3);
                           var4_int++;
-                          break L6;
+                          break L5;
                         } else {
-                          break L6;
+                          break L5;
                         }
                       }
-                      L7: {
+                      L6: {
                         if (0 < var4_int) {
                           or.field_d.b(53, (byte) 118);
                           or.field_d.g(-1207444472, 2 + 5 * var4_int);
                           or.field_d.a(121, var4_int);
                           var9 = (es) (Object) vq.field_g.b((byte) 126);
-                          L8: while (true) {
+                          L7: while (true) {
                             if (var9 == null) {
                               or.field_d.a(105, param3);
                               uv.field_f = true;
                               ri.field_t = 500;
-                              break L7;
+                              break L6;
                             } else {
                               var9.a(or.field_d, (byte) 95);
                               var9 = (es) (Object) vq.field_g.b((byte) 127);
-                              continue L8;
+                              continue L7;
                             }
                           }
                         } else {
-                          break L7;
+                          break L6;
                         }
                       }
                       break L0;
                     } else {
-                      L9: {
+                      L8: {
                         if (bf.field_y.a(var7, (byte) 116, param3) == null) {
-                          L10: {
+                          L9: {
                             if (var5 == 0) {
                               var6 = var7;
-                              break L10;
+                              break L9;
                             } else {
-                              break L10;
+                              break L9;
                             }
                           }
                           var5++;
-                          break L9;
+                          break L8;
                         } else {
-                          L11: {
+                          L10: {
                             if (var5 <= 0) {
-                              break L11;
+                              break L10;
                             } else {
                               var4_int++;
                               vq.field_g.a((gn) (Object) new es(param3, var6, var5), 3);
-                              break L11;
+                              break L10;
                             }
                           }
                           var5 = 0;
-                          break L9;
+                          break L8;
                         }
                       }
                       var7++;
-                      continue L5;
+                      continue L4;
                     }
                   }
                 }
@@ -649,7 +649,7 @@ final class re implements gj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var4, "re.F(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw nb.a((Throwable) (Object) var4, "re.F(" + 125 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

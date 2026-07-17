@@ -95,7 +95,7 @@ final class vk {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var3 = fm.a(param0);
+              var3 = fm.a(false);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -121,7 +121,7 @@ final class vk {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2_ref;
-            stackOut_14_1 = new StringBuilder().append("vk.B(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("vk.B(").append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -149,7 +149,7 @@ final class vk {
         return stackIn_13_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
         field_d = null;

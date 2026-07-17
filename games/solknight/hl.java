@@ -8,16 +8,7 @@ final class hl {
 
     final static void a(boolean param0, int param1, boolean param2) {
         Object var4 = null;
-        if (param1 != 24574) {
-          field_a = null;
-          var4 = null;
-          hf.a(param2, 17072, param0, (String) null);
-          return;
-        } else {
-          var4 = null;
-          hf.a(param2, 17072, param0, (String) null);
-          return;
-        }
+        hf.a(param2, 17072, param0, (String) null);
     }
 
     final int a(int param0) {
@@ -84,11 +75,11 @@ final class hl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static String a(String param0, String param1, String param2, boolean param3) {
+    final static String a(String param0, String param1, String param2) {
         int var5 = SolKnight.field_L ? 1 : 0;
         int var4 = param0.indexOf(param2);
         while (-1 != var4) {

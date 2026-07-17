@@ -16,7 +16,7 @@ final class no extends me {
     static int[][] field_r;
 
     final static String a(byte param0, char param1) {
-        int var2 = -36 % ((-5 - param0) / 36);
+        int var2 = 0;
         return String.valueOf(param1);
     }
 
@@ -293,17 +293,19 @@ final class no extends me {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean a(int param0, int param1) {
         if (!lf.a(param0, param1, 128)) {
             return false;
         }
-        if (!(bqa.a(540800, param1, param0) | ((param1 & param2) == 0 ? true : false) | go.d(param0, param1, 26205))) {
+        int discarded$10 = 26205;
+        if (!(bqa.a(540800, param1, param0) | ((param1 & 36864) == 0 ? true : false) | go.d(param0, param1))) {
             return true;
         }
-        return (((8192 & param1) != 0 ? true : false) | kaa.a(param0, param1, false) | rg.e(param0, param2 ^ -36949, param1)) & (0 == (55 & param0) ? true : false);
+        int discarded$19 = 0;
+        return (((8192 & param1) != 0 ? true : false) | kaa.a(param0, param1) | rg.e(param0, -85, param1)) & (0 == (55 & param0) ? true : false);
     }
 
-    final static void a(String param0, long param1, byte param2) {
+    final static void a(String param0, long param1) {
         RuntimeException var4 = null;
         CharSequence var5 = null;
         RuntimeException stackIn_3_0 = null;
@@ -364,7 +366,7 @@ final class no extends me {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_o = null;
         field_r = null;
         field_u = null;

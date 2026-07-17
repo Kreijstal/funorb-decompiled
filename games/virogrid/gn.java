@@ -22,7 +22,7 @@ final class gn extends tg {
         }
     }
 
-    public static void g(boolean param0) {
+    public static void g() {
         field_H = null;
         field_G = null;
         field_I = null;
@@ -39,17 +39,18 @@ final class gn extends tg {
             var3[var4_int] = k.field_c[rb.a((int) var2[var4_int], 255)];
         }
         mg var4 = new mg(oj.field_Kb, se.field_d, el.field_w[0], mb.field_bb[0], db.field_k[0], gb.field_F[0], var3);
-        pe.b((byte) -28);
+        int discarded$0 = -28;
+        pe.b();
         return var4;
     }
 
     final static void a(byte param0, String param1, int param2) {
         try {
             tg.field_x = 1;
-            int var3_int = -66 / ((-14 - param0) / 41);
+            int var3_int = 33;
             pm.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "gn.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "gn.A(" + 86 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

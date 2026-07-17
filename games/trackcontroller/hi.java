@@ -8,7 +8,7 @@ final class hi extends tk {
     static int[] field_A;
     be field_x;
 
-    final static void b(int param0, int param1, int param2) {
+    final static void b() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -19,7 +19,7 @@ final class hi extends tk {
         var9 = TrackController.field_F ? 1 : 0;
         if (0 <= fb.field_a) {
           L0: {
-            var3 = -135 + param0;
+            var3 = 185;
             var4 = 205;
             var5 = 256;
             if (75 > fb.field_a) {
@@ -46,7 +46,7 @@ final class hi extends tk {
             if (150 <= fb.field_a) {
               ej.field_d.d(var3 - -15, 10 + var4, var5);
               var6 = fb.field_a + -125;
-              var7 = 43 / ((param1 - -18) / 54);
+              var7 = -43;
               if (var6 > 0) {
                 if (var6 < 50) {
                   if (var6 >= 20) {
@@ -162,7 +162,7 @@ final class hi extends tk {
             } else {
               kj.field_l.d(var3, var4);
               var6 = fb.field_a + -125;
-              var7 = 43 / ((param1 - -18) / 54);
+              var7 = -43;
               if (var6 > 0) {
                 if (var6 < 50) {
                   if (var6 >= 20) {
@@ -289,7 +289,7 @@ final class hi extends tk {
               }
             }
             var6 = fb.field_a + -125;
-            var7 = 43 / ((param1 - -18) / 54);
+            var7 = -43;
             if (var6 > 0) {
               if (var6 < 50) {
                 if (var6 >= 20) {
@@ -408,7 +408,7 @@ final class hi extends tk {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_A = null;
     }
 

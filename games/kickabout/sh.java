@@ -10,7 +10,7 @@ final class sh {
     static String field_e;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_f = null;
@@ -19,9 +19,6 @@ final class sh {
     }
 
     final static int a(int param0, int param1) {
-        if (param0 != 70) {
-            return -7;
-        }
         return 320 - -(70 * param1) << 16;
     }
 

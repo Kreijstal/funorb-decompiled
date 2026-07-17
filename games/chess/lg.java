@@ -50,11 +50,13 @@ final class lg {
               if (param0 >= 68) {
                 break L1;
               } else {
-                int discarded$2 = lg.a((byte) -92);
+                int discarded$6 = lg.a((byte) -92);
                 break L1;
               }
             }
-            stackOut_2_0 = hf.a(true, param1, -17, 10);
+            int discarded$7 = 10;
+            int discarded$8 = -17;
+            stackOut_2_0 = hf.a(true, param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -163,17 +165,10 @@ final class lg {
                 }
               }
               L3: {
-                if (!param1) {
-                  break L3;
-                } else {
-                  lg.a((int[]) null, false, 99, -85, 76, 0, -23, 120, 25, 3, -33, 32, 68, 91, 124, 23, 71);
-                  break L3;
-                }
-              }
-              L4: {
+                lg.a((int[]) null, false, 99, -85, 76, 0, -23, 120, 25, 3, -33, 32, 68, 91, 124, 23, 71);
                 var34 = -param3 + param6;
                 if (~param12 != ~param3) {
-                  L5: {
+                  L4: {
                     var30 = param9 << 16;
                     var29 = param9 << 16;
                     var18 = param2 << 16;
@@ -196,7 +191,7 @@ final class lg {
                       var36 = var19;
                       var19 = var20;
                       var20 = var36;
-                      break L5;
+                      break L4;
                     } else {
                       var31 = (-param9 + param8 << 16) / var35;
                       var27 = (param7 - param4 << 16) / var35;
@@ -205,11 +200,11 @@ final class lg {
                       var23 = (param16 - param11 << 16) / var35;
                       var33 = 0;
                       var24 = (param13 - param11 << 16) / var34;
-                      break L5;
+                      break L4;
                     }
                   }
-                  L6: {
-                    L7: {
+                  L5: {
+                    L6: {
                       if (param3 < 0) {
                         if (param12 >= 0) {
                           param3 = -param3;
@@ -222,7 +217,7 @@ final class lg {
                           var22 = var22 + var24 * param3;
                           var18 = var18 + var20 * param3;
                           param3 = 0;
-                          break L7;
+                          break L6;
                         } else {
                           param3 = -param3 + param12;
                           var17_int = var17_int + param3 * var19;
@@ -234,54 +229,54 @@ final class lg {
                           var22 = var22 + var24 * param3;
                           var21 = var21 + var23 * param3;
                           param3 = param12;
-                          break L6;
+                          break L5;
                         }
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                     var36 = nh.field_p[param3];
-                    L8: while (true) {
+                    L7: while (true) {
                       if (~param3 <= ~param12) {
-                        break L6;
+                        break L5;
                       } else {
-                        L9: {
+                        L8: {
                           var37 = var17_int >> 16;
                           if (nh.field_o > var37) {
                             var38 = (var18 >> 16) + -(var17_int >> 16);
                             if (var38 == 0) {
                               if (var37 < 0) {
-                                break L9;
+                                break L8;
                               } else {
                                 if (~var37 > ~nh.field_o) {
                                   pi.a(0, 0, var25, param0, 0, var38, var29, var36 + var37, var21, -127);
-                                  break L9;
+                                  break L8;
                                 } else {
-                                  break L9;
+                                  break L8;
                                 }
                               }
                             } else {
-                              L10: {
+                              L9: {
                                 var39 = (-var21 + var22) / var38;
                                 var40 = (var26 - var25) / var38;
                                 var41 = (var30 + -var29) / var38;
                                 if (~nh.field_o >= ~(var37 + var38)) {
                                   var38 = -1 + -var37 + nh.field_o;
-                                  break L10;
+                                  break L9;
                                 } else {
-                                  break L10;
+                                  break L9;
                                 }
                               }
                               if (var37 >= 0) {
                                 pi.a(var41, var40, var25, param0, var39, var38, var29, var36 + var37, var21, 56);
-                                break L9;
+                                break L8;
                               } else {
                                 pi.a(var41, var40, -(var37 * var40) + var25, param0, var39, var37 + var38, var29 - var41 * var37, var36, -(var37 * var39) + var21, 90);
-                                break L9;
+                                break L8;
                               }
                             }
                           } else {
-                            break L9;
+                            break L8;
                           }
                         }
                         param3++;
@@ -295,7 +290,7 @@ final class lg {
                           var25 = var25 + var27;
                           var18 = var18 + var20;
                           var30 = var30 + var32;
-                          continue L8;
+                          continue L7;
                         } else {
                           return;
                         }
@@ -312,9 +307,9 @@ final class lg {
                     var19 = 0;
                     var24 = 0;
                     var31 = 0;
-                    break L4;
+                    break L3;
                   } else {
-                    L11: {
+                    L10: {
                       var37 = param15 << 16;
                       var38 = param13 << 16;
                       var39 = param5 << 16;
@@ -323,13 +318,13 @@ final class lg {
                         var25 = param7 << 16;
                         var21 = param16 << 16;
                         var29 = param8 << 16;
-                        break L11;
+                        break L10;
                       } else {
                         var22 = param16 << 16;
                         var26 = param7 << 16;
                         var30 = param8 << 16;
                         var18 = param14 << 16;
-                        break L11;
+                        break L10;
                       }
                     }
                     var40 = param10 << 16;
@@ -341,10 +336,10 @@ final class lg {
                     var31 = (-var29 + var40) / var36;
                     var23 = (var38 + -var21) / var36;
                     var32 = (var40 - var30) / var36;
-                    break L4;
+                    break L3;
                   }
                 } else {
-                  L12: {
+                  L11: {
                     if (~param3 == ~param6) {
                       var31 = 0;
                       var29 = param9;
@@ -362,7 +357,7 @@ final class lg {
                       var23 = 0;
                       var21 = param11;
                       var18 = param14 << 16;
-                      break L12;
+                      break L11;
                     } else {
                       var35 = param6 - param12;
                       if (~param2 > ~param14) {
@@ -382,7 +377,7 @@ final class lg {
                         var25 = param4 << 16;
                         var24 = (param13 - param16 << 16) / var35;
                         var19 = (param15 + -param2 << 16) / var34;
-                        break L12;
+                        break L11;
                       } else {
                         var19 = (param15 - param14 << 16) / var35;
                         var24 = (-param11 + param13 << 16) / var34;
@@ -400,7 +395,7 @@ final class lg {
                         var32 = (-param9 + param10 << 16) / var34;
                         var28 = (param5 - param4 << 16) / var34;
                         var18 = param2 << 16;
-                        break L12;
+                        break L11;
                       }
                     }
                   }
@@ -416,15 +411,15 @@ final class lg {
                     var30 = var30 + var32 * param3;
                     var29 = var29 + var31 * param3;
                     param3 = 0;
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
               }
-              L13: {
+              L12: {
                 if (param3 >= 0) {
-                  break L13;
+                  break L12;
                 } else {
                   param3 = -param3;
                   var30 = var30 + param3 * var32;
@@ -436,48 +431,48 @@ final class lg {
                   var18 = var18 + var20 * param3;
                   var25 = var25 + var27 * param3;
                   param3 = 0;
-                  break L13;
+                  break L12;
                 }
               }
               var35 = nh.field_p[param3];
-              L14: while (true) {
+              L13: while (true) {
                 if (param6 <= param3) {
                   return;
                 } else {
-                  L15: {
+                  L14: {
                     var36 = var17_int >> 16;
                     if (nh.field_o <= var36) {
-                      break L15;
+                      break L14;
                     } else {
                       var37 = -(var17_int >> 16) + (var18 >> 16);
                       if (var37 != 0) {
-                        L16: {
+                        L15: {
                           var38 = (var22 + -var21) / var37;
                           var39 = (-var25 + var26) / var37;
                           var40 = (var30 + -var29) / var37;
                           if (~nh.field_o < ~(var37 + var36)) {
-                            break L16;
+                            break L15;
                           } else {
                             var37 = -1 + nh.field_o + -var36;
-                            break L16;
+                            break L15;
                           }
                         }
                         if (var36 < 0) {
                           pi.a(var40, var39, var25 - var36 * var39, param0, var38, var37 + var36, -(var40 * var36) + var29, var35, var21 - var36 * var38, 4);
-                          break L15;
+                          break L14;
                         } else {
                           pi.a(var40, var39, var25, param0, var38, var37, var29, var36 - -var35, var21, 84);
-                          break L15;
+                          break L14;
                         }
                       } else {
                         if (var36 < 0) {
-                          break L15;
+                          break L14;
                         } else {
                           if (~var36 <= ~nh.field_o) {
-                            break L15;
+                            break L14;
                           } else {
                             pi.a(0, 0, var25, param0, 0, var37, var29, var36 - -var35, var21, 8);
-                            break L15;
+                            break L14;
                           }
                         }
                       }
@@ -494,7 +489,7 @@ final class lg {
                     var35 = var35 + wb.field_h;
                     var30 = var30 + var32;
                     var21 = var21 + var23;
-                    continue L14;
+                    continue L13;
                   } else {
                     return;
                   }
@@ -507,7 +502,7 @@ final class lg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

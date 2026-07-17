@@ -11,9 +11,11 @@ final class rd {
     final static w b(int param0) {
         if (param0 > -26) {
             int discarded$0 = rd.a((byte) -21, 73, 124);
-            return df.i(119);
+            int discarded$1 = 119;
+            return df.i();
         }
-        return df.i(119);
+        int discarded$2 = 119;
+        return df.i();
     }
 
     final bh a(bh param0, boolean param1) {
@@ -103,7 +105,7 @@ final class rd {
         return stackIn_11_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
         field_e = null;
@@ -437,7 +439,7 @@ final class rd {
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -579,7 +581,9 @@ final class rd {
         try {
           L0: {
             if (param1 == -27454) {
-              stackOut_3_0 = ug.a(param0, false, 100);
+              int discarded$4 = 100;
+              int discarded$5 = 0;
+              stackOut_3_0 = ug.a(param0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -621,7 +625,7 @@ final class rd {
         return stackIn_4_0;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -634,7 +638,7 @@ final class rd {
           L0: {
             var5 = a.field_r;
             var1 = var5;
-            var2 = param0;
+            var2 = 0;
             var3 = var5.length;
             L1: while (true) {
               if (var2 >= var3) {
@@ -671,7 +675,7 @@ final class rd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1_ref, "rd.M(" + param0 + 41);
+          throw dh.a((Throwable) (Object) var1_ref, "rd.M(" + 0 + 41);
         }
     }
 

@@ -603,7 +603,7 @@ final class vb extends tc {
         return var2 != 0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_q = null;
         field_t = null;
         field_o = null;
@@ -819,7 +819,8 @@ final class vb extends tc {
             ((vb) this).field_s = true;
             ((vb) this).field_B = null;
             ((vb) this).field_r.f(param0 + 7);
-            oo.e(-387);
+            int discarded$1 = -387;
+            oo.e();
             break L3;
           }
         }

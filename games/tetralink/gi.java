@@ -6742,8 +6742,8 @@ final class gi {
     }
 
     final static boolean a(boolean param0, CharSequence param1) {
-        int var2_int = 0;
         RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int stackIn_5_0 = 0;
         boolean stackIn_12_0 = false;
@@ -6772,38 +6772,30 @@ final class gi {
         var3 = TetraLink.field_J;
         try {
           L0: {
-            if (!i.a(true, param0, param1)) {
+            if (!i.a(true, false, param1)) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0 != 0;
             } else {
-              L1: {
-                if (!param0) {
-                  break L1;
-                } else {
-                  gi.a(14, 36, 67, 82, (ie) null, -10, (String) null, -2, 20);
-                  break L1;
-                }
-              }
               var2_int = 0;
-              L2: while (true) {
-                L3: {
-                  L4: {
+              L1: while (true) {
+                L2: {
+                  L3: {
                     if (~param1.length() >= ~var2_int) {
-                      break L4;
+                      break L3;
                     } else {
                       stackOut_11_0 = sj.a(3010, param1.charAt(var2_int));
                       stackIn_19_0 = stackOut_11_0 ? 1 : 0;
                       stackIn_12_0 = stackOut_11_0;
                       if (var3 != 0) {
-                        break L3;
+                        break L2;
                       } else {
                         if (stackIn_12_0) {
                           var2_int++;
                           if (var3 == 0) {
-                            continue L2;
+                            continue L1;
                           } else {
-                            break L4;
+                            break L3;
                           }
                         } else {
                           stackOut_15_0 = 0;
@@ -6815,7 +6807,7 @@ final class gi {
                   }
                   stackOut_18_0 = 1;
                   stackIn_19_0 = stackOut_18_0;
-                  break L3;
+                  break L2;
                 }
                 break L0;
               }
@@ -6823,10 +6815,10 @@ final class gi {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var2 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2;
-            stackOut_20_1 = new StringBuilder().append("gi.D(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("gi.D(").append(0).append(44);
             stackIn_23_0 = stackOut_20_0;
             stackIn_23_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -6838,7 +6830,7 @@ final class gi {
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
-              break L5;
+              break L4;
             } else {
               stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
@@ -6846,7 +6838,7 @@ final class gi {
               stackIn_24_0 = stackOut_21_0;
               stackIn_24_1 = stackOut_21_1;
               stackIn_24_2 = stackOut_21_2;
-              break L5;
+              break L4;
             }
           }
           throw oi.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
@@ -6889,15 +6881,7 @@ final class gi {
         String stackOut_10_2 = null;
         try {
           L0: {
-            L1: {
-              ji.field_Lb = param6;
-              if (param2 == 1) {
-                break L1;
-              } else {
-                field_d = null;
-                break L1;
-              }
-            }
+            ji.field_Lb = param6;
             je.field_f = param3;
             dh.field_l = param8;
             ui.field_g = param0;
@@ -6912,10 +6896,10 @@ final class gi {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var9 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var9;
-            stackOut_5_1 = new StringBuilder().append("gi.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_5_1 = new StringBuilder().append("gi.B(").append(param0).append(44).append(param1).append(44).append(1).append(44).append(param3).append(44);
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -6927,7 +6911,7 @@ final class gi {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L2;
+              break L1;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -6935,10 +6919,10 @@ final class gi {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L2;
+              break L1;
             }
           }
-          L3: {
+          L2: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param5).append(44);
             stackIn_12_0 = stackOut_9_0;
@@ -6952,7 +6936,7 @@ final class gi {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L3;
+              break L2;
             } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
@@ -6960,7 +6944,7 @@ final class gi {
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
               stackIn_13_2 = stackOut_10_2;
-              break L3;
+              break L2;
             }
           }
           throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param7 + 44 + param8 + 41);

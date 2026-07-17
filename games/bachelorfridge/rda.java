@@ -6,27 +6,24 @@ final class rda {
     static byte[] field_b;
 
     final static void a(byte param0, int param1, int param2, sga param3, int param4, ema param5, int param6) {
-        ik var12 = null;
+        ik var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        mna.a(-1, (int[]) null, param5.field_Eb, param5.field_Nb, param5.field_Hb, -1, param0 + -7, param3, (sna) (Object) param5);
-        ms.field_u.a(param0 + 220, true);
+        mna.a(-1, (int[]) null, param5.field_Eb, param5.field_Nb, param5.field_Hb, -1, -111, param3, (sna) (Object) param5);
+        ms.field_u.a(116, true);
         ms.field_u.a((int[]) null, (byte) -117, 0);
         ms.field_u.a(21654);
-        if (param0 != -104) {
-            return;
-        }
         try {
-            var12 = ms.field_u;
+            var7 = ms.field_u;
             var8 = param6;
             var9 = param4;
-            var10 = param2;
-            var11 = param1;
-            var12.field_a.a(var10, false, var8, var11, var9);
+            var10 = 0;
+            var11 = 0;
+            var7.field_a.a(var10, false, var8, var11, var9);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rda.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "rda.B(" + -104 + 44 + 0 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
         }
     }
 
@@ -51,7 +48,7 @@ final class rda {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -162,7 +159,8 @@ final class rda {
                     break L10;
                   }
                 }
-                dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                int discarded$8 = 0;
+                dl.field_j = ek.a(var4 * var2, var5 * var2);
                 return;
               }
             }
@@ -211,7 +209,8 @@ final class rda {
               break L15;
             }
           }
-          dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+          int discarded$9 = 0;
+          dl.field_j = ek.a(var4 * var2, var5 * var2);
           return;
         } else {
           if (var3 >= 105) {
@@ -318,7 +317,8 @@ final class rda {
                         break L26;
                       }
                     }
-                    dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                    int discarded$10 = 0;
+                    dl.field_j = ek.a(var4 * var2, var5 * var2);
                     return;
                   }
                 }
@@ -367,7 +367,8 @@ final class rda {
                   break L31;
                 }
               }
-              dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+              int discarded$11 = 0;
+              dl.field_j = ek.a(var4 * var2, var5 * var2);
               return;
             } else {
               L32: {
@@ -469,7 +470,8 @@ final class rda {
                     break L42;
                   }
                 }
-                dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                int discarded$12 = 0;
+                dl.field_j = ek.a(var4 * var2, var5 * var2);
                 return;
               } else {
                 L43: {
@@ -518,7 +520,8 @@ final class rda {
                     break L47;
                   }
                 }
-                dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                int discarded$13 = 0;
+                dl.field_j = ek.a(var4 * var2, var5 * var2);
                 return;
               }
             }
@@ -623,7 +626,8 @@ final class rda {
                   break L58;
                 }
               }
-              dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+              int discarded$14 = 0;
+              dl.field_j = ek.a(var4 * var2, var5 * var2);
               return;
             } else {
               L59: {
@@ -672,14 +676,15 @@ final class rda {
                   break L63;
                 }
               }
-              dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+              int discarded$15 = 0;
+              dl.field_j = ek.a(var4 * var2, var5 * var2);
               return;
             }
           }
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

@@ -138,7 +138,7 @@ abstract class tm {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         int var2 = 0;
         int var3 = Pool.field_O;
         ((tm) this).field_k = new int[16][];
@@ -154,7 +154,8 @@ abstract class tm {
         int var5 = 0;
         hj[] var6 = null;
         var5 = Pool.field_O;
-        var6 = lm.a((byte) -32);
+        int discarded$2 = -32;
+        var6 = lm.a();
         var2 = var6;
         var3 = 0;
         var4 = 81;
@@ -426,10 +427,11 @@ abstract class tm {
         if (param0 != 7096) {
             ((tm) this).field_k = null;
         }
-        this.f(-128);
+        int discarded$0 = -128;
+        this.f();
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_h = null;
         field_i = null;
         field_b = null;

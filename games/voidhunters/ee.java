@@ -7,7 +7,7 @@ final class ee extends rqa {
     static String[][] field_q;
     static String field_r;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         int var1 = 0;
         return tjb.l(0);
     }
@@ -79,7 +79,7 @@ final class ee extends rqa {
         return stackIn_4_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_o = null;
         field_r = null;
         field_q = null;

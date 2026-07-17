@@ -10,7 +10,10 @@ final class lm {
     private int[] field_f;
 
     final static boolean a(int param0, int param1) {
-        return param0 >= 2;
+        if (param1 != 0) {
+            field_e = null;
+        }
+        return param0 >= 2 ? true : false;
     }
 
     final static oh a(int param0, String[] param1) {
@@ -83,7 +86,7 @@ final class lm {
         return stackIn_4_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -93,7 +96,8 @@ final class lm {
     final static void a(int param0) {
         t.field_g = false;
         cg.field_l = false;
-        bd.a(param0, true);
+        int discarded$0 = 1;
+        bd.a(param0);
         ka.field_l = ej.field_P;
         ik.field_g = ej.field_P;
     }

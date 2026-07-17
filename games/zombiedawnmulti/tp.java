@@ -53,7 +53,8 @@ final class tp extends un {
         try {
           L0: {
             var5 = (CharSequence) (Object) param1;
-            if (sj.a(var5, 12319)) {
+            int discarded$7 = 12319;
+            if (sj.a(var5)) {
               L1: {
                 if (!param1.equals((Object) (Object) ((tp) this).field_r)) {
                   L2: {
@@ -82,7 +83,7 @@ final class tp extends un {
                   break L3;
                 } else {
                   var4 = null;
-                  String discarded$2 = ((tp) this).a((String) null, 126);
+                  String discarded$8 = ((tp) this).a((String) null, 126);
                   break L3;
                 }
               }

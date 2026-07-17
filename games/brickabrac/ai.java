@@ -365,15 +365,19 @@ final class ai extends ki {
         return stackIn_19_0 != 0;
     }
 
-    public static void f(int param0) {
-        field_t = null;
-        if (param0 != 0) {
-            return;
-        }
+    public static void f() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
+            field_t = null;
             field_r = null;
-        } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ai.N(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw qb.a((Throwable) (Object) var1, "ai.N(" + 0 + 41);
         }
     }
 
@@ -1005,7 +1009,8 @@ final class ai extends ki {
                 }
               }
               L4: {
-                var6 = ge.a(((ai) this).field_m, param3, -20777);
+                int discarded$2 = -20777;
+                var6 = ge.a(((ai) this).field_m, param3);
                 if (!var6.a((byte) -84, param3, ((ai) this).field_m)) {
                   ej.a(0, bf.field_K, 1, 0, param3, var6);
                   var6.a(((ai) this).field_m, param3, (byte) 78);

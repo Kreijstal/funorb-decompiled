@@ -22,7 +22,7 @@ final class fh implements Iterator {
         ((fh) this).field_b = null;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_i = null;
         field_a = null;
@@ -79,27 +79,25 @@ final class fh implements Iterator {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            if (param0 == 100) {
-              L1: while (true) {
-                var3 = param1.a(param2, 6);
-                L2: while (true) {
-                  if (var3.field_e != 0) {
-                    if (var3.field_e == 1) {
-                      param2.setVisible(false);
-                      param2.dispose();
-                      break L0;
-                    } else {
-                      ao.a(100L, 1);
-                      continue L1;
-                    }
+            L1: while (true) {
+              var3 = param1.a(param2, 6);
+              L2: while (true) {
+                if (var3.field_e != 0) {
+                  if (var3.field_e == 1) {
+                    param2.setVisible(false);
+                    param2.dispose();
+                    break L0;
                   } else {
-                    ao.a(10L, 1);
-                    continue L2;
+                    int discarded$20 = 1;
+                    ao.a(100L);
+                    continue L1;
                   }
+                } else {
+                  int discarded$21 = 1;
+                  ao.a(10L);
+                  continue L2;
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -107,7 +105,7 @@ final class fh implements Iterator {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3_ref;
-            stackOut_10_1 = new StringBuilder().append("fh.A(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("fh.A(").append(100).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;

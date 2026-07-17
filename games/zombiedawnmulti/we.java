@@ -12,7 +12,7 @@ final class we extends br {
     br field_h;
     uj field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
         field_l = null;

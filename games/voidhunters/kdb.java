@@ -79,7 +79,7 @@ final class kdb extends rqa {
                 bpa.a(param3, param0, (byte) -25, param4, param1);
             }
         }
-        int var5 = 54 % ((param2 - 59) / 49);
+        int var5 = 0;
     }
 
     final nc a(nc[] param0, int param1) {

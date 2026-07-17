@@ -13,28 +13,20 @@ final class ph implements jk {
     ff[][] field_f;
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (bg.field_g) {
-          return wi.field_c.a(oq.field_j, ho.field_h, true);
-        } else {
-          if (dp.field_t) {
-            return dp.a(-85, param1, param3);
-          } else {
-            if (!ed.a(param0 ^ 5, param3, param1)) {
-              if (ae.field_b) {
-                return false;
-              } else {
-                if (param0 != 4) {
-                  field_d = null;
-                  return le.a(param1, param2, false);
-                } else {
-                  return le.a(param1, param2, false);
-                }
-              }
-            } else {
-              return true;
-            }
-          }
+        if (!(!bg.field_g)) {
+            return wi.field_c.a(oq.field_j, ho.field_h, true);
         }
+        if (!(!dp.field_t)) {
+            return dp.a(-85, param1, param3);
+        }
+        if (ed.a(1, param3, param1)) {
+            return true;
+        }
+        if (!(!ae.field_b)) {
+            return false;
+        }
+        int discarded$0 = 0;
+        return le.a(param1, param2);
     }
 
     final static void a(int param0) {
@@ -74,16 +66,16 @@ final class ph implements jk {
         }
     }
 
-    final static void a(bc param0, int param1) {
+    final static void a(bc param0) {
         try {
             tc.a((byte) 23, param0.a(true, "tutorial.txt", ""));
-            int var2_int = -90 / ((param1 - -9) / 32);
+            int var2_int = 45;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ph.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ph.C(" + (param0 != null ? "{...}" : "null") + 44 + -85 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_c = null;

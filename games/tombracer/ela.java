@@ -85,14 +85,15 @@ abstract class ela extends od {
                       break L0;
                     } else {
                       var7 = null;
-                      boolean discarded$1 = ((ela) this).a(-67, (String) null, (bfa[]) null);
+                      boolean discarded$2 = ((ela) this).a(-67, (String) null, (bfa[]) null);
                       return true;
                     }
                   } else {
                     L2: {
                       if (param2[var4_int].field_a) {
                         L3: {
-                          var5 = jd.a(param2[var4_int].field_d, 0);
+                          int discarded$3 = 0;
+                          var5 = jd.a(param2[var4_int].field_d);
                           if (Boolean.TYPE != var5) {
                             break L3;
                           } else {

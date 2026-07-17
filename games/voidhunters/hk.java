@@ -142,14 +142,14 @@ final class hk extends le {
         }
     }
 
-    final static void b(int param0, int param1) {
-        nrb.field_b = new pgb[param0 * 15];
+    final static void b() {
+        nrb.field_b = new pgb[3000];
         ou.field_q = 0;
         dca.field_q = new int[3];
-        hab.field_k = param0;
+        hab.field_k = 200;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_i = null;
     }
 

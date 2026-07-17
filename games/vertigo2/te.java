@@ -18,18 +18,9 @@ final class te extends ji {
     }
 
     private final void d(int param0, int param1) {
-        if (param0 != -17016) {
-          field_y = null;
-          ((te) this).field_K = 4080 & param1 >> 4;
-          ((te) this).field_G = (16711680 & param1) >> 12;
-          ((te) this).field_A = (255 & param1) << 4;
-          return;
-        } else {
-          ((te) this).field_K = 4080 & param1 >> 4;
-          ((te) this).field_G = (16711680 & param1) >> 12;
-          ((te) this).field_A = (255 & param1) << 4;
-          return;
-        }
+        ((te) this).field_K = 4080 & param1 >> 4;
+        ((te) this).field_G = (16711680 & param1) >> 12;
+        ((te) this).field_A = (255 & param1) << 4;
     }
 
     private te(int param0) {
@@ -168,7 +159,7 @@ final class te extends ji {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_F = null;
         field_B = null;
         field_z = null;

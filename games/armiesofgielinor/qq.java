@@ -13,7 +13,7 @@ final class qq extends oj {
     static String field_H;
     int field_G;
 
-    final static void e(byte param0) {
+    final static void e() {
         if (ib.field_j != -fw.field_C) {
             if (250 - fw.field_C == ib.field_j) {
             }
@@ -466,33 +466,29 @@ final class qq extends oj {
           L0: {
             param0 = param0 << 8 | param0;
             var4_int = param0 ^ param0 >> 1;
-            if (param1 == -12933) {
-              var7 = 0;
-              L1: while (true) {
-                if (4 <= var7) {
-                  break L0;
-                } else {
-                  var5 = -54 + (bm.field_y[var7][0] + param3) + (var4_int & 15);
-                  var6 = param2 + (bm.field_y[var7][1] - -(param0 & 7) + -64);
-                  fe.a(jq.field_G[3], 60 + var5, var6 - -50, jq.field_G[3].field_A >> 1, jq.field_G[3].field_x >> 1);
-                  var4_int = var4_int >> 1;
-                  param0 = param0 >> 1;
-                  var7++;
-                  continue L1;
-                }
+            var7 = 0;
+            L1: while (true) {
+              if (4 <= var7) {
+                break L0;
+              } else {
+                var5 = -54 + (bm.field_y[var7][0] + param3) + (var4_int & 15);
+                var6 = param2 + (bm.field_y[var7][1] - -(param0 & 7) + -64);
+                fe.a(jq.field_G[3], 60 + var5, var6 - -50, jq.field_G[3].field_A >> 1, jq.field_G[3].field_x >> 1);
+                var4_int = var4_int >> 1;
+                param0 = param0 >> 1;
+                var7++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var4, "qq.T(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ig.a((Throwable) (Object) var4, "qq.T(" + param0 + 44 + -12933 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
-    final static void g(int param0) {
+    final static void g() {
         int var1_int = 0;
         int var2 = 0;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
@@ -516,13 +512,15 @@ final class qq extends oj {
                 oh.field_G[var2] = true;
             }
             oh.field_G[37] = false;
-            oh.field_G[32] = re.a(0, (byte) -98);
+            int discarded$0 = -98;
+            int discarded$1 = 0;
+            oh.field_G[32] = re.a();
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "qq.D(" + 1 + 41);
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_A = null;
         field_y = null;
         field_D = null;
@@ -821,16 +819,13 @@ final class qq extends oj {
     final static void a(kl param0, kl param1, kl param2, int param3, boolean param4) {
         se.field_g = cr.a("", 4210752);
         se.field_g.a(false, true);
-        if (param3 != 0) {
-            return;
-        }
         try {
             kr.a(param2, false, param1, param0);
             da.b(-2);
             oh.field_L = nb.field_i;
             mh.field_b = nb.field_i;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "qq.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "qq.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 0 + 44 + param4 + 41);
         }
     }
 

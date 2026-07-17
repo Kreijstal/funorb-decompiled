@@ -39,10 +39,7 @@ final class ij extends kc {
     }
 
     final static boolean b(int param0, int param1) {
-        if (param1 != 10) {
-            return false;
-        }
-        return param0 >= 0 ? true : false;
+        return param0 >= 0;
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
@@ -63,7 +60,8 @@ final class ij extends kc {
               break L0;
             } else {
               if (((ij) this).field_Ib[param3] == -1) {
-                ua.g(-19741);
+                int discarded$25 = -19741;
+                ua.g();
                 gb.a(14);
                 break L0;
               } else {
@@ -774,7 +772,7 @@ final class ij extends kc {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_Ob = null;
         field_Tb = null;
         field_Gb = null;

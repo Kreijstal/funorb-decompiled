@@ -14,9 +14,10 @@ final class kc extends oj {
         return var3;
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         vi.a(-76);
-        mw.b(dh.field_n[0].field_A, jn.field_c, mi.field_l, gl.field_c, jn.field_d, 1);
+        int discarded$0 = 1;
+        mw.b(dh.field_n[0].field_A, jn.field_c, mi.field_l, gl.field_c, jn.field_d);
     }
 
     final void a(ha param0, int param1) {

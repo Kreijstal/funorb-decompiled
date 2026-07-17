@@ -20,26 +20,21 @@ abstract class um {
             var4 = (kg) (Object) we.field_c.c((byte) 65);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  if (param0 == 10) {
-                    break L2;
-                  } else {
-                    field_e = false;
-                    break L2;
-                  }
-                }
                 var2 = ke.field_f.c((byte) -34);
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    hi.a(1, 6);
+                    int discarded$10 = 6;
+                    int discarded$11 = 1;
+                    hi.a();
                     var2 = ke.field_f.f((byte) -5);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                fr.a(98, var4, 6);
+                int discarded$12 = 6;
+                fr.a(98, var4);
                 var4 = (kg) (Object) we.field_c.f((byte) -5);
                 continue L1;
               }
@@ -48,7 +43,7 @@ abstract class um {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2_ref, "um.T(" + param0 + 44 + 6 + 41);
+          throw wm.a((Throwable) (Object) var2_ref, "um.T(" + 10 + 44 + 6 + 41);
         }
     }
 

@@ -92,53 +92,29 @@ abstract class loa {
                   }
                 }
                 if (param0 == 2) {
-                  if (caa.field_i == param3) {
-                    if (param2 != 108) {
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    ce.field_B = true;
-                    caa.field_i = param3;
-                    wga.a(true, param1);
-                    if (param2 != 108) {
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                } else {
-                  if (param2 != 108) {
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                if (param0 == 2) {
                   if (caa.field_i != param3) {
                     ce.field_B = true;
                     caa.field_i = param3;
                     wga.a(true, param1);
-                    if (param2 != 108) {
-                      return;
-                    } else {
-                      return;
-                    }
+                    return;
                   } else {
-                    if (param2 != 108) {
-                      return;
-                    } else {
-                      return;
-                    }
+                    return;
                   }
                 } else {
-                  if (param2 != 108) {
+                  return;
+                }
+              } else {
+                if (param0 == 2) {
+                  if (caa.field_i == param3) {
                     return;
                   } else {
+                    ce.field_B = true;
+                    caa.field_i = param3;
+                    wga.a(true, param1);
                     return;
                   }
+                } else {
+                  return;
                 }
               }
             }
@@ -155,55 +131,31 @@ abstract class loa {
               break L2;
             } else {
               if (param0 == 2) {
-                if (caa.field_i != param3) {
+                if (caa.field_i == param3) {
+                  return;
+                } else {
                   ce.field_B = true;
                   caa.field_i = param3;
                   wga.a(true, param1);
-                  if (param2 == 108) {
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (param2 != 108) {
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
               } else {
-                if (param2 != 108) {
-                  return;
-                } else {
-                  return;
-                }
+                return;
               }
             }
           }
         }
         if (param0 == 2) {
-          if (caa.field_i != param3) {
+          if (caa.field_i == param3) {
+            return;
+          } else {
             ce.field_B = true;
             caa.field_i = param3;
             wga.a(true, param1);
-            if (param2 == 108) {
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (param2 == 108) {
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
-          if (param2 == 108) {
-            return;
-          } else {
-            return;
-          }
+          return;
         }
     }
 
@@ -432,11 +384,8 @@ abstract class loa {
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         ss.field_c = param0;
         hc.field_h = param4;
-        if (param1) {
-            return;
-        }
-        gca.field_d = param2;
-        pka.field_b = param3;
+        gca.field_d = 0;
+        pka.field_b = 0;
     }
 
     loa(qea param0) {

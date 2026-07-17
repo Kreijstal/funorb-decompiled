@@ -80,7 +80,7 @@ final class vd {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_g = null;
         field_a = null;
@@ -126,9 +126,6 @@ final class vd {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         pj.field_E = param1;
-        if (param2) {
-            field_a = null;
-        }
         b.field_h = param0;
         a.field_i = param3;
     }
@@ -204,7 +201,8 @@ final class vd {
         var2 = 0;
         L1: while (true) {
           if (bd.field_M <= var2) {
-            oc.a((byte) -21);
+            int discarded$1 = -21;
+            oc.a();
             return var1;
           } else {
             var3 = qa.field_J[var2] * gf.field_o[var2];
@@ -270,7 +268,7 @@ final class vd {
         return var3;
     }
 
-    final static StringBuilder a(char param0, StringBuilder param1, int param2, boolean param3) {
+    final static StringBuilder a(char param0, StringBuilder param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -297,15 +295,15 @@ final class vd {
         try {
           L0: {
             var4_int = param1.length();
-            param1.setLength(param2);
+            param1.setLength(0);
             var5 = var4_int;
             L1: while (true) {
-              if (param2 <= var5) {
+              if (0 <= var5) {
                 stackOut_4_0 = (StringBuilder) param1;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                param1.setCharAt(var5, param0);
+                param1.setCharAt(var5, ' ');
                 var5++;
                 continue L1;
               }
@@ -316,7 +314,7 @@ final class vd {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("vd.J(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("vd.J(").append(32).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -339,7 +337,7 @@ final class vd {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + 0 + 41);
+          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 44 + 0 + 41);
         }
         return stackIn_5_0;
     }

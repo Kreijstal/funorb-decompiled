@@ -142,7 +142,7 @@ final class ff {
         }
     }
 
-    final static void a(vf param0, sb param1, int param2, boolean param3) {
+    final static void a(vf param0, sb param1, int param2) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;
@@ -408,7 +408,7 @@ final class ff {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_f = null;

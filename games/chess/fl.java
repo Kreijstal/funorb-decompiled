@@ -18,11 +18,11 @@ final class fl extends o {
     static String field_s;
     static um field_m;
 
-    final static ci c(byte param0) {
+    final static ci c() {
         return fg.field_d.field_Fb;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -44,7 +44,7 @@ final class fl extends o {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_s = null;
         field_m = null;
         field_k = null;
@@ -110,7 +110,7 @@ final class fl extends o {
                   break L2;
                 } else {
                   var7 = null;
-                  boolean discarded$2 = fl.a((int[]) null, -126L, 111, (String) null, (byte) 60);
+                  boolean discarded$4 = fl.a((int[]) null, -126L, 111, (String) null, (byte) 60);
                   break L2;
                 }
               }
@@ -119,7 +119,8 @@ final class fl extends o {
               var8 = (CharSequence) (Object) param3;
               ec.field_f = ad.a(var8, -2);
               re.field_p = param1;
-              var6 = dn.a(va.field_d, param0, vj.field_g, wk.field_c, 13911);
+              int discarded$5 = 13911;
+              var6 = dn.a(va.field_d, param0, vj.field_g, wk.field_c);
               pg.a((byte) -18, var6);
               stackOut_8_0 = 1;
               stackIn_9_0 = stackOut_8_0;

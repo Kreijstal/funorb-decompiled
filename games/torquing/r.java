@@ -37,7 +37,7 @@ final class r {
         try {
           L0: {
             var5_int = 0;
-            var7 = -80 % ((param2 - 4) / 43);
+            var7 = 0;
             var6 = param1;
             var8 = -param1;
             var9 = -1;
@@ -77,7 +77,7 @@ final class r {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var5, "r.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rb.a((Throwable) (Object) var5, "r.B(" + param0 + 44 + param1 + 44 + -121 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

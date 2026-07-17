@@ -7,7 +7,7 @@ final class kf {
     static int field_b;
     static Random field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -65,7 +65,8 @@ final class kf {
         L0: {
           kq.field_i = dg.field_c;
           kg.field_b = dg.field_i;
-          pm.f(199);
+          int discarded$2 = 199;
+          pm.f();
           lia.field_j.a(0, -42 + ng.field_e.field_p, 0, ng.field_e.field_sb, (byte) 59);
           dea.field_m.a(rg.field_h, 31407, kt.field_m.field_sb, 0, 0);
           var1 = 2 + rg.field_h;
@@ -141,7 +142,8 @@ final class kf {
         }
         L2: {
           ((sna) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_6_5);
-          pg.e(0);
+          int discarded$3 = 0;
+          pg.e();
           mc.field_g.a(40, 31407, ng.field_e.field_sb, 0, -40 + ng.field_e.field_p);
           wia.field_f.a(30, 31407, ui.field_r.field_sb, 0, 0);
           nea.field_yb.a(ui.field_r.field_p + -72, 31407, ui.field_r.field_sb, 0, 30);
@@ -176,7 +178,7 @@ final class kf {
         vh.field_y.a(40, 31407, -var3 + ui.field_r.field_sb, var3, ui.field_r.field_p + -40);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
     }
 
@@ -199,7 +201,7 @@ final class kf {
           }
         }
         var3 = stackIn_3_0;
-        var4 = -114 % ((20 - param1) / 63);
+        var4 = 0;
         if (gf.field_k != 9) {
           if (gf.field_k == 10) {
             if (var3 == 0) {
@@ -238,7 +240,8 @@ final class kf {
                       }
                     }
                   }
-                  if (!rna.b(7)) {
+                  int discarded$4 = 7;
+                  if (!rna.b()) {
                     return true;
                   } else {
                     var5 = null;
@@ -287,7 +290,8 @@ final class kf {
                           }
                         }
                       }
-                      if (!rna.b(7)) {
+                      int discarded$5 = 7;
+                      if (!rna.b()) {
                         return true;
                       } else {
                         var5 = null;
@@ -300,7 +304,8 @@ final class kf {
                       if (var3 != 0) {
                         return false;
                       } else {
-                        if (!rna.b(7)) {
+                        int discarded$6 = 7;
+                        if (!rna.b()) {
                           return true;
                         } else {
                           var5 = null;
@@ -309,7 +314,8 @@ final class kf {
                         }
                       }
                     } else {
-                      if (!rna.b(7)) {
+                      int discarded$7 = 7;
+                      if (!rna.b()) {
                         return true;
                       } else {
                         var5 = null;

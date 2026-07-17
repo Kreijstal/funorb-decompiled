@@ -7,7 +7,7 @@ final class rc {
     static int[] field_c;
     static int[] field_a;
 
-    final static void a(int param0) {
+    final static void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -264,7 +264,8 @@ final class rc {
                   if (~var2_int <= ~var3) {
                     break L2;
                   } else {
-                    if (!jq.a(param0.charAt(var2_int), -96)) {
+                    int discarded$4 = -96;
+                    if (!jq.a(param0.charAt(var2_int))) {
                       break L2;
                     } else {
                       var2_int++;
@@ -277,7 +278,8 @@ final class rc {
                     if (~var3 >= ~var2_int) {
                       break L4;
                     } else {
-                      if (!jq.a(param0.charAt(var3 + -1), -96)) {
+                      int discarded$5 = -96;
+                      if (!jq.a(param0.charAt(var3 + -1))) {
                         break L4;
                       } else {
                         var3--;
@@ -311,9 +313,10 @@ final class rc {
                           L7: {
                             var7 = param0.charAt(var6);
                             if (cp.a((byte) 64, (char) var7)) {
-                              var8 = wm.a((char) var7, (byte) 94);
+                              int discarded$6 = 94;
+                              var8 = wm.a((char) var7);
                               if (var8 != 0) {
-                                StringBuilder discarded$1 = var5.append(var8);
+                                StringBuilder discarded$7 = var5.append(var8);
                                 break L7;
                               } else {
                                 break L7;

@@ -12,19 +12,27 @@ final class p extends cg {
     private boolean field_m;
 
     final static de a(int param0, int param1) {
+        de[] var2 = null;
         int var3 = 0;
-        int var4 = Main.field_T;
-        de[] var5 = bg.v(113);
-        de[] var2 = var5;
-        for (var3 = 0; var3 < var5.length; var3++) {
-            if (!(param1 != var5[var3].field_a)) {
-                return var5[var3];
-            }
-        }
-        if (param0 == -1) {
+        int var4 = 0;
+        de[] var5 = null;
+        var4 = Main.field_T;
+        int discarded$2 = 113;
+        var5 = bg.v();
+        var2 = var5;
+        var3 = 0;
+        L0: while (true) {
+          if (var3 >= var5.length) {
             return null;
+          } else {
+            if (param1 == var5[var3].field_a) {
+              return var5[var3];
+            } else {
+              var3++;
+              continue L0;
+            }
+          }
         }
-        return null;
     }
 
     p(hf param0, hf param1) {
@@ -171,7 +179,8 @@ final class p extends cg {
             } else {
               L2: {
                 if (!param0.equals((Object) (Object) ((p) this).field_j)) {
-                  var3 = hg.a(param0, (byte) -125);
+                  int discarded$2 = -125;
+                  var3 = hg.a(param0);
                   if (!var3.a(640)) {
                     stackOut_10_0 = a.field_n;
                     stackIn_11_0 = stackOut_10_0;

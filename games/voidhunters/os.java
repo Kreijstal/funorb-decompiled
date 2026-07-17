@@ -34,7 +34,8 @@ class os extends gea implements oo {
               }
             }
           } else {
-            kia.a((byte) 63);
+            int discarded$5 = 63;
+            kia.a();
             if (param0 == -106) {
               return;
             } else {

@@ -55,7 +55,8 @@ final class cn extends java.awt.Canvas {
               }
             }
             if (vj.a(param2, param0, param1, (byte) 121)) {
-              stackOut_5_0 = cl.a(param3.a(param4 + -24766, param1, param2), true);
+              int discarded$2 = 1;
+              stackOut_5_0 = cl.a(param3.a(param4 + -24766, param1, param2));
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -144,11 +145,11 @@ final class cn extends java.awt.Canvas {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return qi.field_c;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
     }
@@ -189,7 +190,7 @@ final class cn extends java.awt.Canvas {
         try {
           L0: {
             L1: {
-              var2_int = 115 / ((param0 - 73) / 39);
+              var2_int = -57;
               var3 = param1.length();
               if (var3 <= 20) {
                 break L1;
@@ -259,7 +260,7 @@ final class cn extends java.awt.Canvas {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var2;
-            stackOut_18_1 = new StringBuilder().append("cn.A(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("cn.A(").append(-28).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;

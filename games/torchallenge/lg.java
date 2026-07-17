@@ -135,36 +135,32 @@ abstract class lg {
     final static int b(byte param0, int param1) {
         int[] var2 = null;
         int[] var3 = null;
-        if (param0 == 84) {
-          L0: {
-            var3 = bj.field_d;
-            var2 = var3;
-            if (var3[4] == param1) {
+        L0: {
+          var3 = bj.field_d;
+          var2 = var3;
+          if (var3[4] == param1) {
+            break L0;
+          } else {
+            if (var3[3] == param1) {
               break L0;
             } else {
-              if (var3[3] == param1) {
-                break L0;
-              } else {
-                if (var3[2] != param1) {
-                  if (param1 != var3[1]) {
-                    if (var3[0] != param1) {
-                      return -1;
-                    } else {
-                      return 2;
-                    }
+              if (var3[2] != param1) {
+                if (param1 != var3[1]) {
+                  if (var3[0] != param1) {
+                    return -1;
                   } else {
-                    return 4;
+                    return 2;
                   }
                 } else {
-                  return 0;
+                  return 4;
                 }
+              } else {
+                return 0;
               }
             }
           }
-          return 0;
-        } else {
-          return -106;
         }
+        return 0;
     }
 
     final int a(String param0, int param1, byte param2, int param3) {
@@ -552,7 +548,7 @@ abstract class lg {
         return ((lg) this).field_a.length;
     }
 
-    final static hb a(java.applet.Applet param0, int param1) {
+    final static hb a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         hb[] var3 = null;
@@ -586,7 +582,8 @@ abstract class lg {
           L0: {
             var2 = g.a("jagex-last-login-method", (byte) 75, param0);
             if (var2 != null) {
-              var3 = dg.j(1);
+              int discarded$2 = 1;
+              var3 = dg.j();
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {

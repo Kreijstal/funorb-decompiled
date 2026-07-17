@@ -38,7 +38,7 @@ final class cb extends kd {
         field_n = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -54,23 +54,15 @@ final class cb extends kd {
             var1_int = 0;
             L1: while (true) {
               if (var1_int >= 256) {
-                L2: {
-                  if (param0 <= -51) {
-                    break L2;
-                  } else {
-                    field_n = null;
-                    break L2;
-                  }
-                }
                 var5 = 256;
                 var1_int = var5;
-                L3: while (true) {
+                L2: while (true) {
                   if (var5 >= gl.field_e.length) {
                     break L0;
                   } else {
                     gl.field_e[var5] = 255;
                     var5++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -84,11 +76,11 @@ final class cb extends kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var1, "cb.C(" + param0 + 41);
+          throw ld.a((Throwable) (Object) var1, "cb.C(" + -110 + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ug.field_m = 0;
         nc.field_p = null;
         af.field_b = false;
@@ -99,9 +91,9 @@ final class cb extends kd {
     final static boolean a(byte param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_28_0 = 0;
         L0: {
           if (!param1) {
             if (oj.field_j[param3] >= oj.field_j[param2]) {
@@ -141,30 +133,22 @@ final class cb extends kd {
             }
           }
         }
-        L1: {
-          if (param0 >= 13) {
-            break L1;
-          } else {
-            cb.b(73);
-            break L1;
-          }
-        }
         var4 = hl.field_N[param3] + oc.field_a[param3] + l.field_D[param3];
         var5 = hl.field_N[param2] + oc.field_a[param2] + l.field_D[param2];
         if (var4 >= var5) {
           if (var5 >= var4) {
-            L2: {
+            L1: {
               if (param3 >= param2) {
-                stackOut_31_0 = 0;
-                stackIn_32_0 = stackOut_31_0;
-                break L2;
+                stackOut_29_0 = 0;
+                stackIn_30_0 = stackOut_29_0;
+                break L1;
               } else {
-                stackOut_30_0 = 1;
-                stackIn_32_0 = stackOut_30_0;
-                break L2;
+                stackOut_28_0 = 1;
+                stackIn_30_0 = stackOut_28_0;
+                break L1;
               }
             }
-            return stackIn_32_0 != 0;
+            return stackIn_30_0 != 0;
           } else {
             return false;
           }

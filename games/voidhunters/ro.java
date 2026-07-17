@@ -275,7 +275,7 @@ final class ro {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         int var1 = -121;
     }

@@ -490,78 +490,42 @@ final class nn {
         ca.field_D = (param1 & 53) >> 4;
         qe.field_m = (param1 & 15) >> 2;
         if (ca.field_D <= 2) {
-          el.field_t = param1 & 3;
-          if (param0) {
-            L0: {
-              if (qe.field_m > 2) {
-                qe.field_m = 2;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (el.field_t > 2) {
-              el.field_t = 2;
-              return;
+          L0: {
+            el.field_t = param1 & 3;
+            if (qe.field_m > 2) {
+              qe.field_m = 2;
+              break L0;
             } else {
-              return;
-            }
-          } else {
-            L1: {
-              nn.a(true, -24);
-              if (qe.field_m > 2) {
-                qe.field_m = 2;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if (el.field_t > 2) {
-              el.field_t = 2;
-              return;
-            } else {
-              return;
+              break L0;
             }
           }
-        } else {
-          ca.field_D = 2;
-          el.field_t = param1 & 3;
-          if (!param0) {
-            L2: {
-              nn.a(true, -24);
-              if (qe.field_m > 2) {
-                qe.field_m = 2;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            if (el.field_t <= 2) {
-              return;
-            } else {
-              el.field_t = 2;
-              return;
-            }
+          if (el.field_t > 2) {
+            el.field_t = 2;
+            return;
           } else {
-            L3: {
-              if (qe.field_m > 2) {
-                qe.field_m = 2;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            if (el.field_t > 2) {
-              el.field_t = 2;
-              return;
+            return;
+          }
+        } else {
+          L1: {
+            ca.field_D = 2;
+            el.field_t = param1 & 3;
+            if (qe.field_m > 2) {
+              qe.field_m = 2;
+              break L1;
             } else {
-              return;
+              break L1;
             }
+          }
+          if (el.field_t <= 2) {
+            return;
+          } else {
+            el.field_t = 2;
+            return;
           }
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -587,7 +551,8 @@ final class nn {
         try {
           L0: {
             L1: {
-              uh.a((java.awt.Component) (Object) param0, (byte) 97);
+              int discarded$5 = 97;
+              uh.a((java.awt.Component) (Object) param0);
               if (param1 < -40) {
                 break L1;
               } else {
@@ -637,9 +602,6 @@ final class nn {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 < 64) {
-            return;
-        }
         if (ij.field_j == null) {
             return;
         }

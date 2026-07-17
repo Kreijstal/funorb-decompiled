@@ -673,7 +673,8 @@ abstract class dc extends jl {
                 ((dc) this).field_I = var17;
                 ((dc) this).field_F = var15;
                 ((dc) this).field_A = var29;
-                if (!this.c(false)) {
+                int discarded$1 = 0;
+                if (!this.c()) {
                   break L4;
                 } else {
                   if (!((dc) this).g(-10603)) {
@@ -1236,7 +1237,7 @@ abstract class dc extends jl {
         }
     }
 
-    private final boolean c(boolean param0) {
+    private final boolean c() {
         double var2 = 0.0;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -1488,7 +1489,7 @@ abstract class dc extends jl {
         int var8 = -81 % ((-49 - param0) / 58);
     }
 
-    final static void e(byte param0) {
+    final static void e() {
     }
 
     int a(int param0, byte param1) {
@@ -1537,45 +1538,37 @@ abstract class dc extends jl {
           var6 = (param2 * (-((dc) this).field_v + ((dc) this).field_E) >> 16) + ((dc) this).field_v;
           var7 = var4 - var6 >> 4;
           var8 = var6 + var4 - -15 >> 4;
-          if (param0 == -9867) {
+          var9 = var5 + -var6 >> 4;
+          if (var7 >= 0) {
             break L0;
           } else {
-            ((dc) this).field_V = true;
+            var7 = 0;
             break L0;
           }
         }
         L1: {
-          var9 = var5 + -var6 >> 4;
-          if (var7 >= 0) {
+          if (var9 < 0) {
+            var9 = 0;
             break L1;
           } else {
-            var7 = 0;
             break L1;
           }
         }
         L2: {
-          if (var9 < 0) {
-            var9 = 0;
+          var10 = var6 + (var5 + 15) >> 4;
+          if (var8 <= 640) {
             break L2;
           } else {
+            var8 = 640;
             break L2;
           }
         }
         L3: {
-          var10 = var6 + (var5 + 15) >> 4;
-          if (var8 <= 640) {
-            break L3;
-          } else {
-            var8 = 640;
-            break L3;
-          }
-        }
-        L4: {
           if (var10 > 376) {
             var10 = 376;
-            break L4;
+            break L3;
           } else {
-            break L4;
+            break L3;
           }
         }
         var11 = var7 + 640 * var9;
@@ -1587,27 +1580,27 @@ abstract class dc extends jl {
         var10 = var10 << 4;
         var13 = ((((dc) this).field_H & 65280) * param1 & 16711680) + (-16711936 & (((dc) this).field_H & 16711935) * param1) >> 8;
         var14 = var9;
-        L5: while (true) {
+        L4: while (true) {
           if (var14 >= var10) {
             return;
           } else {
             var15 = var7;
-            L6: while (true) {
+            L5: while (true) {
               if (var15 >= var8) {
                 var11 = var11 + var12;
                 var14 += 16;
-                continue L5;
+                continue L4;
               } else {
-                L7: {
+                L6: {
                   if (!((dc) this).field_V) {
-                    break L7;
+                    break L6;
                   } else {
                     if (param2 <= ((dc) this).field_U * (var15 - ((dc) this).field_G) - -((-((dc) this).field_z + var14) * ((dc) this).field_O)) {
-                      break L7;
+                      break L6;
                     } else {
                       var11++;
                       var15 += 16;
-                      continue L6;
+                      continue L5;
                     }
                   }
                 }
@@ -1624,11 +1617,11 @@ abstract class dc extends jl {
                   fn.field_h[var11] = nl.a(var21, var19);
                   var11++;
                   var15 += 16;
-                  continue L6;
+                  continue L5;
                 } else {
                   var11++;
                   var15 += 16;
-                  continue L6;
+                  continue L5;
                 }
               }
             }

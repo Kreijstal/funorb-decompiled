@@ -142,7 +142,6 @@ final class jn implements ca {
         int var7 = 0;
         Object var8 = null;
         String[] var9 = null;
-        String[] var10 = null;
         String[] stackIn_15_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -241,7 +240,7 @@ final class jn implements ca {
                 case 4: {
                     try {
                         var8 = null;
-                        String[] discarded$2 = jn.a((String) null, (int[]) null, -127, (se) null);
+                        String[] discarded$4 = jn.a((String) null, (int[]) null, -127, (se) null);
                         statePc = 5;
                         continue stateLoop;
                     } catch (Throwable stateCaught_4) {
@@ -309,8 +308,7 @@ final class jn implements ca {
                 case 11: {
                     try {
                         var9 = new String[var4_int];
-                        var10 = var9;
-                        var5 = var10;
+                        var5 = var9;
                         var6 = 0;
                         statePc = 12;
                         continue stateLoop;
@@ -348,7 +346,8 @@ final class jn implements ca {
                 }
                 case 14: {
                     try {
-                        ig.a(var10, (byte) -121);
+                        int discarded$5 = -121;
+                        ig.a(var5);
                         stackOut_14_0 = (String[]) var5;
                         stackIn_15_0 = stackOut_14_0;
                         statePc = 15;
@@ -473,7 +472,7 @@ final class jn implements ca {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_n = null;
         field_k = null;
         field_l = null;

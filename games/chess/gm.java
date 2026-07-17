@@ -6809,15 +6809,19 @@ abstract class gm {
         sc.field_c = null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_a = null;
             field_b = null;
-            if (param0 != 6) {
-                boolean discarded$0 = gm.a(']', (byte) -50);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "gm.K(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw fk.a((Throwable) (Object) var1, "gm.K(" + 6 + 41);
         }
     }
 

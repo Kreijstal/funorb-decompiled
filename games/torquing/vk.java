@@ -303,27 +303,14 @@ final class vk extends am {
         var5 = (var5 << 12) / ((vk) this).field_G;
         var5 = (var5 << 12) / ((vk) this).field_D;
         var5 = var5 * ((vk) this).field_w >> 12;
-        if (param1 == 2016089164) {
-          if (param0 - -param2 < var5) {
-            if (-var5 >= param2 + param0) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (param0 - -param2 < var5) {
+          if (-var5 >= param2 + param0) {
             return false;
+          } else {
+            return true;
           }
         } else {
-          field_x = null;
-          if (param0 - -param2 < var5) {
-            if (-var5 >= param2 + param0) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
+          return false;
         }
     }
 
@@ -331,7 +318,8 @@ final class vk extends am {
         if (param0 < 123) {
             return;
         }
-        ie.a(14837);
+        int discarded$0 = 14837;
+        ie.a();
     }
 
     final void a(fj param0, int param1, int param2) {

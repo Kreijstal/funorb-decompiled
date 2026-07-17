@@ -9,10 +9,7 @@ final class oi {
         return -sg.field_d + c.field_e;
     }
 
-    public static void a(byte param0) {
-        if (param0 < 76) {
-            return;
-        }
+    public static void a() {
         field_a = null;
     }
 

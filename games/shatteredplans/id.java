@@ -8,14 +8,14 @@ final class id {
     static byte[] field_c;
     static ln field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_c = null;
         field_e = null;
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -161,7 +161,8 @@ final class id {
             }
             var4_int = param1.a(125, param2);
             var5 = param1.a(var4_int, (byte) 106, param3);
-            stackOut_2_0 = ga.a(param1, var5, var4_int, -20487);
+            int discarded$2 = -20487;
+            stackOut_2_0 = ga.a(param1, var5, var4_int);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -257,7 +258,7 @@ final class id {
         try {
             var7 = new lm();
             var3 = var7;
-            var7.field_c = args[param1];
+            var7.field_c = args[0];
             if (args.length > 2) {
                 var4 = new StringBuilder(args[1]);
                 for (var5 = 2; args.length > var5; var5++) {
@@ -270,60 +271,29 @@ final class id {
             }
             param2.a((byte) 33, var3);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "id.C(" + (args != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "id.C(" + (args != null ? "{...}" : "null") + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        Object var3 = null;
-        L0: {
-          var2 = 0;
-          if (param1 != 0) {
-            break L0;
-          } else {
+        if (param1 == 0) {
             var2 = vm.field_Bb;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 == 1) {
+        if (!(param1 != 1)) {
             var2 = sq.field_a;
-            break L1;
-          } else {
-            break L1;
-          }
         }
-        L2: {
-          if (param1 != 2) {
-            break L2;
-          } else {
+        if (param1 == 2) {
             var2 = ul.field_Hb;
-            break L2;
-          }
         }
-        if (param0 != -7019) {
-          var3 = null;
-          bi discarded$2 = id.a(20, (bc) null, (String) null, (String) null);
-          return var2;
-        } else {
-          return var2;
-        }
+        return var2;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         field_b = param4;
         e.field_d = param0;
-        if (param2 != 26883) {
-          field_b = 22;
-          dp.field_v = param1;
-          je.field_g = param3;
-          return;
-        } else {
-          dp.field_v = param1;
-          je.field_g = param3;
-          return;
-        }
+        dp.field_v = param1;
+        je.field_g = param3;
     }
 
     static {

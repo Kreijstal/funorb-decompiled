@@ -13,7 +13,7 @@ final class rf extends da {
     static int field_s;
     static String[][] field_m;
 
-    public static void g(int param0) {
+    public static void g() {
         field_m = null;
         field_n = null;
         field_o = null;

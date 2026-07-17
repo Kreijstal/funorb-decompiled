@@ -40,12 +40,12 @@ final class ok {
     static int[] field_G;
     static String field_d;
 
-    final static m[] b(byte param0) {
+    final static m[] b() {
         int var1 = -103;
         return new m[]{bb.field_J, mh.field_B, el.field_b};
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_b = null;
         field_d = null;

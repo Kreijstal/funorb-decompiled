@@ -11,7 +11,7 @@ final class am {
     static long field_a;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_b = null;
         field_h = null;
@@ -96,13 +96,14 @@ final class am {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    tg.a(-126, param0);
+                    tg.a(-126, 4);
                     var2 = mj.field_m.d(853);
                     continue L2;
                   }
                 }
               } else {
-                tl.a(-128, var3, param0);
+                int discarded$2 = 4;
+                tl.a(-128, var3);
                 var3 = (ha) (Object) oa.field_d.d(853);
                 continue L1;
               }
@@ -111,7 +112,7 @@ final class am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var2_ref, "am.C(" + param0 + 44 + 113 + 41);
+          throw dd.a((Throwable) (Object) var2_ref, "am.C(" + 4 + 44 + 113 + 41);
         }
     }
 

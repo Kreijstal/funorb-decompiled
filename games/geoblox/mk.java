@@ -238,7 +238,7 @@ final class mk extends q {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = 111 % ((param0 - 9) / 38);
+            var3_int = 0;
             var4 = new cd();
             ((jg) (Object) var4).field_b = param2;
             ((jg) (Object) var4).field_e = param1;
@@ -251,7 +251,7 @@ final class mk extends q {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("mk.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("mk.B(").append(-43).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

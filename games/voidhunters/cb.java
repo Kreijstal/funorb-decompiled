@@ -105,7 +105,7 @@ final class cb extends rqa {
           L0: {
             L1: {
               var2_int = param1.e((byte) -87);
-              if (~var2_int == param0) {
+              if (var2_int == 1) {
                 stackOut_2_0 = 1;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -125,7 +125,7 @@ final class cb extends rqa {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("cb.B(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("cb.B(").append(-2).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

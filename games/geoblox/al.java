@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class al {
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -72,7 +72,8 @@ final class al {
                     }
                   }
                 } else {
-                  gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+                  int discarded$16 = 125;
+                  gi.a((Throwable) null, "A1: " + og.e(55));
                   jl.a((byte) -120);
                   break L1;
                 }
@@ -91,51 +92,46 @@ final class al {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        var4 = Geoblox.field_C;
-        var2 = qi.b(3, param0 ^ 9667);
-        if (param0 == 9666) {
-          L0: {
-            var3 = param1;
-            if (var3 != 4) {
-              if (var3 == 3) {
-                td.a(-348, fl.field_c[var2 + 13]);
-                break L0;
-              } else {
-                if (var3 != 1) {
-                  if (var3 != 0) {
-                    if (var3 == 6) {
-                      td.a(-348, fl.field_c[var2 + 4]);
+        L0: {
+          var4 = Geoblox.field_C;
+          var2 = qi.b(3, 1);
+          var3 = param1;
+          if (var3 != 4) {
+            if (var3 == 3) {
+              td.a(-348, fl.field_c[var2 + 13]);
+              break L0;
+            } else {
+              if (var3 != 1) {
+                if (var3 != 0) {
+                  if (var3 == 6) {
+                    td.a(-348, fl.field_c[var2 + 4]);
+                    break L0;
+                  } else {
+                    if (5 == var3) {
+                      td.a(-348, fl.field_c[16 + var2]);
                       break L0;
                     } else {
-                      if (5 == var3) {
-                        td.a(-348, fl.field_c[16 + var2]);
+                      if (var3 == 2) {
+                        td.a(-348, fl.field_c[var2 + 19]);
                         break L0;
                       } else {
-                        if (var3 == 2) {
-                          td.a(-348, fl.field_c[var2 + 19]);
-                          break L0;
-                        } else {
-                          break L0;
-                        }
+                        break L0;
                       }
                     }
-                  } else {
-                    td.a(-348, fl.field_c[var2 + 1]);
-                    break L0;
                   }
                 } else {
-                  td.a(-348, fl.field_c[7 - -var2]);
+                  td.a(-348, fl.field_c[var2 + 1]);
                   break L0;
                 }
+              } else {
+                td.a(-348, fl.field_c[7 - -var2]);
+                break L0;
               }
-            } else {
-              td.a(-348, fl.field_c[10 + var2]);
-              break L0;
             }
+          } else {
+            td.a(-348, fl.field_c[10 + var2]);
+            break L0;
           }
-          return;
-        } else {
-          return;
         }
     }
 
@@ -304,25 +300,10 @@ final class al {
                     }
                     case 12: {
                         try {
-                            if (param0 == -109) {
-                                statePc = 16;
-                            } else {
-                                statePc = 13;
-                            }
+                            statePc = 16;
                             continue stateLoop;
                         } catch (Throwable stateCaught_12) {
                             caughtException = stateCaught_12;
-                            statePc = 15;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            al.a(114, -32);
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
                             statePc = 15;
                             continue stateLoop;
                         }
@@ -382,7 +363,7 @@ final class al {
                     case 20: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_20_0 = (RuntimeException) var2_ref;
-                        stackOut_20_1 = new StringBuilder().append("al.A(").append(param0).append(44);
+                        stackOut_20_1 = new StringBuilder().append("al.A(").append(-109).append(44);
                         stackIn_22_0 = stackOut_20_0;
                         stackIn_22_1 = stackOut_20_1;
                         stackIn_21_0 = stackOut_20_0;

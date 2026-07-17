@@ -7,7 +7,7 @@ final class oj extends jc {
     static int field_K;
     static String[][] field_M;
 
-    final static void o(int param0) {
+    final static void o() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -70,61 +70,53 @@ final class oj extends jc {
                     }
                   }
                 }
-                L3: {
-                  var10 = 256.0 / Math.sqrt((double)(var7 * var7 - -(var8 * var8) - -(var9 * var9)));
-                  var9 = (int)((double)var9 * var10);
-                  var7 = (int)((double)var7 * var10);
-                  var8 = (int)((double)var8 * var10);
-                  var12 = -var3 + var7;
-                  var13 = var8 + -var4;
-                  var14 = var9 - var5;
-                  var10 = 256.0 / Math.sqrt((double)(var13 * var13 + var12 * var12 - -(var14 * var14)));
-                  var14 = (int)((double)var14 * var10);
-                  var13 = (int)((double)var13 * var10);
-                  var12 = (int)((double)var12 * var10);
-                  var15 = 0;
-                  if (param0 == -1236579128) {
-                    break L3;
-                  } else {
-                    field_J = 107;
-                    break L3;
-                  }
-                }
-                L4: while (true) {
+                var10 = 256.0 / Math.sqrt((double)(var7 * var7 - -(var8 * var8) - -(var9 * var9)));
+                var9 = (int)((double)var9 * var10);
+                var7 = (int)((double)var7 * var10);
+                var8 = (int)((double)var8 * var10);
+                var12 = -var3 + var7;
+                var13 = var8 + -var4;
+                var14 = var9 - var5;
+                var10 = 256.0 / Math.sqrt((double)(var13 * var13 + var12 * var12 - -(var14 * var14)));
+                var14 = (int)((double)var14 * var10);
+                var13 = (int)((double)var13 * var10);
+                var12 = (int)((double)var12 * var10);
+                var15 = 0;
+                L3: while (true) {
                   if (aj.field_b.length <= var15) {
                     break L0;
                   } else {
                     var16 = 0;
                     var17_int = 1;
-                    L5: while (true) {
+                    L4: while (true) {
                       if (aj.field_b.length <= var17_int) {
                         var23[var16] = -2147483648;
                         var17 = aj.field_b[var16];
                         fd.a(3300, var16);
                         var18 = 0;
-                        L6: while (true) {
+                        L5: while (true) {
                           if (var18 >= 3) {
                             tm.a(var17, -363953584, pc.field_g, tk.field_d, true, false, false);
                             sl.a(-1, var8, var12, var7, var17, var13, var9, var14);
                             var15++;
-                            continue L4;
+                            continue L3;
                           } else {
                             tk.field_d[var18] = tk.field_d[var18] + pa.field_b[var15][var18];
                             var18++;
-                            continue L6;
+                            continue L5;
                           }
                         }
                       } else {
-                        L7: {
+                        L6: {
                           if (var23[var16] < var23[var17_int]) {
                             var16 = var17_int;
-                            break L7;
+                            break L6;
                           } else {
-                            break L7;
+                            break L6;
                           }
                         }
                         var17_int++;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   }
@@ -151,11 +143,11 @@ final class oj extends jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "oj.E(" + param0 + 41);
+          throw lj.a((Throwable) (Object) var1, "oj.E(" + -1236579128 + 41);
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
     }
 
     oj(fe param0) {
@@ -169,11 +161,8 @@ final class oj extends jc {
         }
     }
 
-    final static void a(pi param0, pi param1, byte param2) {
+    final static void a(pi param0, pi param1) {
         try {
-            if (param2 != -117) {
-                field_K = -82;
-            }
             if (param0.field_c != null) {
                 param0.b(34);
             }
@@ -182,15 +171,12 @@ final class oj extends jc {
             param0.field_c.field_f = param0;
             param0.field_f.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "oj.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "oj.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -117 + 41);
         }
     }
 
     final static void a(int param0, int param1) {
         dm.field_j = param0;
-        if (param1 != 3) {
-            field_K = 80;
-        }
     }
 
     public oj() {
@@ -198,7 +184,7 @@ final class oj extends jc {
         ((oj) this).field_L = 256;
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_M = null;
     }
 

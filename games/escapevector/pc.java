@@ -10,7 +10,7 @@ final class pc {
     static String field_g;
     static mf field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_g = null;
         field_e = null;
@@ -99,17 +99,11 @@ final class pc {
     final static int a(int param0, int param1) {
         int var2 = 0;
         if (param1 >= 0) {
-          if (fh.field_c.length > param1) {
-            if (param0 != 2513) {
-              field_c = null;
-              var2 = fh.field_c[param1].length;
-              return var2;
-            } else {
-              var2 = fh.field_c[param1].length;
-              return var2;
-            }
-          } else {
+          if (fh.field_c.length <= param1) {
             return 0;
+          } else {
+            var2 = fh.field_c[param1].length;
+            return var2;
           }
         } else {
           return 0;

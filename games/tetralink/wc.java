@@ -13,21 +13,13 @@ final class wc extends mb {
     static String field_G;
     static hl field_D;
 
-    public static void c(byte param0) {
+    public static void c() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_H = null;
-              field_K = null;
-              if (param0 == -103) {
-                break L1;
-              } else {
-                field_G = null;
-                break L1;
-              }
-            }
+            field_H = null;
+            field_K = null;
             field_G = null;
             field_E = null;
             field_D = null;
@@ -36,11 +28,11 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "wc.H(" + param0 + 41);
+          throw oi.a((Throwable) (Object) var1, "wc.H(" + -103 + 41);
         }
     }
 
-    final static void h(int param0) {
+    final static void h() {
         RuntimeException var1 = null;
         bc var1_ref = null;
         int var2 = 0;
@@ -131,7 +123,7 @@ final class wc extends mb {
                 } else {
                   var6 = fh.a(-32055, var7);
                   if (null != var6) {
-                    sd.field_nb.a((long)var8.hashCode(), (gb) (Object) var6, param0 + 104);
+                    sd.field_nb.a((long)var8.hashCode(), (gb) (Object) var6, 105);
                     break L6;
                   } else {
                     break L6;
@@ -142,9 +134,9 @@ final class wc extends mb {
                 if (var6 == null) {
                   var6 = new ud();
                   sd.field_nb.a((long)var8.hashCode(), (gb) (Object) var6, 113);
-                  int fieldTemp$2 = ca.field_c;
+                  int fieldTemp$3 = ca.field_c;
                   ca.field_c = ca.field_c + 1;
-                  var6.field_Rb = fieldTemp$2;
+                  var6.field_Rb = fieldTemp$3;
                   mm.field_s.a((mc) (Object) var6, false);
                   break L7;
                 } else {
@@ -156,7 +148,7 @@ final class wc extends mb {
               var6.field_Mb = var4_ref_String;
               return;
             } else {
-              if (param0 == var2) {
+              if (1 == var2) {
                 L8: {
                   if (null == wb.field_f) {
                     wb.field_f = new kd(128);
@@ -197,9 +189,9 @@ final class wc extends mb {
                   } else {
                     var6 = new ud();
                     wb.field_f.a((long)cc.a((CharSequence) (Object) var4_ref_String, (byte) 95).hashCode(), (gb) (Object) var6, 96);
-                    int fieldTemp$3 = qi.field_q;
+                    int fieldTemp$4 = qi.field_q;
                     qi.field_q = qi.field_q + 1;
-                    var6.field_Rb = fieldTemp$3;
+                    var6.field_Rb = fieldTemp$4;
                     og.field_j.a((mc) (Object) var6, false);
                     break L11;
                   }
@@ -296,7 +288,8 @@ final class wc extends mb {
                       return;
                     } else {
                       fk.a(-97, (Throwable) null, "F1: " + hc.a(false));
-                      mk.a(false);
+                      int discarded$5 = 0;
+                      mk.a();
                       break L0;
                     }
                   } else {
@@ -317,7 +310,7 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "wc.F(" + param0 + 41);
+          throw oi.a((Throwable) (Object) var1, "wc.F(" + 1 + 41);
         }
     }
 
@@ -404,9 +397,9 @@ final class wc extends mb {
         }
     }
 
-    final static void i(int param0) {
-        RuntimeException runtimeException = null;
+    final static void i() {
         int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -423,30 +416,30 @@ final class wc extends mb {
                   if (~var3 >= ~var2) {
                     break L3;
                   } else {
-                    int incrementValue$16 = var2;
+                    int incrementValue$24 = var2;
                     var2++;
-                    var1[incrementValue$16] = 0;
-                    int incrementValue$17 = var2;
+                    var1[incrementValue$24] = 0;
+                    int incrementValue$25 = var2;
                     var2++;
-                    var1[incrementValue$17] = 0;
-                    int incrementValue$18 = var2;
+                    var1[incrementValue$25] = 0;
+                    int incrementValue$26 = var2;
                     var2++;
-                    var1[incrementValue$18] = 0;
-                    int incrementValue$19 = var2;
+                    var1[incrementValue$26] = 0;
+                    int incrementValue$27 = var2;
                     var2++;
-                    var1[incrementValue$19] = 0;
-                    int incrementValue$20 = var2;
+                    var1[incrementValue$27] = 0;
+                    int incrementValue$28 = var2;
                     var2++;
-                    var1[incrementValue$20] = 0;
-                    int incrementValue$21 = var2;
+                    var1[incrementValue$28] = 0;
+                    int incrementValue$29 = var2;
                     var2++;
-                    var1[incrementValue$21] = 0;
-                    int incrementValue$22 = var2;
+                    var1[incrementValue$29] = 0;
+                    int incrementValue$30 = var2;
                     var2++;
-                    var1[incrementValue$22] = 0;
-                    int incrementValue$23 = var2;
+                    var1[incrementValue$30] = 0;
+                    int incrementValue$31 = var2;
                     var2++;
-                    var1[incrementValue$23] = 0;
+                    var1[incrementValue$31] = 0;
                     if (var4 != 0) {
                       break L2;
                     } else {
@@ -458,20 +451,15 @@ final class wc extends mb {
                     }
                   }
                 }
-                if (param0 == 3) {
-                  break L2;
-                } else {
-                  wc.c((byte) 12);
-                  break L2;
-                }
+                break L2;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) runtimeException, "wc.G(" + param0 + 41);
+          var1_ref = decompiledCaughtException;
+          throw oi.a((Throwable) (Object) var1_ref, "wc.G(" + 3 + 41);
         }
     }
 

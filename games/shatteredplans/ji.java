@@ -11,7 +11,7 @@ abstract class ji extends f implements ki {
 
     abstract int d(boolean param0);
 
-    public static void g(byte param0) {
+    public static void g() {
         field_E = null;
         field_G = null;
         field_F = null;
@@ -100,7 +100,7 @@ abstract class ji extends f implements ki {
         return kl.field_t;
     }
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String a(CharSequence param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -112,24 +112,24 @@ abstract class ji extends f implements ki {
         int var9 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_16_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_15_0 = null;
         Object stackOut_2_0 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
         String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 != null) {
@@ -140,7 +140,8 @@ abstract class ji extends f implements ki {
                 if (var2_int >= var3) {
                   break L1;
                 } else {
-                  if (!tc.a(param0.charAt(var2_int), 2)) {
+                  int discarded$4 = 2;
+                  if (!tc.a(param0.charAt(var2_int))) {
                     break L1;
                   } else {
                     var2_int++;
@@ -153,7 +154,8 @@ abstract class ji extends f implements ki {
                   if (var3 <= var2_int) {
                     break L3;
                   } else {
-                    if (!tc.a(param0.charAt(-1 + var3), 2)) {
+                    int discarded$5 = 2;
+                    if (!tc.a(param0.charAt(-1 + var3))) {
                       break L3;
                     } else {
                       var3--;
@@ -164,17 +166,9 @@ abstract class ji extends f implements ki {
                 var4 = -var2_int + var3;
                 if (var4 >= 1) {
                   if (var4 <= 12) {
-                    L4: {
-                      var5 = new StringBuilder(var4);
-                      var6 = var2_int;
-                      if (param1) {
-                        break L4;
-                      } else {
-                        int discarded$2 = ji.a(22);
-                        break L4;
-                      }
-                    }
-                    L5: while (true) {
+                    var5 = new StringBuilder(var4);
+                    var6 = var2_int;
+                    L4: while (true) {
                       if (var6 >= var3) {
                         if (var5.length() != 0) {
                           return var5.toString();
@@ -182,22 +176,23 @@ abstract class ji extends f implements ki {
                           return null;
                         }
                       } else {
-                        L6: {
+                        L5: {
                           var7 = param0.charAt(var6);
                           if (ne.a(0, (char) var7)) {
-                            var8 = os.a((char) var7, -31024);
+                            int discarded$6 = -31024;
+                            var8 = os.a((char) var7);
                             if (var8 != 0) {
-                              StringBuilder discarded$3 = var5.append(var8);
-                              break L6;
+                              StringBuilder discarded$7 = var5.append(var8);
+                              break L5;
                             } else {
-                              break L6;
+                              break L5;
                             }
                           } else {
-                            break L6;
+                            break L5;
                           }
                         }
                         var6++;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   } else {
@@ -217,37 +212,37 @@ abstract class ji extends f implements ki {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var2;
-            stackOut_30_1 = new StringBuilder().append("ji.K(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackOut_29_0 = (RuntimeException) var2;
+            stackOut_29_1 = new StringBuilder().append("ji.K(");
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
-              break L7;
-            } else {
               stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
               stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
-              break L7;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L6;
+            } else {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L6;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 41);
+          throw r.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + 1 + 41);
         }
     }
 
-    final static void a(String[] args, int param1) {
+    final static void a(String[] args) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -277,49 +272,47 @@ abstract class ji extends f implements ki {
           L0: {
             var2_int = -1;
             var3 = 0;
-            if (param1 == 62) {
-              L1: while (true) {
-                if (var3 >= args.length) {
-                  break L0;
-                } else {
-                  L2: {
-                    var4 = args[var3];
-                    if (var2_int != -1) {
-                      args[var3] = re.a("<col=<%0>>", nc.a(param1, 4397), new String[1]) + var4;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var5 = ua.a(var4, "<col=", 0);
-                  var6 = ua.a(var4, "</col>", param1 + -62);
-                  if (var5 <= var6) {
-                    L3: {
-                      if (var6 != -1) {
-                        var2_int = -1;
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    var3++;
-                    continue L1;
+            L1: while (true) {
+              if (var3 >= args.length) {
+                break L0;
+              } else {
+                L2: {
+                  var4 = args[var3];
+                  if (var2_int != -1) {
+                    args[var3] = re.a("<col=<%0>>", nc.a(62, 4397), new String[1]) + var4;
+                    break L2;
                   } else {
-                    L4: {
-                      var7 = var4.indexOf('>', var5);
-                      if (var7 == -1) {
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    var3++;
-                    continue L1;
+                    break L2;
                   }
                 }
+                int discarded$12 = 0;
+                var5 = ua.a(var4, "<col=");
+                int discarded$13 = 0;
+                var6 = ua.a(var4, "</col>");
+                if (var5 <= var6) {
+                  L3: {
+                    if (var6 != -1) {
+                      var2_int = -1;
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  var3++;
+                  continue L1;
+                } else {
+                  L4: {
+                    var7 = var4.indexOf('>', var5);
+                    if (var7 == -1) {
+                      break L4;
+                    } else {
+                      break L4;
+                    }
+                  }
+                  var3++;
+                  continue L1;
+                }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -350,7 +343,7 @@ abstract class ji extends f implements ki {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+          throw r.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 62 + 41);
         }
     }
 

@@ -12,7 +12,6 @@ final class wk {
     static String field_e;
 
     final static ln a(boolean param0, boolean param1) {
-        en var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -21,19 +20,18 @@ final class wk {
         en var8 = null;
         hj var9 = null;
         int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_23_0 = null;
+        int stackIn_9_0 = 0;
+        int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int[] stackOut_22_0 = null;
-        Object stackOut_21_0 = null;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int[] stackOut_21_0 = null;
+        Object stackOut_20_0 = null;
         L0: {
           var7 = HostileSpawn.field_I ? 1 : 0;
           var8 = sc.field_g;
-          var2 = var8;
           var3 = var8.l(32270);
           if (0 == (var3 & 128)) {
             stackOut_2_0 = 0;
@@ -45,59 +43,63 @@ final class wk {
             break L0;
           }
         }
-        pk.field_k = stackIn_3_0 != 0;
-        lb.field_b = 127 & var3;
-        ja.field_c = var8.l(32270);
-        pm.field_c = var8.c(10818);
-        if (param0) {
-          L1: {
-            if (lb.field_b != 2) {
-              qa.field_e = 0;
-              jg.field_c = 0;
-              break L1;
-            } else {
-              jg.field_c = var8.e(8);
-              qa.field_e = var8.h(64);
-              break L1;
-            }
+        L1: {
+          pk.field_k = stackIn_3_0 != 0;
+          lb.field_b = 127 & var3;
+          ja.field_c = var8.l(32270);
+          pm.field_c = var8.c(10818);
+          if (lb.field_b != 2) {
+            qa.field_e = 0;
+            jg.field_c = 0;
+            break L1;
+          } else {
+            jg.field_c = var8.e(8);
+            qa.field_e = var8.h(64);
+            break L1;
           }
-          L2: {
-            if (var8.l(32270) != 1) {
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
-              break L2;
-            } else {
-              stackOut_9_0 = 1;
-              stackIn_11_0 = stackOut_9_0;
-              break L2;
-            }
+        }
+        L2: {
+          if (var8.l(32270) != 1) {
+            stackOut_8_0 = 0;
+            stackIn_9_0 = stackOut_8_0;
+            break L2;
+          } else {
+            stackOut_7_0 = 1;
+            stackIn_9_0 = stackOut_7_0;
+            break L2;
           }
-          L3: {
-            var4 = stackIn_11_0;
-            qa.field_f = var8.o(32);
-            if (var4 == 0) {
-              qg.field_o = qa.field_f;
-              break L3;
-            } else {
-              qg.field_o = var8.o(32);
-              break L3;
-            }
+        }
+        L3: {
+          var4 = stackIn_9_0;
+          qa.field_f = var8.o(32);
+          if (var4 == 0) {
+            qg.field_o = qa.field_f;
+            break L3;
+          } else {
+            qg.field_o = var8.o(32);
+            break L3;
           }
-          L4: {
-            if (lb.field_b == 1) {
-              int discarded$4 = var8.e(8);
-              String discarded$5 = var8.o(32);
+        }
+        L4: {
+          if (lb.field_b == 1) {
+            int discarded$4 = var8.e(8);
+            String discarded$5 = var8.o(32);
+            break L4;
+          } else {
+            if (lb.field_b != 4) {
               break L4;
             } else {
-              if (lb.field_b != 4) {
-                break L4;
-              } else {
-                int discarded$6 = var8.e(8);
-                String discarded$7 = var8.o(32);
-                break L4;
-              }
+              int discarded$6 = var8.e(8);
+              String discarded$7 = var8.o(32);
+              break L4;
             }
           }
+        }
+        if (!param1) {
+          md.field_f = pk.a(80, 122, (vi) (Object) var8);
+          bn.field_b = null;
+          return new ln(param1);
+        } else {
           var5 = var8.e(8);
           try {
             L5: {
@@ -105,35 +107,31 @@ final class wk {
                 var9 = le.field_ub.a(var5, 1);
                 md.field_f = var9.d((byte) -53);
                 if (!qg.field_o.equals((Object) (Object) qg.field_r)) {
-                  stackOut_22_0 = var9.field_w;
-                  stackIn_23_0 = stackOut_22_0;
+                  stackOut_21_0 = var9.field_w;
+                  stackIn_22_0 = stackOut_21_0;
                   break L6;
                 } else {
-                  stackOut_21_0 = null;
-                  stackIn_23_0 = (int[]) (Object) stackOut_21_0;
+                  stackOut_20_0 = null;
+                  stackIn_22_0 = (int[]) (Object) stackOut_20_0;
                   break L6;
                 }
               }
-              bn.field_b = stackIn_23_0;
+              bn.field_b = stackIn_22_0;
               break L5;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            L7: {
-              var6 = (Exception) (Object) decompiledCaughtException;
-              ic.a((byte) -115, "CC1", (Throwable) (Object) var6);
-              md.field_f = null;
-              bn.field_b = null;
-              break L7;
-            }
+            var6 = (Exception) (Object) decompiledCaughtException;
+            ic.a((byte) -115, "CC1", (Throwable) (Object) var6);
+            md.field_f = null;
+            bn.field_b = null;
+            return new ln(param1);
           }
-          return new ln(false);
-        } else {
-          return null;
+          return new ln(param1);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_g = null;
@@ -143,20 +141,13 @@ final class wk {
     }
 
     final static ri a(int param0, int param1) {
-        ri var2 = null;
-        var2 = new ri();
+        ri var2 = new ri();
         ei.field_h.a((am) (Object) var2, 88);
-        if (param1 != -2178) {
-          field_e = null;
-          wg.d(param1 ^ 11338, param0);
-          return var2;
-        } else {
-          wg.d(param1 ^ 11338, param0);
-          return var2;
-        }
+        wg.d(-9420, 4);
+        return var2;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         oj var2 = null;
         int var3 = 0;

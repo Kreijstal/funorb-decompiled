@@ -188,7 +188,6 @@ final class td {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -212,19 +211,10 @@ final class td {
             var2_int = 0;
             L1: while (true) {
               if (lk.field_o.length <= var2_int) {
-                L2: {
-                  li.field_d = new tf(48, 48);
-                  li.field_d.c();
-                  if (param0 >= 117) {
-                    break L2;
-                  } else {
-                    var8 = null;
-                    td.a(-3, 104, 72, (tf[]) null, (byte) -122, -90);
-                    break L2;
-                  }
-                }
+                li.field_d = new tf(48, 48);
+                li.field_d.c();
                 var2_int = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (8 <= var2_int) {
                     t.d(8, 8, 32, 32, 6, 16777215);
                     t.c(2, 2, 0, 0, t.field_j, t.field_d);
@@ -234,7 +224,7 @@ final class td {
                     var3 = (var2_int << 8) / 8;
                     t.d(var2_int, var2_int, 32 - -((-var2_int + 8) * 2), -(2 * var2_int) + 48, 6, var3 * 65793);
                     var2_int++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -242,20 +232,20 @@ final class td {
                 var4 = gd.field_e[var2_int].field_k;
                 lk.field_o[var2_int] = new hh(var3, var4, 2);
                 var5 = 0;
-                L4: while (true) {
+                L3: while (true) {
                   if (var5 >= var4) {
                     var2_int++;
                     continue L1;
                   } else {
                     var6 = 0;
-                    L5: while (true) {
+                    L4: while (true) {
                       if (var3 <= var6) {
                         var5++;
-                        continue L4;
+                        continue L3;
                       } else {
                         lk.field_o[var2_int].field_n[var6 + var5 * var3] = param1[var2_int].field_n[var6 + var5 * 5];
                         var6++;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   }
@@ -265,10 +255,10 @@ final class td {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var2 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2;
-            stackOut_17_1 = new StringBuilder().append("td.A(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("td.A(").append(127).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -280,7 +270,7 @@ final class td {
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
-              break L6;
+              break L5;
             } else {
               stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
               stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
@@ -288,7 +278,7 @@ final class td {
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
               stackIn_20_2 = stackOut_18_2;
-              break L6;
+              break L5;
             }
           }
           throw aa.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);

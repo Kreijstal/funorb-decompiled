@@ -11,12 +11,13 @@ class pja extends le {
     int field_j;
     static String field_i;
 
-    final static void e(int param0) {
+    final static void e() {
         if (bm.field_o == null) {
             return;
         }
         if (!(psb.field_b == null)) {
-            spb.a((byte) -95);
+            int discarded$0 = -95;
+            spb.a();
             ip.field_p.height = eta.field_a.height;
             ip.field_p.width = eta.field_a.width;
         }
@@ -141,7 +142,7 @@ class pja extends le {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_o = null;
         field_n = null;
         field_l = null;

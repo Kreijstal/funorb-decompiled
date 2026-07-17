@@ -6,7 +6,7 @@ final class lb extends rqa {
     static ef field_p;
 
     final static int a(int param0, int param1) {
-        param0 = (param1 & param0) - -(1431655765 & param0 >>> 1);
+        param0 = (1431655765 & param0) - -(1431655765 & param0 >>> 1);
         param0 = (param0 & 858993459) - -((-858993460 & param0) >>> 2);
         param0 = 252645135 & (param0 >>> 4) + param0;
         param0 = param0 + (param0 >>> 8);
@@ -23,7 +23,7 @@ final class lb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
     }

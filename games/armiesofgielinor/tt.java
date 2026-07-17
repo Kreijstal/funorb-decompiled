@@ -68,7 +68,7 @@ final class tt {
         }
     }
 
-    final static int a(int param0, int param1, int[] param2, boolean param3) {
+    final static int a(int param0, int param1, int[] param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -114,31 +114,23 @@ final class tt {
                       var4_int = 5;
                       L2: while (true) {
                         if (var4_int < 0) {
-                          L3: {
-                            if (!param3) {
-                              break L3;
-                            } else {
-                              field_d = null;
-                              break L3;
-                            }
-                          }
                           stackOut_23_0 = -1;
                           stackIn_24_0 = stackOut_23_0;
                           break L0;
                         } else {
-                          L4: {
+                          L3: {
                             var5 = nd.field_d[var4_int];
                             if (bc.field_j[var5].length > param2[var5]) {
-                              break L4;
+                              break L3;
                             } else {
                               param2[var5] = 0;
-                              break L4;
+                              break L3;
                             }
                           }
-                          L5: {
+                          L4: {
                             if (param2[var5] > -1) {
                               if (!bc.field_j[var5][param2[var5]].a(dp.field_Vb[var5][0], dp.field_Vb[var5][1], param1, param0)) {
-                                break L5;
+                                break L4;
                               } else {
                                 stackOut_18_0 = var5;
                                 stackIn_19_0 = stackOut_18_0;
@@ -150,7 +142,7 @@ final class tt {
                                 stackIn_16_0 = stackOut_15_0;
                                 return stackIn_16_0;
                               } else {
-                                break L5;
+                                break L4;
                               }
                             }
                           }
@@ -171,7 +163,7 @@ final class tt {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var4;
             stackOut_25_1 = new StringBuilder().append("tt.F(").append(param0).append(44).append(param1).append(44);
@@ -186,7 +178,7 @@ final class tt {
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
-              break L6;
+              break L5;
             } else {
               stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
               stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
@@ -194,10 +186,10 @@ final class tt {
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
               stackIn_28_2 = stackOut_26_2;
-              break L6;
+              break L5;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param3 + 41);
+          throw ig.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + 0 + 41);
         }
         return stackIn_24_0;
     }
@@ -217,7 +209,7 @@ final class tt {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
     }

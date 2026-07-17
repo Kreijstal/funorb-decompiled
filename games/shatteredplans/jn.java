@@ -10,7 +10,7 @@ final class jn extends Exception {
         super(param0);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         if (wm.field_b < 224) {
           var1 = wm.field_b % 32;

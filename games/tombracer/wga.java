@@ -109,17 +109,11 @@ final class wga implements bo {
     }
 
     final static void a(boolean param0, int param1) {
-        kh var2 = null;
-        var2 = ql.field_k;
-        if (!param0) {
-          return;
-        } else {
-          var2.k(param1, -2988);
-          var2.i(2, 0);
-          var2.i(4, 0);
-          var2.i(r.f(11), 0);
-          return;
-        }
+        kh var2 = ql.field_k;
+        var2.k(param1, -2988);
+        var2.i(2, 0);
+        var2.i(4, 0);
+        var2.i(r.f(11), 0);
     }
 
     public final void a(kh param0, byte param1) {

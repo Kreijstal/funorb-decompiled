@@ -8,7 +8,7 @@ final class brb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         java.awt.Canvas var1 = null;
         if (upa.field_a) {
             upa.field_a = false;

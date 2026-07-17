@@ -127,7 +127,7 @@ final class ws extends fw {
         return stackIn_18_0 != 0;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         hw.a((byte) 52, wf.field_y, 6);
         hw.a((byte) 33, sh.field_r, 26);
         kr.field_D.a(kr.field_D.a(26, (byte) -107) - -30, 26, (byte) 126);

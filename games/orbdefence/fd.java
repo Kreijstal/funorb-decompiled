@@ -11,7 +11,7 @@ final class fd {
     static String field_d;
     static String field_g;
 
-    final static void b(int param0) {
+    final static void b() {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
@@ -31,7 +31,7 @@ final class fd {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_g = null;
         field_d = null;

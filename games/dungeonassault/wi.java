@@ -24,62 +24,54 @@ final class wi extends sj {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_16_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_5_0 = 0;
         var8 = DungeonAssault.field_K;
         try {
           L0: {
-            L1: {
-              var3_int = 0;
-              if (param1 == 2113632) {
-                break L1;
-              } else {
-                field_tb = -43;
-                break L1;
-              }
-            }
+            var3_int = 0;
             var4 = en.field_c;
-            L2: while (true) {
+            L1: while (true) {
               if (uc.field_K.length <= var3_int) {
-                stackOut_15_0 = -1;
-                stackIn_16_0 = stackOut_15_0;
+                stackOut_13_0 = -1;
+                stackIn_14_0 = stackOut_13_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = dd.field_A[var3_int];
                   if (var5 < 0) {
                     var4 = var4 + gb.field_a;
                     var3_int++;
-                    break L3;
+                    break L2;
                   } else {
                     var6 = rb.a((byte) 120, true, uc.field_K[var3_int]);
                     var7 = -(var6 >> 1) + tm.field_e;
                     var4 = var4 + lc.field_j;
-                    if (!ec.a(var4, (i.field_o << 1) + cd.field_e, param2, (an.field_w << 1) + var6, -an.field_w + var7, param0, param1 + -2113557)) {
+                    if (!ec.a(var4, (i.field_o << 1) + cd.field_e, param2, (an.field_w << 1) + var6, -an.field_w + var7, param0, 75)) {
                       var4 = var4 + (cd.field_e + (lc.field_j + (i.field_o << 1)));
                       var3_int++;
-                      break L3;
+                      break L2;
                     } else {
-                      stackOut_7_0 = var5;
-                      stackIn_8_0 = stackOut_7_0;
-                      return stackIn_8_0;
+                      stackOut_5_0 = var5;
+                      stackIn_6_0 = stackOut_5_0;
+                      return stackIn_6_0;
                     }
                   }
                 }
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var3, "wi.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) var3, "wi.A(" + param0 + 44 + 2113632 + 44 + param2 + 41);
         }
-        return stackIn_16_0;
+        return stackIn_14_0;
     }
 
     public static void i(byte param0) {

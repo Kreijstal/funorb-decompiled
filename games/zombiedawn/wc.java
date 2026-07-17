@@ -8,7 +8,7 @@ class wc extends qk {
     static int[] field_Nb;
     static int field_Rb;
 
-    private final void x(int param0) {
+    private final void x() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -217,7 +217,7 @@ class wc extends qk {
         }
     }
 
-    final static void a(re[] param0, int param1) {
+    final static void a(re[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -501,7 +501,8 @@ class wc extends qk {
               }
             } else {
               if (((wc) this).field_Qb <= 0) {
-                this.x(-44);
+                int discarded$4 = -44;
+                this.x();
                 break L3;
               } else {
                 ((wc) this).field_Qb = ((wc) this).field_Qb - 1;
@@ -570,43 +571,42 @@ class wc extends qk {
         }
     }
 
-    final static void f(int param0, int param1) {
-        le var2 = null;
-        RuntimeException var2_ref = null;
+    final static void f() {
+        RuntimeException var2 = null;
+        le var2_ref = null;
         int var3 = 0;
         ep var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawn.field_J;
         try {
           L0: {
-            if (param0 == 67600) {
-              var4 = (ep) (Object) uk.field_a.b((byte) 26);
-              L1: while (true) {
-                if (var4 == null) {
-                  var2 = jj.field_D.b((byte) 26);
-                  L2: while (true) {
-                    if (var2 == null) {
-                      break L0;
-                    } else {
-                      p.a(0, 6);
-                      var2 = jj.field_D.a(false);
-                      continue L2;
-                    }
+            var4 = (ep) (Object) uk.field_a.b((byte) 26);
+            L1: while (true) {
+              if (var4 == null) {
+                var2_ref = jj.field_D.b((byte) 26);
+                L2: while (true) {
+                  if (var2_ref == null) {
+                    break L0;
+                  } else {
+                    int discarded$3 = 6;
+                    int discarded$4 = 0;
+                    p.a();
+                    var2_ref = jj.field_D.a(false);
+                    continue L2;
                   }
-                } else {
-                  sn.a(6, var4, 0);
-                  var4 = (ep) (Object) uk.field_a.a(false);
-                  continue L1;
                 }
+              } else {
+                int discarded$5 = 0;
+                sn.a(6, var4);
+                var4 = (ep) (Object) uk.field_a.a(false);
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2_ref, "wc.UB(" + param0 + 44 + 6 + 41);
+          var2 = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) var2, "wc.UB(" + 67600 + 44 + 6 + 41);
         }
     }
 

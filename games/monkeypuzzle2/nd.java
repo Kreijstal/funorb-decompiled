@@ -43,7 +43,7 @@ final class nd implements Iterator {
         return ((nd) this).field_c.field_b != ((nd) this).field_f;
     }
 
-    final static String a(byte param0) {
+    final static String a() {
         if (!ac.field_b) {
           if (cj.field_e <= ka.field_a) {
             if (id.field_a + cj.field_e > ka.field_a) {

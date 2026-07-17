@@ -48,8 +48,10 @@ final class tda extends iw implements oo {
                 ((tda) this).field_J.field_j = "" + var7;
                 break L2;
               } else {
-                spb.a((byte) -95);
-                this.l((byte) -98);
+                int discarded$4 = -95;
+                spb.a();
+                int discarded$5 = -98;
+                this.l();
                 ((tda) this).field_v.a(false, (shb) (Object) new mr(((tda) this).field_v, oca.field_a));
                 break L2;
               }
@@ -61,7 +63,8 @@ final class tda extends iw implements oo {
                 if (psb.field_b != null) {
                   break L3;
                 } else {
-                  this.l((byte) -98);
+                  int discarded$6 = -98;
+                  this.l();
                   ((tda) this).field_v.a(false, (shb) (Object) new mr(((tda) this).field_v, bca.field_a));
                   break L3;
                 }
@@ -72,7 +75,8 @@ final class tda extends iw implements oo {
                 break L4;
               } else {
                 if (psb.field_b.field_a) {
-                  this.l((byte) -98);
+                  int discarded$7 = -98;
+                  this.l();
                   ((tda) this).field_v.a(false, (shb) (Object) new mr(((tda) this).field_v, bca.field_a));
                   break L4;
                 } else {
@@ -216,14 +220,17 @@ final class tda extends iw implements oo {
               }
             }
             if (param3 == ((tda) this).field_N) {
-              this.l((byte) -98);
+              int discarded$6 = -98;
+              this.l();
               return;
             } else {
               if (((tda) this).field_P != param3) {
                 break L0;
               } else {
-                spb.a((byte) -95);
-                this.l((byte) -98);
+                int discarded$7 = -95;
+                spb.a();
+                int discarded$8 = -98;
+                this.l();
                 return;
               }
             }
@@ -465,12 +472,12 @@ final class tda extends iw implements oo {
         return stackIn_12_0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_M = null;
         field_O = null;
     }
 
-    private final void l(byte param0) {
+    private final void l() {
         if (!(((tda) this).field_z)) {
             return;
         }

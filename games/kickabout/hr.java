@@ -13,7 +13,7 @@ final class hr extends gn {
     int field_g;
     int field_n;
 
-    final static void b(int param0) {
+    final static void b() {
         du.field_n = 22 + Math.max(q.field_d.a(ag.field_l), q.field_d.a(h.field_a));
     }
 
@@ -26,7 +26,7 @@ final class hr extends gn {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2_int = 0;
         oh[] var2 = null;
@@ -402,7 +402,8 @@ final class hr extends gn {
                   if (rm.field_C != 3) {
                     break L28;
                   } else {
-                    de.a((byte) 92);
+                    int discarded$1 = 92;
+                    de.a();
                     break L28;
                   }
                 }

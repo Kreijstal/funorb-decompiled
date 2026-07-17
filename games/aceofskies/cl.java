@@ -18,7 +18,7 @@ final class cl extends di {
         field_eb = null;
     }
 
-    final static int a(int param0, byte[] param1, int param2, byte param3) {
+    final static int a(int param0, byte[] param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

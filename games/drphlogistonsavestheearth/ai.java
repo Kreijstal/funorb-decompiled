@@ -211,7 +211,7 @@ final class ai extends uh {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_x = null;
         field_A = null;
         field_w = null;

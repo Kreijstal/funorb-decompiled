@@ -14,7 +14,7 @@ final class ah {
     static fj field_a;
     String field_h;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -29,7 +29,7 @@ final class ah {
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);
-        int var11 = 62 % ((-44 - param1) / 36);
+        int var11 = 0;
         int var10 = (int)((long)var6 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }

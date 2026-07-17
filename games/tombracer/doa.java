@@ -4,7 +4,7 @@
 final class doa {
     private va field_a;
 
-    final static jua a(String param0, int param1, byte param2) {
+    final static jua a(String param0, int param1) {
         jua var3 = null;
         RuntimeException var3_ref = null;
         jua stackIn_1_0 = null;
@@ -68,9 +68,6 @@ final class doa {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param0 != 2) {
-            return -126;
-        }
         return gqa.a(param2, (byte) 24, param1 >> 8) << 8;
     }
 
@@ -83,7 +80,7 @@ final class doa {
         var6 = TombRacer.field_G ? 1 : 0;
         var7 = cm.field_a[param2].field_c;
         var3 = var7;
-        var4 = param1;
+        var4 = 0;
         L0: while (true) {
           if (var7.length > var4) {
             var5 = var7[var4];

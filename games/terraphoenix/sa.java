@@ -38,8 +38,8 @@ final class sa {
         var4 = Terraphoenix.field_V;
         try {
           L0: {
-            if (li.a(param0, param2, 18116)) {
-              var3_int = param1;
+            if (li.a(false, param2, 18116)) {
+              var3_int = 0;
               L1: while (true) {
                 if (param2.length() <= var3_int) {
                   stackOut_10_0 = 1;
@@ -67,7 +67,7 @@ final class sa {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("sa.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("sa.A(").append(0).append(44).append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -95,7 +95,7 @@ final class sa {
         return stackIn_11_0 != 0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         ja var4 = null;
@@ -106,14 +106,11 @@ final class sa {
             var4 = (ja) (Object) vd.field_l.d(9272);
             L1: while (true) {
               if (var4 == null) {
-                if (param0 == -336) {
-                  break L0;
-                } else {
-                  field_a = null;
-                  return;
-                }
+                break L0;
               } else {
-                eb.a(var4, 0, 7);
+                int discarded$8 = 7;
+                int discarded$9 = 0;
+                eb.a(var4);
                 var4 = (ja) (Object) vd.field_l.e((byte) -119);
                 continue L1;
               }
@@ -122,7 +119,7 @@ final class sa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var2, "sa.E(" + param0 + 44 + 7 + 41);
+          throw qk.a((Throwable) (Object) var2, "sa.E(" + -336 + 44 + 7 + 41);
         }
     }
 

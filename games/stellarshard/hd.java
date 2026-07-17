@@ -23,7 +23,7 @@ final class hd {
         return param0 < 6144 ? -fh.field_h[-4096 + param0] : -fh.field_h[-param0 + 8192];
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;

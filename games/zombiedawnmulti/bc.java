@@ -8,11 +8,11 @@ final class bc {
     static String field_d;
     static String field_c;
 
-    final static void b(int param0) {
+    final static void b() {
         gi.field_i = null;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -20,20 +20,43 @@ final class bc {
     }
 
     final static void a(int param0, int param1, byte param2, boolean param3) {
+        int var4 = 0;
         L0: {
-          if (param2 == -59) {
-            er.field_j.g(param0, param1);
+          er.field_j.g(param0, param1);
+          if (param3) {
+            L1: {
+              var4 = fn.field_c % er.field_j.field_x * 2;
+              if (var4 < er.field_j.field_x) {
+                break L1;
+              } else {
+                var4 = er.field_j.field_x + -var4 + er.field_j.field_x;
+                break L1;
+              }
+            }
+            L2: {
+              if (var4 < 10) {
+                var4 = 10;
+                break L2;
+              } else {
+                if (-40 + er.field_j.field_x < var4) {
+                  var4 = -40 + er.field_j.field_x;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
             break L0;
           } else {
-            bc.a((byte) 86);
-            er.field_j.g(param0, param1);
             break L0;
           }
         }
     }
 
     final static void a(byte param0) {
-        iq.a((byte) -78);
+        int discarded$0 = -78;
+        iq.a();
         ok.field_l = ah.field_e.a(we.field_g[12]);
         int var1 = ah.field_e.a(we.field_g[13]);
         if (!(var1 <= ok.field_l)) {
@@ -45,7 +68,7 @@ final class bc {
         }
     }
 
-    final static ri[] a(int param0) {
+    final static ri[] a() {
         int var2 = 0;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         ri[] var1 = new ri[qc.field_v];

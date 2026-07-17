@@ -6,10 +6,6 @@ final class iua extends rqa {
     static int field_p;
 
     final static boolean a(int param0, byte param1, int param2) {
-        if (param1 != 119) {
-            iua.e((byte) 34);
-            return false;
-        }
         return false;
     }
 
@@ -83,12 +79,7 @@ final class iua extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e(byte param0) {
-        if (param0 > -100) {
-            field_p = 70;
-            field_o = null;
-            return;
-        }
+    public static void e() {
         field_o = null;
     }
 

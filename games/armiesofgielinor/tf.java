@@ -35,23 +35,19 @@ final class tf extends tc {
         var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            if (param1 == -1432128863) {
-              L1: while (true) {
-                param2--;
-                if (0 > param2) {
-                  break L0;
-                } else {
-                  var9 = param3;
-                  var5 = var9;
-                  var6 = param0;
-                  var7 = param4;
-                  var9[var6] = var7 - -rn.a(var9[var6] >> 1, 8355711);
-                  param0++;
-                  continue L1;
-                }
+            L1: while (true) {
+              param2--;
+              if (0 > param2) {
+                break L0;
+              } else {
+                var9 = param3;
+                var5 = var9;
+                var6 = param0;
+                var7 = param4;
+                var9[var6] = var7 - -rn.a(var9[var6] >> 1, 8355711);
+                param0++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +55,7 @@ final class tf extends tc {
           L2: {
             var5_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var5_ref;
-            stackOut_6_1 = new StringBuilder().append("tf.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("tf.C(").append(param0).append(44).append(-1432128863).append(44).append(param2).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -86,20 +82,20 @@ final class tf extends tc {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_m = null;
         field_p = null;
     }
 
-    final static void a(int param0, nt param1, byte param2) {
+    final static void a(int param0, nt param1) {
         bv var3 = null;
         try {
             var3 = vl.field_n;
-            var3.h(32161, param0);
+            var3.h(32161, 7);
             var3.b(1, param1.field_o);
             var3.b(1, param1.field_q);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tf.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -64 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "tf.B(" + 7 + 44 + (param1 != null ? "{...}" : "null") + 44 + -64 + 41);
         }
     }
 
@@ -108,15 +104,12 @@ final class tf extends tc {
         long var4 = 0L;
         at.field_a = true;
         String var2 = "tuhstatbut";
-        if (param0 != -99) {
-            return;
-        }
         try {
             var3 = "rvnadlm";
             var4 = -1L;
             tc.a(param1, var3, (byte) 120, var2, var4);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tf.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "tf.D(" + -99 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

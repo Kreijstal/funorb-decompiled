@@ -35,15 +35,10 @@ final class p extends nm {
         if (param3 >= 0) {
           if (param3 <= 11) {
             if (param1 >= 1) {
-              if (bg.a(param2, 29, param3) >= param1) {
-                if (param0 != -49) {
-                  field_j = null;
-                  return true;
-                } else {
-                  return true;
-                }
-              } else {
+              if (bg.a(param2, 29, param3) < param1) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;
@@ -56,13 +51,14 @@ final class p extends nm {
         }
     }
 
-    final static String a(int param0) {
+    final static String a() {
         String var1 = "";
         if (null != eo.field_k) {
             var1 = eo.field_k.j((byte) -76);
         }
         if (0 == var1.length()) {
-            var1 = dg.b(100);
+            int discarded$0 = 100;
+            var1 = dg.b();
         }
         if (!(var1.length() != 0)) {
             var1 = ud.field_t;

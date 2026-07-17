@@ -10,7 +10,7 @@ final class bn {
     static String field_d;
     static ck field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_b = null;
         field_e = null;
@@ -208,22 +208,12 @@ final class bn {
     }
 
     final static cd a(boolean param0, boolean param1) {
-        cd var2 = null;
-        Object var3 = null;
-        if (param0) {
-          var3 = null;
-          bn.a((byte) 42, -57, 101, -103, (ck) null, 71);
-          var2 = new cd(true);
-          var2.field_e = false;
-          return var2;
-        } else {
-          var2 = new cd(true);
-          var2.field_e = false;
-          return var2;
-        }
+        cd var2 = new cd(true);
+        var2.field_e = param1 ? true : false;
+        return var2;
     }
 
-    final static void a(long param0, int param1, byte param2) {
+    final static void a(long param0, int param1) {
         uf var4 = we.field_b;
         var4.f(param1, -4);
         var4.field_n = var4.field_n + 1;

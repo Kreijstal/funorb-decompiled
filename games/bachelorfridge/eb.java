@@ -141,7 +141,7 @@ final class eb extends td {
         return (ii) (Object) stackIn_15_0;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var2_int = 0;
         kr var2_ref = null;
@@ -243,7 +243,7 @@ final class eb extends td {
                 L4: {
                   ((fea) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4, -1);
                   hfa.field_z.a(ow.field_n, 530, 446, 16204, -1);
-                  ug.field_q.a(true, param1 + 7766);
+                  ug.field_q.a(true, 7802);
                   if (null != qg.field_b.field_z) {
                     dg.a(ug.field_q.field_kb, ug.field_q.field_rb, ug.field_q.field_sb + ug.field_q.field_kb, ug.field_q.field_p + ug.field_q.field_rb);
                     var2_ref = (kr) (Object) qg.field_b.field_z.b((byte) 90);
@@ -264,18 +264,12 @@ final class eb extends td {
                 }
                 L6: {
                   jha.field_g.c(hka.field_g, 452, 306, 65793, -1);
+                  int discarded$3 = 1;
                   var4 = lga.a(true, new String[1], vla.field_u);
                   jha.field_g.b(var4, 600, 306, 16699649, -1);
                   hfa.field_z.b(var4, 600, 306, 65793, -1);
                   jha.field_g.c(jla.field_c, 452, 400, 65793, -1);
-                  if (param1 == 36) {
-                    break L6;
-                  } else {
-                    field_q = null;
-                    break L6;
-                  }
-                }
-                L7: {
+                  int discarded$4 = 1;
                   var5 = lga.a(true, new String[1], vla.field_u);
                   jha.field_g.b(var5, 600, 400, 16699649, -1);
                   hfa.field_z.b(var5, 600, 400, 65793, -1);
@@ -284,29 +278,30 @@ final class eb extends td {
                   lma.field_y.a(598, 166);
                   gha.field_b.a(598, 271);
                   if (!um.a(true)) {
-                    kla.b(true);
-                    break L7;
+                    int discarded$5 = 1;
+                    kla.b();
+                    break L6;
                   } else {
-                    break L7;
+                    break L6;
                   }
                 }
                 break L0;
               } else {
-                L8: {
-                  L9: {
+                L7: {
+                  L8: {
                     jf.field_l.a(14 + var2_int * 77, 89);
                     if (se.field_s[var2_int].field_T) {
-                      break L9;
+                      break L8;
                     } else {
                       if (baa.field_Q - 1 == var2_int) {
-                        break L9;
-                      } else {
                         break L8;
+                      } else {
+                        break L7;
                       }
                     }
                   }
                   dr.field_p.a(77 * var2_int + 14, 89);
-                  break L8;
+                  break L7;
                 }
                 nw.field_p[var2_int].e(77 * var2_int + 36, 91);
                 var2_int++;
@@ -317,11 +312,11 @@ final class eb extends td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2, "eb.C(" + param0 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) var2, "eb.C(" + 1 + 44 + 36 + 41);
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_s = null;
         field_q = null;
         field_r = null;

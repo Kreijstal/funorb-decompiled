@@ -316,7 +316,7 @@ final class de {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -324,17 +324,14 @@ final class de {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 0) {
-            Object var3 = null;
-            de.a((nk) null, (byte) -114);
-        }
         if (!(pc.field_Mb == null)) {
-            sj.a(pc.field_Mb, (byte) 85);
+            int discarded$0 = 85;
+            sj.a(pc.field_Mb);
         }
         if (null != pi.field_d) {
             pi.field_d.b(-65, param1);
         }
-        k.a(param1, param0 ^ 100);
+        k.a(param1, 100);
         if (!(pj.field_h == null)) {
             pj.field_h.a(false, param1);
         }

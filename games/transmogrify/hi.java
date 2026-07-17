@@ -11,7 +11,7 @@ final class hi {
     static int field_a;
     static int[] field_h;
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return null != vg.field_b && vg.field_b.a(67);
     }
 
@@ -60,25 +60,19 @@ final class hi {
         return stackIn_8_0 != 0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_d = null;
-        if (param0) {
-            field_c = -26;
-        }
         field_h = null;
         field_b = null;
     }
 
     final static void a(int param0, String param1) {
         try {
-            if (param0 != -23883) {
-                hi.a(true);
-            }
             e.field_I = param1;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "hi.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "hi.D(" + -23883 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -254,9 +248,6 @@ final class hi {
     }
 
     final static int a(boolean param0, int param1) {
-        if (param0) {
-            return 34;
-        }
         param1 = (param1 >>> 1 & 1431655765) + (1431655765 & param1);
         param1 = ((-858993458 & param1) >>> 2) + (858993459 & param1);
         param1 = (param1 >>> 4) + param1 & 252645135;

@@ -53,10 +53,12 @@ final class lo {
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  if (ep.a((char) var3, (byte) -14)) {
+                  int discarded$14 = -14;
+                  if (ep.a((char) var3)) {
                     break L2;
                   } else {
-                    if (!ag.a((char) var3, 48)) {
+                    int discarded$15 = 48;
+                    if (!ag.a((char) var3)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
                       return stackIn_7_0 != 0;
@@ -134,7 +136,7 @@ final class lo {
               L0: {
                 L1: {
                   L2: {
-                    var6 = new byte[param0];
+                    var6 = new byte[24];
                     var2 = var6;
                     if (fp.field_e == null) {
                       break L2;
@@ -200,7 +202,7 @@ final class lo {
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_15_0 = (RuntimeException) var2_ref;
-                stackOut_15_1 = new StringBuilder().append("lo.D(").append(param0).append(44);
+                stackOut_15_1 = new StringBuilder().append("lo.D(").append(24).append(44);
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;

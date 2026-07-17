@@ -314,10 +314,7 @@ final class be implements Runnable {
     }
 
     private final eb a(boolean param0, String param1, int param2, int param3) {
-        if (param2 != 1) {
-            ((be) this).field_o = null;
-        }
-        return this.a(0, param3, (Object) (Object) param1, param0 ? 22 : 1, 0);
+        return this.a(0, param3, (Object) (Object) param1, 1, 0);
     }
 
     final eb a(Class param0, String param1, int param2) {
@@ -414,7 +411,8 @@ final class be implements Runnable {
                         } else {
                           try {
                             L9: {
-                              var8_ref.field_g = (Object) (Object) a.a(var8_ref.field_b, (String) var8_ref.field_e, -115).b(0);
+                              int discarded$7 = -115;
+                              var8_ref.field_g = (Object) (Object) a.a(var8_ref.field_b, (String) var8_ref.field_e).b(0);
                               break L9;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -474,7 +472,7 @@ final class be implements Runnable {
                                                 ((be) this).field_o.a(var8_ref.field_b >>> 16, var8_ref.field_c & 65535, -121, var8_ref.field_c >> 16, var8_ref.field_b & 65535, var16);
                                                 break L8;
                                               } else {
-                                                Object discarded$6 = Class.forName("oi").getMethod("enter", new Class[5]).invoke(((be) this).field_i, new Object[5]);
+                                                Object discarded$8 = Class.forName("oi").getMethod("enter", new Class[5]).invoke(((be) this).field_i, new Object[5]);
                                                 break L8;
                                               }
                                             } else {
@@ -491,7 +489,7 @@ final class be implements Runnable {
                                                           var3_int = var8_ref.field_b;
                                                           var4_int = var8_ref.field_c;
                                                           if (!((be) this).field_m) {
-                                                            Object discarded$7 = Class.forName("jh").getDeclaredMethod("movemouse", new Class[2]).invoke(((be) this).field_h, new Object[2]);
+                                                            Object discarded$9 = Class.forName("jh").getDeclaredMethod("movemouse", new Class[2]).invoke(((be) this).field_h, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((be) this).field_l.a(var4_int, var3_int, -117);
@@ -524,7 +522,7 @@ final class be implements Runnable {
                                                             ((be) this).field_l.a(32512, var13, var3_int != 0);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$8 = Class.forName("jh").getDeclaredMethod("showcursor", new Class[2]).invoke(((be) this).field_h, new Object[2]);
+                                                            Object discarded$10 = Class.forName("jh").getDeclaredMethod("showcursor", new Class[2]).invoke(((be) this).field_h, new Object[2]);
                                                             break L8;
                                                           }
                                                         }
@@ -538,7 +536,7 @@ final class be implements Runnable {
                                                           break L14;
                                                         } else {
                                                           var14 = (Object[]) var8_ref.field_e;
-                                                          Object discarded$9 = Class.forName("jh").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((be) this).field_h, new Object[5]);
+                                                          Object discarded$11 = Class.forName("jh").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((be) this).field_h, new Object[5]);
                                                           break L8;
                                                         }
                                                       }
@@ -565,7 +563,7 @@ final class be implements Runnable {
                                                             var5 = 0;
                                                             L17: while (true) {
                                                               if (~var5 <= ~var15.length()) {
-                                                                Process discarded$10 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var15 + "\"");
+                                                                Process discarded$12 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var15 + "\"");
                                                                 var8_ref.field_g = null;
                                                                 break L15;
                                                               } else {
@@ -604,7 +602,7 @@ final class be implements Runnable {
                                                   ((be) this).field_o.a((java.awt.Frame) var8_ref.field_e, (byte) 34);
                                                   break L8;
                                                 } else {
-                                                  Object discarded$11 = Class.forName("oi").getMethod("exit", new Class[0]).invoke(((be) this).field_i, new Object[0]);
+                                                  Object discarded$13 = Class.forName("oi").getMethod("exit", new Class[0]).invoke(((be) this).field_i, new Object[0]);
                                                   break L8;
                                                 }
                                               }

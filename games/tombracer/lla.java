@@ -30,22 +30,12 @@ final class lla {
 
     final static int a(boolean param0, int param1) {
         param1--;
-        if (param0) {
-          int discarded$1 = lla.a(false, 59);
-          param1 = param1 | param1 >>> 1;
-          param1 = param1 | param1 >>> 2;
-          param1 = param1 | param1 >>> 4;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return 1 + param1;
-        } else {
-          param1 = param1 | param1 >>> 1;
-          param1 = param1 | param1 >>> 2;
-          param1 = param1 | param1 >>> 4;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return 1 + param1;
-        }
+        param1 = param1 | param1 >>> 1;
+        param1 = param1 | param1 >>> 2;
+        param1 = param1 | param1 >>> 4;
+        param1 = param1 | param1 >>> 8;
+        param1 = param1 | param1 >>> 16;
+        return 1 + param1;
     }
 
     static {

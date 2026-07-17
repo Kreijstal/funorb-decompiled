@@ -10,7 +10,7 @@ final class nc extends ue {
     private re field_f;
     static String field_k;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_k = null;
     }
 
@@ -104,7 +104,9 @@ final class nc extends ue {
           }
         }
         L2: {
-          var3 = gm.a(stackIn_6_0 != 0, stackIn_6_1 != 0, true, 12184);
+          int discarded$2 = 12184;
+          int discarded$3 = 1;
+          var3 = gm.a(stackIn_6_0 != 0, stackIn_6_1 != 0);
           if (pc.field_y == 0) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
@@ -446,7 +448,8 @@ final class nc extends ue {
           if (((nc) this).field_j <= 0) {
             L3: {
               if (0 == ((nc) this).field_j) {
-                dg.a((byte) -85);
+                int discarded$2 = -85;
+                dg.a();
                 a.field_b = (ue) (Object) new rb(((nc) this).field_f, ((nc) this).field_b.field_i);
                 break L3;
               } else {
@@ -458,7 +461,8 @@ final class nc extends ue {
             L4: {
               ((nc) this).field_j = ((nc) this).field_j - 1;
               if (0 == ((nc) this).field_j) {
-                dg.a((byte) -85);
+                int discarded$3 = -85;
+                dg.a();
                 a.field_b = (ue) (Object) new rb(((nc) this).field_f, ((nc) this).field_b.field_i);
                 break L4;
               } else {

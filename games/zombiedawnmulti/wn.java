@@ -11,7 +11,7 @@ final class wn extends pp {
         super(param0, param1);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_s = null;
         field_u = null;
     }

@@ -7,12 +7,12 @@ final class cg extends rqa {
     static phb field_o;
     static int field_r;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_o = null;
         field_p = null;
     }
 
-    final static String a(int param0) {
+    final static String a() {
         return wg.field_p;
     }
 

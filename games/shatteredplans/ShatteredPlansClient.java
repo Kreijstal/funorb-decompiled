@@ -120,7 +120,8 @@ public final class ShatteredPlansClient extends tl {
         }
         kf.e(120);
         if (!(null == bj.field_K)) {
-            ej.c(0);
+            int discarded$0 = 0;
+            ej.c();
         }
         w.f((byte) 89);
     }
@@ -132,14 +133,17 @@ public final class ShatteredPlansClient extends tl {
         var3.field_r.d(128, (byte) -110, 9);
         var3.field_u.c(598, wm.field_b);
         var3.field_r.c(param0 ^ -599, wm.field_b);
-        da.a((java.awt.Component) (Object) tm.field_i, fa.field_W, var3, 1102, false, 22050, 22050, true);
+        int discarded$0 = 1;
+        da.a((java.awt.Component) (Object) tm.field_i, fa.field_W, var3, 1102, false, 22050, 22050);
         rm.field_b = 2458760;
         wo.field_a = 2805974;
         em.field_j = 2458760;
         ih.field_b = 2458760;
         ah.field_P = 2458760;
         es.field_n = 2805974;
-        em.a(us.b(0), 1);
+        int discarded$1 = 0;
+        int discarded$2 = 1;
+        em.a(us.b());
         ((ShatteredPlansClient) this).a(false, true, -2839, true, true, false, false);
         td.field_K = hi.field_a;
         ae.field_a[71] = 4;
@@ -243,14 +247,15 @@ public final class ShatteredPlansClient extends tl {
             int stackOut_122_1 = 0;
             L0: {
               var16 = field_F ? 1 : 0;
-              int discarded$3 = po.b(-87);
+              int discarded$33 = po.b(-87);
               l.field_f = po.b(-80);
               ql.a(-26848);
               if (null == bj.field_K) {
                 break L0;
               } else {
                 if (bj.field_K.field_c) {
-                  ej.c(0);
+                  int discarded$34 = 0;
+                  ej.c();
                   kq.g(4);
                   break L0;
                 } else {
@@ -281,7 +286,8 @@ public final class ShatteredPlansClient extends tl {
               if (!um.field_n) {
                 break L2;
               } else {
-                this.c(false);
+                int discarded$35 = 0;
+                this.c();
                 um.field_n = false;
                 break L2;
               }
@@ -323,7 +329,8 @@ public final class ShatteredPlansClient extends tl {
                 }
               } else {
                 if (!m.f((byte) 122)) {
-                  tc.f((byte) 125);
+                  int discarded$36 = 125;
+                  tc.f();
                   break L5;
                 } else {
                   if (gl.field_e) {
@@ -370,7 +377,8 @@ public final class ShatteredPlansClient extends tl {
                           }
                           L9: {
                             if (bj.field_K != null) {
-                              ej.c(0);
+                              int discarded$37 = 0;
+                              ej.c();
                               break L9;
                             } else {
                               break L9;
@@ -386,7 +394,8 @@ public final class ShatteredPlansClient extends tl {
                         this.b(false, true);
                         break L5;
                       } else {
-                        if (i.c(0)) {
+                        int discarded$38 = 0;
+                        if (i.c()) {
                           var2 = 1;
                           if (~jb.field_c != ~jb.field_g) {
                             this.b(false, false);
@@ -417,15 +426,18 @@ public final class ShatteredPlansClient extends tl {
                           break L11;
                         } else {
                           L12: {
-                            var3 = cq.d(false);
+                            int discarded$39 = 0;
+                            var3 = cq.d();
                             if (var3 == 2) {
-                              ej.c(0);
+                              int discarded$40 = 0;
+                              ej.c();
                               break L12;
                             } else {
                               if (3 == var3) {
                                 ne.field_s = false;
                                 m.a(8, 13421772, rm.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, mr.field_i, 320, (nq) (Object) mp.field_b, (nq) (Object) mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (bi[]) null, es.field_n);
-                                fm.a(true, -1);
+                                int discarded$41 = -1;
+                                fm.a(true);
                                 break L12;
                               } else {
                                 if (var3 == 4) {
@@ -448,7 +460,8 @@ public final class ShatteredPlansClient extends tl {
                     }
                   } else {
                     L13: {
-                      if (w.d(true)) {
+                      int discarded$42 = 1;
+                      if (w.d()) {
                         break L13;
                       } else {
                         s.a(1);
@@ -466,9 +479,9 @@ public final class ShatteredPlansClient extends tl {
                 if (~gg.field_a >= ~eb.field_b) {
                   break L14;
                 } else {
-                  int fieldTemp$4 = eb.field_b + jl.field_U;
+                  int fieldTemp$43 = eb.field_b + jl.field_U;
                   eb.field_b = eb.field_b + jl.field_U;
-                  if (gg.field_a >= fieldTemp$4) {
+                  if (gg.field_a >= fieldTemp$43) {
                     break L14;
                   } else {
                     eb.field_b = gg.field_a;
@@ -479,9 +492,9 @@ public final class ShatteredPlansClient extends tl {
                 if (0 >= eb.field_b) {
                   break L14;
                 } else {
-                  int fieldTemp$5 = eb.field_b - jl.field_U;
+                  int fieldTemp$44 = eb.field_b - jl.field_U;
                   eb.field_b = eb.field_b - jl.field_U;
-                  if (fieldTemp$5 >= 0) {
+                  if (fieldTemp$44 >= 0) {
                     break L14;
                   } else {
                     eb.field_b = 0;
@@ -491,13 +504,16 @@ public final class ShatteredPlansClient extends tl {
               }
             }
             L15: {
-              if (!w.d(true)) {
+              int discarded$45 = 1;
+              if (!w.d()) {
                 L16: while (true) {
                   var3_ref_lq = (lq) (Object) jq.field_a.h(54);
                   if (var3_ref_lq == null) {
                     break L15;
                   } else {
-                    gd.a(var3_ref_lq, 1500005281, 4);
+                    int discarded$46 = 4;
+                    int discarded$47 = 1500005281;
+                    gd.a(var3_ref_lq);
                     continue L16;
                   }
                 }
@@ -507,7 +523,8 @@ public final class ShatteredPlansClient extends tl {
             }
             var3 = -87 % ((15 - param0) / 35);
             L17: while (true) {
-              if (!di.a(ae.field_a, 1)) {
+              int discarded$48 = 1;
+              if (!di.a(ae.field_a)) {
                 L18: {
                   d.a(0, (byte) 82);
                   if (null == ur.field_zb) {
@@ -627,9 +644,14 @@ public final class ShatteredPlansClient extends tl {
                         }
                       }
                       vs.a(4, (byte) -103);
-                      se.a(7, true);
-                      oq.a(6, 37);
-                      ef.a(true);
+                      int discarded$49 = 1;
+                      int discarded$50 = 7;
+                      se.a();
+                      int discarded$51 = 37;
+                      int discarded$52 = 6;
+                      oq.a();
+                      int discarded$53 = 1;
+                      ef.a();
                       if (1 == var6) {
                         is.field_a = true;
                         md.field_Q = true;
@@ -657,7 +679,8 @@ public final class ShatteredPlansClient extends tl {
                             kc.field_d = false;
                             v.field_b = false;
                             mf.field_p = false;
-                            wm.a(0);
+                            int discarded$54 = 0;
+                            wm.a();
                             break L31;
                           }
                         }
@@ -723,8 +746,14 @@ public final class ShatteredPlansClient extends tl {
                 } else {
                   if (ej.field_e == 14) {
                     rn.a(1048576);
-                    be.a(a.a(20605), js.a(2000, (byte) 122), pe.m(42), 1024, js.a(6, (byte) 122), (byte) -122, hn.field_j.length, bb.a((byte) 100), pg.field_C, 150);
-                    sj.a((byte) 77, js.b((byte) 121), fl.a(83));
+                    int discarded$55 = 122;
+                    int discarded$56 = 42;
+                    int discarded$57 = 122;
+                    int discarded$58 = 100;
+                    int discarded$59 = 150;
+                    be.a(a.a(20605), js.a(2000), pe.m(), 1024, js.a(6), (byte) -122, hn.field_j.length, bb.a(), pg.field_C);
+                    int discarded$60 = 83;
+                    sj.a((byte) 77, js.b((byte) 121), fl.a());
                     mf.field_p = true;
                     md.field_Q = false;
                     gr.field_o = -2;
@@ -745,7 +774,8 @@ public final class ShatteredPlansClient extends tl {
                           kc.field_d = false;
                           v.field_b = false;
                           ak.field_A = true;
-                          wm.a(0);
+                          int discarded$61 = 0;
+                          wm.a();
                           break L37;
                         }
                       }
@@ -758,7 +788,8 @@ public final class ShatteredPlansClient extends tl {
                           break L38;
                         } else {
                           if (mf.field_p) {
-                            rp.h(112);
+                            int discarded$62 = 112;
+                            rp.h();
                             continue L17;
                           } else {
                             break L38;
@@ -795,7 +826,8 @@ public final class ShatteredPlansClient extends tl {
                               cs.field_i = false;
                               kc.field_d = false;
                               ge.field_n = true;
-                              wm.a(0);
+                              int discarded$63 = 0;
+                              wm.a();
                               break L39;
                             }
                             is.field_a = false;
@@ -968,9 +1000,11 @@ public final class ShatteredPlansClient extends tl {
                                   if (var9 != 0) {
                                     v.field_b = true;
                                     ce.field_x = var13;
-                                    ri.k(8);
+                                    int discarded$64 = 8;
+                                    ri.k();
                                     wp.a(-2);
-                                    qf.b((byte) -98);
+                                    int discarded$65 = -98;
+                                    qf.b();
                                     break L56;
                                   } else {
                                     in.field_g = var13;
@@ -1032,7 +1066,7 @@ public final class ShatteredPlansClient extends tl {
         }
     }
 
-    private final void l(int param0) {
+    private final void l() {
         int var2_int = 0;
         String var2 = null;
         int var3 = 0;
@@ -1047,7 +1081,7 @@ public final class ShatteredPlansClient extends tl {
             wg.field_e.a(field_L, 27275, "territories");
             wg.field_e.a(dm.field_c, 27275, "uioptions");
             wg.field_e.a(ba.field_a, 27275, "fleetinfo");
-            wg.field_e.a(ib.field_c, param0 ^ 27274, "projects");
+            wg.field_e.a(ib.field_c, 27275, "projects");
             wg.field_e.a(vj.field_B, 27275, "diplomacy");
             wg.field_e.a(uq.field_l, 27275, "messages");
             wg.field_e.a(Integer.toString(gm.field_k[0], 16), 27275, "colmetal");
@@ -1059,17 +1093,17 @@ public final class ShatteredPlansClient extends tl {
             wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "project_biomass");
             wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "project_energy");
             wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "Project_Metal");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), param0 + 27274, "Project_Biomass");
+            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "Project_Biomass");
             wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "Project_Energy");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), param0 ^ 27274, "Project_Exotics");
+            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "Project_Exotics");
             wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "PROJECT_METAL");
-            wg.field_e.a(re.a(var2, param0 ^ 4370, new String[2]), 27275, "PROJECT_BIOMASS");
-            wg.field_e.a(re.a(var2, param0 ^ 4370, new String[2]), param0 ^ 27274, "PROJECT_ENERGY");
-            wg.field_e.a(re.a(var2, param0 + 4370, new String[2]), 27275, "PROJECT_EXOTICS");
+            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "PROJECT_BIOMASS");
+            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "PROJECT_ENERGY");
+            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "PROJECT_EXOTICS");
             return;
           } else {
             wg.field_e.a(re.a("<col=<%0>><%1></col>", 4371, new String[2]), 27275, "resource" + var2_int);
-            wg.field_e.a(re.a("<col=<%0>><%1></col>", param0 ^ 4370, new String[2]), 27275, "Resource" + var2_int);
+            wg.field_e.a(re.a("<col=<%0>><%1></col>", 4371, new String[2]), 27275, "Resource" + var2_int);
             var2_int++;
             continue L0;
           }
@@ -1079,11 +1113,12 @@ public final class ShatteredPlansClient extends tl {
     private final boolean c(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
-        int stackIn_77_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_75_0 = 0;
+        int stackIn_75_0 = 0;
+        int stackOut_74_0 = 0;
+        int stackOut_73_0 = 0;
         var4 = field_F ? 1 : 0;
-        na.a((byte) 51);
+        int discarded$9 = 51;
+        na.a();
         if (null != cm.field_a) {
           L0: {
             if (!kl.field_s.b((byte) 127)) {
@@ -1094,31 +1129,31 @@ public final class ShatteredPlansClient extends tl {
                   if (!kl.field_s.b((byte) -45)) {
                     break L1;
                   } else {
-                    if (kl.field_s.a("lobby", param0 + 16)) {
+                    if (kl.field_s.a("lobby", 98)) {
                       L2: {
                         if (!rl.field_f.b((byte) 120)) {
                           break L2;
                         } else {
-                          if (rl.field_f.a("lobby", param0 ^ -62)) {
+                          if (rl.field_f.a("lobby", -112)) {
                             L3: {
                               if (!cm.field_a.b((byte) 120)) {
                                 break L3;
                               } else {
-                                if (!cm.field_a.a(param0 + -83)) {
+                                if (!cm.field_a.a(-1)) {
                                   break L3;
                                 } else {
                                   L4: {
                                     if (!ld.field_m.b((byte) -70)) {
                                       break L4;
                                     } else {
-                                      if (!ld.field_m.a(param0 + -83)) {
+                                      if (!ld.field_m.a(-1)) {
                                         break L4;
                                       } else {
                                         L5: {
                                           if (!df.field_n.b((byte) 111)) {
                                             break L5;
                                           } else {
-                                            if (!df.field_n.a(param0 + -83)) {
+                                            if (!df.field_n.a(-1)) {
                                               break L5;
                                             } else {
                                               L6: {
@@ -1139,7 +1174,7 @@ public final class ShatteredPlansClient extends tl {
                                                             if (!nh.field_l.b((byte) -19)) {
                                                               break L8;
                                                             } else {
-                                                              if (nh.field_l.a(param0 ^ -83)) {
+                                                              if (nh.field_l.a(-1)) {
                                                                 L9: {
                                                                   if (!ti.field_g.b((byte) -79)) {
                                                                     break L9;
@@ -1151,7 +1186,7 @@ public final class ShatteredPlansClient extends tl {
                                                                         if (!ai.field_c.b((byte) -40)) {
                                                                           break L10;
                                                                         } else {
-                                                                          if (!ai.field_c.a(param0 ^ -83)) {
+                                                                          if (!ai.field_c.a(-1)) {
                                                                             break L10;
                                                                           } else {
                                                                             L11: {
@@ -1170,9 +1205,10 @@ public final class ShatteredPlansClient extends tl {
                                                                                       } else {
                                                                                         dp.e(-23771);
                                                                                         nj.a(65.0f, 2, jp.field_xb);
-                                                                                        ((ShatteredPlansClient) this).d(param0 + -81);
+                                                                                        ((ShatteredPlansClient) this).d(1);
                                                                                         if (param1) {
-                                                                                          vo.a(ld.field_m, cm.field_a, param0 + 18);
+                                                                                          int discarded$10 = 100;
+                                                                                          vo.a(ld.field_m, cm.field_a);
                                                                                           cm.field_a = null;
                                                                                           ld.field_m = null;
                                                                                           u.c(122);
@@ -1183,7 +1219,7 @@ public final class ShatteredPlansClient extends tl {
                                                                                       }
                                                                                     }
                                                                                   }
-                                                                                  nj.a(75.0f, 2, nc.a(ed.field_e, la.field_k, param0 ^ 118, jh.field_v));
+                                                                                  nj.a(75.0f, 2, nc.a(ed.field_e, la.field_k, 36, jh.field_v));
                                                                                   return false;
                                                                                 }
                                                                               }
@@ -1215,12 +1251,12 @@ public final class ShatteredPlansClient extends tl {
                                                   }
                                                 }
                                               }
-                                              nj.a(60.0f, param0 + -80, bh.a("", m.field_z, (byte) 62, le.field_a, hc.field_b));
+                                              nj.a(60.0f, 2, bh.a("", m.field_z, (byte) 62, le.field_a, hc.field_b));
                                               return false;
                                             }
                                           }
                                         }
-                                        nj.a(45.0f, 2, ve.a(df.field_n, 0, le.field_a, hc.field_b, param0 + -15012));
+                                        nj.a(45.0f, 2, ve.a(df.field_n, 0, le.field_a, hc.field_b, -14930));
                                         return false;
                                       }
                                     }
@@ -1251,13 +1287,14 @@ public final class ShatteredPlansClient extends tl {
               }
             }
           }
-          nj.a(10.0f, param0 ^ 80, bh.a("basic", kl.field_s, (byte) 38, fa.field_J, ii.field_r));
+          nj.a(10.0f, 2, bh.a("basic", kl.field_s, (byte) 38, fa.field_J, ii.field_r));
           return false;
         } else {
           if (m.field_z != null) {
             nj.a(75.0f, 2, cq.field_I);
             ((ShatteredPlansClient) this).d(1);
-            ii.a(m.field_z, df.field_n, param0 + -47);
+            int discarded$11 = 35;
+            ii.a(m.field_z, df.field_n);
             df.field_n = null;
             m.field_z = null;
             u.c(126);
@@ -1266,45 +1303,42 @@ public final class ShatteredPlansClient extends tl {
             if (ti.field_g == null) {
               if (nh.field_l == null) {
                 if (null != ai.field_c) {
-                  ph.a(ai.field_c, param0 + -167);
-                  mh.field_h = oq.a(ai.field_c.a(true, "starnames.txt", ""), (byte) -17);
+                  int discarded$12 = -85;
+                  ph.a(ai.field_c);
+                  int discarded$13 = -17;
+                  mh.field_h = oq.a(ai.field_c.a(true, "starnames.txt", ""));
                   ai.field_c = null;
                   u.c(121);
                   return false;
                 } else {
                   if (null == oi.field_h) {
-                    this.l(1);
+                    int discarded$14 = 1;
+                    this.l();
                     er.a(true);
                     qf.a((byte) -125);
                     var3 = 0;
                     L13: while (true) {
                       if (14 <= var3) {
                         L14: {
-                          if (param0 == 82) {
-                            break L14;
-                          } else {
-                            this.l(64);
-                            break L14;
-                          }
-                        }
-                        L15: {
                           gr.field_o = 0;
                           if (bs.field_b < 2) {
-                            stackOut_76_0 = 0;
-                            stackIn_77_0 = stackOut_76_0;
-                            break L15;
+                            stackOut_74_0 = 0;
+                            stackIn_75_0 = stackOut_74_0;
+                            break L14;
                           } else {
-                            stackOut_75_0 = 1;
-                            stackIn_77_0 = stackOut_75_0;
-                            break L15;
+                            stackOut_73_0 = 1;
+                            stackIn_75_0 = stackOut_73_0;
+                            break L14;
                           }
                         }
-                        se.field_g = stackIn_77_0 != 0;
+                        se.field_g = stackIn_75_0 != 0;
                         uc.field_A = -1;
                         vr.field_c = 0;
                         de.field_j = -1;
-                        hk.a(50, (byte) 52);
-                        ec.b(param0 ^ -86, 50);
+                        int discarded$15 = 52;
+                        int discarded$16 = 50;
+                        hk.a();
+                        ec.b(-8, 50);
                         u.c(122);
                         jo.a(32767, hk.field_nb, true, 1048576);
                         return true;
@@ -1330,7 +1364,8 @@ public final class ShatteredPlansClient extends tl {
             } else {
               nj.a(90.0f, 2, cc.field_p);
               ((ShatteredPlansClient) this).d(1);
-              ck.a(ms.field_d, (java.applet.Applet) this, kl.field_s, rl.field_f, ti.field_g, la.field_k, (byte) -8);
+              int discarded$17 = -8;
+              ck.a(ms.field_d, (java.applet.Applet) this, kl.field_s, rl.field_f, ti.field_g, la.field_k);
               rl.field_f = null;
               ti.field_g = null;
               la.field_k = null;
@@ -1343,392 +1378,614 @@ public final class ShatteredPlansClient extends tl {
 
     final void g(int param0) {
         ShatteredPlansClient.m((byte) -46);
-        he.a(23811);
-        pf.c(0);
-        tg.a(82);
+        int discarded$0 = 23811;
+        he.a();
+        int discarded$1 = 0;
+        pf.c();
+        int discarded$2 = 82;
+        tg.a();
         wi.a((byte) 111);
-        no.a(-6);
+        int discarded$3 = -6;
+        no.a();
         h.d(param0 ^ 24068);
-        id.a((byte) -77);
-        va.a(102);
+        int discarded$4 = -77;
+        id.a();
+        int discarded$5 = 102;
+        va.a();
         kq.d(param0 ^ -24389);
-        kr.a((byte) 16);
+        int discarded$6 = 16;
+        kr.a();
         vr.a(true);
         l.a((byte) -98);
         rl.a(param0 ^ -24069);
-        jq.a((byte) -102);
+        int discarded$7 = -102;
+        jq.a();
         uo.a(true);
-        jf.a((byte) -23);
+        int discarded$8 = -23;
+        jf.a();
         wo.a((byte) -103);
         vo.a(256);
         tl.k(-38);
-        rg.b(108);
+        int discarded$9 = 108;
+        rg.b();
         kf.b(param0 ^ -24187);
         r.a(0);
         ed.a(param0 ^ -24150);
         ib.a(param0 ^ -24163);
         gf.c();
-        bc.b(-466);
+        int discarded$10 = -466;
+        bc.b();
         gg.a(param0 + 24069);
-        ob.a((byte) 78);
-        pr.b(21455);
-        bs.a(53);
-        sa.b(2029303720);
-        ba.a(0);
+        int discarded$11 = 78;
+        ob.a();
+        int discarded$12 = 21455;
+        pr.b();
+        int discarded$13 = 53;
+        bs.a();
+        int discarded$14 = 2029303720;
+        sa.b();
+        int discarded$15 = 0;
+        ba.a();
         kd.a(109);
-        ss.a(1);
-        je.a(1);
-        dk.a((byte) 125);
-        nf.b((byte) -25);
-        hq.a(108);
-        fp.a((byte) 47);
+        int discarded$16 = 1;
+        ss.a();
+        int discarded$17 = 1;
+        je.a();
+        int discarded$18 = 125;
+        dk.a();
+        int discarded$19 = -25;
+        nf.b();
+        int discarded$20 = 108;
+        hq.a();
+        int discarded$21 = 47;
+        fp.a();
         uh.a(param0 ^ -24161);
-        eb.b(-1314558012);
-        cp.b(false);
+        int discarded$22 = -1314558012;
+        eb.b();
+        int discarded$23 = 0;
+        cp.b();
         ar.a(16967);
-        rn.a(true);
-        tj.a((byte) 124);
+        int discarded$24 = 1;
+        rn.a();
+        int discarded$25 = 124;
+        tj.a();
         ej.a(false);
         ke.b((byte) -127);
-        um.a((byte) -17);
-        ui.c(-26088);
+        int discarded$26 = -17;
+        um.a();
+        int discarded$27 = -26088;
+        ui.c();
         oh.a(true);
         c.b();
         nq.a();
-        sj.a((byte) -106);
+        int discarded$28 = -106;
+        sj.a();
         dm.a(false);
         pl.a(param0 ^ -17251);
         nb.a((byte) 123);
-        dh.a((byte) -98);
-        of.b(64);
-        ud.a(127);
-        aj.a(21805);
-        ij.a((byte) -29);
+        int discarded$29 = -98;
+        dh.a();
+        int discarded$30 = 64;
+        of.b();
+        int discarded$31 = 127;
+        ud.a();
+        int discarded$32 = 21805;
+        aj.a();
+        int discarded$33 = -29;
+        ij.a();
         io.a((byte) 120);
         sm.f(-25370);
         km.h(11);
         te.a(param0 + 24069);
-        nn.a((byte) 63);
+        int discarded$34 = 63;
+        nn.a();
         ga.d(-17876);
-        ti.b(0);
-        qq.a(-109);
+        int discarded$35 = 0;
+        ti.b();
+        int discarded$36 = -109;
+        qq.a();
         pi.b();
         ap.f();
         d.a(-28065);
-        np.b(true);
-        hm.d(false);
+        int discarded$37 = 1;
+        np.b();
+        int discarded$38 = 0;
+        hm.d();
         v.a(3);
-        wp.a((byte) -90);
+        int discarded$39 = -90;
+        wp.a();
         ae.b(-17358);
-        qr.e(-14115);
-        fb.h(32);
+        int discarded$40 = -14115;
+        qr.e();
+        int discarded$41 = 32;
+        fb.h();
         in.a(true);
         mj.g(-4923);
         qn.a(-989994556);
-        ue.a(18031);
-        rs.h(2616);
+        int discarded$42 = 18031;
+        ue.a();
+        int discarded$43 = 2616;
+        rs.h();
         ur.f((byte) -118);
         ul.g(param0 ^ -24045);
         am.g(param0 + 47949);
-        fc.a((byte) -87);
+        int discarded$44 = -87;
+        fc.a();
         ub.g(param0 ^ param0);
         kh.g(param0 ^ 24070);
-        wg.a((byte) -117);
-        ci.a(true);
-        s.a((byte) 114);
-        lc.a(false);
-        ig.a((byte) 92);
-        ta.a((byte) 118);
+        int discarded$45 = -117;
+        wg.a();
+        int discarded$46 = 1;
+        ci.a();
+        int discarded$47 = 114;
+        s.a();
+        int discarded$48 = 0;
+        lc.a();
+        int discarded$49 = 92;
+        ig.a();
+        int discarded$50 = 118;
+        ta.a();
         tc.e(true);
-        oj.q(-17682);
-        eo.h((byte) -94);
+        int discarded$51 = -17682;
+        oj.q();
+        int discarded$52 = -94;
+        eo.h();
         hk.p(param0 + 24089);
-        ns.j((byte) -121);
+        int discarded$53 = -121;
+        ns.j();
         aa.a((byte) 32);
-        cq.a((byte) 121);
+        int discarded$54 = 121;
+        cq.a();
         ri.a((byte) -73);
         e.b(param0 + 2129445);
-        sp.a(3);
-        wc.a(-23092);
-        ea.a((byte) -109);
+        int discarded$55 = 3;
+        sp.a();
+        int discarded$56 = -23092;
+        wc.a();
+        int discarded$57 = -109;
+        ea.a();
         fs.a(param0 ^ -24065);
         ho.a(520);
-        dc.e((byte) -67);
+        int discarded$58 = -67;
+        dc.e();
         ln.e(param0 ^ -24069);
         mg.g((byte) -106);
-        qa.e(21758);
-        an.b(true);
-        fm.a(110);
+        int discarded$59 = 21758;
+        qa.e();
+        int discarded$60 = 1;
+        an.b();
+        int discarded$61 = 110;
+        fm.a();
         ia.c(param0 ^ 28675);
-        tr.g(0);
-        jj.c(45);
+        int discarded$62 = 0;
+        tr.g();
+        int discarded$63 = 45;
+        jj.c();
         hp.b((byte) -64);
-        nh.b((byte) 59);
-        me.a(true);
-        jb.a(30);
+        int discarded$64 = 59;
+        nh.b();
+        int discarded$65 = 1;
+        me.a();
+        int discarded$66 = 30;
+        jb.a();
         vs.a(param0 ^ -24162);
-        oo.a(4);
+        int discarded$67 = 4;
+        oo.a();
         mk.a((byte) -58);
-        ds.a(false);
+        int discarded$68 = 0;
+        ds.a();
         ms.a(param0 ^ 24068);
-        sl.l(0);
+        int discarded$69 = 0;
+        sl.l();
         ai.a((byte) 1);
-        po.a((byte) 87);
+        int discarded$70 = 87;
+        po.a();
         mh.a(-117);
         qj.a((byte) -20);
-        or.b(126);
-        sg.f((byte) 34);
-        wh.b(true);
-        tb.a(58);
-        nl.a(-87);
-        q.f((byte) 125);
+        int discarded$71 = 126;
+        or.b();
+        int discarded$72 = 34;
+        sg.f();
+        int discarded$73 = 1;
+        wh.b();
+        int discarded$74 = 58;
+        tb.a();
+        int discarded$75 = -87;
+        nl.a();
+        int discarded$76 = 125;
+        q.f();
         jp.g(param0 + 23965);
         dd.a(param0 ^ 27074);
-        dg.f((byte) -124);
-        ka.d((byte) 79);
+        int discarded$77 = -124;
+        dg.f();
+        int discarded$78 = 79;
+        ka.d();
         hi.f(param0 ^ 24118);
         as.a(param0 ^ -24081);
         vn.a((byte) 68);
-        sd.f(-28714);
+        int discarded$79 = -28714;
+        sd.f();
         eg.a(param0 + 24195);
-        hj.a((byte) 12);
-        ne.c(false);
-        qi.a(0);
-        nr.a((byte) 48);
-        k.a(0);
-        hb.c((byte) -122);
-        sf.a((byte) 82);
+        int discarded$80 = 12;
+        hj.a();
+        int discarded$81 = 0;
+        ne.c();
+        int discarded$82 = 0;
+        qi.a();
+        int discarded$83 = 48;
+        nr.a();
+        int discarded$84 = 0;
+        k.a();
+        int discarded$85 = -122;
+        hb.c();
+        int discarded$86 = 82;
+        sf.a();
         db.d(param0 ^ -8957);
         wb.a(-79);
         wm.a(false);
-        mi.a((byte) 99);
+        int discarded$87 = 99;
+        mi.a();
         ls.a(param0 + -4458);
         qg.c(-124);
-        ph.a((byte) 118);
-        ad.a(18973);
+        int discarded$88 = 118;
+        ph.a();
+        int discarded$89 = 18973;
+        ad.a();
         em.a(param0 + 24072);
-        rh.a(5);
-        fe.g(128);
-        kb.d(true);
-        vd.a((byte) -124);
+        int discarded$90 = 5;
+        rh.a();
+        int discarded$91 = 128;
+        fe.g();
+        int discarded$92 = 1;
+        kb.d();
+        int discarded$93 = -124;
+        vd.a();
         uc.e((byte) 106);
-        ff.e((byte) -68);
-        lp.f(1546006977);
-        qk.f(104);
-        jh.d((byte) 124);
-        os.d(true);
-        qh.d((byte) 6);
-        lo.l(0);
-        pc.d(84);
-        hs.b(0);
+        int discarded$94 = -68;
+        ff.e();
+        int discarded$95 = 1546006977;
+        lp.f();
+        int discarded$96 = 104;
+        qk.f();
+        int discarded$97 = 124;
+        jh.d();
+        int discarded$98 = 1;
+        os.d();
+        int discarded$99 = 6;
+        qh.d();
+        int discarded$100 = 0;
+        lo.l();
+        int discarded$101 = 84;
+        pc.d();
+        int discarded$102 = 0;
+        hs.b();
         vl.b((byte) -80);
-        vi.d(-10);
-        el.a(-5731);
+        int discarded$103 = -10;
+        vi.d();
+        int discarded$104 = -5731;
+        el.a();
         se.a((byte) -37);
-        ck.a(100);
-        eh.i(-105);
+        int discarded$105 = 100;
+        ck.a();
+        int discarded$106 = -105;
+        eh.i();
         df.d(9768448);
-        bq.b(1);
+        int discarded$107 = 1;
+        bq.b();
         ii.e(997342595);
-        eq.a((byte) -70);
-        ra.a(false);
-        bf.a((byte) -57);
-        vh.a((byte) 110);
-        jg.b(-102);
-        bd.h(-110);
-        lh.f(5);
+        int discarded$108 = -70;
+        eq.a();
+        int discarded$109 = 0;
+        ra.a();
+        int discarded$110 = -57;
+        bf.a();
+        int discarded$111 = 110;
+        vh.a();
+        int discarded$112 = -102;
+        jg.b();
+        int discarded$113 = -110;
+        bd.h();
+        int discarded$114 = 5;
+        lh.f();
         gd.b(param0 + 24189);
         tm.d(param0 ^ 11083);
         tq.b(param0 ^ 10214);
-        de.a((byte) 102);
-        sq.a((byte) 127);
-        jd.a(14077);
+        int discarded$115 = 102;
+        de.a();
+        int discarded$116 = 127;
+        sq.a();
+        int discarded$117 = 14077;
+        jd.a();
         fi.a(param0 + 24110);
         sn.a(param0 ^ -24146);
         cs.a(-93);
-        a.a((byte) 15);
-        rf.c(true);
-        qc.f(-126);
-        tk.d(false);
-        ua.a(4);
+        int discarded$118 = 15;
+        a.a();
+        int discarded$119 = 1;
+        rf.c();
+        int discarded$120 = -126;
+        qc.f();
+        int discarded$121 = 0;
+        tk.d();
+        int discarded$122 = 4;
+        ua.a();
         ak.h(param0 + 24092);
         p.b((byte) 114);
-        gp.a((byte) 123);
+        int discarded$123 = 123;
+        gp.a();
         jc.g(param0 ^ 6520);
-        ng.a(-109);
+        int discarded$124 = -109;
+        ng.a();
         bo.p(param0 ^ -24069);
         o.a((byte) -77);
         wn.b();
         fd.a();
-        hc.a((byte) 66);
-        sr.a((byte) -74);
-        nm.a((byte) 4);
-        im.a(-27153);
+        int discarded$125 = 66;
+        hc.a();
+        int discarded$126 = -74;
+        sr.a();
+        int discarded$127 = 4;
+        nm.a();
+        int discarded$128 = -27153;
+        im.a();
         oe.a(param0 ^ -24069);
-        uk.a((byte) 91);
+        int discarded$129 = 91;
+        uk.a();
         af.a(param0 ^ 24068);
-        bb.b((byte) 26);
+        int discarded$130 = 26;
+        bb.b();
         cm.a((byte) -26);
-        le.a(124);
+        int discarded$131 = 124;
+        le.a();
         lb.a();
-        na.b((byte) -105);
-        lr.b(3);
-        gi.a(32);
+        int discarded$132 = -105;
+        na.b();
+        int discarded$133 = 3;
+        lr.b();
+        int discarded$134 = 32;
+        gi.a();
         tf.a(false);
-        gn.b(true);
-        i.b(16711935);
-        tp.a((byte) 49);
+        int discarded$135 = 1;
+        gn.b();
+        int discarded$136 = 16711935;
+        i.b();
+        int discarded$137 = 49;
+        tp.a();
         qo.a(-109);
         vg.d(0);
-        kg.d(true);
-        qs.a((byte) 109);
+        int discarded$138 = 1;
+        kg.d();
+        int discarded$139 = 109;
+        qs.a();
         jl.o(-123);
         w.m(-1);
         f.j(param0 ^ -24192);
-        on.b(22256);
-        wl.a((byte) 85);
+        int discarded$140 = 22256;
+        on.b();
+        int discarded$141 = 85;
+        wl.a();
         kn.a();
-        ab.a((byte) -121);
-        mq.b((byte) 127);
-        ch.b((byte) 72);
-        hr.a(5);
+        int discarded$142 = -121;
+        ab.a();
+        int discarded$143 = 127;
+        mq.b();
+        int discarded$144 = 72;
+        ch.b();
+        int discarded$145 = 5;
+        hr.a();
         vm.g(param0 ^ 2556);
         jo.a(true);
         re.a((byte) 125);
-        si.e((byte) -117);
+        int discarded$146 = -117;
+        si.e();
         dp.f((byte) -50);
         ol.a(false);
         li.a((byte) 23);
-        lg.b(101);
-        gs.b((byte) 78);
+        int discarded$147 = 101;
+        lg.b();
+        int discarded$148 = 78;
+        gs.b();
         ge.a(6);
         us.a(param0 ^ -24069);
         gl.a(param0 + 24155);
         er.a(0);
         t.a((byte) -11);
-        ei.a((byte) -81);
+        int discarded$149 = -81;
+        ei.a();
         we.a(-122);
         lm.a(true);
         vp.e((byte) -21);
         cn.e(true);
-        ep.b(640);
-        be.a((byte) 123);
+        int discarded$150 = 640;
+        ep.b();
+        int discarded$151 = 123;
+        be.a();
         pk.a();
-        kl.d(-62);
-        ac.e(-127);
-        co.d((byte) -99);
+        int discarded$152 = -62;
+        kl.d();
+        int discarded$153 = -127;
+        ac.e();
+        int discarded$154 = -99;
+        co.d();
         wf.a((byte) -122);
-        n.a(11209);
-        br.d(59114);
-        kc.a(false);
-        pg.f((byte) -43);
-        fa.l(5);
-        go.k(102);
+        int discarded$155 = 11209;
+        n.a();
+        int discarded$156 = 59114;
+        br.d();
+        int discarded$157 = 0;
+        kc.a();
+        int discarded$158 = -43;
+        pg.f();
+        int discarded$159 = 5;
+        fa.l();
+        int discarded$160 = 102;
+        go.k();
         il.h((byte) 88);
         md.j(-125);
         bj.a(param0 ^ -32120);
-        ts.a((byte) -104);
-        hl.a((byte) 107);
-        ah.i(4096);
-        lk.h(-22429);
+        int discarded$161 = -104;
+        ts.a();
+        int discarded$162 = 107;
+        hl.a();
+        int discarded$163 = 4096;
+        ah.i();
+        int discarded$164 = -22429;
+        lk.h();
         ml.d((byte) -65);
         bk.a(param0 + 26631);
-        pe.a((byte) -75);
-        rp.a(4);
-        td.a(-104);
-        en.a(-5);
-        cr.a((byte) 41);
+        int discarded$165 = -75;
+        pe.a();
+        int discarded$166 = 4;
+        rp.a();
+        int discarded$167 = -104;
+        td.a();
+        int discarded$168 = -5;
+        en.a();
+        int discarded$169 = 41;
+        cr.a();
         mr.a(false);
         rd.a(-90);
-        sh.b((byte) 87);
+        int discarded$170 = 87;
+        sh.b();
         es.a(param0 ^ 24068);
-        so.d(2);
-        qe.a((byte) 93);
+        int discarded$171 = 2;
+        so.d();
+        int discarded$172 = 93;
+        qe.a();
         di.c(true);
-        js.c((byte) 115);
+        int discarded$173 = 115;
+        js.c();
         ja.d((byte) 124);
-        wd.e(false);
+        int discarded$174 = 0;
+        wd.e();
         ek.a(-1);
         cj.c(false);
-        j.i(19333);
+        int discarded$175 = 19333;
+        j.i();
         sc.f((byte) 97);
         rj.i(388178881);
-        hg.c(false);
-        ma.i(30);
-        ca.a(2105376);
-        ji.g((byte) -113);
+        int discarded$176 = 0;
+        hg.c();
+        int discarded$177 = 30;
+        ma.i();
+        int discarded$178 = 2105376;
+        ca.a();
+        int discarded$179 = -113;
+        ji.g();
         la.a((byte) 36);
         cb.a((byte) 104);
         hn.a(19568);
-        fr.i(-950540796);
-        vj.f((byte) 111);
-        rm.a(-1215);
+        int discarded$180 = -950540796;
+        fr.i();
+        int discarded$181 = 111;
+        vj.f();
+        int discarded$182 = -1215;
+        rm.a();
         up.a(param0 ^ -24167);
-        mc.d(false);
+        int discarded$183 = 0;
+        mc.d();
         gq.a(118);
-        m.e(-120);
-        pa.d(1);
+        int discarded$184 = -120;
+        m.e();
+        int discarded$185 = 1;
+        pa.d();
         nc.d(param0 + 24068);
         oi.a(-1);
         fh.a();
         ef.a(0);
         fl.b(param0 + 24068);
-        ip.a(124);
+        int discarded$186 = 124;
+        ip.a();
         jr.a(1885);
-        wj.a((byte) 59);
-        wq.a((byte) -36);
-        gr.a(-47);
-        gm.a((byte) -111);
-        qf.a(9952);
+        int discarded$187 = 59;
+        wj.a();
+        int discarded$188 = -36;
+        wq.a();
+        int discarded$189 = -47;
+        gr.a();
+        int discarded$190 = -111;
+        gm.a();
+        int discarded$191 = 9952;
+        qf.a();
         uq.a(param0 + 24123);
-        bh.a(0);
+        int discarded$192 = 0;
+        bh.a();
         oq.a(param0 + 24098);
-        qp.b((byte) -128);
-        rq.b(-110);
-        ce.b(true);
-        og.a(-1);
-        cg.j(124);
+        int discarded$193 = -128;
+        qp.b();
+        int discarded$194 = -110;
+        rq.b();
+        int discarded$195 = 1;
+        ce.b();
+        int discarded$196 = -1;
+        og.a();
+        int discarded$197 = 124;
+        cg.j();
         ve.g(0);
-        uf.a((byte) 68);
-        hd.a((byte) -99);
+        int discarded$198 = 68;
+        uf.a();
+        int discarded$199 = -99;
+        hd.a();
         vc.a(-67);
-        nd.a(true);
-        ks.a((byte) 127);
+        int discarded$200 = 1;
+        nd.a();
+        int discarded$201 = 127;
+        ks.a();
         fg.b(param0 ^ -24186);
         sk.a(param0 + 24021);
-        gb.a((byte) -115);
-        lq.a((byte) 67);
-        ld.a(16711680);
+        int discarded$202 = -115;
+        gb.a();
+        int discarded$203 = 67;
+        lq.a();
+        int discarded$204 = 16711680;
+        ld.a();
         fk.a((byte) 93);
         mp.a(param0 + 16160);
         kj.a(1);
-        cf.a(240);
-        bg.a(16928);
+        int discarded$205 = 240;
+        cf.a();
+        int discarded$206 = 16928;
+        bg.a();
         kp.b((byte) -47);
-        jm.d(22595);
+        int discarded$207 = 22595;
+        jm.d();
         ee.a(false);
         cl.a(16777215);
-        un.a(11);
-        dn.d((byte) -107);
+        int discarded$208 = 11;
+        un.a();
+        int discarded$209 = -107;
+        dn.d();
         pd.b(0);
-        vf.a(17593);
+        int discarded$210 = 17593;
+        vf.a();
         wa.a(param0 ^ -14291);
-        ih.a(-1);
-        rk.a(-13095);
-        aq.a((byte) 107);
-        wk.a((byte) 70);
+        int discarded$211 = -1;
+        ih.a();
+        int discarded$212 = -13095;
+        rk.a();
+        int discarded$213 = 107;
+        aq.a();
+        int discarded$214 = 70;
+        wk.a();
         ha.a(4324);
         ec.b(true);
         cc.d(param0 + 24324);
         mm.e(param0 + 23978);
-        mf.f(0);
-        mb.d(127);
+        int discarded$215 = 0;
+        mf.f();
+        int discarded$216 = 127;
+        mb.d();
         fj.d(param0 + 24147);
-        oa.b(78);
-        ql.a((byte) -53);
-        u.b(-31);
-        da.b((byte) -37);
-        ro.a((byte) -92);
+        int discarded$217 = 78;
+        oa.b();
+        int discarded$218 = -53;
+        ql.a();
+        int discarded$219 = -31;
+        u.b();
+        int discarded$220 = -37;
+        da.b();
+        int discarded$221 = -92;
+        ro.a();
         ((ShatteredPlansClient) this).field_s = null;
         ((ShatteredPlansClient) this).field_G = null;
     }
@@ -1754,31 +2011,29 @@ public final class ShatteredPlansClient extends tl {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        String[] var10 = null;
         String[] var11 = null;
-        String[] var12 = null;
-        int stackIn_75_0 = 0;
-        int stackIn_78_0 = 0;
-        int stackIn_90_0 = 0;
-        int stackIn_95_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_77_0 = 0;
+        int stackIn_77_0 = 0;
+        int stackIn_87_0 = 0;
+        int stackIn_92_0 = 0;
         int stackOut_76_0 = 0;
-        int stackOut_89_0 = 0;
-        int stackOut_88_0 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_93_0 = 0;
+        int stackOut_75_0 = 0;
+        int stackOut_86_0 = 0;
+        int stackOut_85_0 = 0;
+        int stackOut_91_0 = 0;
+        int stackOut_90_0 = 0;
         L0: {
           var8 = field_F ? 1 : 0;
-          if (~jb.field_c != ~jb.field_g) {
+          if (jb.field_c != jb.field_g) {
             if (jb.field_g != po.field_f) {
-              if (~jb.field_g == ~gs.field_d) {
+              if (jb.field_g == gs.field_d) {
                 L1: {
-                  if (!w.d(true)) {
+                  int discarded$14 = 1;
+                  if (!w.d()) {
                     L2: {
                       if (null != tq.field_b) {
-                        ks.a(20, tq.field_b, 3);
+                        int discarded$15 = 3;
+                        ks.a(20, tq.field_b);
                         break L2;
                       } else {
                         break L2;
@@ -1786,36 +2041,26 @@ public final class ShatteredPlansClient extends tl {
                     }
                     L3: {
                       if (bs.field_b < 2) {
-                        stackOut_74_0 = 0;
-                        stackIn_75_0 = stackOut_74_0;
+                        stackOut_76_0 = 0;
+                        stackIn_77_0 = stackOut_76_0;
                         break L3;
                       } else {
-                        stackOut_73_0 = 1;
-                        stackIn_75_0 = stackOut_73_0;
+                        stackOut_75_0 = 1;
+                        stackIn_77_0 = stackOut_75_0;
                         break L3;
                       }
                     }
                     L4: {
-                      se.field_g = stackIn_75_0 != 0;
+                      se.field_g = stackIn_77_0 != 0;
                       gr.field_o = sh.field_b;
                       jc.a(75, id.a(2, kl.field_s, "basic", "unachieved"));
-                      if (param0) {
-                        stackOut_77_0 = 0;
-                        stackIn_78_0 = stackOut_77_0;
-                        break L4;
-                      } else {
-                        stackOut_76_0 = 1;
-                        stackIn_78_0 = stackOut_76_0;
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      oi.a(stackIn_78_0 != 0);
+                      int discarded$16 = 1;
+                      oi.a();
                       if (nh.a((byte) -111, gr.field_o)) {
                         rn.a(1048576);
-                        break L5;
+                        break L4;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                     s.a(1);
@@ -1840,7 +2085,8 @@ public final class ShatteredPlansClient extends tl {
             } else {
               na.field_F = na.field_F + 1;
               if (na.field_F == 16) {
-                si.f((byte) -91);
+                int discarded$17 = -91;
+                si.f();
                 jb.field_g = gs.field_d;
                 break L0;
               } else {
@@ -1848,277 +2094,271 @@ public final class ShatteredPlansClient extends tl {
               }
             }
           } else {
-            L6: {
+            L5: {
               var3 = 0;
               var4 = 0;
               if (param1) {
-                break L6;
+                break L5;
               } else {
                 if (vr.field_c == gr.field_o) {
                   if (vr.field_c != -1) {
                     if (vr.field_c != -2) {
                       if (vr.field_c == -3) {
                         ub.f((byte) 93);
-                        break L6;
+                        break L5;
                       } else {
                         if (!nh.a((byte) -121, vr.field_c)) {
-                          break L6;
+                          break L5;
                         } else {
                           mj.field_Hb[vr.field_c].i(2664);
-                          break L6;
+                          break L5;
                         }
                       }
                     } else {
                       var3 = 1;
-                      break L6;
+                      break L5;
                     }
                   } else {
                     if (mf.field_p) {
                       var3 = 1;
                       var4 = 1;
-                      break L6;
+                      break L5;
                     } else {
                       ce.field_x.b(true, true);
-                      L7: while (true) {
-                        if (!cc.e((byte) 55)) {
-                          break L6;
+                      L6: while (true) {
+                        int discarded$18 = 55;
+                        if (!cc.e()) {
+                          break L5;
                         } else {
                           ce.field_x.g(-86);
-                          continue L7;
+                          continue L6;
                         }
                       }
                     }
                   }
                 } else {
-                  L8: {
-                    L9: {
-                      if (eh.field_Q != 0) {
-                        break L9;
-                      } else {
-                        if (!nh.a((byte) -76, vr.field_c)) {
-                          break L9;
+                  L7: {
+                    if (eh.field_Q == 0) {
+                      if (nh.a((byte) -76, vr.field_c)) {
+                        if (!mj.field_Hb[vr.field_c].a((byte) 95)) {
+                          break L7;
                         } else {
-                          if (!mj.field_Hb[vr.field_c].a((byte) 95)) {
-                            break L8;
-                          } else {
-                            break L9;
-                          }
+                          eh.field_Q = eh.field_Q + 1;
+                          break L7;
                         }
+                      } else {
+                        eh.field_Q = eh.field_Q + 1;
+                        break L7;
                       }
+                    } else {
+                      eh.field_Q = eh.field_Q + 1;
+                      break L7;
                     }
-                    eh.field_Q = eh.field_Q + 1;
-                    break L8;
                   }
                   if (eh.field_Q == 32) {
                     rn.a(1048576);
-                    break L6;
+                    break L5;
                   } else {
-                    break L6;
+                    break L5;
                   }
                 }
               }
             }
-            L10: {
+            L8: {
               if (!mf.field_p) {
-                break L10;
+                break L8;
               } else {
                 if (md.field_Q) {
-                  break L10;
+                  break L8;
                 } else {
                   if (!is.field_a) {
-                    L11: {
+                    L9: {
                       if (!v.field_b) {
-                        break L11;
+                        break L9;
                       } else {
                         if (!sr.field_h) {
-                          break L11;
+                          break L9;
                         } else {
                           var3 = 0;
-                          break L11;
+                          break L9;
                         }
                       }
                     }
-                    L12: {
+                    L10: {
                       cf.a(2, var3 != 0);
                       if (!kc.field_d) {
-                        break L12;
+                        break L10;
                       } else {
                         in.field_g.b(var4 != 0, true);
-                        break L12;
+                        break L10;
                       }
                     }
-                    L13: {
+                    L11: {
                       if (v.field_b) {
                         cf.a(320, 8, 180, var4 != 0);
                         ce.field_x.b(var4 != 0, true);
-                        break L13;
+                        break L11;
                       } else {
-                        break L13;
+                        break L11;
                       }
                     }
-                    L14: while (true) {
-                      if (!cc.e((byte) 55)) {
-                        break L10;
+                    L12: while (true) {
+                      int discarded$19 = 55;
+                      if (!cc.e()) {
+                        break L8;
                       } else {
-                        L15: {
+                        L13: {
                           if (v.field_b) {
-                            if (gn.a(13, -9861, 12, 15)) {
-                              continue L14;
+                            int discarded$20 = 15;
+                            int discarded$21 = 12;
+                            int discarded$22 = -9861;
+                            int discarded$23 = 13;
+                            if (gn.a()) {
+                              continue L12;
                             } else {
-                              break L15;
+                              break L13;
                             }
                           } else {
-                            boolean discarded$4 = qf.a(0, 13, 15, 12);
-                            break L15;
+                            boolean discarded$24 = qf.a(0, 13, 15, 12);
+                            break L13;
                           }
                         }
-                        L16: {
+                        L14: {
                           if (kc.field_d) {
                             in.field_g.g(-98);
-                            break L16;
+                            break L14;
                           } else {
-                            break L16;
+                            break L14;
                           }
                         }
                         if (!v.field_b) {
-                          continue L14;
+                          continue L12;
                         } else {
                           ce.field_x.g(-99);
-                          continue L14;
+                          continue L12;
                         }
                       }
                     }
                   } else {
-                    break L10;
+                    break L8;
                   }
                 }
               }
             }
-            L17: {
+            L15: {
               if (mf.field_p) {
-                break L17;
+                break L15;
               } else {
-                af.b(0);
-                break L17;
+                int discarded$25 = 0;
+                af.b();
+                break L15;
               }
             }
-            L18: {
+            L16: {
               if (!ge.field_n) {
                 if (fl.field_h <= 0) {
-                  break L18;
+                  break L16;
                 } else {
                   fl.field_h = fl.field_h - 1;
-                  break L18;
+                  break L16;
                 }
               } else {
                 if (fl.field_h < ed.field_f) {
                   fl.field_h = fl.field_h + 1;
-                  break L18;
+                  break L16;
                 } else {
-                  break L18;
+                  break L16;
                 }
               }
             }
-            L19: {
+            L17: {
               var5 = ed.field_f * ed.field_f;
               var6 = -(fl.field_h * fl.field_h) + var5;
               var7 = 120 * var6 / var5 + fs.field_z;
               fa.a(var7, (byte) -47);
               if (uc.field_v > 0) {
                 uc.field_v = uc.field_v - 1;
-                break L19;
+                break L17;
               } else {
-                break L19;
+                break L17;
               }
             }
-            L20: {
-              if (((ShatteredPlansClient) this).field_G.d(0) == null) {
-                break L20;
+            if (((ShatteredPlansClient) this).field_G.d(0) == null) {
+              break L0;
+            } else {
+              int fieldTemp$26 = ((ShatteredPlansClient) this).field_I + 1;
+              ((ShatteredPlansClient) this).field_I = ((ShatteredPlansClient) this).field_I + 1;
+              if (fieldTemp$26 != 335) {
+                break L0;
               } else {
-                int fieldTemp$5 = ((ShatteredPlansClient) this).field_I + 1;
-                ((ShatteredPlansClient) this).field_I = ((ShatteredPlansClient) this).field_I + 1;
-                if (fieldTemp$5 != 335) {
-                  break L20;
-                } else {
-                  ((ShatteredPlansClient) this).field_I = 0;
-                  oh discarded$6 = ((ShatteredPlansClient) this).field_G.h(64);
-                  break L0;
-                }
+                ((ShatteredPlansClient) this).field_I = 0;
+                oh discarded$27 = ((ShatteredPlansClient) this).field_G.h(64);
+                break L0;
               }
             }
-            break L0;
           }
         }
-        L21: {
-          if (!param0) {
-            break L21;
+        L18: {
+          if (gr.field_o == -4) {
+            L19: {
+              tq.field_b = null;
+              var10 = new String[]{hn.field_f[0], hn.field_f[1], hn.field_f[2], hn.field_f[3]};
+              ce.field_x = new km(false, false, (int) ga.field_w[0], td.field_K, hj.field_k, var10, 0, false, (kq) null);
+              if (!uh.field_i) {
+                stackOut_86_0 = 0;
+                stackIn_87_0 = stackOut_86_0;
+                break L19;
+              } else {
+                stackOut_85_0 = 1;
+                stackIn_87_0 = stackOut_85_0;
+                break L19;
+              }
+            }
+            var4 = stackIn_87_0;
+            ta.a(0, -1, (byte) 96, var4 != 0);
+            cs.field_i = true;
+            break L18;
           } else {
-            var9 = null;
-            boolean discarded$7 = ShatteredPlansClient.a(64, 68L, (String) null);
-            break L21;
+            break L18;
+          }
+        }
+        L20: {
+          if (gr.field_o != -5) {
+            break L20;
+          } else {
+            L21: {
+              tq.field_b = null;
+              var11 = new String[]{hn.field_f[0]};
+              ce.field_x = new km(false, true, 0, hi.field_a, 0, var11, 0, false, (kq) null);
+              if (!uh.field_i) {
+                stackOut_91_0 = 0;
+                stackIn_92_0 = stackOut_91_0;
+                break L21;
+              } else {
+                stackOut_90_0 = 1;
+                stackIn_92_0 = stackOut_90_0;
+                break L21;
+              }
+            }
+            var4 = stackIn_92_0;
+            ta.a(0, -1, (byte) 96, var4 != 0);
+            cs.field_i = true;
+            break L20;
           }
         }
         L22: {
-          if (gr.field_o == -4) {
-            L23: {
-              tq.field_b = null;
-              var11 = new String[]{hn.field_f[0], hn.field_f[1], hn.field_f[2], hn.field_f[3]};
-              ce.field_x = new km(false, false, (int) ga.field_w[0], td.field_K, hj.field_k, var11, 0, false, (kq) null);
-              if (!uh.field_i) {
-                stackOut_89_0 = 0;
-                stackIn_90_0 = stackOut_89_0;
-                break L23;
-              } else {
-                stackOut_88_0 = 1;
-                stackIn_90_0 = stackOut_88_0;
-                break L23;
-              }
-            }
-            var4 = stackIn_90_0;
-            ta.a(0, -1, (byte) 96, var4 != 0);
-            cs.field_i = true;
-            break L22;
-          } else {
-            break L22;
-          }
-        }
-        L24: {
-          if (gr.field_o != -5) {
-            break L24;
-          } else {
-            L25: {
-              tq.field_b = null;
-              var12 = new String[]{hn.field_f[0]};
-              ce.field_x = new km(false, true, 0, hi.field_a, 0, var12, 0, false, (kq) null);
-              if (!uh.field_i) {
-                stackOut_94_0 = 0;
-                stackIn_95_0 = stackOut_94_0;
-                break L25;
-              } else {
-                stackOut_93_0 = 1;
-                stackIn_95_0 = stackOut_93_0;
-                break L25;
-              }
-            }
-            var4 = stackIn_95_0;
-            ta.a(0, -1, (byte) 96, var4 != 0);
-            cs.field_i = true;
-            break L24;
-          }
-        }
-        L26: {
           if (gr.field_o != -7) {
-            break L26;
+            break L22;
           } else {
             tk.a(11, np.field_a.g(-79), (byte) -2);
             gr.field_o = vr.field_c;
             is.field_a = true;
-            break L26;
+            break L22;
           }
         }
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         if (!(ka.field_e == null)) {
             ee.a(-47, ka.field_e);
             ka.field_e = null;
@@ -2210,7 +2450,8 @@ public final class ShatteredPlansClient extends tl {
                   }
                   L3: {
                     L4: {
-                      u.a(stackIn_28_0 != 0, false);
+                      int discarded$10 = 0;
+                      u.a(stackIn_28_0 != 0);
                       if (vr.field_c != gr.field_o) {
                         break L4;
                       } else {
@@ -2221,7 +2462,8 @@ public final class ShatteredPlansClient extends tl {
                         }
                       }
                     }
-                    ShatteredPlansClient.n((byte) 67);
+                    int discarded$11 = 67;
+                    ShatteredPlansClient.n();
                     break L3;
                   }
                   L5: {
@@ -2273,7 +2515,8 @@ public final class ShatteredPlansClient extends tl {
                     }
                     L8: {
                       L9: {
-                        u.a(stackIn_18_0 != 0, false);
+                        int discarded$12 = 0;
+                        u.a(stackIn_18_0 != 0);
                         if (vr.field_c != gr.field_o) {
                           break L9;
                         } else {
@@ -2284,7 +2527,8 @@ public final class ShatteredPlansClient extends tl {
                           }
                         }
                       }
-                      ShatteredPlansClient.n((byte) 67);
+                      int discarded$13 = 67;
+                      ShatteredPlansClient.n();
                       break L8;
                     }
                     if (nh.a((byte) -99, vr.field_c)) {
@@ -2341,8 +2585,10 @@ public final class ShatteredPlansClient extends tl {
               }
               L14: {
                 if (sq.a(false)) {
-                  ts.a(sa.a(-27572), param0 ^ -2, mg.e(param0 ^ -84));
-                  kd.a((byte) -119);
+                  int discarded$14 = -27572;
+                  ts.a(sa.a(), param0 ^ -2, mg.e(param0 ^ -84));
+                  int discarded$15 = -119;
+                  kd.a();
                   break L14;
                 } else {
                   if (kh.f((byte) -67)) {
@@ -2379,7 +2625,8 @@ public final class ShatteredPlansClient extends tl {
                     fs.a((byte) stackIn_71_0, stackIn_71_1 != 0);
                     break L14;
                   } else {
-                    if (!i.c(0)) {
+                    int discarded$16 = 0;
+                    if (!i.c()) {
                       if (((ShatteredPlansClient) this).field_G.g(27)) {
                         break L14;
                       } else {
@@ -2416,8 +2663,10 @@ public final class ShatteredPlansClient extends tl {
                         break L14;
                       }
                     } else {
-                      ts.a(gq.c(-118), param0 + -2, ah.h(param0 + 107));
-                      rg.a(94);
+                      int discarded$17 = -118;
+                      ts.a(gq.c(), param0 + -2, ah.h(param0 + 107));
+                      int discarded$18 = 94;
+                      rg.a();
                       break L14;
                     }
                   }
@@ -2460,7 +2709,8 @@ public final class ShatteredPlansClient extends tl {
                   break L20;
                 }
               }
-              mc.a(110, 0, (java.awt.Canvas) var2, 0);
+              int discarded$19 = 0;
+              mc.a(110, 0, (java.awt.Canvas) var2);
               return;
             } else {
               nj.a(100.0f, 2, jh.field_v);
@@ -2493,7 +2743,7 @@ public final class ShatteredPlansClient extends tl {
         ((ShatteredPlansClient) this).field_I = 0;
     }
 
-    private final static void n(byte param0) {
+    private final static void n() {
         int var1 = 0;
         int var2 = 0;
         double var3 = 0.0;

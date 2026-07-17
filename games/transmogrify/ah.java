@@ -37,7 +37,7 @@ final class ah extends java.awt.Canvas {
           try {
             if (param2 >= 88) {
               var4 = param3.getGraphics();
-              ri.field_k.a(-32299, param0, var4, param1);
+              ri.field_k.a(-32299, 0, var4, 0);
               var4.dispose();
               return;
             } else {
@@ -54,7 +54,7 @@ final class ah extends java.awt.Canvas {
           L0: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("ah.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("ah.C(").append(0).append(44).append(0).append(44).append(param2).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

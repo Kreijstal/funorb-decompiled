@@ -511,11 +511,7 @@ final class vf implements Runnable {
         }
     }
 
-    private final ia a(int param0, int param1, String param2, boolean param3) {
-        if (param1 <= 62) {
-            Object var6 = null;
-            ia discarded$0 = ((vf) this).a((java.awt.Frame) null, false);
-        }
+    private final ia a(int param0, int param1, String param2) {
         return this.a((Object) (Object) param2, param0, (byte) 67, 0, 1);
     }
 
@@ -555,11 +551,7 @@ final class vf implements Runnable {
             break L0;
           }
         }
-        if (param2 == 67) {
-          return var6;
-        } else {
-          return null;
-        }
+        return var6;
     }
 
     final ia a(Runnable param0, byte param1, int param2) {
@@ -683,7 +675,8 @@ final class vf implements Runnable {
         if (param2 < 3) {
             ia discarded$0 = ((vf) this).a((byte) 66);
         }
-        return this.a(param1, 67, param0, false);
+        int discarded$1 = 0;
+        return this.a(param1, 67, param0);
     }
 
     final ia a(String param0, Class param1, int param2, Class[] param3) {

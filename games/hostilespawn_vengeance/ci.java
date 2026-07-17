@@ -768,27 +768,24 @@ final class ci implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static void a(int param0, int param1, hm param2) {
-        en var5 = null;
+        en var3 = null;
         int var4 = 0;
         try {
-            var5 = s.field_b;
-            var5.i(param1 ^ 19317, param0);
-            var5.field_i = var5.field_i + 1;
-            var4 = var5.field_i;
-            if (param1 != 2) {
-                ci.b(-16);
-            }
-            var5.d(114, 1);
-            var5.d(94, param2.field_m);
-            var5.d(param1 ^ 96, param2.field_p);
-            var5.b(param2.field_i, param1 + 25249);
-            var5.b(param2.field_k, 25251);
-            var5.b(param2.field_h, 25251);
-            var5.b(param2.field_j, 25251);
-            int discarded$0 = var5.f(var4, -84);
-            var5.a(var5.field_i - var4, param1 + -19722);
+            var3 = s.field_b;
+            var3.i(19319, 4);
+            var3.field_i = var3.field_i + 1;
+            var4 = var3.field_i;
+            var3.d(114, 1);
+            var3.d(94, param2.field_m);
+            var3.d(98, param2.field_p);
+            var3.b(param2.field_i, 25251);
+            var3.b(param2.field_k, 25251);
+            var3.b(param2.field_h, 25251);
+            var3.b(param2.field_j, 25251);
+            int discarded$0 = var3.f(var4, -84);
+            var3.a(var3.field_i - var4, -19720);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ci.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "ci.A(" + 4 + 44 + 2 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

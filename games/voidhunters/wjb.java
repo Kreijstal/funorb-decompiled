@@ -128,8 +128,9 @@ final class wjb extends rqa {
         try {
           L0: {
             var4_int = param0.b(param2, -94);
-            var5 = param0.a(param1, var4_int, param3);
-            stackOut_0_0 = pib.a(param0, var5, var4_int, 0);
+            var5 = param0.a(true, var4_int, param3);
+            int discarded$2 = 0;
+            stackOut_0_0 = pib.a(param0, var5, var4_int);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -163,7 +164,7 @@ final class wjb extends rqa {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(1).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -223,12 +224,12 @@ final class wjb extends rqa {
         }
     }
 
-    final static int e(int param0) {
+    final static int e() {
         return (int)(1000000000L / asa.field_c);
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, boolean param7, boolean param8, int param9, int param10, int param11) {
-        qdb.a(param2, param10, 16777215, param9, param8, param4, param7, param0, -128, param3, param5, param1, 0, param6);
+    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, boolean param7, boolean param8) {
+        qdb.a(14, 15, 16777215, 13, param8, param4, param7, param0, -128, true, 16777215, 11, 0, param6);
     }
 
     wjb(String param0, Class[] param1, String param2) {

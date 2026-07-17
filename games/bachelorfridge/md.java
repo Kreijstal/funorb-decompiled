@@ -8,14 +8,14 @@ final class md extends pu {
     static String[] field_p;
     static int field_l;
 
-    public static void b(int param0) {
+    public static void b() {
         field_o = null;
         field_m = null;
         field_n = null;
         field_p = null;
     }
 
-    final static int d(byte param0) {
+    final static int d() {
         return 1;
     }
 

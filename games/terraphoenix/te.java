@@ -37,7 +37,8 @@ abstract class te {
               var12 = mk.field_j;
               var2 = var12.a(-16384);
               if (0 == var2) {
-                var10 = a.b(3922);
+                int discarded$3 = 3922;
+                var10 = a.b();
                 var18 = var10;
                 var17 = var18;
                 var16 = var17;
@@ -79,7 +80,8 @@ abstract class te {
                   }
                 } else {
                   if (var2 != 2) {
-                    bd.a((Throwable) null, "A1: " + r.i(-15465), -87);
+                    int discarded$4 = -15465;
+                    bd.a((Throwable) null, "A1: " + r.i(), -87);
                     gb.g(-17464);
                     break L1;
                   } else {
@@ -88,7 +90,8 @@ abstract class te {
                       gb.g(-17464);
                       return;
                     } else {
-                      var13.field_l = a.b(3922);
+                      int discarded$5 = 3922;
+                      var13.field_l = a.b();
                       var13.field_k = true;
                       var13.field_m = var13.field_l[0];
                       var13.b((byte) 12);
@@ -107,7 +110,7 @@ abstract class te {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void a(long param0) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -124,71 +127,63 @@ abstract class te {
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean a(CharSequence param0) {
         RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
-        boolean stackIn_4_0 = false;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            if (param1) {
-              stackOut_3_0 = bk.a((byte) 120, true, 10, param0);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
-            }
+            stackOut_2_0 = bk.a((byte) 120, true, 10, param0);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("te.D(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("te.D(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 1 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
@@ -210,8 +205,7 @@ abstract class te {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        Object var24 = null;
-        int var25 = 0;
+        int var24 = 0;
         RuntimeException decompiledCaughtException = null;
         var23 = Terraphoenix.field_V;
         try {
@@ -265,173 +259,164 @@ abstract class te {
               }
               L5: while (true) {
                 if (var13 >= param3) {
-                  L6: {
-                    var15 = param1;
-                    var16 = -param3 + var13;
-                    if (param0 == 99) {
-                      break L6;
-                    } else {
-                      var24 = null;
-                      boolean discarded$7 = te.a((CharSequence) null, false);
-                      break L6;
-                    }
-                  }
+                  var15 = param1;
+                  var16 = -param3 + var13;
                   var18 = var16 * var16 - -var14;
                   var17 = var18 + -var15;
                   var18 = var18 - var16;
-                  L7: while (true) {
+                  L6: while (true) {
                     if (var12 <= var13) {
                       break L0;
                     } else {
-                      L8: while (true) {
-                        L9: {
+                      L7: while (true) {
+                        L8: {
                           if (var14 >= var18) {
-                            break L9;
+                            break L8;
                           } else {
                             if (var14 >= var17) {
-                              break L9;
+                              break L8;
                             } else {
-                              int incrementValue$8 = var15;
+                              int incrementValue$6 = var15;
                               var15--;
-                              var18 = var18 - (incrementValue$8 + var15);
+                              var18 = var18 - (incrementValue$6 + var15);
                               var17 = var17 - (var15 + var15);
-                              continue L8;
+                              continue L7;
                             }
                           }
                         }
-                        L10: {
+                        L9: {
                           var19 = -var15 + param2;
                           if (var19 >= l.field_b) {
-                            break L10;
+                            break L9;
                           } else {
                             var19 = l.field_b;
-                            break L10;
+                            break L9;
                           }
                         }
-                        L11: {
+                        L10: {
                           var20 = var15 + param2;
                           if (l.field_f - 1 < var20) {
                             var20 = l.field_f - 1;
-                            break L11;
+                            break L10;
                           } else {
-                            break L11;
+                            break L10;
                           }
                         }
                         var21 = var13 * l.field_k + var19;
-                        var25 = var19;
-                        var7_int = var25;
+                        var24 = var19;
+                        var7_int = var24;
                         var22 = var19;
-                        L12: while (true) {
+                        L11: while (true) {
                           if (var20 <= var22) {
                             var18 = var18 + (var16 + var16);
                             var13++;
                             var8++;
-                            int incrementValue$9 = var16;
+                            int incrementValue$7 = var16;
                             var16++;
-                            var17 = var17 + (incrementValue$9 + var16);
-                            continue L7;
+                            var17 = var17 + (incrementValue$7 + var16);
+                            continue L6;
                           } else {
-                            L13: {
-                              var10 = (int)(Math.sqrt((double)(-((-param2 + var25) * (var25 - param2)) + -((-param3 + var8) * (-param3 + var8)) + param1 * param1)) + (double)var9);
-                              if (gd.field_a[var25][var8] <= var10) {
-                                L14: {
+                            L12: {
+                              var10 = (int)(Math.sqrt((double)(-((-param2 + var24) * (var24 - param2)) + -((-param3 + var8) * (-param3 + var8)) + param1 * param1)) + (double)var9);
+                              if (gd.field_a[var24][var8] <= var10) {
+                                L13: {
                                   if (param6) {
-                                    gd.field_a[var25][var8] = var10;
-                                    break L14;
+                                    gd.field_a[var24][var8] = var10;
+                                    break L13;
                                   } else {
-                                    break L14;
+                                    break L13;
                                   }
                                 }
-                                int incrementValue$10 = var21;
+                                int incrementValue$8 = var21;
                                 var21++;
-                                l.field_i[incrementValue$10] = param5;
-                                break L13;
+                                l.field_i[incrementValue$8] = param5;
+                                break L12;
                               } else {
                                 var21++;
-                                break L13;
+                                break L12;
                               }
                             }
-                            var25++;
+                            var24++;
                             var22++;
-                            continue L12;
+                            continue L11;
                           }
                         }
                       }
                     }
                   }
                 } else {
-                  L15: while (true) {
-                    L16: {
+                  L14: while (true) {
+                    L15: {
                       if (var18 <= var14) {
-                        break L16;
+                        break L15;
                       } else {
                         if (var17 > var14) {
-                          L17: {
+                          L16: {
                             var19 = param2 + -var15 + 1;
                             if (var19 >= l.field_b) {
-                              break L17;
+                              break L16;
                             } else {
                               var19 = l.field_b;
-                              break L17;
+                              break L16;
                             }
                           }
-                          L18: {
+                          L17: {
                             var20 = param2 + var15;
                             if (l.field_f < var20) {
                               var20 = l.field_f;
-                              break L18;
+                              break L17;
                             } else {
-                              break L18;
+                              break L17;
                             }
                           }
                           var7_int = var19;
                           var21 = l.field_k * var13 + var19;
                           var22 = var19;
-                          L19: while (true) {
+                          L18: while (true) {
                             if (var20 <= var22) {
                               var13++;
                               var8++;
-                              int incrementValue$11 = var16;
+                              int incrementValue$9 = var16;
                               var16--;
-                              var17 = var17 - (incrementValue$11 - -var16);
+                              var17 = var17 - (incrementValue$9 - -var16);
                               var18 = var18 - (var16 + var16);
                               continue L5;
                             } else {
-                              L20: {
+                              L19: {
                                 var10 = (int)((double)var9 + Math.sqrt((double)(-((-param3 + var8) * (var8 - param3)) + -((var7_int + -param2) * (var7_int + -param2)) + param1 * param1)));
                                 if (var10 >= gd.field_a[var7_int][var8]) {
-                                  L21: {
+                                  L20: {
                                     if (param6) {
                                       gd.field_a[var7_int][var8] = var10;
-                                      break L21;
+                                      break L20;
                                     } else {
-                                      break L21;
+                                      break L20;
                                     }
                                   }
-                                  int incrementValue$12 = var21;
+                                  int incrementValue$10 = var21;
                                   var21++;
-                                  l.field_i[incrementValue$12] = param5;
-                                  break L20;
+                                  l.field_i[incrementValue$10] = param5;
+                                  break L19;
                                 } else {
                                   var21++;
-                                  break L20;
+                                  break L19;
                                 }
                               }
                               var7_int++;
                               var22++;
-                              continue L19;
+                              continue L18;
                             }
                           }
                         } else {
-                          break L16;
+                          break L15;
                         }
                       }
                     }
                     var17 = var17 + (var15 + var15);
-                    int incrementValue$13 = var15;
+                    int incrementValue$11 = var15;
                     var15++;
-                    var18 = var18 + (incrementValue$13 + var15);
-                    continue L15;
+                    var18 = var18 + (incrementValue$11 + var15);
+                    continue L14;
                   }
                 }
               }
@@ -440,7 +425,7 @@ abstract class te {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var7, "te.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw qk.a((Throwable) (Object) var7, "te.H(" + 99 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -456,9 +441,6 @@ abstract class te {
     public static void b(byte param0) {
         field_a = null;
         field_e = null;
-        if (param0 > -51) {
-            return;
-        }
         field_g = null;
     }
 

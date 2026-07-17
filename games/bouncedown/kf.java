@@ -6,41 +6,10 @@ abstract class kf {
     static int field_a;
 
     final static boolean a(int param0, char param1) {
-        Object var3 = null;
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 == -49) {
-            break L0;
-          } else {
-            var3 = null;
-            int discarded$2 = kf.a(-21, (CharSequence) null, true, -109);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (param1 < 48) {
-              break L2;
-            } else {
-              if (param1 > 57) {
-                break L2;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-          }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        return param1 >= 48 && param1 <= 57;
     }
 
-    final static tg[] a(int param0, int param1, gk param2, boolean param3) {
+    final static tg[] a(int param0, int param1, gk param2) {
         RuntimeException var4 = null;
         tg[] stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -64,7 +33,8 @@ abstract class kf {
           L0: {
             if (c.a(param2, false, param0, param1)) {
               field_a = 78;
-              stackOut_3_0 = ng.a((byte) -107);
+              int discarded$2 = -107;
+              stackOut_3_0 = ng.a();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -108,7 +78,7 @@ abstract class kf {
 
     abstract void a(int param0, java.awt.Component param1);
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 

@@ -114,7 +114,7 @@ final class hc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         int var1 = 68;
@@ -159,7 +159,7 @@ final class hc {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3 = new pi(0, param0, 0);
+            var3 = new pi(0, 0, 0);
             var3.field_b = param2.field_b;
             var3.field_i = param2.field_i;
             var3.field_a = param2.field_a;
@@ -177,7 +177,7 @@ final class hc {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("hc.A(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("hc.A(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

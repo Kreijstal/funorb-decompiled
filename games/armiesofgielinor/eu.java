@@ -277,9 +277,10 @@ final class eu {
         if (param0 <= 11) {
             ((eu) this).field_f = null;
         }
-        this.c(10201);
+        int discarded$0 = 10201;
+        this.c();
         if (null != ((eu) this).field_c) {
-            tc discarded$0 = ((eu) this).field_f.a(((eu) this).field_c, true);
+            tc discarded$1 = ((eu) this).field_f.a(((eu) this).field_c, true);
             ((eu) this).field_c = ((eu) this).field_f.b(50);
         }
         if (((eu) this).field_c == null) {
@@ -296,7 +297,8 @@ final class eu {
 
     final static void a(int param0, int param1, int param2, jd param3) {
         try {
-            cd.a(27, param2 + -16, param1, 2);
+            int discarded$0 = 2;
+            cd.a(27, param2 + -16, param1);
             int var4_int = 110 / ((49 - param0) / 39);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "eu.J(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
@@ -304,20 +306,21 @@ final class eu {
     }
 
     final void b(int param0) {
-        this.c(10201);
+        int discarded$0 = 10201;
+        this.c();
         if (null != ((eu) this).field_c) {
-            tc discarded$0 = ((eu) this).field_f.a(false, ((eu) this).field_c);
+            tc discarded$1 = ((eu) this).field_f.a(false, ((eu) this).field_c);
             ((eu) this).field_c = ((eu) this).field_f.b((byte) -112);
         }
         if (param0 >= -50) {
-            boolean discarded$1 = this.c((byte) 124);
+            boolean discarded$2 = this.c((byte) 124);
         }
         if (!(((eu) this).field_c != null)) {
             ((eu) this).field_c = ((eu) this).field_f.a(50);
         }
     }
 
-    private final void c(int param0) {
+    private final void c() {
         if (!(!this.c((byte) -33))) {
             ((eu) this).field_f = new bb(((eu) this).field_b);
         }

@@ -21,7 +21,7 @@ final class q extends qr {
         this.a(-4783, param3, param6);
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         int var1 = 32;
         field_Cb = null;
         field_Ab = null;
@@ -463,22 +463,14 @@ final class q extends qr {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var7 = ShatteredPlansClient.field_F ? 1 : 0;
-          if (param0 == -4783) {
-            break L0;
-          } else {
-            ((q) this).field_zb = -80;
-            break L0;
-          }
-        }
+        var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var4 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var4 >= ((q) this).field_Db.length) {
             ((q) this).field_yb.a(((q) this).field_K, ((q) this).field_mb - param1, (byte) 56, param1, 0);
             var8 = 0;
             var4 = var8;
-            L2: while (true) {
+            L1: while (true) {
               if (var8 >= ((q) this).field_xb.length) {
                 return;
               } else {
@@ -486,10 +478,10 @@ final class q extends qr {
                 if (((q) this).field_zb != var8) {
                   ((q) this).field_xb[var8].field_hb = ((q) this).field_xb[var8].field_hb + 10000;
                   var8++;
-                  continue L2;
+                  continue L1;
                 } else {
                   var8++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -501,7 +493,7 @@ final class q extends qr {
             ((q) this).field_Db[var4].field_K = var6 + -var5;
             ((q) this).field_Db[var4].field_mb = param1;
             var4++;
-            continue L1;
+            continue L0;
           }
         }
     }

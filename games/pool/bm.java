@@ -35,7 +35,7 @@ final class bm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -77,7 +77,8 @@ final class bm {
               }
             }
             L2: {
-              var2_int = nj.b(hq.field_i, ta.field_f, -21223);
+              int discarded$2 = -21223;
+              var2_int = nj.b(hq.field_i, ta.field_f);
               if (1 == var2_int) {
                 param1 = "<img=0>" + param1;
                 break L2;

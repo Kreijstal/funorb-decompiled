@@ -7,7 +7,7 @@ abstract class hk {
     static int field_d;
     static long field_c;
 
-    final static void a(byte param0) {
+    final static void a() {
         if (fl.field_u != null) {
             fl.field_u.r(-128);
         }
@@ -327,7 +327,7 @@ abstract class hk {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
     }
 

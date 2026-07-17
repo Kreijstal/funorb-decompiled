@@ -252,7 +252,7 @@ final class lj {
         return 0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         e.a(12899, hb.field_D, ji.field_s, ee.field_b, ua.field_c);
     }
 
@@ -276,11 +276,8 @@ final class lj {
         ((lj) this).field_b = true;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_o = null;
-        if (param0 != 1) {
-            return;
-        }
         field_m = null;
         field_A = null;
     }
@@ -458,7 +455,7 @@ final class lj {
                               if (((lj) this).field_l.length <= var5) {
                                 break L10;
                               } else {
-                                int discarded$1 = ((lj) this).b(-6133);
+                                int discarded$2 = ((lj) this).b(-6133);
                                 var5++;
                                 continue L11;
                               }
@@ -631,7 +628,8 @@ final class lj {
                       }
                     }
                     if (((lj) this).field_j == 3) {
-                      dh.a(((lj) this).field_e, ((lj) this).field_l[0].field_H, true);
+                      int discarded$3 = 1;
+                      dh.a(((lj) this).field_e, ((lj) this).field_l[0].field_H);
                       gj.a((byte) 91, false, am.field_n, 20);
                       break L18;
                     } else {
@@ -714,9 +712,6 @@ final class lj {
     }
 
     final static int a(int param0, boolean param1, int param2) {
-        if (param1) {
-            return 127;
-        }
         int var3 = param0 >>> 31;
         return (var3 + param0) / param2 - var3;
     }

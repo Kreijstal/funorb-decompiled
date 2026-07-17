@@ -737,52 +737,48 @@ final class fm extends pn {
         int var17 = 0;
         int var18 = 0;
         var18 = CrazyCrystals.field_B;
-        if (!param1) {
-          var6 = 0;
-          L0: while (true) {
-            if (24 <= var6) {
-              return;
-            } else {
-              if (0 < ((fm) this).field_t[var6]) {
-                var7 = 32768 + (int)((double)((fm) this).field_x[var6] * Math.sin((double)((fm) this).field_u[var6] * 0.00009587379924285257));
-                var8 = (int)((double)((fm) this).field_x[var6] * Math.cos((double)((fm) this).field_u[var6] * 0.00009587379924285257)) + 32768;
-                var9 = param4 - -(param2 * var7 >> 15);
-                var10 = (param3 * (var8 * 2 - ((fm) this).field_q[var6]) >> 16) + param0;
-                var11 = ((fm) this).field_t[var6] * param2 * param3 / 144;
-                var12 = 0;
-                L1: while (true) {
-                  if (var12 < var11 >> 6) {
-                    var13 = var11 + -(var12 << 6);
-                    var14 = var13 << 23 >> 31;
-                    var13 = (var14 ^ var13) & 255;
-                    var15 = var14 ^ dc.field_J[var6 & 3];
-                    var16 = 16711935 & (var15 & 16711935) * var13 >> 8;
-                    var17 = 65280 & var13 * (var15 & 65280) >> 8;
-                    var15 = var14 ^ (var16 | var17);
-                    kh.b(-var12 + var9, var10, var15);
-                    if (0 < var12) {
-                      kh.b(var12 + var9, var10, var15);
-                      kh.b(var9, -var12 + var10, var15);
-                      kh.b(var9, var12 + var10, var15);
-                      var12++;
-                      continue L1;
-                    } else {
-                      var12++;
-                      continue L1;
-                    }
+        var6 = 0;
+        L0: while (true) {
+          if (24 <= var6) {
+            return;
+          } else {
+            if (0 < ((fm) this).field_t[var6]) {
+              var7 = 32768 + (int)((double)((fm) this).field_x[var6] * Math.sin((double)((fm) this).field_u[var6] * 0.00009587379924285257));
+              var8 = (int)((double)((fm) this).field_x[var6] * Math.cos((double)((fm) this).field_u[var6] * 0.00009587379924285257)) + 32768;
+              var9 = param4 - -(param2 * var7 >> 15);
+              var10 = (param3 * (var8 * 2 - ((fm) this).field_q[var6]) >> 16) + param0;
+              var11 = ((fm) this).field_t[var6] * param2 * param3 / 144;
+              var12 = 0;
+              L1: while (true) {
+                if (var12 < var11 >> 6) {
+                  var13 = var11 + -(var12 << 6);
+                  var14 = var13 << 23 >> 31;
+                  var13 = (var14 ^ var13) & 255;
+                  var15 = var14 ^ dc.field_J[var6 & 3];
+                  var16 = 16711935 & (var15 & 16711935) * var13 >> 8;
+                  var17 = 65280 & var13 * (var15 & 65280) >> 8;
+                  var15 = var14 ^ (var16 | var17);
+                  kh.b(-var12 + var9, var10, var15);
+                  if (0 < var12) {
+                    kh.b(var12 + var9, var10, var15);
+                    kh.b(var9, -var12 + var10, var15);
+                    kh.b(var9, var12 + var10, var15);
+                    var12++;
+                    continue L1;
                   } else {
-                    var6++;
-                    continue L0;
+                    var12++;
+                    continue L1;
                   }
+                } else {
+                  var6++;
+                  continue L0;
                 }
-              } else {
-                var6++;
-                continue L0;
               }
+            } else {
+              var6++;
+              continue L0;
             }
           }
-        } else {
-          return;
         }
     }
 

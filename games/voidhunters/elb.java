@@ -229,7 +229,7 @@ abstract class elb {
 
     abstract void a(int param0);
 
-    private final void b(byte param0) {
+    private final void b() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -249,7 +249,7 @@ abstract class elb {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         ((elb) this).field_c = new short[((elb) this).field_a];
@@ -272,8 +272,10 @@ abstract class elb {
         ((elb) this).field_g = param4;
         ((elb) this).field_h = param2;
         ((elb) this).field_e = param0;
-        this.a((byte) 109);
-        this.b((byte) 23);
+        int discarded$0 = 109;
+        this.a();
+        int discarded$1 = 23;
+        this.b();
     }
 
     public static void c(byte param0) {

@@ -20,66 +20,56 @@ final class pf extends ee implements ga, pl {
     private boolean field_N;
 
     final static boolean a(int param0, char param1) {
-        Object var3 = null;
-        int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
         L0: {
-          if (param0 == -123) {
-            break L0;
-          } else {
-            var3 = null;
-            pf.a(-108, (pk) null);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            L3: {
+          L1: {
+            L2: {
               if (param1 < 48) {
-                break L3;
+                break L2;
               } else {
                 if (param1 <= 57) {
+                  break L1;
+                } else {
                   break L2;
+                }
+              }
+            }
+            L3: {
+              if (param1 < 65) {
+                break L3;
+              } else {
+                if (param1 <= 90) {
+                  break L1;
                 } else {
                   break L3;
                 }
               }
             }
             L4: {
-              if (param1 < 65) {
+              if (param1 < 97) {
                 break L4;
               } else {
-                if (param1 <= 90) {
-                  break L2;
-                } else {
-                  break L4;
-                }
-              }
-            }
-            L5: {
-              if (param1 < 97) {
-                break L5;
-              } else {
                 if (param1 > 122) {
-                  break L5;
+                  break L4;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
-            stackOut_12_0 = 0;
-            stackIn_13_0 = stackOut_12_0;
-            break L1;
+            stackOut_10_0 = 0;
+            stackIn_11_0 = stackOut_10_0;
+            break L0;
           }
-          stackOut_11_0 = 1;
-          stackIn_13_0 = stackOut_11_0;
-          break L1;
+          stackOut_9_0 = 1;
+          stackIn_11_0 = stackOut_9_0;
+          break L0;
         }
-        return stackIn_13_0 != 0;
+        return stackIn_11_0 != 0;
     }
 
-    final static void f(int param0) {
+    final static void f() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -105,7 +95,8 @@ final class pf extends ee implements ga, pl {
               var3 = var9.c((byte) 34);
               if (0 != var2) {
                 if (var2 != 1) {
-                  gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
+                  int discarded$1 = 125;
+                  gi.a((Throwable) null, "LR1: " + og.e(55));
                   jl.a((byte) -123);
                   break L1;
                 } else {
@@ -544,7 +535,8 @@ final class pf extends ee implements ga, pl {
               if (oc.field_e != null) {
                 break L1;
               } else {
-                if (!w.a(false, 52)) {
+                int discarded$5 = 52;
+                if (!w.a(false)) {
                   stackOut_3_0 = -1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -577,7 +569,8 @@ final class pf extends ee implements ga, pl {
                       fc.field_d.a(var13, (byte) -126);
                       fc.field_d.a(var8, (byte) -126);
                       var14 = (CharSequence) (Object) param4;
-                      fc.field_d.a(sl.a(var14, 48), (byte) -126);
+                      int discarded$6 = 48;
+                      fc.field_d.a(sl.a(var14), (byte) -126);
                       fc.field_d.e(param0, 28695);
                       fc.field_d.d((byte) -94, param1);
                       fc.field_d.d((byte) 123, var9);
@@ -676,8 +669,9 @@ final class pf extends ee implements ga, pl {
                       me.field_l = var9;
                       break L8;
                     } else {
-                      boolean discarded$1 = el.b(30000, rc.d(112));
-                      fi.field_b = new Boolean(jl.a((qc) (Object) eh.field_d, 0));
+                      boolean discarded$7 = el.b(30000, rc.d(112));
+                      int discarded$8 = 0;
+                      fi.field_b = new Boolean(jl.a((qc) (Object) eh.field_d));
                       eh.field_d.field_f = 0;
                       break L8;
                     }
@@ -778,7 +772,8 @@ final class pf extends ee implements ga, pl {
                   break L15;
                 } else {
                   L16: {
-                    if (ll.a((byte) 12) <= 30000L) {
+                    int discarded$9 = 12;
+                    if (ll.a() <= 30000L) {
                       kh.field_a = uj.field_e;
                       break L16;
                     } else {
@@ -1035,7 +1030,7 @@ final class pf extends ee implements ga, pl {
                 if (var17 == null) {
                   return;
                 } else {
-                  var4 = 2 % ((param0 - -26) / 62);
+                  var4 = 0;
                   var3 = 0;
                   var5 = 0;
                   L1: while (true) {
@@ -1246,7 +1241,7 @@ final class pf extends ee implements ga, pl {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_65_0 = (RuntimeException) var2;
-                stackOut_65_1 = new StringBuilder().append("pf.M(").append(param0).append(44);
+                stackOut_65_1 = new StringBuilder().append("pf.M(").append(46).append(44);
                 stackIn_67_0 = stackOut_65_0;
                 stackIn_67_1 = stackOut_65_1;
                 stackIn_66_0 = stackOut_65_0;
@@ -1573,7 +1568,8 @@ final class pf extends ee implements ga, pl {
             }
             L13: {
               var8 = jj.field_c;
-              var9 = th.a(k.c(120), 200);
+              int discarded$3 = 200;
+              var9 = th.a(k.c(120));
               if (var9 != mb.field_b) {
                 if (var9 != rl.field_W) {
                   break L13;
@@ -1587,13 +1583,13 @@ final class pf extends ee implements ga, pl {
               }
             }
             L14: {
-              hd dupTemp$2 = new hd(10, ((pf) this).field_m, -20 + ((pf) this).field_r, 25, (el) (Object) ((pf) this).field_J, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((pf) this).b((byte) -110, (el) (Object) dupTemp$2);
+              hd dupTemp$4 = new hd(10, ((pf) this).field_m, -20 + ((pf) this).field_r, 25, (el) (Object) ((pf) this).field_J, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((pf) this).b((byte) -110, (el) (Object) dupTemp$4);
               ((pf) this).field_m = ((pf) this).field_m + (((el) (Object) var12).field_h - -5);
-              hd dupTemp$3 = new hd(10, ((pf) this).field_m, ((pf) this).field_r + -20, 25, (el) (Object) ((pf) this).field_P, false, 80, 3, var7, 16777215, qg.field_b);
-              var13 = dupTemp$3;
-              ((pf) this).b((byte) -120, (el) (Object) dupTemp$3);
+              hd dupTemp$5 = new hd(10, ((pf) this).field_m, ((pf) this).field_r + -20, 25, (el) (Object) ((pf) this).field_P, false, 80, 3, var7, 16777215, qg.field_b);
+              var13 = dupTemp$5;
+              ((pf) this).b((byte) -120, (el) (Object) dupTemp$5);
               ((pf) this).field_E.field_u = (bb) this;
               ((pf) this).field_m = ((pf) this).field_m + (((el) (Object) var13).field_h - -5);
               if (((pf) this).field_M == null) {
@@ -1734,7 +1730,8 @@ final class pf extends ee implements ga, pl {
         if (param0 != -42) {
             mb discarded$0 = pf.h((byte) -98);
         }
-        return new mb(vh.f(100), jg.d(7));
+        int discarded$1 = 7;
+        return new mb(vh.f(100), jg.d());
     }
 
     final void i(int param0) {

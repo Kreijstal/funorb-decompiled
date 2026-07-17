@@ -37,7 +37,7 @@ final class nha {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -177,20 +177,12 @@ final class nha {
                 }
               }
             }
-            L10: {
-              if (param3) {
-                break L10;
-              } else {
-                field_b = null;
-                break L10;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var6, "nha.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw pe.a((Throwable) (Object) var6, "nha.C(" + param0 + 44 + param1 + 44 + param2 + 44 + 1 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

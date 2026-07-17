@@ -54,11 +54,11 @@ final class rj {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_f = null;
     }
 
-    final static void a(String param0, String param1, boolean param2) {
+    final static void a(String param0, String param1) {
         try {
             if (!(null == aa.field_lb)) {
                 aa.field_lb.l(-27697);
@@ -391,7 +391,6 @@ final class rj {
     }
 
     final void a(int param0) {
-        Object var3 = null;
         L0: {
           ((rj) this).field_e = 0;
           ((rj) this).field_b = 0;
@@ -479,8 +478,8 @@ final class rj {
           }
           return;
         } else {
-          var3 = null;
-          rj.a((String) null, (String) null, true);
+          int discarded$1 = 1;
+          rj.a((String) null, (String) null);
           if (0 == ((rj) this).field_h) {
             if (vk.field_r == 98) {
               L5: {

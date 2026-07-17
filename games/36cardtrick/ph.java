@@ -63,13 +63,17 @@ final class ph {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         ga.a(true);
         if (tb.field_c == null) {
-          r.b((byte) 123);
-          kf.d(0);
-          ui.d((byte) -122);
-          if (wk.b((byte) -112)) {
+          int discarded$100 = 123;
+          r.b();
+          int discarded$101 = 0;
+          kf.d();
+          int discarded$102 = -122;
+          ui.d();
+          int discarded$103 = -112;
+          if (wk.b()) {
             na.field_r.h(1, 0);
             fe.a((byte) -38, 0);
             mc.a((byte) -126);
@@ -80,10 +84,14 @@ final class ph {
           }
         } else {
           bg.a(tb.field_c, (byte) -76);
-          r.b((byte) 123);
-          kf.d(0);
-          ui.d((byte) -122);
-          if (!wk.b((byte) -112)) {
+          int discarded$104 = 123;
+          r.b();
+          int discarded$105 = 0;
+          kf.d();
+          int discarded$106 = -122;
+          ui.d();
+          int discarded$107 = -112;
+          if (!wk.b()) {
             mc.a((byte) -126);
             return;
           } else {
@@ -140,7 +148,7 @@ final class ph {
         }
     }
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean a(char param0) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;

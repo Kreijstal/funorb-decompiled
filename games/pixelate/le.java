@@ -13,29 +13,28 @@ final class le {
     static int field_c;
     private int field_a;
 
-    private final void a(Object param0, boolean param1, long param2, int param3) {
+    private final void a(Object param0, boolean param1, long param2) {
         ah var6 = null;
         tj var6_ref = null;
         int var7 = Pixelate.field_H ? 1 : 0;
         if (!(((le) this).field_a >= 1)) {
             throw new IllegalStateException();
         }
-        this.a(param2, (byte) 11);
-        if (!param1) {
-            return;
-        }
+        int discarded$0 = 11;
+        this.a(param2);
         try {
             ((le) this).field_f = ((le) this).field_f - 1;
             while (((le) this).field_f < 0) {
                 var6 = (ah) (Object) ((le) this).field_g.a(113);
-                this.a(var6, -26133);
+                int discarded$1 = -26133;
+                this.a(var6);
             }
             var6_ref = new tj(param0, 1);
             ((le) this).field_e.a((fa) (Object) var6_ref, param2, -1);
             ((le) this).field_g.a((byte) 99, (lm) (Object) var6_ref);
             ((ah) (Object) var6_ref).field_q = 0L;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "le.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "le.A(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + param2 + 44 + 1 + 41);
         }
     }
 
@@ -60,7 +59,8 @@ final class le {
         try {
           L0: {
             L1: {
-              this.a(param1, true, param0, 1);
+              int discarded$2 = 1;
+              this.a(param1, true, param0);
               if (param2 > 75) {
                 break L1;
               } else {
@@ -109,9 +109,10 @@ final class le {
         }
     }
 
-    private final void a(long param0, byte param1) {
+    private final void a(long param0) {
         ah var4 = (ah) (Object) ((le) this).field_e.a(1, param0);
-        this.a(var4, -26133);
+        int discarded$0 = -26133;
+        this.a(var4);
     }
 
     final Object a(long param0, int param1) {
@@ -176,7 +177,7 @@ final class le {
         }
     }
 
-    private final void a(ah param0, int param1) {
+    private final void a(ah param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

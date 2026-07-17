@@ -31,7 +31,7 @@ final class nf {
         field_d = null;
     }
 
-    final static la a(int param0, int param1, ec param2, int param3, boolean param4, int param5) {
+    final static la a(int param0, int param1, ec param2, int param3, boolean param4) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         la var7 = null;
@@ -56,7 +56,7 @@ final class nf {
         String stackOut_8_2 = null;
         try {
           L0: {
-            var8 = me.a((byte) 114, param1, param3, param2, 0, param0);
+            var8 = me.a((byte) 114, param1, 0, param2, 0, param0);
             var6 = var8;
             if (var8 != null) {
               L1: {
@@ -108,7 +108,7 @@ final class nf {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 44 + param4 + 44 + 0 + 41);
+          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 0 + 44 + param4 + 44 + 0 + 41);
         }
         return stackIn_6_0;
     }

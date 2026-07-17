@@ -150,7 +150,7 @@ final class oq {
         return stackIn_29_0;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         ge.field_L = false;
         ge.a(320, 8, param0, (po) (Object) aha.field_D, 2, 8, (aha.field_D.field_v + aha.field_D.field_B) * 3 / 2, (kv[]) null, aha.field_D.field_v, (byte) 91, 240, (kv[]) null);
         if (null != kga.field_c) {
@@ -158,7 +158,7 @@ final class oq {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 

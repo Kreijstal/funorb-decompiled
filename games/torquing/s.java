@@ -7,8 +7,9 @@ final class s extends am {
     private kj[] field_v;
     static String field_u;
 
-    final static void b(int param0) {
-        if (!(on.b(160))) {
+    final static void b() {
+        int discarded$5 = 160;
+        if (!(on.b())) {
             return;
         }
         ka.a(4, false, (byte) -53);
@@ -232,7 +233,8 @@ final class s extends am {
                         var5 = param0.i((byte) -101);
                         var6 = var5;
                         if (0 == var6) {
-                          ((s) this).field_v[var4_int] = (kj) (Object) tl.a(param0, (byte) -51);
+                          int discarded$2 = -51;
+                          ((s) this).field_v[var4_int] = (kj) (Object) tl.a(param0);
                           break L6;
                         } else {
                           if (var6 != 1) {
@@ -243,7 +245,8 @@ final class s extends am {
                               if (var6 != 3) {
                                 break L6;
                               } else {
-                                ((s) this).field_v[var4_int] = (kj) (Object) bi.a(param0, (byte) 13);
+                                int discarded$3 = 13;
+                                ((s) this).field_v[var4_int] = (kj) (Object) bi.a(param0);
                                 break L6;
                               }
                             }

@@ -419,12 +419,12 @@ class t extends we {
         }
     }
 
-    final static void i(int param0) {
+    final static void i() {
         me var1 = null;
         int var2 = 0;
         hb var3 = null;
         var1 = (me) (Object) af.field_a.a((byte) -117);
-        var2 = -29 % ((-53 - param0) / 58);
+        var2 = 0;
         if (var1 == null) {
           gk.a(-1);
           return;
@@ -439,7 +439,7 @@ class t extends we {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_v = null;
         field_z = null;
         field_y = null;

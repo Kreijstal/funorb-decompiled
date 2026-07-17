@@ -30,36 +30,14 @@ final class l {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_j = null;
         field_f = null;
         field_a = null;
     }
 
     final static char a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
-        if (param0 < 73) {
-            Object var4 = null;
-            boolean discarded$0 = l.a(-18, (String) null, (String) null);
-            var2 = 255 & param1;
-            if (0 == var2) {
-                throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-            }
-            if (var2 < 128) {
-                return (char)var2;
-            }
-            if (var2 >= 160) {
-                return (char)var2;
-            }
-            var3 = fe.field_a[-128 + var2];
-            if (!(var3 != 0)) {
-                var3 = 63;
-            }
-            var2 = var3;
-            return (char)var2;
-        }
-        var2 = 255 & param1;
+        int var2 = 255 & param1;
         if (0 == var2) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
@@ -69,7 +47,7 @@ final class l {
         if (var2 >= 160) {
             return (char)var2;
         }
-        var3 = fe.field_a[-128 + var2];
+        int var3 = fe.field_a[-128 + var2];
         if (!(var3 != 0)) {
             var3 = 63;
         }
@@ -227,9 +205,6 @@ final class l {
 
     private final void a(ad param0, byte param1, int param2) {
         float var4_float = 0.0f;
-        if (param1 != 0) {
-            return;
-        }
         try {
             var4_float = (float)param2 / 100.0f + (float)(1 + ((l) this).field_b);
             if (param2 == 0) {
@@ -239,11 +214,11 @@ final class l {
             }
             ((l) this).field_h = (float)((l) this).field_g * var4_float / (float)(((l) this).field_i - -1);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "l.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "l.C(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + param2 + 41);
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return mb.field_b != null || we.field_B;
     }
 

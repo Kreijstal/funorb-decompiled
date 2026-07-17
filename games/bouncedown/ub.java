@@ -8,7 +8,7 @@ final class ub {
     static String field_e;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -20,14 +20,12 @@ final class ub {
         tg var2 = null;
         int var3 = 0;
         int var4 = 0;
-        if (param0 != -32) {
-            return;
-        }
         try {
             var2 = new tg(param1.b("final_frame.jpg", "", -90), (java.awt.Component) (Object) ch.field_h);
             var3 = var2.field_s;
             var4 = var2.field_q;
-            wa.a(true);
+            int discarded$0 = 1;
+            wa.a();
             jl.field_c = new tg(var3, 3 * var4 / 4);
             jl.field_c.d();
             var2.b(0, 0);
@@ -35,9 +33,9 @@ final class ub {
             bf.field_o.d();
             var2.b(0, -jl.field_c.field_q);
             bf.field_o.field_p = jl.field_c.field_q;
-            ve.a(param0 ^ 100);
+            ve.a(-124);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ub.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ub.A(" + -32 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

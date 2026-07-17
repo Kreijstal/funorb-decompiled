@@ -15,7 +15,8 @@ final class cc extends af {
 
     final static void f(int param0) {
         qa.e((byte) -95);
-        bd.a(4, true);
+        int discarded$0 = 1;
+        bd.a(4);
     }
 
     final boolean a(int param0, byte param1) {

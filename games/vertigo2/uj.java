@@ -1430,7 +1430,7 @@ final class uj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_j = null;
         field_k = null;
@@ -1781,7 +1781,7 @@ final class uj {
                 }
               }
               var9 = new StringBuilder(var7);
-              var10 = param2;
+              var10 = 0;
               L3: while (true) {
                 var11 = param3.indexOf(param0, var10);
                 if (var11 >= 0) {
@@ -1855,7 +1855,7 @@ final class uj {
           }
           L6: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param2).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(0).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

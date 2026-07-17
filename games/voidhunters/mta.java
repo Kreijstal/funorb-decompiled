@@ -9,7 +9,7 @@ final class mta implements dja {
         return (tv) (Object) new hkb();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -25,13 +25,14 @@ final class mta implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            mta.a(false);
+            int discarded$0 = 0;
+            mta.a();
             return (tv[]) (Object) new hkb[param1];
         }
         return (tv[]) (Object) new hkb[param1];
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         ft var1 = null;
         byte[] var3 = null;
         ola var1_ref = null;

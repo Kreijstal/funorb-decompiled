@@ -53,9 +53,9 @@ abstract class vi extends nm {
         try {
           L0: {
             var4_int = 0;
-            var5 = 29 / ((-52 - param0) / 49);
+            var5 = 29;
             L1: while (true) {
-              if (var4_int >= param2) {
+              if (var4_int >= 5) {
                 break L0;
               } else {
                 var6 = 0;
@@ -80,7 +80,7 @@ abstract class vi extends nm {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("vi.G(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("vi.G(").append(-122).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -105,7 +105,7 @@ abstract class vi extends nm {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(5).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -272,14 +272,16 @@ abstract class vi extends nm {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            boolean discarded$12 = mf.field_f.a(v.field_e, tk.field_r, -114, true);
+            boolean discarded$30 = mf.field_f.a(v.field_e, tk.field_r, -114, true);
             mf.field_f.i(79);
             L1: while (true) {
-              if (!jl.a((byte) 5)) {
+              int discarded$31 = 5;
+              if (!jl.a()) {
                 var1_int = -30 % ((55 - param0) / 43);
                 if (ch.field_b != -1) {
                   var2 = ch.field_b;
-                  bd.a(-1, true);
+                  int discarded$32 = 1;
+                  bd.a(-1);
                   stackOut_6_0 = var2;
                   stackIn_7_0 = stackOut_6_0;
                   return stackIn_7_0;
@@ -313,7 +315,7 @@ abstract class vi extends nm {
                   }
                 }
               } else {
-                boolean discarded$13 = mf.field_f.a(go.field_b, dc.field_b, true);
+                boolean discarded$33 = mf.field_f.a(go.field_b, dc.field_b, true);
                 continue L1;
               }
             }
@@ -397,17 +399,9 @@ abstract class vi extends nm {
                 }
               }
               L3: {
-                if (param3 == -111) {
-                  break L3;
-                } else {
-                  field_n = null;
-                  break L3;
-                }
-              }
-              L4: {
                 var34 = -param2 + param15;
                 if (~param2 == ~param14) {
-                  L5: {
+                  L4: {
                     if (param2 == param15) {
                       var23 = 0;
                       var28 = 0;
@@ -425,7 +419,7 @@ abstract class vi extends nm {
                       var17_int = param7 << 16;
                       var25 = param5;
                       var20 = 0;
-                      break L5;
+                      break L4;
                     } else {
                       var35 = param15 + -param14;
                       if (~param7 <= ~param4) {
@@ -445,7 +439,7 @@ abstract class vi extends nm {
                         var30 = param0 << 16;
                         var29 = param13 << 16;
                         var26 = param5 << 16;
-                        break L5;
+                        break L4;
                       } else {
                         var24 = (param8 - param10 << 16) / var35;
                         var31 = (-param0 + param11 << 16) / var34;
@@ -463,13 +457,13 @@ abstract class vi extends nm {
                         var21 = param16 << 16;
                         var27 = (param12 - param5 << 16) / var34;
                         var17_int = param7 << 16;
-                        break L5;
+                        break L4;
                       }
                     }
                   }
-                  L6: {
+                  L5: {
                     if (param2 >= 0) {
-                      break L6;
+                      break L5;
                     } else {
                       param2 = Math.min(-param2, -param2 + param14);
                       var25 = var25 + var27 * param2;
@@ -481,13 +475,13 @@ abstract class vi extends nm {
                       var17_int = var17_int + param2 * var19;
                       var21 = var21 + var23 * param2;
                       param2 = 0;
-                      break L6;
+                      break L5;
                     }
                   }
                   var33 = 0;
-                  break L4;
+                  break L3;
                 } else {
-                  L7: {
+                  L6: {
                     var22 = param16 << 16;
                     var21 = param16 << 16;
                     var18 = param7 << 16;
@@ -507,7 +501,7 @@ abstract class vi extends nm {
                       var24 = (param8 + -param16 << 16) / var34;
                       var32 = (-param0 + param11 << 16) / var34;
                       var23 = (param10 + -param16 << 16) / var35;
-                      break L7;
+                      break L6;
                     } else {
                       var23 = (param8 - param16 << 16) / var34;
                       var32 = (-param0 + param13 << 16) / var35;
@@ -519,11 +513,11 @@ abstract class vi extends nm {
                       var19 = var20;
                       var20 = var36;
                       var27 = (param12 + -param5 << 16) / var34;
-                      break L7;
+                      break L6;
                     }
                   }
-                  L8: {
-                    L9: {
+                  L7: {
+                    L8: {
                       if (param2 < 0) {
                         if (param14 >= 0) {
                           param2 = -param2;
@@ -536,7 +530,7 @@ abstract class vi extends nm {
                           var30 = var30 + param2 * var32;
                           var25 = var25 + var27 * param2;
                           param2 = 0;
-                          break L9;
+                          break L8;
                         } else {
                           param2 = -param2 + param14;
                           var18 = var18 + var20 * param2;
@@ -548,54 +542,54 @@ abstract class vi extends nm {
                           var17_int = var17_int + var19 * param2;
                           var25 = var25 + param2 * var27;
                           param2 = param14;
-                          break L8;
+                          break L7;
                         }
                       } else {
-                        break L9;
+                        break L8;
                       }
                     }
                     var36 = mg.field_g[param2];
-                    L10: while (true) {
+                    L9: while (true) {
                       if (param2 >= param14) {
-                        break L8;
+                        break L7;
                       } else {
-                        L11: {
+                        L10: {
                           var37 = var17_int >> 16;
                           if (mg.field_e > var37) {
                             var38 = -(var17_int >> 16) + (var18 >> 16);
                             if (0 == var38) {
                               if (var37 < 0) {
-                                break L11;
+                                break L10;
                               } else {
                                 if (var37 < mg.field_e) {
                                   rp.a((byte) 127, var29, 0, 0, 0, var36 + var37, var38, var21, param9, var25);
-                                  break L11;
+                                  break L10;
                                 } else {
-                                  break L11;
+                                  break L10;
                                 }
                               }
                             } else {
-                              L12: {
+                              L11: {
                                 var39 = (var22 - var21) / var38;
                                 var40 = (var26 + -var25) / var38;
                                 var41 = (-var29 + var30) / var38;
                                 if (~mg.field_e < ~(var38 + var37)) {
-                                  break L12;
+                                  break L11;
                                 } else {
                                   var38 = -1 + (-var37 + mg.field_e);
-                                  break L12;
+                                  break L11;
                                 }
                               }
                               if (var37 < 0) {
                                 rp.a((byte) 121, var29 - var41 * var37, var41, var39, var40, var36, var38 + var37, var21 - var37 * var39, param9, -(var40 * var37) + var25);
-                                break L11;
+                                break L10;
                               } else {
                                 rp.a((byte) 117, var29, var41, var39, var40, var36 + var37, var38, var21, param9, var25);
-                                break L11;
+                                break L10;
                               }
                             }
                           } else {
-                            break L11;
+                            break L10;
                           }
                         }
                         param2++;
@@ -609,7 +603,7 @@ abstract class vi extends nm {
                           var29 = var29 + var31;
                           var17_int = var17_int + var19;
                           var30 = var30 + var32;
-                          continue L10;
+                          continue L9;
                         } else {
                           return;
                         }
@@ -618,7 +612,7 @@ abstract class vi extends nm {
                   }
                   var36 = -param14 + param15;
                   if (var36 != 0) {
-                    L13: {
+                    L12: {
                       var37 = param1 << 16;
                       var38 = param8 << 16;
                       var39 = param12 << 16;
@@ -627,13 +621,13 @@ abstract class vi extends nm {
                         var29 = param13 << 16;
                         var17_int = param4 << 16;
                         var25 = param6 << 16;
-                        break L13;
+                        break L12;
                       } else {
                         var26 = param6 << 16;
                         var22 = param10 << 16;
                         var30 = param13 << 16;
                         var18 = param4 << 16;
-                        break L13;
+                        break L12;
                       }
                     }
                     var40 = param11 << 16;
@@ -645,7 +639,7 @@ abstract class vi extends nm {
                     var31 = (-var29 + var40) / var36;
                     var24 = (var38 - var22) / var36;
                     var27 = (-var25 + var39) / var36;
-                    break L4;
+                    break L3;
                   } else {
                     var24 = 0;
                     var19 = 0;
@@ -655,11 +649,11 @@ abstract class vi extends nm {
                     var20 = 0;
                     var28 = 0;
                     var31 = 0;
-                    break L4;
+                    break L3;
                   }
                 }
               }
-              L14: {
+              L13: {
                 if (param2 < 0) {
                   param2 = -param2;
                   var22 = var22 + param2 * var24;
@@ -671,53 +665,53 @@ abstract class vi extends nm {
                   var17_int = var17_int + var19 * param2;
                   var18 = var18 + param2 * var20;
                   param2 = 0;
-                  break L14;
+                  break L13;
                 } else {
-                  break L14;
+                  break L13;
                 }
               }
               var35 = mg.field_g[param2];
-              L15: while (true) {
+              L14: while (true) {
                 if (param15 <= param2) {
                   return;
                 } else {
-                  L16: {
+                  L15: {
                     var36 = var17_int >> 16;
                     if (mg.field_e > var36) {
                       var37 = (var18 >> 16) - (var17_int >> 16);
                       if (var37 == 0) {
                         if (var36 < 0) {
-                          break L16;
+                          break L15;
                         } else {
                           if (mg.field_e <= var36) {
-                            break L16;
+                            break L15;
                           } else {
                             rp.a((byte) 127, var29, 0, 0, 0, var36 + var35, var37, var21, param9, var25);
-                            break L16;
+                            break L15;
                           }
                         }
                       } else {
-                        L17: {
+                        L16: {
                           var38 = (-var21 + var22) / var37;
                           var39 = (var26 - var25) / var37;
                           var40 = (-var29 + var30) / var37;
                           if (var36 + var37 < mg.field_e) {
-                            break L17;
+                            break L16;
                           } else {
                             var37 = mg.field_e - (var36 + 1);
-                            break L17;
+                            break L16;
                           }
                         }
                         if (0 <= var36) {
                           rp.a((byte) 125, var29, var40, var38, var39, var35 + var36, var37, var21, param9, var25);
-                          break L16;
+                          break L15;
                         } else {
                           rp.a((byte) 117, var29 + -(var40 * var36), var40, var38, var39, var35, var37 - -var36, var21 - var38 * var36, param9, var25 + -(var36 * var39));
-                          break L16;
+                          break L15;
                         }
                       }
                     } else {
-                      break L16;
+                      break L15;
                     }
                   }
                   param2++;
@@ -731,7 +725,7 @@ abstract class vi extends nm {
                     var21 = var21 + var23;
                     var30 = var30 + var32;
                     var29 = var29 + var31;
-                    continue L15;
+                    continue L14;
                   } else {
                     return;
                   }
@@ -811,12 +805,13 @@ abstract class vi extends nm {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_n = null;
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        jf.d(-99);
+        int discarded$2 = -99;
+        jf.d();
         lb.d(param2, param3, param1, param4);
         if (param0 < 68) {
             field_n = null;

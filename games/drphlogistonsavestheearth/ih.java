@@ -12,14 +12,15 @@ final class ih extends pj implements ra, ke {
     static int field_R;
     private hf field_L;
 
-    final static he[] k(int param0) {
+    final static he[] k() {
         int var2 = 0;
         int var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         he[] var1 = new he[bd.field_M];
         for (var2 = 0; var2 < bd.field_M; var2++) {
             var1[var2] = new he(oe.field_b, field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], a.field_e[var2], aj.field_a);
         }
-        oc.a((byte) -21);
+        int discarded$0 = -21;
+        oc.a();
         return var1;
     }
 
@@ -139,6 +140,8 @@ final class ih extends pj implements ra, ke {
             ((ih) this).field_M = param0;
             ((ih) this).field_L = new hf(cd.field_a, (fd) null);
             ((ih) this).field_L.field_l = (cg) (Object) new ie();
+            int discarded$2 = 88;
+            int discarded$3 = -84;
             var7 = a.a(5044, wk.field_l, new String[2]);
             var3 = 20;
             var4 = new l(uh.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, uh.field_i.field_x, -1, 2147483647, true);
@@ -215,7 +218,8 @@ final class ih extends pj implements ra, ke {
               if (((ih) this).field_L != param3) {
                 break L1;
               } else {
-                lk.b(1);
+                int discarded$2 = 1;
+                lk.b();
                 ((ih) this).field_M.d(true);
                 break L1;
               }
@@ -262,7 +266,7 @@ final class ih extends pj implements ra, ke {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_O = null;
         field_J = null;
         field_P = null;
@@ -347,11 +351,11 @@ final class ih extends pj implements ra, ke {
         }
     }
 
-    private final String j(int param0) {
+    private final String j() {
         return "</col></u>";
     }
 
-    private final String i(int param0) {
+    private final String i() {
         int var2 = 0;
         return "<u=2164A2><col=2164A2>";
     }

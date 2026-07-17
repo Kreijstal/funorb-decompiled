@@ -68,7 +68,7 @@ final class s extends ke {
         return ue.a(9, param0, 1, param2, param1);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_h = null;
         field_f = null;
@@ -89,7 +89,7 @@ final class s extends ke {
         }
     }
 
-    final static String a(ng param0, int param1, int param2) {
+    final static String a(ng param0) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -119,7 +119,7 @@ final class s extends ke {
         try {
           try {
             L0: {
-              var4 = 36 % ((param1 - 40) / 56);
+              var4 = 0;
               var3_int = param0.c(false);
               if (80 >= var3_int) {
                 break L0;
@@ -169,12 +169,13 @@ final class s extends ke {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + 80 + 41);
+          throw dn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 116 + 44 + 80 + 41);
         }
     }
 
     final long a(boolean param0) {
-        ((s) this).field_i = ((s) this).field_i + this.c((byte) 14);
+        int discarded$2 = 14;
+        ((s) this).field_i = ((s) this).field_i + this.c();
         if (~((s) this).field_e >= ~((s) this).field_i) {
           if (!param0) {
             return 27L;
@@ -186,7 +187,7 @@ final class s extends ke {
         }
     }
 
-    private final long c(byte param0) {
+    private final long c() {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;

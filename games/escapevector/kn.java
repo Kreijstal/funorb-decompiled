@@ -38,7 +38,7 @@ final class kn {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_f = null;
         field_c = null;
         field_h = null;
@@ -73,18 +73,16 @@ final class kn {
     }
 
     private final void b(int param0, int param1) {
-        int[] var4 = new int[this.d(param0, param1)];
+        int[] var4 = new int[this.d(0, param1)];
         int[] var3 = var4;
         qg.a(((kn) this).field_a, 0, var4, 0, ((kn) this).field_a.length);
         ((kn) this).field_a = var4;
     }
 
-    final static void a(byte param0) {
-        mb.field_g = hi.c(false);
+    final static void a() {
+        int discarded$0 = 0;
+        mb.field_g = hi.c();
         bo.field_F = new tb();
-        if (param0 > -21) {
-            return;
-        }
         ve.a(-43, true, true);
     }
 
@@ -105,25 +103,21 @@ final class kn {
         int var3 = 0;
         int var4 = 0;
         var4 = EscapeVector.field_A;
-        if (param0 != 0) {
-          return 34;
-        } else {
-          var3 = ((kn) this).field_a.length;
-          L0: while (true) {
-            if (param1 < var3) {
-              return var3;
+        var3 = ((kn) this).field_a.length;
+        L0: while (true) {
+          if (param1 < var3) {
+            return var3;
+          } else {
+            if (!((kn) this).field_d) {
+              var3 = var3 + ((kn) this).field_e;
+              continue L0;
             } else {
-              if (!((kn) this).field_d) {
-                var3 = var3 + ((kn) this).field_e;
+              if (var3 != 0) {
+                var3 = var3 * ((kn) this).field_e;
                 continue L0;
               } else {
-                if (var3 != 0) {
-                  var3 = var3 * ((kn) this).field_e;
-                  continue L0;
-                } else {
-                  var3 = 1;
-                  continue L0;
-                }
+                var3 = 1;
+                continue L0;
               }
             }
           }
@@ -138,7 +132,9 @@ final class kn {
         if (!param0) {
             return null;
         }
-        return new sn(ce.c(31069), jc.c(-89));
+        int discarded$0 = 31069;
+        int discarded$1 = -89;
+        return new sn(ce.c(), jc.c());
     }
 
     final int a(boolean param0) {

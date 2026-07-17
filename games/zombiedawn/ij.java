@@ -167,40 +167,32 @@ final class ij extends pa {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_6_0 = 0;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
-            if (param1) {
-              var3_int = 0;
-              L1: while (true) {
-                if (0 >= param2) {
-                  stackOut_7_0 = var3_int;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L0;
-                } else {
-                  var3_int = var3_int << 1 | param0 & 1;
-                  param0 = param0 >>> 1;
-                  param2--;
-                  continue L1;
-                }
+            var3_int = 0;
+            L1: while (true) {
+              if (0 >= param2) {
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3_int = var3_int << 1 | param0 & 1;
+                param0 = param0 >>> 1;
+                param2--;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 57;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var3, "ij.H(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw sh.a((Throwable) (Object) var3, "ij.H(" + param0 + 44 + 1 + 44 + param2 + 41);
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, ga param5) {
@@ -215,7 +207,7 @@ final class ij extends pa {
         }
     }
 
-    final static eo h(int param0) {
+    final static eo h() {
         if (!(ic.field_S != fk.field_F)) {
             throw new IllegalStateException();
         }
@@ -226,7 +218,7 @@ final class ij extends pa {
         return mp.field_f;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_M = null;
         field_J = null;
         field_L = null;

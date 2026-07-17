@@ -5,17 +5,14 @@ final class plb extends rqa {
     static String field_o;
 
     final static boolean a(int param0, boolean param1, int param2) {
-        if (param1) {
-            return false;
-        }
-        return 0 != (param0 & 16) ? true : false;
+        return 0 != (param0 & 16);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 
-    final static void a(llb param0, llb param1, boolean param2) {
+    final static void a(llb param0, llb param1) {
         if (!(param1.field_lb != null)) {
             param1.field_lb = new ij();
         }

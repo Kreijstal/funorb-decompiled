@@ -41,7 +41,7 @@ final class db {
     int[] field_u;
     int field_B;
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_h = null;
         field_f = null;
@@ -58,7 +58,7 @@ final class db {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return ao.field_Kb == cb.field_c;
     }
 
@@ -260,7 +260,7 @@ final class db {
         return stackIn_6_0;
     }
 
-    final static lk a(long param0, boolean param1) {
+    final static lk a(long param0) {
         return (lk) (Object) ti.field_i.a(param0, (byte) -9);
     }
 

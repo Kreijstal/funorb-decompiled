@@ -241,14 +241,11 @@ final class r implements fc {
 
     final static rg a(int param0, boolean param1) {
         rg var2 = new rg(true);
-        if (param0 != 5579) {
-            return null;
-        }
-        var2.field_a = false;
+        var2.field_a = param1 ? true : false;
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
     }
@@ -305,7 +302,7 @@ final class r implements fc {
             }
             L3: {
               var7 = stackIn_5_0;
-              int discarded$1 = ((r) this).field_b.a("<u=" + Integer.toString(var7, 16) + ">" + param1.field_h + "</u>", param4 - -param1.field_r, param1.field_i + param0, param1.field_k, param1.field_m, var7, -1, ((r) this).field_a, ((r) this).field_e, ((r) this).field_b.field_s - -((r) this).field_b.field_x);
+              int discarded$2 = ((r) this).field_b.a("<u=" + Integer.toString(var7, 16) + ">" + param1.field_h + "</u>", param4 - -param1.field_r, param1.field_i + param0, param1.field_k, param1.field_m, var7, -1, ((r) this).field_a, ((r) this).field_e, ((r) this).field_b.field_s - -((r) this).field_b.field_x);
               if (!param1.e(1)) {
                 break L3;
               } else {
@@ -339,7 +336,8 @@ final class r implements fc {
                     }
                   }
                 }
-                ck.a(-2 + var10, var9, var8 + 4, 2 + var11, 14677);
+                int discarded$3 = 14677;
+                ck.a(-2 + var10, var9, var8 + 4, 2 + var11);
                 break L3;
               }
             }

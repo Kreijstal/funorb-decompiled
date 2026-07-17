@@ -16,7 +16,7 @@ final class gn {
     static int field_d;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         field_h = null;
         field_b = null;
@@ -52,7 +52,7 @@ final class gn {
             var2 = 0;
             L1: while (true) {
               if (var2 >= 256) {
-                var2 = param0;
+                var2 = 0;
                 L2: while (true) {
                   if (256 <= var2) {
                     this.a(false);

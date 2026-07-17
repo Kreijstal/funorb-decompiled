@@ -41,7 +41,7 @@ final class qd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -88,7 +88,7 @@ final class qd {
         }
     }
 
-    final static boolean a(String param0, String param1, boolean param2) {
+    final static boolean a(String param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_7_0 = 0;

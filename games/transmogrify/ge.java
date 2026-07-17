@@ -89,7 +89,7 @@ final class ge extends aj implements hl, df {
         return stackIn_9_0;
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_A = null;
     }
 
@@ -163,11 +163,11 @@ final class ge extends aj implements hl, df {
         }
     }
 
-    private final String m(int param0) {
+    private final String m() {
         return "</col></u>";
     }
 
-    private final String l(int param0) {
+    private final String l() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -200,6 +200,8 @@ final class ge extends aj implements hl, df {
             ((ge) this).field_w = param0;
             ((ge) this).field_y = new lj(qe.field_I, (ma) null);
             ((ge) this).field_y.field_q = (ui) (Object) new qa();
+            int discarded$2 = 300;
+            int discarded$3 = -71;
             var7 = ij.a(ua.field_b, new String[2], (byte) -123);
             var3 = 20;
             var4 = new h(vd.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);

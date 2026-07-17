@@ -18,7 +18,7 @@ final class ic {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void a(boolean param0) {
         we.field_e = param0 ? new mk(qf.field_a, eh.field_q) : new mk(rl.field_e, qd.field_Q);
         tl.field_P = new hl(0L, (hl) null);
         tl.field_P.a((byte) -98, (hl) (Object) we.field_e.field_g);
@@ -29,17 +29,21 @@ final class ic {
         fj.field_b.a((byte) -123, wb.field_e);
         wb.field_e.a((byte) 21, hh.field_c);
         wb.field_e.a((byte) 18, c.field_b);
-        cc.a(param0, true);
+        int discarded$0 = 1;
+        cc.a(param0);
     }
 
     final static void a(byte param0) {
+        int var1 = 0;
         if (!bh.field_r) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
+        } else {
+          k.field_c = true;
+          ck.a((byte) 126, false);
+          fn.field_R = 0;
+          var1 = 82 / ((param0 - -51) / 57);
+          return;
         }
-        k.field_c = true;
-        ck.a((byte) 126, false);
-        fn.field_R = 0;
-        int var1 = 41;
     }
 
     static {

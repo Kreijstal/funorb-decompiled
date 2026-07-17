@@ -79,7 +79,7 @@ final class gwa extends rqa {
     final static void a(int param0, int param1, double param2, int param3, double param4) {
         int var8 = 0;
         var8 = VoidHunters.field_G;
-        if (param1 != ~cd.field_c) {
+        if (cd.field_c != 0) {
           if (param0 == 0) {
             L0: {
               mlb.field_q = null;
@@ -242,7 +242,7 @@ final class gwa extends rqa {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_p = null;
     }
 

@@ -10,20 +10,17 @@ final class ac {
     static int field_b;
 
     final static void a(int param0, int param1) {
-        int discarded$4 = dj.a(6445);
-        if (param0 != 25972) {
-            field_c = null;
-        }
+        int discarded$0 = dj.a(6445);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (bk.field_r != null) {
             bk.field_r.a((byte) -124);
             return;
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -36,7 +33,7 @@ final class ac {
               L0: {
                 L1: {
                   if (od.field_j != null) {
-                    od.field_j.a(param0 ^ -16802);
+                    od.field_j.a(0);
                     break L1;
                   } else {
                     break L1;
@@ -50,47 +47,43 @@ final class ac {
                     break L2;
                   }
                 }
-                if (param0 == -16802) {
-                  L3: {
-                    if (uc.field_h != null) {
-                      {
-                        L4: {
-                          uc.field_h.a((byte) -111);
-                          break L4;
-                        }
-                      }
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  if (bg.field_e != null) {
-                    var1_int = 0;
-                    L6: while (true) {
-                      if (bg.field_e.length <= var1_int) {
-                        break L0;
-                      } else {
-                        L7: {
-                          if (bg.field_e[var1_int] == null) {
-                            var1_int++;
-                            break L7;
-                          } else {
-                            {
-                              L8: {
-                                bg.field_e[var1_int].a((byte) -111);
-                                var1_int++;
-                                break L8;
-                              }
-                            }
-                            break L7;
-                          }
-                        }
-                        var1_int++;
-                        continue L6;
+                L3: {
+                  if (uc.field_h != null) {
+                    {
+                      L4: {
+                        uc.field_h.a((byte) -111);
+                        break L4;
                       }
                     }
+                    break L3;
                   } else {
-                    return;
+                    break L3;
+                  }
+                }
+                if (bg.field_e != null) {
+                  var1_int = 0;
+                  L6: while (true) {
+                    if (bg.field_e.length <= var1_int) {
+                      break L0;
+                    } else {
+                      L7: {
+                        if (bg.field_e[var1_int] == null) {
+                          var1_int++;
+                          break L7;
+                        } else {
+                          {
+                            L8: {
+                              bg.field_e[var1_int].a((byte) -111);
+                              var1_int++;
+                              break L8;
+                            }
+                          }
+                          break L7;
+                        }
+                      }
+                      var1_int++;
+                      continue L6;
+                    }
                   }
                 } else {
                   return;
@@ -99,7 +92,7 @@ final class ac {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw t.a((Throwable) (Object) var1_ref, "ac.F(" + param0 + 41);
+              throw t.a((Throwable) (Object) var1_ref, "ac.F(" + -16802 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -108,7 +101,7 @@ final class ac {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -352,7 +345,7 @@ final class ac {
         return stackIn_1_0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_d = null;
         int var1 = 25;
         field_a = null;

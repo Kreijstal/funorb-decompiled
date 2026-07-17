@@ -213,15 +213,11 @@ final class la extends jd {
         return var4;
     }
 
-    final static String a(long param0, boolean param1) {
+    final static String a(long param0) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
         int var11 = TetraLink.field_J;
-        if (!param1) {
-            Object var12 = null;
-            rj discarded$0 = la.a((String) null, -122);
-        }
         if (param0 <= 0L) {
             return null;
         }
@@ -247,9 +243,9 @@ final class la extends jd {
                 var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
                 var9 = 160;
             }
-            StringBuilder discarded$1 = var6.append(var9);
+            StringBuilder discarded$0 = var6.append(var9);
         }
-        StringBuilder discarded$2 = var6.reverse();
+        StringBuilder discarded$1 = var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
         return var6.toString();
     }
@@ -298,7 +294,8 @@ final class la extends jd {
                 if (param0.equals((Object) (Object) oa.field_y.a((byte) 72))) {
                   break L1;
                 } else {
-                  oa.field_y = il.a(param0, 14781);
+                  int discarded$2 = 14781;
+                  oa.field_y = il.a(param0);
                   break L1;
                 }
               }
@@ -362,7 +359,7 @@ final class la extends jd {
     la() {
     }
 
-    final static void d(int param0) {
+    final static void d() {
         if (cd.field_c == null) {
           co.field_p = new String[11];
           co.field_p[7] = am.field_d;

@@ -11,20 +11,20 @@ final class s {
 
     final static void a(int param0, qa param1) {
         try {
-            param1.field_t = new int[]{param0};
+            param1.field_t = new int[]{-1};
             param1.field_u = new char[]{'?'};
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "s.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "s.C(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_e = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return ~qb.field_N.field_cc == ~oj.field_c;
     }
 

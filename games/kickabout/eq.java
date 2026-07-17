@@ -14,7 +14,7 @@ final class eq {
     static ot field_h;
     private ci field_i;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_b = null;
         field_c = null;
@@ -30,7 +30,8 @@ final class eq {
         int var2 = -(pg.field_b * pg.field_b) + var1;
         int var3 = c.field_c + var2 * (-c.field_c + na.field_Ab) / var1;
         g.field_a.a(true, 640, df.field_H, var3, 120);
-        cf.a(124, mj.field_b, 640, 5, eb.field_b, na.field_Ab - 24, param0);
+        int discarded$0 = 0;
+        cf.a(124, mj.field_b, 640, 5, eb.field_b, na.field_Ab - 24);
     }
 
     final static boolean a(boolean param0) {
@@ -73,16 +74,11 @@ final class eq {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 1) {
-          return;
-        } else {
-          nq.field_I = 0;
-          ig.field_g = vp.field_c;
-          ps.field_e = 0;
-          fp.field_l = new ko(2);
-          fp.field_l.a(vp.a(n.field_m, el.field_A, (byte) 42), 0, -1, param1);
-          return;
-        }
+        nq.field_I = 0;
+        ig.field_g = vp.field_c;
+        ps.field_e = 0;
+        fp.field_l = new ko(2);
+        fp.field_l.a(vp.a(n.field_m, el.field_A, (byte) 42), 0, -1, param1);
     }
 
     private final void a(int param0, Object param1, int param2, long param3) {
@@ -90,21 +86,21 @@ final class eq {
         pn var6_ref = null;
         int var7 = Kickabout.field_G;
         try {
-            if (param0 > ((eq) this).field_k) {
+            if (((eq) this).field_k < 1) {
                 throw new IllegalStateException();
             }
             this.a((byte) 90, param3);
-            ((eq) this).field_f = ((eq) this).field_f - param0;
+            ((eq) this).field_f = ((eq) this).field_f - 1;
             while (((eq) this).field_f < 0) {
                 var6 = (ij) (Object) ((eq) this).field_i.a((byte) -120);
-                this.a(var6, param2 + -126);
+                this.a(var6, -126);
             }
-            var6_ref = new pn(param1, param0);
+            var6_ref = new pn(param1, 1);
             ((eq) this).field_e.a((gn) (Object) var6_ref, -78, param3);
             ((eq) this).field_i.a(-8545, (am) (Object) var6_ref);
-            ((ij) (Object) var6_ref).field_l = (long)param2;
+            ((ij) (Object) var6_ref).field_l = 0L;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "eq.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "eq.C(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + param3 + 41);
         }
     }
 

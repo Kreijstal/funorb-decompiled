@@ -215,7 +215,7 @@ final class lf {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         aj var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

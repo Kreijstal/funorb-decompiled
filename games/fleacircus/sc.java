@@ -11,32 +11,32 @@ final class sc {
         return param0 & param1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_d = null;
         int var1 = 88;
     }
 
-    final static void a(int param0, hi param1, int param2) {
-        ih var5 = null;
+    final static void a(int param0, hi param1) {
+        ih var3 = null;
         int var4 = 0;
         try {
-            var5 = ud.field_b;
-            var5.e(param2 + 7, param0);
-            var5.field_i = var5.field_i + 1;
-            var4 = var5.field_i;
-            var5.a(param2 ^ -12, param2);
-            var5.a(-11, param1.field_j);
-            var5.a(param2 + -12, param1.field_m);
-            var5.a(param1.field_o, (byte) -46);
-            var5.a(param1.field_i, (byte) -82);
-            var5.a(param1.field_l, (byte) -67);
-            var5.a(param1.field_n, (byte) -42);
-            int discarded$0 = var5.c(var4, param2 + -30533);
-            var5.c((byte) -81, var5.field_i - var4);
+            var3 = ud.field_b;
+            var3.e(8, param0);
+            var3.field_i = var3.field_i + 1;
+            var4 = var3.field_i;
+            var3.a(-11, 1);
+            var3.a(-11, param1.field_j);
+            var3.a(-11, param1.field_m);
+            var3.a(param1.field_o, (byte) -46);
+            var3.a(param1.field_i, (byte) -82);
+            var3.a(param1.field_l, (byte) -67);
+            var3.a(param1.field_n, (byte) -42);
+            int discarded$0 = var3.c(var4, -30532);
+            var3.c((byte) -81, var3.field_i - var4);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "sc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "sc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 

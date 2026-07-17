@@ -10,7 +10,7 @@ final class tn extends pn {
     static volatile int field_s;
     static String field_m;
 
-    final static ef a(byte[] param0, int param1) {
+    final static ef a(byte[] param0) {
         ef var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -36,9 +36,11 @@ final class tn extends pn {
         try {
           L0: {
             if (param0 != null) {
-              dl discarded$2 = tn.b(false);
+              int discarded$6 = 0;
+              dl discarded$7 = tn.b();
               var2 = new ef(param0, uo.field_k, jm.field_a, uo.field_l, je.field_c, ui.field_c);
-              ok.a(2188450);
+              int discarded$8 = 2188450;
+              ok.a();
               stackOut_3_0 = (ef) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -606,7 +608,8 @@ final class tn extends pn {
 
     final static void e(byte param0) {
         if (hp.field_s == 10) {
-          qp.a((byte) 102);
+          int discarded$4 = 102;
+          qp.a();
           hp.field_s = 11;
           if (param0 <= -125) {
             nf.field_f = true;
@@ -618,7 +621,8 @@ final class tn extends pn {
           }
         } else {
           if (!ca.a((byte) 72)) {
-            qp.a((byte) 102);
+            int discarded$5 = 102;
+            qp.a();
             hp.field_s = 11;
             if (param0 > -125) {
               tn.f(-62);
@@ -669,49 +673,19 @@ final class tn extends pn {
         return true;
     }
 
-    final static dl b(boolean param0) {
-        int var1 = 0;
-        int[] var3 = null;
+    final static dl b() {
         int var4_int = 0;
-        dl var4 = null;
-        int var5 = 0;
-        int[] var7 = null;
-        byte[] var8 = null;
-        int[] var9 = null;
-        var5 = CrazyCrystals.field_B;
-        var1 = je.field_c[0] * uo.field_l[0];
-        var8 = ui.field_c[0];
-        var9 = new int[var1];
-        var7 = var9;
-        var3 = var7;
-        if (!param0) {
-          tn.f(87);
-          var4_int = 0;
-          L0: while (true) {
-            if (var1 <= var4_int) {
-              var4 = new dl(km.field_c, bo.field_o, uo.field_k[0], jm.field_a[0], uo.field_l[0], je.field_c[0], var9);
-              ok.a(2188450);
-              return var4;
-            } else {
-              var3[var4_int] = gh.field_z[pf.b(255, (int) var8[var4_int])];
-              var4_int++;
-              continue L0;
-            }
-          }
-        } else {
-          var4_int = 0;
-          L1: while (true) {
-            if (var1 <= var4_int) {
-              var4 = new dl(km.field_c, bo.field_o, uo.field_k[0], jm.field_a[0], uo.field_l[0], je.field_c[0], var9);
-              ok.a(2188450);
-              return var4;
-            } else {
-              var3[var4_int] = gh.field_z[pf.b(255, (int) var8[var4_int])];
-              var4_int++;
-              continue L1;
-            }
-          }
+        int var5 = CrazyCrystals.field_B;
+        int var1 = je.field_c[0] * uo.field_l[0];
+        byte[] var2 = ui.field_c[0];
+        int[] var3 = new int[var1];
+        for (var4_int = 0; var1 > var4_int; var4_int++) {
+            var3[var4_int] = gh.field_z[pf.b(255, (int) var2[var4_int])];
         }
+        dl var4 = new dl(km.field_c, bo.field_o, uo.field_k[0], jm.field_a[0], uo.field_l[0], je.field_c[0], var3);
+        int discarded$0 = 2188450;
+        ok.a();
+        return var4;
     }
 
     final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {

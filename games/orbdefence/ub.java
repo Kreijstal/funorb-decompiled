@@ -55,7 +55,7 @@ final class ub {
                     } else {
                       int incrementValue$81 = var10;
                       var10++;
-                      var4[incrementValue$81] = param1;
+                      var4[incrementValue$81] = 0;
                       var14++;
                       continue L1;
                     }
@@ -67,7 +67,7 @@ final class ub {
             return;
           }
         } else {
-          ul.h(0, 0, ul.field_f, ul.field_l, param1);
+          ul.h(0, 0, ul.field_f, ul.field_l, 0);
           return;
         }
     }

@@ -27,7 +27,7 @@ final class vj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_a = null;
@@ -58,9 +58,12 @@ final class vj {
         try {
           L0: {
             L1: {
-              var4_int = -2 / ((41 - param2) / 40);
+              var4_int = 1;
               if (null != dc.field_e) {
-                ul.a(1048576, param3, param1, param0, -104);
+                int discarded$9 = -104;
+                int discarded$10 = 1;
+                int discarded$11 = 256;
+                ul.a(1048576, param3);
                 break L1;
               } else {
                 break L1;
@@ -72,7 +75,7 @@ final class vj {
               var5 = (Object) (Object) eo.field_f;
               synchronized (var5) {
                 L2: {
-                  m.field_f.e(param1, -1, 16);
+                  m.field_f.e(256, -1, 16);
                   if (param3 != fo.field_a) {
                     L3: {
                       m.field_f.f(-24774);
@@ -81,7 +84,7 @@ final class vj {
                       if (null == fo.field_a) {
                         break L3;
                       } else {
-                        m.field_f.a(fo.field_a, 127, param0);
+                        m.field_f.a(fo.field_a, 127, true);
                         break L3;
                       }
                     }
@@ -99,7 +102,7 @@ final class vj {
           L4: {
             var4 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("vj.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_15_1 = new StringBuilder().append("vj.A(").append(1).append(44).append(256).append(44).append(121).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

@@ -42,7 +42,8 @@ class gt extends ur implements ai {
                 return;
               }
             } else {
-              ag.a(0);
+              int discarded$4 = 0;
+              ag.a();
               return;
             }
           } else {
@@ -60,7 +61,8 @@ class gt extends ur implements ai {
                 return;
               }
             } else {
-              ag.a(0);
+              int discarded$5 = 0;
+              ag.a();
               return;
             }
           } else {
@@ -69,7 +71,7 @@ class gt extends ur implements ai {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_hb = null;
         field_db = null;
         int var1 = 57;
@@ -354,7 +356,8 @@ class gt extends ur implements ai {
             }
           }
           if (!((gt) this).field_eb) {
-            cn.a("tochangedisplayname.ws", ra.c(param1 + -708), (byte) -103);
+            int discarded$2 = -103;
+            cn.a("tochangedisplayname.ws", ra.c(param1 + -708));
             return;
           } else {
             rd.a(3, -82);
@@ -527,15 +530,18 @@ class gt extends ur implements ai {
         }
     }
 
-    final static void m(int param0) {
+    final static void m() {
         ib.d(1);
         if (qn.field_f != null) {
           L0: {
             wr.a(true, qn.field_f);
-            rq.a(false);
-            jm.b(28679);
+            int discarded$98 = 0;
+            rq.a();
+            int discarded$99 = 28679;
+            jm.b();
             fu.a(-1);
-            if (pe.a((byte) -98)) {
+            int discarded$100 = -98;
+            if (pe.a()) {
               as.field_v.g(1, 8);
               gt.a(0, 0);
               break L0;
@@ -547,10 +553,13 @@ class gt extends ur implements ai {
           return;
         } else {
           L1: {
-            rq.a(false);
-            jm.b(28679);
+            int discarded$101 = 0;
+            rq.a();
+            int discarded$102 = 28679;
+            jm.b();
             fu.a(-1);
-            if (pe.a((byte) -98)) {
+            int discarded$103 = -98;
+            if (pe.a()) {
               as.field_v.g(1, 8);
               gt.a(0, 0);
               break L1;

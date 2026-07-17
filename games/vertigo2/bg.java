@@ -84,7 +84,7 @@ abstract class bg {
 
     abstract int a(int param0);
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_e = null;
@@ -166,11 +166,12 @@ abstract class bg {
         try {
           L0: {
             if (l.field_a == un.field_Hb) {
-              var8 = -4 % ((3 - param5) / 42);
+              var8 = 0;
               var9 = new oe(ch.field_e, param6);
               var7 = var9;
               ch.field_e.b((iq) (Object) var9, 0);
-              if (ko.e((byte) -94)) {
+              int discarded$8 = -94;
+              if (ko.e()) {
                 var9.o(16614);
                 stackOut_8_0 = 1;
                 stackIn_9_0 = stackOut_8_0;
@@ -282,7 +283,7 @@ abstract class bg {
           }
           L5: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param5).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(66).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -321,7 +322,7 @@ abstract class bg {
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var6_int = 39 % ((param1 - -35) / 40);
+            var6_int = 1;
             var7 = param3;
             L1: while (true) {
               if (param5 < var7) {
@@ -336,7 +337,7 @@ abstract class bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var6, "bg.S(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wn.a((Throwable) (Object) var6, "bg.S(" + param0 + 44 + 61 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

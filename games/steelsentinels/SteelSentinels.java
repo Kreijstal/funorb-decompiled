@@ -16,10 +16,12 @@ public final class SteelSentinels extends n {
         try {
           var2_ref = gl.a(false);
           if (ol.j(0)) {
-            df.a(-111, var2_ref, qb.g(2));
+            int discarded$2 = 2;
+            df.a(-111, var2_ref, qb.g());
             return;
           } else {
-            en.a(var2_ref, -28003);
+            int discarded$3 = -28003;
+            en.a(var2_ref);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -41,7 +43,8 @@ public final class SteelSentinels extends n {
         int var5 = 0;
         int var6 = 0;
         var6 = field_G;
-        ec.a(35);
+        int discarded$59 = 35;
+        ec.a();
         if (null == aj.field_x) {
           if (ti.field_t == null) {
             if (g.field_i == null) {
@@ -59,7 +62,7 @@ public final class SteelSentinels extends n {
                     pl.field_U = be.a(kd.field_x, oh.field_a, (byte) -93, "bitingfont", "basic");
                     ui.field_U = be.a(kd.field_x, oh.field_a, (byte) -84, "bitinghalf", "basic");
                     ql.field_Tb = dd.a(kd.field_x, oh.field_a, true, "basic", "menutitlefont");
-                    wk[] discarded$11 = cf.a("menu_overlays", "basic", (byte) -87, kd.field_x);
+                    wk[] discarded$60 = cf.a("menu_overlays", "basic", (byte) -87, kd.field_x);
                     wd.field_a = nb.a(kd.field_x, (byte) 42, "frame", "basic");
                     km.field_e = nb.a(kd.field_x, (byte) -119, "frame_filled", "basic");
                     ag.field_o = nb.a(kd.field_x, (byte) -60, "button_frame", "basic");
@@ -84,9 +87,12 @@ public final class SteelSentinels extends n {
                 var3_int = 0;
                 L2: while (true) {
                   if (~var3_int <= ~vg.field_h.length) {
-                    ff.field_tb = rl.a(tm.field_d, "basic", "unachieved", false);
-                    ug.field_P = rl.a(tm.field_d, "basic", "locked", false);
-                    d.field_G = rl.a(tm.field_d, "basic", "orbcoin", false);
+                    int discarded$61 = 0;
+                    ff.field_tb = rl.a(tm.field_d, "basic", "unachieved");
+                    int discarded$62 = 0;
+                    ug.field_P = rl.a(tm.field_d, "basic", "locked");
+                    int discarded$63 = 0;
+                    d.field_G = rl.a(tm.field_d, "basic", "orbcoin");
                     g.field_d = new wk(40, 40);
                     g.field_d.d();
                     ff.field_tb.c(0, 0, 40, 40);
@@ -115,15 +121,21 @@ public final class SteelSentinels extends n {
                     be.field_f[4] = null;
                     pd.field_T = cf.a("greybox", "basic", (byte) -90, kd.field_x);
                     pd.field_T[4] = null;
-                    ao.field_y = rl.a(kd.field_x, "basic", "dropdown_mark", false);
-                    ac.field_bb = rl.a(kd.field_x, "basic", "button_cover", false);
+                    int discarded$64 = 0;
+                    ao.field_y = rl.a(kd.field_x, "basic", "dropdown_mark");
+                    int discarded$65 = 0;
+                    ac.field_bb = rl.a(kd.field_x, "basic", "button_cover");
                     var3_int = 0;
                     L3: while (true) {
                       if (~ac.field_bb.field_E.length >= ~var3_int) {
-                        oa.field_N = rl.a(kd.field_x, "basic", "goldstar", false);
-                        td.field_ec = rl.a(kd.field_x, "basic", "silverstar", false);
-                        wk discarded$12 = rl.a(kd.field_x, "basic", "starfrigate", false);
-                        sb.field_W = rl.a(kd.field_x, "basic", "starcruiser", false);
+                        int discarded$66 = 0;
+                        oa.field_N = rl.a(kd.field_x, "basic", "goldstar");
+                        int discarded$67 = 0;
+                        td.field_ec = rl.a(kd.field_x, "basic", "silverstar");
+                        int discarded$68 = 0;
+                        wk discarded$69 = rl.a(kd.field_x, "basic", "starfrigate");
+                        int discarded$70 = 0;
+                        sb.field_W = rl.a(kd.field_x, "basic", "starcruiser");
                         hb.field_e = sb.field_W.a();
                         jc.field_c = cj.a(27, "basic", kd.field_x, "texticons");
                         bb.field_X = new int[]{13, 13, 13, 13, 14, 14, 14, 13, 13, 15, 13, 13, 12, 13, 15, 13, 13, 13, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15};
@@ -174,52 +186,84 @@ public final class SteelSentinels extends n {
                             fa.field_a = cj.a(param0 ^ -128, "basic", kd.field_x, "infantary");
                             ie.field_d = cj.a(-123, "basic", kd.field_x, "modules");
                             var3_array = rh.field_v;
-                            var3_array[0] = rl.a(kd.field_x, "basic", "instr_giantrobot", false);
-                            var3_array[1] = rl.a(kd.field_x, "basic", "instr_queue", false);
-                            var3_array[2] = rl.a(kd.field_x, "Basic", "instr_walk", false);
-                            var3_array[3] = rl.a(kd.field_x, "basic", "instr_jump", false);
-                            var3_array[4] = rl.a(kd.field_x, "basic", "instr_thrust", false);
+                            int discarded$71 = 0;
+                            var3_array[0] = rl.a(kd.field_x, "basic", "instr_giantrobot");
+                            int discarded$72 = 0;
+                            var3_array[1] = rl.a(kd.field_x, "basic", "instr_queue");
+                            int discarded$73 = 0;
+                            var3_array[2] = rl.a(kd.field_x, "Basic", "instr_walk");
+                            int discarded$74 = 0;
+                            var3_array[3] = rl.a(kd.field_x, "basic", "instr_jump");
+                            int discarded$75 = 0;
+                            var3_array[4] = rl.a(kd.field_x, "basic", "instr_thrust");
                             var3_array[5] = ie.field_d[16].a();
-                            var3_array[6] = rl.a(kd.field_x, "basic", "instr_selweapon", false);
-                            var3_array[7] = rl.a(kd.field_x, "basic", "instr_target", false);
-                            var3_array[8] = rl.a(kd.field_x, "basic", "instr_noenergy", false);
+                            int discarded$76 = 0;
+                            var3_array[6] = rl.a(kd.field_x, "basic", "instr_selweapon");
+                            int discarded$77 = 0;
+                            var3_array[7] = rl.a(kd.field_x, "basic", "instr_target");
+                            int discarded$78 = 0;
+                            var3_array[8] = rl.a(kd.field_x, "basic", "instr_noenergy");
                             var3_array[9] = ie.field_d[32].a();
                             var3_array[10] = ie.field_d[33].a();
-                            var3_array[11] = rl.a(kd.field_x, "basic", "instr_bigshieldicon", false);
+                            int discarded$79 = 0;
+                            var3_array[11] = rl.a(kd.field_x, "basic", "instr_bigshieldicon");
                             var3_array[12] = ie.field_d[27].a();
-                            var3_array[13] = rl.a(kd.field_x, "basic", "instr_stats", false);
-                            var3_array[14] = rl.a(kd.field_x, "basic", "instr_chassis", false);
-                            var3_array[15] = rl.a(kd.field_x, "basic", "instr_components", false);
-                            var3_array[16] = rl.a(kd.field_x, "basic", "instr_weapons", false);
-                            var3_array[17] = rl.a(kd.field_x, "basic", "instr_modules", false);
-                            var3_array[18] = rl.a(kd.field_x, "basic", "instr_engineer", false);
-                            var3_array[19] = rl.a(kd.field_x, "basic", "instr_coop", false);
-                            var3_array[20] = rl.a(kd.field_x, "basic", "instr_team", false);
-                            var3_array[25] = rl.a(kd.field_x, "basic", "instr_techvalue", false);
-                            fa.field_b = rl.a(kd.field_x, "basic", "logo_menu_chromakey", false);
+                            int discarded$80 = 0;
+                            var3_array[13] = rl.a(kd.field_x, "basic", "instr_stats");
+                            int discarded$81 = 0;
+                            var3_array[14] = rl.a(kd.field_x, "basic", "instr_chassis");
+                            int discarded$82 = 0;
+                            var3_array[15] = rl.a(kd.field_x, "basic", "instr_components");
+                            int discarded$83 = 0;
+                            var3_array[16] = rl.a(kd.field_x, "basic", "instr_weapons");
+                            int discarded$84 = 0;
+                            var3_array[17] = rl.a(kd.field_x, "basic", "instr_modules");
+                            int discarded$85 = 0;
+                            var3_array[18] = rl.a(kd.field_x, "basic", "instr_engineer");
+                            int discarded$86 = 0;
+                            var3_array[19] = rl.a(kd.field_x, "basic", "instr_coop");
+                            int discarded$87 = 0;
+                            var3_array[20] = rl.a(kd.field_x, "basic", "instr_team");
+                            int discarded$88 = 0;
+                            var3_array[25] = rl.a(kd.field_x, "basic", "instr_techvalue");
+                            int discarded$89 = 0;
+                            fa.field_b = rl.a(kd.field_x, "basic", "logo_menu_chromakey");
                             ob.field_z = (ek) (Object) dn.a("basic", -63, "main_lower_panel", kd.field_x);
                             ma.field_eb = (ek) (Object) dn.a("basic", param0 ^ 75, "main_title_panel", kd.field_x);
-                            fi.field_j = rl.a(kd.field_x, "basic", "menu_mesh", false);
-                            ic.field_db = rl.a(kd.field_x, "basic", "menu_titlebar", false);
+                            int discarded$90 = 0;
+                            fi.field_j = rl.a(kd.field_x, "basic", "menu_mesh");
+                            int discarded$91 = 0;
+                            ic.field_db = rl.a(kd.field_x, "basic", "menu_titlebar");
                             pl.field_T = nb.a(kd.field_x, (byte) -62, "menu_button_1", "basic");
-                            wk[] discarded$13 = nb.a(kd.field_x, (byte) 107, "empty_button", "basic");
-                            el.field_Ub = rl.a(kd.field_x, "basic", "prevbtn", false);
-                            gm.field_b = rl.a(kd.field_x, "basic", "nextbtn", false);
-                            pf.field_b = rl.a(kd.field_x, "basic", "lobby_icon", false);
+                            wk[] discarded$92 = nb.a(kd.field_x, (byte) 107, "empty_button", "basic");
+                            int discarded$93 = 0;
+                            el.field_Ub = rl.a(kd.field_x, "basic", "prevbtn");
+                            int discarded$94 = 0;
+                            gm.field_b = rl.a(kd.field_x, "basic", "nextbtn");
+                            int discarded$95 = 0;
+                            pf.field_b = rl.a(kd.field_x, "basic", "lobby_icon");
                             vc.field_e = cf.a("statbars", "basic", (byte) -13, kd.field_x);
                             pd.field_Z = cf.a("tags", "basic", (byte) -50, kd.field_x);
-                            uh.field_k = rl.a(kd.field_x, "basic", "tagborder", false);
+                            int discarded$96 = 0;
+                            uh.field_k = rl.a(kd.field_x, "basic", "tagborder");
                             qg.field_f = cf.a("movekeys", "basic", (byte) -38, kd.field_x);
-                            bc.field_wb = rl.a(kd.field_x, "basic", "shiftkey", false);
+                            int discarded$97 = 0;
+                            bc.field_wb = rl.a(kd.field_x, "basic", "shiftkey");
                             da.field_e = cf.a("config_tabs", "basic", (byte) -33, kd.field_x);
-                            aj.field_r[0] = rl.a(kd.field_x, "basic", "research_ring", false);
-                            b.field_q[0] = rl.a(kd.field_x, "basic", "research_icon", false);
+                            int discarded$98 = 0;
+                            aj.field_r[0] = rl.a(kd.field_x, "basic", "research_ring");
+                            int discarded$99 = 0;
+                            b.field_q[0] = rl.a(kd.field_x, "basic", "research_icon");
                             bl.field_p = cj.a(param0 + -75, "basic", kd.field_x, "powerups");
                             gf.field_c = cf.a("headings_bar", "basic", (byte) -26, kd.field_x);
-                            wk discarded$14 = rl.a(kd.field_x, "basic", "solarite", false);
-                            vk.field_q = rl.a(kd.field_x, "basic", "mansize", false);
-                            gj.field_a = rl.a(kd.field_x, "basic", "stripeybar", false);
-                            vk.field_r = rl.a(kd.field_x, "basic", "hackbit", false);
+                            int discarded$100 = 0;
+                            wk discarded$101 = rl.a(kd.field_x, "basic", "solarite");
+                            int discarded$102 = 0;
+                            vk.field_q = rl.a(kd.field_x, "basic", "mansize");
+                            int discarded$103 = 0;
+                            gj.field_a = rl.a(kd.field_x, "basic", "stripeybar");
+                            int discarded$104 = 0;
+                            vk.field_r = rl.a(kd.field_x, "basic", "hackbit");
                             wc.field_d = cf.a("pretty_button_lit", "basic", (byte) -111, kd.field_x);
                             hk.field_Tb = cf.a("pretty_button_unlit", "basic", (byte) -50, kd.field_x);
                             eb.field_p = cf.a("menu_border", "basic", (byte) -31, kd.field_x);
@@ -235,7 +279,7 @@ public final class SteelSentinels extends n {
                             L5: while (true) {
                               if (var4_int >= var3_array.length) {
                                 bm.field_S = cf.a("plasma", "basic", (byte) -98, kd.field_x);
-                                wk[] discarded$15 = cf.a("dust", "basic", (byte) -81, kd.field_x);
+                                wk[] discarded$105 = cf.a("dust", "basic", (byte) -81, kd.field_x);
                                 bf.field_Cb = cj.a(-120, "basic", kd.field_x, "crowns");
                                 bc.field_sb = new wk(32, 32);
                                 bc.field_sb.d();
@@ -293,15 +337,19 @@ public final class SteelSentinels extends n {
                 }
               } else {
                 if (null == ie.field_k) {
-                  hd.a(false);
-                  gf.a(0);
+                  int discarded$106 = 0;
+                  hd.a();
+                  int discarded$107 = 0;
+                  gf.a();
                   var2_int = 0;
                   L8: while (true) {
                     if (23 <= var2_int) {
                       L9: {
                         pm.field_T = 0;
                         vb.field_g = 0;
-                        vg.a(50, (byte) -127);
+                        int discarded$108 = -127;
+                        int discarded$109 = 50;
+                        vg.a();
                         jn.a(true, (byte) 92, 200, me.field_f);
                         if (ni.b(118)) {
                           break L9;
@@ -315,7 +363,9 @@ public final class SteelSentinels extends n {
                         if (param0 == -52) {
                           break L10;
                         } else {
-                          this.b(-1, true);
+                          int discarded$110 = 1;
+                          int discarded$111 = -1;
+                          this.b();
                           break L10;
                         }
                       }
@@ -342,12 +392,12 @@ public final class SteelSentinels extends n {
               kj.field_z = tg.a(g.field_i, "", "cityscape");
               ue.field_e = tg.a(g.field_i, "", "thats_no_moon");
               db.field_a = tg.a(g.field_i, "", "star_fleet");
-              boolean discarded$16 = q.field_f.a(0, me.field_f, 21687, he.field_e, rc.field_i);
-              boolean discarded$17 = q.field_f.a(0, l.field_i, 21687, he.field_e, rc.field_i);
-              boolean discarded$18 = q.field_f.a(0, gb.field_e, 21687, he.field_e, rc.field_i);
-              boolean discarded$19 = q.field_f.a(0, kj.field_z, 21687, he.field_e, rc.field_i);
-              boolean discarded$20 = q.field_f.a(0, ue.field_e, param0 + 21739, he.field_e, rc.field_i);
-              boolean discarded$21 = q.field_f.a(0, db.field_a, 21687, he.field_e, rc.field_i);
+              boolean discarded$112 = q.field_f.a(0, me.field_f, 21687, he.field_e, rc.field_i);
+              boolean discarded$113 = q.field_f.a(0, l.field_i, 21687, he.field_e, rc.field_i);
+              boolean discarded$114 = q.field_f.a(0, gb.field_e, 21687, he.field_e, rc.field_i);
+              boolean discarded$115 = q.field_f.a(0, kj.field_z, 21687, he.field_e, rc.field_i);
+              boolean discarded$116 = q.field_f.a(0, ue.field_e, param0 + 21739, he.field_e, rc.field_i);
+              boolean discarded$117 = q.field_f.a(0, db.field_a, 21687, he.field_e, rc.field_i);
               q.field_f.a((byte) 25);
               g.field_i = null;
               rc.field_i = null;
@@ -1545,7 +1595,8 @@ public final class SteelSentinels extends n {
                     } else {
                       al.field_g = al.field_g + 1;
                       ig.field_o[1] = new wk[4];
-                      ig.field_o[1][0] = rl.a(kd.field_x, "basic", "lw_midground_01", false);
+                      int discarded$13 = 0;
+                      ig.field_o[1][0] = rl.a(kd.field_x, "basic", "lw_midground_01");
                       break L28;
                     }
                   }
@@ -1558,7 +1609,8 @@ public final class SteelSentinels extends n {
                       break L30;
                     } else {
                       al.field_g = al.field_g + 1;
-                      ig.field_o[1][1] = rl.a(kd.field_x, "basic", "lw_midground_02", false);
+                      int discarded$14 = 0;
+                      ig.field_o[1][1] = rl.a(kd.field_x, "basic", "lw_midground_02");
                       break L28;
                     }
                   }
@@ -1569,7 +1621,8 @@ public final class SteelSentinels extends n {
                   } else {
                     if (kd.field_x.a((byte) -78, "lw_midground_03", "basic")) {
                       al.field_g = al.field_g + 1;
-                      ig.field_o[1][2] = rl.a(kd.field_x, "basic", "lw_midground_03", false);
+                      int discarded$15 = 0;
+                      ig.field_o[1][2] = rl.a(kd.field_x, "basic", "lw_midground_03");
                       break L28;
                     } else {
                       break L31;
@@ -1584,7 +1637,8 @@ public final class SteelSentinels extends n {
                       break L32;
                     } else {
                       al.field_g = al.field_g + 1;
-                      ig.field_o[1][3] = rl.a(kd.field_x, "basic", "lw_midground_04", false);
+                      int discarded$16 = 0;
+                      ig.field_o[1][3] = rl.a(kd.field_x, "basic", "lw_midground_04");
                       break L28;
                     }
                   }
@@ -1596,7 +1650,8 @@ public final class SteelSentinels extends n {
                     if (kd.field_x.a((byte) -56, "ct_midground_01", "basic")) {
                       al.field_g = al.field_g + 1;
                       ig.field_o[2] = new wk[4];
-                      ig.field_o[2][0] = rl.a(kd.field_x, "basic", "ct_midground_01", false);
+                      int discarded$17 = 0;
+                      ig.field_o[2][0] = rl.a(kd.field_x, "basic", "ct_midground_01");
                       break L28;
                     } else {
                       break L33;
@@ -1609,7 +1664,8 @@ public final class SteelSentinels extends n {
                   } else {
                     if (kd.field_x.a((byte) 102, "ct_midground_02", "basic")) {
                       al.field_g = al.field_g + 1;
-                      ig.field_o[2][1] = rl.a(kd.field_x, "basic", "ct_midground_02", false);
+                      int discarded$18 = 0;
+                      ig.field_o[2][1] = rl.a(kd.field_x, "basic", "ct_midground_02");
                       break L28;
                     } else {
                       break L34;
@@ -1622,7 +1678,8 @@ public final class SteelSentinels extends n {
                   } else {
                     if (kd.field_x.a((byte) -117, "ct_midground_03", "basic")) {
                       al.field_g = al.field_g + 1;
-                      ig.field_o[2][2] = rl.a(kd.field_x, "basic", "ct_midground_03", false);
+                      int discarded$19 = 0;
+                      ig.field_o[2][2] = rl.a(kd.field_x, "basic", "ct_midground_03");
                       break L28;
                     } else {
                       break L35;
@@ -1637,7 +1694,8 @@ public final class SteelSentinels extends n {
                       break L36;
                     } else {
                       al.field_g = al.field_g + 1;
-                      ig.field_o[2][3] = rl.a(kd.field_x, "basic", "ct_midground_04", false);
+                      int discarded$20 = 0;
+                      ig.field_o[2][3] = rl.a(kd.field_x, "basic", "ct_midground_04");
                       break L28;
                     }
                   }
@@ -1650,7 +1708,8 @@ public final class SteelSentinels extends n {
                       break L37;
                     } else {
                       al.field_g = al.field_g + 1;
-                      vi.field_R = rl.a(kd.field_x, "basic", "testsurface", false);
+                      int discarded$21 = 0;
+                      vi.field_R = rl.a(kd.field_x, "basic", "testsurface");
                       break L28;
                     }
                   }
@@ -1662,7 +1721,8 @@ public final class SteelSentinels extends n {
                     if (kd.field_x.a((byte) -63, "wz_texture", "basic")) {
                       al.field_g = al.field_g + 1;
                       bc.field_rb = new wk[5];
-                      bc.field_rb[0] = rl.a(kd.field_x, "basic", "wz_texture", false);
+                      int discarded$22 = 0;
+                      bc.field_rb[0] = rl.a(kd.field_x, "basic", "wz_texture");
                       bc.field_rb[4] = bc.field_rb[0];
                       break L28;
                     } else {
@@ -1678,7 +1738,8 @@ public final class SteelSentinels extends n {
                       break L39;
                     } else {
                       al.field_g = al.field_g + 1;
-                      bc.field_rb[1] = rl.a(kd.field_x, "basic", "lw_texture", false);
+                      int discarded$23 = 0;
+                      bc.field_rb[1] = rl.a(kd.field_x, "basic", "lw_texture");
                       break L28;
                     }
                   }
@@ -1691,7 +1752,8 @@ public final class SteelSentinels extends n {
                       break L40;
                     } else {
                       al.field_g = al.field_g + 1;
-                      bc.field_rb[2] = rl.a(kd.field_x, "basic", "ct_texture", false);
+                      int discarded$24 = 0;
+                      bc.field_rb[2] = rl.a(kd.field_x, "basic", "ct_texture");
                       break L28;
                     }
                   }
@@ -1703,7 +1765,8 @@ public final class SteelSentinels extends n {
                     break L28;
                   } else {
                     al.field_g = al.field_g + 1;
-                    bc.field_rb[3] = rl.a(kd.field_x, "basic", "mn_texture", false);
+                    int discarded$25 = 0;
+                    bc.field_rb[3] = rl.a(kd.field_x, "basic", "mn_texture");
                     break L28;
                   }
                 }
@@ -1784,7 +1847,8 @@ public final class SteelSentinels extends n {
         try {
           L0: {
             L1: {
-              ti.d(7094);
+              int discarded$6 = 7094;
+              ti.d();
               if (null != wb.field_c) {
                 ub.c(0);
                 break L1;
@@ -1793,7 +1857,8 @@ public final class SteelSentinels extends n {
               }
             }
             var2_int = 21 % ((param0 - 34) / 48);
-            ao.h(0);
+            int discarded$7 = 0;
+            ao.h();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1811,7 +1876,7 @@ public final class SteelSentinels extends n {
         }
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void b() {
         RuntimeException var3 = null;
         int var3_int = 0;
         String var3_ref = null;
@@ -1819,10 +1884,18 @@ public final class SteelSentinels extends n {
         String[] var4_ref_String__ = null;
         int var5_int = 0;
         int[][] var5 = null;
-        mb var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        nb stackIn_240_0 = null;
+        nb stackIn_240_1 = null;
+        int stackIn_240_2 = 0;
+        int stackIn_240_3 = 0;
+        int stackIn_240_4 = 0;
+        String[] stackIn_240_5 = null;
+        int stackIn_240_6 = 0;
+        int stackIn_240_7 = 0;
+        int[][] stackIn_240_8 = null;
         nb stackIn_242_0 = null;
         nb stackIn_242_1 = null;
         int stackIn_242_2 = 0;
@@ -1832,45 +1905,26 @@ public final class SteelSentinels extends n {
         int stackIn_242_6 = 0;
         int stackIn_242_7 = 0;
         int[][] stackIn_242_8 = null;
-        nb stackIn_244_0 = null;
-        nb stackIn_244_1 = null;
-        int stackIn_244_2 = 0;
-        int stackIn_244_3 = 0;
-        int stackIn_244_4 = 0;
-        String[] stackIn_244_5 = null;
-        int stackIn_244_6 = 0;
-        int stackIn_244_7 = 0;
-        int[][] stackIn_244_8 = null;
-        nb stackIn_245_0 = null;
-        nb stackIn_245_1 = null;
-        int stackIn_245_2 = 0;
-        int stackIn_245_3 = 0;
-        int stackIn_245_4 = 0;
-        String[] stackIn_245_5 = null;
-        int stackIn_245_6 = 0;
-        int stackIn_245_7 = 0;
-        int[][] stackIn_245_8 = null;
-        int stackIn_245_9 = 0;
+        nb stackIn_243_0 = null;
+        nb stackIn_243_1 = null;
+        int stackIn_243_2 = 0;
+        int stackIn_243_3 = 0;
+        int stackIn_243_4 = 0;
+        String[] stackIn_243_5 = null;
+        int stackIn_243_6 = 0;
+        int stackIn_243_7 = 0;
+        int[][] stackIn_243_8 = null;
+        int stackIn_243_9 = 0;
         RuntimeException decompiledCaughtException = null;
-        nb stackOut_241_0 = null;
-        nb stackOut_241_1 = null;
-        int stackOut_241_2 = 0;
-        int stackOut_241_3 = 0;
-        int stackOut_241_4 = 0;
-        String[] stackOut_241_5 = null;
-        int stackOut_241_6 = 0;
-        int stackOut_241_7 = 0;
-        int[][] stackOut_241_8 = null;
-        nb stackOut_244_0 = null;
-        nb stackOut_244_1 = null;
-        int stackOut_244_2 = 0;
-        int stackOut_244_3 = 0;
-        int stackOut_244_4 = 0;
-        String[] stackOut_244_5 = null;
-        int stackOut_244_6 = 0;
-        int stackOut_244_7 = 0;
-        int[][] stackOut_244_8 = null;
-        int stackOut_244_9 = 0;
+        nb stackOut_239_0 = null;
+        nb stackOut_239_1 = null;
+        int stackOut_239_2 = 0;
+        int stackOut_239_3 = 0;
+        int stackOut_239_4 = 0;
+        String[] stackOut_239_5 = null;
+        int stackOut_239_6 = 0;
+        int stackOut_239_7 = 0;
+        int[][] stackOut_239_8 = null;
         nb stackOut_242_0 = null;
         nb stackOut_242_1 = null;
         int stackOut_242_2 = 0;
@@ -1881,245 +1935,185 @@ public final class SteelSentinels extends n {
         int stackOut_242_7 = 0;
         int[][] stackOut_242_8 = null;
         int stackOut_242_9 = 0;
+        nb stackOut_240_0 = null;
+        nb stackOut_240_1 = null;
+        int stackOut_240_2 = 0;
+        int stackOut_240_3 = 0;
+        int stackOut_240_4 = 0;
+        String[] stackOut_240_5 = null;
+        int stackOut_240_6 = 0;
+        int stackOut_240_7 = 0;
+        int[][] stackOut_240_8 = null;
+        int stackOut_240_9 = 0;
         var8 = field_G;
         try {
           L0: {
             L1: {
               wh.a(false);
               if (in.field_h == in.field_i) {
+                var3_int = 0;
+                var4 = 0;
                 L2: {
-                  var3_int = 0;
-                  var4 = 0;
-                  if (!param1) {
-                    if (~vb.field_g != ~pm.field_T) {
-                      pm.field_U = pm.field_U + 1;
-                      if (pm.field_U != 20) {
-                        break L2;
-                      } else {
-                        ol.b(true);
-                        break L2;
-                      }
-                    } else {
-                      if (pm.field_T != -1) {
-                        if (pm.field_T != -2) {
-                          if (!d.a(pm.field_T, param0 ^ 120)) {
-                            break L2;
-                          } else {
-                            i.field_e[pm.field_T].b(true);
-                            break L2;
-                          }
-                        } else {
-                          L3: {
-                            if (null == ih.field_s) {
-                              break L3;
-                            } else {
-                              if (null == hl.a((byte) -66)) {
-                                break L3;
-                              } else {
-                                ih.field_s.b((byte) 27);
-                                var5_ref = (mb) (Object) ih.field_s.field_K.e(13058);
-                                L4: while (true) {
-                                  if (null == var5_ref) {
-                                    break L3;
-                                  } else {
-                                    var5_ref.field_vb = 0;
-                                    var5_ref = (mb) (Object) ih.field_s.field_K.a((byte) -80);
-                                    continue L4;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          var3_int = 1;
-                          break L2;
-                        }
-                      } else {
-                        if (bg.field_H) {
-                          var4 = 1;
-                          var3_int = 1;
-                          break L2;
-                        } else {
-                          if (null == fk.field_i) {
-                            break L2;
-                          } else {
-                            fk.field_i.c(-68, true);
-                            L5: while (true) {
-                              if (!dl.f(22759)) {
-                                break L2;
-                              } else {
-                                fk.field_i.g(97);
-                                continue L5;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    break L2;
-                  }
-                }
-                L6: {
                   if (!bg.field_H) {
-                    break L6;
+                    break L2;
                   } else {
                     if (rc.field_n) {
-                      break L6;
+                      break L2;
                     } else {
                       if (!da.field_d) {
-                        L7: {
+                        L3: {
                           if (!ob.field_y) {
-                            break L7;
+                            break L3;
                           } else {
                             if (!jn.field_g) {
-                              break L7;
+                              break L3;
                             } else {
                               var3_int = 0;
-                              break L7;
+                              break L3;
                             }
                           }
                         }
-                        L8: {
-                          L9: {
+                        L4: {
+                          L5: {
                             la.a(13, var3_int != 0);
                             if (ee.field_G) {
-                              break L9;
+                              break L5;
                             } else {
                               if (!ob.field_y) {
-                                break L8;
+                                break L4;
                               } else {
-                                break L9;
+                                break L5;
                               }
                             }
                           }
                           ue.a((byte) 38, var4 != 0, 320, 180);
-                          break L8;
+                          break L4;
                         }
-                        L10: {
+                        L6: {
                           if (!ee.field_G) {
-                            break L10;
+                            break L6;
                           } else {
                             if (null != si.field_A) {
-                              si.field_A.c(param0 ^ 37, var4 != 0);
-                              break L10;
+                              si.field_A.c(-38, var4 != 0);
+                              break L6;
                             } else {
-                              break L10;
+                              break L6;
                             }
                           }
                         }
-                        L11: {
+                        L7: {
                           if (!ob.field_y) {
-                            break L11;
+                            break L7;
                           } else {
                             fk.field_i.c(-121, var4 != 0);
-                            break L11;
+                            break L7;
                           }
                         }
-                        L12: while (true) {
+                        L8: while (true) {
                           if (!dl.f(22759)) {
-                            break L6;
+                            break L2;
                           } else {
-                            L13: {
+                            L9: {
                               if (!vl.field_v) {
-                                L14: {
+                                L10: {
                                   if (ob.field_y) {
-                                    break L14;
+                                    break L10;
                                   } else {
                                     if (!ee.field_G) {
-                                      break L13;
+                                      break L9;
                                     } else {
-                                      break L14;
+                                      break L10;
                                     }
                                   }
                                 }
-                                L15: {
+                                L11: {
                                   if (jn.field_g) {
-                                    break L15;
+                                    break L11;
                                   } else {
                                     if (ei.field_q == 80) {
-                                      break L15;
+                                      break L11;
                                     } else {
                                       if (ei.field_q == 10) {
-                                        break L15;
+                                        break L11;
                                       } else {
-                                        break L13;
+                                        break L9;
                                       }
                                     }
                                   }
                                 }
                                 if (cn.a(13, 15, 12, false)) {
-                                  continue L12;
+                                  continue L8;
                                 } else {
-                                  break L13;
+                                  break L9;
                                 }
                               } else {
-                                L16: {
+                                L12: {
                                   if (ob.field_y) {
-                                    break L16;
+                                    break L12;
                                   } else {
                                     if (!ee.field_G) {
                                       boolean discarded$3 = cj.a(13, (byte) 99, 12, 15);
-                                      break L13;
+                                      break L9;
                                     } else {
-                                      break L16;
+                                      break L12;
                                     }
                                   }
                                 }
                                 if (!cn.a(13, 15, 12, false)) {
-                                  break L13;
+                                  break L9;
                                 } else {
-                                  continue L12;
+                                  continue L8;
                                 }
                               }
                             }
                             if (jn.field_g) {
-                              continue L12;
+                              continue L8;
                             } else {
-                              L17: {
+                              L13: {
                                 if (!ee.field_G) {
-                                  break L17;
+                                  break L13;
                                 } else {
                                   si.field_A.g(73);
-                                  break L17;
+                                  break L13;
                                 }
                               }
                               if (!ob.field_y) {
-                                continue L12;
+                                continue L8;
                               } else {
                                 fk.field_i.g(51);
-                                continue L12;
+                                continue L8;
                               }
                             }
                           }
                         }
                       } else {
-                        break L6;
+                        break L2;
                       }
                     }
                   }
                 }
-                L18: {
+                L14: {
                   if (bg.field_H) {
-                    break L18;
+                    break L14;
                   } else {
                     jk.d((byte) -66);
-                    break L18;
+                    break L14;
                   }
                 }
-                L19: {
+                L15: {
                   if (vl.field_v) {
                     if (on.field_i >= an.field_h) {
-                      break L19;
+                      break L15;
                     } else {
                       on.field_i = on.field_i + 1;
-                      break L19;
+                      break L15;
                     }
                   } else {
                     if (on.field_i > 0) {
                       on.field_i = on.field_i - 1;
-                      break L19;
+                      break L15;
                     } else {
-                      break L19;
+                      break L15;
                     }
                   }
                 }
@@ -2144,13 +2138,13 @@ public final class SteelSentinels extends n {
                 if (~bg.field_G == ~in.field_i) {
                   ji.field_a = ji.field_a + 1;
                   if (ji.field_a == 16) {
-                    L20: {
+                    L16: {
                       if (si.field_y) {
-                        ef.a(param0 ^ 116);
-                        break L20;
+                        ef.a(-117);
+                        break L16;
                       } else {
                         bb.a((byte) 113);
-                        break L20;
+                        break L16;
                       }
                     }
                     in.field_i = de.field_f;
@@ -2168,35 +2162,35 @@ public final class SteelSentinels extends n {
                       break L1;
                     }
                   } else {
-                    L21: {
+                    L17: {
                       if (!ni.b(12)) {
-                        L22: {
+                        L18: {
                           if (null == lc.field_c) {
-                            break L22;
+                            break L18;
                           } else {
                             pa.a(3, (byte) -114, lc.field_c);
-                            break L22;
+                            break L18;
                           }
                         }
-                        L23: {
+                        L19: {
                           gf.c(-128);
                           vb.field_g = ji.field_i;
                           if (!si.field_y) {
-                            break L23;
+                            break L19;
                           } else {
                             si.field_y = false;
                             ag.a(-4, false);
-                            break L23;
+                            break L19;
                           }
                         }
                         if (d.a(vb.field_g, 0)) {
                           ol.b(true);
-                          break L21;
+                          break L17;
                         } else {
-                          break L21;
+                          break L17;
                         }
                       } else {
-                        break L21;
+                        break L17;
                       }
                     }
                     in.field_i = ik.field_b;
@@ -2205,15 +2199,8 @@ public final class SteelSentinels extends n {
                 }
               }
             }
-            L24: {
-              if (param0 == 120) {
-                break L24;
-              } else {
-                this.m(-19);
-                break L24;
-              }
-            }
-            L25: {
+            this.m(-19);
+            L20: {
               if (vb.field_g == -3) {
                 lc.field_c = null;
                 var3_ref = g.field_l;
@@ -2221,43 +2208,43 @@ public final class SteelSentinels extends n {
                 var5 = new int[var4_ref_String__.length][];
                 var5[0] = uc.field_b;
                 var6 = 1;
-                L26: while (true) {
+                L21: while (true) {
                   if (var6 >= var4_ref_String__.length) {
-                    L27: {
+                    L22: {
                       var6 = 0;
                       var7 = di.field_g;
                       if (0 == var7) {
                         var5[0] = ua.field_v;
                         var6 = 16;
-                        break L27;
+                        break L22;
                       } else {
                         if (var7 == 1) {
                           var5[0] = ua.field_v;
                           var6 = 16;
-                          break L27;
+                          break L22;
                         } else {
                           if (7 == var7) {
                             var6 = 16;
-                            break L27;
+                            break L22;
                           } else {
                             if (var7 != 4) {
-                              L28: {
+                              L23: {
                                 if (var7 == 3) {
-                                  break L28;
+                                  break L23;
                                 } else {
                                   if (var7 == 5) {
-                                    break L28;
+                                    break L23;
                                   } else {
                                     if (var7 == 10) {
                                       var6 = ua.field_t[10 * ge.field_j - -ol.field_Ub][1];
                                       var5[0] = ua.field_C[ol.field_Ub + ge.field_j * 10];
-                                      break L27;
+                                      break L22;
                                     } else {
                                       if (var7 == -1) {
                                         var6 = 0;
-                                        break L27;
+                                        break L22;
                                       } else {
-                                        break L27;
+                                        break L22;
                                       }
                                     }
                                   }
@@ -2265,68 +2252,46 @@ public final class SteelSentinels extends n {
                               }
                               var5[0] = ua.field_C[ol.field_Ub + 10 * ge.field_j];
                               var6 = 16;
-                              break L27;
+                              break L22;
                             } else {
                               var6 = 16;
-                              break L27;
+                              break L22;
                             }
                           }
                         }
                       }
                     }
-                    L29: {
+                    L24: {
                       vl.field_v = false;
                       jn.field_g = false;
-                      stackOut_241_0 = null;
-                      stackOut_241_1 = null;
-                      stackOut_241_2 = 0;
-                      stackOut_241_3 = var6;
-                      stackOut_241_4 = 1;
-                      stackOut_241_5 = (String[]) var4_ref_String__;
-                      stackOut_241_6 = 0;
-                      stackOut_241_7 = 0;
-                      stackOut_241_8 = (int[][]) var5;
-                      stackIn_244_0 = stackOut_241_0;
-                      stackIn_244_1 = stackOut_241_1;
-                      stackIn_244_2 = stackOut_241_2;
-                      stackIn_244_3 = stackOut_241_3;
-                      stackIn_244_4 = stackOut_241_4;
-                      stackIn_244_5 = stackOut_241_5;
-                      stackIn_244_6 = stackOut_241_6;
-                      stackIn_244_7 = stackOut_241_7;
-                      stackIn_244_8 = stackOut_241_8;
-                      stackIn_242_0 = stackOut_241_0;
-                      stackIn_242_1 = stackOut_241_1;
-                      stackIn_242_2 = stackOut_241_2;
-                      stackIn_242_3 = stackOut_241_3;
-                      stackIn_242_4 = stackOut_241_4;
-                      stackIn_242_5 = stackOut_241_5;
-                      stackIn_242_6 = stackOut_241_6;
-                      stackIn_242_7 = stackOut_241_7;
-                      stackIn_242_8 = stackOut_241_8;
+                      stackOut_239_0 = null;
+                      stackOut_239_1 = null;
+                      stackOut_239_2 = 0;
+                      stackOut_239_3 = var6;
+                      stackOut_239_4 = 1;
+                      stackOut_239_5 = (String[]) var4_ref_String__;
+                      stackOut_239_6 = 0;
+                      stackOut_239_7 = 0;
+                      stackOut_239_8 = (int[][]) var5;
+                      stackIn_242_0 = stackOut_239_0;
+                      stackIn_242_1 = stackOut_239_1;
+                      stackIn_242_2 = stackOut_239_2;
+                      stackIn_242_3 = stackOut_239_3;
+                      stackIn_242_4 = stackOut_239_4;
+                      stackIn_242_5 = stackOut_239_5;
+                      stackIn_242_6 = stackOut_239_6;
+                      stackIn_242_7 = stackOut_239_7;
+                      stackIn_242_8 = stackOut_239_8;
+                      stackIn_240_0 = stackOut_239_0;
+                      stackIn_240_1 = stackOut_239_1;
+                      stackIn_240_2 = stackOut_239_2;
+                      stackIn_240_3 = stackOut_239_3;
+                      stackIn_240_4 = stackOut_239_4;
+                      stackIn_240_5 = stackOut_239_5;
+                      stackIn_240_6 = stackOut_239_6;
+                      stackIn_240_7 = stackOut_239_7;
+                      stackIn_240_8 = stackOut_239_8;
                       if (-1 != di.field_g) {
-                        stackOut_244_0 = null;
-                        stackOut_244_1 = null;
-                        stackOut_244_2 = stackIn_244_2;
-                        stackOut_244_3 = stackIn_244_3;
-                        stackOut_244_4 = stackIn_244_4;
-                        stackOut_244_5 = (String[]) (Object) stackIn_244_5;
-                        stackOut_244_6 = stackIn_244_6;
-                        stackOut_244_7 = stackIn_244_7;
-                        stackOut_244_8 = (int[][]) (Object) stackIn_244_8;
-                        stackOut_244_9 = 0;
-                        stackIn_245_0 = stackOut_244_0;
-                        stackIn_245_1 = stackOut_244_1;
-                        stackIn_245_2 = stackOut_244_2;
-                        stackIn_245_3 = stackOut_244_3;
-                        stackIn_245_4 = stackOut_244_4;
-                        stackIn_245_5 = stackOut_244_5;
-                        stackIn_245_6 = stackOut_244_6;
-                        stackIn_245_7 = stackOut_244_7;
-                        stackIn_245_8 = stackOut_244_8;
-                        stackIn_245_9 = stackOut_244_9;
-                        break L29;
-                      } else {
                         stackOut_242_0 = null;
                         stackOut_242_1 = null;
                         stackOut_242_2 = stackIn_242_2;
@@ -2336,68 +2301,90 @@ public final class SteelSentinels extends n {
                         stackOut_242_6 = stackIn_242_6;
                         stackOut_242_7 = stackIn_242_7;
                         stackOut_242_8 = (int[][]) (Object) stackIn_242_8;
-                        stackOut_242_9 = 3;
-                        stackIn_245_0 = stackOut_242_0;
-                        stackIn_245_1 = stackOut_242_1;
-                        stackIn_245_2 = stackOut_242_2;
-                        stackIn_245_3 = stackOut_242_3;
-                        stackIn_245_4 = stackOut_242_4;
-                        stackIn_245_5 = stackOut_242_5;
-                        stackIn_245_6 = stackOut_242_6;
-                        stackIn_245_7 = stackOut_242_7;
-                        stackIn_245_8 = stackOut_242_8;
-                        stackIn_245_9 = stackOut_242_9;
-                        break L29;
+                        stackOut_242_9 = 0;
+                        stackIn_243_0 = stackOut_242_0;
+                        stackIn_243_1 = stackOut_242_1;
+                        stackIn_243_2 = stackOut_242_2;
+                        stackIn_243_3 = stackOut_242_3;
+                        stackIn_243_4 = stackOut_242_4;
+                        stackIn_243_5 = stackOut_242_5;
+                        stackIn_243_6 = stackOut_242_6;
+                        stackIn_243_7 = stackOut_242_7;
+                        stackIn_243_8 = stackOut_242_8;
+                        stackIn_243_9 = stackOut_242_9;
+                        break L24;
+                      } else {
+                        stackOut_240_0 = null;
+                        stackOut_240_1 = null;
+                        stackOut_240_2 = stackIn_240_2;
+                        stackOut_240_3 = stackIn_240_3;
+                        stackOut_240_4 = stackIn_240_4;
+                        stackOut_240_5 = (String[]) (Object) stackIn_240_5;
+                        stackOut_240_6 = stackIn_240_6;
+                        stackOut_240_7 = stackIn_240_7;
+                        stackOut_240_8 = (int[][]) (Object) stackIn_240_8;
+                        stackOut_240_9 = 3;
+                        stackIn_243_0 = stackOut_240_0;
+                        stackIn_243_1 = stackOut_240_1;
+                        stackIn_243_2 = stackOut_240_2;
+                        stackIn_243_3 = stackOut_240_3;
+                        stackIn_243_4 = stackOut_240_4;
+                        stackIn_243_5 = stackOut_240_5;
+                        stackIn_243_6 = stackOut_240_6;
+                        stackIn_243_7 = stackOut_240_7;
+                        stackIn_243_8 = stackOut_240_8;
+                        stackIn_243_9 = stackOut_240_9;
+                        break L24;
                       }
                     }
-                    fk.field_i = new nb(stackIn_245_2 != 0, stackIn_245_3, stackIn_245_4, stackIn_245_5, stackIn_245_6, stackIn_245_7 != 0, stackIn_245_8, stackIn_245_9, 2, false, false);
+                    fk.field_i = new nb(stackIn_243_2 != 0, stackIn_243_3, stackIn_243_4, stackIn_243_5, stackIn_243_6, stackIn_243_7 != 0, stackIn_243_8, stackIn_243_9, 2, false, false);
                     var7 = nk.field_B ? 1 : 0;
                     q.a(-1, var7 != 0, -1, 0);
                     ea.field_k = true;
-                    break L25;
+                    break L20;
                   } else {
                     var5[var6] = uc.field_b;
                     var6++;
-                    continue L26;
+                    continue L21;
                   }
                 }
               } else {
-                break L25;
+                break L20;
               }
             }
-            L30: {
+            L25: {
               if (-4 != vb.field_g) {
-                break L30;
+                break L25;
               } else {
                 mm.field_g.a(63, (byte) -117);
                 mm.field_g.field_p = mm.field_g.field_p + 1;
                 var3_int = mm.field_g.field_p;
                 mm.field_g.a((byte) 124, uc.field_b.length);
                 var4 = 0;
-                L31: while (true) {
+                L26: while (true) {
                   if (var4 >= uc.field_b.length) {
                     mm.field_g.b((byte) 111, mm.field_g.field_p - var3_int);
                     mm.field_g.a(9, (byte) -117);
                     rc.field_n = true;
                     vb.field_g = pm.field_T;
                     on.field_i = an.field_h;
-                    break L30;
+                    break L25;
                   } else {
                     mm.field_g.a((byte) 127, uc.field_b[var4]);
                     var4++;
-                    continue L31;
+                    continue L26;
                   }
                 }
               }
             }
-            L32: {
+            L27: {
               if (vb.field_g == -5) {
                 na.a((byte) -43, 11, nf.field_b.j(-26));
                 da.field_d = true;
                 vb.field_g = pm.field_T;
-                break L32;
+                break L27;
               } else {
-                break L32;
+                break L27;
               }
             }
             break L0;
@@ -2405,7 +2392,7 @@ public final class SteelSentinels extends n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var3, "SteelSentinels.SA(" + param0 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) var3, "SteelSentinels.SA(" + -1 + 44 + 1 + 41);
         }
     }
 
@@ -3470,20 +3457,28 @@ public final class SteelSentinels extends n {
           L0: {
             L1: {
               SteelSentinels.j((byte) -10);
-              ul.c((byte) -29);
-              wd.a(0);
+              int discarded$207 = -29;
+              ul.c();
+              int discarded$208 = 0;
+              wd.a();
               hf.a(true);
-              fj.a((byte) -120);
-              rg.c(125);
+              int discarded$209 = -120;
+              fj.a();
+              int discarded$210 = 125;
+              rg.c();
               gh.a(false);
-              i.a((byte) 100);
-              uc.a(false);
+              int discarded$211 = 100;
+              i.a();
+              int discarded$212 = 0;
+              uc.a();
               ci.a(false);
               am.a(2);
-              n.h((byte) -111);
+              int discarded$213 = -111;
+              n.h();
               od.a(false);
               lg.e(48);
-              fk.a((byte) -64);
+              int discarded$214 = -64;
+              fk.a();
               wc.a(true);
               a.c(72);
               pb.a();
@@ -3496,280 +3491,479 @@ public final class SteelSentinels extends n {
                 break L1;
               }
             }
-            gi.d(-125);
-            mm.b(122);
-            fl.a(124);
-            of.a((byte) 84);
-            in.b(127);
-            ph.a(80);
-            vh.a(-67);
-            be.a((byte) -34);
-            pa.a((byte) 56);
-            ib.a((byte) -119);
-            na.a(2);
-            im.a((byte) -88);
-            wn.a((byte) -126);
+            int discarded$215 = -125;
+            gi.d();
+            int discarded$216 = 122;
+            mm.b();
+            int discarded$217 = 124;
+            fl.a();
+            int discarded$218 = 84;
+            of.a();
+            int discarded$219 = 127;
+            in.b();
+            int discarded$220 = 80;
+            ph.a();
+            int discarded$221 = -67;
+            vh.a();
+            int discarded$222 = -34;
+            be.a();
+            int discarded$223 = 56;
+            pa.a();
+            int discarded$224 = -119;
+            ib.a();
+            int discarded$225 = 2;
+            na.a();
+            int discarded$226 = -88;
+            im.a();
+            int discarded$227 = -126;
+            wn.a();
             al.b(30);
-            he.a(690);
+            int discarded$228 = 690;
+            he.a();
             cj.a(-1);
-            nn.b((byte) 30);
-            jg.b((byte) -109);
-            ng.a((byte) -82);
+            int discarded$229 = 30;
+            nn.b();
+            int discarded$230 = -109;
+            jg.b();
+            int discarded$231 = -82;
+            ng.a();
             ub.a(94);
             ji.h((byte) -104);
-            nb.b(750);
+            int discarded$232 = 750;
+            nb.b();
             nd.a(-107);
-            hh.a(false);
-            vk.c((byte) -91);
-            cb.b(-1);
-            ta.a((byte) -35);
+            int discarded$233 = 0;
+            hh.a();
+            int discarded$234 = -91;
+            vk.c();
+            int discarded$235 = -1;
+            cb.b();
+            int discarded$236 = -35;
+            ta.a();
             rj.a(83);
-            sg.a((byte) -45);
-            jn.a((byte) 79);
+            int discarded$237 = -45;
+            sg.a();
+            int discarded$238 = 79;
+            jn.a();
             ck.c(4433);
-            cd.a(false);
+            int discarded$239 = 0;
+            cd.a();
             di.a(-1);
-            bi.a((byte) 80);
-            ik.b(79);
-            lc.b(1);
-            o.a(-98);
+            int discarded$240 = 80;
+            bi.a();
+            int discarded$241 = 79;
+            ik.b();
+            int discarded$242 = 1;
+            lc.b();
+            int discarded$243 = -98;
+            o.a();
             dj.a((byte) 94);
-            me.a(-118);
-            kj.e(true);
-            ie.a((byte) -94);
-            gj.a(-102);
-            tf.a((byte) 26);
-            lb.j(0);
-            dh.c((byte) 93);
-            ve.b((byte) -60);
+            int discarded$244 = -118;
+            me.a();
+            int discarded$245 = 1;
+            kj.e();
+            int discarded$246 = -94;
+            ie.a();
+            int discarded$247 = -102;
+            gj.a();
+            int discarded$248 = 26;
+            tf.a();
+            int discarded$249 = 0;
+            lb.j();
+            int discarded$250 = 93;
+            dh.c();
+            int discarded$251 = -60;
+            ve.b();
             ee.g(0);
-            nk.d((byte) 20);
-            rm.d((byte) -18);
+            int discarded$252 = 20;
+            nk.d();
+            int discarded$253 = -18;
+            rm.d();
             qj.c(21841);
-            jc.e(5370);
+            int discarded$254 = 5370;
+            jc.e();
             mi.a();
-            vf.a(-119);
+            int discarded$255 = -119;
+            vf.a();
             jh.a(30706);
             ba.a(false);
-            je.a((byte) -110);
-            wl.h(31554);
-            mb.c((byte) 58);
-            hd.b(false);
+            int discarded$256 = -110;
+            je.a();
+            int discarded$257 = 31554;
+            wl.h();
+            int discarded$258 = 58;
+            mb.c();
+            int discarded$259 = 0;
+            hd.b();
             ic.a(false);
             uh.c(96);
-            hj.e(0);
+            int discarded$260 = 0;
+            hj.e();
             ab.a();
             ej.e(-93);
             tb.f();
             sj.b(false);
-            hk.d((byte) -65);
-            dk.b((byte) -91);
-            cc.k(102);
-            lj.a((byte) 109);
+            int discarded$261 = -65;
+            hk.d();
+            int discarded$262 = -91;
+            dk.b();
+            int discarded$263 = 102;
+            cc.k();
+            int discarded$264 = 109;
+            lj.a();
             jl.a(0);
-            vb.a(-1);
-            fa.b(38);
+            int discarded$265 = -1;
+            vb.a();
+            int discarded$266 = 38;
+            fa.b();
             wi.g(573);
             kd.f(8191);
             rd.a(8192);
-            eh.b(0);
+            int discarded$267 = 0;
+            eh.b();
             ka.f((byte) 127);
-            fg.o((byte) -29);
-            ki.l((byte) -47);
-            bf.m((byte) -111);
+            int discarded$268 = -29;
+            fg.o();
+            int discarded$269 = -47;
+            ki.l();
+            int discarded$270 = -111;
+            bf.m();
             k.n((byte) 107);
-            vi.a(false);
-            pd.i(-48);
-            pm.l(320);
-            qc.j(60);
-            ll.a(103);
-            uj.a(-1);
+            int discarded$271 = 0;
+            vi.a();
+            int discarded$272 = -48;
+            pd.i();
+            int discarded$273 = 320;
+            pm.l();
+            int discarded$274 = 60;
+            qc.j();
+            int discarded$275 = 103;
+            ll.a();
+            int discarded$276 = -1;
+            uj.a();
             uk.c();
             pj.a();
-            dg.a((byte) -84);
-            ri.d(0);
+            int discarded$277 = -84;
+            dg.a();
+            int discarded$278 = 0;
+            ri.d();
             tj.a(true);
             ea.a((byte) 66);
-            qd.a((byte) 17);
+            int discarded$279 = 17;
+            qd.a();
             ne.g(-23261);
             oc.a(-1);
-            qi.a(-104);
+            int discarded$280 = -104;
+            qi.a();
             ad.a(0);
-            id.j(127);
-            dn.b(false);
-            ql.d((byte) 91);
+            int discarded$281 = 127;
+            id.j();
+            int discarded$282 = 0;
+            dn.b();
+            int discarded$283 = 91;
+            ql.d();
             dd.a(0);
-            td.j(-114);
-            oh.a(1);
-            m.a(64);
-            qm.a((byte) 37);
-            te.a((byte) -83);
-            ak.a(124);
-            gm.a(-1);
-            gf.b(-111);
+            int discarded$284 = -114;
+            td.j();
+            int discarded$285 = 1;
+            oh.a();
+            int discarded$286 = 64;
+            m.a();
+            int discarded$287 = 37;
+            qm.a();
+            int discarded$288 = -83;
+            te.a();
+            int discarded$289 = 124;
+            ak.a();
+            int discarded$290 = -1;
+            gm.a();
+            int discarded$291 = -111;
+            gf.b();
             rb.a((byte) -82);
-            en.a(true);
-            kk.a((byte) -105);
-            pl.c(true);
+            int discarded$292 = 1;
+            en.a();
+            int discarded$293 = -105;
+            kk.a();
+            int discarded$294 = 1;
+            pl.c();
             ai.e(0);
-            dc.a(-38);
+            int discarded$295 = -38;
+            dc.a();
             ra.b((byte) 26);
-            qh.j(15);
-            uf.a(24);
+            int discarded$296 = 15;
+            qh.j();
+            int discarded$297 = 24;
+            uf.a();
             nf.a(55);
-            ol.k(-16);
-            qb.h(-185837884);
-            ua.a((byte) 115);
-            sn.b(0);
-            bd.a(-23333);
-            og.a((byte) -88);
-            la.a((byte) -112);
-            an.a((byte) -63);
-            f.e(-2);
-            qa.h(10);
-            rc.a(15598);
-            df.i(-58);
-            fi.c(2);
-            ok.a(true);
-            fe.e((byte) 21);
-            se.a((byte) -114);
-            jd.l(0);
+            int discarded$298 = -16;
+            ol.k();
+            int discarded$299 = -185837884;
+            qb.h();
+            int discarded$300 = 115;
+            ua.a();
+            int discarded$301 = 0;
+            sn.b();
+            int discarded$302 = -23333;
+            bd.a();
+            int discarded$303 = -88;
+            og.a();
+            int discarded$304 = -112;
+            la.a();
+            int discarded$305 = -63;
+            an.a();
+            int discarded$306 = -2;
+            f.e();
+            int discarded$307 = 10;
+            qa.h();
+            int discarded$308 = 15598;
+            rc.a();
+            int discarded$309 = -58;
+            df.i();
+            int discarded$310 = 2;
+            fi.c();
+            int discarded$311 = 1;
+            ok.a();
+            int discarded$312 = 21;
+            fe.e();
+            int discarded$313 = -114;
+            se.a();
+            int discarded$314 = 0;
+            jd.l();
             lf.b();
-            jj.b(-123);
-            pe.a((byte) -117);
-            tm.a(5);
-            ec.b((byte) 24);
-            fc.a(true);
+            int discarded$315 = -123;
+            jj.b();
+            int discarded$316 = -117;
+            pe.a();
+            int discarded$317 = 5;
+            tm.a();
+            int discarded$318 = 24;
+            ec.b();
+            int discarded$319 = 1;
+            fc.a();
             sa.a(false);
-            pi.b((byte) 61);
-            mc.a(23225);
-            jk.b((byte) -81);
-            gb.a(false);
+            int discarded$320 = 61;
+            pi.b();
+            int discarded$321 = 23225;
+            mc.a();
+            int discarded$322 = -81;
+            jk.b();
+            int discarded$323 = 0;
+            gb.a();
             oi.a();
-            nh.a(-120);
-            ni.a(42);
-            rl.a(0);
-            pf.a(true);
-            wa.c(-21121);
-            b.a(0);
-            qg.b((byte) 105);
-            da.a(true);
+            int discarded$324 = -120;
+            nh.a();
+            int discarded$325 = 42;
+            ni.a();
+            int discarded$326 = 0;
+            rl.a();
+            int discarded$327 = 1;
+            pf.a();
+            int discarded$328 = -21121;
+            wa.c();
+            int discarded$329 = 0;
+            b.a();
+            int discarded$330 = 105;
+            qg.b();
+            int discarded$331 = 1;
+            da.a();
             lh.c((byte) 19);
             oa.a((byte) -105);
-            ug.g(475);
-            ac.k((byte) 38);
-            bb.h((byte) 127);
+            int discarded$332 = 475;
+            ug.g();
+            int discarded$333 = 38;
+            ac.k();
+            int discarded$334 = 127;
+            bb.h();
             dl.g(-19969);
-            qe.a(-31914);
-            sh.a(-3274);
-            kb.a(5);
-            ln.b(0);
+            int discarded$335 = -31914;
+            qe.a();
+            int discarded$336 = -3274;
+            sh.a();
+            int discarded$337 = 5;
+            kb.a();
+            int discarded$338 = 0;
+            ln.b();
             mg.k(-31097);
-            co.a((byte) -13);
+            int discarded$339 = -13;
+            co.a();
             oe.a(272);
-            mn.g(1);
-            ao.g(0);
-            nc.a((byte) 127);
-            db.a(true);
+            int discarded$340 = 1;
+            mn.g();
+            int discarded$341 = 0;
+            ao.g();
+            int discarded$342 = 127;
+            nc.a();
+            int discarded$343 = 1;
+            db.a();
             vg.a(-61);
-            gl.c(0);
-            ti.b(65280);
-            ed.a((byte) 99);
+            int discarded$344 = 0;
+            gl.c();
+            int discarded$345 = 65280;
+            ti.b();
+            int discarded$346 = 99;
+            ed.a();
             vc.b(-13);
-            ue.b((byte) -96);
+            int discarded$347 = -96;
+            ue.b();
             p.a();
-            ce.a((byte) 77);
-            bh.a((byte) -98);
-            jb.h(-2107133436);
-            ig.a((byte) 121);
-            qf.a(false);
-            mj.d((byte) -72);
-            el.b(true);
-            ca.c((byte) -73);
+            int discarded$348 = 77;
+            ce.a();
+            int discarded$349 = -98;
+            bh.a();
+            int discarded$350 = -2107133436;
+            jb.h();
+            int discarded$351 = 121;
+            ig.a();
+            int discarded$352 = 0;
+            qf.a();
+            int discarded$353 = -72;
+            mj.d();
+            int discarded$354 = 1;
+            el.b();
+            int discarded$355 = -73;
+            ca.c();
             bj.a(7);
             hc.f((byte) 67);
-            bc.i((byte) -108);
+            int discarded$356 = -108;
+            bc.i();
             jf.d(true);
             gd.l(-12930);
-            bk.g(-47);
-            ij.a((byte) -42);
-            ma.c(false);
-            lk.h(-30289);
+            int discarded$357 = -47;
+            bk.g();
+            int discarded$358 = -42;
+            ij.a();
+            int discarded$359 = 0;
+            ma.c();
+            int discarded$360 = -30289;
+            lk.h();
             ff.h(-3413);
             sb.g(108);
             ia.c((byte) 103);
-            wb.a((byte) 87);
-            nj.a(false);
-            nl.f((byte) -122);
-            um.g(32);
-            cl.a(5);
+            int discarded$361 = 87;
+            wb.a();
+            int discarded$362 = 0;
+            nj.a();
+            int discarded$363 = -122;
+            nl.f();
+            int discarded$364 = 32;
+            um.g();
+            int discarded$365 = 5;
+            cl.a();
             vn.d(false);
-            re.l(0);
+            int discarded$366 = 0;
+            re.l();
             ch.a((byte) -68);
-            ha.c(true);
+            int discarded$367 = 1;
+            ha.c();
             si.a(24);
             ge.b(26);
-            g.a(122);
-            h.h(0);
-            d.h(12);
-            q.a((byte) -127);
-            hb.a(true);
-            bg.g(-1008);
+            int discarded$368 = 122;
+            g.a();
+            int discarded$369 = 0;
+            h.h();
+            int discarded$370 = 12;
+            d.h();
+            int discarded$371 = -127;
+            q.a();
+            int discarded$372 = 1;
+            hb.a();
+            int discarded$373 = -1008;
+            bg.g();
             fm.a(4314);
-            le.i(124);
+            int discarded$374 = 124;
+            le.i();
             r.c((byte) -117);
             mf.a();
             va.a(false);
-            l.a((byte) 22);
-            wh.a((byte) 46);
-            kf.d(90);
-            tc.a(false);
-            hg.a(108);
-            ud.d(20000000);
-            pc.f(100);
-            jm.d(-89);
-            kh.b(100);
-            bl.a(false);
-            ag.b(9);
+            int discarded$375 = 22;
+            l.a();
+            int discarded$376 = 46;
+            wh.a();
+            int discarded$377 = 90;
+            kf.d();
+            int discarded$378 = 0;
+            tc.a();
+            int discarded$379 = 108;
+            hg.a();
+            int discarded$380 = 20000000;
+            ud.d();
+            int discarded$381 = 100;
+            pc.f();
+            int discarded$382 = -89;
+            jm.d();
+            int discarded$383 = 100;
+            kh.b();
+            int discarded$384 = 0;
+            bl.a();
+            int discarded$385 = 9;
+            ag.b();
             li.d(-30874);
             s.a((byte) -86);
-            ui.h(-13);
-            ah.b(false);
-            sl.a(-104);
-            hl.e(0);
-            cf.a((byte) 9);
-            c.a((byte) 127);
-            rh.b(false);
+            int discarded$386 = -13;
+            ui.h();
+            int discarded$387 = 0;
+            ah.b();
+            int discarded$388 = -104;
+            sl.a();
+            int discarded$389 = 0;
+            hl.e();
+            int discarded$390 = 9;
+            cf.a();
+            int discarded$391 = 127;
+            c.a();
+            int discarded$392 = 0;
+            rh.b();
             dm.a(-127);
-            rf.c(126);
-            kc.d(-1341);
-            de.a(7);
+            int discarded$393 = 126;
+            rf.c();
+            int discarded$394 = -1341;
+            kc.d();
+            int discarded$395 = 7;
+            de.a();
             fb.b((byte) -119);
-            pg.c(28873);
-            on.b((byte) -116);
-            sf.a(false);
+            int discarded$396 = 28873;
+            pg.c();
+            int discarded$397 = -116;
+            on.b();
+            int discarded$398 = 0;
+            sf.a();
             ml.a(107);
             e.a((byte) -89);
-            bm.a((byte) -90);
-            aj.d(-1);
-            km.a((byte) -27);
-            t.a(-13375);
-            hm.a((byte) 105);
+            int discarded$399 = -90;
+            bm.a();
+            int discarded$400 = -1;
+            aj.d();
+            int discarded$401 = -27;
+            km.a();
+            int discarded$402 = -13375;
+            t.a();
+            int discarded$403 = 105;
+            hm.a();
             ob.d(18601);
             rn.d(3);
             ke.b((byte) 12);
-            il.c(-58);
-            ei.c(1);
-            vm.d((byte) -128);
-            ih.c(18384);
-            nm.d((byte) 116);
-            eb.c(81);
-            tk.d((byte) -113);
-            ja.a(true);
-            vl.a((byte) 29);
+            int discarded$404 = -58;
+            il.c();
+            int discarded$405 = 1;
+            ei.c();
+            int discarded$406 = -128;
+            vm.d();
+            int discarded$407 = 18384;
+            ih.c();
+            int discarded$408 = 116;
+            nm.d();
+            int discarded$409 = 81;
+            eb.c();
+            int discarded$410 = -113;
+            tk.d();
+            int discarded$411 = 1;
+            ja.a();
+            int discarded$412 = 29;
+            vl.a();
             vd.b((byte) 56);
             v.c(true);
-            ef.b(8421504);
+            int discarded$413 = 8421504;
+            ef.b();
             ((SteelSentinels) this).field_t = null;
             break L0;
           }

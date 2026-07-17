@@ -16,7 +16,7 @@ final class bh extends k {
     private int field_o;
     private int field_m;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_r = null;
         field_p = null;
         field_s = null;
@@ -34,7 +34,7 @@ final class bh extends k {
         ((bh) this).field_l = 2;
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         int var3 = 0;
         int var4 = BachelorFridge.field_y;
         Random var5 = new Random((long)((bh) this).field_o);
@@ -152,7 +152,8 @@ final class bh extends k {
           if (param1 == 0) {
             break L0;
           } else {
-            this.b(false);
+            int discarded$2 = 0;
+            this.b();
             break L0;
           }
         }
@@ -288,9 +289,9 @@ final class bh extends k {
                         }
                         L8: {
                           var13 = stackIn_16_0 * (stackIn_16_1[stackIn_16_2 & stackIn_16_3 - -stackIn_16_4] & 255);
-                          int incrementValue$1 = var13;
+                          int incrementValue$3 = var13;
                           var13++;
-                          var9 = -((bh) this).field_k[incrementValue$1] + -(var7 << 12) + var15;
+                          var9 = -((bh) this).field_k[incrementValue$3] + -(var7 << 12) + var15;
                           var10 = var4 - (((bh) this).field_k[var13] + (var8 << 12));
                           var18 = ((bh) this).field_n;
                           if (var18 != 1) {
@@ -571,7 +572,8 @@ final class bh extends k {
 
     final void d(byte param0) {
         ((bh) this).field_t = rba.a(((bh) this).field_o, -96);
-        this.b(false);
+        int discarded$0 = 0;
+        this.b();
         if (param0 != -68) {
             Object var3 = null;
             ((bh) this).a((byte) 95, (lu) null, -98);

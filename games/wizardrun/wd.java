@@ -12,7 +12,7 @@ final class wd {
     String[] field_c;
     static int[] field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_e = null;

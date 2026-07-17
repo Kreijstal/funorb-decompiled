@@ -147,7 +147,7 @@ final class ba {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_e = null;
         field_d = null;
@@ -164,12 +164,12 @@ final class ba {
         return param0 & param1;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         na.field_e = false;
         int discarded$0 = id.field_b.j(-117);
     }
 
-    final static void a(byte[] param0, int param1) {
+    final static void a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -471,7 +471,7 @@ final class ba {
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         t.field_b.i(8389905);
         if (oa.field_k == null) {
             oa.field_k = new pe(t.field_b, jh.field_a);

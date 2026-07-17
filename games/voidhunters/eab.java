@@ -64,10 +64,7 @@ final class eab implements Runnable {
     }
 
     private final mob a(int param0, boolean param1, byte param2, String param3) {
-        if (param2 != 85) {
-            return null;
-        }
-        return this.a((byte) -107, !param1 ? 1 : 22, param0, 0, (Object) (Object) param3);
+        return this.a((byte) -107, 1, param0, 0, (Object) (Object) param3);
     }
 
     final void b(int param0) {

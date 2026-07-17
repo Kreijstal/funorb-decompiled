@@ -9,28 +9,24 @@ abstract class rra {
     int field_c;
 
     final static int a(boolean param0, int param1) {
-        if (!param0) {
-          if (0 > param1) {
-            if (param1 < -65536) {
-              return wl.field_i[134217728 / -param1] - 2048;
-            } else {
-              return -wl.field_i[-param1 >> 5];
-            }
+        if (0 > param1) {
+          if (param1 < -65536) {
+            return wl.field_i[134217728 / -param1] - 2048;
           } else {
-            if (param1 <= 65536) {
-              return wl.field_i[param1 >> 5];
-            } else {
-              return -wl.field_i[134217728 / param1] + 2048;
-            }
+            return -wl.field_i[-param1 >> 5];
           }
         } else {
-          return 45;
+          if (param1 <= 65536) {
+            return wl.field_i[param1 >> 5];
+          } else {
+            return -wl.field_i[134217728 / param1] + 2048;
+          }
         }
     }
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             int var1 = 0;
             Exception var2 = null;
@@ -77,68 +73,24 @@ abstract class rra {
     abstract void a(int param0, int param1, boolean param2);
 
     final static boolean a(byte param0, char param1) {
-        if (param0 <= -77) {
-          if (32 > param1) {
-            L0: {
-              if (param1 < 160) {
+        if (32 > param1) {
+          L0: {
+            if (param1 < 160) {
+              break L0;
+            } else {
+              if (param1 > 255) {
                 break L0;
               } else {
-                if (param1 > 255) {
-                  break L0;
-                } else {
-                  return true;
-                }
+                return true;
               }
             }
-            L1: {
-              if (8364 == param1) {
-                break L1;
-              } else {
-                if (param1 == 338) {
-                  break L1;
-                } else {
-                  if (8212 == param1) {
-                    break L1;
-                  } else {
-                    if (param1 == 339) {
-                      break L1;
-                    } else {
-                      if (param1 != 376) {
-                        return false;
-                      } else {
-                        return true;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            return true;
-          } else {
-            if (126 < param1) {
-              L2: {
-                if (param1 < 160) {
-                  break L2;
-                } else {
-                  if (param1 > 255) {
-                    break L2;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              if (8364 != param1) {
-                if (param1 != 338) {
-                  if (8212 != param1) {
-                    if (param1 != 339) {
-                      if (param1 == 376) {
-                        return true;
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      return true;
-                    }
+          }
+          if (8364 != param1) {
+            if (param1 != 338) {
+              if (8212 != param1) {
+                if (param1 != 339) {
+                  if (param1 != 376) {
+                    return false;
                   } else {
                     return true;
                   }
@@ -151,40 +103,13 @@ abstract class rra {
             } else {
               return true;
             }
+          } else {
+            return true;
           }
         } else {
-          field_a = null;
-          if (32 <= param1) {
-            if (126 >= param1) {
-              return true;
-            } else {
-              if (param1 >= 160) {
-                if (param1 > 255) {
-                  if (8364 != param1) {
-                    if (param1 != 338) {
-                      if (8212 != param1) {
-                        if (param1 != 339) {
-                          if (param1 != 376) {
-                            return false;
-                          } else {
-                            return true;
-                          }
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
+          if (126 < param1) {
+            if (param1 >= 160) {
+              if (param1 > 255) {
                 if (8364 != param1) {
                   if (param1 != 338) {
                     if (8212 != param1) {
@@ -206,28 +131,21 @@ abstract class rra {
                 } else {
                   return true;
                 }
-              }
-            }
-          } else {
-            L3: {
-              if (param1 < 160) {
-                break L3;
               } else {
-                if (param1 > 255) {
-                  break L3;
-                } else {
-                  return true;
-                }
+                return true;
               }
-            }
-            if (8364 != param1) {
-              if (param1 != 338) {
-                if (8212 != param1) {
-                  if (param1 != 339) {
-                    if (param1 == 376) {
-                      return true;
+            } else {
+              if (8364 != param1) {
+                if (param1 != 338) {
+                  if (8212 != param1) {
+                    if (param1 != 339) {
+                      if (param1 == 376) {
+                        return true;
+                      } else {
+                        return false;
+                      }
                     } else {
-                      return false;
+                      return true;
                     }
                   } else {
                     return true;
@@ -238,9 +156,9 @@ abstract class rra {
               } else {
                 return true;
               }
-            } else {
-              return true;
             }
+          } else {
+            return true;
           }
         }
     }
@@ -257,14 +175,6 @@ abstract class rra {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        L0: {
-          if (param4 == 0) {
-            break L0;
-          } else {
-            rra.a(false);
-            break L0;
-          }
-        }
         if (param3 != param5) {
           if (pka.field_b <= param0 + -param5) {
             if (param0 - -param5 <= ss.field_c) {

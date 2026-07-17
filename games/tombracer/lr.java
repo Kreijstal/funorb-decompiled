@@ -8,7 +8,7 @@ final class lr extends RuntimeException {
     static String field_e;
     static int field_c;
 
-    final static int a(una param0, int param1) {
+    final static int a(una param0) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -18,32 +18,30 @@ final class lr extends RuntimeException {
         int stackIn_19_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_23_0 = 0;
-        int stackIn_26_0 = 0;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
+        String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_22_0 = 0;
         int stackOut_20_0 = 0;
         int stackOut_18_0 = 0;
-        int stackOut_25_0 = 0;
         int stackOut_16_0 = 0;
         int stackOut_13_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_2_0 = 0;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
         RuntimeException stackOut_28_0 = null;
         StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
         try {
           if (param0 == una.field_a) {
             stackOut_22_0 = 5120;
@@ -65,13 +63,7 @@ final class lr extends RuntimeException {
                     } else {
                       if (param0 != una.field_l) {
                         if (param0 != una.field_h) {
-                          if (param1 == 5126) {
-                            throw new IllegalArgumentException("");
-                          } else {
-                            stackOut_25_0 = 1;
-                            stackIn_26_0 = stackOut_25_0;
-                            return stackIn_26_0;
-                          }
+                          throw new IllegalArgumentException("");
                         } else {
                           stackOut_16_0 = 5126;
                           stackIn_17_0 = stackOut_16_0;
@@ -104,31 +96,31 @@ final class lr extends RuntimeException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var2 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) var2;
-            stackOut_28_1 = new StringBuilder().append("lr.B(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackOut_26_0 = (RuntimeException) var2;
+            stackOut_26_1 = new StringBuilder().append("lr.B(");
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
               break L0;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
               break L0;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + 5126 + 41);
         }
     }
 
@@ -146,7 +138,7 @@ final class lr extends RuntimeException {
         ((lr) this).field_d = param1;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
     }

@@ -7,7 +7,7 @@ final class gr {
     static jp[] field_d;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -124,7 +124,7 @@ final class gr {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void b(int param0) {
         tn.field_C = param0;
         if (tn.field_C != 1) {
             a.field_s = ln.field_j;
@@ -148,9 +148,6 @@ final class gr {
             fq.field_d = qg.field_D;
             we.field_b = gg.field_p;
             field_c = re.field_k;
-        }
-        if (param1 != -28463) {
-            field_a = -38;
         }
     }
 

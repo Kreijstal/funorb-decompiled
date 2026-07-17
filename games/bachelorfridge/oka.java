@@ -106,36 +106,32 @@ class oka extends gha {
                 break L1;
               }
             }
-            if (!param3) {
-              L2: {
-                if (var6 + param2 <= dg.field_k) {
-                  break L2;
-                } else {
-                  var6 = -param2 + dg.field_k;
-                  break L2;
-                }
+            L2: {
+              if (var6 + param2 <= dg.field_k) {
+                break L2;
+              } else {
+                var6 = -param2 + dg.field_k;
+                break L2;
               }
-              var7 = var5_int;
-              L3: while (true) {
-                if (var6 <= var7) {
-                  break L0;
-                } else {
-                  var8 = 48 * var7 / param4 + 152;
-                  var9 = var8 | (var8 << 8 | var8 << 16);
-                  dg.field_e[(var7 + param2) * dg.field_i + param0] = var9;
-                  dg.field_e[param1 + ((var7 + param2) * dg.field_i + param0)] = var9;
-                  var7++;
-                  continue L3;
-                }
+            }
+            var7 = var5_int;
+            L3: while (true) {
+              if (var6 <= var7) {
+                break L0;
+              } else {
+                var8 = 48 * var7 / param4 + 152;
+                var9 = var8 | (var8 << 8 | var8 << 16);
+                dg.field_e[(var7 + param2) * dg.field_i + param0] = var9;
+                dg.field_e[param1 + ((var7 + param2) * dg.field_i + param0)] = var9;
+                var7++;
+                continue L3;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var5, "oka.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw pe.a((Throwable) (Object) var5, "oka.C(" + param0 + 44 + param1 + 44 + param2 + 44 + 0 + 44 + param4 + 41);
         }
     }
 

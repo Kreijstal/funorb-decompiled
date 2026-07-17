@@ -127,7 +127,7 @@ final class ff extends pj implements ke {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -338,7 +338,8 @@ final class ff extends pj implements ke {
               try {
                 L0: {
                   var3 = new java.net.URL(param2.getCodeBase(), param1);
-                  var3 = kk.a(var3, param2, 4767999);
+                  int discarded$2 = 4767999;
+                  var3 = kk.a(var3, param2);
                   wa.a(var3.toString(), true, param2, (byte) 9);
                   var4 = 4 % ((param0 - 33) / 48);
                   break L0;

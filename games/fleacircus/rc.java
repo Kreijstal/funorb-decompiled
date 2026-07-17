@@ -18,7 +18,7 @@ final class rc implements Iterator {
         return ((rc) this).field_b != ((rc) this).field_c.field_a;
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte a(char param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = fleas.field_A ? 1 : 0;
@@ -503,7 +503,7 @@ final class rc implements Iterator {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_h = null;
         int var1 = 0;

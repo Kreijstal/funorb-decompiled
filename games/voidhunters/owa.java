@@ -287,7 +287,7 @@ final class owa extends le {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         int[] var13 = ((owa) this).field_n[0];
         int[] var11 = var13;
         int[] var9 = var11;
@@ -349,7 +349,8 @@ final class owa extends le {
             return;
         }
         if (!(((owa) this).field_m != 2)) {
-            this.e(0);
+            int discarded$0 = 0;
+            this.e();
         }
         taa.e((byte) -21);
         this.d(90);

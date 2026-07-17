@@ -108,7 +108,7 @@ final class me extends am {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        nf var6 = null;
+        nf var5 = null;
         if (param2 >= 36) {
           if (param1 != 0) {
             return;
@@ -119,11 +119,13 @@ final class me extends am {
                   ((me) this).field_H.a(param0 - -((me) this).field_m, param1, (byte) 45, param3 + ((me) this).field_q);
                   return;
                 } else {
-                  var6 = new nf(((me) this).field_H.field_F, ((me) this).field_H.field_z);
-                  vm.a(var6, -8409);
+                  var5 = new nf(((me) this).field_H.field_F, ((me) this).field_H.field_z);
+                  int discarded$2 = -8409;
+                  vm.a(var5);
                   ((me) this).field_H.a(0, param1, (byte) 83, 0);
-                  ib.b(false);
-                  var6.a(param3 - -((me) this).field_q, ((me) this).field_m + param0, ((me) this).field_K);
+                  int discarded$3 = 0;
+                  ib.b();
+                  var5.a(param3 - -((me) this).field_q, ((me) this).field_m + param0, ((me) this).field_K);
                   return;
                 }
               } else {

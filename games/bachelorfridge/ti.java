@@ -4,12 +4,13 @@
 final class ti {
     static byte[] field_a;
 
-    final static hh a(int param0) {
+    final static hh a() {
         int var1 = 0;
-        return new hh(tt.e(21240), aj.a((byte) -65));
+        int discarded$0 = -65;
+        return new hh(tt.e(21240), aj.a());
     }
 
-    final static String a(byte param0, int param1, long param2, int param3, boolean param4) {
+    final static String a(byte param0, int param1, long param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -49,61 +50,47 @@ final class ti {
             break L2;
           }
         }
-        L3: {
-          var10 = new StringBuilder(26);
-          if (0 < param1) {
+        var10 = new StringBuilder(26);
+        var11 = 0;
+        L3: while (true) {
+          if (var11 >= 2) {
+            StringBuilder discarded$5 = var10.append(var6);
             var11 = 0;
             L4: while (true) {
-              if (var11 >= param1) {
-                StringBuilder discarded$5 = var10.append(var6);
-                break L3;
-              } else {
-                var12 = (int)param2;
-                param2 = param2 / 10L;
-                StringBuilder discarded$6 = var10.append((char)(-(10 * (int)param2) + var12 + 48));
-                var11++;
-                continue L4;
-              }
-            }
-          } else {
-            break L3;
-          }
-        }
-        var11 = 0;
-        L5: while (true) {
-          var12 = (int)param2;
-          param2 = param2 / 10L;
-          StringBuilder discarded$7 = var10.append((char)(48 + (var12 - 10 * (int)param2)));
-          if (0L != param2) {
-            L6: {
-              if (!param4) {
-                break L6;
-              } else {
+              var12 = (int)param2;
+              param2 = param2 / 10L;
+              StringBuilder discarded$6 = var10.append((char)(48 + (var12 - 10 * (int)param2)));
+              if (0L != param2) {
                 var11++;
                 if (var11 % 3 == 0) {
-                  StringBuilder discarded$8 = var10.append(var7);
-                  break L6;
+                  StringBuilder discarded$7 = var10.append(var7);
+                  continue L4;
                 } else {
-                  continue L5;
+                  continue L4;
                 }
-              }
-            }
-            continue L5;
-          } else {
-            L7: {
-              if (var8 != 0) {
-                StringBuilder discarded$9 = var10.append(45);
-                break L7;
               } else {
-                break L7;
+                L5: {
+                  if (var8 != 0) {
+                    StringBuilder discarded$8 = var10.append(45);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                return var10.reverse().toString();
               }
             }
-            return var10.reverse().toString();
+          } else {
+            var12 = (int)param2;
+            param2 = param2 / 10L;
+            StringBuilder discarded$9 = var10.append((char)(-(10 * (int)param2) + var12 + 48));
+            var11++;
+            continue L3;
           }
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
     }
 

@@ -143,25 +143,10 @@ final class dc extends hg {
                     }
                     case 8: {
                         try {
-                            if (param0 > 78) {
-                                statePc = 12;
-                            } else {
-                                statePc = 9;
-                            }
+                            statePc = 12;
                             continue stateLoop;
                         } catch (Throwable stateCaught_8) {
                             caughtException = stateCaught_8;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            field_i = null;
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
                             statePc = 11;
                             continue stateLoop;
                         }
@@ -195,7 +180,7 @@ final class dc extends hg {
                     case 14: {
                         var3_ref = (RuntimeException) (Object) caughtException;
                         stackOut_14_0 = (RuntimeException) var3_ref;
-                        stackOut_14_1 = new StringBuilder().append("dc.B(").append(param0).append(44);
+                        stackOut_14_1 = new StringBuilder().append("dc.B(").append(90).append(44);
                         stackIn_16_0 = stackOut_14_0;
                         stackIn_16_1 = stackOut_14_1;
                         stackIn_15_0 = stackOut_14_0;
@@ -277,8 +262,8 @@ final class dc extends hg {
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
         if (param0 <= -5) {
-          var3 = param2 / param1;
-          if (param2 % param1 != 0) {
+          var3 = param2 / 100;
+          if (param2 % 100 != 0) {
             var3++;
             return var3;
           } else {
@@ -289,22 +274,19 @@ final class dc extends hg {
         }
     }
 
-    final static void a(byte param0, String param1, int param2, int param3) {
+    final static void a(byte param0, String param1) {
         try {
-            fh.field_g.b(param1, param2 + -1, 475, 0, -1, 64);
-            if (param0 < 19) {
-                field_i = null;
-            }
-            fh.field_g.b(param1, 1 + param2, 475, 0, -1, 64);
-            fh.field_g.b(param1, param2 - 1, 477, 0, -1, 64);
-            fh.field_g.b(param1, 1 + param2, 477, 0, -1, 64);
-            fh.field_g.c(param1, param2, 476, 16777215, -1);
+            fh.field_g.b(param1, 319, 475, 0, -1, 64);
+            fh.field_g.b(param1, 321, 475, 0, -1, 64);
+            fh.field_g.b(param1, 319, 477, 0, -1, 64);
+            fh.field_g.b(param1, 321, 477, 0, -1, 64);
+            fh.field_g.c(param1, 320, 476, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "dc.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 476 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "dc.E(" + 57 + 44 + (param1 != null ? "{...}" : "null") + 44 + 320 + 44 + 476 + 41);
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
+    final static int a(int param0, int param1, int param2, int param3) {
         return param3 * (-param2 + param0) / param1 + param2;
     }
 

@@ -21,13 +21,10 @@ final class gu extends hd {
     private int field_Mb;
 
     final static void b(int param0, byte param1, int param2) {
-        if (param1 != 60) {
-            return;
-        }
         sk.field_d.field_n[param0] = -param2;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return mj.field_a == nr.field_f;
     }
 
@@ -77,7 +74,8 @@ final class gu extends hd {
             var6 = var6 + 2 * ((gu) this).field_Mb;
             var7 = ((gu) this).field_Fb - -(((gu) this).field_Ab * ((gu) this).field_Cb) + ((gu) this).field_Fb;
             var8 = ou.b(var6, param2, param1, param0 ^ 127);
-            var9 = nj.a(param3, param4, var7, 29079);
+            int discarded$1 = 29079;
+            var9 = nj.a(param3, param4, var7);
             ((gu) this).a(true, var6, var8, var9, var7);
             var10 = param0;
             L2: while (true) {
@@ -132,7 +130,11 @@ final class gu extends hd {
         if (param4 <= 107) {
             return null;
         }
-        return uj.a(param1, (byte) 112, param2, param0, false, param3);
+        int discarded$0 = 1;
+        int discarded$1 = 0;
+        int discarded$2 = 0;
+        int discarded$3 = 1;
+        return uj.a(param1, (byte) 112);
     }
 
     final void a(String param0, boolean param1, int param2, ut param3) {
@@ -179,23 +181,15 @@ final class gu extends hd {
             var3 = (jb) (Object) np.field_Jb.g(24009);
             L1: while (true) {
               if (var3 == null) {
-                L2: {
-                  np.field_Jb.a((gn) (Object) new bm(param1, param2), 3);
-                  if (param0 == -25) {
-                    break L2;
-                  } else {
-                    gu.b(-42, (byte) 4, 39);
-                    break L2;
-                  }
-                }
+                np.field_Jb.a((gn) (Object) new bm(param1, param2), 3);
                 break L0;
               } else {
-                L3: {
+                L2: {
                   if (!(var3 instanceof bm)) {
-                    break L3;
+                    break L2;
                   } else {
-                    if (!((bm) (Object) var3).field_J.a(param1, param0 ^ -5275)) {
-                      break L3;
+                    if (!((bm) (Object) var3).field_J.a(param1, 5250)) {
+                      break L2;
                     } else {
                       return;
                     }
@@ -208,10 +202,10 @@ final class gu extends hd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3_ref;
-            stackOut_11_1 = new StringBuilder().append("gu.H(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("gu.H(").append(-25).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -223,7 +217,7 @@ final class gu extends hd {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L4;
+              break L3;
             } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
@@ -231,14 +225,14 @@ final class gu extends hd {
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L4;
+              break L3;
             }
           }
           throw nb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
         }
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_zb = null;
         field_Jb = null;
         field_Ib = null;

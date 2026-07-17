@@ -13,7 +13,7 @@ class ke extends wb {
     ke() {
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_q = null;
         int var1 = -9;
         field_o = null;

@@ -10,7 +10,7 @@ final class el extends ki {
     static int field_I;
     static uc field_E;
 
-    final static ek i(int param0) {
+    final static ek i() {
         ek var1 = new ek(nc.field_G, wd.field_b, ak.field_c[0], vi.field_c[0], vc.field_b[0], ih.field_d[0], ih.field_b[0], gj.field_w);
         tb.f((byte) -113);
         return var1;
@@ -94,7 +94,8 @@ final class el extends ki {
             var4_int = param1.b(param3, (byte) -118);
             var6 = -52 % ((param2 - 71) / 55);
             var5 = param1.a(var4_int, param0, (byte) -11);
-            stackOut_0_0 = fc.a(var4_int, param1, var5, true);
+            int discarded$2 = 1;
+            stackOut_0_0 = fc.a(var4_int, param1, var5);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

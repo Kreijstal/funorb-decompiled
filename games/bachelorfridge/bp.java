@@ -8,7 +8,7 @@ final class bp extends ana {
     static int field_z;
     private kk field_v;
 
-    private final void g(int param0) {
+    private final void g() {
     }
 
     bp(gj param0, kk param1) {
@@ -31,31 +31,35 @@ final class bp extends ana {
                 ((bp) this).field_l = ((bp) this).field_l - 1;
                 if (!(fieldTemp$0 < 0)) {
                     if (((bp) this).field_l == 75) {
-                        this.f(-2602);
+                        int discarded$1 = -2602;
+                        this.f();
                         return false;
                     }
                     return false;
                 }
                 var2 = 89 / ((71 - param0) / 47);
-                this.g(-114);
+                int discarded$2 = -114;
+                this.g();
                 return true;
             }
             wf.a(3, (byte) 126);
         }
-        int fieldTemp$1 = ((bp) this).field_l - 1;
+        int fieldTemp$3 = ((bp) this).field_l - 1;
         ((bp) this).field_l = ((bp) this).field_l - 1;
-        if (!(fieldTemp$1 < 0)) {
+        if (!(fieldTemp$3 < 0)) {
             if (!(((bp) this).field_l != 75)) {
-                this.f(-2602);
+                int discarded$4 = -2602;
+                this.f();
             }
             return false;
         }
         var2 = 89 / ((71 - param0) / 47);
-        this.g(-114);
+        int discarded$5 = -114;
+        this.g();
         return true;
     }
 
-    private final void f(int param0) {
+    private final void f() {
         iv var3 = null;
         ad var4 = null;
         int var5 = 0;
@@ -92,37 +96,13 @@ final class bp extends ana {
     }
 
     final static void d(int param0) {
-        if (null == gja.field_m) {
-          if (param0 == 18) {
-            if (null != hp.field_d) {
-              hp.field_d.d((byte) 47);
-              va.a((byte) 75);
-              return;
-            } else {
-              va.a((byte) 75);
-              return;
-            }
-          } else {
+        if (null != gja.field_m) {
+            gja.field_m.g((byte) 127);
             return;
-          }
-        } else {
-          gja.field_m.g((byte) 127);
-          if (param0 == 18) {
-            if (null == hp.field_d) {
-              va.a((byte) 75);
-              return;
-            } else {
-              hp.field_d.d((byte) 47);
-              va.a((byte) 75);
-              return;
-            }
-          } else {
-            return;
-          }
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_y = null;
         field_w = null;
     }

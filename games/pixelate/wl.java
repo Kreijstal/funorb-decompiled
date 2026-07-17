@@ -145,7 +145,7 @@ final class wl {
         return 1;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
     }
 
@@ -181,7 +181,8 @@ final class wl {
                 var6[var7] = -1000.0;
             }
             var5_double = (double)(ok.a(ea.field_b, -124, 10) + 15) / 10.0;
-            ((wl) this).field_d = var5_double * si.a(3.141592653589793 * (double)param2 / 512.0, false);
+            int discarded$0 = 0;
+            ((wl) this).field_d = var5_double * si.a(3.141592653589793 * (double)param2 / 512.0);
             ((wl) this).field_c = var5_double * jn.a((double)param2 * 3.141592653589793 / 512.0, 6802);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "wl.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);

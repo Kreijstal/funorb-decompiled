@@ -209,7 +209,8 @@ final class as {
         if (!(null == fu.field_d)) {
             fu.field_d.k(-116);
         }
-        fo.b(0);
+        int discarded$0 = 0;
+        fo.b();
     }
 
     public static void b(int param0) {

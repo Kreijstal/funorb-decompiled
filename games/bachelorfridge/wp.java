@@ -14,7 +14,7 @@ final class wp extends tga {
         ((wp) this).field_j = 3;
     }
 
-    private final void a(ub param0, int param1, int param2, byte param3) {
+    private final void a(ub param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         gj var5 = null;
         op var6 = null;
@@ -105,22 +105,22 @@ final class wp extends tga {
     private final void a(byte param0, int param1, int param2, op param3) {
         aga var5 = null;
         RuntimeException var5_ref = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -142,14 +142,6 @@ final class wp extends tga {
                             break L3;
                           }
                         }
-                        L4: {
-                          if (param0 == -116) {
-                            break L4;
-                          } else {
-                            field_r = -38;
-                            break L4;
-                          }
-                        }
                         break L0;
                       } else {
                         break L2;
@@ -166,33 +158,33 @@ final class wp extends tga {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var5_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5_ref;
-            stackOut_12_1 = new StringBuilder().append("wp.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_10_0 = (RuntimeException) var5_ref;
+            stackOut_10_1 = new StringBuilder().append("wp.D(").append(-116).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L5;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L5;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
@@ -255,7 +247,6 @@ final class wp extends tga {
         gna[] var30 = null;
         String var31 = null;
         String var32 = null;
-        String var33 = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_17_0 = 0;
@@ -494,7 +485,7 @@ final class wp extends tga {
         L4: {
           L5: {
             L6: {
-              var5 = param0 ? 1 : 0;
+              var5 = 0;
               if (!param3) {
                 var6 = 0;
                 L7: while (true) {
@@ -982,7 +973,9 @@ final class wp extends tga {
                       break L43;
                     } else {
                       if (!param3) {
-                        bka.b(-112, param2);
+                        int discarded$3 = 11;
+                        int discarded$4 = -112;
+                        bka.b();
                         break L43;
                       } else {
                         break L42;
@@ -1521,13 +1514,14 @@ final class wp extends tga {
                           }
                           L78: {
                             if (var21 != null) {
-                              var32 = "<col=A00000>" + var21;
-                              var33 = qm.a("<br><col=A00000>", "<br>", var32, -1);
+                              var21 = (Object) (Object) ("<col=A00000>" + var21);
+                              int discarded$5 = -1;
+                              var32 = qm.a("<br><col=A00000>", "<br>", (String) var21);
                               if (var20 == null) {
-                                var20 = (Object) (Object) var33;
+                                var20 = (Object) (Object) var32;
                                 break L78;
                               } else {
-                                var20 = (Object) (Object) (var20 + "<br>" + var33);
+                                var20 = (Object) (Object) (var20 + "<br>" + var32);
                                 break L78;
                               }
                             } else {
@@ -1830,11 +1824,16 @@ final class wp extends tga {
                 }
               }
               param0.a(27799, (at) (Object) new fha((kj) (Object) new dw(var5, ((wp) this).field_n, ((wp) this).field_o)));
-              this.a(param0, ((wp) this).field_o, ((wp) this).field_n, (byte) 83);
-              this.a(param0, ((wp) this).field_o, -1 + ((wp) this).field_n, (byte) 83);
-              this.a(param0, ((wp) this).field_o, ((wp) this).field_n - -1, (byte) 83);
-              this.a(param0, ((wp) this).field_o - 1, ((wp) this).field_n, (byte) 83);
-              this.a(param0, 1 + ((wp) this).field_o, ((wp) this).field_n, (byte) 83);
+              int discarded$5 = 83;
+              this.a(param0, ((wp) this).field_o, ((wp) this).field_n);
+              int discarded$6 = 83;
+              this.a(param0, ((wp) this).field_o, -1 + ((wp) this).field_n);
+              int discarded$7 = 83;
+              this.a(param0, ((wp) this).field_o, ((wp) this).field_n - -1);
+              int discarded$8 = 83;
+              this.a(param0, ((wp) this).field_o - 1, ((wp) this).field_n);
+              int discarded$9 = 83;
+              this.a(param0, 1 + ((wp) this).field_o, ((wp) this).field_n);
               super.a(false, var5.field_h);
               break L0;
             } else {

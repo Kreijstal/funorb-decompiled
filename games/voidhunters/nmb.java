@@ -77,7 +77,8 @@ final class nmb extends hrb {
     }
 
     final long a(byte param0) {
-        ((nmb) this).field_g = ((nmb) this).field_g + this.c(-110);
+        int discarded$0 = -110;
+        ((nmb) this).field_g = ((nmb) this).field_g + this.c();
         if (param0 != -81) {
             ((nmb) this).field_h = 67;
         }
@@ -96,7 +97,6 @@ final class nmb extends hrb {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_2_0 = null;
         StringBuilder stackOut_2_1 = null;
@@ -109,20 +109,14 @@ final class nmb extends hrb {
         try {
           L0: {
             kpb.field_q.a((f) (Object) param1.field_e);
-            if (param0 < -73) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("nmb.F(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("nmb.F(").append(-91).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -146,11 +140,6 @@ final class nmb extends hrb {
             }
           }
           throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -180,7 +169,7 @@ final class nmb extends hrb {
         }
     }
 
-    private final long c(int param0) {
+    private final long c() {
         int var8 = 0;
         int var9 = VoidHunters.field_G;
         long var2 = System.nanoTime();

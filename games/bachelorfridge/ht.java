@@ -29,7 +29,7 @@ final class ht implements Runnable {
     private pq field_l;
     private boolean field_q;
 
-    private final static qaa a(String param0, String param1, int param2, int param3) {
+    private final static qaa a(String param0, String param1, int param2) {
         try {
             String var4 = null;
             Object[] var5 = null;
@@ -206,8 +206,8 @@ final class ht implements Runnable {
     }
 
     private final eh a(int param0, boolean param1, int param2, String param3) {
-        int var5 = 49 % ((param2 - -66) / 51);
-        return this.a(0, (Object) (Object) param3, param0, 0, param1 ? 22 : 1);
+        int var5 = 0;
+        return this.a(0, (Object) (Object) param3, param0, 0, 1);
     }
 
     public final void run() {
@@ -329,13 +329,14 @@ final class ht implements Runnable {
                                                 ((ht) this).field_d.a((byte) -122, var8_ref.field_a & 65535, var8_ref.field_c >> 16, var8_ref.field_a >>> 16, var14, 65535 & var8_ref.field_c);
                                                 break L8;
                                               } else {
-                                                Object discarded$6 = Class.forName("hma").getMethod("enter", new Class[5]).invoke(((ht) this).field_f, new Object[5]);
+                                                Object discarded$9 = Class.forName("hma").getMethod("enter", new Class[5]).invoke(((ht) this).field_f, new Object[5]);
                                                 break L8;
                                               }
                                             } else {
                                               if (var2_int != 7) {
                                                 if (12 == var2_int) {
-                                                  var3_ref3 = ht.a(field_e, (String) var8_ref.field_d, field_w, -1);
+                                                  int discarded$10 = -1;
+                                                  var3_ref3 = ht.a(field_e, (String) var8_ref.field_d, field_w);
                                                   var8_ref.field_e = (Object) (Object) var3_ref3;
                                                   break L8;
                                                 } else {
@@ -353,7 +354,7 @@ final class ht implements Runnable {
                                                             ((ht) this).field_l.a(var4_int, var3_int, 9537);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$7 = Class.forName("br").getDeclaredMethod("movemouse", new Class[2]).invoke(((ht) this).field_p, new Object[2]);
+                                                            Object discarded$11 = Class.forName("br").getDeclaredMethod("movemouse", new Class[2]).invoke(((ht) this).field_p, new Object[2]);
                                                             break L8;
                                                           }
                                                         }
@@ -378,7 +379,7 @@ final class ht implements Runnable {
                                                           var3_int = stackIn_95_0;
                                                           var13 = (java.awt.Component) var8_ref.field_d;
                                                           if (!((ht) this).field_j) {
-                                                            Object discarded$8 = Class.forName("br").getDeclaredMethod("showcursor", new Class[2]).invoke(((ht) this).field_p, new Object[2]);
+                                                            Object discarded$12 = Class.forName("br").getDeclaredMethod("showcursor", new Class[2]).invoke(((ht) this).field_p, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((ht) this).field_l.a(var13, (byte) -86, var3_int != 0);
@@ -397,7 +398,7 @@ final class ht implements Runnable {
                                                           break L12;
                                                         } else {
                                                           var11 = (Object[]) var8_ref.field_d;
-                                                          Object discarded$9 = Class.forName("br").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((ht) this).field_p, new Object[5]);
+                                                          Object discarded$13 = Class.forName("br").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((ht) this).field_p, new Object[5]);
                                                           break L8;
                                                         }
                                                       }
@@ -426,7 +427,7 @@ final class ht implements Runnable {
                                                             var5 = 0;
                                                             L15: while (true) {
                                                               if (~var12.length() >= ~var5) {
-                                                                Process discarded$10 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var12 + "\"");
+                                                                Process discarded$14 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var12 + "\"");
                                                                 var8_ref.field_e = null;
                                                                 break L13;
                                                               } else {
@@ -449,14 +450,15 @@ final class ht implements Runnable {
                                                       break L8;
                                                     }
                                                   } else {
-                                                    var3_ref3 = ht.a("", (String) var8_ref.field_d, field_w, -1);
+                                                    int discarded$15 = -1;
+                                                    var3_ref3 = ht.a("", (String) var8_ref.field_d, field_w);
                                                     var8_ref.field_e = (Object) (Object) var3_ref3;
                                                     break L8;
                                                   }
                                                 }
                                               } else {
                                                 if (!((ht) this).field_j) {
-                                                  Object discarded$11 = Class.forName("hma").getMethod("exit", new Class[0]).invoke(((ht) this).field_f, new Object[0]);
+                                                  Object discarded$16 = Class.forName("hma").getMethod("exit", new Class[0]).invoke(((ht) this).field_f, new Object[0]);
                                                   break L8;
                                                 } else {
                                                   ((ht) this).field_d.a(-31, (java.awt.Frame) var8_ref.field_d);
@@ -532,7 +534,8 @@ final class ht implements Runnable {
                         if (~f.b((byte) 73) <= ~field_u) {
                           try {
                             L18: {
-                              var8_ref.field_e = (Object) (Object) lda.a((String) var8_ref.field_d, var8_ref.field_a, (byte) -113).a((byte) -70);
+                              int discarded$17 = -113;
+                              var8_ref.field_e = (Object) (Object) lda.a((String) var8_ref.field_d, var8_ref.field_a).a((byte) -70);
                               break L18;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter2) {

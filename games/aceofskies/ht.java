@@ -11,7 +11,7 @@ final class ht extends wf {
     int field_f;
     static jd field_i;
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_h = null;
         field_i = null;

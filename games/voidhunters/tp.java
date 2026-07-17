@@ -3,19 +3,13 @@
  */
 final class tp extends rqa {
     final static int a(int param0, boolean param1, int param2) {
-        if (!param1) {
-          if (param2 == 1) {
+        if (param2 == 1) {
             if (!coa.b((byte) -117, param0)) {
-              return tia.field_J[param2];
-            } else {
-              return 29;
+                return tia.field_J[param2];
             }
-          } else {
-            return tia.field_J[param2];
-          }
-        } else {
-          return -81;
+            return 29;
         }
+        return tia.field_J[param2];
     }
 
     tp(String param0, Class[] param1, String param2) {

@@ -218,10 +218,7 @@ final class mg {
     }
 
     final static boolean a(byte param0, int param1, int param2) {
-        if (param0 != -53) {
-            field_k = null;
-        }
-        return (param2 & 34) != 0 ? true : false;
+        return (param2 & 34) != 0;
     }
 
     final int b(int param0) {

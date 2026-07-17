@@ -483,9 +483,6 @@ class w extends tj {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        if (param0 != 93) {
-            ((w) this).field_P = null;
-        }
     }
 
     final synchronized void c(int param0) {
@@ -554,15 +551,11 @@ class w extends tj {
 
     private final void b(byte param0, int param1, int param2) {
         ((w) this).field_F[param2] = param1;
-        if (param0 != 22) {
-            Object var5 = null;
-            int discarded$0 = this.a((tm) null, true);
-        }
         ((w) this).field_o[param2] = ua.a(param1, -128);
         this.d(-14089, param1, param2);
     }
 
-    private final int a(tm param0, boolean param1) {
+    private final int a(tm param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -1068,7 +1061,8 @@ class w extends tj {
               stackIn_65_0 = stackOut_64_0;
               return stackIn_65_0 != 0;
             } else {
-              param0.field_A.a(param0.field_u, this.a(param0, (byte) 68), this.a(param0, true));
+              int discarded$1 = 1;
+              param0.field_A.a(param0.field_u, this.a(param0, (byte) 68), this.a(param0));
               stackOut_66_0 = 0;
               stackIn_67_0 = stackOut_66_0;
               break L0;
@@ -1210,9 +1204,6 @@ class w extends tj {
 
     public static void a(boolean param0) {
         field_A = null;
-        if (param0) {
-            w.b(false, -68);
-        }
         field_S = null;
     }
 
@@ -1343,9 +1334,6 @@ class w extends tj {
     private final void d(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = HostileSpawn.field_I ? 1 : 0;
-        if (param0 != -14089) {
-            ((w) this).field_J = false;
-        }
         if (!(param1 == ((w) this).field_n[param2])) {
             ((w) this).field_n[param2] = param1;
             for (var4 = 0; var4 < 128; var4++) {
@@ -1435,7 +1423,8 @@ class w extends tj {
                 var7.field_C = 0;
                 if (((w) this).field_H[param2] != 0) {
                   L4: {
-                    var7.field_A = b.a(var6, this.a(1, var7), 0, this.a(var7, true));
+                    int discarded$2 = 1;
+                    var7.field_A = b.a(var6, this.a(1, var7), 0, this.a(var7));
                     stackOut_17_0 = this;
                     stackIn_19_0 = stackOut_17_0;
                     stackIn_18_0 = stackOut_17_0;
@@ -1456,7 +1445,8 @@ class w extends tj {
                   ((w) this).a(stackIn_20_1 != 0, var7, -128);
                   break L3;
                 } else {
-                  var7.field_A = b.a(var6, this.a(param0 ^ 34, var7), this.a(var7, (byte) -75), this.a(var7, true));
+                  int discarded$3 = 1;
+                  var7.field_A = b.a(var6, this.a(param0 ^ 34, var7), this.a(var7, (byte) -75), this.a(var7));
                   break L3;
                 }
               }
@@ -1613,17 +1603,12 @@ class w extends tj {
         }
     }
 
-    final static void b(boolean param0, int param1) {
-        pc.a(param0, false, false);
-        if (param1 != -23960) {
-            field_r = -96;
-        }
+    final static void b(boolean param0) {
+        int discarded$0 = 0;
+        pc.a(param0, false);
     }
 
     private final void a(int param0, int param1, int param2) {
-        if (param1 > -65) {
-            return;
-        }
         ((w) this).field_E[param0] = param2;
     }
 
@@ -1636,7 +1621,7 @@ class w extends tj {
         int var8 = 0;
         int var9 = 0;
         var9 = HostileSpawn.field_I ? 1 : 0;
-        var4 = 73 / ((param0 - -9) / 51);
+        var4 = -73;
         var3 = param1 & 240;
         if (var3 == 128) {
           var5 = 15 & param1;

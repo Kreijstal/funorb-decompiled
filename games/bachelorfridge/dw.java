@@ -15,7 +15,7 @@ final class dw extends kj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
     }
 

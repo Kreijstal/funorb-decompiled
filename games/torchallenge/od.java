@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class od {
-    final static void b(ka param0, int param1, int param2, int param3, int param4) {
+    final static void b(ka param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -19,8 +19,8 @@ final class od {
           L0: {
             var5 = param0.field_x;
             var6 = param0.field_u;
-            var7 = param3 << 8;
-            var8 = (param4 - param3 << 8) / var5;
+            var7 = 0;
+            var8 = 32768 / var5;
             var9 = 0;
             if (param1 >= qg.field_a) {
               break L0;
@@ -162,7 +162,7 @@ final class od {
         }
     }
 
-    final static void c(ka param0, int param1, int param2, int param3, int param4) {
+    final static void c(ka param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -185,10 +185,10 @@ final class od {
         int var24 = 0;
         if (param3 <= param0.field_q) {
           L0: {
-            var5 = param1 + param0.field_s * param3 / param0.field_q;
-            var6 = param1 + ((param0.field_s + param0.field_u) * param3 + param0.field_q - 1) / param0.field_q;
-            var7 = param2 + param0.field_p * param0.field_x / param0.field_v;
-            var8 = param2 + ((param0.field_p + param0.field_x) * param0.field_x + param0.field_v - 1) / param0.field_v;
+            var5 = param0.field_s * param3 / param0.field_q;
+            var6 = ((param0.field_s + param0.field_u) * param3 + param0.field_q - 1) / param0.field_q;
+            var7 = param0.field_p * param0.field_x / param0.field_v;
+            var8 = ((param0.field_p + param0.field_x) * param0.field_x + param0.field_v - 1) / param0.field_v;
             if (var5 >= qg.field_a) {
               break L0;
             } else {
@@ -234,7 +234,7 @@ final class od {
                     return;
                   } else {
                     var11 = var9;
-                    var13 = var12 - param1 << 4;
+                    var13 = var12 << 4;
                     var14 = var13 * param0.field_q / param3 - (param0.field_s << 4);
                     var15 = (var13 + 16) * param0.field_q / param3 - (param0.field_s << 4);
                     var16 = var15 - var14;
@@ -267,7 +267,7 @@ final class od {
                           continue L5;
                         } else {
                           L9: {
-                            var18 = var17 - param2 - param0.field_p;
+                            var18 = var17 - param0.field_p;
                             if (var18 >= 0) {
                               break L9;
                             } else {
@@ -589,7 +589,7 @@ final class od {
                 param0[incrementValue$1] = (param3 | param4) >>> 8;
             }
             param6 = param6 + param9;
-            param5 = param5 + param10;
+            param5 = param5;
         }
     }
 
@@ -609,7 +609,7 @@ final class od {
                 param0[incrementValue$1] = (param3 | param4) >>> 8;
             }
             param6 = param6 + param10;
-            param5 = param5 + param11;
+            param5 = param5;
         }
     }
 
@@ -794,8 +794,8 @@ final class od {
         int var25 = 0;
         int[][][] var29 = null;
         var9 = 16777215;
-        var10 = param2 - param4 >> 1;
-        var11 = param3 - param5 >> 1;
+        var10 = 17;
+        var11 = 22;
         var29 = new int[2][4][2];
         var15 = 0;
         L0: while (true) {
@@ -804,7 +804,7 @@ final class od {
             L1: while (true) {
               if (var24 >= 4) {
                 param6.d();
-                qg.f(param0 + var10, param1 + var11, param4, param5 + 1, var9);
+                qg.f(33 + var10, 30 + var11, 34, 46, var9);
                 la.field_f.a(115);
                 return;
               } else {
@@ -821,7 +821,7 @@ final class od {
                         fi.a(param8, 0, 8);
                         var15 = 65793;
                         var16 = var9;
-                        var19 = param2;
+                        var19 = 68;
                         var20 = var11;
                         var21 = 0;
                         if (var24 == 0) {
@@ -834,7 +834,7 @@ final class od {
                           }
                         }
                       }
-                      var19 = param2;
+                      var19 = 68;
                       var20 = var11;
                       break L3;
                     }
@@ -850,7 +850,7 @@ final class od {
                           }
                         }
                       }
-                      var19 = param3;
+                      var19 = 90;
                       var20 = var10;
                       break L5;
                     }
@@ -891,13 +891,13 @@ final class od {
                       qg.b();
                       qg.c(0, 0, var19, var20, var15, var16);
                       la.field_f.a(-99);
-                      var22 = param0;
-                      var23 = param1;
+                      var22 = 33;
+                      var23 = 30;
                       if (var21 != 90) {
                         break L11;
                       } else {
                         param7.f();
-                        var22 = param0 - (param3 - param2);
+                        var22 = 11;
                         break L11;
                       }
                     }
@@ -1002,7 +1002,7 @@ final class od {
               } else {
                 L23: {
                   L24: {
-                    var13 = param0;
+                    var13 = 33;
                     if (var16 == 0) {
                       break L24;
                     } else {
@@ -1017,14 +1017,14 @@ final class od {
                     if (var15 != 0) {
                       break L25;
                     } else {
-                      var13 = param0;
+                      var13 = 33;
                       break L25;
                     }
                   }
                   if (var15 != 1) {
                     break L23;
                   } else {
-                    var13 = param0 + var10;
+                    var13 = 33 + var10;
                     break L23;
                   }
                 }
@@ -1044,21 +1044,21 @@ final class od {
                     if (var15 != 0) {
                       break L28;
                     } else {
-                      var13 = param0 + param2;
+                      var13 = 101;
                       break L28;
                     }
                   }
                   if (var15 != 1) {
                     break L26;
                   } else {
-                    var13 = param0 + var10 + param4;
+                    var13 = 33 + var10 + 34;
                     break L26;
                   }
                 }
                 L29: {
                   L30: {
                     var29[var15][var16][0] = var13;
-                    var14 = param1;
+                    var14 = 30;
                     if (var16 == 0) {
                       break L30;
                     } else {
@@ -1073,14 +1073,14 @@ final class od {
                     if (var15 != 0) {
                       break L31;
                     } else {
-                      var14 = param1;
+                      var14 = 30;
                       break L31;
                     }
                   }
                   if (var15 != 1) {
                     break L29;
                   } else {
-                    var14 = param1 + var11;
+                    var14 = 30 + var11;
                     break L29;
                   }
                 }
@@ -1100,14 +1100,14 @@ final class od {
                     if (var15 != 0) {
                       break L34;
                     } else {
-                      var14 = param1 + param3;
+                      var14 = 120;
                       break L34;
                     }
                   }
                   if (var15 != 1) {
                     break L32;
                   } else {
-                    var14 = param1 + var11 + param5;
+                    var14 = 30 + var11 + 45;
                     break L32;
                   }
                 }

@@ -113,7 +113,7 @@ final class el extends rg {
                 if (mh.field_h <= 0) {
                   break L1;
                 } else {
-                  ko.a(param4, param7, false, param9);
+                  ko.a(param4, 11, false, param9);
                   break L1;
                 }
               }
@@ -123,13 +123,15 @@ final class el extends rg {
                 if (sq.field_Q <= 0) {
                   break L2;
                 } else {
-                  gg.a(param7, param4, param9, true);
+                  int discarded$20 = 1;
+                  gg.a(11, param4, param9);
                   break L2;
                 }
               }
               L3: {
                 if (0 < da.field_a) {
-                  so.a(param3 ^ 48, param4, param9, param1, param7);
+                  int discarded$21 = 11;
+                  so.a(50, param4, param9, param1);
                   break L3;
                 } else {
                   break L3;
@@ -152,17 +154,13 @@ final class el extends rg {
                 }
                 hf.field_e.field_Jb.field_wb = null;
                 pd.field_b.field_Z = true;
-                vi.a(param2, param7, (byte) 45, hf.field_e, param6);
+                vi.a(param2, 11, (byte) 45, hf.field_e, param6);
                 break L4;
               }
-              og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-              vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-              if (param3 == 2) {
-                qj.field_i = qj.field_i + 1;
-                return;
-              } else {
-                return;
-              }
+              og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+              vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+              qj.field_i = qj.field_i + 1;
+              return;
             } else {
               ck.field_a = (-640 + kp.field_l) / 2;
               ui.a((byte) -109, param9);
@@ -173,115 +171,95 @@ final class el extends rg {
                   if (sq.field_Q <= 0) {
                     break L6;
                   } else {
-                    gg.a(param7, param4, param9, true);
+                    int discarded$22 = 1;
+                    gg.a(11, param4, param9);
                     break L6;
                   }
                 }
                 L7: {
                   if (0 < da.field_a) {
-                    so.a(param3 ^ 48, param4, param9, param1, param7);
+                    int discarded$23 = 11;
+                    so.a(50, param4, param9, param1);
                     break L7;
                   } else {
                     break L7;
                   }
                 }
-                if (!io.field_b) {
-                  hf.field_e.field_Jb.field_wb = null;
-                  pd.field_b.field_Z = true;
-                  vi.a(param2, param7, (byte) 45, hf.field_e, param6);
-                  og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                  vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                  if (param3 == 2) {
+                if (io.field_b) {
+                  if (mh.field_c.field_mc > mh.field_c.field_cc) {
+                    hf.field_e.field_Jb.field_wb = null;
+                    pd.field_b.field_Z = true;
+                    vi.a(param2, 11, (byte) 45, hf.field_e, param6);
+                    og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                    vi.a(param2, 11, (byte) 45, bf.field_n, param6);
                     qj.field_i = qj.field_i + 1;
                     return;
                   } else {
-                    return;
-                  }
-                } else {
-                  if (mh.field_c.field_mc <= mh.field_c.field_cc) {
                     pd.field_b.field_Z = false;
                     hf.field_e.field_Jb.field_wb = ka.field_p;
                     ob.a(hf.field_e.field_Gb, 97);
-                    og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                    vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                    if (param3 == 2) {
-                      qj.field_i = qj.field_i + 1;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    hf.field_e.field_Jb.field_wb = null;
-                    pd.field_b.field_Z = true;
-                    vi.a(param2, param7, (byte) 45, hf.field_e, param6);
-                    og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                    vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                    if (param3 == 2) {
-                      qj.field_i = qj.field_i + 1;
-                      return;
-                    } else {
-                      return;
-                    }
+                    og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                    vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                    qj.field_i = qj.field_i + 1;
+                    return;
                   }
+                } else {
+                  hf.field_e.field_Jb.field_wb = null;
+                  pd.field_b.field_Z = true;
+                  vi.a(param2, 11, (byte) 45, hf.field_e, param6);
+                  og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                  vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                  qj.field_i = qj.field_i + 1;
+                  return;
                 }
               } else {
                 L8: {
-                  ko.a(param4, param7, false, param9);
+                  ko.a(param4, 11, false, param9);
                   eb.field_B.field_R = 1;
                   eb.field_B.field_V = qc.field_u.field_V;
                   if (sq.field_Q <= 0) {
                     break L8;
                   } else {
-                    gg.a(param7, param4, param9, true);
+                    int discarded$24 = 1;
+                    gg.a(11, param4, param9);
                     break L8;
                   }
                 }
                 L9: {
                   if (0 < da.field_a) {
-                    so.a(param3 ^ 48, param4, param9, param1, param7);
+                    int discarded$25 = 11;
+                    so.a(50, param4, param9, param1);
                     break L9;
                   } else {
                     break L9;
                   }
                 }
-                if (!io.field_b) {
-                  hf.field_e.field_Jb.field_wb = null;
-                  pd.field_b.field_Z = true;
-                  vi.a(param2, param7, (byte) 45, hf.field_e, param6);
-                  og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                  vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                  if (param3 == 2) {
+                if (io.field_b) {
+                  if (mh.field_c.field_mc > mh.field_c.field_cc) {
+                    hf.field_e.field_Jb.field_wb = null;
+                    pd.field_b.field_Z = true;
+                    vi.a(param2, 11, (byte) 45, hf.field_e, param6);
+                    og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                    vi.a(param2, 11, (byte) 45, bf.field_n, param6);
                     qj.field_i = qj.field_i + 1;
                     return;
                   } else {
-                    return;
-                  }
-                } else {
-                  if (mh.field_c.field_mc <= mh.field_c.field_cc) {
                     pd.field_b.field_Z = false;
                     hf.field_e.field_Jb.field_wb = ka.field_p;
                     ob.a(hf.field_e.field_Gb, 97);
-                    og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                    vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                    if (param3 == 2) {
-                      qj.field_i = qj.field_i + 1;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    hf.field_e.field_Jb.field_wb = null;
-                    pd.field_b.field_Z = true;
-                    vi.a(param2, param7, (byte) 45, hf.field_e, param6);
-                    og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                    vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                    if (param3 == 2) {
-                      qj.field_i = qj.field_i + 1;
-                      return;
-                    } else {
-                      return;
-                    }
+                    og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                    vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                    qj.field_i = qj.field_i + 1;
+                    return;
                   }
+                } else {
+                  hf.field_e.field_Jb.field_wb = null;
+                  pd.field_b.field_Z = true;
+                  vi.a(param2, 11, (byte) 45, hf.field_e, param6);
+                  og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                  vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                  qj.field_i = qj.field_i + 1;
+                  return;
                 }
               }
             }
@@ -315,7 +293,7 @@ final class el extends rg {
                 if (mh.field_h <= 0) {
                   break L11;
                 } else {
-                  ko.a(param4, param7, false, param9);
+                  ko.a(param4, 11, false, param9);
                   break L11;
                 }
               }
@@ -325,13 +303,15 @@ final class el extends rg {
                 if (sq.field_Q <= 0) {
                   break L12;
                 } else {
-                  gg.a(param7, param4, param9, true);
+                  int discarded$26 = 1;
+                  gg.a(11, param4, param9);
                   break L12;
                 }
               }
               L13: {
                 if (0 < da.field_a) {
-                  so.a(param3 ^ 48, param4, param9, param1, param7);
+                  int discarded$27 = 11;
+                  so.a(50, param4, param9, param1);
                   break L13;
                 } else {
                   break L13;
@@ -354,17 +334,13 @@ final class el extends rg {
                 }
                 hf.field_e.field_Jb.field_wb = null;
                 pd.field_b.field_Z = true;
-                vi.a(param2, param7, (byte) 45, hf.field_e, param6);
+                vi.a(param2, 11, (byte) 45, hf.field_e, param6);
                 break L14;
               }
-              og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-              vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-              if (param3 != 2) {
-                return;
-              } else {
-                qj.field_i = qj.field_i + 1;
-                return;
-              }
+              og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+              vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+              qj.field_i = qj.field_i + 1;
+              return;
             } else {
               ck.field_a = (-640 + kp.field_l) / 2;
               ui.a((byte) -109, param9);
@@ -374,56 +350,47 @@ final class el extends rg {
                 if (sq.field_Q <= 0) {
                   L16: {
                     if (0 < da.field_a) {
-                      so.a(param3 ^ 48, param4, param9, param1, param7);
+                      int discarded$28 = 11;
+                      so.a(50, param4, param9, param1);
                       break L16;
                     } else {
                       break L16;
                     }
                   }
-                  if (!io.field_b) {
-                    hf.field_e.field_Jb.field_wb = null;
-                    pd.field_b.field_Z = true;
-                    vi.a(param2, param7, (byte) 45, hf.field_e, param6);
-                    og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                    vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                    if (param3 == 2) {
+                  if (io.field_b) {
+                    if (mh.field_c.field_mc > mh.field_c.field_cc) {
+                      hf.field_e.field_Jb.field_wb = null;
+                      pd.field_b.field_Z = true;
+                      vi.a(param2, 11, (byte) 45, hf.field_e, param6);
+                      og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                      vi.a(param2, 11, (byte) 45, bf.field_n, param6);
                       qj.field_i = qj.field_i + 1;
                       return;
                     } else {
-                      return;
-                    }
-                  } else {
-                    if (mh.field_c.field_mc <= mh.field_c.field_cc) {
                       pd.field_b.field_Z = false;
                       hf.field_e.field_Jb.field_wb = ka.field_p;
                       ob.a(hf.field_e.field_Gb, 97);
-                      og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                      vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                      if (param3 == 2) {
-                        qj.field_i = qj.field_i + 1;
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      hf.field_e.field_Jb.field_wb = null;
-                      pd.field_b.field_Z = true;
-                      vi.a(param2, param7, (byte) 45, hf.field_e, param6);
-                      og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                      vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                      if (param3 == 2) {
-                        qj.field_i = qj.field_i + 1;
-                        return;
-                      } else {
-                        return;
-                      }
+                      og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                      vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                      qj.field_i = qj.field_i + 1;
+                      return;
                     }
+                  } else {
+                    hf.field_e.field_Jb.field_wb = null;
+                    pd.field_b.field_Z = true;
+                    vi.a(param2, 11, (byte) 45, hf.field_e, param6);
+                    og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                    vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                    qj.field_i = qj.field_i + 1;
+                    return;
                   }
                 } else {
                   L17: {
-                    gg.a(param7, param4, param9, true);
+                    int discarded$29 = 1;
+                    gg.a(11, param4, param9);
                     if (0 < da.field_a) {
-                      so.a(param3 ^ 48, param4, param9, param1, param7);
+                      int discarded$30 = 11;
+                      so.a(50, param4, param9, param1);
                       break L17;
                     } else {
                       break L17;
@@ -446,33 +413,31 @@ final class el extends rg {
                     }
                     hf.field_e.field_Jb.field_wb = null;
                     pd.field_b.field_Z = true;
-                    vi.a(param2, param7, (byte) 45, hf.field_e, param6);
+                    vi.a(param2, 11, (byte) 45, hf.field_e, param6);
                     break L18;
                   }
-                  og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                  vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                  if (param3 == 2) {
-                    qj.field_i = qj.field_i + 1;
-                    return;
-                  } else {
-                    return;
-                  }
+                  og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                  vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                  qj.field_i = qj.field_i + 1;
+                  return;
                 }
               } else {
                 L20: {
-                  ko.a(param4, param7, false, param9);
+                  ko.a(param4, 11, false, param9);
                   eb.field_B.field_R = 1;
                   eb.field_B.field_V = qc.field_u.field_V;
                   if (sq.field_Q <= 0) {
                     break L20;
                   } else {
-                    gg.a(param7, param4, param9, true);
+                    int discarded$31 = 1;
+                    gg.a(11, param4, param9);
                     break L20;
                   }
                 }
                 L21: {
                   if (0 < da.field_a) {
-                    so.a(param3 ^ 48, param4, param9, param1, param7);
+                    int discarded$32 = 11;
+                    so.a(50, param4, param9, param1);
                     break L21;
                   } else {
                     break L21;
@@ -495,17 +460,13 @@ final class el extends rg {
                   }
                   hf.field_e.field_Jb.field_wb = null;
                   pd.field_b.field_Z = true;
-                  vi.a(param2, param7, (byte) 45, hf.field_e, param6);
+                  vi.a(param2, 11, (byte) 45, hf.field_e, param6);
                   break L22;
                 }
-                og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                if (param3 != 2) {
-                  return;
-                } else {
-                  qj.field_i = qj.field_i + 1;
-                  return;
-                }
+                og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                qj.field_i = qj.field_i + 1;
+                return;
               }
             }
           }
@@ -517,7 +478,7 @@ final class el extends rg {
               if (mh.field_h <= 0) {
                 break L24;
               } else {
-                ko.a(param4, param7, false, param9);
+                ko.a(param4, 11, false, param9);
                 break L24;
               }
             }
@@ -527,13 +488,15 @@ final class el extends rg {
               if (sq.field_Q <= 0) {
                 break L25;
               } else {
-                gg.a(param7, param4, param9, true);
+                int discarded$33 = 1;
+                gg.a(11, param4, param9);
                 break L25;
               }
             }
             L26: {
               if (0 < da.field_a) {
-                so.a(param3 ^ 48, param4, param9, param1, param7);
+                int discarded$34 = 11;
+                so.a(50, param4, param9, param1);
                 break L26;
               } else {
                 break L26;
@@ -556,17 +519,13 @@ final class el extends rg {
               }
               hf.field_e.field_Jb.field_wb = null;
               pd.field_b.field_Z = true;
-              vi.a(param2, param7, (byte) 45, hf.field_e, param6);
+              vi.a(param2, 11, (byte) 45, hf.field_e, param6);
               break L27;
             }
-            og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-            vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-            if (param3 != 2) {
-              return;
-            } else {
-              qj.field_i = qj.field_i + 1;
-              return;
-            }
+            og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+            vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+            qj.field_i = qj.field_i + 1;
+            return;
           } else {
             ck.field_a = (-640 + kp.field_l) / 2;
             ui.a((byte) -109, param9);
@@ -576,56 +535,47 @@ final class el extends rg {
               if (sq.field_Q <= 0) {
                 L29: {
                   if (0 < da.field_a) {
-                    so.a(param3 ^ 48, param4, param9, param1, param7);
+                    int discarded$35 = 11;
+                    so.a(50, param4, param9, param1);
                     break L29;
                   } else {
                     break L29;
                   }
                 }
-                if (!io.field_b) {
-                  hf.field_e.field_Jb.field_wb = null;
-                  pd.field_b.field_Z = true;
-                  vi.a(param2, param7, (byte) 45, hf.field_e, param6);
-                  og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                  vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                  if (param3 != 2) {
+                if (io.field_b) {
+                  if (mh.field_c.field_mc > mh.field_c.field_cc) {
+                    hf.field_e.field_Jb.field_wb = null;
+                    pd.field_b.field_Z = true;
+                    vi.a(param2, 11, (byte) 45, hf.field_e, param6);
+                    og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                    vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                    qj.field_i = qj.field_i + 1;
                     return;
                   } else {
+                    pd.field_b.field_Z = false;
+                    hf.field_e.field_Jb.field_wb = ka.field_p;
+                    ob.a(hf.field_e.field_Gb, 97);
+                    og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                    vi.a(param2, 11, (byte) 45, bf.field_n, param6);
                     qj.field_i = qj.field_i + 1;
                     return;
                   }
                 } else {
-                  if (mh.field_c.field_mc <= mh.field_c.field_cc) {
-                    pd.field_b.field_Z = false;
-                    hf.field_e.field_Jb.field_wb = ka.field_p;
-                    ob.a(hf.field_e.field_Gb, 97);
-                    og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                    vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                    if (param3 != 2) {
-                      return;
-                    } else {
-                      qj.field_i = qj.field_i + 1;
-                      return;
-                    }
-                  } else {
-                    hf.field_e.field_Jb.field_wb = null;
-                    pd.field_b.field_Z = true;
-                    vi.a(param2, param7, (byte) 45, hf.field_e, param6);
-                    og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                    vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                    if (param3 != 2) {
-                      return;
-                    } else {
-                      qj.field_i = qj.field_i + 1;
-                      return;
-                    }
-                  }
+                  hf.field_e.field_Jb.field_wb = null;
+                  pd.field_b.field_Z = true;
+                  vi.a(param2, 11, (byte) 45, hf.field_e, param6);
+                  og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                  vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                  qj.field_i = qj.field_i + 1;
+                  return;
                 }
               } else {
                 L30: {
-                  gg.a(param7, param4, param9, true);
+                  int discarded$36 = 1;
+                  gg.a(11, param4, param9);
                   if (0 < da.field_a) {
-                    so.a(param3 ^ 48, param4, param9, param1, param7);
+                    int discarded$37 = 11;
+                    so.a(50, param4, param9, param1);
                     break L30;
                   } else {
                     break L30;
@@ -648,33 +598,31 @@ final class el extends rg {
                   }
                   hf.field_e.field_Jb.field_wb = null;
                   pd.field_b.field_Z = true;
-                  vi.a(param2, param7, (byte) 45, hf.field_e, param6);
+                  vi.a(param2, 11, (byte) 45, hf.field_e, param6);
                   break L31;
                 }
-                og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-                vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-                if (param3 != 2) {
-                  return;
-                } else {
-                  qj.field_i = qj.field_i + 1;
-                  return;
-                }
+                og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+                vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+                qj.field_i = qj.field_i + 1;
+                return;
               }
             } else {
               L33: {
-                ko.a(param4, param7, false, param9);
+                ko.a(param4, 11, false, param9);
                 eb.field_B.field_R = 1;
                 eb.field_B.field_V = qc.field_u.field_V;
                 if (sq.field_Q <= 0) {
                   break L33;
                 } else {
-                  gg.a(param7, param4, param9, true);
+                  int discarded$38 = 1;
+                  gg.a(11, param4, param9);
                   break L33;
                 }
               }
               L34: {
                 if (0 < da.field_a) {
-                  so.a(param3 ^ 48, param4, param9, param1, param7);
+                  int discarded$39 = 11;
+                  so.a(50, param4, param9, param1);
                   break L34;
                 } else {
                   break L34;
@@ -697,17 +645,13 @@ final class el extends rg {
                 }
                 hf.field_e.field_Jb.field_wb = null;
                 pd.field_b.field_Z = true;
-                vi.a(param2, param7, (byte) 45, hf.field_e, param6);
+                vi.a(param2, 11, (byte) 45, hf.field_e, param6);
                 break L35;
               }
-              og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
-              vi.a(param2, param7, (byte) 45, bf.field_n, param6);
-              if (param3 != 2) {
-                return;
-              } else {
-                qj.field_i = qj.field_i + 1;
-                return;
-              }
+              og.a(true, (byte) 120, 16777215, 11, 16777215, param6, param2);
+              vi.a(param2, 11, (byte) 45, bf.field_n, param6);
+              qj.field_i = qj.field_i + 1;
+              return;
             }
           }
         }
@@ -722,7 +666,7 @@ final class el extends rg {
         return var3;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_E = null;
         field_H = null;
     }

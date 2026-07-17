@@ -10,7 +10,7 @@ final class gma {
     boolean field_a;
     static int[][] field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
     }
@@ -23,7 +23,7 @@ final class gma {
         uv.a(false, hla.field_r, false);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;
@@ -37,26 +37,14 @@ final class gma {
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (Exception) (Object) decompiledCaughtException;
-                if (param0 <= 44) {
-                  return;
-                } else {
-                  ig.field_m.field_g = ig.field_m.field_g + 24;
-                  return;
-                }
-              }
-              if (param0 <= 44) {
-                return;
-              } else {
                 ig.field_m.field_g = ig.field_m.field_g + 24;
                 return;
               }
+              ig.field_m.field_g = ig.field_m.field_g + 24;
+              return;
             } else {
-              if (param0 <= 44) {
-                return;
-              } else {
-                ig.field_m.field_g = ig.field_m.field_g + 24;
-                return;
-              }
+              ig.field_m.field_g = ig.field_m.field_g + 24;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -65,7 +53,7 @@ final class gma {
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

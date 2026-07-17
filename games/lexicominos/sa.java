@@ -19,34 +19,34 @@ final class sa {
         ij var4 = null;
         mk var5 = null;
         int var6 = 0;
-        ij[] stackIn_17_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
+        ij[] stackIn_18_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ij[] stackOut_16_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
+        ij[] stackOut_17_0 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
             var2_array = new ij[param1.b(2)];
-            var3 = param0;
+            var3 = 0;
             var4 = (ij) (Object) param1.a(true);
             L1: while (true) {
               if (var4 == null) {
-                stackOut_16_0 = (ij[]) var2_array;
-                stackIn_17_0 = stackOut_16_0;
+                stackOut_17_0 = (ij[]) var2_array;
+                stackIn_18_0 = stackOut_17_0;
                 break L0;
               } else {
                 var4.field_i = var3;
@@ -61,11 +61,12 @@ final class sa {
                   } else {
                     L3: while (true) {
                       if (null == var5.field_k.field_m) {
-                        L4: {
-                          if (var5.field_k == var4) {
-                            var5.b((byte) -121);
-                            break L4;
-                          } else {
+                        if (var5.field_k == var4) {
+                          var5.b((byte) -121);
+                          var5 = (mk) (Object) var4.field_k.f(2);
+                          continue L2;
+                        } else {
+                          L4: {
                             if (var5.field_k.field_r != var4) {
                               var5.field_k.field_r = var4;
                               var5.field_k.field_t = var5;
@@ -81,9 +82,9 @@ final class sa {
                               }
                             }
                           }
+                          var5 = (mk) (Object) var4.field_k.f(2);
+                          continue L2;
                         }
-                        var5 = (mk) (Object) var4.field_k.f(param0 ^ 2);
-                        continue L2;
                       } else {
                         var5.field_k = var5.field_k.field_m;
                         continue L3;
@@ -98,36 +99,36 @@ final class sa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var2;
-            stackOut_18_1 = new StringBuilder().append("sa.A(").append(param0).append(44);
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_1 = new StringBuilder().append("sa.A(").append(0).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
               break L5;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
         }
-        return stackIn_17_0;
+        return stackIn_18_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_g = null;
         field_a = null;
@@ -154,13 +155,9 @@ final class sa {
 
     final static void a(byte param0, String param1) {
         try {
-            if (param0 != 68) {
-                Object var3 = null;
-                sa.a((byte) 6, (java.applet.Applet) null);
-            }
             og.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "sa.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "sa.B(" + 68 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

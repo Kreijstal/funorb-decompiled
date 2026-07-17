@@ -17,14 +17,16 @@ final class hd extends ub {
     private int field_F;
     private o field_D;
 
-    private final void a(int param0) {
+    private final void a() {
         ((hd) this).field_G = new o[]{this.a(((hd) this).field_B, ((hd) this).field_H, (byte) -11), this.a(((hd) this).field_L, ((hd) this).field_F, (byte) -11)};
-        ((hd) this).field_D = this.d(10706);
+        int discarded$0 = 10706;
+        ((hd) this).field_D = this.d();
         ((hd) this).field_y = ((hd) this).field_D.c();
         ((hd) this).field_K = new o(((hd) this).field_n >> 1, ((hd) this).field_n);
     }
 
     private final o a(int param0, int param1, byte param2) {
+        o var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -34,7 +36,6 @@ final class hd extends ub {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        o var14 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_4_0 = 0;
@@ -42,14 +43,16 @@ final class hd extends ub {
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         var13 = wizardrun.field_H;
-        var14 = new o(((hd) this).field_J * 2, ((hd) this).field_n);
-        ud.a(var14, false);
+        var4 = new o(((hd) this).field_J * 2, ((hd) this).field_n);
+        int discarded$2 = 0;
+        ud.a(var4);
         var5 = ((hd) this).field_n >> 1;
         var6 = 0;
         L0: while (true) {
           if (((hd) this).field_n <= var6) {
-            bb.b(4);
-            return var14;
+            int discarded$3 = 4;
+            bb.b();
+            return var4;
           } else {
             L1: {
               var7 = (-1 + 2 * ((hd) this).field_J) * (var6 >> 1) % (((hd) this).field_J * 2);
@@ -97,7 +100,8 @@ final class hd extends ub {
         ((hd) this).field_F = (param0 & 16711422) >> 1;
         ((hd) this).field_H = param0;
         ((hd) this).field_B = param2;
-        this.a(-24060);
+        int discarded$0 = -24060;
+        this.a();
         if (param1 != -1028717695) {
             ((hd) this).field_A = 0;
         }
@@ -134,15 +138,18 @@ final class hd extends ub {
             L1: while (true) {
               if (var5_int <= var6) {
                 L2: {
-                  bb.b(4);
+                  int discarded$5 = 4;
+                  bb.b();
                   if (ed.field_c > param2 - -((hd) this).field_D.field_z) {
                     break L2;
                   } else {
-                    ud.a(((hd) this).field_K, false);
+                    int discarded$6 = 0;
+                    ud.a(((hd) this).field_K);
                     param0.e(-((hd) this).field_A, 0);
                     param0.e(((hd) this).field_J * 2 + -((hd) this).field_A, 0);
                     ((hd) this).field_y.f(0, 0);
-                    bb.b(4);
+                    int discarded$7 = 4;
+                    bb.b();
                     ((hd) this).field_K.e(param2, param1);
                     break L2;
                   }
@@ -151,14 +158,16 @@ final class hd extends ub {
                   if (var5_int + -((hd) this).field_D.field_z > ed.field_l) {
                     break L3;
                   } else {
-                    ud.a(((hd) this).field_K, false);
+                    int discarded$8 = 0;
+                    ud.a(((hd) this).field_K);
                     var7 = ((hd) this).field_r + -((hd) this).field_D.field_z + ((hd) this).field_A;
                     L4: while (true) {
                       if (((hd) this).field_J * 2 >= var7) {
                         param0.e(-var7, 0);
                         param0.e(-var7 + 2 * ((hd) this).field_J, 0);
                         ((hd) this).field_D.f(0, 0);
-                        bb.b(4);
+                        int discarded$9 = 4;
+                        bb.b();
                         ((hd) this).field_K.e(var5_int - ((hd) this).field_D.field_z, param1);
                         break L3;
                       } else {
@@ -208,7 +217,7 @@ final class hd extends ub {
         }
     }
 
-    private final o d(int param0) {
+    private final o d() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -216,7 +225,8 @@ final class hd extends ub {
         int var9 = wizardrun.field_H;
         int var2 = ((hd) this).field_n >> 1;
         o var3 = new o(var2, ((hd) this).field_n);
-        ud.a(var3, false);
+        int discarded$0 = 0;
+        ud.a(var3);
         for (var4 = 0; var4 < ((hd) this).field_n; var4++) {
             for (var5 = 0; var5 < var2; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)((((hd) this).field_n + -var4) * var4);
@@ -228,7 +238,8 @@ final class hd extends ub {
                 ed.a(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
         }
-        bb.b(4);
+        int discarded$1 = 4;
+        bb.b();
         return var3;
     }
 
@@ -241,10 +252,11 @@ final class hd extends ub {
             ((hd) this).field_K = null;
         }
         super.a(122, param1, param2, param3, param4);
-        this.a(-24060);
+        int discarded$0 = -24060;
+        this.a();
     }
 
-    final static void a(kl param0, int param1) {
+    final static void a(kl param0) {
         nc var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -312,7 +324,8 @@ final class hd extends ub {
         if (((hd) this).field_z < 65536) {
             eb.a(0, ((hd) this).field_n + var6, var5 - -(((hd) this).field_r * ((hd) this).field_z >> 16), var6, var5 + ((hd) this).field_r);
             this.a(((hd) this).field_G[1], var6, var5, 0);
-            bb.b(4);
+            int discarded$0 = 4;
+            bb.b();
         }
     }
 

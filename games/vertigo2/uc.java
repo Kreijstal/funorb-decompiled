@@ -19,13 +19,9 @@ final class uc {
 
     final static void a(byte param0, boolean param1) {
         ie.b(20983, param1);
-        if (param0 >= 97) {
-            return;
-        }
-        field_a = null;
     }
 
-    final static int a(String param0, boolean param1, boolean param2) {
+    final static int a(String param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -92,7 +88,7 @@ final class uc {
         return stackIn_4_0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;

@@ -15,7 +15,7 @@ final class ke extends qb {
         super(param0, param1);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_u = null;
         field_t = null;
         field_v = null;

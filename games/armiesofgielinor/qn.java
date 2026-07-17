@@ -728,8 +728,8 @@ final class qn {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        qn.a(field_d, 0, param2 + param3 * field_l, param0, param2, param4, field_l - param4, param5);
-        qn.a(field_d, 0, param2 + param3 * field_l, param1, param3, param5, field_l - param4, param2, param4);
+        qn.a(field_d, 0, param3 * field_l, param0, 0, param4, field_l - param4, param5);
+        qn.a(field_d, 0, param3 * field_l, param1, param3, param5, field_l - param4, 0, param4);
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -851,7 +851,7 @@ final class qn {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_l;
+          var14 = var13 * field_l;
           var15 = param4 + param3;
           var16 = 0;
           if (var15 < field_g) {
@@ -881,7 +881,7 @@ final class qn {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_l;
+                  var19 = (param4 - param3) * field_l;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1456,7 +1456,7 @@ final class qn {
         param3 = param14;
         param4 = param13;
         while (param8 < 0) {
-            param1 = (param6 - param3) * param10 / param6;
+            param1 = (2560000 - param3) * param10 / 2560000;
             if (param1 >= param11.length) {
                 return true;
             }
@@ -2481,9 +2481,9 @@ final class qn {
         int var28 = 0;
         int var29 = 0;
         L0: {
-          var5 = param2 * param2;
-          var6 = param1 - param2 >> 4;
-          var7 = param1 + param2 + 15 >> 4;
+          var5 = 2560000;
+          var6 = param1 - 1600 >> 4;
+          var7 = param1 + 1615 >> 4;
           if (var6 >= field_a) {
             break L0;
           } else {
@@ -2516,8 +2516,8 @@ final class qn {
             return;
           } else {
             L3: {
-              var17 = param0 - param2 >> 4;
-              var18 = param0 + param2 + 15 >> 4;
+              var17 = param0 - 1600 >> 4;
+              var18 = param0 + 1615 >> 4;
               if (var17 >= field_j) {
                 break L3;
               } else {
@@ -2615,7 +2615,7 @@ final class qn {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -2624,7 +2624,7 @@ final class qn {
           }
         }
         L1: {
-          var10 = field_l - param4 - param5 - param3;
+          var10 = field_l - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -2634,7 +2634,7 @@ final class qn {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_l >= var12) {
             break L2;
           } else {
@@ -2654,7 +2654,7 @@ final class qn {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -2811,7 +2811,7 @@ final class qn {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_e) {
+                      if (param5 + var19 + param3 >= field_e) {
                         break L18;
                       } else {
                         param1 = param0[var17];

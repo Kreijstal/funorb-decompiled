@@ -17,56 +17,42 @@ final class pi extends ga implements ge, el {
     public final void a(na param0, int param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var6 = Confined.field_J ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (0 == param1) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (param1 == 1) {
-                      break L3;
-                    } else {
-                      if (2 != param1) {
-                        break L1;
-                      } else {
-                        tb.a(-15912, "conduct.ws");
-                        if (var6 == 0) {
-                          break L1;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                  }
+              if (0 == param1) {
+                tb.a(-15912, "terms.ws");
+                break L1;
+              } else {
+                if (param1 == 1) {
                   tb.a(-15912, "privacy.ws");
-                  if (var6 == 0) {
+                  break L1;
+                } else {
+                  if (2 != param1) {
                     break L1;
                   } else {
-                    break L2;
+                    tb.a(-15912, "conduct.ws");
+                    break L1;
                   }
                 }
               }
-              tb.a(-15912, "terms.ws");
-              break L1;
             }
             if (!param3) {
               break L0;
@@ -77,113 +63,47 @@ final class pi extends ga implements ge, el {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("pi.LA(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_10_0 = (RuntimeException) var5;
+            stackOut_10_1 = new StringBuilder().append("pi.LA(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L4;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L4;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     final static String a(String param0, String param1, int param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
-        String stackIn_5_0 = null;
-        String stackIn_7_0 = null;
-        String stackIn_11_0 = null;
-        String stackIn_13_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_6_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_12_0 = null;
-        var5 = Confined.field_J ? 1 : 0;
-        if (param2 == 22232) {
-          var4 = param3.indexOf(param0);
-          L0: while (true) {
-            L1: {
-              L2: {
-                if (-1 == var4) {
-                  break L2;
-                } else {
-                  param3 = param3.substring(0, var4) + param1 + param3.substring(var4 - -param0.length());
-                  stackOut_4_0 = (String) param3;
-                  stackIn_7_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
-                    var4 = ((String) (Object) stackIn_5_0).indexOf(param0, param1.length() + var4);
-                    if (var5 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
-              stackOut_6_0 = (String) param3;
-              stackIn_7_0 = stackOut_6_0;
-              break L1;
-            }
-            return stackIn_7_0;
-          }
-        } else {
-          pi.j(-6);
-          var4 = param3.indexOf(param0);
-          L3: while (true) {
-            L4: {
-              L5: {
-                if (-1 == var4) {
-                  break L5;
-                } else {
-                  param3 = param3.substring(0, var4) + param1 + param3.substring(var4 - -param0.length());
-                  stackOut_10_0 = (String) param3;
-                  stackIn_13_0 = stackOut_10_0;
-                  stackIn_11_0 = stackOut_10_0;
-                  if (var5 != 0) {
-                    break L4;
-                  } else {
-                    var4 = ((String) (Object) stackIn_11_0).indexOf(param0, param1.length() + var4);
-                    if (var5 == 0) {
-                      continue L3;
-                    } else {
-                      break L5;
-                    }
-                  }
-                }
-              }
-              stackOut_12_0 = (String) param3;
-              stackIn_13_0 = stackOut_12_0;
-              break L4;
-            }
-            return stackIn_13_0;
-          }
+        int var5 = Confined.field_J ? 1 : 0;
+        int var4 = param3.indexOf(param0);
+        while (-1 != var4) {
+            param3 = param3.substring(0, var4) + param1 + param3.substring(var4 - -param0.length());
+            var4 = param3.indexOf(param0, param1.length() + var4);
         }
+        return param3;
     }
 
-    private final String k(int param0) {
+    private final String k() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -192,6 +112,9 @@ final class pi extends ga implements ge, el {
         field_T = null;
         field_S = null;
         field_P = null;
+        if (param0 >= -70) {
+            pi.a((byte) -105);
+        }
     }
 
     final boolean a(fj param0, byte param1, int param2, char param3) {
@@ -499,6 +422,7 @@ final class pi extends ga implements ge, el {
             ((pi) this).field_O = param0;
             ((pi) this).field_Q = new rg(gi.field_fb, (uk) null);
             ((pi) this).field_Q.field_n = (fe) (Object) new je();
+            int discarded$1 = -99;
             var7 = b.a(new String[2], ja.field_g, 1177);
             var3 = 20;
             var4 = new vf(gm.field_cb, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
@@ -551,8 +475,13 @@ final class pi extends ga implements ge, el {
         }
     }
 
-    final static void j(int param0) {
+    final static void j() {
         int var1 = hn.d(24860);
+        int discarded$0 = 1;
+        int var2 = gh.a();
+        kn.field_d.a(-ll.field_a + uh.field_c, ef.field_sb + -g.field_n, (byte) 103, (ll.field_a << 1) + var2, var1 + (g.field_n << 1));
+        int discarded$1 = 0;
+        na.f();
     }
 
     private final String l(int param0) {

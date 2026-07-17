@@ -21,11 +21,13 @@ final class pj {
         if (param0 != -6446) {
           pj.b(27, 37);
           var2.c(4, (byte) -71);
-          var2.c(jg.m(73), (byte) -88);
+          int discarded$4 = 73;
+          var2.c(jg.m(), (byte) -88);
           return;
         } else {
           var2.c(4, (byte) -71);
-          var2.c(jg.m(73), (byte) -88);
+          int discarded$5 = 73;
+          var2.c(jg.m(), (byte) -88);
           return;
         }
     }
@@ -74,8 +76,9 @@ final class pj {
               mn.field_h.d(ol.field_S[1], (byte) -81);
               mn.field_h.d(ol.field_S[2], (byte) -81);
               mn.field_h.d(ol.field_S[3], (byte) -81);
-              sa.a(mn.field_h, 109);
-              mn.field_h.b(param3, param1 + 27463);
+              int discarded$2 = 109;
+              sa.a(mn.field_h);
+              mn.field_h.b(param3, 104);
               param4.a(mn.field_h, (byte) 123);
               qn.field_U.field_l = 0;
               if (param2) {
@@ -91,72 +94,69 @@ final class pj {
             qn.field_U.d(gb.field_s, (byte) -81);
             qn.field_U.a(-97, qc.field_a);
             var6 = 0;
-            if (param1 == -27359) {
-              L2: {
-                if (ln.field_Kb) {
-                  var6 = var6 | 1;
-                  break L2;
-                } else {
-                  break L2;
-                }
+            L2: {
+              if (ln.field_Kb) {
+                var6 = var6 | 1;
+                break L2;
+              } else {
+                break L2;
               }
-              L3: {
-                if (!on.field_a) {
-                  break L3;
-                } else {
-                  var6 = var6 | 4;
-                  break L3;
-                }
-              }
-              L4: {
-                if (!param0) {
-                  break L4;
-                } else {
-                  var6 = var6 | 8;
-                  break L4;
-                }
-              }
-              L5: {
-                if (lf.field_N == null) {
-                  break L5;
-                } else {
-                  var6 = var6 | 16;
-                  break L5;
-                }
-              }
-              L6: {
-                qn.field_U.c(var6, (byte) 52);
-                var7 = m.a(bh.i(81), (byte) 87);
-                if (var7 == null) {
-                  var7 = "";
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              L7: {
-                qn.field_U.a(param1 ^ 27325, var7);
-                if (null == lf.field_N) {
-                  break L7;
-                } else {
-                  qn.field_U.a(true, lf.field_N);
-                  break L7;
-                }
-              }
-              lk.a(dk.field_k, mn.field_h, (p) (Object) qn.field_U, 91, se.field_M);
-              qn.field_U.d(qn.field_U.field_l - var5_int, 111);
-              vh.a(-1, (byte) -42);
-              break L0;
-            } else {
-              return;
             }
+            L3: {
+              if (!on.field_a) {
+                break L3;
+              } else {
+                var6 = var6 | 4;
+                break L3;
+              }
+            }
+            L4: {
+              if (!param0) {
+                break L4;
+              } else {
+                var6 = var6 | 8;
+                break L4;
+              }
+            }
+            L5: {
+              if (lf.field_N == null) {
+                break L5;
+              } else {
+                var6 = var6 | 16;
+                break L5;
+              }
+            }
+            L6: {
+              qn.field_U.c(var6, (byte) 52);
+              int discarded$3 = 87;
+              var7 = m.a(bh.i(81));
+              if (var7 == null) {
+                var7 = "";
+                break L6;
+              } else {
+                break L6;
+              }
+            }
+            L7: {
+              qn.field_U.a(-100, var7);
+              if (null == lf.field_N) {
+                break L7;
+              } else {
+                qn.field_U.a(true, lf.field_N);
+                break L7;
+              }
+            }
+            lk.a(dk.field_k, mn.field_h, (p) (Object) qn.field_U, 91, se.field_M);
+            qn.field_U.d(qn.field_U.field_l - var5_int, 111);
+            vh.a(-1, (byte) -42);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("pj.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_21_1 = new StringBuilder().append("pj.A(").append(param0).append(44).append(-27359).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -331,7 +331,7 @@ final class pj {
     private pj(int param0, int param1, int param2) {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_h = null;
         field_b = null;

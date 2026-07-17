@@ -139,7 +139,7 @@ final class um extends rf {
         try {
           L0: {
             L1: {
-              if (~(4 & ((um) this).field_l.field_G[param2.field_m]) == param0) {
+              if ((4 & ((um) this).field_l.field_G[param2.field_m]) == 0) {
                 break L1;
               } else {
                 if (0 <= param2.field_p) {
@@ -208,7 +208,7 @@ final class um extends rf {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("um.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("um.C(").append(-1).append(44).append(param1).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -239,7 +239,7 @@ final class um extends rf {
         return 0;
     }
 
-    final static s a(boolean param0, int param1) {
+    final static s a(boolean param0) {
         dl var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -312,13 +312,13 @@ final class um extends rf {
         }
         L4: {
           if (1 == m.field_f) {
-            int discarded$4 = var8.i((byte) 0);
-            String discarded$5 = var8.h(-17883);
+            int discarded$6 = var8.i((byte) 0);
+            String discarded$7 = var8.h(-17883);
             break L4;
           } else {
             if (m.field_f == 4) {
-              int discarded$6 = var8.i((byte) 0);
-              String discarded$7 = var8.h(-17883);
+              int discarded$8 = var8.i((byte) 0);
+              String discarded$9 = var8.h(-17883);
               break L4;
             } else {
               break L4;
@@ -355,7 +355,9 @@ final class um extends rf {
           }
           return new s(param0);
         } else {
-          ep.field_x = ko.a((rb) (Object) var8, 80, (byte) -114);
+          int discarded$10 = -114;
+          int discarded$11 = 80;
+          ep.field_x = ko.a((rb) (Object) var8);
           ku.field_e = null;
           return new s(param0);
         }
@@ -432,63 +434,34 @@ final class um extends rf {
         int var1 = 0;
         int var2 = 0;
         var2 = AceOfSkies.field_G ? 1 : 0;
-        if (param0 == 1) {
-          ss.field_t = false;
-          uf.field_e = null;
-          if (!nf.field_a) {
-            var1 = un.field_c;
-            if (var1 > 0) {
-              if (var1 == 1) {
-                uf.field_e = qk.field_f;
-                uf.field_e = od.a(new CharSequence[3], 3);
-                ml.field_m.h((byte) 127);
-                nj.c(98);
-                return;
-              } else {
-                uf.field_e = sn.a(field_n, 121, new String[1]);
-                uf.field_e = od.a(new CharSequence[3], 3);
-                ml.field_m.h((byte) 127);
-                nj.c(98);
-                return;
-              }
+        ss.field_t = false;
+        uf.field_e = null;
+        if (!nf.field_a) {
+          var1 = un.field_c;
+          if (var1 > 0) {
+            if (var1 == 1) {
+              uf.field_e = qk.field_f;
+              int discarded$2 = 3;
+              uf.field_e = od.a(new CharSequence[3]);
+              ml.field_m.h((byte) 127);
+              nj.c(98);
+              return;
             } else {
+              uf.field_e = sn.a(field_n, 121, new String[1]);
+              int discarded$3 = 3;
+              uf.field_e = od.a(new CharSequence[3]);
               ml.field_m.h((byte) 127);
               nj.c(98);
               return;
             }
           } else {
-            ml.field_m.l(88);
+            ml.field_m.h((byte) 127);
+            nj.c(98);
             return;
           }
         } else {
-          field_n = null;
-          ss.field_t = false;
-          uf.field_e = null;
-          if (!nf.field_a) {
-            var1 = un.field_c;
-            if (var1 > 0) {
-              if (var1 == 1) {
-                uf.field_e = qk.field_f;
-                uf.field_e = od.a(new CharSequence[3], 3);
-                ml.field_m.h((byte) 127);
-                nj.c(98);
-                return;
-              } else {
-                uf.field_e = sn.a(field_n, 121, new String[1]);
-                uf.field_e = od.a(new CharSequence[3], 3);
-                ml.field_m.h((byte) 127);
-                nj.c(98);
-                return;
-              }
-            } else {
-              ml.field_m.h((byte) 127);
-              nj.c(98);
-              return;
-            }
-          } else {
-            ml.field_m.l(88);
-            return;
-          }
+          ml.field_m.l(88);
+          return;
         }
     }
 

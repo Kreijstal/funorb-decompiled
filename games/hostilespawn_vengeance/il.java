@@ -25,7 +25,7 @@ final class il {
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         int var2 = 0;
         var2 = 12;
         if (param0 < 65) {

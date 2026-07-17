@@ -39,7 +39,7 @@ abstract class sj extends ug {
         String stackOut_12_2 = null;
         try {
           L0: {
-            var5_int = 28 / ((47 - param1) / 43);
+            var5_int = 28;
             if (!super.a(param0, (byte) 115, param2, param3)) {
               if (((sj) this).field_lb != null) {
                 L1: {
@@ -98,7 +98,7 @@ abstract class sj extends ug {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + -2 + 44 + param2 + 44 + param3 + 41);
         }
         return stackIn_10_0 != 0;
     }
@@ -107,9 +107,6 @@ abstract class sj extends ug {
         try {
             if (!(null == ((sj) this).field_lb)) {
                 ((sj) this).field_lb.a(true);
-            }
-            if (!param0) {
-                ((sj) this).field_mb = 112;
             }
             if (param1 != null) {
                 param1.a(-110, param1.field_F, 6 + ((sj) this).field_ob, param1.field_z, 6);
@@ -120,7 +117,7 @@ abstract class sj extends ug {
             ((sj) this).b((fj) (Object) ((sj) this).field_lb, 10);
             ((sj) this).field_nb = null;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "sj.HB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "sj.HB(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -174,63 +171,33 @@ abstract class sj extends ug {
             if (((sj) this).field_ib == cl.field_S) {
               int fieldTemp$2 = ((sj) this).field_mb + 1;
               ((sj) this).field_mb = ((sj) this).field_mb + 1;
-              if (((sj) this).field_qb != fieldTemp$2) {
-                ((sj) this).field_lb.field_K = (((sj) this).field_mb << 8) / ((sj) this).field_qb;
-                if (param0 != -6) {
-                  field_rb = null;
-                  return super.l(param0);
-                } else {
-                  return super.l(param0);
-                }
-              } else {
+              if (((sj) this).field_qb == fieldTemp$2) {
                 ((sj) this).field_lb.field_K = 256;
                 ((sj) this).field_ib = null;
-                if (param0 != -6) {
-                  field_rb = null;
-                  return super.l(param0);
-                } else {
-                  return super.l(param0);
-                }
+                return super.l(-6);
+              } else {
+                ((sj) this).field_lb.field_K = (((sj) this).field_mb << 8) / ((sj) this).field_qb;
+                return super.l(-6);
               }
             } else {
-              if (param0 != -6) {
-                field_rb = null;
-                return super.l(param0);
-              } else {
-                return super.l(param0);
-              }
+              return super.l(-6);
             }
           } else {
             int fieldTemp$3 = ((sj) this).field_mb + 1;
             ((sj) this).field_mb = ((sj) this).field_mb + 1;
-            if (((sj) this).field_jb == fieldTemp$3) {
+            if (((sj) this).field_jb != fieldTemp$3) {
+              ((sj) this).field_lb.field_K = -((((sj) this).field_mb << 8) / ((sj) this).field_jb) + 256;
+              return super.l(-6);
+            } else {
               ((sj) this).field_ib = sc.field_a;
               ((sj) this).a(((sj) this).field_nb.field_z + (((sj) this).field_ob + 12), ((sj) this).field_hb, 6, ((sj) this).field_nb.field_F + 12);
               ((sj) this).field_lb.field_K = 0;
               ((sj) this).field_mb = 0;
-              if (param0 == -6) {
-                return super.l(param0);
-              } else {
-                field_rb = null;
-                return super.l(param0);
-              }
-            } else {
-              ((sj) this).field_lb.field_K = -((((sj) this).field_mb << 8) / ((sj) this).field_jb) + 256;
-              if (param0 == -6) {
-                return super.l(param0);
-              } else {
-                field_rb = null;
-                return super.l(param0);
-              }
+              return super.l(-6);
             }
           }
         } else {
-          if (param0 != -6) {
-            field_rb = null;
-            return super.l(param0);
-          } else {
-            return super.l(param0);
-          }
+          return super.l(-6);
         }
     }
 

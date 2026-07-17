@@ -17,7 +17,7 @@ final class ja extends uf {
         return qi.field_b;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -46,7 +46,7 @@ final class ja extends uf {
               return stackIn_4_0 != 0;
             } else {
               if (!pd.a(72, param0)) {
-                var2_int = -42 % ((param1 - 27) / 40);
+                var2_int = 0;
                 var7 = c.field_a;
                 var4 = 0;
                 L1: while (true) {
@@ -93,7 +93,7 @@ final class ja extends uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var2, "ja.A(" + param0 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) var2, "ja.A(" + param0 + 44 + 106 + 41);
         }
         return stackIn_23_0 != 0;
     }
@@ -681,7 +681,7 @@ final class ja extends uf {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_h = null;
     }

@@ -7,7 +7,7 @@ final class tg {
     static int[] field_b;
     static va field_c;
 
-    final static ti a(String param0, int param1) {
+    final static ti a(String param0) {
         Object var2 = null;
         ti var3 = null;
         String var4 = null;
@@ -115,14 +115,14 @@ final class tg {
           return;
         } else {
           var2 = uk.field_b;
-          var2.i(param1, 108);
+          var2.i(4, 108);
           var2.a(1, -92);
           var2.a(2, -71);
           return;
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_b = null;

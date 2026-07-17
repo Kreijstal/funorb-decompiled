@@ -8,7 +8,7 @@ final class cl {
     static int field_b;
     static int[] field_d;
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -33,15 +33,7 @@ final class cl {
         var8 = fleas.field_A ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var13 = ae.field_a;
-              if (param0 == -36) {
-                break L1;
-              } else {
-                field_c = null;
-                break L1;
-              }
-            }
+            var13 = ae.field_a;
             var2 = var13.e(false);
             if (var2 == 0) {
               var11 = h.a((byte) -112);
@@ -55,8 +47,8 @@ final class cl {
               var5 = var13;
               var6 = ((ni) (Object) var5).e(false);
               var7 = 0;
-              L2: while (true) {
-                if (var6 <= var7) {
+              L1: while (true) {
+                if (~var6 >= ~var7) {
                   var16_ref = (ia) (Object) rj.field_i.c((byte) 47);
                   if (var16_ref == null) {
                     k.c(-28354);
@@ -71,13 +63,14 @@ final class cl {
                 } else {
                   var10[var7] = ((ni) (Object) var5).c((byte) -114);
                   var7++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
               if (var2 != 1) {
                 if (var2 != 2) {
-                  ud.a("A1: " + ak.a(true), (Throwable) null, 0);
+                  int discarded$1 = 1;
+                  ud.a("A1: " + ak.a(), (Throwable) null, 0);
                   k.c(-28354);
                   return;
                 } else {
@@ -99,7 +92,7 @@ final class cl {
                   var12.c(-1);
                   return;
                 } else {
-                  k.c(param0 ^ 28386);
+                  k.c(-28354);
                   return;
                 }
               }
@@ -108,7 +101,7 @@ final class cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "cl.A(" + param0 + 41);
+          throw pf.a((Throwable) (Object) var1, "cl.A(" + -36 + 41);
         }
     }
 

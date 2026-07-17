@@ -12,7 +12,7 @@ final class ri {
     static boolean field_b;
     static vi field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_i = null;
         field_g = null;
@@ -93,11 +93,11 @@ final class ri {
         return true;
     }
 
-    final static void a(int param0, byte param1) {
-        de.field_e = new aa[param0 * 15];
-        ee.field_d = param0;
+    final static void a() {
+        de.field_e = new aa[3000];
+        ee.field_d = 200;
         tm.field_O = new int[3];
-        int var2 = 20 / ((param1 - -94) / 32);
+        int var2 = -20;
         sd.field_L = 0;
     }
 

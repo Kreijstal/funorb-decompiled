@@ -5,7 +5,7 @@ final class db {
     static vr field_a;
     static String[] field_b;
 
-    final static pp a(lu param0, int param1) {
+    final static pp a(lu param0) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -91,12 +91,12 @@ final class db {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
-    final static boolean a(String param0, String param1, boolean param2) {
+    final static boolean a(String param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;

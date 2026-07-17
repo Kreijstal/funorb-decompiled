@@ -11,7 +11,7 @@ final class b {
     static String field_b;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -55,7 +55,7 @@ final class b {
         var16 = new StringWriter();
         var4 = new PrintWriter((Writer) (Object) var16);
         param1.printStackTrace(var4);
-        var5 = -66 % ((32 - param0) / 52);
+        var5 = 0;
         var4.close();
         var6 = var16.toString();
         var2 = var6;

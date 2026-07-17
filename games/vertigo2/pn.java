@@ -511,12 +511,9 @@ class pn extends d {
 
     final static void a(byte param0, ei param1) {
         try {
-            if (param0 <= 51) {
-                field_H = null;
-            }
             jm.field_B = param1;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "pn.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "pn.V(" + 71 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

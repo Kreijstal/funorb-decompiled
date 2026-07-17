@@ -18,18 +18,12 @@ final class al extends li {
     static String[] field_y;
     static int field_t;
 
-    final static void a(byte param0) {
-        if (param0 != -41) {
-            field_A = null;
-        }
+    final static void a() {
         rc.field_d = null;
     }
 
     final static boolean a(int param0, byte param1) {
-        if (param1 != -94) {
-            al.a((byte) 42);
-        }
-        return 0 <= param0 ? true : false;
+        return 0 <= param0;
     }
 
     final boolean a(int param0, byte[] param1, id param2, int[] param3) {

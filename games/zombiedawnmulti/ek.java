@@ -75,7 +75,8 @@ abstract class ek extends ff {
             var9 = -51 % ((param3 - -75) / 50);
             var7 = new hf(param5);
             var8 = new hf(param2);
-            stackOut_0_0 = mg.a(param0, var7, param6, var8, param4, param1, (byte) -92);
+            int discarded$2 = -92;
+            stackOut_0_0 = mg.a(param0, var7, param6, var8, param4, param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -162,7 +163,7 @@ abstract class ek extends ff {
         return stackIn_1_0;
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_J = null;
         field_F = null;
         field_z = null;
@@ -201,18 +202,9 @@ abstract class ek extends ff {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         me.field_h = param4;
-        if (param2 != 1829947600) {
-          field_z = null;
-          nc.field_h = param0;
-          se.field_C = param1;
-          bf.field_g = param3;
-          return;
-        } else {
-          nc.field_h = param0;
-          se.field_C = param1;
-          bf.field_g = param3;
-          return;
-        }
+        nc.field_h = param0;
+        se.field_C = param1;
+        bf.field_g = param3;
     }
 
     final int g(int param0) {

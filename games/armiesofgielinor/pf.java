@@ -16,7 +16,8 @@ final class pf {
         var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            if (!cd.c(9501)) {
+            int discarded$19 = 9501;
+            if (!cd.c()) {
               L1: {
                 if (wq.field_a == null) {
                   break L1;
@@ -32,7 +33,7 @@ final class pf {
               }
               return;
             } else {
-              boolean discarded$12 = ee.field_v.a(true, -6226, en.field_F, cl.field_s);
+              boolean discarded$20 = ee.field_v.a(true, -6226, en.field_F, cl.field_s);
               ee.field_v.d((byte) -117);
               L2: while (true) {
                 if (!jd.i((byte) 107)) {
@@ -43,7 +44,7 @@ final class pf {
                     return;
                   }
                 } else {
-                  boolean discarded$13 = ee.field_v.a(rs.field_q, ui.field_i, 80);
+                  boolean discarded$21 = ee.field_v.a(rs.field_q, ui.field_i, 80);
                   continue L2;
                 }
               }
@@ -123,7 +124,7 @@ final class pf {
         return stackIn_3_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
         field_f = null;
         field_a = null;
@@ -157,10 +158,11 @@ final class pf {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = -125 % ((param1 - -56) / 56);
+            var3_int = 0;
             if (param0 != 0) {
               var4 = new om();
-              no.a(param2, (uo) (Object) var4, param0, -24721);
+              int discarded$2 = -24721;
+              no.a(param2, (uo) (Object) var4, param0);
               var4.a(true);
               stackOut_3_0 = (om) var4;
               stackIn_4_0 = stackOut_3_0;
@@ -174,7 +176,7 @@ final class pf {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("pf.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("pf.D(").append(param0).append(44).append(6).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

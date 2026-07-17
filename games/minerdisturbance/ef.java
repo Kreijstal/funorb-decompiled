@@ -7,7 +7,7 @@ final class ef {
     static String field_d;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -24,19 +24,11 @@ final class ef {
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
-            L1: {
-              var5 = di.field_V;
-              var1 = var5;
-              if (param0 == -24322) {
-                break L1;
-              } else {
-                field_a = 8;
-                break L1;
-              }
-            }
+            var5 = di.field_V;
+            var1 = var5;
             var2 = 0;
             var3 = var5.length;
-            L2: while (true) {
+            L1: while (true) {
               if (var2 >= var3) {
                 break L0;
               } else {
@@ -64,14 +56,14 @@ final class ef {
                 int incrementValue$47 = var2;
                 var2++;
                 var5[incrementValue$47] = 0;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "ef.A(" + param0 + 41);
+          throw lj.a((Throwable) (Object) var1_ref, "ef.A(" + -24322 + 41);
         }
     }
 

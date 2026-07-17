@@ -36,31 +36,33 @@ abstract class nk extends qb {
         ll.field_f = param1;
         ij.field_l = param3;
         gf.field_e = param5;
-        this.g(7);
+        int discarded$0 = 7;
+        this.g();
         vk.b(0);
     }
 
-    private final void h(int param0) {
-        String var2 = kg.g(0);
+    private final void h() {
+        int discarded$0 = 0;
+        String var2 = kg.g();
         gg.a(true, kk.c(-14047), var2);
     }
 
-    private final void j(int param0) {
+    private final void j() {
         ij.field_o[4] = true;
     }
 
-    private final void i(int param0) {
+    private final void i() {
         ij.field_o[2] = true;
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void a() {
         ij.field_o[17] = true;
         ij.field_o[0] = true;
         ij.field_o[18] = true;
         ij.field_o[7] = true;
         ij.field_o[8] = false;
         ij.field_o[16] = true;
-        ij.field_o[param0] = true;
+        ij.field_o[3] = true;
     }
 
     public static void c(byte param0) {
@@ -86,10 +88,11 @@ abstract class nk extends qb {
             if (10 > wf.field_i) {
             } else {
                 if (!og.a(23440)) {
-                    ta.d(-108);
+                    int discarded$3 = -108;
+                    ta.d();
                 } else {
                     if (ta.field_g == 0) {
-                        int discarded$3 = this.a(false, 0, false);
+                        int discarded$5 = this.a(false, 0, false);
                     } else {
                         hb.a(gd.field_l, true);
                     }
@@ -97,11 +100,11 @@ abstract class nk extends qb {
             }
         }
         if (param0 < 4) {
-            int discarded$4 = this.a(true, 79, false);
+            int discarded$6 = this.a(true, 79, false);
         }
     }
 
-    private final void g(int param0) {
+    private final void g() {
         fg.field_f[5] = -1;
         fg.field_f[12] = -1;
         fg.field_f[8] = -2;
@@ -176,7 +179,8 @@ abstract class nk extends qb {
         }
         L2: {
           u.j(param1 ^ 6);
-          bf.b((byte) -21);
+          int discarded$13 = -21;
+          bf.b();
           if (lh.b(param1 ^ 24920)) {
             break L2;
           } else {
@@ -197,7 +201,8 @@ abstract class nk extends qb {
           }
         }
         L4: {
-          if (!bd.c(false)) {
+          int discarded$14 = 0;
+          if (!bd.c()) {
             break L4;
           } else {
             L5: {
@@ -205,10 +210,12 @@ abstract class nk extends qb {
               if (((nk) this).field_w) {
                 break L5;
               } else {
-                if (~ec.a(-28617) >= ~var3) {
+                int discarded$15 = -28617;
+                if (~ec.a() >= ~var3) {
                   break L4;
                 } else {
-                  if (var3 >= rf.a(30448)) {
+                  int discarded$16 = 30448;
+                  if (var3 >= rf.a()) {
                     break L4;
                   } else {
                     break L5;
@@ -220,7 +227,8 @@ abstract class nk extends qb {
             ck.b((byte) -125);
             ia.a((byte) 93);
             sc.a(2, (byte) -128, kk.field_i);
-            l.i(57);
+            int discarded$17 = 57;
+            l.i();
             kj.field_o = true;
             mc.field_i = rf.c(0) - -15000L;
             break L4;
@@ -251,7 +259,8 @@ abstract class nk extends qb {
           }
           L9: {
             var3 = stackIn_25_0;
-            nc.field_r = ea.a((byte) 105);
+            int discarded$18 = 105;
+            nc.field_r = ea.a();
             if (var3 == 0) {
               break L9;
             } else {
@@ -262,7 +271,8 @@ abstract class nk extends qb {
                   if (d.a((byte) 117)) {
                     break L9;
                   } else {
-                    wb.b((byte) 50);
+                    int discarded$19 = 50;
+                    wb.b();
                     break L9;
                   }
                 }
@@ -418,9 +428,12 @@ abstract class nk extends qb {
                 break L18;
               }
             }
-            we.field_h = cl.a(true, (byte) -98, false, gf.field_e, 1);
-            gk.field_a = cl.a(true, (byte) -15, false, ij.field_l, 1);
-            ej.field_d = cl.a(true, (byte) -37, false, ll.field_f, 1);
+            int discarded$20 = 1;
+            we.field_h = cl.a(true, (byte) -98, false, gf.field_e);
+            int discarded$21 = 1;
+            gk.field_a = cl.a(true, (byte) -15, false, ij.field_l);
+            int discarded$22 = 1;
+            ej.field_d = cl.a(true, (byte) -37, false, ll.field_f);
             wf.field_i = 2;
             gg.field_d = gk.field_a;
             th.field_p = we.field_h;
@@ -471,7 +484,8 @@ abstract class nk extends qb {
             if (!cl.a(ej.field_d, we.field_h, gk.field_a, (byte) 127)) {
               break L21;
             } else {
-              if (oh.a(ej.field_d, -109)) {
+              int discarded$23 = -109;
+              if (oh.a(ej.field_d)) {
                 L22: {
                   L23: {
                     qa.b(0);
@@ -548,7 +562,8 @@ abstract class nk extends qb {
                     break L27;
                   } else {
                     de.field_b = fb.b(12898);
-                    jh.field_c = kf.g(0);
+                    int discarded$24 = 0;
+                    jh.field_c = kf.g();
                     break L27;
                   }
                 }
@@ -662,7 +677,8 @@ abstract class nk extends qb {
             if (!rl.field_O) {
               break L37;
             } else {
-              jd.a(ug.field_y, 160);
+              int discarded$25 = 160;
+              jd.a(ug.field_y);
               ((nk) this).f(param1 ^ -468);
               ha.a(ug.field_y, (byte) 105);
               break L37;
@@ -682,7 +698,8 @@ abstract class nk extends qb {
     final int n(int param0) {
         int var2 = 0;
         L0: {
-          var2 = this.f((byte) -127);
+          int discarded$20 = -127;
+          var2 = this.f();
           if (param0 == 6) {
             break L0;
           } else {
@@ -706,7 +723,9 @@ abstract class nk extends qb {
             if (!ij.field_o[1]) {
               break L3;
             } else {
-              bh.a((byte) 77, 2);
+              int discarded$21 = 2;
+              int discarded$22 = 77;
+              bh.a();
               break L3;
             }
           }
@@ -714,7 +733,9 @@ abstract class nk extends qb {
             if (!ij.field_o[2]) {
               break L4;
             } else {
-              g.a(3, (byte) -39);
+              int discarded$23 = -39;
+              int discarded$24 = 3;
+              g.a();
               break L4;
             }
           }
@@ -722,7 +743,9 @@ abstract class nk extends qb {
             if (!ij.field_o[3]) {
               break L5;
             } else {
-              vh.a(false, 4);
+              int discarded$25 = 4;
+              int discarded$26 = 0;
+              vh.a();
               break L5;
             }
           }
@@ -730,7 +753,9 @@ abstract class nk extends qb {
             if (!ij.field_o[4]) {
               break L6;
             } else {
-              hl.f(5, -2212);
+              int discarded$27 = -2212;
+              int discarded$28 = 5;
+              hl.f();
               break L6;
             }
           }
@@ -751,7 +776,8 @@ abstract class nk extends qb {
             }
           }
           if (ij.field_o[8]) {
-            pg.a((byte) 92);
+            int discarded$29 = 92;
+            pg.a();
             break L1;
           } else {
             break L1;
@@ -760,7 +786,7 @@ abstract class nk extends qb {
         return var2;
     }
 
-    private final void a(String param0, int param1, int param2, byte param3, int param4) {
+    private final void a(String param0, int param1, int param2) {
         Exception var6 = null;
         RuntimeException var6_ref = null;
         String var6_ref2 = null;
@@ -768,35 +794,35 @@ abstract class nk extends qb {
         String var8 = null;
         String var9 = null;
         Object var10 = null;
+        Object stackIn_4_0 = null;
+        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
-        Object stackIn_9_0 = null;
-        Object stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
+        int stackIn_8_1 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
+        String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
+        Object stackOut_3_0 = null;
+        Object stackOut_4_0 = null;
+        Object stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
         Object stackOut_5_0 = null;
         Object stackOut_6_0 = null;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_7_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
+        int stackOut_6_1 = 0;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         try {
           try {
             L0: {
@@ -804,134 +830,126 @@ abstract class nk extends qb {
                 return;
               } else {
                 L1: {
-                  if (param3 == 62) {
-                    break L1;
-                  } else {
-                    ((nk) this).field_B = null;
-                    break L1;
-                  }
-                }
-                L2: {
-                  L3: {
+                  L2: {
                     ((nk) this).field_B = ((nk) this).getCodeBase().getHost();
                     var6_ref2 = ((nk) this).field_B.toLowerCase();
-                    stackOut_5_0 = this;
-                    stackIn_8_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackOut_3_0 = this;
+                    stackIn_6_0 = stackOut_3_0;
+                    stackIn_4_0 = stackOut_3_0;
                     if (var6_ref2.equals((Object) (Object) "jagex.com")) {
-                      break L3;
+                      break L2;
                     } else {
-                      stackOut_6_0 = this;
-                      stackIn_9_0 = stackOut_6_0;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackOut_4_0 = this;
+                      stackIn_7_0 = stackOut_4_0;
+                      stackIn_5_0 = stackOut_4_0;
                       if (!var6_ref2.endsWith(".jagex.com")) {
-                        stackOut_9_0 = this;
-                        stackOut_9_1 = 0;
-                        stackIn_10_0 = stackOut_9_0;
-                        stackIn_10_1 = stackOut_9_1;
-                        break L2;
-                      } else {
                         stackOut_7_0 = this;
+                        stackOut_7_1 = 0;
                         stackIn_8_0 = stackOut_7_0;
-                        break L3;
+                        stackIn_8_1 = stackOut_7_1;
+                        break L1;
+                      } else {
+                        stackOut_5_0 = this;
+                        stackIn_6_0 = stackOut_5_0;
+                        break L2;
                       }
                     }
                   }
-                  stackOut_8_0 = this;
-                  stackOut_8_1 = 1;
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_10_1 = stackOut_8_1;
-                  break L2;
+                  stackOut_6_0 = this;
+                  stackOut_6_1 = 1;
+                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_1 = stackOut_6_1;
+                  break L1;
                 }
-                L4: {
-                  ((nk) this).field_y = stackIn_10_1 != 0;
+                L3: {
+                  ((nk) this).field_y = stackIn_8_1 != 0;
                   ((nk) this).field_D = Integer.parseInt(((nk) this).getParameter("gameport1"));
                   ((nk) this).field_q = Integer.parseInt(((nk) this).getParameter("gameport2"));
                   var7 = ((nk) this).getParameter("servernum");
                   if (var7 == null) {
-                    break L4;
+                    break L3;
                   } else {
                     ((nk) this).field_s = Integer.parseInt(var7);
-                    break L4;
+                    break L3;
                   }
                 }
-                L5: {
+                L4: {
                   ((nk) this).field_r = Integer.parseInt(((nk) this).getParameter("gamecrc"));
                   ((nk) this).field_v = Long.parseLong(((nk) this).getParameter("instanceid"));
                   ((nk) this).field_x = ((nk) this).getParameter("member").equals((Object) (Object) "yes");
                   var8 = ((nk) this).getParameter("lang");
                   if (var8 != null) {
                     ((nk) this).field_u = Integer.parseInt(var8);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                L5: {
+                  if (((nk) this).field_u >= 5) {
+                    ((nk) this).field_u = 0;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
                 L6: {
-                  if (((nk) this).field_u >= 5) {
-                    ((nk) this).field_u = 0;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                L7: {
                   var9 = ((nk) this).getParameter("affid");
                   if (var9 == null) {
-                    break L7;
+                    break L6;
                   } else {
                     ((nk) this).field_A = Integer.parseInt(var9);
-                    break L7;
+                    break L6;
                   }
                 }
                 Lexicominos.field_M = Boolean.valueOf(((nk) this).getParameter("simplemode")).booleanValue();
-                ((nk) this).a(((nk) this).field_r, param2, 640, param1, param3 ^ 92, 32, param0);
+                ((nk) this).a(((nk) this).field_r, param2, 640, 480, 98, 32, param0);
                 break L0;
               }
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            L8: {
+            L7: {
               var6 = (Exception) (Object) decompiledCaughtException;
               var10 = null;
               uj.a((String) null, (Throwable) (Object) var6, 1);
               ((nk) this).a("crash", 92);
-              break L8;
+              break L7;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L9: {
+          L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var6_ref;
-            stackOut_24_1 = new StringBuilder().append("nk.GA(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackOut_22_0 = (RuntimeException) var6_ref;
+            stackOut_22_1 = new StringBuilder().append("nk.GA(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
-              break L9;
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
-              break L9;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L8;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 640 + 41);
+          throw ld.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 480 + 44 + param2 + 44 + 62 + 44 + 640 + 41);
         }
     }
 
-    private final int f(byte param0) {
+    private final int f() {
         int var2 = 0;
         if (((nk) this).field_g) {
           return -1;
@@ -972,7 +990,8 @@ abstract class nk extends qb {
                     if (nc.field_r != 0) {
                       break L2;
                     } else {
-                      wb.b((byte) 50);
+                      int discarded$2 = 50;
+                      wb.b();
                       break L2;
                     }
                   }
@@ -1009,7 +1028,9 @@ abstract class nk extends qb {
         try {
           L0: {
             L1: {
-              this.a(param1, 480, param0, (byte) 62, 640);
+              int discarded$4 = 640;
+              int discarded$5 = 62;
+              this.a(param1, 480, param0);
               if (param2 < -82) {
                 break L1;
               } else {
@@ -1052,18 +1073,24 @@ abstract class nk extends qb {
     }
 
     final void a(boolean param0, boolean param1, boolean param2, byte param3, boolean param4) {
-        this.a(3, false);
+        int discarded$0 = 0;
+        int discarded$1 = 3;
+        this.a();
         if (!(!param0)) {
-            this.l(-74);
+            int discarded$2 = -74;
+            this.l();
         }
         if (param2) {
-            this.i(-1);
+            int discarded$3 = -1;
+            this.i();
         }
         if (!(!param4)) {
-            this.j(-67);
+            int discarded$4 = -67;
+            this.j();
         }
         if (!(!param1)) {
-            this.d((byte) -47);
+            int discarded$5 = -47;
+            this.d();
         }
         int var6 = -104 % ((param3 - 77) / 34);
     }
@@ -1088,7 +1115,9 @@ abstract class nk extends qb {
               L0: {
                 if (1 == var4) {
                   L1: {
-                    var5_int = mg.a(0, fk.a(85), qd.a(false));
+                    int discarded$9 = 85;
+                    int discarded$10 = 0;
+                    var5_int = mg.a(0, fk.a(), qd.a());
                     if (var5_int != -1) {
                       mb.a(105, var5_int, wj.field_p, fc.field_S);
                       wj.field_p = null;
@@ -1113,7 +1142,10 @@ abstract class nk extends qb {
                 if (var4 != 2) {
                   break L2;
                 } else {
-                  var5_int = il.a(((nk) this).field_A, dg.a(false), el.b(param1 ^ 1), ve.b(25594), tf.a((byte) -101), 103, a.c(true));
+                  int discarded$11 = 25594;
+                  int discarded$12 = -101;
+                  int discarded$13 = 1;
+                  var5_int = il.a(((nk) this).field_A, dg.a(false), el.b(param1 ^ 1), ve.b(), tf.a(), 103, a.c());
                   if (var5_int == -1) {
                     break L2;
                   } else {
@@ -1150,7 +1182,8 @@ abstract class nk extends qb {
                         break L3;
                       } else {
                         d.field_a = rc.field_f;
-                        wb.b((byte) 50);
+                        int discarded$14 = 50;
+                        wb.b();
                         ta.field_g = 10;
                         qg.field_d = false;
                         break L3;
@@ -1200,7 +1233,8 @@ abstract class nk extends qb {
               }
               L8: {
                 if (7 == var4) {
-                  sk.a(kk.c(-14047), 12);
+                  int discarded$15 = 12;
+                  sk.a(kk.c(-14047));
                   break L8;
                 } else {
                   break L8;
@@ -1216,7 +1250,8 @@ abstract class nk extends qb {
               }
               L10: {
                 if (var4 == 9) {
-                  la.a(kk.c(-14047), true);
+                  int discarded$16 = 1;
+                  la.a(kk.c(-14047));
                   break L10;
                 } else {
                   break L10;
@@ -1240,7 +1275,8 @@ abstract class nk extends qb {
               }
               L13: {
                 if (12 == var4) {
-                  pd.a(cf.c(32), -120, kk.c(param1 + -14047));
+                  int discarded$17 = 32;
+                  pd.a(cf.c(), -120, kk.c(param1 + -14047));
                   break L13;
                 } else {
                   break L13;
@@ -1321,9 +1357,9 @@ abstract class nk extends qb {
         }
     }
 
-    private final void l(int param0) {
+    private final void l() {
         ij.field_o[1] = true;
-        int var2 = 65 % ((62 - param0) / 33);
+        int var2 = 1;
     }
 
     protected nk() {
@@ -1365,7 +1401,8 @@ abstract class nk extends qb {
                         break L1;
                       } else {
                         if (var2 == 3) {
-                          me.e(false);
+                          int discarded$5 = 0;
+                          me.e();
                           break L1;
                         } else {
                           if (var2 != 4) {
@@ -1380,7 +1417,8 @@ abstract class nk extends qb {
                                 if (var2 != 7) {
                                   if (8 != var2) {
                                     if (var2 == 16) {
-                                      kf.h(-1);
+                                      int discarded$6 = -1;
+                                      kf.h();
                                       break L1;
                                     } else {
                                       L2: {
@@ -1392,7 +1430,8 @@ abstract class nk extends qb {
                                           } else {
                                             if (13 != var2) {
                                               if (var2 == 17) {
-                                                this.k(126);
+                                                int discarded$7 = 126;
+                                                this.k();
                                                 break L1;
                                               } else {
                                                 if (var2 != 18) {
@@ -1405,7 +1444,8 @@ abstract class nk extends qb {
                                                 }
                                               }
                                             } else {
-                                              pa.a(15);
+                                              int discarded$8 = 15;
+                                              pa.a();
                                               break L1;
                                             }
                                           }
@@ -1438,7 +1478,8 @@ abstract class nk extends qb {
                                     break L1;
                                   }
                                 } else {
-                                  this.h(16);
+                                  int discarded$9 = 16;
+                                  this.h();
                                   break L1;
                                 }
                               }
@@ -1464,7 +1505,7 @@ abstract class nk extends qb {
         }
     }
 
-    private final void k(int param0) {
+    private final void k() {
         int var2 = ig.field_a.d(true);
         int var3 = 0 != (var2 & 1) ? 1 : 0;
         int var4 = -1 + a.field_c;
@@ -1473,7 +1514,7 @@ abstract class nk extends qb {
         m.a(var3 != 0, true, ni.a((byte) -55, var5), kk.c(-14047));
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         ij.field_o[5] = true;
     }
 

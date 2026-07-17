@@ -582,7 +582,7 @@ final class db implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 9;
         field_a = null;
     }

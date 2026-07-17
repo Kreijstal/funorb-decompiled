@@ -22,9 +22,10 @@ final class fi extends tc {
         int var4 = 0;
         me[] var5 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var5 = uj.c((byte) 105);
+        int discarded$2 = 105;
+        var5 = uj.c();
         var2 = var5;
-        var3 = param0;
+        var3 = 0;
         L0: while (true) {
           if (var5.length > var3) {
             if (var5[var3].field_b == param1) {

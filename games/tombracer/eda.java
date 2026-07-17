@@ -48,7 +48,7 @@ final class eda {
         kh.a(true, var2, var3);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
     }
 

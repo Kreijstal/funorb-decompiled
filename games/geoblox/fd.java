@@ -4,7 +4,7 @@
 final class fd {
     int field_a;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -85,15 +85,12 @@ final class fd {
 
     final static void a(int param0, gd param1, boolean param2, int param3) {
         kl var4 = kl.a(param1, 100, param3);
-        cg var5 = rl.a(param0, (ia) (Object) var4, 1000);
+        cg var5 = rl.a(300, (ia) (Object) var4, 1000);
         qa.field_f.a(-103, (hf) (Object) new je(var4, (hf) (Object) var5));
-        if (param2) {
-            return;
-        }
         try {
             ge.field_d.a((ia) (Object) var5);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fd.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fd.B(" + 300 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + param3 + 41);
         }
     }
 

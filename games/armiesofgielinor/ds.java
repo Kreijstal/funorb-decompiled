@@ -12,7 +12,7 @@ final class ds {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var1 = null;
         int var2 = 0;
         Throwable var3 = null;
@@ -62,7 +62,6 @@ final class ds {
         ru var13 = null;
         int var14 = 0;
         int stackIn_20_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_19_0 = 0;
         int stackOut_18_0 = 0;
@@ -162,7 +161,7 @@ final class ds {
                                   }
                                 }
                                 L10: {
-                                  var12 = var8_int + (param7 * 20 + ls.a(var11, param7, var10, var9, param3 + -27089));
+                                  var12 = var8_int + (param7 * 20 + ls.a(var11, param7, var10, var9, -23));
                                   if (var12 < 0) {
                                     break L10;
                                   } else {
@@ -195,13 +194,7 @@ final class ds {
                             break L4;
                           }
                         }
-                        if (param3 == 27066) {
-                          decompiledRegionSelector0 = 0;
-                          break L0;
-                        } else {
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        }
+                        break L0;
                       } else {
                         return;
                       }
@@ -215,12 +208,7 @@ final class ds {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var8, "ds.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw ig.a((Throwable) (Object) var8, "ds.B(" + param0 + 44 + param1 + 44 + param2 + 44 + 27066 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

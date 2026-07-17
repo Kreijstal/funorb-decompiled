@@ -935,7 +935,7 @@ final class om extends wm implements ntb {
         ((om) this).field_d = param0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
     }
 

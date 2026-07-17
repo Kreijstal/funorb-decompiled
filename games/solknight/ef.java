@@ -14,58 +14,50 @@ final class ef {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
         var4 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            if (param0 == 64) {
-              var3_int = 1;
-              L1: while (true) {
-                if (param2 <= 1) {
-                  if (1 != param2) {
-                    stackOut_13_0 = var3_int;
-                    stackIn_14_0 = stackOut_13_0;
-                    break L0;
-                  } else {
-                    stackOut_11_0 = param1 * var3_int;
-                    stackIn_12_0 = stackOut_11_0;
-                    return stackIn_12_0;
-                  }
+            var3_int = 1;
+            L1: while (true) {
+              if (param2 <= 1) {
+                if (1 != param2) {
+                  stackOut_12_0 = var3_int;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
                 } else {
-                  L2: {
-                    if (0 != (1 & param2)) {
-                      var3_int = var3_int * param1;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  param2 = param2 >> 1;
-                  param1 = param1 * param1;
-                  continue L1;
+                  stackOut_10_0 = param1 * var3_int;
+                  stackIn_11_0 = stackOut_10_0;
+                  return stackIn_11_0;
                 }
+              } else {
+                L2: {
+                  if (0 != (1 & param2)) {
+                    var3_int = var3_int * param1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                param2 = param2 >> 1;
+                param1 = param1 * param1;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = -27;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var3, "ef.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw fc.a((Throwable) (Object) var3, "ef.C(" + 64 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_14_0;
+        return stackIn_13_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -78,7 +70,7 @@ final class ef {
         throw new IllegalStateException();
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

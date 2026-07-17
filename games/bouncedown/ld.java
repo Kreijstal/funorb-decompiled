@@ -9,7 +9,7 @@ final class ld extends ai {
     int[] field_i;
     static int[] field_j;
 
-    final static void b(byte param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -45,11 +45,13 @@ final class ld extends ai {
                   var8.c(2);
                   break L0;
                 } else {
-                  kc.a((byte) 18);
+                  int discarded$8 = 18;
+                  kc.a();
                   return;
                 }
               } else {
-                kc.a((byte) 18);
+                int discarded$9 = 18;
+                kc.a();
                 return;
               }
             } else {
@@ -73,13 +75,15 @@ final class ld extends ai {
                     var4_ref_gf.c(2);
                     return;
                   } else {
-                    kc.a((byte) 18);
+                    int discarded$10 = 18;
+                    kc.a();
                     return;
                   }
                 }
               } else {
                 ti.a((Throwable) null, (byte) 100, "A1: " + la.a(-119));
-                kc.a((byte) 18);
+                int discarded$11 = 18;
+                kc.a();
                 return;
               }
             }
@@ -91,7 +95,7 @@ final class ld extends ai {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_j = null;
         field_h = null;
         field_l = null;
@@ -103,29 +107,13 @@ final class ld extends ai {
 
     final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
-        L0: {
-          var4 = 0;
-          if (param2) {
+        if (!(!param2)) {
             var4 += 4;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (!param1) {
-          if (param0 < 36) {
-            return null;
-          } else {
-            return tb.field_r[var4];
-          }
-        } else {
-          var4++;
-          if (param0 < 36) {
-            return null;
-          } else {
-            return tb.field_r[var4];
-          }
+        if (!(!param3)) {
+            var4 += 2;
         }
+        return tb.field_r[var4];
     }
 
     static {

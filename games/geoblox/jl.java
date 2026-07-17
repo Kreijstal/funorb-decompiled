@@ -36,7 +36,7 @@ final class jl {
     int field_G;
     byte[] field_z;
 
-    final static boolean a(qc param0, int param1) {
+    final static boolean a(qc param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

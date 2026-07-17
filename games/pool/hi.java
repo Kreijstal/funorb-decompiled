@@ -8,7 +8,7 @@ final class hi extends mb {
     static String field_i;
     private java.nio.ByteBuffer field_l;
 
-    public static void f(int param0) {
+    public static void f() {
         field_k = null;
         field_j = null;
         field_h = null;
@@ -264,7 +264,7 @@ final class hi extends mb {
         return stackIn_68_0;
     }
 
-    final static void g(int param0) {
+    final static void g() {
         f.field_c = uc.a(true, new double[4][][]);
         f.field_a = uc.a(true, new double[4][][]);
     }
@@ -305,10 +305,10 @@ final class hi extends mb {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         oq var2 = ej.field_j;
-        var2.b(false, param1);
-        var2.a(param0, false);
+        var2.b(false, 6);
+        var2.a(1, false);
         var2.a(0, false);
     }
 
@@ -364,7 +364,7 @@ final class hi extends mb {
         try {
           L0: {
             if (vj.a(param1, param4, param2, (byte) 121)) {
-              var5_int = 41 / ((param0 - -73) / 41);
+              var5_int = 10;
               stackOut_3_0 = ta.a(16908, param3.a(105, param2, param1));
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -379,7 +379,7 @@ final class hi extends mb {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("hi.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_5_1 = new StringBuilder().append("hi.A(").append(107).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

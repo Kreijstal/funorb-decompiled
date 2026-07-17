@@ -17,8 +17,8 @@ final class aa {
         field_c = null;
     }
 
-    final static void a(byte param0) {
-        int var1 = 65 / ((param0 - 27) / 34);
+    final static void a() {
+        int var1 = 65;
         ij.field_j = new na(fn.field_e, wh.field_a, eb.field_b, ti.field_h, (km) (Object) vd.field_Z, ma.field_e);
     }
 

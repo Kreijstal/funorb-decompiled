@@ -64,18 +64,11 @@ abstract class qc extends dk {
     }
 
     private final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        var6 = ((qc) this).field_u << 3;
+        int var6 = ((qc) this).field_u << 3;
         param0 = (var6 & 15) + (param0 << 4);
-        if (param3) {
-          return;
-        } else {
-          var7 = ((qc) this).field_r << 3;
-          param2 = (param2 << 4) - -(15 & var7);
-          ((qc) this).a(var6, var7, param0, param2, param1, param4);
-          return;
-        }
+        int var7 = ((qc) this).field_r << 3;
+        param2 = (param2 << 4) - -(15 & var7);
+        ((qc) this).a(var6, var7, param0, param2, param1, param4);
     }
 
     public static void a(boolean param0) {

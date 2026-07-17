@@ -221,9 +221,6 @@ final class hk extends rf {
     }
 
     private final void a(int param0, byte param1, int param2, int param3) {
-        if (param1 < 126) {
-            ((hk) this).field_k = false;
-        }
     }
 
     private final void a(int param0, int param1, int param2) {
@@ -267,34 +264,26 @@ final class hk extends rf {
         var3 = (ft) (Object) ((hk) this).field_L.field_k.d(268435455);
         L0: while (true) {
           if (var3 == null) {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                ((hk) this).field_s = null;
-                break L1;
-              }
-            }
             return;
           } else {
-            L2: {
-              L3: {
+            L1: {
+              L2: {
                 if (param1 < 0) {
-                  break L3;
+                  break L2;
                 } else {
                   if (~var3.field_m == ~param1) {
-                    break L3;
-                  } else {
                     break L2;
+                  } else {
+                    break L1;
                   }
                 }
               }
               if (var3.field_p >= 0) {
-                break L2;
+                break L1;
               } else {
                 ((hk) this).field_E[var3.field_m][var3.field_n] = null;
                 var3.field_p = 0;
-                break L2;
+                break L1;
               }
             }
             var3 = (ft) (Object) ((hk) this).field_L.field_k.b((byte) 103);
@@ -472,7 +461,7 @@ final class hk extends rf {
           var6 = var11.field_f[param2];
           if (var6 != null) {
             L3: {
-              var8 = 5 / ((-31 - param0) / 43);
+              var8 = -5;
               var7 = new ft();
               var7.field_y = var12;
               var7.field_m = param3;
@@ -968,7 +957,8 @@ final class hk extends rf {
                     var9 = (int)var8.field_b;
                     var12 = (ml) (Object) ((hk) this).field_n.a((byte) 106, (long)var9);
                     if (var12 == null) {
-                      var13 = gu.a(var9, param3, 16652);
+                      int discarded$1 = 16652;
+                      var13 = gu.a(var9, param3);
                       if (var13 == null) {
                         var6_int = 0;
                         break L4;
@@ -1188,25 +1178,25 @@ final class hk extends rf {
         dh var9 = null;
         dh var10 = null;
         int stackIn_2_0 = 0;
-        int stackIn_19_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
+        String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
+        int stackOut_16_0 = 0;
         int stackOut_1_0 = 0;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
         RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         try {
           L0: {
             if (((hk) this).field_l[param1.field_m] != 0) {
@@ -1218,67 +1208,59 @@ final class hk extends rf {
                 var4 = 16384 + var4 * param1.field_h >> 15;
                 var4 = 128 + ((hk) this).field_t * var4 >> 8;
                 var4 = ((hk) this).field_l[param1.field_m] * var4 - -128 >> 8;
-                if (param0 == -67) {
+                if (0 >= var10.field_b) {
                   break L1;
                 } else {
-                  ((hk) this).field_u = 112L;
+                  var4 = (int)(0.5 + Math.pow(0.5, (double)var10.field_b * ((double)param1.field_A * 0.00001953125)) * (double)var4);
                   break L1;
                 }
               }
               L2: {
-                if (0 >= var10.field_b) {
-                  break L2;
-                } else {
-                  var4 = (int)(0.5 + Math.pow(0.5, (double)var10.field_b * ((double)param1.field_A * 0.00001953125)) * (double)var4);
-                  break L2;
-                }
-              }
-              L3: {
                 if (var10.field_g == null) {
-                  break L3;
+                  break L2;
                 } else {
-                  L4: {
+                  L3: {
                     var5 = param1.field_s;
                     var6 = var10.field_g[param1.field_g + 1];
                     if (param1.field_g >= var10.field_g.length - 2) {
-                      break L4;
+                      break L3;
                     } else {
                       var7 = 65280 & var9.field_g[param1.field_g] << 8;
                       var8 = (var10.field_g[2 + param1.field_g] & 255) << 8;
                       var6 = var6 + (var5 - var7) * (-var6 + var10.field_g[param1.field_g + 3]) / (-var7 + var8);
-                      break L4;
+                      break L3;
                     }
                   }
                   var4 = var4 * var6 + 32 >> 6;
-                  break L3;
+                  break L2;
                 }
               }
-              L5: {
+              L4: {
                 if (0 >= param1.field_p) {
-                  break L5;
+                  break L4;
                 } else {
                   if (var10.field_e != null) {
-                    L6: {
+                    L5: {
                       var5 = param1.field_p;
                       var6 = var10.field_e[param1.field_k - -1];
                       if (~param1.field_k > ~(var10.field_e.length - 2)) {
                         var7 = (255 & var9.field_e[param1.field_k]) << 8;
                         var8 = (255 & var10.field_e[param1.field_k - -2]) << 8;
                         var6 = var6 + (-var6 + var10.field_e[param1.field_k + 3]) * (var5 - var7) / (-var7 + var8);
-                        break L6;
+                        break L5;
                       } else {
-                        break L6;
+                        break L5;
                       }
                     }
                     var4 = var4 * var6 + 32 >> 6;
-                    break L5;
+                    break L4;
                   } else {
-                    break L5;
+                    break L4;
                   }
                 }
               }
-              stackOut_18_0 = var4;
-              stackIn_19_0 = stackOut_18_0;
+              stackOut_16_0 = var4;
+              stackIn_17_0 = stackOut_16_0;
               break L0;
             } else {
               stackOut_1_0 = 0;
@@ -1288,35 +1270,35 @@ final class hk extends rf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var3;
-            stackOut_20_1 = new StringBuilder().append("hk.C(").append(param0).append(44);
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackOut_18_0 = (RuntimeException) var3;
+            stackOut_18_1 = new StringBuilder().append("hk.C(").append(-67).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
-              break L7;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
-              break L7;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
-        return stackIn_19_0;
+        return stackIn_17_0;
     }
 
     private final synchronized void a(int param0, boolean param1) {
@@ -2111,7 +2093,7 @@ final class hk extends rf {
         this.b(2993, param0, param2);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_i = null;
     }
 
@@ -2126,9 +2108,6 @@ final class hk extends rf {
         ((hk) this).field_F[param2] = param1;
         ((hk) this).field_s[param2] = pg.a(-128, param1);
         this.a(param2, (byte) 100, param1);
-        if (param0 != 2993) {
-            this.a(-27, (byte) -89, -25);
-        }
     }
 
     private final void b(int param0, byte param1) {

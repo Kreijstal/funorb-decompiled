@@ -34,7 +34,7 @@ final class tm extends vg implements qb {
               if (param3 == 1) {
                 break L1;
               } else {
-                qe[] discarded$2 = tm.c(-26, 47, -12);
+                qe[] discarded$4 = tm.c(-26, 47, -12);
                 break L1;
               }
             }
@@ -42,7 +42,8 @@ final class tm extends vg implements qb {
               if (param0 != ((tm) this).field_eb) {
                 break L2;
               } else {
-                this.o(127);
+                int discarded$5 = 127;
+                this.o();
                 break L2;
               }
             }
@@ -154,7 +155,8 @@ final class tm extends vg implements qb {
                 if (param1 == ck.field_A) {
                   ((tm) this).field_x = ((tm) this).field_x + 10;
                   var3 = (Object) (Object) ol.field_K;
-                  if (!tb.a(false)) {
+                  int discarded$25 = 0;
+                  if (!tb.a()) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) e.field_b;
@@ -239,7 +241,7 @@ final class tm extends vg implements qb {
         }
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_ab = null;
         field_cb = null;
         field_db = null;
@@ -366,7 +368,7 @@ final class tm extends vg implements qb {
         return stackIn_3_0;
     }
 
-    private final void o(int param0) {
+    private final void o() {
         if (!((tm) this).field_G) {
             return;
         }

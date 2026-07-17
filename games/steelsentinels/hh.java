@@ -73,14 +73,10 @@ final class hh {
     }
 
     final static int a(int param0, boolean param1, byte param2, int param3) {
-        if (param2 != -66) {
-            hh.a(false);
-            return gh.i(104);
-        }
         return gh.i(104);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -89,7 +85,7 @@ final class hh {
         field_c = null;
     }
 
-    final static void a(String param0, String param1, int param2) {
+    final static void a(String param0, String param1) {
         try {
             ma.a(false, (byte) -65, param0, param1);
         } catch (RuntimeException runtimeException) {

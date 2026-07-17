@@ -88,7 +88,7 @@ final class fb {
         }
     }
 
-    final static void a(ob param0, byte param1) {
+    final static void a(ob param0) {
         try {
             param0.field_D = new char[]{'?'};
             int var2_int = 54;
@@ -106,35 +106,17 @@ final class fb {
     }
 
     private final int a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        float var7 = 0.0f;
-        var4 = Math.abs(20 + (((fb) this).field_m - param2));
-        if (param0 < 81) {
-          return 73;
-        } else {
-          L0: {
-            var5 = 480 - param1;
-            var6 = 55;
-            var7 = (float)(-(var4 * var4) + -(var5 * var5)) + 8100.0f;
-            if (0.0f < var7) {
-              L1: {
-                if (var7 <= 8000.0f) {
-                  break L1;
-                } else {
-                  var7 = 8000.0f;
-                  break L1;
-                }
-              }
-              var6 = var6 + (int)(10.0f * (var7 / 8000.0f));
-              break L0;
-            } else {
-              break L0;
+        int var4 = Math.abs(20 + (((fb) this).field_m - param2));
+        int var5 = 480 - param1;
+        int var6 = 55;
+        float var7 = (float)(-(var4 * var4) + -(var5 * var5)) + 8100.0f;
+        if (!(0.0f >= var7)) {
+            if (var7 > 8000.0f) {
+                var7 = 8000.0f;
             }
-          }
-          return var6;
+            var6 = var6 + (int)(10.0f * (var7 / 8000.0f));
         }
+        return var6;
     }
 
     final void b(int param0) {

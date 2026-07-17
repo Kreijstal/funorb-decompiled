@@ -17,41 +17,46 @@ final class vb {
     static mg field_l;
 
     final static lc a(byte param0, int param1) {
+        lc[] var2 = null;
         int var3 = 0;
-        int var4 = Virogrid.field_F ? 1 : 0;
-        lc[] var5 = cc.a((byte) -104);
-        lc[] var2 = var5;
-        for (var3 = 0; var3 < var5.length; var3++) {
-            if (var5[var3].field_a == param1) {
-                return var5[var3];
-            }
-        }
-        if (param0 == 0) {
+        int var4 = 0;
+        lc[] var5 = null;
+        var4 = Virogrid.field_F ? 1 : 0;
+        int discarded$2 = -104;
+        var5 = cc.a();
+        var2 = var5;
+        var3 = 0;
+        L0: while (true) {
+          if (var3 >= var5.length) {
             return null;
+          } else {
+            if (var5[var3].field_a != param1) {
+              var3++;
+              continue L0;
+            } else {
+              return var5[var3];
+            }
+          }
         }
-        return null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         he.field_Xb = null;
         int var1 = 0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
         field_a = null;
         field_d = null;
         field_j = null;
-        int var1 = -23 % ((61 - param0) / 41);
+        int var1 = 0;
         field_c = null;
         field_g = null;
         field_l = null;
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        if (param1 != 90) {
-            return;
-        }
         ag.field_e = param4;
         vc.field_bb = param0;
         re.field_m = param2;
@@ -65,9 +70,6 @@ final class vb {
     final static void b(int param0, byte param1, int param2, int param3, int param4) {
         ej.field_L = param0;
         bn.field_b = param3;
-        if (param1 != -127) {
-            vb.b((byte) 0);
-        }
         di.field_o = param2;
         eg.field_l = param4;
     }

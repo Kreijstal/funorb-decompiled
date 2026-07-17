@@ -46,13 +46,13 @@ final class ee implements Iterator {
 
     final static void a(java.math.BigInteger param0, be param1, java.math.BigInteger param2, int param3, be param4) {
         try {
-            ha.a(param2, param0, param4.field_k, param4.field_j, param3, (byte) 77, param1);
+            ha.a(param2, param0, param4.field_k, param4.field_j, 0, (byte) 77, param1);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ee.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "ee.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 0 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         ((ee) this).field_g = ((ee) this).field_a.field_c[0].field_h;
         ((ee) this).field_b = 1;
         ((ee) this).field_d = null;
@@ -107,7 +107,8 @@ final class ee implements Iterator {
         ((ee) this).field_d = null;
         try {
             ((ee) this).field_a = param0;
-            this.a((byte) 73);
+            int discarded$0 = 73;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) (Object) runtimeException, "ee.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

@@ -10,7 +10,7 @@ final class fb extends ih {
     String field_ob;
     static eh field_pb;
 
-    final static boolean e(byte param0) {
+    final static boolean e() {
         hh var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

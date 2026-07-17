@@ -515,7 +515,7 @@ final class bb extends di {
           if (param0.field_g.length == 0) {
             return null;
           } else {
-            return new bb(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * la.field_c)), param2 << 6);
+            return new bb(param0, (int)((long)param0.field_h * 256L * 100L / (long)(100 * la.field_c)), param2 << 6);
           }
         } else {
           return null;

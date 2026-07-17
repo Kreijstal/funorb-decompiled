@@ -14,7 +14,7 @@ final class wa {
     static long field_b;
     static String field_d;
 
-    final static tf[] c(int param0) {
+    final static tf[] c() {
         tf[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -35,12 +35,9 @@ final class wa {
         var2 = 0;
         L0: while (true) {
           if (im.field_Qb <= var2) {
-            if (param0 < -116) {
-              re.b(140);
-              return var1;
-            } else {
-              return null;
-            }
+            int discarded$1 = 140;
+            re.b();
+            return var1;
           } else {
             var3 = ge.field_c[var2] * gf.field_g[var2];
             var21 = wo.field_f[var2];
@@ -88,7 +85,7 @@ final class wa {
         int var17 = 0;
         L0: {
           var17 = Pixelate.field_H ? 1 : 0;
-          var16 = -29 / ((param11 - -19) / 57);
+          var16 = 29;
           if (param5 >= param1) {
             if (param0 <= param5) {
               if (param0 <= param1) {
@@ -119,7 +116,7 @@ final class wa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_g = null;
         field_f = null;

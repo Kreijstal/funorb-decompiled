@@ -16,7 +16,7 @@ final class mf {
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2_double = 0.0;
@@ -32,7 +32,7 @@ final class mf {
             var1_int = 0;
             L1: while (true) {
               if (var1_int >= 256) {
-                var1_int = -125 % ((param0 - -11) / 55);
+                var1_int = 0;
                 var2 = 256;
                 L2: while (true) {
                   if (var2 >= gta.field_g.length) {
@@ -54,7 +54,7 @@ final class mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "mf.B(" + param0 + 41);
+          throw tba.a((Throwable) (Object) var1, "mf.B(" + 85 + 41);
         }
     }
 

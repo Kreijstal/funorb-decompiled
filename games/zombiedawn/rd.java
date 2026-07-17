@@ -179,53 +179,45 @@ final class rd extends pa {
     final static void a(int param0, int param1) {
         f.field_b = (58 & param1) >> 4;
         c.field_c = (param1 & 13) >> 2;
-        if (2 >= f.field_b) {
+        if (2 < f.field_b) {
           L0: {
-            if (2 < c.field_c) {
-              c.field_c = 2;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          gf.field_c = param1 & 3;
-          if (param0 != 20348) {
-            return;
-          } else {
-            L1: {
-              if (gf.field_c <= 2) {
-                break L1;
-              } else {
-                gf.field_c = 2;
-                break L1;
-              }
-            }
-            return;
-          }
-        } else {
-          L2: {
             f.field_b = 2;
             if (2 < c.field_c) {
               c.field_c = 2;
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          L1: {
+            gf.field_c = param1 & 3;
+            if (gf.field_c <= 2) {
+              break L1;
+            } else {
+              gf.field_c = 2;
+              break L1;
+            }
+          }
+          return;
+        } else {
+          L2: {
+            if (2 < c.field_c) {
+              c.field_c = 2;
               break L2;
             } else {
               break L2;
             }
           }
-          gf.field_c = param1 & 3;
-          if (param0 != 20348) {
-            return;
-          } else {
-            L3: {
-              if (gf.field_c <= 2) {
-                break L3;
-              } else {
-                gf.field_c = 2;
-                break L3;
-              }
+          L3: {
+            gf.field_c = param1 & 3;
+            if (gf.field_c <= 2) {
+              break L3;
+            } else {
+              gf.field_c = 2;
+              break L3;
             }
-            return;
           }
+          return;
         }
     }
 

@@ -77,17 +77,14 @@ final class wo extends rqa {
     }
 
     final static void a(int param0, boolean param1, int param2, boolean param3, kka param4) {
-        if (!param3) {
-            return;
-        }
         try {
-            ew.field_p.a(param2, param0, !param1 ? true : false, param4, -47, 1000000);
+            ew.field_p.a(256, 1048576, !param1 ? true : false, param4, -47, 1000000);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "wo.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "wo.C(" + 1048576 + 44 + param1 + 44 + 256 + 44 + 1 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
     }
 

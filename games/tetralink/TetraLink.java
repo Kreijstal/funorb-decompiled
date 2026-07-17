@@ -18,15 +18,22 @@ public final class TetraLink extends ph {
         TetraLink.p(10297);
         ek.b((byte) -64);
         mc.b(20043);
-        je.b((byte) 25);
+        int discarded$0 = 25;
+        je.b();
         kj.a(param0 ^ param0);
-        sn.a(-127);
-        ma.d(-3);
-        tb.a((byte) -123);
-        ao.a(true);
+        int discarded$1 = -127;
+        sn.a();
+        int discarded$2 = -3;
+        ma.d();
+        int discarded$3 = -123;
+        tb.a();
+        int discarded$4 = 1;
+        ao.a();
         ib.a(27204);
-        rf.b(127);
-        qe.a((byte) -70);
+        int discarded$5 = 127;
+        rf.b();
+        int discarded$6 = -70;
+        qe.a();
         jj.a(param0 + -1320);
         cd.a((byte) 67);
         lf.a(true);
@@ -35,283 +42,439 @@ public final class TetraLink extends ph {
         ph.o(param0 ^ -1328);
         cn.a(true);
         bg.e(6);
-        un.a(-2);
+        int discarded$7 = -2;
+        un.a();
         ha.a(param0 ^ 1322);
-        se.b(-1);
+        int discarded$8 = -1;
+        se.b();
         ra.b();
         ah.d(16);
         jb.a();
         gh.a(126);
-        bh.c(true);
-        k.b(-14243);
-        jg.a(true);
+        int discarded$9 = 1;
+        bh.c();
+        int discarded$10 = -14243;
+        k.b();
+        int discarded$11 = 1;
+        jg.a();
         da.a(param0 + -1333);
         ai.a(param0 ^ 12618);
         lo.a(4666);
-        e.b((byte) 83);
-        fm.a(-35);
+        int discarded$12 = 83;
+        e.b();
+        int discarded$13 = -35;
+        fm.a();
         ic.b((byte) 88);
-        im.a((byte) -109);
+        int discarded$14 = -109;
+        im.a();
         fj.a(param0 ^ 1316);
-        nj.a((byte) 122);
+        int discarded$15 = 122;
+        nj.a();
         uh.a((byte) 41);
-        wd.a((byte) -20);
+        int discarded$16 = -20;
+        wd.a();
         wh.a(false);
-        kl.a((byte) -117);
+        int discarded$17 = -117;
+        kl.a();
         i.a(false);
-        fa.b(-2);
-        th.a(121);
+        int discarded$18 = -2;
+        fa.b();
+        int discarded$19 = 121;
+        th.a();
         ke.a(param0 ^ 1327);
         ni.c((byte) 107);
         p.b((byte) -94);
         fl.b(-26787);
-        cl.d(-119);
+        int discarded$20 = -119;
+        cl.d();
         ei.b(false);
-        wg.a(6945);
+        int discarded$21 = 6945;
+        wg.a();
         ob.d();
-        ti.a(2);
-        md.f(21);
+        int discarded$22 = 2;
+        ti.a();
+        int discarded$23 = 21;
+        md.f();
         gb.d(105);
-        fe.a(-1);
-        rl.a(14236);
-        bb.b(-578);
-        mi.h(0);
+        int discarded$24 = -1;
+        fe.a();
+        int discarded$25 = 14236;
+        rl.a();
+        int discarded$26 = -578;
+        bb.b();
+        int discarded$27 = 0;
+        mi.h();
         bl.e((byte) 124);
         uk.b((byte) -96);
-        hl.g(-31057);
-        aa.h(-2);
+        int discarded$28 = -31057;
+        hl.g();
+        int discarded$29 = -2;
+        aa.h();
         ji.d((byte) 116);
         pf.a((byte) 86);
-        rb.d((byte) -127);
-        om.c(true);
-        gd.h(11042);
+        int discarded$30 = -127;
+        rb.d();
+        int discarded$31 = 1;
+        om.c();
+        int discarded$32 = 11042;
+        gd.h();
         tk.a(-161);
-        s.a(63);
-        lc.a(120);
-        vf.b((byte) -41);
-        nh.c(false);
+        int discarded$33 = 63;
+        s.a();
+        int discarded$34 = 120;
+        lc.a();
+        int discarded$35 = -41;
+        vf.b();
+        int discarded$36 = 0;
+        nh.c();
         mk.a(param0 + -1324);
-        el.i(0);
+        int discarded$37 = 0;
+        el.i();
         vn.a();
         ja.a((byte) 99);
-        dh.a((byte) -55);
+        int discarded$38 = -55;
+        dh.a();
         vh.a(126);
         ce.a((byte) 51);
         io.a(false);
         oe.a(true);
         jl.b(param0 ^ -26264);
-        f.c((byte) 87);
+        int discarded$39 = 87;
+        f.c();
         pc.a();
         g.c((byte) 118);
-        dj.a((byte) 38);
+        int discarded$40 = 38;
+        dj.a();
         oc.c(param0 ^ 1322);
         wj.b();
         wn.c(param0 ^ 19100);
         nk.e();
         r.c(-59);
         rn.a((byte) 99);
-        of.g(-126);
+        int discarded$41 = -126;
+        of.g();
         ve.a(param0 ^ 1365);
         jm.a(90);
         ak.b(param0 + -1415);
-        ac.a((byte) -100);
-        gm.a(0);
+        int discarded$42 = -100;
+        ac.a();
+        int discarded$43 = 0;
+        gm.a();
         t.a(param0 ^ 1345);
-        go.b((byte) 57);
-        hk.b(8);
-        kn.a(true);
+        int discarded$44 = 57;
+        go.b();
+        int discarded$45 = 8;
+        hk.b();
+        int discarded$46 = 1;
+        kn.a();
         hh.a((byte) 126);
         pk.h(param0 + -1324);
-        fi.g((byte) -22);
+        int discarded$47 = -22;
+        fi.g();
         ug.f(false);
-        sd.p(-32527);
-        lk.f((byte) 100);
+        int discarded$48 = -32527;
+        sd.p();
+        int discarded$49 = 100;
+        lk.f();
         ho.a(112);
         qb.a(param0 ^ 1403);
-        tl.i(20);
-        fn.e((byte) 84);
-        hb.b(-125);
+        int discarded$50 = 20;
+        tl.i();
+        int discarded$51 = 84;
+        fn.e();
+        int discarded$52 = -125;
+        hb.b();
         wk.a(param0 ^ 1323);
         sc.a(param0 + 25418);
-        ik.b(-137);
-        fh.a((byte) -48);
+        int discarded$53 = -137;
+        ik.b();
+        int discarded$54 = -48;
+        fh.a();
         pm.a(-85);
         tn.a(param0 + -1324);
-        wa.a((byte) -123);
-        gj.a(-12359);
+        int discarded$55 = -123;
+        wa.a();
+        int discarded$56 = -12359;
+        gj.a();
         eo.a((byte) -109);
-        pi.a((byte) -62);
-        df.a((byte) -108);
+        int discarded$57 = -62;
+        pi.a();
+        int discarded$58 = -108;
+        df.a();
         hm.a(118);
         bc.j(29313);
-        oj.a((byte) 125);
-        kd.a(-84);
-        me.b((byte) -92);
-        l.b(9);
+        int discarded$59 = 125;
+        oj.a();
+        int discarded$60 = -84;
+        kd.a();
+        int discarded$61 = -92;
+        me.b();
+        int discarded$62 = 9;
+        l.b();
         em.f(-86);
         lb.h(param0 ^ 1322);
-        vi.b(117);
+        int discarded$63 = 117;
+        vi.b();
         sb.a((byte) -30);
         nd.h(param0 ^ 2106634);
         oi.a(-49);
-        qj.a((byte) -78);
+        int discarded$64 = -78;
+        qj.a();
         mj.b();
-        nm.c((byte) 6);
+        int discarded$65 = 6;
+        nm.c();
         sa.b((byte) -112);
-        ua.c(-1);
+        int discarded$66 = -1;
+        ua.c();
         pj.a(39);
         pg.a(false);
         pd.e(param0 + -1322);
-        jo.a(21332);
-        rh.g(-84);
-        sk.c(29187);
+        int discarded$67 = 21332;
+        jo.a();
+        int discarded$68 = -84;
+        rh.g();
+        int discarded$69 = 29187;
+        sk.c();
         fd.h(-1);
-        bo.c(-251);
+        int discarded$70 = -251;
+        bo.c();
         am.a(true);
-        ll.b((byte) 125);
-        wl.a(-101);
+        int discarded$71 = 125;
+        ll.b();
+        int discarded$72 = -101;
+        wl.a();
         qc.e((byte) -128);
-        al.a((byte) -93);
+        int discarded$73 = -93;
+        al.a();
         ag.a();
-        rm.a((byte) -16);
-        id.a(338);
-        b.a((byte) 41);
-        nc.a(105);
+        int discarded$74 = -16;
+        rm.a();
+        int discarded$75 = 338;
+        id.a();
+        int discarded$76 = 41;
+        b.a();
+        int discarded$77 = 105;
+        nc.a();
         an.a(param0 ^ -14345);
-        bd.a((byte) 119);
-        on.a(-10457);
-        wb.a(-108);
-        qf.a(false);
-        qm.a(false);
-        jd.b(-84);
+        int discarded$78 = 119;
+        bd.a();
+        int discarded$79 = -10457;
+        on.a();
+        int discarded$80 = -108;
+        wb.a();
+        int discarded$81 = 0;
+        qf.a();
+        int discarded$82 = 0;
+        qm.a();
+        int discarded$83 = -84;
+        jd.b();
         sl.a();
-        cm.b((byte) 28);
+        int discarded$84 = 28;
+        cm.b();
         pe.a(true);
-        mn.a(-119);
+        int discarded$85 = -119;
+        mn.a();
         og.a(-17479);
         qn.a(24468);
-        cc.a(-114);
-        dc.b(82);
-        hi.a((byte) 91);
+        int discarded$86 = -114;
+        cc.a();
+        int discarded$87 = 82;
+        dc.b();
+        int discarded$88 = 91;
+        hi.a();
         na.c((byte) 101);
-        ae.a(true);
-        en.g(99);
-        nb.n(-463);
+        int discarded$89 = 1;
+        ae.a();
+        int discarded$90 = 99;
+        en.g();
+        int discarded$91 = -463;
+        nb.n();
         ld.k(param0 ^ -1365);
-        gn.d(true);
+        int discarded$92 = 1;
+        gn.d();
         tg.a(param0 + -1322);
-        qk.a(-30581);
+        int discarded$93 = -30581;
+        qk.a();
         cj.b();
-        kf.a(23365);
-        ki.a((byte) -49);
-        vc.a((byte) 118);
-        ga.a(7151);
-        le.j(66);
+        int discarded$94 = 23365;
+        kf.a();
+        int discarded$95 = -49;
+        ki.a();
+        int discarded$96 = 118;
+        vc.a();
+        int discarded$97 = 7151;
+        ga.a();
+        int discarded$98 = 66;
+        le.j();
         hj.a(param0 ^ 34090);
         u.b(param0 + 31446);
         qa.f(param0 + -1322);
-        j.f(4);
-        ec.a((byte) 116);
+        int discarded$99 = 4;
+        j.f();
+        int discarded$100 = 116;
+        ec.a();
         ca.d(param0 ^ 1322);
-        bn.b(-26623);
-        ef.c(-34);
+        int discarded$101 = -26623;
+        bn.b();
+        int discarded$102 = -34;
+        ef.c();
         wm.b(true);
-        pl.a((byte) 63);
+        int discarded$103 = 63;
+        pl.a();
         nl.a(false);
         ql.a();
         ch.a(param0 ^ 1375);
         li.a(255);
         ui.a(12000);
         ad.d((byte) 43);
-        vg.e((byte) 102);
+        int discarded$104 = 102;
+        vg.e();
         gk.b(3);
         ng.a(param0 ^ 1348);
-        lm.a(2);
-        rc.h(0);
+        int discarded$105 = 2;
+        lm.a();
+        int discarded$106 = 0;
+        rc.h();
         fo.o(param0 + 28468);
-        nn.e(true);
+        int discarded$107 = 1;
+        nn.e();
         ml.e((byte) -38);
-        lg.d((byte) -104);
-        n.a(96);
-        fk.g(-24314);
-        ab.e((byte) 59);
+        int discarded$108 = -104;
+        lg.d();
+        int discarded$109 = 96;
+        n.a();
+        int discarded$110 = -24314;
+        fk.g();
+        int discarded$111 = 59;
+        ab.e();
         ck.f((byte) 125);
         re.a(param0 ^ 1322);
         um.f(param0 ^ 1322);
-        hg.a(-108);
-        ia.a(-51);
+        int discarded$112 = -108;
+        hg.a();
+        int discarded$113 = -51;
+        ia.a();
         qd.d(true);
-        kk.h(2147483647);
-        qh.d((byte) -34);
+        int discarded$114 = 2147483647;
+        kk.h();
+        int discarded$115 = -34;
+        qh.d();
         od.e(false);
-        eg.g(-1);
+        int discarded$116 = -1;
+        eg.g();
         dd.a(0);
-        hn.e((byte) -98);
-        we.c(0);
+        int discarded$117 = -98;
+        hn.e();
+        int discarded$118 = 0;
+        we.c();
         la.c(param0 ^ 1295);
         vd.a((byte) 83);
-        ed.a(false);
+        int discarded$119 = 0;
+        ed.a();
         te.h(-108);
-        ea.a(-4099);
-        rk.a(0);
-        mb.b((byte) -48);
+        int discarded$120 = -4099;
+        ea.a();
+        int discarded$121 = 0;
+        rk.a();
+        int discarded$122 = -48;
+        mb.b();
         db.a(true);
-        wc.c((byte) -103);
-        vb.b((byte) -109);
+        int discarded$123 = -103;
+        wc.c();
+        int discarded$124 = -109;
+        vb.b();
         si.a();
-        h.a(-74);
-        lj.b((byte) 123);
-        sf.a((byte) -125);
-        c.a((byte) 72);
-        kb.a(111);
+        int discarded$125 = -74;
+        h.a();
+        int discarded$126 = 123;
+        lj.b();
+        int discarded$127 = -125;
+        sf.a();
+        int discarded$128 = 72;
+        c.a();
+        int discarded$129 = 111;
+        kb.a();
         ko.b((byte) -127);
         qi.a(param0 + 18059);
-        v.b((byte) 103);
-        bf.a(65364);
-        co.a(22);
-        uj.b((byte) -67);
-        q.a(98);
+        int discarded$130 = 103;
+        v.b();
+        int discarded$131 = 65364;
+        bf.a();
+        int discarded$132 = 22;
+        co.a();
+        int discarded$133 = -67;
+        uj.b();
+        int discarded$134 = 98;
+        q.a();
         mf.b(false);
-        ci.c(true);
-        ul.a(17);
-        il.e((byte) -16);
-        oa.a(-25731);
-        o.a(-11961);
-        pb.a(127);
-        ud.h(0);
-        in.b(-1);
-        cf.b((byte) 6);
+        int discarded$135 = 1;
+        ci.c();
+        int discarded$136 = 17;
+        ul.a();
+        int discarded$137 = -16;
+        il.e();
+        int discarded$138 = -25731;
+        oa.a();
+        int discarded$139 = -11961;
+        o.a();
+        int discarded$140 = 127;
+        pb.a();
+        int discarded$141 = 0;
+        ud.h();
+        int discarded$142 = -1;
+        in.b();
+        int discarded$143 = 6;
+        cf.b();
         eh.a(param0 + -1322);
-        rj.b(true);
-        a.a(0);
+        int discarded$144 = 1;
+        rj.b();
+        int discarded$145 = 0;
+        a.a();
         tc.a(true);
-        dl.c(-57);
-        jn.a((byte) 122);
-        uf.a(-11535);
-        sj.a(0);
+        int discarded$146 = -57;
+        dl.c();
+        int discarded$147 = 122;
+        jn.a();
+        int discarded$148 = -11535;
+        uf.a();
+        int discarded$149 = 0;
+        sj.a();
         ba.h(22);
         dk.a(-5384);
         ka.b((byte) 86);
-        gl.d(24943);
+        int discarded$150 = 24943;
+        gl.d();
         gg.a(false);
         bi.a(param0 ^ 1226);
-        ej.a(-1);
+        int discarded$151 = -1;
+        ej.a();
         af.a(-119);
-        km.b((byte) -57);
-        hc.a(-95);
-        vj.a(false);
-        bm.b((byte) 112);
-        dg.b(-5549);
+        int discarded$152 = -57;
+        km.b();
+        int discarded$153 = -95;
+        hc.a();
+        int discarded$154 = 0;
+        vj.a();
+        int discarded$155 = 112;
+        bm.b();
+        int discarded$156 = -5549;
+        dg.b();
         bk.b(81);
         tm.g(-62);
-        mm.g(0);
-        lh.g(255);
+        int discarded$157 = 0;
+        mm.g();
+        int discarded$158 = 255;
+        lh.g();
         hd.g(-57);
-        w.g(47);
+        int discarded$159 = 47;
+        w.g();
         cb.d((byte) 80);
-        ok.a(4);
-        va.b((byte) 44);
-        jk.a((byte) 77);
+        int discarded$160 = 4;
+        ok.a();
+        int discarded$161 = 44;
+        va.b();
+        int discarded$162 = 77;
+        jk.a();
         d.b((byte) 6);
         mh.a(-82);
         ((TetraLink) this).field_L = null;
@@ -363,10 +526,12 @@ public final class TetraLink extends ph {
             if (qj.a(4)) {
               L1: {
                 if (wk.field_i.field_c) {
-                  this.s(99);
+                  int discarded$13 = 99;
+                  this.s();
                   break L1;
                 } else {
-                  this.r(10);
+                  int discarded$14 = 10;
+                  this.r();
                   break L1;
                 }
               }
@@ -390,7 +555,8 @@ public final class TetraLink extends ph {
                     break L3;
                   } else {
                     if (nn.field_X) {
-                      rn.a(hc.c(64), -124);
+                      int discarded$15 = 64;
+                      rn.a(hc.c(), -124);
                       break L3;
                     } else {
                       break L3;
@@ -441,7 +607,9 @@ public final class TetraLink extends ph {
                     break L8;
                   }
                 }
-                pn.a(var4, 256, 16769381, false, false);
+                int discarded$16 = 0;
+                int discarded$17 = 0;
+                pn.a(var4, 256, 16769381);
                 break L5;
               }
               L9: {
@@ -456,16 +624,20 @@ public final class TetraLink extends ph {
                     }
                   }
                 }
-                rn.a(hc.c(64), -108);
+                int discarded$18 = 64;
+                rn.a(hc.c(), -108);
                 break L9;
               }
               L11: {
                 if (pj.b((byte) 56)) {
                   ra.e(0, 0, ra.field_f, ra.field_e);
                   var4 = 14 + dc.a((byte) 117);
-                  var5 = ia.h(88) + 16;
-                  jl.a(var5, var4, 480);
-                  jj.a(14, 12, li.field_l, (byte) -88);
+                  int discarded$19 = 88;
+                  var5 = ia.h() + 16;
+                  int discarded$20 = 480;
+                  jl.a(var5, var4);
+                  int discarded$21 = -88;
+                  jj.a(14, 12, li.field_l);
                   break L11;
                 } else {
                   if (!ai.a((byte) 105)) {
@@ -495,8 +667,10 @@ public final class TetraLink extends ph {
                       }
                     } else {
                       var4 = 4 + nn.f((byte) -63);
-                      var5 = 12 + ed.h(32768);
-                      jl.a(var5, var4, 480);
+                      int discarded$22 = 32768;
+                      var5 = 12 + ed.h();
+                      int discarded$23 = 480;
+                      jl.a(var5, var4);
                       e.a(8, (byte) -92, 12, li.field_l);
                       break L11;
                     }
@@ -564,12 +738,14 @@ public final class TetraLink extends ph {
             return;
           }
         } else {
-          oc.a((java.awt.Canvas) var2, qj.c(124), 32511);
+          int discarded$24 = 124;
+          int discarded$25 = 32511;
+          oc.a((java.awt.Canvas) var2, qj.c());
           return;
         }
     }
 
-    private final void r(int param0) {
+    private final void r() {
         int var2 = 0;
         int var3_int = 0;
         int[] var3 = null;
@@ -725,7 +901,8 @@ public final class TetraLink extends ph {
                 var6_ref_int__[1] = 128 + (var3_int >> 4);
                 var29[2] = 80;
                 var31[2] = 128;
-                var7 = ta.a(8437759);
+                int discarded$1 = 8437759;
+                var7 = ta.a();
                 mj.a(240, 0, 0, var30, var32, var31, var7, var7, var7);
                 var3_int = var30[0];
                 var4_ref_int__[0] = var30[1];
@@ -886,7 +1063,8 @@ public final class TetraLink extends ph {
             return;
           } else {
             L2: {
-              var5 = (int)(mb.a((float)var4 / 200.0f, (float)dh.field_e, false) * 3.0f);
+              int discarded$1 = 0;
+              var5 = (int)(mb.a((float)var4 / 200.0f, (float)dh.field_e) * 3.0f);
               if (var5 > 0) {
                 var6 = ra.field_f * var4 + 100;
                 var3 = 440;
@@ -998,9 +1176,11 @@ public final class TetraLink extends ph {
         var4_ref = null;
         L0: {
           var10 = field_J;
-          int discarded$4 = pm.a((byte) 26);
+          int discarded$19 = 26;
+          int discarded$20 = pm.a();
           bd.field_e = nn.i(117);
-          gg.d((byte) -106);
+          int discarded$21 = -106;
+          gg.d();
           if (hd.field_u == null) {
             break L0;
           } else {
@@ -1043,7 +1223,8 @@ public final class TetraLink extends ph {
           if (!oa.field_w) {
             break L2;
           } else {
-            this.q(104);
+            int discarded$22 = 104;
+            this.q();
             oa.field_w = false;
             break L2;
           }
@@ -1056,7 +1237,7 @@ public final class TetraLink extends ph {
             if (ed.field_O != 10) {
               break L3;
             } else {
-              bf discarded$5 = lb.a(oa.field_x, 573509761);
+              bf discarded$23 = lb.a(oa.field_x, 573509761);
               break L3;
             }
           }
@@ -1084,7 +1265,7 @@ public final class TetraLink extends ph {
               } else {
                 L6: {
                   if (ac.a(-19403)) {
-                    boolean discarded$6 = this.a((byte) -55, false);
+                    boolean discarded$24 = this.a((byte) -55, false);
                     break L6;
                   } else {
                     break L6;
@@ -1099,7 +1280,8 @@ public final class TetraLink extends ph {
         }
         L7: {
           if (!ji.field_Nb) {
-            t.b(hc.field_p, -21901);
+            int discarded$25 = -21901;
+            t.b(hc.field_p);
             if (!this.a((byte) 98, true)) {
               break L7;
             } else {
@@ -1108,7 +1290,8 @@ public final class TetraLink extends ph {
             }
           } else {
             if (!qj.a(4)) {
-              io.a(4);
+              int discarded$26 = 4;
+              io.a();
               break L7;
             } else {
               if (!pj.b((byte) 119)) {
@@ -1171,7 +1354,8 @@ public final class TetraLink extends ph {
                       break L7;
                     } else {
                       L12: {
-                        var2 = kk.i(-91);
+                        int discarded$27 = -91;
+                        var2 = kk.i();
                         if (var2 != 1) {
                           break L12;
                         } else {
@@ -1188,7 +1372,8 @@ public final class TetraLink extends ph {
               } else {
                 if (ko.field_s == 0) {
                   L13: {
-                    var2 = mf.b(1000);
+                    int discarded$28 = 1000;
+                    var2 = mf.b();
                     if (var2 != 2) {
                       if (var2 != 3) {
                         if (4 != var2) {
@@ -1246,7 +1431,8 @@ public final class TetraLink extends ph {
               }
             }
             L18: {
-              if (!ca.c(-25945)) {
+              int discarded$29 = -25945;
+              if (!ca.c()) {
                 break L18;
               } else {
                 L19: {
@@ -1264,7 +1450,8 @@ public final class TetraLink extends ph {
                   }
                   ck.a(true, 4);
                   qc.a(true, 7);
-                  ae.d((byte) 82);
+                  int discarded$30 = 82;
+                  ae.d();
                   if (var2 != 1) {
                     L21: {
                       if (!mi.field_Pb) {
@@ -1350,10 +1537,14 @@ public final class TetraLink extends ph {
               continue L14;
             } else {
               if (ua.field_c == 14) {
-                bf discarded$7 = lb.a(e.field_c, 573509761);
+                bf discarded$31 = lb.a(e.field_c, 573509761);
                 q.b(0);
-                tm.a((byte) -58, 1024, fa.a(true), cc.a(2, (byte) -108), qn.field_s.length, ke.a((byte) -95), pl.field_a, cn.a(12), 150, cc.a(2000, (byte) -51));
-                mi.a(uj.b(false), uh.b(32), 0);
+                int discarded$32 = 1;
+                int discarded$33 = 12;
+                tm.a((byte) -58, 1024, fa.a(), cc.a(2, (byte) -108), qn.field_s.length, ke.a((byte) -95), pl.field_a, cn.a(), 150, cc.a(2000, (byte) -51));
+                int discarded$34 = 32;
+                int discarded$35 = 0;
+                mi.a(uj.b(false), uh.b());
                 mi.field_Pb = true;
                 ed.field_O = -2;
                 jo.field_e = false;
@@ -1365,7 +1556,8 @@ public final class TetraLink extends ph {
                       break L26;
                     } else {
                       if (mi.field_Pb) {
-                        vf.a((byte) -7);
+                        int discarded$36 = -7;
+                        vf.a();
                         continue L14;
                       } else {
                         break L26;
@@ -1652,7 +1844,8 @@ public final class TetraLink extends ph {
                       L43: {
                         L44: {
                           q.b(0);
-                          qi.b((byte) -98);
+                          int discarded$37 = -98;
+                          qi.b();
                           nn.g((byte) -126);
                           ed.field_O = 0;
                           sj.field_a = false;
@@ -1700,7 +1893,7 @@ public final class TetraLink extends ph {
         }
     }
 
-    private final void s(int param0) {
+    private final void s() {
         int var2 = 0;
         int var3 = 0;
         ob var4 = null;
@@ -2755,7 +2948,7 @@ public final class TetraLink extends ph {
                   } else {
                     L3: {
                       ed.field_O = ci.field_x;
-                      ld.i(param0 + -21781);
+                      ld.i(-21719);
                       if (!em.field_f) {
                         break L3;
                       } else {
@@ -2802,7 +2995,7 @@ public final class TetraLink extends ph {
                           break L4;
                         } else {
                           if (qb.a(kb.field_t, (byte) 114)) {
-                            kk.field_X[kb.field_t].c(param0 + -62);
+                            kk.field_X[kb.field_t].c(0);
                             break L4;
                           } else {
                             break L4;
@@ -2870,7 +3063,7 @@ public final class TetraLink extends ph {
                       } else {
                         L11: {
                           if (tb.field_e) {
-                            boolean discarded$4 = nj.a(param0 + 15718, 13, 12, 15);
+                            boolean discarded$4 = nj.a(15780, 13, 12, 15);
                             break L11;
                           } else {
                             break L11;
@@ -2954,7 +3147,7 @@ public final class TetraLink extends ph {
             if (param1) {
               break L0;
             } else {
-              ka.b(param0 + -58);
+              ka.b(4);
               break L0;
             }
           }
@@ -3003,19 +3196,14 @@ public final class TetraLink extends ph {
             break L21;
           }
         }
-        if (param0 == 62) {
-          L22: {
-            ed.f((byte) -85);
-            if (ui.a(1000, 1692) == 0) {
-              bf discarded$7 = dg.a(24, (byte) 127, mb.field_y[ui.a(3, 1692)]);
-              break L22;
-            } else {
-              break L22;
-            }
+        L22: {
+          ed.f((byte) -85);
+          if (ui.a(1000, 1692) == 0) {
+            bf discarded$7 = dg.a(24, (byte) 127, mb.field_y[ui.a(3, 1692)]);
+            break L22;
+          } else {
+            break L22;
           }
-          return;
-        } else {
-          return;
         }
     }
 
@@ -3024,7 +3212,8 @@ public final class TetraLink extends ph {
     }
 
     final void b(int param0) {
-        ja.a(0);
+        int discarded$2 = 0;
+        ja.a();
         if (hd.field_u != null) {
             qa.b((byte) 46);
         }
@@ -3066,22 +3255,22 @@ public final class TetraLink extends ph {
     private final void a(boolean param0, ah param1) {
         kc var3 = null;
         RuntimeException var3_ref = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
@@ -3098,46 +3287,38 @@ public final class TetraLink extends ph {
                 break L1;
               }
             }
-            L2: {
-              mf.field_w.a(gk.field_e);
-              if (!param0) {
-                break L2;
-              } else {
-                TetraLink.p(-81);
-                break L2;
-              }
-            }
+            mf.field_w.a(gk.field_e);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3_ref;
-            stackOut_6_1 = new StringBuilder().append("TetraLink.N(").append(param0).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_1 = new StringBuilder().append("TetraLink.N(").append(0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L3;
-            } else {
               stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
               stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L3;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -3291,9 +3472,12 @@ public final class TetraLink extends ph {
             pk.field_O.a(-117);
             bg.field_c = qk.a((byte) 79, param1, "", "logo");
             ef.field_k = ug.a(param1, (byte) -45, "splash", "");
-            of.field_f = el.a(param1, "walk1", "", -1409);
-            th.field_p = el.a(param1, "walk2", "", -1409);
-            qd.field_cb = el.a(param1, "walk3", "", -1409);
+            int discarded$5 = -1409;
+            of.field_f = el.a(param1, "walk1", "");
+            int discarded$6 = -1409;
+            th.field_p = el.a(param1, "walk2", "");
+            int discarded$7 = -1409;
+            qd.field_cb = el.a(param1, "walk3", "");
             li.field_l = oc.a("frame", true, param1, "");
             sd.field_qb = bf.a((byte) -69, param1, "", "achievements_large");
             ek.field_p = ug.a(param0, (byte) -45, "unachieved", "basic");
@@ -3310,8 +3494,10 @@ public final class TetraLink extends ph {
                   ek.field_p.b(0, 0, 32, 32);
                   fh.a(true);
                   l.field_c = bf.a((byte) -97, param1, "", "viewicons");
-                  e.field_f = this.a(8388608, 262144, (byte) -107);
-                  ho.field_M = this.a(6316128, 263172, (byte) -107);
+                  int discarded$8 = -107;
+                  e.field_f = this.a(8388608, 262144);
+                  int discarded$9 = -107;
+                  ho.field_M = this.a(6316128, 263172);
                   if (cf.a(0, (byte) 119)) {
                     me.field_e = ug.a(param1, (byte) -45, "red_counter", "allhallowseve");
                     qd.field_X = ug.a(param1, (byte) -45, "white_counter", "allhallowseve");
@@ -3325,7 +3511,7 @@ public final class TetraLink extends ph {
                 L3: while (true) {
                   if (~ua.field_b.length >= ~var10) {
                     L4: {
-                      qn.a(false, pl.field_a, sb.field_b, d.field_c, var9, param2, var9, d.field_c, rc.field_U, param4, qn.field_s, 1, 2, a.field_i, param0);
+                      qn.a(false, pl.field_a, sb.field_b, d.field_c, var9, true, var9, d.field_c, rc.field_U, param4, qn.field_s, 1, 2, a.field_i, param0);
                       hd.field_r = ug.a(param1, (byte) -45, "lobbyicon", "");
                       if (cf.a(0, (byte) 116)) {
                         vn.a((m) (Object) new ja(param5, param1));
@@ -3407,7 +3593,7 @@ public final class TetraLink extends ph {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(1).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -3484,11 +3670,12 @@ public final class TetraLink extends ph {
         }
     }
 
-    private final void q(int param0) {
+    private final void q() {
         if (um.field_k != null) {
             of.a(-98, um.field_k);
             um.field_k = null;
-            rk.c(-8243);
+            int discarded$0 = -8243;
+            rk.c();
         }
         nl.field_b = ve.b(108, 3);
         cd.field_b = ve.b(-84, 5);
@@ -3507,7 +3694,7 @@ public final class TetraLink extends ph {
         }
     }
 
-    private final oh a(int param0, int param1, byte param2) {
+    private final oh a(int param0, int param1) {
         int var5 = 0;
         int var6 = field_J;
         oh var4 = new oh(57, 57);
@@ -3529,7 +3716,8 @@ public final class TetraLink extends ph {
         int var5 = 0;
         f var6 = null;
         var5 = field_J;
-        la.d(-109);
+        int discarded$12 = -109;
+        la.d();
         if (null != n.field_N) {
           L0: {
             if (!v.field_v.c(106)) {
@@ -3666,7 +3854,7 @@ public final class TetraLink extends ph {
                                                                                                     ((TetraLink) this).g(122);
                                                                                                     if (param1) {
                                                                                                       bh.field_q = new fa(n.field_N, oa.field_p);
-                                                                                                      wf discarded$2 = bh.field_q.a("menu_select", "", (byte) 1);
+                                                                                                      wf discarded$13 = bh.field_q.a("menu_select", "", (byte) 1);
                                                                                                       io.field_c = bh.field_q.a("tetralink_invalid_move", "", (byte) 1);
                                                                                                       s.field_a = new wf[5];
                                                                                                       ti.field_a = new wf[5];
@@ -3688,7 +3876,8 @@ public final class TetraLink extends ph {
                                                                                                           mb.field_y[2] = bh.field_q.a(-128, "", "tetralink_NASA_chatter_3");
                                                                                                           oa.field_p = null;
                                                                                                           n.field_N = null;
-                                                                                                          rk.c(-8243);
+                                                                                                          int discarded$14 = -8243;
+                                                                                                          rk.c();
                                                                                                           return false;
                                                                                                         } else {
                                                                                                           s.field_a[var3] = bh.field_q.a("tetralink_drop_piece_" + (1 + var3), "", (byte) 1);
@@ -3750,7 +3939,8 @@ public final class TetraLink extends ph {
                                                         }
                                                       }
                                                     }
-                                                    ak.a(0, ma.a(jo.field_f, se.field_a, 0, rl.field_g, (byte) 15), 45.0f);
+                                                    int discarded$15 = 15;
+                                                    ak.a(0, ma.a(jo.field_f, se.field_a, 0, rl.field_g), 45.0f);
                                                     return false;
                                                   }
                                                 }
@@ -3801,7 +3991,8 @@ public final class TetraLink extends ph {
               this.a(v.field_v, cd.field_b, true, ll.field_x, sb.field_a, vf.field_a);
               sb.field_a = null;
               ll.field_x = null;
-              rk.c(-8243);
+              int discarded$16 = -8243;
+              rk.c();
               return false;
             } else {
               if (fk.field_U != null) {
@@ -3809,7 +4000,8 @@ public final class TetraLink extends ph {
                 ((TetraLink) this).g(118);
                 this.a(false, fk.field_U);
                 fk.field_U = null;
-                rk.c(-8243);
+                int discarded$17 = -8243;
+                rk.c();
                 return false;
               } else {
                 L20: {
@@ -3840,17 +4032,21 @@ public final class TetraLink extends ph {
                 if (null != nl.field_b) {
                   bj.a(5, new fh(nl.field_b.a("", "huffman", true)));
                   nl.field_b = null;
-                  rk.c(-8243);
+                  int discarded$18 = -8243;
+                  rk.c();
                   return false;
                 } else {
-                  o.b((byte) -117);
+                  int discarded$19 = -117;
+                  o.b();
                   var3 = 108 / ((0 - param0) / 55);
                   var4 = 0;
                   L22: while (true) {
                     if (var4 >= 11) {
                       ed.field_O = 10;
                       kb.field_t = 10;
-                      gl.a((byte) 124, 50);
+                      int discarded$20 = 50;
+                      int discarded$21 = 124;
+                      gl.a();
                       bm.b(-51, 50);
                       dl.a(27654, qc.field_bb[0]);
                       dh.field_e = 0;
@@ -3885,10 +4081,11 @@ public final class TetraLink extends ph {
                 jo.field_f = null;
                 nl.field_g = null;
                 bh.field_q = null;
-                rk.c(-8243);
+                int discarded$22 = -8243;
+                rk.c();
                 return false;
               } else {
-                boolean discarded$3 = ic.field_b.a(bh.field_q, qc.field_bb[var3], jo.field_f, -1, 0);
+                boolean discarded$23 = ic.field_b.a(bh.field_q, qc.field_bb[var3], jo.field_f, -1, 0);
                 var3++;
                 continue L23;
               }

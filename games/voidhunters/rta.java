@@ -99,7 +99,7 @@ final class rta extends rqa {
         return var2;
     }
 
-    final static boolean e(int param0) {
+    final static boolean e() {
         return lrb.field_b == dw.field_c;
     }
 

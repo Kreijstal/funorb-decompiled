@@ -38,7 +38,7 @@ final class pr {
         return ((pr) this).field_a;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -205,7 +205,7 @@ final class pr {
         ((pr) this).field_d = null;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -218,36 +218,32 @@ final class pr {
             jb.d();
             ima.field_s = 11;
             qk.field_m = new int[260];
-            if (param0 <= -21) {
-              var1_int = 0;
-              L1: while (true) {
-                if (var1_int >= 256) {
-                  var5 = 256;
-                  var1_int = var5;
-                  L2: while (true) {
-                    if (qk.field_m.length <= var5) {
-                      break L0;
-                    } else {
-                      qk.field_m[var5] = 255;
-                      var5++;
-                      continue L2;
-                    }
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (qk.field_m.length <= var5) {
+                    break L0;
+                  } else {
+                    qk.field_m[var5] = 255;
+                    var5++;
+                    continue L2;
                   }
-                } else {
-                  var2 = 15.0;
-                  qk.field_m[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
-                  var1_int++;
-                  continue L1;
                 }
+              } else {
+                var2 = 15.0;
+                qk.field_m[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+                var1_int++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "pr.E(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "pr.E(" + -95 + 41);
         }
     }
 

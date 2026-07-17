@@ -157,7 +157,7 @@ final class on extends bn {
         ((on) this).field_M = param6;
     }
 
-    private final void a(j param0, int param1) {
+    private final void a(j param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -607,7 +607,8 @@ final class on extends bn {
                         break L16;
                       }
                     }
-                    this.a(param1, 15165);
+                    int discarded$1 = 15165;
+                    this.a(param1);
                     break L13;
                   }
                   ((on) this).field_l = 0;

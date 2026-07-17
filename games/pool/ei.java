@@ -137,6 +137,11 @@ class ei extends ma {
     public static void c(byte param0) {
         field_q = null;
         field_A = null;
+        if (param0 != 80) {
+            return;
+        }
+        field_E = null;
+        field_w = null;
     }
 
     boolean a(ei param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
@@ -667,11 +672,13 @@ class ei extends ma {
         var2 = var4;
         if (param0 <= 4) {
           var3 = null;
-          boolean discarded$2 = ei.a((byte) 3, (String) null);
-          var4[4] = ad.a(param1, 64, 7);
+          boolean discarded$6 = ei.a((byte) 3, (String) null);
+          int discarded$7 = 7;
+          var4[4] = ad.a(param1, 64);
           return var2;
         } else {
-          var4[4] = ad.a(param1, 64, 7);
+          int discarded$8 = 7;
+          var4[4] = ad.a(param1, 64);
           return var2;
         }
     }

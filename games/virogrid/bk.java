@@ -229,11 +229,12 @@ abstract class bk {
     final static rm a(int param0) {
         int var2 = 66 % ((77 - param0) / 34);
         rm var1 = new rm(oj.field_Kb, se.field_d, el.field_w[0], mb.field_bb[0], db.field_k[0], gb.field_F[0], lj.field_j[0], k.field_c);
-        pe.b((byte) -28);
+        int discarded$0 = -28;
+        pe.b();
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
     }

@@ -121,12 +121,9 @@ final class va {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ov.field_g = null;
         jl.field_s = -1;
-        if (param0 < 7) {
-            return;
-        }
         eaa.field_b = -1;
         b.field_r = false;
         df.field_o = 0;

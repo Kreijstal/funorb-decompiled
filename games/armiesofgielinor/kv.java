@@ -112,7 +112,7 @@ final class kv extends tj implements he {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int[] var2 = new int[3];
         int[] var1 = var2;
         var2[0] = 1;
@@ -124,7 +124,7 @@ final class kv extends tj implements he {
         tm.b(0.75f);
     }
 
-    final static fl k(int param0) {
+    final static fl k() {
         if (iv.field_b == null) {
             iv.field_b = new fl();
             iv.field_b.a(13421772, ArmiesOfGielinor.field_J);
@@ -147,10 +147,11 @@ final class kv extends tj implements he {
         }
         ka var5 = ArmiesOfGielinor.field_J;
         if (param2 > -82) {
-            kv.b(true);
+            int discarded$0 = 1;
+            kv.b();
         }
         if (!(((kv) this).field_H == null)) {
-            int discarded$0 = var5.a(we.field_i, param0 + ((kv) this).field_B, param1 + ((kv) this).field_p, ((kv) this).field_l, 20, 16777215, -1, 0, 0, var5.field_L + var5.field_H);
+            int discarded$1 = var5.a(we.field_i, param0 + ((kv) this).field_B, param1 + ((kv) this).field_p, ((kv) this).field_l, 20, 16777215, -1, 0, 0, var5.field_L + var5.field_H);
         }
     }
 
@@ -159,30 +160,30 @@ final class kv extends tj implements he {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
-        int stackIn_18_0 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
-        int stackOut_17_0 = 0;
         int stackOut_15_0 = 0;
-        int stackOut_10_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_8_0 = 0;
         int stackOut_5_0 = 0;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         try {
           L0: {
             if (!ph.a(-19, param2)) {
@@ -191,33 +192,25 @@ final class kv extends tj implements he {
               return stackIn_3_0 != 0;
             } else {
               if (param1 != null) {
-                L1: {
-                  var3_int = param1.length();
-                  if (!param0) {
-                    break L1;
-                  } else {
-                    field_F = 103;
-                    break L1;
-                  }
-                }
+                var3_int = param1.length();
                 if (var3_int < 12) {
                   if (rs.a(param2, (byte) -87)) {
                     if (var3_int != 0) {
-                      stackOut_17_0 = 1;
-                      stackIn_18_0 = stackOut_17_0;
+                      stackOut_15_0 = 1;
+                      stackIn_16_0 = stackOut_15_0;
                       break L0;
                     } else {
-                      stackOut_15_0 = 0;
-                      stackIn_16_0 = stackOut_15_0;
-                      return stackIn_16_0 != 0;
+                      stackOut_13_0 = 0;
+                      stackIn_14_0 = stackOut_13_0;
+                      return stackIn_14_0 != 0;
                     }
                   } else {
                     return true;
                   }
                 } else {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0 != 0;
+                  stackOut_8_0 = 0;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0 != 0;
                 }
               } else {
                 stackOut_5_0 = 0;
@@ -228,35 +221,35 @@ final class kv extends tj implements he {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3;
-            stackOut_19_1 = new StringBuilder().append("kv.D(").append(param0).append(44);
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_1 = new StringBuilder().append("kv.D(").append(0).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L2;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L1;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L2;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 41);
         }
-        return stackIn_18_0 != 0;
+        return stackIn_16_0 != 0;
     }
 
     final boolean a(kb param0, int param1, char param2, int param3) {
@@ -444,7 +437,7 @@ final class kv extends tj implements he {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_I = null;
         field_J = null;
     }

@@ -113,17 +113,17 @@ final class kj {
         int var38 = 0;
         int var39 = 0;
         int[] var40 = null;
+        byte[] var42 = null;
         int var43 = 0;
         oc var44 = null;
-        int[] var49 = null;
-        int[] var54 = null;
+        int[] var48 = null;
+        int[] var52 = null;
+        int[] var56 = null;
+        int[] var58 = null;
         int[] var59 = null;
-        byte[] var61 = null;
+        int[] var60 = null;
+        int[] var61 = null;
         int[] var62 = null;
-        int[] var63 = null;
-        int[] var64 = null;
-        int[] var65 = null;
-        int[] var66 = null;
         int stackIn_14_0 = 0;
         int[] stackIn_15_0 = null;
         int[] stackIn_16_0 = null;
@@ -180,8 +180,9 @@ final class kj {
                   break L2;
                 } else {
                   if (var44.field_I > 1) {
-                    var61 = var44.field_K;
-                    ko.a(wa.field_ib, 0, var61, 0, -147296924);
+                    var42 = var44.field_K;
+                    int discarded$1 = -147296924;
+                    ko.a(wa.field_ib, 0, var42, 0);
                     break L1;
                   } else {
                     break L2;
@@ -191,16 +192,16 @@ final class kj {
               bo.a(-94);
               break L1;
             }
-            var65 = new int[param2.field_o];
-            var59 = var65;
-            var54 = var59;
-            var49 = var54;
-            var40 = var49;
+            var61 = new int[param2.field_o];
+            var56 = var61;
+            var52 = var56;
+            var48 = var52;
+            var40 = var48;
             var8_array = var40;
-            var66 = new int[param2.field_o];
-            var62 = oj.field_r;
-            var63 = wa.field_mb;
-            var64 = al.field_g;
+            var62 = new int[param2.field_o];
+            var58 = oj.field_r;
+            var59 = wa.field_mb;
+            var60 = al.field_g;
             var13 = 0;
             L3: while (true) {
               if (param2.field_o <= var13) {
@@ -304,8 +305,8 @@ final class kj {
                             break L12;
                           } else {
                             L13: {
-                              var28 = var65[var18];
-                              var29 = var66[var18];
+                              var28 = var61[var18];
+                              var29 = var62[var18];
                               if (var21_ref == null) {
                                 stackOut_42_0 = 8355711;
                                 stackIn_43_0 = stackOut_42_0;
@@ -327,12 +328,12 @@ final class kj {
                         }
                       }
                       L14: {
-                        var28 = var65[var18];
-                        var29 = var65[var19];
-                        var30 = var65[var20];
-                        var31 = var66[var18];
-                        var32 = var66[var19];
-                        var33 = var66[var20];
+                        var28 = var61[var18];
+                        var29 = var61[var19];
+                        var30 = var61[var20];
+                        var31 = var62[var18];
+                        var32 = var62[var19];
+                        var33 = var62[var20];
                         if (var21_ref != null) {
                           stackOut_46_0 = var21_ref.field_a;
                           stackIn_47_0 = stackOut_46_0;
@@ -361,7 +362,7 @@ final class kj {
                 }
               } else {
                 L15: {
-                  var14 = var62[var13] * param7 + (param3 * var63[var13] + param5 * var64[var13]) >> 8;
+                  var14 = var58[var13] * param7 + (param3 * var59[var13] + param5 * var60[var13]) >> 8;
                   if (0 <= var14) {
                     break L15;
                   } else {
@@ -388,7 +389,7 @@ final class kj {
                 }
                 L17: {
                   var14 = stackIn_14_0;
-                  var15 = param4 * var63[var13] + param6 * var62[var13] - -(var64[var13] * param0) >> 8;
+                  var15 = param4 * var59[var13] + param6 * var58[var13] - -(var60[var13] * param0) >> 8;
                   stackOut_14_0 = cp.field_d;
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_15_0 = stackOut_14_0;
@@ -408,8 +409,8 @@ final class kj {
                 }
                 var15 = stackIn_17_0[stackIn_17_1];
                 var14 = (-var15 + 256) * var14 >>> 8;
-                var65[var13] = var14;
-                var66[var13] = var15;
+                var61[var13] = var14;
+                var62[var13] = var15;
                 var13++;
                 continue L3;
               }

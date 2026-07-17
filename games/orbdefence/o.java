@@ -44,7 +44,7 @@ class o extends ca {
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4 = 0;
         te.field_O = 0;
-        kk.field_S = param3;
+        kk.field_S = 1;
         bk.field_e = param0;
         if (b.a((byte) 112, kk.field_S)) {
           L0: {
@@ -56,30 +56,15 @@ class o extends ca {
               break L0;
             }
           }
-          nc.field_cb[kk.field_S].a((byte) -108, var4, param2);
-          if (kk.field_S == 7) {
-            vk.a(0, param2);
-            if (param1 != 2) {
-              field_j = -61;
-              return;
-            } else {
-              return;
-            }
+          nc.field_cb[kk.field_S].a((byte) -108, var4, false);
+          if (kk.field_S != 7) {
+            return;
           } else {
-            if (param1 == 2) {
-              return;
-            } else {
-              field_j = -61;
-              return;
-            }
+            vk.a(0, false);
+            return;
           }
         } else {
-          if (param1 == 2) {
-            return;
-          } else {
-            field_j = -61;
-            return;
-          }
+          return;
         }
     }
 

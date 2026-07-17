@@ -1748,7 +1748,7 @@ final class nb extends kd {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new nb(param0, (int)((long)param0.field_p * 256L * (long)param1 / (long)(100 * bp.field_h)), param2 << 6, param3 << 6);
+            return new nb(param0, (int)((long)param0.field_p * 256L * 100L / (long)(100 * bp.field_h)), param2 << 6, param3 << 6);
           }
         } else {
           return null;
@@ -1760,7 +1760,7 @@ final class nb extends kd {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new nb(param0, (int)((long)param0.field_p * 256L * (long)param1 / (long)(100 * bp.field_h)), param2, param3);
+            return new nb(param0, (int)((long)param0.field_p * 256L * 100L / (long)(100 * bp.field_h)), param2, param3);
           }
         } else {
           return null;
@@ -2242,24 +2242,24 @@ final class nb extends kd {
         }
     }
 
-    final static nb a(jg param0, int param1, int param2) {
+    final static nb a(jg param0) {
         if (param0.field_n != null) {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new nb(param0, param1, 0);
+            return new nb(param0, 256, 0);
           }
         } else {
           return null;
         }
     }
 
-    final static nb b(jg param0, int param1, int param2) {
+    final static nb b(jg param0) {
         if (param0.field_n != null) {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new nb(param0, (int)((long)param0.field_p * 256L * (long)param1 / (long)(100 * bp.field_h)), 6144);
+            return new nb(param0, (int)((long)param0.field_p * 256L * 100L / (long)(100 * bp.field_h)), 6144);
           }
         } else {
           return null;

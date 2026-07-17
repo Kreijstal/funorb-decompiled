@@ -30,7 +30,7 @@ final class un {
         }
     }
 
-    final static int a(int param0) {
+    final static int a() {
         return 1900 + new Date().getYear();
     }
 
@@ -40,7 +40,7 @@ final class un {
             vh.field_U = param1.i(65280) << 5;
             var2_int = param1.l(255);
             fh.field_c = 1835008 & var2_int << 18;
-            int var3 = -32 % ((param0 - -69) / 37);
+            int var3 = 0;
             vh.field_U = vh.field_U + (var2_int >> 3);
             fh.field_c = fh.field_c + (param1.i(65280) << 2);
             var2_int = param1.l(255);
@@ -52,7 +52,7 @@ final class un {
             vj.field_c = 65536 & var2_int << 16;
             vj.field_c = vj.field_c + param1.i(65280);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "un.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "un.C(" + -122 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

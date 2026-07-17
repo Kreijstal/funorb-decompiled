@@ -161,33 +161,55 @@ final class ep extends c implements fo, ffa, t {
     }
 
     private final void b(boolean param0, boolean param1) {
-        if (param0) {
-          L0: {
-            ((ep) this).field_z.a(((ep) this).field_K, ((ep) this).field_u, ((ep) this).field_m, ((ep) this).field_G, (byte) 6);
-            if (!((ep) this).field_B) {
-              break L0;
-            } else {
-              if (((ep) this).field_s == 0) {
-                if (((ep) this).field_y == 0) {
-                  break L0;
+        ((ep) this).field_z.a(((ep) this).field_K, ((ep) this).field_u, ((ep) this).field_m, ((ep) this).field_G, (byte) 6);
+        if (((ep) this).field_B) {
+          if (((ep) this).field_s == 0) {
+            if (((ep) this).field_y == 0) {
+              this.h((byte) 32);
+              if (!param1) {
+                ((ep) this).field_I = ((ep) this).field_I - 1;
+                if (((ep) this).field_I > 0) {
+                  if (((ep) this).field_C) {
+                    ((ep) this).field_t.field_g = null;
+                    return;
+                  } else {
+                    return;
+                  }
                 } else {
-                  ((ep) this).field_s = 0;
-                  ((ep) this).field_B = false;
-                  ((ep) this).field_J = ((ep) this).field_J * 2;
-                  ((ep) this).field_y = 0;
-                  ((ep) this).field_C = false;
-                  return;
+                  this.a(true, 0);
+                  if (((ep) this).field_C) {
+                    ((ep) this).field_t.field_g = null;
+                    return;
+                  } else {
+                    return;
+                  }
                 }
               } else {
-                ((ep) this).field_s = 0;
-                ((ep) this).field_B = false;
-                ((ep) this).field_J = ((ep) this).field_J * 2;
-                ((ep) this).field_y = 0;
-                ((ep) this).field_C = false;
-                return;
+                this.a(true, 0);
+                if (((ep) this).field_C) {
+                  ((ep) this).field_t.field_g = null;
+                  return;
+                } else {
+                  return;
+                }
               }
+            } else {
+              ((ep) this).field_s = 0;
+              ((ep) this).field_B = false;
+              ((ep) this).field_J = ((ep) this).field_J * 2;
+              ((ep) this).field_y = 0;
+              ((ep) this).field_C = false;
+              return;
             }
+          } else {
+            ((ep) this).field_s = 0;
+            ((ep) this).field_B = false;
+            ((ep) this).field_J = ((ep) this).field_J * 2;
+            ((ep) this).field_y = 0;
+            ((ep) this).field_C = false;
+            return;
           }
+        } else {
           this.h((byte) 32);
           if (!param1) {
             ((ep) this).field_I = ((ep) this).field_I - 1;
@@ -208,89 +230,13 @@ final class ep extends c implements fo, ffa, t {
               }
             }
           } else {
-            this.a(true, 0);
-            if (((ep) this).field_C) {
-              ((ep) this).field_t.field_g = null;
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          ((ep) this).field_o = -115;
-          ((ep) this).field_z.a(((ep) this).field_K, ((ep) this).field_u, ((ep) this).field_m, ((ep) this).field_G, (byte) 6);
-          if (((ep) this).field_B) {
-            if (((ep) this).field_s == 0) {
-              if (((ep) this).field_y == 0) {
-                this.h((byte) 32);
-                if (!param1) {
-                  ((ep) this).field_I = ((ep) this).field_I - 1;
-                  if (((ep) this).field_I > 0) {
-                    if (((ep) this).field_C) {
-                      ((ep) this).field_t.field_g = null;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    L1: {
-                      this.a(true, 0);
-                      if (!((ep) this).field_C) {
-                        break L1;
-                      } else {
-                        ((ep) this).field_t.field_g = null;
-                        break L1;
-                      }
-                    }
-                    return;
-                  }
-                } else {
-                  this.a(true, 0);
-                  if (((ep) this).field_C) {
-                    ((ep) this).field_t.field_g = null;
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                ((ep) this).field_s = 0;
-                ((ep) this).field_B = false;
-                ((ep) this).field_J = ((ep) this).field_J * 2;
-                ((ep) this).field_y = 0;
-                ((ep) this).field_C = false;
-                return;
-              }
-            } else {
-              ((ep) this).field_s = 0;
-              ((ep) this).field_B = false;
-              ((ep) this).field_J = ((ep) this).field_J * 2;
-              ((ep) this).field_y = 0;
-              ((ep) this).field_C = false;
-              return;
-            }
-          } else {
-            L2: {
-              this.h((byte) 32);
-              if (!param1) {
-                ((ep) this).field_I = ((ep) this).field_I - 1;
-                if (((ep) this).field_I > 0) {
-                  break L2;
-                } else {
-                  this.a(true, 0);
-                  break L2;
-                }
-              } else {
-                this.a(true, 0);
-                break L2;
-              }
-            }
-            L3: {
+            L0: {
+              this.a(true, 0);
               if (!((ep) this).field_C) {
-                break L3;
+                break L0;
               } else {
                 ((ep) this).field_t.field_g = null;
-                break L3;
+                break L0;
               }
             }
             return;
@@ -304,7 +250,6 @@ final class ep extends c implements fo, ffa, t {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        Object var10 = null;
         L0: {
           var9 = TombRacer.field_G ? 1 : 0;
           var5 = 0;
@@ -342,51 +287,21 @@ final class ep extends c implements fo, ffa, t {
                 }
               }
             }
-            L3: {
-              var6 = 0;
-              if (param2 < 0) {
-                var6 = 1;
-                ((ep) this).field_K = ((ep) this).field_K + param2;
-                break L3;
-              } else {
-                if (0 < param2) {
-                  ((ep) this).field_K = ((ep) this).field_K + param2;
-                  var6 = 1;
-                  if (var6 != 0) {
-                    L4: {
-                      if (this.c(param2, 0, 111)) {
-                        var5 = 1;
-                        this.b(true, false);
-                        ((ep) this).field_y = -((ep) this).field_y;
-                        ((ep) this).field_K = var8;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    if (param1 >= -51) {
-                      var10 = null;
-                      ((ep) this).a(81, (up) null);
-                      if (var5 == 0) {
-                        L5: {
-                          if (param3) {
-                            break L5;
-                          } else {
-                            if (((ep) this).field_t.field_j != 0) {
-                              break L5;
-                            } else {
-                              return;
-                            }
-                          }
-                        }
-                        L6: {
-                          if (((ep) this).field_t.field_j != 3) {
-                            break L6;
-                          } else {
-                            int discarded$8 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
-                            break L6;
-                          }
-                        }
+            var6 = 0;
+            if (param2 < 0) {
+              var6 = 1;
+              ((ep) this).field_K = ((ep) this).field_K + param2;
+              if (var6 != 0) {
+                if (this.c(param2, 0, 111)) {
+                  var5 = 1;
+                  this.b(true, false);
+                  ((ep) this).field_y = -((ep) this).field_y;
+                  ((ep) this).field_K = var8;
+                  break L0;
+                } else {
+                  if (var5 == 0) {
+                    if (param3) {
+                      if (((ep) this).field_t.field_j != 3) {
                         var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
                         if (var6 > 0) {
                           this.b(true, true);
@@ -395,70 +310,47 @@ final class ep extends c implements fo, ffa, t {
                           return;
                         }
                       } else {
-                        return;
+                        int discarded$9 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
+                        var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+                        if (var6 > 0) {
+                          this.b(true, true);
+                          return;
+                        } else {
+                          return;
+                        }
                       }
                     } else {
-                      if (var5 == 0) {
-                        L7: {
-                          if (param3) {
-                            break L7;
+                      if (((ep) this).field_t.field_j != 0) {
+                        if (((ep) this).field_t.field_j != 3) {
+                          var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+                          if (var6 > 0) {
+                            this.b(true, true);
+                            return;
                           } else {
-                            if (((ep) this).field_t.field_j != 0) {
-                              break L7;
-                            } else {
-                              return;
-                            }
+                            return;
                           }
-                        }
-                        L8: {
-                          if (((ep) this).field_t.field_j != 3) {
-                            break L8;
-                          } else {
-                            int discarded$9 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
-                            break L8;
-                          }
-                        }
-                        var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
-                        if (var6 > 0) {
-                          this.b(true, true);
-                          return;
                         } else {
-                          return;
+                          int discarded$10 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
+                          var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+                          if (var6 > 0) {
+                            this.b(true, true);
+                            return;
+                          } else {
+                            return;
+                          }
                         }
                       } else {
                         return;
                       }
                     }
                   } else {
-                    L9: {
-                      if (param1 < -51) {
-                        break L9;
-                      } else {
-                        var10 = null;
-                        ((ep) this).a(81, (up) null);
-                        break L9;
-                      }
-                    }
-                    if (var5 == 0) {
-                      L10: {
-                        if (param3) {
-                          break L10;
-                        } else {
-                          if (((ep) this).field_t.field_j != 0) {
-                            break L10;
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                      L11: {
-                        if (((ep) this).field_t.field_j != 3) {
-                          break L11;
-                        } else {
-                          int discarded$10 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
-                          break L11;
-                        }
-                      }
+                    return;
+                  }
+                }
+              } else {
+                if (var5 == 0) {
+                  if (param3) {
+                    if (((ep) this).field_t.field_j != 3) {
                       var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
                       if (var6 > 0) {
                         this.b(true, true);
@@ -467,40 +359,69 @@ final class ep extends c implements fo, ffa, t {
                         return;
                       }
                     } else {
+                      int discarded$11 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
+                      var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+                      if (var6 > 0) {
+                        this.b(true, true);
+                        return;
+                      } else {
+                        return;
+                      }
+                    }
+                  } else {
+                    if (((ep) this).field_t.field_j != 0) {
+                      if (((ep) this).field_t.field_j != 3) {
+                        var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+                        if (var6 > 0) {
+                          this.b(true, true);
+                          return;
+                        } else {
+                          return;
+                        }
+                      } else {
+                        int discarded$12 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
+                        var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+                        if (var6 > 0) {
+                          this.b(true, true);
+                          return;
+                        } else {
+                          return;
+                        }
+                      }
+                    } else {
                       return;
                     }
                   }
                 } else {
-                  break L3;
+                  return;
                 }
               }
-            }
-            if (var6 == 0) {
-              break L0;
             } else {
-              if (this.c(param2, 0, 111)) {
-                var5 = 1;
-                this.b(true, false);
-                ((ep) this).field_y = -((ep) this).field_y;
-                ((ep) this).field_K = var8;
-                break L0;
-              } else {
-                L12: {
-                  if (param1 < -51) {
-                    break L12;
+              if (0 < param2) {
+                L3: {
+                  ((ep) this).field_K = ((ep) this).field_K + param2;
+                  var6 = 1;
+                  if (var6 == 0) {
+                    break L3;
                   } else {
-                    var10 = null;
-                    ((ep) this).a(81, (up) null);
-                    break L12;
+                    if (this.c(param2, 0, 111)) {
+                      var5 = 1;
+                      this.b(true, false);
+                      ((ep) this).field_y = -((ep) this).field_y;
+                      ((ep) this).field_K = var8;
+                      break L3;
+                    } else {
+                      break L3;
+                    }
                   }
                 }
                 if (var5 == 0) {
-                  L13: {
+                  L4: {
                     if (param3) {
-                      break L13;
+                      break L4;
                     } else {
                       if (((ep) this).field_t.field_j != 0) {
-                        break L13;
+                        break L4;
                       } else {
                         return;
                       }
@@ -508,14 +429,14 @@ final class ep extends c implements fo, ffa, t {
                   }
                   if (((ep) this).field_t.field_j != 3) {
                     var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
-                    if (var6 > 0) {
-                      this.b(true, true);
+                    if (var6 <= 0) {
                       return;
                     } else {
+                      this.b(true, true);
                       return;
                     }
                   } else {
-                    int discarded$11 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
+                    int discarded$13 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
                     var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
                     if (var6 > 0) {
                       this.b(true, true);
@@ -527,15 +448,109 @@ final class ep extends c implements fo, ffa, t {
                 } else {
                   return;
                 }
+              } else {
+                if (var6 != 0) {
+                  L5: {
+                    if (this.c(param2, 0, 111)) {
+                      var5 = 1;
+                      this.b(true, false);
+                      ((ep) this).field_y = -((ep) this).field_y;
+                      ((ep) this).field_K = var8;
+                      break L5;
+                    } else {
+                      break L5;
+                    }
+                  }
+                  if (var5 == 0) {
+                    L6: {
+                      if (param3) {
+                        break L6;
+                      } else {
+                        if (((ep) this).field_t.field_j != 0) {
+                          break L6;
+                        } else {
+                          return;
+                        }
+                      }
+                    }
+                    L7: {
+                      if (((ep) this).field_t.field_j != 3) {
+                        break L7;
+                      } else {
+                        int discarded$14 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
+                        break L7;
+                      }
+                    }
+                    var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+                    if (var6 > 0) {
+                      this.b(true, true);
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    return;
+                  }
+                } else {
+                  if (var5 == 0) {
+                    L8: {
+                      if (param3) {
+                        break L8;
+                      } else {
+                        if (((ep) this).field_t.field_j != 0) {
+                          break L8;
+                        } else {
+                          return;
+                        }
+                      }
+                    }
+                    L9: {
+                      if (((ep) this).field_t.field_j != 3) {
+                        break L9;
+                      } else {
+                        int discarded$15 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
+                        break L9;
+                      }
+                    }
+                    var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+                    if (var6 > 0) {
+                      this.b(true, true);
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    return;
+                  }
+                }
               }
             }
           } else {
             break L0;
           }
         }
-        if (param1 < -51) {
-          if (var5 == 0) {
-            if (param3) {
+        if (var5 == 0) {
+          if (param3) {
+            if (((ep) this).field_t.field_j != 3) {
+              var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+              if (var6 > 0) {
+                this.b(true, true);
+                return;
+              } else {
+                return;
+              }
+            } else {
+              int discarded$16 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
+              var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
+              if (var6 > 0) {
+                this.b(true, true);
+                return;
+              } else {
+                return;
+              }
+            }
+          } else {
+            if (((ep) this).field_t.field_j != 0) {
               if (((ep) this).field_t.field_j != 3) {
                 var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
                 if (var6 > 0) {
@@ -545,7 +560,7 @@ final class ep extends c implements fo, ffa, t {
                   return;
                 }
               } else {
-                int discarded$12 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
+                int discarded$17 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
                 var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
                 if (var6 > 0) {
                   this.b(true, true);
@@ -555,82 +570,11 @@ final class ep extends c implements fo, ffa, t {
                 }
               }
             } else {
-              if (((ep) this).field_t.field_j != 0) {
-                if (((ep) this).field_t.field_j != 3) {
-                  var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
-                  if (var6 > 0) {
-                    this.b(true, true);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  int discarded$13 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
-                  var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
-                  if (var6 > 0) {
-                    this.b(true, true);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                return;
-              }
+              return;
             }
-          } else {
-            return;
           }
         } else {
-          var10 = null;
-          ((ep) this).a(81, (up) null);
-          if (var5 == 0) {
-            if (param3) {
-              if (((ep) this).field_t.field_j != 3) {
-                var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
-                if (var6 > 0) {
-                  this.b(true, true);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                int discarded$14 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
-                var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
-                if (var6 > 0) {
-                  this.b(true, true);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              if (((ep) this).field_t.field_j != 0) {
-                if (((ep) this).field_t.field_j != 3) {
-                  var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
-                  if (var6 > 0) {
-                    this.b(true, true);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  int discarded$15 = ((ep) this).field_z.a(-40, ((ep) this).field_K, th.field_o, 2 * ((ep) this).field_o, 2 * ((ep) this).field_o, ((ep) this).field_u);
-                  var6 = ((ep) this).field_z.a((ep) this, -16164, ((ep) this).field_t);
-                  if (var6 > 0) {
-                    this.b(true, true);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            return;
-          }
+          return;
         }
     }
 
@@ -1623,10 +1567,11 @@ final class ep extends c implements fo, ffa, t {
     public final void a(int param0, int param1, int param2) {
         ((ep) this).field_z.field_u.a((ffa) this, (byte) 98);
         this.a(param1, param0, (byte) 114);
-        this.g((byte) -99);
+        int discarded$4 = -99;
+        this.g();
         ((ep) this).field_t.field_g = null;
         if (param2 != 2) {
-          int discarded$2 = ((ep) this).d(107);
+          int discarded$5 = ((ep) this).d(107);
           ((ep) this).field_z.field_u.b((ffa) this, param2 + 7071);
           return;
         } else {
@@ -1922,7 +1867,8 @@ final class ep extends c implements fo, ffa, t {
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         L0: {
-          this.g((byte) -99);
+          int discarded$1 = -99;
+          this.g();
           ((ep) this).field_q.a(param0 + 87);
           if (param1) {
             if (this.f((byte) -118)) {
@@ -2725,7 +2671,8 @@ final class ep extends c implements fo, ffa, t {
         try {
           L0: {
             if (!((ep) this).field_l) {
-              if (eha.a(((ep) this).field_o, param1, ((ep) this).field_K, ((ep) this).field_o, param2, ((ep) this).field_u, 2) >= 0) {
+              int discarded$15 = 2;
+              if (eha.a(((ep) this).field_o, param1, ((ep) this).field_K, ((ep) this).field_o, param2, ((ep) this).field_u) >= 0) {
                 stackOut_6_0 = this.b(115, param0);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
@@ -2943,7 +2890,7 @@ final class ep extends c implements fo, ffa, t {
         return stackIn_4_0 != 0;
     }
 
-    private final void g(byte param0) {
+    private final void g() {
     }
 
     ep() {

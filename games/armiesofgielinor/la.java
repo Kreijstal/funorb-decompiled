@@ -11,7 +11,7 @@ final class la {
     static int field_d;
     static java.applet.Applet field_g;
 
-    private final int c(byte param0) {
+    private final int c() {
         int var3 = 0;
         int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var2 = aw.field_j[((la) this).field_f].length;
@@ -23,20 +23,17 @@ final class la {
         return 0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_g = null;
         field_e = null;
     }
 
     final static void b(int param0) {
-        if (param0 != -26887) {
-            return;
-        }
         rs.field_t = 0;
         hf.field_c = true;
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         int[] var6 = null;
         int var2 = 0;
         int var3 = 0;
@@ -72,13 +69,13 @@ final class la {
                 var2++;
                 var6[incrementValue$7] = 0;
             }
-            int var4 = 57 % ((-6 - param0) / 49);
+            int var4 = 1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "la.K(" + param0 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "la.K(" + 111 + 41);
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void a(boolean param0, int param1) {
         tg var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
@@ -102,8 +99,10 @@ final class la {
         if (param0 < 68) {
             this.a(91);
         }
-        wp var3 = we.a(var2, true);
-        io.a(var3, (byte) -34);
+        int discarded$0 = 1;
+        wp var3 = we.a(var2);
+        int discarded$1 = -34;
+        io.a(var3);
     }
 
     private final void a(byte param0, int param1) {
@@ -156,7 +155,8 @@ final class la {
           } else {
             L4: {
               if (aw.field_j[((la) this).field_f][((la) this).field_b][0] < 0) {
-                ((la) this).field_b = this.c((byte) 82);
+                int discarded$2 = 82;
+                ((la) this).field_b = this.c();
                 break L4;
               } else {
                 break L4;
@@ -177,9 +177,6 @@ final class la {
     }
 
     final static void b(byte param0, int param1) {
-        if (param0 != 30) {
-            la.b(104);
-        }
         lk.field_h = 0;
         am.field_D = new int[3];
         an.field_F = new mo[3000];
@@ -206,7 +203,7 @@ final class la {
         this.c(0);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

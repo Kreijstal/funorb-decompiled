@@ -153,7 +153,7 @@ final class dg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_f = null;
         field_k = null;
@@ -298,7 +298,7 @@ final class dg {
         char[] var6 = new char[param0];
         char[] var3 = var6;
         for (var4 = 0; var4 < param0; var4++) {
-            var6[var4] = param1;
+            var6[var4] = '*';
         }
         return new String(var6);
     }

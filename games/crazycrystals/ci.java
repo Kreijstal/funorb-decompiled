@@ -108,13 +108,8 @@ final class ci extends se {
         return stackIn_12_0;
     }
 
-    final static dl[] a(int param0, int param1, byte param2, int param3, int param4) {
-        if (param2 != -70) {
-          field_j = null;
-          return rc.a(3, 1, param1, param3, 1, param0, 0, param2 ^ -3020, 1);
-        } else {
-          return rc.a(3, 1, param1, param3, 1, param0, 0, param2 ^ -3020, 1);
-        }
+    final static dl[] a() {
+        return rc.a(3, 1, 0, 65793, 1, 0, 0, 2958, 1);
     }
 
     final static String a(String[] args, String param1, int param2) {
@@ -187,7 +182,8 @@ final class ci extends se {
                           if (var3_int <= var5) {
                             break L4;
                           } else {
-                            if (!ag.a(param1.charAt(var5), 48)) {
+                            int discarded$5 = 48;
+                            if (!ag.a(param1.charAt(var5))) {
                               break L4;
                             } else {
                               var5++;
@@ -205,9 +201,9 @@ final class ci extends se {
                             if (param1.charAt(var5) == 62) {
                               var5++;
                               var10 = ti.a(100, (CharSequence) (Object) var9);
-                              StringBuilder discarded$3 = var6.append(param1.substring(var7, var8));
+                              StringBuilder discarded$6 = var6.append(param1.substring(var7, var8));
                               var7 = var5;
-                              StringBuilder discarded$4 = var6.append(args[var10]);
+                              StringBuilder discarded$7 = var6.append(args[var10]);
                               continue L2;
                             } else {
                               continue L2;
@@ -216,7 +212,7 @@ final class ci extends se {
                         }
                       }
                     } else {
-                      StringBuilder discarded$5 = var6.append(param1.substring(var7));
+                      StringBuilder discarded$8 = var6.append(param1.substring(var7));
                       stackOut_26_0 = var6.toString();
                       stackIn_27_0 = stackOut_26_0;
                       break L0;
@@ -234,7 +230,8 @@ final class ci extends se {
                     if (var3_int <= var5) {
                       break L6;
                     } else {
-                      if (!ag.a(param1.charAt(var5), 48)) {
+                      int discarded$9 = 48;
+                      if (!ag.a(param1.charAt(var5))) {
                         break L6;
                       } else {
                         var5++;
@@ -390,7 +387,7 @@ final class ci extends se {
         return (String) (Object) stackIn_4_0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         int var1 = 0;
         field_i = null;
         field_k = null;

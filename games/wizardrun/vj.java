@@ -5,7 +5,7 @@ final class vj {
     static rc field_a;
     static kl field_b;
 
-    final static void b(int param0) {
+    final static void b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

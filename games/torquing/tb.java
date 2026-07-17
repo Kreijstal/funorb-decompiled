@@ -11,7 +11,7 @@ final class tb extends q {
     int field_m;
     static uh field_l;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_o = null;
         field_l = null;
     }
@@ -90,12 +90,9 @@ final class tb extends q {
     }
 
     final static void a(int param0, int param1) {
-        op.field_k = (param0 << 16) / 150;
-        if (param1 > -123) {
-            return;
-        }
-        op.field_q = param0 * 400 / 150;
-        op.field_j = param0 * 100 / 150;
+        op.field_k = 21845;
+        op.field_q = 133;
+        op.field_j = 33;
     }
 
     static {

@@ -122,7 +122,8 @@ final class rj {
                 } else {
                   if (param2 > 0) {
                     L6: {
-                      this.b(-84);
+                      int discarded$2 = -84;
+                      this.b();
                       var9_int = param2;
                       if (((rj) this).field_g < var9_int) {
                         var9_int = ((rj) this).field_g;
@@ -165,9 +166,9 @@ final class rj {
                           if (param3 >= var9_int) {
                             break L8;
                           } else {
-                            int incrementValue$1 = param3;
+                            int incrementValue$3 = param3;
                             param3++;
-                            param1[incrementValue$1] = (byte) 0;
+                            param1[incrementValue$3] = (byte) 0;
                             param2--;
                             ((rj) this).field_l = ((rj) this).field_l + 1L;
                             continue L10;
@@ -411,7 +412,7 @@ final class rj {
         return ((rj) this).field_o;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -2188,7 +2189,8 @@ final class rj {
                                                   km.field_a = dj.field_i;
                                                   dm.field_a = dm.field_a | 4;
                                                   if (!ni.b(89)) {
-                                                    um.f((byte) 3);
+                                                    int discarded$3 = 3;
+                                                    um.f();
                                                     break L107;
                                                   } else {
                                                     break L107;
@@ -2500,7 +2502,8 @@ final class rj {
                     qa.field_O = var25;
                     var26_int = -2;
                     if (fg.field_Ob != 0) {
-                      var26_int = te.a(var57, var26_int, true, -1);
+                      int discarded$4 = -1;
+                      var26_int = te.a(var57, var26_int, true);
                       break L134;
                     } else {
                       var26_int = pi.a((byte) -46, var57, var26_int, true);
@@ -2561,7 +2564,8 @@ final class rj {
                       var26_int = pi.a((byte) -70, var57, var26_int, false);
                       break L137;
                     } else {
-                      var26_int = te.a(var57, var26_int, false, -1);
+                      int discarded$5 = -1;
+                      var26_int = te.a(var57, var26_int, false);
                       break L137;
                     }
                   }
@@ -2977,7 +2981,7 @@ final class rj {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void a(int param0, int param1, int param2, int param3) {
         rm.field_g = param2;
         ig.field_e = param0;
         ck.field_e = param3;
@@ -3102,7 +3106,7 @@ final class rj {
         }
     }
 
-    private final void b(int param0) throws IOException {
+    private final void b() throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = SteelSentinels.field_G;

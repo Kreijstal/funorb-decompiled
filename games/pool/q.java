@@ -5,12 +5,12 @@ final class q {
     static vh field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -103;
         field_b = null;
     }
 
-    final static void a(di param0, int param1) {
+    final static void a(di param0) {
         gm var2 = null;
         try {
             gm.b(param0.a(false, "", "headers.packvorbis"));

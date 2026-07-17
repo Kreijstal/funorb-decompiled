@@ -149,7 +149,7 @@ final class wj extends ec {
         }
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_u = null;
         field_w = null;
         field_x = null;

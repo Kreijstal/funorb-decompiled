@@ -33,15 +33,12 @@ final class un extends hb {
     final static void a(String param0, byte param1, long param2, int param3, int param4) {
         try {
             jj.field_n = true;
-            if (param1 <= 44) {
-                field_k = null;
-            }
             vs.field_d = param4;
             ac.field_o = param2;
             ah.field_S = param0;
             vp.field_r = param3;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "un.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "un.C(" + (param0 != null ? "{...}" : "null") + 44 + 123 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -53,7 +50,7 @@ final class un extends hb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_f = null;
         field_k = null;

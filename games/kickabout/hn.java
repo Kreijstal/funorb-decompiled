@@ -192,14 +192,14 @@ final class hn extends gn {
         try {
             var7_int = un.field_d.a(param6) - -15;
             pt.a(10, -22914, 0, 480, 0);
-            on.a(param3 - var7_int, param4 - 17, var7_int + 20, 21, param0, 65793, 128);
+            on.a(param3 - var7_int, param4 - 17, var7_int + 20, 21, 8, 65793, 128);
             ta.e(123);
             pt.a(param3, -22914, 0, 480, 0);
             on.a(-var7_int + param3, param4 - 17, 20 + var7_int, 21, 8, param1, param2);
-            ta.e(param0 + 113);
+            ta.e(121);
             un.field_d.c(param6, param3, param4, param5, -1);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "hn.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "hn.E(" + 8 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -459,7 +459,7 @@ final class hn extends gn {
         return stackIn_7_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_h = null;

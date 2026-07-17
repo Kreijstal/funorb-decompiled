@@ -23,10 +23,10 @@ final class qe extends wh {
 
     private final void a(int param0, int param1, nb param2, int param3) {
         try {
-            param2.a(param0, (byte) -116, param1);
+            param2.a(param0, (byte) -116, -1);
             param2.a(0, param3);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "qe.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "qe.G(" + param0 + 44 + -1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 

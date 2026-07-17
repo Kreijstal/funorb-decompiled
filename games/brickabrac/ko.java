@@ -23,7 +23,7 @@ final class ko {
     byte[][] field_c;
     static String field_q;
 
-    private final void a(byte[] param0, boolean param1) {
+    private final void a(byte[] param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -595,10 +595,7 @@ final class ko {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 <= 108) {
-            return;
-        }
+    public static void a() {
         field_q = null;
         field_j = null;
     }
@@ -606,7 +603,8 @@ final class ko {
     ko(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            ((ko) this).field_b = cg.a(param0.length, param0, (byte) -86);
+            int discarded$0 = -86;
+            ((ko) this).field_b = cg.a(param0.length, param0);
             if (param1 != ((ko) this).field_b) {
                 throw new RuntimeException();
             }
@@ -621,7 +619,8 @@ final class ko {
                     }
                 }
             }
-            this.a(param0, false);
+            int discarded$1 = 0;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "ko.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

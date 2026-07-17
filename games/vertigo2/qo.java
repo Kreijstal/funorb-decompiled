@@ -13,7 +13,7 @@ final class qo extends ji {
         super(0, true);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_y = null;
         field_E = null;
         field_A = null;
@@ -134,7 +134,8 @@ final class qo extends ji {
                       var6 = var5;
                       if (var6 != 0) {
                         if (var6 == 1) {
-                          ((qo) this).field_z[var4_int] = (jq) (Object) ug.a(param2, 46);
+                          int discarded$2 = 46;
+                          ((qo) this).field_z[var4_int] = (jq) (Object) ug.a(param2);
                           break L4;
                         } else {
                           if (var6 == 2) {
@@ -150,7 +151,8 @@ final class qo extends ji {
                           }
                         }
                       } else {
-                        ((qo) this).field_z[var4_int] = (jq) (Object) lb.a(param2, (byte) 92);
+                        int discarded$3 = 92;
+                        ((qo) this).field_z[var4_int] = (jq) (Object) lb.a(param2);
                         break L4;
                       }
                     }

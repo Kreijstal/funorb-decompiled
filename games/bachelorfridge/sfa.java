@@ -10,7 +10,7 @@ abstract class sfa extends bw {
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         int var5 = 0;
-        var5 = -51 % ((-79 - param2) / 46);
+        var5 = 0;
         if (param3 >= an.field_q) {
           if (param3 > ha.field_n) {
             return;

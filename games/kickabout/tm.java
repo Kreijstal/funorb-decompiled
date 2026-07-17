@@ -223,7 +223,7 @@ abstract class tm extends am {
         return stackIn_32_0 != 0;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         si var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

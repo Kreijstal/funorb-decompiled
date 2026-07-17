@@ -208,12 +208,12 @@ final class ff {
         char[] var6 = new char[param0];
         char[] var3 = var6;
         for (var4 = 0; param0 > var4; var4++) {
-            var6[var4] = param1;
+            var6[var4] = '*';
         }
         return new String(var6);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
     }
 

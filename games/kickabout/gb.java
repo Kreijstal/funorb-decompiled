@@ -10,7 +10,7 @@ final class gb extends wi {
     static ut[] field_G;
     private l field_J;
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -28;
         field_G = null;
         field_H = null;

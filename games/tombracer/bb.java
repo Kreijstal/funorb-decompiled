@@ -22,7 +22,7 @@ final class bb extends vg {
         field_f = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         asa.a(-98, cia.field_g);
     }
 

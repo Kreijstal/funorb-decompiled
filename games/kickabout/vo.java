@@ -333,7 +333,7 @@ final class vo extends mu {
                                 var4 = 0;
                                 L6: while (true) {
                                   if (var4 >= io.field_l) {
-                                    var5 = 111 % ((param0 - 11) / 61);
+                                    var5 = 0;
                                     break L0;
                                   } else {
                                     L7: {
@@ -511,7 +511,7 @@ final class vo extends mu {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_53_0 = (RuntimeException) var2;
-            stackOut_53_1 = new StringBuilder().append("vo.WA(").append(param0).append(44);
+            stackOut_53_1 = new StringBuilder().append("vo.WA(").append(-77).append(44);
             stackIn_55_0 = stackOut_53_0;
             stackIn_55_1 = stackOut_53_1;
             stackIn_54_0 = stackOut_53_0;

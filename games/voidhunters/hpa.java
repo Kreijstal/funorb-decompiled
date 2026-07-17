@@ -5,7 +5,7 @@ final class hpa extends rqa {
     static int field_p;
     static llb[] field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_o = null;
     }

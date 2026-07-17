@@ -177,9 +177,6 @@ final class vl extends em {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
-        if (param2) {
-            return;
-        }
         nm.field_e = param4;
         vd.field_z = param0;
         he.field_a = param1;

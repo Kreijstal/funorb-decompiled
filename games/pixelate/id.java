@@ -12,7 +12,7 @@ final class id {
     int field_a;
     static int field_b;
 
-    public static void c(int param0) {
+    public static void c() {
         int var1 = 64;
         field_d = null;
     }
@@ -61,7 +61,8 @@ final class id {
             var1_int = 0;
             L1: while (true) {
               if (var1_int >= 2) {
-                eg.a((byte) 99);
+                int discarded$2 = 99;
+                eg.a();
                 qa.field_f.a(19692);
                 ii.field_p = new hh[10];
                 var1_int = 0;
@@ -113,7 +114,7 @@ final class id {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void a(boolean param0) {
         qk.field_e = 0;
         ae.field_b = 0;
         oe.field_Sb = 0;

@@ -23,15 +23,15 @@ final class wg {
         bc var8 = null;
         j var9 = null;
         int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_23_0 = null;
+        int stackIn_9_0 = 0;
+        int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        Object stackOut_22_0 = null;
-        int[] stackOut_21_0 = null;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        Object stackOut_21_0 = null;
+        int[] stackOut_20_0 = null;
         L0: {
           var7 = TetraLink.field_J;
           var8 = kb.field_q;
@@ -47,103 +47,106 @@ final class wg {
             break L0;
           }
         }
-        bo.field_s = stackIn_3_0 != 0;
-        ng.field_u = var3 & 127;
-        og.field_i = var8.d((byte) -99);
-        if (param0 == 85) {
-          L1: {
-            el.field_tc = var8.c(255);
-            if (ng.field_u == 2) {
-              hg.field_a = var8.e(127);
-              n.field_O = var8.d(-1);
-              break L1;
-            } else {
-              hg.field_a = 0;
-              n.field_O = 0;
-              break L1;
-            }
+        L1: {
+          bo.field_s = stackIn_3_0 != 0;
+          ng.field_u = var3 & 127;
+          og.field_i = var8.d((byte) -99);
+          el.field_tc = var8.c(255);
+          if (ng.field_u == 2) {
+            hg.field_a = var8.e(127);
+            n.field_O = var8.d(-1);
+            break L1;
+          } else {
+            hg.field_a = 0;
+            n.field_O = 0;
+            break L1;
           }
-          L2: {
-            if (1 != var8.d((byte) -99)) {
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
-              break L2;
-            } else {
-              stackOut_9_0 = 1;
-              stackIn_11_0 = stackOut_9_0;
-              break L2;
-            }
-          }
-          L3: {
-            var4 = stackIn_11_0;
-            g.field_O = var8.g((byte) 81);
-            if (var4 != 0) {
-              TetraLink.field_M = var8.g((byte) 81);
-              break L3;
-            } else {
-              TetraLink.field_M = g.field_O;
-              break L3;
-            }
-          }
-          L4: {
-            L5: {
-              if (ng.field_u == 1) {
-                break L5;
-              } else {
-                if (4 != ng.field_u) {
-                  vi.field_c = 0;
-                  ab.field_U = null;
-                  break L4;
-                } else {
-                  break L5;
-                }
-              }
-            }
-            vi.field_c = var8.e(127);
-            ab.field_U = var8.g((byte) 81);
-            break L4;
-          }
-          var5 = var8.e(127);
-          try {
-            L6: {
-              L7: {
-                var9 = eh.field_p.a(var5, -128);
-                ml.field_fb = var9.h(-15);
-                if (TetraLink.field_M.equals((Object) (Object) ph.field_w)) {
-                  stackOut_22_0 = null;
-                  stackIn_23_0 = (int[]) (Object) stackOut_22_0;
-                  break L7;
-                } else {
-                  stackOut_21_0 = var9.field_v;
-                  stackIn_23_0 = stackOut_21_0;
-                  break L7;
-                }
-              }
-              ha.field_i = stackIn_23_0;
-              break L6;
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            L8: {
-              var6 = (Exception) (Object) decompiledCaughtException;
-              fk.a(param0 ^ -122, (Throwable) (Object) var6, "CC1");
-              ml.field_fb = null;
-              ha.field_i = null;
-              break L8;
-            }
-          }
-          return new fj(false);
-        } else {
-          return null;
         }
+        L2: {
+          if (1 != var8.d((byte) -99)) {
+            stackOut_8_0 = 0;
+            stackIn_9_0 = stackOut_8_0;
+            break L2;
+          } else {
+            stackOut_7_0 = 1;
+            stackIn_9_0 = stackOut_7_0;
+            break L2;
+          }
+        }
+        L3: {
+          var4 = stackIn_9_0;
+          g.field_O = var8.g((byte) 81);
+          if (var4 != 0) {
+            TetraLink.field_M = var8.g((byte) 81);
+            break L3;
+          } else {
+            TetraLink.field_M = g.field_O;
+            break L3;
+          }
+        }
+        L4: {
+          L5: {
+            if (ng.field_u == 1) {
+              break L5;
+            } else {
+              if (4 != ng.field_u) {
+                vi.field_c = 0;
+                ab.field_U = null;
+                break L4;
+              } else {
+                break L5;
+              }
+            }
+          }
+          vi.field_c = var8.e(127);
+          ab.field_U = var8.g((byte) 81);
+          break L4;
+        }
+        L6: {
+          if (!param1) {
+            int discarded$1 = 80;
+            ml.field_fb = rh.a(119, (bh) (Object) var8);
+            ha.field_i = null;
+            break L6;
+          } else {
+            var5 = var8.e(127);
+            try {
+              L7: {
+                L8: {
+                  var9 = eh.field_p.a(var5, -128);
+                  ml.field_fb = var9.h(-15);
+                  if (TetraLink.field_M.equals((Object) (Object) ph.field_w)) {
+                    stackOut_21_0 = null;
+                    stackIn_22_0 = (int[]) (Object) stackOut_21_0;
+                    break L8;
+                  } else {
+                    stackOut_20_0 = var9.field_v;
+                    stackIn_22_0 = stackOut_20_0;
+                    break L8;
+                  }
+                }
+                ha.field_i = stackIn_22_0;
+                break L7;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L9: {
+                var6 = (Exception) (Object) decompiledCaughtException;
+                fk.a(-45, (Throwable) (Object) var6, "CC1");
+                ml.field_fb = null;
+                ha.field_i = null;
+                break L9;
+              }
+            }
+            break L6;
+          }
+        }
+        return new fj(param1);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_g = null;
-        if (param0 != 6945) {
-            return;
-        }
         field_a = null;
         field_b = null;
         field_f = null;
@@ -189,7 +192,7 @@ final class wg {
         var9 = TetraLink.field_J;
         try {
           L0: {
-            var3_int = 26 / ((-70 - param1) / 51);
+            var3_int = -26;
             if (param0 == null) {
               stackOut_3_0 = ua.field_e;
               stackIn_4_0 = stackOut_3_0;
@@ -305,7 +308,7 @@ final class wg {
               break L7;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + param1 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + -3 + 44 + param2 + 41);
         }
         return stackIn_33_0;
     }

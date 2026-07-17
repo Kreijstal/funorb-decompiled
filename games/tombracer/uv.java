@@ -1208,95 +1208,45 @@ final class uv extends oga {
     }
 
     final static boolean a(int param0, int param1, int param2) {
+        boolean stackIn_1_0 = false;
         boolean stackIn_2_0 = false;
         boolean stackIn_3_0 = false;
-        boolean stackIn_4_0 = false;
-        int stackIn_4_1 = 0;
-        int stackIn_8_0 = 0;
-        boolean stackIn_12_0 = false;
-        boolean stackIn_13_0 = false;
-        boolean stackIn_14_0 = false;
-        int stackIn_14_1 = 0;
-        int stackIn_17_0 = 0;
-        boolean stackOut_11_0 = false;
-        boolean stackOut_13_0 = false;
-        int stackOut_13_1 = 0;
-        boolean stackOut_12_0 = false;
-        int stackOut_12_1 = 0;
-        int stackOut_15_0 = 0;
-        boolean stackOut_1_0 = false;
-        boolean stackOut_3_0 = false;
-        int stackOut_3_1 = 0;
+        int stackIn_3_1 = 0;
+        int stackIn_6_0 = 0;
+        boolean stackOut_0_0 = false;
         boolean stackOut_2_0 = false;
         int stackOut_2_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param1 == 1) {
-          L0: {
-            stackOut_11_0 = jj.a(param0, param2, -32842);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_12_0 = stackOut_11_0;
-            if (0 == (458752 & param2)) {
-              stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = 0;
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              break L0;
-            } else {
-              stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = 1;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              break L0;
-            }
-          }
-          if (stackIn_14_0 | stackIn_14_1 == 0) {
-            if (so.a(param2, (byte) -105, param0)) {
-              return true;
-            } else {
-              return false;
-            }
+        boolean stackOut_1_0 = false;
+        int stackOut_1_1 = 0;
+        int stackOut_4_0 = 0;
+        L0: {
+          stackOut_0_0 = jj.a(param0, param2, -32842);
+          stackIn_2_0 = stackOut_0_0;
+          stackIn_1_0 = stackOut_0_0;
+          if (0 == (458752 & param2)) {
+            stackOut_2_0 = stackIn_2_0;
+            stackOut_2_1 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            break L0;
           } else {
-            stackOut_15_0 = 1;
-            stackIn_17_0 = stackOut_15_0;
-            return stackIn_17_0 != 0;
-          }
-        } else {
-          L1: {
-            field_k = null;
-            stackOut_1_0 = jj.a(param0, param2, -32842);
+            stackOut_1_0 = stackIn_1_0;
+            stackOut_1_1 = 1;
             stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
-            if (0 == (458752 & param2)) {
-              stackOut_3_0 = stackIn_3_0;
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              break L1;
-            } else {
-              stackOut_2_0 = stackIn_2_0;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              break L1;
-            }
+            stackIn_3_1 = stackOut_1_1;
+            break L0;
           }
-          if (stackIn_4_0 | stackIn_4_1 != 0) {
+        }
+        if (stackIn_3_0 | stackIn_3_1 == 0) {
+          if (so.a(param2, (byte) -105, param0)) {
             return true;
           } else {
-            L2: {
-              if (!so.a(param2, (byte) -105, param0)) {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
-                break L2;
-              } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                break L2;
-              }
-            }
-            return stackIn_8_0 != 0;
+            return false;
           }
+        } else {
+          stackOut_4_0 = 1;
+          stackIn_6_0 = stackOut_4_0;
+          return stackIn_6_0 != 0;
         }
     }
 

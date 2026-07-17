@@ -20,69 +20,65 @@ final class id {
             IOException var2 = null;
             ih var4 = null;
             ih var5 = null;
-            int stackIn_13_0 = 0;
+            int stackIn_11_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_12_0 = 0;
-            int stackOut_11_0 = 0;
-            if (!param0) {
-              L0: {
-                if (gg.field_e == null) {
-                  gg.field_e = af.field_f.a(be.field_b, (byte) 32, a.field_d);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              if (0 == gg.field_e.field_b) {
-                return false;
+            int stackOut_10_0 = 0;
+            int stackOut_9_0 = 0;
+            L0: {
+              if (gg.field_e == null) {
+                gg.field_e = af.field_f.a(be.field_b, (byte) 32, a.field_d);
+                break L0;
               } else {
-                long dupTemp$2 = lj.a((byte) -47);
-                jd.field_n = dupTemp$2;
-                ug.field_d = dupTemp$2;
-                if (1 == gg.field_e.field_b) {
-                  try {
-                    L1: {
-                      L2: {
-                        sg.field_h = new td((java.net.Socket) gg.field_e.field_e, af.field_f);
-                        ud.field_b.field_i = 0;
-                        var4 = ae.field_a;
-                        var5 = var4;
-                        rh.field_k = d.field_O;
-                        var5.field_i = 0;
-                        if (!param1) {
-                          stackOut_12_0 = -1;
-                          stackIn_13_0 = stackOut_12_0;
-                          break L2;
-                        } else {
-                          stackOut_11_0 = -2;
-                          stackIn_13_0 = stackOut_11_0;
-                          break L2;
-                        }
+                break L0;
+              }
+            }
+            if (0 == gg.field_e.field_b) {
+              return false;
+            } else {
+              long dupTemp$2 = lj.a((byte) -47);
+              jd.field_n = dupTemp$2;
+              ug.field_d = dupTemp$2;
+              if (1 == gg.field_e.field_b) {
+                try {
+                  L1: {
+                    L2: {
+                      sg.field_h = new td((java.net.Socket) gg.field_e.field_e, af.field_f);
+                      ud.field_b.field_i = 0;
+                      var4 = ae.field_a;
+                      var5 = var4;
+                      rh.field_k = d.field_O;
+                      var5.field_i = 0;
+                      if (!param1) {
+                        stackOut_10_0 = -1;
+                        stackIn_11_0 = stackOut_10_0;
+                        break L2;
+                      } else {
+                        stackOut_9_0 = -2;
+                        stackIn_11_0 = stackOut_9_0;
+                        break L2;
                       }
-                      hc.field_j = stackIn_13_0;
-                      rj.field_k = stackIn_13_0;
-                      vi.field_a = stackIn_13_0;
-                      ob.a(cj.field_b, j.field_g, (byte) -127, bb.field_E, (ni) (Object) ud.field_b);
-                      dk.b((byte) 41, -1);
-                      break L1;
                     }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var2 = (IOException) (Object) decompiledCaughtException;
-                    rh.field_k = wb.field_q;
-                    gg.field_e = null;
-                    return true;
+                    hc.field_j = stackIn_11_0;
+                    rj.field_k = stackIn_11_0;
+                    vi.field_a = stackIn_11_0;
+                    ob.a(cj.field_b, j.field_g, (byte) -127, bb.field_E, (ni) (Object) ud.field_b);
+                    dk.b((byte) 41, -1);
+                    break L1;
                   }
-                  gg.field_e = null;
-                  return true;
-                } else {
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
                   rh.field_k = wb.field_q;
                   gg.field_e = null;
                   return true;
                 }
+                gg.field_e = null;
+                return true;
+              } else {
+                rh.field_k = wb.field_q;
+                gg.field_e = null;
+                return true;
               }
-            } else {
-              return false;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -93,7 +89,8 @@ final class id {
 
     final static void a(boolean param0) {
         if (bh.field_t == 10) {
-          re.a(-17634);
+          int discarded$4 = -17634;
+          re.a();
           bh.field_t = 11;
           if (param0) {
             return;
@@ -110,7 +107,8 @@ final class id {
               return;
             }
           } else {
-            re.a(-17634);
+            int discarded$5 = -17634;
+            re.a();
             bh.field_t = 11;
             if (param0) {
               return;
@@ -238,7 +236,7 @@ final class id {
         }
     }
 
-    final static ob a(String param0, int param1) {
+    final static ob a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -297,7 +295,8 @@ final class id {
                   var5 = 0;
                   L1: while (true) {
                     if (var4.length <= var5) {
-                      stackOut_20_0 = oa.a(var3[var3.length - 1], -23);
+                      int discarded$2 = -23;
+                      stackOut_20_0 = oa.a(var3[var3.length - 1]);
                       stackIn_21_0 = stackOut_20_0;
                       break L0;
                     } else {
@@ -353,7 +352,7 @@ final class id {
     private final void a(int param0, int param1) {
         int[] var4 = new int[this.a(param1, true)];
         int[] var3 = var4;
-        dm.a(((id) this).field_a, 0, var4, param0, ((id) this).field_a.length);
+        dm.a(((id) this).field_a, 0, var4, 0, ((id) this).field_a.length);
         ((id) this).field_a = var4;
     }
 
@@ -371,17 +370,14 @@ final class id {
     }
 
     final static boolean a(int param0) {
-        if (param0 != -5935) {
-            return false;
-        }
-        return wi.field_f == ui.field_kb ? true : false;
+        return wi.field_f == ui.field_kb;
     }
 
     private id() throws Throwable {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -8;
         field_i = null;
         field_j = null;

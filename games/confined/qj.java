@@ -9,23 +9,14 @@ final class qj {
 
     final static void a(int param0, boolean param1) {
         fb.field_a.a(param1, 64187);
-        int var2 = 32 % ((param0 - 77) / 33);
+        int var2 = 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
-        if (param0 != 0) {
-          qj.a(106, false);
-          field_d = null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
-          field_d = null;
-          field_a = null;
-          field_b = null;
-          return;
-        }
+        field_d = null;
+        field_a = null;
+        field_b = null;
     }
 
     final static void a(nf[] param0, int param1, int param2, int param3, int param4, int param5) {
@@ -129,7 +120,7 @@ final class qj {
         }
     }
 
-    final static String a(int param0) {
+    final static String a() {
         if (oe.field_Q == wh.field_fb) {
             return rd.field_Jb;
         }

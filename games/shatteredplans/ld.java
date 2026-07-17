@@ -13,26 +13,14 @@ final class ld extends oh {
     static bc field_m;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_q = null;
-        if (param0 != 16711680) {
-          field_q = null;
-          field_m = null;
-          field_n = null;
-          field_h = null;
-          field_k = null;
-          field_i = null;
-          field_p = null;
-          return;
-        } else {
-          field_m = null;
-          field_n = null;
-          field_h = null;
-          field_k = null;
-          field_i = null;
-          field_p = null;
-          return;
-        }
+        field_m = null;
+        field_n = null;
+        field_h = null;
+        field_k = null;
+        field_i = null;
+        field_p = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, bi param7) {
@@ -45,39 +33,31 @@ final class ld extends oh {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              param5 = param5 - param7.field_t;
-              if (param4 < -20) {
-                break L1;
-              } else {
-                ld.a(97);
-                break L1;
-              }
-            }
+            param5 = param5 - param7.field_t;
             param0 = param0 - param7.field_x;
             var8_int = param5 + param7.field_z * param0;
             var9 = param1 + gf.field_b * param3;
             var14 = -param6 + 256;
-            L2: while (true) {
+            L1: while (true) {
               param2--;
               if (param2 < 0) {
                 break L0;
@@ -96,46 +76,46 @@ final class ld extends oh {
                 int incrementValue$3 = var9;
                 var9++;
                 gf.field_h[incrementValue$3] = var10;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var8 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var8;
-            stackOut_7_1 = new StringBuilder().append("ld.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var8;
+            stackOut_5_1 = new StringBuilder().append("ld.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(-68).append(44).append(param5).append(44).append(param6).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param7 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
     ld() {
     }
 
-    final static void d(int param0) {
+    final static void d() {
         if (!(di.field_m != 0)) {
             sg.a(true, false, 0, aa.field_P, tk.field_C);
             sg.a(true, false, 700, qf.field_c, tk.field_C);

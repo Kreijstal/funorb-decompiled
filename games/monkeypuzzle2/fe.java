@@ -12,7 +12,7 @@ final class fe {
     static le[] field_f;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_c = null;

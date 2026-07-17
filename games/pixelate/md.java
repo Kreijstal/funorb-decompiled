@@ -17,7 +17,7 @@ final class md extends db {
         return null;
     }
 
-    final static void a(tf param0, tf param1, int param2) {
+    final static void a(tf param0, tf param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -236,14 +236,16 @@ final class md extends db {
                 ((md) this).field_Z = new tf(var12, var13);
                 h.a(-119, ((md) this).field_Z);
                 var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -((md) this).field_X << 10, 4096);
-                ia.a((byte) 92);
+                int discarded$6 = 92;
+                ia.a();
                 ((md) this).field_Z.b(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
                 return;
               } else {
                 h.a(-72, ((md) this).field_Z);
                 t.d();
                 var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -((md) this).field_X << 10, 4096);
-                ia.a((byte) 92);
+                int discarded$7 = 92;
+                ia.a();
                 ((md) this).field_Z.b(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
                 return;
               }
@@ -251,7 +253,8 @@ final class md extends db {
               ((md) this).field_Z = new tf(var12, var13);
               h.a(-119, ((md) this).field_Z);
               var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -((md) this).field_X << 10, 4096);
-              ia.a((byte) 92);
+              int discarded$8 = 92;
+              ia.a();
               ((md) this).field_Z.b(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
               return;
             }
@@ -259,7 +262,8 @@ final class md extends db {
             ((md) this).field_Z = new tf(var12, var13);
             h.a(-119, ((md) this).field_Z);
             var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -((md) this).field_X << 10, 4096);
-            ia.a((byte) 92);
+            int discarded$9 = 92;
+            ia.a();
             ((md) this).field_Z.b(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
             return;
           }
@@ -315,7 +319,8 @@ final class md extends db {
                 break L3;
               }
               var20.a(112, 144, var20.field_A << 4, var20.field_B << 4, -((md) this).field_X << 10, 4096);
-              ia.a((byte) 92);
+              int discarded$10 = 92;
+              ia.a();
               ((md) this).field_Z.b(-(var20.field_A >> 1) + var9, var10 - var20.field_B, 256);
               return;
             }
@@ -346,74 +351,68 @@ final class md extends db {
               break L5;
             }
             var19.a(112, 144, var19.field_A << 4, var19.field_B << 4, -((md) this).field_X << 10, 4096);
-            ia.a((byte) 92);
+            int discarded$11 = 92;
+            ia.a();
             ((md) this).field_Z.b(-(var19.field_A >> 1) + var9, var10 - var19.field_B, 256);
             return;
           }
         }
     }
 
-    final static void a(rh param0, boolean param1, int param2) {
-        RuntimeException runtimeException = null;
+    final static void a(rh param0) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              de.field_b.a(22125, (fa) (Object) param0);
-              sd.a((byte) -52, param0, 3);
-              if (param1) {
-                break L1;
-              } else {
-                md.c(false);
-                break L1;
-              }
-            }
+            de.field_b.a(22125, (fa) (Object) param0);
+            int discarded$2 = 3;
+            sd.a((byte) -52, param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("md.B(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("md.B(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + 3 + 41);
+          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 1 + 44 + 3 + 41);
         }
     }
 
@@ -481,12 +480,13 @@ final class md extends db {
         return stackIn_3_0 != 0;
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_V = null;
     }
 
     md(ml param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (eb) (Object) ih.a((byte) 45));
+        super(param1, (eb) (Object) ih.a());
+        int discarded$0 = 45;
         try {
             ((md) this).field_ab = param1;
             ((md) this).field_W = param0;

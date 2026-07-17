@@ -260,11 +260,13 @@ class ua extends we implements ga {
                 return;
             }
         }
-        hl.field_d = li.a(ke.field_h[6], 100, 96);
+        int discarded$0 = 96;
+        int discarded$1 = 100;
+        hl.field_d = li.a(ke.field_h[6]);
         na.a((byte) 35, hl.field_d);
     }
 
-    private final void b(Hashtable param0, int param1, StringBuilder param2, int param3) {
+    private final void b(Hashtable param0, int param1, StringBuilder param2) {
         ck var5 = null;
         RuntimeException var5_ref = null;
         we var6 = null;
@@ -1030,7 +1032,8 @@ class ua extends we implements ga {
             L1: {
               if (((ua) this).a(param2, (byte) -127, param3, param1)) {
                 ((ua) this).a(param2, param3, param1, -113);
-                this.b(param2, param3, param1, 13467);
+                int discarded$2 = 13467;
+                this.b(param2, param3, param1);
                 break L1;
               } else {
                 break L1;

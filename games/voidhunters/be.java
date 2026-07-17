@@ -192,7 +192,9 @@ final class be implements ntb {
                 Object var4 = null;
                 be.a(-122, false, (kka) null);
             }
-            mi.a(param2, param1, 256, (byte) 97);
+            int discarded$0 = 97;
+            int discarded$1 = 256;
+            mi.a(param2, param1);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "be.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

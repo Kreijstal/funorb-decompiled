@@ -239,7 +239,8 @@ final class nh {
                       break L4;
                     } else {
                       L6: {
-                        this.b(17460);
+                        int discarded$2 = 17460;
+                        this.b();
                         var9_int = param1;
                         if (var9_int > ((nh) this).field_k) {
                           var9_int = ((nh) this).field_k;
@@ -278,9 +279,9 @@ final class nh {
                             if (var9_int <= param0) {
                               break L8;
                             } else {
-                              int incrementValue$1 = param0;
+                              int incrementValue$3 = param0;
                               param0++;
-                              param2[incrementValue$1] = (byte) 0;
+                              param2[incrementValue$3] = (byte) 0;
                               param1--;
                               ((nh) this).field_j = ((nh) this).field_j + 1L;
                               continue L10;
@@ -472,7 +473,7 @@ final class nh {
         }
     }
 
-    private final void b(int param0) throws IOException {
+    private final void b() throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Virogrid.field_F ? 1 : 0;
@@ -723,7 +724,7 @@ final class nh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_s = null;
         field_n = null;
         field_d = null;

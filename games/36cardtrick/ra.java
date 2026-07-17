@@ -8,20 +8,17 @@ final class ra {
     static cc field_b;
     static int field_c;
 
-    final static void a(int param0, vg param1, byte param2, int param3) {
+    final static void a(int param0, vg param1) {
         try {
-            dh.field_k = param0;
-            if (param2 != -106) {
-                field_b = null;
-            }
+            dh.field_k = 0;
             ij.field_f = param1;
-            eg.field_d = param3;
+            eg.field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ra.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ra.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -106 + 44 + 0 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_a = null;

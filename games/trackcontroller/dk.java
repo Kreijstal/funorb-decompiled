@@ -9,7 +9,7 @@ final class dk {
         field_b = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
     }
 
     final static aa a(int param0, byte param1) {
@@ -18,24 +18,21 @@ final class dk {
         int var4 = 0;
         aa[] var5 = null;
         var4 = TrackController.field_F ? 1 : 0;
-        var5 = fi.e(0);
+        int discarded$2 = 0;
+        var5 = fi.e();
         var2 = var5;
         var3 = 0;
-        if (param1 == 25) {
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (param0 == var5[var3].field_c) {
-                return var5[var3];
-              } else {
-                var3++;
-                continue L0;
-              }
+        L0: while (true) {
+          if (var5.length > var3) {
+            if (param0 == var5[var3].field_c) {
+              return var5[var3];
             } else {
-              return null;
+              var3++;
+              continue L0;
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 

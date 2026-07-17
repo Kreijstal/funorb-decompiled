@@ -6,7 +6,7 @@ abstract class sg {
     static tj field_a;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -20,7 +20,8 @@ abstract class sg {
         long var4 = 0L;
         var4 = ((sg) this).a(-32578);
         if (var4 > (long)param0) {
-          wh.a(var4, 19406);
+          int discarded$2 = 19406;
+          wh.a(var4);
           return ((sg) this).a(param0 ^ -127, param1);
         } else {
           return ((sg) this).a(param0 ^ -127, param1);

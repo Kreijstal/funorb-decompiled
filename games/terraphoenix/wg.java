@@ -101,7 +101,7 @@ final class wg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_g = null;
         field_l = null;

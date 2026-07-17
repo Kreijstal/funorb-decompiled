@@ -89,8 +89,8 @@ final class ja extends gg {
               var33 = var34;
               var32 = var33;
               var12 = var32;
-              var13 = 1;
-              var14 = 0;
+              var13 = param7 & 16711935;
+              var14 = 65280 & param7;
               var15 = 0;
               L5: while (true) {
                 if (var15 >= 16) {
@@ -243,11 +243,11 @@ final class ja extends gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var8, "ja.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + 1 + 41);
+          throw ma.a((Throwable) (Object) var8, "ja.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         int var1 = 0;
         field_k = null;
@@ -299,76 +299,73 @@ final class ja extends gg {
                 var4 = sl.field_a[10] >> 8;
                 var5 = sl.field_a[11] >> 8;
                 var6 = ni.field_d << 4;
-                if (param0 == 4) {
-                  L2: {
-                    var7 = 0;
-                    var8 = hd.a(var6, 99) >> 8;
-                    var9 = lc.a(var6, false) >> 8;
-                    if (-1 == ni.field_e) {
+                L2: {
+                  var7 = 0;
+                  var8 = hd.a(var6, 99) >> 8;
+                  var9 = lc.a(var6, false) >> 8;
+                  if (-1 == ni.field_e) {
+                    break L2;
+                  } else {
+                    if (-1 != eb.field_a) {
+                      var8 = -eb.field_a + 240;
+                      var9 = -128;
+                      var7 = -320 + ni.field_e;
                       break L2;
                     } else {
-                      if (-1 != eb.field_a) {
-                        var8 = -eb.field_a + 240;
-                        var9 = -128;
-                        var7 = -320 + ni.field_e;
-                        break L2;
-                      } else {
-                        break L2;
-                      }
+                      break L2;
                     }
                   }
-                  var10 = 256.0 / Math.sqrt((double)(var8 * var8 + var7 * var7 - -(var9 * var9)));
-                  var8 = (int)((double)var8 * var10);
-                  var9 = (int)((double)var9 * var10);
-                  var7 = (int)((double)var7 * var10);
-                  var12 = var7 - var3;
-                  var13 = -var4 + var8;
-                  var14 = -var5 + var9;
-                  var10 = 256.0 / Math.sqrt((double)(var14 * var14 + (var12 * var12 + var13 * var13)));
-                  var12 = (int)((double)var12 * var10);
-                  var13 = (int)((double)var13 * var10);
-                  var14 = (int)((double)var14 * var10);
-                  var15 = 0;
-                  L3: while (true) {
-                    if (var15 >= sj.field_B.length) {
-                      break L0;
-                    } else {
-                      var16 = 0;
-                      var17_int = 1;
-                      L4: while (true) {
-                        if (sj.field_B.length <= var17_int) {
-                          var23[var16] = -2147483648;
-                          var17 = sj.field_B[var16];
-                          kb.a(var16, param0 ^ 116);
-                          var18 = 0;
-                          L5: while (true) {
-                            if (var18 >= 3) {
-                              vi.a(var17, (byte) -116, pd.field_u, true, false, sl.field_a, false);
-                              kf.a(-62, var8, var13, var7, var12, var14, var17, var9);
-                              var15++;
-                              continue L3;
-                            } else {
-                              pd.field_u[var18] = pd.field_u[var18] + bi.field_s[var15][var18];
-                              var18++;
-                              continue L5;
-                            }
+                }
+                var10 = 256.0 / Math.sqrt((double)(var8 * var8 + var7 * var7 - -(var9 * var9)));
+                var8 = (int)((double)var8 * var10);
+                var9 = (int)((double)var9 * var10);
+                var7 = (int)((double)var7 * var10);
+                var12 = var7 - var3;
+                var13 = -var4 + var8;
+                var14 = -var5 + var9;
+                var10 = 256.0 / Math.sqrt((double)(var14 * var14 + (var12 * var12 + var13 * var13)));
+                var12 = (int)((double)var12 * var10);
+                var13 = (int)((double)var13 * var10);
+                var14 = (int)((double)var14 * var10);
+                var15 = 0;
+                L3: while (true) {
+                  if (var15 >= sj.field_B.length) {
+                    break L0;
+                  } else {
+                    var16 = 0;
+                    var17_int = 1;
+                    L4: while (true) {
+                      if (sj.field_B.length <= var17_int) {
+                        var23[var16] = -2147483648;
+                        var17 = sj.field_B[var16];
+                        kb.a(var16, 112);
+                        var18 = 0;
+                        L5: while (true) {
+                          if (var18 >= 3) {
+                            int discarded$1 = 0;
+                            vi.a(var17, (byte) -116, pd.field_u, true, false, sl.field_a);
+                            kf.a(-62, var8, var13, var7, var12, var14, var17, var9);
+                            var15++;
+                            continue L3;
+                          } else {
+                            pd.field_u[var18] = pd.field_u[var18] + bi.field_s[var15][var18];
+                            var18++;
+                            continue L5;
                           }
-                        } else {
-                          L6: {
-                            if (var23[var16] >= var23[var17_int]) {
-                              break L6;
-                            } else {
-                              break L6;
-                            }
-                          }
-                          var17_int++;
-                          continue L4;
                         }
+                      } else {
+                        L6: {
+                          if (var23[var16] >= var23[var17_int]) {
+                            break L6;
+                          } else {
+                            break L6;
+                          }
+                        }
+                        var17_int++;
+                        continue L4;
                       }
                     }
                   }
-                } else {
-                  return;
                 }
               } else {
                 var4_ref_n = sj.field_B[var3];
@@ -392,7 +389,7 @@ final class ja extends gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "ja.A(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "ja.A(" + 4 + 41);
         }
     }
 

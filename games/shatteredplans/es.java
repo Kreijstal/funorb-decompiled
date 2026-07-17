@@ -57,7 +57,8 @@ final class es extends oh {
                         q.g(-114);
                         return false;
                       } else {
-                        if (wh.a(18) <= 30000L) {
+                        int discarded$3 = 18;
+                        if (wh.a() <= 30000L) {
                           break L0;
                         } else {
                           q.g(-114);
@@ -86,7 +87,7 @@ final class es extends oh {
         }
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String a(Throwable param0) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

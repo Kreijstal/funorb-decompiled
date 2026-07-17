@@ -16,14 +16,14 @@ abstract class eh {
         this(0.0, 0.0, 0.0);
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         gp.j((byte) -34);
         od.b(128, 4);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
-        int var1 = 125 % ((param0 - 14) / 44);
+        int var1 = 1;
         field_i = null;
         field_e = null;
     }
@@ -66,13 +66,44 @@ abstract class eh {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        if (param2 != 0) {
-            eh.b((byte) -115);
-        } else {
-            jg.field_t.d(param1, param0);
-            return;
-        }
+        int var4 = 0;
         jg.field_t.d(param1, param0);
+        if (param3) {
+          L0: {
+            var4 = ke.field_c % jg.field_t.field_s * 2;
+            if (jg.field_t.field_s > var4) {
+              break L0;
+            } else {
+              var4 = -var4 + jg.field_t.field_s + jg.field_t.field_s;
+              break L0;
+            }
+          }
+          if (var4 >= 10) {
+            if (jg.field_t.field_s - 40 < var4) {
+              var4 = jg.field_t.field_s - 40;
+              int discarded$9 = 30;
+              int discarded$10 = 0;
+              int discarded$11 = 80;
+              eq.a(jg.field_t, 0, 1, var4, param1, param0);
+              return;
+            } else {
+              int discarded$12 = 30;
+              int discarded$13 = 0;
+              int discarded$14 = 80;
+              eq.a(jg.field_t, 0, 1, var4, param1, param0);
+              return;
+            }
+          } else {
+            var4 = 10;
+            int discarded$15 = 30;
+            int discarded$16 = 0;
+            int discarded$17 = 80;
+            eq.a(jg.field_t, 0, 1, var4, param1, param0);
+            return;
+          }
+        } else {
+          return;
+        }
     }
 
     eh(double param0, double param1, double param2) {

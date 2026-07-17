@@ -15,13 +15,13 @@ final class qn extends rk {
     static String field_x;
     static String field_m;
 
-    public static void b(int param0) {
+    public static void b() {
         field_x = null;
         field_m = null;
         field_v = null;
     }
 
-    final static boolean a(mi param0, int param1) {
+    final static boolean a(mi param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;

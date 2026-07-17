@@ -159,7 +159,7 @@ final class va extends fe {
         return stackIn_23_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_P = null;
         field_W = null;
         field_N = null;
@@ -226,7 +226,8 @@ final class va extends fe {
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  if (!lq.a(param0, -1)) {
+                  int discarded$2 = -1;
+                  if (!lq.a(param0)) {
                     L1: {
                       if (nr.field_S < 100) {
                         break L1;
@@ -245,7 +246,8 @@ final class va extends fe {
                       stackIn_22_0 = stackOut_21_0;
                       return stackIn_22_0;
                     } else {
-                      if (ia.a(param0, 24552)) {
+                      int discarded$3 = 24552;
+                      if (ia.a(param0)) {
                         stackOut_25_0 = nr.a(new String[1], -1, jp.field_R);
                         stackIn_26_0 = stackOut_25_0;
                         return stackIn_26_0;
@@ -309,7 +311,7 @@ final class va extends fe {
         return (String) (Object) stackIn_28_0;
     }
 
-    final static boolean g(byte param0) {
+    final static boolean g() {
         ho var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -332,7 +334,7 @@ final class va extends fe {
             var1 = var5;
             if (var1 != null) {
               var2 = 0;
-              var3 = -7 % ((param0 - -62) / 57);
+              var3 = 0;
               L1: while (true) {
                 if (var1.field_t <= var2) {
                   stackOut_17_0 = 1;
@@ -378,7 +380,7 @@ final class va extends fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1_ref, "va.F(" + param0 + 41);
+          throw wm.a((Throwable) (Object) var1_ref, "va.F(" + -120 + 41);
         }
         return stackIn_18_0 != 0;
     }

@@ -101,7 +101,7 @@ final class jk extends hm {
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
@@ -207,7 +207,7 @@ final class jk extends hm {
           return ((jk) this).a(200);
         }
         L5: {
-          boolean discarded$3 = var3.addAll((Collection) (Object) var4);
+          boolean discarded$4 = var3.addAll((Collection) (Object) var4);
           if (param0) {
             var6_array = var3.toArray();
             var7 = null;
@@ -235,7 +235,8 @@ final class jk extends hm {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                var12_ref2 = this.a(var11, (byte) -38);
+                int discarded$5 = -38;
+                var12_ref2 = this.a(var11);
                 if (var12_ref2 != null) {
                   stackOut_23_0 = (java.net.Socket) var12_ref2;
                   stackIn_24_0 = stackOut_23_0;
@@ -274,7 +275,7 @@ final class jk extends hm {
         }
     }
 
-    private final java.net.Socket a(String param0, int param1, String param2, byte param3) throws IOException {
+    private final java.net.Socket a(String param0, int param1, String param2) throws IOException {
         RuntimeException var5 = null;
         int var6 = 0;
         OutputStream var7 = null;
@@ -473,7 +474,7 @@ final class jk extends hm {
         return (java.net.Socket) (Object) stackIn_25_0;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -557,7 +558,8 @@ final class jk extends hm {
                       break L3;
                     }
                   }
-                  stackOut_17_0 = this.a((String) var5, var4_ref.getPort(), var4_ref.getHostName(), (byte) 101);
+                  int discarded$1 = 101;
+                  stackOut_17_0 = this.a((String) var5, var4_ref.getPort(), var4_ref.getHostName());
                   stackIn_18_0 = stackOut_17_0;
                   break L0;
                 } else {
@@ -619,18 +621,18 @@ final class jk extends hm {
         ((jk) this).field_k = java.net.ProxySelector.getDefault();
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_q = null;
         field_i = null;
         field_m = null;
-        int var1 = -62 / ((param0 - 77) / 37);
+        int var1 = 62;
         field_j = null;
         field_n = null;
         field_o = null;
         field_p = null;
     }
 
-    final static ob a(String param0, byte param1) {
+    final static ob a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

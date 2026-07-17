@@ -153,9 +153,6 @@ final class vg {
         ve var6 = null;
         ve var7 = null;
         uf var4 = null;
-        if (param0 != -20974) {
-            return;
-        }
         if (ta.field_b != param2) {
             var6 = (ve) (Object) tg.field_b.a(24710, (long)ta.field_b);
             var7 = var6;
@@ -171,7 +168,7 @@ final class vg {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3) {
+    final static void a(int param0, boolean param1, boolean param2) {
         RuntimeException var4 = null;
         w var5 = null;
         w var6 = null;
@@ -491,7 +488,8 @@ final class vg {
                       var9_int = var13;
                       L17: while (true) {
                         if (var13 >= j.field_b) {
-                          uc.a(-1, true, -1, 0, -1, j.field_b, g.field_N, false);
+                          int discarded$3 = 0;
+                          uc.a(-1, true, -1, 0, -1, j.field_b, g.field_N);
                           if (2 > te.field_p) {
                             break L15;
                           } else {
@@ -706,7 +704,8 @@ final class vg {
               } else {
                 L28: {
                   if (ma.field_G.field_ob != 0) {
-                    ul.a(param0, 4);
+                    int discarded$4 = 4;
+                    ul.a(param0);
                     break L28;
                   } else {
                     break L28;
@@ -717,7 +716,8 @@ final class vg {
                     break L29;
                   } else {
                     if (fj.field_h) {
-                      ji.c(param0, 1);
+                      int discarded$5 = 1;
+                      ji.c(param0);
                       break L29;
                     } else {
                       th.a(param0, true);
@@ -746,7 +746,10 @@ final class vg {
         if (param1 <= 20) {
             field_G = null;
         }
-        return kc.a(true, 1, param0, false, false, false);
+        int discarded$0 = 0;
+        int discarded$1 = 0;
+        int discarded$2 = 0;
+        return kc.a(true, 1, param0);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -775,7 +778,7 @@ final class vg {
         this.a(false);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_I = null;
         int var1 = 0;
         field_s = null;

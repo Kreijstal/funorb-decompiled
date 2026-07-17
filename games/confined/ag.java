@@ -48,8 +48,10 @@ final class ag {
     final static String a(int param0, Throwable param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
+        String var5 = null;
         BufferedReader var6 = null;
         String var7 = null;
+        String var8 = null;
         int var9 = 0;
         int var10 = 0;
         String var11 = null;
@@ -57,23 +59,10 @@ final class ag {
         int var13 = 0;
         ec var14 = null;
         StringWriter var15 = null;
-        String var20 = null;
-        BufferedReader var21 = null;
-        String var22 = null;
-        String var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        BufferedReader var29 = null;
-        String var30 = null;
-        String var31 = null;
-        String var32 = null;
-        String var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var42 = null;
+        String var16 = null;
+        String var17 = null;
+        String var18 = null;
+        String var19 = null;
         L0: {
           var13 = Confined.field_J ? 1 : 0;
           if (param1 instanceof ec) {
@@ -91,151 +80,70 @@ final class ag {
         }
         var15 = new StringWriter();
         var4 = new PrintWriter((Writer) (Object) var15);
-        if (param0 == -19080) {
-          param1.printStackTrace(var4);
-          var4.close();
-          var20 = var15.toString();
-          var11 = var20;
+        param1.printStackTrace(var4);
+        var4.close();
+        var5 = var15.toString();
+        var11 = var5;
+        var2 = var11;
+        var11 = var5;
+        var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
+        var7 = var6.readLine();
+        var11 = var7;
+        var2 = var11;
+        var11 = var7;
+        L1: while (true) {
+          var8 = var6.readLine();
+          var11 = var8;
           var2 = var11;
-          var11 = var20;
-          var21 = new BufferedReader((Reader) (Object) new StringReader(var20));
-          var27 = var21.readLine();
-          var11 = var27;
-          var2 = var11;
-          var11 = var27;
-          L1: while (true) {
-            var22 = var21.readLine();
-            var11 = var22;
-            var2 = var11;
-            var11 = var22;
-            if (var22 == null) {
-              var2 = var2 + "| " + var27;
-              var11 = var2;
-              var2 = var11;
-              var11 = var2;
-              return var2;
-            } else {
-              L2: {
-                var9 = var22.indexOf('(');
-                var10 = var22.indexOf(')', 1 + var9);
-                if (var9 == -1) {
-                  var11 = var22;
-                  var2 = var11;
-                  var2 = var11;
-                  break L2;
-                } else {
-                  var11 = var22.substring(0, var9);
-                  break L2;
-                }
+          var11 = var8;
+          if (var8 == null) {
+            var2 = var2 + "| " + var7;
+            return var2;
+          } else {
+            L2: {
+              var9 = var8.indexOf('(');
+              var10 = var8.indexOf(')', 1 + var9);
+              if (var9 == -1) {
+                var11 = var8;
+                var2 = var11;
+                var2 = var11;
+                break L2;
+              } else {
+                var11 = var8.substring(0, var9);
+                break L2;
               }
-              L3: {
-                var23 = var11.trim();
-                var2 = var23;
-                var2 = var23;
-                var24 = var23.substring(var23.lastIndexOf(' ') + 1);
-                var2 = var24;
-                var2 = var24;
-                var25 = var24.substring(var24.lastIndexOf('\t') - -1);
-                var2 = var25;
-                var2 = var25;
-                var26 = var2 + var25;
-                var2 = var26;
-                var2 = var26;
-                if (-1 == var9) {
+            }
+            L3: {
+              var16 = var11.trim();
+              var2 = var16;
+              var2 = var16;
+              var17 = var16.substring(var16.lastIndexOf(' ') + 1);
+              var2 = var17;
+              var2 = var17;
+              var18 = var17.substring(var17.lastIndexOf('\t') - -1);
+              var2 = var18;
+              var2 = var18;
+              var19 = var2 + var18;
+              var2 = var19;
+              var2 = var19;
+              if (-1 == var9) {
+                break L3;
+              } else {
+                if (var10 == -1) {
                   break L3;
                 } else {
-                  if (var10 == -1) {
+                  var12 = var8.indexOf(".java:", var9);
+                  if (var12 >= 0) {
+                    var2 = var19 + var8.substring(var12 + 5, var10);
                     break L3;
                   } else {
-                    var12 = var22.indexOf(".java:", var9);
-                    if (var12 >= 0) {
-                      var2 = var26 + var22.substring(var12 + 5, var10);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
+                    break L3;
                   }
                 }
               }
-              var2 = var2 + 32;
-              continue L1;
             }
-          }
-        } else {
-          ag.a(36);
-          param1.printStackTrace(var4);
-          var4.close();
-          var28 = var15.toString();
-          var11 = var28;
-          var2 = var11;
-          var11 = var28;
-          var29 = new BufferedReader((Reader) (Object) new StringReader(var28));
-          var6 = var29;
-          var35 = var29.readLine();
-          var11 = var35;
-          var2 = var11;
-          var11 = var35;
-          var7 = var35;
-          var11 = var7;
-          var2 = var11;
-          var11 = var7;
-          L4: while (true) {
-            var30 = var29.readLine();
-            var11 = var30;
-            var2 = var11;
-            var11 = var30;
-            if (var30 == null) {
-              var2 = var2 + "| " + var35;
-              var11 = var2;
-              var42 = var11;
-              var11 = var2;
-              return var2;
-            } else {
-              L5: {
-                var9 = var30.indexOf('(');
-                var10 = var30.indexOf(')', 1 + var9);
-                if (var9 == -1) {
-                  var11 = var30;
-                  var2 = var11;
-                  var2 = var11;
-                  break L5;
-                } else {
-                  var11 = var30.substring(0, var9);
-                  break L5;
-                }
-              }
-              L6: {
-                var31 = var11.trim();
-                var2 = var31;
-                var2 = var31;
-                var32 = var31.substring(var31.lastIndexOf(' ') + 1);
-                var2 = var32;
-                var2 = var32;
-                var33 = var32.substring(var32.lastIndexOf('\t') - -1);
-                var2 = var33;
-                var2 = var33;
-                var34 = var2 + var33;
-                var2 = var34;
-                var2 = var34;
-                if (-1 == var9) {
-                  break L6;
-                } else {
-                  if (var10 == -1) {
-                    break L6;
-                  } else {
-                    var12 = var30.indexOf(".java:", var9);
-                    if (var12 >= 0) {
-                      var2 = var34 + var30.substring(var12 + 5, var10);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                }
-              }
-              var2 = var2 + 32;
-              continue L4;
-            }
+            var2 = var2 + 32;
+            continue L1;
           }
         }
     }
@@ -265,21 +173,21 @@ final class ag {
         oj var6_ref = null;
         int var7 = Confined.field_J ? 1 : 0;
         try {
-            if (((ag) this).field_c < param0) {
+            if (((ag) this).field_c < 1) {
                 throw new IllegalStateException();
             }
             this.b(-110, param1);
-            ((ag) this).field_i = ((ag) this).field_i - param0;
+            ((ag) this).field_i = ((ag) this).field_i - 1;
             while (((ag) this).field_i < 0) {
                 var6 = (nd) (Object) ((ag) this).field_b.a(-29870);
                 this.a(param3 ^ -96, var6);
             }
-            var6_ref = new oj(param2, param0);
+            var6_ref = new oj(param2, 1);
             ((ag) this).field_f.a((rk) (Object) var6_ref, param1, ~param3);
             ((ag) this).field_b.a((jl) (Object) var6_ref, 18425);
             ((nd) (Object) var6_ref).field_r = (long)param3;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ag.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ag.D(" + 1 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 

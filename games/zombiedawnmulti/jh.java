@@ -417,7 +417,7 @@ final class jh extends cj {
                     var7 = var6 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
                     var5 = var7;
                     var5 = var7;
-                    if (~param2.length() == param1) {
+                    if (param2.length() == 0) {
                         var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     } else {
                         var5 = var7 + "; Expires=" + ke.a(-29971, bl.a((byte) 113) - -94608000000L) + "; Max-Age=" + 94608000L;
@@ -425,9 +425,9 @@ final class jh extends cj {
                     fo.a(param0, 14575, "document.cookie=\"" + var5 + "\"");
                 } catch (Throwable throwable) {
                 }
-                ak.a(param1 + 14159, param0);
+                ak.a(14158, param0);
             } catch (RuntimeException runtimeException) {
-                throw fa.a((Throwable) (Object) runtimeException, "jh.CA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw fa.a((Throwable) (Object) runtimeException, "jh.CA(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -436,7 +436,7 @@ final class jh extends cj {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_Hb = null;
         int var1 = 9;
     }

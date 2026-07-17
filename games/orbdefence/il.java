@@ -127,7 +127,7 @@ final class il {
         mc.field_g = param0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_d = null;

@@ -21,7 +21,8 @@ final class ip extends ki {
         L1: {
           if (((ip) this).b((byte) -99)) {
             L2: {
-              var7 = ge.a(((ip) this).field_m, param3, -20777);
+              int discarded$1 = -20777;
+              var7 = ge.a(((ip) this).field_m, param3);
               if (!var7.a((byte) -84, param3, ((ip) this).field_m)) {
                 ih.a(var7, np.field_d, param3, 1, 0, true);
                 var7.a(((ip) this).field_m, param3, (byte) 78);
@@ -323,7 +324,8 @@ final class ip extends ki {
           if (!param2) {
             L1: {
               L2: {
-                if (!hn.b((byte) 7)) {
+                int discarded$2 = 7;
+                if (!hn.b()) {
                   break L2;
                 } else {
                   if (param1.field_Rb) {
@@ -364,7 +366,8 @@ final class ip extends ki {
             L5: while (true) {
               if (var6 >= 5) {
                 if (ab.field_A[0][2].field_G) {
-                  if (hn.b((byte) 7)) {
+                  int discarded$3 = 7;
+                  if (hn.b()) {
                     ep.field_e = rq.field_d;
                     break L4;
                   } else {
@@ -1867,7 +1870,7 @@ final class ip extends ki {
         return ep.field_h;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_t = null;
         field_u = null;
         field_v = null;
@@ -1918,8 +1921,10 @@ final class ip extends ki {
           fk.field_e = jh.a(0, dg.field_g);
           ib.field_E = jh.a(0, np.field_d);
           ep.field_h = pl.a("jungle", "jungle_character", (byte) -119, i.field_m);
-          tk.field_l[0] = cr.a("jungle", i.field_m, "jungle_caps", 2);
-          ae.field_g[0] = cr.a("jungle", i.field_m, "jungle_segs", 2);
+          int discarded$2 = 2;
+          tk.field_l[0] = cr.a("jungle", i.field_m, "jungle_caps");
+          int discarded$3 = 2;
+          ae.field_g[0] = cr.a("jungle", i.field_m, "jungle_segs");
           up.field_A[0] = pl.a("jungle", "jungle_centre", (byte) -110, i.field_m);
           tk.field_l[1] = ig.a(tk.field_l[0], false);
           ae.field_g[1] = ig.a(ae.field_g[0], param0);

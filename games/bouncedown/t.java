@@ -23,7 +23,7 @@ final class t extends eg {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_t = null;
         field_r = null;
     }

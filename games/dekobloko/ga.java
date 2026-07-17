@@ -148,7 +148,7 @@ final class ga implements lh {
         return stackIn_8_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -156,14 +156,11 @@ final class ga implements lh {
         field_a = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         aa.field_f = new vj();
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        if (param0) {
-            field_a = null;
-        }
         uf var3 = we.field_b;
         var3.f(param2, -4);
         var3.a(true, 3);
@@ -179,28 +176,28 @@ final class ga implements lh {
         int var5 = 0;
         jc stackIn_4_0 = null;
         jc stackIn_8_0 = null;
-        jc stackIn_18_0 = null;
-        jc stackIn_22_0 = null;
+        jc stackIn_17_0 = null;
+        jc stackIn_21_0 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         jc stackOut_3_0 = null;
         jc stackOut_7_0 = null;
-        jc stackOut_21_0 = null;
-        jc stackOut_17_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        jc stackOut_20_0 = null;
+        jc stackOut_16_0 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
         RuntimeException stackOut_26_0 = null;
         StringBuilder stackOut_26_1 = null;
         String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         var5 = client.field_A ? 1 : 0;
         try {
           var2_int = param1.length();
@@ -214,46 +211,38 @@ final class ga implements lh {
               stackIn_8_0 = stackOut_7_0;
               return stackIn_8_0;
             } else {
-              L0: {
-                var3 = 0;
-                if (param0 == 7017) {
-                  break L0;
-                } else {
-                  field_d = null;
-                  break L0;
-                }
-              }
-              L1: while (true) {
+              var3 = 0;
+              L0: while (true) {
                 if (~var3 > ~var2_int) {
-                  L2: {
+                  L1: {
                     var4 = param1.charAt(var3);
                     if (45 != var4) {
                       if (v.field_c.indexOf(var4) == -1) {
-                        stackOut_21_0 = be.field_x;
-                        stackIn_22_0 = stackOut_21_0;
-                        return stackIn_22_0;
+                        stackOut_20_0 = be.field_x;
+                        stackIn_21_0 = stackOut_20_0;
+                        return stackIn_21_0;
                       } else {
-                        break L2;
+                        break L1;
                       }
                     } else {
-                      L3: {
+                      L2: {
                         if (var3 == 0) {
-                          break L3;
+                          break L2;
                         } else {
                           if (var3 != -1 + var2_int) {
-                            break L2;
+                            break L1;
                           } else {
-                            break L3;
+                            break L2;
                           }
                         }
                       }
-                      stackOut_17_0 = be.field_x;
-                      stackIn_18_0 = stackOut_17_0;
-                      return stackIn_18_0;
+                      stackOut_16_0 = be.field_x;
+                      stackIn_17_0 = stackOut_16_0;
+                      return stackIn_17_0;
                     }
                   }
                   var3++;
-                  continue L1;
+                  continue L0;
                 } else {
                   return null;
                 }
@@ -262,33 +251,33 @@ final class ga implements lh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var2;
-            stackOut_25_1 = new StringBuilder().append("ga.A(").append(param0).append(44);
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackOut_24_0 = (RuntimeException) var2;
+            stackOut_24_1 = new StringBuilder().append("ga.A(").append(7017).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
-              break L4;
-            } else {
               stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
               stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
-              break L4;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L3;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
         }
     }
 

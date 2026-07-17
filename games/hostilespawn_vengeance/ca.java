@@ -203,17 +203,6 @@ abstract class ca {
     }
 
     final static void a(double param0, int param1, double param2, boolean param3, int param4) {
-        if (!param3) {
-            ca.a(-0.43438423387122027, 123, -0.7999001328488745, true, -39);
-            dn.field_b = 0;
-            bc.field_i = param2;
-            of.field_d = dn.field_i;
-            vi.field_h = param0;
-            qi.field_N = param4;
-            eh.field_c.a(lm.field_A[23], 100, wj.field_O);
-            HostileSpawn.field_F = 1 == param1 ? true : false;
-            return;
-        }
         dn.field_b = 0;
         bc.field_i = param2;
         of.field_d = dn.field_i;

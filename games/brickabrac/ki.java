@@ -62,7 +62,7 @@ abstract class ki {
         this(param0, param1, uc.a(param3, param2, (byte) -1));
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         L0: {
@@ -70,26 +70,32 @@ abstract class ki {
           if (param4 > param1) {
             if (param4 >= param5) {
               if (param5 > param1) {
-                k.a(param2, param6, param1, lb.field_l, param4, param5, param0, param3, 0);
+                int discarded$76 = 0;
+                k.a(param2, param6, param1, lb.field_l, param4, param5, param0, param3);
                 break L0;
               } else {
-                k.a(param3, param6, param5, lb.field_l, param4, param1, param0, param2, 0);
+                int discarded$77 = 0;
+                k.a(param3, param6, param5, lb.field_l, param4, param1, param0, param2);
                 break L0;
               }
             } else {
-              k.a(param6, param2, param1, lb.field_l, param5, param4, param0, param3, 0);
+              int discarded$78 = 0;
+              k.a(param6, param2, param1, lb.field_l, param5, param4, param0, param3);
               break L0;
             }
           } else {
             if (param5 > param1) {
-              k.a(param3, param2, param4, lb.field_l, param5, param1, param0, param6, 0);
+              int discarded$79 = 0;
+              k.a(param3, param2, param4, lb.field_l, param5, param1, param0, param6);
               break L0;
             } else {
               if (param4 < param5) {
-                k.a(param2, param3, param4, lb.field_l, param1, param5, param0, param6, 0);
+                int discarded$80 = 0;
+                k.a(param2, param3, param4, lb.field_l, param1, param5, param0, param6);
                 break L0;
               } else {
-                k.a(param6, param3, param5, lb.field_l, param1, param4, param0, param2, 0);
+                int discarded$81 = 0;
+                k.a(param6, param3, param5, lb.field_l, param1, param4, param0, param2);
                 break L0;
               }
             }

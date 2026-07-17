@@ -130,21 +130,11 @@ final class ju extends lb {
     }
 
     final static char b(int param0, char param1) {
-        Object var3 = null;
         L0: {
           if (param1 == 181) {
             break L0;
           } else {
             if (param1 != 402) {
-              L1: {
-                if (param0 == 19805) {
-                  break L1;
-                } else {
-                  var3 = null;
-                  ju.a(1.7499217987060547f, (String) null, (byte) -94);
-                  break L1;
-                }
-              }
               return Character.toTitleCase(param1);
             } else {
               break L0;
@@ -224,7 +214,8 @@ final class ju extends lb {
     }
 
     ju(l param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (gj) (Object) fr.h((byte) 66));
+        super(param1, (gj) (Object) fr.h());
+        int discarded$0 = 66;
         try {
             ((ju) this).field_R = param0;
             ((ju) this).field_O = param1;
@@ -234,7 +225,7 @@ final class ju extends lb {
         }
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         int var1 = 118;
         field_V = null;
         field_W = null;
@@ -346,7 +337,7 @@ final class ju extends lb {
         }
     }
 
-    final static ut a(int param0, int param1, sj param2, byte param3) {
+    final static ut a(int param0, int param1, sj param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -366,7 +357,8 @@ final class ju extends lb {
         String stackOut_7_2 = null;
         try {
           if (cu.a(param1, param2, param0, 96)) {
-            return mo.b(0);
+            int discarded$2 = 0;
+            return mo.b();
           } else {
             return null;
           }

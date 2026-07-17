@@ -6,12 +6,14 @@ final class vf extends wl {
     int field_k;
     static o[] field_j;
 
-    final static ne a(byte param0) {
+    final static ne a() {
         int var1 = -30;
-        return new ne(dg.a(-21), wj.g((byte) -115));
+        int discarded$0 = -21;
+        int discarded$1 = -115;
+        return new ne(dg.a(), wj.g());
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_j = null;
     }
 
@@ -31,7 +33,7 @@ final class vf extends wl {
             var1_int = 0;
             L1: while (true) {
               if (var1_int >= 256) {
-                var5 = param0;
+                var5 = 256;
                 var1_int = var5;
                 L2: while (true) {
                   if (qk.field_f.length <= var5) {
@@ -53,7 +55,7 @@ final class vf extends wl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "vf.A(" + param0 + 41);
+          throw bd.a((Throwable) (Object) var1, "vf.A(" + 256 + 41);
         }
     }
 

@@ -12,7 +12,7 @@ final class il {
     static int field_g;
     boolean field_i;
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         Object var2 = null;
         int var2_int = 0;
@@ -132,9 +132,10 @@ final class il {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         int var1 = 34;
-        return uk.b(15000);
+        int discarded$0 = 15000;
+        return uk.b();
     }
 
     public static void a(int param0) {
@@ -145,15 +146,12 @@ final class il {
     }
 
     final static void a(boolean param0, java.awt.Component param1) {
-        if (param0) {
-            return;
-        }
         try {
             param1.addMouseListener((java.awt.event.MouseListener) (Object) sg.field_i);
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) sg.field_i);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) sg.field_i);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "il.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "il.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -179,29 +177,25 @@ final class il {
             StringBuilder stackOut_7_1 = null;
             String stackOut_7_2 = null;
             try {
-              if (param0 == 77) {
-                try {
-                  L0: {
-                    var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                    param1.getAppletContext().showDocument(ib.a(param1, var2, param0 ^ -5390), "_top");
-                    break L0;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
+              try {
+                L0: {
+                  var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
+                  param1.getAppletContext().showDocument(ib.a(param1, var2, -5441), "_top");
+                  break L0;
                 }
-                return;
-              } else {
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
                 return;
               }
+              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("il.C(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("il.C(").append(77).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;

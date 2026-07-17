@@ -14,7 +14,7 @@ final class hh {
     private int field_g;
     static wk field_f;
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_i = null;
         field_j = null;
@@ -58,13 +58,10 @@ final class hh {
     }
 
     final static void a(int param0, int param1, um param2, boolean param3) {
-        if (param0 != -16147) {
-            return;
-        }
         try {
-            lk.field_e.a(256, !param3 ? true : false, param2, -1, param1, 1000000);
+            lk.field_e.a(256, !param3 ? true : false, param2, -1, 50, 1000000);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "hh.H(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "hh.H(" + -16147 + 44 + 50 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -92,37 +89,32 @@ final class hh {
           param0 = 32;
           break L1;
         }
-        ((hh) this).field_k = new em(param3);
-        if (param1 >= 117) {
-          L3: {
-            L4: {
-              ((hh) this).field_h = param0;
-              if (param2 < 0) {
+        L3: {
+          L4: {
+            ((hh) this).field_k = new em(param3);
+            ((hh) this).field_h = param0;
+            if (param2 < 0) {
+              break L4;
+            } else {
+              if (param2 > 255) {
                 break L4;
               } else {
-                if (param2 > 255) {
+                if (param2 < param0) {
                   break L4;
                 } else {
-                  if (param2 < param0) {
-                    break L4;
-                  } else {
-                    break L3;
-                  }
+                  break L3;
                 }
               }
             }
-            param2 = 224;
-            break L3;
           }
-          ((hh) this).field_b = param2;
-          ((hh) this).field_g = ((hh) this).field_b + ((hh) this).field_h >> 1;
-          return;
-        } else {
-          return;
+          param2 = 224;
+          break L3;
         }
+        ((hh) this).field_b = param2;
+        ((hh) this).field_g = ((hh) this).field_b + ((hh) this).field_h >> 1;
     }
 
-    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
+    final static String a(CharSequence[] param0, int param1, int param2) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -172,7 +164,7 @@ final class hh {
                 }
               } else {
                 var4_int = param2;
-                var5 = param1;
+                var5 = 0;
                 var6_int = 0;
                 L1: while (true) {
                   if (var4_int <= var6_int) {
@@ -248,7 +240,7 @@ final class hh {
               break L5;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 44 + param2 + 44 + 0 + 41);
+          throw ig.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + 0 + 44 + param2 + 44 + 0 + 41);
         }
         return stackIn_23_0;
     }

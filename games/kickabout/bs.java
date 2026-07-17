@@ -9,7 +9,7 @@ final class bs extends RuntimeException {
     static int field_f;
     static String field_b;
 
-    final static void a(int param0) {
+    final static void a() {
         id.field_s.a(true, -(ui.field_t ? 40 + (2 + (oe.field_f - -2)) : 0) + mc.field_d.field_q, 0, 0, 18);
         ck.field_c.a(true, oe.field_f + 42, -40 + (-2 + -oe.field_f + mc.field_d.field_q), 0, 18);
         bf.field_u.a(2, 118, mc.field_d.field_mb + -20, 20, 0, mc.field_d.field_q, oe.field_f);
@@ -106,18 +106,8 @@ final class bs extends RuntimeException {
     }
 
     final static void a(int param0, int param1, int param2) {
-        Object var4 = null;
-        if (param1 != 0) {
-          var4 = null;
-          ut[] discarded$2 = bs.a((ut[]) null, (byte) 5);
-          tb.field_s = param0;
-          ta.field_A = param2;
-          return;
-        } else {
-          tb.field_s = param0;
-          ta.field_A = param2;
-          return;
-        }
+        tb.field_s = param0;
+        ta.field_A = param2;
     }
 
     bs(Throwable param0, String param1) {

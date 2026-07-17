@@ -8,7 +8,7 @@ final class qt {
     static String field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_e = null;
@@ -16,29 +16,21 @@ final class qt {
         field_b = null;
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
             var3_int = 0;
             L1: while (true) {
               if (param1 <= 0) {
-                L2: {
-                  if (param2 <= -49) {
-                    break L2;
-                  } else {
-                    field_b = null;
-                    break L2;
-                  }
-                }
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
                 var3_int = var3_int << 1 | param0 & 1;
@@ -51,9 +43,9 @@ final class qt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var3, "qt.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) var3, "qt.A(" + param0 + 44 + param1 + 44 + -114 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     final static void a(boolean param0) {

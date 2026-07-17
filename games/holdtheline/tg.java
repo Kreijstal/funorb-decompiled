@@ -11,21 +11,17 @@ abstract class tg {
     static String field_f;
 
     final static void a(int param0, int param1, int param2) {
-        if (param1 == 5) {
-          if (d.field_c[param0] != -1) {
-            if (d.field_c[param0] <= param2) {
-              return;
-            } else {
-              d.field_c[param0] = param2;
-              tn.a(0);
-              return;
-            }
+        if (d.field_c[param0] != -1) {
+          if (d.field_c[param0] <= param2) {
+            return;
           } else {
             d.field_c[param0] = param2;
             tn.a(0);
             return;
           }
         } else {
+          d.field_c[param0] = param2;
+          tn.a(0);
           return;
         }
     }
@@ -38,7 +34,7 @@ abstract class tg {
 
     abstract qm a(boolean param0, float param1);
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_f = null;

@@ -10,7 +10,7 @@ abstract class hk extends pb {
     hk() {
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         we var4 = null;
@@ -22,26 +22,20 @@ abstract class hk extends pb {
             var4 = (we) (Object) tb.field_b.g(32073);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  if (param0 == 5) {
-                    break L2;
-                  } else {
-                    hk.b(72);
-                    break L2;
-                  }
-                }
-                var5 = (pp) (Object) nh.field_A.g(param0 ^ 32076);
-                L3: while (true) {
+                var5 = (pp) (Object) nh.field_A.g(32073);
+                L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    pk.a(5, var5, (byte) 113);
+                    int discarded$6 = 113;
+                    pk.a(5, var5);
                     var5 = (pp) (Object) nh.field_A.a(false);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                pm.a(5, var4, (byte) 71);
+                int discarded$7 = 71;
+                pm.a(5, var4);
                 var4 = (we) (Object) tb.field_b.a(false);
                 continue L1;
               }
@@ -50,7 +44,7 @@ abstract class hk extends pb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var2, "hk.J(" + param0 + 44 + 5 + 41);
+          throw dn.a((Throwable) (Object) var2, "hk.J(" + 5 + 44 + 5 + 41);
         }
     }
 
@@ -73,12 +67,9 @@ abstract class hk extends pb {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_e = null;
-        if (param0 != 6388) {
-            field_e = null;
-        }
     }
 
     final int a(int param0, int param1) {
@@ -120,13 +111,14 @@ abstract class hk extends pb {
                 L0: {
                   var2_int = -109 / ((59 - param0) / 33);
                   var3 = param1.getCodeBase();
-                  var4 = gh.a(param1, var3, (byte) 67).getFile();
-                  Object discarded$6 = hi.a(-3729, "updatelinks", param1, new Object[2]);
-                  Object discarded$7 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                  int discarded$7 = 67;
+                  var4 = gh.a(param1, var3).getFile();
                   Object discarded$8 = hi.a(-3729, "updatelinks", param1, new Object[2]);
                   Object discarded$9 = hi.a(-3729, "updatelinks", param1, new Object[2]);
                   Object discarded$10 = hi.a(-3729, "updatelinks", param1, new Object[2]);
                   Object discarded$11 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                  Object discarded$12 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                  Object discarded$13 = hi.a(-3729, "updatelinks", param1, new Object[2]);
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {

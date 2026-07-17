@@ -6,7 +6,7 @@ final class sc extends hn implements fp, ng {
     private rb field_D;
     private lg field_E;
 
-    private final String h(int param0) {
+    private final String h() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -39,6 +39,8 @@ final class sc extends hn implements fp, ng {
             ((sc) this).field_C = param0;
             ((sc) this).field_E = new lg(vd.field_d, (ca) null);
             ((sc) this).field_E.field_q = (el) (Object) new rf();
+            int discarded$2 = -29996;
+            int discarded$3 = 119;
             var7 = ff.a(new String[2], 0, md.field_d);
             var3 = 20;
             var4 = new pc(dg.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, dg.field_e.field_x, -1, 2147483647, true);
@@ -174,7 +176,7 @@ final class sc extends hn implements fp, ng {
                     var10.setColor(param1);
                     var10.drawRect(0, 0, 303, 33);
                     var10.fillRect(2, 2, param0 * 3, 30);
-                    var7 = 19 % ((-41 - param3) / 52);
+                    var7 = 0;
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
                     var10.fillRect(param0 * 3 + 2, 2, -(param0 * 3) + 300, 30);
@@ -249,7 +251,7 @@ final class sc extends hn implements fp, ng {
           }
           L9: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param2).append(44).append(21).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -304,15 +306,18 @@ final class sc extends hn implements fp, ng {
                   if (2 != param2) {
                     break L0;
                   } else {
-                    d.a("conduct.ws", (byte) 31);
+                    int discarded$6 = 31;
+                    d.a("conduct.ws");
                     return;
                   }
                 } else {
-                  d.a("privacy.ws", (byte) 31);
+                  int discarded$7 = 31;
+                  d.a("privacy.ws");
                   return;
                 }
               } else {
-                d.a("terms.ws", (byte) 31);
+                int discarded$8 = 31;
+                d.a("terms.ws");
                 return;
               }
             } else {
@@ -504,7 +509,7 @@ final class sc extends hn implements fp, ng {
         return stackIn_12_0 != 0;
     }
 
-    private final String i(int param0) {
+    private final String i() {
         return "</col></u>";
     }
 

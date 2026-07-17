@@ -20,14 +20,14 @@ final class dc extends ur {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_ab = null;
         field_bb = null;
     }
 
-    final static void l(int param0) {
+    final static void l() {
         int var1 = 0;
-        if (param0 > kr.field_c) {
+        if (224 > kr.field_c) {
           var1 = kr.field_c % 32;
           lf.a(32 + (kr.field_c + -var1), (byte) -58);
           return;

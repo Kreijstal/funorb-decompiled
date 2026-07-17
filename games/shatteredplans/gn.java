@@ -17,32 +17,19 @@ final class gn extends o {
         es.field_n = param3;
         ah.field_P = param1;
         rm.field_b = param0;
-        if (param2) {
-            field_w = null;
-        }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean a() {
         int var4 = 0;
-        Object var5 = null;
-        int stackIn_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_18_0 = 0;
         L0: {
-          if (param1 == -9861) {
-            break L0;
-          } else {
-            var5 = null;
-            vm discarded$2 = gn.a(122, (si) null, (qr) null, (qr) null, (qr) null);
-            break L0;
-          }
-        }
-        L1: {
           if (bq.field_h == null) {
-            break L1;
+            break L0;
           } else {
             if (13 != oq.field_j) {
-              break L1;
+              break L0;
             } else {
               bq.field_h = null;
               return true;
@@ -53,64 +40,66 @@ final class gn extends o {
           if (!b.d((byte) -97)) {
             return false;
           } else {
-            L2: {
-              if (!le.a(param0, param2, false)) {
-                stackOut_21_0 = 0;
-                stackIn_22_0 = stackOut_21_0;
-                break L2;
+            L1: {
+              int discarded$13 = 0;
+              if (!le.a(13, 12)) {
+                stackOut_19_0 = 0;
+                stackIn_20_0 = stackOut_19_0;
+                break L1;
               } else {
-                stackOut_20_0 = 1;
-                stackIn_22_0 = stackOut_20_0;
-                break L2;
+                stackOut_18_0 = 1;
+                stackIn_20_0 = stackOut_18_0;
+                break L1;
               }
             }
-            L3: {
-              L4: {
-                var4 = stackIn_22_0;
+            L2: {
+              L3: {
+                var4 = stackIn_20_0;
                 if (80 == oq.field_j) {
-                  break L4;
+                  break L3;
                 } else {
                   if (oq.field_j != 84) {
-                    break L3;
+                    break L2;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
               }
               var4 = 1;
               sr.field_h = false;
-              break L3;
+              break L2;
             }
-            L5: {
+            L4: {
               if (oq.field_j != 13) {
-                break L5;
+                break L4;
               } else {
-                qq.c(false);
+                int discarded$14 = 0;
+                qq.c();
                 var4 = 1;
                 sr.field_h = false;
-                break L5;
+                break L4;
               }
             }
             return var4 != 0;
           }
         } else {
-          L6: {
+          L5: {
             if (dp.field_t) {
-              break L6;
+              break L5;
             } else {
               if (oq.field_j == 9) {
-                break L6;
+                break L5;
               } else {
                 if (oq.field_j == 10) {
-                  break L6;
+                  break L5;
                 } else {
                   if (oq.field_j != 11) {
-                    L7: {
+                    L6: {
                       if (oq.field_j != 80) {
-                        break L7;
+                        break L6;
                       } else {
                         if (!b.d((byte) 108)) {
-                          break L7;
+                          break L6;
                         } else {
                           sr.field_h = true;
                           return true;
@@ -119,17 +108,17 @@ final class gn extends o {
                     }
                     return false;
                   } else {
-                    break L6;
+                    break L5;
                   }
                 }
               }
             }
           }
-          return dp.a(param1 ^ 9952, param0, 15);
+          return dp.a(-101, 13, 15);
         }
     }
 
-    private final void a(gn param0, boolean param1, int param2) {
+    private final void a(gn param0, boolean param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         wk var5 = null;
@@ -288,7 +277,8 @@ final class gn extends o {
               if (param0 == -12) {
                 break L1;
               } else {
-                gn.b(true);
+                int discarded$2 = 1;
+                gn.b();
                 break L1;
               }
             }
@@ -364,13 +354,14 @@ final class gn extends o {
     gn(gn param0, boolean param1) {
         this();
         try {
-            param0.a((gn) this, param1, -21979);
+            int discarded$0 = -21979;
+            param0.a((gn) this, param1);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "gn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_u = null;
         field_v = null;
         field_w = null;

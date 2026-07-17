@@ -9,12 +9,9 @@ final class im {
     final static void a(bj param0, byte param1, bj param2) {
         try {
             uk.field_xb = param2;
-            if (param1 <= 68) {
-                im.a(-65);
-            }
             wk.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "im.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "im.A(" + (param0 != null ? "{...}" : "null") + 44 + 82 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -26,7 +23,7 @@ final class im {
         field_b = null;
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean a(int[] param0) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         jn var4_ref_jn = null;
@@ -126,7 +123,8 @@ final class im {
                     }
                   }
                 }
-                if (kj.b(-9319)) {
+                int discarded$1 = -9319;
+                if (kj.b()) {
                   if (0 == qc.field_f) {
                     lc.field_s = rd.field_a;
                     rd.field_a = ud.field_a;
@@ -206,7 +204,7 @@ final class im {
         return stackIn_34_0 != 0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         bd.field_c = sl.e(105);
         mb.field_b = new hm();
         ie.a(true, true, -57);
@@ -254,8 +252,9 @@ final class im {
         try {
           L0: {
             L1: {
-              var3 = re.a(param2, 0);
-              if (param0.indexOf(param2) != param1) {
+              int discarded$2 = 0;
+              var3 = re.a(param2);
+              if (param0.indexOf(param2) != 0) {
                 break L1;
               } else {
                 if (0 != param0.indexOf(var3)) {
@@ -325,7 +324,7 @@ final class im {
           }
           L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param1).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(0).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -353,7 +352,7 @@ final class im {
         return stackIn_12_0 != 0;
     }
 
-    final static sj[] b(int param0) {
+    final static sj[] b() {
         return new sj[]{ak.field_b, hj.field_e, li.field_d};
     }
 

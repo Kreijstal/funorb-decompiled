@@ -158,137 +158,129 @@ public final class ir extends aw {
         int var11 = 0;
         jagdx.D3DDISPLAYMODE var12 = null;
         jagdx.D3DDISPLAYMODE var13 = null;
-        int stackIn_5_0 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_30_0 = 0;
         int stackIn_32_0 = 0;
-        int stackIn_34_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_33_0 = 0;
         int stackOut_31_0 = 0;
-        int stackOut_4_0 = 0;
-        L0: {
-          var6 = 0;
-          var7 = 0;
-          if (param4 == 6) {
-            break L0;
-          } else {
-            field_Zc = null;
-            break L0;
-          }
-        }
+        int stackOut_29_0 = 0;
+        int stackOut_2_0 = 0;
+        var6 = 0;
+        var7 = 0;
         var8 = 0;
         try {
-          L1: {
+          L0: {
             var12 = new jagdx.D3DDISPLAYMODE();
             var13 = var12;
             if (!jagdx.gv.a(param0.a(param2, var13), -1)) {
-              L2: while (true) {
-                L3: {
+              L1: while (true) {
+                L2: {
                   if (param3 < 0) {
-                    break L3;
+                    break L2;
                   } else {
-                    L4: {
+                    L3: {
                       if (param3 == 1) {
-                        break L4;
+                        break L3;
                       } else {
                         var8 = param3;
                         var10 = 0;
-                        L5: while (true) {
+                        L4: while (true) {
                           if (field_Fc.length <= var10) {
-                            break L4;
+                            break L3;
                           } else {
-                            L6: {
+                            L5: {
                               if (param0.CheckDeviceType(param2, param1, var12.Format, field_Fc[var10], true) != -1) {
-                                break L6;
+                                break L5;
                               } else {
                                 if (-1 != param0.CheckDeviceFormat(param2, param1, var12.Format, 1, 1, field_Fc[var10])) {
-                                  break L6;
+                                  break L5;
                                 } else {
-                                  L7: {
+                                  L6: {
                                     if (param3 == 0) {
-                                      break L7;
+                                      break L6;
                                     } else {
                                       if (0 == param0.CheckDeviceMultiSampleType(param2, param1, field_Fc[var10], true, var8)) {
-                                        break L7;
-                                      } else {
                                         break L6;
+                                      } else {
+                                        break L5;
                                       }
                                     }
                                   }
                                   var11 = 0;
-                                  L8: while (true) {
+                                  L7: while (true) {
                                     if (var11 >= field_Zc.length) {
-                                      break L6;
+                                      break L5;
                                     } else {
-                                      L9: {
+                                      L8: {
                                         if (param0.CheckDeviceFormat(param2, param1, var12.Format, 2, 1, field_Zc[var11]) != 0) {
-                                          break L9;
+                                          break L8;
                                         } else {
                                           if (0 == param0.CheckDepthStencilMatch(param2, param1, var12.Format, field_Fc[var10], field_Zc[var11])) {
-                                            L10: {
+                                            L9: {
                                               if (param3 == 0) {
-                                                break L10;
+                                                break L9;
                                               } else {
                                                 if (param0.CheckDeviceMultiSampleType(param2, param1, field_Zc[var10], true, var8) == 0) {
-                                                  break L10;
-                                                } else {
                                                   break L9;
+                                                } else {
+                                                  break L8;
                                                 }
                                               }
                                             }
                                             var7 = field_Fc[var10];
                                             var6 = field_Zc[var11];
-                                            break L3;
+                                            break L2;
                                           } else {
-                                            break L9;
+                                            break L8;
                                           }
                                         }
                                       }
                                       var11++;
-                                      continue L8;
+                                      continue L7;
                                     }
                                   }
                                 }
                               }
                             }
                             var10++;
-                            continue L5;
+                            continue L4;
                           }
                         }
                       }
                     }
                     param3--;
-                    continue L2;
+                    continue L1;
                   }
                 }
-                L11: {
+                L10: {
                   if (0 > param3) {
-                    break L11;
+                    break L10;
                   } else {
                     if (0 == var7) {
-                      break L11;
+                      break L10;
                     } else {
                       if (var6 != 0) {
                         param5.BackBufferFormat = var7;
                         param5.MultiSampleQuality = 0;
                         param5.AutoDepthStencilFormat = var6;
                         param5.MultiSampleType = var8;
-                        stackOut_33_0 = 1;
-                        stackIn_34_0 = stackOut_33_0;
-                        break L1;
+                        stackOut_31_0 = 1;
+                        stackIn_32_0 = stackOut_31_0;
+                        break L0;
                       } else {
                         return false;
                       }
                     }
                   }
                 }
-                stackOut_31_0 = 0;
-                stackIn_32_0 = stackOut_31_0;
-                return stackIn_32_0 != 0;
+                stackOut_29_0 = 0;
+                stackIn_30_0 = stackOut_29_0;
+                return stackIn_30_0 != 0;
               }
             } else {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0 != 0;
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
           }
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -296,7 +288,7 @@ public final class ir extends aw {
           var9 = decompiledCaughtException;
           return false;
         }
-        return stackIn_34_0 != 0;
+        return stackIn_32_0 != 0;
     }
 
     final void a(vc param0) {
@@ -372,7 +364,6 @@ public final class ir extends aw {
     }
 
     private final static int b(tf param0, int param1) {
-        Object var3 = null;
         if (param0 != he.field_m) {
           if (rs.field_c == param0) {
             return 2;
@@ -387,8 +378,8 @@ public final class ir extends aw {
                   if (param1 == 3103) {
                     return 0;
                   } else {
-                    var3 = null;
-                    int discarded$2 = ir.a((ji) null, false);
+                    int discarded$4 = 0;
+                    int discarded$5 = ir.a((ji) null);
                     return 0;
                   }
                 }
@@ -535,12 +526,13 @@ public final class ir extends aw {
         int stackOut_6_2 = 0;
         int stackOut_6_3 = 0;
         L0: {
-          int discarded$5 = ((ir) this).field_Cc.SetTexture(((ir) this).field_mc, param0.d(-22689));
+          int discarded$8 = ((ir) this).field_Cc.SetTexture(((ir) this).field_mc, param0.d(-22689));
           if (((ir) this).field_Dc[((ir) this).field_mc] != param0.field_a) {
             L1: {
-              var3 = ir.a(param0.field_a, false);
-              int discarded$6 = ((ir) this).field_Cc.SetSamplerState(((ir) this).field_mc, 6, var3);
-              int discarded$7 = ((ir) this).field_Cc.SetSamplerState(((ir) this).field_mc, 5, var3);
+              int discarded$9 = 0;
+              var3 = ir.a(param0.field_a);
+              int discarded$10 = ((ir) this).field_Cc.SetSamplerState(((ir) this).field_mc, 6, var3);
+              int discarded$11 = ((ir) this).field_Cc.SetSamplerState(((ir) this).field_mc, 5, var3);
               ((ir) this).field_Dc[((ir) this).field_mc] = param0.field_a;
               stackOut_9_0 = ((ir) this).field_ad[((ir) this).field_mc];
               stackIn_11_0 = stackOut_9_0;
@@ -583,10 +575,11 @@ public final class ir extends aw {
                   stackIn_16_3 = stackOut_15_3;
                   break L2;
                 } else {
+                  int discarded$12 = 0;
                   stackOut_14_0 = (jagdx.IDirect3DDevice) (Object) stackIn_14_0;
                   stackOut_14_1 = stackIn_14_1;
                   stackOut_14_2 = stackIn_14_2;
-                  stackOut_14_3 = ir.a(param0.field_a, false);
+                  stackOut_14_3 = ir.a(param0.field_a);
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
                   stackIn_16_2 = stackOut_14_2;
@@ -594,7 +587,7 @@ public final class ir extends aw {
                   break L2;
                 }
               }
-              int discarded$8 = ((jagdx.IDirect3DDevice) (Object) stackIn_16_0).SetSamplerState(stackIn_16_1, stackIn_16_2, stackIn_16_3);
+              int discarded$13 = ((jagdx.IDirect3DDevice) (Object) stackIn_16_0).SetSamplerState(stackIn_16_1, stackIn_16_2, stackIn_16_3);
               ((ir) this).field_ad[((ir) this).field_mc] = param0.field_e;
               break L0;
             }
@@ -631,10 +624,11 @@ public final class ir extends aw {
                 stackIn_6_1 = stackOut_5_1;
                 stackIn_6_2 = stackOut_5_2;
                 if (param0.field_e) {
+                  int discarded$14 = 0;
                   stackOut_7_0 = (jagdx.IDirect3DDevice) (Object) stackIn_7_0;
                   stackOut_7_1 = stackIn_7_1;
                   stackOut_7_2 = stackIn_7_2;
-                  stackOut_7_3 = ir.a(param0.field_a, false);
+                  stackOut_7_3 = ir.a(param0.field_a);
                   stackIn_8_0 = stackOut_7_0;
                   stackIn_8_1 = stackOut_7_1;
                   stackIn_8_2 = stackOut_7_2;
@@ -652,7 +646,7 @@ public final class ir extends aw {
                   break L4;
                 }
               }
-              int discarded$9 = ((jagdx.IDirect3DDevice) (Object) stackIn_8_0).SetSamplerState(stackIn_8_1, stackIn_8_2, stackIn_8_3);
+              int discarded$15 = ((jagdx.IDirect3DDevice) (Object) stackIn_8_0).SetSamplerState(stackIn_8_1, stackIn_8_2, stackIn_8_3);
               ((ir) this).field_ad[((ir) this).field_mc] = param0.field_e;
               break L0;
             }
@@ -682,7 +676,7 @@ public final class ir extends aw {
         int discarded$0 = ((ir) this).field_Cc.Clear(1, param0, 0.0f, 0);
     }
 
-    private final boolean h(boolean param0) {
+    private final boolean h() {
         int var2 = 0;
         kg var3 = null;
         int var4 = 0;
@@ -753,7 +747,7 @@ public final class ir extends aw {
         }
     }
 
-    private final static int a(mi param0, int param1) {
+    private final static int a(mi param0) {
         if (jq.field_a != param0) {
           if (fv.field_y == param0) {
             return 0;
@@ -849,7 +843,7 @@ public final class ir extends aw {
         return null;
     }
 
-    private final static int a(ck param0, byte param1) {
+    private final static int a(ck param0) {
         if (param0 != tc.field_g) {
           if (param0 == rv.field_b) {
             return 3;
@@ -1025,7 +1019,8 @@ public final class ir extends aw {
             break L1;
           }
         }
-        int discarded$1 = ((ir) this).field_Cc.SetTextureStageState(((ir) this).field_mc, var6, ir.a(param3, 21) | var7);
+        int discarded$2 = 21;
+        int discarded$3 = ((ir) this).field_Cc.SetTextureStageState(((ir) this).field_mc, var6, ir.a(param3) | var7);
     }
 
     final void b(boolean param0) {
@@ -1085,10 +1080,7 @@ public final class ir extends aw {
         return (ru) (Object) new ec((ir) this, param3, param6, param0, param2, param5, param1);
     }
 
-    private final static int a(ji param0, boolean param1) {
-        if (param1) {
-            return -35;
-        }
+    private final static int a(ji param0) {
         if (param0 == ao.field_y) {
             return 2;
         }
@@ -1518,7 +1510,8 @@ public final class ir extends aw {
             break L2;
           }
         }
-        int discarded$1 = ((ir) this).field_Cc.SetTextureStageState(((ir) this).field_mc, var6, ir.a(param4, 21) | var7);
+        int discarded$2 = 21;
+        int discarded$3 = ((ir) this).field_Cc.SetTextureStageState(((ir) this).field_mc, var6, ir.a(param4) | var7);
     }
 
     final void a(byte param0, jagdx.IDirect3DPixelShader param1) {
@@ -1531,7 +1524,8 @@ public final class ir extends aw {
             Object var6 = null;
             ha discarded$0 = ir.createToolkit((java.awt.Canvas) null, (d) null, (ki) null, (Integer) null);
         }
-        int discarded$1 = ((ir) this).field_Cc.DrawPrimitive(ir.a(param3, (byte) -121), param0, param2);
+        int discarded$1 = -121;
+        int discarded$2 = ((ir) this).field_Cc.DrawPrimitive(ir.a(param3), param0, param2);
     }
 
     final void A(int param0) {
@@ -1829,14 +1823,16 @@ public final class ir extends aw {
             if (!(fieldTemp$10 <= 50)) {
                 throw new rf();
             }
-            boolean discarded$11 = this.h(true);
+            int discarded$11 = 1;
+            boolean discarded$12 = this.h();
         } else {
             ((ir) this).field_Lc = 0;
             if (!(!jagdx.gv.a(((ir) this).field_Hc.a(0, -95), -1))) {
-                boolean discarded$12 = this.h(true);
+                int discarded$13 = 1;
+                boolean discarded$14 = this.h();
             }
         }
-        int discarded$13 = ((ir) this).field_Cc.BeginScene();
+        int discarded$15 = ((ir) this).field_Cc.BeginScene();
     }
 
     final static ha createToolkit(java.awt.Canvas param0, d param1, ki param2, Integer param3) {

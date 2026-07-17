@@ -181,7 +181,8 @@ final class ci extends lc implements gl, rc {
             }
             L2: {
               if (param4 == ((ci) this).field_D) {
-                this.b(false);
+                int discarded$93 = 0;
+                this.b();
                 break L2;
               } else {
                 if (((ci) this).field_H != param4) {
@@ -189,11 +190,13 @@ final class ci extends lc implements gl, rc {
                     break L2;
                   } else {
                     if (((ci) this).field_J) {
-                      hh.c((byte) -60);
+                      int discarded$94 = -60;
+                      hh.c();
                       break L2;
                     } else {
                       if (((ci) this).field_B) {
-                        oh.b(true);
+                        int discarded$95 = 1;
+                        oh.b();
                         break L2;
                       } else {
                         wk.h((byte) -124);
@@ -202,7 +205,8 @@ final class ci extends lc implements gl, rc {
                     }
                   }
                 } else {
-                  ii.n(8);
+                  int discarded$96 = 8;
+                  ii.n();
                   break L2;
                 }
               }
@@ -251,7 +255,7 @@ final class ci extends lc implements gl, rc {
         return ((ci) this).field_I.field_h;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_L = null;
         field_F = null;
         field_G = null;
@@ -530,7 +534,8 @@ final class ci extends lc implements gl, rc {
             }
             L13: {
               var8 = wj.field_b;
-              var9 = ib.a(vi.b(0), (byte) -90);
+              int discarded$3 = -90;
+              var9 = ib.a(vi.b(0));
               if (nj.field_k != var9) {
                 if (w.field_g != var9) {
                   break L13;
@@ -544,13 +549,13 @@ final class ci extends lc implements gl, rc {
               }
             }
             L14: {
-              hb dupTemp$2 = new hb(10, ((ci) this).field_i, ((ci) this).field_k + -20, 25, (lk) (Object) ((ci) this).field_I, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((ci) this).b((lk) (Object) dupTemp$2, true);
+              hb dupTemp$4 = new hb(10, ((ci) this).field_i, ((ci) this).field_k + -20, 25, (lk) (Object) ((ci) this).field_I, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((ci) this).b((lk) (Object) dupTemp$4, true);
               ((ci) this).field_i = ((ci) this).field_i + (5 + ((lk) (Object) var12).field_m);
-              hb dupTemp$3 = new hb(10, ((ci) this).field_i, -20 + ((ci) this).field_k, 25, (lk) (Object) ((ci) this).field_z, false, 80, 3, var7, 16777215, ae.field_d);
-              var13 = dupTemp$3;
-              ((ci) this).b((lk) (Object) dupTemp$3, true);
+              hb dupTemp$5 = new hb(10, ((ci) this).field_i, -20 + ((ci) this).field_k, 25, (lk) (Object) ((ci) this).field_z, false, 80, 3, var7, 16777215, ae.field_d);
+              var13 = dupTemp$5;
+              ((ci) this).b((lk) (Object) dupTemp$5, true);
               ((ci) this).field_D.field_n = (sk) this;
               ((ci) this).field_i = ((ci) this).field_i + (5 + ((lk) (Object) var13).field_m);
               if (((ci) this).field_H == null) {
@@ -719,7 +724,7 @@ final class ci extends lc implements gl, rc {
             L1: {
               var3_int = 12 / ((0 - param0) / 33);
               if (((ci) this).field_I == param1) {
-                boolean discarded$2 = ((ci) this).field_z.a((lk) this, false);
+                boolean discarded$4 = ((ci) this).field_z.a((lk) this, false);
                 break L1;
               } else {
                 break L1;
@@ -729,7 +734,8 @@ final class ci extends lc implements gl, rc {
               if (((ci) this).field_z != param1) {
                 break L2;
               } else {
-                this.b(false);
+                int discarded$5 = 0;
+                this.b();
                 break L2;
               }
             }
@@ -767,7 +773,7 @@ final class ci extends lc implements gl, rc {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         L0: {
           L1: {
             if (td.a(1)) {

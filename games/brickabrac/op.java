@@ -43,11 +43,12 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
           L0: {
             var10 = (CharSequence) (Object) param2;
-            if (tk.a(var10, param1)) {
+            int discarded$7 = 0;
+            if (tk.a(var10)) {
               if (wk.field_m == 2) {
-                var8 = pf.a(param1, param2);
+                var8 = pf.a(false, param2);
                 if (var8 != null) {
-                  nm discarded$2 = bf.field_N.a((byte) 107, (nm) (Object) var8);
+                  nm discarded$8 = bf.field_N.a((byte) 107, (nm) (Object) var8);
                   L1: while (true) {
                     var7 = (mp) (Object) bf.field_N.a((byte) 116);
                     if (var7 == null) {
@@ -90,7 +91,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
           L2: {
             var3 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3;
-            stackOut_15_1 = new StringBuilder().append("op.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("op.E(").append(param0).append(44).append(0).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -279,7 +280,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         }
                       }
                       L10: {
-                        if (null != param1[param3]) {
+                        if (null != param1[6]) {
                           lb.d(param0, var20, var17, var12);
                           param1[6].b(param0, var16, param5);
                           lb.b(rg.field_g);
@@ -456,7 +457,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L23;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw qb.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param2 + 44 + 6 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -692,23 +693,19 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(vc param0, int param1) {
+    final static void a(vc param0) {
         try {
-            kp.field_d.insertElementAt((Object) (Object) param0, param1);
+            kp.field_d.insertElementAt((Object) (Object) param0, 0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "op.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "op.B(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 
     final static String a(boolean param0, int param1) {
-        if (param0) {
-            Object var3 = null;
-            op.a((vc) null, -56);
-        }
         return rd.a(lh.field_t, new String[1], (byte) 103).toLowerCase();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -720,7 +717,8 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var2_int = param0.getKeyChar();
                 if (0 != var2_int) {
                     if (var2_int != 65535) {
-                        if (!(!od.a((char) var2_int, -12))) {
+                        int discarded$6 = -12;
+                        if (!(!od.a((char) var2_int))) {
                             var3 = 127 & hb.field_w - -1;
                             if (!(si.field_m == var3)) {
                                 ef.field_d[hb.field_w] = -1;
@@ -737,7 +735,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

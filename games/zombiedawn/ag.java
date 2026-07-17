@@ -109,7 +109,7 @@ final class ag implements Iterator {
         return ((ag) this).field_g != ((ag) this).field_f.field_c;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_h = null;
         field_e = null;
@@ -119,23 +119,13 @@ final class ag implements Iterator {
 
     final static void a(int param0, boolean param1) {
         Object var2 = null;
-        L0: {
-          var2 = null;
-          if (!param1) {
-            var2 = (Object) (Object) new wh();
-            break L0;
-          } else {
+        if (param1) {
             var2 = (Object) (Object) new cl();
-            break L0;
-          }
-        }
-        nl.a(new lg((wa) var2), (byte) -121);
-        if (param0 > -105) {
-          field_e = null;
-          return;
         } else {
-          return;
+            var2 = (Object) (Object) new wh();
         }
+        int discarded$0 = -121;
+        nl.a(new lg((wa) var2));
     }
 
     final static void a(int param0, boolean param1, bo param2) {
@@ -150,14 +140,11 @@ final class ag implements Iterator {
         var5.h(-105, param2.field_k);
         var5.h(98, param2.field_m);
         var5.h(-118, param2.field_l);
-        if (!param1) {
-            return;
-        }
         try {
             int discarded$0 = var5.e(-69, var4);
             var5.d(-60, -var4 + var5.field_j);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ag.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "ag.C(" + param0 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

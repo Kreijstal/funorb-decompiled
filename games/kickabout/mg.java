@@ -121,9 +121,6 @@ final class mg {
     }
 
     final static ki a(int param0, byte param1, int param2) {
-        if (param1 != 0) {
-            return null;
-        }
         return new ki(4, param0, param2, (byte) 0, (byte) 0);
     }
 
@@ -132,9 +129,6 @@ final class mg {
     }
 
     final static ki a(boolean param0, int param1, int param2) {
-        if (param0) {
-            return null;
-        }
         return new ki(0, param2, param1, (byte) 0, (byte) 0);
     }
 

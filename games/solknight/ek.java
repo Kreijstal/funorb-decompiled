@@ -4,7 +4,7 @@
 final class ek {
     static String field_a;
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -35,7 +35,7 @@ final class ek {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

@@ -10,23 +10,15 @@ final class rb extends ue {
     static int field_h;
     static String field_j;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_k = null;
         field_e = null;
         field_j = null;
-        if (param0 != 100) {
-          field_g = null;
-          field_i = null;
-          field_g = null;
-          return;
-        } else {
-          field_i = null;
-          field_g = null;
-          return;
-        }
+        field_i = null;
+        field_g = null;
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -122,7 +114,15 @@ final class rb extends ue {
             } else {
               if (ga.field_L.a(param0 ^ -20410, "benefits")) {
                 wb.a(0, wl.a("main", ga.field_L, param0 + 2, "benefits"), ei.field_G);
-                sj.a(wl.a("crystal", ga.field_L, 10, "benefits"), -2, 17, 10, 107, 71, 40, 2500, (byte) 113);
+                int discarded$17 = 113;
+                int discarded$18 = 2500;
+                int discarded$19 = 40;
+                int discarded$20 = 71;
+                int discarded$21 = 107;
+                int discarded$22 = 10;
+                int discarded$23 = 17;
+                int discarded$24 = -2;
+                sj.a(wl.a("crystal", ga.field_L, 10, "benefits"));
                 var3 = new dl(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
                 var3.a();
                 ee.field_m.d(3, 3, ee.field_m.field_n / 3, ee.field_m.field_o / 3);
@@ -156,7 +156,8 @@ final class rb extends ue {
                         if (-1 != ((rb) this).field_f.field_f) {
                           return;
                         } else {
-                          la.b(-79);
+                          int discarded$25 = -79;
+                          la.b();
                           return;
                         }
                       }
@@ -166,7 +167,8 @@ final class rb extends ue {
                   if (-1 != ((rb) this).field_f.field_f) {
                     return;
                   } else {
-                    la.b(-79);
+                    int discarded$26 = -79;
+                    la.b();
                     return;
                   }
                 } else {
@@ -182,7 +184,8 @@ final class rb extends ue {
                         if (-1 != ((rb) this).field_f.field_f) {
                           return;
                         } else {
-                          la.b(-79);
+                          int discarded$27 = -79;
+                          la.b();
                           return;
                         }
                       }
@@ -192,7 +195,8 @@ final class rb extends ue {
                   if (-1 != ((rb) this).field_f.field_f) {
                     return;
                   } else {
-                    la.b(-79);
+                    int discarded$28 = -79;
+                    la.b();
                     return;
                   }
                 }
@@ -221,7 +225,8 @@ final class rb extends ue {
                       if (-1 != ((rb) this).field_f.field_f) {
                         return;
                       } else {
-                        la.b(-79);
+                        int discarded$29 = -79;
+                        la.b();
                         return;
                       }
                     }
@@ -231,7 +236,8 @@ final class rb extends ue {
                 if (-1 != ((rb) this).field_f.field_f) {
                   return;
                 } else {
-                  la.b(-79);
+                  int discarded$30 = -79;
+                  la.b();
                   return;
                 }
               }
@@ -249,7 +255,8 @@ final class rb extends ue {
                 if (-1 != ((rb) this).field_f.field_f) {
                   return;
                 } else {
-                  la.b(-79);
+                  int discarded$31 = -79;
+                  la.b();
                   return;
                 }
               }
@@ -257,7 +264,8 @@ final class rb extends ue {
           }
           ((rb) this).field_f.b(param0);
           if (-1 == ((rb) this).field_f.field_f) {
-            la.b(-79);
+            int discarded$32 = -79;
+            la.b();
             return;
           } else {
             return;
@@ -267,7 +275,8 @@ final class rb extends ue {
           if (((rb) this).field_f.field_f != 0) {
             return;
           } else {
-            la.b(-79);
+            int discarded$33 = -79;
+            la.b();
             return;
           }
         }
@@ -284,21 +293,23 @@ final class rb extends ue {
         int var2 = 0;
         ((rb) this).field_f.c(-1);
         if (0 == ((rb) this).field_f.field_f) {
-          var2 = da.a(true, true);
+          int discarded$12 = 1;
+          int discarded$13 = 1;
+          var2 = da.a();
           if (3 != var2) {
             if (var2 != 1) {
               if (var2 != 2) {
                 if (!param0) {
                   return;
                 } else {
-                  boolean discarded$9 = ((rb) this).a(96);
+                  boolean discarded$14 = ((rb) this).a(96);
                   return;
                 }
               } else {
                 a.field_b = (ue) (Object) ((rb) this).field_f;
                 ((rb) this).field_f.a(true, -13880);
                 if (param0) {
-                  boolean discarded$10 = ((rb) this).a(96);
+                  boolean discarded$15 = ((rb) this).a(96);
                   return;
                 } else {
                   return;
@@ -309,7 +320,7 @@ final class rb extends ue {
               ((rb) this).field_f.a(false, -13880);
               if (var2 != 2) {
                 if (param0) {
-                  boolean discarded$11 = ((rb) this).a(96);
+                  boolean discarded$16 = ((rb) this).a(96);
                   return;
                 } else {
                   return;
@@ -318,7 +329,7 @@ final class rb extends ue {
                 a.field_b = (ue) (Object) ((rb) this).field_f;
                 ((rb) this).field_f.a(true, -13880);
                 if (param0) {
-                  boolean discarded$12 = ((rb) this).a(96);
+                  boolean discarded$17 = ((rb) this).a(96);
                   return;
                 } else {
                   return;
@@ -327,13 +338,14 @@ final class rb extends ue {
             }
           } else {
             q.a(param0);
-            on.a(95, le.b((byte) -20));
+            int discarded$18 = -20;
+            on.a(95, le.b());
             if (var2 == 1) {
               a.field_b = (ue) (Object) ((rb) this).field_f;
               ((rb) this).field_f.a(false, -13880);
               if (var2 != 2) {
                 if (param0) {
-                  boolean discarded$13 = ((rb) this).a(96);
+                  boolean discarded$19 = ((rb) this).a(96);
                   return;
                 } else {
                   return;
@@ -342,7 +354,7 @@ final class rb extends ue {
                 a.field_b = (ue) (Object) ((rb) this).field_f;
                 ((rb) this).field_f.a(true, -13880);
                 if (param0) {
-                  boolean discarded$14 = ((rb) this).a(96);
+                  boolean discarded$20 = ((rb) this).a(96);
                   return;
                 } else {
                   return;
@@ -355,12 +367,12 @@ final class rb extends ue {
                 if (!param0) {
                   return;
                 } else {
-                  boolean discarded$15 = ((rb) this).a(96);
+                  boolean discarded$21 = ((rb) this).a(96);
                   return;
                 }
               } else {
                 if (param0) {
-                  boolean discarded$16 = ((rb) this).a(96);
+                  boolean discarded$22 = ((rb) this).a(96);
                   return;
                 } else {
                   return;
@@ -370,7 +382,7 @@ final class rb extends ue {
           }
         } else {
           if (param0) {
-            boolean discarded$17 = ((rb) this).a(96);
+            boolean discarded$23 = ((rb) this).a(96);
             return;
           } else {
             return;

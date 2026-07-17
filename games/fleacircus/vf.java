@@ -47,7 +47,8 @@ final class vf extends r {
         try {
           L0: {
             var5 = (CharSequence) (Object) param1;
-            var3 = q.a(var5, true);
+            int discarded$2 = 1;
+            var3 = q.a(var5);
             if (var3 != null) {
               stackOut_2_0 = (String) var3;
               stackIn_3_0 = stackOut_2_0;
@@ -220,7 +221,7 @@ final class vf extends r {
         return stackIn_3_0;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -332,16 +333,14 @@ final class vf extends r {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_n = null;
-        if (param0) {
-            field_p = 114;
-        }
     }
 
     final void d(boolean param0) {
         if (!param0) {
-            vf.c(false);
+            int discarded$0 = 0;
+            vf.c();
         }
         ((vf) this).field_o = null;
     }

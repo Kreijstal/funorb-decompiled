@@ -514,7 +514,7 @@ final class rt extends ie {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_G = null;
         field_E = null;
         field_C = null;

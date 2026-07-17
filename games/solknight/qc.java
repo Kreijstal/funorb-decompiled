@@ -17,7 +17,7 @@ final class qc extends gg {
     long field_n;
     static String[] field_h;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_l = null;
         field_h = null;
         field_s = null;
@@ -28,7 +28,8 @@ final class qc extends gg {
     final static void a(boolean param0, int param1) {
         td.field_h.a(param0, (byte) -75);
         if (param1 > -104) {
-            qc.b(false);
+            int discarded$0 = 0;
+            qc.b();
         }
     }
 

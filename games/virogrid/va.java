@@ -11,14 +11,14 @@ final class va {
     static String field_f;
     static String field_a;
 
-    final static eh a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
+    final static eh a(int param0, boolean param1, int param2, int param3) {
         try {
             Object var6 = null;
             Object var7 = null;
             oa var8 = null;
-            eh stackIn_17_0 = null;
+            eh stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            eh stackOut_16_0 = null;
+            eh stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -66,17 +66,9 @@ final class va {
                     break L3;
                   }
                 }
-                L6: {
-                  var8 = ql.field_q.a(72, param2, param1, (gl) var6, (gl) var7);
-                  if (param5) {
-                    var8.a(true);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                stackOut_16_0 = new eh((ba) (Object) var8, param4, param0);
-                stackIn_17_0 = stackOut_16_0;
+                var8 = ql.field_q.a(72, param2, false, (gl) var6, (gl) var7);
+                stackOut_13_0 = new eh((ba) (Object) var8, true, 1);
+                stackIn_14_0 = stackOut_13_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -84,7 +76,7 @@ final class va {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_17_0;
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -92,7 +84,7 @@ final class va {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_c = null;
@@ -105,7 +97,7 @@ final class va {
         fi.field_t.b((fi) (Object) tk.field_b, (byte) -53);
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] a(byte[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

@@ -56,42 +56,22 @@ final class bk extends ag {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_H = null;
         field_J = null;
         field_K = null;
         field_L = null;
-        if (param0 != 0) {
-            bk.a(126);
-            field_M = null;
-            return;
-        }
         field_M = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param1 == 1021) {
-          if (2 > param0) {
+        if (2 > param0) {
             if (param2 >= 5) {
-              return 1;
-            } else {
-              return 0;
+                return 1;
             }
-          } else {
-            return 2;
-          }
-        } else {
-          bk.f(44);
-          if (2 > param0) {
-            if (param2 >= 5) {
-              return 1;
-            } else {
-              return 0;
-            }
-          } else {
-            return 2;
-          }
+            return 0;
         }
+        return 2;
     }
 
     private bk(String param0, wc param1) {

@@ -47,12 +47,12 @@ final class fq {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_e = null;
     }
 
-    final static hea a(byte[] param0, byte param1) {
+    final static hea a(byte[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         hea var3 = null;
@@ -77,7 +77,7 @@ final class fq {
         try {
           L0: {
             if (param0 != null) {
-              var2_int = -71 / ((5 - param1) / 35);
+              var2_int = 35;
               var3 = new hea(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, ck.field_c);
               loa.a((byte) 123);
               stackOut_3_0 = (hea) var3;
@@ -115,12 +115,12 @@ final class fq {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 103 + 41);
         }
         return stackIn_4_0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         fna.field_k = vc.field_q.e((byte) -76);
         CharSequence var2 = (CharSequence) (Object) fna.field_k;
         tia.field_b = jd.a(1, var2);

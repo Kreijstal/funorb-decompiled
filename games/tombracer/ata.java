@@ -35,7 +35,7 @@ final class ata extends rra {
         ((ata) this).field_f = param2;
     }
 
-    final static String b(int param0) {
+    final static String b() {
         int var3 = 0;
         String var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;

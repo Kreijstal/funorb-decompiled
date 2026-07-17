@@ -11,7 +11,7 @@ final class ia {
     static char[] field_e;
     static String field_b;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         lc.field_e.a(param0, (byte) -124);
     }
 
@@ -28,19 +28,11 @@ final class ia {
         return mg.field_a;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
-        if (param0 < 71) {
-          field_c = false;
-          field_d = null;
-          field_h = null;
-          return;
-        } else {
-          field_d = null;
-          field_h = null;
-          return;
-        }
+        field_d = null;
+        field_h = null;
     }
 
     static {

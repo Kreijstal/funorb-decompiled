@@ -57,167 +57,82 @@ final class nf extends li {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
-        if (-param5 + param3 < ap.field_e) {
-          og.a(param4, param1, -1, param3, param5, param6, param0);
-          if (param2 >= 96) {
-            return;
+        if (-param5 + param3 >= ap.field_e) {
+          if (ib.field_a >= param3 + param5) {
+            if (ua.field_e <= param6 + -param5) {
+              if (cj.field_D < param6 - -param5) {
+                og.a(param4, param1, -1, param3, param5, param6, param0);
+                return;
+              } else {
+                cl.a(param1, param3, param4, param6, (byte) -40, param5, param0);
+                return;
+              }
+            } else {
+              og.a(param4, param1, -1, param3, param5, param6, param0);
+              return;
+            }
           } else {
-            field_q = null;
+            og.a(param4, param1, -1, param3, param5, param6, param0);
             return;
           }
         } else {
-          if (ib.field_a < param3 + param5) {
-            og.a(param4, param1, -1, param3, param5, param6, param0);
-            if (param2 >= 96) {
-              return;
-            } else {
-              field_q = null;
-              return;
-            }
-          } else {
-            if (ua.field_e > param6 + -param5) {
-              og.a(param4, param1, -1, param3, param5, param6, param0);
-              if (param2 < 96) {
-                field_q = null;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (cj.field_D >= param6 - -param5) {
-                cl.a(param1, param3, param4, param6, (byte) -40, param5, param0);
-                if (param2 < 96) {
-                  field_q = null;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                og.a(param4, param1, -1, param3, param5, param6, param0);
-                if (param2 < 96) {
-                  field_q = null;
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          }
+          og.a(param4, param1, -1, param3, param5, param6, param0);
+          return;
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_u = null;
         field_w = null;
-        if (param0 >= -63) {
-          nf.a(-9, 105, (byte) -96, 28, 93, 4, 42);
-          field_o = null;
-          field_q = null;
-          return;
-        } else {
-          field_o = null;
-          field_q = null;
-          return;
-        }
+        field_o = null;
+        field_q = null;
     }
 
     final static int a(byte param0, int param1) {
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
         param1 = param1 & 8191;
-        if (param0 == -28) {
-          if (param1 >= 4096) {
-            L0: {
-              if (param1 >= 6144) {
-                stackOut_18_0 = -jc.field_b[-param1 + 8192];
-                stackIn_19_0 = stackOut_18_0;
-                break L0;
-              } else {
-                stackOut_17_0 = -jc.field_b[param1 - 4096];
-                stackIn_19_0 = stackOut_17_0;
-                break L0;
-              }
+        if (param1 >= 4096) {
+          L0: {
+            if (param1 >= 6144) {
+              stackOut_7_0 = -jc.field_b[-param1 + 8192];
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = -jc.field_b[param1 - 4096];
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
             }
-            return stackIn_19_0;
-          } else {
-            L1: {
-              if (param1 < 2048) {
-                stackOut_14_0 = jc.field_b[param1];
-                stackIn_15_0 = stackOut_14_0;
-                break L1;
-              } else {
-                stackOut_13_0 = jc.field_b[-param1 + 4096];
-                stackIn_15_0 = stackOut_13_0;
-                break L1;
-              }
-            }
-            return stackIn_15_0;
           }
+          return stackIn_8_0;
         } else {
-          field_u = null;
-          if (param1 >= 4096) {
-            L2: {
-              if (param1 >= 6144) {
-                stackOut_8_0 = -jc.field_b[-param1 + 8192];
-                stackIn_9_0 = stackOut_8_0;
-                break L2;
-              } else {
-                stackOut_7_0 = -jc.field_b[param1 - 4096];
-                stackIn_9_0 = stackOut_7_0;
-                break L2;
-              }
+          L1: {
+            if (param1 < 2048) {
+              stackOut_3_0 = jc.field_b[param1];
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = jc.field_b[-param1 + 4096];
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
             }
-            return stackIn_9_0;
-          } else {
-            L3: {
-              if (param1 < 2048) {
-                stackOut_4_0 = jc.field_b[param1];
-                stackIn_5_0 = stackOut_4_0;
-                break L3;
-              } else {
-                stackOut_3_0 = jc.field_b[-param1 + 4096];
-                stackIn_5_0 = stackOut_3_0;
-                break L3;
-              }
-            }
-            return stackIn_5_0;
           }
+          return stackIn_4_0;
         }
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param0 >= 73) {
-          if (param2 < 2) {
-            if (param1 >= 5) {
-              return 1;
-            } else {
-              return 0;
-            }
-          } else {
+        if (param2 >= 2) {
             return 2;
-          }
-        } else {
-          nf.a((byte) -33);
-          if (param2 < 2) {
-            if (param1 >= 5) {
-              return 1;
-            } else {
-              return 0;
-            }
-          } else {
-            return 2;
-          }
         }
+        if (param1 >= 5) {
+            return 1;
+        }
+        return 0;
     }
 
     nf(int param0, int param1, int param2, int param3, int param4, int param5) {

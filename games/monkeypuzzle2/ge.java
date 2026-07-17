@@ -232,7 +232,7 @@ final class ge {
         ge.a(field_i, 0, param2 + param3 * field_h, param1, param3, param5, field_h - param4, param2, param4);
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
+    final static void e(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -597,7 +597,7 @@ final class ge {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
+    final static void d(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1779,7 +1779,7 @@ final class ge {
         field_l = null;
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void c(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1811,9 +1811,9 @@ final class ge {
         }
         L1: {
           var5 = 156;
-          var6 = (param3 >> 16 & 255) * 100;
-          var7 = (param3 >> 8 & 255) * 100;
-          var8 = (param3 & 255) * 100;
+          var6 = 25500;
+          var7 = 25500;
+          var8 = 25500;
           var12 = param1 - param2;
           if (var12 >= field_f) {
             break L1;
@@ -2026,9 +2026,9 @@ final class ge {
                 param2 = field_j - param0;
             }
             var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
+            var6 = 85 * param4;
+            var7 = 85 * param4;
+            var8 = 85 * param4;
             var12 = param0 + param1 * field_h;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_i[var12] >> 16 & 255) * var5;

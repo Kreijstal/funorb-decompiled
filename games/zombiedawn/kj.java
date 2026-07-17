@@ -9,41 +9,36 @@ final class kj {
     static int[] field_b;
 
     final static vn[] a(int param0, int param1, int param2, int param3, int param4) {
-        vn[] var6 = new vn[9];
-        vn[] var5 = var6;
-        vn dupTemp$0 = qk.c(param4, (byte) -71, param0);
-        var6[6] = dupTemp$0;
-        var5[3] = dupTemp$0;
-        var5[2] = dupTemp$0;
-        var5[1] = dupTemp$0;
-        var5[0] = dupTemp$0;
-        vn dupTemp$1 = qk.c(param3, (byte) -71, param0);
-        var6[8] = dupTemp$1;
-        var5[7] = dupTemp$1;
-        var5[5] = dupTemp$1;
-        if (param2 != 12692) {
-            field_a = null;
-            if (param1 == 0) {
-                return var5;
-            }
-            var6[4] = qk.c(param1, (byte) -71, 64);
-            return var5;
-        }
+        vn[] var5 = null;
+        vn[] var6 = null;
+        var6 = new vn[9];
+        var5 = var6;
+        vn dupTemp$4 = qk.c(param4, (byte) -71, 1);
+        var6[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        vn dupTemp$5 = qk.c(param3, (byte) -71, 1);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[5] = dupTemp$5;
         if (param1 != 0) {
-            var6[4] = qk.c(param1, (byte) -71, 64);
-            return var5;
+          var6[4] = qk.c(param1, (byte) -71, 64);
+          return var5;
+        } else {
+          return var5;
         }
-        return var5;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_d = null;
         field_e = null;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

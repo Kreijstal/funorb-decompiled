@@ -125,35 +125,31 @@ final class ona extends kna {
         int var2 = 0;
         int var3 = 0;
         var3 = TombRacer.field_G ? 1 : 0;
-        if (param0 == 0) {
-          var2 = param1;
-          if (1 != var2) {
-            if (var2 == 3) {
-              return 1;
-            } else {
-              if (var2 != 4) {
-                if (var2 != 0) {
-                  if (var2 != 7) {
-                    if (var2 == 5) {
-                      return 7;
-                    } else {
-                      return param1;
-                    }
+        var2 = param1;
+        if (1 != var2) {
+          if (var2 == 3) {
+            return 1;
+          } else {
+            if (var2 != 4) {
+              if (var2 != 0) {
+                if (var2 != 7) {
+                  if (var2 == 5) {
+                    return 7;
                   } else {
-                    return 5;
+                    return param1;
                   }
                 } else {
-                  return 4;
+                  return 5;
                 }
               } else {
-                return 0;
+                return 4;
               }
+            } else {
+              return 0;
             }
-          } else {
-            return 3;
           }
         } else {
-          return -34;
+          return 3;
         }
     }
 

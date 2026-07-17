@@ -12,7 +12,7 @@ final class ne {
     private int field_i;
     static dm field_b;
 
-    private final void a(boolean param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -237,7 +237,7 @@ final class ne {
         fi.a(0, ll.field_d);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
         field_d = null;
@@ -251,7 +251,8 @@ final class ne {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((ne) this).field_e[var2_int] = param0[var2_int];
             }
-            this.a(true);
+            int discarded$0 = 1;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "ne.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

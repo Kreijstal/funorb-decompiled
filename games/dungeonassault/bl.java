@@ -25,7 +25,7 @@ final class bl {
     static String field_a;
     static nh field_t;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_o = null;
         field_b = null;
         field_s = null;
@@ -40,7 +40,7 @@ final class bl {
         field_l = null;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         int var1_int = 0;
         cn var2 = null;
         cn var3 = null;
@@ -96,7 +96,8 @@ final class bl {
         var18 = DungeonAssault.field_K;
         kk.field_l = ah.a(np.field_A, 200, "smallfont", "", hj.field_Z);
         db.field_v = ah.a(np.field_A, 200, "roman12bold", "", hj.field_Z);
-        df.field_c = rc.a("", sb.field_a, "main_center", (byte) 71);
+        int discarded$11 = 71;
+        df.field_c = rc.a("", sb.field_a, "main_center");
         dm.field_d = new cn[3];
         qi.field_f = new cn[3];
         var1_int = 0;
@@ -111,7 +112,7 @@ final class bl {
                 e.field_j = oh.a(hj.field_Z, "", 11091, "menu_moss_top_right");
                 wj.field_w = oh.a(hj.field_Z, "", 11091, "menu_moss_1");
                 oj.field_a = oh.a(hj.field_Z, "", 11091, "menu_moss_2");
-                cn discarded$5 = oh.a(hj.field_Z, "", 11091, "menu_moss_bottom");
+                cn discarded$12 = oh.a(hj.field_Z, "", 11091, "menu_moss_bottom");
                 am.field_a = oh.a(hj.field_Z, "", 11091, "menu_chain_frame");
                 lf.field_x = oh.a(hj.field_Z, "", 11091, "menu_chain_ext");
                 lf.field_n = oh.a(hj.field_Z, "", 11091, "menu_chain_line");
@@ -147,7 +148,7 @@ final class bl {
                     oe.field_m = ph.a(hj.field_Z, "", "interface_dragon");
                     pi.field_b = oh.a(hj.field_Z, "", 11091, "interface_lattice");
                     jm.field_i = oh.a(hj.field_Z, "", 11091, "button_152");
-                    cn discarded$6 = oh.a(hj.field_Z, "", 11091, "button_252");
+                    cn discarded$13 = oh.a(hj.field_Z, "", 11091, "button_252");
                     gh.field_g = kn.a(hj.field_Z, "", "strategy_buttons", -98);
                     jh.c();
                     var5 = var20.field_y;
@@ -296,7 +297,7 @@ final class bl {
                                                         kd.field_f = oh.a(hj.field_Z, "", 11091, "stat_detect");
                                                         uj.field_c = oh.a(hj.field_Z, "", 11091, "stat_renown");
                                                         ue.field_i = kn.a(hj.field_Z, "", "modifier_icons", -80);
-                                                        cn discarded$7 = oh.a(hj.field_Z, "", 11091, "dead_icon");
+                                                        cn discarded$14 = oh.a(hj.field_Z, "", 11091, "dead_icon");
                                                         rj.field_k = oh.a(hj.field_Z, "", 11091, "youarehere");
                                                         fj.field_d = kn.a(hj.field_Z, "", "spy_icon", -70);
                                                         bf.field_e = kn.a(hj.field_Z, "", "sac_icon", -44);
@@ -309,10 +310,13 @@ final class bl {
                                                         L12: while (true) {
                                                           if (var13_int >= 2) {
                                                             la.field_b.a((lo[]) (Object) new q[2], new int[2]);
-                                                            fl.field_i = fn.a(2);
+                                                            int discarded$15 = 2;
+                                                            fl.field_i = fn.a();
                                                             wm.field_h = fl.field_i.b();
-                                                            dh.field_a = rj.a((byte) 127);
-                                                            sm.field_g = qp.a(true);
+                                                            int discarded$16 = 127;
+                                                            dh.field_a = rj.a();
+                                                            int discarded$17 = 1;
+                                                            sm.field_g = qp.a();
                                                             fo.field_a = wo.a(5, 1, 6, 5, 16744448);
                                                             qp.field_a = fo.field_a.d();
                                                             qp.field_a.g();
@@ -359,7 +363,7 @@ final class bl {
                                                                         var14 = 0;
                                                                         L16: while (true) {
                                                                           if (var14 >= ie.field_j.length) {
-                                                                            cn discarded$8 = new cn(gf.field_i, gf.field_c);
+                                                                            cn discarded$18 = new cn(gf.field_i, gf.field_c);
                                                                             return;
                                                                           } else {
                                                                             kd.field_e[var14] = new tf((se) (Object) db.field_v, ie.field_j[var14], cm.field_M);
@@ -423,9 +427,9 @@ final class bl {
                                                                     var16++;
                                                                     continue L19;
                                                                   } else {
-                                                                    int incrementValue$9 = var15;
+                                                                    int incrementValue$19 = var15;
                                                                     var15++;
-                                                                    var14_ref_byte__[(fb.field_f.field_b + var17 >> 1) - -((var16 - -fb.field_f.field_a >> 1) * fb.field_f.field_d)] = fb.field_f.field_j[incrementValue$9];
+                                                                    var14_ref_byte__[(fb.field_f.field_b + var17 >> 1) - -((var16 - -fb.field_f.field_a >> 1) * fb.field_f.field_d)] = fb.field_f.field_j[incrementValue$19];
                                                                     var17++;
                                                                     continue L20;
                                                                   }
@@ -577,20 +581,22 @@ final class bl {
                   }
                 }
               } else {
-                qi.field_f[var1_int] = rc.a("", sb.field_a, "main_right_0" + (var1_int - -1), (byte) 71);
+                int discarded$20 = 71;
+                qi.field_f[var1_int] = rc.a("", sb.field_a, "main_right_0" + (var1_int - -1));
                 var1_int++;
                 continue L1;
               }
             }
           } else {
-            dm.field_d[var1_int] = rc.a("", sb.field_a, "main_left_0" + (var1_int - -1), (byte) 71);
+            int discarded$21 = 71;
+            dm.field_d[var1_int] = rc.a("", sb.field_a, "main_left_0" + (var1_int - -1));
             var1_int++;
             continue L0;
           }
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
         int var2 = 0;
         L0: {
@@ -605,7 +611,8 @@ final class bl {
               break L0;
             } else {
               if (var1 != 1) {
-                ub.field_o = jk.a(new String[1], hm.field_j, 30496);
+                int discarded$1 = 30496;
+                ub.field_o = jk.a(new String[1], hm.field_j);
                 ub.field_o = nf.a(new CharSequence[3], (byte) 34);
                 a.field_n.j((byte) 79);
                 hl.a(true);
@@ -625,7 +632,7 @@ final class bl {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         int var2 = 0;
         int stackIn_8_0 = 0;
@@ -927,10 +934,7 @@ final class bl {
         for (var4 = 0; var3.field_B.length > var4; var4++) {
             var6.field_B[var4] = param1;
         }
-        if (param0) {
-            return null;
-        }
-        return var3;
+        return null;
     }
 
     final static ai a(boolean param0, ec param1, boolean param2) {

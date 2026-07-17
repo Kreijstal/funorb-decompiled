@@ -18,12 +18,13 @@ final class vd extends td implements jg, m, a {
     private lf field_J;
     static int field_K;
 
-    private final String c(boolean param0) {
+    private final String c() {
         return "</col></u>";
     }
 
     private final boolean l(int param0) {
-        if (!this.j(-21109)) {
+        int discarded$0 = -21109;
+        if (!this.j()) {
             return false;
         }
         int var2 = -1;
@@ -33,7 +34,7 @@ final class vd extends td implements jg, m, a {
         }
         if (param0 != -27163) {
             Object var4 = null;
-            int discarded$0 = this.a((byte) 51, 67, (al) null, -67, (String) null);
+            int discarded$1 = this.a((byte) 51, 67, (al) null, -67, (String) null);
         }
         return wf.a((byte) 29, ((vd) this).field_F.field_s, ((vd) this).field_J.field_s, ((vd) this).field_M.field_s, (vd) this, ((vd) this).field_O.field_G, var2);
     }
@@ -75,6 +76,8 @@ final class vd extends td implements jg, m, a {
         ql dupTemp$1 = new ql(10000536);
         ((vd) this).field_E.field_y = (t) (Object) dupTemp$1;
         ((vd) this).field_J.field_y = (t) (Object) dupTemp$1;
+        int discarded$2 = -9700;
+        int discarded$3 = 1;
         String var2 = dh.a((byte) -56, new String[2], oi.field_d);
         int var3 = 20;
         var3 = var3 + this.a(170, we.field_b, 5, var3, (al) (Object) ((vd) this).field_M);
@@ -498,22 +501,23 @@ final class vd extends td implements jg, m, a {
         return stackIn_3_0;
     }
 
-    private final String m(int param0) {
+    private final String m() {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_G = null;
     }
 
-    final static void k(int param0) {
+    final static void k() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
-            if (!pb.a((byte) -88)) {
+            int discarded$35 = -88;
+            if (!pb.a()) {
               L1: {
                 if (null == og.field_rb) {
                   break L1;
@@ -529,13 +533,14 @@ final class vd extends td implements jg, m, a {
               }
               return;
             } else {
-              boolean discarded$12 = mg.field_b.a(w.field_T, true, false, bl.field_b);
+              boolean discarded$36 = mg.field_b.a(w.field_T, true, false, bl.field_b);
               mg.field_b.b(true);
               L2: while (true) {
-                if (!mh.e(127)) {
+                int discarded$37 = 127;
+                if (!mh.e()) {
                   break L0;
                 } else {
-                  boolean discarded$13 = mg.field_b.a(md.field_d, 3931, kg.field_d);
+                  boolean discarded$38 = mg.field_b.a(md.field_d, 3931, kg.field_d);
                   continue L2;
                 }
               }
@@ -548,7 +553,7 @@ final class vd extends td implements jg, m, a {
         }
     }
 
-    private final boolean j(int param0) {
+    private final boolean j() {
         if (this.a((wk) (Object) ((vd) this).field_F, (byte) 73)) {
             if (this.a((wk) (Object) ((vd) this).field_M, (byte) 73)) {
                 if (this.a((wk) (Object) ((vd) this).field_I, (byte) 73)) {
@@ -843,7 +848,8 @@ final class vd extends td implements jg, m, a {
     final void a(int param0, int param1, byte param2, al param3) {
         try {
             super.a(param0, param1, param2, param3);
-            ((vd) this).field_C.field_B = this.j(-21109);
+            int discarded$0 = -21109;
+            ((vd) this).field_C.field_B = this.j();
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) (Object) runtimeException, "vd.EA(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
@@ -996,7 +1002,7 @@ final class vd extends td implements jg, m, a {
         return stackIn_4_0;
     }
 
-    final static void a(be param0, byte param1) {
+    final static void a(be param0) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

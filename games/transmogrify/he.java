@@ -5,7 +5,7 @@ final class he extends wf {
     static String field_h;
     static String field_g;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_h = null;
     }
@@ -52,46 +52,43 @@ final class he extends wf {
         var5 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
-            if (param1 > 75) {
-              L1: {
-                db.field_a = gd.field_l;
-                if (255 == param3) {
-                  L2: {
-                    if (ab.field_j >= 13) {
-                      stackOut_11_0 = 0;
-                      stackIn_12_0 = stackOut_11_0;
-                      break L2;
-                    } else {
-                      stackOut_10_0 = 1;
-                      stackIn_12_0 = stackOut_10_0;
-                      break L2;
-                    }
+            L1: {
+              db.field_a = gd.field_l;
+              if (255 == param3) {
+                L2: {
+                  if (ab.field_j >= 13) {
+                    stackOut_11_0 = 0;
+                    stackIn_12_0 = stackOut_11_0;
+                    break L2;
+                  } else {
+                    stackOut_10_0 = 1;
+                    stackIn_12_0 = stackOut_10_0;
+                    break L2;
                   }
-                  de.field_a = de.a(stackIn_12_0 != 0, (byte) -116);
-                  var6 = null;
-                  dj.a(false, (String[]) null);
+                }
+                int discarded$1 = -116;
+                de.field_a = de.a(stackIn_12_0 != 0);
+                var6 = null;
+                dj.a(false, (String[]) null);
+                break L1;
+              } else {
+                if (param3 < 100) {
+                  de.field_a = mk.a(242763393, param2, param3);
                   break L1;
                 } else {
-                  if (param3 < 100) {
+                  if (param3 > 105) {
                     de.field_a = mk.a(242763393, param2, param3);
                     break L1;
                   } else {
-                    if (param3 > 105) {
-                      de.field_a = mk.a(242763393, param2, param3);
-                      break L1;
-                    } else {
-                      var4 = args;
-                      dj.a(false, var4);
-                      de.field_a = ve.a(args, (byte) -128);
-                      break L1;
-                    }
+                    var4 = args;
+                    dj.a(false, var4);
+                    de.field_a = ve.a(args, (byte) -128);
+                    break L1;
                   }
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +120,7 @@ final class he extends wf {
           }
           L4: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(89).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -150,7 +147,7 @@ final class he extends wf {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1) {
         L0: {
           L1: {
             if (ba.field_q == null) {

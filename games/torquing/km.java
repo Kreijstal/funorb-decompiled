@@ -35,7 +35,7 @@ final class km {
             var5 = (qk) (Object) kc.field_z.b(0);
             L1: while (true) {
               if (var5 == null) {
-                var3 = -31 % ((-90 - param0) / 35);
+                var3 = 0;
                 var6 = (h) (Object) to.field_s.b(0);
                 L2: while (true) {
                   if (var6 == null) {
@@ -56,7 +56,7 @@ final class km {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2, "km.A(" + param0 + 44 + 5 + 41);
+          throw rb.a((Throwable) (Object) var2, "km.A(" + -128 + 44 + 5 + 41);
         }
     }
 
@@ -81,7 +81,7 @@ final class km {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_a = null;
     }

@@ -16,23 +16,25 @@ final class bb implements Runnable {
     static int[][] field_k;
     static int field_c;
 
-    final static String a(int param0) {
+    final static String a() {
         return id.field_b.b(false);
     }
 
-    final static lj a(int param0, boolean param1, int param2, byte param3, boolean param4, boolean param5) {
+    final static lj a(int param0, boolean param1, int param2, byte param3) {
         try {
             Object var6 = null;
             Object var7 = null;
             di var8 = null;
-            lj stackIn_16_0 = null;
+            lj stackIn_13_0 = null;
             Throwable decompiledCaughtException = null;
-            lj stackOut_15_0 = null;
+            lj stackOut_12_0 = null;
             L0: {
               if (param3 > 91) {
                 break L0;
               } else {
-                lj discarded$2 = bb.a(70, true, 52, (byte) -68, false, false);
+                int discarded$6 = 0;
+                int discarded$7 = 0;
+                lj discarded$8 = bb.a(70, true, 52, (byte) -68);
                 break L0;
               }
             }
@@ -75,17 +77,9 @@ final class bb implements Runnable {
                     break L3;
                   }
                 }
-                L6: {
-                  var8 = wf.field_i.a(param0, (la) var7, param4, (byte) 15, (la) var6);
-                  if (param5) {
-                    var8.d(14);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                stackOut_15_0 = new lj((kl) (Object) var8, param1, param2);
-                stackIn_16_0 = stackOut_15_0;
+                var8 = wf.field_i.a(param0, (la) var7, false, (byte) 15, (la) var6);
+                stackOut_12_0 = new lj((kl) (Object) var8, true, param2);
+                stackIn_13_0 = stackOut_12_0;
                 break L1;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -93,7 +87,7 @@ final class bb implements Runnable {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_16_0;
+            return stackIn_13_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -101,7 +95,7 @@ final class bb implements Runnable {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void a(boolean param0) {
         if (!(param0)) {
             o.a(7, true);
         }
@@ -133,7 +127,7 @@ final class bb implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_k = null;
         field_g = null;
         field_j = null;

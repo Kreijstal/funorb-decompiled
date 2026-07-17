@@ -55,7 +55,8 @@ final class ur {
           L0: {
             if (tn.a(param3, (byte) -127, param2, param1)) {
               var4_int = -91 / ((34 - param0) / 38);
-              stackOut_3_0 = kn.a(-125);
+              int discarded$2 = -125;
+              stackOut_3_0 = kn.a();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

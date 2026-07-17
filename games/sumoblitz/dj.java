@@ -25,7 +25,7 @@ final class dj extends ms {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_o = null;
         field_m = null;

@@ -8,7 +8,7 @@ final class rba {
     static ok field_a;
     static kia field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         int var1 = 16;
@@ -31,14 +31,6 @@ final class rba {
                 break L0;
               } else {
                 if (dg.field_c > param1) {
-                  L1: {
-                    if (param3 == -1) {
-                      break L1;
-                    } else {
-                      field_c = null;
-                      break L1;
-                    }
-                  }
                   var5 = param0 * (param4 >>> 24) >> 8;
                   var6 = 256 - var5;
                   var7 = dg.field_i * param1 + param2;

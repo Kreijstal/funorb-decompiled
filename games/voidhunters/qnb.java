@@ -47,7 +47,7 @@ final class qnb extends rqa {
           L0: {
             L1: {
               var3 = cm.a((byte) -87, param2);
-              if (param1 != param0.indexOf(param2)) {
+              if (-1 != param0.indexOf(param2)) {
                 break L1;
               } else {
                 if (-1 != param0.indexOf(var3)) {
@@ -117,7 +117,7 @@ final class qnb extends rqa {
           }
           L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param1).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(-1).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -186,7 +186,8 @@ final class qnb extends rqa {
               }
             }
             if (!Character.isISOControl(param1)) {
-              if (hoa.a(param1, false)) {
+              int discarded$8 = 0;
+              if (hoa.a(param1)) {
                 stackOut_8_0 = 1;
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0 != 0;

@@ -22,7 +22,7 @@ abstract class za extends vg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_f = null;
     }
@@ -73,7 +73,7 @@ abstract class za extends vg {
               var14 = var9 + -(var11 * (-1 + var12));
               var15 = var8 << 2;
               var16 = var9 << 2;
-              var17 = 71 % ((39 - param4) / 61);
+              var17 = 0;
               var18 = (3 + (var6_int << 1)) * var10;
               var19 = ((var7 << 1) + -3) * var11;
               var20 = (1 + var6_int) * var16;
@@ -162,7 +162,7 @@ abstract class za extends vg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var6, "za.F(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw tba.a((Throwable) (Object) var6, "za.F(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 115 + 44 + param5 + 41);
         }
     }
 

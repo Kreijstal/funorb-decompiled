@@ -103,18 +103,18 @@ final class b extends le {
                 }
               }
             }
-            vl.a((byte) -46, param0);
+            vl.a((byte) -46, 0);
             var2_int = -68 % ((param1 - 1) / 43);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "b.B(" + param0 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) var2, "b.B(" + 0 + 44 + param1 + 41);
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_n = null;
         field_i = null;
         field_j = null;

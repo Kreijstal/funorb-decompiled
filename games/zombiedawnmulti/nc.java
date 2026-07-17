@@ -73,7 +73,7 @@ class nc {
         bm.a(var3 != 0, -5, 126, sp.field_g);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_c = null;
         field_e = null;
     }
@@ -564,7 +564,8 @@ class nc {
                                                             break L13;
                                                           }
                                                         }
-                                                        cq.a(jl.b(0), false);
+                                                        int discarded$4 = 0;
+                                                        cq.a(jl.b(0));
                                                         break L0;
                                                       }
                                                     } else {
@@ -603,9 +604,11 @@ class nc {
                                                         if (var6 == 34) {
                                                           if (((nc) this).field_g.c(-85)) {
                                                             oq.c((byte) 127);
-                                                            we.field_g[34] = df.a(-128);
+                                                            int discarded$5 = -128;
+                                                            we.field_g[34] = df.a();
                                                             ll.field_k.field_i = ll.field_k.field_i ^ 2;
-                                                            th.b((byte) -61);
+                                                            int discarded$6 = -61;
+                                                            th.b();
                                                             break L0;
                                                           } else {
                                                             break L0;
@@ -614,7 +617,8 @@ class nc {
                                                           if (var6 == 47) {
                                                             if (((nc) this).field_g.c(-85)) {
                                                               ll.field_k.e(-110);
-                                                              th.b((byte) -61);
+                                                              int discarded$7 = -61;
+                                                              th.b();
                                                               break L0;
                                                             } else {
                                                               break L0;
@@ -840,9 +844,10 @@ class nc {
     }
 
     final static void a(int param0, boolean param1) {
-        tm.a(param1, false);
+        int discarded$0 = 0;
+        tm.a(param1);
         br.a(param1, 2);
-        int var2 = 31 % ((param0 - -57) / 56);
+        int var2 = 0;
     }
 
     final int a(int param0, int param1, int param2) {
@@ -897,9 +902,6 @@ class nc {
     private final int b(byte param0, int param1) {
         if (~param1 == ~param1) {
         }
-        if (param0 != 68) {
-            ((nc) this).a(-84, -17, true);
-        }
         return 38;
     }
 
@@ -935,7 +937,8 @@ class nc {
             L0: {
               if (((nc) this).field_d != 7) {
                 if (((nc) this).field_d == 8) {
-                  ok.a(true);
+                  int discarded$4 = 1;
+                  ok.a();
                   return;
                 } else {
                   if (2 != ((nc) this).field_d) {
@@ -965,8 +968,11 @@ class nc {
                 var4 = 16777215;
                 pb.field_e.b(af.field_a, 320, var2, var4, -1);
                 pb.field_e.b(jm.a(vh.field_Mb, false, 118, gg.field_k), 320, var3 + var2, var4, -1);
-                pb.field_e.b(on.a(true, gg.field_k, vh.field_Mb, false), 320, var2 + (3 * var3 - -38), var4, -1);
-                pb.field_e.b(op.a(vh.field_Mb, gg.field_k, 4, false), 320, 76 + (var2 + var3 * 4), var4, -1);
+                int discarded$5 = 0;
+                pb.field_e.b(on.a(true, gg.field_k, vh.field_Mb), 320, var2 + (3 * var3 - -38), var4, -1);
+                int discarded$6 = 0;
+                int discarded$7 = 4;
+                pb.field_e.b(op.a(vh.field_Mb, gg.field_k), 320, 76 + (var2 + var3 * 4), var4, -1);
                 break L0;
               }
             }
@@ -1261,7 +1267,8 @@ class nc {
                       }
                     }
                     L3: {
-                      var3 = ai.a(stackIn_8_0 != 0, (byte) 110);
+                      int discarded$2 = 110;
+                      var3 = ai.a(stackIn_8_0 != 0);
                       if (var3 != 3) {
                         break L3;
                       } else {
@@ -1416,7 +1423,7 @@ class nc {
                       break L15;
                     } else {
                       if (((nc) this).field_g.field_d != -1) {
-                        uj discarded$1 = nm.b(-128, 69);
+                        uj discarded$3 = nm.b(-128, 69);
                         break L15;
                       } else {
                         break L13;

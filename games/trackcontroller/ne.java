@@ -9,7 +9,7 @@ final class ne implements t {
     private int field_f;
     static la field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_d = null;

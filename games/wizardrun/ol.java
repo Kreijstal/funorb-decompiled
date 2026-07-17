@@ -14,7 +14,7 @@ final class ol {
         ((ol) this).field_a = 0;
     }
 
-    final static String a(CharSequence[] param0, int param1) {
+    final static String a(CharSequence[] param0) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -36,7 +36,9 @@ final class ol {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = s.a(param0.length, param0, 0, -124);
+            int discarded$4 = -124;
+            int discarded$5 = 0;
+            stackOut_0_0 = s.a(param0.length, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -85,7 +87,7 @@ final class ol {
         }
     }
 
-    final static String a(int param0, va param1, byte param2) {
+    final static String a(int param0, va param1) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -115,10 +117,10 @@ final class ol {
           try {
             L0: {
               var3_int = param1.g(11681);
-              if (param0 >= var3_int) {
+              if (var3_int <= 80) {
                 break L0;
               } else {
-                var3_int = param0;
+                var3_int = 80;
                 break L0;
               }
             }
@@ -140,7 +142,7 @@ final class ol {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3_ref;
-            stackOut_6_1 = new StringBuilder().append("ol.E(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("ol.E(").append(80).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -249,7 +251,7 @@ final class ol {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
     }

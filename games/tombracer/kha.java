@@ -97,32 +97,30 @@ final class kha {
         Object stackIn_7_0 = null;
         Object stackIn_15_0 = null;
         Object stackIn_21_0 = null;
-        Object stackIn_24_0 = null;
-        Object stackIn_27_0 = null;
-        java.awt.Frame stackIn_29_0 = null;
+        Object stackIn_25_0 = null;
+        java.awt.Frame stackIn_27_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_14_0 = null;
         Object stackOut_6_0 = null;
-        java.awt.Frame stackOut_28_0 = null;
-        Object stackOut_26_0 = null;
-        Object stackOut_23_0 = null;
+        java.awt.Frame stackOut_26_0 = null;
+        Object stackOut_24_0 = null;
         Object stackOut_20_0 = null;
         Object stackOut_2_0 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -164,26 +162,20 @@ final class kha {
                   }
                 }
               }
-              var11 = param0.a(param4, param1, param2, (byte) 66, param5);
+              var11 = param0.a(param4, 0, param2, (byte) 66, param5);
               L4: while (true) {
                 if (var11.field_b != 0) {
                   var7 = (java.awt.Frame) var11.field_f;
                   if (var7 != null) {
-                    if (param3 == 10) {
-                      if (var11.field_b != 2) {
-                        stackOut_28_0 = (java.awt.Frame) var7;
-                        stackIn_29_0 = stackOut_28_0;
-                        break L0;
-                      } else {
-                        vf.a(31637, param0, var7);
-                        stackOut_26_0 = null;
-                        stackIn_27_0 = stackOut_26_0;
-                        return (java.awt.Frame) (Object) stackIn_27_0;
-                      }
+                    if (var11.field_b != 2) {
+                      stackOut_26_0 = (java.awt.Frame) var7;
+                      stackIn_27_0 = stackOut_26_0;
+                      break L0;
                     } else {
-                      stackOut_23_0 = null;
-                      stackIn_24_0 = stackOut_23_0;
-                      return (java.awt.Frame) (Object) stackIn_24_0;
+                      vf.a(31637, param0, var7);
+                      stackOut_24_0 = null;
+                      stackIn_25_0 = stackOut_24_0;
+                      return (java.awt.Frame) (Object) stackIn_25_0;
                     }
                   } else {
                     stackOut_20_0 = null;
@@ -205,33 +197,33 @@ final class kha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
-            stackOut_30_1 = new StringBuilder().append("kha.A(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackOut_28_0 = (RuntimeException) var6;
+            stackOut_28_1 = new StringBuilder().append("kha.A(");
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
               break L5;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + 0 + 44 + param2 + 44 + 10 + 44 + param4 + 44 + param5 + 41);
         }
-        return stackIn_29_0;
+        return stackIn_27_0;
     }
 
     static int b(int param0, int param1) {

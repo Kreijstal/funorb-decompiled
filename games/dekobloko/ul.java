@@ -12,7 +12,7 @@ final class ul {
     static int field_f;
     static int[] field_c;
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         cl var3 = null;
@@ -67,13 +67,14 @@ final class ul {
                         var6_int = 0;
                         L5: while (true) {
                           if (var6_int >= var4) {
-                            pd.a(var5, (byte) 6);
-                            String[][] dupTemp$2 = new String[2][var5];
-                            var3.field_x = dupTemp$2;
-                            var6 = dupTemp$2;
-                            int[][] dupTemp$3 = new int[2][var5 * 4];
-                            var3.field_u = dupTemp$3;
-                            var7 = dupTemp$3;
+                            int discarded$5 = 6;
+                            pd.a(var5);
+                            String[][] dupTemp$6 = new String[2][var5];
+                            var3.field_x = dupTemp$6;
+                            var6 = dupTemp$6;
+                            int[][] dupTemp$7 = new int[2][var5 * 4];
+                            var3.field_u = dupTemp$7;
+                            var7 = dupTemp$7;
                             var8 = og.field_eb;
                             var9 = 0;
                             var10 = 0;
@@ -94,7 +95,8 @@ final class ul {
                                       var7[1][1 + 4 * var14] = oa.field_e[var11];
                                       var7[1][4 * var14 + 2] = ln.field_a[var11];
                                       var7[1][4 * var14 + 3] = mk.field_b[var11];
-                                      if (k.a(t.field_cb[var11], true)) {
+                                      int discarded$8 = 1;
+                                      if (k.a(t.field_cb[var11])) {
                                         if (ln.field_a[var11] + oa.field_e[var11] + mk.field_b[var11] != 0) {
                                           break L8;
                                         } else {
@@ -119,7 +121,8 @@ final class ul {
                                   var7[0][1 + var10 * 4] = oa.field_e[var11];
                                   var7[0][2 + 4 * var10] = ln.field_a[var11];
                                   var7[0][3 + var10 * 4] = mk.field_b[var11];
-                                  if (!k.a(t.field_cb[var11], true)) {
+                                  int discarded$9 = 1;
+                                  if (!k.a(t.field_cb[var11])) {
                                     break L9;
                                   } else {
                                     if (oa.field_e[var11] + (ln.field_a[var11] - -mk.field_b[var11]) != 0) {
@@ -176,7 +179,7 @@ final class ul {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_b = null;
         field_a = null;
@@ -186,9 +189,6 @@ final class ul {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param2 != -28705) {
-            ul.a(55, 34);
-        }
         if (param1 < 2) {
             if (5 > param0) {
                 return 0;
@@ -198,10 +198,7 @@ final class ul {
         return 2;
     }
 
-    final static void a(int param0, int param1) {
-        if (param1 != 4) {
-            field_e = null;
-        }
+    final static void a(int param0) {
         uf var2 = we.field_b;
         var2.f(param0, -4);
         var2.a(true, 1);

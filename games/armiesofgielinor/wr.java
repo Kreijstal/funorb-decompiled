@@ -47,15 +47,12 @@ final class wr extends hs implements he {
             var3 = so.field_b.field_g;
             var4 = vu.field_Q.field_Z.a(param1, 272, vu.field_Q.field_pb);
             var5 = -(var4 / 2) + var3 / 2 - 103;
-            if (param0 < 27) {
-                field_J = -20;
-            }
             qc.field_c.a(-(var5 * 2) + (-120 + var3), -20500, 320, var5, (var2_int + -320) / 2);
             qc.field_c.field_G = tq.a(11579568, false, qc.field_c.field_ob, 2105376, 3, 8421504);
             vu.field_Q.a(-20 + (qc.field_c.field_ob - 24), -20500, qc.field_c.field_gb + -48, 16, 24);
             td.field_g.a(24, -20500, 80, qc.field_c.field_ob - 44, 120);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "wr.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "wr.A(" + 68 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -73,7 +70,7 @@ final class wr extends hs implements he {
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         int stackIn_6_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;

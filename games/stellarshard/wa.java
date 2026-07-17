@@ -9,7 +9,7 @@ final class wa {
     static String[] field_e;
     private int field_c;
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
@@ -75,7 +75,7 @@ final class wa {
                 }
               }
             }
-            var2_int = -80 / ((77 - param1) / 45);
+            var2_int = -26;
             stackOut_17_0 = 0;
             stackIn_18_0 = stackOut_17_0;
             break L0;
@@ -83,21 +83,18 @@ final class wa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2_ref, "wa.G(" + param0 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) var2_ref, "wa.G(" + param0 + 44 + -79 + 41);
         }
         return stackIn_18_0 != 0;
     }
 
-    final static String a(int param0) {
+    final static String a() {
         return ae.field_N.e((byte) 91);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_b = null;
-        if (param0 != 0) {
-            boolean discarded$0 = wa.a('\n', (byte) 2);
-        }
     }
 
     final void a(Object param0, long param1, int param2) {
@@ -116,24 +113,22 @@ final class wa {
         ld var6_ref = null;
         int var7 = stellarshard.field_B;
         try {
-            if (param1 > ((wa) this).field_c) {
+            if (1 > ((wa) this).field_c) {
                 throw new IllegalStateException();
             }
-            if (param0 >= -113) {
-                this.a(-81L, (byte) 23);
-            }
-            this.a(param2, (byte) 110);
-            ((wa) this).field_d = ((wa) this).field_d - param1;
+            int discarded$0 = 110;
+            this.a(param2);
+            ((wa) this).field_d = ((wa) this).field_d - 1;
             while (0 > ((wa) this).field_d) {
                 var6 = (gj) (Object) ((wa) this).field_f.b((byte) 103);
                 this.a(var6, (byte) 124);
             }
-            var6_ref = new ld(param3, param1);
+            var6_ref = new ld(param3, 1);
             ((wa) this).field_a.a((byte) 30, (gg) (Object) var6_ref, param2);
             ((wa) this).field_f.a(true, (ah) (Object) var6_ref);
             ((gj) (Object) var6_ref).field_o = 0L;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "wa.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "wa.D(" + -123 + 44 + 1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -247,17 +242,9 @@ final class wa {
         }
     }
 
-    private final void a(long param0, byte param1) {
-        gj var4 = null;
-        var4 = (gj) (Object) ((wa) this).field_a.a(param0, -1);
-        if (param1 <= 106) {
-          wa.b(-119);
-          this.a(var4, (byte) 118);
-          return;
-        } else {
-          this.a(var4, (byte) 118);
-          return;
-        }
+    private final void a(long param0) {
+        gj var4 = (gj) (Object) ((wa) this).field_a.a(param0, -1);
+        this.a(var4, (byte) 118);
     }
 
     private wa() throws Throwable {

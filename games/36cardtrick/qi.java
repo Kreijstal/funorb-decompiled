@@ -363,7 +363,7 @@ final class qi extends qg {
               }
             }
             L24: {
-              var3 = 56 % ((1 - param0) / 55);
+              var3 = 0;
               var2 = wf.a("achievements_crit,8", -19073);
               if (null == var2) {
                 break L24;
@@ -533,7 +533,7 @@ final class qi extends qg {
           L42: {
             var2_ref = decompiledCaughtException;
             stackOut_142_0 = (RuntimeException) var2_ref;
-            stackOut_142_1 = new StringBuilder().append("qi.J(").append(param0).append(44);
+            stackOut_142_1 = new StringBuilder().append("qi.J(").append(-87).append(44);
             stackIn_145_0 = stackOut_142_0;
             stackIn_145_1 = stackOut_142_1;
             stackIn_143_0 = stackOut_142_0;
@@ -620,43 +620,41 @@ final class qi extends qg {
         }
     }
 
-    final static qk a(boolean param0, int param1, int param2, boolean param3, int param4) {
+    final static qk a(boolean param0, int param1) {
         RuntimeException var5 = null;
-        Object stackIn_2_0 = null;
         qk stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         qk stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
         try {
           L0: {
-            if (param4 == 2147483647) {
-              stackOut_3_0 = lf.a(param0, param3, param2, param1, (byte) -70, false);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (qk) (Object) stackIn_2_0;
-            }
+            int discarded$2 = 0;
+            int discarded$3 = -70;
+            stackOut_3_0 = lf.a(true, false, 1, param1);
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var5, "qi.GA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ma.a((Throwable) (Object) var5, "qi.GA(" + 1 + 44 + param1 + 44 + 1 + 44 + 0 + 44 + 2147483647 + 41);
         }
         return stackIn_4_0;
     }
 
-    public static void d(byte param0) {
-        field_A = null;
-        field_D = null;
-        if (param0 <= 11) {
-            return;
-        }
+    public static void d() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
+            field_A = null;
+            field_D = null;
             field_F = null;
-        } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "qi.I(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1, "qi.I(" + 77 + 41);
         }
     }
 

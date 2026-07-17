@@ -48,13 +48,14 @@ final class ckb extends le {
         if (!(null != ((ckb) this).field_j)) {
             this.a(true, 1);
         }
-        this.e((byte) 100);
+        int discarded$0 = 100;
+        this.e();
         if (param0 >= -35) {
             ((ckb) this).field_j = null;
         }
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -274,221 +275,216 @@ final class ckb extends le {
     private final void a(boolean param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        var4 = VoidHunters.field_G;
-        if (param0) {
-          L0: {
-            if (param1 == 0) {
-              break L0;
-            } else {
-              var3 = param1;
-              if (var3 != 1) {
-                if (2 != var3) {
-                  if (var3 == 3) {
-                    ((ckb) this).field_j = new int[7][4];
-                    ((ckb) this).field_j[0][2] = 0;
-                    ((ckb) this).field_j[0][0] = 0;
-                    ((ckb) this).field_j[0][3] = 4096;
-                    ((ckb) this).field_j[0][1] = 0;
-                    ((ckb) this).field_j[1][1] = 0;
-                    ((ckb) this).field_j[1][3] = 4096;
-                    ((ckb) this).field_j[1][0] = 663;
-                    ((ckb) this).field_j[1][2] = 4096;
-                    ((ckb) this).field_j[2][3] = 0;
-                    ((ckb) this).field_j[2][1] = 0;
-                    ((ckb) this).field_j[2][2] = 4096;
-                    ((ckb) this).field_j[2][0] = 1363;
-                    ((ckb) this).field_j[3][2] = 4096;
-                    ((ckb) this).field_j[3][0] = 2048;
-                    ((ckb) this).field_j[3][3] = 0;
-                    ((ckb) this).field_j[3][1] = 4096;
-                    ((ckb) this).field_j[4][0] = 2727;
-                    ((ckb) this).field_j[4][2] = 0;
-                    ((ckb) this).field_j[4][1] = 4096;
-                    ((ckb) this).field_j[4][3] = 0;
-                    ((ckb) this).field_j[5][1] = 4096;
-                    ((ckb) this).field_j[5][3] = 4096;
-                    ((ckb) this).field_j[5][0] = 3411;
-                    ((ckb) this).field_j[5][2] = 0;
-                    ((ckb) this).field_j[6][2] = 0;
-                    ((ckb) this).field_j[6][1] = 0;
-                    ((ckb) this).field_j[6][3] = 4096;
-                    ((ckb) this).field_j[6][0] = 4096;
-                    break L0;
-                  } else {
-                    if (var3 != 4) {
-                      if (var3 == 5) {
-                        ((ckb) this).field_j = new int[16][4];
-                        ((ckb) this).field_j[0][3] = 321;
-                        ((ckb) this).field_j[0][0] = 0;
-                        ((ckb) this).field_j[0][1] = 80;
-                        ((ckb) this).field_j[0][2] = 192;
-                        ((ckb) this).field_j[1][2] = 449;
-                        ((ckb) this).field_j[1][3] = 562;
-                        ((ckb) this).field_j[1][0] = 155;
-                        ((ckb) this).field_j[1][1] = 321;
-                        ((ckb) this).field_j[2][2] = 690;
-                        ((ckb) this).field_j[2][0] = 389;
-                        ((ckb) this).field_j[2][1] = 578;
-                        ((ckb) this).field_j[2][3] = 803;
-                        ((ckb) this).field_j[3][1] = 947;
-                        ((ckb) this).field_j[3][0] = 671;
-                        ((ckb) this).field_j[3][2] = 995;
-                        ((ckb) this).field_j[3][3] = 1140;
-                        ((ckb) this).field_j[4][0] = 897;
-                        ((ckb) this).field_j[4][2] = 1397;
-                        ((ckb) this).field_j[4][3] = 1509;
-                        ((ckb) this).field_j[4][1] = 1285;
-                        ((ckb) this).field_j[5][1] = 1525;
-                        ((ckb) this).field_j[5][3] = 1413;
-                        ((ckb) this).field_j[5][2] = 1429;
-                        ((ckb) this).field_j[5][0] = 1175;
-                        ((ckb) this).field_j[6][1] = 1734;
-                        ((ckb) this).field_j[6][0] = 1368;
-                        ((ckb) this).field_j[6][3] = 1333;
-                        ((ckb) this).field_j[6][2] = 1461;
-                        ((ckb) this).field_j[7][0] = 1507;
-                        ((ckb) this).field_j[7][2] = 1525;
-                        ((ckb) this).field_j[7][3] = 1702;
-                        ((ckb) this).field_j[7][1] = 1413;
-                        ((ckb) this).field_j[8][1] = 1108;
-                        ((ckb) this).field_j[8][0] = 1736;
-                        ((ckb) this).field_j[8][2] = 1590;
-                        ((ckb) this).field_j[8][3] = 2056;
-                        ((ckb) this).field_j[9][0] = 2088;
-                        ((ckb) this).field_j[9][2] = 2056;
-                        ((ckb) this).field_j[9][1] = 1766;
-                        ((ckb) this).field_j[9][3] = 2666;
-                        ((ckb) this).field_j[10][2] = 2586;
-                        ((ckb) this).field_j[10][0] = 2355;
-                        ((ckb) this).field_j[10][1] = 2409;
-                        ((ckb) this).field_j[10][3] = 3276;
-                        ((ckb) this).field_j[11][2] = 3148;
-                        ((ckb) this).field_j[11][1] = 3116;
-                        ((ckb) this).field_j[11][0] = 2691;
-                        ((ckb) this).field_j[11][3] = 3228;
-                        ((ckb) this).field_j[12][0] = 3031;
-                        ((ckb) this).field_j[12][3] = 3196;
-                        ((ckb) this).field_j[12][2] = 3710;
-                        ((ckb) this).field_j[12][1] = 3806;
-                        ((ckb) this).field_j[13][0] = 3522;
-                        ((ckb) this).field_j[13][2] = 3421;
-                        ((ckb) this).field_j[13][3] = 3019;
-                        ((ckb) this).field_j[13][1] = 3437;
-                        ((ckb) this).field_j[14][0] = 3727;
-                        ((ckb) this).field_j[14][1] = 3116;
-                        ((ckb) this).field_j[14][3] = 3228;
-                        ((ckb) this).field_j[14][2] = 3148;
-                        ((ckb) this).field_j[15][2] = 2505;
-                        ((ckb) this).field_j[15][3] = 2746;
-                        ((ckb) this).field_j[15][1] = 2377;
-                        ((ckb) this).field_j[15][0] = 4096;
+        L0: {
+          var4 = VoidHunters.field_G;
+          if (param1 == 0) {
+            break L0;
+          } else {
+            var3 = param1;
+            if (var3 != 1) {
+              if (2 != var3) {
+                if (var3 == 3) {
+                  ((ckb) this).field_j = new int[7][4];
+                  ((ckb) this).field_j[0][2] = 0;
+                  ((ckb) this).field_j[0][0] = 0;
+                  ((ckb) this).field_j[0][3] = 4096;
+                  ((ckb) this).field_j[0][1] = 0;
+                  ((ckb) this).field_j[1][1] = 0;
+                  ((ckb) this).field_j[1][3] = 4096;
+                  ((ckb) this).field_j[1][0] = 663;
+                  ((ckb) this).field_j[1][2] = 4096;
+                  ((ckb) this).field_j[2][3] = 0;
+                  ((ckb) this).field_j[2][1] = 0;
+                  ((ckb) this).field_j[2][2] = 4096;
+                  ((ckb) this).field_j[2][0] = 1363;
+                  ((ckb) this).field_j[3][2] = 4096;
+                  ((ckb) this).field_j[3][0] = 2048;
+                  ((ckb) this).field_j[3][3] = 0;
+                  ((ckb) this).field_j[3][1] = 4096;
+                  ((ckb) this).field_j[4][0] = 2727;
+                  ((ckb) this).field_j[4][2] = 0;
+                  ((ckb) this).field_j[4][1] = 4096;
+                  ((ckb) this).field_j[4][3] = 0;
+                  ((ckb) this).field_j[5][1] = 4096;
+                  ((ckb) this).field_j[5][3] = 4096;
+                  ((ckb) this).field_j[5][0] = 3411;
+                  ((ckb) this).field_j[5][2] = 0;
+                  ((ckb) this).field_j[6][2] = 0;
+                  ((ckb) this).field_j[6][1] = 0;
+                  ((ckb) this).field_j[6][3] = 4096;
+                  ((ckb) this).field_j[6][0] = 4096;
+                  break L0;
+                } else {
+                  if (var3 != 4) {
+                    if (var3 == 5) {
+                      ((ckb) this).field_j = new int[16][4];
+                      ((ckb) this).field_j[0][3] = 321;
+                      ((ckb) this).field_j[0][0] = 0;
+                      ((ckb) this).field_j[0][1] = 80;
+                      ((ckb) this).field_j[0][2] = 192;
+                      ((ckb) this).field_j[1][2] = 449;
+                      ((ckb) this).field_j[1][3] = 562;
+                      ((ckb) this).field_j[1][0] = 155;
+                      ((ckb) this).field_j[1][1] = 321;
+                      ((ckb) this).field_j[2][2] = 690;
+                      ((ckb) this).field_j[2][0] = 389;
+                      ((ckb) this).field_j[2][1] = 578;
+                      ((ckb) this).field_j[2][3] = 803;
+                      ((ckb) this).field_j[3][1] = 947;
+                      ((ckb) this).field_j[3][0] = 671;
+                      ((ckb) this).field_j[3][2] = 995;
+                      ((ckb) this).field_j[3][3] = 1140;
+                      ((ckb) this).field_j[4][0] = 897;
+                      ((ckb) this).field_j[4][2] = 1397;
+                      ((ckb) this).field_j[4][3] = 1509;
+                      ((ckb) this).field_j[4][1] = 1285;
+                      ((ckb) this).field_j[5][1] = 1525;
+                      ((ckb) this).field_j[5][3] = 1413;
+                      ((ckb) this).field_j[5][2] = 1429;
+                      ((ckb) this).field_j[5][0] = 1175;
+                      ((ckb) this).field_j[6][1] = 1734;
+                      ((ckb) this).field_j[6][0] = 1368;
+                      ((ckb) this).field_j[6][3] = 1333;
+                      ((ckb) this).field_j[6][2] = 1461;
+                      ((ckb) this).field_j[7][0] = 1507;
+                      ((ckb) this).field_j[7][2] = 1525;
+                      ((ckb) this).field_j[7][3] = 1702;
+                      ((ckb) this).field_j[7][1] = 1413;
+                      ((ckb) this).field_j[8][1] = 1108;
+                      ((ckb) this).field_j[8][0] = 1736;
+                      ((ckb) this).field_j[8][2] = 1590;
+                      ((ckb) this).field_j[8][3] = 2056;
+                      ((ckb) this).field_j[9][0] = 2088;
+                      ((ckb) this).field_j[9][2] = 2056;
+                      ((ckb) this).field_j[9][1] = 1766;
+                      ((ckb) this).field_j[9][3] = 2666;
+                      ((ckb) this).field_j[10][2] = 2586;
+                      ((ckb) this).field_j[10][0] = 2355;
+                      ((ckb) this).field_j[10][1] = 2409;
+                      ((ckb) this).field_j[10][3] = 3276;
+                      ((ckb) this).field_j[11][2] = 3148;
+                      ((ckb) this).field_j[11][1] = 3116;
+                      ((ckb) this).field_j[11][0] = 2691;
+                      ((ckb) this).field_j[11][3] = 3228;
+                      ((ckb) this).field_j[12][0] = 3031;
+                      ((ckb) this).field_j[12][3] = 3196;
+                      ((ckb) this).field_j[12][2] = 3710;
+                      ((ckb) this).field_j[12][1] = 3806;
+                      ((ckb) this).field_j[13][0] = 3522;
+                      ((ckb) this).field_j[13][2] = 3421;
+                      ((ckb) this).field_j[13][3] = 3019;
+                      ((ckb) this).field_j[13][1] = 3437;
+                      ((ckb) this).field_j[14][0] = 3727;
+                      ((ckb) this).field_j[14][1] = 3116;
+                      ((ckb) this).field_j[14][3] = 3228;
+                      ((ckb) this).field_j[14][2] = 3148;
+                      ((ckb) this).field_j[15][2] = 2505;
+                      ((ckb) this).field_j[15][3] = 2746;
+                      ((ckb) this).field_j[15][1] = 2377;
+                      ((ckb) this).field_j[15][0] = 4096;
+                      break L0;
+                    } else {
+                      if (6 == var3) {
+                        ((ckb) this).field_j = new int[4][4];
+                        ((ckb) this).field_j[0][2] = 4096;
+                        ((ckb) this).field_j[0][0] = 2048;
+                        ((ckb) this).field_j[0][1] = 0;
+                        ((ckb) this).field_j[0][3] = 0;
+                        ((ckb) this).field_j[1][0] = 2867;
+                        ((ckb) this).field_j[1][3] = 0;
+                        ((ckb) this).field_j[1][2] = 4096;
+                        ((ckb) this).field_j[1][1] = 4096;
+                        ((ckb) this).field_j[2][0] = 3276;
+                        ((ckb) this).field_j[2][1] = 4096;
+                        ((ckb) this).field_j[2][2] = 4096;
+                        ((ckb) this).field_j[2][3] = 0;
+                        ((ckb) this).field_j[3][2] = 0;
+                        ((ckb) this).field_j[3][1] = 4096;
+                        ((ckb) this).field_j[3][3] = 0;
+                        ((ckb) this).field_j[3][0] = 4096;
                         break L0;
                       } else {
-                        if (6 == var3) {
-                          ((ckb) this).field_j = new int[4][4];
-                          ((ckb) this).field_j[0][2] = 4096;
-                          ((ckb) this).field_j[0][0] = 2048;
-                          ((ckb) this).field_j[0][1] = 0;
-                          ((ckb) this).field_j[0][3] = 0;
-                          ((ckb) this).field_j[1][0] = 2867;
-                          ((ckb) this).field_j[1][3] = 0;
-                          ((ckb) this).field_j[1][2] = 4096;
-                          ((ckb) this).field_j[1][1] = 4096;
-                          ((ckb) this).field_j[2][0] = 3276;
-                          ((ckb) this).field_j[2][1] = 4096;
-                          ((ckb) this).field_j[2][2] = 4096;
-                          ((ckb) this).field_j[2][3] = 0;
-                          ((ckb) this).field_j[3][2] = 0;
-                          ((ckb) this).field_j[3][1] = 4096;
-                          ((ckb) this).field_j[3][3] = 0;
-                          ((ckb) this).field_j[3][0] = 4096;
-                          break L0;
-                        } else {
-                          throw new RuntimeException("Invalid gradient preset");
-                        }
+                        throw new RuntimeException("Invalid gradient preset");
                       }
-                    } else {
-                      ((ckb) this).field_j = new int[6][4];
-                      ((ckb) this).field_j[0][0] = 0;
-                      ((ckb) this).field_j[0][1] = 0;
-                      ((ckb) this).field_j[0][2] = 0;
-                      ((ckb) this).field_j[0][3] = 0;
-                      ((ckb) this).field_j[1][0] = 1843;
-                      ((ckb) this).field_j[1][2] = 0;
-                      ((ckb) this).field_j[1][1] = 0;
-                      ((ckb) this).field_j[1][3] = 1493;
-                      ((ckb) this).field_j[2][2] = 0;
-                      ((ckb) this).field_j[2][0] = 2457;
-                      ((ckb) this).field_j[2][3] = 2939;
-                      ((ckb) this).field_j[2][1] = 0;
-                      ((ckb) this).field_j[3][3] = 3565;
-                      ((ckb) this).field_j[3][2] = 1124;
-                      ((ckb) this).field_j[3][0] = 2781;
-                      ((ckb) this).field_j[3][1] = 0;
-                      ((ckb) this).field_j[4][3] = 4031;
-                      ((ckb) this).field_j[4][1] = 546;
-                      ((ckb) this).field_j[4][2] = 3084;
-                      ((ckb) this).field_j[4][0] = 3481;
-                      ((ckb) this).field_j[5][1] = 4096;
-                      ((ckb) this).field_j[5][2] = 4096;
-                      ((ckb) this).field_j[5][3] = 4096;
-                      ((ckb) this).field_j[5][0] = 4096;
-                      break L0;
                     }
+                  } else {
+                    ((ckb) this).field_j = new int[6][4];
+                    ((ckb) this).field_j[0][0] = 0;
+                    ((ckb) this).field_j[0][1] = 0;
+                    ((ckb) this).field_j[0][2] = 0;
+                    ((ckb) this).field_j[0][3] = 0;
+                    ((ckb) this).field_j[1][0] = 1843;
+                    ((ckb) this).field_j[1][2] = 0;
+                    ((ckb) this).field_j[1][1] = 0;
+                    ((ckb) this).field_j[1][3] = 1493;
+                    ((ckb) this).field_j[2][2] = 0;
+                    ((ckb) this).field_j[2][0] = 2457;
+                    ((ckb) this).field_j[2][3] = 2939;
+                    ((ckb) this).field_j[2][1] = 0;
+                    ((ckb) this).field_j[3][3] = 3565;
+                    ((ckb) this).field_j[3][2] = 1124;
+                    ((ckb) this).field_j[3][0] = 2781;
+                    ((ckb) this).field_j[3][1] = 0;
+                    ((ckb) this).field_j[4][3] = 4031;
+                    ((ckb) this).field_j[4][1] = 546;
+                    ((ckb) this).field_j[4][2] = 3084;
+                    ((ckb) this).field_j[4][0] = 3481;
+                    ((ckb) this).field_j[5][1] = 4096;
+                    ((ckb) this).field_j[5][2] = 4096;
+                    ((ckb) this).field_j[5][3] = 4096;
+                    ((ckb) this).field_j[5][0] = 4096;
+                    break L0;
                   }
-                } else {
-                  ((ckb) this).field_j = new int[8][4];
-                  ((ckb) this).field_j[0][2] = 2602;
-                  ((ckb) this).field_j[0][0] = 0;
-                  ((ckb) this).field_j[0][1] = 2650;
-                  ((ckb) this).field_j[0][3] = 2361;
-                  ((ckb) this).field_j[1][1] = 2313;
-                  ((ckb) this).field_j[1][3] = 1558;
-                  ((ckb) this).field_j[1][0] = 2867;
-                  ((ckb) this).field_j[1][2] = 1799;
-                  ((ckb) this).field_j[2][3] = 1413;
-                  ((ckb) this).field_j[2][0] = 3072;
-                  ((ckb) this).field_j[2][2] = 1734;
-                  ((ckb) this).field_j[2][1] = 2618;
-                  ((ckb) this).field_j[3][3] = 947;
-                  ((ckb) this).field_j[3][2] = 1220;
-                  ((ckb) this).field_j[3][0] = 3276;
-                  ((ckb) this).field_j[3][1] = 2296;
-                  ((ckb) this).field_j[4][3] = 722;
-                  ((ckb) this).field_j[4][0] = 3481;
-                  ((ckb) this).field_j[4][1] = 2072;
-                  ((ckb) this).field_j[4][2] = 963;
-                  ((ckb) this).field_j[5][1] = 2730;
-                  ((ckb) this).field_j[5][2] = 2152;
-                  ((ckb) this).field_j[5][3] = 1766;
-                  ((ckb) this).field_j[5][0] = 3686;
-                  ((ckb) this).field_j[6][3] = 915;
-                  ((ckb) this).field_j[6][0] = 3891;
-                  ((ckb) this).field_j[6][2] = 1060;
-                  ((ckb) this).field_j[6][1] = 2232;
-                  ((ckb) this).field_j[7][0] = 4096;
-                  ((ckb) this).field_j[7][1] = 1686;
-                  ((ckb) this).field_j[7][3] = 1140;
-                  ((ckb) this).field_j[7][2] = 1413;
-                  break L0;
                 }
               } else {
-                ((ckb) this).field_j = new int[2][4];
-                ((ckb) this).field_j[0][2] = 0;
-                ((ckb) this).field_j[0][1] = 0;
-                ((ckb) this).field_j[0][3] = 0;
+                ((ckb) this).field_j = new int[8][4];
+                ((ckb) this).field_j[0][2] = 2602;
                 ((ckb) this).field_j[0][0] = 0;
-                ((ckb) this).field_j[1][0] = 4096;
-                ((ckb) this).field_j[1][1] = 4096;
-                ((ckb) this).field_j[1][2] = 4096;
-                ((ckb) this).field_j[1][3] = 4096;
+                ((ckb) this).field_j[0][1] = 2650;
+                ((ckb) this).field_j[0][3] = 2361;
+                ((ckb) this).field_j[1][1] = 2313;
+                ((ckb) this).field_j[1][3] = 1558;
+                ((ckb) this).field_j[1][0] = 2867;
+                ((ckb) this).field_j[1][2] = 1799;
+                ((ckb) this).field_j[2][3] = 1413;
+                ((ckb) this).field_j[2][0] = 3072;
+                ((ckb) this).field_j[2][2] = 1734;
+                ((ckb) this).field_j[2][1] = 2618;
+                ((ckb) this).field_j[3][3] = 947;
+                ((ckb) this).field_j[3][2] = 1220;
+                ((ckb) this).field_j[3][0] = 3276;
+                ((ckb) this).field_j[3][1] = 2296;
+                ((ckb) this).field_j[4][3] = 722;
+                ((ckb) this).field_j[4][0] = 3481;
+                ((ckb) this).field_j[4][1] = 2072;
+                ((ckb) this).field_j[4][2] = 963;
+                ((ckb) this).field_j[5][1] = 2730;
+                ((ckb) this).field_j[5][2] = 2152;
+                ((ckb) this).field_j[5][3] = 1766;
+                ((ckb) this).field_j[5][0] = 3686;
+                ((ckb) this).field_j[6][3] = 915;
+                ((ckb) this).field_j[6][0] = 3891;
+                ((ckb) this).field_j[6][2] = 1060;
+                ((ckb) this).field_j[6][1] = 2232;
+                ((ckb) this).field_j[7][0] = 4096;
+                ((ckb) this).field_j[7][1] = 1686;
+                ((ckb) this).field_j[7][3] = 1140;
+                ((ckb) this).field_j[7][2] = 1413;
                 break L0;
               }
+            } else {
+              ((ckb) this).field_j = new int[2][4];
+              ((ckb) this).field_j[0][2] = 0;
+              ((ckb) this).field_j[0][1] = 0;
+              ((ckb) this).field_j[0][3] = 0;
+              ((ckb) this).field_j[0][0] = 0;
+              ((ckb) this).field_j[1][0] = 4096;
+              ((ckb) this).field_j[1][1] = 4096;
+              ((ckb) this).field_j[1][2] = 4096;
+              ((ckb) this).field_j[1][3] = 4096;
+              break L0;
             }
           }
-          return;
-        } else {
-          return;
         }
     }
 

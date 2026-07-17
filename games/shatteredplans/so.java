@@ -42,7 +42,7 @@ final class so extends qe {
           L0: {
             L1: {
               var4_int = param1 + gf.field_b * param2;
-              var5 = param0;
+              var5 = 0;
               var6 = param3.field_w;
               var7 = param3.field_z;
               var8 = -var7 + gf.field_b;
@@ -98,7 +98,7 @@ final class so extends qe {
                 if (var6 <= 0) {
                   break L5;
                 } else {
-                  ge.a(param3.field_B, var5, gf.field_h, 0, param0 + -28646, var7, var4_int, var9, var6, var8);
+                  ge.a(param3.field_B, var5, gf.field_h, 0, -28646, var7, var4_int, var9, var6, var8);
                   break L0;
                 }
               }
@@ -110,7 +110,7 @@ final class so extends qe {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("so.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_14_1 = new StringBuilder().append("so.B(").append(0).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -139,14 +139,18 @@ final class so extends qe {
 
     final static void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11, int param12, boolean param13) {
         dn.field_k = null;
-        wf.a(-15887);
+        int discarded$0 = -15887;
+        wf.a();
         param13 = ak.a(true, param7, param5, param13, param8, param10, param9);
-        fb.a(param13, param11, param10, param2, param12, param6, param4, param3, param1, param0 + param0);
-        pf.a(param12, param11, -1043);
+        int discarded$1 = 0;
+        int discarded$2 = 1;
+        fb.a(param13, param11, param10, 16777215, param12, param6, param4, param3);
+        int discarded$3 = -1043;
+        pf.a(param12, param11);
         cc.a(-115, param7, param12, param13);
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_t = null;
         field_s = null;
         field_q = null;

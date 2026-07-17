@@ -12,7 +12,7 @@ final class qc {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!ci.field_f) {
             throw new IllegalStateException();
         }

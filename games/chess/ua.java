@@ -8,19 +8,12 @@ abstract class ua {
     static String field_c;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_e = null;
         field_c = null;
-        if (param0 != 1007) {
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
-          field_a = null;
-          return;
-        }
+        field_a = null;
     }
 
     abstract int b(int param0, int param1);

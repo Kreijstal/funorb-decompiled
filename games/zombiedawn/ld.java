@@ -8,7 +8,7 @@ final class ld extends bn {
     static boolean field_m;
     static vn[][] field_l;
 
-    public static void d(int param0) {
+    public static void d() {
         field_n = null;
         field_k = null;
         field_l = null;

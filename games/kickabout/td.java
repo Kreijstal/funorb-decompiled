@@ -7,7 +7,7 @@ final class td {
     static int field_d;
     static ut field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
     }
@@ -692,27 +692,27 @@ final class td {
         ov.field_b = 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         eo.a(param4, param2);
-        eo.a(448 + param1, param0 - -672, 134, param3);
-        pt.a(param1 - -896, -22914, param1, 1344 + param0, param0 - -268);
-        eo.a(param1 - -448, 73 + param0, 241, param3);
+        eo.a(463, 687, 134, param3);
+        pt.a(911, -22914, 15, 1359, 283);
+        eo.a(463, 88, 241, param3);
         ta.e(124);
-        pt.a(param1 + 896, -22914, param1, 1076 + param0, param0);
-        eo.a(param1 + 448, param0 + 1271, 241, param3);
+        pt.a(911, -22914, 15, 1091, 15);
+        eo.a(463, 1286, 241, param3);
         ta.e(127);
-        pt.a(param1 + 896, -22914, param1, 1344 + param0, param0);
-        eo.a(param1 + param3, param3 + param0, 33, param3);
-        eo.a(-param3 + param1 - -896, param3 + param0, 33, param3);
-        eo.a(param3 + param1, 1344 + param0 + -param3, 33, param3);
-        eo.a(param1 - -896 + -param3, param0 - -1344 + -param3, 33, param3);
+        pt.a(911, -22914, 15, 1359, 15);
+        eo.a(15 + param3, param3 + 15, 33, param3);
+        eo.a(-param3 + 911, param3 + 15, 33, param3);
+        eo.a(param3 + 15, 1359 + -param3, 33, param3);
+        eo.a(911 + -param3, 1359 + -param3, 33, param3);
         ta.e(121);
-        eo.b(param1, param0, 896, 1344, param3);
-        eo.c(param1, (1344 - param3 >> 1) + param0, 896, param3);
-        eo.b(314 + param1, param0, 268, 122, param3);
-        eo.b(param1 + 314, 1344 + (param0 + -122), 268, 122, param3);
-        eo.b(param1 + 179, param0, 537, 268, param3);
-        eo.b(179 + param1, 1076 + param0, 537, 268, param3);
+        eo.b(15, 15, 896, 1344, param3);
+        eo.c(15, (1344 - param3 >> 1) + 15, 896, param3);
+        eo.b(329, 15, 268, 122, param3);
+        eo.b(329, 1237, 268, 122, param3);
+        eo.b(194, 15, 537, 268, param3);
+        eo.b(194, 1091, 537, 268, param3);
         vj.a(0);
     }
 

@@ -11,13 +11,10 @@ final class de implements Iterable {
     final static void a(byte param0, String param1, String param2, boolean param3) {
         rg.field_S = param1;
         lb.field_e = param2;
-        if (param0 != -52) {
-            return;
-        }
         try {
             fc.a(sd.field_c, param3, -122);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "de.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "de.B(" + -52 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -195,73 +192,66 @@ final class de implements Iterable {
         RuntimeException var3 = null;
         int var4 = 0;
         mg var5 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
-          L0: {
-            var5 = n.field_b;
-            var5.c((byte) -61, param1);
-            var5.field_m = var5.field_m + 1;
-            var4 = var5.field_m;
-            var5.b((byte) 11, 1);
-            var5.b((byte) 11, param2.field_k);
-            var5.d(1710370149, param2.field_m);
-            var5.f(param2.field_r, param0 ^ -612992477);
-            var5.f(param2.field_l, 613003928);
-            var5.f(param2.field_i, 613003928);
-            var5.f(param2.field_p, 613003928);
-            int discarded$59 = var5.e(var4, param0 ^ 1182882603);
-            var5.a(-var4 + var5.field_m, -127);
-            if (param0 == -14149) {
-              break L0;
-            } else {
-              de.a(54, false, 105, -87);
-              return;
-            }
-          }
+          var5 = n.field_b;
+          var5.c((byte) -61, param1);
+          var5.field_m = var5.field_m + 1;
+          var4 = var5.field_m;
+          var5.b((byte) 11, 1);
+          var5.b((byte) 11, param2.field_k);
+          var5.d(1710370149, param2.field_m);
+          var5.f(param2.field_r, 613003928);
+          var5.f(param2.field_l, 613003928);
+          var5.f(param2.field_i, 613003928);
+          var5.f(param2.field_p, 613003928);
+          int discarded$2 = var5.e(var4, -1182887024);
+          var5.a(-var4 + var5.field_m, -127);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L0: {
             var3 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var3;
-            stackOut_3_1 = new StringBuilder().append("de.E(").append(param0).append(44).append(param1).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("de.E(").append(-14149).append(44).append(param1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L1;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L0;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L0;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
     }
 
@@ -273,7 +263,7 @@ final class de implements Iterable {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }
@@ -297,40 +287,38 @@ final class de implements Iterable {
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         int var4 = 0;
-        if (param0 == 2) {
-          L0: {
-            ef.field_H.e(param2, param3);
-            if (param1) {
-              L1: {
-                var4 = hj.field_c % ef.field_H.field_z * 2;
-                if (ef.field_H.field_z > var4) {
-                  break L1;
-                } else {
-                  var4 = ef.field_H.field_z - (var4 - ef.field_H.field_z);
-                  break L1;
-                }
-              }
-              if (var4 >= 10) {
-                if (ef.field_H.field_z - 40 < var4) {
-                  var4 = -40 + ef.field_H.field_z;
-                  df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);
-                  break L0;
-                } else {
-                  df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);
-                  return;
-                }
+        L0: {
+          ef.field_H.e(param2, param3);
+          if (param1) {
+            L1: {
+              var4 = hj.field_c % ef.field_H.field_z * 2;
+              if (ef.field_H.field_z > var4) {
+                break L1;
               } else {
-                var4 = 10;
-                df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);
+                var4 = ef.field_H.field_z - (var4 - ef.field_H.field_z);
+                break L1;
+              }
+            }
+            if (var4 >= 10) {
+              if (ef.field_H.field_z - 40 < var4) {
+                var4 = -40 + ef.field_H.field_z;
+                int discarded$3 = 0;
+                df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4);
+                break L0;
+              } else {
+                int discarded$4 = 0;
+                df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4);
                 return;
               }
             } else {
-              break L0;
+              var4 = 10;
+              int discarded$5 = 0;
+              df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4);
+              return;
             }
+          } else {
+            break L0;
           }
-          return;
-        } else {
-          return;
         }
     }
 

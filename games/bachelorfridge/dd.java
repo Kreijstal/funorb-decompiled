@@ -104,8 +104,8 @@ final class dd extends vd implements lja {
     }
 
     final static void d(byte param0) {
-        Object var2 = null;
-        rt.a("", (String) null, 9);
+        int discarded$4 = 9;
+        rt.a("", (String) null);
         if (param0 >= -10) {
             field_H = true;
         }
@@ -162,7 +162,7 @@ final class dd extends vd implements lja {
                               break L4;
                             } else {
                               var7 = null;
-                              boolean discarded$1 = ((dd) this).a(28, 90, '￺', (wj) null);
+                              boolean discarded$2 = ((dd) this).a(28, 90, '￺', (wj) null);
                               break L4;
                             }
                           }
@@ -179,7 +179,8 @@ final class dd extends vd implements lja {
                         }
                       }
                     } else {
-                      ((dd) this).field_F[var4_int] = lu.a((CharSequence) (Object) param0[var4_int], 7995).replace(' ', ' ');
+                      int discarded$3 = 7995;
+                      ((dd) this).field_F[var4_int] = lu.a((CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }
@@ -224,7 +225,7 @@ final class dd extends vd implements lja {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_G = null;
     }
 

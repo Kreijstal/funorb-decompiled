@@ -20,11 +20,12 @@ final class cca extends ana {
             return false;
         }
         int var2 = -29 / ((71 - param0) / 47);
-        this.e((byte) -64);
+        int discarded$1 = -64;
+        this.e();
         return true;
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         ((cca) this).field_x.a(((cca) this).field_q.field_h, false);
     }
 

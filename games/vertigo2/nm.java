@@ -158,24 +158,16 @@ abstract class nm extends cj {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
-            L0: {
-              if (!param0) {
-                break L0;
-              } else {
-                nm.k(-53);
-                break L0;
-              }
-            }
             try {
-              L1: {
+              L0: {
                 Object discarded$1 = je.a((byte) 49, "resizing", ob.e((byte) 71), new Object[1]);
-                break L1;
+                break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
+              L1: {
                 var2 = decompiledCaughtException;
-                break L2;
+                break L1;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -16,7 +16,7 @@ final class wl {
         }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -49,29 +49,20 @@ final class wl {
         return stackIn_5_0;
     }
 
-    final static na c(int param0) {
-        if (param0 != 11) {
-          return null;
-        } else {
-          L0: {
-            if (q.field_j == null) {
-              q.field_j = new na();
-              q.field_j.a(jd.field_s, (byte) 99);
-              q.field_j.field_a = 2763306;
-              q.field_j.field_f = 7697781;
-              q.field_j.field_i = jn.field_G;
-              q.field_j.field_l = 4;
-              q.field_j.field_g = 5;
-              q.field_j.field_o = 14;
-              q.field_j.field_p = 6;
-              q.field_j.field_r = 0;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return q.field_j;
+    final static na c() {
+        if (!(q.field_j != null)) {
+            q.field_j = new na();
+            q.field_j.a(jd.field_s, (byte) 99);
+            q.field_j.field_a = 2763306;
+            q.field_j.field_f = 7697781;
+            q.field_j.field_i = jn.field_G;
+            q.field_j.field_l = 4;
+            q.field_j.field_g = 5;
+            q.field_j.field_o = 14;
+            q.field_j.field_p = 6;
+            q.field_j.field_r = 0;
         }
+        return q.field_j;
     }
 
     static {

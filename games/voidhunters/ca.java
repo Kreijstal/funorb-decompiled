@@ -5,7 +5,7 @@ final class ca extends rqa {
     static String field_o;
     static ij field_p;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
         field_p = null;
         int var1 = 31;

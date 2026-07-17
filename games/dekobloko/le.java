@@ -148,14 +148,11 @@ final class le extends of {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_m = null;
         field_D = null;
         field_E = null;
         field_r = null;
-        if (!param0) {
-            return;
-        }
         field_o = null;
     }
 
@@ -532,9 +529,6 @@ final class le extends of {
     }
 
     final static int b(int param0, int param1) {
-        if (param0 != 32085) {
-            le.b(false);
-        }
         return 500 * ((-1 + param1) * param1);
     }
 

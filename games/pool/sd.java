@@ -328,11 +328,11 @@ final class sd extends ch implements jb, tb {
         }
     }
 
-    private final String h(byte param0) {
+    private final String h() {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_W = null;
         field_O = null;
         field_N = null;
@@ -371,6 +371,8 @@ final class sd extends ch implements jb, tb {
             ((sd) this).field_V = param0;
             ((sd) this).field_P = new fe(fg.field_c, (cc) null);
             ((sd) this).field_P.field_z = (fp) (Object) new ng();
+            int discarded$2 = 44;
+            int discarded$3 = 99;
             var7 = nr.a(new String[2], -1, hb.field_g);
             var3 = 20;
             var4 = new am(lc.field_O, 0, 0, 0, 0, 16777215, -1, 3, 0, lc.field_O.field_C, -1, 2147483647, true);
@@ -500,7 +502,7 @@ final class sd extends ch implements jb, tb {
         }
     }
 
-    private final String g(byte param0) {
+    private final String g() {
         int var2 = 0;
         return "</col></u>";
     }

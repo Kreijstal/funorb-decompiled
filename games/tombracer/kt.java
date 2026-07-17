@@ -141,7 +141,7 @@ final class kt extends kna {
         }
     }
 
-    public static void A(int param0) {
+    public static void A() {
         field_H = null;
         field_F = null;
     }

@@ -14,7 +14,7 @@ abstract class ie {
 
     abstract long a(int param0);
 
-    final static void a(ck[] param0, mm param1, ck[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, mm param12, ck[] param13, int param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(ck[] param0, mm param1, ck[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, mm param12, ck[] param13) {
         RuntimeException var20 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -94,12 +94,8 @@ abstract class ie {
         String stackOut_17_2 = null;
         try {
           L0: {
-            if (param16 == 10406) {
-              dh.a(param1, param7, param6, new cc(param0), new cc(param2), new cc(param13), param14, param3, param12, param10, param18, param11, param5, false, param15, param9, param17, param4, param8, param19);
-              break L0;
-            } else {
-              return;
-            }
+            dh.a(param1, 20, 32, new cc(param0), new cc(param2), new cc(param13), 1, 320, param12, 5, 16, 20, 0, false, 14, 4, 0, 20, 240, 20);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -181,7 +177,7 @@ abstract class ie {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44).append(param11).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(320).append(44).append(20).append(44).append(0).append(44).append(32).append(44).append(20).append(44).append(240).append(44).append(4).append(44).append(5).append(44).append(20).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -229,11 +225,11 @@ abstract class ie {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param14 + 44 + param15 + 44 + param16 + 44 + param17 + 44 + param18 + 44 + param19 + 41);
+          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 1 + 44 + 14 + 44 + 10406 + 44 + 0 + 44 + 16 + 44 + 20 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;

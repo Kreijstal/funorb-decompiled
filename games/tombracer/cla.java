@@ -32,11 +32,12 @@ final class cla extends od {
     }
 
     protected final void finalize() throws Throwable {
-        this.h(-6814);
+        int discarded$0 = -6814;
+        this.h();
         super.finalize();
     }
 
-    private final void h(int param0) {
+    private final void h() {
         if (!(((cla) this).field_k <= 0L)) {
             ((cla) this).field_l.field_l.releasePbuffer(((cla) this).field_k);
             ((cla) this).field_k = 0L;
@@ -71,16 +72,13 @@ final class cla extends od {
         }
     }
 
-    final static boolean g(int param0) {
+    final static boolean g() {
         if (-1 == uca.field_d) {
             if (!ama.a(1, -1)) {
                 return false;
             }
             uca.field_d = vc.field_q.h(255);
             vc.field_q.field_h = 0;
-        }
-        if (param0 != 0) {
-            return true;
         }
         if (-2 != uca.field_d) {
             return ama.a(uca.field_d, -1);
@@ -93,14 +91,17 @@ final class cla extends od {
         return ama.a(uca.field_d, -1);
     }
 
-    final static void f(int param0) {
+    final static void f() {
         er.b(1, 0);
         bea.a();
         fp.a(122);
         if (!(ld.field_e < 2)) {
             dia.field_o = new gq(jk.a((byte) 122), (il) (Object) o.field_d, dsa.field_c);
-            aca.a((sia) (Object) dia.field_o, 19711);
-            aca.a((sia) (Object) oq.a((byte) 124), 19711);
+            int discarded$0 = 19711;
+            aca.a((sia) (Object) dia.field_o);
+            int discarded$1 = 124;
+            int discarded$2 = 19711;
+            aca.a((sia) (Object) oq.a());
         }
         if (!(!vpa.a(83))) {
             caa.a((byte) -59);

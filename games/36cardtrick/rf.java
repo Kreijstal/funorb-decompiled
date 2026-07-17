@@ -80,26 +80,18 @@ final class rf implements Runnable {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         var1 = (Object) (Object) wc.field_B;
         synchronized (var1) {
           L0: {
-            L1: {
-              qd.field_a = qd.field_a + 1;
-              k.field_c = ge.field_a;
-              eg.field_b = r.field_s;
-              ij.field_e = vd.field_s;
-              d.field_s = oa.field_d;
-              if (param0 <= -48) {
-                break L1;
-              } else {
-                rf.b(-41);
-                break L1;
-              }
-            }
+            qd.field_a = qd.field_a + 1;
+            k.field_c = ge.field_a;
+            eg.field_b = r.field_s;
+            ij.field_e = vd.field_s;
+            d.field_s = oa.field_d;
             oa.field_d = false;
             dl.field_h = kk.field_b;
             ag.field_a = nl.field_d;
@@ -188,7 +180,8 @@ final class rf implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((rf) this).field_a.getFile() + "\n\n");
-                      var3.write(dd.a(var5, (byte) -127));
+                      int discarded$1 = -127;
+                      var3.write(dd.a(var5));
                       ((rf) this).field_h = new DataInputStream(var4.getInputStream());
                       break L7;
                     } else {
@@ -238,7 +231,7 @@ final class rf implements Runnable {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -260,7 +253,8 @@ final class rf implements Runnable {
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
-              if (ph.a(param0, false)) {
+              int discarded$8 = 0;
+              if (ph.a(param0)) {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;
@@ -362,39 +356,31 @@ final class rf implements Runnable {
         var3 = Main.field_T;
         try {
           L0: {
-            L1: {
-              ai.a(bd.field_F, param1, ei.field_f, 0, true, fk.field_h, 8192);
-              if (param0 == -23243) {
-                break L1;
-              } else {
-                rf.c(-100);
-                break L1;
-              }
-            }
+            ai.a(bd.field_F, param1, ei.field_f, 0, true, fk.field_h, 8192);
             var2_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (ei.field_f <= var2_int) {
-                L3: {
+                L2: {
                   ai.a(ah.field_d, param1 + param1, ei.field_f + param1, param1, false, mf.field_g, 8192);
                   if (param1 < ei.field_f) {
                     ei.field_f = param1;
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 break L0;
               } else {
                 re.field_c[param1 + var2_int] = var2_int;
                 var2_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "rf.E(" + param0 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) var2, "rf.E(" + -23243 + 44 + param1 + 41);
         }
     }
 

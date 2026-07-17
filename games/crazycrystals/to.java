@@ -12,16 +12,20 @@ final class to {
     final static void a(int param0, java.awt.Canvas param1) {
         try {
             if (!(11 != hp.field_s)) {
-                fg.c((byte) 95);
+                int discarded$0 = 95;
+                fg.c();
             }
             tg.a(pj.field_p, ta.field_i, (byte) -41, nf.field_f);
-            bq.a(param1, param0, 0, 4);
+            int discarded$1 = 4;
+            int discarded$2 = 0;
+            int discarded$3 = 0;
+            bq.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "to.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "to.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
         field_e = null;

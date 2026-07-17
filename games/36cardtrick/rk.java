@@ -48,7 +48,8 @@ final class rk extends jc {
                       break L1;
                     }
                   }
-                  param0.getAppletContext().showDocument(fh.a(param0, var2, -1), "_top");
+                  int discarded$2 = -1;
+                  param0.getAppletContext().showDocument(fh.a(param0, var2), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -104,7 +105,7 @@ final class rk extends jc {
         }
     }
 
-    final static void a(boolean param0, uf param1, boolean param2) {
+    final static void a(boolean param0, uf param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -237,7 +238,7 @@ final class rk extends jc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_fb = null;
         field_ab = null;
         int var1 = 71;

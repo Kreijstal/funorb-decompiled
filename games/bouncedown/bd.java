@@ -119,7 +119,7 @@ final class bd extends al {
         return stackIn_12_0;
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_l = null;
         field_m = null;
         field_n = null;

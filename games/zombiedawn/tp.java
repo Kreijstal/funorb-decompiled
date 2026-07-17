@@ -118,7 +118,8 @@ final class tp extends sp {
                         break L2;
                       } else {
                         ((tp) this).field_t.a((byte) -22, param5, false);
-                        this.a(param2, param3, ((tp) this).field_t, -1);
+                        int discarded$6 = -1;
+                        this.a(param2, param3, ((tp) this).field_t);
                         break L2;
                       }
                     } else {
@@ -135,7 +136,8 @@ final class tp extends sp {
                         break L2;
                       } else {
                         ((tp) this).field_v.a((byte) -22, param5, false);
-                        this.a(param2, param3, ((tp) this).field_v, -1);
+                        int discarded$7 = -1;
+                        this.a(param2, param3, ((tp) this).field_v);
                         break L2;
                       }
                     }
@@ -239,7 +241,8 @@ final class tp extends sp {
                             }
                           }
                           ((rj) (Object) stackIn_50_0).a((byte) stackIn_50_1, stackIn_50_2, stackIn_50_3 != 0);
-                          this.a(param2, param3, ((tp) this).field_v, -1);
+                          int discarded$8 = -1;
+                          this.a(param2, param3, ((tp) this).field_v);
                           break L10;
                         }
                       }
@@ -290,7 +293,8 @@ final class tp extends sp {
                             }
                           }
                           ((rj) (Object) stackIn_41_0).a((byte) stackIn_41_1, stackIn_41_2, stackIn_41_3 != 0);
-                          this.a(param2, param3, ((tp) this).field_t, -1);
+                          int discarded$9 = -1;
+                          this.a(param2, param3, ((tp) this).field_t);
                           break L13;
                         } else {
                           break L13;
@@ -306,12 +310,14 @@ final class tp extends sp {
                 }
               } else {
                 ((tp) this).field_A = -param0;
-                this.a(param2, param3, ((tp) this).field_t, -1);
+                int discarded$10 = -1;
+                this.a(param2, param3, ((tp) this).field_t);
                 return;
               }
             } else {
               ((tp) this).field_A = param0;
-              this.a(param2, param3, ((tp) this).field_v, -1);
+              int discarded$11 = -1;
+              this.a(param2, param3, ((tp) this).field_v);
               return;
             }
           }
@@ -649,15 +655,12 @@ final class tp extends sp {
 
     final static void a(byte param0, dj param1) {
         mb var2 = null;
-        if (param0 <= 120) {
-            return;
-        }
         try {
             mb.a(param1.a("", -121, "headers.packvorbis"));
             var2 = mb.a(param1, "jagex logo2.packvorbis", "");
             gi discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "tp.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "tp.C(" + 124 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -666,7 +669,8 @@ final class tp extends sp {
     }
 
     final static ji c(byte param0) {
-        return new ji(ra.e((byte) -16), df.a(1));
+        int discarded$0 = 1;
+        return new ji(ra.e((byte) -16), df.a());
     }
 
     final static fn b(byte param0, int param1) {
@@ -681,7 +685,7 @@ final class tp extends sp {
         return var2.field_j;
     }
 
-    private final void a(int param0, int param1, rj param2, int param3) {
+    private final void a(int param0, int param1, rj param2) {
         try {
             param2.a(param0, true, -1);
             param2.a(param1, false);
@@ -715,7 +719,7 @@ final class tp extends sp {
         return 2;
     }
 
-    final static void a(vn[] param0, int param1) {
+    final static void a(vn[] param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

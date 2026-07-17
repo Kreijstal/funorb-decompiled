@@ -34,8 +34,8 @@ final class th {
         int stackOut_1_3 = 0;
         byte stackOut_1_4 = 0;
         L0: {
-          jc.field_O.field_l[od.field_a] = (short) 0;
-          jc.field_O.field_l[qf.field_F] = (short) 0;
+          jc.field_O.field_l[od.field_a] = (short)(param1 >> 1);
+          jc.field_O.field_l[qf.field_F] = (short)(param1 >> 1);
           stackOut_0_0 = jc.field_O.field_O;
           stackOut_0_1 = qf.field_F;
           stackOut_0_2 = jc.field_O.field_O;
@@ -48,7 +48,7 @@ final class th {
           stackIn_1_1 = stackOut_0_1;
           stackIn_1_2 = stackOut_0_2;
           stackIn_1_3 = stackOut_0_3;
-          if (bc.a(0, 1) == 0) {
+          if (bc.a(param1, 1) == 0) {
             stackOut_2_0 = (byte[]) (Object) stackIn_2_0;
             stackOut_2_1 = stackIn_2_1;
             stackOut_2_2 = (byte[]) (Object) stackIn_2_2;
@@ -89,7 +89,8 @@ final class th {
           if (g.field_A >= 20) {
             if (ri.b((byte) 64)) {
               if (qb.field_b > 0) {
-                if (c.b(true)) {
+                int discarded$4 = 1;
+                if (c.b()) {
                   return false;
                 } else {
                   return true;
@@ -108,7 +109,7 @@ final class th {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_b = null;
     }
 
@@ -117,7 +118,7 @@ final class th {
         tk.field_c = tk.field_c + 1;
         rj.field_p = rj.field_p - af.field_ob;
         vf.field_b = vf.field_b + af.field_ob;
-        var3 = param1 << param2;
+        var3 = 1 << param2;
         if ((var3 & db.field_m) == 0) {
           ue.field_d = ue.field_d | var3;
           nb.field_e = nb.field_e | var3;

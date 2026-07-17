@@ -10,12 +10,7 @@ abstract class em {
     static String[] field_f;
 
     final static nf[] a(int param0, int param1, int param2, byte param3, int param4) {
-        if (param3 != 2) {
-          field_b = null;
-          return fa.a(3, 1, param0, param1, param2, 1, 0, 1, (byte) -97);
-        } else {
-          return fa.a(3, 1, param0, param1, param2, 1, 0, 1, (byte) -97);
-        }
+        return fa.a(3, 1, 0, 0, 65793, 1, 0, 1, (byte) -97);
     }
 
     public static void a(byte param0) {

@@ -29,7 +29,7 @@ final class co {
     String field_l;
     um field_n;
 
-    final static boolean a(boolean param0, int param1, int param2, int param3) {
+    final static boolean a(boolean param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -58,7 +58,7 @@ final class co {
                       var5 = pe.field_s[param1] + (wp.field_w[param1] + ci.field_c[param1]);
                       if (var4 >= var5) {
                         if (var5 >= var4) {
-                          var6 = -52 / ((47 - param3) / 35);
+                          var6 = -26;
                           if (param1 <= param2) {
                             break L1;
                           } else {
@@ -97,7 +97,7 @@ final class co {
                       var5 = pe.field_s[param1] + (wp.field_w[param1] + ci.field_c[param1]);
                       if (var4 >= var5) {
                         if (var5 >= var4) {
-                          var6 = -52 / ((47 - param3) / 35);
+                          var6 = -26;
                           if (param1 <= param2) {
                             break L3;
                           } else {
@@ -214,7 +214,7 @@ final class co {
         return ((co) this).field_t[ns.a(false, ((co) this).field_t.length, li.field_n)];
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_r = null;
         field_p = null;
         field_s = null;
@@ -224,7 +224,8 @@ final class co {
 
     final wk c(byte param0) {
         int var2 = -68 / ((53 - param0) / 32);
-        return this.c(34);
+        int discarded$0 = 34;
+        return this.c();
     }
 
     final static String a(int param0, int param1, int param2, byte[] param3) {
@@ -680,10 +681,11 @@ final class co {
         ((co) this).field_g = null;
     }
 
-    private final wk c(int param0) {
+    private final wk c() {
         byte[] var3 = fd.field_m.a(((co) this).field_x, 78, "");
         byte[] var2 = var3;
-        return new wk(var3, (java.awt.Component) (Object) ll.p(0));
+        int discarded$0 = 0;
+        return new wk(var3, (java.awt.Component) (Object) ll.p());
     }
 
     static {

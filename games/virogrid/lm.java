@@ -14,7 +14,7 @@ final class lm implements Runnable {
     static String field_k;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_k = null;
@@ -34,7 +34,7 @@ final class lm implements Runnable {
         jk.field_a.a((l) (Object) var1, (byte) -37);
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4) {
+    final static void a(int param0, int param1, boolean param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -102,7 +102,7 @@ final class lm implements Runnable {
                   throw new RuntimeException();
                 } else {
                   L2: {
-                    pj.a(c.field_d, param4 + 256);
+                    pj.a(c.field_d, 256);
                     stackOut_23_0 = al.field_j[param0];
                     stackOut_23_1 = param3;
                     stackIn_25_0 = stackOut_23_0;
@@ -236,12 +236,12 @@ final class lm implements Runnable {
               }
             }
             L8: {
-              if (!db.b((byte) 13, param4)) {
+              if (!db.b((byte) 13, 0)) {
                 break L8;
               } else {
                 if (hj.field_h > 0) {
                   L9: {
-                    pj.a(c.field_d, param4 + 256);
+                    pj.a(c.field_d, 256);
                     var5_int = 1024 * Math.min(-hj.field_h + id.field_c, hj.field_h) / id.field_c;
                     if (var5_int > 0) {
                       var6 = 0;
@@ -286,7 +286,7 @@ final class lm implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var5, "lm.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw kg.a((Throwable) (Object) var5, "lm.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 0 + 41);
         }
     }
 
@@ -309,8 +309,8 @@ final class lm implements Runnable {
                 od.a(((lm) this).field_b, (Object) null, (byte) -100);
             }
         } catch (Exception exception) {
-            Object var6 = null;
-            en.a((String) null, (Throwable) (Object) exception, 1);
+            int discarded$0 = 1;
+            en.a((String) null, (Throwable) (Object) exception);
         } finally {
             ((lm) this).field_f = false;
         }

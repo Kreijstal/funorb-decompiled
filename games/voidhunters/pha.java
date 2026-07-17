@@ -7,7 +7,7 @@ final class pha extends rqa {
     static String field_q;
     static String[] field_r;
 
-    public static void a(int param0) {
+    public static void a() {
         field_r = null;
         field_q = null;
         field_p = null;

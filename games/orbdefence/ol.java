@@ -31,29 +31,25 @@ final class ol implements Iterator {
         return ((ol) this).field_i != ((ol) this).field_g.field_a;
     }
 
-    final static void a(int param0, qf param1, int param2) {
-        se var6 = null;
+    final static void a(int param0, qf param1) {
+        se var5 = null;
         int var4 = 0;
         try {
-            var6 = uk.field_b;
-            var6.i(param2, 112);
-            var6.field_i = var6.field_i + 1;
-            var4 = var6.field_i;
-            var6.a(1, param0 ^ 30243);
-            var6.a(param1.field_j, -8);
-            var6.f(-1, param1.field_i);
-            var6.b(param1.field_g, -1);
-            var6.b(param1.field_l, param0 + 30328);
-            if (param0 != -30329) {
-                Object var5 = null;
-                ol.a((String) null, -82);
-            }
-            var6.b(param1.field_f, -1);
-            var6.b(param1.field_n, -1);
-            int discarded$0 = var6.e(-18951, var4);
-            var6.c((byte) -69, -var4 + var6.field_i);
+            var5 = uk.field_b;
+            var5.i(5, 112);
+            var5.field_i = var5.field_i + 1;
+            var4 = var5.field_i;
+            var5.a(1, -92);
+            var5.a(param1.field_j, -8);
+            var5.f(-1, param1.field_i);
+            var5.b(param1.field_g, -1);
+            var5.b(param1.field_l, -1);
+            var5.b(param1.field_f, -1);
+            var5.b(param1.field_n, -1);
+            int discarded$0 = var5.e(-18951, var4);
+            var5.c((byte) -69, -var4 + var5.field_i);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ol.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "ol.B(" + -30329 + 44 + (param1 != null ? "{...}" : "null") + 44 + 5 + 41);
         }
     }
 
@@ -66,7 +62,7 @@ final class ol implements Iterator {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
     }
 

@@ -8,21 +8,22 @@ final class hm extends jc {
     static String field_N;
     private ta field_K;
 
-    final static void d(byte param0) {
+    final static void d() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = MinerDisturbance.field_ab;
         try {
           L0: {
-            if (tk.b(127)) {
-              boolean discarded$15 = ll.field_a.a(true, ql.field_c, cl.field_T, 0);
+            int discarded$19 = 127;
+            if (tk.b()) {
+              boolean discarded$20 = ll.field_a.a(true, ql.field_c, cl.field_T, 0);
               ll.field_a.o(-256);
               L1: while (true) {
                 if (!mm.b((byte) 118)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = ll.field_a.a((byte) -65, lj.field_t, ud.field_c);
+                  boolean discarded$21 = ll.field_a.a((byte) -65, lj.field_t, ud.field_c);
                   continue L1;
                 }
               }
@@ -115,7 +116,7 @@ final class hm extends jc {
         }
     }
 
-    final static int f(byte param0) {
+    final static int f() {
         return mj.field_p;
     }
 
@@ -206,7 +207,7 @@ final class hm extends jc {
         }
     }
 
-    final static gj a(String param0, boolean param1) {
+    final static gj a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -258,7 +259,8 @@ final class hm extends jc {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      var7 = rg.a(var6, true);
+                      int discarded$2 = 1;
+                      var7 = rg.a(var6);
                       if (var7 == null) {
                         var5++;
                         continue L1;
@@ -357,8 +359,9 @@ final class hm extends jc {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var3 = 121 % ((-63 - param0) / 48);
-              var4 = im.b(111);
+              var3 = 0;
+              int discarded$2 = 111;
+              var4 = im.b();
               var5 = 0;
               L1: while (true) {
                 if (var5 >= var4.length) {
@@ -384,7 +387,7 @@ final class hm extends jc {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2_ref;
-            stackOut_13_1 = new StringBuilder().append("hm.N(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("hm.N(").append(28).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

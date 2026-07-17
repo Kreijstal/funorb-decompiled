@@ -36,15 +36,13 @@ final class fj extends ml {
                 var5 = (qr) (Object) param1.field_M.a((byte) -71);
                 var5 = var5;
             }
-            if (param0) {
-                fj.d(-29);
-            }
+            fj.d(-29);
             param1.field_mb = 0;
             param1.field_w = 0;
             param1.field_db = 0;
             param1.field_gb = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "fj.O(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "fj.O(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

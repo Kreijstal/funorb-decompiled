@@ -316,7 +316,7 @@ class htb extends shb {
         return ((htb) this).field_t;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_w = null;
         field_A = null;
         field_v = null;

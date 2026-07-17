@@ -59,7 +59,8 @@ final class cc extends qf {
             var3 = ((cc) this).field_m.field_k.toLowerCase();
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
-              if (!kb.a(var3, var4, -28169)) {
+              int discarded$11 = -28169;
+              if (!kb.a(var3, var4)) {
                 stackOut_7_0 = sb.field_n;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
@@ -112,10 +113,10 @@ final class cc extends qf {
     }
 
     final String a(String param0, boolean param1) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
+        RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
+        String var6 = null;
         String stackIn_7_0 = null;
         String stackIn_10_0 = null;
         String stackIn_13_0 = null;
@@ -152,7 +153,7 @@ final class cc extends qf {
         String stackOut_33_2 = null;
         try {
           L0: {
-            var3 = ((cc) this).field_m.field_k.toLowerCase();
+            var6 = ((cc) this).field_m.field_k.toLowerCase();
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
               L1: {
@@ -168,14 +169,15 @@ final class cc extends qf {
                 if (!la.a((byte) 96, var5)) {
                   if (!nc.a(-68, var5)) {
                     if (!this.a(5, param0)) {
-                      if (var3.length() > 0) {
-                        if (!k.a(19272, var5, var3)) {
-                          if (ia.a(var5, (byte) -16, var3)) {
+                      if (var6.length() > 0) {
+                        if (!k.a(19272, var5, var6)) {
+                          if (ia.a(var5, (byte) -16, var6)) {
                             stackOut_25_0 = pc.field_c;
                             stackIn_26_0 = stackOut_25_0;
                             return stackIn_26_0;
                           } else {
-                            if (!bj.a(var5, var3, true)) {
+                            int discarded$7 = 1;
+                            if (!bj.a(var5, var6)) {
                               stackOut_30_0 = eb.field_g;
                               stackIn_31_0 = stackOut_30_0;
                               break L0;
@@ -222,8 +224,8 @@ final class cc extends qf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var3_ref = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var3_ref;
+            var3 = decompiledCaughtException;
+            stackOut_32_0 = (RuntimeException) var3;
             stackOut_32_1 = new StringBuilder().append("cc.A(");
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
@@ -372,7 +374,7 @@ final class cc extends qf {
         return stackIn_16_0 != 0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_k = null;
     }
 
@@ -386,25 +388,25 @@ final class cc extends qf {
         int var9 = 0;
         int var10 = 0;
         int stackIn_2_0 = 0;
-        int stackIn_43_0 = 0;
+        int stackIn_42_0 = 0;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        String stackIn_47_2 = null;
+        String stackIn_46_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_42_0 = 0;
+        int stackOut_41_0 = 0;
         int stackOut_1_0 = 0;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
         RuntimeException stackOut_45_0 = null;
         StringBuilder stackOut_45_1 = null;
         String stackOut_45_2 = null;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        String stackOut_44_2 = null;
         try {
           L0: {
             if (param3 <= -48) {
@@ -425,8 +427,8 @@ final class cc extends qf {
                         if (var5 == 0) {
                           throw new NumberFormatException();
                         } else {
-                          stackOut_42_0 = var6;
-                          stackIn_43_0 = stackOut_42_0;
+                          stackOut_41_0 = var6;
+                          stackIn_42_0 = stackOut_41_0;
                           break L0;
                         }
                       } else {
@@ -443,11 +445,7 @@ final class cc extends qf {
                                 if (var9 != 43) {
                                   break L4;
                                 } else {
-                                  if (!param2) {
-                                    break L4;
-                                  } else {
-                                    break L3;
-                                  }
+                                  break L3;
                                 }
                               }
                             }
@@ -530,33 +528,33 @@ final class cc extends qf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var4 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) var4;
-            stackOut_44_1 = new StringBuilder().append("cc.C(");
-            stackIn_46_0 = stackOut_44_0;
-            stackIn_46_1 = stackOut_44_1;
-            stackIn_45_0 = stackOut_44_0;
-            stackIn_45_1 = stackOut_44_1;
+            stackOut_43_0 = (RuntimeException) var4;
+            stackOut_43_1 = new StringBuilder().append("cc.C(");
+            stackIn_45_0 = stackOut_43_0;
+            stackIn_45_1 = stackOut_43_1;
+            stackIn_44_0 = stackOut_43_0;
+            stackIn_44_1 = stackOut_43_1;
             if (param0 == null) {
-              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
-              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
-              break L10;
-            } else {
               stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
               stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
-              stackOut_45_2 = "{...}";
-              stackIn_47_0 = stackOut_45_0;
-              stackIn_47_1 = stackOut_45_1;
-              stackIn_47_2 = stackOut_45_2;
+              stackOut_45_2 = "null";
+              stackIn_46_0 = stackOut_45_0;
+              stackIn_46_1 = stackOut_45_1;
+              stackIn_46_2 = stackOut_45_2;
+              break L10;
+            } else {
+              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
+              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_2 = "{...}";
+              stackIn_46_0 = stackOut_44_0;
+              stackIn_46_1 = stackOut_44_1;
+              stackIn_46_2 = stackOut_44_2;
               break L10;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_47_0, stackIn_47_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param1 + 44 + 1 + 44 + param3 + 41);
         }
-        return stackIn_43_0;
+        return stackIn_42_0;
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -701,7 +699,7 @@ final class cc extends qf {
         return stackIn_21_0;
     }
 
-    final static hl[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static hl[] a() {
         int var9 = 0;
         hl[] var10 = null;
         hl[] var11_ref_hl__ = null;
@@ -711,99 +709,97 @@ final class cc extends qf {
         int var14 = 0;
         int var15 = 0;
         var15 = StarCannon.field_A;
-        var9 = param7 + (param0 - -param2);
-        var10 = new hl[]{new hl(var9, var9), new hl(param6, var9), new hl(var9, var9), new hl(var9, param6), new hl(64, 64), new hl(var9, param6), new hl(var9, var9), new hl(param6, var9), new hl(var9, var9)};
+        var9 = 3;
+        var10 = new hl[]{new hl(var9, var9), new hl(3, var9), new hl(var9, var9), new hl(var9, 3), new hl(64, 64), new hl(var9, 3), new hl(var9, var9), new hl(3, var9), new hl(var9, var9)};
         var11_ref_hl__ = var10;
         var12 = 0;
         L0: while (true) {
-          if (var12 >= var11_ref_hl__.length) {
+          if (~var12 <= ~var11_ref_hl__.length) {
             var10 = var11_ref_hl__;
             var11 = 0;
             L1: while (true) {
-              if (param0 <= var11) {
-                if (param4 == 3) {
-                  var11 = 0;
-                  L2: while (true) {
-                    if (param0 <= var11) {
-                      var11 = 0;
-                      L3: while (true) {
-                        if (param6 <= var11) {
-                          var11 = 0;
-                          L4: while (true) {
-                            if (param6 >> 1 <= var11) {
-                              return var10;
-                            } else {
-                              var12 = 0;
-                              L5: while (true) {
-                                if (param2 <= var12) {
-                                  var11++;
-                                  continue L4;
-                                } else {
-                                  var10[1].field_B[var11 + param6 * (-var12 + (var9 - 1))] = param1;
-                                  var10[3].field_B[var9 * var11 - var12 - 1 - -var9] = param1;
-                                  var10[7].field_B[var11 + var12 * param6] = param1;
-                                  var10[5].field_B[var9 * var11 + var12] = param1;
-                                  var12++;
-                                  continue L5;
-                                }
+              if (1 <= var11) {
+                var11 = 0;
+                L2: while (true) {
+                  if (1 <= var11) {
+                    var11 = 0;
+                    L3: while (true) {
+                      if (3 <= var11) {
+                        var11 = 0;
+                        L4: while (true) {
+                          if (var11 >= 1) {
+                            return var10;
+                          } else {
+                            var12 = 0;
+                            L5: while (true) {
+                              if (var12 >= 1) {
+                                var11++;
+                                continue L4;
+                              } else {
+                                var10[1].field_B[var11 + 3 * (-var12 + (var9 - 1))] = 65793;
+                                var10[3].field_B[var9 * var11 - var12 - 1 - -var9] = 65793;
+                                var10[7].field_B[var11 + var12 * 3] = 65793;
+                                var10[5].field_B[var9 * var11 + var12] = 65793;
+                                var12++;
+                                continue L5;
                               }
                             }
                           }
-                        } else {
-                          var12 = 0;
-                          L6: while (true) {
-                            if (param0 <= var12) {
-                              var11++;
-                              continue L3;
-                            } else {
-                              var10[7].field_B[(-var12 + (var9 - 1)) * param6 - -var11] = param3;
-                              var10[5].field_B[var9 + (-1 - var12 + var11 * var9)] = param3;
-                              var10[1].field_B[param6 * var12 - -var11] = param8;
-                              var10[3].field_B[var11 * var9 - -var12] = param8;
-                              var12++;
-                              continue L6;
-                            }
-                          }
                         }
-                      }
-                    } else {
-                      var12 = 0;
-                      L7: while (true) {
-                        if (var12 >= var9) {
-                          var11++;
-                          continue L2;
-                        } else {
-                          var10[0].field_B[var12 + var9 * var11] = param8;
-                          var10[0].field_B[var9 * var12 - -var11] = param8;
-                          if (var9 - var11 > var12) {
-                            var10[2].field_B[var9 * var11 + var12] = param8;
-                            var10[6].field_B[var11 + var9 * var12] = param8;
-                            var12++;
-                            continue L7;
+                      } else {
+                        var12 = 0;
+                        L6: while (true) {
+                          if (1 <= var12) {
+                            var11++;
+                            continue L3;
                           } else {
+                            var10[7].field_B[(-var12 + (var9 - 1)) * 3 - -var11] = 0;
+                            var10[5].field_B[var9 + (-1 - var12 + var11 * var9)] = 0;
+                            var10[1].field_B[3 * var12 - -var11] = 0;
+                            var10[3].field_B[var11 * var9 - -var12] = 0;
                             var12++;
-                            continue L7;
+                            continue L6;
                           }
                         }
                       }
                     }
+                  } else {
+                    var12 = 0;
+                    L7: while (true) {
+                      if (~var12 <= ~var9) {
+                        var11++;
+                        continue L2;
+                      } else {
+                        L8: {
+                          var10[0].field_B[var12 + var9 * var11] = 0;
+                          var10[0].field_B[var9 * var12 - -var11] = 0;
+                          if (var9 - var11 > var12) {
+                            var10[2].field_B[var9 * var11 + var12] = 0;
+                            var10[6].field_B[var11 + var9 * var12] = 0;
+                            break L8;
+                          } else {
+                            break L8;
+                          }
+                        }
+                        var12++;
+                        continue L7;
+                      }
+                    }
                   }
-                } else {
-                  return null;
                 }
               } else {
                 var12 = 0;
-                L8: while (true) {
+                L9: while (true) {
                   if (var9 <= var12) {
                     var11++;
                     continue L1;
                   } else {
-                    var10[6].field_B[(-var11 + (var9 + -1)) * var9 + var12] = param3;
-                    var10[8].field_B[var12 + (-1 + (-var11 + var9)) * var9] = param3;
-                    var10[2].field_B[-var11 - -var9 - (1 - var12 * var9)] = param3;
-                    var10[8].field_B[-var11 - -var9 + (-1 + var9 * var12)] = param3;
+                    var10[6].field_B[(-var11 + (var9 + -1)) * var9 + var12] = 0;
+                    var10[8].field_B[var12 + (-1 + (-var11 + var9)) * var9] = 0;
+                    var10[2].field_B[-var11 - -var9 - (1 - var12 * var9)] = 0;
+                    var10[8].field_B[-var11 - -var9 + (-1 + var9 * var12)] = 0;
                     var12++;
-                    continue L8;
+                    continue L9;
                   }
                 }
               }
@@ -811,14 +807,14 @@ final class cc extends qf {
           } else {
             var13 = var11_ref_hl__[var12];
             var14 = 0;
-            L9: while (true) {
-              if (var13.field_B.length <= var14) {
+            L10: while (true) {
+              if (~var13.field_B.length >= ~var14) {
                 var12++;
                 continue L0;
               } else {
-                var13.field_B[var14] = param5;
+                var13.field_B[var14] = 0;
                 var14++;
-                continue L9;
+                continue L10;
               }
             }
           }

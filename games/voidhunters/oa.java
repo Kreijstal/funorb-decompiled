@@ -235,7 +235,8 @@ final class oa extends ha implements e {
     private final void g() {
         System.gc();
         System.runFinalization();
-        pq.a((byte) -128);
+        int discarded$0 = -128;
+        pq.a();
     }
 
     protected final synchronized void finalize() {
@@ -286,7 +287,8 @@ final class oa extends ha implements e {
     }
 
     final void c(int param0) {
-        pq.a((byte) -128);
+        int discarded$0 = -128;
+        pq.a();
         this.d(param0);
         ya var2 = (ya) (Object) ((oa) this).field_c.d(0);
         while (var2 != null) {
@@ -407,13 +409,17 @@ final class oa extends ha implements e {
         ((oa) this).field_h = false;
         try {
           L0: {
-            if (gpb.a("sw3d", (byte) 114)) {
+            int discarded$13 = 114;
+            if (gpb.a("sw3d")) {
               L1: {
-                pq.b((byte) -76);
+                int discarded$14 = -76;
+                pq.b();
                 this.MA(((oa) this).field_a, 0, 0);
-                ocb.a(false, (byte) 33, true);
+                int discarded$15 = 1;
+                int discarded$16 = 33;
+                ocb.a(false);
                 ((oa) this).field_h = true;
-                ja discarded$2 = new ja();
+                ja discarded$17 = new ja();
                 ((oa) this).a((pw) (Object) new ja());
                 this.g(1);
                 this.f(0);

@@ -158,13 +158,12 @@ final class mj {
         }
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         RuntimeException var1 = null;
         String stackIn_2_0 = null;
         String stackIn_10_0 = null;
         String stackIn_12_0 = null;
         String stackIn_15_0 = null;
-        Object stackIn_18_0 = null;
         String stackIn_23_0 = null;
         String stackIn_26_0 = null;
         String stackIn_29_0 = null;
@@ -180,7 +179,6 @@ final class mj {
         String stackOut_40_0 = null;
         String stackOut_28_0 = null;
         String stackOut_25_0 = null;
-        Object stackOut_17_0 = null;
         String stackOut_14_0 = null;
         String stackOut_1_0 = null;
         try {
@@ -198,44 +196,38 @@ final class mj {
                 }
               } else {
                 if (pa.field_i.c(83)) {
-                  if (param0 == -26) {
-                    if (!pa.field_i.b("commonui", false)) {
-                      stackOut_22_0 = fi.field_a + " - " + pa.field_i.b("commonui", (byte) -100) + "%";
-                      stackIn_23_0 = stackOut_22_0;
-                      return stackIn_23_0;
-                    } else {
-                      if (kg.field_b.c(96)) {
-                        if (kg.field_b.b("commonui", false)) {
-                          if (!ea.field_e.c(-111)) {
-                            stackOut_33_0 = se.field_F;
-                            stackIn_34_0 = stackOut_33_0;
-                            return stackIn_34_0;
-                          } else {
-                            if (!ea.field_e.a((byte) -100)) {
-                              stackOut_38_0 = da.field_b + " - " + ea.field_e.a(100) + "%";
-                              stackIn_39_0 = stackOut_38_0;
-                              return stackIn_39_0;
-                            } else {
-                              stackOut_40_0 = gf.field_h;
-                              stackIn_41_0 = stackOut_40_0;
-                              break L0;
-                            }
-                          }
+                  if (!pa.field_i.b("commonui", false)) {
+                    stackOut_22_0 = fi.field_a + " - " + pa.field_i.b("commonui", (byte) -100) + "%";
+                    stackIn_23_0 = stackOut_22_0;
+                    return stackIn_23_0;
+                  } else {
+                    if (kg.field_b.c(96)) {
+                      if (kg.field_b.b("commonui", false)) {
+                        if (!ea.field_e.c(-111)) {
+                          stackOut_33_0 = se.field_F;
+                          stackIn_34_0 = stackOut_33_0;
+                          return stackIn_34_0;
                         } else {
-                          stackOut_28_0 = vc.field_B + " - " + kg.field_b.b("commonui", (byte) -100) + "%";
-                          stackIn_29_0 = stackOut_28_0;
-                          return stackIn_29_0;
+                          if (!ea.field_e.a((byte) -100)) {
+                            stackOut_38_0 = da.field_b + " - " + ea.field_e.a(100) + "%";
+                            stackIn_39_0 = stackOut_38_0;
+                            return stackIn_39_0;
+                          } else {
+                            stackOut_40_0 = gf.field_h;
+                            stackIn_41_0 = stackOut_40_0;
+                            break L0;
+                          }
                         }
                       } else {
-                        stackOut_25_0 = mg.field_k;
-                        stackIn_26_0 = stackOut_25_0;
-                        return stackIn_26_0;
+                        stackOut_28_0 = vc.field_B + " - " + kg.field_b.b("commonui", (byte) -100) + "%";
+                        stackIn_29_0 = stackOut_28_0;
+                        return stackIn_29_0;
                       }
+                    } else {
+                      stackOut_25_0 = mg.field_k;
+                      stackIn_26_0 = stackOut_25_0;
+                      return stackIn_26_0;
                     }
-                  } else {
-                    stackOut_17_0 = null;
-                    stackIn_18_0 = stackOut_17_0;
-                    return (String) (Object) stackIn_18_0;
                   }
                 } else {
                   stackOut_14_0 = dk.field_b;
@@ -252,7 +244,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "mj.E(" + param0 + 41);
+          throw ii.a((Throwable) (Object) var1, "mj.E(" + -26 + 41);
         }
         return stackIn_41_0;
     }
@@ -836,7 +828,12 @@ final class mj {
                 L3: {
                   if (null == pe.field_f) {
                     tk.field_c = 0;
-                    pe.field_f = pe.a(3, 10, 1, -16947, 13);
+                    int discarded$5 = 13;
+                    int discarded$6 = -16947;
+                    int discarded$7 = 1;
+                    int discarded$8 = 10;
+                    int discarded$9 = 3;
+                    pe.field_f = pe.a();
                     break L3;
                   } else {
                     break L3;
@@ -1068,28 +1065,20 @@ final class mj {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_j = null;
-              field_k = null;
-              if (param0 == 4) {
-                break L1;
-              } else {
-                String discarded$2 = mj.b((byte) 102);
-                break L1;
-              }
-            }
+            field_j = null;
+            field_k = null;
             field_f = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "mj.A(" + param0 + 41);
+          throw ii.a((Throwable) (Object) var1, "mj.A(" + 4 + 41);
         }
     }
 

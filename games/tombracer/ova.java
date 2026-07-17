@@ -5,7 +5,7 @@ final class ova extends me {
     static String field_j;
     static String field_k;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_k = null;
         field_j = null;
     }
@@ -39,12 +39,7 @@ final class ova extends me {
     }
 
     final static int a(int param0, int param1, boolean param2, int param3, int param4) {
-        if (!param2) {
-          field_j = null;
-          return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
-        } else {
-          return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
-        }
+        return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
     }
 
     final void a(byte param0) {
@@ -110,7 +105,8 @@ final class ova extends me {
             if (param0 >= 19) {
               L1: {
                 jg.field_a.a(qi.field_K[3], (byte) 104);
-                ni.a(jg.field_a, (byte) 77);
+                int discarded$1 = 77;
+                ni.a(jg.field_a);
                 jg.field_a.f(-1477662136, param2);
                 param3.a(jg.field_a, false);
                 ql.field_k.field_h = 0;

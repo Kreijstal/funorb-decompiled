@@ -6,7 +6,7 @@ final class bi {
     static boolean field_b;
     static int[] field_c;
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var1_int = 0;
@@ -54,20 +54,20 @@ final class bi {
                   }
                 }
                 hc.field_b = pd.field_b;
+                var1_int = 0;
                 break L1;
               }
             }
-            var1_int = -111 % ((param0 - 35) / 57);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1_ref, "bi.A(" + param0 + 41);
+          throw sd.a((Throwable) (Object) var1_ref, "bi.A(" + 119 + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
     }

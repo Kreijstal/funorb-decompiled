@@ -6,7 +6,7 @@ final class gl extends ok {
     int field_H;
     static vl field_E;
 
-    public static void j(int param0) {
+    public static void j() {
         field_E = null;
     }
 
@@ -46,7 +46,7 @@ final class gl extends ok {
         ((gl) this).field_H = 256;
     }
 
-    final static void a(String param0, String[] param1, int param2, byte param3) {
+    final static void a(String param0, String[] param1, int param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_5_0 = 0;
@@ -174,17 +174,17 @@ final class gl extends ok {
     final static qj[] b(int param0, int param1, int param2, int param3, int param4) {
         qj[] var7 = new qj[9];
         qj[] var5 = var7;
-        qj dupTemp$0 = ee.a(param0, param1, (byte) 104);
+        qj dupTemp$0 = ee.a(param0, 1, (byte) 104);
         var7[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        qj dupTemp$1 = ee.a(param2, param1, (byte) -74);
+        qj dupTemp$1 = ee.a(param2, 1, (byte) -74);
         var7[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        int var6 = 87 % ((-23 - param3) / 37);
+        int var6 = 0;
         if (!(param4 == 0)) {
             var7[4] = ee.a(param4, 64, (byte) 104);
         }

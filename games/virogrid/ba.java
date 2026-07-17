@@ -8,7 +8,7 @@ abstract class ba {
     static int field_a;
     static String field_b;
 
-    final static String a(String param0, int param1, byte param2) {
+    final static String a(String param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         String stackIn_10_0 = null;
@@ -129,19 +129,15 @@ abstract class ba {
 
     abstract int a(int param0, int param1);
 
-    final static void b(int param0) {
+    final static void b() {
     }
 
     abstract sj a(byte param0);
 
     abstract byte[] b(int param0, int param1);
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
-        field_b = null;
-        if (param0 == 14) {
-            return;
-        }
         field_b = null;
     }
 

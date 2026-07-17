@@ -14,7 +14,7 @@ final class aka extends ana {
     static String field_y;
     static lda field_x;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_G = null;
         field_y = null;
         field_w = null;

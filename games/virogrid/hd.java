@@ -86,7 +86,7 @@ final class hd {
                 var13 = (bf) (Object) l.field_c.a((byte) -104);
                 var17 = var13;
                 if (var17 != null) {
-                  var3 = param0 ? 1 : 0;
+                  var3 = 0;
                   var4 = 0;
                   L1: while (true) {
                     if (~var4 <= ~var17.field_n) {
@@ -298,7 +298,7 @@ final class hd {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_61_0 = (RuntimeException) var2;
-                stackOut_61_1 = new StringBuilder().append("hd.C(").append(param0).append(44);
+                stackOut_61_1 = new StringBuilder().append("hd.C(").append(0).append(44);
                 stackIn_63_0 = stackOut_61_0;
                 stackIn_63_1 = stackOut_61_1;
                 stackIn_62_0 = stackOut_61_0;
@@ -331,11 +331,8 @@ final class hd {
     }
 
     final static void a(int param0, byte param1, int param2, boolean param3) {
-        if (param1 >= -110) {
-            hd.a(-117);
-        }
         nn.a(89, param3);
-        nb.a(param3, param0, param2, 5);
+        nb.a(param3, 13, 15, 5);
     }
 
     static {

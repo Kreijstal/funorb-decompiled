@@ -188,7 +188,7 @@ final class oh {
         return stackIn_16_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
     }
@@ -209,7 +209,7 @@ final class oh {
             var6 = ji.field_c;
             var4.field_b.b(0, var5, 115, var6, 0);
         }
-        vf.a(param0, param1, param2);
+        vf.a(param0, 0, param2);
     }
 
     oh(byte[] param0) {
@@ -415,20 +415,18 @@ final class oh {
 
     final static void a(int param0, int param1, boolean param2, int param3, byte param4, java.awt.Component param5, cb param6, vi param7) {
         try {
-            if (param4 > -91) {
-                boolean discarded$0 = oh.a('ﾢ', 24);
-            }
-            mm.a(param1, param2, 10);
+            int discarded$0 = 10;
+            mm.a(param1, param2);
             to.field_t = mm.a(param6, param5, 0, param3);
-            ib.field_h = mm.a(param6, param5, 1, param0);
+            ib.field_h = mm.a(param6, param5, 1, 1024);
             wi.field_d = new vj();
-            ba.field_f = param0;
+            ba.field_f = 1024;
             ib.field_h.b((sj) (Object) wi.field_d);
             ri.field_a = param7;
             ri.field_a.a(wn.field_u, (byte) 2);
             to.field_t.b((sj) (Object) ri.field_a);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "oh.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "oh.C(" + 1024 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -110 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -146,7 +146,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

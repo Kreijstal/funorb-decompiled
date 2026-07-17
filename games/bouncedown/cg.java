@@ -42,7 +42,7 @@ final class cg {
           if (var2 == null) {
             break L0;
           } else {
-            jh.field_t = c.a(param0 ^ -99, var2);
+            jh.field_t = c.a(0, var2);
             break L0;
           }
         }
@@ -76,7 +76,7 @@ final class cg {
         L4: {
           var2 = hg.a((byte) 111, "error_js5crc");
           if (var2 != null) {
-            ub.field_c = c.a(param0 ^ -99, var2);
+            ub.field_c = c.a(0, var2);
             break L4;
           } else {
             break L4;
@@ -87,7 +87,7 @@ final class cg {
           if (null == var2) {
             break L5;
           } else {
-            ub.field_d = c.a(param0 + 99, var2);
+            ub.field_d = c.a(0, var2);
             break L5;
           }
         }
@@ -130,7 +130,7 @@ final class cg {
         L10: {
           var2 = hg.a((byte) 110, "create_ineligible");
           if (null != var2) {
-            ih.field_P = c.a(param0 + 99, var2);
+            ih.field_P = c.a(0, var2);
             break L10;
           } else {
             break L10;
@@ -157,7 +157,7 @@ final class cg {
         L13: {
           var2 = hg.a((byte) 94, "andagainprompt");
           if (var2 != null) {
-            String discarded$528 = c.a(param0 ^ -99, var2);
+            String discarded$528 = c.a(0, var2);
             break L13;
           } else {
             break L13;
@@ -175,7 +175,7 @@ final class cg {
         L15: {
           var2 = hg.a((byte) 123, "ticketing_ignore");
           if (var2 != null) {
-            String discarded$530 = c.a(param0 ^ -99, var2);
+            String discarded$530 = c.a(0, var2);
             break L15;
           } else {
             break L15;
@@ -193,7 +193,7 @@ final class cg {
         L17: {
           var2 = hg.a((byte) 110, "ticketing_xunread");
           if (null != var2) {
-            md.field_v = c.a(param0 + 99, var2);
+            md.field_v = c.a(0, var2);
             break L17;
           } else {
             break L17;
@@ -249,7 +249,7 @@ final class cg {
           if (null == var2) {
             break L23;
           } else {
-            String discarded$535 = c.a(param0 + 99, var2);
+            String discarded$535 = c.a(0, var2);
             break L23;
           }
         }
@@ -328,7 +328,7 @@ final class cg {
         L32: {
           var2 = hg.a((byte) 98, "mu_x_left_lobby");
           if (null != var2) {
-            String discarded$544 = c.a(param0 + 99, var2);
+            String discarded$544 = c.a(0, var2);
             break L32;
           } else {
             break L32;
@@ -346,7 +346,7 @@ final class cg {
         L34: {
           var2 = hg.a((byte) 87, "mu_x_cannot_join_full");
           if (var2 != null) {
-            String discarded$546 = c.a(param0 + 99, var2);
+            String discarded$546 = c.a(0, var2);
             break L34;
           } else {
             break L34;
@@ -357,7 +357,7 @@ final class cg {
           if (null == var2) {
             break L35;
           } else {
-            String discarded$547 = c.a(param0 ^ -99, var2);
+            String discarded$547 = c.a(0, var2);
             break L35;
           }
         }
@@ -373,7 +373,7 @@ final class cg {
         L37: {
           var2 = hg.a((byte) 120, "mu_x_withdrew_request");
           if (null != var2) {
-            String discarded$549 = c.a(param0 ^ -99, var2);
+            String discarded$549 = c.a(0, var2);
             break L37;
           } else {
             break L37;
@@ -382,7 +382,7 @@ final class cg {
         L38: {
           var2 = hg.a((byte) 90, "mu_x_removed");
           if (null != var2) {
-            String discarded$550 = c.a(param0 + 99, var2);
+            String discarded$550 = c.a(0, var2);
             break L38;
           } else {
             break L38;
@@ -391,7 +391,7 @@ final class cg {
         L39: {
           var2 = hg.a((byte) 101, "mu_x_dropped_out");
           if (var2 != null) {
-            String discarded$551 = c.a(param0 + 99, var2);
+            String discarded$551 = c.a(0, var2);
             break L39;
           } else {
             break L39;
@@ -420,7 +420,7 @@ final class cg {
           if (null == var2) {
             break L42;
           } else {
-            String discarded$554 = c.a(param0 ^ -99, var2);
+            String discarded$554 = c.a(0, var2);
             break L42;
           }
         }
@@ -465,7 +465,7 @@ final class cg {
           if (var2 == null) {
             break L47;
           } else {
-            String discarded$559 = c.a(param0 ^ -99, var2);
+            String discarded$559 = c.a(0, var2);
             break L47;
           }
         }
@@ -483,7 +483,7 @@ final class cg {
           if (var2 == null) {
             break L49;
           } else {
-            String discarded$561 = c.a(param0 ^ -99, var2);
+            String discarded$561 = c.a(0, var2);
             break L49;
           }
         }
@@ -492,7 +492,7 @@ final class cg {
           if (null == var2) {
             break L50;
           } else {
-            String discarded$562 = c.a(param0 ^ -99, var2);
+            String discarded$562 = c.a(0, var2);
             break L50;
           }
         }
@@ -517,7 +517,7 @@ final class cg {
         L53: {
           var2 = hg.a((byte) 88, "mu_lobby_name_rm");
           if (var2 != null) {
-            String discarded$565 = c.a(param0 ^ -99, var2);
+            String discarded$565 = c.a(0, var2);
             break L53;
           } else {
             break L53;
@@ -645,7 +645,7 @@ final class cg {
           if (var2 == null) {
             break L67;
           } else {
-            String discarded$579 = c.a(param0 ^ -99, var2);
+            String discarded$579 = c.a(0, var2);
             break L67;
           }
         }
@@ -672,7 +672,7 @@ final class cg {
           if (var2 == null) {
             break L70;
           } else {
-            String discarded$582 = c.a(param0 ^ -99, var2);
+            String discarded$582 = c.a(0, var2);
             break L70;
           }
         }
@@ -688,7 +688,7 @@ final class cg {
         L72: {
           var2 = hg.a((byte) 96, "mu_invite_players");
           if (var2 != null) {
-            String discarded$584 = c.a(param0 ^ -99, var2);
+            String discarded$584 = c.a(0, var2);
             break L72;
           } else {
             break L72;
@@ -751,7 +751,7 @@ final class cg {
         L79: {
           var2 = hg.a((byte) 105, "send_qc_to_x");
           if (var2 != null) {
-            String discarded$591 = c.a(param0 ^ -99, var2);
+            String discarded$591 = c.a(0, var2);
             break L79;
           } else {
             break L79;
@@ -787,7 +787,7 @@ final class cg {
         L83: {
           var2 = hg.a((byte) 96, "join_xs_game");
           if (null != var2) {
-            String discarded$595 = c.a(param0 + 99, var2);
+            String discarded$595 = c.a(0, var2);
             break L83;
           } else {
             break L83;
@@ -843,7 +843,7 @@ final class cg {
           if (null == var2) {
             break L89;
           } else {
-            String discarded$601 = c.a(param0 ^ -99, var2);
+            String discarded$601 = c.a(0, var2);
             break L89;
           }
         }
@@ -852,7 +852,7 @@ final class cg {
           if (null == var2) {
             break L90;
           } else {
-            String discarded$602 = c.a(param0 + 99, var2);
+            String discarded$602 = c.a(0, var2);
             break L90;
           }
         }
@@ -861,7 +861,7 @@ final class cg {
           if (var2 == null) {
             break L91;
           } else {
-            String discarded$603 = c.a(param0 + 99, var2);
+            String discarded$603 = c.a(0, var2);
             break L91;
           }
         }
@@ -888,7 +888,7 @@ final class cg {
           if (null == var2) {
             break L94;
           } else {
-            String discarded$606 = c.a(param0 ^ -99, var2);
+            String discarded$606 = c.a(0, var2);
             break L94;
           }
         }
@@ -951,7 +951,7 @@ final class cg {
           if (var2 == null) {
             break L101;
           } else {
-            String discarded$613 = c.a(param0 + 99, var2);
+            String discarded$613 = c.a(0, var2);
             break L101;
           }
         }
@@ -960,7 +960,7 @@ final class cg {
           if (var2 == null) {
             break L102;
           } else {
-            String discarded$614 = c.a(param0 + 99, var2);
+            String discarded$614 = c.a(0, var2);
             break L102;
           }
         }
@@ -976,7 +976,7 @@ final class cg {
         L104: {
           var2 = hg.a((byte) 126, "mu_chat_pm_friends");
           if (null != var2) {
-            String discarded$616 = c.a(param0 + 99, var2);
+            String discarded$616 = c.a(0, var2);
             break L104;
           } else {
             break L104;
@@ -1021,7 +1021,7 @@ final class cg {
         L109: {
           var2 = hg.a((byte) 114, "rated_game");
           if (var2 != null) {
-            String discarded$621 = c.a(param0 + 99, var2);
+            String discarded$621 = c.a(0, var2);
             break L109;
           } else {
             break L109;
@@ -1077,7 +1077,7 @@ final class cg {
           if (null == var2) {
             break L115;
           } else {
-            String discarded$627 = c.a(param0 ^ -99, var2);
+            String discarded$627 = c.a(0, var2);
             break L115;
           }
         }
@@ -1086,7 +1086,7 @@ final class cg {
           if (var2 == null) {
             break L116;
           } else {
-            String discarded$628 = c.a(param0 ^ -99, var2);
+            String discarded$628 = c.a(0, var2);
             break L116;
           }
         }
@@ -1102,7 +1102,7 @@ final class cg {
         L118: {
           var2 = hg.a((byte) 113, "waiting_to_start_hint");
           if (var2 != null) {
-            String discarded$630 = c.a(param0 ^ -99, var2);
+            String discarded$630 = c.a(0, var2);
             break L118;
           } else {
             break L118;
@@ -1158,7 +1158,7 @@ final class cg {
           if (var2 == null) {
             break L124;
           } else {
-            String discarded$636 = c.a(param0 ^ -99, var2);
+            String discarded$636 = c.a(0, var2);
             break L124;
           }
         }
@@ -1174,7 +1174,7 @@ final class cg {
         L126: {
           var2 = hg.a((byte) 100, "players_x_of_y");
           if (null != var2) {
-            String discarded$638 = c.a(param0 + 99, var2);
+            String discarded$638 = c.a(0, var2);
             break L126;
           } else {
             break L126;
@@ -1201,7 +1201,7 @@ final class cg {
         L129: {
           var2 = hg.a((byte) 111, "message_game");
           if (var2 != null) {
-            String discarded$641 = c.a(param0 ^ -99, var2);
+            String discarded$641 = c.a(0, var2);
             break L129;
           } else {
             break L129;
@@ -1219,7 +1219,7 @@ final class cg {
         L131: {
           var2 = hg.a((byte) 117, "quickchat_game");
           if (null != var2) {
-            String discarded$643 = c.a(param0 ^ -99, var2);
+            String discarded$643 = c.a(0, var2);
             break L131;
           } else {
             break L131;
@@ -1237,7 +1237,7 @@ final class cg {
         L133: {
           var2 = hg.a((byte) 94, "inviting_x");
           if (null != var2) {
-            String discarded$645 = c.a(param0 ^ -99, var2);
+            String discarded$645 = c.a(0, var2);
             break L133;
           } else {
             break L133;
@@ -1248,7 +1248,7 @@ final class cg {
           if (null == var2) {
             break L134;
           } else {
-            String discarded$646 = c.a(param0 + 99, var2);
+            String discarded$646 = c.a(0, var2);
             break L134;
           }
         }
@@ -1309,7 +1309,7 @@ final class cg {
         L141: {
           var2 = hg.a((byte) 113, "status_join");
           if (null != var2) {
-            String discarded$653 = c.a(param0 ^ -99, var2);
+            String discarded$653 = c.a(0, var2);
             break L141;
           } else {
             break L141;
@@ -1329,7 +1329,7 @@ final class cg {
           if (var2 == null) {
             break L143;
           } else {
-            String discarded$655 = c.a(param0 ^ -99, var2);
+            String discarded$655 = c.a(0, var2);
             break L143;
           }
         }
@@ -1345,7 +1345,7 @@ final class cg {
         L145: {
           var2 = hg.a((byte) 108, "you_are_invited_to_xs_game");
           if (null != var2) {
-            String discarded$657 = c.a(param0 + 99, var2);
+            String discarded$657 = c.a(0, var2);
             break L145;
           } else {
             break L145;
@@ -1365,7 +1365,7 @@ final class cg {
           if (var2 == null) {
             break L147;
           } else {
-            String discarded$659 = c.a(param0 ^ -99, var2);
+            String discarded$659 = c.a(0, var2);
             break L147;
           }
         }
@@ -1401,7 +1401,7 @@ final class cg {
           if (var2 == null) {
             break L151;
           } else {
-            String discarded$663 = c.a(param0 ^ -99, var2);
+            String discarded$663 = c.a(0, var2);
             break L151;
           }
         }
@@ -1410,7 +1410,7 @@ final class cg {
           if (var2 == null) {
             break L152;
           } else {
-            String discarded$664 = c.a(param0 + 99, var2);
+            String discarded$664 = c.a(0, var2);
             break L152;
           }
         }
@@ -1482,7 +1482,7 @@ final class cg {
           if (null == var2) {
             break L160;
           } else {
-            String discarded$671 = c.a(param0 + 99, var2);
+            String discarded$671 = c.a(0, var2);
             break L160;
           }
         }
@@ -1525,7 +1525,7 @@ final class cg {
         L165: {
           var2 = hg.a((byte) 90, "reportabuse");
           if (var2 != null) {
-            String discarded$676 = c.a(param0 ^ -99, var2);
+            String discarded$676 = c.a(0, var2);
             break L165;
           } else {
             break L165;
@@ -1588,7 +1588,7 @@ final class cg {
         L172: {
           var2 = hg.a((byte) 86, "esc_cancelthisline");
           if (null != var2) {
-            String discarded$683 = c.a(param0 + 99, var2);
+            String discarded$683 = c.a(0, var2);
             break L172;
           } else {
             break L172;
@@ -1599,7 +1599,7 @@ final class cg {
           if (null == var2) {
             break L173;
           } else {
-            String discarded$684 = c.a(param0 + 99, var2);
+            String discarded$684 = c.a(0, var2);
             break L173;
           }
         }
@@ -1624,7 +1624,7 @@ final class cg {
         L176: {
           var2 = hg.a((byte) 95, "publicchat_unavailable_ratedgame");
           if (null != var2) {
-            String discarded$687 = c.a(param0 + 99, var2);
+            String discarded$687 = c.a(0, var2);
             break L176;
           } else {
             break L176;
@@ -1678,7 +1678,7 @@ final class cg {
         L182: {
           var2 = hg.a((byte) 117, "runescapeclan");
           if (var2 != null) {
-            String discarded$693 = c.a(param0 ^ -99, var2);
+            String discarded$693 = c.a(0, var2);
             break L182;
           } else {
             break L182;
@@ -1743,7 +1743,7 @@ final class cg {
           if (null == var2) {
             break L189;
           } else {
-            String discarded$700 = c.a(param0 ^ -99, var2);
+            String discarded$700 = c.a(0, var2);
             break L189;
           }
         }
@@ -1797,7 +1797,7 @@ final class cg {
           if (null == var2) {
             break L195;
           } else {
-            String discarded$706 = c.a(param0 ^ -99, var2);
+            String discarded$706 = c.a(0, var2);
             break L195;
           }
         }
@@ -1806,14 +1806,14 @@ final class cg {
           if (var2 == null) {
             break L196;
           } else {
-            String discarded$707 = c.a(param0 ^ -99, var2);
+            String discarded$707 = c.a(0, var2);
             break L196;
           }
         }
         L197: {
           var2 = hg.a((byte) 120, "gameopt_youneedratedgames");
           if (null != var2) {
-            String discarded$708 = c.a(param0 + 99, var2);
+            String discarded$708 = c.a(0, var2);
             break L197;
           } else {
             break L197;
@@ -1842,14 +1842,14 @@ final class cg {
           if (null == var2) {
             break L200;
           } else {
-            String discarded$711 = c.a(param0 ^ -99, var2);
+            String discarded$711 = c.a(0, var2);
             break L200;
           }
         }
         L201: {
           var2 = hg.a((byte) 119, "gameopt_youhaventunlocked");
           if (var2 != null) {
-            String discarded$712 = c.a(param0 + 99, var2);
+            String discarded$712 = c.a(0, var2);
             break L201;
           } else {
             break L201;
@@ -1867,7 +1867,7 @@ final class cg {
         L203: {
           var2 = hg.a((byte) 117, "gameopt_trychanging2");
           if (null != var2) {
-            String discarded$714 = c.a(param0 ^ -99, var2);
+            String discarded$714 = c.a(0, var2);
             break L203;
           } else {
             break L203;
@@ -1887,7 +1887,7 @@ final class cg {
           if (null == var2) {
             break L205;
           } else {
-            String discarded$716 = c.a(param0 ^ -99, var2);
+            String discarded$716 = c.a(0, var2);
             break L205;
           }
         }
@@ -1957,7 +1957,7 @@ final class cg {
         L213: {
           var2 = hg.a((byte) 101, "gameopt_inviteplayers_or_trychanging1");
           if (null != var2) {
-            String discarded$724 = c.a(param0 ^ -99, var2);
+            String discarded$724 = c.a(0, var2);
             break L213;
           } else {
             break L213;
@@ -1977,7 +1977,7 @@ final class cg {
           if (null == var2) {
             break L215;
           } else {
-            String discarded$726 = c.a(param0 ^ -99, var2);
+            String discarded$726 = c.a(0, var2);
             break L215;
           }
         }
@@ -1986,7 +1986,7 @@ final class cg {
           if (null == var2) {
             break L216;
           } else {
-            String discarded$727 = c.a(param0 ^ -99, var2);
+            String discarded$727 = c.a(0, var2);
             break L216;
           }
         }
@@ -1995,7 +1995,7 @@ final class cg {
           if (null == var2) {
             break L217;
           } else {
-            String discarded$728 = c.a(param0 + 99, var2);
+            String discarded$728 = c.a(0, var2);
             break L217;
           }
         }
@@ -2004,14 +2004,14 @@ final class cg {
           if (null == var2) {
             break L218;
           } else {
-            String discarded$729 = c.a(param0 ^ -99, var2);
+            String discarded$729 = c.a(0, var2);
             break L218;
           }
         }
         L219: {
           var2 = hg.a((byte) 93, "ra_suggestmute");
           if (null != var2) {
-            String discarded$730 = c.a(param0 ^ -99, var2);
+            String discarded$730 = c.a(0, var2);
             break L219;
           } else {
             break L219;
@@ -2076,7 +2076,7 @@ final class cg {
           if (var2 == null) {
             break L226;
           } else {
-            String discarded$737 = c.a(param0 ^ -99, var2);
+            String discarded$737 = c.a(0, var2);
             break L226;
           }
         }
@@ -2110,7 +2110,7 @@ final class cg {
         L230: {
           var2 = hg.a((byte) 98, "rule_pillar_1");
           if (null != var2) {
-            String discarded$741 = c.a(param0 + 99, var2);
+            String discarded$741 = c.a(0, var2);
             break L230;
           } else {
             break L230;
@@ -2119,7 +2119,7 @@ final class cg {
         L231: {
           var2 = hg.a((byte) 104, "rule_1_0");
           if (var2 != null) {
-            String discarded$742 = c.a(param0 ^ -99, var2);
+            String discarded$742 = c.a(0, var2);
             break L231;
           } else {
             break L231;
@@ -2155,7 +2155,7 @@ final class cg {
         L235: {
           var2 = hg.a((byte) 110, "rule_1_4");
           if (null != var2) {
-            String discarded$746 = c.a(param0 ^ -99, var2);
+            String discarded$746 = c.a(0, var2);
             break L235;
           } else {
             break L235;
@@ -2164,7 +2164,7 @@ final class cg {
         L236: {
           var2 = hg.a((byte) 122, "rule_pillar_2");
           if (var2 != null) {
-            String discarded$747 = c.a(param0 + 99, var2);
+            String discarded$747 = c.a(0, var2);
             break L236;
           } else {
             break L236;
@@ -2184,7 +2184,7 @@ final class cg {
           if (var2 == null) {
             break L238;
           } else {
-            String discarded$749 = c.a(param0 + 99, var2);
+            String discarded$749 = c.a(0, var2);
             break L238;
           }
         }
@@ -2209,7 +2209,7 @@ final class cg {
         L241: {
           var2 = hg.a((byte) 119, "cancel");
           if (var2 != null) {
-            qa.field_g = c.a(param0 + 99, var2);
+            qa.field_g = c.a(0, var2);
             break L241;
           } else {
             break L241;
@@ -2229,7 +2229,7 @@ final class cg {
           if (var2 == null) {
             break L243;
           } else {
-            String discarded$753 = c.a(param0 ^ -99, var2);
+            String discarded$753 = c.a(0, var2);
             break L243;
           }
         }
@@ -2245,7 +2245,7 @@ final class cg {
         L245: {
           var2 = hg.a((byte) 112, "invaliduserorpass");
           if (var2 != null) {
-            mc.field_c = c.a(param0 + 99, var2);
+            mc.field_c = c.a(0, var2);
             break L245;
           } else {
             break L245;
@@ -2265,7 +2265,7 @@ final class cg {
           if (var2 == null) {
             break L247;
           } else {
-            String discarded$755 = c.a(param0 + 99, var2);
+            String discarded$755 = c.a(0, var2);
             break L247;
           }
         }
@@ -2344,7 +2344,7 @@ final class cg {
         L256: {
           var2 = hg.a((byte) 98, "login");
           if (var2 != null) {
-            bi.field_k = c.a(param0 + 99, var2);
+            bi.field_k = c.a(0, var2);
             break L256;
           } else {
             break L256;
@@ -2389,7 +2389,7 @@ final class cg {
         L261: {
           var2 = hg.a((byte) 113, "pleasewait");
           if (null != var2) {
-            String discarded$761 = c.a(param0 ^ -99, var2);
+            String discarded$761 = c.a(0, var2);
             break L261;
           } else {
             break L261;
@@ -2445,14 +2445,14 @@ final class cg {
           if (var2 == null) {
             break L267;
           } else {
-            vb.field_o = c.a(param0 + 99, var2);
+            vb.field_o = c.a(0, var2);
             break L267;
           }
         }
         L268: {
           var2 = hg.a((byte) 103, "connectionlost_withreason");
           if (var2 != null) {
-            ta.field_b = c.a(param0 + 99, var2);
+            ta.field_b = c.a(0, var2);
             break L268;
           } else {
             break L268;
@@ -2461,7 +2461,7 @@ final class cg {
         L269: {
           var2 = hg.a((byte) 108, "passwordverificationrequired");
           if (null != var2) {
-            String discarded$766 = c.a(param0 ^ -99, var2);
+            String discarded$766 = c.a(0, var2);
             break L269;
           } else {
             break L269;
@@ -2517,14 +2517,14 @@ final class cg {
           if (null == var2) {
             break L275;
           } else {
-            dh.field_e = c.a(param0 + 99, var2);
+            dh.field_e = c.a(0, var2);
             break L275;
           }
         }
         L276: {
           var2 = hg.a((byte) 103, "warning_ifyouquit");
           if (var2 != null) {
-            mi.field_e = c.a(param0 + 99, var2);
+            mi.field_e = c.a(0, var2);
             break L276;
           } else {
             break L276;
@@ -2542,7 +2542,7 @@ final class cg {
         L278: {
           var2 = hg.a((byte) 100, "resubscribe_withoutlosing_fs");
           if (var2 != null) {
-            String discarded$769 = c.a(param0 ^ -99, var2);
+            String discarded$769 = c.a(0, var2);
             break L278;
           } else {
             break L278;
@@ -2553,7 +2553,7 @@ final class cg {
           if (var2 == null) {
             break L279;
           } else {
-            String discarded$770 = c.a(param0 ^ -99, var2);
+            String discarded$770 = c.a(0, var2);
             break L279;
           }
         }
@@ -2571,7 +2571,7 @@ final class cg {
           if (var2 == null) {
             break L281;
           } else {
-            String discarded$772 = c.a(param0 + 99, var2);
+            String discarded$772 = c.a(0, var2);
             break L281;
           }
         }
@@ -2598,7 +2598,7 @@ final class cg {
           if (null == var2) {
             break L284;
           } else {
-            String discarded$775 = c.a(param0 ^ -99, var2);
+            String discarded$775 = c.a(0, var2);
             break L284;
           }
         }
@@ -2616,7 +2616,7 @@ final class cg {
           if (var2 == null) {
             break L286;
           } else {
-            String discarded$777 = c.a(param0 + 99, var2);
+            String discarded$777 = c.a(0, var2);
             break L286;
           }
         }
@@ -2659,7 +2659,7 @@ final class cg {
         L291: {
           var2 = hg.a((byte) 127, "countrylisterror");
           if (null != var2) {
-            String discarded$782 = c.a(param0 ^ -99, var2);
+            String discarded$782 = c.a(0, var2);
             break L291;
           } else {
             break L291;
@@ -2668,7 +2668,7 @@ final class cg {
         L292: {
           var2 = hg.a((byte) 123, "theonlypersonalquestions");
           if (var2 != null) {
-            String discarded$783 = c.a(param0 + 99, var2);
+            String discarded$783 = c.a(0, var2);
             break L292;
           } else {
             break L292;
@@ -2805,14 +2805,14 @@ final class cg {
           if (null == var2) {
             break L307;
           } else {
-            String discarded$797 = c.a(param0 ^ -99, var2);
+            String discarded$797 = c.a(0, var2);
             break L307;
           }
         }
         L308: {
           var2 = hg.a((byte) 95, "create_idisagree");
           if (var2 != null) {
-            String discarded$798 = c.a(param0 + 99, var2);
+            String discarded$798 = c.a(0, var2);
             break L308;
           } else {
             break L308;
@@ -2821,7 +2821,7 @@ final class cg {
         L309: {
           var2 = hg.a((byte) 96, "create_pleasescrolldowntoaccept");
           if (null != var2) {
-            String discarded$799 = c.a(param0 ^ -99, var2);
+            String discarded$799 = c.a(0, var2);
             break L309;
           } else {
             break L309;
@@ -2904,7 +2904,7 @@ final class cg {
           if (null == var2) {
             break L318;
           } else {
-            String discarded$805 = c.a(param0 + 99, var2);
+            String discarded$805 = c.a(0, var2);
             break L318;
           }
         }
@@ -2967,7 +2967,7 @@ final class cg {
           if (null == var2) {
             break L325;
           } else {
-            bk.field_e[2] = c.a(param0 + 99, var2);
+            bk.field_e[2] = c.a(0, var2);
             break L325;
           }
         }
@@ -2985,7 +2985,7 @@ final class cg {
           if (var2 == null) {
             break L327;
           } else {
-            bk.field_e[4] = c.a(param0 + 99, var2);
+            bk.field_e[4] = c.a(0, var2);
             break L327;
           }
         }
@@ -3046,7 +3046,7 @@ final class cg {
         L334: {
           var2 = hg.a((byte) 100, "monthnames,11");
           if (null != var2) {
-            bk.field_e[11] = c.a(param0 + 99, var2);
+            bk.field_e[11] = c.a(0, var2);
             break L334;
           } else {
             break L334;
@@ -3082,7 +3082,7 @@ final class cg {
         L338: {
           var2 = hg.a((byte) 117, "create_username");
           if (null != var2) {
-            String discarded$811 = c.a(param0 + 99, var2);
+            String discarded$811 = c.a(0, var2);
             break L338;
           } else {
             break L338;
@@ -3174,7 +3174,7 @@ final class cg {
           if (null == var2) {
             break L348;
           } else {
-            String discarded$815 = c.a(param0 + 99, var2);
+            String discarded$815 = c.a(0, var2);
             break L348;
           }
         }
@@ -3201,7 +3201,7 @@ final class cg {
           if (var2 == null) {
             break L351;
           } else {
-            nk.field_e = c.a(param0 ^ -99, var2);
+            nk.field_e = c.a(0, var2);
             break L351;
           }
         }
@@ -3253,7 +3253,7 @@ final class cg {
         L357: {
           var2 = hg.a((byte) 111, "login_username_email");
           if (null != var2) {
-            wj.field_b = c.a(param0 ^ -99, var2);
+            wj.field_b = c.a(0, var2);
             break L357;
           } else {
             break L357;
@@ -3298,7 +3298,7 @@ final class cg {
         L362: {
           var2 = hg.a((byte) 101, "login_login_tooltip");
           if (null != var2) {
-            String discarded$819 = c.a(param0 ^ -99, var2);
+            String discarded$819 = c.a(0, var2);
             break L362;
           } else {
             break L362;
@@ -3307,7 +3307,7 @@ final class cg {
         L363: {
           var2 = hg.a((byte) 104, "login_create_tooltip");
           if (null != var2) {
-            ge.field_a = c.a(param0 ^ -99, var2);
+            ge.field_a = c.a(0, var2);
             break L363;
           } else {
             break L363;
@@ -3354,7 +3354,7 @@ final class cg {
           if (null == var2) {
             break L368;
           } else {
-            String discarded$822 = c.a(param0 + 99, var2);
+            String discarded$822 = c.a(0, var2);
             break L368;
           }
         }
@@ -3372,7 +3372,7 @@ final class cg {
           if (var2 == null) {
             break L370;
           } else {
-            dg.field_i = c.a(param0 ^ -99, var2);
+            dg.field_i = c.a(0, var2);
             break L370;
           }
         }
@@ -3397,7 +3397,7 @@ final class cg {
         L373: {
           var2 = hg.a((byte) 99, "create_password_confirm_tooltip");
           if (var2 != null) {
-            fd.field_o = c.a(param0 + 99, var2);
+            fd.field_o = c.a(0, var2);
             break L373;
           } else {
             break L373;
@@ -3406,7 +3406,7 @@ final class cg {
         L374: {
           var2 = hg.a((byte) 127, "create_email_tooltip");
           if (var2 != null) {
-            ta.field_d = c.a(param0 ^ -99, var2);
+            ta.field_d = c.a(0, var2);
             break L374;
           } else {
             break L374;
@@ -3433,7 +3433,7 @@ final class cg {
         L377: {
           var2 = hg.a((byte) 112, "create_optin_news_tooltip");
           if (null != var2) {
-            pb.field_g = c.a(param0 ^ -99, var2);
+            pb.field_g = c.a(0, var2);
             break L377;
           } else {
             break L377;
@@ -3442,7 +3442,7 @@ final class cg {
         L378: {
           var2 = hg.a((byte) 111, "create_u13_email_tooltip");
           if (var2 != null) {
-            String discarded$823 = c.a(param0 + 99, var2);
+            String discarded$823 = c.a(0, var2);
             break L378;
           } else {
             break L378;
@@ -3453,7 +3453,7 @@ final class cg {
           if (var2 == null) {
             break L379;
           } else {
-            String discarded$824 = c.a(param0 + 99, var2);
+            String discarded$824 = c.a(0, var2);
             break L379;
           }
         }
@@ -3487,7 +3487,7 @@ final class cg {
         L383: {
           var2 = hg.a((byte) 106, "create_continue");
           if (null != var2) {
-            String discarded$828 = c.a(param0 ^ -99, var2);
+            String discarded$828 = c.a(0, var2);
             break L383;
           } else {
             break L383;
@@ -3496,7 +3496,7 @@ final class cg {
         L384: {
           var2 = hg.a((byte) 122, "create_username_unavailable");
           if (null != var2) {
-            ma.field_n = c.a(param0 ^ -99, var2);
+            ma.field_n = c.a(0, var2);
             break L384;
           } else {
             break L384;
@@ -3586,7 +3586,7 @@ final class cg {
         L394: {
           var2 = hg.a((byte) 115, "create_alert_passcontainsemail");
           if (var2 != null) {
-            bd.field_m = c.a(param0 ^ -99, var2);
+            bd.field_m = c.a(0, var2);
             break L394;
           } else {
             break L394;
@@ -3651,7 +3651,7 @@ final class cg {
           if (null == var2) {
             break L401;
           } else {
-            String discarded$831 = c.a(param0 + 99, var2);
+            String discarded$831 = c.a(0, var2);
             break L401;
           }
         }
@@ -3694,7 +3694,7 @@ final class cg {
         L406: {
           var2 = hg.a((byte) 96, "invalid_name");
           if (null != var2) {
-            String discarded$832 = c.a(param0 ^ -99, var2);
+            String discarded$832 = c.a(0, var2);
             break L406;
           } else {
             break L406;
@@ -3820,7 +3820,7 @@ final class cg {
         L420: {
           var2 = hg.a((byte) 86, "enterfriend_add");
           if (null != var2) {
-            String discarded$846 = c.a(param0 ^ -99, var2);
+            String discarded$846 = c.a(0, var2);
             break L420;
           } else {
             break L420;
@@ -3831,7 +3831,7 @@ final class cg {
           if (null == var2) {
             break L421;
           } else {
-            String discarded$847 = c.a(param0 + 99, var2);
+            String discarded$847 = c.a(0, var2);
             break L421;
           }
         }
@@ -3883,7 +3883,7 @@ final class cg {
         L427: {
           var2 = hg.a((byte) 119, "sse");
           if (var2 != null) {
-            String discarded$853 = c.a(param0 + 99, var2);
+            String discarded$853 = c.a(0, var2);
             break L427;
           } else {
             break L427;
@@ -3901,7 +3901,7 @@ final class cg {
         L429: {
           var2 = hg.a((byte) 90, "waitingfor_graphics");
           if (null != var2) {
-            dk.field_b = c.a(param0 ^ -99, var2);
+            dk.field_b = c.a(0, var2);
             break L429;
           } else {
             break L429;
@@ -3948,7 +3948,7 @@ final class cg {
           if (var2 == null) {
             break L434;
           } else {
-            String discarded$856 = c.a(param0 + 99, var2);
+            String discarded$856 = c.a(0, var2);
             break L434;
           }
         }
@@ -3964,7 +3964,7 @@ final class cg {
         L436: {
           var2 = hg.a((byte) 86, "waitingfor_extradata");
           if (var2 != null) {
-            se.field_F = c.a(param0 ^ -99, var2);
+            se.field_F = c.a(0, var2);
             break L436;
           } else {
             break L436;
@@ -3973,7 +3973,7 @@ final class cg {
         L437: {
           var2 = hg.a((byte) 98, "waitingfor_languages");
           if (null != var2) {
-            String discarded$858 = c.a(param0 ^ -99, var2);
+            String discarded$858 = c.a(0, var2);
             break L437;
           } else {
             break L437;
@@ -4020,7 +4020,7 @@ final class cg {
           if (var2 == null) {
             break L442;
           } else {
-            vc.field_B = c.a(param0 + 99, var2);
+            vc.field_B = c.a(0, var2);
             break L442;
           }
         }
@@ -4029,7 +4029,7 @@ final class cg {
           if (var2 == null) {
             break L443;
           } else {
-            fj.field_k = c.a(param0 + 99, var2);
+            fj.field_k = c.a(0, var2);
             break L443;
           }
         }
@@ -4099,7 +4099,7 @@ final class cg {
         L451: {
           var2 = hg.a((byte) 106, "unpacking_graphics");
           if (null != var2) {
-            he.field_i = c.a(param0 ^ -99, var2);
+            he.field_i = c.a(0, var2);
             break L451;
           } else {
             break L451;
@@ -4135,7 +4135,7 @@ final class cg {
         L455: {
           var2 = hg.a((byte) 113, "unpacking_levels");
           if (var2 != null) {
-            String discarded$868 = c.a(param0 + 99, var2);
+            String discarded$868 = c.a(0, var2);
             break L455;
           } else {
             break L455;
@@ -4146,7 +4146,7 @@ final class cg {
           if (var2 == null) {
             break L456;
           } else {
-            String discarded$869 = c.a(param0 + 99, var2);
+            String discarded$869 = c.a(0, var2);
             break L456;
           }
         }
@@ -4155,7 +4155,7 @@ final class cg {
           if (null == var2) {
             break L457;
           } else {
-            String discarded$870 = c.a(param0 ^ -99, var2);
+            String discarded$870 = c.a(0, var2);
             break L457;
           }
         }
@@ -4272,7 +4272,7 @@ final class cg {
           if (null == var2) {
             break L470;
           } else {
-            String discarded$879 = c.a(param0 ^ -99, var2);
+            String discarded$879 = c.a(0, var2);
             break L470;
           }
         }
@@ -4297,7 +4297,7 @@ final class cg {
         L473: {
           var2 = hg.a((byte) 85, "login_createaccount");
           if (null != var2) {
-            qe.field_c = c.a(param0 ^ -99, var2);
+            qe.field_c = c.a(0, var2);
             break L473;
           } else {
             break L473;
@@ -4306,7 +4306,7 @@ final class cg {
         L474: {
           var2 = hg.a((byte) 93, "tohighscores");
           if (null != var2) {
-            String discarded$881 = c.a(param0 + 99, var2);
+            String discarded$881 = c.a(0, var2);
             break L474;
           } else {
             break L474;
@@ -4335,14 +4335,14 @@ final class cg {
           if (null == var2) {
             break L477;
           } else {
-            String discarded$884 = c.a(param0 + 99, var2);
+            String discarded$884 = c.a(0, var2);
             break L477;
           }
         }
         L478: {
           var2 = hg.a((byte) 94, "mainmenu");
           if (null != var2) {
-            hi.field_b = c.a(param0 + 99, var2);
+            hi.field_b = c.a(0, var2);
             break L478;
           } else {
             break L478;
@@ -4369,7 +4369,7 @@ final class cg {
         L481: {
           var2 = hg.a((byte) 106, "menu");
           if (null != var2) {
-            String discarded$887 = c.a(param0 ^ -99, var2);
+            String discarded$887 = c.a(0, var2);
             break L481;
           } else {
             break L481;
@@ -4387,7 +4387,7 @@ final class cg {
         L483: {
           var2 = hg.a((byte) 88, "nextlevel");
           if (var2 != null) {
-            String discarded$889 = c.a(param0 ^ -99, var2);
+            String discarded$889 = c.a(0, var2);
             break L483;
           } else {
             break L483;
@@ -4450,7 +4450,7 @@ final class cg {
         L490: {
           var2 = hg.a((byte) 121, "skipending");
           if (null != var2) {
-            String discarded$896 = c.a(param0 ^ -99, var2);
+            String discarded$896 = c.a(0, var2);
             break L490;
           } else {
             break L490;
@@ -4461,7 +4461,7 @@ final class cg {
           if (var2 == null) {
             break L491;
           } else {
-            String discarded$897 = c.a(param0 ^ -99, var2);
+            String discarded$897 = c.a(0, var2);
             break L491;
           }
         }
@@ -4603,7 +4603,7 @@ final class cg {
         L507: {
           var2 = hg.a((byte) 85, "offerdraw");
           if (null != var2) {
-            String discarded$909 = c.a(param0 + 99, var2);
+            String discarded$909 = c.a(0, var2);
             break L507;
           } else {
             break L507;
@@ -4621,7 +4621,7 @@ final class cg {
         L509: {
           var2 = hg.a((byte) 116, "acceptdraw");
           if (null != var2) {
-            String discarded$911 = c.a(param0 + 99, var2);
+            String discarded$911 = c.a(0, var2);
             break L509;
           } else {
             break L509;
@@ -4639,7 +4639,7 @@ final class cg {
         L511: {
           var2 = hg.a((byte) 86, "returntolobby");
           if (var2 != null) {
-            String discarded$913 = c.a(param0 ^ -99, var2);
+            String discarded$913 = c.a(0, var2);
             break L511;
           } else {
             break L511;
@@ -4659,7 +4659,7 @@ final class cg {
           if (null == var2) {
             break L513;
           } else {
-            String discarded$914 = c.a(param0 + 99, var2);
+            String discarded$914 = c.a(0, var2);
             break L513;
           }
         }
@@ -4722,7 +4722,7 @@ final class cg {
           if (var2 == null) {
             break L520;
           } else {
-            String discarded$921 = c.a(param0 ^ -99, var2);
+            String discarded$921 = c.a(0, var2);
             break L520;
           }
         }
@@ -4749,7 +4749,7 @@ final class cg {
           if (null == var2) {
             break L523;
           } else {
-            String discarded$924 = c.a(param0 + 99, var2);
+            String discarded$924 = c.a(0, var2);
             break L523;
           }
         }
@@ -4776,7 +4776,7 @@ final class cg {
           if (null == var2) {
             break L526;
           } else {
-            String discarded$927 = c.a(param0 + 99, var2);
+            String discarded$927 = c.a(0, var2);
             break L526;
           }
         }
@@ -4794,7 +4794,7 @@ final class cg {
           if (null == var2) {
             break L528;
           } else {
-            String discarded$929 = c.a(param0 ^ -99, var2);
+            String discarded$929 = c.a(0, var2);
             break L528;
           }
         }
@@ -4837,7 +4837,7 @@ final class cg {
         L533: {
           var2 = hg.a((byte) 99, "pressescforoptionsmenu_doesntpause_short");
           if (null != var2) {
-            String discarded$934 = c.a(param0 + 99, var2);
+            String discarded$934 = c.a(0, var2);
             break L533;
           } else {
             break L533;
@@ -4884,7 +4884,7 @@ final class cg {
           if (null == var2) {
             break L538;
           } else {
-            String discarded$939 = c.a(param0 ^ -99, var2);
+            String discarded$939 = c.a(0, var2);
             break L538;
           }
         }
@@ -4893,7 +4893,7 @@ final class cg {
           if (null == var2) {
             break L539;
           } else {
-            String discarded$940 = c.a(param0 ^ -99, var2);
+            String discarded$940 = c.a(0, var2);
             break L539;
           }
         }
@@ -4902,7 +4902,7 @@ final class cg {
           if (var2 == null) {
             break L540;
           } else {
-            String discarded$941 = c.a(param0 + 99, var2);
+            String discarded$941 = c.a(0, var2);
             break L540;
           }
         }
@@ -4918,7 +4918,7 @@ final class cg {
         L542: {
           var2 = hg.a((byte) 107, "membersworld_cannotplayreason");
           if (null != var2) {
-            String discarded$943 = c.a(param0 ^ -99, var2);
+            String discarded$943 = c.a(0, var2);
             break L542;
           } else {
             break L542;
@@ -4992,7 +4992,7 @@ final class cg {
           if (null == var2) {
             break L550;
           } else {
-            String discarded$951 = c.a(param0 ^ -99, var2);
+            String discarded$951 = c.a(0, var2);
             break L550;
           }
         }
@@ -5028,7 +5028,7 @@ final class cg {
           if (var2 == null) {
             break L554;
           } else {
-            b.field_c = c.a(param0 ^ -99, var2);
+            b.field_c = c.a(0, var2);
             break L554;
           }
         }
@@ -5037,7 +5037,7 @@ final class cg {
           if (var2 == null) {
             break L555;
           } else {
-            oh.field_f = c.a(param0 + 99, var2);
+            oh.field_f = c.a(0, var2);
             break L555;
           }
         }
@@ -5053,7 +5053,7 @@ final class cg {
         L557: {
           var2 = hg.a((byte) 92, "orbcoins");
           if (null != var2) {
-            ha.field_m = c.a(param0 + 99, var2);
+            ha.field_m = c.a(0, var2);
             break L557;
           } else {
             break L557;
@@ -5073,7 +5073,7 @@ final class cg {
           if (null == var2) {
             break L559;
           } else {
-            String discarded$955 = c.a(param0 ^ -99, var2);
+            String discarded$955 = c.a(0, var2);
             break L559;
           }
         }
@@ -5091,7 +5091,7 @@ final class cg {
           if (null == var2) {
             break L561;
           } else {
-            String discarded$957 = c.a(param0 ^ -99, var2);
+            String discarded$957 = c.a(0, var2);
             break L561;
           }
         }
@@ -5179,7 +5179,7 @@ final class cg {
         L571: {
           var2 = hg.a((byte) 117, "mp_leavegame");
           if (var2 != null) {
-            String discarded$966 = c.a(param0 + 99, var2);
+            String discarded$966 = c.a(0, var2);
             break L571;
           } else {
             break L571;
@@ -5199,7 +5199,7 @@ final class cg {
           if (null == var2) {
             break L573;
           } else {
-            String discarded$968 = c.a(param0 ^ -99, var2);
+            String discarded$968 = c.a(0, var2);
             break L573;
           }
         }
@@ -5271,7 +5271,7 @@ final class cg {
           if (var2 == null) {
             break L581;
           } else {
-            String discarded$976 = c.a(param0 + 99, var2);
+            String discarded$976 = c.a(0, var2);
             break L581;
           }
         }
@@ -5395,7 +5395,7 @@ final class cg {
         L595: {
           var2 = hg.a((byte) 117, "mp_timeremaining");
           if (null != var2) {
-            String discarded$990 = c.a(param0 ^ -99, var2);
+            String discarded$990 = c.a(0, var2);
             break L595;
           } else {
             break L595;
@@ -5424,7 +5424,7 @@ final class cg {
           if (var2 == null) {
             break L598;
           } else {
-            String discarded$993 = c.a(param0 + 99, var2);
+            String discarded$993 = c.a(0, var2);
             break L598;
           }
         }
@@ -5442,14 +5442,14 @@ final class cg {
           if (null == var2) {
             break L600;
           } else {
-            String discarded$995 = c.a(param0 + 99, var2);
+            String discarded$995 = c.a(0, var2);
             break L600;
           }
         }
         L601: {
           var2 = hg.a((byte) 87, "mp_showchat_unread1");
           if (var2 != null) {
-            String discarded$996 = c.a(param0 ^ -99, var2);
+            String discarded$996 = c.a(0, var2);
             break L601;
           } else {
             break L601;
@@ -5485,7 +5485,7 @@ final class cg {
         L605: {
           var2 = hg.a((byte) 119, "quickchat_help");
           if (null != var2) {
-            String discarded$1000 = c.a(param0 + 99, var2);
+            String discarded$1000 = c.a(0, var2);
             break L605;
           } else {
             break L605;
@@ -5586,14 +5586,14 @@ final class cg {
           if (var2 == null) {
             break L616;
           } else {
-            nb.field_h[3] = c.a(param0 + 99, var2);
+            nb.field_h[3] = c.a(0, var2);
             break L616;
           }
         }
         L617: {
           var2 = hg.a((byte) 127, "quickchat_shortcut_keys,4");
           if (var2 != null) {
-            nb.field_h[4] = c.a(ud.a((int) param0, -99), var2);
+            nb.field_h[4] = c.a(ud.a(-99, -99), var2);
             break L617;
           } else {
             break L617;
@@ -5622,7 +5622,7 @@ final class cg {
           if (null == var2) {
             break L620;
           } else {
-            String discarded$1003 = c.a(param0 + 99, var2);
+            String discarded$1003 = c.a(0, var2);
             break L620;
           }
         }
@@ -5649,7 +5649,7 @@ final class cg {
           if (null == var2) {
             break L623;
           } else {
-            String discarded$1006 = c.a(param0 + 99, var2);
+            String discarded$1006 = c.a(0, var2);
             break L623;
           }
         }
@@ -5737,7 +5737,7 @@ final class cg {
         L633: {
           var2 = hg.a((byte) 118, "members_expansion_price_bottom");
           if (null != var2) {
-            String discarded$1013 = c.a(param0 ^ -99, var2);
+            String discarded$1013 = c.a(0, var2);
             break L633;
           } else {
             break L633;
@@ -5838,7 +5838,7 @@ final class cg {
           if (null == var2) {
             break L644;
           } else {
-            String discarded$1020 = c.a(param0 + 99, var2);
+            String discarded$1020 = c.a(0, var2);
             break L644;
           }
         }
@@ -5856,7 +5856,7 @@ final class cg {
           if (var2 == null) {
             break L646;
           } else {
-            String discarded$1022 = c.a(param0 ^ -99, var2);
+            String discarded$1022 = c.a(0, var2);
             break L646;
           }
         }
@@ -5865,14 +5865,14 @@ final class cg {
           if (null == var2) {
             break L647;
           } else {
-            String discarded$1023 = c.a(param0 + 99, var2);
+            String discarded$1023 = c.a(0, var2);
             break L647;
           }
         }
         L648: {
           var2 = hg.a((byte) 116, "reconnect_check_fs");
           if (null != var2) {
-            String discarded$1024 = c.a(param0 ^ -99, var2);
+            String discarded$1024 = c.a(0, var2);
             break L648;
           } else {
             break L648;
@@ -5892,14 +5892,14 @@ final class cg {
           if (var2 == null) {
             break L650;
           } else {
-            mg.field_l = c.a(param0 + 99, var2);
+            mg.field_l = c.a(0, var2);
             break L650;
           }
         }
         L651: {
           var2 = hg.a((byte) 106, "fs_button_accept");
           if (var2 != null) {
-            eb.field_F = c.a(param0 + 99, var2);
+            eb.field_F = c.a(0, var2);
             break L651;
           } else {
             break L651;
@@ -5926,7 +5926,7 @@ final class cg {
         L654: {
           var2 = hg.a((byte) 106, "fs_accept_aftercancel");
           if (var2 != null) {
-            ma.field_u = c.a(param0 + 99, var2);
+            ma.field_u = c.a(0, var2);
             break L654;
           } else {
             break L654;
@@ -5946,7 +5946,7 @@ final class cg {
           if (null == var2) {
             break L656;
           } else {
-            se.field_B = c.a(param0 ^ -99, var2);
+            se.field_B = c.a(0, var2);
             break L656;
           }
         }
@@ -5973,7 +5973,7 @@ final class cg {
           if (null == var2) {
             break L659;
           } else {
-            tb.field_o = c.a(param0 ^ -99, var2);
+            tb.field_o = c.a(0, var2);
             break L659;
           }
         }
@@ -6070,7 +6070,7 @@ final class cg {
         L670: {
           var2 = hg.a((byte) 90, "mb_full_access_2");
           if (var2 != null) {
-            String discarded$1030 = c.a(param0 ^ -99, var2);
+            String discarded$1030 = c.a(0, var2);
             break L670;
           } else {
             break L670;
@@ -6097,7 +6097,7 @@ final class cg {
         L673: {
           var2 = hg.a((byte) 97, "mb_exclusive_1");
           if (var2 != null) {
-            String discarded$1033 = c.a(param0 ^ -99, var2);
+            String discarded$1033 = c.a(0, var2);
             break L673;
           } else {
             break L673;
@@ -6135,7 +6135,7 @@ final class cg {
           if (null == var2) {
             break L677;
           } else {
-            String discarded$1036 = c.a(param0 ^ -99, var2);
+            String discarded$1036 = c.a(0, var2);
             break L677;
           }
         }
@@ -6160,7 +6160,7 @@ final class cg {
         L680: {
           var2 = hg.a((byte) 97, "hs_mode_name,2");
           if (null != var2) {
-            of.field_d[2] = c.a(ud.a((int) param0, -99), var2);
+            of.field_d[2] = c.a(ud.a(-99, -99), var2);
             break L680;
           } else {
             break L680;
@@ -6178,7 +6178,7 @@ final class cg {
         L682: {
           var2 = hg.a((byte) 88, "rating_mode_name,1");
           if (var2 != null) {
-            dg.field_f[1] = c.a(param0 + 99, var2);
+            dg.field_f[1] = c.a(0, var2);
             break L682;
           } else {
             break L682;
@@ -6187,7 +6187,7 @@ final class cg {
         L683: {
           var2 = hg.a((byte) 109, "rating_mode_long_name,0");
           if (var2 != null) {
-            pf.field_D[0] = c.a(param0 + 99, var2);
+            pf.field_D[0] = c.a(0, var2);
             break L683;
           } else {
             break L683;
@@ -6283,471 +6283,466 @@ final class cg {
             break L693;
           }
         }
-        if (param0 == -99) {
-          L694: {
-            var2 = hg.a((byte) 85, "serviceunavailable");
-            if (var2 != null) {
-              String discarded$1045 = c.a(param0 ^ -99, var2);
-              break L694;
-            } else {
-              break L694;
-            }
+        L694: {
+          var2 = hg.a((byte) 85, "serviceunavailable");
+          if (var2 != null) {
+            String discarded$1045 = c.a(0, var2);
+            break L694;
+          } else {
+            break L694;
           }
-          L695: {
-            var2 = hg.a((byte) 95, "createtouse");
-            if (var2 == null) {
-              break L695;
-            } else {
-              kg.field_d = c.a(0, var2);
-              break L695;
-            }
+        }
+        L695: {
+          var2 = hg.a((byte) 95, "createtouse");
+          if (var2 == null) {
+            break L695;
+          } else {
+            kg.field_d = c.a(0, var2);
+            break L695;
           }
-          L696: {
-            var2 = hg.a((byte) 125, "achievementsoffline");
-            if (null != var2) {
-              String discarded$1046 = c.a(param0 + 99, var2);
-              break L696;
-            } else {
-              break L696;
-            }
+        }
+        L696: {
+          var2 = hg.a((byte) 125, "achievementsoffline");
+          if (null != var2) {
+            String discarded$1046 = c.a(0, var2);
+            break L696;
+          } else {
+            break L696;
           }
-          L697: {
-            var2 = hg.a((byte) 126, "warning");
-            if (var2 == null) {
-              break L697;
-            } else {
-              String discarded$1047 = c.a(0, var2);
-              break L697;
-            }
+        }
+        L697: {
+          var2 = hg.a((byte) 126, "warning");
+          if (var2 == null) {
+            break L697;
+          } else {
+            String discarded$1047 = c.a(0, var2);
+            break L697;
           }
-          L698: {
-            var2 = hg.a((byte) 123, "DEFAULT_PLAYER_NAME");
-            if (var2 == null) {
-              break L698;
-            } else {
-              wk.field_H = c.a(0, var2);
-              break L698;
-            }
+        }
+        L698: {
+          var2 = hg.a((byte) 123, "DEFAULT_PLAYER_NAME");
+          if (var2 == null) {
+            break L698;
+          } else {
+            wk.field_H = c.a(0, var2);
+            break L698;
           }
-          L699: {
-            var2 = hg.a((byte) 100, "mustlogin1");
-            if (var2 == null) {
-              break L699;
-            } else {
-              tc.field_q = c.a(0, var2);
-              break L699;
-            }
+        }
+        L699: {
+          var2 = hg.a((byte) 100, "mustlogin1");
+          if (var2 == null) {
+            break L699;
+          } else {
+            tc.field_q = c.a(0, var2);
+            break L699;
           }
-          L700: {
-            var2 = hg.a((byte) 97, "mustlogin2,1");
-            if (null == var2) {
-              break L700;
-            } else {
-              hc.field_e[1] = c.a(0, var2);
-              break L700;
-            }
+        }
+        L700: {
+          var2 = hg.a((byte) 97, "mustlogin2,1");
+          if (null == var2) {
+            break L700;
+          } else {
+            hc.field_e[1] = c.a(0, var2);
+            break L700;
           }
-          L701: {
-            var2 = hg.a((byte) 123, "mustlogin2,2");
-            if (null == var2) {
-              break L701;
-            } else {
-              hc.field_e[2] = c.a(0, var2);
-              break L701;
-            }
+        }
+        L701: {
+          var2 = hg.a((byte) 123, "mustlogin2,2");
+          if (null == var2) {
+            break L701;
+          } else {
+            hc.field_e[2] = c.a(0, var2);
+            break L701;
           }
-          L702: {
-            var2 = hg.a((byte) 122, "mustlogin2,3");
-            if (null != var2) {
-              hc.field_e[3] = c.a(0, var2);
-              break L702;
-            } else {
-              break L702;
-            }
+        }
+        L702: {
+          var2 = hg.a((byte) 122, "mustlogin2,3");
+          if (null != var2) {
+            hc.field_e[3] = c.a(0, var2);
+            break L702;
+          } else {
+            break L702;
           }
-          L703: {
-            var2 = hg.a((byte) 105, "mustlogin2,4");
-            if (null != var2) {
-              hc.field_e[4] = c.a(0, var2);
-              break L703;
-            } else {
-              break L703;
-            }
+        }
+        L703: {
+          var2 = hg.a((byte) 105, "mustlogin2,4");
+          if (null != var2) {
+            hc.field_e[4] = c.a(0, var2);
+            break L703;
+          } else {
+            break L703;
           }
-          L704: {
-            var2 = hg.a((byte) 117, "mustlogin2,5");
-            if (var2 != null) {
-              hc.field_e[5] = c.a(0, var2);
-              break L704;
-            } else {
-              break L704;
-            }
+        }
+        L704: {
+          var2 = hg.a((byte) 117, "mustlogin2,5");
+          if (var2 != null) {
+            hc.field_e[5] = c.a(0, var2);
+            break L704;
+          } else {
+            break L704;
           }
-          L705: {
-            var2 = hg.a((byte) 119, "mustlogin2,6");
-            if (var2 != null) {
-              hc.field_e[6] = c.a(ud.a((int) param0, -99), var2);
-              break L705;
-            } else {
-              break L705;
-            }
+        }
+        L705: {
+          var2 = hg.a((byte) 119, "mustlogin2,6");
+          if (var2 != null) {
+            hc.field_e[6] = c.a(ud.a(-99, -99), var2);
+            break L705;
+          } else {
+            break L705;
           }
-          L706: {
-            var2 = hg.a((byte) 90, "mustlogin2,7");
-            if (var2 == null) {
-              break L706;
-            } else {
-              hc.field_e[7] = c.a(0, var2);
-              break L706;
-            }
+        }
+        L706: {
+          var2 = hg.a((byte) 90, "mustlogin2,7");
+          if (var2 == null) {
+            break L706;
+          } else {
+            hc.field_e[7] = c.a(0, var2);
+            break L706;
           }
-          L707: {
-            var2 = hg.a((byte) 113, "mustlogin3,1");
-            if (null == var2) {
-              break L707;
-            } else {
-              tb.field_r[1] = c.a(0, var2);
-              break L707;
-            }
+        }
+        L707: {
+          var2 = hg.a((byte) 113, "mustlogin3,1");
+          if (null == var2) {
+            break L707;
+          } else {
+            tb.field_r[1] = c.a(0, var2);
+            break L707;
           }
-          L708: {
-            var2 = hg.a((byte) 111, "mustlogin3,2");
-            if (null == var2) {
-              break L708;
-            } else {
-              tb.field_r[2] = c.a(param0 + 99, var2);
-              break L708;
-            }
+        }
+        L708: {
+          var2 = hg.a((byte) 111, "mustlogin3,2");
+          if (null == var2) {
+            break L708;
+          } else {
+            tb.field_r[2] = c.a(0, var2);
+            break L708;
           }
-          L709: {
-            var2 = hg.a((byte) 126, "mustlogin3,3");
-            if (null != var2) {
-              tb.field_r[3] = c.a(0, var2);
-              break L709;
-            } else {
-              break L709;
-            }
+        }
+        L709: {
+          var2 = hg.a((byte) 126, "mustlogin3,3");
+          if (null != var2) {
+            tb.field_r[3] = c.a(0, var2);
+            break L709;
+          } else {
+            break L709;
           }
-          L710: {
-            var2 = hg.a((byte) 116, "mustlogin3,4");
-            if (var2 == null) {
-              break L710;
-            } else {
-              tb.field_r[4] = c.a(param0 + 99, var2);
-              break L710;
-            }
+        }
+        L710: {
+          var2 = hg.a((byte) 116, "mustlogin3,4");
+          if (var2 == null) {
+            break L710;
+          } else {
+            tb.field_r[4] = c.a(0, var2);
+            break L710;
           }
-          L711: {
-            var2 = hg.a((byte) 97, "mustlogin3,5");
-            if (var2 != null) {
-              tb.field_r[5] = c.a(0, var2);
-              break L711;
-            } else {
-              break L711;
-            }
+        }
+        L711: {
+          var2 = hg.a((byte) 97, "mustlogin3,5");
+          if (var2 != null) {
+            tb.field_r[5] = c.a(0, var2);
+            break L711;
+          } else {
+            break L711;
           }
-          L712: {
-            var2 = hg.a((byte) 116, "mustlogin3,6");
-            if (null != var2) {
-              tb.field_r[6] = c.a(0, var2);
-              break L712;
-            } else {
-              break L712;
-            }
+        }
+        L712: {
+          var2 = hg.a((byte) 116, "mustlogin3,6");
+          if (null != var2) {
+            tb.field_r[6] = c.a(0, var2);
+            break L712;
+          } else {
+            break L712;
           }
-          L713: {
-            var2 = hg.a((byte) 89, "mustlogin3,7");
-            if (var2 != null) {
-              tb.field_r[7] = c.a(0, var2);
-              break L713;
-            } else {
-              break L713;
-            }
+        }
+        L713: {
+          var2 = hg.a((byte) 89, "mustlogin3,7");
+          if (var2 != null) {
+            tb.field_r[7] = c.a(0, var2);
+            break L713;
+          } else {
+            break L713;
           }
-          L714: {
-            var2 = hg.a((byte) 120, "discard");
-            if (var2 == null) {
-              break L714;
-            } else {
-              db.field_T = c.a(0, var2);
-              break L714;
-            }
+        }
+        L714: {
+          var2 = hg.a((byte) 120, "discard");
+          if (var2 == null) {
+            break L714;
+          } else {
+            db.field_T = c.a(0, var2);
+            break L714;
           }
-          L715: {
-            var2 = hg.a((byte) 113, "mustlogin4,1");
-            if (var2 == null) {
-              break L715;
-            } else {
-              vg.field_a[1] = c.a(0, var2);
-              break L715;
-            }
+        }
+        L715: {
+          var2 = hg.a((byte) 113, "mustlogin4,1");
+          if (var2 == null) {
+            break L715;
+          } else {
+            vg.field_a[1] = c.a(0, var2);
+            break L715;
           }
-          L716: {
-            var2 = hg.a((byte) 93, "mustlogin4,2");
-            if (var2 == null) {
-              break L716;
-            } else {
-              vg.field_a[2] = c.a(0, var2);
-              break L716;
-            }
+        }
+        L716: {
+          var2 = hg.a((byte) 93, "mustlogin4,2");
+          if (var2 == null) {
+            break L716;
+          } else {
+            vg.field_a[2] = c.a(0, var2);
+            break L716;
           }
-          L717: {
-            var2 = hg.a((byte) 86, "mustlogin4,3");
-            if (null == var2) {
-              break L717;
-            } else {
-              vg.field_a[3] = c.a(0, var2);
-              break L717;
-            }
+        }
+        L717: {
+          var2 = hg.a((byte) 86, "mustlogin4,3");
+          if (null == var2) {
+            break L717;
+          } else {
+            vg.field_a[3] = c.a(0, var2);
+            break L717;
           }
-          L718: {
-            var2 = hg.a((byte) 111, "mustlogin4,4");
-            if (null == var2) {
-              break L718;
-            } else {
-              vg.field_a[4] = c.a(param0 + 99, var2);
-              break L718;
-            }
+        }
+        L718: {
+          var2 = hg.a((byte) 111, "mustlogin4,4");
+          if (null == var2) {
+            break L718;
+          } else {
+            vg.field_a[4] = c.a(0, var2);
+            break L718;
           }
-          L719: {
-            var2 = hg.a((byte) 114, "mustlogin4,5");
-            if (var2 == null) {
-              break L719;
-            } else {
-              vg.field_a[5] = c.a(ud.a((int) param0, -99), var2);
-              break L719;
-            }
+        }
+        L719: {
+          var2 = hg.a((byte) 114, "mustlogin4,5");
+          if (var2 == null) {
+            break L719;
+          } else {
+            vg.field_a[5] = c.a(ud.a(-99, -99), var2);
+            break L719;
           }
-          L720: {
-            var2 = hg.a((byte) 119, "mustlogin4,6");
-            if (var2 != null) {
-              vg.field_a[6] = c.a(0, var2);
-              break L720;
-            } else {
-              break L720;
-            }
+        }
+        L720: {
+          var2 = hg.a((byte) 119, "mustlogin4,6");
+          if (var2 != null) {
+            vg.field_a[6] = c.a(0, var2);
+            break L720;
+          } else {
+            break L720;
           }
-          L721: {
-            var2 = hg.a((byte) 85, "mustlogin4,7");
-            if (var2 != null) {
-              vg.field_a[7] = c.a(ud.a((int) param0, -99), var2);
-              break L721;
-            } else {
-              break L721;
-            }
+        }
+        L721: {
+          var2 = hg.a((byte) 85, "mustlogin4,7");
+          if (var2 != null) {
+            vg.field_a[7] = c.a(ud.a(-99, -99), var2);
+            break L721;
+          } else {
+            break L721;
           }
-          L722: {
-            var2 = hg.a((byte) 124, "mustlogin_notloggedin");
-            if (var2 == null) {
-              break L722;
-            } else {
-              String discarded$1048 = c.a(param0 + 99, var2);
-              break L722;
-            }
+        }
+        L722: {
+          var2 = hg.a((byte) 124, "mustlogin_notloggedin");
+          if (var2 == null) {
+            break L722;
+          } else {
+            String discarded$1048 = c.a(0, var2);
+            break L722;
           }
-          L723: {
-            var2 = hg.a((byte) 85, "mustlogin_alternate,1");
-            if (null != var2) {
-              qi.field_s[1] = c.a(0, var2);
-              break L723;
-            } else {
-              break L723;
-            }
+        }
+        L723: {
+          var2 = hg.a((byte) 85, "mustlogin_alternate,1");
+          if (null != var2) {
+            qi.field_s[1] = c.a(0, var2);
+            break L723;
+          } else {
+            break L723;
           }
-          L724: {
-            var2 = hg.a((byte) 118, "mustlogin_alternate,2");
-            if (var2 == null) {
-              break L724;
-            } else {
-              qi.field_s[2] = c.a(0, var2);
-              break L724;
-            }
+        }
+        L724: {
+          var2 = hg.a((byte) 118, "mustlogin_alternate,2");
+          if (var2 == null) {
+            break L724;
+          } else {
+            qi.field_s[2] = c.a(0, var2);
+            break L724;
           }
-          L725: {
-            var2 = hg.a((byte) 106, "mustlogin_alternate,3");
-            if (var2 == null) {
-              break L725;
-            } else {
-              qi.field_s[3] = c.a(ud.a((int) param0, -99), var2);
-              break L725;
-            }
+        }
+        L725: {
+          var2 = hg.a((byte) 106, "mustlogin_alternate,3");
+          if (var2 == null) {
+            break L725;
+          } else {
+            qi.field_s[3] = c.a(ud.a(-99, -99), var2);
+            break L725;
           }
-          L726: {
-            var2 = hg.a((byte) 98, "mustlogin_alternate,4");
-            if (null == var2) {
-              break L726;
-            } else {
-              qi.field_s[4] = c.a(0, var2);
-              break L726;
-            }
+        }
+        L726: {
+          var2 = hg.a((byte) 98, "mustlogin_alternate,4");
+          if (null == var2) {
+            break L726;
+          } else {
+            qi.field_s[4] = c.a(0, var2);
+            break L726;
           }
-          L727: {
-            var2 = hg.a((byte) 117, "mustlogin_alternate,5");
-            if (var2 == null) {
-              break L727;
-            } else {
-              qi.field_s[5] = c.a(ud.a((int) param0, -99), var2);
-              break L727;
-            }
+        }
+        L727: {
+          var2 = hg.a((byte) 117, "mustlogin_alternate,5");
+          if (var2 == null) {
+            break L727;
+          } else {
+            qi.field_s[5] = c.a(ud.a(-99, -99), var2);
+            break L727;
           }
-          L728: {
-            var2 = hg.a((byte) 120, "mustlogin_alternate,6");
-            if (null != var2) {
-              qi.field_s[6] = c.a(ud.a((int) param0, -99), var2);
-              break L728;
-            } else {
-              break L728;
-            }
+        }
+        L728: {
+          var2 = hg.a((byte) 120, "mustlogin_alternate,6");
+          if (null != var2) {
+            qi.field_s[6] = c.a(ud.a(-99, -99), var2);
+            break L728;
+          } else {
+            break L728;
           }
-          L729: {
-            var2 = hg.a((byte) 123, "mustlogin_alternate,7");
-            if (var2 == null) {
-              break L729;
-            } else {
-              qi.field_s[7] = c.a(0, var2);
-              break L729;
-            }
+        }
+        L729: {
+          var2 = hg.a((byte) 123, "mustlogin_alternate,7");
+          if (var2 == null) {
+            break L729;
+          } else {
+            qi.field_s[7] = c.a(0, var2);
+            break L729;
           }
-          L730: {
-            var2 = hg.a((byte) 125, "subscription_cost_monthly,0");
-            if (null == var2) {
-              break L730;
-            } else {
-              ag.field_b[0] = c.a(param0 + 99, var2);
-              break L730;
-            }
+        }
+        L730: {
+          var2 = hg.a((byte) 125, "subscription_cost_monthly,0");
+          if (null == var2) {
+            break L730;
+          } else {
+            ag.field_b[0] = c.a(0, var2);
+            break L730;
           }
-          L731: {
-            var2 = hg.a((byte) 123, "subscription_cost_monthly,1");
-            if (null == var2) {
-              break L731;
-            } else {
-              ag.field_b[1] = c.a(0, var2);
-              break L731;
-            }
+        }
+        L731: {
+          var2 = hg.a((byte) 123, "subscription_cost_monthly,1");
+          if (null == var2) {
+            break L731;
+          } else {
+            ag.field_b[1] = c.a(0, var2);
+            break L731;
           }
-          L732: {
-            var2 = hg.a((byte) 124, "subscription_cost_monthly,2");
-            if (var2 == null) {
-              break L732;
-            } else {
-              ag.field_b[2] = c.a(0, var2);
-              break L732;
-            }
+        }
+        L732: {
+          var2 = hg.a((byte) 124, "subscription_cost_monthly,2");
+          if (var2 == null) {
+            break L732;
+          } else {
+            ag.field_b[2] = c.a(0, var2);
+            break L732;
           }
-          L733: {
-            var2 = hg.a((byte) 116, "subscription_cost_monthly,3");
-            if (var2 != null) {
-              ag.field_b[3] = c.a(ud.a((int) param0, -99), var2);
-              break L733;
-            } else {
-              break L733;
-            }
+        }
+        L733: {
+          var2 = hg.a((byte) 116, "subscription_cost_monthly,3");
+          if (var2 != null) {
+            ag.field_b[3] = c.a(ud.a(-99, -99), var2);
+            break L733;
+          } else {
+            break L733;
           }
-          L734: {
-            var2 = hg.a((byte) 103, "subscription_cost_monthly,4");
-            if (null != var2) {
-              ag.field_b[4] = c.a(0, var2);
-              break L734;
-            } else {
-              break L734;
-            }
+        }
+        L734: {
+          var2 = hg.a((byte) 103, "subscription_cost_monthly,4");
+          if (null != var2) {
+            ag.field_b[4] = c.a(0, var2);
+            break L734;
+          } else {
+            break L734;
           }
-          L735: {
-            var2 = hg.a((byte) 93, "subscription_cost_monthly,5");
-            if (null == var2) {
-              break L735;
-            } else {
-              ag.field_b[5] = c.a(0, var2);
-              break L735;
-            }
+        }
+        L735: {
+          var2 = hg.a((byte) 93, "subscription_cost_monthly,5");
+          if (null == var2) {
+            break L735;
+          } else {
+            ag.field_b[5] = c.a(0, var2);
+            break L735;
           }
-          L736: {
-            var2 = hg.a((byte) 121, "subscription_cost_monthly,6");
-            if (null == var2) {
-              break L736;
-            } else {
-              ag.field_b[6] = c.a(0, var2);
-              break L736;
-            }
+        }
+        L736: {
+          var2 = hg.a((byte) 121, "subscription_cost_monthly,6");
+          if (null == var2) {
+            break L736;
+          } else {
+            ag.field_b[6] = c.a(0, var2);
+            break L736;
           }
-          L737: {
-            var2 = hg.a((byte) 124, "subscription_cost_monthly,7");
-            if (null == var2) {
-              break L737;
-            } else {
-              ag.field_b[7] = c.a(0, var2);
-              break L737;
-            }
+        }
+        L737: {
+          var2 = hg.a((byte) 124, "subscription_cost_monthly,7");
+          if (null == var2) {
+            break L737;
+          } else {
+            ag.field_b[7] = c.a(0, var2);
+            break L737;
           }
-          L738: {
-            var2 = hg.a((byte) 104, "subscription_cost_monthly,8");
-            if (var2 != null) {
-              ag.field_b[8] = c.a(0, var2);
-              break L738;
-            } else {
-              break L738;
-            }
+        }
+        L738: {
+          var2 = hg.a((byte) 104, "subscription_cost_monthly,8");
+          if (var2 != null) {
+            ag.field_b[8] = c.a(0, var2);
+            break L738;
+          } else {
+            break L738;
           }
-          L739: {
-            var2 = hg.a((byte) 102, "subscription_cost_monthly,9");
-            if (null == var2) {
-              break L739;
-            } else {
-              ag.field_b[9] = c.a(0, var2);
-              break L739;
-            }
+        }
+        L739: {
+          var2 = hg.a((byte) 102, "subscription_cost_monthly,9");
+          if (null == var2) {
+            break L739;
+          } else {
+            ag.field_b[9] = c.a(0, var2);
+            break L739;
           }
-          L740: {
-            var2 = hg.a((byte) 118, "subscription_cost_monthly,10");
-            if (null == var2) {
-              break L740;
-            } else {
-              ag.field_b[10] = c.a(0, var2);
-              break L740;
-            }
+        }
+        L740: {
+          var2 = hg.a((byte) 118, "subscription_cost_monthly,10");
+          if (null == var2) {
+            break L740;
+          } else {
+            ag.field_b[10] = c.a(0, var2);
+            break L740;
           }
-          L741: {
-            var2 = hg.a((byte) 103, "subscription_cost_monthly,11");
-            if (var2 != null) {
-              ag.field_b[11] = c.a(0, var2);
-              break L741;
-            } else {
-              break L741;
-            }
+        }
+        L741: {
+          var2 = hg.a((byte) 103, "subscription_cost_monthly,11");
+          if (var2 != null) {
+            ag.field_b[11] = c.a(0, var2);
+            break L741;
+          } else {
+            break L741;
           }
-          L742: {
-            var2 = hg.a((byte) 108, "subscription_cost_monthly,12");
-            if (var2 == null) {
-              break L742;
-            } else {
-              ag.field_b[12] = c.a(0, var2);
-              break L742;
-            }
+        }
+        L742: {
+          var2 = hg.a((byte) 108, "subscription_cost_monthly,12");
+          if (var2 == null) {
+            break L742;
+          } else {
+            ag.field_b[12] = c.a(0, var2);
+            break L742;
           }
-          L743: {
-            var2 = hg.a((byte) 88, "sentence_separator");
-            if (null != var2) {
-              String discarded$1049 = c.a(0, var2);
-              break L743;
-            } else {
-              break L743;
-            }
+        }
+        L743: {
+          var2 = hg.a((byte) 88, "sentence_separator");
+          if (null != var2) {
+            String discarded$1049 = c.a(0, var2);
+            break L743;
+          } else {
+            break L743;
           }
-          la.field_D = null;
-          L744: {
-            if (var3 == 0) {
-              break L744;
-            } else {
-              var4 = fj.field_j;
-              var4++;
-              fj.field_j = var4;
-              break L744;
-            }
+        }
+        la.field_D = null;
+        L744: {
+          if (var3 == 0) {
+            break L744;
+          } else {
+            var4 = fj.field_j;
+            var4++;
+            fj.field_j = var4;
+            break L744;
           }
-          return;
-        } else {
-          return;
         }
     }
 

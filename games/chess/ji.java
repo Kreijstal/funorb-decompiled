@@ -12,7 +12,7 @@ final class ji extends kn {
     static String field_Q;
     static boolean field_P;
 
-    public static void i(int param0) {
+    public static void i() {
         field_V = null;
         field_Q = null;
         field_T = null;
@@ -386,7 +386,8 @@ final class ji extends kn {
                   if (tb.field_f == ca.field_h) {
                     L3: {
                       if (!param1) {
-                        eh.field_K = nk.a(false, param2, param3, true);
+                        int discarded$6 = 1;
+                        eh.field_K = nk.a(false, param2, param3);
                         break L3;
                       } else {
                         var11 = null;
@@ -560,9 +561,9 @@ final class ji extends kn {
                         if (!on.field_a) {
                           break L15;
                         } else {
-                          int discarded$5 = tk.field_h.i(-87);
-                          int discarded$6 = tk.field_h.i(-86);
-                          int discarded$7 = tk.field_h.e((byte) -106);
+                          int discarded$7 = tk.field_h.i(-87);
+                          int discarded$8 = tk.field_h.i(-86);
+                          int discarded$9 = tk.field_h.e((byte) -106);
                           si.field_n = tk.field_h.f(674914976);
                           jn.field_P = new byte[si.field_n];
                           var9 = 0;
@@ -614,7 +615,7 @@ final class ji extends kn {
                             } else {
                               try {
                                 L21: {
-                                  Object discarded$8 = u.a(true, "unzap", bh.i(81));
+                                  Object discarded$10 = u.a(true, "unzap", bh.i(81));
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -630,7 +631,7 @@ final class ji extends kn {
                         }
                         try {
                           L23: {
-                            Object discarded$9 = u.a(bh.i(81), true, new Object[1], "zap");
+                            Object discarded$11 = u.a(bh.i(81), true, new Object[1], "zap");
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {

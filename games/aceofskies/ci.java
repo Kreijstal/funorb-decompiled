@@ -54,7 +54,7 @@ final class ci extends hh {
         }
     }
 
-    final static gu[] d(byte param0) {
+    final static gu[] d() {
         int var1 = -36;
         return new gu[]{ef.field_k, lp.field_f, ct.field_t};
     }
@@ -94,7 +94,7 @@ final class ci extends hh {
         }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         return kc.field_c;
     }
 
@@ -166,30 +166,15 @@ final class ci extends hh {
         }
     }
 
-    final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
+    final static String a(boolean param0, byte param1, boolean param2) {
         int var4 = 0;
-        if (param1 < 118) {
-          return null;
-        } else {
-          L0: {
-            var4 = 0;
-            if (param0) {
-              var4 += 4;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          L1: {
-            if (param2) {
-              var4 += 2;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return rb.field_i[var4];
+        if (!(!param0)) {
+            var4 += 4;
         }
+        if (!(!param2)) {
+            var4 += 2;
+        }
+        return rb.field_i[var4];
     }
 
     public static void c(byte param0) {

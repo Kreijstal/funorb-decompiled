@@ -39,7 +39,7 @@ class kt extends elb {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         int var1 = 2;
         field_r = null;
     }
@@ -168,7 +168,8 @@ class kt extends elb {
                   }
                 }
               }
-              ila.c((byte) -15);
+              int discarded$1 = -15;
+              ila.c();
               break L1;
             }
             var66 = new int[param0.field_L];
@@ -188,17 +189,9 @@ class kt extends elb {
                 var13 = var44;
                 L4: while (true) {
                   if (var44 >= pca.field_j) {
-                    L5: {
-                      if (param3 <= -109) {
-                        break L5;
-                      } else {
-                        field_l = 50;
-                        break L5;
-                      }
-                    }
                     break L0;
                   } else {
-                    L6: {
+                    L5: {
                       var14 = aq.field_p[var44];
                       var15 = param0.field_w[var14];
                       var16 = param0.field_N[var14];
@@ -206,58 +199,58 @@ class kt extends elb {
                       if (param0.field_j[var14] < bva.field_b.length) {
                         stackOut_23_0 = param0.field_j[var14];
                         stackIn_24_0 = stackOut_23_0;
-                        break L6;
+                        break L5;
                       } else {
                         stackOut_22_0 = -1;
                         stackIn_24_0 = stackOut_22_0;
-                        break L6;
+                        break L5;
                       }
                     }
-                    L7: {
+                    L6: {
                       var18 = stackIn_24_0;
                       if (param0.field_G[var14] < bva.field_b.length) {
                         stackOut_26_0 = param0.field_G[var14];
                         stackIn_27_0 = stackOut_26_0;
-                        break L7;
+                        break L6;
                       } else {
                         stackOut_25_0 = -1;
                         stackIn_27_0 = stackOut_25_0;
-                        break L7;
+                        break L6;
                       }
                     }
-                    L8: {
+                    L7: {
                       var19 = stackIn_27_0;
                       if (bva.field_b.length > param0.field_I[var14]) {
                         stackOut_29_0 = param0.field_I[var14];
                         stackIn_30_0 = stackOut_29_0;
-                        break L8;
+                        break L7;
                       } else {
                         stackOut_28_0 = -1;
                         stackIn_30_0 = stackOut_28_0;
-                        break L8;
+                        break L7;
                       }
                     }
-                    L9: {
-                      L10: {
+                    L8: {
+                      L9: {
                         var20 = stackIn_30_0;
                         if (gs.field_a == null) {
-                          break L10;
+                          break L9;
                         } else {
                           if (param0.field_K == null) {
-                            break L10;
+                            break L9;
                           } else {
                             if (param0.field_K.length <= var14) {
-                              break L10;
+                              break L9;
                             } else {
                               if (param0.field_K[var14] == -1) {
-                                break L10;
+                                break L9;
                               } else {
                                 if (param0.field_K[var14] < gs.field_a.length) {
                                   stackOut_37_0 = gs.field_a[param0.field_K[var14]];
                                   stackIn_38_0 = stackOut_37_0;
-                                  break L9;
+                                  break L8;
                                 } else {
-                                  break L10;
+                                  break L9;
                                 }
                               }
                             }
@@ -266,10 +259,10 @@ class kt extends elb {
                       }
                       stackOut_36_0 = null;
                       stackIn_38_0 = (apb) (Object) stackOut_36_0;
-                      break L9;
+                      break L8;
                     }
-                    L11: {
-                      L12: {
+                    L10: {
+                      L11: {
                         var21_ref = stackIn_38_0;
                         var22 = cl.field_b[var15];
                         var23 = lr.field_o[var15];
@@ -278,22 +271,22 @@ class kt extends elb {
                         var26 = cl.field_b[var17];
                         var27 = lr.field_o[var17];
                         if (var19 != var18) {
-                          break L12;
+                          break L11;
                         } else {
                           if (var19 != var20) {
-                            break L12;
+                            break L11;
                           } else {
-                            L13: {
+                            L12: {
                               var28 = var66[var18];
                               var29 = var67[var18];
                               if (var21_ref != null) {
                                 stackOut_42_0 = var21_ref.field_c;
                                 stackIn_43_0 = stackOut_42_0;
-                                break L13;
+                                break L12;
                               } else {
                                 stackOut_41_0 = 8355711;
                                 stackIn_43_0 = stackOut_41_0;
-                                break L13;
+                                break L12;
                               }
                             }
                             var30 = stackIn_43_0;
@@ -302,11 +295,11 @@ class kt extends elb {
                             var33 = (-16711864 & var28 * var31) >>> 8 | (16711880 & var28 * var32) >>> 8;
                             var33 = var33 + 65793 * var29;
                             cma.a(var24, var26, false, var27, (16711422 & var33) >> 1, var23, var22, var25);
-                            break L11;
+                            break L10;
                           }
                         }
                       }
-                      L14: {
+                      L13: {
                         var28 = var66[var18];
                         var29 = var66[var19];
                         var30 = var66[var20];
@@ -316,11 +309,11 @@ class kt extends elb {
                         if (var21_ref == null) {
                           stackOut_46_0 = 8355711;
                           stackIn_47_0 = stackOut_46_0;
-                          break L14;
+                          break L13;
                         } else {
                           stackOut_45_0 = var21_ref.field_c;
                           stackIn_47_0 = stackOut_45_0;
-                          break L14;
+                          break L13;
                         }
                       }
                       var34 = stackIn_47_0;
@@ -333,40 +326,40 @@ class kt extends elb {
                       var37 = var37 + var31 * 65793;
                       var39 = var39 + var33 * 65793;
                       vqb.a(var39 >> 16, var38 >> 8 & 255, var38 >> 16, var22, (var39 & 65337) >> 8, var25, var37 >> 16, (65314 & var37) >> 8, var39 & 255, -18419, var26, var27, var37 & 255, var24, var38 & 255, var23);
-                      break L11;
+                      break L10;
                     }
                     var44++;
                     continue L4;
                   }
                 }
               } else {
-                L15: {
+                L14: {
                   var14 = var63[var13] * param6 + (var64[var13] * param5 + var65[var13] * param7) >> 8;
                   if (0 <= var14) {
-                    break L15;
+                    break L14;
                   } else {
                     var14 = -var14;
-                    break L15;
+                    break L14;
                   }
                 }
-                L16: {
+                L15: {
                   if (var14 < 0) {
                     stackOut_14_0 = 128;
                     stackIn_15_0 = stackOut_14_0;
-                    break L16;
+                    break L15;
                   } else {
                     if (var14 < 128) {
                       stackOut_13_0 = 128 - -var14;
                       stackIn_15_0 = stackOut_13_0;
-                      break L16;
+                      break L15;
                     } else {
                       stackOut_12_0 = 256;
                       stackIn_15_0 = stackOut_12_0;
-                      break L16;
+                      break L15;
                     }
                   }
                 }
-                L17: {
+                L16: {
                   var14 = stackIn_15_0;
                   var15 = var65[var13] * param2 + var64[var13] * param1 - -(param4 * var63[var13]) >> 8;
                   stackOut_15_0 = ap.field_p;
@@ -377,13 +370,13 @@ class kt extends elb {
                     stackOut_17_1 = var15;
                     stackIn_18_0 = stackOut_17_0;
                     stackIn_18_1 = stackOut_17_1;
-                    break L17;
+                    break L16;
                   } else {
                     stackOut_16_0 = (int[]) (Object) stackIn_16_0;
                     stackOut_16_1 = -var15;
                     stackIn_18_0 = stackOut_16_0;
                     stackIn_18_1 = stackOut_16_1;
-                    break L17;
+                    break L16;
                   }
                 }
                 var15 = stackIn_18_0[stackIn_18_1];
@@ -397,7 +390,7 @@ class kt extends elb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L17: {
             var8 = decompiledCaughtException;
             stackOut_52_0 = (RuntimeException) var8;
             stackOut_52_1 = new StringBuilder().append("kt.E(");
@@ -412,7 +405,7 @@ class kt extends elb {
               stackIn_55_0 = stackOut_54_0;
               stackIn_55_1 = stackOut_54_1;
               stackIn_55_2 = stackOut_54_2;
-              break L18;
+              break L17;
             } else {
               stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
               stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
@@ -420,10 +413,10 @@ class kt extends elb {
               stackIn_55_0 = stackOut_53_0;
               stackIn_55_1 = stackOut_53_1;
               stackIn_55_2 = stackOut_53_2;
-              break L18;
+              break L17;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw rta.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + 44 + param1 + 44 + param2 + 44 + -119 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

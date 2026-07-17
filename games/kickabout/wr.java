@@ -63,7 +63,7 @@ final class wr extends mo {
         field_g = null;
     }
 
-    final static int a(int param0, ml param1, int param2, int param3, int param4, int param5) {
+    final static int a(int param0, ml param1, int param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_4_0 = 0;
@@ -154,8 +154,10 @@ final class wr extends mo {
                 wr.a((java.awt.Canvas) null, 103);
             }
             ((wr) this).field_k[1] = param0.l(3, 59);
-            ((wr) this).field_i[0] = mu.a(param0, (byte) -39);
-            ((wr) this).field_i[1] = mu.a(param0, (byte) -39);
+            int discarded$0 = -39;
+            ((wr) this).field_i[0] = mu.a(param0);
+            int discarded$1 = -39;
+            ((wr) this).field_i[1] = mu.a(param0);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "wr.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -315,20 +317,22 @@ final class wr extends mo {
           L0: {
             L1: {
               if (vj.field_c == 11) {
-                dn.a(-127);
+                int discarded$12 = -127;
+                dn.a();
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              ik.a(hw.field_j, ts.field_b, m.field_h, (byte) 84);
+              int discarded$13 = 84;
+              ik.a(hw.field_j, ts.field_b, m.field_h);
               su.a(param1 ^ -23390, 0, 0, param0);
               if (param1 == -14142) {
                 break L2;
               } else {
                 var3 = null;
-                String[] discarded$2 = wr.a((String) null, -39, 'ￜ');
+                String[] discarded$14 = wr.a((String) null, -39, 'ￜ');
                 break L2;
               }
             }

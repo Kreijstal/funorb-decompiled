@@ -431,15 +431,18 @@ class tn extends hc {
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         int var1 = 4;
         ng.a((byte) -99);
         if (!(ef.field_c == null)) {
-            ci.a(ef.field_c, 0);
+            int discarded$0 = 0;
+            ci.a(ef.field_c);
         }
         bf.c(109);
-        ll.a(-118);
-        bl.a(true);
+        int discarded$13 = -118;
+        ll.a();
+        int discarded$19 = 1;
+        bl.a();
         if (ob.l(-1)) {
             sn.field_c.d((byte) -75, 1);
             bk.a((byte) 83, 0);

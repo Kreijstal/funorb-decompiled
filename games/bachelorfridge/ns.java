@@ -94,7 +94,8 @@ final class ns extends jm {
                       break L4;
                     } else {
                       var3_int = 0;
-                      bga.c((byte) -106);
+                      int discarded$2 = -106;
+                      bga.c();
                       break L4;
                     }
                   }

@@ -26,14 +26,18 @@ final class tm extends pi {
     private boolean field_B;
     private float field_x;
 
-    public static void a(byte param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_u = null;
-            if (param0 >= -60) {
-                field_I = 32;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "tm.F(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var1, "tm.F(" + -107 + 41);
         }
     }
 
@@ -269,46 +273,43 @@ final class tm extends pi {
                     }
                   }
                 }
-                L5: {
-                  if (param4) {
-                    var9 = param3[3];
-                    var10 = param3[4];
-                    var11 = param3[5];
-                    var12 = param3[6];
-                    var13 = param3[7];
-                    var14 = param3[8];
-                    var15 = param3[9];
-                    var16 = param3[10];
-                    var17 = param3[11];
-                    var18 = 0;
-                    L6: while (true) {
-                      if (var18 >= param0.field_g) {
-                        break L5;
+                var9 = param3[3];
+                var10 = param3[4];
+                var11 = param3[5];
+                var12 = param3[6];
+                var13 = param3[7];
+                var14 = param3[8];
+                var15 = param3[9];
+                var16 = param3[10];
+                var17 = param3[11];
+                var18 = 0;
+                L5: while (true) {
+                  L6: {
+                    if (var18 >= param0.field_g) {
+                      break L6;
+                    } else {
+                      stackOut_58_0 = fb.field_b.length;
+                      stackOut_58_1 = var18;
+                      stackIn_60_0 = stackOut_58_0;
+                      stackIn_60_1 = stackOut_58_1;
+                      if (stackIn_60_0 <= stackIn_60_1) {
+                        break L6;
                       } else {
-                        stackOut_58_0 = fb.field_b.length;
-                        stackOut_58_1 = var18;
-                        stackIn_60_0 = stackOut_58_0;
-                        stackIn_60_1 = stackOut_58_1;
-                        if (stackIn_60_0 <= stackIn_60_1) {
-                          break L5;
-                        } else {
-                          var19 = param0.field_C[var18];
-                          var20 = param0.field_q[var18];
-                          var21 = param0.field_B[var18];
-                          fb.field_b[var18] = var15 * var21 + (var20 * var12 + var9 * var19) >> 16;
-                          sf.field_a[var18] = var10 * var19 + (var20 * var13 + var16 * var21) >> 16;
-                          h.field_a[var18] = var17 * var21 + (var14 * var20 + var19 * var11) >> 16;
-                          var18++;
-                          continue L6;
-                        }
+                        var19 = param0.field_C[var18];
+                        var20 = param0.field_q[var18];
+                        var21 = param0.field_B[var18];
+                        fb.field_b[var18] = var15 * var21 + (var20 * var12 + var9 * var19) >> 16;
+                        sf.field_a[var18] = var10 * var19 + (var20 * var13 + var16 * var21) >> 16;
+                        h.field_a[var18] = var17 * var21 + (var14 * var20 + var19 * var11) >> 16;
+                        var18++;
+                        continue L5;
                       }
                     }
-                  } else {
-                    break L5;
                   }
+                  int discarded$1 = 0;
+                  ri.a(param6, var7_int, var8, param0);
+                  break L0;
                 }
-                ri.a(param6, var7_int, var8, param0, 0);
-                break L0;
               } else {
                 L7: {
                   var24 = param0.field_n[var23];
@@ -340,16 +341,6 @@ final class tm extends pi {
                     }
                   }
                 }
-                L9: {
-                  if (!param5) {
-                    break L9;
-                  } else {
-                    kk.field_b[var23] = var27 >> ml.field_d;
-                    dm.field_d[var23] = var28 >> ml.field_d;
-                    nf.field_d[var23] = var29;
-                    break L9;
-                  }
-                }
                 var23++;
                 continue L2;
               }
@@ -357,7 +348,7 @@ final class tm extends pi {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var7 = decompiledCaughtException;
             stackOut_66_0 = (RuntimeException) var7;
             stackOut_66_1 = new StringBuilder().append("tm.D(");
@@ -372,7 +363,7 @@ final class tm extends pi {
               stackIn_70_0 = stackOut_69_0;
               stackIn_70_1 = stackOut_69_1;
               stackIn_70_2 = stackOut_69_2;
-              break L10;
+              break L9;
             } else {
               stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
               stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
@@ -380,10 +371,10 @@ final class tm extends pi {
               stackIn_70_0 = stackOut_67_0;
               stackIn_70_1 = stackOut_67_1;
               stackIn_70_2 = stackOut_67_2;
-              break L10;
+              break L9;
             }
           }
-          L11: {
+          L10: {
             stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
             stackOut_70_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(44).append(param1).append(44);
             stackIn_73_0 = stackOut_70_0;
@@ -397,7 +388,7 @@ final class tm extends pi {
               stackIn_74_0 = stackOut_73_0;
               stackIn_74_1 = stackOut_73_1;
               stackIn_74_2 = stackOut_73_2;
-              break L11;
+              break L10;
             } else {
               stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
               stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
@@ -405,10 +396,10 @@ final class tm extends pi {
               stackIn_74_0 = stackOut_71_0;
               stackIn_74_1 = stackOut_71_1;
               stackIn_74_2 = stackOut_71_2;
-              break L11;
+              break L10;
             }
           }
-          L12: {
+          L11: {
             stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
             stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(44);
             stackIn_77_0 = stackOut_74_0;
@@ -422,7 +413,7 @@ final class tm extends pi {
               stackIn_78_0 = stackOut_77_0;
               stackIn_78_1 = stackOut_77_1;
               stackIn_78_2 = stackOut_77_2;
-              break L12;
+              break L11;
             } else {
               stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
               stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
@@ -430,10 +421,10 @@ final class tm extends pi {
               stackIn_78_0 = stackOut_75_0;
               stackIn_78_1 = stackOut_75_1;
               stackIn_78_2 = stackOut_75_2;
-              break L12;
+              break L11;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw lj.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 44 + 1 + 44 + 0 + 44 + param6 + 41);
         }
     }
 

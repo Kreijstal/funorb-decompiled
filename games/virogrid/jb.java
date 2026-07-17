@@ -202,7 +202,7 @@ final class jb extends rd {
               }
             }
             L4: {
-              var2_int = -93 % ((31 - param0) / 54);
+              var2_int = 0;
               if (param1.field_n != 1) {
                 break L4;
               } else {
@@ -250,7 +250,7 @@ final class jb extends rd {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2;
-            stackOut_20_1 = new StringBuilder().append("jb.O(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("jb.O(").append(-44).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -413,7 +413,8 @@ final class jb extends rd {
     }
 
     final static void a(int param0, int param1) {
-        int discarded$4 = sn.h(3938);
+        int discarded$6 = 3938;
+        int discarded$10 = sn.h();
         if (param1 != 45) {
             jb.a(26, -128);
         }
@@ -479,7 +480,7 @@ final class jb extends rd {
         return stackIn_4_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_J = null;
         field_I = null;
     }

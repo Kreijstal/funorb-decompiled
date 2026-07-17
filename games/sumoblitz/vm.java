@@ -14,7 +14,7 @@ final class vm {
         return (int)(1000000000L / pj.field_p);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

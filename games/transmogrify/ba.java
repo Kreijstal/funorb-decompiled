@@ -14,8 +14,9 @@ final class ba extends wf {
     static int[] field_q;
     int field_i;
 
-    final static hg e(int param0) {
-        return new hg(le.h(23), uf.a((byte) -76));
+    final static hg e() {
+        int discarded$0 = -76;
+        return new hg(le.h(23), uf.a());
     }
 
     public static void d(int param0) {

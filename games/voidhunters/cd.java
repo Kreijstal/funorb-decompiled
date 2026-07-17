@@ -6,7 +6,7 @@ final class cd {
     static int field_c;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

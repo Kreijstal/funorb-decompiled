@@ -95,7 +95,7 @@ final class an implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_i = null;
         field_g = null;

@@ -29,13 +29,13 @@ final class or extends bp implements ru {
         char[] var6 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_23_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_12_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_10_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_2_0 = 0;
         var5 = Sumoblitz.field_L ? 1 : 0;
@@ -43,35 +43,27 @@ final class or extends bp implements ru {
           L0: {
             if (!Character.isISOControl(param1)) {
               if (!qw.a(57, param1)) {
-                L1: {
-                  var6 = bs.field_o;
-                  var2 = var6;
-                  if (param0 == 61) {
-                    break L1;
-                  } else {
-                    field_k = -127;
-                    break L1;
-                  }
-                }
+                var6 = bs.field_o;
+                var2 = var6;
                 var3 = 0;
-                L2: while (true) {
+                L1: while (true) {
                   if (var6.length <= var3) {
                     var2 = fs.field_m;
                     var3 = 0;
-                    L3: while (true) {
+                    L2: while (true) {
                       if (var2.length <= var3) {
-                        stackOut_22_0 = 0;
-                        stackIn_23_0 = stackOut_22_0;
+                        stackOut_20_0 = 0;
+                        stackIn_21_0 = stackOut_20_0;
                         break L0;
                       } else {
                         var4 = var2[var3];
                         if (param1 == var4) {
-                          stackOut_19_0 = 1;
-                          stackIn_20_0 = stackOut_19_0;
-                          return stackIn_20_0 != 0;
+                          stackOut_17_0 = 1;
+                          stackIn_18_0 = stackOut_17_0;
+                          return stackIn_18_0 != 0;
                         } else {
                           var3++;
-                          continue L3;
+                          continue L2;
                         }
                       }
                     }
@@ -79,11 +71,11 @@ final class or extends bp implements ru {
                     var4 = var6[var3];
                     if (var4 != param1) {
                       var3++;
-                      continue L2;
+                      continue L1;
                     } else {
-                      stackOut_12_0 = 1;
-                      stackIn_13_0 = stackOut_12_0;
-                      return stackIn_13_0 != 0;
+                      stackOut_10_0 = 1;
+                      stackIn_11_0 = stackOut_10_0;
+                      return stackIn_11_0 != 0;
                     }
                   }
                 }
@@ -101,9 +93,9 @@ final class or extends bp implements ru {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2_ref, "or.S(" + param0 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) var2_ref, "or.S(" + 61 + 44 + param1 + 41);
         }
-        return stackIn_23_0 != 0;
+        return stackIn_21_0 != 0;
     }
 
     public final int b(int param0) {

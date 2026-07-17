@@ -92,13 +92,14 @@ final class qf extends rqa {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    wva.b(param0, 22681);
+                    wva.b(6, 22681);
                     var2 = cnb.field_q.a((byte) 54);
                     continue L2;
                   }
                 }
               } else {
-                nv.a((byte) 88, var4, param0);
+                int discarded$2 = 6;
+                nv.a((byte) 88, var4);
                 var4 = (dnb) (Object) ahb.field_o.a((byte) 89);
                 continue L1;
               }
@@ -107,11 +108,11 @@ final class qf extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2_ref, "qf.C(" + param0 + 44 + -52 + 41);
+          throw rta.a((Throwable) (Object) var2_ref, "qf.C(" + 6 + 44 + -52 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

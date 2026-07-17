@@ -117,28 +117,14 @@ final class an {
     }
 
     final static void a(int param0, boolean param1) {
-        oj var2 = null;
         dq.field_k.c(param1, -1);
-        if (param0 != 1) {
-          return;
-        } else {
-          L0: {
-            var2 = ra.field_f;
-            if (var2 != null) {
-              var2.a(param0 ^ -112, dq.field_k.field_qb, dq.field_k.field_w);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
+        oj var2 = ra.field_f;
+        if (!(var2 == null)) {
+            var2.a(-111, dq.field_k.field_qb, dq.field_k.field_w);
         }
     }
 
-    final static hf a(int param0) {
-        if (param0 != 1) {
-            return null;
-        }
+    final static hf a() {
         return new hf(gg.a(91), po.c(128));
     }
 

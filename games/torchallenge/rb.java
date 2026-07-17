@@ -47,8 +47,8 @@ final class rb implements Runnable {
 
     final static void a(int param0, int param1, int param2) {
         L0: {
-          if (oe.field_f > param1) {
-            oe.field_f = param1;
+          if (oe.field_f > 10) {
+            oe.field_f = 10;
             break L0;
           } else {
             break L0;
@@ -63,7 +63,7 @@ final class rb implements Runnable {
               break L1;
             } else {
               h.a(2, 4);
-              oe.field_f = param1;
+              oe.field_f = 10;
               break L1;
             }
           }
@@ -276,7 +276,7 @@ final class rb implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         int var1 = 11;
         field_c = null;
     }

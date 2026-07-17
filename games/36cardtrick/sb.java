@@ -39,8 +39,7 @@ final class sb {
         }
     }
 
-    final static String a(int param0) {
-        field_a = 86;
+    final static String a() {
         return rd.field_j.c(false);
     }
 

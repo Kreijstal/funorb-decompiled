@@ -67,7 +67,8 @@ final class ae {
             try {
               L0: {
                 var2_int = 31;
-                Object discarded$1 = mb.a(new Object[1], ll.b(105), "resizing", -27504);
+                int discarded$2 = -27504;
+                Object discarded$3 = mb.a(new Object[1], ll.b(105), "resizing");
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -88,24 +89,22 @@ final class ae {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_b = null;
         field_a = null;
     }
 
     final static void a(String param0, boolean param1, int param2, boolean param3) {
-        qb.b(-1);
+        int discarded$0 = -1;
+        qb.b();
         ti.field_b.l(26756);
-        if (param2 != 0) {
-            return;
-        }
         try {
             wi.field_c = new rg(lc.field_hb, (String) null, tc.field_x, param1, param3);
             t.field_h = new lc(ti.field_b, (uj) (Object) wi.field_c);
             ti.field_b.a((byte) 102, (uj) (Object) t.field_h);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ae.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ae.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 0 + 44 + param3 + 41);
         }
     }
 

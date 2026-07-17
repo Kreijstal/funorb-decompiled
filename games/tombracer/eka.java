@@ -1251,7 +1251,8 @@ final class eka extends ci {
             if (var2 == -2) {
               return (dfa) (Object) oqa.field_s;
             } else {
-              return (dfa) (Object) nl.a(param0, (byte) 50);
+              int discarded$2 = 50;
+              return (dfa) (Object) nl.a(param0);
             }
           }
         } else {

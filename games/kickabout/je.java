@@ -30,22 +30,20 @@ final class je extends gn {
     }
 
     final static void a(byte param0, pu param1) {
-        if (param0 != 100) {
-            field_g = null;
-        }
         et.field_b = true;
-        if (vl.a(false)) {
+        int discarded$3 = 0;
+        if (vl.a()) {
             return;
         }
         try {
             fp.field_e = 6;
             pc.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "je.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "je.B(" + 100 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static int a(boolean param0) {
+    final static int a() {
         L0: {
           if (ks.field_e != 1) {
             break L0;
@@ -62,7 +60,8 @@ final class je extends gn {
             return 4;
           } else {
             L1: {
-              int discarded$1 = je.a(false);
+              int discarded$2 = 0;
+              int discarded$3 = je.a();
               if (ks.field_e != 4) {
                 break L1;
               } else {

@@ -20,7 +20,7 @@ final class qh extends ee implements pe, pl, ta {
     static String field_S;
     private hk field_L;
 
-    private final int a(int param0, String param1, int param2, el param3, int param4) {
+    private final int a(int param0, String param1, int param2, el param3) {
         hd var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -58,7 +58,7 @@ final class qh extends ee implements pe, pl, ta {
         String stackOut_8_2 = null;
         try {
           L0: {
-            var6 = new hd(20, param0, 120 + param2, 25, param3, false, 120, 3, ng.field_F, 16777215, param1);
+            var6 = new hd(20, param0, 290, 25, param3, false, 120, 3, ng.field_F, 16777215, param1);
             ((qh) this).b((byte) -114, (el) (Object) var6);
             stackOut_2_0 = var6.field_h;
             stackIn_3_0 = stackOut_2_0;
@@ -94,7 +94,7 @@ final class qh extends ee implements pe, pl, ta {
           }
           L2: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(170).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -177,9 +177,9 @@ final class qh extends ee implements pe, pl, ta {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var11 = new hd(20, param5, 120 - -param1, 25, param0, false, 120, 3, ng.field_F, 16777215, param2);
+            var11 = new hd(20, param5, 290, 25, param0, false, 120, 3, ng.field_F, 16777215, param2);
             ((qh) this).b((byte) -128, (el) (Object) var11);
-            var9 = new pi(((nl) (Object) param0).a((byte) -101), param4, 126, param5 - -var11.field_h, param1 - -50, param3);
+            var9 = new pi(((nl) (Object) param0).a((byte) -101), param4, 126, param5 - -var11.field_h, 220, param3);
             var9.field_u = (bb) this;
             ((qh) this).b((byte) -127, (el) (Object) var9);
             var10 = 38 / ((-14 - param6) / 46);
@@ -217,7 +217,7 @@ final class qh extends ee implements pe, pl, ta {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(170).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -307,14 +307,18 @@ final class qh extends ee implements pe, pl, ta {
         uh dupTemp$1 = new uh(10000536);
         ((qh) this).field_N.field_q = (dh) (Object) dupTemp$1;
         ((qh) this).field_M.field_q = (dh) (Object) dupTemp$1;
+        int discarded$2 = 0;
         String var2 = wj.a(bm.field_p, new String[2], (byte) -72);
         int var3 = 20;
-        var3 = var3 + this.a(var3, ug.field_b, 170, (el) (Object) ((qh) this).field_I, 5);
+        int discarded$3 = 5;
+        var3 = var3 + this.a(var3, ug.field_b, 170, (el) (Object) ((qh) this).field_I);
         var3 = var3 + (5 + this.a((el) (Object) ((qh) this).field_G, 170, ok.field_e, 20, "", var3, (byte) -65));
-        var3 = var3 + this.a(var3, qg.field_b, 170, (el) (Object) ((qh) this).field_M, 5);
+        int discarded$4 = 5;
+        var3 = var3 + this.a(var3, qg.field_b, 170, (el) (Object) ((qh) this).field_M);
         var3 = var3 + (this.a(-99, (el) (Object) ((qh) this).field_N, v.field_m, var3, 170, field_Q) + 5);
         var3 = var3 + (this.a(-103, (el) (Object) ((qh) this).field_H, wj.field_E, var3, 170, gk.field_c) + 5);
-        var3 = var3 + this.a(var3, 170, (el) (Object) ((qh) this).field_R, ue.field_g, (byte) -127);
+        int discarded$5 = -127;
+        var3 = var3 + this.a(var3, 170, (el) (Object) ((qh) this).field_R, ue.field_g);
         hd var4 = new hd(46, var3, ((qh) this).field_r - 90, 25, (el) (Object) ((qh) this).field_P, true, ((qh) this).field_r + -120, 5, hh.field_d, 11579568, ue.field_d);
         ((qh) this).b((byte) -106, (el) (Object) var4);
         var3 = var3 + var4.field_h;
@@ -342,7 +346,8 @@ final class qh extends ee implements pe, pl, ta {
     }
 
     private final boolean g(int param0) {
-        if (!this.f(6626)) {
+        int discarded$0 = 6626;
+        if (!this.f()) {
             return false;
         }
         int var2 = -1;
@@ -353,45 +358,20 @@ final class qh extends ee implements pe, pl, ta {
         return mc.a(((qh) this).field_H.field_s, ((qh) this).field_I.field_s, var2, (qh) this, 0, ((qh) this).field_P.field_y, ((qh) this).field_M.field_s);
     }
 
-    final static mb i(int param0) {
-        String var1 = null;
-        var1 = al.b(0);
-        if (param0 != 25) {
-          L0: {
-            field_J = 84;
-            if (var1 == null) {
-              break L0;
-            } else {
-              if (-1 < var1.indexOf('@')) {
-                break L0;
-              } else {
+    final static mb i() {
+        String var1 = al.b(0);
+        if (var1 != null) {
+            if (var1.indexOf('@') >= 0) {
                 var1 = "";
-                break L0;
-              }
             }
-          }
-          return new mb(al.b(0), rl.n(-1071908447));
-        } else {
-          L1: {
-            if (var1 == null) {
-              break L1;
-            } else {
-              if (-1 > var1.indexOf('@')) {
-                break L1;
-              } else {
-                var1 = "";
-                break L1;
-              }
-            }
-          }
-          return new mb(al.b(0), rl.n(-1071908447));
         }
+        return new mb(al.b(0), rl.n(-1071908447));
     }
 
-    private final int a(int param0, int param1, el param2, String param3, byte param4) {
-        RuntimeException var6 = null;
+    private final int a(int param0, int param1, el param2, String param3) {
+        hd var6 = null;
+        RuntimeException var6_ref = null;
         td var7 = null;
-        hd var8 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -427,21 +407,21 @@ final class qh extends ee implements pe, pl, ta {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = new hd(20, param0, param1 + 120, 25, param2, false, 120, 3, ng.field_F, 16777215, param3);
-            ((qh) this).b((byte) -120, (el) (Object) var8);
+            var6 = new hd(20, param0, 290, 25, param2, false, 120, 3, ng.field_F, 16777215, param3);
+            ((qh) this).b((byte) -120, (el) (Object) var6);
             var7 = new td(((nl) (Object) param2).a((byte) -124));
             ((qh) this).b((byte) -79, (el) (Object) var7);
-            var7.a(15, 15, (byte) -22, var8.field_m + (-15 + var8.field_h >> 1), 3 + var8.field_r + var8.field_v);
-            stackOut_0_0 = var8.field_h;
+            var7.a(15, 15, (byte) -22, var6.field_m + (-15 + var6.field_h >> 1), 3 + var6.field_r + var6.field_v);
+            stackOut_0_0 = var6.field_h;
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            var6 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("qh.G(").append(param0).append(44).append(param1).append(44);
+            var6_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var6_ref;
+            stackOut_2_1 = new StringBuilder().append("qh.G(").append(param0).append(44).append(170).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -573,14 +553,15 @@ final class qh extends ee implements pe, pl, ta {
         }
     }
 
-    final static void h(byte param0) {
-        hb.field_j = f.p(125);
+    final static void h() {
+        int discarded$0 = 125;
+        hb.field_j = f.p();
         int var1 = -58;
         kd.field_e = new ng();
         b.a(true, true, false);
     }
 
-    private final String c(boolean param0) {
+    private final String c() {
         return "</col></u>";
     }
 
@@ -769,20 +750,16 @@ final class qh extends ee implements pe, pl, ta {
         field_F = null;
     }
 
-    private final boolean f(int param0) {
+    private final boolean f() {
         if (this.a((byte) -104, (nl) (Object) ((qh) this).field_H)) {
           if (this.a((byte) -118, (nl) (Object) ((qh) this).field_I)) {
             if (this.a((byte) -108, (nl) (Object) ((qh) this).field_G)) {
               if (this.a((byte) -103, (nl) (Object) ((qh) this).field_M)) {
                 if (this.a((byte) -117, (nl) (Object) ((qh) this).field_N)) {
-                  if (this.a((byte) -128, (nl) (Object) ((qh) this).field_R)) {
-                    if (param0 != 6626) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
+                  if (!this.a((byte) -128, (nl) (Object) ((qh) this).field_R)) {
                     return false;
+                  } else {
+                    return true;
                   }
                 } else {
                   return false;
@@ -960,7 +937,7 @@ final class qh extends ee implements pe, pl, ta {
         try {
           L0: {
             if (param0 <= -66) {
-              stackOut_3_0 = this.a(param1, param4, param2, 35, param5, param3, (byte) -121);
+              stackOut_3_0 = this.a(param1, 170, param2, 35, param5, param3, (byte) -121);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -1024,7 +1001,7 @@ final class qh extends ee implements pe, pl, ta {
           }
           L3: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param3).append(44).append(170).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -1062,7 +1039,8 @@ final class qh extends ee implements pe, pl, ta {
     final void a(boolean param0, int param1, el param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            ((qh) this).field_D.field_D = this.f(6626);
+            int discarded$0 = 6626;
+            ((qh) this).field_D.field_D = this.f();
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "qh.H(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }

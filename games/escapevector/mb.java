@@ -10,12 +10,13 @@ final class mb {
     private int field_d;
     static hl field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
         int var3 = 0;
         tj var4 = null;
         L0: {
           var3 = EscapeVector.field_A;
-          var4 = qa.f((byte) -49);
+          int discarded$42 = -49;
+          var4 = qa.f();
           if (p.field_h != 0) {
             if (aj.b(-124)) {
               L1: {
@@ -35,7 +36,8 @@ final class mb {
                     if (!wk.field_c) {
                       if (pg.field_b) {
                         L3: {
-                          qj.a(-883);
+                          int discarded$43 = -883;
+                          qj.a();
                           hm.field_o.e(117);
                           lh.a(72);
                           if (!aj.b(-102)) {
@@ -50,7 +52,8 @@ final class mb {
                       } else {
                         if (0 <= od.field_q) {
                           L4: {
-                            sn.c(-1);
+                            int discarded$44 = -1;
+                            sn.c();
                             hn.field_l.j(2525);
                             lh.a(72);
                             if (!aj.b(-102)) {
@@ -126,7 +129,8 @@ final class mb {
                                     }
                                   }
                                 } else {
-                                  mn.d((byte) -120);
+                                  int discarded$45 = -120;
+                                  mn.d();
                                   if (rc.field_a.f(-91)) {
                                     return;
                                   } else {
@@ -141,7 +145,8 @@ final class mb {
                                 }
                               }
                             } else {
-                              if (!mm.a(-59)) {
+                              int discarded$46 = -59;
+                              if (!mm.a()) {
                                 break L5;
                               } else {
                                 return;
@@ -154,7 +159,8 @@ final class mb {
                       }
                     } else {
                       L10: {
-                        kc.a((byte) -75);
+                        int discarded$47 = -75;
+                        kc.a();
                         lh.a(72);
                         if (!aj.b(-102)) {
                           ce.field_f.d(-32464);
@@ -170,7 +176,8 @@ final class mb {
                     if (!wk.field_c) {
                       if (pg.field_b) {
                         L11: {
-                          qj.a(-883);
+                          int discarded$48 = -883;
+                          qj.a();
                           hm.field_o.e(117);
                           lh.a(72);
                           if (!aj.b(-102)) {
@@ -185,7 +192,8 @@ final class mb {
                       } else {
                         if (0 <= od.field_q) {
                           L12: {
-                            sn.c(-1);
+                            int discarded$49 = -1;
+                            sn.c();
                             hn.field_l.j(2525);
                             lh.a(72);
                             if (!aj.b(-102)) {
@@ -261,7 +269,8 @@ final class mb {
                                     }
                                   }
                                 } else {
-                                  mn.d((byte) -120);
+                                  int discarded$50 = -120;
+                                  mn.d();
                                   if (rc.field_a.f(-91)) {
                                     return;
                                   } else {
@@ -276,7 +285,8 @@ final class mb {
                                 }
                               }
                             } else {
-                              if (!mm.a(-59)) {
+                              int discarded$51 = -59;
+                              if (!mm.a()) {
                                 break L13;
                               } else {
                                 return;
@@ -298,7 +308,8 @@ final class mb {
                       }
                     } else {
                       L19: {
-                        kc.a((byte) -75);
+                        int discarded$52 = -75;
+                        kc.a();
                         lh.a(72);
                         if (!aj.b(-102)) {
                           ce.field_f.d(-32464);
@@ -335,13 +346,16 @@ final class mb {
                     gi.a((byte) -126);
                     di.field_d = null;
                     if (null != de.field_i) {
-                      ml.a(de.field_i, 3, (byte) 101);
+                      int discarded$53 = 101;
+                      int discarded$54 = 3;
+                      ml.a(de.field_i);
                       break L21;
                     } else {
                       break L21;
                     }
                   }
-                  ci.a(0);
+                  int discarded$55 = 0;
+                  ci.a();
                   p.field_h = 0;
                   mj.field_d = 0;
                   gi.a((byte) -105);
@@ -364,7 +378,8 @@ final class mb {
                         if (!wk.field_c) {
                           if (pg.field_b) {
                             L24: {
-                              qj.a(-883);
+                              int discarded$56 = -883;
+                              qj.a();
                               hm.field_o.e(117);
                               lh.a(72);
                               if (!aj.b(-102)) {
@@ -379,7 +394,8 @@ final class mb {
                           } else {
                             if (0 <= od.field_q) {
                               L25: {
-                                sn.c(-1);
+                                int discarded$57 = -1;
+                                sn.c();
                                 hn.field_l.j(2525);
                                 lh.a(72);
                                 if (!aj.b(-102)) {
@@ -455,7 +471,8 @@ final class mb {
                                         }
                                       }
                                     } else {
-                                      mn.d((byte) -120);
+                                      int discarded$58 = -120;
+                                      mn.d();
                                       if (rc.field_a.f(-91)) {
                                         return;
                                       } else {
@@ -470,7 +487,8 @@ final class mb {
                                     }
                                   }
                                 } else {
-                                  if (!mm.a(-59)) {
+                                  int discarded$59 = -59;
+                                  if (!mm.a()) {
                                     break L26;
                                   } else {
                                     return;
@@ -483,7 +501,8 @@ final class mb {
                           }
                         } else {
                           L31: {
-                            kc.a((byte) -75);
+                            int discarded$60 = -75;
+                            kc.a();
                             lh.a(72);
                             if (!aj.b(-102)) {
                               ce.field_f.d(-32464);
@@ -499,7 +518,8 @@ final class mb {
                         if (!wk.field_c) {
                           if (pg.field_b) {
                             L32: {
-                              qj.a(-883);
+                              int discarded$61 = -883;
+                              qj.a();
                               hm.field_o.e(117);
                               lh.a(72);
                               if (!aj.b(-102)) {
@@ -514,7 +534,8 @@ final class mb {
                           } else {
                             if (0 <= od.field_q) {
                               L33: {
-                                sn.c(-1);
+                                int discarded$62 = -1;
+                                sn.c();
                                 hn.field_l.j(2525);
                                 lh.a(72);
                                 if (!aj.b(-102)) {
@@ -590,7 +611,8 @@ final class mb {
                                         }
                                       }
                                     } else {
-                                      mn.d((byte) -120);
+                                      int discarded$63 = -120;
+                                      mn.d();
                                       if (rc.field_a.f(-91)) {
                                         return;
                                       } else {
@@ -605,7 +627,8 @@ final class mb {
                                     }
                                   }
                                 } else {
-                                  if (!mm.a(-59)) {
+                                  int discarded$64 = -59;
+                                  if (!mm.a()) {
                                     break L34;
                                   } else {
                                     return;
@@ -627,7 +650,8 @@ final class mb {
                           }
                         } else {
                           L40: {
-                            kc.a((byte) -75);
+                            int discarded$65 = -75;
+                            kc.a();
                             lh.a(72);
                             if (!aj.b(-102)) {
                               ce.field_f.d(-32464);
@@ -664,13 +688,16 @@ final class mb {
                       gi.a((byte) -126);
                       di.field_d = null;
                       if (null != de.field_i) {
-                        ml.a(de.field_i, 3, (byte) 101);
+                        int discarded$66 = 101;
+                        int discarded$67 = 3;
+                        ml.a(de.field_i);
                         break L43;
                       } else {
                         break L43;
                       }
                     }
-                    ci.a(0);
+                    int discarded$68 = 0;
+                    ci.a();
                     p.field_h = 0;
                     mj.field_d = 0;
                     gi.a((byte) -105);
@@ -698,7 +725,8 @@ final class mb {
                   if (!wk.field_c) {
                     if (pg.field_b) {
                       L45: {
-                        qj.a(-883);
+                        int discarded$69 = -883;
+                        qj.a();
                         hm.field_o.e(117);
                         lh.a(72);
                         if (!aj.b(-102)) {
@@ -713,7 +741,8 @@ final class mb {
                     } else {
                       if (0 <= od.field_q) {
                         L46: {
-                          sn.c(-1);
+                          int discarded$70 = -1;
+                          sn.c();
                           hn.field_l.j(2525);
                           lh.a(72);
                           if (!aj.b(-102)) {
@@ -798,7 +827,8 @@ final class mb {
                                 }
                               }
                             } else {
-                              mn.d((byte) -120);
+                              int discarded$71 = -120;
+                              mn.d();
                               if (rc.field_a.f(-91)) {
                                 return;
                               } else {
@@ -833,7 +863,8 @@ final class mb {
                             }
                           }
                         } else {
-                          if (!mm.a(-59)) {
+                          int discarded$72 = -59;
+                          if (!mm.a()) {
                             L54: {
                               lh.a(72);
                               if (!aj.b(-102)) {
@@ -853,7 +884,8 @@ final class mb {
                     }
                   } else {
                     L55: {
-                      kc.a((byte) -75);
+                      int discarded$73 = -75;
+                      kc.a();
                       lh.a(72);
                       if (!aj.b(-102)) {
                         ce.field_f.d(-32464);
@@ -898,7 +930,8 @@ final class mb {
               if (!wk.field_c) {
                 if (pg.field_b) {
                   L59: {
-                    qj.a(-883);
+                    int discarded$74 = -883;
+                    qj.a();
                     hm.field_o.e(117);
                     lh.a(72);
                     if (!aj.b(-102)) {
@@ -913,7 +946,8 @@ final class mb {
                 } else {
                   if (0 <= od.field_q) {
                     L60: {
-                      sn.c(-1);
+                      int discarded$75 = -1;
+                      sn.c();
                       hn.field_l.j(2525);
                       lh.a(72);
                       if (!aj.b(-102)) {
@@ -989,7 +1023,8 @@ final class mb {
                               }
                             }
                           } else {
-                            mn.d((byte) -120);
+                            int discarded$76 = -120;
+                            mn.d();
                             if (rc.field_a.f(-91)) {
                               return;
                             } else {
@@ -1004,7 +1039,8 @@ final class mb {
                           }
                         }
                       } else {
-                        if (!mm.a(-59)) {
+                        int discarded$77 = -59;
+                        if (!mm.a()) {
                           break L61;
                         } else {
                           return;
@@ -1017,7 +1053,8 @@ final class mb {
                 }
               } else {
                 L66: {
-                  kc.a((byte) -75);
+                  int discarded$78 = -75;
+                  kc.a();
                   lh.a(72);
                   if (!aj.b(-102)) {
                     ce.field_f.d(-32464);
@@ -1033,7 +1070,8 @@ final class mb {
               if (!wk.field_c) {
                 if (pg.field_b) {
                   L67: {
-                    qj.a(-883);
+                    int discarded$79 = -883;
+                    qj.a();
                     hm.field_o.e(117);
                     lh.a(72);
                     if (!aj.b(-102)) {
@@ -1048,7 +1086,8 @@ final class mb {
                 } else {
                   if (0 <= od.field_q) {
                     L68: {
-                      sn.c(-1);
+                      int discarded$80 = -1;
+                      sn.c();
                       hn.field_l.j(2525);
                       lh.a(72);
                       if (!aj.b(-102)) {
@@ -1124,7 +1163,8 @@ final class mb {
                               }
                             }
                           } else {
-                            mn.d((byte) -120);
+                            int discarded$81 = -120;
+                            mn.d();
                             if (rc.field_a.f(-91)) {
                               return;
                             } else {
@@ -1139,7 +1179,8 @@ final class mb {
                           }
                         }
                       } else {
-                        if (!mm.a(-59)) {
+                        int discarded$82 = -59;
+                        if (!mm.a()) {
                           break L69;
                         } else {
                           return;
@@ -1161,7 +1202,8 @@ final class mb {
                 }
               } else {
                 L75: {
-                  kc.a((byte) -75);
+                  int discarded$83 = -75;
+                  kc.a();
                   lh.a(72);
                   if (!aj.b(-102)) {
                     ce.field_f.d(-32464);
@@ -1627,7 +1669,7 @@ final class mb {
         }
     }
 
-    final static void a(ed param0, int param1) {
+    final static void a(ed param0) {
         int[] var3 = null;
         try {
             ah.field_j = param0;

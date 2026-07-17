@@ -33,8 +33,10 @@ final class jb {
     }
 
     final void d(byte param0) {
-        this.j(0);
-        this.f(120);
+        int discarded$0 = 0;
+        this.j();
+        int discarded$1 = 120;
+        this.f();
         if (param0 > -47) {
             ((jb) this).a(108);
         }
@@ -138,7 +140,7 @@ final class jb {
         }
     }
 
-    private final void k(int param0) {
+    private final void k() {
         if (((jb) this).field_q < 8) {
             ((jb) this).field_q = ((jb) this).field_q + 1;
             this.e((byte) -124);
@@ -149,18 +151,10 @@ final class jb {
         int var4 = 0;
         bd var5 = null;
         int var6 = 0;
-        L0: {
-          var6 = Confined.field_J ? 1 : 0;
-          if (param0 == -118) {
-            break L0;
-          } else {
-            ((jb) this).g((byte) 99);
-            break L0;
-          }
-        }
+        var6 = Confined.field_J ? 1 : 0;
         param1 += 0;
         var4 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (((jb) this).field_p.field_k <= var4) {
             return -1;
           } else {
@@ -172,25 +166,25 @@ final class jb {
                     return var4;
                   } else {
                     var4++;
-                    continue L1;
+                    continue L0;
                   }
                 } else {
                   var4++;
-                  continue L1;
+                  continue L0;
                 }
               } else {
                 var4++;
-                continue L1;
+                continue L0;
               }
             } else {
               var4++;
-              continue L1;
+              continue L0;
             }
           }
         }
     }
 
-    private final void j(int param0) {
+    private final void j() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -300,7 +294,7 @@ final class jb {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         this.e(-5);
         if (((jb) this).field_e != 14) {
             return;
@@ -360,7 +354,8 @@ final class jb {
                 if (null != ((jb) this).field_f) {
                   break L2;
                 } else {
-                  if (tj.a(true)) {
+                  int discarded$3 = 1;
+                  if (tj.a()) {
                     break L2;
                   } else {
                     ((jb) this).field_f = om.a(0, 1, 3, 10, (byte) -30);
@@ -375,7 +370,8 @@ final class jb {
                 if (null != ((jb) this).field_d) {
                   break L3;
                 } else {
-                  if (!tj.a(true)) {
+                  int discarded$4 = 1;
+                  if (!tj.a()) {
                     ((jb) this).field_d = om.a(1, 1, 3, 10, (byte) -30);
                     break L3;
                   } else {
@@ -511,7 +507,8 @@ final class jb {
                 }
               }
               L12: {
-                if (tj.a(true)) {
+                int discarded$5 = 1;
+                if (tj.a()) {
                   pn.field_a.b(oc.field_b, 320, ((jb) this).field_c + 259, 4243584, -1);
                   break L12;
                 } else {
@@ -610,7 +607,7 @@ final class jb {
           L0: while (true) {
             if (!nm.e((byte) -96)) {
               ((jb) this).field_p.a(true, this.a((byte) -118, wm.field_hb, m.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
-              boolean discarded$1 = this.c(param0 + -3795, true);
+              boolean discarded$2 = this.c(param0 + -3795, true);
               return;
             } else {
               if (gk.field_r == 13) {
@@ -620,7 +617,8 @@ final class jb {
                 return;
               } else {
                 L1: {
-                  if (!tj.a(true)) {
+                  int discarded$3 = 1;
+                  if (!tj.a()) {
                     L2: {
                       L3: {
                         ((jb) this).field_p.h((byte) -128);
@@ -747,7 +745,8 @@ final class jb {
         if (!(((jb) this).field_e == 14)) {
             return;
         }
-        this.d(36);
+        int discarded$1 = 36;
+        this.d();
     }
 
     private final void c(byte param0) {
@@ -856,7 +855,8 @@ final class jb {
               if (!((jb) this).field_p.d((byte) 55)) {
                 break L7;
               } else {
-                this.k(8);
+                int discarded$2 = 8;
+                this.k();
                 break L7;
               }
             }
@@ -867,7 +867,8 @@ final class jb {
               if (!((jb) this).field_p.d((byte) 55)) {
                 break L7;
               } else {
-                this.k(8);
+                int discarded$3 = 8;
+                this.k();
                 break L7;
               }
             }
@@ -983,7 +984,8 @@ final class jb {
         } else {
             pn.field_a.b(rg.field_J, 320, ((jb) this).field_c + 36, 4243584, -1);
         }
-        if (!(!tj.a(true))) {
+        int discarded$4 = 1;
+        if (!(!tj.a())) {
             pn.field_a.b(oc.field_b, 320, 190 - -((jb) this).field_c, 4243584, -1);
         }
         if (var2 == 5) {
@@ -1389,7 +1391,7 @@ final class jb {
         }
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var2 = 0;
         bd var3 = null;
         String var4 = null;
@@ -1742,7 +1744,7 @@ final class jb {
         L0: while (true) {
           if (!nm.e((byte) -96)) {
             ((jb) this).field_p.a(true, this.a((byte) -118, wm.field_hb, m.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
-            boolean discarded$2 = this.a(true, 34);
+            boolean discarded$4 = this.a(true, 34);
             return;
           } else {
             ((jb) this).field_p.h((byte) -128);
@@ -1788,7 +1790,8 @@ final class jb {
                 if (((jb) this).field_q >= 8) {
                   break L3;
                 } else {
-                  this.k(8);
+                  int discarded$5 = 8;
+                  this.k();
                   ((jb) this).field_p.a(1, -1);
                   ((jb) this).field_p.field_b = false;
                   break L3;
@@ -2493,7 +2496,8 @@ final class jb {
         } else {
           if (((jb) this).field_p.d((byte) 55)) {
             this.e((byte) -123);
-            kg.c(false);
+            int discarded$1 = 0;
+            kg.c();
             return true;
           } else {
             return false;

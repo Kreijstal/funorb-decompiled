@@ -23,7 +23,8 @@ abstract class ie extends ah {
         var2 = stellarshard.field_B;
         try {
           L0: {
-            if (!sf.b(false)) {
+            int discarded$14 = 0;
+            if (!sf.b()) {
               L1: {
                 if (pd.field_f == null) {
                   break L1;
@@ -39,13 +40,13 @@ abstract class ie extends ah {
               }
               return;
             } else {
-              boolean discarded$7 = dg.field_z.a(true, (byte) -128, li.field_d, af.field_q);
+              boolean discarded$15 = dg.field_z.a(true, (byte) -128, li.field_d, af.field_q);
               dg.field_z.f((byte) -127);
               L2: while (true) {
                 if (!qh.c(119)) {
                   break L0;
                 } else {
-                  boolean discarded$8 = dg.field_z.a(gi.field_f, uc.field_b, true);
+                  boolean discarded$16 = dg.field_z.a(gi.field_f, uc.field_b, true);
                   continue L2;
                 }
               }
@@ -66,24 +67,11 @@ abstract class ie extends ah {
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        if (param2 != 1529956675) {
-          field_u = null;
-          var6 = ((ie) this).field_w << 3;
-          var7 = ((ie) this).field_x << 3;
-          param4 = (15 & var6) + (param4 << 4);
-          param3 = (param3 << 4) - -(15 & var7);
-          ((ie) this).a(var6, var7, param4, param3, param0, param1);
-          return;
-        } else {
-          var6 = ((ie) this).field_w << 3;
-          var7 = ((ie) this).field_x << 3;
-          param4 = (15 & var6) + (param4 << 4);
-          param3 = (param3 << 4) - -(15 & var7);
-          ((ie) this).a(var6, var7, param4, param3, param0, param1);
-          return;
-        }
+        int var6 = ((ie) this).field_w << 3;
+        int var7 = ((ie) this).field_x << 3;
+        param4 = (15 & var6) + (param4 << 4);
+        param3 = (param3 << 4) - -(15 & var7);
+        ((ie) this).a(var6, var7, param4, param3, param0, param1);
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);

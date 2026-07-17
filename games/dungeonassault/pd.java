@@ -26,7 +26,7 @@ final class pd extends rj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_B = null;
         field_G = null;
         field_A = null;
@@ -95,14 +95,11 @@ final class pd extends rj {
 
     private final void a(int param0, int param1, int param2, int param3) {
         ((pd) this).field_H = param0 <= 0 ? 1 : param0;
-        if (param1 != -18566) {
-            ((pd) this).field_F = 45;
-        }
         ((pd) this).field_D = param3 > 0 ? param3 : 1;
         ((pd) this).field_C = param2;
     }
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void a(java.awt.Canvas param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -123,7 +120,8 @@ final class pd extends rj {
         try {
           L0: {
             L1: {
-              ud.a((java.awt.Component) (Object) param0, -1);
+              int discarded$12 = -1;
+              ud.a((java.awt.Component) (Object) param0);
               gn.a((byte) 127, (java.awt.Component) (Object) param0);
               if (bn.field_j != null) {
                 bn.field_j.a(false, (java.awt.Component) (Object) param0);
@@ -169,12 +167,9 @@ final class pd extends rj {
     final static void a(int param0, java.applet.Applet param1) {
         try {
             sm.a(param1, 31500, "");
-            if (param0 != 5189) {
-                boolean discarded$0 = pd.c(66, -39, (byte) -110);
-            }
-            fk.a(param0 ^ 5137, param1);
+            fk.a(84, param1);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "pd.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "pd.L(" + 5189 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -200,8 +195,10 @@ final class pd extends rj {
         var7 = DungeonAssault.field_K;
         var4 = param0 + ((pd) this).field_t;
         var5 = ((pd) this).field_i + param2;
-        bp.a(var5, hm.field_q, var4, (byte) 99);
-        bp.a(((pd) this).field_F + var5 - -10, qf.field_f, var4, (byte) 99);
+        int discarded$5 = 99;
+        bp.a(var5, hm.field_q, var4);
+        int discarded$6 = 99;
+        bp.a(((pd) this).field_F + var5 - -10, qf.field_f, var4);
         var6 = 0;
         L0: while (true) {
           if (var6 >= 7) {
@@ -229,8 +226,10 @@ final class pd extends rj {
                           }
                           var6 = stackIn_19_0;
                           gf.e(var4 + 4, var6 + var5 + 5, qh.field_q.field_y + (4 + var4), qh.field_q.field_v / 2 + (var6 + 10) + (var5 + 5));
-                          bp.a(10 + var5 + var6, ji.field_G, var4 - -4, (byte) 99);
-                          bp.a(var5 - (-10 - var6) + -23, ji.field_G, 4 + var4, (byte) 99);
+                          int discarded$7 = 99;
+                          bp.a(10 + var5 + var6, ji.field_G, var4 - -4);
+                          int discarded$8 = 99;
+                          bp.a(var5 - (-10 - var6) + -23, ji.field_G, 4 + var4);
                           gf.b();
                           qh.field_q.c(var4 - -4, var6 + var5 + 10, qh.field_q.field_y, qh.field_q.field_v / 2);
                           break L3;
@@ -247,7 +246,8 @@ final class pd extends rj {
                             }
                           }
                           var6 = stackIn_15_0;
-                          bp.a(var6 + (10 + var5), ji.field_G, 4 + var4, (byte) 99);
+                          int discarded$9 = 99;
+                          bp.a(var6 + (10 + var5), ji.field_G, 4 + var4);
                           qh.field_q.h(var4 + 4, var6 + 10 + var5);
                           break L3;
                         }

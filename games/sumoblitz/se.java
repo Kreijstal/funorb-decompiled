@@ -7,7 +7,7 @@ abstract class se {
     static int field_d;
     static String field_a;
 
-    final static int a(int param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -82,7 +82,7 @@ abstract class se {
 
     abstract nb a(byte param0);
 
-    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
+    final static String a(CharSequence[] param0, int param1, int param2) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -125,7 +125,7 @@ abstract class se {
               return stackIn_6_0;
             } else {
               if (param2 == 1) {
-                var10 = param0[param1];
+                var10 = param0[0];
                 var4 = var10;
                 if (var4 == null) {
                   stackOut_11_0 = "null";
@@ -135,13 +135,13 @@ abstract class se {
                   return ((Object) (Object) var10).toString();
                 }
               } else {
-                var4_int = param2 - -param1;
+                var4_int = param2;
                 var5 = 0;
-                var6_int = param1;
+                var6_int = 0;
                 L1: while (true) {
                   if (var4_int <= var6_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = param1;
+                    var7 = 0;
                     L2: while (true) {
                       if (var7 >= var4_int) {
                         stackOut_25_0 = var6.toString();
@@ -208,7 +208,7 @@ abstract class se {
               break L5;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param1 + 44 + param2 + 44 + 14156 + 41);
+          throw qo.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + 0 + 44 + param2 + 44 + 14156 + 41);
         }
         return stackIn_26_0;
     }
@@ -216,7 +216,7 @@ abstract class se {
     abstract void a(fs param0, byte param1);
 
     final static boolean a(int param0, int param1, int param2) {
-        int var3 = -24 % ((-63 - param0) / 40);
+        int var3 = 0;
         if (!oj.a(param1, 13836, param2)) {
             return false;
         }
@@ -226,7 +226,7 @@ abstract class se {
         return (lg.a(param1, -22, param2) | ((8192 & param1) != 0 ? true : false) | mb.a(true, param2, param1)) & ((param2 & 55) == 0 ? true : false);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
         field_c = null;

@@ -20,7 +20,7 @@ final class db {
         field_b = null;
     }
 
-    final static void a(ah param0, jb param1, int param2) {
+    final static void a(ah param0, jb param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         qa var4 = null;
@@ -166,7 +166,7 @@ final class db {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;

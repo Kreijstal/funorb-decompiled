@@ -42,7 +42,7 @@ abstract class ff {
         String stackOut_8_2 = null;
         try {
           L0: {
-            var8 = eh.a(param0, param5, param3, 119, param1, param2);
+            var8 = eh.a(0, param5, param3, 119, 0, param2);
             var6 = var8;
             if (var8 != null) {
               L1: {
@@ -73,7 +73,7 @@ abstract class ff {
           L2: {
             var6_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("ff.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_7_1 = new StringBuilder().append("ff.H(").append(0).append(44).append(0).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -134,7 +134,8 @@ abstract class ff {
                     if (var5 == null) {
                       break L0;
                     } else {
-                      uo.a(var5, param1, (byte) 68);
+                      int discarded$4 = 68;
+                      uo.a(var5, param1);
                       var5 = (eg) (Object) qc.field_n.a((byte) 116);
                       continue L2;
                     }

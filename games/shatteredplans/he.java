@@ -35,7 +35,8 @@ final class he extends oh {
         try {
           L0: {
             L1: {
-              oo.a(param1, (byte) -70);
+              int discarded$3 = -70;
+              oo.a(param1);
               fk.a(rg.field_c, 72, false);
               if (param0 == 8192) {
                 break L1;
@@ -83,22 +84,9 @@ final class he extends oh {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                Thread.sleep(param1);
-                if (param0) {
-                  break L0;
-                } else {
-                  field_i = null;
-                  return;
-                }
-              }
-            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
-                var3 = (InterruptedException) (Object) decompiledCaughtException;
-                break L1;
-              }
+            {
+              Thread.sleep(param1);
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -107,7 +95,7 @@ final class he extends oh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_q = null;
         field_m = null;
         field_p = null;

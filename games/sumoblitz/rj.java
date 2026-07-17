@@ -40,7 +40,8 @@ final class rj {
                         }
                       }
                     }
-                    gk.field_o = pb.a(640, 8089, 0, 480, lt.field_m, 0);
+                    int discarded$6 = 0;
+                    gk.field_o = pb.a(640, 8089, 0, 480, lt.field_m);
                     break L3;
                   }
                   L5: {
@@ -65,7 +66,8 @@ final class rj {
                 }
               }
               L6: {
-                if (vs.b((byte) 9)) {
+                int discarded$7 = 9;
+                if (vs.b()) {
                   break L6;
                 } else {
                   var2_int = 1;
@@ -86,17 +88,9 @@ final class rj {
                 if (!dt.field_f) {
                   break L7;
                 } else {
-                  ou.a(param0, var2_int, (byte) -28);
+                  ou.a(true, var2_int, (byte) -28);
                   break L7;
                 }
-              }
-            }
-            L8: {
-              if (!param1) {
-                break L8;
-              } else {
-                field_a = -94L;
-                break L8;
               }
             }
             break L0;
@@ -104,7 +98,7 @@ final class rj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2, "rj.B(" + param0 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) var2, "rj.B(" + 1 + 44 + 0 + 41);
         }
     }
 
@@ -564,13 +558,17 @@ final class rj {
     }
 
     public static void a(int param0) {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_f = null;
-            if (param0 != 2) {
-                rj.a(true, true);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "rj.H(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var1, "rj.H(" + 2 + 41);
         }
     }
 
@@ -2903,7 +2901,8 @@ final class rj {
                     var4 = 1;
                     if (param1 == 10) {
                       var4 = 0;
-                      vf.a((byte) -49);
+                      int discarded$2 = -49;
+                      vf.a();
                       break L5;
                     } else {
                       break L5;
@@ -2915,7 +2914,8 @@ final class rj {
                         if (!mc.field_E) {
                           break L7;
                         } else {
-                          param2 = ic.a(hh.field_b, new String[1], (byte) -128);
+                          int discarded$3 = -128;
+                          param2 = ic.a(hh.field_b, new String[1]);
                           break L7;
                         }
                       }
@@ -3176,26 +3176,19 @@ final class rj {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 == -6) {
-                break L1;
-              } else {
-                field_f = null;
-                break L1;
-              }
-            }
-            jt.a(-99);
+            int discarded$1 = -99;
+            jt.a();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "rj.I(" + param0 + 41);
+          throw qo.a((Throwable) (Object) var1, "rj.I(" + -6 + 41);
         }
     }
 

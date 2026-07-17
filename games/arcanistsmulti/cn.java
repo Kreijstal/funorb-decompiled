@@ -70,7 +70,7 @@ final class cn extends kl implements vb {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_N = null;
         field_M = null;
         field_J = null;
@@ -83,9 +83,6 @@ final class cn extends kl implements vb {
     }
 
     final static boolean a(int param0, int param1) {
-        if (param0 <= 103) {
-            return true;
-        }
         if (!(param1 >= 0)) {
             return (1 + param1) % 4 == 0 ? true : false;
         }
@@ -104,7 +101,7 @@ final class cn extends kl implements vb {
         return false;
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         int var1_int = 0;
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {

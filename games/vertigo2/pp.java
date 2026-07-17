@@ -16,7 +16,7 @@ final class pp extends li {
     private boolean[][] field_p;
     private int[][] field_u;
 
-    public static void e(int param0) {
+    public static void e() {
         field_v = null;
         field_x = null;
         field_s = null;
@@ -25,8 +25,8 @@ final class pp extends li {
         field_w = null;
     }
 
-    final static cr f(int param0) {
-        int var1 = 87 % ((param0 - -53) / 59);
+    final static cr f() {
+        int var1 = 0;
         return h.field_D.field_Mb;
     }
 
@@ -211,24 +211,25 @@ final class pp extends li {
         return ((pp) this).field_q[param0];
     }
 
-    final static cr a(int param0) {
-        return hi.b(117);
+    final static cr a() {
+        int discarded$0 = 117;
+        return hi.b();
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         er var8 = new er(param3, param6);
         int[] var9 = bi.field_l;
         int var10 = bi.field_e;
         int var11 = bi.field_j;
         var8.d();
-        int var12 = -9 % ((11 - param1) / 38);
-        bi.a(0, 0, param3, param6, 12, param0, 3355443);
+        int var12 = 0;
+        bi.a(0, 0, param3, param6, 12, 16777215, 3355443);
         bi.a(var9, var10, var11);
-        var8.f(param4, param2);
-        var8.d(param4, param2, param5);
+        var8.f(0, 0);
+        var8.d(0, 0, 40);
     }
 
-    final static boolean a(java.applet.Applet param0, int param1) {
+    final static boolean a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -303,7 +304,7 @@ final class pp extends li {
                             var2 = "tuhstatbut";
                             var3 = (String) je.a(param0, false, "getcookies");
                             var4 = jr.a((byte) -9, ';', var3);
-                            var5 = param1;
+                            var5 = 0;
                             statePc = 5;
                             continue stateLoop;
                         } catch (Throwable stateCaught_4) {
@@ -479,7 +480,7 @@ final class pp extends li {
                         continue stateLoop;
                     }
                     case 21: {
-                        throw wn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+                        throw wn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 0 + 41);
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -642,37 +643,19 @@ final class pp extends li {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          if (up.field_z == null) {
-            break L0;
-          } else {
+        if (up.field_z != null) {
             var3 = up.field_z.b(13721, param1);
-            if (var3 == -2) {
-              break L0;
-            } else {
-              L1: {
-                if (-1 == var3) {
-                  break L1;
-                } else {
-                  var4 = up.field_z.k(22719) ? 1 : 0;
-                  qg.a(param2, var3, 0, var4 != 0, up.field_z.l(4), up.field_z.field_Kb);
-                  break L1;
+            if (var3 != -2) {
+                if (-1 != var3) {
+                    var4 = up.field_z.k(22719) ? 1 : 0;
+                    qg.a(14, var3, 0, var4 != 0, up.field_z.l(4), up.field_z.field_Kb);
                 }
-              }
-              up.field_z = null;
-              ql.i(30);
-              break L0;
+                up.field_z = null;
+                ql.i(30);
             }
-          }
-        }
-        if (param0 > -46) {
-          cr discarded$2 = pp.f(63);
-          return;
-        } else {
-          return;
         }
     }
 

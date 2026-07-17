@@ -37,7 +37,7 @@ final class kb {
     int field_z;
     int field_t;
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 73;
         field_a = null;
         field_s = null;
@@ -111,9 +111,9 @@ final class kb {
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
-        pl.field_P = param2;
-        eb.field_I = param0;
-        ib.field_cb = param1;
+        pl.field_P = 16744576;
+        eb.field_I = 16777215;
+        ib.field_cb = 16711680;
     }
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, boolean param11, int param12) {
@@ -121,7 +121,6 @@ final class kb {
         int var13_int = 0;
         int var14 = 0;
         int var15 = 0;
-        Object var16 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -161,54 +160,45 @@ final class kb {
             param8 = -param2;
             L1: while (true) {
               if (param8 >= 0) {
-                L2: {
-                  if (param11) {
-                    break L2;
-                  } else {
-                    var16 = null;
-                    kb.a(-123, (int[]) null, -30, -85, -53, -125, (int[]) null, 41, 37, -119, -27, true, -85);
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
                 param7 = -param10;
-                L3: while (true) {
+                L2: while (true) {
                   if (param7 >= 0) {
                     param4 = param4 + param5;
                     param12 = param12 + param0;
                     param8++;
                     continue L1;
                   } else {
-                    L4: {
+                    L3: {
                       int incrementValue$3 = param12;
                       param12++;
                       param3 = param1[incrementValue$3];
                       if (param3 == 0) {
                         param4++;
-                        break L4;
+                        break L3;
                       } else {
                         if (param3 >> 8 != (param3 & 65535)) {
                           int incrementValue$4 = param4;
                           param4++;
                           param6[incrementValue$4] = param3;
-                          break L4;
+                          break L3;
                         } else {
                           param3 = param3 & 255;
                           int incrementValue$5 = param4;
                           param4++;
                           param6[incrementValue$5] = dg.a(param3 * var14, 65280) + dg.a(var13_int * param3 >> 8, 16711935);
                           if (param6[-1 + param4] != 0) {
-                            break L4;
+                            break L3;
                           } else {
                             param6[param4 + -1] = 1;
-                            break L4;
+                            break L3;
                           }
                         }
                       }
                     }
                     param7++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -216,7 +206,7 @@ final class kb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var13 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var13;
             stackOut_16_1 = new StringBuilder().append("kb.C(").append(param0).append(44);
@@ -231,7 +221,7 @@ final class kb {
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L5;
+              break L4;
             } else {
               stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
               stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
@@ -239,10 +229,10 @@ final class kb {
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
               stackIn_19_2 = stackOut_17_2;
-              break L5;
+              break L4;
             }
           }
-          L6: {
+          L5: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
             stackIn_21_0 = stackOut_19_0;
@@ -256,7 +246,7 @@ final class kb {
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
-              break L6;
+              break L5;
             } else {
               stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
@@ -264,10 +254,10 @@ final class kb {
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
               stackIn_22_2 = stackOut_20_2;
-              break L6;
+              break L5;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
+          throw qk.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + 1 + 44 + param12 + 41);
         }
     }
 

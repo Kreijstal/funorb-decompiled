@@ -204,10 +204,10 @@ final class up implements lv {
         var2.field_n = var2.field_n + 1;
         int var3 = var2.field_n;
         var2.a(112, 2);
-        var2.a(param1, er.field_h.length, param1 ^ 1991220144, er.field_h);
-        var2.a(param1 ^ 124, lk.field_l);
+        var2.a(0, er.field_h.length, 1991220144, er.field_h);
+        var2.a(124, lk.field_l);
         var2.a(124, ru.field_C);
-        var2.a(0, rf.field_d.length, param1 + 1991220144, rf.field_d);
+        var2.a(0, rf.field_d.length, 1991220144, rf.field_d);
         var2.c(62, -var3 + var2.field_n);
     }
 
@@ -538,7 +538,7 @@ final class up implements lv {
         return var2;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         if (!(wd.field_l == null)) {
             wd.field_l.l(4508);
         }
@@ -659,7 +659,8 @@ final class up implements lv {
             param0 = param0 + var3 * (-param0 + na.field_Ab) / var2;
         }
         g.field_a.a(true, 640, df.field_H, param0, 120);
-        cf.a(119, mj.field_b, 640, 5, eb.field_b, na.field_Ab + -24, 0);
+        int discarded$0 = 0;
+        cf.a(119, mj.field_b, 640, 5, eb.field_b, na.field_Ab + -24);
     }
 
     final int a(int param0, boolean param1) {
@@ -1098,7 +1099,7 @@ final class up implements lv {
         return false;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         kr.field_e = true;
         ua.field_g = 15000L + nj.a(-112);
         return vj.field_c == 11 ? true : false;
@@ -1638,7 +1639,7 @@ final class up implements lv {
           if (param0 >= 36) {
             break L6;
           } else {
-            String discarded$1 = ((up) this).toString();
+            String discarded$2 = ((up) this).toString();
             break L6;
           }
         }
@@ -1836,6 +1837,7 @@ final class up implements lv {
                 L17: {
                   param6 = param6 + var28[2];
                   if (param2) {
+                    int discarded$3 = 1;
                     var17 = vo.a((byte) -18, ti.field_g, new String[1]);
                     q.field_d.a(var17, param1 + 10, param6 + 15, 16777215, 65793);
                     break L17;
@@ -1928,10 +1930,10 @@ final class up implements lv {
         return var3;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_d = null;
         field_a = null;
-        int var1 = 8 % ((53 - param0) / 56);
+        int var1 = 0;
         field_m = null;
         field_k = null;
     }

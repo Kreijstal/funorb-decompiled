@@ -310,8 +310,8 @@ final class bk extends nm {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = bk.c(16);
                                     int discarded$4 = bk.c(16);
+                                    int discarded$5 = bk.c(16);
                                     field_A[var6] = bk.c(8);
                                     var6++;
                                     continue L6;
@@ -336,7 +336,7 @@ final class bk extends nm {
                       }
                     }
                   } else {
-                    int discarded$5 = bk.c(16);
+                    int discarded$6 = bk.c(16);
                     var3++;
                     continue L2;
                   }
@@ -396,7 +396,8 @@ final class bk extends nm {
                               continue L0;
                             }
                           } else {
-                            var9[var11] = op.a(var10, var11, -1);
+                            int discarded$7 = -1;
+                            var9[var11] = op.a(var10, var11);
                             var11++;
                             continue L12;
                           }

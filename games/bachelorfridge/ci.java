@@ -7,7 +7,7 @@ final class ci extends td {
     static String field_p;
     static int[] field_q;
 
-    public static void b(int param0) {
+    public static void b() {
         field_q = null;
         field_p = null;
         int var1 = 0;

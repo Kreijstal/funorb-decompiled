@@ -372,13 +372,17 @@ final class gd extends ob {
         String stackOut_45_2 = null;
         try {
           L0: {
-            ve.a(param12 ^ param12, param17, param0, param1, param10);
+            ve.a(0, param17, param0, param1, param10);
             gf.a((byte) 72, param17);
-            nn.a(param8, param19, param3, param2, param6, param9, param4, param11, param17, param18, param5, param16, param15, param13, param12 + -17290);
-            hg.a(param7, param14, param17, (byte) -103);
+            int discarded$4 = 2;
+            nn.a(param8, param19, 3, param2, 6, param9, param4, param11, param17, param18, param5, param16, 1, param13);
+            int discarded$5 = -103;
+            hg.a(param7, true, param17);
             tc.a((byte) 6);
-            ik.a((byte) -85);
-            r.a(false);
+            int discarded$6 = -85;
+            ik.a();
+            int discarded$7 = 0;
+            r.a();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -461,7 +465,7 @@ final class gd extends ob {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param3).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(3).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -511,7 +515,7 @@ final class gd extends ob {
           }
           L6: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param6).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(6).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -636,7 +640,7 @@ final class gd extends ob {
           }
           L11: {
             stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(param12).append(44);
+            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(17292).append(44);
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -661,7 +665,7 @@ final class gd extends ob {
           }
           L12: {
             stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-            stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(44).append(param14).append(44).append(param15).append(44);
+            stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(44).append(1).append(44).append(1).append(44);
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -780,7 +784,7 @@ final class gd extends ob {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_pb = null;
         field_mb = null;
         field_qb = null;
@@ -790,33 +794,11 @@ final class gd extends ob {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        int var3 = 0;
-        if (param0 != 29389) {
-          L0: {
-            field_tb = 65;
-            var2 = 0;
-            if ((7 & param1) == 0) {
-              break L0;
-            } else {
-              var2 = 8 + -(7 & param1);
-              break L0;
-            }
-          }
-          var3 = var2 + param1;
-          return var3;
-        } else {
-          L1: {
-            var2 = 0;
-            if ((7 & param1) == 0) {
-              break L1;
-            } else {
-              var2 = 8 + -(7 & param1);
-              break L1;
-            }
-          }
-          var3 = var2 + param1;
-          return var3;
+        if ((7 & param1) != 0) {
+            var2 = 8 + -(7 & param1);
         }
+        int var3 = var2 + param1;
+        return var3;
     }
 
     static {

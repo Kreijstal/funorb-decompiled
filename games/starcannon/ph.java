@@ -19,35 +19,18 @@ class ph extends qj implements ga {
         var3 = 1 << param2;
         if ((var3 & eb.field_c) == 0) {
           eb.field_c = eb.field_c | var3;
-          if (!param1) {
-            jg.field_H = jg.field_H | var3;
-            pk.field_a.b(90, (rf) (Object) new wf(param2));
-            if (!a.field_a) {
-              if (wk.a(112)) {
-                bh.field_e.b(86, (rf) (Object) new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
-                return;
-              } else {
-                hb discarded$2 = rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
-                return;
-              }
+          jg.field_H = jg.field_H | var3;
+          pk.field_a.b(90, (rf) (Object) new wf(param2));
+          if (!a.field_a) {
+            if (wk.a(112)) {
+              bh.field_e.b(86, (rf) (Object) new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
+              return;
             } else {
+              hb discarded$2 = rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
               return;
             }
           } else {
-            ph.a(-49, false, 94);
-            jg.field_H = jg.field_H | var3;
-            pk.field_a.b(90, (rf) (Object) new wf(param2));
-            if (!a.field_a) {
-              if (wk.a(112)) {
-                bh.field_e.b(86, (rf) (Object) new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
-                return;
-              } else {
-                hb discarded$3 = rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
-                return;
-              }
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           return;
@@ -67,7 +50,7 @@ class ph extends qj implements ga {
         }
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_mb = null;
         field_nb = null;
         field_gb = null;
@@ -86,7 +69,8 @@ class ph extends qj implements ga {
               return;
             }
           } else {
-            vg.a(32083);
+            int discarded$2 = 32083;
+            vg.a();
             return;
           }
         } else {

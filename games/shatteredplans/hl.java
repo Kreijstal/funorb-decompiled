@@ -12,13 +12,10 @@ final class hl extends kg {
     static qr field_I;
 
     final static int a(int param0, int param1) {
-        if (param0 >= -21) {
-            return 83;
-        }
         return (param1 - 100) / 200;
     }
 
-    final static void a(pf param0, boolean param1) throws jn {
+    final static void a(pf param0) throws jn {
         RuntimeException runtimeException = null;
         nc var3 = null;
         nc var4 = null;
@@ -138,14 +135,11 @@ final class hl extends kg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_I = null;
         field_D = null;
         field_E = null;
         field_K = null;
-        if (param0 <= 17) {
-            field_H = null;
-        }
         field_H = null;
         field_J = null;
     }
@@ -231,6 +225,7 @@ final class hl extends kg {
     }
 
     final static bi[] a(byte param0, int param1) {
+        int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         double var8 = 0.0;
@@ -243,11 +238,7 @@ final class hl extends kg {
         bi[] var16 = new bi[80];
         bi[] var2 = var16;
         bi var3 = new bi(240, 120);
-        int var4 = 0;
-        if (param0 != 111) {
-            hl.a((byte) 53);
-        }
-        while (var4 < 80) {
+        for (var4 = 0; var4 < 80; var4++) {
             var3.e();
             gf.b();
             for (var5 = 0; var5 < 4; var5++) {
@@ -262,7 +253,6 @@ final class hl extends kg {
             var2[var4] = new bi(60, 30);
             var16[var4].e();
             var3.g(0, 0);
-            var4++;
         }
         cg.i(0);
         return var2;

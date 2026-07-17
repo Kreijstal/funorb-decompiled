@@ -35,43 +35,39 @@ final class ca {
         String stackOut_8_2 = null;
         try {
           L0: {
-            if (param7 >= 101) {
-              L1: {
-                hb.field_j.field_S = param6;
-                if (2 == ui.field_g) {
-                  oa.field_s.field_S = nj.field_c;
-                  break L1;
-                } else {
-                  oa.field_s.field_S = ml.field_x;
-                  break L1;
-                }
+            L1: {
+              hb.field_j.field_S = param6;
+              if (2 == ui.field_g) {
+                oa.field_s.field_S = nj.field_c;
+                break L1;
+              } else {
+                oa.field_s.field_S = ml.field_x;
+                break L1;
               }
-              var9_int = 495;
-              var10 = 5;
-              gg.field_o.a(88, -10 + var9_int, param3, var10, 5);
-              dj.field_d.a(97, -ui.field_b.field_Fb + gg.field_o.field_Fb, param3, 0, 0);
-              var10 = var10 + (param8 + param3);
-              ui.field_b.a(83, ui.field_b.field_Fb, param3, 0, dj.field_d.field_Fb);
-              kk.field_a.a(94, kk.field_a.j(-21391), param1, var10, 5);
-              var11 = oa.field_s.j(-21391);
-              oa.field_s.a(120, var11, param1, var10, -5 + var9_int + -var11);
-              hb.field_j.a(121, var9_int, param4, 0, 0);
-              var12 = 5 + var10 - -param1;
-              lm.field_F.a(120, var9_int, var12, param4, 0);
-              lm.field_F.field_Bb = vl.a(lm.field_F.field_db, 3, 0, 2105376, 11579568, 8421504);
-              var12 = var12 + param4;
-              gk.field_c.a(72, var9_int, var12, param0 - var12 / 2, -(var9_int / 2) + param5);
-              break L0;
-            } else {
-              return;
             }
+            var9_int = 495;
+            var10 = 5;
+            gg.field_o.a(88, -10 + var9_int, param3, var10, 5);
+            dj.field_d.a(97, -ui.field_b.field_Fb + gg.field_o.field_Fb, param3, 0, 0);
+            var10 = var10 + (param8 + param3);
+            ui.field_b.a(83, ui.field_b.field_Fb, param3, 0, dj.field_d.field_Fb);
+            kk.field_a.a(94, kk.field_a.j(-21391), param1, var10, 5);
+            var11 = oa.field_s.j(-21391);
+            oa.field_s.a(120, var11, param1, var10, -5 + var9_int + -var11);
+            hb.field_j.a(121, var9_int, 20, 0, 0);
+            var12 = 5 + var10 - -param1;
+            lm.field_F.a(120, var9_int, var12, 20, 0);
+            lm.field_F.field_Bb = vl.a(lm.field_F.field_db, 3, 0, 2105376, 11579568, 8421504);
+            var12 = var12 + 20;
+            gk.field_c.a(72, var9_int, var12, param0 - var12 / 2, -(var9_int / 2) + param5);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var9 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var9;
-            stackOut_7_1 = new StringBuilder().append("ca.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_7_1 = new StringBuilder().append("ca.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(20).append(44).append(param5).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -94,7 +90,7 @@ final class ca {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param7 + 44 + param8 + 41);
+          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 126 + 44 + param8 + 41);
         }
     }
 
@@ -103,10 +99,7 @@ final class ca {
         int var6 = Vertigo2.field_L ? 1 : 0;
         er[] var7 = new er[9];
         er[] var4 = var7;
-        if (param0 > -73) {
-            return null;
-        }
-        var7[0] = ed.a(param3, param2, false);
+        var7[0] = ed.a(param3, 1, false);
         for (var5 = 1; var5 < 9; var5++) {
             var7[var5] = var7[0];
         }
@@ -254,7 +247,8 @@ final class ca {
                     stackIn_80_0 = stackOut_79_0;
                     break L4;
                   }
-                  ff.a(stackIn_80_0 != 0, 11182);
+                  int discarded$6 = 11182;
+                  ff.a(stackIn_80_0 != 0);
                   if (var2 != 0) {
                     L6: {
                       L7: {
@@ -328,7 +322,8 @@ final class ca {
                         stackIn_60_0 = stackOut_59_0;
                         break L9;
                       }
-                      ff.a(stackIn_60_0 != 0, 11182);
+                      int discarded$7 = 11182;
+                      ff.a(stackIn_60_0 != 0);
                       if (var2 != 0) {
                         L11: {
                           L12: {
@@ -388,7 +383,8 @@ final class ca {
                         break L13;
                       }
                       L15: {
-                        ff.a(stackIn_47_0 != 0, 11182);
+                        int discarded$8 = 11182;
+                        ff.a(stackIn_47_0 != 0);
                         if (var2 != 0) {
                           L16: {
                             L17: {
@@ -442,7 +438,8 @@ final class ca {
                           }
                         }
                         L19: {
-                          ff.a(stackIn_33_0 != 0, 11182);
+                          int discarded$9 = 11182;
+                          ff.a(stackIn_33_0 != 0);
                           if (var2 != 0) {
                             L20: {
                               L21: {
@@ -481,7 +478,8 @@ final class ca {
                         return;
                       } else {
                         L22: {
-                          ff.a(false, 11182);
+                          int discarded$10 = 11182;
+                          ff.a(false);
                           if (var2 != 0) {
                             L23: {
                               L24: {
@@ -521,7 +519,8 @@ final class ca {
                       }
                     } else {
                       L25: {
-                        ff.a(false, 11182);
+                        int discarded$11 = 11182;
+                        ff.a(false);
                         if (var2 != 0) {
                           L26: {
                             L27: {

@@ -6,7 +6,7 @@ class nl extends gm {
     static mp field_n;
     static boolean field_o;
 
-    public static void b(int param0) {
+    public static void b() {
         field_n = null;
         field_p = null;
     }

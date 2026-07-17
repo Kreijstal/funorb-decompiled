@@ -867,64 +867,56 @@ abstract class h {
             L2: while (true) {
               if (var8 <= var9) {
                 L3: {
-                  if (param0 == -8) {
-                    break L3;
-                  } else {
-                    field_c = null;
-                    break L3;
-                  }
-                }
-                L4: {
                   if (var7 < var8) {
                     int incrementValue$3 = var6;
                     var6++;
                     param4[incrementValue$3] = param3.substring(var7, var8).trim();
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
                 stackOut_21_0 = var6;
                 stackIn_22_0 = stackOut_21_0;
                 break L0;
               } else {
-                L5: {
-                  L6: {
+                L4: {
+                  L5: {
                     var10 = param3.charAt(var9);
                     if (var10 == 32) {
-                      break L6;
+                      break L5;
                     } else {
                       if (var10 == 45) {
-                        break L6;
-                      } else {
                         break L5;
+                      } else {
+                        break L4;
                       }
                     }
                   }
                   var11 = param3.substring(var7, var9 - -1).trim();
                   var12 = param1.a(var11);
                   if (var12 < param2) {
-                    break L5;
+                    break L4;
                   } else {
                     var7 = var9 - -1;
                     int incrementValue$4 = var6;
                     var6++;
                     param4[incrementValue$4] = var11;
-                    break L5;
+                    break L4;
                   }
                 }
-                L7: {
+                L6: {
                   if (var10 != 62) {
-                    break L7;
+                    break L6;
                   } else {
                     if (!param3.regionMatches(-3 + var9, "<br>", 0, 4)) {
-                      break L7;
+                      break L6;
                     } else {
                       int incrementValue$5 = var6;
                       var6++;
                       param4[incrementValue$5] = param3.substring(var7, var9 + -3).trim();
                       var7 = var9 - -1;
-                      break L7;
+                      break L6;
                     }
                   }
                 }
@@ -935,10 +927,10 @@ abstract class h {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var5 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var5;
-            stackOut_23_1 = new StringBuilder().append("h.D(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("h.D(").append(-8).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -950,7 +942,7 @@ abstract class h {
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
-              break L8;
+              break L7;
             } else {
               stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
               stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
@@ -958,10 +950,10 @@ abstract class h {
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
               stackIn_26_2 = stackOut_24_2;
-              break L8;
+              break L7;
             }
           }
-          L9: {
+          L8: {
             stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
             stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(param2).append(44);
             stackIn_28_0 = stackOut_26_0;
@@ -975,7 +967,7 @@ abstract class h {
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
-              break L9;
+              break L8;
             } else {
               stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
               stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
@@ -983,10 +975,10 @@ abstract class h {
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
               stackIn_29_2 = stackOut_27_2;
-              break L9;
+              break L8;
             }
           }
-          L10: {
+          L9: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
             stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44);
             stackIn_31_0 = stackOut_29_0;
@@ -1000,7 +992,7 @@ abstract class h {
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
-              break L10;
+              break L9;
             } else {
               stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
               stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
@@ -1008,7 +1000,7 @@ abstract class h {
               stackIn_32_0 = stackOut_30_0;
               stackIn_32_1 = stackOut_30_1;
               stackIn_32_2 = stackOut_30_2;
-              break L10;
+              break L9;
             }
           }
           throw sl.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);

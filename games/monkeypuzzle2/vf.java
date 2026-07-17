@@ -5,7 +5,7 @@ final class vf {
     static int field_b;
     static int field_a;
 
-    final static void a(boolean param0) {
+    final static void a() {
         qh.a(17, true);
     }
 

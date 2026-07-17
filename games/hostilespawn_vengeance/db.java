@@ -64,7 +64,8 @@ final class db extends hi {
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               } else {
-                if (!nf.a(var6, -29205)) {
+                int discarded$6 = -29205;
+                if (!nf.a(var6)) {
                   if (pb.a(17032, var6)) {
                     stackOut_12_0 = uj.field_i;
                     stackIn_13_0 = stackOut_12_0;
@@ -285,7 +286,7 @@ final class db extends hi {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_t = null;
         field_r = null;
         field_u = null;
@@ -439,7 +440,8 @@ final class db extends hi {
             var3 = ((db) this).field_q.field_n.toLowerCase();
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
-              if (ja.a(var4, var3, 0)) {
+              int discarded$6 = 0;
+              if (ja.a(var4, var3)) {
                 var5 = -63 % ((3 - param1) / 42);
                 if (!this.a(123, param0)) {
                   stackOut_9_0 = nd.field_d;
@@ -496,9 +498,9 @@ final class db extends hi {
 
     final static void a(boolean param0, int param1, ji param2) {
         try {
-            kh.a(param2, param1, (byte) -105, param0);
+            kh.a(param2, 256, (byte) -105, param0);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "db.H(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "db.H(" + param0 + 44 + 256 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

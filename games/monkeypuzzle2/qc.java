@@ -43,10 +43,12 @@ final class qc extends rj implements ag {
           if (((qc) this).field_m != null) {
             if (param0 != 54) {
               ((qc) this).m(90);
-              oh.a(p.field_a, ei.field_a + ((qc) this).field_l - ((qc) this).field_Q, 94);
+              int discarded$4 = 94;
+              oh.a(p.field_a, ei.field_a + ((qc) this).field_l - ((qc) this).field_Q);
               return ((qc) this).field_m;
             } else {
-              oh.a(p.field_a, ei.field_a + ((qc) this).field_l - ((qc) this).field_Q, 94);
+              int discarded$5 = 94;
+              oh.a(p.field_a, ei.field_a + ((qc) this).field_l - ((qc) this).field_Q);
               return ((qc) this).field_m;
             }
           } else {
@@ -57,7 +59,7 @@ final class qc extends rj implements ag {
         }
     }
 
-    public static void q(int param0) {
+    public static void q() {
         field_L = null;
         field_O = null;
         field_R = null;

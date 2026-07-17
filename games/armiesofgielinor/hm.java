@@ -15,7 +15,7 @@ final class hm {
     static int[] field_l;
     static je field_f;
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_l = null;
         field_e = null;
@@ -32,7 +32,7 @@ final class hm {
         }
     }
 
-    final static int a(mo param0, int param1) {
+    final static int a(mo param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -194,13 +194,13 @@ final class hm {
         var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            var4_int = param0.k(param1 + 2);
+            var4_int = param0.k(0);
             if (9 >= var4_int) {
               L1: {
-                if (var4_int <= param1) {
+                if (var4_int >= 1) {
                   L2: {
                     L3: {
-                      if (-6 > var4_int) {
+                      if (var4_int < 5) {
                         break L3;
                       } else {
                         if (!param2) {
@@ -212,7 +212,7 @@ final class hm {
                     }
                     var6 = 0;
                     L4: while (true) {
-                      if (((hm) this).field_a.length <= var6) {
+                      if (~((hm) this).field_a.length >= ~var6) {
                         break L2;
                       } else {
                         ((hm) this).field_a[var6] = param0.k(0);
@@ -223,7 +223,7 @@ final class hm {
                   }
                   var6 = 0;
                   L5: while (true) {
-                    if (((hm) this).field_d.length <= var6) {
+                    if (~((hm) this).field_d.length >= ~var6) {
                       ((hm) this).field_c = param0.i(1);
                       var6 = 0;
                       L6: while (true) {
@@ -266,7 +266,7 @@ final class hm {
                   ((hm) this).field_j = 0;
                   var6 = 0;
                   L9: while (true) {
-                    if (var6 >= var5) {
+                    if (~var6 <= ~var5) {
                       break L8;
                     } else {
                       var7 = at.field_c[var6];
@@ -312,18 +312,15 @@ final class hm {
               break L10;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + -2 + 44 + param2 + 41);
         }
         return stackIn_26_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        as.field_E.a(param5, -20500, param6, param2, param4);
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        as.field_E.a(param5, -20500, 640, 0, 5);
         if (qd.field_I != null) {
-            qd.field_I.b(param1, param3, param5, -kn.field_z + param1, param5, param0 ^ 6518);
-        }
-        if (param0 != -1) {
-            field_i = null;
+            qd.field_I.b(param1, param3, param5, -kn.field_z + param1, param5, -6519);
         }
     }
 

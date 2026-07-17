@@ -101,7 +101,7 @@ final class jb extends java.awt.Canvas implements java.awt.event.FocusListener {
     jb() {
     }
 
-    final static int a(int param0) {
+    final static int a() {
         return ak.field_y;
     }
 

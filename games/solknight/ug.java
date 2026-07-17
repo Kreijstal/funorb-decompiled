@@ -91,29 +91,25 @@ abstract class ug {
         o[] var6 = null;
         var6 = new o[9];
         var5 = var6;
-        o dupTemp$4 = ib.a(param2, true, param4);
+        o dupTemp$4 = ib.a(1, true, param4);
         var6[6] = dupTemp$4;
         var5[3] = dupTemp$4;
         var5[2] = dupTemp$4;
         var5[1] = dupTemp$4;
         var5[0] = dupTemp$4;
-        o dupTemp$5 = ib.a(param2, true, param3);
+        o dupTemp$5 = ib.a(1, true, param3);
         var6[8] = dupTemp$5;
         var5[7] = dupTemp$5;
         var5[5] = dupTemp$5;
-        if (param1 == -8591) {
-          if (param0 != 0) {
-            var6[4] = ib.a(64, true, param0);
-            return var5;
-          } else {
-            return var5;
-          }
+        if (param0 != 0) {
+          var6[4] = ib.a(64, true, param0);
+          return var5;
         } else {
-          return null;
+          return var5;
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_e = null;
         field_g = null;
@@ -125,12 +121,12 @@ abstract class ug {
         try {
             ai.field_a = param5;
             kb.field_d = param0;
-            vg.field_N = param3;
-            int var6_int = 57 % ((param4 - 32) / 62);
-            bl.field_i = param2;
-            g.field_l = param1;
+            vg.field_N = 2;
+            int var6_int = 0;
+            bl.field_i = 8;
+            g.field_l = 8;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ug.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ug.L(" + (param0 != null ? "{...}" : "null") + 44 + 8 + 44 + 8 + 44 + 2 + 44 + 117 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -166,7 +162,8 @@ abstract class ug {
         try {
           if (null != lc.field_m) {
             var6 = (CharSequence) (Object) param0;
-            var2 = jg.a(var6, -2);
+            int discarded$4 = -2;
+            var2 = jg.a(var6);
             if (param1 >= 103) {
               L0: {
                 if (var2 == null) {
@@ -181,7 +178,8 @@ abstract class ug {
                 if (var3 != null) {
                   L2: {
                     var7 = (CharSequence) (Object) var3.field_ib;
-                    var4 = jg.a(var7, -2);
+                    int discarded$5 = -2;
+                    var4 = jg.a(var7);
                     if (var4 == null) {
                       var4 = var3.field_ib;
                       break L2;

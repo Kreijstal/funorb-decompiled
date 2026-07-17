@@ -5,7 +5,7 @@ final class uh extends ac {
     static kj field_y;
     static int[] field_x;
 
-    public static void c(int param0) {
+    public static void c() {
         field_y = null;
         field_x = null;
     }
@@ -105,7 +105,7 @@ final class uh extends ac {
         int discarded$0 = uh.b(-111);
     }
 
-    final static nf a(pk param0, byte param1) {
+    final static nf a(pk param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -166,7 +166,7 @@ final class uh extends ac {
               }
               L2: {
                 if (var4 != 0) {
-                  int discarded$1 = param0.e((byte) -17, 16);
+                  int discarded$3 = param0.e((byte) -17, 16);
                   var5.field_J = ji.a(var5.field_J, 16, 0, param0);
                   var5.field_z = ji.a(var5.field_z, 16, 0, param0);
                   var5.field_h = ji.a(var5.field_h, 16, 0, param0);
@@ -189,7 +189,9 @@ final class uh extends ac {
                 if (!ac.a((byte) 37, param0)) {
                   break L4;
                 } else {
-                  var5.field_n = vk.a(var5.field_n, param0, 16, 8);
+                  int discarded$4 = 8;
+                  int discarded$5 = 16;
+                  var5.field_n = vk.a(var5.field_n, param0);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {
@@ -256,7 +258,7 @@ final class uh extends ac {
         return stackIn_26_0;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         RuntimeException var1 = null;
         float var2 = 0.0f;
         float var3 = 0.0f;

@@ -40,15 +40,16 @@ final class tk {
         ((tk) this).field_w = ((tk) this).field_w + 1;
     }
 
-    final static void a(byte param0) {
-        tn.a(-1);
+    final static void a() {
+        int discarded$0 = -1;
+        tn.a();
         he.field_s = true;
         qc.field_t = true;
         lg.field_w.h(1);
         gh.a(23321, ha.field_o, false);
     }
 
-    private final int a(cn[] param0, cn[] param1, int[] param2, se param3, int param4, String[] param5, int param6) {
+    private final int a(cn[] param0, cn[] param1, int[] param2, se param3, int param4, String[] param5) {
         RuntimeException var8 = null;
         int var8_int = 0;
         Random var9 = null;
@@ -342,12 +343,9 @@ final class tk {
         return stackIn_5_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_v = null;
         field_k = null;
-        if (param0 != 10) {
-            return;
-        }
         field_b = null;
     }
 
@@ -355,9 +353,6 @@ final class tk {
         sm.field_c = param2;
         om.field_a = param0;
         he.field_p = param3;
-        if (param1 > -35) {
-            field_v = null;
-        }
     }
 
     final void a(int param0) {
@@ -449,7 +444,8 @@ final class tk {
 
     tk(cn[] param0, int[] param1, int param2, se param3, String[] param4, cn[] param5) {
         try {
-            ((tk) this).field_g = this.a(param5, param0, param1, param3, param2, param4, 2048);
+            int discarded$0 = 2048;
+            ((tk) this).field_g = this.a(param5, param0, param1, param3, param2, param4);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
         }

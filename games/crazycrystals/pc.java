@@ -824,7 +824,7 @@ class pc extends qm {
         return stackIn_13_0 != 0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_u = null;
         int var1 = 0;
         field_w = null;

@@ -9,19 +9,24 @@ final class t {
     static int field_f;
     static String field_c;
 
-    final static void a(boolean param0) {
+    final static void a() {
         ih.b((byte) 108);
         if (!(qd.field_j == null)) {
             nd.a(-26621, qd.field_j);
         }
-        dd.a(-91);
-        ra.a(126);
-        id.a(true);
-        if (!(!qb.e((byte) 58))) {
+        int discarded$16 = -91;
+        dd.a();
+        int discarded$35 = 126;
+        ra.a();
+        int discarded$48 = 1;
+        id.a();
+        int discarded$55 = 58;
+        if (!(!qb.e())) {
             pg.field_fb.f(1, 950);
             ue.a((byte) -96, 0);
         }
-        oj.c(-2290);
+        int discarded$56 = -2290;
+        oj.c();
     }
 
     public static void a(int param0) {

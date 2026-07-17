@@ -39,7 +39,7 @@ abstract class wd extends hl {
         return super.j(-87);
     }
 
-    final static StringBuilder a(StringBuilder param0, char param1, int param2, int param3) {
+    final static StringBuilder a(StringBuilder param0) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -66,15 +66,15 @@ abstract class wd extends hl {
         try {
           L0: {
             var4_int = param0.length();
-            param0.setLength(param2);
+            param0.setLength(0);
             var5 = var4_int;
             L1: while (true) {
-              if (param2 <= var5) {
+              if (var5 >= 0) {
                 stackOut_6_0 = (StringBuilder) param0;
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                param0.setCharAt(var5, param1);
+                param0.setCharAt(var5, ' ');
                 var5++;
                 continue L1;
               }
@@ -108,7 +108,7 @@ abstract class wd extends hl {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + 1 + 41);
+          throw sl.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 32 + 44 + 0 + 44 + 1 + 41);
         }
         return stackIn_7_0;
     }
@@ -134,11 +134,11 @@ abstract class wd extends hl {
         ((wd) this).field_N = param1;
     }
 
-    final static k q(int param0) {
+    final static k q() {
         return qc.field_e;
     }
 
-    public static void p(int param0) {
+    public static void p() {
         field_J = null;
         field_I = null;
         field_H = null;

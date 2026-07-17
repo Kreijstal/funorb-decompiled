@@ -44,91 +44,91 @@ final class hi extends bg {
                                     if (param4 >= ua.field_e) {
                                       if (param4 > cj.field_D) {
                                         lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                                        var10 = 14 / ((param1 - 11) / 40);
+                                        var10 = -14;
                                         return;
                                       } else {
                                         vc.a(param2, param8, param0, param4, param6, param5, param3, (byte) 96, param7, param9);
-                                        var10 = 14 / ((param1 - 11) / 40);
+                                        var10 = -14;
                                         return;
                                       }
                                     } else {
                                       lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                                      var10 = 14 / ((param1 - 11) / 40);
+                                      var10 = -14;
                                       return;
                                     }
                                   } else {
                                     lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                                    var10 = 14 / ((param1 - 11) / 40);
+                                    var10 = -14;
                                     return;
                                   }
                                 } else {
                                   lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                                  var10 = 14 / ((param1 - 11) / 40);
+                                  var10 = -14;
                                   return;
                                 }
                               } else {
                                 lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                                var10 = 14 / ((param1 - 11) / 40);
+                                var10 = -14;
                                 return;
                               }
                             } else {
                               lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                              var10 = 14 / ((param1 - 11) / 40);
+                              var10 = -14;
                               return;
                             }
                           } else {
                             lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                            var10 = 14 / ((param1 - 11) / 40);
+                            var10 = -14;
                             return;
                           }
                         } else {
                           lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                          var10 = 14 / ((param1 - 11) / 40);
+                          var10 = -14;
                           return;
                         }
                       } else {
                         lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                        var10 = 14 / ((param1 - 11) / 40);
+                        var10 = -14;
                         return;
                       }
                     } else {
                       lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                      var10 = 14 / ((param1 - 11) / 40);
+                      var10 = -14;
                       return;
                     }
                   } else {
                     lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                    var10 = 14 / ((param1 - 11) / 40);
+                    var10 = -14;
                     return;
                   }
                 } else {
                   lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                  var10 = 14 / ((param1 - 11) / 40);
+                  var10 = -14;
                   return;
                 }
               } else {
                 lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-                var10 = 14 / ((param1 - 11) / 40);
+                var10 = -14;
                 return;
               }
             } else {
               lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-              var10 = 14 / ((param1 - 11) / 40);
+              var10 = -14;
               return;
             }
           } else {
             lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-            var10 = 14 / ((param1 - 11) / 40);
+            var10 = -14;
             return;
           }
         } else {
           lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
-          var10 = 14 / ((param1 - 11) / 40);
+          var10 = -14;
           return;
         }
     }
 
-    final static void a(r param0, int param1) {
+    final static void a(r param0) {
         vh var2 = null;
         vh.a(param0.a("headers.packvorbis", "", 0));
         try {
@@ -243,19 +243,19 @@ final class hi extends bg {
         return stackIn_11_0 != 0;
     }
 
-    final static cr b(int param0) {
+    final static cr b() {
         int var1 = -5;
         return ao.field_O.field_Mb;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_p = null;
         field_n = null;
         field_i = null;
         field_o = null;
     }
 
-    final static boolean c(byte param0) {
+    final static boolean c() {
         return tk.field_e;
     }
 

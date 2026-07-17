@@ -416,7 +416,7 @@ final class hd {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = -19 % ((param1 - 71) / 53);
+        int var2 = 0;
         return vg.a(param0, -1) >> 8;
     }
 

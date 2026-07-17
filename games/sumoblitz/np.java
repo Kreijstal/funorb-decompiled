@@ -31,7 +31,7 @@ final class np {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
     }
 
@@ -66,13 +66,14 @@ final class np {
               if (((np) this).field_f > 32) {
                 L2: while (true) {
                   if (((np) this).field_f >= 64) {
-                    this.b((byte) 99);
+                    int discarded$4 = 99;
+                    this.b();
                     ((np) this).field_f = 0;
                     break L1;
                   } else {
-                    int fieldTemp$2 = ((np) this).field_f;
+                    int fieldTemp$5 = ((np) this).field_f;
                     ((np) this).field_f = ((np) this).field_f + 1;
-                    ((np) this).field_e[fieldTemp$2] = (byte) 0;
+                    ((np) this).field_e[fieldTemp$5] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -84,7 +85,8 @@ final class np {
               if (((np) this).field_f >= 32) {
                 if (param2 < -2) {
                   la.a(((np) this).field_g, 0, ((np) this).field_e, 32, 32);
-                  this.b((byte) 99);
+                  int discarded$6 = 99;
+                  this.b();
                   var4_int = 0;
                   var5 = param0;
                   L4: while (true) {
@@ -109,9 +111,9 @@ final class np {
                   return;
                 }
               } else {
-                int fieldTemp$3 = ((np) this).field_f;
+                int fieldTemp$7 = ((np) this).field_f;
                 ((np) this).field_f = ((np) this).field_f + 1;
-                ((np) this).field_e[fieldTemp$3] = (byte) 0;
+                ((np) this).field_e[fieldTemp$7] = (byte) 0;
                 continue L3;
               }
             }
@@ -148,7 +150,7 @@ final class np {
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -323,7 +325,8 @@ final class np {
                           ((np) this).field_b = ((np) this).field_b + (-var7 + 8);
                           param2 = param2 - (long)(-var7 + 8);
                           if (((np) this).field_b == 512) {
-                            this.b((byte) 99);
+                            int discarded$2 = 99;
+                            this.b();
                             ((np) this).field_b = 0;
                             ((np) this).field_f = 0;
                             break L5;
@@ -351,7 +354,8 @@ final class np {
                             ((np) this).field_f = ((np) this).field_f + 1;
                             ((np) this).field_b = ((np) this).field_b + (-var7 + 8);
                             if (512 == ((np) this).field_b) {
-                              this.b((byte) 99);
+                              int discarded$3 = 99;
+                              this.b();
                               ((np) this).field_b = 0;
                               ((np) this).field_f = 0;
                               break L7;

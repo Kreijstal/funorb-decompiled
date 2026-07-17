@@ -16,7 +16,7 @@ final class un {
     int field_c;
     int field_k;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_m = null;
@@ -44,9 +44,9 @@ final class un {
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_45_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_43_0 = 0;
+        int stackIn_41_0 = 0;
+        int stackOut_40_0 = 0;
+        int stackOut_39_0 = 0;
         if (param0) {
           if (gk.field_a[param1] > gk.field_a[param3]) {
             return true;
@@ -54,31 +54,27 @@ final class un {
             if (gk.field_a[param1] >= gk.field_a[param3]) {
               if (uc.field_k[param3] >= uc.field_k[param1]) {
                 if (uc.field_k[param1] >= uc.field_k[param3]) {
-                  if (param2 == -17596) {
-                    var4 = uda.field_X[param3] + sc.field_o[param3] + mba.field_a[param3];
-                    var5 = sc.field_o[param1] + mba.field_a[param1] - -uda.field_X[param1];
-                    if (var4 < var5) {
-                      return true;
-                    } else {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param1 <= param3) {
-                            stackOut_44_0 = 0;
-                            stackIn_45_0 = stackOut_44_0;
-                            break L0;
-                          } else {
-                            stackOut_43_0 = 1;
-                            stackIn_45_0 = stackOut_43_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_45_0 != 0;
-                      }
-                    }
+                  var4 = uda.field_X[param3] + sc.field_o[param3] + mba.field_a[param3];
+                  var5 = sc.field_o[param1] + mba.field_a[param1] - -uda.field_X[param1];
+                  if (var4 < var5) {
+                    return true;
                   } else {
-                    return false;
+                    if (var4 > var5) {
+                      return false;
+                    } else {
+                      L0: {
+                        if (param1 <= param3) {
+                          stackOut_40_0 = 0;
+                          stackIn_41_0 = stackOut_40_0;
+                          break L0;
+                        } else {
+                          stackOut_39_0 = 1;
+                          stackIn_41_0 = stackOut_39_0;
+                          break L0;
+                        }
+                      }
+                      return stackIn_41_0 != 0;
+                    }
                   }
                 } else {
                   return false;
@@ -101,24 +97,20 @@ final class un {
                 return true;
               } else {
                 if (gk.field_a[param1] >= gk.field_a[param3]) {
-                  if (param2 == -17596) {
-                    var4 = uda.field_X[param3] + sc.field_o[param3] + mba.field_a[param3];
-                    var5 = sc.field_o[param1] + mba.field_a[param1] - -uda.field_X[param1];
-                    if (var4 < var5) {
-                      return true;
+                  var4 = uda.field_X[param3] + sc.field_o[param3] + mba.field_a[param3];
+                  var5 = sc.field_o[param1] + mba.field_a[param1] - -uda.field_X[param1];
+                  if (var4 < var5) {
+                    return true;
+                  } else {
+                    if (var4 > var5) {
+                      return false;
                     } else {
-                      if (var4 > var5) {
+                      if (param1 <= param3) {
                         return false;
                       } else {
-                        if (param1 <= param3) {
-                          return false;
-                        } else {
-                          return true;
-                        }
+                        return true;
                       }
                     }
-                  } else {
-                    return false;
                   }
                 } else {
                   return false;

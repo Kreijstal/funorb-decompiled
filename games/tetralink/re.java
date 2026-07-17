@@ -27,36 +27,22 @@ final class re extends ae {
         if (!(uh.field_b == null)) {
             oa.a((byte) -128, uh.field_b);
         }
-        rl.b(-9648);
+        int discarded$12 = -9648;
+        rl.b();
         jl.a(109);
-        bm.a(-25676);
-        if (!(!wm.c(-14688))) {
+        int discarded$33 = -25676;
+        bm.a();
+        int discarded$40 = -14688;
+        if (!(!wm.c())) {
             nd.field_Lb.f(1, (byte) -92);
             ak.a((byte) -86, 0);
         }
-        mk.a(false);
+        int discarded$41 = 0;
+        mk.a();
     }
 
     final static boolean a(byte param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 >= -84) {
-          return true;
-        } else {
-          L0: {
-            if ((-param1 & param1) != param1) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return ~(-param1 & param1) == ~param1;
     }
 
     public static void a(int param0) {
@@ -79,7 +65,7 @@ final class re extends ae {
         }
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         gd var2 = null;
@@ -112,7 +98,7 @@ final class re extends ae {
             }
             L3: {
               db.field_e = null;
-              var1_int = 39 / ((param0 - 14) / 42);
+              var1_int = -39;
               if (ui.field_d != null) {
                 ui.field_d.b(1);
                 ui.field_d = null;
@@ -144,7 +130,7 @@ final class re extends ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) runtimeException, "re.C(" + param0 + 41);
+          throw oi.a((Throwable) (Object) runtimeException, "re.C(" + -33 + 41);
         }
     }
 

@@ -77,7 +77,7 @@ final class pc {
         String stackOut_12_2 = null;
         try {
           L0: {
-            var5_int = param0.a(param1, param2);
+            var5_int = param0.a(-1, param2);
             var6 = param0.a(-70, var5_int, param3);
             stackOut_0_0 = ie.a(false, var6, var5_int, param0, param4);
             stackIn_1_0 = stackOut_0_0;
@@ -113,7 +113,7 @@ final class pc {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(-1).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -191,7 +191,7 @@ final class pc {
         return stackIn_1_0;
     }
 
-    final static void a(mg param0, byte param1) {
+    final static void a(mg param0) {
         ij var2 = null;
         RuntimeException var2_ref = null;
         rm[] var3 = null;
@@ -299,15 +299,10 @@ final class pc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_c = null;
-        if (param0 != -30114) {
-            field_b = -39L;
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 

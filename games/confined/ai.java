@@ -217,14 +217,16 @@ class ai extends em {
                       qf.field_c.a(var14, (byte) 45);
                       qf.field_c.a(var8, (byte) 105);
                       var15 = (CharSequence) (Object) param1;
-                      qf.field_c.a(ka.a(var15, 23617), (byte) 75);
+                      int discarded$5 = 23617;
+                      qf.field_c.a(ka.a(var15), (byte) 75);
                       qf.field_c.c(param0, 8);
                       qf.field_c.f(114, param4);
                       qf.field_c.f(117, var9);
                       vh.field_a.f(101, 18);
                       vh.field_a.field_n = vh.field_a.field_n + 2;
                       var10 = vh.field_a.field_n;
-                      var11_ref_String = pa.a(ii.b(false), 59);
+                      int discarded$6 = 59;
+                      var11_ref_String = pa.a(ii.b(false));
                       if (var11_ref_String != null) {
                         break L7;
                       } else {
@@ -267,7 +269,8 @@ class ai extends em {
                   }
                   if (248 != var9) {
                     if (99 == var9) {
-                      boolean discarded$1 = jj.a(lb.c(-30316), (byte) 16);
+                      int discarded$7 = -30316;
+                      boolean discarded$8 = jj.a(lb.c(), (byte) 16);
                       ca.field_o = new Boolean(qe.a((byte) -73, (kg) (Object) e.field_c));
                       e.field_c.field_n = 0;
                       break L8;
@@ -330,7 +333,8 @@ class ai extends em {
                     if (Confined.field_F == 255) {
                       var9_ref_String = e.field_c.e((byte) 102);
                       if (var9_ref_String != null) {
-                        qc.a(var9_ref_String, ii.b(false), -1);
+                        int discarded$9 = -1;
+                        qc.a(var9_ref_String, ii.b(false));
                         break L13;
                       } else {
                         break L13;
@@ -470,7 +474,7 @@ class ai extends em {
         return stackIn_65_0;
     }
 
-    final static void a(ok param0, ji param1, int param2, int param3, int param4, int param5, int param6, int param7, ji param8, int param9, int param10, int param11, int param12, ji param13, int param14, int param15, int param16, ok param17, int param18, int param19, int param20) {
+    final static void a(ok param0, ji param1, int param2, int param3, int param4, int param5, int param6, int param7, ji param8, int param9, int param10, int param11, int param12, ji param13, int param14, int param15, int param16, ok param17) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -551,13 +555,19 @@ class ai extends em {
         String stackOut_15_2 = null;
         try {
           L0: {
-            nl.a(param0, param7, param17, 2);
-            ue.a(param5, param11, param2, param9, 243);
-            ud.a(param15, (byte) -12, param18);
-            var21_int = -30 % ((-19 - param12) / 55);
-            pb.a(param13, (byte) -71, param8, param16, param10, param14);
-            kc.a(13421772, param3, param1, param20);
-            am.a(param19, (byte) -18, param6, param4);
+            int discarded$6 = 2;
+            nl.a(param0, 480, param17);
+            int discarded$7 = 243;
+            ue.a(20, 20, 16, 16);
+            ud.a(320, (byte) -12, 240);
+            var21_int = 0;
+            pb.a(param13, (byte) -71, param8, 5, 50, 0);
+            kc.a(13421772, 30, param1, 20);
+            int discarded$8 = 4243584;
+            int discarded$9 = 9805732;
+            int discarded$10 = -18;
+            int discarded$11 = 16777215;
+            am.a();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -615,7 +625,7 @@ class ai extends em {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(16).append(44).append(30).append(44).append(4243584).append(44).append(20).append(44).append(9805732).append(44).append(480).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -640,7 +650,7 @@ class ai extends em {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param9).append(44).append(param10).append(44).append(param11).append(44).append(param12).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(16).append(44).append(50).append(44).append(20).append(44).append(-78).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -665,7 +675,7 @@ class ai extends em {
           }
           L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param14).append(44).append(param15).append(44).append(param16).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(0).append(44).append(320).append(44).append(5).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -688,11 +698,11 @@ class ai extends em {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param18 + 44 + param19 + 44 + param20 + 41);
+          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 240 + 44 + 16777215 + 44 + 20 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
     }
 

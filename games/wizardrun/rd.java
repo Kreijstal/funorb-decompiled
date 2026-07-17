@@ -4,7 +4,7 @@
 final class rd {
     static String field_a;
 
-    final static int a(int param0, boolean param1) {
+    final static int a(int param0) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;
@@ -219,7 +219,7 @@ final class rd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

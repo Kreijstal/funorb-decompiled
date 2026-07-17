@@ -441,7 +441,7 @@ final class si {
         return ((si) this).field_n;
     }
 
-    private final void c(byte param0) throws IOException {
+    private final void c() throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -487,7 +487,8 @@ final class si {
 
     final static kl a(int param0, int param1) {
         int var2 = -72 / ((-23 - param0) / 63);
-        return sc.a(param1, 12000, 1, false, false, true);
+        int discarded$0 = 1;
+        return sc.a(param1, 12000, 1, false, false);
     }
 
     final void a(int param0) throws IOException {
@@ -576,7 +577,8 @@ final class si {
                 if (((si) this).field_a.length >= param2) {
                   if (param2 > 0) {
                     L5: {
-                      this.c((byte) -121);
+                      int discarded$2 = -121;
+                      this.c();
                       var9_int = param2;
                       if (((si) this).field_l < var9_int) {
                         var9_int = ((si) this).field_l;
@@ -642,9 +644,9 @@ final class si {
                           if (param0 >= var9_int) {
                             break L9;
                           } else {
-                            int incrementValue$1 = param0;
+                            int incrementValue$3 = param0;
                             param0++;
-                            param1[incrementValue$1] = (byte) 0;
+                            param1[incrementValue$3] = (byte) 0;
                             param2--;
                             ((si) this).field_e = ((si) this).field_e + 1L;
                             continue L11;

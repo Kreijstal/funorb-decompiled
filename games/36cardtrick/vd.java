@@ -18,7 +18,7 @@ final class vd extends he {
     static int field_u;
     static String field_n;
 
-    private final void a(int param0, pb param1, byte param2) {
+    private final void a(int param0, pb param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -146,7 +146,7 @@ final class vd extends he {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
@@ -359,7 +359,8 @@ final class vd extends he {
             L1: while (true) {
               var3_int = param1.f(91);
               if (0 != var3_int) {
-                this.a(var3_int, param1, (byte) 117);
+                int discarded$4 = 117;
+                this.a(var3_int, param1);
                 continue L1;
               } else {
                 L2: {

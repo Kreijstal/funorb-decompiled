@@ -11,27 +11,16 @@ final class pb extends tm {
     static int field_A;
     static pd field_E;
 
-    final static vl[] a(boolean param0) {
+    final static vl[] a() {
         return new vl[]{field_F, ae.field_I, rd.field_h};
     }
 
-    public static void g(int param0) {
-        if (param0 != 50) {
-          vl[] discarded$2 = pb.a(true);
-          field_E = null;
-          field_C = null;
-          field_G = null;
-          field_D = null;
-          field_F = null;
-          return;
-        } else {
-          field_E = null;
-          field_C = null;
-          field_G = null;
-          field_D = null;
-          field_F = null;
-          return;
-        }
+    public static void g() {
+        field_E = null;
+        field_C = null;
+        field_G = null;
+        field_D = null;
+        field_F = null;
     }
 
     pb(String param0, Class[] param1, String param2) {

@@ -10,13 +10,10 @@ final class ss extends rqa {
     }
 
     final static void a(int[] param0, byte param1, int[] param2) {
-        if (param1 != 16) {
-            return;
-        }
         try {
             smb.a(param2, 0, param0.length + -1, (byte) -79, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ss.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ss.C(" + (param0 != null ? "{...}" : "null") + 44 + 16 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

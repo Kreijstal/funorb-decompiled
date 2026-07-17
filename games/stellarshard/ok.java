@@ -31,7 +31,7 @@ final class ok {
         var5 = stellarshard.field_B;
         try {
           L0: {
-            var2_int = 79 / ((param0 - 16) / 36);
+            var2_int = -79;
             if (param1.field_m == null) {
               return;
             } else {
@@ -80,7 +80,8 @@ final class ok {
                   break L5;
                 }
               }
-              vd.a(param1, -128);
+              int discarded$2 = -128;
+              vd.a(param1);
               break L0;
             }
           }
@@ -89,7 +90,7 @@ final class ok {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var2;
-            stackOut_18_1 = new StringBuilder().append("ok.C(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("ok.C(").append(-54).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -116,7 +117,7 @@ final class ok {
         }
     }
 
-    final static wb a(String param0, int param1) {
+    final static wb a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -297,7 +298,7 @@ final class ok {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_b = null;

@@ -6,7 +6,7 @@ final class ek {
     static int field_a;
     static char[] field_c;
 
-    final static String a(int param0, int param1, int param2) {
+    final static String a(int param0, int param1) {
         if (!(param0 < 60)) {
             return p.a(param0 % 60, param1, 45, param0 / 60);
         }
@@ -38,7 +38,7 @@ final class ek {
         return new int[8];
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
@@ -165,10 +165,6 @@ final class ek {
     }
 
     final static int a(byte param0, boolean param1, int param2, int param3) {
-        if (param0 != -88) {
-            field_b = null;
-            return ph.a((byte) -115);
-        }
         return ph.a((byte) -115);
     }
 

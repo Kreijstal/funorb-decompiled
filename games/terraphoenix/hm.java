@@ -20,7 +20,7 @@ final class hm extends gl {
     boolean field_P;
     private ci field_I;
 
-    private final ci a(int param0) {
+    private final ci a() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -343,10 +343,11 @@ final class hm extends gl {
                         } else {
                           L6: {
                             var8 = param1.charAt(var7);
-                            if (ja.a((char) var8, (byte) 106)) {
+                            int discarded$2 = 106;
+                            if (ja.a((char) var8)) {
                               var9 = kh.a((char) var8, (byte) -128);
                               if (0 != var9) {
-                                StringBuilder discarded$1 = var6.append(var9);
+                                StringBuilder discarded$3 = var6.append(var9);
                                 break L6;
                               } else {
                                 break L6;
@@ -420,7 +421,7 @@ final class hm extends gl {
         this.e((byte) -43);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_G = null;
         field_J = null;
         field_H = null;
@@ -504,7 +505,8 @@ final class hm extends gl {
     private final void e(byte param0) {
         ((hm) this).field_D = new ci[]{this.b(((hm) this).field_B, -27888, ((hm) this).field_Q), this.b(((hm) this).field_F, -27888, ((hm) this).field_E)};
         int var2 = -120 % ((12 - param0) / 40);
-        ((hm) this).field_C = this.a(0);
+        int discarded$0 = 0;
+        ((hm) this).field_C = this.a();
         ((hm) this).field_z = ((hm) this).field_C.e();
         ((hm) this).field_I = new ci(((hm) this).field_n >> 1, ((hm) this).field_n);
     }

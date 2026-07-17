@@ -5,7 +5,7 @@ final class lh {
     static int field_b;
     static vg field_a;
 
-    final static void a(java.awt.Component param0, boolean param1) {
+    final static void a(java.awt.Component param0) {
         param0.removeKeyListener((java.awt.event.KeyListener) (Object) tf.field_n);
         param0.removeFocusListener((java.awt.event.FocusListener) (Object) tf.field_n);
         try {
@@ -15,7 +15,7 @@ final class lh {
         }
     }
 
-    final static qe a(int param0, String param1, int param2) {
+    final static qe a(int param0, String param1) {
         hf var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -78,14 +78,14 @@ final class lh {
             vl.field_d.field_q.a(mk.field_e, false);
             vl.field_d.field_C.d(128, -13549, 9);
             vl.field_d.field_C.a(mk.field_e, false);
-            int var3_int = -54 % ((param1 - 11) / 55);
+            int var3_int = 0;
             wc.a((byte) -111, param0, param2, 22050, 1102, true, 22050, vl.field_d);
             ll.a(-114, 160);
             pc.field_h = 256;
-            Object var4 = null;
-            sa.a((ee) null, -15676);
+            int discarded$0 = -15676;
+            sa.a((ee) null);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "lh.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "lh.B(" + (param0 != null ? "{...}" : "null") + 44 + -81 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -4,7 +4,7 @@
 final class lma {
     private static String field_z;
 
-    final static int a(int param0, int param1, int param2, byte param3) {
+    final static int a(int param0, int param1, int param2) {
         if (!(param1 + param0 - -param2 > dma.field_j)) {
             return param0 + param1;
         }

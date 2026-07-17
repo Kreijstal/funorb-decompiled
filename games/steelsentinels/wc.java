@@ -422,7 +422,7 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(mg param0, int param1) {
+    final static void a(mg param0) {
         try {
             qf.field_c.a((gh) (Object) param0, 126);
         } catch (RuntimeException runtimeException) {
@@ -599,9 +599,6 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     final static void a(int param0, boolean param1, long param2, int param3, String param4, int param5) {
         int var7_int = 0;
         mm.field_g.a(param5, (byte) -117);
-        if (param0 != 0) {
-            return;
-        }
         try {
             mm.field_g.field_p = mm.field_g.field_p + 1;
             var7_int = mm.field_g.field_p;
@@ -611,35 +608,25 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             mm.field_g.a((byte) 115, !param1 ? 0 : 1);
             mm.field_g.b((byte) 83, -var7_int + mm.field_g.field_p);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "wc.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "wc.A(" + 0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         hh.field_a = null;
         vc.field_f = null;
         te.field_f = null;
         cc.field_bc = null;
         jn.field_g = true;
-        if (param0 != 23825) {
-          return;
-        } else {
-          L0: {
-            if (tj.field_f != null) {
-              wh.field_e = sb.field_ab;
-              vd.field_d = tj.field_f;
-              vd.field_d.field_xb = -1;
-              vd.field_d.field_rb = -1;
-              tj.field_f = null;
-              sb.field_ab = null;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          qa.field_N = null;
-          return;
+        if (!(tj.field_f == null)) {
+            wh.field_e = sb.field_ab;
+            vd.field_d = tj.field_f;
+            vd.field_d.field_xb = -1;
+            vd.field_d.field_rb = -1;
+            tj.field_f = null;
+            sb.field_ab = null;
         }
+        qa.field_N = null;
     }
 
     final static int a(byte param0, ie param1, int param2) {
@@ -648,25 +635,25 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         int var4 = 0;
         int var5 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
-        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var5 = SteelSentinels.field_G;
         try {
           L0: {
@@ -674,26 +661,18 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               throw new IllegalArgumentException();
             } else {
               if (de.a(param2, (byte) -99)) {
-                stackOut_6_0 = (int)((long)param2 * ((long)param1.c(param0 ^ 100) & 4294967295L) >> 32);
+                stackOut_6_0 = (int)((long)param2 * ((long)param1.c(-89) & 4294967295L) >> 32);
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               } else {
-                L1: {
-                  if (param0 == -61) {
-                    break L1;
-                  } else {
-                    field_c = null;
-                    break L1;
-                  }
-                }
                 var3_int = -2147483648 + -(int)(4294967296L % (long)param2);
-                L2: while (true) {
+                L1: while (true) {
                   var4 = param1.c(-111);
                   if (var3_int <= var4) {
-                    continue L2;
+                    continue L1;
                   } else {
-                    stackOut_12_0 = uh.a(false, var4, param2);
-                    stackIn_13_0 = stackOut_12_0;
+                    stackOut_10_0 = uh.a(false, var4, param2);
+                    stackIn_11_0 = stackOut_10_0;
                     break L0;
                   }
                 }
@@ -702,35 +681,35 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("wc.B(").append(param0).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("wc.B(").append(-61).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L3;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L3;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
     public static void a(boolean param0) {

@@ -118,7 +118,7 @@ final class vj {
         }
     }
 
-    final static byte[] a(File param0, byte param1) {
+    final static byte[] a(File param0) {
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -140,7 +140,8 @@ final class vj {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = gja.a((int)param0.length(), param0, 0);
+            int discarded$2 = 0;
+            stackOut_0_0 = gja.a((int)param0.length(), param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

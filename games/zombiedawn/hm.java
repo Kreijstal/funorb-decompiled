@@ -117,80 +117,40 @@ class hm extends an {
         eg var5 = null;
         int var6 = 0;
         var6 = ZombieDawn.field_J;
-        if (param0 == 31677) {
-          var4 = (eg) (Object) ((hm) this).field_I.b((byte) 26);
-          L0: while (true) {
-            if (var4 != null) {
-              var5 = var4;
-              L1: while (true) {
-                if (var5 == null) {
-                  var4 = (eg) (Object) ((hm) this).field_I.a(false);
-                  continue L0;
-                } else {
-                  L2: {
-                    if (param1 < var5.field_i) {
+        var4 = (eg) (Object) ((hm) this).field_I.b((byte) 26);
+        L0: while (true) {
+          if (var4 != null) {
+            var5 = var4;
+            L1: while (true) {
+              if (var5 == null) {
+                var4 = (eg) (Object) ((hm) this).field_I.a(false);
+                continue L0;
+              } else {
+                L2: {
+                  if (param1 < var5.field_i) {
+                    break L2;
+                  } else {
+                    if (param2 < var5.field_k) {
                       break L2;
                     } else {
-                      if (param2 < var5.field_k) {
+                      if (var5.field_i - -var5.field_j <= param1) {
                         break L2;
                       } else {
-                        if (var5.field_i - -var5.field_j <= param1) {
+                        if (var5.field_m + var5.field_k < param2) {
                           break L2;
                         } else {
-                          if (var5.field_m + var5.field_k < param2) {
-                            break L2;
-                          } else {
-                            return var4;
-                          }
+                          return var4;
                         }
                       }
                     }
                   }
-                  var5 = var5.field_h;
-                  continue L1;
                 }
+                var5 = var5.field_h;
+                continue L1;
               }
-            } else {
-              return null;
             }
-          }
-        } else {
-          ((hm) this).field_I = null;
-          var4 = (eg) (Object) ((hm) this).field_I.b((byte) 26);
-          L3: while (true) {
-            if (var4 != null) {
-              var5 = var4;
-              L4: while (true) {
-                if (var5 == null) {
-                  var4 = (eg) (Object) ((hm) this).field_I.a(false);
-                  continue L3;
-                } else {
-                  L5: {
-                    if (param1 < var5.field_i) {
-                      break L5;
-                    } else {
-                      if (param2 < var5.field_k) {
-                        break L5;
-                      } else {
-                        if (var5.field_i - -var5.field_j <= param1) {
-                          break L5;
-                        } else {
-                          if (var5.field_m + var5.field_k < param2) {
-                            break L5;
-                          } else {
-                            return var4;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  var5 = var5.field_h;
-                  continue L4;
-                }
-              }
-            } else {
-              return null;
-            }
+          } else {
+            return null;
           }
         }
     }
@@ -536,7 +496,7 @@ class hm extends an {
         }
     }
 
-    final static int a(int param0, int param1, int[][] param2, int param3) {
+    final static int a(int param0, int param1, int[][] param2) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;

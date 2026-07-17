@@ -86,7 +86,7 @@ final class ph extends og implements im, vd {
         }
     }
 
-    private final String a(int param0) {
+    private final String a() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -202,6 +202,8 @@ final class ph extends og implements im, vd {
             ((ph) this).field_z = param0;
             ((ph) this).field_C = new pc(go.field_j, (bi) null);
             ((ph) this).field_C.field_i = (wo) (Object) new ve();
+            int discarded$2 = 106;
+            int discarded$3 = 64;
             var7 = ci.a(new String[2], cc.field_d, 3);
             var3 = 20;
             var4 = new lb(ai.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ai.field_h.field_o, -1, 2147483647, true);
@@ -382,11 +384,11 @@ final class ph extends og implements im, vd {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_E = null;
     }
 
-    private final String i(int param0) {
+    private final String i() {
         int var2 = 0;
         return "</col></u>";
     }

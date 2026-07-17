@@ -66,7 +66,7 @@ final class av extends bca {
         }
     }
 
-    final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
+    final static void a(int param0, int param1, java.awt.Canvas param2) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -90,7 +90,7 @@ final class av extends bca {
           try {
             if (param1 <= -21) {
               var4 = param2.getGraphics();
-              hga.field_U.a((byte) 80, param0, var4, 0);
+              hga.field_U.a((byte) 80, 0, var4, 0);
               var4.dispose();
               return;
             } else {
@@ -107,7 +107,7 @@ final class av extends bca {
           L0: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("av.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("av.C(").append(0).append(44).append(param1).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -204,10 +204,7 @@ final class av extends bca {
     }
 
     final static void a(int param0, boolean param1) {
-        ia.a(false, -84);
-        if (param0 != 0) {
-            return;
-        }
+        ia.a(param1, -84);
     }
 
     static {

@@ -16,21 +16,18 @@ final class rc {
     int field_b;
     static String field_i;
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         int var1 = 0;
-        var1 = 51 % ((-1 - param0) / 32);
-        if (ne.field_b != null) {
-          if (!ne.field_b.b(95)) {
+        if (ne.field_b == null) {
             return false;
-          } else {
-            return true;
-          }
-        } else {
-          return false;
         }
+        if (!ne.field_b.b(95)) {
+            return false;
+        }
+        return true;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_m = null;
         field_i = null;

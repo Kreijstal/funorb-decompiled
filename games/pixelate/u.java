@@ -19,12 +19,9 @@ final class u {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, tf[] param6, jl param7, int param8, tf[] param9, int param10, boolean param11) {
         try {
-            if (param1 != -879) {
-                field_h = 78;
-            }
-            tj.a(param8, param11, param10, param5, param7, param6, param4, param0, param9, param2, param7, (byte) 122, param3, param0, param2);
+            tj.a(240, param11, 8, 8, param7, param6, 320, param0, param9, param2, param7, (byte) 122, 2, param0, param2);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "u.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 44 + (param9 != null ? "{...}" : "null") + 44 + param10 + 44 + param11 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "u.B(" + param0 + 44 + -879 + 44 + param2 + 44 + 2 + 44 + 320 + 44 + 8 + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 44 + 240 + 44 + (param9 != null ? "{...}" : "null") + 44 + 8 + 44 + param11 + 41);
         }
     }
 
@@ -246,10 +243,8 @@ final class u {
     }
 
     final static void a(boolean param0, int param1) {
-        qh.a((byte) -110, 10, bj.field_c[param1], true);
-        if (param0) {
-            u.a(-24);
-        }
+        int discarded$0 = 1;
+        qh.a((byte) -110, 10, bj.field_c[param1]);
     }
 
     static {

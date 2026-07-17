@@ -16,78 +16,41 @@ final class vb {
     private static int[] field_h;
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        L0: {
-          var6 = 0;
-          var7 = 65536 / param3;
-          if (param0 >= field_e) {
-            break L0;
-          } else {
+        int var6 = 0;
+        int var7 = 65536 / param3;
+        if (param0 < field_e) {
             param2 = param2 - (field_e - param0);
             param0 = field_e;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 >= field_i) {
-            break L1;
-          } else {
+        if (param1 < field_i) {
             var6 = var6 + (field_i - param1) * var7;
             param3 = param3 - (field_i - param1);
             param1 = field_i;
-            break L1;
-          }
         }
-        L2: {
-          if (param0 + param2 <= field_k) {
-            break L2;
-          } else {
+        if (param0 + param2 > field_k) {
             param2 = field_k - param0;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + param3 <= field_d) {
-            break L3;
-          } else {
+        if (param1 + param3 > field_d) {
             param3 = field_d - param1;
-            break L3;
-          }
         }
-        var8 = field_f - param2;
-        var9 = param0 + param1 * field_f;
-        var10 = -param3;
-        L4: while (true) {
-          if (var10 >= 0) {
-            return;
-          } else {
+        int var8 = field_f - param2;
+        int var9 = param0 + param1 * field_f;
+        for (var10 = -param3; var10 < 0; var10++) {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + 0 * var12 & -16711936) + ((param4 & 65280) * var11 + 0 * var12 & 16711680) >>> 8;
-            var14 = -param2;
-            L5: while (true) {
-              if (var14 >= 0) {
-                var9 = var9 + var8;
-                var6 = var6 + var7;
-                var10++;
-                continue L4;
-              } else {
-                int incrementValue$1 = var9;
+            var13 = (2097184 * var11 + 0 * var12 & -16711936) + (8192 * var11 + 0 * var12 & 16711680) >>> 8;
+            for (var14 = -param2; var14 < 0; var14++) {
+                int incrementValue$0 = var9;
                 var9++;
-                field_c[incrementValue$1] = var13;
-                var14++;
-                continue L5;
-              }
+                field_c[incrementValue$0] = var13;
             }
-          }
+            var9 = var9 + var8;
+            var6 = var6 + var7;
         }
     }
 
@@ -198,20 +161,20 @@ final class vb {
           L1: {
             var6 = param0 + param4;
             var7 = param1 + param4;
-            var8 = param0 + param2 - param4 - 1;
-            var9 = param1 + param3 - param4 - 1;
+            var8 = param0 + 28 - param4 - 1;
+            var9 = param1 + 28 - param4 - 1;
             if (field_k <= field_e) {
               break L1;
             } else {
               if (field_d > field_i) {
-                if (param0 + param2 <= field_e) {
+                if (param0 + 28 <= field_e) {
                   break L1;
                 } else {
                   L2: {
                     if (param0 >= field_k) {
                       break L2;
                     } else {
-                      if (param1 + param3 < field_i) {
+                      if (param1 + 28 < field_i) {
                         break L2;
                       } else {
                         if (param1 < field_d) {
@@ -232,13 +195,13 @@ final class vb {
                               if (param0 < field_e) {
                                 break L4;
                               } else {
-                                if (param0 + param2 >= field_k) {
+                                if (param0 + 28 >= field_k) {
                                   break L4;
                                 } else {
                                   if (param1 < field_i) {
                                     break L4;
                                   } else {
-                                    if (param1 + param3 < field_d) {
+                                    if (param1 + 28 < field_d) {
                                       var22 = var12;
                                       L5: while (true) {
                                         if (var22 > var14) {
@@ -317,10 +280,10 @@ final class vb {
                                 }
                               }
                             }
-                            vb.g(param0, param1 + var18, param3 - var18 - var18, 16777215);
-                            vb.g(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, 16777215);
-                            vb.c(param0 + var18, param1, param2 - var18 - var18, 16777215);
-                            vb.c(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, 16777215);
+                            vb.g(param0, param1 + var18, 28 - var18 - var18, 16777215);
+                            vb.g(param0 + 27, param1 + var18, 28 - var18 - var18, 16777215);
+                            vb.c(param0 + var18, param1, 28 - var18 - var18, 16777215);
+                            vb.c(param0 + var18, param1 + 27, 28 - var18 - var18, 16777215);
                             L11: while (true) {
                               L12: {
                                 int incrementValue$3 = var19;
@@ -490,7 +453,7 @@ final class vb {
           }
           return;
         } else {
-          vb.d(param0, param1, param2, param3, 16777215);
+          vb.d(param0, param1, 28, 28, 16777215);
           return;
         }
     }
@@ -514,7 +477,7 @@ final class vb {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -523,7 +486,7 @@ final class vb {
           }
         }
         L1: {
-          var10 = field_f - param4 - param5 - param3;
+          var10 = field_f - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -533,7 +496,7 @@ final class vb {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_f >= var12) {
             break L2;
           } else {
@@ -553,7 +516,7 @@ final class vb {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -710,7 +673,7 @@ final class vb {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_k) {
+                      if (param5 + var19 + param3 >= field_k) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -770,9 +733,9 @@ final class vb {
                 param2 = field_k - param0;
             }
             var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
+            var6 = 85 * param4;
+            var7 = 85 * param4;
+            var8 = 85 * param4;
             var12 = param0 + param1 * field_f;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_c[var12] >> 16 & 255) * var5;
@@ -810,9 +773,9 @@ final class vb {
                 param2 = field_d - param1;
             }
             var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
+            var6 = 85 * param4;
+            var7 = 85 * param4;
+            var8 = 85 * param4;
             var12 = param0 + param1 * field_f;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_c[var12] >> 16 & 255) * var5;
@@ -860,8 +823,8 @@ final class vb {
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        vb.a(field_c, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, param5);
-        vb.a(field_c, 0, param2 + param3 * field_f, param1, param3, param5, field_f - param4, param2, param4);
+        vb.a(field_c, 0, 0 * field_f, param0, 0, param4, field_f - param4, param5);
+        vb.a(field_c, 0, 0 * field_f, param1, 0, param5, field_f - param4, 0, param4);
     }
 
     private final static void b() {
@@ -891,180 +854,189 @@ final class vb {
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
-        L0: {
-          if (param2 >= 0) {
-            break L0;
-          } else {
-            param2 = -param2;
-            break L0;
-          }
-        }
-        L1: {
-          var5 = 156;
-          var6 = (param3 >> 16 & 255) * 100;
-          var7 = (param3 >> 8 & 255) * 100;
-          var8 = (param3 & 255) * 100;
-          var12 = param1 - param2;
-          if (var12 >= field_i) {
-            break L1;
-          } else {
-            var12 = field_i;
-            break L1;
-          }
-        }
-        L2: {
-          var13 = param1 + param2 + 1;
-          if (var13 <= field_d) {
-            break L2;
-          } else {
-            var13 = field_d;
-            break L2;
-          }
-        }
-        L3: {
-          var14 = var12;
-          var15 = param2 * param2;
-          var16 = 0;
-          var17 = param1 - var14;
-          var18 = var17 * var17;
-          var19 = var18 - var17;
-          if (param1 <= var13) {
-            break L3;
-          } else {
-            param1 = var13;
-            break L3;
-          }
-        }
-        L4: while (true) {
-          if (var14 >= param1) {
-            var16 = param2;
-            var17 = -var17;
-            var19 = var17 * var17 + var15;
-            var18 = var19 - var16;
-            var19 = var19 - var17;
-            L5: while (true) {
-              if (var14 >= var13) {
-                return;
+        if (param4 != 0) {
+          if (param4 != 256) {
+            L0: {
+              if (param2 >= 0) {
+                break L0;
               } else {
-                L6: while (true) {
-                  L7: {
-                    if (var19 <= var15) {
-                      break L7;
-                    } else {
-                      if (var18 <= var15) {
-                        break L7;
-                      } else {
-                        int incrementValue$6 = var16;
-                        var16--;
-                        var19 = var19 - (incrementValue$6 + var16);
-                        var18 = var18 - (var16 + var16);
-                        continue L6;
+                param2 = -param2;
+                break L0;
+              }
+            }
+            L1: {
+              var5 = 256 - param4;
+              var6 = (param3 >> 16 & 255) * param4;
+              var7 = (param3 >> 8 & 255) * param4;
+              var8 = (param3 & 255) * param4;
+              var12 = param1 - param2;
+              if (var12 >= field_i) {
+                break L1;
+              } else {
+                var12 = field_i;
+                break L1;
+              }
+            }
+            L2: {
+              var13 = param1 + param2 + 1;
+              if (var13 <= field_d) {
+                break L2;
+              } else {
+                var13 = field_d;
+                break L2;
+              }
+            }
+            L3: {
+              var14 = var12;
+              var15 = param2 * param2;
+              var16 = 0;
+              var17 = param1 - var14;
+              var18 = var17 * var17;
+              var19 = var18 - var17;
+              if (param1 <= var13) {
+                break L3;
+              } else {
+                param1 = var13;
+                break L3;
+              }
+            }
+            L4: while (true) {
+              if (var14 >= param1) {
+                var16 = param2;
+                var17 = -var17;
+                var19 = var17 * var17 + var15;
+                var18 = var19 - var16;
+                var19 = var19 - var17;
+                L5: while (true) {
+                  if (var14 >= var13) {
+                    return;
+                  } else {
+                    L6: while (true) {
+                      L7: {
+                        if (var19 <= var15) {
+                          break L7;
+                        } else {
+                          if (var18 <= var15) {
+                            break L7;
+                          } else {
+                            int incrementValue$6 = var16;
+                            var16--;
+                            var19 = var19 - (incrementValue$6 + var16);
+                            var18 = var18 - (var16 + var16);
+                            continue L6;
+                          }
+                        }
+                      }
+                      L8: {
+                        var20 = param0 - var16;
+                        if (var20 >= field_e) {
+                          break L8;
+                        } else {
+                          var20 = field_e;
+                          break L8;
+                        }
+                      }
+                      L9: {
+                        var21 = param0 + var16;
+                        if (var21 <= field_k - 1) {
+                          break L9;
+                        } else {
+                          var21 = field_k - 1;
+                          break L9;
+                        }
+                      }
+                      var25 = var20 + var14 * field_f;
+                      var22 = var25;
+                      var23 = var20;
+                      L10: while (true) {
+                        if (var23 > var21) {
+                          var14++;
+                          var19 = var19 + (var17 + var17);
+                          int incrementValue$7 = var17;
+                          var17++;
+                          var18 = var18 + (incrementValue$7 + var17);
+                          continue L5;
+                        } else {
+                          var9 = (field_c[var25] >> 16 & 255) * var5;
+                          var10 = (field_c[var25] >> 8 & 255) * var5;
+                          var11 = (field_c[var25] & 255) * var5;
+                          var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                          int incrementValue$8 = var25;
+                          var25++;
+                          field_c[incrementValue$8] = var24;
+                          var23++;
+                          continue L10;
+                        }
                       }
                     }
                   }
-                  L8: {
-                    var20 = param0 - var16;
-                    if (var20 >= field_e) {
-                      break L8;
+                }
+              } else {
+                L11: while (true) {
+                  L12: {
+                    if (var19 <= var15) {
+                      break L12;
                     } else {
-                      var20 = field_e;
-                      break L8;
+                      if (var18 > var15) {
+                        L13: {
+                          var20 = param0 - var16 + 1;
+                          if (var20 >= field_e) {
+                            break L13;
+                          } else {
+                            var20 = field_e;
+                            break L13;
+                          }
+                        }
+                        L14: {
+                          var21 = param0 + var16;
+                          if (var21 <= field_k) {
+                            break L14;
+                          } else {
+                            var21 = field_k;
+                            break L14;
+                          }
+                        }
+                        var22 = var20 + var14 * field_f;
+                        var23 = var20;
+                        L15: while (true) {
+                          if (var23 >= var21) {
+                            var14++;
+                            int incrementValue$9 = var17;
+                            var17--;
+                            var18 = var18 - (incrementValue$9 + var17);
+                            var19 = var19 - (var17 + var17);
+                            continue L4;
+                          } else {
+                            var9 = (field_c[var22] >> 16 & 255) * var5;
+                            var10 = (field_c[var22] >> 8 & 255) * var5;
+                            var11 = (field_c[var22] & 255) * var5;
+                            var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                            int incrementValue$10 = var22;
+                            var22++;
+                            field_c[incrementValue$10] = var24;
+                            var23++;
+                            continue L15;
+                          }
+                        }
+                      } else {
+                        break L12;
+                      }
                     }
                   }
-                  L9: {
-                    var21 = param0 + var16;
-                    if (var21 <= field_k - 1) {
-                      break L9;
-                    } else {
-                      var21 = field_k - 1;
-                      break L9;
-                    }
-                  }
-                  var25 = var20 + var14 * field_f;
-                  var22 = var25;
-                  var23 = var20;
-                  L10: while (true) {
-                    if (var23 > var21) {
-                      var14++;
-                      var19 = var19 + (var17 + var17);
-                      int incrementValue$7 = var17;
-                      var17++;
-                      var18 = var18 + (incrementValue$7 + var17);
-                      continue L5;
-                    } else {
-                      var9 = (field_c[var25] >> 16 & 255) * var5;
-                      var10 = (field_c[var25] >> 8 & 255) * var5;
-                      var11 = (field_c[var25] & 255) * var5;
-                      var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                      int incrementValue$8 = var25;
-                      var25++;
-                      field_c[incrementValue$8] = var24;
-                      var23++;
-                      continue L10;
-                    }
-                  }
+                  var18 = var18 + (var16 + var16);
+                  int incrementValue$11 = var16;
+                  var16++;
+                  var19 = var19 + (incrementValue$11 + var16);
+                  continue L11;
                 }
               }
             }
           } else {
-            L11: while (true) {
-              L12: {
-                if (var19 <= var15) {
-                  break L12;
-                } else {
-                  if (var18 > var15) {
-                    L13: {
-                      var20 = param0 - var16 + 1;
-                      if (var20 >= field_e) {
-                        break L13;
-                      } else {
-                        var20 = field_e;
-                        break L13;
-                      }
-                    }
-                    L14: {
-                      var21 = param0 + var16;
-                      if (var21 <= field_k) {
-                        break L14;
-                      } else {
-                        var21 = field_k;
-                        break L14;
-                      }
-                    }
-                    var22 = var20 + var14 * field_f;
-                    var23 = var20;
-                    L15: while (true) {
-                      if (var23 >= var21) {
-                        var14++;
-                        int incrementValue$9 = var17;
-                        var17--;
-                        var18 = var18 - (incrementValue$9 + var17);
-                        var19 = var19 - (var17 + var17);
-                        continue L4;
-                      } else {
-                        var9 = (field_c[var22] >> 16 & 255) * var5;
-                        var10 = (field_c[var22] >> 8 & 255) * var5;
-                        var11 = (field_c[var22] & 255) * var5;
-                        var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                        int incrementValue$10 = var22;
-                        var22++;
-                        field_c[incrementValue$10] = var24;
-                        var23++;
-                        continue L15;
-                      }
-                    }
-                  } else {
-                    break L12;
-                  }
-                }
-              }
-              var18 = var18 + (var16 + var16);
-              int incrementValue$11 = var16;
-              var16++;
-              var19 = var19 + (incrementValue$11 + var16);
-              continue L11;
-            }
+            vb.d(param0, param1, param2, param3);
+            return;
           }
+        } else {
+          return;
         }
     }
 
@@ -1883,7 +1855,7 @@ final class vb {
             }
           }
           L2: {
-            var9 = param1 + param3;
+            var9 = param1 + 32;
             if (var9 <= field_d) {
               break L2;
             } else {
@@ -1892,7 +1864,7 @@ final class vb {
             }
           }
           L3: {
-            var10 = param2 - param4 - param4 - 1;
+            var10 = 32 - param4 - param4 - 1;
             var11 = var8;
             var12 = param4 * param4;
             var13 = 0;
@@ -1919,7 +1891,7 @@ final class vb {
                 }
               }
               L6: {
-                var18 = param0 + param2;
+                var18 = param0 + 32;
                 if (var18 <= field_k) {
                   break L6;
                 } else {
@@ -1930,7 +1902,7 @@ final class vb {
               L7: {
                 var19 = var17 + var11 * field_f;
                 var20 = field_f + var17 - var18;
-                var21 = param1 + param3 - param4 - 1;
+                var21 = param1 + 32 - param4 - 1;
                 if (var21 <= field_d) {
                   break L7;
                 } else {
@@ -2078,7 +2050,7 @@ final class vb {
             }
           }
         } else {
-          vb.a(param0, param1, param2, param3, param5);
+          vb.a(param0, param1, 32, 32, param5);
           return;
         }
     }
@@ -2213,7 +2185,7 @@ final class vb {
           sf.a(var34, 0, param8);
           sf.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -2222,8 +2194,8 @@ final class vb {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_f;
-          var15 = param4 + param3;
+          var14 = var13 * field_f;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_b) {
             break L3;
@@ -2243,7 +2215,7 @@ final class vb {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -2252,7 +2224,7 @@ final class vb {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_f;
+                  var19 = (0 - param3) * field_f;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -2263,7 +2235,7 @@ final class vb {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_b - param4 - param5 - param3;
+                      var18 = field_b - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -2505,7 +2477,7 @@ final class vb {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_d) {
+                      if (var13 + param5 + param3 >= field_d) {
                         var14 = var14 + field_f;
                         break L26;
                       } else {

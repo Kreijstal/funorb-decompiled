@@ -182,7 +182,7 @@ abstract class dk {
         return stackIn_15_0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

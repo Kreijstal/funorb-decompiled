@@ -12,7 +12,7 @@ final class bm extends mc {
     static int field_p;
     static String field_o;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_s = null;
         field_o = null;
     }
@@ -42,13 +42,13 @@ final class bm extends mc {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = sk.a(param2, param5, 10, param3, param4, param0);
+            var8 = sk.a(0, param5, 10, param3, 0, param0);
             var6 = var8;
             if (var8 != null) {
               var7 = new kl();
               var7.field_d = var8;
               java.awt.Component discarded$2 = var7.field_d.add((java.awt.Component) (Object) var7);
-              var7.setBounds(0, param1, param3, param0);
+              var7.setBounds(0, 0, param3, param0);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();
               stackOut_3_0 = (kl) var7;
@@ -63,7 +63,7 @@ final class bm extends mc {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("bm.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_5_1 = new StringBuilder().append("bm.C(").append(param0).append(44).append(0).append(44).append(0).append(44).append(param3).append(44).append(0).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -95,7 +95,7 @@ final class bm extends mc {
         throw new Error();
     }
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -176,9 +176,6 @@ final class bm extends mc {
     }
 
     final static void b(int param0, int param1) {
-        if (-51 != param0) {
-            throw new IllegalArgumentException();
-        }
     }
 
     static {

@@ -56,7 +56,7 @@ final class eh {
                 L2: {
                   var8 = param4.charAt(var7);
                   if (var8 != 32) {
-                    cg.a(bi.field_a, param1, param0, param5, (byte) -98, pa.field_d, param2, (char) var8);
+                    cg.a(bi.field_a, param1, 0, param5, (byte) -98, pa.field_d, param2, (char) var8);
                     break L2;
                   } else {
                     break L2;
@@ -73,7 +73,7 @@ final class eh {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6;
-            stackOut_8_1 = new StringBuilder().append("eh.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("eh.C(").append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -125,18 +125,19 @@ final class eh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_c = null;
         field_d = null;
     }
 
-    final static void a(vb param0, int param1, byte param2) {
+    final static void a(vb param0) {
         try {
             jl.field_a.b(101, (kd) (Object) param0);
-            vi.a(param1, param0, 1);
+            int discarded$0 = 1;
+            vi.a(4, param0);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "eh.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -4 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "eh.B(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + -4 + 41);
         }
     }
 

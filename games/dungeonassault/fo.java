@@ -7,7 +7,7 @@ final class fo {
     static int field_b;
     static cn field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;
@@ -30,16 +30,14 @@ final class fo {
             }
             var1[var2] = new cn(ce.field_x, tb.field_i, hg.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], var5);
         }
-        sb.a(500);
+        int discarded$0 = 500;
+        sb.a();
         return var1;
     }
 
     final static void a(int param0, int param1) {
         int var3 = 0;
         int var2 = 0;
-        if (param0 >= -124) {
-            field_c = null;
-        }
         if (param1 < ib.field_d * (-1 + ib.field_j)) {
             var2 = ib.field_j * (param1 / (-1 + ib.field_j)) + param1 % (-1 + ib.field_j);
             var3 = 1 + var2;
@@ -60,6 +58,7 @@ final class fo {
     }
 
     private static void $cfr$clinit() {
-        field_c = rb.b(16777215, 8421504, 64);
+        int discarded$0 = 64;
+        field_c = rb.b(16777215, 8421504);
     }
 }

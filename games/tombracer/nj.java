@@ -213,7 +213,7 @@ final class nj extends wda {
         return param1;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_v = null;
         field_q = null;
         field_p = null;
@@ -271,9 +271,9 @@ final class nj extends wda {
                 var4.readFully(param0, 0, param2);
             }
             var4.close();
-            int var5 = 59 % ((-16 - param1) / 50);
+            int var5 = 1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "nj.N(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "nj.N(" + (param0 != null ? "{...}" : "null") + 44 + 107 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

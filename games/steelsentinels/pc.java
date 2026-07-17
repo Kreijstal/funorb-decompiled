@@ -64,7 +64,7 @@ final class pc extends ck {
         return stackIn_11_0;
     }
 
-    final static void a(int param0, wk[] param1, int param2, mi param3, int param4, int param5, int param6, int param7, int param8, wk[] param9, int param10, int param11, int param12, int param13, int param14, int param15, mi param16, int param17, wk[] param18, int param19, int param20) {
+    final static void a(int param0, wk[] param1, int param2, mi param3, int param4, int param5, int param6, int param7, int param8, wk[] param9, int param10, int param11, int param12, int param13, int param14, int param15, mi param16, int param17, wk[] param18) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -144,7 +144,8 @@ final class pc extends ck {
         String stackOut_15_2 = null;
         try {
           L0: {
-            vk.a(param14, param13, param5, param6, param10, param7, new ak(param18), (byte) -115, param16, param11, new ak(param9), param19, param15, param2, param0, param12, param4, param17, param3, new ak(param1), param8);
+            int discarded$1 = 8;
+            vk.a(param14, 240, 8, 2, 0, 16777215, new ak(param18), (byte) -115, param16, param11, new ak(param9), 480, 8, 320, param0, 1146810, 8, param17, param3, new ak(param1));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +178,7 @@ final class pc extends ck {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(320).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -202,7 +203,7 @@ final class pc extends ck {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(8).append(44).append(8).append(44).append(2).append(44).append(16777215).append(44).append(8).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -227,7 +228,7 @@ final class pc extends ck {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param10).append(44).append(param11).append(44).append(param12).append(44).append(param13).append(44).append(param14).append(44).append(param15).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(0).append(44).append(param11).append(44).append(1146810).append(44).append(240).append(44).append(param14).append(44).append(8).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -275,11 +276,11 @@ final class pc extends ck {
               break L5;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param19 + 44 + 53 + 41);
+          throw ci.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 480 + 44 + 53 + 41);
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_s = null;
         field_q = null;
         int var1 = 124;

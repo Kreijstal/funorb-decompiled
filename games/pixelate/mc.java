@@ -17,7 +17,8 @@ final class mc extends fa {
 
     final static dd a(Random param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException var5 = null;
-        rk var6 = null;
+        Object var6 = null;
+        rk var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -53,7 +54,8 @@ final class mc extends fa {
               tg.field_f = param0;
               var12 = vg.a((byte) 96, param3);
               if (!param2) {
-                stackOut_2_0 = ga.a(param3, 10);
+                int discarded$3 = 10;
+                stackOut_2_0 = ga.a(param3);
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               } else {
@@ -62,13 +64,13 @@ final class mc extends fa {
                 break L1;
               }
             }
-            var6 = stackIn_3_0;
+            var6_ref = stackIn_3_0;
             var7 = el.a(param3, (byte) -24);
             if (param4 < -31) {
               var8 = cf.a(false, param3);
               var9 = hq.a((byte) 124, param3);
               var10 = mi.a(var12.field_d, param1, var12.field_j, 20);
-              var11 = new dd(var12.field_j, var12.field_d, var7, var6.field_a, var6.field_b, var6.field_c, var9, var8, var10);
+              var11 = new dd(var12.field_j, var12.field_d, var7, var6_ref.field_a, var6_ref.field_b, var6_ref.field_c, var9, var8, var10);
               var11.a((byte) 58, tg.field_f);
               stackOut_6_0 = (dd) var11;
               stackIn_7_0 = stackOut_6_0;
@@ -112,7 +114,7 @@ final class mc extends fa {
         return stackIn_7_0;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         tf var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -245,7 +247,7 @@ final class mc extends fa {
                           break L0;
                         } else {
                           li.field_a[var7].c();
-                          int discarded$3 = qe.field_A.a(tm.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E + -6, ug.field_k, -1, 1, 1, qe.field_A.field_z + qe.field_A.field_w);
+                          int discarded$7 = qe.field_A.a(tm.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E + -6, ug.field_k, -1, 1, 1, qe.field_A.field_z + qe.field_A.field_w);
                           de.a(0, 0, 1, li.field_a[var7], li.field_a[var7].field_F, -1, 3, li.field_a[var7].field_E);
                           var7++;
                           continue L1;
@@ -340,7 +342,7 @@ final class mc extends fa {
                 mk.field_d.d();
                 var9 = new tf(mk.field_d.field_A, mk.field_d.field_B);
                 var9.c();
-                int discarded$4 = kc.field_r.a(var14, bl.field_c, cl.field_d, mp.field_f, vp.field_Lb, 16777215, -1, 1, 1, kc.field_r.field_w - -kc.field_r.field_z);
+                int discarded$8 = kc.field_r.a(var14, bl.field_c, cl.field_d, mp.field_f, vp.field_Lb, 16777215, -1, 1, 1, kc.field_r.field_w - -kc.field_r.field_z);
                 de.a(0, 0, 1, var9, var9.field_A, -1, 3, var9.field_B);
                 mk.field_d.c();
                 var9.b(0, 0);
@@ -368,7 +370,7 @@ final class mc extends fa {
                 var5_ref_String = sd.a(dk.field_f, 30, new String[1]);
                 fa.field_i = null;
                 var16.c();
-                int discarded$5 = qe.field_A.a(var5_ref_String, 3, 3, var16.field_F + -6, -6 + var16.field_E, 16777215, -1, 0, 1, qe.field_A.field_w - -qe.field_A.field_z);
+                int discarded$9 = qe.field_A.a(var5_ref_String, 3, 3, var16.field_F + -6, -6 + var16.field_E, 16777215, -1, 0, 1, qe.field_A.field_w - -qe.field_A.field_z);
                 de.a(0, 0, 1, var16, var16.field_F, -1, 3, var16.field_E);
                 qf.field_c.c();
                 var16.b(199 - qf.field_c.field_D, -qf.field_c.field_y + 83);
@@ -519,7 +521,8 @@ final class mc extends fa {
                     break L16;
                   }
                 }
-                r.a(stackIn_55_0, stackIn_55_1, stackIn_55_2 != 0, -40);
+                int discarded$10 = -40;
+                r.a(stackIn_55_0, stackIn_55_1, stackIn_55_2 != 0);
                 break L12;
               }
             }
@@ -566,7 +569,8 @@ final class mc extends fa {
                     break L19;
                   }
                 }
-                r.a(stackIn_64_0, stackIn_64_1, stackIn_64_2 != 0, -40);
+                int discarded$11 = -40;
+                r.a(stackIn_64_0, stackIn_64_1, stackIn_64_2 != 0);
                 break L17;
               }
             }
@@ -612,7 +616,8 @@ final class mc extends fa {
                           hf.field_m.b(587, var1_int + 1, var2);
                           break L21;
                         } else {
-                          no.e(-19308);
+                          int discarded$12 = -19308;
+                          no.e();
                           li.field_a[ae.field_b].b(269, 340);
                           break L20;
                         }
@@ -624,7 +629,8 @@ final class mc extends fa {
                 break L21;
               }
             }
-            no.e(-19308);
+            int discarded$13 = -19308;
+            no.e();
             li.field_a[ae.field_b].b(269, 340);
             break L20;
           }
@@ -653,7 +659,7 @@ final class mc extends fa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_o = null;
         field_r = null;

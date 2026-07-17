@@ -225,7 +225,8 @@ final class pp implements Runnable {
               L1: while (true) {
                 if (2 <= var1_int) {
                   tg.a(10L, (byte) 107);
-                  rd.a((Object) null, ((pp) this).field_g, -11030);
+                  int discarded$1 = -11030;
+                  rd.a((Object) null, ((pp) this).field_g);
                   continue L0;
                 } else {
                   L2: {

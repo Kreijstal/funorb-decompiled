@@ -7,7 +7,7 @@ final class jl extends rqa {
     static mab field_q;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_q = null;
         field_o = null;
     }

@@ -88,7 +88,7 @@ final class kc extends pj {
         return stackIn_4_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_K = null;
         field_Q = null;
         int var1 = 0;

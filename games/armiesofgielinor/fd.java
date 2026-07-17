@@ -10,25 +10,16 @@ final class fd extends tc {
     static String[][] field_n;
 
     final static int a(boolean param0, int param1) {
-        int var2 = 0;
-        var2 = param1 >>> 1;
+        int var2 = param1 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
-        if (!param0) {
-          int discarded$1 = fd.a(true, 15);
-          var2 = var2 | var2 >>> 4;
-          var2 = var2 | var2 >>> 8;
-          var2 = var2 | var2 >>> 16;
-          return param1 & ~var2;
-        } else {
-          var2 = var2 | var2 >>> 4;
-          var2 = var2 | var2 >>> 8;
-          var2 = var2 | var2 >>> 16;
-          return param1 & ~var2;
-        }
+        var2 = var2 | var2 >>> 4;
+        var2 = var2 | var2 >>> 8;
+        var2 = var2 | var2 >>> 16;
+        return param1 & ~var2;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_m = null;
         field_n = null;

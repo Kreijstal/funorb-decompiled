@@ -319,7 +319,7 @@ final class dua extends me {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_j = null;
     }
 

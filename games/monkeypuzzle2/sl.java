@@ -110,7 +110,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
               } else {
                 var6 = bi.field_s;
                 var2 = var6;
-                var3 = param0;
+                var3 = 0;
                 L1: while (true) {
                   if (var3 >= var6.length) {
                     var2 = ff.field_e;
@@ -154,12 +154,12 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var2_ref, "sl.G(" + param0 + 44 + param1 + 41);
+          throw la.a((Throwable) (Object) var2_ref, "sl.G(" + 0 + 44 + param1 + 41);
         }
         return stackIn_21_0 != 0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_o = null;
         field_n = null;
         field_k = null;
@@ -233,7 +233,8 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
                           if (var1_ref.field_q - (float)var1_ref.field_y < (float)hf.field_f.field_O) {
                             break L3;
                           } else {
-                            lb.b(false);
+                            int discarded$2 = 0;
+                            lb.b();
                             break L3;
                           }
                         }
@@ -251,7 +252,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
                             break L2;
                           } else {
                             L4: {
-                              boolean discarded$1 = jj.a(-32680, var1_ref, var1_ref.field_G + ((int)var1_ref.field_B - 80), (int)var1_ref.field_q + var1_ref.field_y);
+                              boolean discarded$3 = jj.a(-32680, var1_ref, var1_ref.field_G + ((int)var1_ref.field_B - 80), (int)var1_ref.field_q + var1_ref.field_y);
                               if (0 < var1_ref.field_m) {
                                 break L4;
                               } else {
@@ -382,12 +383,14 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             var5 = (m) (Object) gi.field_l.a((byte) -117);
-            var3 = 65 / ((param1 - -27) / 57);
+            var3 = 65;
             L1: while (true) {
               if (var5 == null) {
                 break L0;
               } else {
-                oe.a(var5, param0, (byte) -95);
+                int discarded$8 = -95;
+                int discarded$9 = 7;
+                oe.a(var5);
                 var5 = (m) (Object) gi.field_l.d((byte) 63);
                 continue L1;
               }
@@ -396,7 +399,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var2, "sl.F(" + param0 + 44 + param1 + 41);
+          throw la.a((Throwable) (Object) var2, "sl.F(" + 7 + 44 + 63 + 41);
         }
     }
 

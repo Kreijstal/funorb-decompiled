@@ -8,11 +8,8 @@ final class me extends pja {
     static llb field_s;
     static llb field_q;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_q = null;
-        if (!param0) {
-            return;
-        }
         field_s = null;
     }
 
@@ -132,7 +129,7 @@ final class me extends pja {
         return var11;
     }
 
-    final static void a(int param0, int param1, boolean param2, boolean param3, int param4, int param5, byte param6) {
+    final static void a(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
         int var7_int = 0;
         ij var8 = null;
         long var9 = 0L;
@@ -913,8 +910,8 @@ final class me extends pja {
                       } else {
                         var31 += 2;
                         var37 = new StringBuilder(64);
-                        StringBuilder discarded$4 = var37.append(ija.field_c);
-                        StringBuilder discarded$5 = var37.append(var12.field_Ib[0]);
+                        StringBuilder discarded$5 = var37.append(ija.field_c);
+                        StringBuilder discarded$6 = var37.append(var12.field_Ib[0]);
                         var38_int = 1;
                         L37: while (true) {
                           if (var38_int >= var12.field_zb) {
@@ -925,8 +922,8 @@ final class me extends pja {
                             var31 = var31 + nna.field_w * var39;
                             break L36;
                           } else {
-                            StringBuilder discarded$6 = var37.append(", ");
-                            StringBuilder discarded$7 = var37.append(var12.field_Ib[var38_int]);
+                            StringBuilder discarded$7 = var37.append(", ");
+                            StringBuilder discarded$8 = var37.append(var12.field_Ib[var38_int]);
                             var38_int++;
                             continue L37;
                           }
@@ -1082,7 +1079,8 @@ final class me extends pja {
                           break L52;
                         } else {
                           if (var12.field_Sb.field_o == 0) {
-                            aaa.a((byte) 112, var12, var32, param3);
+                            int discarded$9 = 1;
+                            aaa.a((byte) 112, var12, var32);
                             break L52;
                           } else {
                             L53: {

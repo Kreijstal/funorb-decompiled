@@ -15,8 +15,8 @@ final class npa implements dja {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -27,35 +27,27 @@ final class npa implements dja {
         try {
           L0: {
             L1: {
-              if (param1 == 115) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
-            L2: {
               dma.h(param4, param0, param3 + 1, 10000536);
               dma.h(param4, param0 + param2, param3 - -1, 12105912);
               var5_int = 1;
               if (param0 - -var5_int < dma.field_c) {
                 var5_int = dma.field_c - param0;
-                break L2;
+                break L1;
               } else {
-                break L2;
+                break L1;
               }
             }
-            L3: {
+            L2: {
               var6 = param2;
               if (dma.field_f < var6 + param0) {
                 var6 = dma.field_f + -param0;
-                break L3;
+                break L2;
               } else {
-                break L3;
+                break L2;
               }
             }
             var7 = var5_int;
-            L4: while (true) {
+            L3: while (true) {
               if (var6 <= var7) {
                 break L0;
               } else {
@@ -64,14 +56,14 @@ final class npa implements dja {
                 dma.field_i[dma.field_g * (param0 + var7) - -param4] = var9;
                 dma.field_i[(param0 + var7) * dma.field_g - -param4 - -param3] = var9;
                 var7++;
-                continue L4;
+                continue L3;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var5, "npa.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) var5, "npa.D(" + param0 + 44 + 115 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -194,7 +186,7 @@ final class npa implements dja {
         return (String) (Object) stackIn_19_0;
     }
 
-    final static StringBuilder a(int param0, boolean param1, StringBuilder param2, char param3) {
+    final static StringBuilder a(int param0, boolean param1, StringBuilder param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -278,7 +270,7 @@ final class npa implements dja {
         return stackIn_7_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

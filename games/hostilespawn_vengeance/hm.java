@@ -12,16 +12,13 @@ final class hm extends am {
     static String field_n;
     static String field_o;
 
-    public static void d(int param0) {
-        if (param0 != 5) {
-            return;
-        }
+    public static void d() {
         field_o = null;
         field_l = null;
         field_n = null;
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         return !c.field_a.d((byte) -102);
     }
 
@@ -48,13 +45,13 @@ final class hm extends am {
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
+        RuntimeException stackIn_71_0 = null;
+        StringBuilder stackIn_71_1 = null;
+        RuntimeException stackIn_72_0 = null;
+        StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        RuntimeException stackIn_75_0 = null;
-        StringBuilder stackIn_75_1 = null;
-        String stackIn_75_2 = null;
+        String stackIn_73_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -64,14 +61,14 @@ final class hm extends am {
         int stackOut_13_0 = 0;
         int stackOut_17_0 = 0;
         int stackOut_16_0 = 0;
+        RuntimeException stackOut_70_0 = null;
+        StringBuilder stackOut_70_1 = null;
         RuntimeException stackOut_72_0 = null;
         StringBuilder stackOut_72_1 = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        String stackOut_74_2 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        String stackOut_73_2 = null;
+        String stackOut_72_2 = null;
+        RuntimeException stackOut_71_0 = null;
+        StringBuilder stackOut_71_1 = null;
+        String stackOut_71_2 = null;
         var22 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
@@ -265,61 +262,53 @@ final class hm extends am {
                       }
                     }
                     L18: {
-                      if (!param2) {
-                        break L18;
-                      } else {
-                        hm.d(79);
-                        break L18;
-                      }
-                    }
-                    L19: {
                       if (null == param1[5]) {
-                        break L19;
+                        break L18;
                       } else {
                         if (param1[5].field_r == 0) {
-                          break L19;
+                          break L18;
                         } else {
                           si.f(var17, var18, var10, var19);
                           var20 = var14;
-                          L20: while (true) {
+                          L19: while (true) {
                             if (var15 <= var20) {
                               si.a(rj.field_M);
-                              break L19;
+                              break L18;
                             } else {
                               param1[5].e(var13, var20);
                               var20 = var20 + param1[5].field_r;
-                              continue L20;
+                              continue L19;
                             }
                           }
                         }
                       }
                     }
-                    L21: {
+                    L20: {
                       if (param1[4] == null) {
-                        break L21;
+                        break L20;
                       } else {
                         if (param1[4].field_u == 0) {
-                          break L21;
+                          break L20;
                         } else {
                           if (param1[4].field_r == 0) {
-                            break L21;
+                            break L20;
                           } else {
                             si.f(var16, var18, var17, var19);
                             var20 = var14;
-                            L22: while (true) {
+                            L21: while (true) {
                               if (var15 <= var20) {
                                 si.a(rj.field_M);
-                                break L21;
+                                break L20;
                               } else {
                                 var21 = var12;
-                                L23: while (true) {
+                                L22: while (true) {
                                   if (var13 <= var21) {
                                     var20 = var20 + param1[4].field_r;
-                                    continue L22;
+                                    continue L21;
                                   } else {
                                     param1[4].e(var21, var20);
                                     var21 = var21 + param1[4].field_u;
-                                    continue L23;
+                                    continue L22;
                                   }
                                 }
                               }
@@ -341,33 +330,33 @@ final class hm extends am {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L24: {
+          L23: {
             var6 = decompiledCaughtException;
-            stackOut_72_0 = (RuntimeException) var6;
-            stackOut_72_1 = new StringBuilder().append("hm.D(").append(param0).append(44);
-            stackIn_74_0 = stackOut_72_0;
-            stackIn_74_1 = stackOut_72_1;
-            stackIn_73_0 = stackOut_72_0;
-            stackIn_73_1 = stackOut_72_1;
+            stackOut_70_0 = (RuntimeException) var6;
+            stackOut_70_1 = new StringBuilder().append("hm.D(").append(param0).append(44);
+            stackIn_72_0 = stackOut_70_0;
+            stackIn_72_1 = stackOut_70_1;
+            stackIn_71_0 = stackOut_70_0;
+            stackIn_71_1 = stackOut_70_1;
             if (param1 == null) {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
-              stackOut_74_2 = "null";
-              stackIn_75_0 = stackOut_74_0;
-              stackIn_75_1 = stackOut_74_1;
-              stackIn_75_2 = stackOut_74_2;
-              break L24;
+              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
+              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_2 = "null";
+              stackIn_73_0 = stackOut_72_0;
+              stackIn_73_1 = stackOut_72_1;
+              stackIn_73_2 = stackOut_72_2;
+              break L23;
             } else {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
-              stackOut_73_2 = "{...}";
-              stackIn_75_0 = stackOut_73_0;
-              stackIn_75_1 = stackOut_73_1;
-              stackIn_75_2 = stackOut_73_2;
-              break L24;
+              stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
+              stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
+              stackOut_71_2 = "{...}";
+              stackIn_73_0 = stackOut_71_0;
+              stackIn_73_1 = stackOut_71_1;
+              stackIn_73_2 = stackOut_71_2;
+              break L23;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wg.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + 44 + 0 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -380,7 +369,7 @@ final class hm extends am {
         ((hm) this).field_m = param0;
     }
 
-    final static void a(int param0, int param1, vi param2, int param3, int param4) {
+    final static void a(int param0, int param1, vi param2, int param3) {
         try {
             param2.d(99, 12);
             param2.a((byte) -113, 17);

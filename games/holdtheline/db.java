@@ -632,7 +632,7 @@ final class db extends tj {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new db(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * lo.field_l)), param2 << 6, param3 << 6);
+            return new db(param0, (int)((long)param0.field_j * 256L * 100L / (long)(100 * lo.field_l)), 4096, param3 << 6);
           }
         } else {
           return null;
@@ -1031,7 +1031,7 @@ final class db extends tj {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new db(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * lo.field_l)), param2 << 6);
+            return new db(param0, (int)((long)param0.field_j * 256L * 100L / (long)(100 * lo.field_l)), param2 << 6);
           }
         } else {
           return null;
@@ -1270,7 +1270,7 @@ final class db extends tj {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new db(param0, param1, param2 << 6);
+            return new db(param0, 256, param2 << 6);
           }
         } else {
           return null;

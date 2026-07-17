@@ -67,7 +67,8 @@ final class qg {
         try {
           L0: {
             L1: {
-              var18 = new ng(b.a(param1, -1));
+              int discarded$5 = -1;
+              var18 = new ng(b.a(param1));
               var4 = var18.h(255);
               if (var4 < 5) {
                 break L1;
@@ -129,9 +130,9 @@ final class qg {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$4 = var8 + var18.c((byte) -7);
-                            var8 = dupTemp$4;
-                            ((qg) this).field_e[var10] = dupTemp$4;
+                            int dupTemp$6 = var8 + var18.c((byte) -7);
+                            var8 = dupTemp$6;
+                            ((qg) this).field_e[var10] = dupTemp$6;
                             if (~var9 > ~((qg) this).field_e[var10]) {
                               var9 = ((qg) this).field_e[var10];
                               break L8;
@@ -150,9 +151,9 @@ final class qg {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$5 = var8 + var18.a((byte) -124);
-                            var8 = dupTemp$5;
-                            ((qg) this).field_e[var10] = dupTemp$5;
+                            int dupTemp$7 = var8 + var18.a((byte) -124);
+                            var8 = dupTemp$7;
+                            ((qg) this).field_e[var10] = dupTemp$7;
                             if (~((qg) this).field_e[var10] >= ~var9) {
                               break L10;
                             } else {
@@ -262,10 +263,10 @@ final class qg {
                                           continue L21;
                                         } else {
                                           L24: {
-                                            int dupTemp$6 = var8 + var18.c((byte) -7);
-                                            var8 = dupTemp$6;
-                                            ((qg) this).field_h[var11][var14] = dupTemp$6;
-                                            var15 = dupTemp$6;
+                                            int dupTemp$8 = var8 + var18.c((byte) -7);
+                                            var8 = dupTemp$8;
+                                            ((qg) this).field_h[var11][var14] = dupTemp$8;
+                                            var15 = dupTemp$8;
                                             if (~var13 > ~var15) {
                                               var13 = var15;
                                               break L24;
@@ -315,10 +316,10 @@ final class qg {
                                           continue L26;
                                         } else {
                                           L29: {
-                                            int dupTemp$7 = var8 + var18.a((byte) -121);
-                                            var8 = dupTemp$7;
-                                            ((qg) this).field_h[var11][var14] = dupTemp$7;
-                                            var15 = dupTemp$7;
+                                            int dupTemp$9 = var8 + var18.a((byte) -121);
+                                            var8 = dupTemp$9;
+                                            ((qg) this).field_h[var11][var14] = dupTemp$9;
+                                            var15 = dupTemp$9;
                                             if (~var13 <= ~var15) {
                                               break L29;
                                             } else {
@@ -447,7 +448,7 @@ final class qg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_o = null;
         field_s = null;
@@ -464,7 +465,8 @@ final class qg {
                 if (param2.length != 64) {
                     throw new RuntimeException();
                 }
-                ((qg) this).field_j = ac.a(param0, 0, param0.length, (byte) -127);
+                int discarded$0 = -127;
+                ((qg) this).field_j = ac.a(param0, 0, param0.length);
                 for (var4_int = 0; var4_int < 64; var4_int++) {
                     if (((qg) this).field_j[var4_int] != param2[var4_int]) {
                         throw new RuntimeException();

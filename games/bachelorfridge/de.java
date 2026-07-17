@@ -30,39 +30,31 @@ final class de extends wj {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
         String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var8 = BachelorFridge.field_y;
         try {
           L0: {
-            L1: {
-              var5_int = param1 + ((de) this).field_p;
-              ah.a(-((de) this).field_N.field_q + var5_int, (byte) -99, param0, param1 + ((de) this).field_N.field_q, ((de) this).field_q + param0);
-              var6 = param1 + -((de) this).field_C;
-              if (param2 == 2) {
-                break L1;
-              } else {
-                int discarded$1 = de.d(12, 87, 19);
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var5_int = param1 + ((de) this).field_p;
+            ah.a(-((de) this).field_N.field_q + var5_int, (byte) -99, param0, param1 + ((de) this).field_N.field_q, ((de) this).field_q + param0);
+            var6 = param1 + -((de) this).field_C;
+            L1: while (true) {
               if (var6 >= var5_int) {
-                L3: {
+                L2: {
                   db.b(74);
                   if (param1 + ((de) this).field_N.field_q >= dg.field_f) {
                     bu.a(0, ((de) this).field_H);
@@ -71,69 +63,69 @@ final class de extends wj {
                     ((de) this).field_z.a(0, 0);
                     db.b(121);
                     ((de) this).field_H.e(param1, param0);
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
-                L4: {
+                L3: {
                   if (dg.field_h >= var5_int - ((de) this).field_N.field_q) {
                     bu.a(0, ((de) this).field_H);
                     var7 = -((de) this).field_N.field_q + ((de) this).field_p + ((de) this).field_C;
-                    L5: while (true) {
+                    L4: while (true) {
                       if (var7 <= ((de) this).field_J * 2) {
                         param3.e(-var7, 0);
                         param3.e(((de) this).field_J * 2 + -var7, 0);
                         ((de) this).field_N.a(0, 0);
-                        db.b(param2 + 107);
+                        db.b(109);
                         ((de) this).field_H.e(-((de) this).field_N.field_q + var5_int, param0);
-                        break L4;
+                        break L3;
                       } else {
                         var7 = var7 - ((de) this).field_J * 2;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
                 break L0;
               } else {
                 param3.e(var6, param0);
                 var6 = var6 + param3.field_q;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var5;
-            stackOut_15_1 = new StringBuilder().append("de.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_1 = new StringBuilder().append("de.C(").append(param0).append(44).append(param1).append(44).append(2).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
-              break L6;
-            } else {
               stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
               stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
-              break L6;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 
@@ -148,7 +140,7 @@ final class de extends wj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_K = null;
         field_F = null;
         field_A = null;
@@ -229,7 +221,7 @@ final class de extends wj {
         }
     }
 
-    private final kv g(int param0) {
+    private final kv g() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -336,9 +328,10 @@ final class de extends wj {
 
     private final void h(int param0) {
         ((de) this).field_D = new kv[]{this.b(((de) this).field_y, ((de) this).field_O, -47), this.b(((de) this).field_L, ((de) this).field_G, -126)};
-        ((de) this).field_N = this.g(5);
+        int discarded$0 = 5;
+        ((de) this).field_N = this.g();
         if (param0 <= 92) {
-            int discarded$0 = de.d(84, 78, 72);
+            int discarded$1 = de.d(84, 78, 72);
         }
         ((de) this).field_z = ((de) this).field_N.h();
         ((de) this).field_H = new kv(((de) this).field_q >> 1, ((de) this).field_q);

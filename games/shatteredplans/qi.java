@@ -49,7 +49,8 @@ final class qi extends oh {
                   if (param3 <= -113) {
                     break L2;
                   } else {
-                    qi.a(0);
+                    int discarded$14 = 0;
+                    qi.a();
                     break L2;
                   }
                 }
@@ -84,9 +85,9 @@ final class qi extends oh {
                         }
                       }
                     }
-                    int incrementValue$13 = var5;
+                    int incrementValue$15 = var5;
                     var5++;
-                    var10[incrementValue$13] = (char)var7;
+                    var10[incrementValue$15] = (char)var7;
                     var6++;
                     break L3;
                   }
@@ -129,7 +130,7 @@ final class qi extends oh {
         return stackIn_18_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_h = null;
     }

@@ -10,7 +10,7 @@ final class qk extends k {
     static String field_k;
     static int[] field_m;
 
-    public static void d(int param0) {
+    public static void d() {
         field_q = null;
         field_m = null;
         field_k = null;

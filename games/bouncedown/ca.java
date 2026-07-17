@@ -291,7 +291,7 @@ final class ca {
         return var3;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;

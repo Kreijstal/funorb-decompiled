@@ -525,7 +525,7 @@ final class rk {
         rk.a(param0, param1, param4, 0, 0, var9, df.field_d, var12 * df.field_e + var11, param5, var7, var8, var12 - var14, var11 - var13, df.field_e - (var13 - var11));
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -683,7 +683,7 @@ final class rk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_b = null;
         field_d = null;
@@ -691,7 +691,7 @@ final class rk {
         field_g = null;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

@@ -9,7 +9,7 @@ final class vc {
     static String field_e;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_b = null;
@@ -37,7 +37,7 @@ final class vc {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         NumberFormatException var3 = null;
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;

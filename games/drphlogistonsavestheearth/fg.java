@@ -14,7 +14,7 @@ final class fg {
     int field_a;
     private long field_c;
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -62,7 +62,7 @@ final class fg {
             var8 = var9;
             var3 = var8;
             var4 = 0;
-            var5 = 90 % ((param1 - 5) / 48);
+            var5 = 0;
             L2: while (true) {
               if (var2_int <= var4) {
                 stackOut_19_0 = new String(var11);
@@ -147,12 +147,12 @@ final class fg {
               break L8;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 90 + 41);
         }
         return stackIn_20_0;
     }
 
-    final static sf a(int param0) {
+    final static sf a() {
         if (!(null != th.field_c)) {
             th.field_c = new sf();
             th.field_c.a(42, uh.field_i);
@@ -191,7 +191,8 @@ final class fg {
             if (((fg) this).field_c != DrPhlogistonSavesTheEarth.field_I) {
               var2 = 19 / ((param0 - -29) / 38);
               if (of.field_v == 2) {
-                if (ik.a(((fg) this).field_b, (byte) -119)) {
+                int discarded$12 = -119;
+                if (ik.a(((fg) this).field_b)) {
                   return 1;
                 } else {
                   return 0;
@@ -207,7 +208,8 @@ final class fg {
               if (((fg) this).field_c != DrPhlogistonSavesTheEarth.field_I) {
                 var2 = 19 / ((param0 - -29) / 38);
                 if (of.field_v == 2) {
-                  if (ik.a(((fg) this).field_b, (byte) -119)) {
+                  int discarded$13 = -119;
+                  if (ik.a(((fg) this).field_b)) {
                     return 1;
                   } else {
                     return 0;

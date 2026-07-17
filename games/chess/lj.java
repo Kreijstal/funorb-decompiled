@@ -46,7 +46,8 @@ final class lj {
         }
         L1: {
           if (an.field_e > 0) {
-            tf.a(90);
+            int discarded$1 = 90;
+            tf.a();
             break L1;
           } else {
             break L1;
@@ -78,17 +79,14 @@ final class lj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_i = null;
-        if (param0 <= 81) {
-            lj.a((String) null, 126L, -28);
-        }
         field_d = null;
         field_n = null;
     }
 
-    private final void a(byte[] param0, byte param1) {
+    private final void a(byte[] param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -505,7 +503,7 @@ final class lj {
         }
     }
 
-    final static void a(String param0, long param1, int param2) {
+    final static void a(String param0, long param1) {
         CharSequence var5 = null;
         try {
             vk.field_g = 2;
@@ -513,10 +511,11 @@ final class lj {
             var5 = (CharSequence) (Object) param0;
             ec.field_f = ad.a(var5, -2);
             re.field_p = param1;
-            int var4_int = -59 % ((param2 - 54) / 48);
-            df.a(true);
+            int var4_int = 0;
+            int discarded$0 = 1;
+            df.a();
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "lj.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "lj.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 112 + 41);
         }
     }
 
@@ -538,7 +537,8 @@ final class lj {
                     }
                 }
             }
-            this.a(param0, (byte) 50);
+            int discarded$0 = 50;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "lj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

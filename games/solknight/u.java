@@ -8,7 +8,7 @@ final class u {
     static volatile int field_d;
     static String field_e;
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
         field_b = null;

@@ -39,12 +39,13 @@ final class uc extends sa {
                 if (param1.equals((Object) (Object) fb.field_a.a(55))) {
                   break L1;
                 } else {
-                  fb.field_a = a.a(param1, -6728);
+                  int discarded$2 = -6728;
+                  fb.field_a = a.a(param1);
                   break L1;
                 }
               }
             }
-            var2_int = -64 % ((38 - param0) / 61);
+            var2_int = 0;
             stackOut_3_0 = fb.field_a;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -54,7 +55,7 @@ final class uc extends sa {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("uc.H(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("uc.H(").append(-112).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

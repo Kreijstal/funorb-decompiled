@@ -10,7 +10,7 @@ final class ho {
     static String field_b;
     static String field_d;
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -19,24 +19,16 @@ final class ho {
         try {
           L0: {
             if (we.field_o == null) {
-              L1: {
-                we.field_o = new String[35];
-                we.field_o[3] = ah.field_u;
-                we.field_o[7] = ge.field_b;
-                we.field_o[9] = ih.field_e;
-                we.field_o[6] = wk.field_f;
-                we.field_o[0] = jm.field_s;
-                we.field_o[28] = od.field_Nb;
-                we.field_o[1] = jo.field_c;
-                we.field_o[11] = al.field_d;
-                we.field_o[29] = ge.field_a;
-                if (param0 == -29810) {
-                  break L1;
-                } else {
-                  ho.a(false, -69);
-                  break L1;
-                }
-              }
+              we.field_o = new String[35];
+              we.field_o[3] = ah.field_u;
+              we.field_o[7] = ge.field_b;
+              we.field_o[9] = ih.field_e;
+              we.field_o[6] = wk.field_f;
+              we.field_o[0] = jm.field_s;
+              we.field_o[28] = od.field_Nb;
+              we.field_o[1] = jo.field_c;
+              we.field_o[11] = al.field_d;
+              we.field_o[29] = ge.field_a;
               we.field_o[8] = null;
               we.field_o[5] = cm.field_l;
               we.field_o[2] = sk.field_b;
@@ -67,20 +59,20 @@ final class ho {
               wc.field_m[0] = bn.field_L;
               wc.field_m[5] = wa.field_e;
               var1_int = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var1_int >= wc.field_m.length) {
                   break L0;
                 } else {
-                  L3: {
+                  L2: {
                     if (null == wc.field_m[var1_int]) {
                       wc.field_m[var1_int] = bl.field_f;
-                      break L3;
+                      break L2;
                     } else {
-                      break L3;
+                      break L2;
                     }
                   }
                   var1_int++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
@@ -90,19 +82,16 @@ final class ho {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "ho.A(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1, "ho.A(" + -29810 + 41);
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         kk.a((byte) -61, param0);
-        if (param1 != 12402) {
-            return;
-        }
         cl.a((byte) 95, param0);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_b = null;
         field_a = null;

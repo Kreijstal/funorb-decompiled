@@ -14,7 +14,7 @@ final class uo {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

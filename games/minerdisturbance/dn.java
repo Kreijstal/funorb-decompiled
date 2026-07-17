@@ -80,7 +80,7 @@ final class dn extends pi {
         }
     }
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String a(CharSequence param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_4_0 = null;
@@ -104,7 +104,8 @@ final class dn extends pi {
         try {
           L0: {
             L1: {
-              var2 = oh.a(ah.a(-97, param0), 95);
+              int discarded$2 = 95;
+              var2 = oh.a(ah.a(-97, param0));
               if (var2 == null) {
                 var2 = "";
                 break L1;
@@ -149,13 +150,13 @@ final class dn extends pi {
         return stackIn_4_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_s = null;
         field_t = null;
         field_n = null;
     }
 
-    final static void a(bj param0, byte param1) {
+    final static void a(bj param0) {
         ea var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

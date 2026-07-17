@@ -7,7 +7,7 @@ final class gj {
     static String field_d;
     static jp[] field_c;
 
-    final static kn b(int param0) {
+    final static kn b() {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         kn var2 = null;
@@ -99,7 +99,7 @@ final class gj {
                       var6 = 0;
                       L2: while (true) {
                         if (var5 <= var6) {
-                          var6 = 127 / ((param2 - 59) / 36);
+                          var6 = -31;
                           stackOut_20_0 = -1;
                           stackIn_21_0 = stackOut_20_0;
                           break L0;
@@ -197,12 +197,12 @@ final class gj {
               break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param2 + 44 + param3 + 41);
+          throw qb.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + -87 + 44 + param3 + 41);
         }
         return stackIn_21_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_c = null;

@@ -342,7 +342,8 @@ final class na extends jh {
                       jb.field_c.a(var15, (byte) -72);
                       jb.field_c.a(var8, (byte) -72);
                       var17 = (CharSequence) (Object) param1;
-                      jb.field_c.a(lp.a(var17, 109), (byte) -72);
+                      int discarded$10 = 109;
+                      jb.field_c.a(lp.a(var17), (byte) -72);
                       jb.field_c.a(param6, 109);
                       jb.field_c.b(90, param4);
                       jb.field_c.b(90, var9);
@@ -358,7 +359,8 @@ final class na extends jh {
                       }
                     }
                     wa.field_d.b((byte) 4, var11_ref_String);
-                    ok.a(jb.field_c, ua.field_a, (fj) (Object) wa.field_d, gk.field_b, -4);
+                    int discarded$11 = -4;
+                    ok.a(jb.field_c, ua.field_a, (fj) (Object) wa.field_d, gk.field_b);
                     wa.field_d.c(-var10 + wa.field_d.field_n, param2 + 400395746);
                     break L3;
                   } else {
@@ -406,7 +408,8 @@ final class na extends jh {
                     wa.field_d.b(90, 16);
                     wa.field_d.field_n = wa.field_d.field_n + 1;
                     var9 = wa.field_d.field_n;
-                    ok.a(jb.field_c, ua.field_a, (fj) (Object) wa.field_d, gk.field_b, -4);
+                    int discarded$12 = -4;
+                    ok.a(jb.field_c, ua.field_a, (fj) (Object) wa.field_d, gk.field_b);
                     wa.field_d.c((byte) 48, -var9 + wa.field_d.field_n);
                     break L3;
                   }
@@ -423,7 +426,7 @@ final class na extends jh {
                 break L8;
               } else {
                 var14 = null;
-                int discarded$2 = na.a((da) null, (String) null, 121, (da) null, -99, true, 19);
+                int discarded$13 = na.a((da) null, (String) null, 121, (da) null, -99, true, 19);
                 break L8;
               }
             }
@@ -450,14 +453,16 @@ final class na extends jh {
                   if (248 == var9) {
                     ae.a(ip.a(9), (byte) 25);
                     pl.field_u = od.field_u;
-                    ih.b(true);
+                    int discarded$14 = 1;
+                    ih.b();
                     lh.field_J = false;
                     stackOut_35_0 = var9;
                     stackIn_36_0 = stackOut_35_0;
                     return stackIn_36_0;
                   } else {
                     if (var9 == 99) {
-                      boolean discarded$3 = no.a(ol.b(-92), param2 ^ -25978);
+                      int discarded$15 = -92;
+                      boolean discarded$16 = no.a(ol.b(), param2 ^ -25978);
                       jl.field_T = new Boolean(ac.a((fj) (Object) kj.field_d, 28066));
                       kj.field_d.field_n = 0;
                       break L9;
@@ -486,7 +491,8 @@ final class na extends jh {
                     var12 = 0;
                     L12: while (true) {
                       if (var12 >= var11) {
-                        ih.b(true);
+                        int discarded$17 = 1;
+                        ih.b();
                         lh.field_J = false;
                         stackOut_46_0 = 100 - -var11;
                         stackIn_47_0 = stackOut_46_0;
@@ -522,7 +528,8 @@ final class na extends jh {
                       }
                     }
                   }
-                  ih.b(true);
+                  int discarded$18 = 1;
+                  ih.b();
                   lh.field_J = false;
                   stackOut_56_0 = fa.field_e;
                   stackIn_57_0 = stackOut_56_0;
@@ -540,7 +547,8 @@ final class na extends jh {
               } else {
                 if (lh.field_J) {
                   L16: {
-                    if (lc.h((byte) -76) > 30000L) {
+                    int discarded$19 = -76;
+                    if (lc.h() > 30000L) {
                       pl.field_u = eb.field_h;
                       break L16;
                     } else {
@@ -648,7 +656,7 @@ final class na extends jh {
         return stackIn_67_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_I = null;
         field_G = null;
     }

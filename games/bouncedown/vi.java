@@ -9,7 +9,7 @@ final class vi implements Runnable {
     private boolean field_a;
     int field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
     }
 
@@ -32,7 +32,8 @@ final class vi implements Runnable {
             var3 = 115 % ((param0 - 53) / 58);
             var2 = 0;
             L1: while (true) {
-              if (!q.g((byte) -15)) {
+              int discarded$1 = -15;
+              if (!q.g()) {
                 L2: {
                   cf.field_f.a(qe.a(uc.field_C, (byte) -94, ll.field_y), qe.a(og.field_a, (byte) -125, rk.field_a), -798);
                   if (cf.field_f.a(-1)) {
@@ -169,7 +170,8 @@ final class vi implements Runnable {
                 if (var2 != 0) {
                   if (var2 != 1) {
                     ti.a((Throwable) null, (byte) 100, "HS1: " + la.a(-105));
-                    kc.a((byte) 18);
+                    int discarded$9 = 18;
+                    kc.a();
                     break L1;
                   } else {
                     var3 = var27.a(-1640531527);
@@ -193,7 +195,8 @@ final class vi implements Runnable {
                         var6.c(2);
                         break L1;
                       } else {
-                        kc.a((byte) 18);
+                        int discarded$10 = 18;
+                        kc.a();
                         return;
                       }
                     }
@@ -215,7 +218,8 @@ final class vi implements Runnable {
                       }
                     }
                     if (var4_ref_sa == null) {
-                      kc.a((byte) 18);
+                      int discarded$11 = 18;
+                      kc.a();
                       return;
                     } else {
                       L6: {
@@ -231,16 +235,16 @@ final class vi implements Runnable {
                           var8_int = 1;
                           L7: while (true) {
                             if (var5 <= var8_int) {
-                              String[][] dupTemp$6 = new String[3][var6_int];
-                              var4_ref_sa.field_h = dupTemp$6;
-                              var8 = dupTemp$6;
+                              String[][] dupTemp$12 = new String[3][var6_int];
+                              var4_ref_sa.field_h = dupTemp$12;
+                              var8 = dupTemp$12;
                               var9 = new String[3][var6_int];
-                              long[][] dupTemp$7 = new long[3][var6_int];
-                              var4_ref_sa.field_l = dupTemp$7;
-                              var10 = dupTemp$7;
-                              int[][] dupTemp$8 = new int[3][var7 * var6_int];
-                              var4_ref_sa.field_o = dupTemp$8;
-                              var11 = dupTemp$8;
+                              long[][] dupTemp$13 = new long[3][var6_int];
+                              var4_ref_sa.field_l = dupTemp$13;
+                              var10 = dupTemp$13;
+                              int[][] dupTemp$14 = new int[3][var7 * var6_int];
+                              var4_ref_sa.field_o = dupTemp$14;
+                              var11 = dupTemp$14;
                               var12 = 0;
                               var13 = 0;
                               var14 = 0;
@@ -269,9 +273,9 @@ final class vi implements Runnable {
                                           if (var25 >= var7) {
                                             break L9;
                                           } else {
-                                            int incrementValue$9 = var15;
+                                            int incrementValue$15 = var15;
                                             var15++;
-                                            var11[0][incrementValue$9] = var27.j(-3);
+                                            var11[0][incrementValue$15] = var27.j(-3);
                                             var25++;
                                             continue L10;
                                           }
@@ -295,9 +299,9 @@ final class vi implements Runnable {
                                             if (var25 >= var7) {
                                               break L11;
                                             } else {
-                                              int incrementValue$10 = var16;
+                                              int incrementValue$16 = var16;
                                               var16++;
-                                              var11[1][incrementValue$10] = var27.j(-3);
+                                              var11[1][incrementValue$16] = var27.j(-3);
                                               var25++;
                                               continue L12;
                                             }
@@ -325,9 +329,9 @@ final class vi implements Runnable {
                                             if (var25 >= var7) {
                                               break L13;
                                             } else {
-                                              int incrementValue$11 = var17;
+                                              int incrementValue$17 = var17;
                                               var17++;
-                                              var11[2][incrementValue$11] = var27.j(-3);
+                                              var11[2][incrementValue$17] = var27.j(-3);
                                               var25++;
                                               continue L14;
                                             }
@@ -892,7 +896,8 @@ final class vi implements Runnable {
         try {
             var2 = param0.a(5, (byte) -123, (Runnable) this);
             while (0 == var2.field_f) {
-                wh.a(10L, 19406);
+                int discarded$0 = 19406;
+                wh.a(10L);
             }
             if (var2.field_f == 2) {
                 throw new RuntimeException();

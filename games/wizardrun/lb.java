@@ -10,6 +10,10 @@ final class lb {
     private int field_c;
 
     final static int a(byte param0) {
+        if (param0 != 47) {
+            field_f = null;
+            return fh.field_f;
+        }
         return fh.field_f;
     }
 
@@ -216,41 +220,13 @@ final class lb {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        if (param2 <= ((lb) this).field_a) {
-          if (param0 <= 100) {
+        if (~param2 < ~((lb) this).field_a) {
+            ((lb) this).field_a = param2;
             return;
-          } else {
-            L0: {
-              if (param2 >= ((lb) this).field_d.length) {
-                this.c(param2, 65);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            ((lb) this).field_d[param2] = param1;
-            return;
-          }
-        } else {
-          ((lb) this).field_a = param2;
-          if (param0 <= 100) {
-            return;
-          } else {
-            L1: {
-              if (param2 >= ((lb) this).field_d.length) {
-                this.c(param2, 65);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            ((lb) this).field_d[param2] = param1;
-            return;
-          }
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
         field_f = null;
     }
@@ -266,7 +242,7 @@ final class lb {
         }
     }
 
-    private final int b(int param0, int param1) {
+    private final int b(int param0) {
         int var3 = 0;
         int var4 = 0;
         var4 = wizardrun.field_H;
@@ -383,8 +359,9 @@ final class lb {
         }
     }
 
-    private final void c(int param0, int param1) {
-        int[] var5 = new int[this.b(param0, 0)];
+    private final void c(int param0) {
+        int discarded$0 = 0;
+        int[] var5 = new int[this.b(param0)];
         int[] var3 = var5;
         g.a(((lb) this).field_d, 0, var5, 0, ((lb) this).field_d.length);
         int var4 = 0;

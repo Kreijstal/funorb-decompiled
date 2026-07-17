@@ -54,7 +54,7 @@ final class el extends aba {
           L0: {
             var10_int = -(param0 >> 2);
             param0 = -(3 & param0);
-            var11 = 90 % ((37 - param4) / 50);
+            var11 = 0;
             var12 = -param9;
             L1: while (true) {
               if (var12 >= 0) {
@@ -80,7 +80,7 @@ final class el extends aba {
                           } else {
                             int incrementValue$11 = param3;
                             param3++;
-                            param6[incrementValue$11] = param5;
+                            param6[incrementValue$11] = 5587456;
                             break L4;
                           }
                         }
@@ -95,7 +95,7 @@ final class el extends aba {
                       if ((-16777216 & param7[incrementValue$12]) == -16777216) {
                         int incrementValue$13 = param3;
                         param3++;
-                        param6[incrementValue$13] = param5;
+                        param6[incrementValue$13] = 5587456;
                         break L5;
                       } else {
                         param3++;
@@ -111,7 +111,7 @@ final class el extends aba {
                       } else {
                         int incrementValue$15 = param3;
                         param3++;
-                        param6[incrementValue$15] = param5;
+                        param6[incrementValue$15] = 5587456;
                         break L6;
                       }
                     }
@@ -121,7 +121,7 @@ final class el extends aba {
                       if ((-16777216 & param7[incrementValue$16]) == -16777216) {
                         int incrementValue$17 = param3;
                         param3++;
-                        param6[incrementValue$17] = param5;
+                        param6[incrementValue$17] = 5587456;
                         break L7;
                       } else {
                         param3++;
@@ -137,7 +137,7 @@ final class el extends aba {
                       } else {
                         int incrementValue$19 = param3;
                         param3++;
-                        param6[incrementValue$19] = param5;
+                        param6[incrementValue$19] = 5587456;
                         break L8;
                       }
                     }
@@ -153,7 +153,7 @@ final class el extends aba {
           L9: {
             var10 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var10;
-            stackOut_26_1 = new StringBuilder().append("el.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_26_1 = new StringBuilder().append("el.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(125).append(44).append(5587456).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -306,26 +306,17 @@ final class el extends aba {
             }
           }
         }
-        L1: {
-          if (param0 == 29322) {
-            break L1;
-          } else {
-            field_h = -114;
-            break L1;
-          }
-        }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_g = null;
     }
 
-    final static void e(byte param0) {
-        if (param0 < 20) {
-            field_g = null;
-        }
-        int var1 = te.d((byte) 89);
-        int var2 = nka.a((byte) -74);
+    final static void e() {
+        int discarded$0 = 89;
+        int var1 = te.d();
+        int discarded$1 = -74;
+        int var2 = nka.a();
         raa.field_I.a((ge.field_I << 1) + var2, 9, -wo.field_j + rs.field_a, vka.field_q - ge.field_I, (wo.field_j << 1) + var1);
         w.a(true);
     }

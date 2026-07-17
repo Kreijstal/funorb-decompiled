@@ -44,7 +44,7 @@ final class pl extends jb {
         }
     }
 
-    final static void a(boolean param0, java.awt.Canvas param1, byte param2) {
+    final static void a(boolean param0, java.awt.Canvas param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -78,13 +78,18 @@ final class pl extends jb {
                   break L1;
                 }
               }
-              ud.a(rn.d(-3), 1, oo.e((byte) -110), cf.field_e, var3_int != 0);
+              int discarded$24 = -3;
+              ud.a(rn.d(), 1, oo.e((byte) -110), cf.field_e, var3_int != 0);
               break L0;
             } else {
-              if (ji.f(250)) {
+              int discarded$25 = 250;
+              if (ji.f()) {
                 if (0 == hp.field_s) {
                   dc.a(param0, (byte) 107, false);
-                  bq.a(param1, 0, 0, 4);
+                  int discarded$26 = 4;
+                  int discarded$27 = 0;
+                  int discarded$28 = 0;
+                  bq.a(param1);
                   return;
                 } else {
                   to.a(0, param1);
@@ -92,8 +97,14 @@ final class pl extends jb {
                 }
               } else {
                 kh.a();
-                bc.a(240, 125, 320);
-                bq.a(param1, 0, 0, 4);
+                int discarded$29 = 320;
+                int discarded$30 = 125;
+                int discarded$31 = 240;
+                bc.a();
+                int discarded$32 = 4;
+                int discarded$33 = 0;
+                int discarded$34 = 0;
+                bq.a(param1);
                 return;
               }
             }
@@ -141,7 +152,7 @@ final class pl extends jb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_s = null;
         field_B = null;
         field_n = null;
@@ -189,7 +200,8 @@ final class pl extends jb {
           L0: {
             if (gm.a(param3, param1, true, param0)) {
               if (param2 == -11) {
-                stackOut_6_0 = tn.a(param4.b(param1, 0, param0), 0);
+                int discarded$2 = 0;
+                stackOut_6_0 = tn.a(param4.b(param1, 0, param0));
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {

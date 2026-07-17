@@ -462,7 +462,8 @@ final class pd extends th {
                 }
                 L4: {
                   ((pd) this).field_s = (fl) param0;
-                  this.c(false);
+                  int discarded$1 = 0;
+                  this.c();
                   this.a(false, param1);
                   if (param2 <= -73) {
                     break L4;
@@ -560,10 +561,11 @@ final class pd extends th {
         hn.field_P = new hl(0L, (hl) null);
         hn.field_P.a((byte) -92, (hl) (Object) gg.field_j.field_g);
         hn.field_P.a((byte) 68, gg.field_i);
-        db.a(5);
+        int discarded$0 = 5;
+        db.a();
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -593,100 +595,66 @@ final class pd extends th {
         try {
             IOException iOException = null;
             Exception var4 = null;
+            bh stackIn_4_0 = null;
+            bh stackIn_5_0 = null;
             bh stackIn_6_0 = null;
-            bh stackIn_7_0 = null;
-            bh stackIn_8_0 = null;
-            int stackIn_8_1 = 0;
-            fl stackIn_9_0 = null;
-            fl stackIn_10_0 = null;
-            fl stackIn_11_0 = null;
-            int stackIn_11_1 = 0;
+            int stackIn_6_1 = 0;
             Throwable decompiledCaughtException = null;
+            bh stackOut_3_0 = null;
             bh stackOut_5_0 = null;
-            bh stackOut_7_0 = null;
-            int stackOut_7_1 = 0;
-            bh stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
-            fl stackOut_8_0 = null;
-            fl stackOut_10_0 = null;
-            int stackOut_10_1 = 0;
-            fl stackOut_9_0 = null;
-            int stackOut_9_1 = 0;
+            int stackOut_5_1 = 0;
+            bh stackOut_4_0 = null;
+            int stackOut_4_1 = 0;
             if (((pd) this).field_s == null) {
               return;
             } else {
               try {
                 L0: {
                   L1: {
-                    if (!param0) {
-                      break L1;
-                    } else {
-                      ((pd) this).field_s = null;
-                      break L1;
-                    }
-                  }
-                  L2: {
+                    ((pd) this).field_s = null;
                     ((pd) this).field_b.field_t = 0;
-                    stackOut_5_0 = ((pd) this).field_b;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackOut_3_0 = ((pd) this).field_b;
+                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_4_0 = stackOut_3_0;
                     if (!param1) {
-                      stackOut_7_0 = (bh) (Object) stackIn_7_0;
-                      stackOut_7_1 = 3;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
-                      break L2;
+                      stackOut_5_0 = (bh) (Object) stackIn_5_0;
+                      stackOut_5_1 = 3;
+                      stackIn_6_0 = stackOut_5_0;
+                      stackIn_6_1 = stackOut_5_1;
+                      break L1;
                     } else {
-                      stackOut_6_0 = (bh) (Object) stackIn_6_0;
-                      stackOut_6_1 = 2;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
-                      break L2;
+                      stackOut_4_0 = (bh) (Object) stackIn_4_0;
+                      stackOut_4_1 = 2;
+                      stackIn_6_0 = stackOut_4_0;
+                      stackIn_6_1 = stackOut_4_1;
+                      break L1;
                     }
                   }
-                  L3: {
-                    ((bh) (Object) stackIn_8_0).a(stackIn_8_1, param0);
-                    ((pd) this).field_b.a(0L, true);
-                    stackOut_8_0 = ((pd) this).field_s;
-                    stackIn_10_0 = stackOut_8_0;
-                    stackIn_9_0 = stackOut_8_0;
-                    if (param0) {
-                      stackOut_10_0 = (fl) (Object) stackIn_10_0;
-                      stackOut_10_1 = 0;
-                      stackIn_11_0 = stackOut_10_0;
-                      stackIn_11_1 = stackOut_10_1;
-                      break L3;
-                    } else {
-                      stackOut_9_0 = (fl) (Object) stackIn_9_0;
-                      stackOut_9_1 = 1;
-                      stackIn_11_0 = stackOut_9_0;
-                      stackIn_11_1 = stackOut_9_1;
-                      break L3;
-                    }
-                  }
-                  ((fl) (Object) stackIn_11_0).a(stackIn_11_1 != 0, ((pd) this).field_b.field_u.length, ((pd) this).field_b.field_u, 0);
+                  ((bh) (Object) stackIn_6_0).a(stackIn_6_1, false);
+                  ((pd) this).field_b.a(0L, true);
+                  ((pd) this).field_s.a(true, ((pd) this).field_b.field_u.length, ((pd) this).field_b.field_u, 0);
                   break L0;
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                L4: {
+                L2: {
                   iOException = (IOException) (Object) decompiledCaughtException;
                   try {
-                    L5: {
+                    L3: {
                       ((pd) this).field_s.d(-15488);
-                      break L5;
+                      break L3;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
-                    L6: {
+                    L4: {
                       var4 = (Exception) (Object) decompiledCaughtException;
-                      break L6;
+                      break L4;
                     }
                   }
                   ((pd) this).field_s = null;
                   ((pd) this).field_h = ((pd) this).field_h + 1;
                   ((pd) this).field_d = -2;
-                  break L4;
+                  break L2;
                 }
               }
               return;

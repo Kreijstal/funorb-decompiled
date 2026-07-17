@@ -83,7 +83,7 @@ final class aq {
         return stackIn_4_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -101,7 +101,7 @@ final class aq {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         of.field_Ob = -no.field_q.field_w + qh.field_l >> 1;
         fm.field_M = -no.field_q.field_A;
         vk.field_H = of.field_Ob - -224;

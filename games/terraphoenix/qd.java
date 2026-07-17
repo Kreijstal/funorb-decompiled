@@ -48,7 +48,7 @@ final class qd extends uf {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_h = null;
         field_j = null;
     }

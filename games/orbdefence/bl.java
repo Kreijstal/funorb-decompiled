@@ -189,50 +189,42 @@ final class bl {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
               var5_int = ((bl) this).field_j.a(param1);
               var6 = ((bl) this).field_j.field_B + ((bl) this).field_j.field_E;
               var7 = param3;
-              if (!param0) {
+              if (var5_int + (var7 + 6) > ul.field_f) {
+                var7 = -var5_int + ul.field_f - 6;
                 break L1;
               } else {
-                bl.b(21);
                 break L1;
               }
             }
             L2: {
-              if (var5_int + (var7 + 6) > ul.field_f) {
-                var7 = -var5_int + ul.field_f - 6;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
               var8 = 32 + param2 + -((bl) this).field_j.field_E;
               if (ul.field_l >= var8 + (var6 + 6)) {
-                break L3;
+                break L2;
               } else {
                 var8 = -var6 + ul.field_l - 6;
-                break L3;
+                break L2;
               }
             }
             ul.d(var7, var8, var5_int + 6, var6 - -6, ((bl) this).field_m);
@@ -242,33 +234,33 @@ final class bl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5;
-            stackOut_9_1 = new StringBuilder().append("bl.D(").append(param0).append(44);
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("bl.D(").append(0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 44 + param3 + 41);
+          throw dd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -511,35 +503,27 @@ final class bl {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (null != jg.field_n) {
           return;
         } else {
-          L0: {
-            jg.field_n = new String[27];
-            jg.field_n[3] = vh.field_i;
-            jg.field_n[11] = qf.field_h;
-            jg.field_n[15] = ha.field_j;
-            jg.field_n[6] = jl.field_a;
-            jg.field_n[14] = nf.field_l;
-            jg.field_n[16] = bm.field_c;
-            jg.field_n[5] = jl.field_a;
-            jg.field_n[12] = l.field_j;
-            jg.field_n[0] = k.field_e;
-            jg.field_n[4] = rc.field_i;
-            jg.field_n[7] = dk.field_b;
-            jg.field_n[2] = gl.field_f;
-            jg.field_n[1] = vg.field_s;
-            jg.field_n[13] = gl.field_a;
-            jg.field_n[24] = gb.field_g[5];
-            jg.field_n[9] = eg.field_w[1];
-            if (param0 >= 14) {
-              break L0;
-            } else {
-              bl.b(-55);
-              break L0;
-            }
-          }
+          jg.field_n = new String[27];
+          jg.field_n[3] = vh.field_i;
+          jg.field_n[11] = qf.field_h;
+          jg.field_n[15] = ha.field_j;
+          jg.field_n[6] = jl.field_a;
+          jg.field_n[14] = nf.field_l;
+          jg.field_n[16] = bm.field_c;
+          jg.field_n[5] = jl.field_a;
+          jg.field_n[12] = l.field_j;
+          jg.field_n[0] = k.field_e;
+          jg.field_n[4] = rc.field_i;
+          jg.field_n[7] = dk.field_b;
+          jg.field_n[2] = gl.field_f;
+          jg.field_n[1] = vg.field_s;
+          jg.field_n[13] = gl.field_a;
+          jg.field_n[24] = gb.field_g[5];
+          jg.field_n[9] = eg.field_w[1];
           jg.field_n[20] = gb.field_g[1];
           jg.field_n[23] = gb.field_g[4];
           jg.field_n[18] = qj.field_g;

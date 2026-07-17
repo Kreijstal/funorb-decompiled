@@ -10,7 +10,7 @@ final class rf {
     static eg field_g;
     static n field_b;
 
-    final static void a(int param0, long param1, boolean param2) {
+    final static void a(int param0, long param1) {
         pi var4 = k.field_h;
         var4.e(-13413, param0);
         var4.field_l = var4.field_l + 1;
@@ -20,13 +20,10 @@ final class rf {
         var4.d((byte) 113, -var5 + var4.field_l);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_d = null;
-        if (param0 != 98) {
-            return;
-        }
         field_a = null;
         field_e = null;
         field_b = null;

@@ -940,8 +940,8 @@ final class gm extends ma {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = gm.a(16);
                                     int discarded$4 = gm.a(16);
+                                    int discarded$5 = gm.a(16);
                                     field_G[var6] = gm.a(8);
                                     var6++;
                                     continue L6;
@@ -966,7 +966,7 @@ final class gm extends ma {
                       }
                     }
                   } else {
-                    int discarded$5 = gm.a(16);
+                    int discarded$6 = gm.a(16);
                     var3++;
                     continue L2;
                   }
@@ -1026,7 +1026,8 @@ final class gm extends ma {
                               continue L0;
                             }
                           } else {
-                            var9[var11] = c.a(var11, var10, (byte) -87);
+                            int discarded$7 = -87;
+                            var9[var11] = c.a(var11, var10);
                             var11++;
                             continue L12;
                           }

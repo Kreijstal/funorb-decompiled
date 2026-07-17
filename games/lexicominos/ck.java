@@ -9,7 +9,7 @@ final class ck extends IOException {
     static String field_c;
     static String field_b;
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -49,7 +49,8 @@ final class ck extends IOException {
                 if (var2_int >= var3) {
                   break L1;
                 } else {
-                  if (!cf.a(param0.charAt(var2_int), (byte) 78)) {
+                  int discarded$35 = 78;
+                  if (!cf.a(param0.charAt(var2_int))) {
                     break L1;
                   } else {
                     var2_int++;
@@ -62,7 +63,8 @@ final class ck extends IOException {
                   if (var3 <= var2_int) {
                     break L3;
                   } else {
-                    if (!cf.a(param0.charAt(var3 - 1), (byte) 78)) {
+                    int discarded$36 = 78;
+                    if (!cf.a(param0.charAt(var3 - 1))) {
                       break L3;
                     } else {
                       var3--;
@@ -92,7 +94,7 @@ final class ck extends IOException {
                             if (var8 == 0) {
                               break L5;
                             } else {
-                              StringBuilder discarded$1 = var5.append(var8);
+                              StringBuilder discarded$37 = var5.append(var8);
                               break L5;
                             }
                           }
@@ -154,7 +156,7 @@ final class ck extends IOException {
 
     final static void a(int param0, int param1) {
         th var2 = ed.field_q;
-        var2.h(param0, 0);
+        var2.h(4, 0);
         var2.c(1, -1);
         var2.c(2, -1);
     }
@@ -169,7 +171,7 @@ final class ck extends IOException {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_b = null;

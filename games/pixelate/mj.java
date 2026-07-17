@@ -91,14 +91,7 @@ final class mj {
     }
 
     final static String a(int param0, int param1) {
-        Object var3 = null;
-        if (param0 != 4067) {
-          var3 = null;
-          mj.a(112, (sb) null, -11, -57, 97, (sb) null);
-          return param1 - -1 + "/" + ln.field_m.length;
-        } else {
-          return param1 - -1 + "/" + ln.field_m.length;
-        }
+        return param1 - -1 + "/" + ln.field_m.length;
     }
 
     final static String a(int param0, String param1, int param2) {
@@ -157,7 +150,8 @@ final class mj {
                       stackIn_17_0 = stackOut_16_0;
                       return stackIn_17_0;
                     } else {
-                      if (!ha.a(param1, (byte) 37)) {
+                      int discarded$1 = 37;
+                      if (!ha.a(param1)) {
                         var6 = aa.field_f;
                         var6.g(param2, 15514);
                         var6.field_m = var6.field_m + 1;
@@ -237,7 +231,7 @@ final class mj {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         un.field_l = false;
         if (null != bo.field_h) {
           L0: {

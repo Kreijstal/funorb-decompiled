@@ -8,11 +8,11 @@ final class hb {
     int field_d;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ng.field_e = rd.field_e.j(-1231);
         CharSequence var2 = (CharSequence) (Object) ng.field_e;
         co.field_e = kf.a(var2, (byte) 124);

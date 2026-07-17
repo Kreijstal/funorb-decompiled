@@ -369,7 +369,7 @@ final class hq extends de {
 
     final static int a(byte param0, int param1) {
         int var2 = -((-10 + param1) / 2) + 25;
-        int var3 = 19 % ((param0 - 54) / 38);
+        int var3 = 0;
         if (var2 < 5) {
             var2 = 5;
         }
@@ -405,7 +405,8 @@ final class hq extends de {
             kj.a(((hq) this).field_x, (byte) 126);
             fc.field_e = 14;
             var3 = param0 ? 1 : 0;
-            la.a(!gq.d(121) ? 0 : 12, -3, var3 != 0, -25528);
+            int discarded$1 = -25528;
+            la.a(!gq.d(121) ? 0 : 12, -3, var3 != 0);
         } else {
             if (oa.field_j == 2) {
                 ro.field_e.g(46);
@@ -743,7 +744,8 @@ final class hq extends de {
                 break L1;
               }
             }
-            la.a(stackIn_8_0, var3, var4 != 0, -25528);
+            int discarded$4 = -25528;
+            la.a(stackIn_8_0, var3, var4 != 0);
             break L0;
           } else {
             L2: {
@@ -751,7 +753,8 @@ final class hq extends de {
                 break L2;
               } else {
                 var3 = param1 ? 1 : 0;
-                la.a(ti.field_t, -5, var3 != 0, -25528);
+                int discarded$5 = -25528;
+                la.a(ti.field_t, -5, var3 != 0);
                 break L2;
               }
             }

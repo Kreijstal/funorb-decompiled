@@ -22,7 +22,7 @@ final class iu extends gn {
           L0: {
             var3 = "";
             var4 = 0;
-            var5 = -71 / ((param0 - -58) / 61);
+            var5 = -71;
             if (param2 != 2) {
               if (param2 == 1) {
                 var4 = 3;
@@ -74,7 +74,7 @@ final class iu extends gn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_e = null;
     }
@@ -123,7 +123,7 @@ final class iu extends gn {
         var9 = Kickabout.field_G;
         try {
           L0: {
-            var6_int = -param4 + param0;
+            var6_int = param0;
             var7 = 0;
             if (param5 > 39) {
               L1: while (true) {
@@ -135,7 +135,7 @@ final class iu extends gn {
                   L2: {
                     L3: {
                       L4: {
-                        var8 = param1.charAt(var7 + param4);
+                        var8 = param1.charAt(var7);
                         if (var8 <= 0) {
                           break L4;
                         } else {
@@ -361,7 +361,7 @@ final class iu extends gn {
               break L7;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param4 + 44 + param5 + 41);
+          throw nb.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + 0 + 44 + param5 + 41);
         }
         return stackIn_69_0;
     }

@@ -77,21 +77,23 @@ abstract class r extends pj {
         }
         L4: {
           if (jb.field_h == 1) {
-            int discarded$4 = var8.a(255);
-            String discarded$5 = var8.d(-1);
+            int discarded$6 = var8.a(255);
+            String discarded$7 = var8.d(-1);
             break L4;
           } else {
             if (4 != jb.field_h) {
               break L4;
             } else {
-              int discarded$6 = var8.a(255);
-              String discarded$7 = var8.d(-1);
+              int discarded$8 = var8.a(255);
+              String discarded$9 = var8.d(-1);
               break L4;
             }
           }
         }
         if (!param0) {
-          oi.field_c = jb.a((fs) (Object) var8, 80, -14832);
+          int discarded$10 = -14832;
+          int discarded$11 = 80;
+          oi.field_c = jb.a((fs) (Object) var8);
           tm.field_c = null;
           return new br(param0);
         } else {
@@ -126,7 +128,7 @@ abstract class r extends pj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_r = null;
     }

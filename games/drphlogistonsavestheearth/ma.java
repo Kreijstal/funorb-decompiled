@@ -392,7 +392,8 @@ class ma extends jf implements ke {
                 return;
               }
             } else {
-              hg.e((byte) 47);
+              int discarded$5 = 47;
+              hg.e();
               if (param0) {
                 return;
               } else {

@@ -31,7 +31,7 @@ class gk extends eg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_s = null;
     }
 
@@ -43,7 +43,7 @@ class gk extends eg {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_I, -1, 2147483647, false);
     }
 
-    final static lc a(int param0, int param1, int param2, int param3, int param4) {
+    final static lc a(int param0, int param1, int param2, int param3) {
         lc var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -61,10 +61,10 @@ class gk extends eg {
             var5 = new lc();
             var5.field_q = param2;
             var5.field_r = 10;
-            var5.field_v = param1;
+            var5.field_v = 1;
             sj.field_g.a((byte) -94, (pi) (Object) var5);
             var6 = 51 / ((50 - param3) / 50);
-            lc.a((byte) 126, param0, var5);
+            lc.a((byte) 126, 3, var5);
             return var5;
           }
         }

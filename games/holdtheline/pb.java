@@ -70,7 +70,7 @@ final class pb {
             var6 = (int)((float)param2.field_Q + (float)(param2.field_M - param2.field_Q) * param0);
             var7 = (int)((float)(param2.field_M - param2.field_Q) * param3 + (float)param2.field_Q);
             var8 = param2.field_G + param0 * (-param2.field_G + param2.field_y);
-            var10 = 122 / ((-59 - param1) / 49);
+            var10 = 122;
             var9 = param2.field_G + (param2.field_y - param2.field_G) * param3;
             var11 = new dd(var4_ref, var5, param2.field_k, param2.field_O, param2.field_I, param2.field_N, param2.field_C, param2.field_K, param2.field_z, param2.field_L, param2.field_A, var6, var7, param2.field_w, param2.field_s, param2.field_m, param2.field_x, param2.field_t, param2.field_q, 0.0f, var8, var9);
             var11.field_D = param2.field_D;
@@ -85,7 +85,7 @@ final class pb {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("pb.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("pb.B(").append(param0).append(44).append(-111).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -113,7 +113,7 @@ final class pb {
         return stackIn_7_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

@@ -167,11 +167,11 @@ final class ei {
         int var5 = 0;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 == -1) {
-          wl.a(19, param1);
+          wl.a(19, true);
           if (!param3) {
             return;
           } else {
-            boolean discarded$15 = ei.a(49, -48);
+            boolean discarded$17 = ei.a(49, -48);
             return;
           }
         } else {
@@ -196,25 +196,27 @@ final class ei {
                                   if (!param3) {
                                     return;
                                   } else {
-                                    boolean discarded$16 = ei.a(49, -48);
+                                    boolean discarded$18 = ei.a(49, -48);
                                     return;
                                   }
                                 } else {
                                   if (-6 == param0) {
-                                    ee.e(0);
+                                    int discarded$19 = 0;
+                                    ee.e();
                                     if (!param3) {
                                       return;
                                     } else {
-                                      boolean discarded$17 = ei.a(49, -48);
+                                      boolean discarded$20 = ei.a(49, -48);
                                       return;
                                     }
                                   } else {
                                     if (-7 == param0) {
-                                      tl.b((byte) -90);
+                                      int discarded$21 = -90;
+                                      tl.b();
                                       if (!param3) {
                                         return;
                                       } else {
-                                        boolean discarded$18 = ei.a(49, -48);
+                                        boolean discarded$22 = ei.a(49, -48);
                                         return;
                                       }
                                     } else {
@@ -225,7 +227,7 @@ final class ei {
                                         if (!param3) {
                                           return;
                                         } else {
-                                          boolean discarded$19 = ei.a(49, -48);
+                                          boolean discarded$23 = ei.a(49, -48);
                                           return;
                                         }
                                       } else {
@@ -235,7 +237,7 @@ final class ei {
                                         if (!param3) {
                                           return;
                                         } else {
-                                          boolean discarded$20 = ei.a(49, -48);
+                                          boolean discarded$24 = ei.a(49, -48);
                                           return;
                                         }
                                       }
@@ -249,7 +251,7 @@ final class ei {
                           if (!param3) {
                             return;
                           } else {
-                            boolean discarded$21 = ei.a(49, -48);
+                            boolean discarded$25 = ei.a(49, -48);
                             return;
                           }
                         } else {
@@ -257,7 +259,7 @@ final class ei {
                           qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                           rq.field_p[param0].e(param3);
                           if (param3) {
-                            boolean discarded$22 = ei.a(49, -48);
+                            boolean discarded$26 = ei.a(49, -48);
                             return;
                           } else {
                             return;
@@ -268,7 +270,7 @@ final class ei {
                         qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                         rq.field_p[param0].e(param3);
                         if (param3) {
-                          boolean discarded$23 = ei.a(49, -48);
+                          boolean discarded$27 = ei.a(49, -48);
                           return;
                         } else {
                           return;
@@ -279,7 +281,7 @@ final class ei {
                       qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                       rq.field_p[param0].e(param3);
                       if (param3) {
-                        boolean discarded$24 = ei.a(49, -48);
+                        boolean discarded$28 = ei.a(49, -48);
                         return;
                       } else {
                         return;
@@ -290,7 +292,7 @@ final class ei {
                     qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                     rq.field_p[param0].e(param3);
                     if (param3) {
-                      boolean discarded$25 = ei.a(49, -48);
+                      boolean discarded$29 = ei.a(49, -48);
                       return;
                     } else {
                       return;
@@ -301,7 +303,7 @@ final class ei {
                   qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                   rq.field_p[param0].e(param3);
                   if (param3) {
-                    boolean discarded$26 = ei.a(49, -48);
+                    boolean discarded$30 = ei.a(49, -48);
                     return;
                   } else {
                     return;
@@ -312,7 +314,7 @@ final class ei {
                 qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                 rq.field_p[param0].e(param3);
                 if (param3) {
-                  boolean discarded$27 = ei.a(49, -48);
+                  boolean discarded$31 = ei.a(49, -48);
                   return;
                 } else {
                   return;
@@ -325,7 +327,7 @@ final class ei {
               if (!param3) {
                 return;
               } else {
-                boolean discarded$28 = ei.a(49, -48);
+                boolean discarded$32 = ei.a(49, -48);
                 return;
               }
             }
@@ -336,14 +338,14 @@ final class ei {
             if (!param3) {
               return;
             } else {
-              boolean discarded$29 = ei.a(49, -48);
+              boolean discarded$33 = ei.a(49, -48);
               return;
             }
           }
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_e = null;
     }

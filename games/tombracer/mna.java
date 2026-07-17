@@ -31,7 +31,7 @@ abstract class mna {
         var5 = 0;
         var6 = 0;
         var7 = -1 + ara.field_xb;
-        var8 = 116 / ((-27 - param0) / 50);
+        var8 = -58;
         L0: while (true) {
           if (var7 < 0) {
             var7 = 0;
@@ -174,7 +174,8 @@ abstract class mna {
                   break L11;
                 }
               }
-              var11 = moa.a(var15, 94);
+              int discarded$1 = 94;
+              var11 = moa.a(var15);
               var12 = var11 + il.c(var15.field_f);
               var13 = uaa.a((byte) -116, var15);
               var15.field_l = new jea(0L, bn.field_t, var12);
@@ -200,7 +201,7 @@ abstract class mna {
         var5 = TombRacer.field_G ? 1 : 0;
         var6 = sja.field_i;
         var2 = var6;
-        var3 = param0;
+        var3 = 0;
         L0: while (true) {
           if (var6.length > var3) {
             var4 = var6[var3];

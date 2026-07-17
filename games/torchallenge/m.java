@@ -14,7 +14,8 @@ final class m {
     static int[] field_g;
 
     private final void a(int param0, int param1) {
-        int[] var4 = new int[this.b(param0, 1)];
+        int discarded$0 = 1;
+        int[] var4 = new int[this.b(param0)];
         int[] var3 = var4;
         he.a(((m) this).field_b, 0, var4, 0, ((m) this).field_b.length);
         ((m) this).field_b = var4;
@@ -310,13 +311,9 @@ final class m {
         if (param0 >= ((m) this).field_b.length) {
             this.a(param0, 100);
         }
-        if (param1 <= 39) {
-            return;
-        }
-        ((m) this).field_b[param0] = param2;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
@@ -377,34 +374,26 @@ final class m {
         return stackIn_12_0 != 0;
     }
 
-    private final int b(int param0, int param1) {
+    private final int b(int param0) {
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          var4 = TorChallenge.field_F ? 1 : 0;
-          if (param1 == 1) {
-            break L0;
-          } else {
-            field_g = null;
-            break L0;
-          }
-        }
+        var4 = TorChallenge.field_F ? 1 : 0;
         var3 = ((m) this).field_b.length;
-        L1: while (true) {
+        L0: while (true) {
           if (var3 > param0) {
             return var3;
           } else {
             if (((m) this).field_a) {
               if (var3 != 0) {
                 var3 = var3 * ((m) this).field_e;
-                continue L1;
+                continue L0;
               } else {
                 var3 = 1;
-                continue L1;
+                continue L0;
               }
             } else {
               var3 = var3 + ((m) this).field_e;
-              continue L1;
+              continue L0;
             }
           }
         }

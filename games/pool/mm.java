@@ -175,7 +175,7 @@ final class mm {
         return (int)((-var2 + 1.5707963267948966) / (Math.atan(0.625) * 2.0) * 480.0);
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         if (Double.isNaN(((mm) this).field_d)) {
             ((mm) this).field_d = 0.0;
         }
@@ -276,7 +276,7 @@ final class mm {
                   break L1;
                 } else {
                   var2_int = param1.indexOf('@');
-                  if (param0 == var2_int) {
+                  if (-1 == var2_int) {
                     stackOut_7_0 = uj.field_e;
                     stackIn_8_0 = stackOut_7_0;
                     return stackIn_8_0;
@@ -306,7 +306,7 @@ final class mm {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("mm.R(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("mm.R(").append(-1).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -382,7 +382,7 @@ final class mm {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        e.field_a.b(param2, 2147483647, param4, param3, param1);
+        e.field_a.b(0, 2147483647, 5, 640, param1);
         if (im.field_Ub != null) {
             im.field_Ub.a(param0, param6, -gj.field_G + param6, (byte) 127, param1, param1);
         }
@@ -391,7 +391,7 @@ final class mm {
         }
     }
 
-    private final void a(double param0, double param1, double param2, int param3) {
+    private final void a(double param0, double param1, double param2) {
         if (!(2.945243112740431 >= param1)) {
             param1 = 2.945243112740431;
         }
@@ -408,7 +408,8 @@ final class mm {
         if (param3 != -6861) {
             field_c = null;
         }
-        this.a(param0, param1, param2, 144);
+        int discarded$0 = 144;
+        this.a(param0, param1, param2);
         ((mm) this).c((byte) -40);
     }
 
@@ -559,7 +560,7 @@ final class mm {
               if (param1 == -78) {
                 break L13;
               } else {
-                int discarded$1 = ((mm) this).b(-34);
+                int discarded$2 = ((mm) this).b(-34);
                 break L13;
               }
             }
@@ -585,7 +586,8 @@ final class mm {
                 break L14;
               }
             }
-            this.d((byte) 108);
+            int discarded$3 = 108;
+            this.d();
             ((mm) this).c((byte) -40);
             stackOut_41_0 = var5;
             stackIn_42_0 = stackOut_41_0;
@@ -742,7 +744,7 @@ final class mm {
         return stackIn_13_0;
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         ((mm) this).field_f = 288.0;
         ((mm) this).field_m = 144.0;
         ((mm) this).field_d = 288.0;
@@ -834,7 +836,8 @@ final class mm {
             qp.field_ec = param14;
             qa.field_t = param4;
             el.b(84, param1, param7, param6, param12);
-            mp.a(param18, param0, param13, -92);
+            int discarded$1 = -92;
+            mp.a(param18, param0, param13);
             if (param16 == 2) {
               ci.a(param17, 26790, param10, param3, param5, param19);
               w.a(param9, -17, param2);
@@ -977,7 +980,8 @@ final class mm {
     }
 
     mm() {
-        this.b((byte) -24);
+        int discarded$0 = -24;
+        this.b();
     }
 
     static {

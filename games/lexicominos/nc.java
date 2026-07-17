@@ -53,7 +53,7 @@ final class nc extends kd {
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
           } else {
-            if (param0 >= var2_int) {
+            if (63 >= var2_int) {
               var3 = 0;
               L0: while (true) {
                 if (var2_int > var3) {
@@ -101,7 +101,7 @@ final class nc extends kd {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("nc.A(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("nc.A(").append(63).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -128,7 +128,7 @@ final class nc extends kd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 1;
         field_p = null;
         field_n = null;

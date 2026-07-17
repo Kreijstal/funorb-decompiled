@@ -48,28 +48,24 @@ final class pg {
         var4 = var10;
         var5 = var10[ns.a(false, var13.length, gg.field_J)];
         if (var5 < 0) {
-          if (param1 == 176) {
-            var14 = var4;
-            var7 = 0;
-            L2: while (true) {
-              if (var7 >= var14.length) {
-                if (param2) {
-                  return ck.field_e[sf.field_P[param3]][aw.field_j[param3][0][0]];
-                } else {
-                  return null;
-                }
+          var14 = var4;
+          var7 = 0;
+          L2: while (true) {
+            if (var7 >= var14.length) {
+              if (param2) {
+                return ck.field_e[sf.field_P[param3]][aw.field_j[param3][0][0]];
               } else {
-                var8 = var14[var7];
-                if (0 <= var8) {
-                  return ck.field_e[sf.field_P[param3]][var8];
-                } else {
-                  var7++;
-                  continue L2;
-                }
+                return null;
+              }
+            } else {
+              var8 = var14[var7];
+              if (0 <= var8) {
+                return ck.field_e[sf.field_P[param3]][var8];
+              } else {
+                var7++;
+                continue L2;
               }
             }
-          } else {
-            return null;
           }
         } else {
           return ck.field_e[sf.field_P[param3]][var5];
@@ -79,9 +75,11 @@ final class pg {
     final static void a(boolean param0) {
         ck.b(-111);
         if (si.field_b != null) {
-            dt.a(si.field_b, 23678);
+            int discarded$0 = 23678;
+            dt.a(si.field_b);
         }
-        hi.a((byte) 41);
+        int discarded$5 = 41;
+        hi.a();
         pf.a(-15291);
         tj.j(-118);
         if (!(!fh.b((byte) -88))) {
@@ -254,14 +252,14 @@ final class pg {
               }
             }
             tn.field_Z.a((byte) 68);
-            tn.field_Z.a(param0 + 23899, false);
+            tn.field_Z.a(23899, false);
             tn.field_Z.a(param1.field_d, 7, param1.field_b);
             tn.field_Z.b((byte) 92);
             tn.field_Z.a(param1, 0);
             var13 = tn.field_Z;
             var3 = iu.field_t;
             var4 = ur.field_z;
-            var13.field_i.a(0, var4, param0, (byte) -118, var3);
+            var13.field_i.a(0, var4, 0, (byte) -118, var3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -269,7 +267,7 @@ final class pg {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("pg.E(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("pg.E(").append(0).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -296,7 +294,7 @@ final class pg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_d = null;

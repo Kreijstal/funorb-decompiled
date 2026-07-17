@@ -9,7 +9,7 @@ final class id {
     static pa field_b;
     static Random field_a;
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String a(CharSequence param0) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -68,7 +68,7 @@ final class id {
         return stackIn_1_0;
     }
 
-    final static nf a(byte[] param0, ge[] param1, int param2) {
+    final static nf a(byte[] param0, ge[] param1) {
         RuntimeException var3 = null;
         int[] var3_array = null;
         int[] var4 = null;
@@ -239,7 +239,7 @@ final class id {
         return stackIn_7_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_b = null;

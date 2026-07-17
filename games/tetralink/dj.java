@@ -12,7 +12,7 @@ final class dj {
     private mc[] field_e;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_c = null;
@@ -258,10 +258,10 @@ final class dj {
 
     final static void a(byte param0, f param1) {
         try {
-            int var2_int = 29 / ((-63 - param0) / 49);
+            int var2_int = 29;
             im.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "dj.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "dj.F(" + -116 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

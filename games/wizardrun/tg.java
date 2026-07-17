@@ -113,24 +113,29 @@ final class tg implements Serializable {
         return stackIn_12_0;
     }
 
-    final static void a(long param0, boolean param1) {
+    final static void a(long param0) {
         if (param0 <= 0L) {
           return;
         } else {
           if (param0 % 10L != 0L) {
-            pg.a(param0, 2);
-            tg.a(true);
+            int discarded$10 = 2;
+            pg.a(param0);
+            int discarded$11 = 1;
+            tg.a();
             return;
           } else {
-            pg.a(-1L + param0, 2);
-            pg.a(1L, 2);
-            tg.a(true);
+            int discarded$12 = 2;
+            pg.a(-1L + param0);
+            int discarded$13 = 2;
+            pg.a(1L);
+            int discarded$14 = 1;
+            tg.a();
             return;
           }
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_h = null;

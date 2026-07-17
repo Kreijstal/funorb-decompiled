@@ -8,7 +8,7 @@ final class ro {
     static java.security.SecureRandom field_b;
     static ub field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_e = null;
@@ -61,7 +61,7 @@ final class ro {
               }
             }
             var3 = stackIn_3_0;
-            var4 = 24 / ((param0 - 29) / 49);
+            var4 = -24;
             stackOut_3_0 = var3;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -71,7 +71,7 @@ final class ro {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("ro.A(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("ro.A(").append(-24).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

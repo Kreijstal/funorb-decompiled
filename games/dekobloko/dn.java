@@ -69,7 +69,7 @@ final class dn extends ie {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_j = null;
         field_q = null;
         field_l = null;
@@ -78,7 +78,8 @@ final class dn extends ie {
     }
 
     final long a(int param0) {
-        ((dn) this).field_g = ((dn) this).field_g + this.c(-8325);
+        int discarded$0 = -8325;
+        ((dn) this).field_g = ((dn) this).field_g + this.c();
         if (param0 != -22962) {
             ((dn) this).field_o = 53;
         }
@@ -88,34 +89,26 @@ final class dn extends ie {
         return 0L;
     }
 
-    final static ac b(byte param0) {
+    final static ac b() {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         ac var2 = null;
         int var3 = 0;
-        ac stackIn_6_0 = null;
+        ac stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
-        ac stackOut_5_0 = null;
+        ac stackOut_3_0 = null;
         var3 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            if (param0 >= 25) {
-              break L0;
-            } else {
-              field_j = null;
-              break L0;
-            }
-          }
           var1_int = 0;
-          L1: while (true) {
+          L0: while (true) {
             var2 = oi.field_a.a(-39, var1_int);
             if (!var2.field_D) {
               var1_int++;
-              continue L1;
+              continue L0;
             } else {
-              stackOut_5_0 = (ac) var2;
-              stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0;
+              stackOut_3_0 = (ac) var2;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -125,7 +118,7 @@ final class dn extends ie {
         }
     }
 
-    private final long c(int param0) {
+    private final long c() {
         int var8 = 0;
         int var9 = client.field_A ? 1 : 0;
         long var2 = System.nanoTime();

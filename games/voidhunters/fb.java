@@ -77,7 +77,7 @@ final class fb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -161,7 +161,7 @@ final class fb extends rqa {
         }
     }
 
-    final static String a(byte[] param0, byte param1) {
+    final static String a(byte[] param0) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

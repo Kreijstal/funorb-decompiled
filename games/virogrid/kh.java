@@ -12,7 +12,7 @@ final class kh {
     static km field_g;
     static km field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_f = null;
@@ -88,12 +88,20 @@ final class kh {
                 }
               }
             }
+            L7: {
+              if (!param0) {
+                break L7;
+              } else {
+                field_f = null;
+                break L7;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1_ref, "kh.D(" + 0 + 41);
+          throw kg.a((Throwable) (Object) var1_ref, "kh.D(" + param0 + 41);
         }
     }
 
@@ -177,7 +185,7 @@ final class kh {
         }
     }
 
-    final static void a(km param0, int param1, int param2) {
+    final static void a(km param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -348,87 +356,77 @@ final class kh {
         mg var13 = null;
         int var14 = 0;
         int var15 = 0;
-        Object var16 = null;
         var15 = Virogrid.field_F ? 1 : 0;
-        var9 = 1 + param0 + param6;
-        var10 = new mg[]{new mg(var9, var9), new mg(param5, var9), new mg(var9, var9), new mg(var9, param5), new mg(64, 64), new mg(var9, param5), new mg(var9, var9), new mg(param5, var9), new mg(var9, var9)};
+        var9 = 3;
+        var10 = new mg[]{new mg(var9, var9), new mg(3, var9), new mg(var9, var9), new mg(var9, 3), new mg(64, 64), new mg(var9, 3), new mg(var9, var9), new mg(3, var9), new mg(var9, var9)};
         var11_ref_mg__ = var10;
         var12 = 0;
         L0: while (true) {
           if (var12 >= var11_ref_mg__.length) {
             var11 = 0;
             L1: while (true) {
-              if (param0 <= var11) {
+              if (var11 >= 1) {
                 var11 = 0;
                 L2: while (true) {
-                  if (param0 <= var11) {
-                    L3: {
-                      if (param2 == -105) {
-                        break L3;
-                      } else {
-                        var16 = null;
-                        kh.a(92, -47, -44, -58, (e) null, (byte) 53, (mg[]) null, 44, 120, 77, -28, (mg[]) null, 119, (e) null, true);
-                        break L3;
-                      }
-                    }
+                  if (var11 >= 1) {
                     var11 = 0;
-                    L4: while (true) {
-                      if (var11 >= param5) {
+                    L3: while (true) {
+                      if (var11 >= 3) {
                         var11 = 0;
-                        L5: while (true) {
-                          if (var11 >= param5 >> 1) {
+                        L4: while (true) {
+                          if (var11 >= 1) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L6: while (true) {
-                              if (var12 < param6) {
-                                var10[1].field_B[var11 + (-1 + var9 - var12) * param5] = param7;
-                                var10[3].field_B[-var12 - (1 + -var9) + var11 * var9] = param7;
-                                var10[7].field_B[var11 + var12 * param5] = param7;
-                                var10[5].field_B[var12 + var9 * var11] = param7;
+                            L5: while (true) {
+                              if (var12 < 1) {
+                                var10[1].field_B[var11 + (-1 + var9 - var12) * 3] = 65793;
+                                var10[3].field_B[-var12 - (1 + -var9) + var11 * var9] = 65793;
+                                var10[7].field_B[var11 + var12 * 3] = 65793;
+                                var10[5].field_B[var12 + var9 * var11] = 65793;
                                 var12++;
-                                continue L6;
+                                continue L5;
                               } else {
                                 var11++;
-                                continue L5;
+                                continue L4;
                               }
                             }
                           }
                         }
                       } else {
                         var12 = 0;
-                        L7: while (true) {
-                          if (param0 > var12) {
-                            var10[7].field_B[(-var12 + (var9 - 1)) * param5 - -var11] = param1;
-                            var10[5].field_B[var11 * var9 + (-var12 + -1) + var9] = param1;
-                            var10[1].field_B[param5 * var12 - -var11] = param3;
-                            var10[3].field_B[var11 * var9 - -var12] = param3;
+                        L6: while (true) {
+                          if (var12 < 1) {
+                            var10[7].field_B[(-var12 + (var9 - 1)) * 3 - -var11] = 0;
+                            var10[5].field_B[var11 * var9 + (-var12 + -1) + var9] = 0;
+                            var10[1].field_B[3 * var12 - -var11] = 0;
+                            var10[3].field_B[var11 * var9 - -var12] = 0;
                             var12++;
-                            continue L7;
+                            continue L6;
                           } else {
                             var11++;
-                            continue L4;
+                            continue L3;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (var9 <= var12) {
                         var11++;
                         continue L2;
                       } else {
-                        var10[0].field_B[var12 + var9 * var11] = param3;
-                        var10[0].field_B[var12 * var9 - -var11] = param3;
+                        var10[0].field_B[var12 + var9 * var11] = 0;
+                        var10[0].field_B[var12 * var9 - -var11] = 0;
                         if (var9 - var11 > var12) {
-                          var10[2].field_B[var12 - -(var11 * var9)] = param3;
-                          var10[6].field_B[var9 * var12 - -var11] = param3;
+                          var10[2].field_B[var12 - -(var11 * var9)] = 0;
+                          var10[6].field_B[var9 * var12 - -var11] = 0;
                           var12++;
-                          continue L8;
+                          continue L7;
                         } else {
                           var12++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -436,17 +434,17 @@ final class kh {
                 }
               } else {
                 var12 = 0;
-                L9: while (true) {
+                L8: while (true) {
                   if (var9 <= var12) {
                     var11++;
                     continue L1;
                   } else {
-                    var10[6].field_B[var12 + (-var11 + (var9 - 1)) * var9] = param1;
-                    var10[8].field_B[var12 + (var9 + (-var11 + -1)) * var9] = param1;
-                    var10[2].field_B[var9 * var12 + (-var11 + -1 + var9)] = param1;
-                    var10[8].field_B[var9 - (1 - -var11 - var9 * var12)] = param1;
+                    var10[6].field_B[var12 + (-var11 + (var9 - 1)) * var9] = 0;
+                    var10[8].field_B[var12 + (var9 + (-var11 + -1)) * var9] = 0;
+                    var10[2].field_B[var9 * var12 + (-var11 + -1 + var9)] = 0;
+                    var10[8].field_B[var9 - (1 - -var11 - var9 * var12)] = 0;
                     var12++;
-                    continue L9;
+                    continue L8;
                   }
                 }
               }
@@ -454,14 +452,14 @@ final class kh {
           } else {
             var13 = var11_ref_mg__[var12];
             var14 = 0;
-            L10: while (true) {
+            L9: while (true) {
               if (var13.field_B.length <= var14) {
                 var12++;
                 continue L0;
               } else {
-                var13.field_B[var14] = param4;
+                var13.field_B[var14] = 0;
                 var14++;
-                continue L10;
+                continue L9;
               }
             }
           }
@@ -470,12 +468,13 @@ final class kh {
 
     final static void a(int param0, int param1, int param2, int param3, e param4, byte param5, mg[] param6, int param7, int param8, int param9, int param10, mg[] param11, int param12, e param13, boolean param14) {
         try {
-            Object var16 = null;
-            ok.a(param0, 480, jl.field_E, -100, param3, param9, en.field_Kb, param2, param10, param13, param1, (mg[]) null, 0, param8, param7, ti.field_b, param11, param4, param6, param12, 0);
-            int var15_int = -42 % ((18 - param5) / 62);
-            ti.a(param14, -1502464351);
+            int discarded$0 = 0;
+            ok.a(param0, 480, jl.field_E, -100, param3, param9, en.field_Kb, param2, param10, param13, param1, (mg[]) null, 0, param8, param7, ti.field_b, param11, param4, param6, param12);
+            int var15_int = 0;
+            int discarded$1 = -1502464351;
+            ti.a(param14);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "kh.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + (param11 != null ? "{...}" : "null") + 44 + param12 + 44 + (param13 != null ? "{...}" : "null") + 44 + param14 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "kh.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + -59 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + (param11 != null ? "{...}" : "null") + 44 + param12 + 44 + (param13 != null ? "{...}" : "null") + 44 + param14 + 41);
         }
     }
 

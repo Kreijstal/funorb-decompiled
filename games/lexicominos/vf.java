@@ -48,7 +48,7 @@ final class vf extends kd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         field_s = null;
     }
@@ -59,9 +59,6 @@ final class vf extends kd {
         int var4 = var2.field_u;
         ja.b((byte) -126);
         nc.field_n = new db(var3, var4 * 3 / 4);
-        if (param0) {
-            return;
-        }
         try {
             nc.field_n.b();
             var2.b(0, 0);
@@ -71,7 +68,7 @@ final class vf extends kd {
             jg.field_m.field_w = nc.field_n.field_u;
             pd.a(-22949);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "vf.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "vf.G(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -161,7 +161,7 @@ final class kab extends bob {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_p = null;
     }
 

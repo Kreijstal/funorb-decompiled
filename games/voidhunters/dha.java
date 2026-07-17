@@ -38,7 +38,7 @@ final class dha {
     int field_H;
     private static String field_I;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_u = null;
         field_q = null;

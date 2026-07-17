@@ -7,14 +7,14 @@ final class ca {
     static String[] field_a;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;
         field_a = null;
     }
 
-    final static j a(String param0, int param1) {
+    final static j a(String param0) {
         RuntimeException var2 = null;
         j stackIn_5_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -41,7 +41,8 @@ final class ca {
                 break L1;
               } else {
                 if (!param0.equals((Object) (Object) sa.field_Q.a((byte) 63))) {
-                  sa.field_Q = c.a(param0, 30692);
+                  int discarded$2 = 30692;
+                  sa.field_Q = c.a(param0);
                   break L1;
                 } else {
                   break L1;

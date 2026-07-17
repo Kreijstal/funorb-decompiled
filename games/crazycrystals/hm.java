@@ -10,25 +10,16 @@ final class hm {
         return param0 | param1;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
     }
 
-    final static void a(int param0) {
-        Object var2 = null;
-        pi.field_j = rl.c(-9918);
-        if (param0 != -3121) {
-          var2 = null;
-          boolean discarded$2 = hm.a((ng) null, -93);
-          qe.field_g = new ol();
-          vk.a(param0 ^ 3095, true, true);
-          return;
-        } else {
-          qe.field_g = new ol();
-          vk.a(param0 ^ 3095, true, true);
-          return;
-        }
+    final static void a() {
+        int discarded$0 = -9918;
+        pi.field_j = rl.c();
+        qe.field_g = new ol();
+        vk.a(-40, true, true);
     }
 
     final static int a(int param0, int param1, int param2) {

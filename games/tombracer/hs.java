@@ -105,15 +105,15 @@ final class hs {
         return stackIn_9_0 != 0;
     }
 
-    final static void a(boolean param0, byte param1) {
-        int var2 = 109 / ((-1 - param1) / 54);
+    final static void a(boolean param0) {
+        int var2 = 109;
         if (!(era.field_d == null)) {
             bea.d(bea.field_b, bea.field_h, -bea.field_b + bea.field_d, -bea.field_h + bea.field_k);
             era.field_d.b(64, param0);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_a = null;

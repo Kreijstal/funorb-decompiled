@@ -17,179 +17,86 @@ final class m extends tb {
         String var4 = null;
         String var5 = null;
         Object var6 = null;
-        Object var7 = null;
-        CharSequence var8 = null;
-        CharSequence var9 = null;
-        if (param1 == 0) {
-          if (gi.field_i == null) {
-            return;
-          } else {
-            var3 = gi.field_i.a((byte) 113, param0);
-            if (var3 != 0) {
-              if (var3 != 2) {
-                gi.field_i = null;
-                ic.field_e = -1;
-                return;
-              } else {
-                if (null == gi.field_i.field_wb) {
-                  gi.field_i = null;
-                  ic.field_e = -1;
-                  return;
-                } else {
-                  if (gi.field_i.field_wb.equals((Object) (Object) "")) {
-                    gi.field_i = null;
-                    ic.field_e = -1;
-                    return;
-                  } else {
-                    L0: {
-                      if (gi.field_i.field_wb.charAt(0) != 91) {
-                        var9 = (CharSequence) (Object) gi.field_i.field_wb;
-                        var4 = tg.a(var9, false);
-                        var5 = var4;
-                        var5 = var4;
-                        break L0;
-                      } else {
-                        var4 = gi.field_i.field_wb;
-                        break L0;
-                      }
-                    }
-                    L1: {
-                      var5 = null;
-                      if (0 == ic.field_e) {
-                        var5 = ii.a(var4, (byte) 116, param2);
-                        break L1;
-                      } else {
-                        break L1;
-                      }
-                    }
-                    L2: {
-                      if (1 != ic.field_e) {
-                        break L2;
-                      } else {
-                        var5 = gn.a(var4, 103, param2);
-                        break L2;
-                      }
-                    }
-                    L3: {
-                      if (ic.field_e == 2) {
-                        var5 = sf.a(param1 + -86, param2, var4);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if (ic.field_e != 3) {
-                        break L4;
-                      } else {
-                        var5 = ng.a(var4, var4, param1 + -25, param2);
-                        break L4;
-                      }
-                    }
-                    if (var5 == null) {
-                      gi.field_i = null;
-                      ic.field_e = -1;
-                      return;
-                    } else {
-                      var7 = null;
-                      vm.a(var4, 0, (String) null, var5, 2, 0);
-                      gi.field_i = null;
-                      ic.field_e = -1;
-                      return;
-                    }
-                  }
-                }
-              }
-            } else {
-              return;
-            }
-          }
+        CharSequence var7 = null;
+        if (gi.field_i == null) {
+          return;
         } else {
-          var6 = null;
-          java.awt.Frame discarded$1 = m.a(-30, (go) null, 112, 17, -89, 48);
-          if (gi.field_i != null) {
-            var3 = gi.field_i.a((byte) 113, param0);
-            if (var3 != 0) {
-              if (var3 != 2) {
+          var3 = gi.field_i.a((byte) 113, param0);
+          if (var3 != 0) {
+            if (var3 != 2) {
+              gi.field_i = null;
+              ic.field_e = -1;
+              return;
+            } else {
+              if (null == gi.field_i.field_wb) {
                 gi.field_i = null;
                 ic.field_e = -1;
                 return;
               } else {
-                if (null == gi.field_i.field_wb) {
+                if (gi.field_i.field_wb.equals((Object) (Object) "")) {
                   gi.field_i = null;
                   ic.field_e = -1;
                   return;
                 } else {
-                  if (gi.field_i.field_wb.equals((Object) (Object) "")) {
+                  L0: {
+                    if (gi.field_i.field_wb.charAt(0) != 91) {
+                      var7 = (CharSequence) (Object) gi.field_i.field_wb;
+                      int discarded$1 = 0;
+                      var4 = tg.a(var7);
+                      var5 = var4;
+                      var5 = var4;
+                      break L0;
+                    } else {
+                      var4 = gi.field_i.field_wb;
+                      break L0;
+                    }
+                  }
+                  L1: {
+                    var5 = null;
+                    if (0 == ic.field_e) {
+                      var5 = ii.a(var4, (byte) 116, 13);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  }
+                  L2: {
+                    if (1 != ic.field_e) {
+                      break L2;
+                    } else {
+                      var5 = gn.a(var4, 103, 13);
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    if (ic.field_e == 2) {
+                      var5 = sf.a(-86, 13, var4);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  L4: {
+                    if (ic.field_e != 3) {
+                      break L4;
+                    } else {
+                      var5 = ng.a(var4, var4, -25, 13);
+                      break L4;
+                    }
+                  }
+                  if (var5 == null) {
                     gi.field_i = null;
                     ic.field_e = -1;
                     return;
                   } else {
-                    L5: {
-                      if (gi.field_i.field_wb.charAt(0) != 91) {
-                        var8 = (CharSequence) (Object) gi.field_i.field_wb;
-                        var4 = tg.a(var8, false);
-                        var5 = var4;
-                        var4 = var5;
-                        var5 = var4;
-                        break L5;
-                      } else {
-                        var4 = gi.field_i.field_wb;
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      var5 = null;
-                      if (0 == ic.field_e) {
-                        var5 = ii.a(var4, (byte) 116, param2);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    L7: {
-                      if (1 != ic.field_e) {
-                        break L7;
-                      } else {
-                        var5 = gn.a(var4, 103, param2);
-                        break L7;
-                      }
-                    }
-                    L8: {
-                      if (ic.field_e == 2) {
-                        var5 = sf.a(param1 + -86, param2, var4);
-                        break L8;
-                      } else {
-                        break L8;
-                      }
-                    }
-                    L9: {
-                      if (ic.field_e != 3) {
-                        break L9;
-                      } else {
-                        var5 = ng.a(var4, var4, param1 + -25, param2);
-                        var4 = var5;
-                        var5 = var4;
-                        var4 = var5;
-                        break L9;
-                      }
-                    }
-                    if (var5 == null) {
-                      gi.field_i = null;
-                      ic.field_e = -1;
-                      return;
-                    } else {
-                      var7 = null;
-                      vm.a(var4, 0, (String) null, var5, 2, 0);
-                      gi.field_i = null;
-                      ic.field_e = -1;
-                      return;
-                    }
+                    var6 = null;
+                    vm.a(var4, 0, (String) null, var5, 2, 0);
+                    gi.field_i = null;
+                    ic.field_e = -1;
+                    return;
                   }
                 }
               }
-            } else {
-              return;
             }
           } else {
             return;
@@ -270,7 +177,7 @@ final class m extends tb {
         return stackIn_3_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_A = null;
         field_C = null;
         field_x = null;
@@ -278,7 +185,7 @@ final class m extends tb {
         field_B = null;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         il var1 = (il) (Object) db.field_a.a(true);
         if (!(var1 != null)) {
             var1 = new il();

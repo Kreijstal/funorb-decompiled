@@ -124,7 +124,8 @@ final class fa implements Runnable {
                     var3 = var4.getOutputStream();
                     var3.write(17);
                     var5 = (CharSequence) (Object) ("JAGGRAB " + ((fa) this).field_b.getFile() + "\n\n");
-                    var3.write(nr.a(var5, false));
+                    int discarded$1 = 0;
+                    var3.write(nr.a(var5));
                     ((fa) this).field_m = new DataInputStream(var4.getInputStream());
                     break L6;
                   } else {
@@ -281,7 +282,7 @@ final class fa implements Runnable {
         return ((fa) this).field_o;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_k = null;
         field_e = null;

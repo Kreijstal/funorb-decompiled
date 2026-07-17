@@ -676,7 +676,7 @@ final class la {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -763,7 +763,7 @@ final class la {
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         return ka.field_l == jm.field_f;
     }
 
@@ -777,7 +777,7 @@ final class la {
         int var18 = 0;
         pa.field_i[0] = param0;
         pa.field_i[1] = param1;
-        pa.field_i[2] = param3;
+        pa.field_i[2] = 4;
         int var7 = 0;
         int var8 = 3;
         int var9 = 1;
@@ -785,7 +785,7 @@ final class la {
         int var11 = param2;
         param6 = 273 * param6 + 36;
         lb.a(param0, param1, 2 * param2, 254, param5);
-        for (var12 = 0; var12 < param3; var12++) {
+        for (var12 = 0; var12 < 4; var12++) {
             lb.a(param0, param1, var12 * param2, 254 / (1 + var12), param5);
             lb.a(param0, param1, var12 * param2, 196 / (1 + var12), param5);
             var13 = 0;
@@ -820,7 +820,7 @@ final class la {
                     var8++;
                     int incrementValue$8 = param6;
                     param6++;
-                    pa.field_i[incrementValue$7] = 1 + er.a(-1560508993, param4, mh.field_F[incrementValue$8]);
+                    pa.field_i[incrementValue$7] = 1 + er.a(-1560508993, 3, mh.field_F[incrementValue$8]);
                 }
             }
             var9 = var13;
@@ -829,14 +829,14 @@ final class la {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0) {
         param0 = param0 / 60;
         int var3 = (param0 >> 8) % 6;
         param0 = param0 & 255;
         int var4 = 256;
-        int var5 = 255 * (255 * (var4 - param1)) >> 8 >> 8;
-        int var6 = 255 * (255 * (var4 - (param0 * param1 >> 8)) >> 8) >> 8;
-        int var7 = 255 * (255 * (var4 - ((var4 - param0) * param1 >> 8)) >> 8) >> 8;
+        int var5 = 255 * (255 * (var4 - 255)) >> 8 >> 8;
+        int var6 = 255 * (255 * (var4 - (param0 * 255 >> 8)) >> 8) >> 8;
+        int var7 = 255 * (255 * (var4 - ((var4 - param0) * 255 >> 8)) >> 8) >> 8;
         var4 = var3 & 1;
         var3 = var3 >> 1;
         return (var5 << (2 - (2 + var3) % 3 << 3)) + (255 << (2 - (var3 + var4) % 3 << 3)) + (var7 + (-var4 >> 31 & var6 - var7) << (2 - (4 + var3 - var4) % 3 << 3));

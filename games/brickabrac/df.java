@@ -125,19 +125,15 @@ final class df {
         return stackIn_17_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
-        int var1 = 112 / ((param0 - -36) / 63);
+        int var1 = 56;
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
     final static int a(int param0, int param1, int param2, boolean param3) {
-        if (param0 != -27790) {
-            df.a((byte) 15);
-            return vi.c((byte) 109);
-        }
         return vi.c((byte) 109);
     }
 
@@ -148,61 +144,34 @@ final class df {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
-        var3 = param2 >>> 31;
-        if (param1 != 15) {
-          field_c = null;
-          return (param2 - -var3) / param0 + -var3;
-        } else {
-          return (param2 - -var3) / param0 + -var3;
-        }
+        int var3 = param2 >>> 31;
+        return (param2 - -var3) / param0 + -var3;
     }
 
-    final static void a(e param0, int param1, int param2) {
+    final static void a(e param0) {
         try {
             na.field_Q.a((nm) (Object) param0, (byte) 3);
-            ud.a(param1, param0, (byte) 119);
+            ud.a(4, param0, (byte) 119);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "df.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -161 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "df.D(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + -161 + 41);
         }
     }
 
     final static void a(int param0, byte param1, int param2, int param3) {
-        int var4 = 0;
-        if (param1 != 103) {
-          field_c = null;
-          tq.field_f.field_l = 0;
-          tq.field_f.a(-112, 12);
-          tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-          tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-          tq.field_f.a(-104, param2);
-          tq.field_f.a(50, param3);
-          tq.field_f.b((byte) 124, param0);
-          tq.field_f.a(vn.field_F, to.field_g, param1 + 19672);
-          k.field_h.e(param1 ^ -13316, 18);
-          int fieldTemp$2 = k.field_h.field_l + 1;
-          k.field_h.field_l = k.field_h.field_l + 1;
-          var4 = fieldTemp$2;
-          k.field_h.a(tq.field_f.field_k, -1, 0, tq.field_f.field_l);
-          k.field_h.d((byte) 125, k.field_h.field_l - var4);
-          return;
-        } else {
-          tq.field_f.field_l = 0;
-          tq.field_f.a(-112, 12);
-          tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-          tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-          tq.field_f.a(-104, param2);
-          tq.field_f.a(50, param3);
-          tq.field_f.b((byte) 124, param0);
-          tq.field_f.a(vn.field_F, to.field_g, param1 + 19672);
-          k.field_h.e(param1 ^ -13316, 18);
-          int fieldTemp$3 = k.field_h.field_l + 1;
-          k.field_h.field_l = k.field_h.field_l + 1;
-          var4 = fieldTemp$3;
-          k.field_h.a(tq.field_f.field_k, -1, 0, tq.field_f.field_l);
-          k.field_h.d((byte) 125, k.field_h.field_l - var4);
-          return;
-        }
+        tq.field_f.field_l = 0;
+        tq.field_f.a(-112, 12);
+        tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
+        tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
+        tq.field_f.a(-104, param2);
+        tq.field_f.a(50, param3);
+        tq.field_f.b((byte) 124, param0);
+        tq.field_f.a(vn.field_F, to.field_g, 19775);
+        k.field_h.e(-13413, 18);
+        int fieldTemp$0 = k.field_h.field_l + 1;
+        k.field_h.field_l = k.field_h.field_l + 1;
+        int var4 = fieldTemp$0;
+        k.field_h.a(tq.field_f.field_k, -1, 0, tq.field_f.field_l);
+        k.field_h.d((byte) 125, k.field_h.field_l - var4);
     }
 
     static {

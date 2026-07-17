@@ -14,7 +14,7 @@ final class fi {
     private int field_f;
     private int field_c;
 
-    final static void a(sd param0, int param1, int param2) {
+    final static void a(sd param0, int param1) {
         jd var3 = null;
         try {
             var3 = id.field_c;
@@ -30,20 +30,19 @@ final class fi {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
-        uj.a(param4, param5, param2, h.field_d, param6, 2);
-        uj.a(param3, param0, (param4 - param3 >> 1) + param2, of.field_b, param6 - (param0 + -18 >> 1), 2);
-        th.field_H.d((param4 + -param3 >> 1) + param2 + -20, -10 + param6);
-        uk.field_k.d(-18 + param3 + ((-param3 + param4 >> 1) + param2), param6 - 10);
-        if (!param1) {
-            fi.a(-46);
-        }
+        int discarded$0 = 2;
+        uj.a(638, param5, 1, h.field_d, param6);
+        int discarded$1 = 2;
+        uj.a(param3, 118, (638 - param3 >> 1) + 1, of.field_b, param6 - 50);
+        th.field_H.d((638 + -param3 >> 1) - 19, -10 + param6);
+        uk.field_k.d(-18 + param3 + ((-param3 + 638 >> 1) + 1), param6 - 10);
     }
 
     static int a(int param0, int param1) {
         return param0 & param1;
     }
 
-    private final void c(int param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -160,7 +159,7 @@ final class fi {
         }
     }
 
-    final static String a(byte param0) {
+    final static String a() {
         if (!(gf.field_Z != ma.field_o)) {
             return lf.field_e;
         }
@@ -242,7 +241,8 @@ final class fi {
                           if (512 != ((fi) this).field_f) {
                             break L5;
                           } else {
-                            this.c(24843);
+                            int discarded$2 = 24843;
+                            this.c();
                             ((fi) this).field_c = 0;
                             ((fi) this).field_f = 0;
                             break L5;
@@ -271,7 +271,8 @@ final class fi {
                             if (((fi) this).field_f != 512) {
                               break L7;
                             } else {
-                              this.c(24843);
+                              int discarded$3 = 24843;
+                              this.c();
                               ((fi) this).field_c = 0;
                               ((fi) this).field_f = 0;
                               break L7;
@@ -332,16 +333,13 @@ final class fi {
         }
     }
 
-    final static o[] b(int param0) {
+    final static o[] b() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = SolKnight.field_L ? 1 : 0;
-        if (param0 != 255) {
-            return null;
-        }
         o[] var1 = new o[nb.field_c];
         for (var2 = 0; nb.field_c > var2; var2++) {
             var3 = uj.field_b[var2] * sa.field_l[var2];
@@ -352,7 +350,8 @@ final class fi {
             }
             var1[var2] = new o(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var5);
         }
-        og.a((byte) -97);
+        int discarded$0 = -97;
+        og.a();
         return var1;
     }
 
@@ -409,13 +408,14 @@ final class fi {
               if (((fi) this).field_c > 32) {
                 L3: while (true) {
                   if (64 <= ((fi) this).field_c) {
-                    this.c(24843);
+                    int discarded$4 = 24843;
+                    this.c();
                     ((fi) this).field_c = 0;
                     break L2;
                   } else {
-                    int fieldTemp$2 = ((fi) this).field_c;
+                    int fieldTemp$5 = ((fi) this).field_c;
                     ((fi) this).field_c = ((fi) this).field_c + 1;
-                    ((fi) this).field_g[fieldTemp$2] = (byte) 0;
+                    ((fi) this).field_g[fieldTemp$5] = (byte) 0;
                     continue L3;
                   }
                 }
@@ -426,7 +426,8 @@ final class fi {
             L4: while (true) {
               if (((fi) this).field_c >= 32) {
                 fk.a(((fi) this).field_e, 0, ((fi) this).field_g, 32, 32);
-                this.c(24843);
+                int discarded$6 = 24843;
+                this.c();
                 var4_int = 0;
                 var5 = param1;
                 L5: while (true) {
@@ -448,9 +449,9 @@ final class fi {
                   }
                 }
               } else {
-                int fieldTemp$3 = ((fi) this).field_c;
+                int fieldTemp$7 = ((fi) this).field_c;
                 ((fi) this).field_c = ((fi) this).field_c + 1;
-                ((fi) this).field_g[fieldTemp$3] = (byte) 0;
+                ((fi) this).field_g[fieldTemp$7] = (byte) 0;
                 continue L4;
               }
             }

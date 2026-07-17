@@ -9,7 +9,7 @@ final class uj {
     static boolean field_f;
     static oj field_e;
 
-    final static int a(CharSequence param0, byte param1, int param2, boolean param3) {
+    final static int a(CharSequence param0, byte param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

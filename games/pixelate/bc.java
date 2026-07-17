@@ -101,10 +101,7 @@ final class bc extends mg {
     }
 
     final static void a(byte param0, int param1) {
-        pp discarded$10 = mc.a(8 * ci.field_o - -param1, -127);
-        if (param0 != 96) {
-            field_n = null;
-        }
+        pp discarded$0 = mc.a(8 * ci.field_o - -param1, -127);
     }
 
     public static void e(int param0) {
@@ -115,7 +112,7 @@ final class bc extends mg {
         int var1 = -73 / ((-35 - param0) / 59);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
@@ -221,7 +218,7 @@ final class bc extends mg {
           L0: {
             var2_int = param1.length();
             var3 = new char[var2_int];
-            var4 = param0;
+            var4 = 0;
             L1: while (true) {
               if (var4 >= var2_int) {
                 stackOut_4_0 = new String(var3);
@@ -239,7 +236,7 @@ final class bc extends mg {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("bc.C(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("bc.C(").append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -309,11 +306,9 @@ final class bc extends mg {
         char[] var6 = new char[param2];
         char[] var3 = var6;
         for (var4 = 0; var4 < param2; var4++) {
-            var6[var4] = param1;
+            var6[var4] = '*';
         }
-        if (param0) {
-            field_o = null;
-        }
+        field_o = null;
         return new String(var3);
     }
 

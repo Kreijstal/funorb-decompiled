@@ -201,18 +201,18 @@ final class cc implements Runnable {
         return stackIn_4_0;
     }
 
-    final static String a(char param0, int param1, int param2) {
+    final static String a(char param0, int param1) {
         int var4 = 0;
         int var5 = DungeonAssault.field_K;
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = 0; var4 < param1; var4++) {
-            var6[var4] = param0;
+            var6[var4] = '*';
         }
         return new String(var6);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_e = null;
         field_i = null;

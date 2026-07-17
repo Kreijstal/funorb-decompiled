@@ -22,11 +22,8 @@ final class ml extends cj {
         var3.a(param0, (byte) -44);
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_Ob = null;
-        if (param0 != -102) {
-            return;
-        }
         field_Lb = null;
     }
 

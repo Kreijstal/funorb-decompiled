@@ -297,24 +297,20 @@ final class dna extends sna {
             ((dna) this).field_vb.a(-param2 + ((dna) this).field_p, 31407, ((dna) this).field_sb, 0, param2);
             var8 = 0;
             var4 = var8;
-            if (!param0) {
-              L1: while (true) {
-                if (((dna) this).field_wb.length <= var8) {
-                  return;
+            L1: while (true) {
+              if (((dna) this).field_wb.length <= var8) {
+                return;
+              } else {
+                ((dna) this).field_wb[var8].a(((dna) this).field_vb.field_p - param1 * 2, 31407, -(param1 * 2) + ((dna) this).field_vb.field_sb, param1, param1);
+                if (((dna) this).field_yb != var8) {
+                  ((dna) this).field_wb[var8].field_kb = ((dna) this).field_wb[var8].field_kb + 10000;
+                  var8++;
+                  continue L1;
                 } else {
-                  ((dna) this).field_wb[var8].a(((dna) this).field_vb.field_p - param1 * 2, 31407, -(param1 * 2) + ((dna) this).field_vb.field_sb, param1, param1);
-                  if (((dna) this).field_yb != var8) {
-                    ((dna) this).field_wb[var8].field_kb = ((dna) this).field_wb[var8].field_kb + 10000;
-                    var8++;
-                    continue L1;
-                  } else {
-                    var8++;
-                    continue L1;
-                  }
+                  var8++;
+                  continue L1;
                 }
               }
-            } else {
-              return;
             }
           } else {
             var5 = ((dna) this).field_sb * var4 / ((dna) this).field_xb.length;

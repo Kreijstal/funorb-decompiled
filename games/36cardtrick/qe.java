@@ -10,7 +10,7 @@ final class qe extends g implements cl, qh {
     static de field_H;
     static int field_I;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_J = null;
         field_H = null;
     }
@@ -131,7 +131,10 @@ final class qe extends g implements cl, qh {
             ((qe) this).field_K = param0;
             ((qe) this).field_F = new hl(bj.field_b, (pl) null);
             ((qe) this).field_F.field_v = (ci) (Object) new ki();
-            var7 = re.a(dd.field_h, new String[2], (byte) -50);
+            int discarded$3 = 1;
+            int discarded$4 = -110;
+            int discarded$5 = -50;
+            var7 = re.a(dd.field_h, new String[2]);
             var3 = 20;
             var4 = new ek(j.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, j.field_C.field_s, -1, 2147483647, true);
             ((qe) this).field_D = new dg(var7, (ci) (Object) var4);
@@ -183,7 +186,7 @@ final class qe extends g implements cl, qh {
         }
     }
 
-    final static boolean a(java.applet.Applet param0, byte param1) {
+    final static boolean a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -448,7 +451,7 @@ final class qe extends g implements cl, qh {
         }
     }
 
-    private final String l(int param0) {
+    private final String l() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -514,7 +517,7 @@ final class qe extends g implements cl, qh {
         }
     }
 
-    private final String d(byte param0) {
+    private final String d() {
         return "</col></u>";
     }
 

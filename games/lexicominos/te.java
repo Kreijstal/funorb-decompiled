@@ -22,7 +22,7 @@ final class te extends kf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_E = null;
     }
 
@@ -117,7 +117,8 @@ final class te extends kf {
                       var7 = var10 + "; Discard;";
                       break L2;
                     } else {
-                      var7 = var10 + "; Expires=" + q.a(1000L * param1 + rf.c(0), (byte) 28) + "; Max-Age=" + param1;
+                      int discarded$1 = 28;
+                      var7 = var10 + "; Expires=" + q.a(1000L * param1 + rf.c(0)) + "; Max-Age=" + param1;
                       break L2;
                     }
                   }

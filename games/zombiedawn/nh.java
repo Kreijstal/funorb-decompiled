@@ -85,7 +85,7 @@ final class nh extends hp implements hh {
         return stackIn_3_0;
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_R = null;
         int var1 = -87;
     }
@@ -227,69 +227,61 @@ final class nh extends hp implements hh {
 
     final static boolean a(byte param0, ec param1) {
         RuntimeException var2 = null;
-        boolean stackIn_3_0 = false;
+        boolean stackIn_1_0 = false;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
+        boolean stackOut_0_0 = false;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 77) {
-                break L1;
-              } else {
-                field_G = 1;
-                break L1;
-              }
-            }
-            stackOut_2_0 = param1.c(10);
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = param1.c(10);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("nh.O(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("nh.O(").append(77).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -378,7 +370,8 @@ final class nh extends hp implements hh {
                                       break L1;
                                     } else {
                                       var7 = ((nh) this).field_U + param3;
-                                      this.a(var7, (byte) -89);
+                                      int discarded$3 = -89;
+                                      this.a(var7);
                                       stackOut_49_0 = 1;
                                       stackIn_50_0 = stackOut_49_0;
                                       return stackIn_50_0 != 0;
@@ -438,7 +431,8 @@ final class nh extends hp implements hh {
                             break L8;
                           }
                         }
-                        this.a(24);
+                        int discarded$4 = 24;
+                        this.a();
                         stackOut_33_0 = 1;
                         stackIn_34_0 = stackOut_33_0;
                         return stackIn_34_0 != 0;
@@ -478,7 +472,8 @@ final class nh extends hp implements hh {
                       break L12;
                     }
                   }
-                  this.a(24);
+                  int discarded$5 = 24;
+                  this.a();
                   stackOut_18_0 = 1;
                   stackIn_19_0 = stackOut_18_0;
                   return stackIn_19_0 != 0;
@@ -602,7 +597,8 @@ final class nh extends hp implements hh {
         ((nh) this).field_T.a(-117, 0, 0, ((nh) this).field_i, var2);
         ((nh) this).field_F = new qi(0, 0, 0, 0, (io) (Object) new kh(), (ga) (Object) ((nh) this).field_T, (io) null);
         if (var4 != 0) {
-            ((nh) this).field_F.a(true, (byte) 100, wo.v(6130));
+            int discarded$0 = 6130;
+            ((nh) this).field_F.a(true, (byte) 100, wo.v());
         }
         ((nh) this).field_F.a(-78, ((nh) this).field_M, 0, ((nh) this).field_i, ((nh) this).field_n - ((nh) this).field_M);
         ((nh) this).field_H = true;
@@ -610,7 +606,8 @@ final class nh extends hp implements hh {
             return;
         }
         ((nh) this).a((ga) (Object) ((nh) this).field_F, 10);
-        this.a(24);
+        int discarded$1 = 24;
+        this.a();
     }
 
     final void b(boolean param0) {
@@ -704,7 +701,7 @@ final class nh extends hp implements hh {
         return stackIn_6_0 != 0;
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -775,7 +772,7 @@ final class nh extends hp implements hh {
         return stackIn_4_0;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -850,21 +847,22 @@ final class nh extends hp implements hh {
         }
     }
 
-    private final void a(String param0, byte param1) {
+    private final void a(String param0) {
         if (((nh) this).field_T.field_L == null) {
             return;
         }
-        int var4 = 31 / ((param1 - 47) / 48);
+        int var4 = -15;
         int var3_int = this.a(-129, param0.toLowerCase());
         if (var3_int == -1) {
             return;
         }
         try {
             ((nh) this).field_T.field_K = var3_int;
-            this.a(24);
+            int discarded$0 = 24;
+            this.a();
             ((nh) this).field_U = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "nh.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "nh.E(" + (param0 != null ? "{...}" : "null") + 44 + -89 + 41);
         }
     }
 

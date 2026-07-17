@@ -9,12 +9,12 @@ final class pd {
     static int field_b;
     static n field_d;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
     }
 
-    final static vi a(String param0, int param1) {
+    final static vi a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -53,7 +53,7 @@ final class pd {
         try {
           L0: {
             var2_int = param0.length();
-            if (~var2_int == param1) {
+            if (var2_int == 0) {
               stackOut_3_0 = qj.field_e;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
@@ -70,7 +70,8 @@ final class pd {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      var7 = nc.a(var6, (byte) -33);
+                      int discarded$2 = -33;
+                      var7 = nc.a(var6);
                       if (var7 != null) {
                         stackOut_15_0 = (vi) var7;
                         stackIn_16_0 = stackOut_15_0;
@@ -121,7 +122,7 @@ final class pd {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + -1 + 41);
         }
         return stackIn_19_0;
     }

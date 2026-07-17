@@ -357,7 +357,7 @@ final class ve {
         return ((ve) this).field_e;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_b = null;
         field_c = null;
     }

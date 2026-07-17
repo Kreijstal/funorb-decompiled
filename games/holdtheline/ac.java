@@ -114,10 +114,6 @@ final class ac {
     private final void a(byte param0, int param1, ic param2) {
         float var4_float = 0.0f;
         try {
-            if (param0 != -52) {
-                Object var5 = null;
-                ac.a((ji) null, (String[]) null, -128, -113);
-            }
             var4_float = (float)param1 / 100.0f + (float)(((ac) this).field_f - -1);
             if (param1 != 0) {
                 ((ac) this).field_b = param2.field_c + " - " + param1 + "%";
@@ -126,7 +122,7 @@ final class ac {
             }
             ((ac) this).field_j = (float)((ac) this).field_d * var4_float / (float)(((ac) this).field_i - -1);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ac.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "ac.B(" + -52 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -140,13 +136,13 @@ final class ac {
                 throw new IllegalArgumentException();
             }
             var4_int = ka.a((byte) -127, param1[0]);
-            var5 = ka.a((byte) -116, param1[param2]);
+            var5 = ka.a((byte) -116, param1[1]);
             var6 = ka.a((byte) 39, param1[2]);
             var7 = ka.a((byte) -120, param1[3]);
             param0.field_g = param0.field_j;
             param0.field_j = new ul(param3, var4_int, var5, var6, var7);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ac.D(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "ac.D(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + param3 + 41);
         }
     }
 

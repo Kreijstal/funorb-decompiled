@@ -104,8 +104,9 @@ final class bc {
         }
     }
 
-    final static void a(int param0) {
-        ng.x(90);
+    final static void a() {
+        int discarded$0 = 90;
+        ng.x();
     }
 
     final static void a(int param0, mo param1) {

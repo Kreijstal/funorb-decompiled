@@ -21,14 +21,7 @@ final class ed {
         qd.field_e = param1;
         var2 = qd.field_e;
         if (var2 != 1) {
-          if (var2 != 0) {
-            if (param0 != -11325) {
-              field_c = null;
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (var2 == 0) {
             no.field_G = new int[]{230, 150, 180, 100};
             sf.field_d = new int[]{26, 182, 370, 463};
             ki.field_X = new int[]{-1, 160, 342, 435};
@@ -36,12 +29,9 @@ final class ed {
             cj.field_c = new int[]{220, 347, 515, -1};
             fl.field_c = new int[]{170, 150, 140, 160};
             pj.field_u = new int[]{135, 135, 90, 120};
-            if (param0 == -11325) {
-              return;
-            } else {
-              field_c = null;
-              return;
-            }
+            return;
+          } else {
+            return;
           }
         } else {
           fl.field_c = new int[]{180, 180, 180, 180};
@@ -51,16 +41,11 @@ final class ed {
           cj.field_c = new int[]{220, 307, 490, -1};
           sf.field_d = new int[]{26, 117, 304, 419};
           no.field_G = new int[]{230, 80, 160, 100};
-          if (param0 == -11325) {
-            return;
-          } else {
-            field_c = null;
-            return;
-          }
+          return;
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         int var1 = 115;
         field_a = null;
@@ -68,12 +53,7 @@ final class ed {
     }
 
     final static void a(int param0, String param1) {
-        if (param0 < 81) {
-          return;
-        } else {
-          System.out.println("Error: " + fg.a("%0a", -127, "\n", param1));
-          return;
-        }
+        System.out.println("Error: " + fg.a("%0a", -127, "\n", param1));
     }
 
     final static String a(CharSequence param0, byte param1) {
@@ -104,11 +84,12 @@ final class ed {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$2 = ed.a((CharSequence) null, (byte) -46);
+                String discarded$4 = ed.a((CharSequence) null, (byte) -46);
                 break L1;
               }
             }
-            stackOut_2_0 = fh.a(param0, param1 ^ -7154, false);
+            int discarded$5 = 0;
+            stackOut_2_0 = fh.a(param0, param1 ^ -7154);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

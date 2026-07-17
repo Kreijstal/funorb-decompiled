@@ -42,12 +42,12 @@ class dj extends bd {
     private boolean field_o;
     private int field_Q;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_ab = null;
-        int var1 = -13 % ((-22 - param0) / 36);
+        int var1 = 0;
     }
 
-    private final void a(dj param0, int param1) {
+    private final void a(dj param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_99_0 = null;
         StringBuilder stackIn_99_1 = null;
@@ -455,7 +455,8 @@ class dj extends bd {
           L0: {
             L1: {
               ((dj) this).field_e = param0;
-              this.a(param1, 2147483647);
+              int discarded$2 = 2147483647;
+              this.a(param1);
               if (param6 == null) {
                 break L1;
               } else {

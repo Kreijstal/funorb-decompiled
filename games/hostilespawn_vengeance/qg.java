@@ -19,7 +19,7 @@ final class qg extends lf {
     private int field_t;
     static bd[] field_g;
 
-    final static void b(byte param0) {
+    final static void b() {
     }
 
     private final void a(int param0, byte param1) {
@@ -152,19 +152,15 @@ final class qg extends lf {
 
     private final void a(int param0, vi param1) {
         try {
-            ((qg) this).field_c = param1.l(param0 + 32014);
+            ((qg) this).field_c = param1.l(32270);
             ((qg) this).field_b = param1.l(32270);
             ((qg) this).field_a = param1.l(32270);
-            if (param0 != 256) {
-                Object var4 = null;
-                ((qg) this).a(-53, -22, (oj) null);
-            }
-            ((qg) this).field_k = param1.e(param0 + -248);
+            ((qg) this).field_k = param1.e(8);
             ((qg) this).field_h = param1.e(8);
             this.a(param1.l(32270), (byte) 21);
             this.a(param1.l(32270), 42);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "qg.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "qg.G(" + 256 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

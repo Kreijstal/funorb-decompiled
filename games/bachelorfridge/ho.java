@@ -8,7 +8,7 @@ final class ho extends bw {
     pd field_h;
     static ee[] field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_g = null;
         field_f = null;

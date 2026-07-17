@@ -8,7 +8,7 @@ final class df extends dj {
     static String[] field_F;
     static hd field_G;
 
-    final static void d(boolean param0) {
+    final static void d() {
         nl var1 = null;
         nl var2 = null;
         if (!(0 == et.field_d.field_R[1].field_g)) {
@@ -68,7 +68,7 @@ final class df extends dj {
         var5 = var24;
         var6 = (short)param3;
         var7 = (short)param1;
-        var8 = new vn(of.field_f, param2, false, true, true);
+        var8 = new vn(of.field_f, true, false, true, true);
         var32 = of.field_f.field_p;
         var12 = var8.field_p;
         var13 = 0;
@@ -295,23 +295,20 @@ final class df extends dj {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_F = null;
-        if (param0) {
-            field_H = 29;
-        }
         field_I = null;
         field_G = null;
     }
 
-    final static int g(int param0) {
+    final static int g() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_16_0 = 0;
+        int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
+        int stackOut_13_0 = 0;
         var3 = Kickabout.field_G;
         try {
           L0: {
@@ -319,42 +316,37 @@ final class df extends dj {
             L1: while (true) {
               if (!nk.b((byte) -59)) {
                 L2: {
-                  if (param0 < -35) {
+                  int discarded$25 = 16756;
+                  int discarded$26 = 16756;
+                  re.field_c.a(-21174, ts.b(n.field_m, el.field_A), ts.b(vc.field_y, sm.field_q));
+                  if (!re.field_c.c(-1)) {
                     break L2;
                   } else {
-                    df.c(true);
+                    var1_int = 1;
                     break L2;
                   }
                 }
                 L3: {
-                  re.field_c.a(-21174, ts.b(n.field_m, el.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
-                  if (!re.field_c.c(-1)) {
-                    break L3;
-                  } else {
-                    var1_int = 1;
-                    break L3;
-                  }
-                }
-                L4: {
                   var2 = 0;
                   if (var1_int == 0) {
-                    break L4;
+                    break L3;
                   } else {
                     if (re.field_c.field_e >= 0) {
                       var2 = gl.field_d[re.field_c.field_e];
                       if (2 == var2) {
-                        dh.c((byte) -77);
-                        break L4;
+                        int discarded$27 = -77;
+                        dh.c();
+                        break L3;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
-                stackOut_15_0 = var2;
-                stackIn_16_0 = stackOut_15_0;
+                stackOut_13_0 = var2;
+                stackIn_14_0 = stackOut_13_0;
                 break L0;
               } else {
                 re.field_c.d(105);
@@ -370,9 +362,9 @@ final class df extends dj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "df.K(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "df.K(" + -61 + 41);
         }
-        return stackIn_16_0;
+        return stackIn_14_0;
     }
 
     static {

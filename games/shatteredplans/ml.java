@@ -60,7 +60,7 @@ abstract class ml extends da implements od {
 
     abstract String a(boolean param0, String param1);
 
-    final static void a(int param0, int param1, int param2, int param3, bi param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, bi param4, int param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -270,26 +270,11 @@ abstract class ml extends da implements od {
     }
 
     final static void a(byte param0, boolean param1) {
-        eh var2 = null;
-        if (param0 >= 96) {
-          tg.field_c.b(param1, -43);
-          var2 = wi.field_c;
-          if (var2 != null) {
+        tg.field_c.b(param1, -43);
+        eh var2 = wi.field_c;
+        if (var2 != null) {
             var2.a(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
             return;
-          } else {
-            return;
-          }
-        } else {
-          field_l = null;
-          tg.field_c.b(param1, -43);
-          var2 = wi.field_c;
-          if (var2 == null) {
-            return;
-          } else {
-            var2.a(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
-            return;
-          }
         }
     }
 

@@ -11,59 +11,32 @@ final class ie extends wl {
         int var2 = 0;
         int var3 = 0;
         var2 = 255 & param1;
-        if (param0 < -11) {
-          if (var2 == 0) {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-          } else {
-            if (var2 >= 128) {
-              if (var2 >= 160) {
-                return (char)var2;
-              } else {
-                L0: {
-                  var3 = ki.field_G[-128 + var2];
-                  if (var3 == 0) {
-                    var3 = 63;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
-            } else {
-              return (char)var2;
-            }
-          }
+        if (var2 == 0) {
+          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         } else {
-          field_j = 101;
-          if (var2 == 0) {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-          } else {
-            if (var2 >= 128) {
-              if (var2 >= 160) {
-                return (char)var2;
-              } else {
-                L1: {
-                  var3 = ki.field_G[-128 + var2];
-                  if (var3 == 0) {
-                    var3 = 63;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
+          if (var2 >= 128) {
+            if (var2 >= 160) {
+              return (char)var2;
             } else {
+              L0: {
+                var3 = ki.field_G[-128 + var2];
+                if (var3 == 0) {
+                  var3 = 63;
+                  break L0;
+                } else {
+                  break L0;
+                }
+              }
+              var2 = var3;
               return (char)var2;
             }
+          } else {
+            return (char)var2;
           }
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(aa.field_lb == null)) {
             aa.field_lb.l(-27697);
         }
@@ -71,7 +44,7 @@ final class ie extends wl {
         td.field_f.c((ub) (Object) ik.field_G, -128);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_l = null;
     }
 
@@ -109,7 +82,7 @@ final class ie extends wl {
           L0: {
             var2_int = param1.g(8, -11719);
             if (var2_int <= 0) {
-              var3 = param1.g(param0, -11719);
+              var3 = param1.g(12, -11719);
               var4 = new ca[var3];
               var5 = 0;
               L1: while (true) {
@@ -128,10 +101,10 @@ final class ie extends wl {
                       var6_ref_ca = new ca();
                       int discarded$126 = param1.g(24, -11719);
                       int discarded$127 = param1.g(24, -11719);
-                      var6_ref_ca.field_b = param1.g(24, param0 + -11731);
+                      var6_ref_ca.field_b = param1.g(24, -11719);
                       int discarded$128 = param1.g(9, -11719);
                       int discarded$129 = param1.g(12, -11719);
-                      int discarded$130 = param1.g(12, param0 ^ -11723);
+                      int discarded$130 = param1.g(12, -11719);
                       int discarded$131 = param1.g(12, -11719);
                       var4[var5] = var6_ref_ca;
                       var5++;
@@ -153,7 +126,7 @@ final class ie extends wl {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("ie.A(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("ie.A(").append(12).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

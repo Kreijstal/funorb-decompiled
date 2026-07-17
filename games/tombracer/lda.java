@@ -178,7 +178,7 @@ final class lda extends kna {
         return stackIn_8_0;
     }
 
-    public static void r(byte param0) {
+    public static void r() {
         field_G = null;
         field_F = null;
         field_I = null;

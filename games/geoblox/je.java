@@ -8,7 +8,7 @@ final class je extends hf {
     hf field_f;
     static sk[] field_h;
 
-    final static void c(byte param0) {
+    final static void c() {
         p var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -36,24 +36,18 @@ final class je extends hf {
               }
             }
             L2: {
-              if (param0 < -119) {
-                break L2;
-              } else {
-                field_j = null;
-                break L2;
-              }
-            }
-            L3: {
               if (fh.c(-91)) {
-                break L3;
+                break L2;
               } else {
-                L4: while (true) {
+                L3: while (true) {
                   var1 = (p) (Object) ja.field_A.b((byte) -118);
                   if (var1 == null) {
-                    break L3;
+                    break L2;
                   } else {
-                    sj.a(var1, -56, 4);
-                    continue L4;
+                    int discarded$26 = 4;
+                    int discarded$27 = -56;
+                    sj.a(var1);
+                    continue L3;
                   }
                 }
               }
@@ -63,13 +57,16 @@ final class je extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "je.C(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1_ref, "je.C(" + -122 + 41);
         }
     }
 
-    final static rh a(int param0, boolean param1, boolean param2, boolean param3, byte param4) {
+    final static rh a(int param0, boolean param1, boolean param2) {
         int var5 = -55;
-        return am.a(-128, param0, param2, !param1 ? 0 : 1, param3, false);
+        int discarded$0 = 0;
+        int discarded$1 = 1;
+        int discarded$2 = 1;
+        return am.a(-128, 1, param2);
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
@@ -110,7 +107,7 @@ final class je extends hf {
                     break L2;
                   }
                 }
-                var2_int = 91 % ((50 - param0) / 49);
+                var2_int = 0;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -118,7 +115,7 @@ final class je extends hf {
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_5_0 = (RuntimeException) var2_ref2;
-                stackOut_5_1 = new StringBuilder().append("je.D(").append(param0).append(44);
+                stackOut_5_1 = new StringBuilder().append("je.D(").append(114).append(44);
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_7_1 = stackOut_5_1;
                 stackIn_6_0 = stackOut_5_0;
@@ -150,7 +147,7 @@ final class je extends hf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_h = null;
     }

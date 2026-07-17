@@ -25,26 +25,61 @@ final class kc extends nm {
     }
 
     final boolean c(byte param0) {
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
         if (param0 < 47) {
+          L0: {
             field_o = null;
+            int fieldTemp$4 = ((kc) this).field_k + 1;
+            ((kc) this).field_k = ((kc) this).field_k + 1;
+            if (fieldTemp$4 >= 40) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            int fieldTemp$5 = ((kc) this).field_k + 1;
+            ((kc) this).field_k = ((kc) this).field_k + 1;
+            if (fieldTemp$5 >= 40) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
         }
-        int fieldTemp$0 = ((kc) this).field_k + 1;
-        ((kc) this).field_k = ((kc) this).field_k + 1;
-        return fieldTemp$0 < 40 ? true : false;
     }
 
     final static void a(mf param0, ra param1, int param2, int param3) {
         try {
-            rn.field_i = wn.a((byte) -98) * param2 / 1000;
+            int discarded$0 = -98;
+            rn.field_i = wn.a() * param2 / 1000;
             if (param3 < 91) {
                 Object var5 = null;
                 kc.a((mf) null, (ra) null, -127, -72);
             }
             ck.a(-2196, param0);
             bm.a((byte) -70, param0);
-            e.a(param0, 115);
+            int discarded$1 = 115;
+            e.a(param0);
             ul.a(-37);
-            fl.e(-41);
+            int discarded$2 = -41;
+            fl.e();
             ld.field_t = -rn.field_i;
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "kc.D(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
@@ -52,26 +87,36 @@ final class kc extends nm {
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        int var5 = (int)((Math.exp((double)((float)(-((kc) this).field_k) / 20.0f)) - Math.exp(-2.0)) * 200.0);
-        int var6 = this.a((byte) 116);
+        int var5 = 0;
+        int var6 = 0;
+        var5 = (int)((Math.exp((double)((float)(-((kc) this).field_k) / 20.0f)) - Math.exp(-2.0)) * 200.0);
+        int discarded$4 = 116;
+        var6 = this.a();
         al.a(param2 - -((((kc) this).field_l >> 8) / param0), var6 / (param0 << 1), (-((kc) this).field_k + 40 << 8) / 40, var5, -94, var6 / param0, (((kc) this).field_m >> 8) / param0 + param1);
-        if (param3) {
-            return;
+        if (!param3) {
+          boolean discarded$5 = ((kc) this).c((byte) -61);
+          return;
+        } else {
+          return;
         }
-        boolean discarded$0 = ((kc) this).c((byte) -61);
     }
 
     final static jp[] a(int param0, boolean param1) {
-        jp[] var3 = new jp[9];
-        jp[] var2 = var3;
+        jp[] var2 = null;
+        jp[] var3 = null;
+        var3 = new jp[9];
+        var2 = var3;
         if (param1) {
-            gb discarded$0 = kc.a((byte) -5, false);
+          gb discarded$2 = kc.a((byte) -5, false);
+          var3[4] = hd.a(param0, 64, (byte) -6);
+          return var2;
+        } else {
+          var3[4] = hd.a(param0, 64, (byte) -6);
+          return var2;
         }
-        var3[4] = hd.a(param0, 64, (byte) -6);
-        return var2;
     }
 
-    private final int a(byte param0) {
+    private final int a() {
         int var2 = -80;
         return ((kc) this).field_k * (-((kc) this).field_k + 100) / 20 + -5;
     }
@@ -80,14 +125,21 @@ final class kc extends nm {
         pi var2 = null;
         int var3 = 0;
         int var4 = 0;
+        int var5 = 0;
+        Exception var6 = null;
         int var7 = 0;
         pi var8 = null;
+        wd var9 = null;
         int stackIn_5_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_24_0 = null;
+        Throwable decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
+        Object stackOut_23_0 = null;
+        int[] stackOut_22_0 = null;
         L0: {
           var7 = BrickABrac.field_J ? 1 : 0;
           var8 = jl.field_e;
@@ -128,17 +180,17 @@ final class kc extends nm {
         }
         L3: {
           if (var8.l(255) != 1) {
-            stackOut_12_0 = 0;
-            stackIn_13_0 = stackOut_12_0;
+            stackOut_10_0 = 0;
+            stackIn_11_0 = stackOut_10_0;
             break L3;
           } else {
-            stackOut_11_0 = 1;
-            stackIn_13_0 = stackOut_11_0;
+            stackOut_9_0 = 1;
+            stackIn_11_0 = stackOut_9_0;
             break L3;
           }
         }
         L4: {
-          var4 = stackIn_13_0;
+          var4 = stackIn_11_0;
           dp.field_t = var8.d(-1);
           if (var4 != 0) {
             nd.field_g = var8.d(-1);
@@ -166,9 +218,40 @@ final class kc extends nm {
           sl.field_y = var8.d(-1);
           break L5;
         }
-        gd.field_d = bj.a(80, (byte) 76, (wq) (Object) var8);
-        rn.field_m = null;
-        return new gb(false);
+        if (param1) {
+          var5 = var8.i(65280);
+          try {
+            L7: {
+              L8: {
+                var9 = nh.field_c.a(var5, true);
+                gd.field_d = var9.h(-3);
+                if (nd.field_g.equals((Object) (Object) tb.field_cb)) {
+                  stackOut_23_0 = null;
+                  stackIn_24_0 = (int[]) (Object) stackOut_23_0;
+                  break L8;
+                } else {
+                  stackOut_22_0 = var9.field_u;
+                  stackIn_24_0 = stackOut_22_0;
+                  break L8;
+                }
+              }
+              rn.field_m = stackIn_24_0;
+              break L7;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6 = (Exception) (Object) decompiledCaughtException;
+            rk.a("CC1", (Throwable) (Object) var6, param0 ^ 16);
+            rn.field_m = null;
+            gd.field_d = null;
+            return new gb(param1);
+          }
+          return new gb(param1);
+        } else {
+          gd.field_d = bj.a(80, (byte) 76, (wq) (Object) var8);
+          rn.field_m = null;
+          return new gb(param1);
+        }
     }
 
     kc(int param0, int param1) {

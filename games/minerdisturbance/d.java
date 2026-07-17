@@ -65,7 +65,7 @@ final class d {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0) {
         int var2 = 0;
         var2 = 0;
         if (0 <= param0) {
@@ -191,7 +191,7 @@ final class d {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
     }

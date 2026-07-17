@@ -45,7 +45,7 @@ final class nv extends wi {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var2_int = 34 / ((15 - param0) / 44);
+            var2_int = 17;
             if (param1 != null) {
               var3 = new cn(param1, aq.field_f, fc.field_g, ku.field_c, lo.field_j, lt.field_a, pq.field_O);
               tk.h((byte) -92);
@@ -61,7 +61,7 @@ final class nv extends wi {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("nv.H(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("nv.H(").append(-109).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -97,7 +97,7 @@ final class nv extends wi {
             be.field_i = new tf();
             i.field_B = param2;
             cu.field_c = param4;
-            if (param3 != go.field_b) {
+            if (0 != go.field_b) {
               if (0 != param0) {
                 m.field_a = param1;
                 go.field_b = param0;
@@ -131,7 +131,7 @@ final class nv extends wi {
             if (param4 != 0) {
               i.field_B = param2;
               cu.field_c = param4;
-              if (param3 != go.field_b) {
+              if (0 != go.field_b) {
                 if (0 == param0) {
                   am.field_g = null;
                   m.field_a = param1;
@@ -165,7 +165,7 @@ final class nv extends wi {
               be.field_i = null;
               i.field_B = param2;
               cu.field_c = param4;
-              if (param3 == go.field_b) {
+              if (0 == go.field_b) {
                 if (param0 <= 0) {
                   if (0 == param0) {
                     am.field_g = null;
@@ -201,7 +201,7 @@ final class nv extends wi {
           if (param4 != 0) {
             i.field_B = param2;
             cu.field_c = param4;
-            if (param3 != go.field_b) {
+            if (0 != go.field_b) {
               if (0 == param0) {
                 am.field_g = null;
                 m.field_a = param1;
@@ -235,7 +235,7 @@ final class nv extends wi {
             be.field_i = null;
             i.field_B = param2;
             cu.field_c = param4;
-            if (param3 != go.field_b) {
+            if (0 != go.field_b) {
               if (0 == param0) {
                 am.field_g = null;
                 m.field_a = param1;
@@ -292,18 +292,18 @@ final class nv extends wi {
         return ((nv) this).field_M;
     }
 
-    final static void a(int param0, int param1, String param2, String param3, byte param4) {
+    final static void a(int param0, int param1, String param2, String param3) {
         try {
             ei.field_b.field_y = param1;
             ei.field_b.field_V = param3;
             ei.field_b.field_q = ei.field_b.field_q + ij.field_s.field_q;
             ei.field_b.field_E = param2;
             ij.field_s.field_s = ij.field_s.field_s + ij.field_s.field_q;
-            ij.field_s.field_q = param0;
+            ij.field_s.field_q = 0;
             ei.field_b.field_q = ei.field_b.field_q - ij.field_s.field_q;
             ij.field_s.field_s = ij.field_s.field_s - ij.field_s.field_q;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "nv.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 34 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "nv.G(" + 0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 34 + 41);
         }
     }
 
@@ -440,25 +440,13 @@ final class nv extends wi {
         return stackIn_21_0 != 0;
     }
 
-    public static void j(int param0) {
-        if (param0 != 696) {
-          nv.a(-1, -86);
-          field_I = null;
-          field_F = null;
-          field_G = null;
-          field_L = null;
-          field_N = null;
-          field_E = null;
-          return;
-        } else {
-          field_I = null;
-          field_F = null;
-          field_G = null;
-          field_L = null;
-          field_N = null;
-          field_E = null;
-          return;
-        }
+    public static void j() {
+        field_I = null;
+        field_F = null;
+        field_G = null;
+        field_L = null;
+        field_N = null;
+        field_E = null;
     }
 
     final static void a(int param0, int param1) {
@@ -475,7 +463,7 @@ final class nv extends wi {
         }
     }
 
-    final static boolean i(int param0) {
+    final static boolean i() {
         return ~eq.field_j != ~eq.field_a;
     }
 

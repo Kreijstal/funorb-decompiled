@@ -11,7 +11,7 @@ final class mh {
         field_a = null;
     }
 
-    final static String a(boolean param0) {
+    final static String a() {
         return e.field_c.d(true);
     }
 

@@ -5,7 +5,7 @@ final class dr {
     static int field_a;
     private static String field_z;
 
-    final static void a(int param0) {
+    final static void a() {
         awa.field_p.setLength(0);
         ow.field_b = 0;
     }

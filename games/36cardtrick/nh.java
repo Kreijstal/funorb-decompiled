@@ -10,7 +10,7 @@ final class nh {
         int var3 = 0;
         byte[] var4 = null;
         L0: {
-          var2 = 100 % ((10 - param0) / 54);
+          var2 = 0;
           if (param1 != 100) {
             break L0;
           } else {

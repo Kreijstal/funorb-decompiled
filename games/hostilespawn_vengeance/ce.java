@@ -69,7 +69,7 @@ abstract class ce {
         return ((ce) this).field_d.length;
     }
 
-    final static void a(ln param0, boolean param1) {
+    final static void a(ln param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ln var3 = null;

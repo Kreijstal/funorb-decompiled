@@ -279,7 +279,7 @@ abstract class jf {
         return stackIn_5_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

@@ -10,53 +10,27 @@ final class wka {
         var4 = al.a(-101, param1);
         if (var4 instanceof t) {
           if (-3 != ((t) (Object) var4).field_p) {
-            if (param0 == 57) {
-              if (var4 instanceof t) {
-                if (((t) (Object) var4).field_p == 3) {
-                  return (1 + param3) * 6200 / ((1 + param3) * param2 * 57 + 1);
-                } else {
-                  return param3 * 400 / param2;
-                }
-              } else {
+            if (var4 instanceof t) {
+              if (-4 != ((t) (Object) var4).field_p) {
                 return param3 * 400 / param2;
+              } else {
+                return (1 + param3) * 6200 / ((1 + param3) * param2 * 57 + 1);
               }
             } else {
-              field_a = 79;
-              if (var4 instanceof t) {
-                if (-4 != ((t) (Object) var4).field_p) {
-                  return param3 * 400 / param2;
-                } else {
-                  return (1 + param3) * 6200 / ((1 + param3) * param2 * 57 + 1);
-                }
-              } else {
-                return param3 * 400 / param2;
-              }
+              return param3 * 400 / param2;
             }
           } else {
             return (12000 * param3 - -12000) / (param2 * (param3 * 57 - -57));
           }
         } else {
-          if (param0 == 57) {
-            if (var4 instanceof t) {
-              if (((t) (Object) var4).field_p != 3) {
-                return param3 * 400 / param2;
-              } else {
-                return (1 + param3) * 6200 / ((1 + param3) * param2 * 57 + 1);
-              }
-            } else {
+          if (var4 instanceof t) {
+            if (((t) (Object) var4).field_p != 3) {
               return param3 * 400 / param2;
+            } else {
+              return (1 + param3) * 6200 / ((1 + param3) * param2 * 57 + 1);
             }
           } else {
-            field_a = 79;
-            if (var4 instanceof t) {
-              if (((t) (Object) var4).field_p != 3) {
-                return param3 * 400 / param2;
-              } else {
-                return (1 + param3) * 6200 / ((1 + param3) * param2 * 57 + 1);
-              }
-            } else {
-              return param3 * 400 / param2;
-            }
+            return param3 * 400 / param2;
           }
         }
     }

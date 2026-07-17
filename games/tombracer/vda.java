@@ -180,7 +180,7 @@ final class vda extends ci {
         ((vda) this).field_o = 4096;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_m = null;
         field_n = null;
     }

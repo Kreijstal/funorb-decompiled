@@ -101,7 +101,8 @@ final class l extends bj implements qb {
             L1: {
               if (((l) this).field_G != param0) {
                 if (((l) this).field_I == param0) {
-                  fe.a((byte) -83);
+                  int discarded$2 = -83;
+                  fe.a();
                   break L1;
                 } else {
                   if (((l) this).field_J == param0) {
@@ -119,7 +120,7 @@ final class l extends bj implements qb {
             if (param3 == 1) {
               break L0;
             } else {
-              boolean discarded$1 = l.a((byte) -64);
+              boolean discarded$3 = l.a((byte) -64);
               return;
             }
           }
@@ -243,9 +244,6 @@ final class l extends bj implements qb {
     }
 
     final static int a(int param0, int param1) {
-        if (param0 != -8462) {
-            return -107;
-        }
         if (!qd.a(param1, -99)) {
             return -1;
         }

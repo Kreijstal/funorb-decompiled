@@ -89,73 +89,65 @@ final class ra {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                field_g = -122;
-                break L1;
-              }
-            }
             var3_int = 1;
-            L2: while (true) {
+            L1: while (true) {
               if (var3_int >= param1) {
                 break L0;
               } else {
                 wl.a(var3_int, 46, param2);
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("ra.H(").append(param0).append(44).append(param1).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("ra.H(").append(0).append(44).append(param1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -265,7 +257,7 @@ final class ra {
             var13 = var14;
             var12 = var13;
             var8 = var12;
-            var9 = param3;
+            var9 = 0;
             L2: while (true) {
               if (var9 >= 4) {
                 L3: {
@@ -286,9 +278,9 @@ final class ra {
                 L5: {
                   L6: {
                     ih.field_c.field_j = 0;
-                    ih.field_c.a(param2, param6, param5, 22186);
+                    ih.field_c.a(0, param6, param5, 22186);
                     ih.field_c.a(var7_int, (byte) -103);
-                    ih.field_c.a(var15, param3 ^ 107);
+                    ih.field_c.a(var15, 107);
                     if (il.field_kb == null) {
                       break L6;
                     } else {
@@ -311,7 +303,7 @@ final class ra {
                     il.field_kb.d(param6, 255);
                     il.field_kb.a(param4, param0, (byte) -86);
                     param1.a(0, il.field_kb.field_j, il.field_kb.field_h, 22186);
-                    param1.a(0, ih.field_c.field_j, ih.field_c.field_h, param3 ^ 22186);
+                    param1.a(0, ih.field_c.field_j, ih.field_c.field_h, 22186);
                     break L0;
                   } else {
                     il.field_kb.e(11135, var15[var11]);
@@ -381,7 +373,7 @@ final class ra {
           }
           L10: {
             stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(0).append(44).append(0).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -451,12 +443,13 @@ final class ra {
     final void a(long param0, byte param1) throws IOException {
         ((ra) this).field_d.seek(param0);
         if (param1 <= 25) {
-            ra.a(false);
+            int discarded$0 = 0;
+            ra.a();
         }
         ((ra) this).field_h = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
         field_j = null;
         field_a = null;

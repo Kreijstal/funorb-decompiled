@@ -142,7 +142,7 @@ final class fm {
                           break L0;
                         } else {
                           il.field_e[var7].d();
-                          int discarded$3 = rc.field_a.a(tb.field_c[var7], 3, 3, il.field_e[var7].field_o + -6, il.field_e[var7].field_k - 6, pl.field_d, -1, 1, 1, rc.field_a.field_B + rc.field_a.field_H);
+                          int discarded$5 = rc.field_a.a(tb.field_c[var7], 3, 3, il.field_e[var7].field_o + -6, il.field_e[var7].field_k - 6, pl.field_d, -1, 1, 1, rc.field_a.field_B + rc.field_a.field_H);
                           ve.a(3, il.field_e[var7].field_k, il.field_e[var7], il.field_e[var7].field_o, 1, 0, (byte) 61, 0);
                           var7++;
                           continue L1;
@@ -233,7 +233,7 @@ final class fm {
                 pf.field_b.e();
                 var9 = new hj(pf.field_b.field_s, pf.field_b.field_t);
                 var9.d();
-                int discarded$4 = lj.field_m.a(var14, ok.field_f, pa.field_d, vg.field_l, qf.field_m, 16777215, -1, 1, 1, lj.field_m.field_H - -lj.field_m.field_B);
+                int discarded$6 = lj.field_m.a(var14, ok.field_f, pa.field_d, vg.field_l, qf.field_m, 16777215, -1, 1, 1, lj.field_m.field_H - -lj.field_m.field_B);
                 ve.a(3, var9.field_t, var9, var9.field_s, 1, 0, (byte) 88, 0);
                 pf.field_b.d();
                 var9.c(0, 0);
@@ -265,7 +265,7 @@ final class fm {
                 var17 = t.a(-415993727, new String[1], oc.field_U);
                 pj.field_k = null;
                 var16.d();
-                int discarded$5 = rc.field_a.a(var17, 3, 3, var16.field_o - 6, -6 + var16.field_k, 16777215, -1, 0, 1, rc.field_a.field_B + rc.field_a.field_H);
+                int discarded$7 = rc.field_a.a(var17, 3, 3, var16.field_o - 6, -6 + var16.field_k, 16777215, -1, 0, 1, rc.field_a.field_B + rc.field_a.field_H);
                 ve.a(3, var16.field_k, var16, var16.field_o, 1, 0, (byte) 55, 0);
                 hc.field_l.d();
                 var16.c(199 - hc.field_l.field_p, 83 - hc.field_l.field_u);
@@ -505,7 +505,8 @@ final class fm {
                           oh.field_a.e(587, 1 + var1_int, var2);
                           break L21;
                         } else {
-                          ei.a(-463);
+                          int discarded$8 = -463;
+                          ei.a();
                           il.field_e[kb.field_m].c(269, 340);
                           break L20;
                         }
@@ -519,7 +520,8 @@ final class fm {
                 }
               }
             }
-            ei.a(-463);
+            int discarded$9 = -463;
+            ei.a();
             il.field_e[kb.field_m].c(269, 340);
             break L20;
           }
@@ -529,7 +531,7 @@ final class fm {
         }
     }
 
-    final static Object a(byte[] param0, int param1, boolean param2) {
+    final static Object a(byte[] param0, int param1) {
         fc var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -615,7 +617,7 @@ final class fm {
         return (Object) (Object) stackIn_10_0;
     }
 
-    final static void a(og param0, byte param1) {
+    final static void a(og param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -689,7 +691,8 @@ final class fm {
                   break L5;
                 }
               }
-              ia.a(param0, false);
+              int discarded$2 = 0;
+              ia.a(param0);
               break L0;
             }
           }
@@ -726,13 +729,10 @@ final class fm {
     }
 
     private final static int a(int param0, int param1) {
-        if (param1 != 2047) {
-            field_d = null;
-        }
         return wi.field_f[param0 & 2047];
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -740,44 +740,36 @@ final class fm {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          if (param4 >= 85) {
-            break L0;
-          } else {
-            int discarded$2 = fm.a(-62, -45);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (param5 < param2) {
-              break L2;
+              break L1;
             } else {
               if (param2 - -param3 <= param5) {
-                break L2;
+                break L1;
               } else {
                 if (param0 > param1) {
-                  break L2;
+                  break L1;
                 } else {
                   if (param1 >= param6 + param0) {
-                    break L2;
-                  } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
                     break L1;
+                  } else {
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L0;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
-          break L1;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_6_0 != 0;
     }
 
     static {

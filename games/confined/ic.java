@@ -7,19 +7,13 @@ final class ic {
     static int field_b;
     static bi[] field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
-        if (param0 <= 3) {
-            field_c = null;
-            field_a = null;
-            field_c = null;
-            return;
-        }
         field_a = null;
         field_c = null;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int a(int param0) {
         int var2 = 0;
         if (!(param0 != 0)) {
             return 0;

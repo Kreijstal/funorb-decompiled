@@ -31,17 +31,19 @@ final class qn {
         if (null == ua.field_d) {
           if (go.field_c > 0) {
             if (((qn) this).field_b) {
-              int fieldTemp$2 = ((qn) this).field_w - 1;
+              int fieldTemp$6 = ((qn) this).field_w - 1;
               ((qn) this).field_w = ((qn) this).field_w - 1;
-              if (fieldTemp$2 <= 0) {
+              if (fieldTemp$6 <= 0) {
                 ((qn) this).field_w = ((qn) this).field_g;
                 if (qh.field_a >= ((qn) this).field_c) {
                   if (param0 >= 23) {
-                    this.d(0);
+                    int discarded$7 = 0;
+                    this.d();
                     return;
                   } else {
                     ((qn) this).field_l = -43;
-                    this.d(0);
+                    int discarded$8 = 0;
+                    this.d();
                     return;
                   }
                 } else {
@@ -97,17 +99,19 @@ final class qn {
           } else {
             ((qn) this).field_b = false;
             if (((qn) this).field_b) {
-              int fieldTemp$3 = ((qn) this).field_w - 1;
+              int fieldTemp$9 = ((qn) this).field_w - 1;
               ((qn) this).field_w = ((qn) this).field_w - 1;
-              if (fieldTemp$3 <= 0) {
+              if (fieldTemp$9 <= 0) {
                 ((qn) this).field_w = ((qn) this).field_g;
                 if (qh.field_a >= ((qn) this).field_c) {
                   if (param0 >= 23) {
-                    this.d(0);
+                    int discarded$10 = 0;
+                    this.d();
                     return;
                   } else {
                     ((qn) this).field_l = -43;
-                    this.d(0);
+                    int discarded$11 = 0;
+                    this.d();
                     return;
                   }
                 } else {
@@ -152,7 +156,7 @@ final class qn {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         cq var4 = null;
@@ -160,29 +164,21 @@ final class qn {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 > 118) {
-                break L1;
-              } else {
-                qn.a(17, -27, -12, -54, -92);
-                break L1;
-              }
-            }
             var4 = (cq) (Object) fk.field_f.d(-99);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
                 gn.a(-21167, var4, 7);
                 var4 = (cq) (Object) fk.field_f.a((byte) 116);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var2, "qn.I(" + param0 + 44 + 7 + 41);
+          throw qb.a((Throwable) (Object) var2, "qn.I(" + 119 + 44 + 7 + 41);
         }
     }
 
@@ -199,23 +195,12 @@ final class qn {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         ip.field_r = new fo(new int[1]);
-        oq.field_x = param1;
-        if (param4 != -6532) {
-          qn.b(109);
-          fr.field_k = param3;
-          lg.field_L = param2;
-          wo.field_a = param0;
-          qb.field_w = lg.field_L + -oq.field_x;
-          ag.field_E = -fr.field_k + wo.field_a;
-          return;
-        } else {
-          fr.field_k = param3;
-          lg.field_L = param2;
-          wo.field_a = param0;
-          qb.field_w = lg.field_L + -oq.field_x;
-          ag.field_E = -fr.field_k + wo.field_a;
-          return;
-        }
+        oq.field_x = 0;
+        fr.field_k = 0;
+        lg.field_L = 640;
+        wo.field_a = 240;
+        qb.field_w = lg.field_L + -oq.field_x;
+        ag.field_E = -fr.field_k + wo.field_a;
     }
 
     final wg a(boolean param0) {
@@ -264,7 +249,7 @@ final class qn {
         return true;
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

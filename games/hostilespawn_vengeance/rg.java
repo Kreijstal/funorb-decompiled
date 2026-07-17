@@ -10,63 +10,56 @@ final class rg {
 
     final static boolean a(byte param0) {
         int var1 = -58 % ((param0 - 55) / 62);
-        return uk.a(bm.field_b, 0);
+        int discarded$0 = 0;
+        return uk.a(bm.field_b);
     }
 
     final static boolean a(byte param0, char param1) {
-        int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          if (param0 == -109) {
-            break L0;
-          } else {
-            field_e = true;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (param1 == 160) {
-              break L2;
+              break L1;
             } else {
               if (param1 == 32) {
-                break L2;
+                break L1;
               } else {
                 if (param1 == 95) {
-                  break L2;
+                  break L1;
                 } else {
                   if (param1 != 45) {
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    break L1;
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    break L0;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 1;
-          stackIn_9_0 = stackOut_7_0;
-          break L1;
+          stackOut_5_0 = 1;
+          stackIn_7_0 = stackOut_5_0;
+          break L0;
         }
-        return stackIn_9_0 != 0;
+        return stackIn_7_0 != 0;
     }
 
-    final static pg b(int param0) {
+    final static pg b() {
         pg var1 = new pg(ra.field_a, vc.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], ja.field_e[0], bf.field_d);
         uj.d(-43);
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         qj var3 = null;
@@ -111,7 +104,8 @@ final class rg {
                     var6_int = 1;
                     L4: while (true) {
                       if (var4 <= var6_int) {
-                        qh.a(var4, var5, 96);
+                        int discarded$1 = 96;
+                        qh.a(var4, var5);
                         var6_int = 0;
                         L5: while (true) {
                           if (var4 <= var6_int) {

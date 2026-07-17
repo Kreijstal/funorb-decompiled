@@ -58,7 +58,8 @@ final class tc extends na {
               var5 = var4;
               if (!ao.a(var5, 30996)) {
                 if (!me.a(false, var5)) {
-                  if (!hp.a(var5, true)) {
+                  int discarded$6 = 1;
+                  if (!hp.a(var5)) {
                     if (!this.b(-53, param1)) {
                       if (var3.length() <= 0) {
                         stackOut_27_0 = ka.field_a;
@@ -177,7 +178,8 @@ final class tc extends na {
             var3 = ((tc) this).field_h.field_m.toLowerCase();
             var4 = param1.toLowerCase();
             if (var4.length() != 0) {
-              if (!gg.a(var4, var3, -83)) {
+              int discarded$11 = -83;
+              if (!gg.a(var4, var3)) {
                 stackOut_5_0 = qr.field_e;
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
@@ -364,7 +366,7 @@ final class tc extends na {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_i = null;
         field_j = null;
         field_g = null;

@@ -10,7 +10,7 @@ final class ub extends nb {
     int field_C;
     static qm field_z;
 
-    public static void f(int param0) {
+    public static void f() {
         field_z = null;
         field_E = null;
         int var1 = 0;
@@ -38,9 +38,9 @@ final class ub extends nb {
         return hm.a(d.field_Gb, oc.field_n, -24236);
     }
 
-    final static void b(int param0, int param1) {
+    final static void b() {
         hg var2 = gk.field_g;
-        var2.g(param0, 8);
+        var2.g(11, 8);
         var2.a(1, -126);
         var2.a(1, -82);
     }
@@ -64,24 +64,24 @@ final class ub extends nb {
 
     final static kg a(int param0, String param1) {
         RuntimeException var2 = null;
-        kg stackIn_7_0 = null;
+        kg stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kg stackOut_6_0 = null;
+        kg stackOut_4_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -89,70 +89,60 @@ final class ub extends nb {
                 break L1;
               } else {
                 if (!param1.equals((Object) (Object) w.field_I.a(32))) {
-                  w.field_I = oe.a(param1, false);
+                  int discarded$2 = 0;
+                  w.field_I = oe.a(param1);
                   break L1;
                 } else {
                   break L1;
                 }
               }
             }
-            L2: {
-              if (param0 > 54) {
-                break L2;
-              } else {
-                field_D = null;
-                break L2;
-              }
-            }
-            stackOut_6_0 = w.field_I;
-            stackIn_7_0 = stackOut_6_0;
+            stackOut_4_0 = w.field_I;
+            stackIn_5_0 = stackOut_4_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("ub.G(").append(param0).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("ub.G(").append(99).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     final static void a(byte param0, String param1, String param2) {
-        if (param0 != 102) {
-            return;
-        }
         try {
             sa.a((byte) 107, param2, param1, false);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ub.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "ub.H(" + 102 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(java.awt.Color param0, boolean param1, String param2, int param3, int param4) {
+    final static void a(java.awt.Color param0, boolean param1, String param2, int param3) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -235,7 +225,7 @@ final class ub extends nb {
                     var10.setColor(param0);
                     var10.drawRect(0, 0, 303, 33);
                     var10.fillRect(2, 2, 3 * param3, 30);
-                    var7 = 1 / ((param4 - -88) / 35);
+                    var7 = -1;
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
                     var10.fillRect(param3 * 3 + 2, 2, -(param3 * 3) + 300, 30);
@@ -333,7 +323,7 @@ final class ub extends nb {
               break L9;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param3 + 44 + param4 + 41);
+          throw kg.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param3 + 44 + -126 + 41);
         }
     }
 

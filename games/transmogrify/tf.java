@@ -8,7 +8,7 @@ final class tf {
     static int field_a;
     int field_c;
 
-    final static void a(int param0, boolean param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         am var4 = null;
@@ -20,19 +20,22 @@ final class tf {
             var4 = (am) (Object) ec.field_b.a((byte) -95);
             L1: while (true) {
               if (var4 == null) {
-                tf.a(-55, false);
+                int discarded$8 = 0;
+                int discarded$9 = -55;
+                tf.a();
                 var5 = (o) (Object) mh.field_a.a((byte) -95);
                 L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    nk.a(param0, var5, -31995);
+                    int discarded$10 = -31995;
+                    nk.a(3, var5);
                     var5 = (o) (Object) mh.field_a.a(true);
                     continue L2;
                   }
                 }
               } else {
-                ei.a(true, param0, var4);
+                ei.a(true, 3, var4);
                 var4 = (am) (Object) ec.field_b.a(true);
                 continue L1;
               }
@@ -41,7 +44,7 @@ final class tf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var2, "tf.B(" + param0 + 44 + 0 + 41);
+          throw ch.a((Throwable) (Object) var2, "tf.B(" + 3 + 44 + 0 + 41);
         }
     }
 

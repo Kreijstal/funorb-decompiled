@@ -127,28 +127,24 @@ final class lh extends od {
               } else {
                 if (param2 > 0) {
                   var6_int = param0[0].field_z;
-                  if (param1 > 46) {
-                    var7 = param0[2].field_z;
-                    var8 = param0[1].field_z;
-                    param0[0].b(param4, param5, param3);
-                    param0[2].b(param4 + param2 - var7, param5, param3);
-                    wj.b(rb.field_e);
-                    wj.d(param4 - -var6_int, param5, param4 + (param2 + -var7), param0[1].field_C + param5);
-                    var9 = param4 + var6_int;
-                    var10 = -var7 + (param4 - -param2);
-                    param4 = var9;
-                    L2: while (true) {
-                      if (var10 <= param4) {
-                        wj.a(rb.field_e);
-                        break L0;
-                      } else {
-                        param0[1].b(param4, param5, param3);
-                        param4 = param4 + var8;
-                        continue L2;
-                      }
+                  var7 = param0[2].field_z;
+                  var8 = param0[1].field_z;
+                  param0[0].b(param4, param5, param3);
+                  param0[2].b(param4 + param2 - var7, param5, param3);
+                  wj.b(rb.field_e);
+                  wj.d(param4 - -var6_int, param5, param4 + (param2 + -var7), param0[1].field_C + param5);
+                  var9 = param4 + var6_int;
+                  var10 = -var7 + (param4 - -param2);
+                  param4 = var9;
+                  L2: while (true) {
+                    if (var10 <= param4) {
+                      wj.a(rb.field_e);
+                      break L0;
+                    } else {
+                      param0[1].b(param4, param5, param3);
+                      param4 = param4 + var8;
+                      continue L2;
                     }
-                  } else {
-                    return;
                   }
                 } else {
                   break L1;
@@ -185,7 +181,7 @@ final class lh extends od {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 121 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -275,7 +271,7 @@ final class lh extends od {
         return var5;
     }
 
-    public static void p(int param0) {
+    public static void p() {
         field_l = null;
         field_p = null;
         field_n = null;

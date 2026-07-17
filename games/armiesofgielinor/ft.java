@@ -10,7 +10,7 @@ final class ft extends tc {
     static wp field_q;
     static hd field_m;
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_q = null;
         field_p = null;
@@ -18,25 +18,21 @@ final class ft extends tc {
         field_o = null;
     }
 
-    final static wk[] a(int param0, byte param1, int param2, int param3) {
+    final static wk[] a(int param0, byte param1, int param2) {
+        int var5 = 0;
         int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         wk[] var7 = new wk[9];
         wk[] var4 = var7;
         var7[0] = hl.a(false, param2, 1);
-        int var5 = 1;
-        if (param1 > -8) {
-            ft.e(-23);
-        }
-        while (var5 < 9) {
-            var4[var5] = var4[0];
-            var5++;
+        for (var5 = 1; var5 < 9; var5++) {
+            var7[var5] = var7[0];
         }
         var4[4] = hl.a(false, param0, 64);
         return var4;
     }
 
-    final static void e(int param0) {
-        gl.a(120, param0);
+    final static void e() {
+        gl.a(120, 17);
     }
 
     ft(int param0, int param1) {

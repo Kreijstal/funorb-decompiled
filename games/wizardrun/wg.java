@@ -77,7 +77,7 @@ final class wg {
             var4_int = param3.length();
             var5 = param0.length();
             var6 = param2.length();
-            if (param1 == var5) {
+            if (0 == var5) {
               throw new IllegalArgumentException("Key cannot have zero length");
             } else {
               L1: {
@@ -147,7 +147,7 @@ final class wg {
           }
           L5: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param1).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(0).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -200,14 +200,14 @@ final class wg {
         return stackIn_14_0;
     }
 
-    final static o[] a(int param0, int param1) {
+    final static o[] a(int param0) {
         o[] var3 = new o[9];
         o[] var2 = var3;
         var3[4] = id.a((byte) 98, param0, 64);
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_e = null;
@@ -236,29 +236,25 @@ final class wg {
             StringBuilder stackOut_7_1 = null;
             String stackOut_7_2 = null;
             try {
-              if (param0 == 1234) {
-                try {
-                  L0: {
-                    var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                    param1.getAppletContext().showDocument(jl.a(param0 + -1338, var2, param1), "_top");
-                    break L0;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
+              try {
+                L0: {
+                  var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
+                  param1.getAppletContext().showDocument(jl.a(-104, var2, param1), "_top");
+                  break L0;
                 }
-                return;
-              } else {
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
                 return;
               }
+              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("wg.A(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("wg.A(").append(1234).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;

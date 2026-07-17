@@ -10,127 +10,82 @@ final class pa extends ob {
     static int[] field_L;
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
+        int stackIn_17_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_15_0 = 0;
         if (null != vl.field_m) {
           if (!vl.field_m.b((byte) 111)) {
-            if (!param0) {
-              if (null == fc.field_b) {
-                if (sn.h(-3)) {
-                  return true;
-                } else {
-                  if (Pool.a(param3, param2, param1, -80)) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                }
+            int discarded$7 = 118;
+            int discarded$8 = pa.f();
+            if (null == fc.field_b) {
+              if (sn.h(-3)) {
+                return true;
               } else {
-                if (!fc.field_b.f(13)) {
-                  if (sn.h(-3)) {
-                    return true;
-                  } else {
-                    if (Pool.a(param3, param2, param1, -80)) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  }
-                } else {
-                  fc.field_b = null;
-                  wa.m(8421504);
+                if (Pool.a(12, 13, 15, -80)) {
                   return true;
+                } else {
+                  return false;
                 }
               }
             } else {
-              int discarded$2 = pa.f(118);
-              if (null == fc.field_b) {
+              if (!fc.field_b.f(13)) {
                 if (sn.h(-3)) {
                   return true;
                 } else {
-                  if (Pool.a(param3, param2, param1, -80)) {
+                  if (Pool.a(12, 13, 15, -80)) {
                     return true;
                   } else {
                     return false;
                   }
                 }
               } else {
-                if (!fc.field_b.f(13)) {
-                  if (sn.h(-3)) {
-                    return true;
-                  } else {
-                    if (Pool.a(param3, param2, param1, -80)) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  }
-                } else {
-                  fc.field_b = null;
-                  wa.m(8421504);
-                  return true;
-                }
+                fc.field_b = null;
+                int discarded$9 = 8421504;
+                wa.m();
+                return true;
               }
             }
           } else {
-            wa.m(8421504);
+            int discarded$10 = 8421504;
+            wa.m();
             return true;
           }
         } else {
-          if (!param0) {
-            if (null == fc.field_b) {
-              if (sn.h(-3)) {
-                return true;
-              } else {
-                if (Pool.a(param3, param2, param1, -80)) {
-                  return true;
-                } else {
-                  return false;
-                }
-              }
+          int discarded$11 = 118;
+          int discarded$12 = pa.f();
+          if (null == fc.field_b) {
+            if (sn.h(-3)) {
+              return true;
             } else {
-              if (!fc.field_b.f(13)) {
-                if (sn.h(-3)) {
-                  return true;
+              L0: {
+                if (Pool.a(12, 13, 15, -80)) {
+                  stackOut_16_0 = 1;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L0;
                 } else {
-                  if (Pool.a(param3, param2, param1, -80)) {
-                    return true;
-                  } else {
-                    return false;
-                  }
+                  stackOut_15_0 = 0;
+                  stackIn_17_0 = stackOut_15_0;
+                  break L0;
                 }
-              } else {
-                fc.field_b = null;
-                wa.m(8421504);
-                return true;
               }
+              return stackIn_17_0 != 0;
             }
           } else {
-            int discarded$3 = pa.f(118);
-            if (null == fc.field_b) {
+            if (!fc.field_b.f(13)) {
               if (sn.h(-3)) {
                 return true;
               } else {
-                if (Pool.a(param3, param2, param1, -80)) {
-                  return true;
-                } else {
+                if (!Pool.a(12, 13, 15, -80)) {
                   return false;
+                } else {
+                  return true;
                 }
               }
             } else {
-              if (!fc.field_b.f(13)) {
-                if (sn.h(-3)) {
-                  return true;
-                } else {
-                  if (!Pool.a(param3, param2, param1, -80)) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                }
-              } else {
-                fc.field_b = null;
-                wa.m(8421504);
-                return true;
-              }
+              fc.field_b = null;
+              int discarded$13 = 8421504;
+              wa.m();
+              return true;
             }
           }
         }
@@ -140,41 +95,8 @@ final class pa extends ob {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final static int f(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != -1) {
-          L0: {
-            boolean discarded$14 = pa.a(false, 38, 98, -101);
-            if (pq.field_B == null) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = pq.field_B.length;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0;
-        } else {
-          L1: {
-            if (pq.field_B == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = pq.field_B.length;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0;
-        }
+    final static int f() {
+        return pq.field_B != null ? pq.field_B.length : 0;
     }
 
     public static void g(int param0) {

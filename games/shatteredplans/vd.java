@@ -929,22 +929,11 @@ class vd extends oh {
         }
     }
 
-    public static void a(byte param0) {
-        Object var2 = null;
+    public static void a() {
         field_n = null;
-        if (param0 > -114) {
-          var2 = null;
-          boolean discarded$2 = vd.a(40, (bc) null, 88, 85);
-          field_q = null;
-          field_j = null;
-          field_r = null;
-          return;
-        } else {
-          field_q = null;
-          field_j = null;
-          field_r = null;
-          return;
-        }
+        field_q = null;
+        field_j = null;
+        field_r = null;
     }
 
     void a(boolean param0, int param1, int param2) {
@@ -977,17 +966,18 @@ class vd extends oh {
                     break L2;
                   } else {
                     var4 = null;
-                    boolean discarded$4 = vd.a(0, (bc) null, -70, 78);
+                    boolean discarded$6 = vd.a(0, (bc) null, -70, 78);
                     break L2;
                   }
                 }
                 break L0;
               } else {
                 var1.h(8, 255);
-                int fieldTemp$5 = var1.field_j + 1;
+                int fieldTemp$7 = var1.field_j + 1;
                 var1.field_j = var1.field_j + 1;
-                var2 = fieldTemp$5;
-                hs.a(var1, (byte) -128);
+                var2 = fieldTemp$7;
+                int discarded$8 = -128;
+                hs.a(var1);
                 js.field_f.b(-var2 + var1.field_j, (byte) 118);
                 continue L1;
               }

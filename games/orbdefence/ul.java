@@ -605,7 +605,7 @@ final class ul {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + 5898330 * var12 & -16711936) + ((param4 & 65280) * var11 + 23040 * var12 & 16711680) >>> 8;
+            var13 = (2490406 * var11 + 5898330 * var12 & -16711936) + (9728 * var11 + 23040 * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -3228,8 +3228,8 @@ final class ul {
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
-        for (var7 = 0; var7 < param4; var7++) {
-            ul.g(param0 + var7, param1 + var7, param2 - (var7 << 1), param3 - (var7 << 1), param5, 128);
+        for (var7 = 0; var7 < 3; var7++) {
+            ul.g(param0 + var7, 405 + var7, param2 - (var7 << 1), param3 - (var7 << 1), 16777215, 128);
         }
     }
 

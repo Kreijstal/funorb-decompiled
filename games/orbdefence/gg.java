@@ -7,7 +7,7 @@ final class gg extends ej implements ai {
     static int[] field_O;
     static int field_N;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, kc param7, kc param8, int param9, int param10, int param11, pf param12, int param13, int param14, pf param15, int param16, pf param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, kc param7, kc param8, int param9, int param10, int param11, pf param12, int param13, int param14, pf param15, int param16, pf param17, int param18, int param19) {
         RuntimeException var21 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -87,24 +87,22 @@ final class gg extends ej implements ai {
         String stackOut_17_2 = null;
         try {
           L0: {
-            ta.a(0, param8, param7, param13);
+            ta.a(0, param8, param7, 480);
             nc.a(-101, param3, param10, param9, param1);
-            jk.b(param11, param18, 249);
-            if (param16 < -78) {
-              fe.a(param2, param5, param12, param15, param20, -81);
-              e.a(false, param4, param6, param17);
-              l.a(0, param14, param19, param0);
-              break L0;
-            } else {
-              return;
-            }
+            jk.b(240, 320, 249);
+            int discarded$2 = -81;
+            int discarded$3 = 6;
+            fe.a(8, 6, param12, param15);
+            e.a(false, 0, 0, param17);
+            l.a(0, param14, param19, param0);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var21 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var21;
-            stackOut_4_1 = new StringBuilder().append("gg.O(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_4_1 = new StringBuilder().append("gg.O(").append(param0).append(44).append(param1).append(44).append(8).append(44).append(param3).append(44).append(0).append(44).append(6).append(44).append(0).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -154,7 +152,7 @@ final class gg extends ej implements ai {
           }
           L3: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param9).append(44).append(param10).append(44).append(param11).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param9).append(44).append(param10).append(44).append(240).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -179,7 +177,7 @@ final class gg extends ej implements ai {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param13).append(44).append(param14).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(480).append(44).append(param14).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -204,7 +202,7 @@ final class gg extends ej implements ai {
           }
           L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param16).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(-90).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -227,72 +225,62 @@ final class gg extends ej implements ai {
               break L5;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param18 + 44 + param19 + 44 + param20 + 41);
+          throw dd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 320 + 44 + param19 + 44 + 6 + 41);
         }
     }
 
     final static void a(byte param0, java.awt.Component param1) {
-        RuntimeException runtimeException = null;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
-          L0: {
-            L1: {
-              param1.addMouseListener((java.awt.event.MouseListener) (Object) nk.field_q);
-              param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) nk.field_q);
-              param1.addFocusListener((java.awt.event.FocusListener) (Object) nk.field_q);
-              if (param0 == -56) {
-                break L1;
-              } else {
-                field_Q = 118;
-                break L1;
-              }
-            }
-            break L0;
-          }
+          param1.addMouseListener((java.awt.event.MouseListener) (Object) nk.field_q);
+          param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) nk.field_q);
+          param1.addFocusListener((java.awt.event.FocusListener) (Object) nk.field_q);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("gg.H(").append(param0).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L0: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("gg.H(").append(-56).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L0;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L0;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
     }
 
@@ -342,7 +330,8 @@ final class gg extends ej implements ai {
                 if (hh.field_d == param1) {
                   ((gg) this).field_r = ((gg) this).field_r + 10;
                   var3 = (Object) (Object) fi.field_a;
-                  if (!rc.b(-38)) {
+                  int discarded$25 = -38;
+                  if (!rc.b()) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) va.field_a;
@@ -427,7 +416,7 @@ final class gg extends ej implements ai {
         }
     }
 
-    public static void f(boolean param0) {
+    public static void f() {
         field_O = null;
     }
 
@@ -454,7 +443,8 @@ final class gg extends ej implements ai {
           L0: {
             var6_int = -74 % ((param0 - -3) / 62);
             if (param3 == ((gg) this).field_P) {
-              this.p(126);
+              int discarded$2 = 126;
+              this.p();
               break L0;
             } else {
               return;
@@ -492,7 +482,7 @@ final class gg extends ej implements ai {
         }
     }
 
-    private final void p(int param0) {
+    private final void p() {
         if (!((gg) this).field_A) {
             return;
         }
@@ -541,7 +531,7 @@ final class gg extends ej implements ai {
           L0: {
             var4 = new s(param0, param2);
             var4.field_j = (td) (Object) new vk();
-            var5 = ((gg) this).field_r - param1;
+            var5 = ((gg) this).field_r - 6;
             ((gg) this).field_r = ((gg) this).field_r + 38;
             var4.a(15, var5, 30, (byte) -90, -14 + ((gg) this).field_m - 16);
             ((gg) this).a((pj) (Object) var4, (byte) 74);
@@ -580,7 +570,7 @@ final class gg extends ej implements ai {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(6).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

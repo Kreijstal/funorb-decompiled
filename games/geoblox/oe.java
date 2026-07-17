@@ -43,69 +43,61 @@ abstract class oe extends dd {
 
     final static String a(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
-        Object stackIn_2_0 = null;
-        String stackIn_4_0 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            if (param0 == 44) {
-              stackOut_3_0 = ei.a(false, false, param1);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
-            }
+            stackOut_2_0 = ei.a(false, false, param1);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("oe.V(").append(param0).append(44);
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("oe.V(").append(44).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     void b(boolean param0) {
@@ -120,7 +112,7 @@ abstract class oe extends dd {
         ((oe) this).k(-107);
     }
 
-    final static void l(int param0) {
+    final static void l() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -273,7 +265,7 @@ abstract class oe extends dd {
         int var3 = 0;
         int var5 = 0;
         int var4 = 0;
-        if (~((oe) this).field_U < param0) {
+        if (((oe) this).field_U > 0) {
             var2 = ((oe) this).field_N;
             var3 = ((oe) this).field_M;
             int fieldTemp$0 = ((oe) this).field_Q + 1;
@@ -289,14 +281,11 @@ abstract class oe extends dd {
             }
             ((oe) this).c(var3, 113, var2);
         }
-        return super.f(param0);
+        return super.f(-1);
     }
 
     final static void a(int param0, byte param1, int param2) {
         k.field_g = param2;
-        if (param1 > -20) {
-            return;
-        }
         gb.field_e = param0;
     }
 
@@ -387,14 +376,15 @@ abstract class oe extends dd {
                         } else {
                           L7: {
                             var7 = param0.charAt(var6);
-                            if (!fb.a((char) var7, -47)) {
+                            int discarded$2 = -47;
+                            if (!fb.a((char) var7)) {
                               break L7;
                             } else {
                               var8 = hc.a((char) var7, param1 + -239);
                               if (var8 == 0) {
                                 break L7;
                               } else {
-                                StringBuilder discarded$1 = var5.append(var8);
+                                StringBuilder discarded$3 = var5.append(var8);
                                 break L7;
                               }
                             }
@@ -761,8 +751,10 @@ abstract class oe extends dd {
                     break L2;
                   }
                 }
-                vl.a(id.field_c, -10 + ((oe) this).field_r, 35 + param2, 5 + param0, (byte) 107);
-                vl.a(fh.field_e, ((oe) this).field_r, -22 + (((oe) this).field_h + param2), param0, (byte) 107);
+                int discarded$2 = 107;
+                vl.a(id.field_c, -10 + ((oe) this).field_r, 35 + param2, 5 + param0);
+                int discarded$3 = 107;
+                vl.a(fh.field_e, ((oe) this).field_r, -22 + (((oe) this).field_h + param2), param0);
                 var4 = ((oe) this).field_h + -79;
                 var5 = 169;
                 var6 = 127;

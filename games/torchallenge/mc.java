@@ -22,7 +22,8 @@ final class mc implements j {
 
     final static void a(int param0, int param1) {
         int var2 = 64 / ((24 - param1) / 57);
-        int discarded$0 = lh.e(0);
+        int discarded$0 = 0;
+        int discarded$1 = lh.e();
     }
 
     final static void a(int param0) {
@@ -39,18 +40,21 @@ final class mc implements j {
                 jh.field_a = cl.field_A;
                 jh.field_a = qa.a(119, new CharSequence[3]);
                 da.field_c.o(77);
-                ba.c((byte) 15);
+                int discarded$4 = 15;
+                ba.c();
                 return;
               } else {
                 jh.field_a = ni.a(new String[1], 0, gh.field_r);
                 jh.field_a = qa.a(119, new CharSequence[3]);
                 da.field_c.o(77);
-                ba.c((byte) 15);
+                int discarded$5 = 15;
+                ba.c();
                 return;
               }
             } else {
               da.field_c.o(77);
-              ba.c((byte) 15);
+              int discarded$6 = 15;
+              ba.c();
               return;
             }
           } else {
@@ -320,7 +324,7 @@ final class mc implements j {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_o = null;
         field_g = null;
         field_k = null;

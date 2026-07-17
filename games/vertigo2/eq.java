@@ -239,7 +239,7 @@ final class eq extends ji {
             StringBuilder discarded$0 = var6.append(var9);
         }
         StringBuilder discarded$1 = var6.reverse();
-        var6.setCharAt(param0, Character.toUpperCase(var6.charAt(0)));
+        var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
         return var6.toString();
     }
 
@@ -354,7 +354,7 @@ final class eq extends ji {
         }
     }
 
-    final static void a(String[] args, String param1, int param2, int param3) {
+    final static void a(String[] args, String param1, int param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         Object var6 = null;

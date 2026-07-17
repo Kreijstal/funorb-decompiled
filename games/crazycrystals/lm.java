@@ -13,7 +13,7 @@ final class lm {
     static sj field_e;
     static f[] field_d;
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var1 = null;
         int var2 = 0;
         Throwable var3 = null;
@@ -31,7 +31,7 @@ final class lm {
             to.field_a = kk.field_g;
             dp.field_h = sb.field_I;
             th.field_y = 0;
-            var2 = 33 % ((-53 - param0) / 49);
+            var2 = 1;
             break L0;
           }
         }

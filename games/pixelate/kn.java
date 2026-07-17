@@ -123,10 +123,7 @@ final class kn extends ie {
     }
 
     final static boolean a(boolean param0, int param1) {
-        if (!param0) {
-            field_J = null;
-        }
-        return param1 >= 2 ? true : false;
+        return param1 >= 2;
     }
 
     final void e(byte param0) {

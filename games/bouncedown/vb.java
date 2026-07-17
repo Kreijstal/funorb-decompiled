@@ -23,9 +23,6 @@ final class vb implements fc {
         field_o = null;
         field_k = null;
         field_g = null;
-        if (param0 <= 65) {
-            field_o = null;
-        }
         field_m = null;
     }
 
@@ -267,15 +264,18 @@ final class vb implements fc {
                       wa.field_d = var9;
                       break L8;
                     } else {
-                      boolean discarded$1 = qb.a(jf.b(false), 3);
-                      lk.field_p = new Boolean(pb.a((wi) (Object) jc.field_g, (byte) 87));
+                      int discarded$7 = 0;
+                      boolean discarded$8 = qb.a(jf.b(), 3);
+                      int discarded$9 = 87;
+                      lk.field_p = new Boolean(pb.a((wi) (Object) jc.field_g));
                       jc.field_g.field_h = 0;
                       break L8;
                     }
                   } else {
                     ta.a((byte) -118, vi.b(0));
                     ib.field_o = vf.field_a;
-                    kc.a((byte) 18);
+                    int discarded$10 = 18;
+                    kc.a();
                     fa.field_a = false;
                     stackOut_27_0 = var9;
                     stackIn_28_0 = stackOut_27_0;
@@ -298,7 +298,8 @@ final class vb implements fc {
                     var13 = 0;
                     L11: while (true) {
                       if (var12 <= var13) {
-                        kc.a((byte) 18);
+                        int discarded$11 = 18;
+                        kc.a();
                         fa.field_a = false;
                         stackOut_42_0 = 100 + var12;
                         stackIn_43_0 = stackOut_42_0;
@@ -323,7 +324,8 @@ final class vb implements fc {
               if (id.field_i != pj.field_a) {
                 break L12;
               } else {
-                if (va.b(1)) {
+                int discarded$12 = 1;
+                if (va.b()) {
                   L13: {
                     if (255 != wa.field_d) {
                       ib.field_o = jc.field_g.b(true);
@@ -338,7 +340,8 @@ final class vb implements fc {
                       }
                     }
                   }
-                  kc.a((byte) 18);
+                  int discarded$13 = 18;
+                  kc.a();
                   fa.field_a = false;
                   stackOut_51_0 = wa.field_d;
                   stackIn_52_0 = stackOut_51_0;
@@ -578,7 +581,7 @@ final class vb implements fc {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ih.field_V = null;
         ph.field_c = null;
         cl.field_n = null;

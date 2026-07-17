@@ -17,7 +17,7 @@ abstract class sd {
         field_b = null;
     }
 
-    final static String a(String param0, String[] param1, boolean param2) {
+    final static String a(String param0, String[] param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -93,7 +93,8 @@ abstract class sd {
                         }
                       }
                       var9 = param0.substring(2 + var8, var5);
-                      if (ik.a((CharSequence) (Object) var9, true)) {
+                      int discarded$5 = 1;
+                      if (ik.a((CharSequence) (Object) var9)) {
                         if (var3_int <= var5) {
                           continue L2;
                         } else {
@@ -102,9 +103,9 @@ abstract class sd {
                           } else {
                             var5++;
                             var10 = mo.a((CharSequence) (Object) var9, (byte) -116);
-                            StringBuilder discarded$3 = var6.append(param0.substring(var7, var8));
+                            StringBuilder discarded$6 = var6.append(param0.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$4 = var6.append(param1[var10]);
+                            StringBuilder discarded$7 = var6.append(param1[var10]);
                             continue L2;
                           }
                         }
@@ -113,7 +114,7 @@ abstract class sd {
                       }
                     }
                   } else {
-                    StringBuilder discarded$5 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$8 = var6.append(param0.substring(var7));
                     stackOut_24_0 = var6.toString();
                     stackIn_25_0 = stackOut_24_0;
                     break L0;
@@ -135,7 +136,8 @@ abstract class sd {
                     }
                   }
                   var7_ref_String = param0.substring(2 + var6_int, var5);
-                  if (!ik.a((CharSequence) (Object) var7_ref_String, true)) {
+                  int discarded$9 = 1;
+                  if (!ik.a((CharSequence) (Object) var7_ref_String)) {
                     continue L1;
                   } else {
                     if (var3_int <= var5) {
@@ -252,7 +254,7 @@ abstract class sd {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = -29 / ((-76 - param0) / 48);
+            var3_int = -29;
             var4 = null;
             stackOut_0_0 = cc.a(65500, 0, 0, param2, false, (String) null, param1);
             stackIn_1_0 = stackOut_0_0;
@@ -263,7 +265,7 @@ abstract class sd {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("sd.K(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("sd.K(").append(-124).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -316,7 +318,7 @@ abstract class sd {
         return stackIn_1_0;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

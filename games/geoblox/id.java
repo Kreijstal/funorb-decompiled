@@ -6,13 +6,13 @@ final class id {
     static lc[] field_b;
     static dm[] field_c;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         tl var1 = (tl) (Object) n.field_l.e(1);
         if (!(var1 != null)) {
             throw new IllegalStateException();
@@ -20,9 +20,6 @@ final class id {
         vb.a(var1.field_q, var1.field_j, var1.field_k);
         vb.e(var1.field_n, var1.field_p, var1.field_i, var1.field_m);
         var1.field_q = null;
-        if (!param0) {
-            return;
-        }
         sg.field_b.a(-110, (hf) (Object) var1);
     }
 

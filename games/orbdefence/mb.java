@@ -6,13 +6,13 @@ final class mb {
     static boolean field_c;
     static bl field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 106;
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, boolean param4) {
+    final static void a(int param0, int param1, int[] param2, int param3) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;

@@ -46,19 +46,31 @@ final class am {
     }
 
     final static void a(byte param0) {
-        if (!(ih.field_b != null)) {
+        if (ih.field_b == null) {
+          return;
+        } else {
+          L0: {
+            af.a((byte) -67, (java.awt.Canvas) (Object) ih.field_b);
+            ih.field_b.a(109, ei.field_c);
+            ih.field_b = null;
+            if (null != kk.field_q) {
+              kk.field_q.a((byte) -122);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          fi.field_v.requestFocus();
+          if (param0 != -16) {
+            boolean discarded$2 = am.a((byte) -28, 121);
             return;
+          } else {
+            return;
+          }
         }
-        af.a((byte) -67, (java.awt.Canvas) (Object) ih.field_b);
-        ih.field_b.a(109, ei.field_c);
-        ih.field_b = null;
-        if (!(null == kk.field_q)) {
-            kk.field_q.a((byte) -122);
-        }
-        fi.field_v.requestFocus();
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = 0;
         field_c = null;
         field_a = null;

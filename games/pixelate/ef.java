@@ -10,7 +10,7 @@ final class ef {
     static String field_d;
     static int field_f;
 
-    final static void a(int param0) {
+    final static void a() {
         m var1 = (m) (Object) on.field_nb.c(1504642273);
         if (var1 == null) {
             na.a(true);
@@ -24,7 +24,7 @@ final class ef {
         var1.c(2779);
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -277,9 +277,6 @@ final class ef {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (!param0) {
-            return;
-        }
         field_e = null;
         field_c = null;
     }

@@ -8,7 +8,7 @@ final class jo {
     static Hashtable field_a;
     static int field_c;
 
-    final static int a(int param0, boolean param1) {
+    final static int a(int param0) {
         int var2 = param0 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
@@ -94,11 +94,11 @@ final class jo {
             break L3;
           }
         }
-        var2 = 26 % ((42 - param0) / 51);
+        var2 = 0;
         return new byte[param1];
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         int var1 = 0;
         field_b = null;

@@ -48,7 +48,7 @@ abstract class wi {
         jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1);
     }
 
-    final static e a(int param0) {
+    final static e a() {
         if (tg.field_e == null) {
           tg.field_e = new e(nb.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_c.field_H, -1, 2147483647, true);
           return tg.field_e;
@@ -63,9 +63,6 @@ abstract class wi {
         field_e = null;
         field_m = null;
         field_h = null;
-        if (param0) {
-            return;
-        }
         field_p = null;
     }
 

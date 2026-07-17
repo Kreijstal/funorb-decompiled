@@ -9,7 +9,7 @@ final class oo {
     static int field_b;
     static int[][] field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_e = null;
@@ -18,9 +18,9 @@ final class oo {
     final static void a(int param0, qe param1) {
         try {
             param1.field_t = new char[]{'?'};
-            param1.field_D = new int[]{param0};
+            param1.field_D = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "oo.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "oo.A(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

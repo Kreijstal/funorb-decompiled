@@ -516,7 +516,7 @@ final class te {
         return (te) this;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
     }
 

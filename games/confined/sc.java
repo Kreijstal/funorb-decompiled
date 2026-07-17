@@ -72,7 +72,7 @@ abstract class sc {
               } else {
                 var9_int = 0;
                 L2: while (true) {
-                  var9_int = param0.indexOf((int) param1, var9_int);
+                  var9_int = param0.indexOf('_', var9_int);
                   if (var9_int >= 0) {
                     var6 = var6 + var7;
                     var9_int++;
@@ -86,7 +86,7 @@ abstract class sc {
             var9 = new StringBuilder(var6);
             var10 = 0;
             L3: while (true) {
-              var11 = param0.indexOf((int) param1, var10);
+              var11 = param0.indexOf('_', var10);
               if (0 > var11) {
                 StringBuilder discarded$3 = var9.append(param0.substring(var10));
                 stackOut_9_0 = var9.toString();
@@ -130,7 +130,7 @@ abstract class sc {
           }
           L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(95).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

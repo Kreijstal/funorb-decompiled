@@ -15,7 +15,7 @@ final class jn extends se {
     private ga field_j;
     private ga field_r;
 
-    public static void d(int param0) {
+    public static void d() {
         field_n = null;
         field_l = null;
         field_o = null;
@@ -195,13 +195,14 @@ final class jn extends se {
               return stackIn_3_0 != 0;
             } else {
               if (!qc.a(param2, -122)) {
-                if (bf.a(param2, false)) {
+                int discarded$8 = 0;
+                if (bf.a(param2)) {
                   stackOut_9_0 = 0;
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0 != 0;
                 } else {
                   if (param1.length() != 0) {
-                    var3_int = 94 / ((param0 - -31) / 58);
+                    var3_int = 47;
                     if (wp.a(param2, -1, param1)) {
                       stackOut_16_0 = 0;
                       stackIn_17_0 = stackOut_16_0;
@@ -241,7 +242,7 @@ final class jn extends se {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var3;
-            stackOut_26_1 = new StringBuilder().append("jn.E(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("jn.E(").append(112).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -350,7 +351,8 @@ final class jn extends se {
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
-              if (!bf.a(var5, false)) {
+              int discarded$6 = 0;
+              if (!bf.a(var5)) {
                 if (!lo.a(var5, 52)) {
                   var6 = -39 % ((41 - param1) / 49);
                   if (!qc.a(var5, -121)) {

@@ -181,7 +181,7 @@ final class qj {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2 = new rg(param0);
+            var2 = new rg(false);
             var2.field_d = param1;
             stackOut_0_0 = (rg) var2;
             stackIn_1_0 = stackOut_0_0;
@@ -192,7 +192,7 @@ final class qj {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("qj.D(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("qj.D(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -220,7 +220,7 @@ final class qj {
         return stackIn_1_0;
     }
 
-    final static fe a(byte param0) {
+    final static fe a() {
         if (!(null != ca.field_b)) {
             ca.field_b = new fe();
             ca.field_b.a(32, sg.field_a);

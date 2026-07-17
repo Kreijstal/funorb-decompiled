@@ -8,7 +8,7 @@ final class rv {
     static String[] field_d;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -32,8 +32,8 @@ final class rv {
           return;
         } else {
           L0: {
-            var3 = param0 + -135;
-            var4 = -35 + param1;
+            var3 = 185;
+            var4 = 205;
             var5 = 256;
             if (up.field_p >= 75) {
               break L0;

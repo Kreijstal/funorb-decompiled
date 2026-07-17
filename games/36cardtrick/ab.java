@@ -24,7 +24,7 @@ final class ab extends la {
         }
     }
 
-    final static void a(qk param0, int param1) {
+    final static void a(qk param0) {
         kc var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -56,14 +56,14 @@ final class ab extends la {
         return 100;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_p = null;
         field_w = null;
         field_u = null;
         field_q = null;
     }
 
-    final static String a(pb param0, int param1, int param2) {
+    final static String a(pb param0) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -102,7 +102,7 @@ final class ab extends la {
               }
             }
             var4 = new byte[var3_int];
-            var5 = 54 % ((6 - param1) / 55);
+            var5 = 0;
             param0.field_i = param0.field_i + qf.field_J.a(var3_int, var4, param0.field_g, 0, 109, param0.field_i);
             var6 = bd.a(255, 0, var4, var3_int);
             stackOut_3_0 = (String) var6;
@@ -143,7 +143,7 @@ final class ab extends la {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + 80 + 41);
+          throw ma.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 104 + 44 + 80 + 41);
         }
     }
 

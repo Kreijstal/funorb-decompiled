@@ -5,12 +5,12 @@ abstract class ai {
     static String field_b;
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
 
-    final static w a(String param0, byte param1) {
+    final static w a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;

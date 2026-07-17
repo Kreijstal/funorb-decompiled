@@ -5,7 +5,7 @@ final class lj {
     static int field_b;
     static String field_a;
 
-    final static dh a(db param0, String param1, db param2, String param3, int param4) {
+    final static dh a(db param0, String param1, db param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -210,7 +210,8 @@ final class lj {
           L0: {
             L1: {
               tb.field_b.b(0, (jb) (Object) param1);
-              pm.a(param0, param1, (byte) 71);
+              int discarded$2 = 71;
+              pm.a(5, param1);
               if (param2 <= -38) {
                 break L1;
               } else {
@@ -225,7 +226,7 @@ final class lj {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("lj.A(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("lj.A(").append(5).append(44);
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -252,7 +253,7 @@ final class lj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

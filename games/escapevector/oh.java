@@ -16,7 +16,7 @@ final class oh extends hg {
     static String field_k;
     int field_j;
 
-    final static void a(vj param0, boolean param1, int param2, boolean param3, byte param4) {
+    final static void a(vj param0, boolean param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -99,8 +99,8 @@ final class oh extends hg {
               }
             }
             L6: {
-              om.field_c.f(var6, param4 + -24);
-              var7 = tf.a(param4 ^ 98, oc.d((byte) -120));
+              om.field_c.f(var6, -123);
+              var7 = tf.a(-1, oc.d((byte) -120));
               if (var7 == null) {
                 var7 = "";
                 break L6;
@@ -109,22 +109,18 @@ final class oh extends hg {
               }
             }
             om.field_c.a(var7, 101);
-            if (param4 == -99) {
-              L7: {
-                if (p.field_i != null) {
-                  om.field_c.a((byte) 100, p.field_i);
-                  break L7;
-                } else {
-                  break L7;
-                }
+            L7: {
+              if (p.field_i != null) {
+                om.field_c.a((byte) 100, p.field_i);
+                break L7;
+              } else {
+                break L7;
               }
-              bn.a(param4 ^ -99, (n) (Object) om.field_c, qj.field_a, q.field_O, cf.field_c);
-              om.field_c.i(-var5_int + om.field_c.field_m, 32614);
-              rn.a(-1, param4 + 30884);
-              break L0;
-            } else {
-              return;
             }
+            bn.a(0, (n) (Object) om.field_c, qj.field_a, q.field_O, cf.field_c);
+            om.field_c.i(-var5_int + om.field_c.field_m, 32614);
+            rn.a(-1, 30785);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,11 +150,11 @@ final class oh extends hg {
               break L8;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -99 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_p = null;
         field_k = null;
         field_n = null;

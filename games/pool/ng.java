@@ -142,7 +142,7 @@ final class ng extends am {
         }
     }
 
-    final static int c(int param0) {
+    final static int c() {
         return j.field_b;
     }
 
@@ -155,33 +155,25 @@ final class ng extends am {
         int var14 = 0;
         int var15 = 0;
         int[] var16 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            L1: {
-              if (param4 == -117) {
-                break L1;
-              } else {
-                field_t = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            L1: while (true) {
               param7--;
               if (0 > param7) {
                 break L0;
@@ -198,43 +190,43 @@ final class ng extends am {
                 param3++;
                 param1 = param1 + param2;
                 param6 = param6 + param9;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var10_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var10_ref;
-            stackOut_5_1 = new StringBuilder().append("ng.BA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var10_ref;
+            stackOut_4_1 = new StringBuilder().append("ng.BA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(-117).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param8 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L3;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L3;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param9 + 41);
+          throw wm.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param9 + 41);
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_B = null;
         field_v = null;
         field_A = null;
@@ -247,20 +239,11 @@ final class ng extends am {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        var3 = param2 >> 16;
-        var4 = param2 & 65535;
-        var5 = param0 >> 16;
-        var6 = param0 & 65535;
-        if (param1 != 0) {
-          field_x = null;
-          return (var4 * var6 >> 16) + (var4 * var5 + param0 * var3);
-        } else {
-          return (var4 * var6 >> 16) + (var4 * var5 + param0 * var3);
-        }
+        int var3 = param2 >> 16;
+        int var4 = param2 & 65535;
+        int var5 = param0 >> 16;
+        int var6 = param0 & 65535;
+        return (var4 * var6 >> 16) + (var4 * var5 + param0 * var3);
     }
 
     private ng(int param0, int param1, int param2) {

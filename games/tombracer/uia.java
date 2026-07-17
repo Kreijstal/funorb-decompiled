@@ -358,7 +358,7 @@ class uia extends vg {
         throw new IllegalArgumentException();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
     }
 
@@ -610,7 +610,8 @@ class uia extends vg {
 
     uia(int param0) {
         ((uia) this).field_h = 0;
-        ((uia) this).field_g = fba.a(param0, 0);
+        int discarded$0 = 0;
+        ((uia) this).field_g = fba.a(param0);
     }
 
     final void b(int param0, int param1) {
@@ -895,10 +896,11 @@ class uia extends vg {
             if (var3_int < 0) {
               L1: {
                 var4 = (CharSequence) (Object) param0;
-                ((uia) this).field_h = ((uia) this).field_h + laa.a(((uia) this).field_h, param0.length(), ((uia) this).field_g, 0, var4, (byte) -4);
-                int fieldTemp$2 = ((uia) this).field_h;
+                int discarded$4 = -4;
+                ((uia) this).field_h = ((uia) this).field_h + laa.a(((uia) this).field_h, param0.length(), ((uia) this).field_g, 0, var4);
+                int fieldTemp$5 = ((uia) this).field_h;
                 ((uia) this).field_h = ((uia) this).field_h + 1;
-                ((uia) this).field_g[fieldTemp$2] = (byte) 0;
+                ((uia) this).field_g[fieldTemp$5] = (byte) 0;
                 if (!param1) {
                   break L1;
                 } else {
@@ -1015,10 +1017,11 @@ class uia extends vg {
             ((uia) this).field_h = ((uia) this).field_h + 1;
             ((uia) this).field_g[fieldTemp$0] = (byte)param1;
             var4 = (CharSequence) (Object) param0;
-            ((uia) this).field_h = ((uia) this).field_h + laa.a(((uia) this).field_h, param0.length(), ((uia) this).field_g, 0, var4, (byte) -4);
-            int fieldTemp$1 = ((uia) this).field_h;
+            int discarded$1 = -4;
+            ((uia) this).field_h = ((uia) this).field_h + laa.a(((uia) this).field_h, param0.length(), ((uia) this).field_g, 0, var4);
+            int fieldTemp$2 = ((uia) this).field_h;
             ((uia) this).field_h = ((uia) this).field_h + 1;
-            ((uia) this).field_g[fieldTemp$1] = (byte) 0;
+            ((uia) this).field_g[fieldTemp$2] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "uia.V(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }

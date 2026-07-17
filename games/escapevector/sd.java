@@ -17,9 +17,6 @@ final class sd {
     }
 
     final static void a(byte param0, java.applet.Applet param1, String param2) throws Throwable {
-        if (param0 != -111) {
-            return;
-        }
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param1).eval(param2);
     }
 }

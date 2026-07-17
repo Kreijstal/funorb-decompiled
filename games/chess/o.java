@@ -20,11 +20,8 @@ class o {
     }
 
     final static ci b(byte param0) {
-        if (param0 != 19) {
-            field_a = null;
-            return db.j(param0 ^ -20);
-        }
-        return db.j(param0 ^ -20);
+        int discarded$0 = -1;
+        return db.j();
     }
 
     final boolean b(int param0) {

@@ -43,7 +43,7 @@ final class il {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         int var1 = -117;
     }

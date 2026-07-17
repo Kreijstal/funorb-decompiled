@@ -84,7 +84,7 @@ final class aq extends rqa {
         }
     }
 
-    final static pgb b(int param0, int param1, int param2, int param3) {
+    final static pgb b(int param0, int param1, int param2) {
         Object var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -341,7 +341,8 @@ final class aq extends rqa {
                 if (var5 >= hab.field_k) {
                   break L16;
                 } else {
-                  var10_int = jia.a(var8_ref_pgb.field_a, (byte) 19);
+                  int discarded$1 = 19;
+                  var10_int = jia.a(var8_ref_pgb.field_a);
                   if (var10_int <= var8_ref_pgb.a(1)) {
                     L17: {
                       if (var8_ref_pgb.field_k) {

@@ -42,14 +42,11 @@ final class fj {
                 param1.d(-105);
             }
             param1.field_j = param2.field_j;
-            if (param0 != -123) {
-                field_a = null;
-            }
             param1.field_b = param2;
             param1.field_j.field_b = param1;
             param1.field_b.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "fj.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "fj.L(" + -123 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -253,7 +250,7 @@ final class fj {
         ((fj) this).field_j = -64;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) va.field_w);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) va.field_w);

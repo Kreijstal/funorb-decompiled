@@ -11,7 +11,7 @@ final class kc {
         int var4 = 0;
         try {
             var6 = ra.field_C;
-            var6.c(param0, 7);
+            var6.c(6, 7);
             var6.field_k = var6.field_k + 1;
             var4 = var6.field_k;
             var6.a(1, (byte) -75);
@@ -24,14 +24,14 @@ final class kc {
             int discarded$0 = var6.a(var4, false);
             var6.field_k = var6.field_k - 4;
             param2.field_n = var6.e((byte) 113);
-            int var5 = -14 / ((param1 - -66) / 49);
+            int var5 = -7;
             var6.a(true, -var4 + var6.field_k);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "kc.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "kc.D(" + 6 + 44 + 75 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -54,14 +54,6 @@ final class kc {
         var8 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 <= -83) {
-                break L1;
-              } else {
-                field_c = null;
-                break L1;
-              }
-            }
             var12 = ne.field_a;
             var2 = var12.h(16383);
             if (var2 != 0) {
@@ -105,7 +97,7 @@ final class kc {
               var5 = var12;
               var6 = ((be) (Object) var5).h(16383);
               var7 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var6 <= var7) {
                   var14 = (th) (Object) fh.field_b.b(2);
                   if (var14 == null) {
@@ -121,7 +113,7 @@ final class kc {
                 } else {
                   var9[var7] = ((be) (Object) var5).e((byte) 113);
                   var7++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -129,7 +121,7 @@ final class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "kc.B(" + param0 + 41);
+          throw sl.a((Throwable) (Object) var1, "kc.B(" + -107 + 41);
         }
     }
 
@@ -159,15 +151,12 @@ final class kc {
                     if (param2.length() == 0) {
                         var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
-                    if (param1 != 1263) {
-                        kc.b(-38);
-                    }
                     sj.a(param0, "document.cookie=\"" + var5 + "\"", -24531);
                 } catch (Throwable throwable) {
                 }
                 rj.a(param0, (byte) -128);
             } catch (RuntimeException runtimeException) {
-                throw sl.a((Throwable) (Object) runtimeException, "kc.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw sl.a((Throwable) (Object) runtimeException, "kc.C(" + (param0 != null ? "{...}" : "null") + 44 + 1263 + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

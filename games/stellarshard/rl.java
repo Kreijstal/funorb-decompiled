@@ -6,7 +6,7 @@ final class rl {
     static String[] field_c;
     static int field_b;
 
-    final static void a(int param0, ka param1, java.math.BigInteger param2, java.math.BigInteger param3, byte[] param4, int param5, int param6) {
+    final static void a(int param0, ka param1, java.math.BigInteger param2, java.math.BigInteger param3, byte[] param4, int param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -115,43 +115,39 @@ final class rl {
                 }
                 a.field_b.field_k = 0;
                 a.field_b.a(param5, 0, (byte) -13, param4);
-                if (param0 == -13791) {
-                  L5: {
-                    L6: {
-                      a.field_b.a(var7_int, -18920);
-                      a.field_b.a((byte) 12, var15);
-                      if (null == kl.field_r) {
+                L5: {
+                  L6: {
+                    a.field_b.a(var7_int, -18920);
+                    a.field_b.a((byte) 12, var15);
+                    if (null == kl.field_r) {
+                      break L6;
+                    } else {
+                      if (kl.field_r.field_r.length < 100) {
                         break L6;
                       } else {
-                        if (kl.field_r.field_r.length < 100) {
-                          break L6;
-                        } else {
-                          break L5;
-                        }
+                        break L5;
                       }
                     }
-                    kl.field_r = new ka(100);
-                    break L5;
                   }
-                  kl.field_r.field_k = 0;
-                  kl.field_r.a(false, 10);
-                  var11 = 0;
-                  var9 = var11;
-                  L7: while (true) {
-                    if (var11 >= 4) {
-                      kl.field_r.c(param5, param0 + 13664);
-                      kl.field_r.a(false, param2, param3);
-                      param1.a(kl.field_r.field_k, 0, (byte) -13, kl.field_r.field_r);
-                      param1.a(a.field_b.field_k, 0, (byte) -13, a.field_b.field_r);
-                      break L0;
-                    } else {
-                      kl.field_r.b(0, var15[var11]);
-                      var11++;
-                      continue L7;
-                    }
+                  kl.field_r = new ka(100);
+                  break L5;
+                }
+                kl.field_r.field_k = 0;
+                kl.field_r.a(false, 10);
+                var11 = 0;
+                var9 = var11;
+                L7: while (true) {
+                  if (var11 >= 4) {
+                    kl.field_r.c(param5, -127);
+                    kl.field_r.a(false, param2, param3);
+                    param1.a(kl.field_r.field_k, 0, (byte) -13, kl.field_r.field_r);
+                    param1.a(a.field_b.field_k, 0, (byte) -13, a.field_b.field_r);
+                    break L0;
+                  } else {
+                    kl.field_r.b(0, var15[var11]);
+                    var11++;
+                    continue L7;
                   }
-                } else {
-                  return;
                 }
               } else {
                 var8[var9] = wb.field_a.nextInt();
@@ -165,7 +161,7 @@ final class rl {
           L8: {
             var7 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var7;
-            stackOut_22_1 = new StringBuilder().append("rl.D(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("rl.D(").append(-13791).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -302,12 +298,13 @@ final class rl {
                     break L2;
                   }
                 }
-                ph.a(cd.h(-1064120735), 2, qf.field_a, ia.l(50), var3_int != 0);
+                int discarded$1 = 50;
+                ph.a(cd.h(-1064120735), 2, qf.field_a, ia.l(), var3_int != 0);
                 break L1;
               } else {
                 if (gh.b((byte) 105)) {
                   if (eg.field_d == 0) {
-                    vc.a((byte) -121, true, false);
+                    vc.a((byte) -121, param2, false);
                     pd.a(param0, 0, 0, (byte) -24);
                     break L1;
                   } else {
@@ -352,15 +349,15 @@ final class rl {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + 1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;

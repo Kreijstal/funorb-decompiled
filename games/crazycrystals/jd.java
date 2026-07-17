@@ -293,14 +293,6 @@ final class jd extends og implements vd {
             var7[var5] = ((jd) this).field_L[var5];
             var4[var5] = ((jd) this).field_E[var5];
         }
-        if (param0 < 92) {
-            ((jd) this).field_E = null;
-        } else {
-            ((jd) this).field_F = param1;
-            ((jd) this).field_L = var3;
-            ((jd) this).field_E = var4;
-            return;
-        }
         ((jd) this).field_F = param1;
         ((jd) this).field_L = var3;
         ((jd) this).field_E = var4;

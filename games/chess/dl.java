@@ -27,11 +27,12 @@ final class dl {
         if (param0 != -15326) {
             rk[] discarded$0 = dl.a(-33);
         }
-        ch.k(4210752);
+        int discarded$1 = 4210752;
+        ch.k();
         return var1;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_m = null;
         field_h = null;
         field_j = null;

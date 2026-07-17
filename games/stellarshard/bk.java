@@ -8,7 +8,7 @@ final class bk {
     static pb field_b;
     private boolean field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         int var1 = 126;
         field_e = null;
@@ -123,13 +123,13 @@ final class bk {
 
     final static void a(int param0, boolean param1, int param2, ka param3, int param4) {
         try {
-            param3.a(param1, 12);
+            param3.a(false, 12);
             param3.c(17, -117);
             param3.c(param0, -123);
             param3.c(param2, -117);
             param3.a(false, param4);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "bk.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "bk.F(" + param0 + 44 + 0 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 
@@ -166,13 +166,13 @@ final class bk {
               var5 = new hk();
               var5.field_r = param2;
               var5.field_q = param1;
-              var5.field_t = 5;
+              var5.field_t = param4;
               id.field_g.b(param3 ^ -69, (gg) (Object) var5);
               pd.a(param0, var5, 31);
               return var5;
             }
           } else {
-            if (var5.field_t == 5) {
+            if (var5.field_t == param4) {
               return var5;
             } else {
               var5 = (hk) (Object) id.field_g.b((byte) 102);

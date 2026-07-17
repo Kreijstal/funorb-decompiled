@@ -24,7 +24,7 @@ final class jg extends ck implements oi {
         }
     }
 
-    final static void a(pf param0, pf param1, byte param2) {
+    final static void a(pf param0, pf param1) {
         try {
             vf.field_E = param0;
             nh.field_g = param1;
@@ -73,85 +73,82 @@ final class jg extends ck implements oi {
         var6 = stellarshard.field_B;
         try {
           L0: {
-            if (param1 == -8895) {
-              L1: {
-                ((jg) this).field_mb = true;
-                if (!param0.field_f) {
-                  if (null == param0.field_d) {
-                    var4_ref = param0.field_e;
-                    if (248 == param0.field_g) {
-                      L2: {
-                        if (!param2) {
-                          di.a(1);
-                          break L2;
-                        } else {
-                          break L2;
-                        }
+            L1: {
+              ((jg) this).field_mb = true;
+              if (!param0.field_f) {
+                if (null == param0.field_d) {
+                  var4_ref = param0.field_e;
+                  if (248 == param0.field_g) {
+                    L2: {
+                      if (!param2) {
+                        int discarded$3 = 1;
+                        di.a();
+                        break L2;
+                      } else {
+                        break L2;
                       }
-                      ((jg) this).field_lb = true;
-                      var4_ref = ki.field_r;
-                      break L1;
-                    } else {
-                      break L1;
                     }
+                    ((jg) this).field_lb = true;
+                    var4_ref = ki.field_r;
+                    break L1;
                   } else {
-                    var4_ref = jb.field_p;
-                    if (((jg) this).field_nb != null) {
-                      ((jg) this).field_nb.a(param1 ^ 8915);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
+                    break L1;
                   }
                 } else {
-                  var4_ref = mb.field_a;
-                  break L1;
+                  var4_ref = jb.field_p;
+                  if (((jg) this).field_nb != null) {
+                    ((jg) this).field_nb.a(-110);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
+              } else {
+                var4_ref = mb.field_a;
+                break L1;
               }
-              L3: {
-                var5 = new vf((ck) this, s.field_c, var4_ref);
-                if (!param0.field_f) {
-                  L4: {
-                    if (!((jg) this).field_lb) {
-                      if (5 == param0.field_g) {
-                        var5.a(param1 + -22910, 11, gj.field_s);
-                        var5.a(-31805, 17, wc.field_z);
-                        break L4;
-                      } else {
-                        var5.a(-31805, -1, bk.field_e);
-                        break L4;
-                      }
+            }
+            L3: {
+              var5 = new vf((ck) this, s.field_c, var4_ref);
+              if (!param0.field_f) {
+                L4: {
+                  if (!((jg) this).field_lb) {
+                    if (5 == param0.field_g) {
+                      var5.a(-31805, 11, gj.field_s);
+                      var5.a(-31805, 17, wc.field_z);
+                      break L4;
                     } else {
-                      ig discarded$2 = var5.a((lf) this, tc.field_q, (byte) 118);
+                      var5.a(-31805, -1, bk.field_e);
                       break L4;
                     }
-                  }
-                  if (param0.field_g == 3) {
-                    var5.a(-31805, 7, gh.field_a);
-                    break L3;
                   } else {
-                    if (6 != param0.field_g) {
-                      break L3;
-                    } else {
-                      var5.a(-31805, 9, a.field_d);
-                      break L3;
-                    }
-                  }
-                } else {
-                  if (!param0.field_a) {
-                    ig discarded$3 = var5.a((lf) this, tc.field_q, (byte) -125);
-                    break L3;
-                  } else {
-                    ((jg) this).b((rj) (Object) new sj((jg) this), param1 ^ -30938);
-                    return;
+                    ig discarded$4 = var5.a((lf) this, tc.field_q, (byte) 118);
+                    break L4;
                   }
                 }
+                if (param0.field_g == 3) {
+                  var5.a(-31805, 7, gh.field_a);
+                  break L3;
+                } else {
+                  if (6 != param0.field_g) {
+                    break L3;
+                  } else {
+                    var5.a(-31805, 9, a.field_d);
+                    break L3;
+                  }
+                }
+              } else {
+                if (!param0.field_a) {
+                  ig discarded$5 = var5.a((lf) this, tc.field_q, (byte) -125);
+                  break L3;
+                } else {
+                  ((jg) this).b((rj) (Object) new sj((jg) this), 23143);
+                  return;
+                }
               }
-              ((jg) this).b((rj) (Object) var5, 23143);
-              break L0;
-            } else {
-              return;
             }
+            ((jg) this).b((rj) (Object) var5, 23143);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -181,7 +178,7 @@ final class jg extends ck implements oi {
               break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param1 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + -8895 + 44 + param2 + 41);
         }
     }
 
@@ -189,10 +186,11 @@ final class jg extends ck implements oi {
         ml var2 = null;
         if (((jg) this).field_G) {
           if (!((jg) this).field_mb) {
-            var2 = mj.i(0);
+            int discarded$5 = 0;
+            var2 = mj.i();
             if (var2 == null) {
               if (!param0) {
-                int discarded$4 = jg.i((byte) -113);
+                int discarded$6 = jg.i((byte) -113);
                 return super.d(true);
               } else {
                 return super.d(true);
@@ -200,7 +198,7 @@ final class jg extends ck implements oi {
             } else {
               this.a(var2, -8895, false);
               if (!param0) {
-                int discarded$5 = jg.i((byte) -113);
+                int discarded$7 = jg.i((byte) -113);
                 return super.d(true);
               } else {
                 return super.d(true);
@@ -208,7 +206,7 @@ final class jg extends ck implements oi {
             }
           } else {
             if (!param0) {
-              int discarded$6 = jg.i((byte) -113);
+              int discarded$8 = jg.i((byte) -113);
               return super.d(true);
             } else {
               return super.d(true);
@@ -216,7 +214,7 @@ final class jg extends ck implements oi {
           }
         } else {
           if (!param0) {
-            int discarded$7 = jg.i((byte) -113);
+            int discarded$9 = jg.i((byte) -113);
             return super.d(true);
           } else {
             return super.d(true);
@@ -224,13 +222,14 @@ final class jg extends ck implements oi {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_ob = null;
     }
 
     final static int i(byte param0) {
         if (param0 != 113) {
-            jg.e(true);
+            int discarded$0 = 1;
+            jg.e();
             return u.field_k;
         }
         return u.field_k;

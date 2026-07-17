@@ -15,14 +15,8 @@ final class ge {
         return 250 < cf.field_q;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
-        if (param0 != -31819) {
-            field_a = null;
-            field_a = null;
-            field_d = null;
-            return;
-        }
         field_a = null;
         field_d = null;
     }

@@ -18,7 +18,7 @@ final class jja implements dja {
         return (tv[]) (Object) new pwa[param1];
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
     }

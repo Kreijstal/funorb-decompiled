@@ -212,7 +212,7 @@ final class ta {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
     }
@@ -240,7 +240,7 @@ final class ta {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = 80 % ((-13 - param0) / 38);
+            var2_int = 0;
             stackOut_0_0 = new pea(qi.a(param1, (byte) 24), param1.b(16711935), param1.b(16711935));
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -250,7 +250,7 @@ final class ta {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("ta.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ta.C(").append(59).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

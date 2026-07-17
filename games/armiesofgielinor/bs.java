@@ -6,7 +6,7 @@ final class bs {
     static int[] field_b;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -17,7 +17,7 @@ final class bs {
         return fc.field_b;
     }
 
-    final static int a(vh param0, int param1) {
+    final static int a(vh param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_7_0 = 0;

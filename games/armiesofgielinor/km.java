@@ -16,14 +16,11 @@ final class km {
     private vj field_i;
     static String[] field_j;
 
-    final static int a(int param0) {
-        if (param0 > -46) {
-            field_j = null;
-        }
+    final static int a() {
         return kw.field_R;
     }
 
-    final static je c(int param0) {
+    final static je c() {
         return mw.field_E.field_Nb;
     }
 
@@ -70,19 +67,17 @@ final class km {
         int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         nt var4 = (nt) (Object) s.field_a.e((byte) 112);
         while (var4 != null) {
-            if (!(var4.field_o != param0)) {
+            if (!(var4.field_o != 0)) {
                 return var4;
             }
             var4 = (nt) (Object) s.field_a.a((byte) 123);
         }
-        if (param1 < 65) {
-            field_j = null;
-        }
         var4 = new nt();
-        var4.field_o = param0;
-        var4.field_q = param2;
+        var4.field_o = 0;
+        var4.field_q = 10;
         s.field_a.a((byte) -119, (tc) (Object) var4);
-        tf.a(7, var4, (byte) -64);
+        int discarded$0 = -64;
+        tf.a(7, var4);
         return var4;
     }
 
@@ -333,40 +328,32 @@ final class km {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (param0 == 6) {
-            break L0;
-          } else {
-            int discarded$2 = km.a(52);
-            break L0;
-          }
-        }
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         var7 = 0;
-        L1: while (true) {
-          L2: {
+        L0: while (true) {
+          L1: {
             if (var7 >= 6) {
-              break L2;
+              break L1;
             } else {
               if (20 * var7 >= ((km) this).field_f) {
-                break L2;
+                break L1;
               } else {
-                L3: {
+                L2: {
                   if (!param2) {
                     var6 = -(2 * (((km) this).field_f - (-(var7 * 10) + 60))) + ((km) this).field_k;
                     var5 = ((km) this).field_d;
                     var4 = ((km) this).field_g + -(5 * (-((-var7 + 6) * 10) + ((km) this).field_f));
-                    break L3;
+                    break L2;
                   } else {
                     var4 = -(((km) this).field_g + -(5 * (((km) this).field_f + -(var7 * 10))));
                     var6 = -(2 * (((km) this).field_f + -(10 * var7))) + ((km) this).field_k;
                     var5 = ((km) this).field_d;
-                    break L3;
+                    break L2;
                   }
                 }
                 cb.a(var5, hs.field_F[(-var7 + ((km) this).field_f / 20) % hs.field_F.length], (-var7 + 6) * 256 / 6, -110, var4, var6);
                 var7++;
-                continue L1;
+                continue L0;
               }
             }
           }

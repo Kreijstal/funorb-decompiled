@@ -19,24 +19,15 @@ final class vl extends hl {
         }
     }
 
-    final static String c(int param0) {
+    final static String c() {
         if (ql.field_f != ol.field_i) {
           if (ql.field_f == wd.field_d) {
             return bf.field_o;
           } else {
-            if (param0 == -29455) {
-              if (!im.field_b.b(36)) {
-                return bf.field_o;
-              } else {
-                return co.field_C;
-              }
+            if (!im.field_b.b(36)) {
+              return bf.field_o;
             } else {
-              vl.a(32, (byte) 15);
-              if (!im.field_b.b(36)) {
-                return bf.field_o;
-              } else {
-                return co.field_C;
-              }
+              return co.field_C;
             }
           }
         } else {
@@ -44,18 +35,19 @@ final class vl extends hl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
     }
 
-    final static q[] d(int param0) {
+    final static q[] d() {
         int var2 = 0;
         int var3 = DungeonAssault.field_K;
         q[] var1 = new q[dk.field_d];
         for (var2 = 0; dk.field_d > var2; var2++) {
             var1[var2] = new q(ce.field_x, tb.field_i, hg.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], ub.field_q[var2], uo.field_b);
         }
-        sb.a(500);
+        int discarded$0 = 500;
+        sb.a();
         return var1;
     }
 
@@ -65,27 +57,13 @@ final class vl extends hl {
     }
 
     final static void a(int param0, byte param1) {
-        Object var3 = null;
-        L0: {
-          if (!ed.c(true)) {
-            if (param0 <= gm.field_d.field_K) {
-              return;
-            } else {
-              gm.field_d.field_K = param0;
-              ac.field_B.d((byte) -78, 72);
-              ac.field_B.a(6, gm.field_d.field_K);
-              break L0;
+        if (!(ed.c(true))) {
+            if (!(1 > gm.field_d.field_K)) {
+                return;
             }
-          } else {
-            break L0;
-          }
-        }
-        if (param1 != -49) {
-          var3 = null;
-          boolean discarded$2 = vl.a(105, 115, (int[]) null);
-          return;
-        } else {
-          return;
+            gm.field_d.field_K = 1;
+            ac.field_B.d((byte) -78, 72);
+            ac.field_B.a(6, gm.field_d.field_K);
         }
     }
 

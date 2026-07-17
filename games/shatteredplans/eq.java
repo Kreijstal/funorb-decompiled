@@ -14,7 +14,7 @@ final class eq extends oh {
     static qh field_k;
     int field_l;
 
-    final static void d(byte param0) {
+    final static void d() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -56,7 +56,7 @@ final class eq extends oh {
         }
     }
 
-    final static void a(String[] args, sq param1, int param2) {
+    final static void a(String[] args, sq param1) {
         String[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -99,7 +99,7 @@ final class eq extends oh {
           L0: {
             var7 = args;
             var3 = var7;
-            var4 = param2;
+            var4 = 0;
             L1: while (true) {
               if (var7.length <= var4) {
                 break L0;
@@ -164,11 +164,11 @@ final class eq extends oh {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 41);
+          throw r.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 0 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_o = null;
         field_k = null;

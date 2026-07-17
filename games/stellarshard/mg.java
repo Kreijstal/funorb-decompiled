@@ -39,11 +39,8 @@ final class mg {
     int[] field_x;
     int[][] field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
-        if (!param0) {
-            mg.a(true);
-        }
         field_k = null;
     }
 
@@ -60,22 +57,22 @@ final class mg {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        RuntimeException stackIn_76_0 = null;
+        StringBuilder stackIn_76_1 = null;
+        RuntimeException stackIn_77_0 = null;
+        StringBuilder stackIn_77_1 = null;
         RuntimeException stackIn_78_0 = null;
         StringBuilder stackIn_78_1 = null;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
-        RuntimeException stackIn_80_0 = null;
-        StringBuilder stackIn_80_1 = null;
-        String stackIn_80_2 = null;
+        String stackIn_78_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_75_0 = null;
+        StringBuilder stackOut_75_1 = null;
         RuntimeException stackOut_77_0 = null;
         StringBuilder stackOut_77_1 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        String stackOut_78_2 = null;
+        String stackOut_77_2 = null;
+        RuntimeException stackOut_76_0 = null;
+        StringBuilder stackOut_76_1 = null;
+        String stackOut_76_2 = null;
         var19 = stellarshard.field_B;
         try {
           L0: {
@@ -115,23 +112,15 @@ final class mg {
                     }
                   }
                   L4: {
-                    if (param6 == -445834032) {
-                      break L4;
-                    } else {
-                      mg.a(false);
-                      break L4;
-                    }
-                  }
-                  L5: {
                     var14 = param0 + -param4;
                     if (param4 == param8) {
-                      L6: {
+                      L5: {
                         if (param4 == param0) {
                           var12 = 0;
                           var9_int = param3 << 16;
                           var10 = param7 << 16;
                           var11 = 0;
-                          break L6;
+                          break L5;
                         } else {
                           var15 = -param8 + param0;
                           if (param3 < param7) {
@@ -139,31 +128,31 @@ final class mg {
                             var9_int = param3 << 16;
                             var11 = (-param3 + param1 << 16) / var14;
                             var10 = param7 << 16;
-                            break L6;
+                            break L5;
                           } else {
                             var10 = param3 << 16;
                             var11 = (param1 + -param7 << 16) / var15;
                             var9_int = param7 << 16;
                             var12 = (-param3 + param1 << 16) / var14;
-                            break L6;
+                            break L5;
                           }
                         }
                       }
-                      L7: {
+                      L6: {
                         if (0 > param4) {
                           param4 = Math.min(-param4, -param4 + param8);
                           var10 = var10 + param4 * var12;
                           var9_int = var9_int + param4 * var11;
                           param4 = 0;
-                          break L7;
+                          break L6;
                         } else {
-                          break L7;
+                          break L6;
                         }
                       }
                       var13 = 0;
-                      break L5;
+                      break L4;
                     } else {
-                      L8: {
+                      L7: {
                         var10 = param3 << 16;
                         var9_int = param3 << 16;
                         var15 = -param4 + param8;
@@ -171,74 +160,74 @@ final class mg {
                         var12 = (-param3 + param1 << 16) / var14;
                         if (var12 > var11) {
                           var13 = 0;
-                          break L8;
+                          break L7;
                         } else {
                           var16 = var11;
                           var11 = var12;
                           var12 = var16;
                           var13 = 1;
-                          break L8;
+                          break L7;
                         }
                       }
-                      L9: {
-                        L10: {
+                      L8: {
+                        L9: {
                           if (param4 >= 0) {
-                            break L10;
+                            break L9;
                           } else {
                             if (param8 < 0) {
                               param4 = param8 + -param4;
                               var9_int = var9_int + param4 * var11;
                               var10 = var10 + param4 * var12;
                               param4 = param8;
-                              break L9;
+                              break L8;
                             } else {
                               param4 = -param4;
                               var10 = var10 + param4 * var12;
                               var9_int = var9_int + param4 * var11;
                               param4 = 0;
-                              break L10;
+                              break L9;
                             }
                           }
                         }
                         var16 = cc.field_i[param4];
-                        L11: while (true) {
+                        L10: while (true) {
                           if (param8 <= param4) {
-                            break L9;
+                            break L8;
                           } else {
-                            L12: {
+                            L11: {
                               var17 = var9_int >> 16;
                               if (var17 < cc.field_m) {
                                 var18 = -(var9_int >> 16) + (var10 >> 16);
                                 if (var18 == 0) {
                                   if (var17 < 0) {
-                                    break L12;
+                                    break L11;
                                   } else {
                                     if (var17 >= cc.field_m) {
-                                      break L12;
+                                      break L11;
                                     } else {
                                       aj.a(param5, true, var18, param2, var17 - -var16);
-                                      break L12;
+                                      break L11;
                                     }
                                   }
                                 } else {
-                                  L13: {
+                                  L12: {
                                     if (var18 + var17 >= cc.field_m) {
                                       var18 = -var17 + cc.field_m + -1;
-                                      break L13;
+                                      break L12;
                                     } else {
-                                      break L13;
+                                      break L12;
                                     }
                                   }
                                   if (var17 >= 0) {
                                     aj.a(param5, true, var18, param2, var17 - -var16);
-                                    break L12;
+                                    break L11;
                                   } else {
                                     aj.a(param5, true, var17 + var18, param2, var16);
-                                    break L12;
+                                    break L11;
                                   }
                                 }
                               } else {
-                                break L12;
+                                break L11;
                               }
                             }
                             param4++;
@@ -248,83 +237,83 @@ final class mg {
                               var16 = var16 + ti.field_i;
                               var9_int = var9_int + var11;
                               var10 = var10 + var12;
-                              continue L11;
+                              continue L10;
                             }
                           }
                         }
                       }
                       var16 = -param8 + param0;
                       if (0 != var16) {
-                        L14: {
+                        L13: {
                           var17 = param1 << 16;
                           if (var13 != 0) {
                             var10 = param7 << 16;
-                            break L14;
+                            break L13;
                           } else {
                             var9_int = param7 << 16;
-                            break L14;
+                            break L13;
                           }
                         }
                         var11 = (-var9_int + var17) / var16;
                         var12 = (var17 + -var10) / var16;
-                        break L5;
+                        break L4;
                       } else {
                         var12 = 0;
                         var11 = 0;
-                        break L5;
+                        break L4;
                       }
                     }
                   }
-                  L15: {
+                  L14: {
                     if (param4 >= 0) {
-                      break L15;
+                      break L14;
                     } else {
                       param4 = -param4;
                       var9_int = var9_int + param4 * var11;
                       var10 = var10 + var12 * param4;
                       param4 = 0;
-                      break L15;
+                      break L14;
                     }
                   }
                   var15 = cc.field_i[param4];
-                  L16: while (true) {
+                  L15: while (true) {
                     if (param0 <= param4) {
                       break L0;
                     } else {
-                      L17: {
+                      L16: {
                         var16 = var9_int >> 16;
                         if (var16 < cc.field_m) {
                           var17 = -(var9_int >> 16) + (var10 >> 16);
                           if (0 == var17) {
                             if (var16 < 0) {
-                              break L17;
+                              break L16;
                             } else {
                               if (cc.field_m <= var16) {
-                                break L17;
+                                break L16;
                               } else {
                                 aj.a(param5, true, var17, param2, var16 - -var15);
-                                break L17;
+                                break L16;
                               }
                             }
                           } else {
-                            L18: {
+                            L17: {
                               if (var17 + var16 >= cc.field_m) {
                                 var17 = -var16 + (cc.field_m + -1);
-                                break L18;
+                                break L17;
                               } else {
-                                break L18;
+                                break L17;
                               }
                             }
                             if (var16 < 0) {
                               aj.a(param5, true, var16 + var17, param2, var15);
-                              break L17;
+                              break L16;
                             } else {
                               aj.a(param5, true, var17, param2, var15 + var16);
-                              break L17;
+                              break L16;
                             }
                           }
                         } else {
-                          break L17;
+                          break L16;
                         }
                       }
                       param4++;
@@ -332,7 +321,7 @@ final class mg {
                         var9_int = var9_int + var11;
                         var15 = var15 + ti.field_i;
                         var10 = var10 + var12;
-                        continue L16;
+                        continue L15;
                       } else {
                         return;
                       }
@@ -347,33 +336,33 @@ final class mg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L19: {
+          L18: {
             var9 = decompiledCaughtException;
-            stackOut_77_0 = (RuntimeException) var9;
-            stackOut_77_1 = new StringBuilder().append("mg.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
-            stackIn_79_0 = stackOut_77_0;
-            stackIn_79_1 = stackOut_77_1;
-            stackIn_78_0 = stackOut_77_0;
-            stackIn_78_1 = stackOut_77_1;
+            stackOut_75_0 = (RuntimeException) var9;
+            stackOut_75_1 = new StringBuilder().append("mg.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackIn_77_0 = stackOut_75_0;
+            stackIn_77_1 = stackOut_75_1;
+            stackIn_76_0 = stackOut_75_0;
+            stackIn_76_1 = stackOut_75_1;
             if (param5 == null) {
-              stackOut_79_0 = (RuntimeException) (Object) stackIn_79_0;
-              stackOut_79_1 = (StringBuilder) (Object) stackIn_79_1;
-              stackOut_79_2 = "null";
-              stackIn_80_0 = stackOut_79_0;
-              stackIn_80_1 = stackOut_79_1;
-              stackIn_80_2 = stackOut_79_2;
-              break L19;
+              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
+              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
+              stackOut_77_2 = "null";
+              stackIn_78_0 = stackOut_77_0;
+              stackIn_78_1 = stackOut_77_1;
+              stackIn_78_2 = stackOut_77_2;
+              break L18;
             } else {
-              stackOut_78_0 = (RuntimeException) (Object) stackIn_78_0;
-              stackOut_78_1 = (StringBuilder) (Object) stackIn_78_1;
-              stackOut_78_2 = "{...}";
-              stackIn_80_0 = stackOut_78_0;
-              stackIn_80_1 = stackOut_78_1;
-              stackIn_80_2 = stackOut_78_2;
-              break L19;
+              stackOut_76_0 = (RuntimeException) (Object) stackIn_76_0;
+              stackOut_76_1 = (StringBuilder) (Object) stackIn_76_1;
+              stackOut_76_2 = "{...}";
+              stackIn_78_0 = stackOut_76_0;
+              stackIn_78_1 = stackOut_76_1;
+              stackIn_78_2 = stackOut_76_2;
+              break L18;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_80_0, stackIn_80_2 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw ma.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 44 + -445834032 + 44 + param7 + 44 + param8 + 41);
         }
     }
 

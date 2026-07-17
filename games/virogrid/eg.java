@@ -26,7 +26,11 @@ final class eg extends in {
     static String field_F;
 
     final static km d(int param0) {
-        return hj.c(112);
+        if (param0 != 1048576) {
+            return null;
+        }
+        int discarded$0 = 112;
+        return hj.c();
     }
 
     final static void a(int param0, int param1, boolean param2) {
@@ -35,9 +39,6 @@ final class eg extends in {
         int var5 = 0;
         int var6 = 0;
         gh var3 = gk.a((byte) -100, param0, param2);
-        if (param1 > -16) {
-            field_G = null;
-        }
         if (var3 != null) {
             md.field_e.a(false, (byte) -99);
             var4 = md.field_e;
@@ -48,7 +49,8 @@ final class eg extends in {
             var6 = a.field_y;
             var4.field_a.a(0, 0, 0, var5, var6);
         }
-        qm.a(param0, param2, (byte) 115);
+        int discarded$0 = 115;
+        qm.a(param0, param2);
     }
 
     private final void a(int param0, byte param1, int param2, i param3) {
@@ -462,7 +464,7 @@ final class eg extends in {
         return 2;
     }
 
-    final static wf a(java.awt.Component param0, int param1, int param2, int param3) {
+    final static wf a(java.awt.Component param0, int param1, int param2) {
         try {
             int var4_int = 0;
             RuntimeException var4 = null;

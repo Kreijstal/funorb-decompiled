@@ -34,12 +34,7 @@ final class dl {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            Object var3 = null;
             java.net.URL var2 = null;
-            if (param0 != 23943) {
-                var3 = null;
-                dl.a((java.applet.Applet) null, -65);
-            }
             try {
                 var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
                 param1.getAppletContext().showDocument(bb.a((byte) 119, var2, param1), "_top");
@@ -60,15 +55,7 @@ final class dl {
         int var8 = 0;
         dl var9 = null;
         int var10 = 0;
-        L0: {
-          var10 = Terraphoenix.field_V;
-          if (param1 == -14) {
-            break L0;
-          } else {
-            ((dl) this).a(56, true, -97);
-            break L0;
-          }
-        }
+        var10 = Terraphoenix.field_V;
         if (((dl) this).field_v != -1) {
           if (((dl) this).field_v == 2) {
             return 10000;
@@ -76,24 +63,24 @@ final class dl {
             if (((dl) this).field_v == 3) {
               return 10000;
             } else {
-              L1: {
+              L0: {
                 if (param0) {
-                  L2: {
+                  L1: {
                     if (((dl) this).field_v != 4) {
-                      break L2;
+                      break L1;
                     } else {
                       if (((dl) this).field_C == null) {
                         return 10000;
                       } else {
                         if (((dl) this).field_C.field_h == null) {
-                          L3: {
+                          L2: {
                             if (0 != param2) {
-                              break L3;
+                              break L2;
                             } else {
                               if (param3 == 1) {
-                                break L2;
+                                break L1;
                               } else {
-                                break L3;
+                                break L2;
                               }
                             }
                           }
@@ -109,14 +96,14 @@ final class dl {
                       if (((dl) this).field_c.field_h != null) {
                         return 10000;
                       } else {
-                        L4: {
+                        L3: {
                           if (param2 != 0) {
-                            break L4;
+                            break L3;
                           } else {
                             if (param3 != -1) {
-                              break L4;
+                              break L3;
                             } else {
-                              break L1;
+                              break L0;
                             }
                           }
                         }
@@ -126,55 +113,55 @@ final class dl {
                       return 10000;
                     }
                   } else {
-                    break L1;
+                    break L0;
                   }
                 } else {
-                  break L1;
+                  break L0;
                 }
               }
-              L5: {
+              L4: {
                 var5 = ((dl) this).field_A + param2;
                 var6 = param3 + ((dl) this).field_n;
                 var7 = 4;
                 if (param2 == 0) {
-                  break L5;
+                  break L4;
                 } else {
                   if (param3 == 0) {
-                    break L5;
+                    break L4;
                   } else {
                     var7 = 6;
-                    break L5;
+                    break L4;
                   }
                 }
               }
               var8 = 0;
-              var9 = ((dl) this).field_s.a(param1 + 124, var6, ((dl) this).field_r, var5);
+              var9 = ((dl) this).field_s.a(110, var6, ((dl) this).field_r, var5);
               if (var9 != null) {
-                L6: {
-                  L7: {
+                L5: {
+                  L6: {
                     if (((dl) this).field_i == 0) {
-                      break L7;
+                      break L6;
                     } else {
                       if (param0) {
-                        break L6;
+                        break L5;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                   }
                   if (!param0) {
-                    L8: {
+                    L7: {
                       if (((dl) this).field_i == 1) {
-                        break L8;
+                        break L7;
                       } else {
                         if (param2 != -1) {
-                          break L8;
+                          break L7;
                         } else {
                           if (0 != param3) {
-                            break L8;
+                            break L7;
                           } else {
                             if ((((dl) this).field_e & 1) != 1) {
-                              break L8;
+                              break L7;
                             } else {
                               return 10000;
                             }
@@ -182,24 +169,24 @@ final class dl {
                         }
                       }
                     }
-                    L9: {
+                    L8: {
                       if (-1 != param2) {
-                        break L9;
+                        break L8;
                       } else {
                         if (param3 != -1) {
-                          break L9;
+                          break L8;
                         } else {
-                          L10: {
+                          L9: {
                             if ((3 & ((dl) this).field_e) == 3) {
-                              break L10;
+                              break L9;
                             } else {
                               if ((((dl) this).field_e & 1) - -(4 & var9.field_e) == 5) {
-                                break L10;
+                                break L9;
                               } else {
                                 if ((2 & ((dl) this).field_e) + (8 & var9.field_e) == 10) {
-                                  break L10;
-                                } else {
                                   break L9;
+                                } else {
+                                  break L8;
                                 }
                               }
                             }
@@ -208,43 +195,43 @@ final class dl {
                         }
                       }
                     }
-                    L11: {
+                    L10: {
                       if (((dl) this).field_i == 2) {
-                        break L11;
+                        break L10;
                       } else {
                         if (0 != param2) {
-                          break L11;
+                          break L10;
                         } else {
                           if (-1 != param3) {
-                            break L11;
+                            break L10;
                           } else {
                             if ((((dl) this).field_e & 2) == 2) {
                               return 10000;
                             } else {
-                              break L11;
+                              break L10;
                             }
                           }
                         }
                       }
                     }
-                    L12: {
+                    L11: {
                       if (1 != param2) {
-                        break L12;
+                        break L11;
                       } else {
                         if (param3 != -1) {
-                          break L12;
+                          break L11;
                         } else {
-                          L13: {
+                          L12: {
                             if ((6 & ((dl) this).field_e) == 6) {
-                              break L13;
+                              break L12;
                             } else {
                               if ((1 & var9.field_e) + (4 & ((dl) this).field_e) == 5) {
-                                break L13;
+                                break L12;
                               } else {
                                 if ((8 & var9.field_e) + (((dl) this).field_e & 2) == 10) {
-                                  break L13;
-                                } else {
                                   break L12;
+                                } else {
+                                  break L11;
                                 }
                               }
                             }
@@ -253,43 +240,43 @@ final class dl {
                         }
                       }
                     }
-                    L14: {
+                    L13: {
                       if (((dl) this).field_i == 4) {
-                        break L14;
+                        break L13;
                       } else {
                         if (param2 != 1) {
-                          break L14;
+                          break L13;
                         } else {
                           if (param3 != 0) {
-                            break L14;
+                            break L13;
                           } else {
                             if ((((dl) this).field_e & 4) == 4) {
                               return 10000;
                             } else {
-                              break L14;
+                              break L13;
                             }
                           }
                         }
                       }
                     }
-                    L15: {
+                    L14: {
                       if (param2 != 1) {
-                        break L15;
+                        break L14;
                       } else {
                         if (param3 != 1) {
-                          break L15;
+                          break L14;
                         } else {
-                          L16: {
+                          L15: {
                             if ((12 & ((dl) this).field_e) == 12) {
-                              break L16;
+                              break L15;
                             } else {
                               if ((var9.field_e & 1) + (4 & ((dl) this).field_e) == 5) {
-                                break L16;
+                                break L15;
                               } else {
                                 if ((var9.field_e & 2) + (8 & ((dl) this).field_e) != 10) {
-                                  break L15;
+                                  break L14;
                                 } else {
-                                  break L16;
+                                  break L15;
                                 }
                               }
                             }
@@ -298,42 +285,42 @@ final class dl {
                         }
                       }
                     }
-                    L17: {
+                    L16: {
                       if (((dl) this).field_i == 8) {
-                        break L17;
+                        break L16;
                       } else {
                         if (param2 != 0) {
-                          break L17;
+                          break L16;
                         } else {
                           if (param3 != 1) {
-                            break L17;
+                            break L16;
                           } else {
                             if (8 == (((dl) this).field_e & 8)) {
                               return 10000;
                             } else {
-                              break L17;
+                              break L16;
                             }
                           }
                         }
                       }
                     }
                     if (-1 != param2) {
-                      break L6;
+                      break L5;
                     } else {
                       if (1 != param3) {
-                        break L6;
+                        break L5;
                       } else {
-                        L18: {
+                        L17: {
                           if ((((dl) this).field_e & 9) == 9) {
-                            break L18;
+                            break L17;
                           } else {
                             if ((4 & var9.field_e) + (((dl) this).field_e & 1) == 5) {
-                              break L18;
+                              break L17;
                             } else {
                               if ((var9.field_e & 2) + (((dl) this).field_e & 8) != 10) {
-                                break L6;
+                                break L5;
                               } else {
-                                break L18;
+                                break L17;
                               }
                             }
                           }
@@ -342,11 +329,22 @@ final class dl {
                       }
                     }
                   } else {
-                    L19: {
+                    L18: {
                       if (param2 != -1) {
-                        break L19;
+                        break L18;
                       } else {
                         if ((((dl) this).field_e & 1) != 1) {
+                          break L18;
+                        } else {
+                          return 10000;
+                        }
+                      }
+                    }
+                    L19: {
+                      if (param3 != -1) {
+                        break L19;
+                      } else {
+                        if ((2 & ((dl) this).field_e) != 2) {
                           break L19;
                         } else {
                           return 10000;
@@ -354,10 +352,10 @@ final class dl {
                       }
                     }
                     L20: {
-                      if (param3 != -1) {
+                      if (1 != param2) {
                         break L20;
                       } else {
-                        if ((2 & ((dl) this).field_e) != 2) {
+                        if ((4 & ((dl) this).field_e) != 4) {
                           break L20;
                         } else {
                           return 10000;
@@ -365,10 +363,10 @@ final class dl {
                       }
                     }
                     L21: {
-                      if (1 != param2) {
+                      if (param3 != 1) {
                         break L21;
                       } else {
-                        if ((4 & ((dl) this).field_e) != 4) {
+                        if ((8 & ((dl) this).field_e) != 8) {
                           break L21;
                         } else {
                           return 10000;
@@ -376,23 +374,25 @@ final class dl {
                       }
                     }
                     L22: {
-                      if (param3 != 1) {
-                        break L22;
-                      } else {
-                        if ((8 & ((dl) this).field_e) != 8) {
-                          break L22;
-                        } else {
-                          return 10000;
-                        }
-                      }
-                    }
-                    L23: {
                       if (-1 != param2) {
-                        break L23;
+                        break L22;
                       } else {
                         if ((((dl) this).field_e & 16) == 16) {
                           var8++;
                           var7 = 10;
+                          break L22;
+                        } else {
+                          break L22;
+                        }
+                      }
+                    }
+                    L23: {
+                      if (param3 != -1) {
+                        break L23;
+                      } else {
+                        if (32 == (((dl) this).field_e & 32)) {
+                          var7 = 10;
+                          var8++;
                           break L23;
                         } else {
                           break L23;
@@ -400,66 +400,64 @@ final class dl {
                       }
                     }
                     L24: {
-                      if (param3 != -1) {
+                      if (param2 != 1) {
                         break L24;
                       } else {
-                        if (32 == (((dl) this).field_e & 32)) {
-                          var7 = 10;
-                          var8++;
-                          break L24;
-                        } else {
-                          break L24;
-                        }
-                      }
-                    }
-                    L25: {
-                      if (param2 != 1) {
-                        break L25;
-                      } else {
                         if (64 != (64 & ((dl) this).field_e)) {
-                          break L25;
+                          break L24;
                         } else {
                           var7 = 10;
                           var8++;
-                          break L25;
+                          break L24;
                         }
                       }
                     }
                     if (param3 != 1) {
-                      break L6;
+                      break L5;
                     } else {
                       if ((((dl) this).field_e & 128) == 128) {
                         var7 = 10;
                         var8++;
-                        break L6;
+                        break L5;
                       } else {
-                        break L6;
+                        break L5;
                       }
                     }
                   }
                 }
-                L26: {
+                L25: {
                   if (!param0) {
-                    break L26;
+                    break L25;
                   } else {
-                    L27: {
+                    L26: {
                       if (var9.field_i == 0) {
-                        L28: {
+                        L27: {
                           if (param2 != 1) {
-                            break L28;
+                            break L27;
                           } else {
                             if ((var9.field_e & 1) == 1) {
                               return 10000;
                             } else {
+                              break L27;
+                            }
+                          }
+                        }
+                        L28: {
+                          if (param3 != 1) {
+                            break L28;
+                          } else {
+                            if ((2 & var9.field_e) != 2) {
                               break L28;
+                            } else {
+                              return 10000;
                             }
                           }
                         }
                         L29: {
-                          if (param3 != 1) {
+                          if (param2 != -1) {
                             break L29;
                           } else {
-                            if ((2 & var9.field_e) != 2) {
+                            if ((var9.field_e & 4) != 4) {
                               break L29;
                             } else {
                               return 10000;
@@ -467,10 +465,10 @@ final class dl {
                           }
                         }
                         L30: {
-                          if (param2 != -1) {
+                          if (param3 != -1) {
                             break L30;
                           } else {
-                            if ((var9.field_e & 4) != 4) {
+                            if ((var9.field_e & 8) != 8) {
                               break L30;
                             } else {
                               return 10000;
@@ -478,84 +476,73 @@ final class dl {
                           }
                         }
                         L31: {
-                          if (param3 != -1) {
+                          if (param2 != 1) {
                             break L31;
                           } else {
-                            if ((var9.field_e & 8) != 8) {
+                            if ((var9.field_e & 16) != 16) {
                               break L31;
                             } else {
-                              return 10000;
+                              var8++;
+                              var7 = 10;
+                              break L31;
                             }
                           }
                         }
                         L32: {
-                          if (param2 != 1) {
+                          if (1 != param3) {
                             break L32;
                           } else {
-                            if ((var9.field_e & 16) != 16) {
+                            if ((32 & var9.field_e) != 32) {
                               break L32;
                             } else {
-                              var8++;
                               var7 = 10;
+                              var8++;
                               break L32;
                             }
                           }
                         }
                         L33: {
-                          if (1 != param3) {
+                          if (param2 != -1) {
                             break L33;
                           } else {
-                            if ((32 & var9.field_e) != 32) {
-                              break L33;
-                            } else {
-                              var7 = 10;
-                              var8++;
-                              break L33;
-                            }
-                          }
-                        }
-                        L34: {
-                          if (param2 != -1) {
-                            break L34;
-                          } else {
                             if ((64 & var9.field_e) != 64) {
-                              break L34;
+                              break L33;
                             } else {
                               var7 = 10;
                               var8++;
-                              break L34;
+                              break L33;
                             }
                           }
                         }
                         if (param3 != -1) {
-                          break L27;
+                          break L26;
                         } else {
                           if ((128 & var9.field_e) != 128) {
-                            break L27;
+                            break L26;
                           } else {
                             var7 = 10;
                             var8++;
-                            break L27;
+                            break L26;
                           }
                         }
                       } else {
-                        break L27;
+                        break L26;
                       }
                     }
-                    L35: {
+                    L34: {
                       if (var8 > 2) {
-                        break L35;
+                        break L34;
                       } else {
                         if (param2 == 0) {
-                          break L26;
+                          break L25;
                         } else {
                           if (param3 == 0) {
-                            break L26;
+                            break L25;
                           } else {
                             if (var8 > 0) {
-                              break L35;
+                              break L34;
                             } else {
-                              break L26;
+                              break L25;
                             }
                           }
                         }
@@ -564,7 +551,7 @@ final class dl {
                     return 10000;
                   }
                 }
-                L36: {
+                L35: {
                   if (param0) {
                     if (var9.field_v == 2) {
                       return 10000;
@@ -573,29 +560,29 @@ final class dl {
                         if (var9.field_v == -1) {
                           return 10000;
                         } else {
-                          L37: {
+                          L36: {
                             if (1 == var9.field_v) {
                               var7 += 4;
-                              break L37;
+                              break L36;
                             } else {
-                              break L37;
+                              break L36;
                             }
                           }
-                          L38: {
+                          L37: {
                             if (var9.field_v != 4) {
-                              break L38;
+                              break L37;
                             } else {
                               if (var9.field_C.field_h != null) {
                                 return 10000;
                               } else {
-                                L39: {
+                                L38: {
                                   if (param2 != 0) {
-                                    break L39;
+                                    break L38;
                                   } else {
                                     if (param3 == -1) {
-                                      break L38;
+                                      break L37;
                                     } else {
-                                      break L39;
+                                      break L38;
                                     }
                                   }
                                 }
@@ -603,55 +590,55 @@ final class dl {
                               }
                             }
                           }
-                          L40: {
+                          L39: {
                             if (5 == var9.field_v) {
-                              L41: {
+                              L40: {
                                 if (null != var9.field_c) {
                                   if (null != var9.field_c.field_h) {
                                     return 10000;
                                   } else {
-                                    break L41;
+                                    break L40;
                                   }
                                 } else {
                                   var9.field_v = 0;
-                                  break L41;
+                                  break L40;
                                 }
                               }
-                              L42: {
+                              L41: {
                                 if (param2 != 0) {
-                                  break L42;
+                                  break L41;
                                 } else {
                                   if (param3 == 1) {
-                                    break L40;
+                                    break L39;
                                   } else {
-                                    break L42;
+                                    break L41;
                                   }
                                 }
                               }
                               return 10000;
                             } else {
-                              break L40;
+                              break L39;
                             }
                           }
                           if (null != var9.field_h) {
-                            L43: {
+                            L42: {
                               if (var9.field_h.field_k) {
-                                break L43;
+                                break L42;
                               } else {
                                 if (var9.field_h.field_C == 0) {
-                                  break L43;
+                                  break L42;
                                 } else {
                                   if (!var9.field_s.field_i.field_J) {
-                                    break L43;
+                                    break L42;
                                   } else {
-                                    break L36;
+                                    break L35;
                                   }
                                 }
                               }
                             }
                             return 10000;
                           } else {
-                            break L36;
+                            break L35;
                           }
                         }
                       } else {
@@ -659,7 +646,7 @@ final class dl {
                       }
                     }
                   } else {
-                    break L36;
+                    break L35;
                   }
                 }
                 return var7;
@@ -3407,17 +3394,9 @@ final class dl {
                 }
               }
               L3: {
-                if (param0) {
-                  break L3;
-                } else {
-                  field_o = null;
-                  break L3;
-                }
-              }
-              L4: {
                 var34 = -param12 + param10;
                 if (param4 == param12) {
-                  L5: {
+                  L4: {
                     if (param10 == param12) {
                       var19 = 0;
                       var24 = 0;
@@ -3435,7 +3414,7 @@ final class dl {
                       var21 = param14;
                       var20 = 0;
                       var27 = 0;
-                      break L5;
+                      break L4;
                     } else {
                       var35 = param10 + -param4;
                       if (param5 <= param16) {
@@ -3455,7 +3434,7 @@ final class dl {
                         var24 = (-param14 + param1 << 16) / var34;
                         var25 = param11 << 16;
                         var22 = param14 << 16;
-                        break L5;
+                        break L4;
                       } else {
                         var25 = param15 << 16;
                         var27 = (param8 - param15 << 16) / var34;
@@ -3473,7 +3452,7 @@ final class dl {
                         var26 = param11 << 16;
                         var22 = param9 << 16;
                         var19 = (-param16 + param7 << 16) / var34;
-                        break L5;
+                        break L4;
                       }
                     }
                   }
@@ -3489,12 +3468,12 @@ final class dl {
                     var29 = var29 + param12 * var31;
                     var18 = var18 + var20 * param12;
                     param12 = 0;
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 } else {
-                  L6: {
+                  L5: {
                     var30 = param6 << 16;
                     var29 = param6 << 16;
                     var18 = param16 << 16;
@@ -3517,7 +3496,7 @@ final class dl {
                       var23 = (-param14 + param1 << 16) / var34;
                       var31 = (param2 - param6 << 16) / var34;
                       var28 = (param11 + -param15 << 16) / var35;
-                      break L6;
+                      break L5;
                     } else {
                       var31 = (-param6 + param13 << 16) / var35;
                       var28 = (param8 - param15 << 16) / var34;
@@ -3526,11 +3505,11 @@ final class dl {
                       var33 = 0;
                       var32 = (param2 - param6 << 16) / var34;
                       var23 = (-param14 + param9 << 16) / var35;
-                      break L6;
+                      break L5;
                     }
                   }
-                  L7: {
-                    L8: {
+                  L6: {
+                    L7: {
                       if (0 > param12) {
                         if (0 > param4) {
                           param12 = -param12 + param4;
@@ -3543,7 +3522,7 @@ final class dl {
                           var25 = var25 + param12 * var27;
                           var30 = var30 + var32 * param12;
                           param12 = param4;
-                          break L7;
+                          break L6;
                         } else {
                           param12 = -param12;
                           var17_int = var17_int + var19 * param12;
@@ -3555,54 +3534,54 @@ final class dl {
                           var21 = var21 + var23 * param12;
                           var25 = var25 + var27 * param12;
                           param12 = 0;
-                          break L8;
+                          break L7;
                         }
                       } else {
-                        break L8;
+                        break L7;
                       }
                     }
                     var36 = ob.field_d[param12];
-                    L9: while (true) {
+                    L8: while (true) {
                       if (param4 <= param12) {
-                        break L7;
+                        break L6;
                       } else {
-                        L10: {
+                        L9: {
                           var37 = var17_int >> 16;
                           if (ob.field_i > var37) {
                             var38 = -(var17_int >> 16) + (var18 >> 16);
                             if (var38 != 0) {
-                              L11: {
+                              L10: {
                                 var39 = (var22 + -var21) / var38;
                                 var40 = (var26 + -var25) / var38;
                                 var41 = (var30 - var29) / var38;
                                 if (var37 - -var38 >= ob.field_i) {
                                   var38 = -1 + (-var37 + ob.field_i);
-                                  break L11;
+                                  break L10;
                                 } else {
-                                  break L11;
+                                  break L10;
                                 }
                               }
                               if (var37 < 0) {
                                 fl.a(var38 + var37, param3, var41, 6, var25 - var37 * var40, -(var37 * var39) + var21, -(var41 * var37) + var29, var40, var36, var39);
-                                break L10;
+                                break L9;
                               } else {
                                 fl.a(var38, param3, var41, 6, var25, var21, var29, var40, var37 + var36, var39);
-                                break L10;
+                                break L9;
                               }
                             } else {
                               if (var37 < 0) {
-                                break L10;
+                                break L9;
                               } else {
                                 if (var37 < ob.field_i) {
                                   fl.a(var38, param3, 0, 6, var25, var21, var29, 0, var37 - -var36, 0);
-                                  break L10;
+                                  break L9;
                                 } else {
-                                  break L10;
+                                  break L9;
                                 }
                               }
                             }
                           } else {
-                            break L10;
+                            break L9;
                           }
                         }
                         param12++;
@@ -3616,7 +3595,7 @@ final class dl {
                           var17_int = var17_int + var19;
                           var21 = var21 + var23;
                           var36 = var36 + l.field_k;
-                          continue L9;
+                          continue L8;
                         } else {
                           return;
                         }
@@ -3633,9 +3612,9 @@ final class dl {
                     var32 = 0;
                     var27 = 0;
                     var28 = 0;
-                    break L4;
+                    break L3;
                   } else {
-                    L12: {
+                    L11: {
                       var37 = param7 << 16;
                       var38 = param1 << 16;
                       var39 = param8 << 16;
@@ -3644,13 +3623,13 @@ final class dl {
                         var29 = param13 << 16;
                         var21 = param9 << 16;
                         var17_int = param5 << 16;
-                        break L12;
+                        break L11;
                       } else {
                         var26 = param11 << 16;
                         var22 = param9 << 16;
                         var18 = param5 << 16;
                         var30 = param13 << 16;
-                        break L12;
+                        break L11;
                       }
                     }
                     var40 = param2 << 16;
@@ -3662,11 +3641,11 @@ final class dl {
                     var32 = (-var30 + var40) / var36;
                     var19 = (var37 - var17_int) / var36;
                     var31 = (var40 - var29) / var36;
-                    break L4;
+                    break L3;
                   }
                 }
               }
-              L13: {
+              L12: {
                 if (param12 < 0) {
                   param12 = -param12;
                   var30 = var30 + param12 * var32;
@@ -3678,51 +3657,51 @@ final class dl {
                   var22 = var22 + param12 * var24;
                   var26 = var26 + param12 * var28;
                   param12 = 0;
-                  break L13;
+                  break L12;
                 } else {
-                  break L13;
+                  break L12;
                 }
               }
               var35 = ob.field_d[param12];
-              L14: while (true) {
+              L13: while (true) {
                 if (param10 <= param12) {
                   return;
                 } else {
-                  L15: {
+                  L14: {
                     var36 = var17_int >> 16;
                     if (ob.field_i <= var36) {
-                      break L15;
+                      break L14;
                     } else {
                       var37 = -(var17_int >> 16) + (var18 >> 16);
                       if (0 == var37) {
                         if (var36 < 0) {
-                          break L15;
+                          break L14;
                         } else {
                           if (var36 >= ob.field_i) {
-                            break L15;
+                            break L14;
                           } else {
                             fl.a(var37, param3, 0, 6, var25, var21, var29, 0, var36 - -var35, 0);
-                            break L15;
+                            break L14;
                           }
                         }
                       } else {
-                        L16: {
+                        L15: {
                           var38 = (-var21 + var22) / var37;
                           var39 = (-var25 + var26) / var37;
                           var40 = (var30 + -var29) / var37;
                           if (ob.field_i > var36 - -var37) {
-                            break L16;
+                            break L15;
                           } else {
                             var37 = -1 + -var36 + ob.field_i;
-                            break L16;
+                            break L15;
                           }
                         }
                         if (var36 < 0) {
                           fl.a(var36 + var37, param3, var40, 6, -(var39 * var36) + var25, var21 - var38 * var36, var29 - var40 * var36, var39, var35, var38);
-                          break L15;
+                          break L14;
                         } else {
                           fl.a(var37, param3, var40, 6, var25, var21, var29, var39, var35 + var36, var38);
-                          break L15;
+                          break L14;
                         }
                       }
                     }
@@ -3738,7 +3717,7 @@ final class dl {
                     var21 = var21 + var23;
                     var35 = var35 + l.field_k;
                     var18 = var18 + var20;
-                    continue L14;
+                    continue L13;
                   } else {
                     return;
                   }

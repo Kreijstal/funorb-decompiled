@@ -141,50 +141,47 @@ final class kn {
 
     private final boolean a(byte param0, int param1, int param2) {
         int var5 = 0;
-        var5 = Pool.field_O;
-        if (param0 == 98) {
-          L0: {
-            if (param2 != 0) {
-              if (param2 != 1) {
-                if (2 != param2) {
-                  if (param2 == 3) {
-                    nf.a(((kn) this).field_b, true, param1);
+        L0: {
+          var5 = Pool.field_O;
+          if (param2 != 0) {
+            if (param2 != 1) {
+              if (2 != param2) {
+                if (param2 == 3) {
+                  nf.a(((kn) this).field_b, true, param1);
+                  break L0;
+                } else {
+                  if (param2 == 10) {
+                    ef.a(((kn) this).field_b, 3, param1);
                     break L0;
                   } else {
-                    if (param2 == 10) {
-                      ef.a(((kn) this).field_b, 3, param1);
+                    if (param2 == 15) {
+                      eo.a(param1, ((kn) this).field_b, 11);
                       break L0;
                     } else {
-                      if (param2 == 15) {
-                        eo.a(param1, ((kn) this).field_b, 11);
+                      if (16 == param2) {
+                        eo.a(param1, 0, 11);
                         break L0;
                       } else {
-                        if (16 == param2) {
-                          eo.a(param1, 0, param0 ^ 105);
-                          break L0;
-                        } else {
-                          return false;
-                        }
+                        return false;
                       }
                     }
                   }
-                } else {
-                  em.a(((kn) this).field_b, (byte) -125, param1);
-                  break L0;
                 }
               } else {
-                jk.a(((kn) this).field_l, param1, param0 + -98);
+                em.a(((kn) this).field_b, (byte) -125, param1);
                 break L0;
               }
             } else {
-              k.a(param1, (byte) 97, ((kn) this).field_l);
+              int discarded$56 = 0;
+              jk.a(((kn) this).field_l, param1);
               break L0;
             }
+          } else {
+            k.a(param1, (byte) 97, ((kn) this).field_l);
+            break L0;
           }
-          return true;
-        } else {
-          return true;
         }
+        return true;
     }
 
     final void a(int param0, int[] param1, byte param2) {
@@ -230,10 +227,12 @@ final class kn {
                   break L1;
                 } else {
                   L3: {
-                    var7 = this.a(3);
+                    int discarded$3 = 3;
+                    var7 = this.a();
                     var4_ref = var7;
                     var5 = gf.a(-103, ((kn) this).field_m);
-                    var6 = ia.a(((kn) this).field_m, 24552) ? 1 : 0;
+                    int discarded$4 = 24552;
+                    var6 = ia.a(((kn) this).field_m) ? 1 : 0;
                     if (var5 != null) {
                       break L3;
                     } else {
@@ -307,7 +306,7 @@ final class kn {
               if (param2 >= 43) {
                 break L7;
               } else {
-                boolean discarded$1 = this.a(63, 79, -128);
+                boolean discarded$5 = this.a(63, 79, -128);
                 break L7;
               }
             }
@@ -349,13 +348,14 @@ final class kn {
         String var3 = null;
         if (null != ((kn) this).field_m) {
             if (!(((kn) this).field_l == ve.field_m)) {
-                var3 = this.a(3);
+                int discarded$0 = 3;
+                var3 = this.a();
                 String var2 = var3;
                 ((kn) this).field_n.a(nr.a(new String[1], -1, ep.field_p), 17130, 17);
             }
         }
         if (param0 < 8) {
-            boolean discarded$0 = this.b((byte) -22, -119, 104);
+            boolean discarded$1 = this.b((byte) -22, -119, 104);
         }
     }
 
@@ -382,8 +382,9 @@ final class kn {
                         if (param2 != 19) {
                           return false;
                         } else {
-                          boolean discarded$22726 = hj.a(((kn) this).field_a, ((kn) this).field_h, ((kn) this).field_l, ((kn) this).field_m, (byte) 76);
-                          break L0;
+                          int discarded$1802 = 76;
+                          boolean discarded$1803 = hj.a(((kn) this).field_a, ((kn) this).field_h, ((kn) this).field_l, ((kn) this).field_m);
+                          return true;
                         }
                       }
                     }
@@ -405,12 +406,7 @@ final class kn {
             break L0;
           }
         }
-        if (param1 >= 57) {
-          return true;
-        } else {
-          ((kn) this).field_d = null;
-          return true;
-        }
+        return true;
     }
 
     private final boolean b(byte param0, int param1, int param2) {
@@ -484,7 +480,6 @@ final class kn {
     private final boolean a(int param0, int param1, int param2) {
         Object var4 = null;
         String var4_ref = null;
-        Object var5 = null;
         L0: {
           var4 = null;
           if (param0 == 4) {
@@ -511,8 +506,8 @@ final class kn {
         }
         L1: {
           if (var4_ref != null) {
-            var5 = null;
-            jh.a(0, var4_ref, (String) null, 2, ((kn) this).field_m, true);
+            int discarded$1 = 1;
+            jh.a(0, var4_ref, (String) null, 2, ((kn) this).field_m);
             break L1;
           } else {
             break L1;
@@ -539,10 +534,13 @@ final class kn {
               if (null == em.field_L) {
                 break L0;
               } else {
-                if (cj.e((byte) 85)) {
+                int discarded$3 = 85;
+                if (cj.e()) {
                   var6 = mg.a(param0 ^ 124, ((kn) this).field_l);
-                  var4 = fn.b(((kn) this).field_l, 0);
-                  var5 = this.a(3);
+                  int discarded$4 = 0;
+                  var4 = fn.b(((kn) this).field_l);
+                  int discarded$5 = 3;
+                  var5 = this.a();
                   if (var4 != null) {
                     L1: {
                       if (!em.field_L.field_ec) {
@@ -608,7 +606,7 @@ final class kn {
         }
     }
 
-    private final String a(int param0) {
+    private final String a() {
         String var2 = null;
         if (null != ((kn) this).field_d) {
             var2 = ((kn) this).field_d;
@@ -722,7 +720,8 @@ final class kn {
         kh var4 = null;
         L0: {
           if (null == em.field_L) {
-            var4 = rb.a(((kn) this).field_b, 125);
+            int discarded$2 = 125;
+            var4 = rb.a(((kn) this).field_b);
             if (var4 != null) {
               var3 = var4.field_Ob;
               if (var4.field_Xb) {
@@ -776,7 +775,7 @@ final class kn {
           if (param0 == 2616) {
             break L3;
           } else {
-            boolean discarded$1 = kn.a((byte) 103, 'ﾥ');
+            boolean discarded$3 = kn.a((byte) 103, 'ﾥ');
             break L3;
           }
         }

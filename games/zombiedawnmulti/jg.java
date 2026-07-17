@@ -5,7 +5,7 @@ final class jg {
     static String field_b;
     static boolean field_a;
 
-    final static String a(k param0, int param1, int param2) {
+    final static String a(k param0) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -35,8 +35,8 @@ final class jg {
           try {
             L0: {
               var3_int = param0.h((byte) -109);
-              if (var3_int > param1) {
-                var3_int = param1;
+              if (var3_int > 80) {
+                var3_int = 80;
                 break L0;
               } else {
                 break L0;
@@ -83,7 +83,7 @@ final class jg {
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + 3460 + 41);
+          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 80 + 44 + 3460 + 41);
         }
     }
 
@@ -98,24 +98,24 @@ final class jg {
         byte[] var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
-        fc stackIn_9_0 = null;
+        fc stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fc stackOut_8_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        fc stackOut_7_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -128,38 +128,30 @@ final class jg {
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= 4) {
-                L2: {
-                  int incrementValue$2 = var2_int;
-                  var2_int++;
-                  var4 = ql.a(true, incrementValue$2, param1);
-                  int incrementValue$3 = var2_int;
-                  var2_int++;
-                  var5 = ql.a(true, incrementValue$3, param1);
-                  nn.a(-114, 4, var10, var4);
-                  nn.a(-128, 5, var10, var5);
-                  nn.a(-111, 6, var10, var4);
-                  nn.a(-118, 7, var10, var5);
-                  nn.a(-113, 8, var10, var4);
-                  nn.a(-106, 9, var10, var5);
-                  nn.a(-123, 10, var10, var4);
-                  nn.a(-127, 11, var10, var5);
-                  var2_int = 6;
-                  if (param0 == 30270) {
-                    break L2;
-                  } else {
-                    field_b = null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
+                int incrementValue$2 = var2_int;
+                var2_int++;
+                var4 = ql.a(true, incrementValue$2, param1);
+                int incrementValue$3 = var2_int;
+                var2_int++;
+                var5 = ql.a(true, incrementValue$3, param1);
+                nn.a(-114, 4, var10, var4);
+                nn.a(-128, 5, var10, var5);
+                nn.a(-111, 6, var10, var4);
+                nn.a(-118, 7, var10, var5);
+                nn.a(-113, 8, var10, var4);
+                nn.a(-106, 9, var10, var5);
+                nn.a(-123, 10, var10, var4);
+                nn.a(-127, 11, var10, var5);
+                var2_int = 6;
+                L2: while (true) {
                   if (param1.length / 4 <= var2_int) {
-                    stackOut_8_0 = gi.a(var10, -113);
-                    stackIn_9_0 = stackOut_8_0;
+                    stackOut_7_0 = gi.a(var10, -113);
+                    stackIn_8_0 = stackOut_7_0;
                     break L0;
                   } else {
-                    nn.a(param0 ^ -30281, var2_int - -6, var3, ql.a(true, var2_int, param1));
+                    nn.a(-119, var2_int - -6, var3, ql.a(true, var2_int, param1));
                     var2_int++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -171,35 +163,35 @@ final class jg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("jg.B(").append(param0).append(44);
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_1 = new StringBuilder().append("jg.B(").append(30270).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
-            } else {
               stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
               stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        return stackIn_9_0;
+        return stackIn_8_0;
     }
 
     final static sm[] a(int param0, go param1) {
@@ -250,7 +242,7 @@ final class jg {
                     var11 = var12;
                     var10 = var11;
                     var3 = var10;
-                    var5 = 88 % ((27 - param0) / 55);
+                    var5 = 0;
                     var4 = new sm[var13.length >> 2];
                     var6 = 0;
                     L2: while (true) {
@@ -290,7 +282,7 @@ final class jg {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("jg.A(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("jg.A(").append(-123).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -318,7 +310,7 @@ final class jg {
         return stackIn_14_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!og.field_N) {
             throw new IllegalStateException();
         }
@@ -327,10 +319,7 @@ final class jg {
         a.field_b = 0;
     }
 
-    public static void b(int param0) {
-        if (param0 != 7) {
-            return;
-        }
+    public static void b() {
         field_b = null;
     }
 

@@ -380,11 +380,8 @@ final class ul {
         return stackIn_67_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
-        if (param0 != 14) {
-            field_a = true;
-        }
     }
 
     private ul() throws Throwable {

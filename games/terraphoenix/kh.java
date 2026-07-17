@@ -127,13 +127,14 @@ abstract class kh extends gb {
         }
     }
 
-    private final int h(int param0) {
+    private final int h() {
         return !((kh) this).field_J ? 0 : (Object) (Object) ((kh) this).field_N.c(true) != this ? 0 : 256;
     }
 
     boolean i(int param0) {
         int var2 = 0;
-        ((kh) this).field_G = this.h(0);
+        int discarded$2 = 0;
+        ((kh) this).field_G = this.h();
         var2 = 17 / ((param0 - -2) / 63);
         if (0 == ((kh) this).field_G) {
           if (((kh) this).field_J) {
@@ -673,7 +674,8 @@ abstract class kh extends gb {
         int stackOut_18_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_9_0 = 0;
-        var2 = this.h(0);
+        int discarded$1 = 0;
+        var2 = this.h();
         if (param0 == -121) {
           var3 = -((kh) this).field_G + var2;
           if (0 < var3) {

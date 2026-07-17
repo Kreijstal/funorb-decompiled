@@ -224,7 +224,7 @@ final class ija extends td {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_p = null;
     }
 

@@ -11,10 +11,10 @@ final class fg {
         int var4_int = 0;
         try {
             var4_int = -(param3.field_e * 32) + 256;
-            int var5 = -125 % ((-44 - param2) / 49);
+            int var5 = 0;
             lg.field_k.a(true, var4_int, (int)param3.field_c, param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "fg.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "fg.F(" + param0 + 44 + param1 + 44 + 25 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -25,7 +25,6 @@ final class fg {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
         int stackIn_7_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_23_0 = 0;
@@ -82,41 +81,32 @@ final class fg {
                       var6 = 0;
                       L2: while (true) {
                         if (var5 <= var6) {
-                          L3: {
-                            if (!param2) {
-                              break L3;
-                            } else {
-                              var9 = null;
-                              fg.a(81, -66, -114, (p) null);
-                              break L3;
-                            }
-                          }
                           stackOut_22_0 = -1;
                           stackIn_23_0 = stackOut_22_0;
                           break L0;
                         } else {
-                          L4: {
+                          L3: {
                             if (~param3.field_k != ~param0.field_i[param1][var6]) {
-                              break L4;
+                              break L3;
                             } else {
                               if (pc.a(14088, param0.field_p[param1][var6])) {
                                 var7 = 0;
-                                L5: while (true) {
+                                L4: while (true) {
                                   if (var7 >= var4_int) {
                                     stackOut_17_0 = var6;
                                     stackIn_18_0 = stackOut_17_0;
                                     return stackIn_18_0;
                                   } else {
                                     if (param3.field_w[var7] != param0.field_l[param1][var6 * var4_int - -var7]) {
-                                      break L4;
+                                      break L3;
                                     } else {
                                       var7++;
-                                      continue L5;
+                                      continue L4;
                                     }
                                   }
                                 }
                               } else {
-                                break L4;
+                                break L3;
                               }
                             }
                           }
@@ -137,7 +127,7 @@ final class fg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var4;
             stackOut_24_1 = new StringBuilder().append("fg.A(");
@@ -152,7 +142,7 @@ final class fg {
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L6;
+              break L5;
             } else {
               stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
               stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
@@ -160,12 +150,12 @@ final class fg {
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
               stackIn_27_2 = stackOut_25_2;
-              break L6;
+              break L5;
             }
           }
-          L7: {
+          L6: {
             stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(param1).append(44).append(0).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -177,7 +167,7 @@ final class fg {
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
-              break L7;
+              break L6;
             } else {
               stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
               stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
@@ -185,7 +175,7 @@ final class fg {
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
               stackIn_30_2 = stackOut_28_2;
-              break L7;
+              break L6;
             }
           }
           throw wg.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
@@ -193,14 +183,14 @@ final class fg {
         return stackIn_23_0;
     }
 
-    final static java.awt.Container b(byte param0) {
+    final static java.awt.Container b() {
         if (!(null == md.field_n)) {
             return (java.awt.Container) (Object) md.field_n;
         }
         return (java.awt.Container) (Object) bn.c(-1);
     }
 
-    final static bd a(String param0, String param1, gb param2, boolean param3) {
+    final static bd a(String param0, String param1, gb param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -343,11 +333,11 @@ final class fg {
         return stackIn_3_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_d = null;
-        int var1 = -49 % ((param0 - -55) / 38);
+        int var1 = 0;
         field_c = null;
     }
 

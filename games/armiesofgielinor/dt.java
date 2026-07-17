@@ -19,33 +19,22 @@ final class dt {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (param2 >= 0) {
-          if (param2 <= 11) {
-            if (param1 == -24375) {
-              L0: {
-                if (1 > param3) {
-                  break L0;
-                } else {
-                  if (param3 > bn.a((byte) -84, param2, param0)) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (param2 < 0) {
             return false;
-          }
-        } else {
-          return false;
         }
+        if (param2 > 11) {
+            return false;
+        }
+        if (1 > param3) {
+            return false;
+        }
+        if (param3 > bn.a((byte) -84, param2, param0)) {
+            return false;
+        }
+        return true;
     }
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void a(java.awt.Canvas param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -65,8 +54,10 @@ final class dt {
         String stackOut_4_2 = null;
         try {
           L0: {
-            fj.a((java.awt.Component) (Object) param0, (byte) 35);
-            dc.a((java.awt.Component) (Object) param0, -37);
+            int discarded$14 = 35;
+            fj.a((java.awt.Component) (Object) param0);
+            int discarded$15 = -37;
+            dc.a((java.awt.Component) (Object) param0);
             if (om.field_I == null) {
               break L0;
             } else {

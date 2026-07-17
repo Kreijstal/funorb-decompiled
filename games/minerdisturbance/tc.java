@@ -13,7 +13,7 @@ final class tc extends pi {
     static String field_p;
     String field_n;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_r = null;
         field_o = null;
         field_v = null;
@@ -25,16 +25,8 @@ final class tc extends pi {
         fa.field_c = null;
         pe.field_pb = 0;
         ng.field_l = -1;
-        if (param0 != 9358) {
-          field_s = -106;
-          il.field_n = false;
-          lj.field_q = -1;
-          return;
-        } else {
-          il.field_n = false;
-          lj.field_q = -1;
-          return;
-        }
+        il.field_n = false;
+        lj.field_q = -1;
     }
 
     final static void a(int param0, int param1) {

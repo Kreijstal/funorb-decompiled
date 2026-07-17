@@ -25,7 +25,7 @@ abstract class qg {
 
     abstract java.net.Socket a(boolean param0) throws IOException;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_a = null;
         field_h = null;
@@ -75,30 +75,26 @@ abstract class qg {
                 nj.field_X = param2;
                 try {
                   L1: {
-                    if (param0 == 165) {
-                      L2: {
-                        var6 = param1.getParameter("cookieprefix");
-                        var5 = var6;
-                        var5 = var6;
-                        var4 = param1.getParameter("cookiehost");
-                        var5 = var4;
-                        var5 = var4;
-                        var7 = var6 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
-                        var5 = var7;
-                        var5 = var7;
-                        if (param2.length() == 0) {
-                          var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                          break L2;
-                        } else {
-                          var5 = var7 + "; Expires=" + jb.a(param0 ^ 2147483482, 94608000000L + pd.a(-22826)) + "; Max-Age=" + 94608000L;
-                          break L2;
-                        }
+                    L2: {
+                      var6 = param1.getParameter("cookieprefix");
+                      var5 = var6;
+                      var5 = var6;
+                      var4 = param1.getParameter("cookiehost");
+                      var5 = var4;
+                      var5 = var4;
+                      var7 = var6 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
+                      var5 = var7;
+                      var5 = var7;
+                      if (param2.length() == 0) {
+                        var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        break L2;
+                      } else {
+                        var5 = var7 + "; Expires=" + jb.a(2147483647, 94608000000L + pd.a(-22826)) + "; Max-Age=" + 94608000L;
+                        break L2;
                       }
-                      qe.a("document.cookie=\"" + var5 + "\"", param1, (byte) 63);
-                      break L1;
-                    } else {
-                      return;
                     }
+                    qe.a("document.cookie=\"" + var5 + "\"", param1, (byte) 63);
+                    break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +103,8 @@ abstract class qg {
                     break L3;
                   }
                 }
-                hl.a(param1, 1);
+                int discarded$2 = 1;
+                hl.a(param1);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -115,7 +112,7 @@ abstract class qg {
               L4: {
                 var3_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_11_0 = (RuntimeException) var3_ref;
-                stackOut_11_1 = new StringBuilder().append("qg.J(").append(param0).append(44);
+                stackOut_11_1 = new StringBuilder().append("qg.J(").append(165).append(44);
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;

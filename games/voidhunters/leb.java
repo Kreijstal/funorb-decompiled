@@ -18,14 +18,11 @@ final class leb extends rqa {
             var3 = new ml(29);
             var3.a(1, 0, new ml(27));
             param1.a(1, 4, var3);
-            if (param0 >= -77) {
-                field_o = null;
-            }
             var4 = new ml(29);
             var4.a(1, 0, new ml(27));
             param1.a(1, 11, var4);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "leb.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "leb.B(" + -107 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -98,7 +95,7 @@ final class leb extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
         int var1 = 0;
     }

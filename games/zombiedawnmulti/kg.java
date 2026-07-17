@@ -11,7 +11,7 @@ final class kg extends br {
     static int field_g;
     static String field_k;
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_f = null;
         field_l = null;
@@ -22,9 +22,6 @@ final class kg extends br {
 
     final static void a(boolean param0, byte param1) {
         k.a((byte) 122, param0);
-        if (param1 < 97) {
-            field_l = null;
-        }
     }
 
     kg(byte[] param0) {

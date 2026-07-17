@@ -72,7 +72,7 @@ final class ej extends we {
         field_s = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -137,7 +137,7 @@ final class ej extends we {
                         } else {
                           L8: {
                             var8 = pb.field_g[var6_int];
-                            if ((var8 & 65280) >> 8 <= param3) {
+                            if ((var8 & 65280) >> 8 <= 64) {
                               break L8;
                             } else {
                               break L8;
@@ -160,7 +160,7 @@ final class ej extends we {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var6, "ej.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 40 + 41);
+          throw ci.a((Throwable) (Object) var6, "ej.C(" + param0 + 44 + param1 + 44 + param2 + 44 + 64 + 44 + param4 + 44 + 40 + 41);
         }
     }
 
@@ -590,19 +590,28 @@ final class ej extends we {
         }
     }
 
-    final static boolean f(int param0) {
+    final static boolean f() {
         if (null != jb.field_B) {
             return true;
         }
         if (!kd.field_x.a("benefits", (byte) 90)) {
             return false;
         }
-        jb.field_B = rl.a(kd.field_x, "benefits", "members_benefits_borders", false);
-        el.field_ac = rl.a(kd.field_x, "benefits", "members_benefits_price", false);
-        bc.field_qb = rl.a(kd.field_x, "benefits", "members_benefits_logo", false);
+        int discarded$0 = 0;
+        jb.field_B = rl.a(kd.field_x, "benefits", "members_benefits_borders");
+        int discarded$1 = 0;
+        el.field_ac = rl.a(kd.field_x, "benefits", "members_benefits_price");
+        int discarded$2 = 0;
+        bc.field_qb = rl.a(kd.field_x, "benefits", "members_benefits_logo");
         pg.field_v = cf.a("members_benefits_screenshots", "benefits", (byte) -73, kd.field_x);
-        vc.a(uj.field_h, jb.field_B, false);
-        ha.a(16744576, 2, (byte) 120, (mi) (Object) va.field_j, -2400, el.field_ac, 80, 40, 15, 80, 40);
+        int discarded$3 = 0;
+        vc.a(uj.field_h, jb.field_B);
+        int discarded$4 = 40;
+        int discarded$5 = 80;
+        int discarded$6 = 15;
+        int discarded$7 = 40;
+        int discarded$8 = 80;
+        ha.a(16744576, 2, (byte) 120, (mi) (Object) va.field_j, -2400, el.field_ac);
         uh.a(1, pg.field_v);
         qa.a(bc.field_qb, (byte) 69);
         return true;

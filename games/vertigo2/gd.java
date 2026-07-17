@@ -17,25 +17,13 @@ final class gd extends jq {
     static boolean field_r;
 
     final static void a(int param0, boolean param1) {
-        if (null == rc.field_d) {
-          if (param0 != 3206) {
-            gd.a(true);
+        if (null != rc.field_d) {
+            rc.field_d.b(param1, 0);
             return;
-          } else {
-            return;
-          }
-        } else {
-          rc.field_d.b(param1, 0);
-          if (param0 == 3206) {
-            return;
-          } else {
-            gd.a(true);
-            return;
-          }
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_j = null;
         field_l = null;
         field_s = null;

@@ -14,7 +14,7 @@ final class aa extends uf {
     static boolean[] field_k;
     int field_l;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_j = null;
         field_r = null;
         field_k = null;

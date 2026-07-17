@@ -128,7 +128,7 @@ final class lm {
               if (var8 != 0) {
                 var9_int = 0;
                 L2: while (true) {
-                  var9_int = param2.indexOf((int) param0, var9_int);
+                  var9_int = param2.indexOf('_', var9_int);
                   if (0 > var9_int) {
                     break L1;
                   } else {
@@ -144,7 +144,7 @@ final class lm {
             var9 = new StringBuilder(var7);
             var10 = 0;
             L3: while (true) {
-              var11 = param2.indexOf((int) param0, var10);
+              var11 = param2.indexOf('_', var10);
               if (var11 < 0) {
                 StringBuilder discarded$6 = var9.append(param2.substring(var10));
                 stackOut_9_0 = var9.toString();
@@ -163,7 +163,7 @@ final class lm {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("lm.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("lm.E(").append(95).append(44).append(param1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -219,9 +219,9 @@ final class lm {
     final static void a(int param0, ap param1, boolean param2, byte param3) {
         try {
             int var4_int = 65 / ((56 - param3) / 36);
-            wt.field_e.a((byte) -62, param0, !param2 ? true : false, 256, param1, 1000000);
+            wt.field_e.a((byte) -62, param0, false, 256, param1, 1000000);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "lm.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "lm.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + param3 + 41);
         }
     }
 

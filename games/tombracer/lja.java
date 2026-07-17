@@ -14,8 +14,8 @@ final class lja {
     String field_i;
     static String field_a;
 
-    public static void b(byte param0) {
-        int var1 = 37 % ((7 - param0) / 44);
+    public static void b() {
+        int var1 = 0;
         field_j = null;
         field_a = null;
     }
@@ -229,85 +229,53 @@ final class lja {
         boolean discarded$0 = this.a(param3 + -16, var6, param2);
         boolean discarded$1 = this.b(var6, (byte) -121, param4);
         boolean discarded$2 = this.a(var6, (byte) -39, param4);
-        boolean discarded$3 = this.b(param1, var6, 114);
+        int discarded$3 = 114;
+        boolean discarded$4 = this.b(param1, var6);
         return true;
     }
 
     private final boolean b(int param0, byte param1, int param2) {
         Object var4 = null;
         String var4_ref = null;
-        Object var5 = null;
         var4 = null;
         if (4 == param0) {
           var4_ref = rf.a(true, ((lja) this).field_i, param2);
-          if (var4_ref == null) {
-            if (param1 != -121) {
-              return false;
-            } else {
-              return true;
-            }
+          if (var4_ref != null) {
+            int discarded$4 = 2;
+            gu.a(0, true, ((lja) this).field_i, var4_ref, (String) null);
+            return true;
           } else {
-            var5 = null;
-            gu.a(0, true, ((lja) this).field_i, var4_ref, (String) null, 2);
-            if (param1 != -121) {
-              return false;
-            } else {
-              return true;
-            }
+            return true;
           }
         } else {
           if (param0 == 5) {
             var4_ref = uca.a(((lja) this).field_i, (byte) 102, param2);
-            if (var4_ref == null) {
-              if (param1 != -121) {
-                return false;
-              } else {
-                return true;
-              }
+            if (var4_ref != null) {
+              int discarded$5 = 2;
+              gu.a(0, true, ((lja) this).field_i, var4_ref, (String) null);
+              return true;
             } else {
-              var5 = null;
-              gu.a(0, true, ((lja) this).field_i, var4_ref, (String) null, 2);
-              if (param1 != -121) {
-                return false;
-              } else {
-                return true;
-              }
+              return true;
             }
           } else {
             if (param0 == 6) {
               var4_ref = nna.a(-3, ((lja) this).field_i, param2);
-              if (var4_ref != null) {
-                var5 = null;
-                gu.a(0, true, ((lja) this).field_i, var4_ref, (String) null, 2);
-                if (param1 != -121) {
-                  return false;
-                } else {
-                  return true;
-                }
+              if (var4_ref == null) {
+                return true;
               } else {
-                if (param1 != -121) {
-                  return false;
-                } else {
-                  return true;
-                }
+                int discarded$6 = 2;
+                gu.a(0, true, ((lja) this).field_i, var4_ref, (String) null);
+                return true;
               }
             } else {
               if (7 == param0) {
                 var4_ref = kc.a(((lja) this).field_i, param2, false, ((lja) this).field_d);
-                if (var4_ref != null) {
-                  var5 = null;
-                  gu.a(0, true, ((lja) this).field_i, var4_ref, (String) null, 2);
-                  if (param1 != -121) {
-                    return false;
-                  } else {
-                    return true;
-                  }
+                if (var4_ref == null) {
+                  return true;
                 } else {
-                  if (param1 != -121) {
-                    return false;
-                  } else {
-                    return true;
-                  }
+                  int discarded$7 = 2;
+                  gu.a(0, true, ((lja) this).field_i, var4_ref, (String) null);
+                  return true;
                 }
               } else {
                 return false;
@@ -394,94 +362,42 @@ final class lja {
     }
 
     private final boolean a(int param0, byte param1, int param2) {
-        int var5 = 0;
-        var5 = TombRacer.field_G ? 1 : 0;
-        if (param1 != -39) {
-          lja.b((byte) 36);
-          if (param0 == 8) {
-            no.a(((lja) this).field_i, ((lja) this).field_g, (byte) 120);
-            return true;
-          } else {
-            if (param0 == 18) {
-              fs.a((byte) 123, ((lja) this).field_g, ((lja) this).field_i);
-              return true;
-            } else {
-              if (param0 == 11) {
+        int var5 = TombRacer.field_G ? 1 : 0;
+        if (param0 != 8) {
+            if (param0 != 18) {
+                if (param0 != 11) {
+                    if (param0 != 12) {
+                        if (param0 == 13) {
+                            loa.a(((lja) this).field_b, param2, (byte) 108, 2);
+                            return true;
+                        }
+                        if (param0 == 14) {
+                            int discarded$0 = 118;
+                            kaa.a();
+                            return true;
+                        }
+                        if (param0 == 20) {
+                            ola.e((byte) 123);
+                            return true;
+                        }
+                        if (19 != param0) {
+                            return false;
+                        }
+                        boolean discarded$1 = eca.a((byte) 84, ((lja) this).field_b, ((lja) this).field_g, ((lja) this).field_e, ((lja) this).field_i);
+                        return true;
+                    }
+                    loa.a(((lja) this).field_b, param2, (byte) 108, 1);
+                    return true;
+                }
                 loa.a(((lja) this).field_b, param2, (byte) 108, 0);
                 return true;
-              } else {
-                if (param0 == 12) {
-                  loa.a(((lja) this).field_b, param2, (byte) 108, 1);
-                  return true;
-                } else {
-                  if (param0 != 13) {
-                    if (param0 != 14) {
-                      if (param0 != 20) {
-                        if (19 == param0) {
-                          boolean discarded$2 = eca.a((byte) 84, ((lja) this).field_b, ((lja) this).field_g, ((lja) this).field_e, ((lja) this).field_i);
-                          return true;
-                        } else {
-                          return false;
-                        }
-                      } else {
-                        ola.e((byte) 123);
-                        return true;
-                      }
-                    } else {
-                      kaa.a((byte) 118);
-                      return true;
-                    }
-                  } else {
-                    loa.a(((lja) this).field_b, param2, (byte) 108, 2);
-                    return true;
-                  }
-                }
-              }
             }
-          }
-        } else {
-          if (param0 == 8) {
-            no.a(((lja) this).field_i, ((lja) this).field_g, (byte) 120);
+            fs.a((byte) 123, ((lja) this).field_g, ((lja) this).field_i);
             return true;
-          } else {
-            if (param0 == 18) {
-              fs.a((byte) 123, ((lja) this).field_g, ((lja) this).field_i);
-              return true;
-            } else {
-              if (param0 == 11) {
-                loa.a(((lja) this).field_b, param2, (byte) 108, 0);
-                return true;
-              } else {
-                if (param0 == 12) {
-                  loa.a(((lja) this).field_b, param2, (byte) 108, 1);
-                  return true;
-                } else {
-                  if (param0 != 13) {
-                    if (param0 != 14) {
-                      if (param0 != 20) {
-                        if (19 == param0) {
-                          boolean discarded$3 = eca.a((byte) 84, ((lja) this).field_b, ((lja) this).field_g, ((lja) this).field_e, ((lja) this).field_i);
-                          return true;
-                        } else {
-                          return false;
-                        }
-                      } else {
-                        ola.e((byte) 123);
-                        return true;
-                      }
-                    } else {
-                      kaa.a((byte) 118);
-                      return true;
-                    }
-                  } else {
-                    loa.a(((lja) this).field_b, param2, (byte) 108, 2);
-                    return true;
-                  }
-                }
-              }
-            }
-          }
         }
+        int discarded$2 = 120;
+        no.a(((lja) this).field_i, ((lja) this).field_g);
+        return true;
     }
 
     final void a(int[] param0, int param1, int param2) {
@@ -771,7 +687,8 @@ final class lja {
                 if (null == uu.field_a) {
                   break L0;
                 } else {
-                  if (mka.b(8192)) {
+                  int discarded$2 = 8192;
+                  if (mka.b()) {
                     var14 = nl.a(true, ((lja) this).field_g);
                     var4 = vba.a((byte) -40, ((lja) this).field_g);
                     var5 = this.b(-13);
@@ -835,7 +752,8 @@ final class lja {
           if (((lja) this).field_i != null) {
             if (((lja) this).field_g != rb.field_r) {
               if (null != uu.field_a) {
-                if (mka.b(8192)) {
+                int discarded$3 = 8192;
+                if (mka.b()) {
                   L2: {
                     var13 = nl.a(true, ((lja) this).field_g);
                     var4 = vba.a((byte) -40, ((lja) this).field_g);
@@ -930,7 +848,7 @@ final class lja {
         }
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean b(int param0, int param1) {
         if (param1 == 17) {
           fj.field_c = new wla(((lja) this).field_h.field_q, ((lja) this).field_h.field_A, ((lja) this).field_h.field_G, ((lja) this).field_h.field_t, param0, lma.field_r, oba.field_f, cga.field_g, kua.field_i, kt.field_F, dja.field_p, ((lja) this).field_i, ((lja) this).field_g);
           return true;

@@ -110,9 +110,11 @@ final class ng implements dja {
                 }
                 if (param2 < 45) {
                   field_a = null;
-                  return joa.a(param8, param5, param1, param4, param0, param9, param3, 0);
+                  int discarded$2 = 0;
+                  return joa.a(param8, param5, param1, param4, param0, param9, param3);
                 } else {
-                  return joa.a(param8, param5, param1, param4, param0, param9, param3, 0);
+                  int discarded$3 = 0;
+                  return joa.a(param8, param5, param1, param4, param0, param9, param3);
                 }
               } else {
                 return -1;

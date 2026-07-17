@@ -148,7 +148,7 @@ final class jl extends hq {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, fm param6, pd param7, pd param8, int param9, int param10, int param11, int param12, int param13, int param14, fm param15, int param16, int param17, pd param18, int param19, boolean param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, fm param6, pd param7, pd param8, int param9, int param10, int param11, int param12, int param13, int param14, fm param15, int param16, int param17, pd param18, int param19) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -228,7 +228,8 @@ final class jl extends hq {
         String stackOut_15_2 = null;
         try {
           L0: {
-            lj.a(param6, param4, param15, 61);
+            int discarded$1 = 61;
+            lj.a(param6, 480, param15);
             ek.a(param16, param0, 1829947600, param9, param10);
             uo.a(param13, param1, 1633);
             vl.a(param18, param8, 127, param2, param12, param11);
@@ -241,7 +242,7 @@ final class jl extends hq {
           L1: {
             var21 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var21;
-            stackOut_2_1 = new StringBuilder().append("jl.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_2_1 = new StringBuilder().append("jl.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(480).append(44).append(param5).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -544,7 +545,8 @@ final class jl extends hq {
               }
             }
             ((jl) this).field_w.a(param3, false, (jl) this, param4, param1);
-            ql.a(true);
+            int discarded$1 = 1;
+            ql.a();
             if (param2 == -15112) {
               break L0;
             } else {
@@ -670,24 +672,12 @@ final class jl extends hq {
 
     final static void a(int param0, byte param1, int param2, boolean param3, int param4, int param5, int param6) {
         String var7 = null;
-        Object var8 = null;
-        L0: {
-          if (va.field_a == 2) {
-            var7 = nc.field_c;
-            break L0;
-          } else {
+        if (va.field_a != 2) {
             var7 = pi.field_e;
-            break L0;
-          }
-        }
-        gf.a(127, param2, param4, param5, var7, param6, param0, param3);
-        if (param1 != -97) {
-          var8 = null;
-          jl.a(-33, 72, 86, 111, -101, -58, (fm) null, (pd) null, (pd) null, -42, -100, -45, 56, 89, -124, (fm) null, -98, -113, (pd) null, -13, true);
-          return;
         } else {
-          return;
+            var7 = nc.field_c;
         }
+        gf.a(127, param2, 180, 320, var7, param6, param0, param3);
     }
 
     final void a(ja[] param0, boolean param1) {
@@ -785,7 +775,7 @@ final class jl extends hq {
         var1.a((byte) 11);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_t = null;
         field_v = null;
         field_u = null;

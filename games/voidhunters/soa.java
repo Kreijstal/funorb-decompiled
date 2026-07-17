@@ -11,22 +11,19 @@ final class soa extends llb {
     final static int[][] a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, float param8) {
         int var11 = 0;
         int var12 = VoidHunters.field_G;
-        int[][] var15 = new int[param5][param7];
+        int[][] var15 = new int[256][64];
         int[][] var14 = var15;
         int[][] var13 = var14;
         int[][] var9 = var13;
         rw var10 = new rw();
-        var10.field_s = param4 ? true : false;
+        var10.field_s = false;
         var10.field_k = (int)(param8 * 4096.0f);
-        var10.field_o = param2;
-        if (param6 != -1) {
-            return null;
-        }
-        var10.field_j = param0;
-        var10.field_r = param3;
+        var10.field_o = 4;
+        var10.field_j = 4;
+        var10.field_r = 3;
         var10.c((byte) -105);
-        hr.a(param5, param7, -108);
-        for (var11 = 0; var11 < param5; var11++) {
+        hr.a(256, 64, -108);
+        for (var11 = 0; var11 < 256; var11++) {
             var10.a(1, var11, var15[var11]);
         }
         return var9;
@@ -37,9 +34,6 @@ final class soa extends llb {
         ((soa) this).field_wb.field_L = 0;
         ((soa) this).field_xb.field_hb = -param0 + (((soa) this).field_hb + -param2);
         ((soa) this).field_wb.field_hb = -param2 + ((soa) this).field_hb + -param0;
-        if (param1 <= 84) {
-            int[][] discarded$0 = soa.a(92, -71, 109, -69, true, 40, 47, 70, -1.1040540933609009f);
-        }
         ((soa) this).field_vb.a(-param0 + ((soa) this).field_hb, ((soa) this).field_wb.field_G, 0, -((soa) this).field_wb.field_K, ((soa) this).field_xb.field_G, ((soa) this).field_G, param0, -1);
     }
 
@@ -47,7 +41,8 @@ final class soa extends llb {
         if (param0 != 38) {
             ((soa) this).field_vb = null;
         }
-        return this.a(param3, param4, ((soa) this).field_xb.field_G, param2, param1, param5, -120);
+        int discarded$0 = -120;
+        return this.a(param3, param4, ((soa) this).field_xb.field_G, param2, param1, param5);
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
@@ -470,82 +465,78 @@ final class soa extends llb {
               break L23;
             }
             ((llb) (Object) stackIn_75_0).a(stackIn_75_1 != 0, 1332);
-            if (param1 <= -89) {
-              L25: {
-                L26: {
-                  stackOut_77_0 = jfb.field_o;
-                  stackIn_81_0 = stackOut_77_0;
-                  stackIn_78_0 = stackOut_77_0;
-                  if (!param0) {
+            L25: {
+              L26: {
+                stackOut_77_0 = jfb.field_o;
+                stackIn_81_0 = stackOut_77_0;
+                stackIn_78_0 = stackOut_77_0;
+                if (!param0) {
+                  break L26;
+                } else {
+                  stackOut_78_0 = (llb) (Object) stackIn_78_0;
+                  stackIn_81_0 = stackOut_78_0;
+                  stackIn_79_0 = stackOut_78_0;
+                  if (param2) {
                     break L26;
                   } else {
-                    stackOut_78_0 = (llb) (Object) stackIn_78_0;
-                    stackIn_81_0 = stackOut_78_0;
-                    stackIn_79_0 = stackOut_78_0;
-                    if (param2) {
+                    stackOut_79_0 = (llb) (Object) stackIn_79_0;
+                    stackIn_81_0 = stackOut_79_0;
+                    stackIn_80_0 = stackOut_79_0;
+                    if (!wo.field_o) {
                       break L26;
                     } else {
-                      stackOut_79_0 = (llb) (Object) stackIn_79_0;
-                      stackIn_81_0 = stackOut_79_0;
-                      stackIn_80_0 = stackOut_79_0;
-                      if (!wo.field_o) {
-                        break L26;
-                      } else {
-                        stackOut_80_0 = (llb) (Object) stackIn_80_0;
-                        stackOut_80_1 = 1;
-                        stackIn_82_0 = stackOut_80_0;
-                        stackIn_82_1 = stackOut_80_1;
-                        break L25;
-                      }
+                      stackOut_80_0 = (llb) (Object) stackIn_80_0;
+                      stackOut_80_1 = 1;
+                      stackIn_82_0 = stackOut_80_0;
+                      stackIn_82_1 = stackOut_80_1;
+                      break L25;
                     }
                   }
                 }
-                stackOut_81_0 = (llb) (Object) stackIn_81_0;
-                stackOut_81_1 = 0;
-                stackIn_82_0 = stackOut_81_0;
-                stackIn_82_1 = stackOut_81_1;
-                break L25;
               }
-              L27: {
-                ((llb) (Object) stackIn_82_0).a(stackIn_82_1 != 0, 1332);
-                hra.field_o.field_a.i(10000);
-                if (ohb.field_o == null) {
-                  break L27;
-                } else {
-                  L28: {
-                    if (nt.field_q.field_o != 0) {
-                      ts.a(false, param3);
-                      break L28;
-                    } else {
-                      break L28;
-                    }
+              stackOut_81_0 = (llb) (Object) stackIn_81_0;
+              stackOut_81_1 = 0;
+              stackIn_82_0 = stackOut_81_0;
+              stackIn_82_1 = stackOut_81_1;
+              break L25;
+            }
+            L27: {
+              ((llb) (Object) stackIn_82_0).a(stackIn_82_1 != 0, 1332);
+              hra.field_o.field_a.i(10000);
+              if (ohb.field_o == null) {
+                break L27;
+              } else {
+                L28: {
+                  if (nt.field_q.field_o != 0) {
+                    ts.a(false, param3);
+                    break L28;
+                  } else {
+                    break L28;
                   }
-                  L29: {
-                    if (qsa.field_b.field_o == 0) {
+                }
+                L29: {
+                  if (qsa.field_b.field_o == 0) {
+                    break L29;
+                  } else {
+                    if (ii.field_h) {
+                      stb.a(38, param3);
                       break L29;
                     } else {
-                      if (ii.field_h) {
-                        stb.a(38, param3);
-                        break L29;
-                      } else {
-                        mjb.a((byte) 108, param3);
-                        break L29;
-                      }
+                      mjb.a((byte) 108, param3);
+                      break L29;
                     }
                   }
-                  asb.a(param3, ohb.field_o, true, (byte) -67);
-                  break L27;
                 }
+                asb.a(param3, ohb.field_o, true, (byte) -67);
+                break L27;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var4, "soa.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) var4, "soa.C(" + param0 + 44 + -99 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -668,7 +659,7 @@ final class soa extends llb {
         ((soa) this).field_vb.a(((soa) this).field_wb.field_G, -((soa) this).field_wb.field_K, (byte) -126, ((soa) this).field_xb.field_G);
     }
 
-    private final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
+    private final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         int stackIn_8_0 = 0;
         int stackOut_6_0 = 0;

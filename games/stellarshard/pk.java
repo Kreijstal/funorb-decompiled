@@ -54,7 +54,7 @@ final class pk {
         }
     }
 
-    final static void a(String param0, String[] param1, int param2, byte param3) {
+    final static void a(String param0, String[] param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -182,43 +182,27 @@ final class pk {
     }
 
     final static void a(int param0) {
-        if (10 == eg.field_d) {
-          ki.f(107);
-          eg.field_d = 11;
-          if (param0 == 4) {
+        if (10 != eg.field_d) {
+          if (fa.a(-72)) {
             b.field_v = true;
             return;
           } else {
-            boolean discarded$6 = pk.a(105, -118);
+            int discarded$4 = 107;
+            ki.f();
+            eg.field_d = 11;
             b.field_v = true;
             return;
           }
         } else {
-          if (!fa.a(-72)) {
-            ki.f(107);
-            eg.field_d = 11;
-            if (param0 != 4) {
-              boolean discarded$7 = pk.a(105, -118);
-              b.field_v = true;
-              return;
-            } else {
-              b.field_v = true;
-              return;
-            }
-          } else {
-            if (param0 == 4) {
-              b.field_v = true;
-              return;
-            } else {
-              boolean discarded$8 = pk.a(105, -118);
-              b.field_v = true;
-              return;
-            }
-          }
+          int discarded$5 = 107;
+          ki.f();
+          eg.field_d = 11;
+          b.field_v = true;
+          return;
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_j = null;
         field_b = null;

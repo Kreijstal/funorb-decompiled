@@ -85,7 +85,7 @@ final class ej extends mc {
         return stackIn_3_0;
     }
 
-    final static void a(boolean param0, int param1, byte param2) {
+    final static void a(boolean param0) {
         int var3 = 0;
         int var4 = 0;
         String var5 = null;
@@ -124,7 +124,7 @@ final class ej extends mc {
                     if (ke.field_c != 0) {
                       break L1;
                     } else {
-                      var6 = (Object) (Object) qf.a((byte) 122, var5, param1);
+                      var6 = (Object) (Object) qf.a((byte) 122, var5, 13);
                       break L1;
                     }
                   }
@@ -132,13 +132,14 @@ final class ej extends mc {
                     if (ke.field_c != 1) {
                       break L2;
                     } else {
-                      var6 = (Object) (Object) ma.a(false, var5, param1);
+                      var6 = (Object) (Object) ma.a(false, var5, 13);
                       break L2;
                     }
                   }
                   L3: {
                     if (ke.field_c == 2) {
-                      var6 = (Object) (Object) li.a(param1, var5, 2);
+                      int discarded$1 = 2;
+                      var6 = (Object) (Object) li.a(13, var5);
                       break L3;
                     } else {
                       break L3;
@@ -146,7 +147,7 @@ final class ej extends mc {
                   }
                   L4: {
                     if (ke.field_c == 3) {
-                      var6 = (Object) (Object) aa.a(var5, param1, 2, var5);
+                      var6 = (Object) (Object) aa.a(var5, 13, 2, var5);
                       break L4;
                     } else {
                       break L4;
@@ -176,7 +177,7 @@ final class ej extends mc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_r = null;
         field_v = null;
         field_o = null;

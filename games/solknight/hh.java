@@ -25,15 +25,12 @@ final class hh extends pj {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 < 32) {
-            return;
-        }
+    public static void a() {
         field_N = null;
         field_J = null;
     }
 
-    final static ce a(String param0, boolean param1) {
+    final static ce a(String param0) {
         RuntimeException var2 = null;
         ce stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -238,51 +235,36 @@ final class hh extends pj {
 
     final static String a(boolean param0, java.applet.Applet param1) {
         try {
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
+            String var2 = null;
+            Throwable var2_ref = null;
+            RuntimeException var2_ref2 = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
             int var6 = 0;
             int var7 = 0;
             int var8 = 0;
-            String var9 = null;
-            String stackIn_4_0 = null;
-            int stackIn_4_1 = 0;
-            String stackIn_5_0 = null;
-            int stackIn_5_1 = 0;
             String stackIn_6_0 = null;
-            int stackIn_6_1 = 0;
-            int stackIn_6_2 = 0;
-            String stackIn_11_0 = null;
-            String stackIn_17_0 = null;
-            String stackIn_19_0 = null;
-            RuntimeException stackIn_21_0 = null;
-            StringBuilder stackIn_21_1 = null;
-            RuntimeException stackIn_22_0 = null;
-            StringBuilder stackIn_22_1 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
-            String stackIn_23_2 = null;
-            String stackOut_3_0 = null;
-            int stackOut_3_1 = 0;
-            String stackOut_4_0 = null;
-            int stackOut_4_1 = 0;
-            int stackOut_4_2 = 0;
+            String stackIn_12_0 = null;
+            String stackIn_14_0 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            String stackIn_18_2 = null;
             String stackOut_5_0 = null;
-            int stackOut_5_1 = 0;
-            int stackOut_5_2 = 0;
-            String stackOut_10_0 = null;
-            String stackOut_16_0 = null;
-            String stackOut_18_0 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            String stackOut_21_2 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
+            String stackOut_11_0 = null;
+            String stackOut_13_0 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            String stackOut_16_2 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
             int statePc = 0;
             Throwable caughtException = null;
             stateLoop: while (true) {
@@ -294,257 +276,181 @@ final class hh extends pj {
                     }
                     case 1: {
                         try {
-                            var9 = param1.getParameter("cookieprefix");
-                            var3 = var9 + "settings";
-                            if (!param0) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
+                            var2 = param1.getParameter("cookieprefix");
+                            var3 = var2 + "settings";
+                            var4 = (String) fd.a(param1, "getcookies", (byte) 116);
+                            int discarded$2 = 1;
+                            var5 = b.a(var4, ';');
+                            var6 = 0;
+                            statePc = 2;
                             continue stateLoop;
                         } catch (Throwable stateCaught_1) {
                             caughtException = stateCaught_1;
-                            statePc = 14;
+                            statePc = 9;
                             continue stateLoop;
                         }
                     }
                     case 2: {
                         try {
-                            hh.a((byte) -44);
-                            statePc = 3;
+                            if (var5.length <= var6) {
+                                statePc = 10;
+                            } else {
+                                statePc = 3;
+                            }
                             continue stateLoop;
                         } catch (Throwable stateCaught_2) {
                             caughtException = stateCaught_2;
-                            statePc = 14;
+                            statePc = 9;
                             continue stateLoop;
                         }
                     }
                     case 3: {
                         try {
-                            var4 = (String) fd.a(param1, "getcookies", (byte) 116);
-                            stackOut_3_0 = (String) var4;
-                            stackOut_3_1 = 59;
-                            stackIn_5_0 = stackOut_3_0;
-                            stackIn_5_1 = stackOut_3_1;
-                            stackIn_4_0 = stackOut_3_0;
-                            stackIn_4_1 = stackOut_3_1;
-                            if (param0) {
-                                statePc = 5;
+                            var7 = var5[var6].indexOf('=');
+                            if (0 > var7) {
+                                statePc = 7;
                             } else {
                                 statePc = 4;
                             }
                             continue stateLoop;
                         } catch (Throwable stateCaught_3) {
                             caughtException = stateCaught_3;
-                            statePc = 14;
+                            statePc = 9;
                             continue stateLoop;
                         }
                     }
                     case 4: {
                         try {
-                            stackOut_4_0 = (String) (Object) stackIn_4_0;
-                            stackOut_4_1 = stackIn_4_1;
-                            stackOut_4_2 = 1;
-                            stackIn_6_0 = stackOut_4_0;
-                            stackIn_6_1 = stackOut_4_1;
-                            stackIn_6_2 = stackOut_4_2;
-                            statePc = 6;
+                            if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
+                                statePc = 7;
+                            } else {
+                                statePc = 5;
+                            }
                             continue stateLoop;
                         } catch (Throwable stateCaught_4) {
                             caughtException = stateCaught_4;
-                            statePc = 14;
+                            statePc = 9;
                             continue stateLoop;
                         }
                     }
                     case 5: {
                         try {
-                            stackOut_5_0 = (String) (Object) stackIn_5_0;
-                            stackOut_5_1 = stackIn_5_1;
-                            stackOut_5_2 = 0;
+                            stackOut_5_0 = var5[var6].substring(var7 - -1).trim();
                             stackIn_6_0 = stackOut_5_0;
-                            stackIn_6_1 = stackOut_5_1;
-                            stackIn_6_2 = stackOut_5_2;
                             statePc = 6;
                             continue stateLoop;
                         } catch (Throwable stateCaught_5) {
                             caughtException = stateCaught_5;
-                            statePc = 14;
+                            statePc = 9;
                             continue stateLoop;
                         }
                     }
                     case 6: {
-                        try {
-                            var5 = b.a(stackIn_6_0, (char) stackIn_6_1, stackIn_6_2 != 0);
-                            var6 = 0;
-                            statePc = 7;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 14;
-                            continue stateLoop;
-                        }
+                        return stackIn_6_0;
                     }
                     case 7: {
                         try {
-                            if (var5.length <= var6) {
-                                statePc = 15;
-                            } else {
-                                statePc = 8;
-                            }
+                            var6++;
+                            statePc = 2;
                             continue stateLoop;
                         } catch (Throwable stateCaught_7) {
                             caughtException = stateCaught_7;
-                            statePc = 14;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            var7 = var5[var6].indexOf('=');
-                            if (0 > var7) {
-                                statePc = 12;
-                            } else {
-                                statePc = 9;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 14;
+                            statePc = 9;
                             continue stateLoop;
                         }
                     }
                     case 9: {
                         try {
-                            if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
-                                statePc = 12;
-                            } else {
-                                statePc = 10;
-                            }
+                            var2_ref = caughtException;
+                            statePc = 10;
                             continue stateLoop;
                         } catch (Throwable stateCaught_9) {
                             caughtException = stateCaught_9;
-                            statePc = 14;
+                            statePc = 15;
                             continue stateLoop;
                         }
                     }
                     case 10: {
                         try {
-                            stackOut_10_0 = var5[var6].substring(var7 - -1).trim();
-                            stackIn_11_0 = stackOut_10_0;
-                            statePc = 11;
+                            if (td.field_i == null) {
+                                statePc = 13;
+                            } else {
+                                statePc = 11;
+                            }
                             continue stateLoop;
                         } catch (Throwable stateCaught_10) {
                             caughtException = stateCaught_10;
-                            statePc = 14;
+                            statePc = 15;
                             continue stateLoop;
                         }
                     }
                     case 11: {
-                        return stackIn_11_0;
+                        try {
+                            stackOut_11_0 = td.field_i;
+                            stackIn_12_0 = stackOut_11_0;
+                            statePc = 12;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_11) {
+                            caughtException = stateCaught_11;
+                            statePc = 15;
+                            continue stateLoop;
+                        }
                     }
                     case 12: {
+                        return stackIn_12_0;
+                    }
+                    case 13: {
                         try {
-                            var6++;
-                            statePc = 7;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
+                            stackOut_13_0 = param1.getParameter("settings");
+                            stackIn_14_0 = stackOut_13_0;
                             statePc = 14;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_13) {
+                            caughtException = stateCaught_13;
+                            statePc = 15;
                             continue stateLoop;
                         }
                     }
                     case 14: {
-                        try {
-                            var2 = caughtException;
-                            statePc = 15;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_14) {
-                            caughtException = stateCaught_14;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
+                        return stackIn_14_0;
                     }
                     case 15: {
-                        try {
-                            if (td.field_i == null) {
-                                statePc = 18;
-                            } else {
-                                statePc = 16;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = 20;
-                            continue stateLoop;
+                        var2_ref2 = (RuntimeException) (Object) caughtException;
+                        stackOut_15_0 = (RuntimeException) var2_ref2;
+                        stackOut_15_1 = new StringBuilder().append("hh.D(").append(0).append(44);
+                        stackIn_17_0 = stackOut_15_0;
+                        stackIn_17_1 = stackOut_15_1;
+                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_1 = stackOut_15_1;
+                        if (param1 == null) {
+                            statePc = 17;
+                        } else {
+                            statePc = 16;
                         }
+                        continue stateLoop;
                     }
                     case 16: {
-                        try {
-                            stackOut_16_0 = td.field_i;
-                            stackIn_17_0 = stackOut_16_0;
-                            statePc = 17;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
+                        stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                        stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                        stackOut_16_2 = "{...}";
+                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_1 = stackOut_16_1;
+                        stackIn_18_2 = stackOut_16_2;
+                        statePc = 18;
+                        continue stateLoop;
                     }
                     case 17: {
-                        return stackIn_17_0;
+                        stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                        stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                        stackOut_17_2 = "null";
+                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_1 = stackOut_17_1;
+                        stackIn_18_2 = stackOut_17_2;
+                        statePc = 18;
+                        continue stateLoop;
                     }
                     case 18: {
-                        try {
-                            stackOut_18_0 = param1.getParameter("settings");
-                            stackIn_19_0 = stackOut_18_0;
-                            statePc = 19;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        return stackIn_19_0;
-                    }
-                    case 20: {
-                        var2_ref = (RuntimeException) (Object) caughtException;
-                        stackOut_20_0 = (RuntimeException) var2_ref;
-                        stackOut_20_1 = new StringBuilder().append("hh.D(").append(param0).append(44);
-                        stackIn_22_0 = stackOut_20_0;
-                        stackIn_22_1 = stackOut_20_1;
-                        stackIn_21_0 = stackOut_20_0;
-                        stackIn_21_1 = stackOut_20_1;
-                        if (param1 == null) {
-                            statePc = 22;
-                        } else {
-                            statePc = 21;
-                        }
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-                        stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-                        stackOut_21_2 = "{...}";
-                        stackIn_23_0 = stackOut_21_0;
-                        stackIn_23_1 = stackOut_21_1;
-                        stackIn_23_2 = stackOut_21_2;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                    case 22: {
-                        stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-                        stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-                        stackOut_22_2 = "null";
-                        stackIn_23_0 = stackOut_22_0;
-                        stackIn_23_1 = stackOut_22_1;
-                        stackIn_23_2 = stackOut_22_2;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                    case 23: {
-                        throw fc.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+                        throw fc.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

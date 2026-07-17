@@ -1039,7 +1039,8 @@ abstract class lh extends l {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_O = bb.a(var7, 86, 16);
+                                    int discarded$4 = 16;
+                                    field_O = bb.a(var7, 86);
                                     break L1;
                                   }
                                 } else {
@@ -1052,7 +1053,8 @@ abstract class lh extends l {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_y = bb.a(var6, 86, 16);
+                              int discarded$5 = 16;
+                              field_y = bb.a(var6, 86);
                               break L1;
                             }
                           } else {
@@ -1065,7 +1067,8 @@ abstract class lh extends l {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_B = bb.a(var5, 120, 16);
+                        int discarded$6 = 16;
+                        field_B = bb.a(var5, 120);
                         break L1;
                       }
                     } else {
@@ -1083,7 +1086,8 @@ abstract class lh extends l {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_r = bb.a(var3, 90, 16);
+                int discarded$7 = 16;
+                field_r = bb.a(var3, 90);
                 break L1;
               }
             }

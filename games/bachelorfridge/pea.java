@@ -60,7 +60,7 @@ final class pea extends pp {
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

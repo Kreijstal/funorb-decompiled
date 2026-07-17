@@ -59,7 +59,7 @@ final class na implements Iterator {
         ij.a(-1, "", (String) null);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
     }

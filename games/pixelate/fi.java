@@ -565,76 +565,41 @@ final class fi {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+    final static void a(int param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var11 = 0;
+        int var8 = 0;
+        int var9 = 0;
         int var12 = 0;
-        L0: {
-          if (param0 >= t.field_e) {
-            break L0;
-          } else {
+        if (param0 < t.field_e) {
             param2 = param2 - (t.field_e - param0);
             param0 = t.field_e;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 >= t.field_f) {
-            break L1;
-          } else {
+        if (param1 < t.field_f) {
             param3 = param3 - (t.field_f - param1);
             param1 = t.field_f;
-            break L1;
-          }
         }
-        L2: {
-          if (param0 + param2 <= t.field_h) {
-            break L2;
-          } else {
+        if (param0 + param2 > t.field_h) {
             param2 = t.field_h - param0;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + param3 <= t.field_a) {
-            break L3;
-          } else {
+        if (param1 + param3 > t.field_a) {
             param3 = t.field_a - param1;
-            break L3;
-          }
         }
-        var6 = t.field_j - param2;
-        var7 = param0 + param1 * t.field_j;
-        var10 = -param3;
-        L4: while (true) {
-          if (var10 >= 0) {
-            return;
-          } else {
-            var11 = -param2;
-            L5: while (true) {
-              if (var11 >= 0) {
-                var7 = var7 + var6;
-                var10++;
-                continue L4;
-              } else {
-                var8 = (param4 & 16711935) * 40;
-                var9 = (var8 & -16711936) + (param4 * 40 - var8 & 16711680) >>> 8;
+        int var6 = t.field_j - param2;
+        int var7 = param0 + param1 * t.field_j;
+        for (var10 = -param3; var10 < 0; var10++) {
+            for (var11 = -param2; var11 < 0; var11++) {
+                var8 = 668477400;
+                var9 = (var8 & -16711936) + (671088600 - var8 & 16711680) >>> 8;
                 var8 = t.field_k[var7];
                 var12 = var9 + var8;
                 var9 = (var9 & 16711935) + (var8 & 16711935);
                 var8 = (var9 & 16777472) + (var12 - var9 & 65536);
-                int incrementValue$1 = var7;
+                int incrementValue$0 = var7;
                 var7++;
-                t.field_k[incrementValue$1] = var12 - var8 | var8 - (var8 >>> 8);
-                var11++;
-                continue L5;
-              }
+                t.field_k[incrementValue$0] = var12 - var8 | var8 - (var8 >>> 8);
             }
-          }
+            var7 = var7 + var6;
         }
     }
 
@@ -850,8 +815,8 @@ final class fi {
     }
 
     final static void a(jl param0, String param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        param0.b(param1, param4, param5, param6, param7, param8);
-        param0.b(param2, param4 + param3, param5, param6, param7, param8);
+        param0.b(param1, 30, param5, 0, -1, param8);
+        param0.b(param2, 30 + param3, param5, 0, -1, param8);
     }
 
     final static tf a(int param0) {

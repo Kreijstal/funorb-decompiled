@@ -68,7 +68,8 @@ final class qh extends vo {
                       break L5;
                     } else {
                       var3_int = 0;
-                      jp.a((byte) -70);
+                      int discarded$2 = -70;
+                      jp.a();
                       break L5;
                     }
                   }
@@ -158,14 +159,11 @@ final class qh extends vo {
             e.field_S.a((ga) (Object) vi.field_c, true);
         }
         vi.field_c.a(param3, param0, (byte) -97, param1);
-        if (param2 >= -18) {
-            return;
-        }
         try {
             bi.d();
             rc.a(true, (byte) -63);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "qh.M(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "qh.M(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -92 + 44 + param3 + 41);
         }
     }
 

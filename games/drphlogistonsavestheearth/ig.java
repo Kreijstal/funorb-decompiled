@@ -238,11 +238,11 @@ final class ig extends gi {
         return param0 & 255;
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         return vi.field_e;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_o = null;
         field_i = null;
         field_t = null;

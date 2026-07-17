@@ -118,11 +118,12 @@ final class ta extends pk {
 
     final void a(int param0) {
         int var2 = 80 / ((param0 - 24) / 51);
-        this.d((byte) 19);
+        int discarded$0 = 19;
+        this.d();
         ((ta) this).field_n = wh.field_f == 1 ? true : false;
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         int var3 = 0;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
@@ -382,7 +383,8 @@ final class ta extends pk {
               bb.field_d.a((o) (Object) param0, (byte) -43);
               return;
             } else {
-              he.a((o) (Object) param0, (o) (Object) var2, true);
+              int discarded$2 = 1;
+              he.a((o) (Object) param0, (o) (Object) var2);
               return;
             }
           }

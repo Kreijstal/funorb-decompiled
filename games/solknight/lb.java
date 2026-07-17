@@ -36,22 +36,19 @@ final class lb extends ld {
         }
     }
 
-    final static boolean g(byte param0) {
+    final static boolean g() {
         rh.field_f = true;
         kj.field_I = je.a(1) - -15000L;
         return fj.field_i == 11 ? true : false;
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_T = null;
         field_W = null;
-        if (param0 <= 118) {
-            return;
-        }
         field_V = null;
     }
 
-    final static boolean b(java.applet.Applet param0, int param1) {
+    final static boolean b(java.applet.Applet param0) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -135,7 +132,8 @@ final class lb extends ld {
                         try {
                             var2 = "tuhstatbut";
                             var3 = (String) fd.a(param0, "getcookies", (byte) 94);
-                            var4 = b.a(var3, ';', true);
+                            int discarded$2 = 1;
+                            var4 = b.a(var3, ';');
                             var5 = 0;
                             statePc = 6;
                             continue stateLoop;
@@ -347,7 +345,7 @@ final class lb extends ld {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var6 = new o(0, param4);
+            var6 = new o(0, 0);
             var6.field_t = param1.field_t;
             var6.field_p = param1.field_p;
             var6.field_r = param1.field_r - (-param5 + -param0);
@@ -387,7 +385,7 @@ final class lb extends ld {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
         }
         return stackIn_1_0;
     }

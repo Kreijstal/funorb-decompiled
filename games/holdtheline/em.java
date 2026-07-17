@@ -17,155 +17,69 @@ final class em extends gd {
           if (kf.field_U == null) {
             if (of.a(-969)) {
               if (hf.a(wi.field_b, 0)) {
-                kf.field_U = oc.a(0, 0, 480, -123, wi.field_b, 640);
+                int discarded$2 = 640;
+                kf.field_U = oc.a(0, 0, 480, -123, wi.field_b);
                 if (null != kf.field_U) {
-                  am.a((java.awt.Canvas) (Object) kf.field_U, 114);
-                  if (HoldTheLine.field_D != 0) {
-                    L0: {
-                      if (param1) {
-                        break L0;
-                      } else {
-                        if (kf.field_U != null) {
-                          om.a(-46342, (java.awt.Canvas) (Object) kf.field_U);
-                          kd.field_b.requestFocus();
-                          kf.field_U.a(wi.field_b, param0 ^ -29472);
-                          kf.field_U = null;
-                          break L0;
-                        } else {
-                          if (param0 == -29486) {
-                            return;
-                          } else {
-                            String discarded$12 = em.b(true);
-                            return;
-                          }
-                        }
-                      }
-                    }
-                    if (param0 == -29486) {
-                      return;
-                    } else {
-                      String discarded$13 = em.b(true);
-                      return;
-                    }
-                  } else {
-                    if (param0 == -29486) {
-                      return;
-                    } else {
-                      String discarded$14 = em.b(true);
-                      return;
-                    }
-                  }
+                  int discarded$3 = 114;
+                  am.a((java.awt.Canvas) (Object) kf.field_U);
+                  return;
                 } else {
-                  if (param0 == -29486) {
-                    return;
-                  } else {
-                    String discarded$15 = em.b(true);
-                    return;
-                  }
+                  return;
                 }
               } else {
-                L1: {
-                  if (param1) {
-                    break L1;
+                if (!param1) {
+                  if (kf.field_U == null) {
+                    return;
                   } else {
-                    if (kf.field_U != null) {
-                      om.a(-46342, (java.awt.Canvas) (Object) kf.field_U);
-                      kd.field_b.requestFocus();
-                      kf.field_U.a(wi.field_b, param0 ^ -29472);
-                      kf.field_U = null;
-                      break L1;
-                    } else {
-                      if (param0 != -29486) {
-                        String discarded$16 = em.b(true);
-                        return;
-                      } else {
-                        return;
-                      }
-                    }
+                    om.a(-46342, (java.awt.Canvas) (Object) kf.field_U);
+                    kd.field_b.requestFocus();
+                    kf.field_U.a(wi.field_b, 50);
+                    kf.field_U = null;
+                    return;
                   }
-                }
-                if (param0 != -29486) {
-                  String discarded$17 = em.b(true);
-                  return;
                 } else {
                   return;
                 }
               }
             } else {
-              L2: {
-                if (param1) {
-                  break L2;
+              if (!param1) {
+                if (kf.field_U == null) {
+                  return;
                 } else {
-                  if (kf.field_U != null) {
-                    om.a(-46342, (java.awt.Canvas) (Object) kf.field_U);
-                    kd.field_b.requestFocus();
-                    kf.field_U.a(wi.field_b, param0 ^ -29472);
-                    kf.field_U = null;
-                    break L2;
-                  } else {
-                    if (param0 != -29486) {
-                      String discarded$18 = em.b(true);
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
+                  om.a(-46342, (java.awt.Canvas) (Object) kf.field_U);
+                  kd.field_b.requestFocus();
+                  kf.field_U.a(wi.field_b, 50);
+                  kf.field_U = null;
+                  return;
                 }
-              }
-              if (param0 != -29486) {
-                String discarded$19 = em.b(true);
-                return;
               } else {
                 return;
               }
             }
           } else {
-            L3: {
-              if (param1) {
-                break L3;
+            if (!param1) {
+              if (kf.field_U == null) {
+                return;
               } else {
-                if (kf.field_U != null) {
-                  om.a(-46342, (java.awt.Canvas) (Object) kf.field_U);
-                  kd.field_b.requestFocus();
-                  kf.field_U.a(wi.field_b, param0 ^ -29472);
-                  kf.field_U = null;
-                  break L3;
-                } else {
-                  if (param0 != -29486) {
-                    String discarded$20 = em.b(true);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
+                om.a(-46342, (java.awt.Canvas) (Object) kf.field_U);
+                kd.field_b.requestFocus();
+                kf.field_U.a(wi.field_b, 50);
+                kf.field_U = null;
+                return;
               }
-            }
-            if (param0 != -29486) {
-              String discarded$21 = em.b(true);
-              return;
             } else {
               return;
             }
           }
         } else {
-          if (kf.field_U != null) {
+          if (kf.field_U == null) {
+            return;
+          } else {
             om.a(-46342, (java.awt.Canvas) (Object) kf.field_U);
             kd.field_b.requestFocus();
-            kf.field_U.a(wi.field_b, param0 ^ -29472);
+            kf.field_U.a(wi.field_b, 50);
             kf.field_U = null;
-            if (param0 != -29486) {
-              String discarded$22 = em.b(true);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (param0 != -29486) {
-              String discarded$23 = em.b(true);
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         }
     }
@@ -201,7 +115,8 @@ final class em extends gd {
         try {
           L0: {
             var5 = (CharSequence) (Object) param0;
-            if (!ik.a(var5, true)) {
+            int discarded$11 = 1;
+            if (!ik.a(var5)) {
               stackOut_2_0 = g.field_k;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -213,7 +128,7 @@ final class em extends gd {
                   break L1;
                 } else {
                   var4 = null;
-                  fd discarded$2 = ((em) this).a((String) null, (byte) 76);
+                  fd discarded$12 = ((em) this).a((String) null, (byte) 76);
                   break L1;
                 }
               }
@@ -268,7 +183,7 @@ final class em extends gd {
         return stackIn_12_0;
     }
 
-    final static String b(boolean param0) {
+    final static String b() {
         String var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -277,12 +192,7 @@ final class em extends gd {
         String var6 = null;
         String var7 = null;
         String var8 = null;
-        String stackIn_6_0 = null;
-        String stackIn_16_0 = null;
-        String stackOut_5_0 = null;
-        String stackOut_15_0 = null;
         var5 = HoldTheLine.field_D;
-        field_o = true;
         var6 = "(" + ab.field_pb + " " + hc.field_e + " " + rd.field_l + ") " + vn.field_c;
         if (ad.field_c > 0) {
           var1 = var6 + ":";
@@ -290,61 +200,31 @@ final class em extends gd {
           L0: while (true) {
             if (ad.field_c > var2) {
               L1: {
-                stackOut_5_0 = var1 + 32;
-                stackIn_16_0 = stackOut_5_0;
-                stackIn_6_0 = stackOut_5_0;
-                if (var5 != 0) {
+                var7 = var1 + 32;
+                var3 = rd.field_e.field_i[var2] & 255;
+                var4 = var3 >> 4;
+                if (10 <= var4) {
+                  var4 += 55;
                   break L1;
                 } else {
-                  L2: {
-                    L3: {
-                      var7 = stackIn_6_0;
-                      var3 = rd.field_e.field_i[var2] & 255;
-                      var4 = var3 >> 4;
-                      if (10 <= var4) {
-                        break L3;
-                      } else {
-                        var4 += 48;
-                        if (var5 == 0) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    var4 += 55;
-                    break L2;
-                  }
-                  L4: {
-                    L5: {
-                      var3 = var3 & 15;
-                      var8 = var7 + (char)var4;
-                      if (var3 < 10) {
-                        break L5;
-                      } else {
-                        var3 += 55;
-                        if (var5 == 0) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    var3 += 48;
-                    break L4;
-                  }
-                  var1 = var8 + (char)var3;
-                  var2++;
-                  if (var5 == 0) {
-                    continue L0;
-                  } else {
-                    stackOut_15_0 = (String) var1;
-                    stackIn_16_0 = stackOut_15_0;
-                    break L1;
-                  }
+                  var4 += 48;
+                  break L1;
                 }
               }
-              return stackIn_16_0;
+              L2: {
+                var3 = var3 & 15;
+                var8 = var7 + (char)var4;
+                if (var3 < 10) {
+                  var3 += 48;
+                  break L2;
+                } else {
+                  var3 += 55;
+                  break L2;
+                }
+              }
+              var1 = var8 + (char)var3;
+              var2++;
+              continue L0;
             } else {
               return var1;
             }
@@ -354,73 +234,61 @@ final class em extends gd {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_n = null;
         field_k = null;
         field_m = null;
-        int var1 = -100 % ((param0 - -65) / 53);
+        int var1 = 0;
         field_i = null;
     }
 
-    final static int a(boolean param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_25_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_23_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_22_0 = 0;
         var2 = HoldTheLine.field_D;
         try {
           L0: {
-            boolean discarded$12 = ka.field_b.a(go.field_e, lh.field_b, param0, false);
+            boolean discarded$12 = ka.field_b.a(go.field_e, lh.field_b, true, false);
             ka.field_b.g((byte) -59);
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (!qh.c(-99)) {
-                    break L3;
-                  } else {
-                    boolean discarded$13 = ka.field_b.a(aa.field_n, pk.field_M, (byte) 108);
-                    if (var2 != 0) {
-                      break L2;
-                    } else {
-                      if (var2 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
+              if (!qh.c(-99)) {
                 if (-1 != v.field_B) {
-                  break L2;
+                  var1_int = v.field_B;
+                  go.a(0, -1);
+                  stackOut_6_0 = var1_int;
+                  stackIn_7_0 = stackOut_6_0;
+                  return stackIn_7_0;
                 } else {
                   if (aa.field_k) {
-                    stackOut_12_0 = 3;
-                    stackIn_13_0 = stackOut_12_0;
-                    return stackIn_13_0;
+                    stackOut_10_0 = 3;
+                    stackIn_11_0 = stackOut_10_0;
+                    return stackIn_11_0;
                   } else {
                     if (ak.field_b == sf.field_n) {
-                      stackOut_16_0 = 1;
-                      stackIn_17_0 = stackOut_16_0;
-                      return stackIn_17_0;
+                      stackOut_14_0 = 1;
+                      stackIn_15_0 = stackOut_14_0;
+                      return stackIn_15_0;
                     } else {
                       if (!fj.field_o.a(250)) {
-                        stackOut_20_0 = 1;
-                        stackIn_21_0 = stackOut_20_0;
-                        return stackIn_21_0;
+                        stackOut_18_0 = 1;
+                        stackIn_19_0 = stackOut_18_0;
+                        return stackIn_19_0;
                       } else {
                         if (bb.field_a == sf.field_n) {
-                          stackOut_24_0 = 2;
-                          stackIn_25_0 = stackOut_24_0;
+                          stackOut_22_0 = 2;
+                          stackIn_23_0 = stackOut_22_0;
                           break L0;
                         } else {
                           return -1;
@@ -429,20 +297,18 @@ final class em extends gd {
                     }
                   }
                 }
+              } else {
+                boolean discarded$13 = ka.field_b.a(aa.field_n, pk.field_M, (byte) 108);
+                continue L1;
               }
-              var1_int = v.field_B;
-              go.a(0, -1);
-              stackOut_8_0 = var1_int;
-              stackIn_9_0 = stackOut_8_0;
-              return stackIn_9_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "em.V(" + param0 + 41);
+          throw kk.a((Throwable) (Object) var1, "em.V(" + 1 + 41);
         }
-        return stackIn_25_0;
+        return stackIn_23_0;
     }
 
     final String a(String param0, boolean param1) {

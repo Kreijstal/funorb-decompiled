@@ -10,7 +10,7 @@ final class p {
     static int[] field_f;
     static fi field_d;
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -30,14 +30,6 @@ final class p {
                 var1_int = var5;
                 L2: while (true) {
                   if (sd.field_e.length <= var5) {
-                    L3: {
-                      if (param0 == -68) {
-                        break L3;
-                      } else {
-                        field_g = 120;
-                        break L3;
-                      }
-                    }
                     break L0;
                   } else {
                     sd.field_e[var5] = 255;
@@ -56,7 +48,7 @@ final class p {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "p.B(" + param0 + 41);
+          throw sd.a((Throwable) (Object) var1, "p.B(" + -68 + 41);
         }
     }
 

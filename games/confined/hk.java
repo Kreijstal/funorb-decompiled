@@ -150,7 +150,7 @@ final class hk implements fe {
         }
     }
 
-    final static int a(int param0) {
+    final static int a() {
         return wc.field_Ob;
     }
 

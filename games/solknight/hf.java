@@ -257,7 +257,7 @@ final class hf {
                                 }
                               }
                               if (var37 < 0) {
-                                da.a(var37 + var38, param6 ^ 1517200866, param12, var40, var41, var39, -(var37 * var40) + var25, var36, -(var41 * var37) + var29, -(var39 * var37) + var21);
+                                da.a(var37 + var38, 114, param12, var40, var41, var39, -(var37 * var40) + var25, var36, -(var41 * var37) + var29, -(var39 * var37) + var21);
                                 break L9;
                               } else {
                                 da.a(var38, 88, param12, var40, var41, var39, var25, var37 + var36, var29, var21);
@@ -330,16 +330,8 @@ final class hf {
                 }
               }
               L12: {
-                if (param6 == 1517200784) {
-                  break L12;
-                } else {
-                  field_c = null;
-                  break L12;
-                }
-              }
-              L13: {
                 if (param4 >= 0) {
-                  break L13;
+                  break L12;
                 } else {
                   param4 = -param4;
                   var21 = var21 + param4 * var23;
@@ -351,51 +343,51 @@ final class hf {
                   var18 = var18 + param4 * var20;
                   var17_int = var17_int + var19 * param4;
                   param4 = 0;
-                  break L13;
+                  break L12;
                 }
               }
               var35 = hk.field_d[param4];
-              L14: while (true) {
+              L13: while (true) {
                 if (~param4 <= ~param8) {
                   return;
                 } else {
-                  L15: {
+                  L14: {
                     var36 = var17_int >> 16;
                     if (~hk.field_i < ~var36) {
                       var37 = -(var17_int >> 16) + (var18 >> 16);
                       if (var37 != 0) {
-                        L16: {
+                        L15: {
                           var38 = (var22 - var21) / var37;
                           var39 = (var26 - var25) / var37;
                           var40 = (-var29 + var30) / var37;
                           if (hk.field_i > var36 + var37) {
-                            break L16;
+                            break L15;
                           } else {
                             var37 = hk.field_i + -var36 - 1;
-                            break L16;
+                            break L15;
                           }
                         }
                         if (var36 >= 0) {
-                          da.a(var37, param6 ^ 1517200837, param12, var39, var40, var38, var25, var36 - -var35, var29, var21);
-                          break L15;
+                          da.a(var37, 85, param12, var39, var40, var38, var25, var36 - -var35, var29, var21);
+                          break L14;
                         } else {
                           da.a(var37 + var36, 112, param12, var39, var40, var38, -(var36 * var39) + var25, var35, var29 + -(var36 * var40), -(var38 * var36) + var21);
-                          break L15;
+                          break L14;
                         }
                       } else {
                         if (var36 < 0) {
-                          break L15;
+                          break L14;
                         } else {
                           if (~var36 > ~hk.field_i) {
-                            da.a(var37, param6 + -1517200669, param12, 0, 0, 0, var25, var36 + var35, var29, var21);
-                            break L15;
+                            da.a(var37, 115, param12, 0, 0, 0, var25, var36 + var35, var29, var21);
+                            break L14;
                           } else {
-                            break L15;
+                            break L14;
                           }
                         }
                       }
                     } else {
-                      break L15;
+                      break L14;
                     }
                   }
                   param4++;
@@ -411,7 +403,7 @@ final class hf {
                     var22 = var22 + var24;
                     var25 = var25 + var27;
                     var30 = var30 + var32;
-                    continue L14;
+                    continue L13;
                   }
                 }
               }
@@ -422,7 +414,7 @@ final class hf {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
     }
@@ -471,7 +463,8 @@ final class hf {
 
     final static void a(boolean param0, int param1, boolean param2, String param3) {
         try {
-            k.a((byte) -35);
+            int discarded$0 = -35;
+            k.a();
             u.field_b.j(param1 ^ 17073);
             ve.field_a = new bb(me.field_h, (String) null, k.field_b, param0, param2);
             if (param1 != 17072) {

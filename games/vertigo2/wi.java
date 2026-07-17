@@ -10,7 +10,7 @@ final class wi extends v {
     private String field_i;
     static boolean[] field_h;
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         int var1 = 81;
         field_j = null;

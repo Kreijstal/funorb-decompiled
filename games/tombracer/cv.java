@@ -256,7 +256,7 @@ final class cv extends dg {
         }
     }
 
-    public static void n(byte param0) {
+    public static void n() {
         field_r = null;
         field_m = null;
     }
@@ -2478,7 +2478,8 @@ final class cv extends dg {
 
     final static void o(byte param0) {
         wp.a(-1);
-        rda.d((byte) -128);
+        int discarded$0 = -128;
+        rda.d();
         fj.field_c = null;
         int var1 = 43 / ((param0 - -55) / 48);
         f.b(-68);

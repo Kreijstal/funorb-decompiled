@@ -16,7 +16,7 @@ final class fk extends gi {
     int field_i;
     static String field_r;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         field_p = null;
         field_r = null;
@@ -54,11 +54,12 @@ final class fk extends gi {
                 break L1;
               } else {
                 var5 = null;
-                nh discarded$2 = fk.a(-100, (vj) null, -21, -59);
+                nh discarded$9 = fk.a(-100, (vj) null, -21, -59);
                 break L1;
               }
             }
-            if (fl.a(param2, param1, param0, (byte) -98)) {
+            int discarded$10 = -98;
+            if (fl.a(param2, param1, param0)) {
               stackOut_5_0 = ta.a(param3 ^ 16732209);
               stackIn_6_0 = stackOut_5_0;
               break L0;
@@ -168,7 +169,7 @@ final class fk extends gi {
                           continue L6;
                         } else {
                           var9 = wj.field_l[var6_int];
-                          if (param3 >= (255 & var9 >> 8)) {
+                          if (64 >= (255 & var9 >> 8)) {
                             var6_int++;
                             param5++;
                             continue L7;
@@ -210,7 +211,7 @@ final class fk extends gi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var6, "fk.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ie.a((Throwable) (Object) var6, "fk.C(" + param0 + 44 + param1 + 44 + param2 + 44 + 64 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

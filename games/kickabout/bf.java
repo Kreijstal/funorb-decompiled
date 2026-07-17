@@ -565,7 +565,7 @@ final class bf extends hs {
                 L4: {
                   if (((bf) this).field_o.field_sb == 1) {
                     this.i(74, -1);
-                    wh discarded$1 = sp.c(61, 47);
+                    wh discarded$2 = sp.c(61, 47);
                     break L4;
                   } else {
                     break L4;
@@ -633,7 +633,8 @@ final class bf extends hs {
                 }
                 if (((bf) this).field_p != var3) {
                   L9: {
-                    var7 = this.h(var3, 3);
+                    int discarded$3 = 3;
+                    var7 = this.h(var3);
                     var8 = this.a((byte) 116, var3);
                     if (var7 != var11.field_s) {
                       L10: {
@@ -757,7 +758,7 @@ final class bf extends hs {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_m = null;
         field_s = null;
         field_n = null;
@@ -767,7 +768,7 @@ final class bf extends hs {
         int var1 = 19;
     }
 
-    final static void a(tv param0, byte param1) {
+    final static void a(tv param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -921,7 +922,8 @@ final class bf extends hs {
               if (param0.field_c != 0) {
                 break L2;
               } else {
-                if (wm.c((byte) -121)) {
+                int discarded$2 = -121;
+                if (wm.c()) {
                   break L2;
                 } else {
                   if (null != uv.field_i) {
@@ -953,7 +955,8 @@ final class bf extends hs {
               if (param0.field_c != 1) {
                 break L4;
               } else {
-                if (wm.c((byte) -121)) {
+                int discarded$3 = -121;
+                if (wm.c()) {
                   break L4;
                 } else {
                   if (uv.field_i == null) {
@@ -1487,7 +1490,7 @@ final class bf extends hs {
         }
     }
 
-    private final int h(int param0, int param1) {
+    private final int h(int param0) {
         int var3 = this.g(param0, 0);
         if (-1 == var3) {
             return ((bf) this).field_A.field_F + 52 * (param0 % 3);
@@ -1497,9 +1500,6 @@ final class bf extends hs {
 
     private final void i(int param0, int param1) {
         ((bf) this).field_a.a(wd.a(18238, ((bf) this).field_k, tu.field_E, param1, ((bf) this).field_g), -121);
-        if (param0 != 74) {
-            return;
-        }
         if (((bf) this).field_f) {
             or.field_d.b(74, (byte) 121);
             or.field_d.g(-1207444472, param1);
@@ -1615,7 +1615,8 @@ final class bf extends hs {
                         break L2;
                       } else {
                         ((bf) this).field_j[var7] = new kq();
-                        ((bf) this).field_j[var7].a(true, 52, this.h(var7, 3), this.a((byte) 113, var7), 75);
+                        int discarded$1 = 3;
+                        ((bf) this).field_j[var7].a(true, 52, this.h(var7), this.a((byte) 113, var7), 75);
                         ((bf) this).field_j[var7].field_F = ((bf) this).field_j[var7].field_s;
                         ((bf) this).field_j[var7].field_T = ((bf) this).field_j[var7].field_J;
                         ((bf) this).field_q.a((byte) -125, (hd) (Object) ((bf) this).field_j[var7]);

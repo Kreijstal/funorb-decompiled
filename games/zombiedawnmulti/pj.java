@@ -9,7 +9,7 @@ final class pj extends se implements co, in {
     private gn field_G;
     static String field_J;
 
-    private final String a(int param0) {
+    private final String a() {
         return "</col></u>";
     }
 
@@ -121,6 +121,8 @@ final class pj extends se implements co, in {
             ((pj) this).field_H = param0;
             ((pj) this).field_G = new gn(ub.field_xb, (bj) null);
             ((pj) this).field_G.field_h = (nl) (Object) new oq();
+            int discarded$2 = -1;
+            int discarded$3 = 111;
             var7 = vl.a(ng.field_a, new String[2], 2);
             var3 = 20;
             var4 = new hq(ke.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
@@ -173,13 +175,13 @@ final class pj extends se implements co, in {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_K = null;
         field_I = null;
         field_J = null;
     }
 
-    private final String h(int param0) {
+    private final String h() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -480,7 +482,8 @@ final class pj extends se implements co, in {
           L0: {
             L1: {
               if (param2 == ((pj) this).field_G) {
-                va.a((byte) 62);
+                int discarded$2 = 62;
+                va.a();
                 ((pj) this).field_H.m(-7435);
                 break L1;
               } else {
@@ -527,7 +530,7 @@ final class pj extends se implements co, in {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
         hn[] var11 = null;
         hn[] var7 = null;
         int var8 = 0;
@@ -539,10 +542,10 @@ final class pj extends se implements co, in {
             for (var8 = 0; ia.field_x.length > var8; var8++) {
                 var11[var8] = ia.field_x[var8];
             }
-            var7[-1 + var7.length] = new hn(param3, param4, param1, 3, param0, param2);
+            var7[-1 + var7.length] = new hn(param3, param4, param1, 3, 0, param2);
             ia.field_x = var7;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "pj.F(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 3 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "pj.F(" + 0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 3 + 41);
         }
     }
 

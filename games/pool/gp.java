@@ -8,7 +8,7 @@ final class gp {
     static String field_a;
     static int[] field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -17,12 +17,9 @@ final class gp {
     final static void a(byte param0, sf param1) {
         try {
             param1.field_A = new char[]{'?'};
-            if (param0 < 9) {
-                field_d = null;
-            }
             param1.field_D = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "gp.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "gp.C(" + 58 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

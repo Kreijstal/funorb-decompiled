@@ -136,44 +136,42 @@ final class ei implements ub {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1 = 0;
         int var2 = 0;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (param0 == 0) {
-          ke.field_b = null;
-          t.field_g = false;
-          if (!cg.field_l) {
-            var1 = fp.field_x;
-            if (var1 > 0) {
-              if (var1 != 1) {
-                ke.field_b = rd.a(ed.field_c, new String[1], (byte) 103);
-                ke.field_b = nm.a(new CharSequence[3], true);
-                ej.field_I.m(param0 + 17);
-                qa.e((byte) -117);
-                return;
-              } else {
-                ke.field_b = ib.field_C;
-                ke.field_b = nm.a(new CharSequence[3], true);
-                ej.field_I.m(param0 + 17);
-                qa.e((byte) -117);
-                return;
-              }
+        ke.field_b = null;
+        t.field_g = false;
+        if (!cg.field_l) {
+          var1 = fp.field_x;
+          if (var1 > 0) {
+            if (var1 != 1) {
+              ke.field_b = rd.a(ed.field_c, new String[1], (byte) 103);
+              int discarded$2 = 1;
+              ke.field_b = nm.a(new CharSequence[3]);
+              ej.field_I.m(17);
+              qa.e((byte) -117);
+              return;
             } else {
-              ej.field_I.m(param0 + 17);
+              ke.field_b = ib.field_C;
+              int discarded$3 = 1;
+              ke.field_b = nm.a(new CharSequence[3]);
+              ej.field_I.m(17);
               qa.e((byte) -117);
               return;
             }
           } else {
-            ej.field_I.i((byte) -104);
+            ej.field_I.m(17);
+            qa.e((byte) -117);
             return;
           }
         } else {
+          ej.field_I.i((byte) -104);
           return;
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_a = null;
     }

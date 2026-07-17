@@ -43,7 +43,8 @@ final class hw extends mn {
                 break L1;
               }
             }
-            stackOut_2_0 = nk.a(false, param0, (byte) -95);
+            int discarded$2 = -95;
+            stackOut_2_0 = nk.a(false, param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -271,60 +272,52 @@ final class hw extends mn {
                       if (gv.field_a[param1].length <= param2) {
                         break L2;
                       } else {
-                        L3: {
-                          if (param0 == 29) {
-                            break L3;
-                          } else {
-                            int discarded$1 = hw.a(false);
-                            break L3;
-                          }
-                        }
                         var4 = 0;
-                        L4: while (true) {
+                        L3: while (true) {
                           if (gv.field_a[param1][param2].length <= var4) {
                             if (var3_int <= 0) {
                               return;
                             } else {
                               var7 = 0;
                               var4 = var7;
-                              L5: while (true) {
+                              L4: while (true) {
                                 if (var7 >= gv.field_a[param1][param2].length) {
                                   break L0;
                                 } else {
-                                  L6: {
+                                  L5: {
                                     var9 = gv.field_a[param1][param2][var7];
                                     if (var9 != null) {
                                       if (var3_int <= var9.field_A) {
-                                        break L6;
+                                        break L5;
                                       } else {
                                         var9.field_w = -var9.field_A + var3_int >> 1;
                                         var9.field_A = var3_int;
-                                        break L6;
+                                        break L5;
                                       }
                                     } else {
-                                      break L6;
+                                      break L5;
                                     }
                                   }
                                   var7++;
-                                  continue L5;
+                                  continue L4;
                                 }
                               }
                             }
                           } else {
                             var8 = gv.field_a[param1][param2][var4];
                             if (var8 != null) {
-                              L7: {
+                              L6: {
                                 if (-1 < var8.field_A) {
-                                  break L7;
+                                  break L6;
                                 } else {
-                                  break L7;
+                                  break L6;
                                 }
                               }
                               var4++;
-                              continue L4;
+                              continue L3;
                             } else {
                               var4++;
-                              continue L4;
+                              continue L3;
                             }
                           }
                         }
@@ -340,7 +333,7 @@ final class hw extends mn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var3, "hw.E(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) var3, "hw.E(" + 29 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -499,10 +492,7 @@ final class hw extends mn {
         return (bd) (Object) stackIn_30_0;
     }
 
-    final static int a(boolean param0) {
-        if (!param0) {
-            field_B = -104;
-        }
+    final static int a() {
         return -co.field_f + bm.field_h;
     }
 

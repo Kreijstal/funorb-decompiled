@@ -7,7 +7,7 @@ final class da {
     static ta field_b;
     static String field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!(nf.field_u)) {
             throw new IllegalStateException();
         }
@@ -40,7 +40,7 @@ final class da {
         }
     }
 
-    final static te b(byte param0) {
+    final static te b() {
         int var2 = 0;
         te var1 = new te(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], qe.field_a[0], qk.field_f);
         of.a(false);

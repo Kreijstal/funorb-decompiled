@@ -20,8 +20,8 @@ abstract class gd extends ac {
     static gh field_wb;
     static int field_mb;
 
-    final static gh l(byte param0) {
-        int var1 = 116 / ((param0 - -52) / 48);
+    final static gh l() {
+        int var1 = 116;
         return vi.field_W.field_Wb;
     }
 
@@ -172,7 +172,7 @@ abstract class gd extends ac {
         ((gd) this).field_pb = null;
     }
 
-    final static int[] b(int param0, int param1, byte param2) {
+    final static int[] b(int param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         int var12 = SteelSentinels.field_G;

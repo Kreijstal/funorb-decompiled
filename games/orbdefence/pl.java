@@ -70,7 +70,7 @@ final class pl implements Iterator {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         ((pl) this).field_b = 1;
         ((pl) this).field_c = ((pl) this).field_e.field_b[0].field_e;
         ((pl) this).field_g = null;
@@ -95,7 +95,8 @@ final class pl implements Iterator {
         ((pl) this).field_g = null;
         try {
             ((pl) this).field_e = param0;
-            this.a((byte) 103);
+            int discarded$0 = 103;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "pl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

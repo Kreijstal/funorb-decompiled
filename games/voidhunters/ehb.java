@@ -107,7 +107,7 @@ final class ehb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
     }
 

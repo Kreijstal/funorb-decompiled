@@ -53,7 +53,7 @@ final class ik implements Iterator {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_b = null;
         field_a = null;
@@ -86,7 +86,7 @@ final class ik implements Iterator {
         }
     }
 
-    final static aj b(int param0) {
+    final static aj b() {
         if (g.field_a == ji.field_T) {
             throw new IllegalStateException();
         }

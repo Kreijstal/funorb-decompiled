@@ -70,10 +70,7 @@ final class jn {
         }
     }
 
-    final static void a(li param0, li param1, int param2) {
-        if (param2 != 18724) {
-            return;
-        }
+    final static void a(li param0, li param1) {
         try {
             if (param0.field_a != null) {
                 param0.c(2);
@@ -83,21 +80,21 @@ final class jn {
             param0.field_a.field_c = param0;
             param0.field_c.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "jn.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "jn.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 18724 + 41);
         }
     }
 
-    final static void a(int param0) {
-        ga.a(nl.field_e, param0, param0 ^ 82);
+    final static void a() {
+        ga.a(nl.field_e, 5, 87);
         ga.a(nq.field_G, 6, 86);
-        ga.a(ir.field_e, 8, param0 ^ 126);
+        ga.a(ir.field_e, 8, 123);
         ga.a(aa.field_Jb, 13, 80);
         if (!mm.b(-12942)) {
             ga.a(po.field_c, 18, 127);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_b = null;
         field_d = null;
@@ -255,27 +252,21 @@ final class jn {
 
     final static void a(int param0, int param1, java.awt.Component param2, int param3, boolean param4, int param5, db param6, jj param7) {
         try {
-            dd.a(param0, param4, 10);
-            ri.field_r = dd.a(param7, param2, 0, param3);
-            mh.field_d = dd.a(param7, param2, 1, param1);
+            dd.a(22050, true, 10);
+            ri.field_r = dd.a(param7, param2, 0, 22050);
+            mh.field_d = dd.a(param7, param2, 1, 1024);
             il.field_g = new fp();
-            wp.field_a = param1 * 1000 / param0;
+            wp.field_a = 46;
             mh.field_d.a((sn) (Object) il.field_g);
             qc.field_v = param6;
             qc.field_v.c(-82, nd.field_k);
-            if (param5 != 18246) {
-                field_c = 51;
-            }
             ri.field_r.a((sn) (Object) qc.field_v);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "jn.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "jn.A(" + 22050 + 44 + 1024 + 44 + (param2 != null ? "{...}" : "null") + 44 + 22050 + 44 + 1 + 44 + 18246 + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (param1 != -4765) {
-            return;
-        }
         or.field_c = param0;
         ek.field_E = param2;
     }
@@ -322,7 +313,7 @@ final class jn {
           param6 = param6 - param0[0];
           param3 = param3 - param0[1];
           param1 = param1 - param0[2];
-          var9_int = param1 * param0[11] + (param3 * param0[param7] + param0[9] * param6) >> 9;
+          var9_int = param1 * param0[11] + (param3 * param0[10] + param0[9] * param6) >> 9;
           if (var9_int > 6400) {
             var10 = (param8 << 16) / var9_int;
             var11 = (param5 << 16) / var9_int;
@@ -391,7 +382,7 @@ final class jn {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw wn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + 10 + 44 + param8 + 41);
         }
     }
 

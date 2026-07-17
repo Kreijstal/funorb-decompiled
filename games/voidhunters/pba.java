@@ -11,14 +11,17 @@ final class pba extends rqa {
         super(param0, param1, param2);
     }
 
-    final static vpa b(boolean param0) {
+    final static vpa b() {
         if (null == saa.field_o) {
-            saa.field_o = new vpa();
-            vpa discarded$0 = pba.b(false);
-            return saa.field_o;
+          saa.field_o = new vpa();
+          int discarded$8 = 0;
+          vpa discarded$9 = pba.b();
+          return saa.field_o;
+        } else {
+          int discarded$10 = 0;
+          vpa discarded$11 = pba.b();
+          return saa.field_o;
         }
-        vpa discarded$1 = pba.b(false);
-        return saa.field_o;
     }
 
     final nc a(nc[] param0, int param1) {

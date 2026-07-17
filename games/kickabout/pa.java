@@ -8,7 +8,7 @@ final class pa extends dg {
     static String field_j;
     static fn[] field_g;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_j = null;
         field_g = null;
         field_i = null;

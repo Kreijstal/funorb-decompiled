@@ -5,7 +5,7 @@ final class vi {
     static int[] field_b;
     static String[] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
@@ -979,11 +979,11 @@ final class vi {
             return;
         }
         try {
-            var3.b((byte) -35, param0);
+            var3.b((byte) -35, 7);
             var3.a(119, param1.field_i);
             var3.a(-21, param1.field_p);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "vi.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "vi.C(" + 7 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

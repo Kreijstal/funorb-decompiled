@@ -9,7 +9,7 @@ final class wh {
     static String field_a;
     static boolean field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_f = null;
         field_a = null;

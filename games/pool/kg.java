@@ -23,22 +23,22 @@ final class kg extends ma {
         return qg.field_a;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_q = null;
         field_r = null;
         field_t = null;
         field_s = null;
-        int var1 = -63 % ((param0 - -36) / 40);
+        int var1 = 0;
         field_l = null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            hr.field_c = new ro[param0];
+            hr.field_c = new ro[2];
             var2_int = 0;
             L1: while (true) {
               if (hr.field_c.length <= var2_int) {
@@ -53,7 +53,7 @@ final class kg extends ma {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "kg.A(" + param0 + 44 + 49 + 41);
+          throw wm.a((Throwable) (Object) var2, "kg.A(" + 2 + 44 + 49 + 41);
         }
     }
 
@@ -63,18 +63,9 @@ final class kg extends ma {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         qe.field_y = param2;
-        if (!param1) {
-          kg.a(-104, true, -107, 21, 17);
-          vc.field_K = param4;
-          ch.field_I = param3;
-          mm.field_b = param0;
-          return;
-        } else {
-          vc.field_K = param4;
-          ch.field_I = param3;
-          mm.field_b = param0;
-          return;
-        }
+        vc.field_K = param4;
+        ch.field_I = param3;
+        mm.field_b = param0;
     }
 
     static {

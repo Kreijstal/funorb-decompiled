@@ -67,7 +67,7 @@ abstract class mc {
         }
     }
 
-    final static boolean a(long param0, boolean param1) {
+    final static boolean a(long param0) {
         return param0 == 1272878999115L || param0 == 1272878132285L;
     }
 
@@ -96,7 +96,7 @@ abstract class mc {
 
     abstract void b(int param0);
 
-    final static double a(double param0, double param1, boolean param2) {
+    final static double a(double param0, double param1) {
         return Math.sqrt(param0 * (1.7 * param1));
     }
 

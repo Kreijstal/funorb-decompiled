@@ -96,7 +96,7 @@ final class ugb extends rqa {
           L0: {
             L1: {
               var2_int = kmb.field_a;
-              if (param1.field_a != param0) {
+              if (param1.field_a != 2) {
                 if (param1.field_a == 4) {
                   var2_int = bja.field_p[param1.field_a];
                   break L1;
@@ -140,7 +140,7 @@ final class ugb extends rqa {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("ugb.B(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("ugb.B(").append(2).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

@@ -156,7 +156,7 @@ final class nn {
         }
     }
 
-    final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
+    final static void a(java.awt.Canvas param0, int param1, int param2) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;

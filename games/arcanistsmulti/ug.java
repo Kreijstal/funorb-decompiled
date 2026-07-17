@@ -96,23 +96,19 @@ final class ug {
         try {
           L0: {
             ml.a(param4, param3, (byte) 95, param13);
-            if (param0 >= 85) {
-              e.b(1, param8, param12, param1, param2);
-              td.a(true, param17, param5);
-              rc.a(param14, 120, param16, param15, param19, param18);
-              lj.a(param10, param11, param7, 69);
-              vi.a(-1, param6, param20, param9);
-              break L0;
-            } else {
-              return;
-            }
+            e.b(1, param8, param12, param1, param2);
+            td.a(true, param17, param5);
+            rc.a(param14, 120, param16, param15, param19, param18);
+            lj.a(param10, param11, param7, 69);
+            vi.a(-1, param6, param20, param9);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var21 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var21;
-            stackOut_4_1 = new StringBuilder().append("ug.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_4_1 = new StringBuilder().append("ug.C(").append(100).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -239,15 +235,17 @@ final class ug {
         }
     }
 
-    final static void a(int param0, m param1, eg param2, int param3) {
+    final static void a(int param0, m param1, eg param2) {
         try {
             sn.field_G = param0 * gm.b(-2) / 1000;
             ed.a((byte) -17, param2);
             ArcanistsMulti.a(param2, (byte) -80);
             int var4_int = 0;
             fl.a(-2389, param2);
-            tm.a(5968);
-            h.j(0);
+            int discarded$0 = 5968;
+            tm.a();
+            int discarded$1 = 0;
+            h.j();
             gi.field_a = -sn.field_G;
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ug.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 121 + 41);
@@ -307,7 +305,7 @@ final class ug {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -481,7 +479,8 @@ final class ug {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((ug) this).field_e[var2_int] = param0[var2_int];
             }
-            this.a((byte) 126);
+            int discarded$0 = 126;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ug.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

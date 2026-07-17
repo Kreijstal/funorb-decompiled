@@ -374,67 +374,59 @@ final class rj extends sq {
     final static long a(long param0, byte param1, long param2) {
         long var5 = 0L;
         L0: {
-          if (param1 == -48) {
-            break L0;
-          } else {
-            field_g = null;
-            break L0;
-          }
-        }
-        L1: {
           var5 = param0 * param2;
           if (param0 >= 0L) {
-            break L1;
+            break L0;
           } else {
             if (param2 >= 0L) {
-              break L1;
+              break L0;
             } else {
               if (var5 < 0L) {
                 throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param0 + "[" + cr.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + cr.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + cr.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
               } else {
-                break L1;
+                break L0;
               }
             }
           }
         }
-        L2: {
-          L3: {
-            L4: {
+        L1: {
+          L2: {
+            L3: {
               if (0L >= param0) {
-                break L4;
+                break L3;
               } else {
                 if (0L > param2) {
-                  break L3;
+                  break L2;
                 } else {
-                  break L4;
+                  break L3;
                 }
               }
             }
             if (param0 >= 0L) {
-              break L2;
+              break L1;
             } else {
               if (param2 <= 0L) {
-                break L2;
+                break L1;
               } else {
-                break L3;
+                break L2;
               }
             }
           }
           if (var5 <= 0L) {
-            break L2;
+            break L1;
           } else {
             throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + cr.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + cr.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a positive number: " + var5 + "[" + cr.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
           }
         }
-        L5: {
+        L4: {
           if (param0 <= 0L) {
-            break L5;
+            break L4;
           } else {
             if (param2 <= 0L) {
-              break L5;
+              break L4;
             } else {
               if (0L <= var5) {
-                break L5;
+                break L4;
               } else {
                 throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + cr.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + cr.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + cr.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
               }
@@ -739,7 +731,8 @@ final class rj extends sq {
 
     final static void c(byte param0) {
         qk.field_f.field_hb = dq.a(1, param0 ^ -45, Integer.toString(fr.field_n));
-        dk.a(qk.field_f, (byte) 93);
+        int discarded$6 = 93;
+        dk.a(qk.field_f);
         tn.field_w.field_pb = 2 < fr.field_n ? true : false;
         ih.field_e.field_pb = fr.field_n < 8 ? true : false;
         if (param0 != -45) {
@@ -834,7 +827,7 @@ final class rj extends sq {
         return stackIn_1_0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_j = null;
         field_g = null;
         field_i = null;

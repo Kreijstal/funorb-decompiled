@@ -53,7 +53,7 @@ final class bd extends vg {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           var2_int = param1.length();
-          if (~var2_int == param0) {
+          if (var2_int == 0) {
             stackOut_3_0 = is.field_wb;
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
@@ -166,7 +166,7 @@ final class bd extends vg {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_46_0 = (RuntimeException) var2;
-            stackOut_46_1 = new StringBuilder().append("bd.C(").append(param0).append(44);
+            stackOut_46_1 = new StringBuilder().append("bd.C(").append(-1).append(44);
             stackIn_48_0 = stackOut_46_0;
             stackIn_48_1 = stackOut_46_1;
             stackIn_47_0 = stackOut_46_0;

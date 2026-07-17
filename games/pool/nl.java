@@ -49,29 +49,25 @@ final class nl {
             StringBuilder stackOut_7_1 = null;
             String stackOut_7_2 = null;
             try {
-              if (param0 >= 71) {
-                try {
-                  L0: {
-                    var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                    param1.getAppletContext().showDocument(p.a((byte) -33, var2, param1), "_top");
-                    break L0;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
+              try {
+                L0: {
+                  var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
+                  param1.getAppletContext().showDocument(p.a((byte) -33, var2, param1), "_top");
+                  break L0;
                 }
-                return;
-              } else {
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
                 return;
               }
+              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("nl.A(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("nl.A(").append(112).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -103,7 +99,7 @@ final class nl {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;

@@ -389,7 +389,7 @@ final class rd {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_g = null;
     }
@@ -1041,7 +1041,8 @@ final class rd {
                           if (vj.field_g != 2) {
                             break L28;
                           } else {
-                            ad.a((byte) -118);
+                            int discarded$5 = -118;
+                            ad.a();
                             break L28;
                           }
                         } else {
@@ -1053,9 +1054,12 @@ final class rd {
                         vf.a(var1_int, var2, var11, 28, var12, var14, var13);
                         lg.a(var4, 0, 1, var3);
                         ih.a(-15587, var1_int);
-                        nj.a(11178);
-                        nm.a(var1_int, 3);
-                        hi.b(false);
+                        int discarded$6 = 11178;
+                        nj.a();
+                        int discarded$7 = 3;
+                        nm.a(var1_int);
+                        int discarded$8 = 0;
+                        hi.b();
                         qa.a(var11, 18, var12, var13, var14, var1_int, var2);
                         ei.d(-114);
                         if (null == pf.field_I) {
@@ -1067,7 +1071,8 @@ final class rd {
                       }
                       L30: {
                         L31: {
-                          dd.g(-125);
+                          int discarded$9 = -125;
+                          dd.g();
                           if (null == q.field_g) {
                             break L31;
                           } else {
@@ -1366,7 +1371,7 @@ final class rd {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             if (null != q.field_b) {
                 try {

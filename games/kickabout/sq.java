@@ -6,7 +6,7 @@ final class sq extends i {
     static boolean field_G;
     static ut[] field_F;
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean b() {
         int var3 = null != ow.field_b ? 1 : 0;
         if (cc.field_e == 9) {
             if (!(!cb.a(ol.field_z, mv.field_a, (byte) -64, qs.field_S, nr.field_r))) {
@@ -18,12 +18,13 @@ final class sq extends i {
                 return mi.a(nr.field_r, mv.field_a, (byte) 124, ol.field_z, qs.field_S);
             }
         }
-        int var4 = 1 % ((59 - param0) / 44);
+        int var4 = 0;
         if (!(10 != cc.field_e)) {
             if (var3 != 0) {
                 return false;
             }
-            hp.b(0);
+            int discarded$0 = 0;
+            hp.b();
             return true;
         }
         if (11 == cc.field_e) {
@@ -42,7 +43,7 @@ final class sq extends i {
                     return true;
                 }
                 Object var5 = null;
-                gp.a(vb.field_h, 101, qs.field_K, param2, oc.field_f, (String) null);
+                gp.a(vb.field_h, 101, qs.field_K, 15, oc.field_f, (String) null);
                 return true;
             }
         }
@@ -57,7 +58,8 @@ final class sq extends i {
         int var4 = Kickabout.field_G;
         super.a(127, param1);
         if (0 == param1) {
-            nk.c((byte) -56);
+            int discarded$1 = -56;
+            nk.c();
             jm.a(13, true, -2);
         } else {
             if (param1 == 1) {
@@ -73,7 +75,7 @@ final class sq extends i {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_H = null;
         field_F = null;
     }

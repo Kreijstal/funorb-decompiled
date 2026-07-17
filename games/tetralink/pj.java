@@ -20,7 +20,7 @@ final class pj {
         return me.field_d;
     }
 
-    final static java.awt.Container a(byte param0) {
+    final static java.awt.Container a() {
         if (null != ea.field_h) {
             return (java.awt.Container) (Object) ea.field_h;
         }

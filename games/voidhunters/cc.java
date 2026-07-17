@@ -197,7 +197,7 @@ final class cc extends wm implements ntb, hd {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_d = null;
     }
 
@@ -432,7 +432,8 @@ final class cc extends wm implements ntb, hd {
             }
             L2: {
               if (((cc) this).field_c >= 0) {
-                param1 = qi.a(((cc) this).field_c, true, param1, (byte) -14);
+                int discarded$2 = -14;
+                param1 = qi.a(((cc) this).field_c, true, param1);
                 break L2;
               } else {
                 break L2;

@@ -7,7 +7,7 @@ final class hb {
     static kc field_c;
     static int[] field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

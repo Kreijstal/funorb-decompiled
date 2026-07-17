@@ -74,63 +74,55 @@ final class qk extends rh {
             var4 = 0;
             L2: while (true) {
               if (var2_int <= var4) {
-                L3: {
-                  if (param0 <= -85) {
-                    break L3;
-                  } else {
-                    field_O = null;
-                    break L3;
-                  }
-                }
                 stackOut_23_0 = new String(var10);
                 stackIn_24_0 = stackOut_23_0;
                 break L0;
               } else {
-                L4: {
-                  L5: {
+                L3: {
+                  L4: {
                     var5 = param1.charAt(var4);
                     if (var5 < 65) {
-                      break L5;
+                      break L4;
                     } else {
                       if (var5 > 90) {
-                        break L5;
+                        break L4;
                       } else {
                         var3[var4] = (char)(var5 + 32);
                         var4++;
-                        break L4;
+                        break L3;
                       }
                     }
                   }
-                  L6: {
-                    L7: {
+                  L5: {
+                    L6: {
                       if (var5 < 97) {
-                        break L7;
+                        break L6;
                       } else {
                         if (var5 <= 122) {
-                          break L6;
+                          break L5;
                         } else {
-                          break L7;
+                          break L6;
                         }
                       }
                     }
-                    L8: {
+                    L7: {
                       if (var5 < 48) {
-                        break L8;
+                        break L7;
                       } else {
                         if (57 < var5) {
-                          break L8;
+                          break L7;
                         } else {
-                          break L6;
+                          break L5;
                         }
                       }
                     }
                     var3[var4] = '_';
                     var4++;
-                    break L4;
+                    break L3;
                   }
                   var3[var4] = (char)var5;
                   var4++;
-                  break L4;
+                  break L3;
                 }
                 var4++;
                 continue L2;
@@ -139,10 +131,10 @@ final class qk extends rh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var2 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var2;
-            stackOut_25_1 = new StringBuilder().append("qk.W(").append(param0).append(44);
+            stackOut_25_1 = new StringBuilder().append("qk.W(").append(-128).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -154,7 +146,7 @@ final class qk extends rh {
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
-              break L9;
+              break L8;
             } else {
               stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
               stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
@@ -162,7 +154,7 @@ final class qk extends rh {
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
               stackIn_28_2 = stackOut_26_2;
-              break L9;
+              break L8;
             }
           }
           throw sl.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
@@ -438,7 +430,7 @@ final class qk extends rh {
         return ((qk) this).field_L;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_M = null;
         field_K = null;
         field_O = null;

@@ -15,7 +15,7 @@ final class vc {
     static wk[] field_e;
     int field_j;
 
-    final static void a(String param0, wk param1, boolean param2) {
+    final static void a(String param0, wk param1) {
         try {
             ij.field_P = param0;
             jf.field_kb = param1;
@@ -42,13 +42,14 @@ final class vc {
     }
 
     final static void a(int param0) {
-        wc.a(23825);
+        int discarded$3 = 23825;
+        wc.a();
         if (param0 != -1) {
             vc.a(79);
         }
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         int var1 = 0;
         int var2 = 0;
         var2 = SteelSentinels.field_G;

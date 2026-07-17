@@ -4,7 +4,7 @@
 final class tu {
     private static String field_z;
 
-    final static void a(byte param0) {
+    final static void a() {
     }
 
     static {

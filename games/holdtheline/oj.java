@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oj {
-    final static void a(byte param0) {
+    final static void a() {
         vi var1 = null;
         int var2 = 0;
         vi var3 = null;
@@ -14,10 +14,10 @@ final class oj {
               if (var1 != null) {
                 break L0;
               } else {
-                vi dupTemp$2 = vi.a(bd.field_Q, em.field_m[ab.field_jb], "");
-                var3 = dupTemp$2;
+                vi dupTemp$10 = vi.a(bd.field_Q, em.field_m[ab.field_jb], "");
+                var3 = dupTemp$10;
                 var1 = var3;
-                if (dupTemp$2 != null) {
+                if (dupTemp$10 != null) {
                   gh.field_n[ab.field_jb] = var3;
                   break L0;
                 } else {
@@ -26,66 +26,52 @@ final class oj {
               }
             }
             if (vl.field_d.field_q.a(22050, jh.field_a, var1, false, pd.field_f)) {
-              i.field_k[ab.field_jb] = var1;
-              ab.field_jb = -1;
-              int fieldTemp$3 = oc.field_a - 1;
-              oc.field_a = oc.field_a - 1;
-              if (fieldTemp$3 != 0) {
-                if (bi.field_e != 2) {
-                  if (1 == bi.field_e) {
-                    if (lc.field_d != null) {
-                      if (!ai.field_a.a(-98, lc.field_d)) {
-                        gn.a(true, var1, (byte) 69, 30);
-                        lc.field_d = null;
-                        return;
-                      } else {
-                        ec.field_D = var1;
-                        return;
-                      }
-                    } else {
-                      gn.a(true, var1, (byte) 69, 30);
+              L1: {
+                i.field_k[ab.field_jb] = var1;
+                ab.field_jb = -1;
+                int fieldTemp$11 = oc.field_a - 1;
+                oc.field_a = oc.field_a - 1;
+                if (fieldTemp$11 != 0) {
+                  break L1;
+                } else {
+                  vl.field_d.field_q.e(0);
+                  jh.field_a = null;
+                  break L1;
+                }
+              }
+              if (bi.field_e != 2) {
+                if (1 == bi.field_e) {
+                  if (lc.field_d != null) {
+                    if (!ai.field_a.a(-98, lc.field_d)) {
+                      int discarded$12 = 30;
+                      int discarded$13 = 69;
+                      gn.a(true, var1);
                       lc.field_d = null;
+                      return;
+                    } else {
+                      ec.field_D = var1;
                       return;
                     }
                   } else {
-                    gn.a(true, var1, (byte) 69, 30);
+                    int discarded$14 = 30;
+                    int discarded$15 = 69;
+                    gn.a(true, var1);
                     lc.field_d = null;
                     return;
                   }
                 } else {
-                  lc.field_d = var1;
-                  gn.a(false, var1, (byte) 69, 30);
+                  int discarded$16 = 30;
+                  int discarded$17 = 69;
+                  gn.a(true, var1);
+                  lc.field_d = null;
                   return;
                 }
               } else {
-                vl.field_d.field_q.e(0);
-                jh.field_a = null;
-                if (bi.field_e != 2) {
-                  if (1 == bi.field_e) {
-                    if (lc.field_d != null) {
-                      if (!ai.field_a.a(-98, lc.field_d)) {
-                        gn.a(true, var1, (byte) 69, 30);
-                        lc.field_d = null;
-                        return;
-                      } else {
-                        ec.field_D = var1;
-                        return;
-                      }
-                    } else {
-                      gn.a(true, var1, (byte) 69, 30);
-                      lc.field_d = null;
-                      return;
-                    }
-                  } else {
-                    gn.a(true, var1, (byte) 69, 30);
-                    lc.field_d = null;
-                    return;
-                  }
-                } else {
-                  lc.field_d = var1;
-                  gn.a(false, var1, (byte) 69, 30);
-                  return;
-                }
+                lc.field_d = var1;
+                int discarded$18 = 30;
+                int discarded$19 = 69;
+                gn.a(false, var1);
+                return;
               }
             } else {
               return;
@@ -141,20 +127,16 @@ final class oj {
                   tc.e(param2 - -var6_int, param3, param2 - -param5 + -var7, param3 - -param0[1].field_v);
                   var9 = var6_int + param2;
                   var10 = param2 - (-param5 - -var7);
-                  if (param4 <= -73) {
-                    param2 = var9;
-                    L2: while (true) {
-                      if (param2 >= var10) {
-                        tc.a(hi.field_W);
-                        break L0;
-                      } else {
-                        param0[1].a(param2, param3, param1);
-                        param2 = param2 + var8;
-                        continue L2;
-                      }
+                  param2 = var9;
+                  L2: while (true) {
+                    if (param2 >= var10) {
+                      tc.a(hi.field_W);
+                      break L0;
+                    } else {
+                      param0[1].a(param2, param3, param1);
+                      param2 = param2 + var8;
+                      continue L2;
                     }
-                  } else {
-                    return;
                   }
                 }
               }
@@ -189,7 +171,7 @@ final class oj {
               break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw kk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -102 + 44 + param5 + 41);
         }
     }
 

@@ -7,7 +7,7 @@ final class wnb extends rqa {
     static int field_q;
     static String field_r;
 
-    final static void a(ml param0, byte param1) {
+    final static void a(ml param0) {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -34,27 +34,23 @@ final class wnb extends rqa {
         var6 = VoidHunters.field_G;
         try {
           L0: {
-            if (param1 == -10) {
-              var7 = new int[]{27, 43, 27, 43};
-              var2 = var7;
-              var3 = 0;
-              L1: while (true) {
-                if (4 <= var3) {
-                  break L0;
-                } else {
-                  var4 = new ml(29);
-                  var5 = new ml(32);
-                  var5.a(param1 ^ -9, 2, new ml(var7[var3]));
-                  var5.a(1, 3, new ml(var7[var3]));
-                  var5.a(1, 4, new ml(var7[var3]));
-                  var4.a(1, 0, var5);
-                  param0.a(1, var3, var4);
-                  var3++;
-                  continue L1;
-                }
+            var7 = new int[]{27, 43, 27, 43};
+            var2 = var7;
+            var3 = 0;
+            L1: while (true) {
+              if (4 <= var3) {
+                break L0;
+              } else {
+                var4 = new ml(29);
+                var5 = new ml(32);
+                var5.a(1, 2, new ml(var7[var3]));
+                var5.a(1, 3, new ml(var7[var3]));
+                var5.a(1, 4, new ml(var7[var3]));
+                var4.a(1, 0, var5);
+                param0.a(1, var3, var4);
+                var3++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,11 +81,11 @@ final class wnb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + -10 + 41);
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_o = null;
         field_r = null;
         field_p = null;

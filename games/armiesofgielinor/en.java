@@ -19,14 +19,10 @@ abstract class en extends tj implements eg {
 
     void a(byte param0, sb param1) {
         try {
-            if (param0 >= -21) {
-                Object var4 = null;
-                int[] discarded$0 = en.a((vh) null, (byte) -110);
-            }
             ((en) this).field_H = param1;
             ((en) this).field_H.field_j = (en) this;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "en.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "en.I(" + -108 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

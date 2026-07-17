@@ -9,25 +9,15 @@ final class bb {
     static vi field_f;
     static ji field_e;
 
-    final static String b(byte param0) {
+    final static String b() {
         return sc.field_g.o(32);
     }
 
-    public static void a(byte param0) {
-        if (param0 > -59) {
-          field_e = null;
-          field_e = null;
-          field_b = null;
-          field_f = null;
-          field_a = null;
-          return;
-        } else {
-          field_e = null;
-          field_b = null;
-          field_f = null;
-          field_a = null;
-          return;
-        }
+    public static void a() {
+        field_e = null;
+        field_b = null;
+        field_f = null;
+        field_a = null;
     }
 
     static {

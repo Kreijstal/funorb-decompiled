@@ -21,7 +21,7 @@ abstract class qb {
 
     abstract void a(boolean param0, Object param1, int param2);
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

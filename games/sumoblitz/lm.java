@@ -24,7 +24,7 @@ final class lm {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
     }
 
@@ -112,7 +112,8 @@ final class lm {
                         try {
                             var2 = "tuhstatbut";
                             var3 = (String) tw.a(param1, 116, "getcookies");
-                            var4 = cn.a((char)param0, var3, -27224);
+                            int discarded$2 = -27224;
+                            var4 = cn.a(';', var3);
                             var5 = 0;
                             statePc = 6;
                             continue stateLoop;
@@ -246,7 +247,7 @@ final class lm {
                     case 18: {
                         var2_ref2 = (RuntimeException) (Object) caughtException;
                         stackOut_18_0 = (RuntimeException) var2_ref2;
-                        stackOut_18_1 = new StringBuilder().append("lm.B(").append(param0).append(44);
+                        stackOut_18_1 = new StringBuilder().append("lm.B(").append(59).append(44);
                         stackIn_20_0 = stackOut_18_0;
                         stackIn_20_1 = stackOut_18_1;
                         stackIn_19_0 = stackOut_18_0;

@@ -26,7 +26,7 @@ final class cma extends ana {
             var11 = param6;
             L1: while (true) {
               if (var11 >= var7_int) {
-                var12 = -103 % ((param5 - 16) / 45);
+                var12 = 0;
                 var11 = param0;
                 L2: while (true) {
                   if (var8 >= var11) {
@@ -60,17 +60,17 @@ final class cma extends ana {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var7, "cma.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw pe.a((Throwable) (Object) var7, "cma.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 64 + 44 + param6 + 41);
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_y = null;
         field_v = null;
         field_x = null;
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         ad var5 = null;
         int var6 = BachelorFridge.field_y;
         aga var7 = ((cma) this).field_w.field_l.a(44, ((cma) this).field_q.field_h);
@@ -187,7 +187,8 @@ final class cma extends ana {
         if (!(fieldTemp$0 < 0)) {
             if (((cma) this).field_l == 25) {
                 this.e(-128);
-                this.e((byte) 35);
+                int discarded$1 = 35;
+                this.e();
             }
             return false;
         }

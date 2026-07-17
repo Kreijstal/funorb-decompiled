@@ -8,7 +8,7 @@ final class cg {
     static String field_c;
     static int field_a;
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

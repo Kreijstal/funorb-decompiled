@@ -62,22 +62,22 @@ class si extends bi {
 
     private final void a(byte param0, si param1) {
         RuntimeException var3 = null;
+        RuntimeException stackIn_98_0 = null;
+        StringBuilder stackIn_98_1 = null;
+        RuntimeException stackIn_99_0 = null;
+        StringBuilder stackIn_99_1 = null;
         RuntimeException stackIn_100_0 = null;
         StringBuilder stackIn_100_1 = null;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
-        RuntimeException stackIn_102_0 = null;
-        StringBuilder stackIn_102_1 = null;
-        String stackIn_102_2 = null;
+        String stackIn_100_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_97_0 = null;
+        StringBuilder stackOut_97_1 = null;
         RuntimeException stackOut_99_0 = null;
         StringBuilder stackOut_99_1 = null;
-        RuntimeException stackOut_101_0 = null;
-        StringBuilder stackOut_101_1 = null;
-        String stackOut_101_2 = null;
-        RuntimeException stackOut_100_0 = null;
-        StringBuilder stackOut_100_1 = null;
-        String stackOut_100_2 = null;
+        String stackOut_99_2 = null;
+        RuntimeException stackOut_98_0 = null;
+        StringBuilder stackOut_98_1 = null;
+        String stackOut_98_2 = null;
         try {
           L0: {
             L1: {
@@ -380,45 +380,37 @@ class si extends bi {
                 }
               }
             }
-            L38: {
-              if (param0 == -62) {
-                break L38;
-              } else {
-                si.f(75);
-                break L38;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L39: {
+          L38: {
             var3 = decompiledCaughtException;
-            stackOut_99_0 = (RuntimeException) var3;
-            stackOut_99_1 = new StringBuilder().append("si.A(").append(param0).append(44);
-            stackIn_101_0 = stackOut_99_0;
-            stackIn_101_1 = stackOut_99_1;
-            stackIn_100_0 = stackOut_99_0;
-            stackIn_100_1 = stackOut_99_1;
+            stackOut_97_0 = (RuntimeException) var3;
+            stackOut_97_1 = new StringBuilder().append("si.A(").append(-62).append(44);
+            stackIn_99_0 = stackOut_97_0;
+            stackIn_99_1 = stackOut_97_1;
+            stackIn_98_0 = stackOut_97_0;
+            stackIn_98_1 = stackOut_97_1;
             if (param1 == null) {
-              stackOut_101_0 = (RuntimeException) (Object) stackIn_101_0;
-              stackOut_101_1 = (StringBuilder) (Object) stackIn_101_1;
-              stackOut_101_2 = "null";
-              stackIn_102_0 = stackOut_101_0;
-              stackIn_102_1 = stackOut_101_1;
-              stackIn_102_2 = stackOut_101_2;
-              break L39;
+              stackOut_99_0 = (RuntimeException) (Object) stackIn_99_0;
+              stackOut_99_1 = (StringBuilder) (Object) stackIn_99_1;
+              stackOut_99_2 = "null";
+              stackIn_100_0 = stackOut_99_0;
+              stackIn_100_1 = stackOut_99_1;
+              stackIn_100_2 = stackOut_99_2;
+              break L38;
             } else {
-              stackOut_100_0 = (RuntimeException) (Object) stackIn_100_0;
-              stackOut_100_1 = (StringBuilder) (Object) stackIn_100_1;
-              stackOut_100_2 = "{...}";
-              stackIn_102_0 = stackOut_100_0;
-              stackIn_102_1 = stackOut_100_1;
-              stackIn_102_2 = stackOut_100_2;
-              break L39;
+              stackOut_98_0 = (RuntimeException) (Object) stackIn_98_0;
+              stackOut_98_1 = (StringBuilder) (Object) stackIn_98_1;
+              stackOut_98_2 = "{...}";
+              stackIn_100_0 = stackOut_98_0;
+              stackIn_100_1 = stackOut_98_1;
+              stackIn_100_2 = stackOut_98_2;
+              break L38;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_102_0, stackIn_102_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_100_0, stackIn_100_2 + 41);
         }
     }
 

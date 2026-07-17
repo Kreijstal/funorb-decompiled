@@ -10,7 +10,7 @@ final class qm {
     int field_f;
     static String field_b;
 
-    final static void a(boolean param0, int param1, boolean param2, byte param3) {
+    final static void a(boolean param0, int param1, boolean param2) {
         int var5 = 0;
         w stackIn_2_0 = null;
         int stackIn_2_1 = 0;
@@ -579,7 +579,7 @@ final class qm {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_g = null;
@@ -669,7 +669,7 @@ final class qm {
     }
 
     final static ck[] a(int param0, int param1) {
-        ck[] var3 = new ck[param0];
+        ck[] var3 = new ck[9];
         ck[] var2 = var3;
         var3[4] = sm.a((byte) -126, 64, param1);
         return var2;
@@ -681,7 +681,7 @@ final class qm {
 
     final static void a(int param0, int param1, int param2, int param3) {
         hd.field_s = param2;
-        int var4 = 22 % ((-8 - param1) / 37);
+        int var4 = 0;
         ie.field_b = param3;
         i.field_c = param0;
     }

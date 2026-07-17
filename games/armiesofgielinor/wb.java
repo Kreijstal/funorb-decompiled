@@ -46,7 +46,7 @@ final class wb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -55,13 +55,11 @@ final class wb {
     final static void a(boolean param0, byte param1, String param2, String param3) {
         ah.field_d = param3;
         ga.field_d = param2;
-        if (param1 != 32) {
-            return;
-        }
         try {
-            af.a(param0, lo.field_o, param1 ^ -33);
+            int discarded$0 = -1;
+            af.a(param0, lo.field_o);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "wb.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "wb.A(" + param0 + 44 + 32 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

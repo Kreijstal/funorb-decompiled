@@ -22,18 +22,20 @@ final class io {
         super.finalize();
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         fp var5 = null;
         int var4 = AceOfSkies.field_G ? 1 : 0;
         try {
             var5 = (fp) (Object) ks.field_d.d(268435455);
             while (var5 != null) {
-                po.a(var5, (byte) 115, 2);
+                int discarded$0 = 2;
+                int discarded$1 = 115;
+                po.a(var5);
                 var5 = (fp) (Object) ks.field_d.b((byte) 103);
             }
-            int var3 = 127 % ((param0 - -37) / 51);
+            int var3 = 0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "io.B(" + param0 + 44 + 2 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "io.B(" + -117 + 44 + 2 + 41);
         }
     }
 

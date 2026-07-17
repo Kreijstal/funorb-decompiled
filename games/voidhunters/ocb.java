@@ -14,10 +14,10 @@ final class ocb extends eca {
     static int field_l;
 
     final String b(String param0, int param1) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
+        RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
+        String var6 = null;
         Object stackIn_2_0 = null;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
@@ -56,26 +56,29 @@ final class ocb extends eca {
         String stackOut_32_2 = null;
         try {
           L0: {
-            var3 = ((ocb) this).field_f.field_j.toLowerCase();
+            var6 = ((ocb) this).field_f.field_j.toLowerCase();
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
-              if (!hcb.a(var5, 15)) {
+              int discarded$15 = 15;
+              if (!hcb.a(var5)) {
                 if (!ws.a((byte) 109, var5)) {
                   if (!mea.a(126, var5)) {
-                    if (this.a(param0, false)) {
+                    int discarded$16 = 0;
+                    if (this.a(param0)) {
                       stackOut_14_0 = gnb.field_f;
                       stackIn_15_0 = stackOut_14_0;
                       return stackIn_15_0;
                     } else {
-                      if (~var3.length() < param1) {
-                        if (!qnb.a(var5, -1, var3)) {
-                          if (njb.a(var3, 95, var5)) {
+                      if (~var6.length() < param1) {
+                        if (!qnb.a(var5, -1, var6)) {
+                          if (njb.a(var6, 95, var5)) {
                             stackOut_24_0 = lna.field_p;
                             stackIn_25_0 = stackOut_24_0;
                             return stackIn_25_0;
                           } else {
-                            if (!wg.a(var5, var3, true)) {
+                            int discarded$17 = 1;
+                            if (!wg.a(var5, var6)) {
                               stackOut_29_0 = ema.field_r;
                               stackIn_30_0 = stackOut_29_0;
                               break L0;
@@ -120,8 +123,8 @@ final class ocb extends eca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            var3_ref = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var3_ref;
+            var3 = decompiledCaughtException;
+            stackOut_31_0 = (RuntimeException) var3;
             stackOut_31_1 = new StringBuilder().append("ocb.C(");
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
@@ -153,101 +156,90 @@ final class ocb extends eca {
     final static llb a(int param0, int param1, int param2, no param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         llb var13 = null;
         RuntimeException var13_ref = null;
-        llb stackIn_3_0 = null;
+        llb stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        llb stackOut_2_0 = null;
+        llb stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              var13 = new llb(0L, (llb) null);
-              if (param2 == 10204) {
-                break L1;
-              } else {
-                field_i = null;
-                break L1;
-              }
-            }
+            var13 = new llb(0L, (llb) null);
             var13.field_gb = va.a(-26998, param4, param11);
-            var13.field_mb = va.a(param2 + -37202, param5, param6);
-            var13.field_A = va.a(param2 ^ -20138, param12, param9);
+            var13.field_mb = va.a(-26998, param5, param6);
+            var13.field_A = va.a(-26998, param12, param9);
             var13.field_nb = va.a(-26998, param7, param1);
-            var13.field_ub = va.a(param2 + -37202, param0, param8);
+            var13.field_ub = va.a(-26998, param0, param8);
             var13.field_Y = param10;
             var13.field_eb = param3;
-            stackOut_2_0 = (llb) var13;
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = (llb) var13;
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var13_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var13_ref;
-            stackOut_4_1 = new StringBuilder().append("ocb.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var13_ref;
+            stackOut_2_1 = new StringBuilder().append("ocb.D(").append(param0).append(44).append(param1).append(44).append(10204).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param3 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
-    final static void a(boolean param0, byte param1, boolean param2) {
+    final static void a(boolean param0) {
         if (!(!param0)) {
             oqa.field_o = oqa.field_o + 1;
-            psa.e(param1 + 94);
+            int discarded$0 = 127;
+            psa.e();
         }
         emb.field_p = emb.field_p + 1;
-        vkb.a(param1 + -10726);
-        if (param1 != 33) {
-            ocb.f(12);
-        }
+        int discarded$1 = -10693;
+        vkb.a();
     }
 
-    final static void f(int param0) {
+    final static void f() {
         ulb.a(100);
-        if (param0 != -10150) {
-            llb discarded$0 = ocb.a(-128, 101, 87, (no) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
-        }
         uda.b(-2283);
-        ah.e(-17);
+        int discarded$0 = -17;
+        ah.e();
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_m = null;
         field_g = null;
         field_h = null;
@@ -308,12 +300,14 @@ final class ocb extends eca {
             if (param1 == 16384) {
               var4 = param0.toLowerCase();
               if (var4.length() != 0) {
-                if (!seb.a(var3, var4, -101)) {
+                int discarded$13 = -101;
+                if (!seb.a(var3, var4)) {
                   stackOut_8_0 = cca.field_o;
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
                 } else {
-                  if (!this.a(param0, false)) {
+                  int discarded$14 = 0;
+                  if (!this.a(param0)) {
                     stackOut_13_0 = lea.field_o;
                     stackIn_14_0 = stackOut_13_0;
                     break L0;
@@ -367,7 +361,7 @@ final class ocb extends eca {
         return stackIn_14_0;
     }
 
-    private final boolean a(String param0, boolean param1) {
+    private final boolean a(String param0) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;

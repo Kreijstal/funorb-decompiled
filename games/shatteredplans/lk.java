@@ -13,12 +13,9 @@ final class lk extends kg {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         rd.field_g = null;
         ui.field_p = nm.field_a;
-        if (param0 != -15365) {
-            lk.h(-36);
-        }
     }
 
     private lk(String param0, ko param1) {
@@ -44,12 +41,7 @@ final class lk extends kg {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void h(int param0) {
-        if (param0 != -22429) {
-            field_D = null;
-            field_D = null;
-            return;
-        }
+    public static void h() {
         field_D = null;
     }
 

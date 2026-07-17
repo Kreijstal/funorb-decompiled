@@ -11,7 +11,7 @@ final class ni {
     static bd field_d;
 
     final static int a(int param0, int param1) {
-        param0 = param0 & param1;
+        param0 = param0 & 8191;
         if (4096 <= param0) {
             return param0 < 6144 ? -vd.field_B[-4096 + param0] : -vd.field_B[8192 - param0];
         }
@@ -95,13 +95,13 @@ final class ni {
         return stackIn_23_0 != 0;
     }
 
-    final static void c(int param0) {
+    final static void c() {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        si.a(param5, param3, param1, param4, 0, 128 * param2 / 256);
-        int var6 = -60 % ((-23 - param0) / 45);
-        gn.a(param3, -1 + (param5 + param1), param5, param2, param4 + (param3 + -1), (byte) 101);
+        si.a(param5, param3, param1, param4, 0, 128);
+        int var6 = 0;
+        gn.a(param3, -1 + (param5 + param1), param5, 256, param4 + (param3 + -1), (byte) 101);
     }
 
     public static void b(int param0) {

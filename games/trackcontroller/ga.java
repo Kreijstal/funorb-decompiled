@@ -12,7 +12,7 @@ final class ga implements Iterable {
     private fc field_g;
     static boolean[] field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
         field_d = null;
@@ -26,7 +26,8 @@ final class ga implements Iterable {
         int var1 = 0;
         var1 = 3 % ((param0 - -50) / 53);
         if (gl.field_I >= 20) {
-          if (ic.a(1)) {
+          int discarded$4 = 1;
+          if (ic.a()) {
             if (0 < si.field_d) {
               if (ij.b(1)) {
                 return false;

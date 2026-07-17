@@ -10,7 +10,7 @@ final class ah {
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = -79 % ((param0 - -15) / 50);
+        int var1 = 0;
         field_b = null;
     }
 
@@ -19,13 +19,13 @@ final class ah {
         int var5 = Geoblox.field_C;
         char[] var6 = new char[param2];
         char[] var3 = var6;
-        for (var4 = param0; var4 < param2; var4++) {
-            var6[var4] = param1;
+        for (var4 = 0; var4 < param2; var4++) {
+            var6[var4] = '*';
         }
         return new String(var6);
     }
 
-    final static ff a(byte param0) {
+    final static ff a() {
         if (ac.field_t == null) {
             ac.field_t = new ff(hh.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, hh.field_d.field_o, -1, 2147483647, true);
         }

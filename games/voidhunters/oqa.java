@@ -6,7 +6,7 @@ final class oqa extends rqa {
     static int field_p;
     static int field_o;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_q = null;
     }
 

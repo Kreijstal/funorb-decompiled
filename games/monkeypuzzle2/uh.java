@@ -79,11 +79,9 @@ final class uh extends ug {
         return stackIn_3_0;
     }
 
-    final static void a(byte param0, int param1) {
-        if (pg.field_d.length <= -98) {
-          return;
-        } else {
-          return;
+    final static void a() {
+        if (!(pg.field_d.length > -98)) {
+            return;
         }
     }
 

@@ -5,7 +5,7 @@ abstract class sqa {
     static String field_a;
     vna field_b;
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean a(CharSequence param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -27,7 +27,9 @@ abstract class sqa {
         String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_2_0 = ega.a(10, param0, true, true);
+            int discarded$4 = 1;
+            int discarded$5 = 1;
+            stackOut_2_0 = ega.a(10, param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -256,7 +258,7 @@ abstract class sqa {
 
     abstract void a(int param0, boolean param1);
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
     }
 

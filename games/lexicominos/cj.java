@@ -39,7 +39,8 @@ final class cj extends kd {
             if (null != cl.field_P) {
               L1: {
                 var6 = (CharSequence) (Object) param1;
-                var2 = (Object) (Object) ck.a(var6, (byte) -48);
+                int discarded$4 = -48;
+                var2 = (Object) (Object) ck.a(var6);
                 if (var2 == null) {
                   var2 = (Object) (Object) var6;
                   break L1;
@@ -57,7 +58,8 @@ final class cj extends kd {
                 } else {
                   L3: {
                     var7 = (CharSequence) (Object) var3.field_R;
-                    var4_ref_String = ck.a(var7, (byte) -48);
+                    int discarded$5 = -48;
+                    var4_ref_String = ck.a(var7);
                     if (var4_ref_String == null) {
                       var4_ref_String = var3.field_R;
                       break L3;

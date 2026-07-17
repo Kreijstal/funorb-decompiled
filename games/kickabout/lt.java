@@ -27,7 +27,7 @@ final class lt {
         }
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         return 1;
     }
 

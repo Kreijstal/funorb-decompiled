@@ -222,7 +222,7 @@ final class um extends gf {
         return stackIn_15_0;
     }
 
-    final static void a(uc param0, int param1, uc param2, int param3) {
+    final static void a(uc param0, int param1, uc param2) {
         try {
             sp.field_Q = param2;
             bo.field_e = param0;
@@ -245,44 +245,66 @@ final class um extends gf {
         int var13 = 0;
         int var14 = 0;
         var14 = Torquing.field_u;
-        var6 = -param0 + param3;
-        var7 = param4 + -param2;
-        if (var6 != 0) {
-          if (var7 == 0) {
-            ef.a(param3, param1, param2, param0, 115);
-            return;
-          } else {
-            var12 = (var7 << 12) / var6;
-            var13 = -(var12 * param0 >> 12) + param2;
-            if (param3 >= kn.field_e) {
-              if (qg.field_z >= param3) {
-                var9 = param3;
-                var11 = param4;
-                if (kn.field_e <= param0) {
-                  if (qg.field_z < param0) {
-                    var10 = var13 - -(qg.field_z * var12 >> 12);
-                    var8 = qg.field_z;
-                    if (j.field_q <= var11) {
-                      if (var11 > qk.field_p) {
-                        var9 = (qk.field_p - var13 << 12) / var12;
-                        var11 = qk.field_p;
-                        if (var10 >= j.field_q) {
-                          if (qk.field_p < var10) {
-                            var8 = (-var13 + qk.field_p << 12) / var12;
-                            var10 = qk.field_p;
-                            oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                            return;
+        if (!param5) {
+          var6 = -param0 + param3;
+          var7 = param4 + -param2;
+          if (var6 != 0) {
+            if (var7 == 0) {
+              int discarded$1 = 115;
+              ef.a(param3, param1, param2, param0);
+              return;
+            } else {
+              var12 = (var7 << 12) / var6;
+              var13 = -(var12 * param0 >> 12) + param2;
+              if (param3 >= kn.field_e) {
+                if (qg.field_z >= param3) {
+                  var9 = param3;
+                  var11 = param4;
+                  if (kn.field_e <= param0) {
+                    if (qg.field_z < param0) {
+                      var10 = var13 - -(qg.field_z * var12 >> 12);
+                      var8 = qg.field_z;
+                      if (j.field_q <= var11) {
+                        if (var11 > qk.field_p) {
+                          var9 = (qk.field_p - var13 << 12) / var12;
+                          var11 = qk.field_p;
+                          if (var10 >= j.field_q) {
+                            if (qk.field_p < var10) {
+                              var8 = (-var13 + qk.field_p << 12) / var12;
+                              var10 = qk.field_p;
+                              oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                              return;
+                            } else {
+                              oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                              return;
+                            }
                           } else {
+                            var8 = (j.field_q + -var13 << 12) / var12;
+                            var10 = j.field_q;
                             oh.a(var8, var10, var11, (byte) -128, var9, param1);
                             return;
                           }
                         } else {
-                          var8 = (j.field_q + -var13 << 12) / var12;
-                          var10 = j.field_q;
-                          oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                          return;
+                          if (var10 >= j.field_q) {
+                            if (qk.field_p < var10) {
+                              var8 = (-var13 + qk.field_p << 12) / var12;
+                              var10 = qk.field_p;
+                              oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                              return;
+                            } else {
+                              oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                              return;
+                            }
+                          } else {
+                            var8 = (j.field_q + -var13 << 12) / var12;
+                            var10 = j.field_q;
+                            oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                            return;
+                          }
                         }
                       } else {
+                        var11 = j.field_q;
+                        var9 = (j.field_q - var13 << 12) / var12;
                         if (var10 >= j.field_q) {
                           if (qk.field_p < var10) {
                             var8 = (-var13 + qk.field_p << 12) / var12;
@@ -301,28 +323,70 @@ final class um extends gf {
                         }
                       }
                     } else {
-                      var11 = j.field_q;
-                      var9 = (j.field_q - var13 << 12) / var12;
-                      if (var10 >= j.field_q) {
-                        if (qk.field_p < var10) {
-                          var8 = (-var13 + qk.field_p << 12) / var12;
-                          var10 = qk.field_p;
-                          oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                          return;
+                      var8 = param0;
+                      var10 = param2;
+                      if (j.field_q <= var11) {
+                        if (var11 > qk.field_p) {
+                          var9 = (qk.field_p - var13 << 12) / var12;
+                          var11 = qk.field_p;
+                          if (var10 >= j.field_q) {
+                            if (qk.field_p < var10) {
+                              var8 = (-var13 + qk.field_p << 12) / var12;
+                              var10 = qk.field_p;
+                              oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                              return;
+                            } else {
+                              oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                              return;
+                            }
+                          } else {
+                            var8 = (j.field_q + -var13 << 12) / var12;
+                            var10 = j.field_q;
+                            oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                            return;
+                          }
                         } else {
+                          if (var10 >= j.field_q) {
+                            if (qk.field_p < var10) {
+                              var8 = (-var13 + qk.field_p << 12) / var12;
+                              var10 = qk.field_p;
+                              oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                              return;
+                            } else {
+                              oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                              return;
+                            }
+                          } else {
+                            var8 = (j.field_q + -var13 << 12) / var12;
+                            var10 = j.field_q;
+                            oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                            return;
+                          }
+                        }
+                      } else {
+                        var11 = j.field_q;
+                        var9 = (j.field_q - var13 << 12) / var12;
+                        if (var10 >= j.field_q) {
+                          if (qk.field_p < var10) {
+                            var8 = (-var13 + qk.field_p << 12) / var12;
+                            var10 = qk.field_p;
+                            oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                            return;
+                          } else {
+                            oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                            return;
+                          }
+                        } else {
+                          var8 = (j.field_q + -var13 << 12) / var12;
+                          var10 = j.field_q;
                           oh.a(var8, var10, var11, (byte) -128, var9, param1);
                           return;
                         }
-                      } else {
-                        var8 = (j.field_q + -var13 << 12) / var12;
-                        var10 = j.field_q;
-                        oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                        return;
                       }
                     }
                   } else {
-                    var8 = param0;
-                    var10 = param2;
+                    var10 = var13 + (var12 * kn.field_e >> 12);
+                    var8 = kn.field_e;
                     if (j.field_q <= var11) {
                       if (var11 > qk.field_p) {
                         var9 = (qk.field_p - var13 << 12) / var12;
@@ -383,8 +447,25 @@ final class um extends gf {
                     }
                   }
                 } else {
-                  var10 = var13 + (var12 * kn.field_e >> 12);
-                  var8 = kn.field_e;
+                  L0: {
+                    var11 = var13 + (var12 * qg.field_z >> 12);
+                    var9 = qg.field_z;
+                    if (kn.field_e <= param0) {
+                      if (qg.field_z < param0) {
+                        var10 = var13 - -(qg.field_z * var12 >> 12);
+                        var8 = qg.field_z;
+                        break L0;
+                      } else {
+                        var8 = param0;
+                        var10 = param2;
+                        break L0;
+                      }
+                    } else {
+                      var10 = var13 + (var12 * kn.field_e >> 12);
+                      var8 = kn.field_e;
+                      break L0;
+                    }
+                  }
                   if (j.field_q <= var11) {
                     if (var11 > qk.field_p) {
                       var9 = (qk.field_p - var13 << 12) / var12;
@@ -445,155 +526,76 @@ final class um extends gf {
                   }
                 }
               } else {
-                L0: {
-                  var11 = var13 + (var12 * qg.field_z >> 12);
-                  var9 = qg.field_z;
+                L1: {
+                  var11 = (var12 * kn.field_e >> 12) + var13;
+                  var9 = kn.field_e;
                   if (kn.field_e <= param0) {
                     if (qg.field_z < param0) {
                       var10 = var13 - -(qg.field_z * var12 >> 12);
                       var8 = qg.field_z;
-                      break L0;
+                      break L1;
                     } else {
                       var8 = param0;
                       var10 = param2;
-                      break L0;
+                      break L1;
                     }
                   } else {
                     var10 = var13 + (var12 * kn.field_e >> 12);
                     var8 = kn.field_e;
-                    break L0;
+                    break L1;
                   }
                 }
-                if (j.field_q <= var11) {
-                  if (var11 > qk.field_p) {
-                    var9 = (qk.field_p - var13 << 12) / var12;
-                    var11 = qk.field_p;
-                    if (var10 >= j.field_q) {
-                      if (qk.field_p < var10) {
-                        var8 = (-var13 + qk.field_p << 12) / var12;
-                        var10 = qk.field_p;
-                        oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                        return;
-                      } else {
-                        oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                        return;
-                      }
+                L2: {
+                  if (j.field_q <= var11) {
+                    if (var11 > qk.field_p) {
+                      var9 = (qk.field_p - var13 << 12) / var12;
+                      var11 = qk.field_p;
+                      break L2;
                     } else {
-                      var8 = (j.field_q + -var13 << 12) / var12;
-                      var10 = j.field_q;
-                      oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                      return;
+                      break L2;
                     }
                   } else {
-                    if (var10 >= j.field_q) {
-                      if (qk.field_p < var10) {
-                        var8 = (-var13 + qk.field_p << 12) / var12;
-                        var10 = qk.field_p;
-                        oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                        return;
-                      } else {
-                        oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                        return;
-                      }
-                    } else {
-                      var8 = (j.field_q + -var13 << 12) / var12;
-                      var10 = j.field_q;
-                      oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                      return;
-                    }
+                    var11 = j.field_q;
+                    var9 = (j.field_q - var13 << 12) / var12;
+                    break L2;
                   }
-                } else {
-                  var11 = j.field_q;
-                  var9 = (j.field_q - var13 << 12) / var12;
-                  if (var10 >= j.field_q) {
-                    if (qk.field_p < var10) {
-                      var8 = (-var13 + qk.field_p << 12) / var12;
-                      var10 = qk.field_p;
-                      oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                      return;
-                    } else {
-                      oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                      return;
-                    }
+                }
+                if (var10 >= j.field_q) {
+                  if (qk.field_p < var10) {
+                    var8 = (-var13 + qk.field_p << 12) / var12;
+                    var10 = qk.field_p;
+                    oh.a(var8, var10, var11, (byte) -128, var9, param1);
+                    return;
                   } else {
-                    var8 = (j.field_q + -var13 << 12) / var12;
-                    var10 = j.field_q;
                     oh.a(var8, var10, var11, (byte) -128, var9, param1);
                     return;
                   }
-                }
-              }
-            } else {
-              L1: {
-                var11 = (var12 * kn.field_e >> 12) + var13;
-                var9 = kn.field_e;
-                if (kn.field_e <= param0) {
-                  if (qg.field_z < param0) {
-                    var10 = var13 - -(qg.field_z * var12 >> 12);
-                    var8 = qg.field_z;
-                    break L1;
-                  } else {
-                    var8 = param0;
-                    var10 = param2;
-                    break L1;
-                  }
                 } else {
-                  var10 = var13 + (var12 * kn.field_e >> 12);
-                  var8 = kn.field_e;
-                  break L1;
-                }
-              }
-              L2: {
-                if (j.field_q <= var11) {
-                  if (var11 > qk.field_p) {
-                    var9 = (qk.field_p - var13 << 12) / var12;
-                    var11 = qk.field_p;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  var11 = j.field_q;
-                  var9 = (j.field_q - var13 << 12) / var12;
-                  break L2;
-                }
-              }
-              if (var10 >= j.field_q) {
-                if (qk.field_p < var10) {
-                  var8 = (-var13 + qk.field_p << 12) / var12;
-                  var10 = qk.field_p;
-                  oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                  return;
-                } else {
+                  var8 = (j.field_q + -var13 << 12) / var12;
+                  var10 = j.field_q;
                   oh.a(var8, var10, var11, (byte) -128, var9, param1);
                   return;
                 }
-              } else {
-                var8 = (j.field_q + -var13 << 12) / var12;
-                var10 = j.field_q;
-                oh.a(var8, var10, var11, (byte) -128, var9, param1);
-                return;
               }
             }
+          } else {
+            L3: {
+              if (0 == var7) {
+                break L3;
+              } else {
+                we.a(param0, param4, param1, -2686, param2);
+                break L3;
+              }
+            }
+            return;
           }
         } else {
-          L3: {
-            if (0 == var7) {
-              break L3;
-            } else {
-              we.a(param0, param4, param1, -2686, param2);
-              break L3;
-            }
-          }
           return;
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_q = null;
-        if (param0 >= -66) {
-            return;
-        }
         field_m = null;
     }
 

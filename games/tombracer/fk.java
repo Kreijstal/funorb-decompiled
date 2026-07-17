@@ -138,31 +138,23 @@ final class fk {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_6_0 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var3_int = 0;
-              if (param1 == -113) {
-                break L1;
-              } else {
-                field_j = null;
-                break L1;
-              }
-            }
+            var3_int = 0;
             var4 = wp.field_b;
-            L2: while (true) {
+            L1: while (true) {
               if (cna.field_b.length <= var3_int) {
-                stackOut_12_0 = -1;
-                stackIn_13_0 = stackOut_12_0;
+                stackOut_10_0 = -1;
+                stackIn_11_0 = stackOut_10_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = f.field_c[var3_int];
                   if (var5 >= 0) {
                     var6 = apa.a((byte) -50, true, cna.field_b[var3_int]);
@@ -170,28 +162,28 @@ final class fk {
                     var4 = var4 + aqa.field_a;
                     if (!rea.a(param2, var6 + (vra.field_a << 1), var7 + -vra.field_a, param0, am.field_n - -(vf.field_d << 1), false, var4)) {
                       var4 = var4 + ((vf.field_d << 1) + (aqa.field_a + am.field_n));
-                      break L3;
+                      break L2;
                     } else {
-                      stackOut_8_0 = var5;
-                      stackIn_9_0 = stackOut_8_0;
-                      return stackIn_9_0;
+                      stackOut_6_0 = var5;
+                      stackIn_7_0 = stackOut_6_0;
+                      return stackIn_7_0;
                     }
                   } else {
                     var4 = var4 + uda.field_x;
-                    break L3;
+                    break L2;
                   }
                 }
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "fk.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) var3, "fk.C(" + param0 + 44 + -113 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
     final void a(int param0) {
@@ -213,7 +205,7 @@ final class fk {
         ((fk) this).field_h = null;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_j = null;
         field_d = null;
     }

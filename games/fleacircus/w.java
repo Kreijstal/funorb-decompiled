@@ -98,7 +98,7 @@ abstract class w {
 
     abstract void a(byte param0);
 
-    public static void c(int param0) {
+    public static void c() {
         field_i = null;
         int var1 = 114;
         field_e = null;
@@ -132,9 +132,10 @@ abstract class w {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var4_int = -54 % ((36 - param0) / 55);
+            var4_int = 0;
             if (ha.a(param3, -32180, param2, param1)) {
-              stackOut_3_0 = fc.b(-128);
+              int discarded$2 = -128;
+              stackOut_3_0 = fc.b();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -148,7 +149,7 @@ abstract class w {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("w.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_5_1 = new StringBuilder().append("w.D(").append(-37).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -263,15 +264,15 @@ abstract class w {
 
     final static String a(int param0, java.applet.Applet param1) {
         try {
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
+            String var2 = null;
+            Throwable var2_ref = null;
+            RuntimeException var2_ref2 = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
             int var6 = 0;
             int var7 = 0;
             int var8 = 0;
-            String var9 = null;
             String stackIn_6_0 = null;
             String stackIn_12_0 = null;
             String stackIn_14_0 = null;
@@ -304,11 +305,12 @@ abstract class w {
                     }
                     case 1: {
                         try {
-                            var9 = param1.getParameter("cookieprefix");
-                            var3 = var9 + "settings";
-                            var4 = (String) eb.a("getcookies", param1, param0 + -250);
+                            var2 = param1.getParameter("cookieprefix");
+                            var3 = var2 + "settings";
+                            int discarded$2 = -250;
+                            var4 = (String) eb.a("getcookies", param1);
                             var5 = m.a(';', 122, var4);
-                            var6 = param0;
+                            var6 = 0;
                             statePc = 2;
                             continue stateLoop;
                         } catch (Throwable stateCaught_1) {
@@ -388,7 +390,7 @@ abstract class w {
                     }
                     case 9: {
                         try {
-                            var2 = caughtException;
+                            var2_ref = caughtException;
                             statePc = 10;
                             continue stateLoop;
                         } catch (Throwable stateCaught_9) {
@@ -442,9 +444,9 @@ abstract class w {
                         return stackIn_14_0;
                     }
                     case 15: {
-                        var2_ref = (RuntimeException) (Object) caughtException;
-                        stackOut_15_0 = (RuntimeException) var2_ref;
-                        stackOut_15_1 = new StringBuilder().append("w.J(").append(param0).append(44);
+                        var2_ref2 = (RuntimeException) (Object) caughtException;
+                        stackOut_15_0 = (RuntimeException) var2_ref2;
+                        stackOut_15_1 = new StringBuilder().append("w.J(").append(0).append(44);
                         stackIn_17_0 = stackOut_15_0;
                         stackIn_17_1 = stackOut_15_1;
                         stackIn_16_0 = stackOut_15_0;

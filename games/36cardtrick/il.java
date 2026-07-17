@@ -14,21 +14,17 @@ final class il implements Iterator {
 
     final static nk a(int param0, boolean param1) {
         nk var2 = new nk(true);
-        var2.field_e = false;
-        if (param0 != -1) {
-            il.b((byte) 34);
-            return var2;
-        }
+        var2.field_e = param1 ? true : false;
         return var2;
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         ((il) this).field_b = 1;
         ((il) this).field_c = ((il) this).field_g.field_b[0].field_d;
         ((il) this).field_d = null;
     }
 
-    final static uh a(int param0, int param1, int param2, int param3, int param4) {
+    final static uh a(int param0, int param1, int param2, int param3) {
         uh var5 = null;
         int var6 = 0;
         uh var7 = null;
@@ -39,18 +35,11 @@ final class il implements Iterator {
             var7 = new uh();
             var5 = var7;
             var7.field_g = param3;
-            var7.field_h = param4;
-            var7.field_k = param0;
-            if (param2 != 25404) {
-              field_f = null;
-              tl.field_a.a((qb) (Object) var5, 27362);
-              ei.a(-91, var5, param1);
-              return var5;
-            } else {
-              tl.field_a.a((qb) (Object) var5, 27362);
-              ei.a(-91, var5, param1);
-              return var5;
-            }
+            var7.field_h = 1;
+            var7.field_k = 8;
+            tl.field_a.a((qb) (Object) var5, 27362);
+            ei.a(-91, var5, 3);
+            return var5;
           } else {
             if (var5.field_g == param3) {
               return var5;
@@ -119,14 +108,10 @@ final class il implements Iterator {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_e = null;
         field_f = null;
-        if (param0 == 38) {
-            return;
-        }
-        uh discarded$0 = il.a(103, 62, -72, -123, -10);
     }
 
     public final void remove() {
@@ -141,7 +126,8 @@ final class il implements Iterator {
         ((il) this).field_d = null;
         try {
             ((il) this).field_g = param0;
-            this.a((byte) 64);
+            int discarded$0 = 64;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "il.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

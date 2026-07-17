@@ -12,11 +12,7 @@ final class dh implements Iterable {
     static int field_g;
     static String field_e;
 
-    final static boolean a(boolean param0) {
-        if (param0) {
-            field_g = -66;
-            return true;
-        }
+    final static boolean a() {
         return true;
     }
 
@@ -63,7 +59,7 @@ final class dh implements Iterable {
             var8 = var9;
             var16 = var8;
             gf.a(var15);
-            gf.e(0, param3 - 16, 640, param2 + (param0 + param3));
+            gf.e(0, param3 - 16, 640, param2 + (32 + param3));
             var5 = (200 - bl.field_s.field_E >> 1) + param1;
             var6 = -16 + param3;
             L1: while (true) {
@@ -82,11 +78,11 @@ final class dh implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var4, "dh.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) var4, "dh.A(" + 32 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (0 - hh.field_b != nl.field_d) {
           if (nl.field_d != -hh.field_b + 250) {
             nl.field_d = nl.field_d + 1;

@@ -10,10 +10,7 @@ final class mt extends td {
     static int field_s;
     static int field_r;
 
-    public static void b(int param0) {
-        if (param0 != 1687) {
-            return;
-        }
+    public static void b() {
         field_q = null;
         field_u = null;
         field_t = null;
@@ -138,7 +135,7 @@ final class mt extends td {
         return (ii) (Object) stackIn_16_0;
     }
 
-    final static sna c(int param0) {
+    final static sna c() {
         return rba.field_a.field_wb;
     }
 

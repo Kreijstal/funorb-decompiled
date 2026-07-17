@@ -90,7 +90,7 @@ final class he {
         }
     }
 
-    final static void a(int param0, pk param1, int param2, int param3, boolean param4) {
+    final static void a(int param0, pk param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -107,7 +107,7 @@ final class he {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        boolean stackIn_12_0 = false;
+        int stackIn_12_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_32_1 = 0;
@@ -122,7 +122,7 @@ final class he {
         StringBuilder stackIn_64_1 = null;
         String stackIn_64_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_11_0 = false;
+        int stackOut_11_0 = 0;
         int stackOut_28_0 = 0;
         int stackOut_26_0 = 0;
         int stackOut_31_0 = 0;
@@ -144,7 +144,8 @@ final class he {
             var5_int = kb.a((-param3 + param0) * 3, 16);
             var6 = param3 * 3;
             var7 = var5_int + -10;
-            oj.a((byte) 102);
+            int discarded$1 = 102;
+            oj.a();
             if (param2 >= 103) {
               L1: {
                 if (param1.field_N <= 0) {
@@ -169,15 +170,15 @@ final class he {
                       var9 = param1.field_a[var8];
                       var10 = param1.field_k[var8];
                       var11 = param1.field_B[var8];
-                      stackOut_11_0 = param4;
-                      stackIn_49_0 = stackOut_11_0 ? 1 : 0;
+                      stackOut_11_0 = 0;
+                      stackIn_49_0 = stackOut_11_0;
                       stackIn_12_0 = stackOut_11_0;
                       if (var19 != 0) {
                         break L3;
                       } else {
                         L5: {
                           L6: {
-                            if (!stackIn_12_0) {
+                            if (stackIn_12_0 == 0) {
                               break L6;
                             } else {
                               var12 = ej.field_c[var9];
@@ -376,7 +377,7 @@ final class he {
               break L17;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_64_0, stackIn_64_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ld.a((Throwable) (Object) stackIn_64_0, stackIn_64_2 + 44 + param2 + 44 + param3 + 44 + 0 + 41);
         }
     }
 
@@ -470,7 +471,8 @@ final class he {
               if (param0 == -1) {
                 break L1;
               } else {
-                he.a(52, (pk) null, -70, 88, false);
+                int discarded$2 = 0;
+                he.a(52, (pk) null, -70, 88);
                 break L1;
               }
             }

@@ -22,27 +22,27 @@ final class uca {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
-        Object stackIn_18_0 = null;
+        Object stackIn_16_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_9_0 = null;
-        Object stackOut_17_0 = null;
+        Object stackOut_15_0 = null;
         String stackOut_5_0 = null;
         String stackOut_2_0 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -55,33 +55,25 @@ final class uca {
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  L1: {
-                    if (param1 == 102) {
-                      break L1;
-                    } else {
-                      field_d = 38;
-                      break L1;
-                    }
-                  }
-                  vg discarded$1 = fla.field_f.a(-13854, (vg) (Object) var8);
-                  L2: while (true) {
+                  vg discarded$2 = fla.field_f.a(-13854, (vg) (Object) var8);
+                  L1: while (true) {
                     var7 = (mu) (Object) fla.field_f.e(115);
                     if (var7 != null) {
                       var7.field_Db = var7.field_Db - 1;
-                      continue L2;
+                      continue L1;
                     } else {
                       var8.p(19);
                       var8.c(-7975);
                       ii.field_a = ii.field_a - 1;
                       var9 = ql.field_k;
-                      var9.k(param2, param1 + -3090);
+                      var9.k(param2, -2988);
                       var9.field_h = var9.field_h + 1;
                       var5 = var9.field_h;
                       var9.i(1, 0);
                       var9.a(param0, false);
                       var9.d(var9.field_h - var5, (byte) -113);
-                      stackOut_17_0 = null;
-                      stackIn_18_0 = stackOut_17_0;
+                      stackOut_15_0 = null;
+                      stackIn_16_0 = stackOut_15_0;
                       break L0;
                     }
                   }
@@ -99,49 +91,49 @@ final class uca {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3;
-            stackOut_19_1 = new StringBuilder().append("uca.B(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_1 = new StringBuilder().append("uca.B(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L3;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L2;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L3;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 102 + 44 + param2 + 41);
         }
-        return (String) (Object) stackIn_18_0;
+        return (String) (Object) stackIn_16_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -39;
         field_f = null;
         field_c = null;
     }
 
-    final static void a(int param0, toa param1, byte param2) {
+    final static void a(int param0, toa param1) {
         kh var5 = null;
         int var4 = 0;
         try {
             var5 = ql.field_k;
-            var5.k(param0, -2988);
+            var5.k(5, -2988);
             var5.field_h = var5.field_h + 1;
             var4 = var5.field_h;
             var5.i(1, 0);
@@ -154,7 +146,7 @@ final class uca {
             int discarded$0 = var5.g(var4, 64);
             var5.d(-var4 + var5.field_h, (byte) -122);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "uca.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 93 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "uca.C(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 93 + 41);
         }
     }
 

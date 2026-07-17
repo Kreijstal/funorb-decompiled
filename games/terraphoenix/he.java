@@ -174,7 +174,9 @@ final class he implements Runnable {
         if (param2 != 60) {
             mf discarded$0 = ((he) this).a(-116);
         }
-        return this.a(param1, param0, false, (byte) -2);
+        int discarded$1 = -2;
+        int discarded$2 = 0;
+        return this.a(param1, param0);
     }
 
     private final static b a(String param0, int param1, String param2, int param3) {
@@ -205,7 +207,7 @@ final class he implements Runnable {
               }
             }
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_i, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
-            var6 = param1;
+            var6 = 0;
             L1: while (true) {
               if (var5_array.length > var6) {
                 L2: {
@@ -261,8 +263,8 @@ final class he implements Runnable {
         return this.a(0, param4 + (param3 << 16), param1 + (param0 << 16), 6, (Object) null);
     }
 
-    private final mf a(String param0, int param1, boolean param2, byte param3) {
-        return this.a(0, param1, 0, !param2 ? 1 : 22, (Object) (Object) param0);
+    private final mf a(String param0, int param1) {
+        return this.a(0, param1, 0, 1, (Object) (Object) param0);
     }
 
     final mf a(int param0, Class param1, String param2, Class[] param3) {
@@ -420,7 +422,7 @@ final class he implements Runnable {
                                               var8_ref.field_e = (Object) (Object) var16;
                                               var16.setResizable(false);
                                               if (!((he) this).field_n) {
-                                                Object discarded$6 = Class.forName("ti").getMethod("enter", new Class[5]).invoke(((he) this).field_f, new Object[5]);
+                                                Object discarded$7 = Class.forName("ti").getMethod("enter", new Class[5]).invoke(((he) this).field_f, new Object[5]);
                                                 break L8;
                                               } else {
                                                 ((he) this).field_c.a(var8_ref.field_f >>> 16, var16, 0, var8_ref.field_g >> 16, 65535 & var8_ref.field_f, var8_ref.field_g & 65535);
@@ -442,7 +444,7 @@ final class he implements Runnable {
                                                           var3_int = var8_ref.field_f;
                                                           var4 = var8_ref.field_g;
                                                           if (!((he) this).field_n) {
-                                                            Object discarded$7 = Class.forName("ub").getDeclaredMethod("movemouse", new Class[2]).invoke(((he) this).field_p, new Object[2]);
+                                                            Object discarded$8 = Class.forName("ub").getDeclaredMethod("movemouse", new Class[2]).invoke(((he) this).field_p, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((he) this).field_l.a(-2, var4, var3_int);
@@ -474,7 +476,7 @@ final class he implements Runnable {
                                                           var3_int = stackIn_62_0;
                                                           var13 = (java.awt.Component) var8_ref.field_c;
                                                           if (!((he) this).field_n) {
-                                                            Object discarded$8 = Class.forName("ub").getDeclaredMethod("showcursor", new Class[2]).invoke(((he) this).field_p, new Object[2]);
+                                                            Object discarded$9 = Class.forName("ub").getDeclaredMethod("showcursor", new Class[2]).invoke(((he) this).field_p, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((he) this).field_l.a(var3_int != 0, var13, -64);
@@ -491,7 +493,7 @@ final class he implements Runnable {
                                                           break L13;
                                                         } else {
                                                           var14 = (Object[]) var8_ref.field_c;
-                                                          Object discarded$9 = Class.forName("ub").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((he) this).field_p, new Object[5]);
+                                                          Object discarded$10 = Class.forName("ub").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((he) this).field_p, new Object[5]);
                                                           break L8;
                                                         }
                                                       }
@@ -516,7 +518,7 @@ final class he implements Runnable {
                                                             var5 = 0;
                                                             L16: while (true) {
                                                               if (var15.length() <= var5) {
-                                                                Process discarded$10 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var15 + "\"");
+                                                                Process discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var15 + "\"");
                                                                 var8_ref.field_e = null;
                                                                 break L14;
                                                               } else {
@@ -553,7 +555,7 @@ final class he implements Runnable {
                                                   ((he) this).field_c.a((java.awt.Frame) var8_ref.field_c, 8);
                                                   break L8;
                                                 } else {
-                                                  Object discarded$11 = Class.forName("ti").getMethod("exit", new Class[0]).invoke(((he) this).field_f, new Object[0]);
+                                                  Object discarded$12 = Class.forName("ti").getMethod("exit", new Class[0]).invoke(((he) this).field_f, new Object[0]);
                                                   break L8;
                                                 }
                                               }
@@ -616,7 +618,8 @@ final class he implements Runnable {
                         } else {
                           try {
                             L18: {
-                              var8_ref.field_e = (Object) (Object) ah.a((String) var8_ref.field_c, var8_ref.field_f, -23891).b(true);
+                              int discarded$13 = -23891;
+                              var8_ref.field_e = (Object) (Object) ah.a((String) var8_ref.field_c, var8_ref.field_f).b(true);
                               break L18;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter2) {

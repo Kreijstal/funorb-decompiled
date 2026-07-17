@@ -10,7 +10,7 @@ final class pm {
     static int field_f;
     static int field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -13;
         field_a = null;
         field_c = null;

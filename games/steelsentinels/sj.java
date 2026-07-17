@@ -349,13 +349,10 @@ final class sj extends we {
     final static void a(String param0, String param1, int param2, byte param3, String param4, int param5) {
         na var6 = null;
         try {
-            if (param3 != 21) {
-                field_x = null;
-            }
-            var6 = new na(param5, param4, param2, param0, param1);
+            var6 = new na(param5, param4, 0, param0, param1);
             tf.a(var6, (byte) -107);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "sj.F(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "sj.F(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + 21 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
     }
 
@@ -498,13 +495,10 @@ final class sj extends we {
 
     private final void a(int param0, ic param1, int param2, int param3) {
         try {
-            if (param2 != 17396) {
-                ((sj) this).a(-97, 18);
-            }
             param1.a(-1, (byte) 37, param3);
             param1.a((byte) 61, param0);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "sj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "sj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 17396 + 44 + param3 + 41);
         }
     }
 

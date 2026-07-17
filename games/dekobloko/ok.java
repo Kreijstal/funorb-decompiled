@@ -20,7 +20,7 @@ final class ok {
     }
 
     final static void a(int[] param0, int param1, int param2) {
-        ok.a(param0, 0, param0.length, param1, param2, (int[]) null, (int[]) null);
+        ok.a(param0, 0, param0.length, 16777215, param2, (int[]) null, (int[]) null);
     }
 
     private final static void a(int param0, int param1, int[] param2, int[] param3) {
@@ -42,7 +42,7 @@ final class ok {
                     var5 = param2[var7] + param3[var7] + hk.field_c;
                 }
             }
-            hk.c(var4, var6, var5 - var4, param0, param1);
+            hk.c(var4, var6, var5 - var4, 16777215, param1);
         }
     }
 
@@ -276,7 +276,7 @@ final class ok {
 
     private final static void a(int[] param0, int param1, int param2, int param3) {
         ok.c();
-        ok.b(param0, param1, param2);
+        ok.b(param0, 0, param2);
         ok.a(param3);
     }
 
@@ -300,8 +300,8 @@ final class ok {
             }
         }
         ok.c();
-        ok.b(param0, param1, param2);
-        ok.a(param3, param4, param5, param6);
+        ok.b(param0, 0, param2);
+        ok.a(16777215, param4, param5, param6);
     }
 
     private final static void b(int[] param0, int param1, int param2) {
@@ -338,9 +338,9 @@ final class ok {
             }
           }
         }
-        param2 = param2 + param1;
+        param2 = param2;
         var4 = param2 - 2;
-        var8 = param1;
+        var8 = 0;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {

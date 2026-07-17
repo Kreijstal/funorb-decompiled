@@ -9,18 +9,20 @@ final class ii {
     static boolean field_d;
     static volatile boolean field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
         field_e = null;
     }
 
-    final static void a(dh param0, int param1, int param2) {
+    final static void a(dh param0) {
         try {
             vb.field_c.a((qb) (Object) param0, 27362);
-            ke.a(param0, param1, 21719);
+            int discarded$0 = 21719;
+            int discarded$1 = 4;
+            ke.a(param0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ii.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 8192 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ii.B(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + 8192 + 41);
         }
     }
 

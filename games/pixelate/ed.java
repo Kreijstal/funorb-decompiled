@@ -5,7 +5,7 @@ final class ed {
     static String field_a;
     static we field_b;
 
-    final static ob a(byte[] param0, int param1) {
+    final static ob a(byte[] param0) {
         ob var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_6_0 = null;
@@ -27,7 +27,8 @@ final class ed {
         try {
           if (param0 != null) {
             var2 = new ob(param0, fa.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
-            re.b(140);
+            int discarded$2 = 140;
+            re.b();
             return var2;
           } else {
             return null;
@@ -64,7 +65,7 @@ final class ed {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 0;
         field_b = null;

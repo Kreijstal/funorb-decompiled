@@ -13,7 +13,7 @@ abstract class gf extends fi implements ja {
     static String field_y;
     static String field_x;
 
-    private final boolean b(fi param0, int param1) {
+    private final boolean b(fi param0) {
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -35,7 +35,9 @@ abstract class gf extends fi implements ja {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = this.a(param0, 1, (byte) -29);
+            int discarded$4 = -29;
+            int discarded$5 = 1;
+            stackOut_0_0 = this.a(param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -79,10 +81,7 @@ abstract class gf extends fi implements ja {
         return this.a(16711935) != null ? true : false;
     }
 
-    final static hm g(boolean param0) {
-        if (!param0) {
-            field_x = null;
-        }
+    final static hm g() {
         return (hm) (Object) new mf();
     }
 
@@ -134,11 +133,13 @@ abstract class gf extends fi implements ja {
                   if (80 == var5_int) {
                     L2: {
                       if (dc.field_Y[81]) {
-                        stackOut_16_0 = this.b(param0, -1);
+                        int discarded$5 = -1;
+                        stackOut_16_0 = this.b(param0);
                         stackIn_17_0 = stackOut_16_0;
                         break L2;
                       } else {
-                        stackOut_15_0 = this.c(param0, 65793);
+                        int discarded$6 = 65793;
+                        stackOut_15_0 = this.c(param0);
                         stackIn_17_0 = stackOut_15_0;
                         break L2;
                       }
@@ -807,7 +808,7 @@ abstract class gf extends fi implements ja {
         }
     }
 
-    private final boolean a(int param0, fi param1, int param2) {
+    private final boolean a(int param0, fi param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         fi var5 = null;
@@ -843,7 +844,7 @@ abstract class gf extends fi implements ja {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              var4_int = param2;
+              var4_int = 0;
               L1: while (true) {
                 if (var4_int >= ((gf) this).field_E.length) {
                   stackOut_18_0 = 0;
@@ -858,7 +859,7 @@ abstract class gf extends fi implements ja {
                       break L2;
                     } else {
                       if (var5.f(true)) {
-                        var4_int = var4_int + param0;
+                        var4_int = var4_int + 1;
                         L3: while (true) {
                           if (var4_int >= ((gf) this).field_E.length) {
                             break L2;
@@ -877,7 +878,7 @@ abstract class gf extends fi implements ja {
                                 }
                               }
                             }
-                            var4_int = var4_int + param0;
+                            var4_int = var4_int + 1;
                             continue L3;
                           }
                         }
@@ -897,7 +898,7 @@ abstract class gf extends fi implements ja {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var4;
-            stackOut_20_1 = new StringBuilder().append("gf.P(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("gf.P(").append(1).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -920,7 +921,7 @@ abstract class gf extends fi implements ja {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 0 + 41);
         }
         return stackIn_19_0 != 0;
     }
@@ -1014,16 +1015,13 @@ abstract class gf extends fi implements ja {
         if (param1 % 100 != 0) {
             return true;
         }
-        if (param0 > -83) {
-            hm discarded$0 = gf.g(false);
-        }
         if (param1 % 400 == 0) {
             return true;
         }
         return false;
     }
 
-    private final boolean c(fi param0, int param1) {
+    private final boolean c(fi param0) {
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -1045,7 +1043,8 @@ abstract class gf extends fi implements ja {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = this.a(1, param0, 0);
+            int discarded$2 = 0;
+            stackOut_0_0 = this.a(1, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1090,7 +1089,7 @@ abstract class gf extends fi implements ja {
         ((gf) this).c((byte) -99);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wm param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, wm param4, int param5, int param6) {
         RuntimeException var8 = null;
         int[] var8_array = null;
         int var13 = 0;
@@ -1123,17 +1122,17 @@ abstract class gf extends fi implements ja {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
+        byte[] var43 = null;
         int var44 = 0;
         wm var45 = null;
-        int[] var50 = null;
-        int[] var55 = null;
+        int[] var49 = null;
+        int[] var53 = null;
+        int[] var57 = null;
+        int[] var59 = null;
         int[] var60 = null;
-        byte[] var62 = null;
+        int[] var61 = null;
+        int[] var62 = null;
         int[] var63 = null;
-        int[] var64 = null;
-        int[] var65 = null;
-        int[] var66 = null;
-        int[] var67 = null;
         int stackIn_15_0 = 0;
         int[] stackIn_16_0 = null;
         int[] stackIn_17_0 = null;
@@ -1191,27 +1190,29 @@ abstract class gf extends fi implements ja {
                   break L2;
                 } else {
                   if (var45.field_a > 1) {
-                    var62 = var45.field_z;
-                    al.a(var62, ph.field_o, 0, 0, 125);
+                    var43 = var45.field_z;
+                    int discarded$2 = 125;
+                    al.a(var43, ph.field_o, 0, 0);
                     break L1;
                   } else {
                     break L2;
                   }
                 }
               }
-              fh.b((byte) -80);
+              int discarded$3 = -80;
+              fh.b();
               break L1;
             }
-            var66 = new int[param4.field_i];
-            var60 = var66;
-            var55 = var60;
-            var50 = var55;
-            var41 = var50;
+            var62 = new int[param4.field_i];
+            var57 = var62;
+            var53 = var57;
+            var49 = var53;
+            var41 = var49;
             var8_array = var41;
-            var67 = new int[param4.field_i];
-            var64 = u.field_q;
-            var65 = fb.field_p;
-            var63 = dc.field_Q;
+            var63 = new int[param4.field_i];
+            var60 = u.field_q;
+            var61 = fb.field_p;
+            var59 = dc.field_Q;
             var13 = 0;
             L3: while (true) {
               if (var13 >= param4.field_i) {
@@ -1305,8 +1306,8 @@ abstract class gf extends fi implements ja {
                         } else {
                           if (var19 == var20) {
                             L12: {
-                              var28 = var66[var18];
-                              var29 = var67[var18];
+                              var28 = var62[var18];
+                              var29 = var63[var18];
                               if (var21_ref == null) {
                                 stackOut_48_0 = 8355711;
                                 stackIn_49_0 = stackOut_48_0;
@@ -1330,12 +1331,12 @@ abstract class gf extends fi implements ja {
                         }
                       }
                       L13: {
-                        var28 = var66[var18];
-                        var29 = var66[var19];
-                        var30 = var66[var20];
-                        var31 = var67[var18];
-                        var32 = var67[var19];
-                        var33 = var67[var20];
+                        var28 = var62[var18];
+                        var29 = var62[var19];
+                        var30 = var62[var20];
+                        var31 = var63[var18];
+                        var32 = var63[var19];
+                        var33 = var63[var20];
                         if (var21_ref != null) {
                           stackOut_44_0 = var21_ref.field_b;
                           stackIn_45_0 = stackOut_44_0;
@@ -1364,7 +1365,7 @@ abstract class gf extends fi implements ja {
                 }
               } else {
                 L14: {
-                  var14 = param5 * var63[var13] + param1 * var64[var13] - -(param6 * var65[var13]) >> 8;
+                  var14 = param5 * var59[var13] + param1 * var60[var13] - -(param6 * var61[var13]) >> 8;
                   if (0 <= var14) {
                     break L14;
                   } else {
@@ -1391,7 +1392,7 @@ abstract class gf extends fi implements ja {
                 }
                 L16: {
                   var14 = stackIn_15_0;
-                  var15 = var63[var13] * param2 + (var64[var13] * param3 - -(var65[var13] * param0)) >> 8;
+                  var15 = var59[var13] * param2 + (var60[var13] * param3 - -(var61[var13] * param0)) >> 8;
                   stackOut_15_0 = dm.field_x;
                   stackIn_17_0 = stackOut_15_0;
                   stackIn_16_0 = stackOut_15_0;
@@ -1411,8 +1412,8 @@ abstract class gf extends fi implements ja {
                 }
                 var15 = stackIn_18_0[stackIn_18_1];
                 var14 = var14 * (256 + -var15) >>> 8;
-                var66[var13] = var14;
-                var67[var13] = var15;
+                var62[var13] = var14;
+                var63[var13] = var15;
                 var13++;
                 continue L3;
               }
@@ -1450,7 +1451,7 @@ abstract class gf extends fi implements ja {
         }
     }
 
-    private final boolean a(fi param0, int param1, byte param2) {
+    private final boolean a(fi param0) {
         int var4_int = 0;
         RuntimeException var4 = null;
         fi var5 = null;
@@ -1501,7 +1502,7 @@ abstract class gf extends fi implements ja {
                       if (!var5.f(true)) {
                         break L2;
                       } else {
-                        var4_int = var4_int - param1;
+                        var4_int = var4_int - 1;
                         L3: while (true) {
                           if (var4_int < 0) {
                             break L2;
@@ -1520,7 +1521,7 @@ abstract class gf extends fi implements ja {
                                 break L4;
                               }
                             }
-                            var4_int = var4_int - param1;
+                            var4_int = var4_int - 1;
                             continue L3;
                           }
                         }
@@ -1561,19 +1562,19 @@ abstract class gf extends fi implements ja {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + -29 + 41);
+          throw kg.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 1 + 44 + -29 + 41);
         }
         return stackIn_20_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_z = null;
         field_D = null;
         field_C = null;
         field_y = null;
         field_B = null;
         field_x = null;
-        int var1 = -19 / ((param0 - 70) / 41);
+        int var1 = -19;
         field_A = null;
     }
 
@@ -1699,26 +1700,22 @@ abstract class gf extends fi implements ja {
               var9 = ((gf) this).field_E;
               var5 = var9;
               var6 = 0;
-              if (param1 > 113) {
-                L1: while (true) {
-                  if (var6 >= var9.length) {
-                    break L0;
-                  } else {
-                    L2: {
-                      var7 = var9[var6];
-                      if (var7 != null) {
-                        var7.a(param0 - -((gf) this).field_l, 125, param2, param3 - -((gf) this).field_u);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
+              L1: while (true) {
+                if (var6 >= var9.length) {
+                  break L0;
+                } else {
+                  L2: {
+                    var7 = var9[var6];
+                    if (var7 != null) {
+                      var7.a(param0 - -((gf) this).field_l, 125, param2, param3 - -((gf) this).field_u);
+                      break L2;
+                    } else {
+                      break L2;
                     }
-                    var6++;
-                    continue L1;
                   }
+                  var6++;
+                  continue L1;
                 }
-              } else {
-                return;
               }
             } else {
               return;
@@ -1729,7 +1726,7 @@ abstract class gf extends fi implements ja {
           L3: {
             var5_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5_ref;
-            stackOut_11_1 = new StringBuilder().append("gf.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("gf.E(").append(param0).append(44).append(124).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;

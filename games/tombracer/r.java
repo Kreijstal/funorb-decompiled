@@ -43,7 +43,7 @@ abstract class r extends od {
         }
     }
 
-    final static via a(int param0, int param1, int param2, fia param3, int param4, int param5) {
+    final static via a(int param0, int param1, int param2, fia param3, int param4) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         via var7 = null;
@@ -70,7 +70,7 @@ abstract class r extends od {
         String stackOut_8_2 = null;
         try {
           L0: {
-            var8 = kha.a(param3, param1, param0, 10, 0, param4);
+            var8 = kha.a(param3, 0, param0, 10, 0, param4);
             var6 = var8;
             if (var8 != null) {
               L1: {
@@ -101,7 +101,7 @@ abstract class r extends od {
           L2: {
             var6_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("r.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_7_1 = new StringBuilder().append("r.A(").append(param0).append(44).append(0).append(44).append(param2).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

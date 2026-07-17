@@ -21,7 +21,7 @@ final class uf {
         uj discarded$0 = nm.b(-128, 59);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_h = null;
         field_c = null;
         field_b = null;
@@ -164,7 +164,7 @@ final class uf {
         ((uf) this).field_k = false;
     }
 
-    final static void a(int param0, boolean param1, byte param2) {
+    final static void a(int param0, boolean param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         th var4 = null;

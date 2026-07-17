@@ -619,7 +619,7 @@ class va extends wl {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_o = null;
         field_n = null;
         field_l = null;
@@ -641,7 +641,8 @@ class va extends wl {
 
     va(int param0) {
         ((va) this).field_m = 0;
-        ((va) this).field_k = ej.a(param0, 1);
+        int discarded$0 = 1;
+        ((va) this).field_k = ej.a(param0);
     }
 
     final void c(int param0, int param1) {

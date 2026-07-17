@@ -23,11 +23,11 @@ final class ti {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return ma.a(-120, rl.a((byte) -77));
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

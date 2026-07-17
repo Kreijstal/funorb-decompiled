@@ -294,62 +294,54 @@ final class ti extends sj {
     private final void a(int param0, int param1) {
         in var3 = null;
         int var4 = 0;
-        L0: {
-          var4 = Pixelate.field_H ? 1 : 0;
-          if (param1 == 0) {
-            break L0;
-          } else {
-            sj discarded$2 = ((ti) this).b();
-            break L0;
-          }
-        }
+        var4 = Pixelate.field_H ? 1 : 0;
         var3 = (in) (Object) ((ti) this).field_N.field_r.c(1504642273);
-        L1: while (true) {
+        L0: while (true) {
           if (var3 == null) {
             return;
           } else {
-            L2: {
-              L3: {
+            L1: {
+              L2: {
                 if (param0 < 0) {
-                  break L3;
+                  break L2;
                 } else {
                   if (var3.field_I != param0) {
-                    break L2;
+                    break L1;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
               }
-              L4: {
+              L3: {
                 if (var3.field_G != null) {
-                  L5: {
+                  L4: {
                     var3.field_G.e(mm.field_h / 100);
                     if (var3.field_G.k()) {
                       ((ti) this).field_N.field_o.a((sj) (Object) var3.field_G);
-                      break L5;
+                      break L4;
                     } else {
-                      break L5;
+                      break L4;
                     }
                   }
                   var3.a(false);
-                  break L4;
+                  break L3;
                 } else {
-                  break L4;
+                  break L3;
                 }
               }
-              L6: {
+              L5: {
                 if (var3.field_v < 0) {
                   ((ti) this).field_G[var3.field_I][var3.field_A] = null;
-                  break L6;
+                  break L5;
                 } else {
-                  break L6;
+                  break L5;
                 }
               }
               var3.c(2779);
-              break L2;
+              break L1;
             }
-            var3 = (in) (Object) ((ti) this).field_N.field_r.f(param1 + 1504642273);
-            continue L1;
+            var3 = (in) (Object) ((ti) this).field_N.field_r.f(1504642273);
+            continue L0;
           }
         }
     }
@@ -453,7 +445,8 @@ final class ti extends sj {
                     var9 = (int)var8.field_e;
                     var12 = (sn) (Object) ((ti) this).field_F.a(-25484, (long)var9);
                     if (var12 == null) {
-                      var13 = od.a(param2, var9, -30805);
+                      int discarded$1 = -30805;
+                      var13 = od.a(param2, var9);
                       if (var13 != null) {
                         ((ti) this).field_F.a((long)var9, 124, (fa) (Object) var13);
                         if (!var13.a(param1, (int[]) var7, (byte) -52, var8.field_r)) {
@@ -571,114 +564,106 @@ final class ti extends sj {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
-        int stackIn_13_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
               var3_int = param1.field_r + (param1.field_k * param1.field_z >> 12);
-              if (param0 == -2003551188) {
-                break L1;
-              } else {
-                ((ti) this).field_M = null;
-                break L1;
-              }
-            }
-            L2: {
               var3_int = var3_int + (((ti) this).field_L[param1.field_I] * (((ti) this).field_u[param1.field_I] - 8192) >> 12);
               var4 = param1.field_q;
               if (0 >= var4.field_g) {
-                break L2;
+                break L1;
               } else {
-                L3: {
+                L2: {
                   if (var4.field_a > 0) {
-                    break L3;
+                    break L2;
                   } else {
                     if (((ti) this).field_r[param1.field_I] > 0) {
-                      break L3;
-                    } else {
                       break L2;
+                    } else {
+                      break L1;
                     }
                   }
                 }
-                L4: {
+                L3: {
                   var5 = var4.field_a << 2;
                   var6 = var4.field_m << 1;
                   if (var6 > param1.field_H) {
                     var5 = param1.field_H * var5 / var6;
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
                 var5 = var5 + (((ti) this).field_r[param1.field_I] >> 7);
                 var7 = Math.sin(0.01227184630308513 * (double)(511 & param1.field_u));
                 var3_int = var3_int + (int)((double)var5 * var7);
-                break L2;
+                break L1;
               }
             }
-            L5: {
+            L4: {
               var5 = (int)(0.5 + (double)(param1.field_F.field_o * 256) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)mm.field_h);
               if (var5 >= 1) {
-                stackOut_12_0 = var5;
-                stackIn_13_0 = stackOut_12_0;
-                break L5;
+                stackOut_10_0 = var5;
+                stackIn_11_0 = stackOut_10_0;
+                break L4;
               } else {
-                stackOut_11_0 = 1;
-                stackIn_13_0 = stackOut_11_0;
-                break L5;
+                stackOut_9_0 = 1;
+                stackIn_11_0 = stackOut_9_0;
+                break L4;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("ti.IA(").append(param0).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("ti.IA(").append(-2003551188).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L6;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L6;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
     private final void d(int param0, int param1, int param2) {
@@ -691,18 +676,15 @@ final class ti extends sj {
             return;
         }
         try {
-            var6 = new aa(param4, param2, param0, param1, param5);
+            var6 = new aa(2, param2, 0, param1, param5);
             vd.a(false, var6);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ti.OA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ti.OA(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + 2 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
     private final void a(int param0, int param1, int param2) {
         ((ti) this).field_V[param2] = param0;
-        if (param1 != 4200) {
-            ((ti) this).field_q = null;
-        }
         ((ti) this).field_K[param2] = cm.a(-128, param0);
         this.a(param0, false, param2);
     }
@@ -738,9 +720,8 @@ final class ti extends sj {
         in var7 = null;
         in var8 = null;
         int var9 = 0;
-        Object var10 = null;
+        sn var10 = null;
         sn var11 = null;
-        sn var12 = null;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         Object stackIn_16_0 = null;
@@ -785,22 +766,22 @@ final class ti extends sj {
             }
           }
         }
-        var11 = (sn) (Object) ((ti) this).field_F.a(-25484, (long)((ti) this).field_y[param0]);
-        var12 = var11;
-        if (var12 != null) {
-          var6 = var11.field_n[param1];
+        var10 = (sn) (Object) ((ti) this).field_F.a(-25484, (long)((ti) this).field_y[param0]);
+        var11 = var10;
+        if (var11 != null) {
+          var6 = var10.field_n[param1];
           if (var6 != null) {
             L3: {
               var7 = new in();
               var7.field_F = var6;
-              var7.field_x = var12;
+              var7.field_x = var11;
               var7.field_I = param0;
-              var7.field_q = var11.field_l[param1];
-              var7.field_y = var11.field_p[param1];
+              var7.field_q = var10.field_l[param1];
+              var7.field_y = var10.field_p[param1];
               var7.field_A = param1;
-              var7.field_D = 1024 + var11.field_t[param1] * (param3 * param3) * var12.field_v >> 11;
-              var7.field_C = 255 & var11.field_o[param1];
-              var7.field_r = -(var11.field_u[param1] & 32767) + (param1 << 8);
+              var7.field_D = 1024 + var10.field_t[param1] * (param3 * param3) * var11.field_v >> 11;
+              var7.field_C = 255 & var10.field_o[param1];
+              var7.field_r = -(var10.field_u[param1] & 32767) + (param1 << 8);
               var7.field_w = 0;
               var7.field_o = 0;
               var7.field_v = -1;
@@ -812,7 +793,7 @@ final class ti extends sj {
                   stackOut_13_0 = this;
                   stackIn_15_0 = stackOut_13_0;
                   stackIn_14_0 = stackOut_13_0;
-                  if (var12.field_u[param1] >= 0) {
+                  if (var11.field_u[param1] >= 0) {
                     stackOut_15_0 = this;
                     stackOut_15_1 = 0;
                     stackIn_16_0 = stackOut_15_0;
@@ -834,7 +815,7 @@ final class ti extends sj {
               }
             }
             L5: {
-              if (var12.field_u[param1] < 0) {
+              if (var11.field_u[param1] < 0) {
                 var7.field_G.g(-1);
                 break L5;
               } else {
@@ -863,16 +844,7 @@ final class ti extends sj {
                 break L6;
               }
             }
-            L8: {
-              ((ti) this).field_N.field_r.a(22125, (fa) (Object) var7);
-              if (param2 < -21) {
-                break L8;
-              } else {
-                var10 = null;
-                boolean discarded$1 = ((ti) this).a((ua) null, (po) null, (fm) null, 79, -76);
-                break L8;
-              }
-            }
+            ((ti) this).field_N.field_r.a(22125, (fa) (Object) var7);
             ((ti) this).field_G[param0][param1] = var7;
             return;
           } else {
@@ -925,15 +897,10 @@ final class ti extends sj {
                 ((ti) this).field_P[param2][var4] = null;
             }
         }
-        if (param1) {
-            this.a(79, 96);
-        }
+        this.a(79, 96);
     }
 
     private final void a(byte param0, int param1, int param2, int param3) {
-        if (param0 <= 106) {
-            ((ti) this).field_G = null;
-        }
     }
 
     final void a(boolean param0, byte param1, in param2) {
@@ -1027,9 +994,6 @@ final class ti extends sj {
         jd var1 = (jd) (Object) vc.field_O.b(-88);
         if (!(var1 != null)) {
             var1 = new jd();
-        }
-        if (param0) {
-            boolean discarded$0 = ti.a(-80, 'ￆ');
         }
         var1.a(t.field_k, t.field_a, t.field_d, t.field_e, (byte) -102, t.field_h, t.field_f, t.field_j);
         oj.field_P.a(22125, (fa) (Object) var1);
@@ -1400,7 +1364,7 @@ final class ti extends sj {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         int var1 = 0;
         field_E = null;
     }
@@ -1430,7 +1394,8 @@ final class ti extends sj {
         try {
           L0: {
             L1: {
-              this.a(param2, param0, true, 0);
+              int discarded$2 = 0;
+              this.a(param2, param0, true);
               if (param1 == -39) {
                 break L1;
               } else {
@@ -1688,7 +1653,8 @@ final class ti extends sj {
             break L1;
           } else {
             if (((ti) this).field_O == var3) {
-              this.a(((ti) this).field_z, ((ti) this).field_D, ((ti) this).field_s, 0);
+              int discarded$1 = 0;
+              this.a(((ti) this).field_z, ((ti) this).field_D, ((ti) this).field_s);
               this.f(-113);
               return;
             } else {
@@ -1933,7 +1899,7 @@ final class ti extends sj {
         int var2 = 127 / ((param0 - 78) / 45);
     }
 
-    private final synchronized void a(boolean param0, ua param1, boolean param2, int param3) {
+    private final synchronized void a(boolean param0, ua param1, boolean param2) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = Pixelate.field_H ? 1 : 0;
@@ -2321,9 +2287,6 @@ final class ti extends sj {
                 }
                 var3 = (in) (Object) ((ti) this).field_N.field_r.f(1504642273);
             }
-        }
-        if (!param0) {
-            ((ti) this).field_L = null;
         }
     }
 

@@ -10,7 +10,7 @@ final class pl {
     static String field_b;
     static int[] field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         int var1 = 1;
@@ -34,10 +34,12 @@ final class pl {
 
     final static ah a(int param0, boolean param1, boolean param2, int param3, byte param4) {
         if (param4 >= -47) {
-          cf discarded$2 = pl.a(-52, (byte) 50);
-          return ai.a(param2, param0, false, param3, (byte) 122, param1);
+          cf discarded$6 = pl.a(-52, (byte) 50);
+          int discarded$7 = 1;
+          return ai.a(false, param0, false, 1, (byte) 122);
         } else {
-          return ai.a(param2, param0, false, param3, (byte) 122, param1);
+          int discarded$8 = 1;
+          return ai.a(false, param0, false, 1, (byte) 122);
         }
     }
 

@@ -73,7 +73,7 @@ final class bt extends bca {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_r = null;
         field_q = null;
     }

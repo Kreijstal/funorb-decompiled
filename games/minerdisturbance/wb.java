@@ -17,42 +17,32 @@ final class wb extends pi {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
-            L1: {
-              if (param1) {
-                break L1;
-              } else {
-                var5 = null;
-                byte[] discarded$2 = wb.a(17, -87, (byte[]) null, 80);
-                break L1;
-              }
-            }
             var3_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (param2 <= 0) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
                 var3_int = param0 & 1 | var3_int << 1;
                 param2--;
                 param0 = param0 >>> 1;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var3, "wb.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw lj.a((Throwable) (Object) var3, "wb.B(" + param0 + 44 + 1 + 44 + param2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     public static void a(int param0) {
@@ -62,7 +52,7 @@ final class wb extends pi {
         }
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, int param3) {
+    final static byte[] a(int param0, int param1, byte[] param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -70,26 +60,24 @@ final class wb extends pi {
         byte[] var6 = null;
         int var7 = 0;
         byte[] var8 = null;
-        Object stackIn_8_0 = null;
-        byte[] stackIn_10_0 = null;
+        byte[] stackIn_9_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_9_0 = null;
-        Object stackOut_7_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        byte[] stackOut_8_0 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
         String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var7 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -113,51 +101,45 @@ final class wb extends pi {
               }
             }
             var5 = new qm();
-            if (param3 == 18738) {
-              var5.a((byte) -29);
-              var5.a(var4, -21816, (long)(8 * param0));
-              var6 = new byte[64];
-              var5.a(0, var6, 8);
-              stackOut_9_0 = (byte[]) var6;
-              stackIn_10_0 = stackOut_9_0;
-              break L0;
-            } else {
-              stackOut_7_0 = null;
-              stackIn_8_0 = stackOut_7_0;
-              return (byte[]) (Object) stackIn_8_0;
-            }
+            var5.a((byte) -29);
+            var5.a(var4, -21816, (long)(8 * param0));
+            var6 = new byte[64];
+            var5.a(0, var6, 8);
+            stackOut_8_0 = (byte[]) var6;
+            stackIn_9_0 = stackOut_8_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var4_ref;
-            stackOut_11_1 = new StringBuilder().append("wb.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_10_0 = (RuntimeException) var4_ref;
+            stackOut_10_1 = new StringBuilder().append("wb.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L3;
-            } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 18738 + 41);
         }
-        return stackIn_10_0;
+        return stackIn_9_0;
     }
 
     wb(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {

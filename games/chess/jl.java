@@ -6,9 +6,6 @@ final class jl {
     static String field_b;
 
     final static boolean a(boolean param0) {
-        if (param0) {
-            return true;
-        }
         if (sb.field_sb == -1) {
             if (!(tk.a(-121, 1))) {
                 return false;
@@ -26,7 +23,7 @@ final class jl {
         return tk.a(-121, sb.field_sb);
     }
 
-    final static long a(CharSequence param0, boolean param1) {
+    final static long a(CharSequence param0) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -160,7 +157,7 @@ final class jl {
         return stackIn_20_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

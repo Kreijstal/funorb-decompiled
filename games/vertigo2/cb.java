@@ -71,9 +71,9 @@ final class cb extends cr {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var7 = new cr((long)param4, param5, 0, param0, param3, 24, param2);
+            var7 = new cr(0L, param5, 0, param0, param3, 24, param2);
             param0 += 32;
-            param1.b(var7, param4 + 121);
+            param1.b(var7, 121);
             stackOut_0_0 = param0;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -133,7 +133,7 @@ final class cb extends cr {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param3).append(44).append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -868,7 +868,7 @@ final class cb extends cr {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_Pb = null;
     }
 

@@ -126,9 +126,6 @@ abstract class tb {
         int var2_int = 0;
         try {
             mc.field_q = param1.c((byte) -7) << 5;
-            if (param0 != -31416) {
-                field_d = null;
-            }
             var2_int = param1.h(255);
             jn.field_q = (7 & var2_int) << 18;
             mc.field_q = mc.field_q + (var2_int >> 3);
@@ -137,12 +134,12 @@ abstract class tb {
             of.field_D = 2064384 & var2_int << 15;
             jn.field_q = jn.field_q + (var2_int >> 6);
             of.field_D = of.field_D + (param1.h(255) << 7);
-            var2_int = param1.h(param0 ^ -31305);
+            var2_int = param1.h(255);
             jd.field_I = var2_int << 16 & 65536;
             of.field_D = of.field_D + (var2_int >> 1);
             jd.field_I = jd.field_I + param1.c((byte) -7);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "tb.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "tb.F(" + -31416 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

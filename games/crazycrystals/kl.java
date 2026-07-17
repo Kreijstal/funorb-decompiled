@@ -41,12 +41,9 @@ final class kl extends en {
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             d.a(param1, (byte) 125, "");
-            if (param0 != -1) {
-                kl.h((byte) -111);
-            }
             qe.a(0, param1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "kl.T(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "kl.T(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

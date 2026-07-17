@@ -4,7 +4,7 @@
 final class ma {
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -81,7 +81,8 @@ final class ma {
                     case 4: {
                         try {
                             var2 = "tuhstatbut";
-                            var3 = (String) eb.a("getcookies", param1, -250);
+                            int discarded$2 = -250;
+                            var3 = (String) eb.a("getcookies", param1);
                             var4 = m.a(';', 119, var3);
                             var5 = 0;
                             statePc = 5;
@@ -173,7 +174,7 @@ final class ma {
                     }
                     case 12: {
                         try {
-                            var5 = 127 / ((-23 - param0) / 36);
+                            var5 = 63;
                             statePc = 13;
                             continue stateLoop;
                         } catch (Throwable stateCaught_12) {
@@ -247,7 +248,7 @@ final class ma {
                     case 19: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_19_0 = (RuntimeException) var2_ref;
-                        stackOut_19_1 = new StringBuilder().append("ma.B(").append(param0).append(44);
+                        stackOut_19_1 = new StringBuilder().append("ma.B(").append(-120).append(44);
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_20_0 = stackOut_19_0;

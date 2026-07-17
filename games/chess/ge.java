@@ -33,7 +33,8 @@ final class ge extends k implements mj {
               if (((ge) this).field_gb != param0) {
                 break L1;
               } else {
-                this.c(true);
+                int discarded$2 = 1;
+                this.c();
                 break L1;
               }
             }
@@ -623,11 +624,11 @@ final class ge extends k implements mj {
         field_eb = null;
     }
 
-    final static pg a(boolean param0, int param1, int param2, int param3) {
+    final static pg a() {
         int var5 = Chess.field_G;
         pg var4 = (pg) (Object) nd.field_h.g(-18110);
         while (var4 != null) {
-            if (!(var4.field_q != param2)) {
+            if (!(var4.field_q != 0)) {
                 return var4;
             }
             var4 = (pg) (Object) nd.field_h.a((byte) -111);
@@ -635,16 +636,14 @@ final class ge extends k implements mj {
         pg var6 = new pg();
         var4 = var6;
         var6.field_u = 10;
-        if (!param0) {
-            return null;
-        }
-        var4.field_q = param2;
+        var4.field_q = 0;
         nd.field_h.a((o) (Object) var4, (byte) 102);
-        tm.a(false, var4, param1);
+        int discarded$0 = 7;
+        tm.a(false, var4);
         return var4;
     }
 
-    private final fb a(String param0, rg param1, int param2) {
+    private final fb a(String param0, rg param1) {
         fb var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -752,7 +751,7 @@ final class ge extends k implements mj {
         return stackIn_1_0;
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         if (!(((ge) this).field_P)) {
             return;
         }
@@ -805,7 +804,8 @@ final class ge extends k implements mj {
                 if (kh.field_k == param1) {
                   ((ge) this).field_C = ((ge) this).field_C + 10;
                   var3 = (Object) (Object) le.field_c;
-                  if (!jj.d(124)) {
+                  int discarded$26 = 124;
+                  if (!jj.d()) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) le.field_d;
@@ -830,7 +830,8 @@ final class ge extends k implements mj {
             var4.field_u = 0;
             var4.field_n = (jm) (Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((ge) this).b(var4, 95);
-            ((ge) this).field_gb = this.a(sj.field_m, (rg) this, 30);
+            int discarded$27 = 30;
+            ((ge) this).field_gb = this.a(sj.field_m, (rg) this);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -23,15 +23,12 @@ final class nb {
     private int field_j;
 
     final static void a(int param0, int param1, byte param2, jd param3) {
-        if (param2 != -97) {
-            return;
-        }
         try {
             param0 -= 16;
             ns.field_E.h(param0 + 48, 12 + param1);
             km.field_h[0].h(46 + param0, param1 - -10);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "nb.S(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "nb.S(" + param0 + 44 + param1 + 44 + -97 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -86,7 +83,7 @@ final class nb {
         }
     }
 
-    final static int c(byte param0) {
+    final static int c() {
         return ku.field_K;
     }
 
@@ -137,69 +134,38 @@ final class nb {
         return var5 != 0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_h = null;
         int var1 = -44;
         field_i = null;
     }
 
     private final boolean a(boolean param0, byte param1) {
-        if (param1 == 10) {
-          if (((nb) this).field_e <= 0) {
-            if (!param0) {
-              if (((nb) this).field_e > 0) {
-                ((nb) this).field_e = 0;
-                return false;
-              } else {
-                ((nb) this).field_e = 0;
-                return false;
-              }
-            } else {
-              ((nb) this).field_e = 5;
-              return true;
-            }
-          } else {
+        if (((nb) this).field_e <= 0) {
+          if (!param0) {
             if (((nb) this).field_e > 0) {
-              if (!param0) {
-                ((nb) this).field_e = 0;
-                return false;
-              } else {
-                ((nb) this).field_e = ((nb) this).field_e - 1;
-                return false;
-              }
+              ((nb) this).field_e = 0;
+              return false;
             } else {
               ((nb) this).field_e = 0;
               return false;
             }
+          } else {
+            ((nb) this).field_e = 5;
+            return true;
           }
         } else {
-          ((nb) this).field_e = -1;
-          if (((nb) this).field_e <= 0) {
+          if (((nb) this).field_e > 0) {
             if (!param0) {
-              if (((nb) this).field_e > 0) {
-                ((nb) this).field_e = 0;
-                return false;
-              } else {
-                ((nb) this).field_e = 0;
-                return false;
-              }
-            } else {
-              ((nb) this).field_e = 5;
-              return true;
-            }
-          } else {
-            if (((nb) this).field_e > 0) {
-              if (!param0) {
-                ((nb) this).field_e = 0;
-                return false;
-              } else {
-                ((nb) this).field_e = ((nb) this).field_e - 1;
-                return false;
-              }
-            } else {
               ((nb) this).field_e = 0;
               return false;
+            } else {
+              ((nb) this).field_e = ((nb) this).field_e - 1;
+              return false;
             }
+          } else {
+            ((nb) this).field_e = 0;
+            return false;
           }
         }
     }
@@ -228,7 +194,7 @@ final class nb {
         ((nb) this).field_s = true;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((nb) this).field_j = ((nb) this).field_k[0].field_A;
     }
 
@@ -236,7 +202,8 @@ final class nb {
         this.g(param0 ^ 1043);
         this.a((byte) -91, param0);
         this.a((byte) -121, 1);
-        this.e(-1342059263);
+        int discarded$0 = -1342059263;
+        this.e();
     }
 
     final boolean b(boolean param0) {
@@ -965,7 +932,7 @@ final class nb {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1066,7 +1033,8 @@ final class nb {
             ((nb) this).field_l = param2;
             ((nb) this).field_k = param0;
             ((nb) this).field_m = param1;
-            this.a(27150);
+            int discarded$2 = 27150;
+            this.a();
             this.b(0);
             ((nb) this).b((byte) -65);
             break L0;

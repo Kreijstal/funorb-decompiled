@@ -85,7 +85,7 @@ final class ph {
         return stackIn_20_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_a = null;
         field_c = null;

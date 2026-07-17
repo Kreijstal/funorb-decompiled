@@ -9,7 +9,7 @@ final class bj {
     static int[] field_b;
     static ua[] field_c;
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!(!un.field_l)) {
             t.a(t.field_e, t.field_f, -t.field_e + t.field_h, t.field_a + -t.field_f);
             bn.field_I.a(false, 0);
@@ -58,7 +58,7 @@ final class bj {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
         field_d = null;
         field_b = null;

@@ -8,7 +8,7 @@ final class sg {
     static hd field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_d = null;

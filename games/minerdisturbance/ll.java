@@ -137,15 +137,15 @@ final class ll implements Runnable {
     }
 
     final void b(int param0) {
-        Object var2 = null;
-        InterruptedException var2_ref = null;
+        InterruptedException var2 = null;
+        Object var2_ref = null;
         Throwable var3 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         var4 = MinerDisturbance.field_ab;
         if (!((ll) this).field_l) {
-          var2 = this;
-          synchronized (var2) {
+          var2_ref = this;
+          synchronized (var2_ref) {
             L0: {
               L1: {
                 ((ll) this).field_l = true;
@@ -171,7 +171,7 @@ final class ll implements Runnable {
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
-                    var2_ref = (InterruptedException) (Object) decompiledCaughtException;
+                    var2 = (InterruptedException) (Object) decompiledCaughtException;
                     ((ll) this).field_b = null;
                     return;
                   }
@@ -182,7 +182,8 @@ final class ll implements Runnable {
                   return;
                 }
               } else {
-                gf.a(1L, -10309);
+                int discarded$3 = -10309;
+                gf.a(1L);
                 continue L2;
               }
             }
@@ -353,24 +354,16 @@ final class ll implements Runnable {
         return ke.a(param1, -21937, sb.field_t);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 <= -46) {
-            break L0;
-          } else {
-            field_a = null;
-            break L0;
-          }
-        }
         if (null != lb.field_y) {
           var1 = (Object) (Object) lb.field_y;
           synchronized (var1) {
-            L1: {
+            L0: {
               lb.field_y = null;
-              break L1;
+              break L0;
             }
           }
           return;
@@ -389,7 +382,7 @@ final class ll implements Runnable {
         return ((ll) this).field_i.available();
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
         field_a = null;
     }

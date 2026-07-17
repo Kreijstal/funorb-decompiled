@@ -231,8 +231,10 @@ final class ik {
                   if (!ps.d(-117)) {
                     break L0;
                   } else {
-                    var7 = gf.a(((ik) this).field_e, false);
-                    var4 = uka.a(((ik) this).field_e, 28791);
+                    int discarded$2 = 0;
+                    var7 = gf.a(((ik) this).field_e);
+                    int discarded$3 = 28791;
+                    var4 = uka.a(((ik) this).field_e);
                     var5 = this.b(8510);
                     if (var4 != null) {
                       L1: {
@@ -293,7 +295,7 @@ final class ik {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
         field_d = null;
         field_i = null;
@@ -318,47 +320,39 @@ final class ik {
         int var5 = 0;
         L0: {
           var5 = BachelorFridge.field_y;
-          if (param1 == 10960) {
-            break L0;
-          } else {
-            boolean discarded$2 = this.a(-100, 21, 18);
-            break L0;
-          }
-        }
-        L1: {
           if (param0 == 0) {
             bia.a((byte) 35, ((ik) this).field_e, param2);
-            break L1;
+            break L0;
           } else {
             if (param0 == 1) {
               od.a(((ik) this).field_e, param2, 2);
-              break L1;
+              break L0;
             } else {
               if (2 != param0) {
                 if (param0 != 3) {
                   if (param0 == 10) {
                     sfa.a(param2, ((ik) this).field_k, false);
-                    break L1;
+                    break L0;
                   } else {
                     if (param0 != 15) {
                       if (param0 != 16) {
                         return false;
                       } else {
                         lu.a(0, param2, (byte) 87);
-                        break L1;
+                        break L0;
                       }
                     } else {
                       lu.a(((ik) this).field_k, param2, (byte) -101);
-                      break L1;
+                      break L0;
                     }
                   }
                 } else {
-                  rja.a(param2, ((ik) this).field_k, param1 + -10959);
-                  break L1;
+                  rja.a(param2, ((ik) this).field_k, 1);
+                  break L0;
                 }
               } else {
                 ep.a(false, param2, ((ik) this).field_k);
-                break L1;
+                break L0;
               }
             }
           }
@@ -538,7 +532,7 @@ final class ik {
           if (param0 == -14) {
             break L0;
           } else {
-            boolean discarded$678 = this.d(35, -60, 45);
+            boolean discarded$2254 = this.d(35, -60, 45);
             break L0;
           }
         }
@@ -559,12 +553,13 @@ final class ik {
                         if (19 != param2) {
                           return false;
                         } else {
-                          boolean discarded$679 = ew.a(((ik) this).field_c, ((ik) this).field_e, ((ik) this).field_b, false, ((ik) this).field_j);
+                          boolean discarded$2255 = ew.a(((ik) this).field_c, ((ik) this).field_e, ((ik) this).field_b, false, ((ik) this).field_j);
                           return true;
                         }
                       }
                     } else {
-                      kw.a(true);
+                      int discarded$2256 = 1;
+                      kw.a();
                       break L1;
                     }
                   } else {
@@ -645,7 +640,8 @@ final class ik {
             return false;
         }
         boolean discarded$3 = this.a(-14, param2, var6);
-        boolean discarded$4 = this.e(var6, param3, -12211);
+        int discarded$4 = -12211;
+        boolean discarded$5 = this.e(var6, param3);
         return true;
     }
 
@@ -662,14 +658,14 @@ final class ik {
             var5 = sja.field_fb.field_g;
             rha.a(param1.field_g, (lu) (Object) var4, (byte) -116);
             var4.d(param0, 0);
-            var4.d(param3, param2 ^ param2);
+            var4.d(param3, 0);
             sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var5);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ik.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ik.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -6622 + 44 + param3 + 41);
         }
     }
 
-    private final boolean e(int param0, int param1, int param2) {
+    private final boolean e(int param0, int param1) {
         if (param0 != 17) {
             return false;
         }
@@ -680,12 +676,11 @@ final class ik {
     private final boolean d(int param0, int param1, int param2) {
         Object var4 = null;
         String var4_ref = null;
-        Object var5 = null;
         L0: {
           if (param2 > 12) {
             break L0;
           } else {
-            boolean discarded$2 = this.a(79, -108, -76);
+            boolean discarded$3 = this.a(79, -108, -76);
             break L0;
           }
         }
@@ -714,8 +709,8 @@ final class ik {
           }
         }
         if (var4_ref != null) {
-          var5 = null;
-          vf.a(((ik) this).field_j, 0, 124, (String) null, var4_ref, 2);
+          int discarded$4 = 2;
+          vf.a(((ik) this).field_j, 0, 124, (String) null, var4_ref);
           return true;
         } else {
           return true;

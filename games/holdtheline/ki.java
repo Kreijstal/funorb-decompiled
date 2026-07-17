@@ -13,13 +13,13 @@ final class ki extends hl {
     byte[][][] field_q;
     af[] field_l;
 
-    final static boolean a(boolean param0) {
+    final static boolean a() {
         go.field_n = true;
         bn.field_k = 15000L + bb.b(-1);
         return bk.field_w == 11 ? true : false;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_i = null;
     }
 

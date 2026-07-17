@@ -81,7 +81,9 @@ final class si extends rqa {
     }
 
     public static void b(boolean param0) {
-        field_s = 71;
+        if (!param0) {
+            field_s = 71;
+        }
         field_q = null;
         field_o = null;
     }

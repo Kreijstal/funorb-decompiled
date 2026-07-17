@@ -16,7 +16,9 @@ final class qh {
             } else {
               if (null != i.field_k[param1]) {
                 lc.field_d = i.field_k[param1];
-                gn.a(false, i.field_k[param1], (byte) 69, 30);
+                int discarded$2 = 30;
+                int discarded$3 = 69;
+                gn.a(false, i.field_k[param1]);
                 break L0;
               } else {
                 break L1;
@@ -31,14 +33,7 @@ final class qh {
             break L0;
           }
         }
-        L2: {
-          if (param0 == 0) {
-            break L2;
-          } else {
-            field_a = null;
-            break L2;
-          }
-        }
+        field_a = null;
     }
 
     final static boolean a(byte param0, ei param1) {
@@ -129,7 +124,7 @@ final class qh {
         return stackIn_10_0 != 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_d = null;
         field_c = null;

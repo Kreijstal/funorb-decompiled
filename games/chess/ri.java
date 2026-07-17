@@ -154,7 +154,7 @@ final class ri extends jb implements ha, we {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_k = null;
         field_h = null;
     }
@@ -166,19 +166,16 @@ final class ri extends jb implements ha, we {
         return ((ri) this).field_j.h((byte) -123);
     }
 
-    final static void a(int param0, pa param1, int param2) {
+    final static void a(int param0, pa param1) {
         nk var3 = null;
         try {
             var3 = qn.field_U;
-            var3.f(param2, -106);
+            var3.f(5, -106);
             var3.c(2, (byte) -56);
             var3.c(0, (byte) -112);
-            if (param0 != -1281) {
-                field_g = 45;
-            }
             var3.c(param1.field_p, (byte) 78);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ri.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ri.C(" + -1281 + 44 + (param1 != null ? "{...}" : "null") + 44 + 5 + 41);
         }
     }
 
@@ -259,9 +256,6 @@ final class ri extends jb implements ha, we {
     }
 
     final static um a(int param0, byte param1) {
-        if (param1 < 126) {
-            return null;
-        }
         return ci.a(-17288, param0, 1, false, false, true);
     }
 

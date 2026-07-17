@@ -125,7 +125,7 @@ final class bg {
               var4 = new hb();
               var5 = var4;
               var2_ref = var5;
-              if (!param1[param0].equalsIgnoreCase("return")) {
+              if (!param1[0].equalsIgnoreCase("return")) {
                 break L1;
               } else {
                 if (param1.length != 1) {
@@ -196,7 +196,7 @@ final class bg {
                       if (4 == param1.length) {
                         var2_ref.field_d = 5;
                         var2_ref.field_c = mo.a((CharSequence) (Object) param1[1], (byte) -116);
-                        var2_ref.field_b = ka.a(param0 ^ 5, param1[2]);
+                        var2_ref.field_b = ka.a(5, param1[2]);
                         var2_ref.field_e = mo.a((CharSequence) (Object) param1[3], (byte) -116);
                         break L2;
                       } else {
@@ -222,7 +222,7 @@ final class bg {
                   if (param1.length == 4) {
                     var4.field_d = 3;
                     var4.field_c = vh.a(122, param1[1]);
-                    var4.field_b = ka.a(param0 ^ 5, param1[2]);
+                    var4.field_b = ka.a(5, param1[2]);
                     var4.field_e = mo.a((CharSequence) (Object) param1[3], (byte) -116);
                     break L2;
                   } else {
@@ -247,7 +247,7 @@ final class bg {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_49_0 = (RuntimeException) var2;
-            stackOut_49_1 = new StringBuilder().append("bg.C(").append(param0).append(44);
+            stackOut_49_1 = new StringBuilder().append("bg.C(").append(0).append(44);
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;

@@ -90,12 +90,12 @@ final class hd extends bh {
                 if (w.field_H.field_f != ta.field_b) {
                   var11 = w.field_H;
                   var12 = cm.a((byte) 86, sb.field_p, new String[1]);
-                  var11.field_h.a(var12, 15, param0 ^ 91);
+                  var11.field_h.a(var12, 15, 91);
                   break L3;
                 } else {
                   var9 = w.field_H;
                   var10 = cm.a((byte) 94, fb.field_d, new String[1]);
-                  var9.field_h.a(var10, 16, param0 + 87);
+                  var9.field_h.a(var10, 16, 87);
                   break L3;
                 }
               }
@@ -103,7 +103,7 @@ final class hd extends bh {
             var13 = w.field_H;
             var5 = he.field_S;
             var6 = nf.field_h;
-            var13.field_h.b(var6, var5, 123, param0, 0);
+            var13.field_h.b(var6, var5, 123, 0, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class hd extends bh {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("hd.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("hd.A(").append(0).append(44).append(param1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -163,7 +163,7 @@ final class hd extends bh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_q = null;
         field_v = null;

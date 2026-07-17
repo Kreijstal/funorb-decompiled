@@ -13,15 +13,12 @@ abstract class fi {
 
     abstract int a(byte param0, long param1);
 
-    final static void c(byte param0) {
+    final static void c() {
         hl var1 = null;
         hl var2 = null;
         int var3 = 0;
         int var4 = StarCannon.field_A;
         try {
-            if (param0 != -96) {
-                field_g = null;
-            }
             var1 = new hl(540, 140);
             bc.a(var1, 26095);
             gl.b();
@@ -37,11 +34,11 @@ abstract class fi {
             var1.a(0, 0);
             wf.a(-71);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "fi.K(" + param0 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "fi.K(" + -96 + 41);
         }
     }
 
-    final static int a(boolean param0, int param1, String param2, String param3, int param4, String param5, byte param6) {
+    final static int a(boolean param0, int param1, String param2, String param3, int param4, String param5) {
         ma var7 = null;
         RuntimeException var7_ref = null;
         ma var8 = null;
@@ -184,7 +181,7 @@ abstract class fi {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_g = null;

@@ -15,7 +15,7 @@ final class ng extends nk {
     private int field_U;
     static int field_P;
 
-    public static void g(boolean param0) {
+    public static void g() {
         field_N = null;
         field_T = null;
         field_Z = null;
@@ -24,7 +24,8 @@ final class ng extends nk {
     }
 
     ng(le param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (ol) (Object) md.a((byte) -108));
+        super(param1, (ol) (Object) md.a());
+        int discarded$0 = -108;
         try {
             ((ng) this).field_R = param0;
             ((ng) this).field_W = param1;
@@ -117,14 +118,16 @@ final class ng extends nk {
             if (((ng) this).field_S != null) {
               if (((ng) this).field_S.field_w < var11) {
                 ((ng) this).field_S = new mg(var11, var12);
-                kb.a(((ng) this).field_S, 16865);
+                int discarded$16 = 16865;
+                kb.a(((ng) this).field_S);
                 var30.a(112, 144, var30.field_u << 4, var30.field_z << 4, -((ng) this).field_U << 10, 4096);
                 ai.a(true);
                 ((ng) this).field_S.e(var9 + -(var30.field_u >> 1), -var30.field_z + var10, 256);
                 return;
               } else {
                 if (var12 <= ((ng) this).field_S.field_p) {
-                  kb.a(((ng) this).field_S, 16865);
+                  int discarded$17 = 16865;
+                  kb.a(((ng) this).field_S);
                   df.c();
                   var30.a(112, 144, var30.field_u << 4, var30.field_z << 4, -((ng) this).field_U << 10, 4096);
                   ai.a(true);
@@ -132,7 +135,8 @@ final class ng extends nk {
                   return;
                 } else {
                   ((ng) this).field_S = new mg(var11, var12);
-                  kb.a(((ng) this).field_S, 16865);
+                  int discarded$18 = 16865;
+                  kb.a(((ng) this).field_S);
                   var30.a(112, 144, var30.field_u << 4, var30.field_z << 4, -((ng) this).field_U << 10, 4096);
                   ai.a(true);
                   ((ng) this).field_S.e(var9 + -(var30.field_u >> 1), -var30.field_z + var10, 256);
@@ -141,7 +145,8 @@ final class ng extends nk {
               }
             } else {
               ((ng) this).field_S = new mg(var11, var12);
-              kb.a(((ng) this).field_S, 16865);
+              int discarded$19 = 16865;
+              kb.a(((ng) this).field_S);
               var30.a(112, 144, var30.field_u << 4, var30.field_z << 4, -((ng) this).field_U << 10, 4096);
               ai.a(true);
               ((ng) this).field_S.e(var9 + -(var30.field_u >> 1), -var30.field_z + var10, 256);
@@ -176,7 +181,8 @@ final class ng extends nk {
                 if (((ng) this).field_S != null) {
                   if (((ng) this).field_S.field_w >= var11) {
                     if (var12 <= ((ng) this).field_S.field_p) {
-                      kb.a(((ng) this).field_S, 16865);
+                      int discarded$20 = 16865;
+                      kb.a(((ng) this).field_S);
                       df.c();
                       var24.a(112, 144, var24.field_u << 4, var24.field_z << 4, -((ng) this).field_U << 10, 4096);
                       ai.a(true);
@@ -184,7 +190,8 @@ final class ng extends nk {
                       return;
                     } else {
                       ((ng) this).field_S = new mg(var11, var12);
-                      kb.a(((ng) this).field_S, 16865);
+                      int discarded$21 = 16865;
+                      kb.a(((ng) this).field_S);
                       var24.a(112, 144, var24.field_u << 4, var24.field_z << 4, -((ng) this).field_U << 10, 4096);
                       ai.a(true);
                       ((ng) this).field_S.e(var9 + -(var24.field_u >> 1), -var24.field_z + var10, 256);
@@ -192,7 +199,8 @@ final class ng extends nk {
                     }
                   } else {
                     ((ng) this).field_S = new mg(var11, var12);
-                    kb.a(((ng) this).field_S, 16865);
+                    int discarded$22 = 16865;
+                    kb.a(((ng) this).field_S);
                     var24.a(112, 144, var24.field_u << 4, var24.field_z << 4, -((ng) this).field_U << 10, 4096);
                     ai.a(true);
                     ((ng) this).field_S.e(var9 + -(var24.field_u >> 1), -var24.field_z + var10, 256);
@@ -200,7 +208,8 @@ final class ng extends nk {
                   }
                 } else {
                   ((ng) this).field_S = new mg(var11, var12);
-                  kb.a(((ng) this).field_S, 16865);
+                  int discarded$23 = 16865;
+                  kb.a(((ng) this).field_S);
                   var24.a(112, 144, var24.field_u << 4, var24.field_z << 4, -((ng) this).field_U << 10, 4096);
                   ai.a(true);
                   ((ng) this).field_S.e(var9 + -(var24.field_u >> 1), -var24.field_z + var10, 256);
@@ -215,13 +224,15 @@ final class ng extends nk {
                 if (((ng) this).field_S.field_w >= var11) {
                   if (var12 > ((ng) this).field_S.field_p) {
                     ((ng) this).field_S = new mg(var11, var12);
-                    kb.a(((ng) this).field_S, 16865);
+                    int discarded$24 = 16865;
+                    kb.a(((ng) this).field_S);
                     var23.a(112, 144, var23.field_u << 4, var23.field_z << 4, -((ng) this).field_U << 10, 4096);
                     ai.a(true);
                     ((ng) this).field_S.e(var9 + -(var23.field_u >> 1), -var23.field_z + var10, 256);
                     return;
                   } else {
-                    kb.a(((ng) this).field_S, 16865);
+                    int discarded$25 = 16865;
+                    kb.a(((ng) this).field_S);
                     df.c();
                     var23.a(112, 144, var23.field_u << 4, var23.field_z << 4, -((ng) this).field_U << 10, 4096);
                     ai.a(true);
@@ -230,7 +241,8 @@ final class ng extends nk {
                   }
                 } else {
                   ((ng) this).field_S = new mg(var11, var12);
-                  kb.a(((ng) this).field_S, 16865);
+                  int discarded$26 = 16865;
+                  kb.a(((ng) this).field_S);
                   var23.a(112, 144, var23.field_u << 4, var23.field_z << 4, -((ng) this).field_U << 10, 4096);
                   ai.a(true);
                   ((ng) this).field_S.e(var9 + -(var23.field_u >> 1), -var23.field_z + var10, 256);
@@ -238,7 +250,8 @@ final class ng extends nk {
                 }
               } else {
                 ((ng) this).field_S = new mg(var11, var12);
-                kb.a(((ng) this).field_S, 16865);
+                int discarded$27 = 16865;
+                kb.a(((ng) this).field_S);
                 var23.a(112, 144, var23.field_u << 4, var23.field_z << 4, -((ng) this).field_U << 10, 4096);
                 ai.a(true);
                 ((ng) this).field_S.e(var9 + -(var23.field_u >> 1), -var23.field_z + var10, 256);
@@ -292,13 +305,15 @@ final class ng extends nk {
             if (((ng) this).field_S.field_w >= var11) {
               if (var12 > ((ng) this).field_S.field_p) {
                 ((ng) this).field_S = new mg(var11, var12);
-                kb.a(((ng) this).field_S, 16865);
+                int discarded$28 = 16865;
+                kb.a(((ng) this).field_S);
                 var21.a(112, 144, var21.field_u << 4, var21.field_z << 4, -((ng) this).field_U << 10, 4096);
                 ai.a(true);
                 ((ng) this).field_S.e(var9 + -(var21.field_u >> 1), -var21.field_z + var10, 256);
                 return;
               } else {
-                kb.a(((ng) this).field_S, 16865);
+                int discarded$29 = 16865;
+                kb.a(((ng) this).field_S);
                 df.c();
                 var21.a(112, 144, var21.field_u << 4, var21.field_z << 4, -((ng) this).field_U << 10, 4096);
                 ai.a(true);
@@ -307,7 +322,8 @@ final class ng extends nk {
               }
             } else {
               ((ng) this).field_S = new mg(var11, var12);
-              kb.a(((ng) this).field_S, 16865);
+              int discarded$30 = 16865;
+              kb.a(((ng) this).field_S);
               var21.a(112, 144, var21.field_u << 4, var21.field_z << 4, -((ng) this).field_U << 10, 4096);
               ai.a(true);
               ((ng) this).field_S.e(var9 + -(var21.field_u >> 1), -var21.field_z + var10, 256);
@@ -315,7 +331,8 @@ final class ng extends nk {
             }
           } else {
             ((ng) this).field_S = new mg(var11, var12);
-            kb.a(((ng) this).field_S, 16865);
+            int discarded$31 = 16865;
+            kb.a(((ng) this).field_S);
             var21.a(112, 144, var21.field_u << 4, var21.field_z << 4, -((ng) this).field_U << 10, 4096);
             ai.a(true);
             ((ng) this).field_S.e(var9 + -(var21.field_u >> 1), -var21.field_z + var10, 256);

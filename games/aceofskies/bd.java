@@ -38,7 +38,7 @@ final class bd {
     int field_b;
     private static String field_D;
 
-    public static void a(int param0) {
+    public static void a() {
         field_I = null;
         field_C = null;
     }

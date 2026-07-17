@@ -13,7 +13,7 @@ final class dg extends gr {
     static int[] field_T;
     static String field_P;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_T = null;
         field_M = null;
         field_L = null;
@@ -37,39 +37,35 @@ final class dg extends gr {
     }
 
     final static int[] a(int param0, int param1) {
-        int[] stackIn_8_0 = null;
-        int[] stackOut_7_0 = null;
+        int[] stackIn_7_0 = null;
         int[] stackOut_6_0 = null;
         int[] stackOut_5_0 = null;
-        int[] stackOut_3_0 = null;
-        if (param0 != -9) {
-          return null;
-        } else {
-          L0: {
-            if (param1 == 0) {
-              stackOut_7_0 = ae.field_e;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              if (param1 != 8) {
-                if (8 > param1) {
-                  stackOut_6_0 = cr.field_p;
-                  stackIn_8_0 = stackOut_6_0;
-                  break L0;
-                } else {
-                  stackOut_5_0 = om.field_r;
-                  stackIn_8_0 = stackOut_5_0;
-                  break L0;
-                }
+        int[] stackOut_4_0 = null;
+        int[] stackOut_2_0 = null;
+        L0: {
+          if (param1 == 0) {
+            stackOut_6_0 = ae.field_e;
+            stackIn_7_0 = stackOut_6_0;
+            break L0;
+          } else {
+            if (param1 != 8) {
+              if (8 > param1) {
+                stackOut_5_0 = cr.field_p;
+                stackIn_7_0 = stackOut_5_0;
+                break L0;
               } else {
-                stackOut_3_0 = sa.field_q;
-                stackIn_8_0 = stackOut_3_0;
+                stackOut_4_0 = om.field_r;
+                stackIn_7_0 = stackOut_4_0;
                 break L0;
               }
+            } else {
+              stackOut_2_0 = sa.field_q;
+              stackIn_7_0 = stackOut_2_0;
+              break L0;
             }
           }
-          return stackIn_8_0;
         }
+        return stackIn_7_0;
     }
 
     final static int a(byte param0, int param1, int param2) {

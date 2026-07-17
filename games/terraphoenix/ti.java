@@ -16,7 +16,8 @@ final class ti {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
-            this.a(param0, -28044126);
+            int discarded$2 = -28044126;
+            this.a(param0);
             if (param4 == 0) {
               var6 = ((ti) this).field_a.getRefreshRate();
               var7 = ((ti) this).field_b.getDisplayModes();
@@ -84,10 +85,11 @@ final class ti {
             }
             ((ti) this).field_a = null;
         }
-        this.a((java.awt.Frame) null, -28044126);
+        int discarded$0 = -28044126;
+        this.a((java.awt.Frame) null);
     }
 
-    private final void a(java.awt.Frame param0, int param1) {
+    private final void a(java.awt.Frame param0) {
         ((ti) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 

@@ -12,7 +12,7 @@ final class ln extends fa {
     static String field_k;
     pp field_o;
 
-    final static String a(java.applet.Applet param0, byte param1) {
+    final static String a(java.applet.Applet param0) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -242,7 +242,7 @@ final class ln extends fa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         field_l = null;
         field_k = null;
@@ -273,39 +273,31 @@ final class ln extends fa {
         int var9 = 0;
         L0: {
           var9 = Pixelate.field_H ? 1 : 0;
-          if (param6 == 100) {
-            break L0;
-          } else {
-            field_k = null;
-            break L0;
-          }
-        }
-        L1: {
           if (param1 <= param3) {
             if (param3 >= param4) {
               if (param1 >= param4) {
                 cn.a(param2, param1, param3, param5, param7, t.field_k, false, param0, param4);
-                break L1;
+                break L0;
               } else {
                 cn.a(param0, param4, param3, param5, param7, t.field_k, false, param2, param1);
-                break L1;
+                break L0;
               }
             } else {
               cn.a(param7, param3, param4, param5, param0, t.field_k, false, param2, param1);
-              break L1;
+              break L0;
             }
           } else {
             if (param4 <= param1) {
               if (param4 <= param3) {
                 cn.a(param7, param3, param1, param5, param2, t.field_k, false, param0, param4);
-                break L1;
+                break L0;
               } else {
                 cn.a(param0, param4, param1, param5, param2, t.field_k, false, param7, param3);
-                break L1;
+                break L0;
               }
             } else {
               cn.a(param2, param1, param4, param5, param0, t.field_k, false, param7, param3);
-              break L1;
+              break L0;
             }
           }
         }

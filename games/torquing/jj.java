@@ -178,7 +178,7 @@ final class jj {
         return stackIn_39_0;
     }
 
-    final static sm a(sm param0, int[] param1, int param2) {
+    final static sm a(sm param0, int[] param1) {
         sm var3 = null;
         RuntimeException var3_ref = null;
         sm stackIn_1_0 = null;

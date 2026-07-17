@@ -6,16 +6,12 @@ final class ni {
     static ql field_a;
 
     final static String a(char param0, byte param1, int param2) {
+        int var4 = 0;
         int var5 = HoldTheLine.field_D;
         char[] var6 = new char[param2];
         char[] var3 = var6;
-        int var4 = 0;
-        if (param1 != -125) {
-            return null;
-        }
-        while (var4 < param2) {
-            var6[var4] = param0;
-            var4++;
+        for (var4 = 0; var4 < param2; var4++) {
+            var6[var4] = '*';
         }
         return new String(var6);
     }

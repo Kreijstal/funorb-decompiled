@@ -11,7 +11,7 @@ final class j {
     static String field_b;
     static String field_h;
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -40,7 +40,8 @@ final class j {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              if (!ba.a(-1)) {
+              int discarded$1 = -1;
+              if (!ba.a()) {
                 if (param0 == 5) {
                   L2: {
                     sj.field_f.a(q.a(p.field_a, (byte) -36, ei.field_a), q.a(ab.field_e, (byte) -36, qg.field_c), true);

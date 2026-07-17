@@ -703,7 +703,7 @@ final class r {
                 }
                 var7 = ((r) this).field_i[param1];
                 var8 = 1;
-                var9 = param0;
+                var9 = 0;
                 L2: while (true) {
                   L3: {
                     if (var5_int <= var9) {
@@ -1041,7 +1041,7 @@ final class r {
           L29: {
             var5 = decompiledCaughtException;
             stackOut_102_0 = (RuntimeException) var5;
-            stackOut_102_1 = new StringBuilder().append("r.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_102_1 = new StringBuilder().append("r.D(").append(0).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_104_0 = stackOut_102_0;
             stackIn_104_1 = stackOut_102_1;
             stackIn_103_0 = stackOut_102_0;
@@ -1236,7 +1236,7 @@ final class r {
                   }
                 }
               }
-              var6 = -41 % ((37 - param2) / 47);
+              var6 = 0;
               if (null != ((r) this).field_i[param0]) {
                 L3: {
                   if (null == ((r) this).field_i[param0][param1]) {
@@ -1288,7 +1288,7 @@ final class r {
           L5: {
             var5 = (Object) (Object) decompiledCaughtException;
             stackOut_25_0 = var5;
-            stackOut_25_1 = new StringBuilder().append("r.M(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_25_1 = new StringBuilder().append("r.M(").append(param0).append(44).append(param1).append(44).append(97).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;

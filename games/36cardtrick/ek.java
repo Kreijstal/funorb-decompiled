@@ -52,7 +52,7 @@ class ek implements ci, ne {
                 break L1;
               } else {
                 var8 = null;
-                int discarded$1 = ((ek) this).a(-100, -38, -40, 81, (lk) null, 47);
+                int discarded$2 = ((ek) this).a(-100, -38, -40, 81, (lk) null, 47);
                 break L1;
               }
             }
@@ -66,7 +66,8 @@ class ek implements ci, ne {
             }
             L3: {
               var3_int = ((ek) this).a(param0, 0);
-              var4 = this.b(param0, -32260);
+              int discarded$3 = -32260;
+              var4 = this.b(param0);
               var6 = ((ek) this).field_f;
               if (var6 == 0) {
                 var5 = ((ek) this).field_c.field_s;
@@ -203,9 +204,6 @@ class ek implements ci, ne {
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         vj.d(param7, param4, param8, param1);
         vj.c(param7, 1 + param4, param6 + -1, param1);
-        if (param0 != 92) {
-            field_a = null;
-        }
         vj.d(param7 + 1, param4 - -1, param8 - 2, param5);
         vj.c(param7 + 1, 2 + param4, -3 + param6, param5);
         vj.c(-2 + (param8 + param7), 2 + param4, param6 + -3, param3);
@@ -424,7 +422,7 @@ class ek implements ci, ne {
         }
     }
 
-    private final int b(lk param0, int param1) {
+    private final int b(lk param0) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -543,8 +541,9 @@ class ek implements ci, ne {
                     var9 = var14.a(true, param1);
                     var10 = this.a(param4, var9, param0, -3);
                     var11 = ((ek) this).a(param4, -1815612287, param2) + Math.max(0, var8.field_b);
+                    int discarded$1 = -32260;
                     stackOut_4_0 = ((ek) this).a(param4, -1815612287, param2);
-                    stackOut_4_1 = this.b(param4, -32260);
+                    stackOut_4_1 = this.b(param4);
                     stackOut_4_2 = var8.field_c;
                     stackIn_6_0 = stackOut_4_0;
                     stackIn_6_1 = stackOut_4_1;
@@ -758,91 +757,84 @@ class ek implements ci, ne {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
+        String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var13 = Main.field_T;
         try {
           L0: {
             L1: {
               ek.a(param7.field_i + param5, param4 + (param7.field_o - -param7.field_h), param4 + param7.field_o, (byte) 61, param5 - (-param7.field_i + -param7.field_q));
               var9_int = ((ek) this).a(param7, 0);
-              var10 = this.b(param7, -32260);
-              if (param2 == 108) {
-                break L1;
-              } else {
-                field_e = -11;
-                break L1;
-              }
-            }
-            L2: {
+              int discarded$2 = -32260;
+              var10 = this.b(param7);
               if (((ek) this).field_g) {
-                int discarded$1 = ((ek) this).field_c.a(((ek) this).b(11, param7), this.a(param7, param0, param4, -3), this.b(param7, 116, param5, param1), var9_int, var10, param3, param6, ((ek) this).field_i, ((ek) this).field_f, ((ek) this).field_b);
-                break L2;
+                int discarded$3 = ((ek) this).field_c.a(((ek) this).b(11, param7), this.a(param7, 0, param4, -3), this.b(param7, 116, param5, 0), var9_int, var10, param3, param6, ((ek) this).field_i, ((ek) this).field_f, ((ek) this).field_b);
+                break L1;
               } else {
-                L3: {
+                L2: {
                   var12 = ((ek) this).field_f;
                   if (0 == var12) {
                     var11 = ((ek) this).field_c.field_s;
-                    break L3;
+                    break L2;
                   } else {
                     if (2 != var12) {
-                      L4: {
+                      L3: {
                         if (var12 == 3) {
-                          break L4;
+                          break L3;
                         } else {
                           if (var12 == 1) {
-                            break L4;
+                            break L3;
                           } else {
-                            break L4;
+                            break L3;
                           }
                         }
                       }
                       var11 = (-((ek) this).field_c.field_x + (-((ek) this).field_c.field_s + var10) >> 1) + ((ek) this).field_c.field_s;
-                      break L3;
+                      break L2;
                     } else {
                       var11 = var10 + -((ek) this).field_c.field_x;
-                      break L3;
+                      break L2;
                     }
                   }
                 }
-                L5: {
+                L4: {
                   var12 = ((ek) this).field_i;
                   if (var12 == 0) {
-                    break L5;
+                    break L4;
                   } else {
                     if (3 == var12) {
-                      break L5;
+                      break L4;
                     } else {
                       if (var12 == 1) {
-                        ((ek) this).field_c.a(((ek) this).b(param2 + 1, param7), (var9_int >> 1) + this.a(param7, param0, param4, param2 + -111), this.b(param7, 126, param5, param1) + var11, param3, param6);
-                        break L2;
+                        ((ek) this).field_c.a(((ek) this).b(109, param7), (var9_int >> 1) + this.a(param7, 0, param4, -3), this.b(param7, 126, param5, 0) + var11, param3, param6);
+                        break L1;
                       } else {
                         if (2 == var12) {
-                          ((ek) this).field_c.c(((ek) this).b(95, param7), this.a(param7, param0, param4, -3) + var9_int, this.b(param7, 116, param5, param1) + var11, param3, param6);
-                          break L2;
+                          ((ek) this).field_c.c(((ek) this).b(95, param7), this.a(param7, 0, param4, -3) + var9_int, this.b(param7, 116, param5, 0) + var11, param3, param6);
+                          break L1;
                         } else {
-                          break L2;
+                          break L1;
                         }
                       }
                     }
                   }
                 }
-                ((ek) this).field_c.b(((ek) this).b(11, param7), this.a(param7, param0, param4, param2 + -111), this.b(param7, param2 ^ 22, param5, param1) - -var11, param3, param6);
-                break L2;
+                ((ek) this).field_c.b(((ek) this).b(11, param7), this.a(param7, 0, param4, -3), this.b(param7, 122, param5, 0) - -var11, param3, param6);
+                break L1;
               }
             }
             gg.a(14756);
@@ -850,33 +842,33 @@ class ek implements ci, ne {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var9 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var9;
-            stackOut_24_1 = new StringBuilder().append("ek.BA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackOut_22_0 = (RuntimeException) var9;
+            stackOut_22_1 = new StringBuilder().append("ek.BA(").append(0).append(44).append(0).append(44).append(108).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
             if (param7 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
-              break L6;
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L5;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
-              break L6;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
     }
 
@@ -993,7 +985,8 @@ class ek implements ci, ne {
                 this.a(param1, true);
                 break L2;
               } else {
-                ((ub) (Object) param1.field_s).a(this.b(param1, -32260), 841570337, ((ek) this).field_f, ((ek) this).a(param1, 0), ((ek) this).field_c, ((ek) this).field_i, ((ek) this).b(75, param1), ((ek) this).field_b);
+                int discarded$3 = -32260;
+                ((ub) (Object) param1.field_s).a(this.b(param1), 841570337, ((ek) this).field_f, ((ek) this).a(param1, 0), ((ek) this).field_c, ((ek) this).field_i, ((ek) this).b(75, param1), ((ek) this).field_b);
                 break L2;
               }
             }

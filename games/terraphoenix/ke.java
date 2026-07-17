@@ -10,10 +10,10 @@ abstract class ke {
     static String field_g;
     static bg[] field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

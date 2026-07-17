@@ -196,7 +196,7 @@ final class ga extends km {
         }
     }
 
-    final static boolean h(int param0) {
+    final static boolean h() {
         return ql.field_q.a((byte) 19);
     }
 

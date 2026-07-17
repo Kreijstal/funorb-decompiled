@@ -8,19 +8,10 @@ abstract class bg {
     static boolean field_a;
     static qb field_e;
 
-    public static void a(byte param0) {
-        if (param0 > -7) {
-          field_c = 105;
-          field_e = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_e = null;
-          field_d = null;
-          field_b = null;
-          return;
-        }
+    public static void a() {
+        field_e = null;
+        field_d = null;
+        field_b = null;
     }
 
     abstract void a(int param0, byte[] param1);
@@ -28,180 +19,35 @@ abstract class bg {
     final static boolean a(int param0, char param1) {
         if (param1 < 32) {
           if (param1 < 160) {
-            if (param0 == -256) {
-              L0: {
-                if (param1 == 8364) {
-                  break L0;
-                } else {
-                  if (param1 == 338) {
-                    break L0;
-                  } else {
-                    if (8212 == param1) {
-                      break L0;
+            if (param1 != 8364) {
+              if (param1 != 338) {
+                if (8212 != param1) {
+                  if (param1 != 339) {
+                    if (param1 == 376) {
+                      return true;
                     } else {
-                      if (param1 == 339) {
-                        break L0;
-                      } else {
-                        if (param1 != 376) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      }
+                      return false;
                     }
+                  } else {
+                    return true;
                   }
+                } else {
+                  return true;
                 }
+              } else {
+                return true;
               }
-              return true;
             } else {
-              L1: {
-                bg.a((byte) 112);
-                if (param1 == 8364) {
-                  break L1;
-                } else {
-                  if (param1 == 338) {
-                    break L1;
-                  } else {
-                    if (8212 == param1) {
-                      break L1;
-                    } else {
-                      if (param1 == 339) {
-                        break L1;
-                      } else {
-                        if (param1 != 376) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
               return true;
             }
           } else {
-            if (param1 <= 255) {
-              return true;
-            } else {
-              if (param0 == -256) {
-                L2: {
-                  if (param1 == 8364) {
-                    break L2;
-                  } else {
-                    if (param1 == 338) {
-                      break L2;
-                    } else {
-                      if (8212 == param1) {
-                        break L2;
-                      } else {
-                        if (param1 == 339) {
-                          break L2;
-                        } else {
-                          if (param1 != 376) {
-                            return false;
-                          } else {
-                            return true;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                return true;
-              } else {
-                L3: {
-                  bg.a((byte) 112);
-                  if (param1 == 8364) {
-                    break L3;
-                  } else {
-                    if (param1 == 338) {
-                      break L3;
-                    } else {
-                      if (8212 == param1) {
-                        break L3;
-                      } else {
-                        if (param1 == 339) {
-                          break L3;
-                        } else {
-                          if (param1 != 376) {
-                            return false;
-                          } else {
-                            return true;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                return true;
-              }
-            }
-          }
-        } else {
-          if (126 < param1) {
-            if (param1 >= 160) {
-              if (param1 <= 255) {
-                return true;
-              } else {
-                if (param0 != -256) {
-                  bg.a((byte) 112);
-                  if (param1 != 8364) {
-                    if (param1 != 338) {
-                      if (8212 != param1) {
-                        if (param1 != 339) {
-                          if (param1 == 376) {
-                            return true;
-                          } else {
-                            return false;
-                          }
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  if (param1 != 8364) {
-                    if (param1 != 338) {
-                      if (8212 != param1) {
-                        if (param1 != 339) {
-                          if (param1 == 376) {
-                            return true;
-                          } else {
-                            return false;
-                          }
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                }
-              }
-            } else {
-              if (param0 == -256) {
-                if (param1 != 8364) {
-                  if (param1 != 338) {
-                    if (8212 != param1) {
-                      if (param1 != 339) {
-                        if (param1 != 376) {
-                          return false;
-                        } else {
-                          return true;
-                        }
+            if (param1 > 255) {
+              if (param1 != 8364) {
+                if (param1 != 338) {
+                  if (8212 != param1) {
+                    if (param1 != 339) {
+                      if (param1 != 376) {
+                        return false;
                       } else {
                         return true;
                       }
@@ -215,7 +61,18 @@ abstract class bg {
                   return true;
                 }
               } else {
-                bg.a((byte) 112);
+                return true;
+              }
+            } else {
+              return true;
+            }
+          }
+        } else {
+          if (126 < param1) {
+            if (param1 >= 160) {
+              if (param1 <= 255) {
+                return true;
+              } else {
                 if (param1 != 8364) {
                   if (param1 != 338) {
                     if (8212 != param1) {
@@ -238,6 +95,28 @@ abstract class bg {
                   return true;
                 }
               }
+            } else {
+              if (param1 != 8364) {
+                if (param1 != 338) {
+                  if (8212 != param1) {
+                    if (param1 != 339) {
+                      if (param1 == 376) {
+                        return true;
+                      } else {
+                        return false;
+                      }
+                    } else {
+                      return true;
+                    }
+                  } else {
+                    return true;
+                  }
+                } else {
+                  return true;
+                }
+              } else {
+                return true;
+              }
             }
           } else {
             return true;
@@ -249,10 +128,11 @@ abstract class bg {
         if (nm.field_h != -1) {
           if (param1 == nm.field_h) {
             nm.field_h = param1;
-            boolean discarded$2 = lc.a((byte) 112);
+            int discarded$4 = 112;
+            boolean discarded$5 = lc.a();
             he.field_e.b((byte) -76, 66);
             he.field_e.f(param1, (byte) -78);
-            if (param0 <= qf.field_d) {
+            if (2 <= qf.field_d) {
               if (ua.field_P + ta.a(true, param1) <= jf.field_j) {
                 if ((cb.field_e & 1L << param1) != 0L) {
                   return;
@@ -273,10 +153,11 @@ abstract class bg {
           }
         } else {
           nm.field_h = param1;
-          boolean discarded$3 = lc.a((byte) 112);
+          int discarded$6 = 112;
+          boolean discarded$7 = lc.a();
           he.field_e.b((byte) -76, 66);
           he.field_e.f(param1, (byte) -78);
-          if (param0 <= qf.field_d) {
+          if (2 <= qf.field_d) {
             if (ua.field_P + ta.a(true, param1) <= jf.field_j) {
               if ((cb.field_e & 1L << param1) != 0L) {
                 return;
@@ -295,7 +176,7 @@ abstract class bg {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void a(boolean param0) {
         n.field_g.a(param0, true);
         cn var2 = ln.field_U;
         if (var2 != null) {

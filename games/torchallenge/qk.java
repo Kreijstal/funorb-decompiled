@@ -287,7 +287,7 @@ final class qk extends kg {
         ll.a(0, true, param0);
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_nb = null;
     }
 

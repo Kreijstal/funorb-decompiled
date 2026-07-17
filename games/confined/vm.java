@@ -22,9 +22,10 @@ final class vm extends hf {
         }
     }
 
-    final static void a(nf param0, int param1) {
+    final static void a(nf param0) {
         try {
-            mk.b(128);
+            int discarded$0 = 128;
+            mk.b();
             fn.a(param0.field_z, param0.field_t, param0.field_x);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "vm.J(" + (param0 != null ? "{...}" : "null") + 44 + -8409 + 41);
@@ -61,7 +62,7 @@ final class vm extends hf {
         }
     }
 
-    final static void h(byte param0) {
+    final static void h() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -355,21 +356,26 @@ final class vm extends hf {
     }
 
     final static oc a(int param0, boolean param1) {
-        hb var2 = null;
         int var3 = 0;
         int var4 = 0;
+        int var5 = 0;
+        Exception var6 = null;
         int var7 = 0;
         hb var8 = null;
+        lb var9 = null;
         int stackIn_3_0 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_22_0 = null;
+        Throwable decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
-        int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int[] stackOut_21_0 = null;
+        Object stackOut_20_0 = null;
         L0: {
           var7 = Confined.field_J ? 1 : 0;
           var8 = e.field_c;
-          var2 = var8;
           var3 = var8.c(32);
           if ((128 & var3) == 0) {
             stackOut_2_0 = 0;
@@ -397,18 +403,18 @@ final class vm extends hf {
           }
         }
         L2: {
-          if (param0 != var8.c(32)) {
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
+          if (1 != var8.c(32)) {
+            stackOut_8_0 = 0;
+            stackIn_9_0 = stackOut_8_0;
             break L2;
           } else {
-            stackOut_8_0 = 1;
-            stackIn_10_0 = stackOut_8_0;
+            stackOut_7_0 = 1;
+            stackIn_9_0 = stackOut_7_0;
             break L2;
           }
         }
         L3: {
-          var4 = stackIn_10_0;
+          var4 = stackIn_9_0;
           hb.field_v = var8.d(true);
           if (var4 != 0) {
             ej.field_d = var8.d(true);
@@ -430,16 +436,53 @@ final class vm extends hf {
               }
             }
           }
-          int discarded$2 = var8.a((byte) 25);
-          String discarded$3 = var8.d(true);
+          int discarded$3 = var8.a((byte) 25);
+          String discarded$4 = var8.d(true);
           break L4;
         }
-        q.field_j = tb.a(80, (kg) (Object) var8, param0 + -119);
-        lk.field_b = null;
-        return new oc(false);
+        L6: {
+          if (param1) {
+            var5 = var8.a((byte) 25);
+            try {
+              L7: {
+                L8: {
+                  var9 = wc.field_Ub.b(1, var5);
+                  q.field_j = var9.e((byte) -114);
+                  if (!ej.field_d.equals((Object) (Object) qc.field_m)) {
+                    stackOut_21_0 = var9.field_s;
+                    stackIn_22_0 = stackOut_21_0;
+                    break L8;
+                  } else {
+                    stackOut_20_0 = null;
+                    stackIn_22_0 = (int[]) (Object) stackOut_20_0;
+                    break L8;
+                  }
+                }
+                lk.field_b = stackIn_22_0;
+                break L7;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L9: {
+                var6 = (Exception) (Object) decompiledCaughtException;
+                mb.a("CC1", true, (Throwable) (Object) var6);
+                q.field_j = null;
+                lk.field_b = null;
+                break L9;
+              }
+            }
+            break L6;
+          } else {
+            int discarded$5 = -118;
+            q.field_j = tb.a(80, (kg) (Object) var8);
+            lk.field_b = null;
+            break L6;
+          }
+        }
+        return new oc(param1);
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_bb = null;
         field_fb = null;
         field_cb = null;

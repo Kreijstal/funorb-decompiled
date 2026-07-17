@@ -58,7 +58,8 @@ final class be {
                   }
                 }
               } else {
-                sj.a("A1: " + ci.a((byte) 94), -126, (Throwable) null);
+                int discarded$1 = 94;
+                sj.a("A1: " + ci.a(), -126, (Throwable) null);
                 pm.m(126);
                 return;
               }
@@ -295,7 +296,7 @@ final class be {
         return stackIn_4_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_f = null;

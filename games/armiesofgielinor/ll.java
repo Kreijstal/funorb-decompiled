@@ -661,7 +661,7 @@ final class ll extends je {
         }
     }
 
-    final static java.awt.Canvas p(int param0) {
+    final static java.awt.Canvas p() {
         return wq.field_a == null ? si.field_b : (java.awt.Canvas) (Object) wq.field_a;
     }
 

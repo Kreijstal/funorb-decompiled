@@ -10,7 +10,7 @@ final class ui {
     static String field_c;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_f = null;
         field_a = null;
@@ -19,7 +19,7 @@ final class ui {
         field_b = null;
     }
 
-    final static fi a(int param0) {
+    final static fi a() {
         return t.field_i;
     }
 

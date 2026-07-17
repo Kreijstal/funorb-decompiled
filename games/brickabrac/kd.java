@@ -52,8 +52,8 @@ final class kd {
         try {
           L0: {
             L1: {
-              var2_int = param1.l(param0 + 257);
-              if (~var2_int != param0) {
+              var2_int = param1.l(255);
+              if (var2_int != 1) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -73,7 +73,7 @@ final class kd {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("kd.B(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("kd.B(").append(-2).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

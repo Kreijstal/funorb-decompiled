@@ -57,7 +57,9 @@ final class dl extends ek {
                   break L1;
                 }
               } else {
-                lj.a(param4, param3, 0, true);
+                int discarded$5 = 1;
+                int discarded$6 = 0;
+                lj.a(param4, param3);
                 break L1;
               }
             }
@@ -113,28 +115,22 @@ final class dl extends ek {
         field_L = null;
     }
 
-    final static void b(int param0, int param1) {
+    final static void b() {
         RuntimeException var2 = null;
         int var3 = 0;
-        Object var4 = null;
-        cl var5 = null;
+        cl var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var5 = (cl) (Object) oe.field_I.c((byte) 113);
+            var4 = (cl) (Object) oe.field_I.c((byte) 113);
             L1: while (true) {
-              if (var5 == null) {
-                if (param0 == 640) {
-                  break L0;
-                } else {
-                  var4 = null;
-                  dl.a((byte) 62, true, (ck) null, -96, 15);
-                  return;
-                }
+              if (var4 == null) {
+                break L0;
               } else {
-                fh.a((byte) 104, var5, 7);
-                var5 = (cl) (Object) oe.field_I.d(true);
+                int discarded$2 = 7;
+                fh.a((byte) 104, var4);
+                var4 = (cl) (Object) oe.field_I.d(true);
                 continue L1;
               }
             }
@@ -142,7 +138,7 @@ final class dl extends ek {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "dl.L(" + param0 + 44 + 7 + 41);
+          throw dh.a((Throwable) (Object) var2, "dl.L(" + 640 + 44 + 7 + 41);
         }
     }
 
@@ -160,7 +156,7 @@ final class dl extends ek {
         super.b(param0, param1, param2, param3);
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return 250 < gd.field_e;
     }
 

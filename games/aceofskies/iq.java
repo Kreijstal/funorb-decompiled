@@ -7,7 +7,7 @@ final class iq extends wf {
     static String[] field_g;
     static gk field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_h = null;
         field_g = null;

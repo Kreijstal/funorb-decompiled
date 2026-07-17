@@ -139,11 +139,12 @@ final class fb extends ql {
                       ln.field_a.field_c[var6] = 4;
                       ln.field_a.field_c[var6 + -1] = 4;
                       ln.field_a.field_c[var6 - -1] = 4;
-                      int fieldTemp$4 = dk.field_o;
+                      int fieldTemp$5 = dk.field_o;
                       dk.field_o = dk.field_o + 1;
-                      vj.field_w[fieldTemp$4] = new qm(ln.field_a, ((fb) this).field_k, 145, rl.field_c, 0, false);
+                      vj.field_w[fieldTemp$5] = new qm(ln.field_a, ((fb) this).field_k, 145, rl.field_c, 0, false);
                       tb.field_N = 150;
-                      tk.a(1, jc.field_c, 31, true);
+                      int discarded$6 = 1;
+                      tk.a(1, jc.field_c, 31);
                       break L3;
                     } else {
                       break L4;
@@ -174,9 +175,9 @@ final class fb extends ql {
                     var9 = new oj(((fb) this).field_d[var4], 18, rl.field_c);
                     var5_ref_oj = var9;
                     var5_ref_oj.field_M = 0;
-                    int fieldTemp$5 = el.field_j;
+                    int fieldTemp$7 = el.field_j;
                     el.field_j = el.field_j + 1;
-                    mm.field_m[fieldTemp$5] = var9;
+                    mm.field_m[fieldTemp$7] = var9;
                     break L6;
                   }
                 }
@@ -280,9 +281,9 @@ final class fb extends ql {
                   ca.a((double)(((fb) this).field_p.field_e - -1), 0, (double)(((fb) this).field_p.field_g - -3), true, 0);
                   ((fb) this).field_o = new qm(ln.field_a, var3, 230, rl.field_c, 0, false);
                   ((fb) this).field_o.field_c = var11.field_c;
-                  int fieldTemp$6 = dk.field_o;
+                  int fieldTemp$8 = dk.field_o;
                   dk.field_o = dk.field_o + 1;
-                  vj.field_w[fieldTemp$6] = ((fb) this).field_o;
+                  vj.field_w[fieldTemp$8] = ((fb) this).field_o;
                   break L10;
                 } else {
                   break L10;
@@ -477,9 +478,9 @@ final class fb extends ql {
                           break L24;
                         }
                       }
-                      int fieldTemp$7 = el.field_j;
+                      int fieldTemp$9 = el.field_j;
                       el.field_j = el.field_j + 1;
-                      mm.field_m[fieldTemp$7] = var10;
+                      mm.field_m[fieldTemp$9] = var10;
                       break L16;
                     } else {
                       break L16;
@@ -692,7 +693,7 @@ final class fb extends ql {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a() {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -701,21 +702,13 @@ final class fb extends ql {
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
-            var5_int = param1 + param0;
-            var6 = (param0 & 1) + param0;
+            var5_int = 430;
+            var6 = 32;
             L1: while (true) {
               if (var6 >= var5_int) {
-                L2: {
-                  if (param2 == 11992) {
-                    break L2;
-                  } else {
-                    boolean discarded$2 = fb.a(0.5819263259193922, (byte) 31, 0.515826981495636, 0.17239172967428718, 0.7326247205058647, 1.0288611625496324, -0.6530990291171533, 1.5894862770774536, 1.0324946007427929);
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
-                si.e(param3, var6, 576, 65793, 96);
+                si.e(32, var6, 576, 65793, 96);
                 var6 += 2;
                 continue L1;
               }
@@ -724,7 +717,7 @@ final class fb extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var5, "fb.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 576 + 41);
+          throw wg.a((Throwable) (Object) var5, "fb.A(" + 32 + 44 + 398 + 44 + 11992 + 44 + 32 + 44 + 576 + 41);
         }
     }
 
@@ -824,9 +817,6 @@ final class fb extends ql {
         double var19 = -param5 + param7;
         double var21 = -param4 + param3;
         double var23 = -param0 + param7;
-        if (param1 != 43) {
-            return false;
-        }
         double var25 = -param6 + param3;
         double var27 = param7 - param2;
         if ((-(var25 * var19) + var27 * var17) * (-(var19 * var21) + var23 * var17) >= 0.0) {

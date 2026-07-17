@@ -203,7 +203,8 @@ class pv extends bw {
                 rf.field_q.field_eb = mu.a(11579568, 3, rf.field_q.field_p, 8421504, 1, (byte) 17);
                 tv.field_o.a(-26 + (-10 + rf.field_q.field_p), 31407, rf.field_q.field_sb - 10, 5, 5);
                 vca.field_h.a(24, 31407, 80, (rf.field_q.field_sb - 80) / 2, -24 + rf.field_q.field_p - 5);
-                pg.e(0);
+                int discarded$1 = 0;
+                pg.e();
                 break L0;
               } else {
                 L8: {

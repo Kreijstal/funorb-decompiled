@@ -7,7 +7,7 @@ final class mn extends pu {
     static String field_n;
     private static String field_z;
 
-    public static void b(int param0) {
+    public static void b() {
         field_l = null;
         field_m = null;
         field_n = null;

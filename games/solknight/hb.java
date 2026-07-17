@@ -139,7 +139,8 @@ final class hb {
                 } else {
                   if (0 < param3) {
                     L6: {
-                      this.c(true);
+                      int discarded$2 = 1;
+                      this.c();
                       var9_int = param3;
                       if (((hb) this).field_h < var9_int) {
                         var9_int = ((hb) this).field_h;
@@ -182,9 +183,9 @@ final class hb {
                               break L9;
                             } else {
                               param3--;
-                              int incrementValue$1 = param2;
+                              int incrementValue$3 = param2;
                               param2++;
-                              param0[incrementValue$1] = (byte) 0;
+                              param0[incrementValue$3] = (byte) 0;
                               ((hb) this).field_e = ((hb) this).field_e + 1L;
                               continue L11;
                             }
@@ -317,7 +318,7 @@ final class hb {
         }
     }
 
-    private final void c(boolean param0) throws IOException {
+    private final void c() throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = SolKnight.field_L ? 1 : 0;
@@ -341,7 +342,7 @@ final class hb {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         int var1_int = 0;
         int var2 = 0;
         rb var3_ref_rb = null;
@@ -782,7 +783,7 @@ final class hb {
               L38: {
                 of.field_g = of.field_g + 1;
                 if (of.field_g <= 50) {
-                  rb discarded$2 = m.a(10, -ea.field_p[kb.field_b] + (720 + bk.a(128, jb.field_g, (byte) 47)) - 64 << 4, bk.a(128, jb.field_g, (byte) -46) + -64 << 4, (byte) -6, 0, 0);
+                  rb discarded$7 = m.a(10, -ea.field_p[kb.field_b] + (720 + bk.a(128, jb.field_g, (byte) 47)) - 64 << 4, bk.a(128, jb.field_g, (byte) -46) + -64 << 4, (byte) -6, 0, 0);
                   break L38;
                 } else {
                   break L38;
@@ -830,7 +831,8 @@ final class hb {
                     gb.a(true, 8, -128);
                     break L42;
                   } else {
-                    ah.b(true);
+                    int discarded$8 = 1;
+                    ah.b();
                     kh.field_c = null;
                     if (jl.field_d != 0) {
                       gb.a(true, 7, -127);
@@ -1142,7 +1144,7 @@ final class hb {
               var8 = var6 + -var4;
               var9 = var7 - var5;
               var10 = (int)Math.sqrt((double)(var8 * var8 - -(var9 * var9)));
-              rb discarded$3 = m.a(var2 + 25, var5, var4, (byte) -6, var9 * var3 / var10, var3 * var8 / var10);
+              rb discarded$9 = m.a(var2 + 25, var5, var4, (byte) -6, var9 * var3 / var10, var3 * var8 / var10);
               break L49;
             }
           }
@@ -1155,7 +1157,8 @@ final class hb {
             }
           }
           L72: {
-            vk.b((byte) -126);
+            int discarded$10 = -126;
+            vk.b();
             if (!pg.field_e) {
               break L72;
             } else {
@@ -1269,7 +1272,8 @@ final class hb {
               break L82;
             }
           }
-          be.c(false);
+          int discarded$11 = 0;
+          be.c();
           break L75;
         }
         L84: {
@@ -1277,7 +1281,8 @@ final class hb {
             break L84;
           } else {
             L85: while (true) {
-              if (!wk.a((byte) -56)) {
+              int discarded$12 = -56;
+              if (!wk.a()) {
                 break L84;
               } else {
                 if (13 == el.field_n) {
@@ -1333,7 +1338,8 @@ final class hb {
                           lk.field_e = lk.field_e + 5000;
                           me.a(false);
                           if (!il.b(507)) {
-                            ah.b(true);
+                            int discarded$13 = 1;
+                            ah.b();
                             kh.field_c = null;
                             break L88;
                           } else {
@@ -1390,7 +1396,7 @@ final class hb {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_j = null;
         field_m = null;
         field_l = null;

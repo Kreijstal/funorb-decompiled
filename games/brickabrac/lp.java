@@ -156,7 +156,8 @@ class lp extends fe implements en {
                 kf.a("tochangedisplayname.ws", (byte) -113, uc.e((byte) -103));
                 break L1;
               } else {
-                bd.a(3, true);
+                int discarded$3 = 1;
+                bd.a(3);
                 ((lp) this).m(17);
                 break L1;
               }
@@ -407,11 +408,13 @@ class lp extends fe implements en {
               if (!((lp) this).field_tb) {
                 return;
               } else {
-                s.a((byte) -30);
+                int discarded$8 = -30;
+                s.a();
                 return;
               }
             } else {
-              cb.e((byte) -46);
+              int discarded$9 = -46;
+              cb.e();
               return;
             }
           }
@@ -425,11 +428,13 @@ class lp extends fe implements en {
               if (!((lp) this).field_tb) {
                 return;
               } else {
-                s.a((byte) -30);
+                int discarded$10 = -30;
+                s.a();
                 return;
               }
             } else {
-              cb.e((byte) -46);
+              int discarded$11 = -46;
+              cb.e();
               return;
             }
           }

@@ -55,13 +55,15 @@ class oh {
             oi.field_f = true;
             return;
           } else {
-            qk.g(-125);
+            int discarded$4 = -125;
+            qk.g();
             gm.field_i = 11;
             oi.field_f = true;
             return;
           }
         } else {
-          qk.g(-125);
+          int discarded$5 = -125;
+          qk.g();
           gm.field_i = 11;
           oi.field_f = true;
           return;
@@ -93,20 +95,10 @@ class oh {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-          boolean discarded$2 = oh.b(true);
-          field_g = null;
-          field_d = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
-          field_g = null;
-          field_d = null;
-          field_c = null;
-          field_a = null;
-          return;
-        }
+        field_g = null;
+        field_d = null;
+        field_c = null;
+        field_a = null;
     }
 
     final static boolean b(boolean param0) {

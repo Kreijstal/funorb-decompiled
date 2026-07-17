@@ -21,12 +21,9 @@ final class vs {
             qd.field_I = param1;
             as.field_E.field_fb.b(75);
             as.field_E.a((je) (Object) qd.field_I, 105);
-            if (param0 != 256) {
-                field_j = true;
-            }
             iu.field_h = true;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "vs.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "vs.B(" + 256 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

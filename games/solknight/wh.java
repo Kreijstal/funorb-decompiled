@@ -6,7 +6,7 @@ final class wh {
     static dl field_c;
     static boolean field_b;
 
-    final static boolean a(boolean param0, CharSequence param1, byte param2) {
+    final static boolean a(boolean param0, CharSequence param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -35,7 +35,9 @@ final class wh {
         var4 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            if (qk.a(param1, param0, -2)) {
+            int discarded$13 = -2;
+            int discarded$14 = 0;
+            if (qk.a(param1)) {
               var3_int = 0;
               L1: while (true) {
                 if (param1.length() <= var3_int) {
@@ -64,7 +66,7 @@ final class wh {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("wh.A(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("wh.A(").append(0).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -96,7 +98,7 @@ final class wh {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

@@ -411,14 +411,13 @@ final class kc extends id {
         qg.field_f = param2;
         ej.field_s = param3;
         qi.field_E = param1;
-        if (param0 == 50) {
-            return;
-        }
-        field_Q = true;
     }
 
     public static void c(boolean param0) {
         field_Y = null;
+        if (param0) {
+            return;
+        }
         field_R = 39;
     }
 

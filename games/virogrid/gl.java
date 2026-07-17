@@ -454,16 +454,16 @@ final class gl {
         }
     }
 
-    final static void a(dh param0, byte param1, int param2) {
+    final static void a(dh param0, byte param1) {
         hg var3 = null;
         try {
             var3 = gk.field_g;
-            var3.g(param2, 8);
+            var3.g(7, 8);
             int var4 = -12 % ((0 - param1) / 43);
             var3.a(param0.field_i, 58);
             var3.a(param0.field_g, 126);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "gl.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "gl.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 7 + 41);
         }
     }
 

@@ -5,7 +5,7 @@ final class hn {
     static int field_a;
     static String[] field_b;
 
-    final static void a(gk param0, boolean param1) {
+    final static void a(gk param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -62,7 +62,8 @@ final class hn {
                   }
                 }
               } else {
-                gp.field_y[var4] = sh.a(var8, (byte) -14);
+                int discarded$1 = -14;
+                gp.field_y[var4] = sh.a(var8);
                 var4++;
                 continue L1;
               }
@@ -102,12 +103,12 @@ final class hn {
 
     final static void a(int param0, int param1) {
         dl var2 = q.field_p;
-        var2.g(111, param1);
+        var2.g(111, 6);
         var2.b(-1336879960, 1);
-        var2.b(-1336879960, param0);
+        var2.b(-1336879960, 0);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

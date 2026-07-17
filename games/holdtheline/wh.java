@@ -6,7 +6,7 @@ final class wh extends vd {
     private int field_h;
     private int field_f;
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!(ci.field_o)) {
             throw new IllegalStateException();
         }

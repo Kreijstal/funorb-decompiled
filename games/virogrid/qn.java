@@ -102,7 +102,7 @@ final class qn extends tg {
               }
               L3: {
                 if (var4 != 0) {
-                  int discarded$1 = param0.c((byte) -78, 16);
+                  int discarded$2 = param0.c((byte) -78, 16);
                   var5.field_s = c.a(var5.field_s, -119, 16, param0);
                   var5.field_d = c.a(var5.field_d, -108, 16, param0);
                   var5.field_t = c.a(var5.field_t, param1 + -13589, 16, param0);
@@ -125,7 +125,8 @@ final class qn extends tg {
                 if (!tk.a(1, param0)) {
                   break L5;
                 } else {
-                  var5.field_z = ah.a(16, var5.field_z, param0, 8);
+                  int discarded$3 = 8;
+                  var5.field_z = ah.a(16, var5.field_z, param0);
                   var6 = 0;
                   var7 = 0;
                   L6: while (true) {

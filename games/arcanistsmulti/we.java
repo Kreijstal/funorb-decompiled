@@ -81,14 +81,14 @@ final class we {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_d = null;
-        int var1 = -7 % ((param0 - -28) / 61);
+        int var1 = -1;
         field_e = null;
         field_a = null;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -121,7 +121,8 @@ final class we {
                     } else {
                       var2 = cf.field_c[wl.field_S.field_h];
                       if (var2 == 2) {
-                        vk.c(false);
+                        int discarded$1 = 0;
+                        vk.c();
                         break L3;
                       } else {
                         break L3;
@@ -151,43 +152,8 @@ final class we {
         return stackIn_15_0;
     }
 
-    final static boolean a(byte param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (param0 == -80) {
-          if (null == pm.field_b) {
-            if (oj.field_i) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
-            return stackIn_11_0 != 0;
-          }
-        } else {
-          we.c(84);
-          if (null != pm.field_b) {
-            return true;
-          } else {
-            L0: {
-              if (!oj.field_i) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L0;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
-          }
-        }
+    final static boolean a() {
+        return null != pm.field_b || oj.field_i;
     }
 
     final static void a(java.math.BigInteger param0, int param1, byte[] param2, wk param3, int param4, java.math.BigInteger param5, int param6) {
@@ -266,7 +232,7 @@ final class we {
         try {
           L0: {
             L1: {
-              var7_int = gd.a(param1 ^ 29389, param6);
+              var7_int = gd.a(29389, param6);
               if (null == c.field_b) {
                 c.field_b = new java.security.SecureRandom();
                 break L1;
@@ -300,9 +266,9 @@ final class we {
                 L5: {
                   L6: {
                     ue.field_c.field_g = 0;
-                    ue.field_c.a(param2, param4, (byte) -86, param6);
+                    ue.field_c.a(param2, 0, (byte) -86, param6);
                     ue.field_c.e(var7_int, (byte) 83);
-                    ue.field_c.a(param1 ^ 127, var15);
+                    ue.field_c.a(127, var15);
                     if (ji.field_b == null) {
                       break L6;
                     } else {
@@ -325,7 +291,7 @@ final class we {
                     ji.field_b.c(param6, (byte) -60);
                     ji.field_b.a(param0, (byte) 95, param5);
                     param3.a(ji.field_b.field_j, 0, (byte) -86, ji.field_b.field_g);
-                    param3.a(ue.field_c.field_j, param1, (byte) -86, ue.field_c.field_g);
+                    param3.a(ue.field_c.field_j, 0, (byte) -86, ue.field_c.field_g);
                     break L0;
                   } else {
                     ji.field_b.a(var15[var11], (byte) -101);
@@ -370,7 +336,7 @@ final class we {
           }
           L9: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(0).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -420,7 +386,7 @@ final class we {
           }
           L11: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(param4).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(0).append(44);
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;

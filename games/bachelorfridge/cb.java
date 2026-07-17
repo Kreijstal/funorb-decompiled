@@ -18,16 +18,18 @@ final class cb extends at {
             ((cb) this).field_k.b(-1, ((cb) this).field_j);
             int fieldTemp$0 = ((cb) this).field_l + 1;
             ((cb) this).field_l = ((cb) this).field_l + 1;
-            if (!(fieldTemp$0 < this.e((byte) 100))) {
+            int discarded$1 = 100;
+            if (!(fieldTemp$0 < this.e())) {
                 this.d(-24070);
                 return true;
             }
             var2 = -15 / ((param0 - 71) / 47);
             return false;
         }
-        int fieldTemp$1 = ((cb) this).field_l + 1;
+        int fieldTemp$2 = ((cb) this).field_l + 1;
         ((cb) this).field_l = ((cb) this).field_l + 1;
-        if (!(fieldTemp$1 < this.e((byte) 100))) {
+        int discarded$3 = 100;
+        if (!(fieldTemp$2 < this.e())) {
             this.d(-24070);
             return true;
         }
@@ -35,15 +37,12 @@ final class cb extends at {
         return false;
     }
 
-    private final int e(byte param0) {
+    private final int e() {
         int var2 = 1;
         return 10;
     }
 
-    public static void d(byte param0) {
-        if (param0 < 102) {
-            return;
-        }
+    public static void d() {
         field_n = null;
         field_m = null;
         field_o = null;

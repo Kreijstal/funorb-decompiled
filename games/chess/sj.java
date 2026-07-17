@@ -24,55 +24,26 @@ final class sj implements jm {
     private int field_q;
 
     final static boolean a(byte param0, char param1) {
-        L0: {
-          if (param1 < 32) {
-            break L0;
-          } else {
-            if (126 < param1) {
-              break L0;
-            } else {
-              return true;
+        if (param1 >= 32) {
+            if (126 >= param1) {
+                return true;
             }
-          }
         }
-        L1: {
-          if (160 > param1) {
-            break L1;
-          } else {
-            if (param1 > 255) {
-              break L1;
-            } else {
-              return true;
+        if (160 <= param1) {
+            if (param1 <= 255) {
+                return true;
             }
-          }
         }
-        L2: {
-          if (param1 == 8364) {
-            break L2;
-          } else {
-            if (param1 == 338) {
-              break L2;
-            } else {
-              if (param1 == 8212) {
-                break L2;
-              } else {
-                if (param1 == 339) {
-                  break L2;
-                } else {
-                  if (param1 == 376) {
-                    break L2;
-                  } else {
-                    if (param0 <= -95) {
-                      return false;
-                    } else {
-                      field_p = null;
-                      return false;
+        if (param1 != 8364) {
+            if (param1 != 338) {
+                if (param1 != 8212) {
+                    if (param1 != 339) {
+                        if (param1 != 376) {
+                            return false;
+                        }
                     }
-                  }
                 }
-              }
             }
-          }
         }
         return true;
     }
@@ -167,10 +138,11 @@ final class sj implements jm {
             Object var2 = null;
             sj.a(50, 74, (ak) null);
         }
-        return fl.c((byte) 70);
+        int discarded$0 = 70;
+        return fl.c();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_k = null;
@@ -296,7 +268,7 @@ final class sj implements jm {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -311,11 +283,12 @@ final class sj implements jm {
             var5 = qn.field_P.field_xb.c(param0, 500) + 6;
             var6 = var4 * fe.field_g - -2;
             var7 = ao.a(var5, true, var2_int, 12);
-            var8 = sg.a(var3, var6, 20, 0);
+            int discarded$0 = 0;
+            var8 = sg.a(var3, var6, 20);
             int var9 = -14;
             wb.d(var7, var8, var5, var6, 0);
             wb.f(1 + var7, var8 - -1, -2 + var5, -2 + var6, 16777088);
-            int discarded$0 = qn.field_P.field_xb.a(param0, 3 + var7, -qn.field_P.field_xb.field_C + jg.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, fe.field_g);
+            int discarded$1 = qn.field_P.field_xb.a(param0, 3 + var7, -qn.field_P.field_xb.field_C + jg.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, fe.field_g);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "sj.F(" + (param0 != null ? "{...}" : "null") + 44 + 85 + 41);
         }

@@ -171,7 +171,7 @@ final class q extends hc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_Q = null;
         field_H = null;
         field_L = null;
@@ -199,13 +199,13 @@ final class q extends hc {
         if (param1 >= -60) {
           field_P = true;
           var2 = om.field_c;
-          var2.a(param0, true);
+          var2.a(6, true);
           var2.f(1, -123);
           var2.f(0, -123);
           return;
         } else {
           var2 = om.field_c;
-          var2.a(param0, true);
+          var2.a(6, true);
           var2.f(1, -123);
           var2.f(0, -123);
           return;

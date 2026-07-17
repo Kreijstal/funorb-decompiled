@@ -13,10 +13,11 @@ final class ll extends pf {
     static ut field_m;
     static ut field_n;
 
-    final static void c(byte param0) {
+    final static void c() {
         ma.k((byte) -118);
         int var1 = 1;
-        ae.m(-19417);
+        int discarded$0 = -19417;
+        ae.m();
     }
 
     public static void b(byte param0) {

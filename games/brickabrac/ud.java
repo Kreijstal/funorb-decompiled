@@ -188,7 +188,9 @@ final class ud extends km {
                       }
                     }
                   }
-                  this.a(178, 243 - 2 * var2, 210, 385, (byte) 85);
+                  int discarded$2 = 85;
+                  int discarded$3 = 385;
+                  this.a(178, 243 - 2 * var2, 210);
                   break L3;
                 }
                 L5: {
@@ -327,70 +329,63 @@ final class ud extends km {
         var3 = 0;
         L0: while (true) {
           if (((ud) this).field_F.length <= var3) {
-            L1: {
-              ((ud) this).field_z.c((byte) -78);
-              int discarded$2 = td.a(((ud) this).field_F, ((ud) this).field_A.field_j[param1], ((ud) this).field_r, ((ud) this).field_z, ((ud) this).field_s, 10792131);
-              cg.a(((ud) this).field_F, (byte) 35, ((ud) this).field_z, false);
-              ((ud) this).field_I = 122880;
-              ((ud) this).field_u = 163840;
-              ((ud) this).field_D = 0;
-              if (param0 == -6845) {
-                break L1;
-              } else {
-                int discarded$3 = ((ud) this).a(false);
-                break L1;
-              }
-            }
+            ((ud) this).field_z.c((byte) -78);
+            int discarded$2 = 10792131;
+            int discarded$3 = td.a(((ud) this).field_F, ((ud) this).field_A.field_j[param1], ((ud) this).field_r, ((ud) this).field_z, ((ud) this).field_s);
+            cg.a(((ud) this).field_F, (byte) 35, ((ud) this).field_z, false);
+            ((ud) this).field_I = 122880;
+            ((ud) this).field_u = 163840;
+            ((ud) this).field_D = 0;
             ((ud) this).field_B = 0;
             var3 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (((ud) this).field_F.length <= var3) {
                 return;
               } else {
-                var4 = (on) (Object) ((ud) this).field_F[var3].d(param0 + 6735);
-                L3: while (true) {
+                var4 = (on) (Object) ((ud) this).field_F[var3].d(-110);
+                L2: while (true) {
                   if (var4 == null) {
                     var3++;
-                    continue L2;
+                    continue L1;
                   } else {
-                    L4: {
+                    L3: {
                       if ((1 & var4.field_N) != 0) {
-                        break L4;
+                        break L3;
                       } else {
-                        L5: {
+                        L4: {
                           if (((ud) this).field_D < var4.field_j - -var4.field_u) {
                             ((ud) this).field_D = var4.field_j + var4.field_u;
+                            break L4;
+                          } else {
+                            break L4;
+                          }
+                        }
+                        L5: {
+                          if (((ud) this).field_I > var4.field_m) {
+                            ((ud) this).field_I = var4.field_m;
                             break L5;
                           } else {
                             break L5;
                           }
                         }
                         L6: {
-                          if (((ud) this).field_I > var4.field_m) {
-                            ((ud) this).field_I = var4.field_m;
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        }
-                        L7: {
                           if (var4.field_m - -var4.field_s > ((ud) this).field_B) {
                             ((ud) this).field_B = var4.field_s + var4.field_m;
-                            break L7;
+                            break L6;
                           } else {
-                            break L7;
+                            break L6;
                           }
                         }
                         if (var4.field_j >= ((ud) this).field_u) {
-                          break L4;
+                          break L3;
                         } else {
                           ((ud) this).field_u = var4.field_j;
-                          break L4;
+                          break L3;
                         }
                       }
                     }
                     var4 = (on) (Object) ((ud) this).field_F[var3].a((byte) 116);
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -456,7 +451,8 @@ final class ud extends km {
                 if (o.field_e == null) {
                   break L3;
                 } else {
-                  if (null == ac.a(param0, 2)) {
+                  int discarded$3 = 2;
+                  if (null == ac.a(param0)) {
                     break L3;
                   } else {
                     stackOut_7_0 = 1;
@@ -518,9 +514,10 @@ final class ud extends km {
         return true;
     }
 
-    final static tp c(boolean param0) {
+    final static tp c() {
         tp var1 = new tp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], cn.field_a[0], qp.field_c);
-        ee.d((byte) 96);
+        int discarded$0 = 96;
+        ee.d();
         return var1;
     }
 
@@ -531,7 +528,7 @@ final class ud extends km {
         return ((ud) this).field_p - -32;
     }
 
-    final static String d(boolean param0) {
+    final static String d() {
         if (jm.field_f == ik.field_g) {
             return td.field_w;
         }
@@ -651,7 +648,7 @@ final class ud extends km {
         int var4 = 0;
         try {
             var6 = k.field_h;
-            var6.e(-13413, param0);
+            var6.e(-13413, 4);
             var6.field_l = var6.field_l + 1;
             var4 = var6.field_l;
             var6.a(116, 1);
@@ -665,11 +662,11 @@ final class ud extends km {
             int discarded$0 = var6.d(3, var4);
             var6.d((byte) 117, var6.field_l - var4);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ud.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ud.C(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_t = null;
         field_x = null;
         int var1 = 0;
@@ -682,12 +679,12 @@ final class ud extends km {
         ((ud) this).a(bm.field_f, 0);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, byte param4) {
+    private final void a(int param0, int param1, int param2) {
         int var8 = 0;
         on var9 = null;
         int var10 = BrickABrac.field_J ? 1 : 0;
         int var6 = ((ud) this).field_D - ((ud) this).field_u >> 9;
-        param2 = param2 + (-var6 + param3) / 2;
+        param2 = param2 + (-var6 + 385) / 2;
         int var7 = -((ud) this).field_I + ((ud) this).field_B >> 9;
         param0 = param0 + (param1 + -var7) / 2;
         for (var8 = 0; var8 < ((ud) this).field_F.length; var8++) {

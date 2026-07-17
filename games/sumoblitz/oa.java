@@ -32,7 +32,8 @@ final class oa extends ha implements e {
     protected final synchronized void finalize() {
         ((oa) this).a((byte) -22);
         if (((oa) this).field_nativeid != 0L) {
-            pa.a((e) this, (byte) -37);
+            int discarded$0 = -37;
+            pa.a((e) this);
         }
     }
 
@@ -145,7 +146,7 @@ final class oa extends ha implements e {
 
     private final native void n(long param0, long param1);
 
-    private final void h(int param0) {
+    private final void h() {
         int var2 = 0;
         ((oa) this).field_l = 1;
         ((oa) this).field_s = new a[((oa) this).field_l];
@@ -169,13 +170,15 @@ final class oa extends ha implements e {
           L0: {
             if (mc.b((byte) -124, "sw3d")) {
               L1: {
-                pa.b((byte) -119);
+                int discarded$6 = -119;
+                pa.b();
                 this.MA(((oa) this).field_h, 0, 0);
                 kr.a(true, -21, false);
                 ((oa) this).field_k = true;
-                ja discarded$2 = new ja();
+                ja discarded$7 = new ja();
                 this.a((eu) (Object) new ja());
-                this.h(1);
+                int discarded$8 = 1;
+                this.h();
                 this.g(0);
                 if (param0 == null) {
                   break L1;
@@ -245,11 +248,13 @@ final class oa extends ha implements e {
         ((oa) this).field_o.e(125);
         this.FA();
         if (((oa) this).field_k) {
-            pt.a(false, true, -1);
+            int discarded$0 = -1;
+            pt.a(false, true);
             ((oa) this).field_k = false;
         }
         this.g();
-        pa.a((byte) -107);
+        int discarded$1 = -107;
+        pa.a();
         ((oa) this).field_m = true;
     }
 

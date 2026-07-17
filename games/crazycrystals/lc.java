@@ -8,12 +8,12 @@ final class lc {
     static int field_d;
     static int field_a;
 
-    public static void c(int param0) {
+    public static void c() {
         field_c = null;
         field_b = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -47,21 +47,13 @@ final class lc {
                     break L1;
                   }
                 }
-                L4: {
-                  if (param0 == 24536) {
-                    break L4;
-                  } else {
-                    field_e = 76;
-                    break L4;
-                  }
-                }
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
+              L4: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                break L5;
+                break L4;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -71,7 +63,7 @@ final class lc {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -143,7 +135,7 @@ final class lc {
         }
     }
 
-    final static e a(String param0, byte param1) {
+    final static e a(String param0) {
         RuntimeException var2 = null;
         e stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

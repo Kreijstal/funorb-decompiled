@@ -7,12 +7,12 @@ final class ua {
     static ge field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

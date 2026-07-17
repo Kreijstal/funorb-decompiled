@@ -13,7 +13,7 @@ final class ok {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -21,7 +21,7 @@ final class ok {
         field_c = null;
     }
 
-    final static int a(char param0, CharSequence param1, byte param2) {
+    final static int a(char param0, CharSequence param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

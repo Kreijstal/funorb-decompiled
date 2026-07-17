@@ -66,7 +66,7 @@ final class ti {
                     } else {
                       var4_int = param3.field_f.length;
                       var5 = param1.field_i[param2].length / var4_int;
-                      var6 = param0;
+                      var6 = 0;
                       L2: while (true) {
                         if (var6 >= var5) {
                           stackOut_19_0 = -1;
@@ -116,7 +116,7 @@ final class ti {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("ti.B(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("ti.B(").append(0).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -171,10 +171,6 @@ final class ti {
 
     final static void a(int param0, boolean param1) {
         bb.field_a.b(16564, param1);
-        if (param0 != 0) {
-            Object var3 = null;
-            int discarded$0 = ti.a(72, (de) null, -117, (d) null);
-        }
     }
 
     static {

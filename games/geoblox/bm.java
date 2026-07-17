@@ -83,7 +83,8 @@ final class bm {
         try {
           L0: {
             L1: {
-              var18 = new qc(v.a(param1, -1));
+              int discarded$5 = -1;
+              var18 = new qc(v.a(param1));
               var4 = var18.c((byte) 34);
               if (5 > var4) {
                 break L1;
@@ -143,9 +144,9 @@ final class bm {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$4 = var8 + var18.d((byte) -27);
-                            var8 = dupTemp$4;
-                            ((bm) this).field_i[var10] = dupTemp$4;
+                            int dupTemp$6 = var8 + var18.d((byte) -27);
+                            var8 = dupTemp$6;
+                            ((bm) this).field_i[var10] = dupTemp$6;
                             if (((bm) this).field_i[var10] > var9) {
                               var9 = ((bm) this).field_i[var10];
                               break L8;
@@ -164,9 +165,9 @@ final class bm {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$5 = var8 + var18.b(true);
-                            var8 = dupTemp$5;
-                            ((bm) this).field_i[var10] = dupTemp$5;
+                            int dupTemp$7 = var8 + var18.b(true);
+                            var8 = dupTemp$7;
+                            ((bm) this).field_i[var10] = dupTemp$7;
                             if (var9 < ((bm) this).field_i[var10]) {
                               var9 = ((bm) this).field_i[var10];
                               break L10;
@@ -285,10 +286,10 @@ final class bm {
                                           continue L22;
                                         } else {
                                           L25: {
-                                            int dupTemp$6 = var8 + var18.d((byte) -27);
-                                            var8 = dupTemp$6;
-                                            ((bm) this).field_o[var11][var14] = dupTemp$6;
-                                            var15 = dupTemp$6;
+                                            int dupTemp$8 = var8 + var18.d((byte) -27);
+                                            var8 = dupTemp$8;
+                                            ((bm) this).field_o[var11][var14] = dupTemp$8;
+                                            var15 = dupTemp$8;
                                             if (~var13 > ~var15) {
                                               var13 = var15;
                                               break L25;
@@ -338,10 +339,10 @@ final class bm {
                                           continue L27;
                                         } else {
                                           L30: {
-                                            int dupTemp$7 = var8 + var18.b(true);
-                                            var8 = dupTemp$7;
-                                            ((bm) this).field_o[var11][var14] = dupTemp$7;
-                                            var15 = dupTemp$7;
+                                            int dupTemp$9 = var8 + var18.b(true);
+                                            var8 = dupTemp$9;
+                                            ((bm) this).field_o[var11][var14] = dupTemp$9;
+                                            var15 = dupTemp$9;
                                             if (~var13 <= ~var15) {
                                               break L30;
                                             } else {
@@ -463,56 +464,48 @@ final class bm {
         }
     }
 
-    final static void a(ai param0, int param1, int param2) {
+    final static void a(ai param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         pk var7 = null;
         pk var8 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var6 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              var7 = fj.field_q;
-              var8 = var7;
-              var8.a(param1, (byte) -125);
-              var8.field_f = var8.field_f + 1;
-              var4 = var8.field_f;
-              var8.d((byte) 122, 1);
-              var8.e(param0.field_q, 28695);
-              var8.e(param0.field_f, 28695);
-              var8.e(param0.field_k, 28695);
-              var8.c((byte) 95, param0.field_m);
-              var8.c((byte) 95, param0.field_g);
-              var8.c((byte) 95, param0.field_j);
-              if (param2 <= -126) {
-                break L1;
-              } else {
-                field_j = 61;
-                break L1;
-              }
-            }
+            var7 = fj.field_q;
+            var8 = var7;
+            var8.a(3, (byte) -125);
+            var8.field_f = var8.field_f + 1;
+            var4 = var8.field_f;
+            var8.d((byte) 122, 1);
+            var8.e(param0.field_q, 28695);
+            var8.e(param0.field_f, 28695);
+            var8.e(param0.field_k, 28695);
+            var8.c((byte) 95, param0.field_m);
+            var8.c((byte) 95, param0.field_g);
+            var8.c((byte) 95, param0.field_j);
             var8.c((byte) 95, param0.field_i);
             var8.d((byte) 126, param0.field_o.length);
             var5 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var5 >= param0.field_o.length) {
                 int discarded$1 = var8.d(78, var4);
                 var8.f(11700, -var4 + var8.field_f);
@@ -520,43 +513,43 @@ final class bm {
               } else {
                 var7.c((byte) 95, param0.field_o[var5]);
                 var5++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("bm.C(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("bm.C(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 3 + 44 + -127 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_p = null;
         int var1 = -4;
@@ -573,7 +566,8 @@ final class bm {
                 if (param2.length != 64) {
                     throw new RuntimeException();
                 }
-                ((bm) this).field_c = wh.a(param0.length, 0, param0, 8);
+                int discarded$0 = 8;
+                ((bm) this).field_c = wh.a(param0.length, 0, param0);
                 for (var4_int = 0; 64 > var4_int; var4_int++) {
                     if (((bm) this).field_c[var4_int] != param2[var4_int]) {
                         throw new RuntimeException();

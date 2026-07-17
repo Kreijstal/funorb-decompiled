@@ -132,7 +132,7 @@ final class moa extends le {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         int var2 = 0;
@@ -149,7 +149,7 @@ final class moa extends le {
         ((moa) this).field_i[((moa) this).field_m] = ((moa) this).field_i[0] + 4096;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_n = null;
     }
 
@@ -246,7 +246,7 @@ final class moa extends le {
         ((moa) this).field_m = 10;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         int var1 = (gp.field_p - 640) / 2;
         int var2 = ldb.field_o * ldb.field_o;
         int var3 = var2 + -(lia.field_b * lia.field_b);
@@ -258,7 +258,8 @@ final class moa extends le {
         if (param0 > -35) {
             return;
         }
-        this.e(-64);
+        int discarded$0 = -64;
+        this.e();
     }
 
     static {

@@ -6,7 +6,7 @@ final class d {
     static String[] field_c;
     static ut field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -31,37 +31,15 @@ final class d {
     }
 
     final static int a(boolean param0, int param1) {
-        L0: {
-          if (param1 >= 0) {
-            param1 = Math.max(param1 - 91750, 0);
-            break L0;
-          } else {
+        if (param1 < 0) {
             param1 = Math.min(param1 + 91750, 0);
-            break L0;
-          }
-        }
-        if (!param0) {
-          L1: {
-            int discarded$6 = d.a(true, -93);
-            if (Math.abs(param1) >= 58982) {
-              break L1;
-            } else {
-              param1 = 0;
-              break L1;
-            }
-          }
-          return param1;
         } else {
-          L2: {
-            if (Math.abs(param1) >= 58982) {
-              break L2;
-            } else {
-              param1 = 0;
-              break L2;
-            }
-          }
-          return param1;
+            param1 = Math.max(param1 - 91750, 0);
         }
+        if (Math.abs(param1) < 58982) {
+            param1 = 0;
+        }
+        return param1;
     }
 
     static {

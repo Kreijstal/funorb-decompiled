@@ -807,7 +807,7 @@ final class in extends bh {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6, int param7, int param8, int param9, int param10, int param11) {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -847,90 +847,86 @@ final class in extends bh {
             break L1;
           }
         }
-        if (param5 == 72) {
-          var17 = 0;
-          L2: while (true) {
-            if (var17 >= ((in) this).field_t.field_K) {
-              var17 = 0;
-              L3: while (true) {
-                if (var14 <= var17) {
-                  var17 = ((in) this).field_t.field_K + -1;
-                  L4: while (true) {
-                    if (var17 < var14) {
-                      return;
-                    } else {
-                      var18 = 0;
-                      L5: while (true) {
-                        if (var18 >= var15) {
-                          var18 = ((in) this).field_t.field_C - 1;
-                          L6: while (true) {
-                            if (var15 > var18) {
-                              var17--;
-                              continue L4;
-                            } else {
-                              this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, false);
-                              var18--;
-                              continue L6;
-                            }
+        var17 = 0;
+        L2: while (true) {
+          if (var17 >= ((in) this).field_t.field_K) {
+            var17 = 0;
+            L3: while (true) {
+              if (var14 <= var17) {
+                var17 = ((in) this).field_t.field_K + -1;
+                L4: while (true) {
+                  if (var17 < var14) {
+                    return;
+                  } else {
+                    var18 = 0;
+                    L5: while (true) {
+                      if (var18 >= var15) {
+                        var18 = ((in) this).field_t.field_C - 1;
+                        L6: while (true) {
+                          if (var15 > var18) {
+                            var17--;
+                            continue L4;
+                          } else {
+                            this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, false);
+                            var18--;
+                            continue L6;
                           }
-                        } else {
-                          this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, false);
-                          var18++;
-                          continue L5;
                         }
+                      } else {
+                        this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, false);
+                        var18++;
+                        continue L5;
                       }
-                    }
-                  }
-                } else {
-                  var18 = 0;
-                  L7: while (true) {
-                    if (var18 >= var15) {
-                      var18 = ((in) this).field_t.field_C + -1;
-                      L8: while (true) {
-                        if (var15 > var18) {
-                          var17++;
-                          continue L3;
-                        } else {
-                          this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, false);
-                          var18--;
-                          continue L8;
-                        }
-                      }
-                    } else {
-                      this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, false);
-                      var18++;
-                      continue L7;
                     }
                   }
                 }
-              }
-            } else {
-              var18 = 0;
-              L9: while (true) {
-                if (((in) this).field_t.field_C <= var18) {
-                  var17++;
-                  continue L2;
-                } else {
-                  this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, true);
-                  var18++;
-                  continue L9;
+              } else {
+                var18 = 0;
+                L7: while (true) {
+                  if (var18 >= var15) {
+                    var18 = ((in) this).field_t.field_C + -1;
+                    L8: while (true) {
+                      if (var15 > var18) {
+                        var17++;
+                        continue L3;
+                      } else {
+                        this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, false);
+                        var18--;
+                        continue L8;
+                      }
+                    }
+                  } else {
+                    this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, false);
+                    var18++;
+                    continue L7;
+                  }
                 }
               }
             }
+          } else {
+            var18 = 0;
+            L9: while (true) {
+              if (((in) this).field_t.field_C <= var18) {
+                var17++;
+                continue L2;
+              } else {
+                this.a(param9, param11, param1, param7, param3, param0, 10000, param4, param10, param8, var17, var18, var16, param2, param6, true);
+                var18++;
+                continue L9;
+              }
+            }
           }
-        } else {
-          return;
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_s = null;
         field_n = null;
         field_u = null;
         field_o = null;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         db.a(-127, te.field_q, ve.field_Gc, true);
         dc.field_d = true;
     }
@@ -950,7 +946,8 @@ final class in extends bh {
             var9 = ((in) this).field_t.field_C * var8 / ((in) this).field_t.field_K;
         }
         int var10 = !(!param4) ? 5 * ((in) this).field_r : 0;
-        this.a(-var9 + -var10, param2, param6, -var8, var8, (byte) 72, param4, param0, 10000, param5, -var10 + var9, param3, 10000);
+        int discarded$0 = 10000;
+        this.a(-var9 + -var10, param2, param6, -var8, var8, (byte) 72, param4, param0, 10000, param5, -var10 + var9, param3);
     }
 
     final static void a(ug param0, byte param1, int param2) {

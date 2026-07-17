@@ -12,13 +12,10 @@ final class sn {
         qk.field_g = param1;
         pk.field_e = param3;
         mb.a(vp.field_c / 2, vp.field_i / 2, (byte) 74);
-        if (param2 != 24097) {
-            return;
-        }
         try {
             hh.a(param3.field_C - -param3.field_D, param0.field_D + param0.field_C, -79, param3.field_C, param0.field_C);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "sn.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "sn.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 24097 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -165,7 +162,8 @@ final class sn {
                     } else {
                       if (62 == param0.charAt(var5)) {
                         var5++;
-                        var8 = td.a((CharSequence) (Object) var7_ref_String, (byte) 38);
+                        int discarded$5 = 38;
+                        var8 = td.a((CharSequence) (Object) var7_ref_String);
                         var4 = var4 + (param2[var8].length() + var6_int + -var5);
                         continue L1;
                       } else {
@@ -214,10 +212,11 @@ final class sn {
                         } else {
                           if (param0.charAt(var5) == 62) {
                             var5++;
-                            var10 = td.a((CharSequence) (Object) var9, (byte) 38);
-                            StringBuilder discarded$3 = var6.append(param0.substring(var7, var8));
+                            int discarded$6 = 38;
+                            var10 = td.a((CharSequence) (Object) var9);
+                            StringBuilder discarded$7 = var6.append(param0.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$4 = var6.append(param2[var10]);
+                            StringBuilder discarded$8 = var6.append(param2[var10]);
                             continue L5;
                           } else {
                             continue L5;
@@ -226,7 +225,7 @@ final class sn {
                       }
                     }
                   } else {
-                    StringBuilder discarded$5 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$9 = var6.append(param0.substring(var7));
                     stackOut_27_0 = var6.toString();
                     stackIn_28_0 = stackOut_27_0;
                     break L0;

@@ -35,55 +35,39 @@ final class tq {
         this.a(((tq) this).field_d + 1, param0, -1);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_g = null;
     }
 
-    private final void c(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        if (param1 != -12364) {
-          ((tq) this).field_f = 94;
-          var4 = new int[this.a((byte) 24, param0)];
-          var3 = var4;
-          lua.a(((tq) this).field_c, 0, var4, 0, ((tq) this).field_c.length);
-          ((tq) this).field_c = var4;
-          return;
-        } else {
-          var4 = new int[this.a((byte) 24, param0)];
-          var3 = var4;
-          lua.a(((tq) this).field_c, 0, var4, 0, ((tq) this).field_c.length);
-          ((tq) this).field_c = var4;
-          return;
-        }
+    private final void c(int param0) {
+        int[] var4 = new int[this.a((byte) 24, param0)];
+        int[] var3 = var4;
+        lua.a(((tq) this).field_c, 0, var4, 0, ((tq) this).field_c.length);
+        ((tq) this).field_c = var4;
     }
 
     private final int a(byte param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (param0 != 24) {
-          return -80;
-        } else {
-          var3 = ((tq) this).field_c.length;
-          L0: while (true) {
-            if (param1 < var3) {
-              return var3;
-            } else {
-              if (((tq) this).field_e) {
-                if (var3 != 0) {
-                  var3 = var3 * ((tq) this).field_f;
-                  continue L0;
-                } else {
-                  var3 = 1;
-                  continue L0;
-                }
+        var3 = ((tq) this).field_c.length;
+        L0: while (true) {
+          if (param1 < var3) {
+            return var3;
+          } else {
+            if (((tq) this).field_e) {
+              if (var3 != 0) {
+                var3 = var3 * ((tq) this).field_f;
+                continue L0;
               } else {
-                var3 = var3 + ((tq) this).field_f;
+                var3 = 1;
                 continue L0;
               }
+            } else {
+              var3 = var3 + ((tq) this).field_f;
+              continue L0;
             }
           }
         }

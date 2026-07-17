@@ -21,7 +21,7 @@ final class dd {
     static String field_a;
     static String field_f;
 
-    final static wm[] b(byte param0) {
+    final static wm[] b() {
         return new wm[]{rn.field_f, ej.field_b, w.field_w, gj.field_T, lb.field_r, lm.field_l, lb.field_C, gn.field_u, pf.field_f, of.field_e, kn.field_M, u.field_d, gh.field_s, ad.field_u};
     }
 
@@ -251,13 +251,14 @@ final class dd {
         return stackIn_13_0 != 0;
     }
 
-    final static String a(int param0) {
+    final static String a() {
         String var1 = "";
         if (!(nf.field_b == null)) {
             var1 = nf.field_b.l(-24832);
         }
         if (0 == var1.length()) {
-            var1 = cg.b(false);
+            int discarded$0 = 0;
+            var1 = cg.b();
         }
         if (var1.length() == 0) {
             var1 = cd.field_d;

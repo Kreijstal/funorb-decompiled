@@ -54,7 +54,7 @@ final class sd extends bi {
         }
     }
 
-    final static void q(int param0) {
+    final static void q() {
     }
 
     final void a(boolean param0, String param1, byte param2, float param3) {
@@ -209,7 +209,7 @@ final class sd extends bi {
         }
     }
 
-    final static void a(ci param0, boolean param1) {
+    final static void a(ci param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -242,7 +242,8 @@ final class sd extends bi {
             var10 = var8;
             var3 = var10.d((byte) 121);
             var10.h((byte) 106);
-            rg.field_L = u.a(var10, (byte) 26);
+            int discarded$1 = 26;
+            rg.field_L = u.a(var10);
             ae.field_a = new int[var3][];
             rf.field_eb = new e[var3];
             var4 = 0;

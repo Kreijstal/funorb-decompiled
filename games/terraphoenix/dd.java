@@ -76,7 +76,7 @@ final class dd extends eb {
         return stackIn_4_0 != 0;
     }
 
-    final static boolean f(byte param0) {
+    final static boolean f() {
         return pe.field_a == ua.field_d;
     }
 
@@ -129,7 +129,7 @@ final class dd extends eb {
             if (param1 != null) {
               if (param1.length() != 0) {
                 var6 = (CharSequence) (Object) param1;
-                var2 = hm.a(param0, var6);
+                var2 = hm.a((byte) 104, var6);
                 if (var2 != null) {
                   var3 = (q) (Object) gb.field_z.a(71, (long)var2.hashCode());
                   L0: while (true) {
@@ -169,7 +169,7 @@ final class dd extends eb {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2_ref;
-            stackOut_20_1 = new StringBuilder().append("dd.H(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("dd.H(").append(104).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -208,12 +208,9 @@ final class dd extends eb {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_N = null;
         field_L = null;
-        if (param0 < 106) {
-            return;
-        }
         field_O = null;
     }
 

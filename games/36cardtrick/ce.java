@@ -73,13 +73,14 @@ final class ce extends java.awt.Canvas {
                 break L1;
               } else {
                 var6 = null;
-                byte[] discarded$2 = ce.a(true, 19, (Object) null);
+                byte[] discarded$4 = ce.a(true, 19, (Object) null);
                 break L1;
               }
             }
             var4_int = param3.a(18659, param2);
             var5 = param3.a(var4_int, param1, (byte) 7);
-            stackOut_2_0 = rh.a(var4_int, param3, var5, -30851);
+            int discarded$5 = -30851;
+            stackOut_2_0 = rh.a(var4_int, param3, var5);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -166,7 +167,7 @@ final class ce extends java.awt.Canvas {
         return stackIn_3_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         cb var1 = null;
         w var2 = null;
         var1 = (cb) (Object) ha.field_d.a((byte) 74);
@@ -194,9 +195,6 @@ final class ce extends java.awt.Canvas {
 
     final static void a(qb param0, int param1, qb param2) {
         try {
-            if (param1 != 0) {
-                field_b = 70;
-            }
             if (null != param2.field_a) {
                 param2.c(112);
             }
@@ -205,7 +203,7 @@ final class ce extends java.awt.Canvas {
             param2.field_a.field_d = param2;
             param2.field_d.field_a = param2;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ce.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ce.C(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

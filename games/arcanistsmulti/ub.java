@@ -55,7 +55,7 @@ final class ub {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            var4_int = param1.d(28089, param2);
+            var4_int = param1.d(28089, 16);
             if (0 != var4_int) {
               L1: {
                 L2: {
@@ -73,8 +73,8 @@ final class ub {
                 break L1;
               }
               L3: {
-                var5 = param1.d(28089, param0);
-                var6 = (byte)param1.d(param0 + 28086, 8);
+                var5 = param1.d(28089, 3);
+                var6 = (byte)param1.d(28089, 8);
                 if (var5 <= 0) {
                   var7 = 0;
                   L4: while (true) {
@@ -92,7 +92,7 @@ final class ub {
                     if (var4_int <= var7) {
                       break L3;
                     } else {
-                      param3[var7] = (byte)(var6 + param1.d(hh.a(param0, 28090), var5));
+                      param3[var7] = (byte)(var6 + param1.d(hh.a(3, 28090), var5));
                       var7++;
                       continue L5;
                     }
@@ -111,7 +111,7 @@ final class ub {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("ub.C(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ub.C(").append(3).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -136,7 +136,7 @@ final class ub {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(16).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -169,7 +169,8 @@ final class ub {
         var2.b((byte) -115, param0);
         var2.f(2, (byte) -128);
         var2.f(4, (byte) -43);
-        var2.f(qn.k((byte) -14), (byte) -57);
+        int discarded$0 = -14;
+        var2.f(qn.k(), (byte) -57);
     }
 
     public static void a(int param0) {
@@ -183,7 +184,7 @@ final class ub {
         field_c = null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         pg var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -192,38 +193,30 @@ final class ub {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 >= 109) {
-                break L1;
-              } else {
-                field_f = null;
-                break L1;
-              }
-            }
             var4 = (cm) (Object) cc.field_e.b(12623);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
                 var2 = i.field_e.b(12623);
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
                     gb.a(4, true);
                     var2 = i.field_e.a(0);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 hb.a(var4, 4, (byte) 93);
                 var4 = (cm) (Object) cc.field_e.a(0);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2_ref, "ub.B(" + param0 + 44 + 4 + 41);
+          throw aa.a((Throwable) (Object) var2_ref, "ub.B(" + 127 + 44 + 4 + 41);
         }
     }
 

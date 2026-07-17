@@ -21,38 +21,38 @@ final class lw extends IOException {
           if (param1 <= param0) {
             if (param2 >= param1) {
               qe.a(param2, param4, -2178, param0, param7, on.field_a, param1, param6, param5);
-              var8 = 91 / ((-2 - param3) / 51);
+              var8 = 91;
               return;
             } else {
               qe.a(param1, param4, -2178, param0, param7, on.field_a, param2, param5, param6);
-              var8 = 91 / ((-2 - param3) / 51);
+              var8 = 91;
               return;
             }
           } else {
             qe.a(param0, param6, -2178, param1, param7, on.field_a, param2, param5, param4);
-            var8 = 91 / ((-2 - param3) / 51);
+            var8 = 91;
             return;
           }
         } else {
           if (param1 <= param2) {
             if (param1 <= param0) {
               qe.a(param0, param5, -2178, param2, param7, on.field_a, param1, param6, param4);
-              var8 = 91 / ((-2 - param3) / 51);
+              var8 = 91;
               return;
             } else {
               qe.a(param1, param5, -2178, param2, param7, on.field_a, param0, param4, param6);
-              var8 = 91 / ((-2 - param3) / 51);
+              var8 = 91;
               return;
             }
           } else {
             qe.a(param2, param6, -2178, param1, param7, on.field_a, param0, param4, param5);
-            var8 = 91 / ((-2 - param3) / 51);
+            var8 = 91;
             return;
           }
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_h = null;
         field_a = null;

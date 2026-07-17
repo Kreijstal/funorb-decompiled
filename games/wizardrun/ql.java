@@ -9,7 +9,7 @@ final class ql {
 
     final static void a(int param0, int param1, int param2) {
         int var3 = 0;
-        var3 = param0 << param2;
+        var3 = 1 << param2;
         if (0 != (ti.field_a & var3)) {
           return;
         } else {
@@ -30,7 +30,7 @@ final class ql {
         }
     }
 
-    final static sf a(String param0, boolean param1) {
+    final static sf a(String param0) {
         RuntimeException var2 = null;
         sf stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -99,7 +99,7 @@ final class ql {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a() {
         if (oa.field_c == null) {
             return false;
         }
@@ -109,7 +109,7 @@ final class ql {
         return true;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         int var1 = 0;
         field_a = null;
         field_b = null;

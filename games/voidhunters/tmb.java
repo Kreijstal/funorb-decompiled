@@ -105,7 +105,7 @@ final class tmb extends rqa {
                 break L1;
               } else {
                 var3 = null;
-                int discarded$2 = tmb.a((tv) null, (byte) 16);
+                int discarded$4 = tmb.a((tv) null, (byte) 16);
                 break L1;
               }
             }
@@ -120,7 +120,8 @@ final class tmb extends rqa {
               }
             }
             bk.field_w.r(32712);
-            stackOut_5_0 = psb.a(bk.field_w.field_h, bk.field_w.field_e, 0);
+            int discarded$5 = 0;
+            stackOut_5_0 = psb.a(bk.field_w.field_h, bk.field_w.field_e);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }

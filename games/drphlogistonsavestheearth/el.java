@@ -32,28 +32,24 @@ final class el extends jf {
         try {
           L0: {
             var4 = (kc) (Object) rd.field_C.h(-11151);
-            if (!param0) {
-              L1: while (true) {
-                if (var4 == null) {
-                  break L0;
-                } else {
-                  rh.a(125, var4, param1);
-                  var4 = (kc) (Object) rd.field_C.e(0);
-                  continue L1;
-                }
+            L1: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                rh.a(125, var4, 2);
+                var4 = (kc) (Object) rd.field_C.e(0);
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "el.R(" + param0 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) var2, "el.R(" + 0 + 44 + 2 + 41);
         }
     }
 
-    final static hj a(String param0, int param1, byte param2) {
+    final static hj a(String param0, int param1) {
         ka var3 = null;
         RuntimeException var3_ref = null;
         ka stackIn_1_0 = null;
@@ -116,7 +112,7 @@ final class el extends jf {
         return (hj) (Object) stackIn_1_0;
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_sb = null;
         field_vb = null;
         field_ub = null;

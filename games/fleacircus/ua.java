@@ -45,90 +45,87 @@ final class ua extends bd implements da {
         try {
           L0: {
             ((ua) this).field_wb = true;
-            if (param0 == 58) {
-              L1: {
-                if (param1.field_k) {
-                  var4_ref = lc.field_q;
-                  break L1;
-                } else {
-                  if (param1.field_j == null) {
-                    var4_ref = param1.field_b;
-                    if (param1.field_f == 248) {
-                      if (param2) {
-                        ((ua) this).field_vb = true;
-                        var4_ref = al.field_a;
-                        break L1;
-                      } else {
-                        ii.b(116);
-                        ((ua) this).field_vb = true;
-                        var4_ref = al.field_a;
-                        break L1;
-                      }
+            L1: {
+              if (param1.field_k) {
+                var4_ref = lc.field_q;
+                break L1;
+              } else {
+                if (param1.field_j == null) {
+                  var4_ref = param1.field_b;
+                  if (param1.field_f == 248) {
+                    if (param2) {
+                      ((ua) this).field_vb = true;
+                      var4_ref = al.field_a;
+                      break L1;
                     } else {
+                      int discarded$3 = 116;
+                      ii.b();
+                      ((ua) this).field_vb = true;
+                      var4_ref = al.field_a;
                       break L1;
                     }
                   } else {
-                    var4_ref = de.field_o;
-                    if (null == ((ua) this).field_ub) {
-                      break L1;
-                    } else {
-                      ((ua) this).field_ub.a(-72);
-                      break L1;
-                    }
+                    break L1;
+                  }
+                } else {
+                  var4_ref = de.field_o;
+                  if (null == ((ua) this).field_ub) {
+                    break L1;
+                  } else {
+                    ((ua) this).field_ub.a(-72);
+                    break L1;
                   }
                 }
               }
-              L2: {
-                var5 = new bm((bd) this, rg.field_o, var4_ref);
-                if (!param1.field_k) {
-                  L3: {
-                    if (!((ua) this).field_vb) {
-                      if (param1.field_f != 5) {
-                        var5.a(mi.field_k, param0 + -23551, -1);
-                        break L3;
-                      } else {
-                        var5.a(ld.field_c, -23493, 11);
-                        var5.a(vk.field_K, -23493, 17);
-                        break L3;
-                      }
+            }
+            L2: {
+              var5 = new bm((bd) this, rg.field_o, var4_ref);
+              if (!param1.field_k) {
+                L3: {
+                  if (!((ua) this).field_vb) {
+                    if (param1.field_f != 5) {
+                      var5.a(mi.field_k, -23493, -1);
+                      break L3;
                     } else {
-                      bb discarded$2 = var5.a((kd) this, true, ee.field_k);
+                      var5.a(ld.field_c, -23493, 11);
+                      var5.a(vk.field_K, -23493, 17);
                       break L3;
                     }
+                  } else {
+                    bb discarded$4 = var5.a((kd) this, true, ee.field_k);
+                    break L3;
                   }
-                  if (param1.field_f == 3) {
-                    var5.a(bm.field_N, -23493, 7);
+                }
+                if (param1.field_f == 3) {
+                  var5.a(bm.field_N, -23493, 7);
+                  break L2;
+                } else {
+                  if (param1.field_f != 6) {
                     break L2;
                   } else {
-                    if (param1.field_f != 6) {
-                      break L2;
-                    } else {
-                      var5.a(cb.field_s, param0 ^ -23551, 9);
-                      break L2;
-                    }
-                  }
-                } else {
-                  if (param1.field_g) {
-                    ((ua) this).d((qa) (Object) new og((ua) this), 26034);
-                    return;
-                  } else {
-                    bb discarded$3 = var5.a((kd) this, true, ee.field_k);
+                    var5.a(cb.field_s, -23493, 9);
                     break L2;
                   }
                 }
+              } else {
+                if (param1.field_g) {
+                  ((ua) this).d((qa) (Object) new og((ua) this), 26034);
+                  return;
+                } else {
+                  bb discarded$5 = var5.a((kd) this, true, ee.field_k);
+                  break L2;
+                }
               }
-              ((ua) this).d((qa) (Object) var5, param0 + 25976);
-              break L0;
-            } else {
-              return;
             }
+            ((ua) this).d((qa) (Object) var5, 26034);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var4;
-            stackOut_31_1 = new StringBuilder().append("ua.BA(").append(param0).append(44);
+            stackOut_31_1 = new StringBuilder().append("ua.BA(").append(58).append(44);
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -168,7 +165,8 @@ final class ua extends bd implements da {
         var2 = -66 / ((38 - param0) / 49);
         if (((ua) this).field_G) {
           if (!((ua) this).field_wb) {
-            var3 = bg.a((byte) 56);
+            int discarded$2 = 56;
+            var3 = bg.a();
             if (var3 != null) {
               this.a((byte) 58, var3, false);
               return super.a(100);
@@ -208,7 +206,8 @@ final class ua extends bd implements da {
               return;
             } else {
               L1: {
-                ih.l(255);
+                int discarded$3 = 255;
+                ih.l();
                 ((ua) this).n(param3 ^ -22669);
                 if (param3 == 248) {
                   break L1;

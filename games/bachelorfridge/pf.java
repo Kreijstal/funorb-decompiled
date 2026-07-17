@@ -86,7 +86,7 @@ final class pf extends lu {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_i = null;
         field_j = null;
         field_n = null;

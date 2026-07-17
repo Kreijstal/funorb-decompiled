@@ -56,7 +56,7 @@ abstract class l {
         try {
           L0: {
             L1: {
-              var6_int = -param4 + param3;
+              var6_int = param3;
               if (param0 > 80) {
                 break L1;
               } else {
@@ -74,7 +74,7 @@ abstract class l {
                 L3: {
                   L4: {
                     L5: {
-                      var8 = param2.charAt(param4 + var7);
+                      var8 = param2.charAt(var7);
                       if (var8 <= 0) {
                         break L5;
                       } else {
@@ -295,7 +295,7 @@ abstract class l {
               break L8;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wn.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
         }
         return stackIn_69_0;
     }
@@ -317,14 +317,16 @@ abstract class l {
           L0: {
             var1 = uh.field_Wb;
             L1: while (true) {
-              if (!kd.l(7)) {
+              int discarded$13 = 7;
+              if (!kd.l()) {
                 break L0;
               } else {
                 var1.j(8, 118);
-                int fieldTemp$5 = var1.field_u + 1;
+                int fieldTemp$14 = var1.field_u + 1;
                 var1.field_u = var1.field_u + 1;
-                var2 = fieldTemp$5;
-                ml.a(var1, (byte) -25);
+                var2 = fieldTemp$14;
+                int discarded$15 = -25;
+                ml.a(var1);
                 uh.field_Wb.b((byte) 15, var1.field_u - var2);
                 continue L1;
               }

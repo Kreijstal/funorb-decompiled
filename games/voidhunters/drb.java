@@ -13,16 +13,11 @@ final class drb extends le {
         }
     }
 
-    final static kob a(boolean param0, int param1) {
-        kob var2 = null;
-        var2 = new kob();
-        if (!param0) {
-          return null;
-        } else {
-          cnb.field_q.b(-10258, (ksa) (Object) var2);
-          wva.b(6, 22681);
-          return var2;
-        }
+    final static kob a() {
+        kob var2 = new kob();
+        cnb.field_q.b(-10258, (ksa) (Object) var2);
+        wva.b(6, 22681);
+        return var2;
     }
 
     final int[] a(int param0, boolean param1) {

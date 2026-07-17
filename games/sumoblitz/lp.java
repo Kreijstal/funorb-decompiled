@@ -70,7 +70,7 @@ final class lp extends ak {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         if (jt.field_u <= 0) {
           if (0 == jt.field_u) {
             pd.field_p = un.field_a[0];

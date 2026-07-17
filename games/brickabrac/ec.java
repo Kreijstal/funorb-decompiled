@@ -68,7 +68,8 @@ final class ec extends ib implements en {
                   } else {
                     var7 = ((ec) this).field_T[var6_int];
                     if (var7 != -1) {
-                      bd.a(((ec) this).field_T[var6_int], true);
+                      int discarded$2 = 1;
+                      bd.a(((ec) this).field_T[var6_int]);
                       break L2;
                     } else {
                       ((ec) this).field_K.m(17);
@@ -120,7 +121,7 @@ final class ec extends ib implements en {
         }
     }
 
-    final static void h(int param0) {
+    final static void h() {
         lm.a(-1);
         cg.field_l = true;
         sa.field_E = true;
@@ -256,9 +257,6 @@ final class ec extends ib implements en {
             var4[var5] = ((ec) this).field_T[var5];
         }
         ((ec) this).field_T = var4;
-        if (param0 > -54) {
-            return;
-        }
         ((ec) this).field_I = var3;
         ((ec) this).field_M = param1;
     }
@@ -338,27 +336,19 @@ final class ec extends ib implements en {
             var33 = var34;
             var32 = var33;
             var12 = var32;
-            var13 = 16711935 & param0;
-            var14 = 65280 & param0;
+            var13 = 4194559;
+            var14 = 32768;
             var15 = 0;
             L5: while (true) {
               if (var15 >= 16) {
                 L6: {
                   var15 = var10 - var8_int;
                   var16 = -var9 + var11;
-                  if (param3 == 99) {
-                    break L6;
-                  } else {
-                    field_O = false;
-                    break L6;
-                  }
-                }
-                L7: {
                   if (var15 <= 0) {
-                    break L7;
+                    break L6;
                   } else {
                     if (var16 <= 0) {
-                      break L7;
+                      break L6;
                     } else {
                       var17 = new jp(var15, var16);
                       var18 = param1 * param1;
@@ -366,7 +356,7 @@ final class ec extends ib implements en {
                       var20 = 0;
                       var21 = -param4 + var9;
                       var22 = 0;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (var22 >= var16) {
                           var17.d(var8_int, var9);
                           lb.b(param2 << 4, param4 << 4, param7 + param1 << 4, 255, var35);
@@ -375,88 +365,88 @@ final class ec extends ib implements en {
                           var23 = -param2 + var8_int;
                           var24 = var23 * var23 + var21 * var21;
                           var25 = 0;
-                          L9: while (true) {
+                          L8: while (true) {
                             if (var25 >= var15) {
                               var22++;
                               var21++;
-                              continue L8;
+                              continue L7;
                             } else {
-                              L10: {
+                              L9: {
                                 var26 = var22 + var9;
                                 var27 = var25 + var8_int;
                                 if (var24 != 0) {
                                   if (var24 < var18) {
-                                    L11: {
+                                    L10: {
                                       var28 = ap.a(var24 << 12, -55);
                                       var29 = (param1 << 6) - var28;
                                       var30 = var28 + -((-BrickABrac.c(2048, (var29 << 7) / param1) + 65536) * param5 >> 11);
                                       var26 = var21 * var30 / var28 + param4;
                                       var27 = var30 * var23 / var28 + param2;
                                       if (lb.field_i <= var27) {
-                                        break L11;
+                                        break L10;
                                       } else {
                                         var27 = lb.field_i;
+                                        break L10;
+                                      }
+                                    }
+                                    L11: {
+                                      if (lb.field_b > var26) {
+                                        var26 = lb.field_b;
+                                        break L11;
+                                      } else {
                                         break L11;
                                       }
                                     }
                                     L12: {
-                                      if (lb.field_b > var26) {
-                                        var26 = lb.field_b;
-                                        break L12;
-                                      } else {
-                                        break L12;
-                                      }
-                                    }
-                                    L13: {
                                       if (var27 < lb.field_f) {
-                                        break L13;
+                                        break L12;
                                       } else {
                                         var27 = lb.field_f;
-                                        break L13;
+                                        break L12;
                                       }
                                     }
                                     if (var26 >= lb.field_j) {
                                       var26 = lb.field_j;
-                                      break L10;
+                                      break L9;
                                     } else {
-                                      break L10;
+                                      break L9;
                                     }
                                   } else {
                                     if (var19 > var24) {
-                                      L14: {
+                                      L13: {
                                         var28 = ap.a(var24 << 12, -100);
                                         var29 = -(param1 << 6) + var28;
                                         var30 = var28 - (param5 * (-BrickABrac.c(2048, (var29 << 7) / param7) + 65536) >> 11);
                                         var27 = param2 - -(var23 * var30 / var28);
                                         var26 = var30 * var21 / var28 + param4;
                                         if (lb.field_i <= var27) {
-                                          break L14;
+                                          break L13;
                                         } else {
                                           var27 = lb.field_i;
+                                          break L13;
+                                        }
+                                      }
+                                      L14: {
+                                        if (lb.field_b > var26) {
+                                          var26 = lb.field_b;
+                                          break L14;
+                                        } else {
                                           break L14;
                                         }
                                       }
                                       L15: {
-                                        if (lb.field_b > var26) {
-                                          var26 = lb.field_b;
-                                          break L15;
-                                        } else {
-                                          break L15;
-                                        }
-                                      }
-                                      L16: {
                                         if (lb.field_j > var26) {
-                                          break L16;
+                                          break L15;
                                         } else {
                                           var26 = lb.field_j;
-                                          break L16;
+                                          break L15;
                                         }
                                       }
                                       if (var27 < lb.field_f) {
-                                        break L10;
+                                        break L9;
                                       } else {
                                         var27 = lb.field_f;
-                                        break L10;
+                                        break L9;
                                       }
                                     } else {
                                       var17.field_G[var20] = lb.field_l[lb.field_c * var26 - -var27];
@@ -464,11 +454,11 @@ final class ec extends ib implements en {
                                       var23++;
                                       var25++;
                                       var24 = var24 + (-1 + var23 * 2);
-                                      continue L9;
+                                      continue L8;
                                     }
                                   }
                                 } else {
-                                  break L10;
+                                  break L9;
                                 }
                               }
                               var17.field_G[var20] = lb.field_l[lb.field_c * var26 - -var27];
@@ -476,7 +466,7 @@ final class ec extends ib implements en {
                               var23++;
                               var25++;
                               var24 = var24 + (-1 + var23 * 2);
-                              continue L9;
+                              continue L8;
                             }
                           }
                         }
@@ -497,7 +487,7 @@ final class ec extends ib implements en {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var8, "ec.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw qb.a((Throwable) (Object) var8, "ec.C(" + 4227327 + 44 + param1 + 44 + param2 + 44 + 99 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -516,11 +506,8 @@ final class ec extends ib implements en {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_Q = null;
-        if (param0 != 0) {
-            field_Q = null;
-        }
         field_N = null;
         field_L = null;
         field_S = null;

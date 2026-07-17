@@ -18,7 +18,6 @@ final class ea {
         char[] var8 = null;
         char[] var9 = null;
         char[] var10 = null;
-        Object stackIn_21_0 = null;
         String stackIn_23_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -29,7 +28,6 @@ final class ea {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_22_0 = null;
-        Object stackOut_20_0 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
         RuntimeException stackOut_26_0 = null;
@@ -58,15 +56,9 @@ final class ea {
             var4 = 0;
             L2: while (true) {
               if (var2_int <= var4) {
-                if (param0 == -1212) {
-                  stackOut_22_0 = new String(var10);
-                  stackIn_23_0 = stackOut_22_0;
-                  break L0;
-                } else {
-                  stackOut_20_0 = null;
-                  stackIn_21_0 = stackOut_20_0;
-                  return (String) (Object) stackIn_21_0;
-                }
+                stackOut_22_0 = new String(var10);
+                stackIn_23_0 = stackOut_22_0;
+                break L0;
               } else {
                 L3: {
                   L4: {
@@ -121,7 +113,7 @@ final class ea {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("ea.B(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("ea.B(").append(-1212).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -314,7 +306,7 @@ final class ea {
             var2 = fk.a((byte) 102, param1, "jagex-last-login-method");
             if (var2 != null) {
               var3 = ca.c(0);
-              var4 = param0;
+              var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {
                   stackOut_10_0 = u.field_l;
@@ -343,7 +335,7 @@ final class ea {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2_ref;
-            stackOut_12_1 = new StringBuilder().append("ea.E(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("ea.E(").append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -397,7 +389,7 @@ final class ea {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         int var1 = 0;

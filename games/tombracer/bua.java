@@ -107,11 +107,13 @@ final class bua {
               }
             }
           } else {
-            this.d(110);
+            int discarded$2 = 110;
+            this.d();
             return;
           }
         } else {
-          this.d(110);
+          int discarded$3 = 110;
+          this.d();
           return;
         }
     }
@@ -180,9 +182,6 @@ final class bua {
     }
 
     final static int a(int param0, int param1) {
-        if (param0 != 0) {
-            return 9;
-        }
         return uoa.field_c[2047 & param1];
     }
 
@@ -326,7 +325,7 @@ final class bua {
         ((bua) this).field_i = 1.865414023399353f;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
     }
@@ -369,7 +368,7 @@ final class bua {
         return var5.a((byte) 117, true);
     }
 
-    private final void d(int param0) {
+    private final void d() {
         ((bua) this).field_e = -1;
         ((bua) this).field_k = null;
         ((bua) this).field_j = -1;

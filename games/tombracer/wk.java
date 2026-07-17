@@ -12,7 +12,7 @@ final class wk extends vg {
     int field_k;
     static int field_m;
 
-    final static void a(byte param0) {
+    final static void a() {
         try {
             Exception var1 = null;
             java.lang.reflect.Method var1_ref = null;
@@ -71,23 +71,29 @@ final class wk extends vg {
 
     final static void a(en param0, int param1, int param2, cn param3) {
         try {
-            gpa.field_b = param1 * aqa.a(1188664449) / 1000;
-            ne.a(param3, -101);
-            gja.a(param3, 0);
-            jp.a(param3, (byte) 20);
+            int discarded$0 = 1188664449;
+            gpa.field_b = param1 * aqa.a() / 1000;
+            int discarded$13 = -101;
+            ne.a(param3);
+            int discarded$24 = 0;
+            gja.a(param3);
+            int discarded$30 = 20;
+            jp.a(param3);
             if (param2 != 11861) {
                 Object var5 = null;
                 wk.a((en) null, 0, -42, (cn) null);
             }
-            mf.a(85);
-            ica.a(16777215);
+            int discarded$31 = 85;
+            mf.a();
+            int discarded$32 = 16777215;
+            ica.a();
             tl.field_r = -gpa.field_b;
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "wk.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
     }
 

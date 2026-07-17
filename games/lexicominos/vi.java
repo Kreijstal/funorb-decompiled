@@ -8,11 +8,11 @@ final class vi extends kd {
     boolean field_h;
     int[] field_k;
 
-    final static void a(byte param0) {
+    final static void a() {
         ni.a(75, 17);
     }
 
-    final static db[] b(int param0) {
+    final static db[] b() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -33,15 +33,15 @@ final class vi extends kd {
         return var1;
     }
 
-    final static void a(int param0, vb param1, int param2) {
+    final static void a(int param0, vb param1) {
         th var5 = null;
         int var4 = 0;
         try {
             var5 = ed.field_q;
-            var5.h(param0, 0);
+            var5.h(4, 0);
             var5.field_h = var5.field_h + 1;
             var4 = var5.field_h;
-            var5.c(param2, param2 + -2);
+            var5.c(1, -1);
             var5.c(param1.field_n, -1);
             var5.c(param1.field_p, -1);
             var5.f(param1.field_j, -32287);
@@ -51,7 +51,7 @@ final class vi extends kd {
             int discarded$0 = var5.a(var4, (byte) 119);
             var5.d(-var4 + var5.field_h, (byte) -122);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "vi.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "vi.A(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
@@ -60,7 +60,7 @@ final class vi extends kd {
         field_l = null;
     }
 
-    final static cd a(byte[] param0, byte param1) {
+    final static cd a(byte[] param0) {
         cd var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;

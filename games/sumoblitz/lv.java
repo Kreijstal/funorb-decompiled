@@ -200,12 +200,12 @@ final class lv extends bq {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_f = null;
         field_e = null;
     }
 
-    final static jj a(java.applet.Applet param0, int param1) {
+    final static jj a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         jj[] var3 = null;
@@ -243,7 +243,8 @@ final class lv extends bq {
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
             } else {
-              var3 = ie.a(32);
+              int discarded$1 = 32;
+              var3 = ie.a();
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {

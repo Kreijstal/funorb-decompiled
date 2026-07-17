@@ -74,7 +74,7 @@ class ee extends rk {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_q = null;
     }
 

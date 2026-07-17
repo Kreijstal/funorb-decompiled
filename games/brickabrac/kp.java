@@ -16,7 +16,7 @@ final class kp {
         try {
             var6 = k.field_h;
             int var4 = 107 / ((44 - param1) / 45);
-            var6.e(-13413, param0);
+            var6.e(-13413, 5);
             var6.field_l = var6.field_l + 1;
             var5 = var6.field_l;
             var6.a(-117, 1);
@@ -29,11 +29,11 @@ final class kp {
             int discarded$0 = var6.d(3, var5);
             var6.d((byte) 124, -var5 + var6.field_l);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "kp.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "kp.B(" + 5 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_c = null;
         field_e = null;

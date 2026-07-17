@@ -8,7 +8,7 @@ final class bc {
         if (!(param1 > 0L)) {
             return;
         }
-        if (param1 % 10L == (long)param0) {
+        if (param1 % 10L == 0L) {
             ji.a(-1L + param1, (byte) -33);
             ji.a(1L, (byte) -33);
         } else {

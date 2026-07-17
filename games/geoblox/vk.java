@@ -14,7 +14,7 @@ abstract class vk {
 
     abstract int a(boolean param0);
 
-    final static byte[] a(byte[] param0, pk param1, int param2, int param3) {
+    final static byte[] a(byte[] param0, pk param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -59,7 +59,7 @@ abstract class vk {
         var8 = Geoblox.field_C;
         try {
           L0: {
-            var4_int = param1.e((byte) -17, param2);
+            var4_int = param1.e((byte) -17, 16);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -165,12 +165,12 @@ abstract class vk {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + 8 + 41);
+          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 16 + 44 + 8 + 41);
         }
         return stackIn_16_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_b = null;

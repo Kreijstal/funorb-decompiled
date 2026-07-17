@@ -27,7 +27,7 @@ final class sc extends ua implements pv {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_o = null;
         field_q = null;
     }

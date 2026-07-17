@@ -107,11 +107,8 @@ final class ge implements Runnable {
         this(param0, param1, 5000);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
-        if (param0 != -59) {
-            field_e = null;
-        }
     }
 
     final static void c(int param0) {
@@ -309,83 +306,75 @@ final class ge implements Runnable {
             byte[][] var21 = null;
             byte[][] var22 = null;
             byte[][] var23 = null;
+            RuntimeException stackIn_36_0 = null;
+            StringBuilder stackIn_36_1 = null;
+            RuntimeException stackIn_37_0 = null;
+            StringBuilder stackIn_37_1 = null;
             RuntimeException stackIn_38_0 = null;
             StringBuilder stackIn_38_1 = null;
+            String stackIn_38_2 = null;
             RuntimeException stackIn_39_0 = null;
             StringBuilder stackIn_39_1 = null;
             RuntimeException stackIn_40_0 = null;
             StringBuilder stackIn_40_1 = null;
-            String stackIn_40_2 = null;
             RuntimeException stackIn_41_0 = null;
             StringBuilder stackIn_41_1 = null;
-            RuntimeException stackIn_42_0 = null;
-            StringBuilder stackIn_42_1 = null;
-            RuntimeException stackIn_43_0 = null;
-            StringBuilder stackIn_43_1 = null;
-            String stackIn_43_2 = null;
+            String stackIn_41_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_35_0 = null;
+            StringBuilder stackOut_35_1 = null;
             RuntimeException stackOut_37_0 = null;
             StringBuilder stackOut_37_1 = null;
+            String stackOut_37_2 = null;
+            RuntimeException stackOut_36_0 = null;
+            StringBuilder stackOut_36_1 = null;
+            String stackOut_36_2 = null;
+            RuntimeException stackOut_38_0 = null;
+            StringBuilder stackOut_38_1 = null;
+            RuntimeException stackOut_40_0 = null;
+            StringBuilder stackOut_40_1 = null;
+            String stackOut_40_2 = null;
             RuntimeException stackOut_39_0 = null;
             StringBuilder stackOut_39_1 = null;
             String stackOut_39_2 = null;
-            RuntimeException stackOut_38_0 = null;
-            StringBuilder stackOut_38_1 = null;
-            String stackOut_38_2 = null;
-            RuntimeException stackOut_40_0 = null;
-            StringBuilder stackOut_40_1 = null;
-            RuntimeException stackOut_42_0 = null;
-            StringBuilder stackOut_42_1 = null;
-            String stackOut_42_2 = null;
-            RuntimeException stackOut_41_0 = null;
-            StringBuilder stackOut_41_1 = null;
-            String stackOut_41_2 = null;
             var14 = Lexicominos.field_L ? 1 : 0;
             try {
               L0: {
-                L1: {
-                  var18 = (Object) (Object) new pd();
-                  ((pd) var18).field_p = param2.d(true);
-                  ((pd) var18).field_j = param2.d((byte) 19);
-                  ((pd) var18).field_n = new int[((pd) var18).field_p];
-                  ((pd) var18).field_h = new int[((pd) var18).field_p];
-                  if (param0 <= -120) {
-                    break L1;
-                  } else {
-                    ge.a((byte) -107);
-                    break L1;
-                  }
-                }
+                var18 = (Object) (Object) new pd();
+                ((pd) var18).field_p = param2.d(true);
+                ((pd) var18).field_j = param2.d((byte) 19);
+                ((pd) var18).field_n = new int[((pd) var18).field_p];
+                ((pd) var18).field_h = new int[((pd) var18).field_p];
                 ((pd) var18).field_i = new ei[((pd) var18).field_p];
                 ((pd) var18).field_k = new ei[((pd) var18).field_p];
                 ((pd) var18).field_m = new int[((pd) var18).field_p];
                 ((pd) var18).field_o = new byte[((pd) var18).field_p][][];
                 var5 = 0;
-                L2: while (true) {
+                L1: while (true) {
                   if (((pd) var18).field_p <= var5) {
                     al.field_C.b(124, (kd) var18);
                     break L0;
                   } else {
                     try {
-                      L3: {
-                        L4: {
-                          L5: {
+                      L2: {
+                        L3: {
+                          L4: {
                             var6_int = param2.d(true);
                             if (0 == var6_int) {
-                              break L5;
+                              break L4;
                             } else {
                               if (1 == var6_int) {
-                                break L5;
+                                break L4;
                               } else {
                                 if (var6_int != 2) {
-                                  L6: {
+                                  L5: {
                                     if (var6_int == 3) {
-                                      break L6;
+                                      break L5;
                                     } else {
                                       if (var6_int == 4) {
-                                        break L6;
+                                        break L5;
                                       } else {
-                                        break L4;
+                                        break L3;
                                       }
                                     }
                                   }
@@ -394,9 +383,9 @@ final class ge implements Runnable {
                                   var9 = param2.d(true);
                                   var10 = new String[var9];
                                   var11_int = 0;
-                                  L7: while (true) {
+                                  L6: while (true) {
                                     if (var11_int >= var9) {
-                                      L8: {
+                                      L7: {
                                         var23 = new byte[var9][];
                                         var22 = var23;
                                         var21 = var22;
@@ -404,49 +393,49 @@ final class ge implements Runnable {
                                         var11 = var19;
                                         if (var6_int == 3) {
                                           var12_int = 0;
-                                          L9: while (true) {
+                                          L8: while (true) {
                                             if (var12_int >= var9) {
-                                              break L8;
+                                              break L7;
                                             } else {
                                               var13 = param2.d((byte) 19);
                                               var11[var12_int] = new byte[var13];
                                               param2.a(116, var13, 0, var23[var12_int]);
                                               var12_int++;
-                                              continue L9;
+                                              continue L8;
                                             }
                                           }
                                         } else {
-                                          break L8;
+                                          break L7;
                                         }
                                       }
                                       ((pd) var18).field_m[var5] = var6_int;
                                       var12 = new Class[var9];
                                       var17 = 0;
                                       var13 = var17;
-                                      L10: while (true) {
+                                      L9: while (true) {
                                         if (~var9 >= ~var17) {
                                           ((pd) var18).field_i[var5] = param3.a(var8, qf.a(-4174, var20), var12, (byte) 113);
                                           ((pd) var18).field_o[var5] = var23;
-                                          break L4;
+                                          break L3;
                                         } else {
                                           var12[var17] = qf.a(-4174, var10[var17]);
                                           var17++;
-                                          continue L10;
+                                          continue L9;
                                         }
                                       }
                                     } else {
                                       var10[var11_int] = param2.c(false);
                                       var11_int++;
-                                      continue L7;
+                                      continue L6;
                                     }
                                   }
                                 } else {
-                                  break L5;
+                                  break L4;
                                 }
                               }
                             }
                           }
-                          L11: {
+                          L10: {
                             var16 = param2.c(false);
                             var7 = var16;
                             var15 = param2.c(false);
@@ -454,99 +443,99 @@ final class ge implements Runnable {
                             var9 = 0;
                             if (var6_int == 1) {
                               var9 = param2.d((byte) 19);
-                              break L11;
+                              break L10;
                             } else {
-                              break L11;
+                              break L10;
                             }
                           }
                           ((pd) var18).field_m[var5] = var6_int;
                           ((pd) var18).field_h[var5] = var9;
                           ((pd) var18).field_k[var5] = param3.a(var15, 2, qf.a(-4174, var16));
-                          break L4;
+                          break L3;
                         }
-                        break L3;
+                        break L2;
                       }
                     } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
-                      L12: {
+                      L11: {
                         var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
                         ((pd) var18).field_n[var5] = -1;
-                        break L12;
+                        break L11;
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter3) {
                       decompiledCaughtException = decompiledCaughtParameter3;
-                      L15: {
+                      L14: {
                         var6_ref3 = (Exception) (Object) decompiledCaughtException;
                         ((pd) var18).field_n[var5] = -4;
-                        break L15;
+                        break L14;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter4) {
                       decompiledCaughtException = decompiledCaughtParameter4;
-                      L16: {
+                      L15: {
                         var6_ref4 = decompiledCaughtException;
                         ((pd) var18).field_n[var5] = -5;
-                        break L16;
+                        break L15;
                       }
                     }
                     var5++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
               decompiledCaughtException = decompiledCaughtParameter5;
-              L17: {
+              L16: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_37_0 = (RuntimeException) var4;
-                stackOut_37_1 = new StringBuilder().append("ge.H(").append(param0).append(44).append(param1).append(44);
-                stackIn_39_0 = stackOut_37_0;
-                stackIn_39_1 = stackOut_37_1;
-                stackIn_38_0 = stackOut_37_0;
-                stackIn_38_1 = stackOut_37_1;
+                stackOut_35_0 = (RuntimeException) var4;
+                stackOut_35_1 = new StringBuilder().append("ge.H(").append(-127).append(44).append(param1).append(44);
+                stackIn_37_0 = stackOut_35_0;
+                stackIn_37_1 = stackOut_35_1;
+                stackIn_36_0 = stackOut_35_0;
+                stackIn_36_1 = stackOut_35_1;
                 if (param2 == null) {
+                  stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
+                  stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+                  stackOut_37_2 = "null";
+                  stackIn_38_0 = stackOut_37_0;
+                  stackIn_38_1 = stackOut_37_1;
+                  stackIn_38_2 = stackOut_37_2;
+                  break L16;
+                } else {
+                  stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
+                  stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+                  stackOut_36_2 = "{...}";
+                  stackIn_38_0 = stackOut_36_0;
+                  stackIn_38_1 = stackOut_36_1;
+                  stackIn_38_2 = stackOut_36_2;
+                  break L16;
+                }
+              }
+              L17: {
+                stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+                stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(44);
+                stackIn_40_0 = stackOut_38_0;
+                stackIn_40_1 = stackOut_38_1;
+                stackIn_39_0 = stackOut_38_0;
+                stackIn_39_1 = stackOut_38_1;
+                if (param3 == null) {
+                  stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+                  stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+                  stackOut_40_2 = "null";
+                  stackIn_41_0 = stackOut_40_0;
+                  stackIn_41_1 = stackOut_40_1;
+                  stackIn_41_2 = stackOut_40_2;
+                  break L17;
+                } else {
                   stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
                   stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
-                  stackOut_39_2 = "null";
-                  stackIn_40_0 = stackOut_39_0;
-                  stackIn_40_1 = stackOut_39_1;
-                  stackIn_40_2 = stackOut_39_2;
-                  break L17;
-                } else {
-                  stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-                  stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
-                  stackOut_38_2 = "{...}";
-                  stackIn_40_0 = stackOut_38_0;
-                  stackIn_40_1 = stackOut_38_1;
-                  stackIn_40_2 = stackOut_38_2;
+                  stackOut_39_2 = "{...}";
+                  stackIn_41_0 = stackOut_39_0;
+                  stackIn_41_1 = stackOut_39_1;
+                  stackIn_41_2 = stackOut_39_2;
                   break L17;
                 }
               }
-              L18: {
-                stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-                stackOut_40_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(44);
-                stackIn_42_0 = stackOut_40_0;
-                stackIn_42_1 = stackOut_40_1;
-                stackIn_41_0 = stackOut_40_0;
-                stackIn_41_1 = stackOut_40_1;
-                if (param3 == null) {
-                  stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-                  stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
-                  stackOut_42_2 = "null";
-                  stackIn_43_0 = stackOut_42_0;
-                  stackIn_43_1 = stackOut_42_1;
-                  stackIn_43_2 = stackOut_42_2;
-                  break L18;
-                } else {
-                  stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-                  stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
-                  stackOut_41_2 = "{...}";
-                  stackIn_43_0 = stackOut_41_0;
-                  stackIn_43_1 = stackOut_41_1;
-                  stackIn_43_2 = stackOut_41_2;
-                  break L18;
-                }
-              }
-              throw ld.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 41);
+              throw ld.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -793,13 +782,16 @@ final class ge implements Runnable {
     }
 
     final static void f(int param0) {
-        int var1 = hc.f(-1980);
+        int discarded$0 = -1980;
+        int var1 = hc.f();
         if (param0 < 55) {
             field_e = null;
         }
-        int var2 = eb.d((byte) -6);
+        int discarded$1 = -6;
+        int var2 = eb.d();
         ki.field_a.a(rf.field_c + -id.field_v, (id.field_v << 1) + var2, var1 - -(wh.field_f << 1), me.field_v - wh.field_f, -1160208572);
-        hi.b(0);
+        int discarded$2 = 0;
+        hi.b();
     }
 
     final int e(int param0) throws IOException {

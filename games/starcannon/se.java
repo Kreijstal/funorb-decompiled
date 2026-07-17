@@ -170,7 +170,7 @@ final class se extends bd {
         try {
           L0: {
             L1: {
-              jl.field_b[param2] = di.field_l.nextInt();
+              jl.field_b[0] = di.field_l.nextInt();
               jl.field_b[1] = di.field_l.nextInt();
               ck.field_g.field_g = 0;
               jl.field_b[3] = (int)mi.field_o;
@@ -179,8 +179,9 @@ final class se extends bd {
               ck.field_g.c((byte) -71, jl.field_b[1]);
               ck.field_g.c((byte) -109, jl.field_b[2]);
               ck.field_g.c((byte) -107, jl.field_b[3]);
-              fd.a(ck.field_g, (byte) -111);
-              ck.field_g.c(param3, param2 + -306);
+              int discarded$2 = -111;
+              fd.a(ck.field_g);
+              ck.field_g.c(param3, -306);
               param1.a((byte) 69, ck.field_g);
               d.field_b.field_g = 0;
               if (!param0) {
@@ -229,7 +230,7 @@ final class se extends bd {
               }
             }
             L6: {
-              d.field_b.a(var6, param2 + -93);
+              d.field_b.a(var6, -93);
               var7 = uj.a(ll.b(125), 61);
               if (var7 == null) {
                 var7 = "";
@@ -247,7 +248,8 @@ final class se extends bd {
                 break L7;
               }
             }
-            fc.a(ck.field_g, (rb) (Object) d.field_b, ed.field_j, gg.field_e, 0);
+            int discarded$3 = 0;
+            fc.a(ck.field_g, (rb) (Object) d.field_b, ed.field_j, gg.field_e);
             d.field_b.a((byte) 88, -var5_int + d.field_b.field_g);
             nf.a(-1, (byte) 95);
             break L0;
@@ -280,18 +282,35 @@ final class se extends bd {
               break L8;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw sd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 0 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    final static boolean b(byte param0) {
-        if (bl.field_a < 10) {
+    final static boolean b() {
+        int stackIn_6_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        if (bl.field_a >= 10) {
+          if (ai.field_c) {
             return false;
+          } else {
+            L0: {
+              int discarded$6 = 57;
+              if (fc.a()) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L0;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L0;
+              }
+            }
+            return stackIn_6_0 != 0;
+          }
+        } else {
+          return false;
         }
-        if (ai.field_c) {
-            return false;
-        }
-        return !fc.a((byte) 57) ? true : false;
     }
 
     final void a(byte param0, qe param1, int param2, int param3, int param4, int param5, int param6, String param7) {
@@ -666,7 +685,7 @@ final class se extends bd {
         }
     }
 
-    final static boolean d(byte param0) {
+    final static boolean d() {
         int var1 = 0;
         return tc.field_x;
     }
@@ -883,7 +902,7 @@ final class se extends bd {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         int var2 = 0;
         if (0 >= u.field_d) {
           if (wk.a(69)) {

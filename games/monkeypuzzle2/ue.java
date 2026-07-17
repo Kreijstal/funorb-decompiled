@@ -172,7 +172,9 @@ final class ue extends jk {
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param0 == 122) {
           if (af.field_c > 0) {
-            ba.field_f = qg.a(640, 480, 0, rc.field_k, (byte) -73, 0);
+            int discarded$4 = 0;
+            int discarded$5 = -73;
+            ba.field_f = qg.a(640, 480, 0, rc.field_k);
             if (null != ba.field_f) {
               af.a(20, (java.awt.Canvas) (Object) ba.field_f);
               var2 = 2;
@@ -201,7 +203,9 @@ final class ue extends jk {
         } else {
           field_D = 13;
           if (af.field_c > 0) {
-            ba.field_f = qg.a(640, 480, 0, rc.field_k, (byte) -73, 0);
+            int discarded$6 = 0;
+            int discarded$7 = -73;
+            ba.field_f = qg.a(640, 480, 0, rc.field_k);
             if (null != ba.field_f) {
               af.a(20, (java.awt.Canvas) (Object) ba.field_f);
               var2 = 2;
@@ -230,7 +234,7 @@ final class ue extends jk {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_E = null;
     }
 

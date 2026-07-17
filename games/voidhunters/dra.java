@@ -473,9 +473,6 @@ final class dra extends f {
     }
 
     final static void a(byte param0, int param1) {
-        if (param0 <= 67) {
-            return;
-        }
         lla.field_b = 3;
         lla.field_e = lla.field_b / 2;
     }
@@ -508,11 +505,11 @@ final class dra extends f {
         try {
             ((dra) this).field_k = param1;
             ((dra) this).field_j = param2;
-            int var4_int = 88 % ((73 - param0) / 51);
+            int var4_int = 1;
             ((dra) this).field_s = 1048576;
             ((dra) this).field_n = ((dra) this).field_k;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "dra.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "dra.G(" + -93 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

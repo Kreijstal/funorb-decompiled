@@ -8,7 +8,7 @@ class hq extends eta {
     hq() {
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
     }
 

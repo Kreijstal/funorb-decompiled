@@ -21,7 +21,7 @@ final class ad implements Runnable {
     static int field_m;
     private int field_i;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_o = null;
         field_b = null;
         field_c = null;
@@ -59,7 +59,8 @@ final class ad implements Runnable {
               }
             }
             L2: {
-              if (mc.a(param1, (byte) 105) == null) {
+              int discarded$8 = 105;
+              if (mc.a(param1) == null) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -268,7 +269,6 @@ final class ad implements Runnable {
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
-            Object var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = SolKnight.field_L ? 1 : 0;
@@ -395,8 +395,8 @@ final class ad implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                var7 = null;
-                hi.a((Throwable) (Object) var1_ref, (String) null, 1);
+                int discarded$1 = 1;
+                hi.a((Throwable) (Object) var1_ref, (String) null);
                 break L17;
               }
             }
@@ -411,33 +411,30 @@ final class ad implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         if (null != dh.field_j) {
-          if (param2 == 0) {
-            L0: {
-              if (param1 < sa.field_m) {
-                break L0;
-              } else {
-                if (sa.field_m - -dh.field_j.field_p <= param1) {
+          field_b = null;
+          if (param1 >= sa.field_m) {
+            if (sa.field_m - -dh.field_j.field_p > param1) {
+              L0: {
+                if (param0 < da.field_f) {
                   break L0;
                 } else {
-                  if (param0 < da.field_f) {
+                  if (dh.field_j.field_t + da.field_f <= param0) {
                     break L0;
                   } else {
-                    if (dh.field_j.field_t + da.field_f <= param0) {
-                      break L0;
-                    } else {
-                      return 0;
-                    }
+                    return 0;
                   }
                 }
               }
-            }
-            if (ke.field_I <= param1) {
-              if (ke.field_I + dh.field_j.field_p > param1) {
-                if (lk.field_c <= param0) {
-                  if (param0 < dh.field_j.field_t + lk.field_c) {
-                    return 1;
+              if (ke.field_I <= param1) {
+                if (ke.field_I + dh.field_j.field_p > param1) {
+                  if (lk.field_c <= param0) {
+                    if (param0 < dh.field_j.field_t + lk.field_c) {
+                      return 1;
+                    } else {
+                      return -1;
+                    }
                   } else {
                     return -1;
                   }
@@ -446,60 +443,6 @@ final class ad implements Runnable {
                 }
               } else {
                 return -1;
-              }
-            } else {
-              return -1;
-            }
-          } else {
-            field_b = null;
-            if (param1 >= sa.field_m) {
-              if (sa.field_m - -dh.field_j.field_p > param1) {
-                L1: {
-                  if (param0 < da.field_f) {
-                    break L1;
-                  } else {
-                    if (dh.field_j.field_t + da.field_f <= param0) {
-                      break L1;
-                    } else {
-                      return 0;
-                    }
-                  }
-                }
-                if (ke.field_I <= param1) {
-                  if (ke.field_I + dh.field_j.field_p > param1) {
-                    if (lk.field_c <= param0) {
-                      if (param0 < dh.field_j.field_t + lk.field_c) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                if (ke.field_I <= param1) {
-                  if (ke.field_I + dh.field_j.field_p > param1) {
-                    if (lk.field_c <= param0) {
-                      if (param0 >= dh.field_j.field_t + lk.field_c) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
               }
             } else {
               if (ke.field_I <= param1) {
@@ -519,6 +462,24 @@ final class ad implements Runnable {
               } else {
                 return -1;
               }
+            }
+          } else {
+            if (ke.field_I <= param1) {
+              if (ke.field_I + dh.field_j.field_p > param1) {
+                if (lk.field_c <= param0) {
+                  if (param0 >= dh.field_j.field_t + lk.field_c) {
+                    return -1;
+                  } else {
+                    return 1;
+                  }
+                } else {
+                  return -1;
+                }
+              } else {
+                return -1;
+              }
+            } else {
+              return -1;
             }
           }
         } else {
@@ -675,7 +636,7 @@ final class ad implements Runnable {
                   var4 = 0;
                   L1: while (true) {
                     if (var2_int <= var4) {
-                      var4 = 107 % ((param0 - -79) / 45);
+                      var4 = 0;
                       stackOut_46_0 = null;
                       stackIn_47_0 = stackOut_46_0;
                       break L0;
@@ -782,7 +743,7 @@ final class ad implements Runnable {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_48_0 = (RuntimeException) var2;
-            stackOut_48_1 = new StringBuilder().append("ad.F(").append(param0).append(44);
+            stackOut_48_1 = new StringBuilder().append("ad.F(").append(-126).append(44);
             stackIn_50_0 = stackOut_48_0;
             stackIn_50_1 = stackOut_48_1;
             stackIn_49_0 = stackOut_48_0;
@@ -810,9 +771,9 @@ final class ad implements Runnable {
         return (pc) (Object) stackIn_47_0;
     }
 
-    final static int c(int param0) {
-        int var1_int = 0;
+    final static int c() {
         RuntimeException var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -827,7 +788,8 @@ final class ad implements Runnable {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              if (!wk.a((byte) -56)) {
+              int discarded$1 = -56;
+              if (!wk.a()) {
                 L2: {
                   bc.field_K.a(-121, uc.a(gb.field_j, 1691746689, field_m), uc.a(db.field_o, 1691746689, s.field_gb));
                   if (bc.field_K.d((byte) -36)) {

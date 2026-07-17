@@ -8,7 +8,7 @@ final class l extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_a;
     volatile boolean field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_e = null;

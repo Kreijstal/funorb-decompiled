@@ -6,22 +6,13 @@ final class el {
     static int[][] field_b;
     static int field_a;
 
-    public static void a(boolean param0) {
-        if (!param0) {
-            field_a = 21;
-            field_b = null;
-            field_c = null;
-            return;
-        }
+    public static void a() {
         field_b = null;
         field_c = null;
     }
 
     final static void a(boolean param0, int param1) {
         aa.field_a = param1;
-        if (!param0) {
-            el.a(false);
-        }
     }
 
     static {

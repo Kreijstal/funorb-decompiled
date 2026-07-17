@@ -510,7 +510,7 @@ final class u {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_d = null;
         field_e = null;

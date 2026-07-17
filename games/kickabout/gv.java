@@ -13,17 +13,14 @@ final class gv extends gn {
         ml var3 = null;
         try {
             var3 = or.field_d;
-            var3.b(param0, (byte) 73);
+            var3.b(3, (byte) 73);
             var3.a(115, 5);
             var3.a(118, 0);
-            if (param1 <= 71) {
-                field_h = -27;
-            }
             var3.g(-1207444472, param2.field_o);
             var3.a(116, param2.field_g);
             var3.a(102, param2.field_j);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "gv.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "gv.B(" + 3 + 44 + 112 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -66,7 +63,7 @@ final class gv extends gn {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1, int param2) {
+    final static boolean a(boolean param0, CharSequence param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -95,7 +92,7 @@ final class gv extends gn {
         var4 = Kickabout.field_G;
         try {
           L0: {
-            if (!hw.a(param1, -26200, param0)) {
+            if (!hw.a(param1, -26200, false)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -124,7 +121,7 @@ final class gv extends gn {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("gv.D(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("gv.D(").append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

@@ -7,14 +7,14 @@ abstract class qc extends oh {
     static String field_h;
     static dl[] field_f;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         if (ph.field_E == null) {
             dq.a(-32056, param0);
         } else {
             q.a(false);
         }
-        Object var3 = null;
-        qc.a(9, -14, -108, (dl[]) null, -100, -14, -83);
+        int discarded$0 = -83;
+        qc.a(9, -14, -108, (dl[]) null, -100, -14);
     }
 
     public static void c(byte param0) {
@@ -123,13 +123,10 @@ abstract class qc extends oh {
     }
 
     int a(byte param0, boolean param1) {
-        if (param0 > -53) {
-            field_i = null;
-        }
         return param1 ? 16 : 2;
     }
 
-    final static void a(int param0, int param1, int param2, dl[] param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, dl[] param3, int param4, int param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -278,7 +275,7 @@ abstract class qc extends oh {
                         }
                       }
                       L9: {
-                        if (null == param3[param6]) {
+                        if (null == param3[2]) {
                           break L9;
                         } else {
                           kh.a(var18, param1, var11, var19);
@@ -467,7 +464,7 @@ abstract class qc extends oh {
               break L23;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw dn.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + 44 + param4 + 44 + param5 + 44 + 2 + 41);
         }
     }
 

@@ -13,7 +13,7 @@ abstract class wd {
 
     abstract kh a(byte param0);
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -24,7 +24,7 @@ abstract class wd {
 
     abstract byte[] b(int param0, int param1);
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;

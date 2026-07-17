@@ -16,37 +16,33 @@ final class dg extends rk {
     final static char a(boolean param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
-        if (!param0) {
-          var2 = 255 & param1;
-          if (0 != var2) {
-            if (var2 >= 128) {
-              if (var2 >= 160) {
-                return (char)var2;
-              } else {
-                L0: {
-                  var3 = cd.field_m[var2 + -128];
-                  if (var3 != 0) {
-                    break L0;
-                  } else {
-                    var3 = 63;
-                    break L0;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
+        var2 = 255 & param1;
+        if (0 != var2) {
+          if (var2 >= 128) {
+            if (var2 >= 160) {
+              return (char)var2;
             } else {
+              L0: {
+                var3 = cd.field_m[var2 + -128];
+                if (var3 != 0) {
+                  break L0;
+                } else {
+                  var3 = 63;
+                  break L0;
+                }
+              }
+              var2 = var3;
               return (char)var2;
             }
           } else {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
+            return (char)var2;
           }
         } else {
-          return '';
+          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_n = null;
         field_p = null;
     }
@@ -66,7 +62,7 @@ final class dg extends rk {
         var4 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            var3_int = param0;
+            var3_int = 1;
             L1: while (true) {
               if (param1 <= 1) {
                 if (param1 != 1) {
@@ -96,7 +92,7 @@ final class dg extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var3, "dg.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) var3, "dg.B(" + 1 + 44 + param1 + 44 + param2 + 41);
         }
         return stackIn_11_0;
     }

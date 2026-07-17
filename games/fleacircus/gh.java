@@ -83,11 +83,12 @@ final class gh extends r {
         String stackOut_21_2 = null;
         try {
           L0: {
-            var7_int = -71 / ((48 - param5) / 49);
+            var7_int = -23;
             if (ql.field_l == cb.field_v) {
               var8 = new ua(nb.field_a, param4);
               nb.field_a.b((qa) (Object) var8, (byte) -35);
-              if (!ti.b(10618)) {
+              int discarded$16 = 10618;
+              if (!ti.b()) {
                 L1: {
                   cb.field_v = wi.field_f;
                   if (!param3) {
@@ -199,7 +200,7 @@ final class gh extends r {
           }
           L5: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param5).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(-122).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -284,7 +285,8 @@ final class gh extends r {
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  if (!hg.a(var6, 1)) {
+                  int discarded$13 = 1;
+                  if (!hg.a(var6)) {
                     if (this.b(0, param1)) {
                       stackOut_16_0 = id.field_j;
                       stackIn_17_0 = stackOut_16_0;
@@ -295,7 +297,8 @@ final class gh extends r {
                         stackIn_32_0 = stackOut_31_0;
                         break L0;
                       } else {
-                        if (!hj.a(var6, var7, 0)) {
+                        int discarded$14 = 0;
+                        if (!hj.a(var6, var7)) {
                           if (hf.a((byte) -67, var6, var7)) {
                             stackOut_24_0 = el.field_B;
                             stackIn_25_0 = stackOut_24_0;
@@ -372,7 +375,7 @@ final class gh extends r {
         }
     }
 
-    final static void e(int param0) {
+    final static void e() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -662,7 +665,8 @@ final class gh extends r {
                   break L1;
                 }
               }
-              if (lh.a(var4, var3, -1)) {
+              int discarded$6 = -1;
+              if (lh.a(var4, var3)) {
                 if (this.b(0, param1)) {
                   stackOut_10_0 = ml.field_K;
                   stackIn_11_0 = stackOut_10_0;
@@ -748,7 +752,7 @@ final class gh extends r {
             L1: {
               var3 = ((gh) this).field_o.field_i.toLowerCase();
               var4 = param1.toLowerCase();
-              if (var3.length() <= param0) {
+              if (var3.length() <= 0) {
                 break L1;
               } else {
                 if (var4.length() > 0) {
@@ -790,7 +794,7 @@ final class gh extends r {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3_ref;
-            stackOut_13_1 = new StringBuilder().append("gh.E(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("gh.E(").append(0).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

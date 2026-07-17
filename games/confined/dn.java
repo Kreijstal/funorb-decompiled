@@ -9,7 +9,7 @@ final class dn {
     static String[] field_e;
     static ok field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         int var1 = 1;
         field_c = null;

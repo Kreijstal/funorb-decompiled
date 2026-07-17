@@ -16,15 +16,12 @@ abstract class mi extends uh {
         long var4 = 0L;
         try {
             ve.field_d = true;
-            if (param0 != 1048576) {
-                mi.d(35);
-            }
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
             var4 = -1L;
             wg.a((byte) 111, var3, param1, var2, var4);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "mi.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "mi.B(" + 1048576 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -32,7 +29,7 @@ abstract class mi extends uh {
         ((mi) this).field_p = param0;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -89,10 +86,7 @@ abstract class mi extends uh {
         }
     }
 
-    public static void d(int param0) {
-        if (param0 != 1) {
-            return;
-        }
+    public static void d() {
         field_n = null;
     }
 

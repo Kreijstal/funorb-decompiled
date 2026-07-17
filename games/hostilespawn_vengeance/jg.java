@@ -410,7 +410,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         return stackIn_21_0;
     }
 
-    final static ue a(int param0, byte param1, fd param2, int param3, int param4, int param5) {
+    final static ue a(int param0, byte param1, fd param2, int param3, int param4) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         ue var7 = null;
@@ -435,7 +435,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         String stackOut_8_2 = null;
         try {
           L0: {
-            var8 = g.a(param4, param3, (byte) 30, param2, 0, param0);
+            var8 = g.a(param4, 0, (byte) 30, param2, 0, param0);
             var6 = var8;
             if (var8 != null) {
               L1: {
@@ -487,23 +487,17 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 44 + param4 + 44 + 0 + 41);
+          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 0 + 44 + param4 + 44 + 0 + 41);
         }
         return stackIn_6_0;
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (param0 > -98) {
-            field_e = null;
-            hn.field_b = param1;
-            qh.field_s = param2;
-            return;
-        }
         hn.field_b = param1;
         qh.field_s = param2;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_f = null;
         field_b = null;

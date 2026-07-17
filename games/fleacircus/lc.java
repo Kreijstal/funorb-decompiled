@@ -11,7 +11,7 @@ class lc extends pa {
     static dd field_t;
     static int field_u;
 
-    final static void a(ni param0, byte param1) {
+    final static void a(ni param0) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -157,27 +157,21 @@ class lc extends pa {
     lc() {
     }
 
-    final static String f(int param0) {
+    final static String f() {
         if (!(wi.field_f != cb.field_v)) {
             return ef.field_j;
         }
-        if (param0 != 0) {
-            return null;
-        }
-        return jk.field_j;
+        return null;
     }
 
     public static void c(byte param0) {
         field_s = null;
         field_q = null;
-        if (param0 != 99) {
-            return;
-        }
         field_t = null;
         field_v = null;
     }
 
-    final static jh a(byte[] param0, boolean param1) {
+    final static jh a(byte[] param0) {
         jh var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -204,7 +198,8 @@ class lc extends pa {
           L0: {
             if (param0 != null) {
               var2 = new jh(param0, vg.field_I, b.field_b, ij.field_H, ob.field_a, of.field_d);
-              c.o(-28210);
+              int discarded$2 = -28210;
+              c.o();
               stackOut_3_0 = (jh) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;

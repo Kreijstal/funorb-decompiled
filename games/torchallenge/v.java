@@ -18,10 +18,11 @@ abstract class v extends b {
 
     final static tc b(int param0, int param1, int param2, int param3) {
         tc var4 = new tc();
-        var4.field_n = new int[param0];
+        var4.field_n = new int[1];
         var4.field_j = param3;
         gf.field_q.a((da) (Object) var4, -104);
-        ue.a(var4, param1 ^ 258, param2);
+        int discarded$12 = 5;
+        ue.a(var4, param1 ^ 258);
         if (param1 != 256) {
             v.b(-126, -115, -75, 79, 102);
         }
@@ -252,12 +253,13 @@ abstract class v extends b {
             }
           }
           L3: {
-            ie.b((byte) -9);
+            int discarded$2 = -9;
+            ie.b();
             if (param2 >= 40) {
               break L3;
             } else {
               var9 = null;
-              ka[] discarded$1 = v.a((String) null, 32, (String) null, (lj) null);
+              ka[] discarded$3 = v.a((String) null, 32, (String) null, (lj) null);
               break L3;
             }
           }
@@ -320,22 +322,21 @@ abstract class v extends b {
     }
 
     final static void a(boolean param0, byte param1, boolean param2, String param3) {
-        fg.i(126);
-        t.field_b.i(param1 + 8389929);
-        if (param1 != -24) {
-            return;
-        }
+        int discarded$0 = 126;
+        fg.i();
+        t.field_b.i(8389905);
         try {
             kb.field_O = new fg(lg.field_b, (String) null, eb.field_m, param2, param0);
             bg.field_K = new jf(t.field_b, (ee) (Object) kb.field_O);
             t.field_b.a((byte) 88, (ee) (Object) bg.field_K);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "v.QA(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "v.QA(" + param0 + 44 + -24 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static boolean f(byte param0) {
-        return lc.a(1);
+    final static boolean f() {
+        int discarded$0 = 1;
+        return lc.a();
     }
 
     boolean j(int param0) {
@@ -367,7 +368,8 @@ abstract class v extends b {
         if (param1 < 66) {
             return null;
         }
-        return ma.a(param0, param3, 1, param2, true);
+        int discarded$0 = 1;
+        return ma.a(param0, param3, 1, param2);
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
@@ -552,7 +554,7 @@ abstract class v extends b {
         return stackIn_3_0;
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_X = null;
         field_S = null;
         field_Y = null;
@@ -617,14 +619,12 @@ abstract class v extends b {
             ug.a(0, param3);
             wl.a(-2681, param3);
             u.a(true, param3);
-            dg.k(-50);
+            int discarded$0 = -50;
+            dg.k();
             td.b((byte) 112);
-            if (param0 != 127) {
-                ka[] discarded$0 = v.a(30, -88, 66, -60);
-            }
             jc.field_c = -vk.field_h;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "v.FA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "v.FA(" + 127 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -675,7 +675,7 @@ abstract class v extends b {
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
-            var6_int = -121 % (param3 / 40);
+            var6_int = -1;
             if (param4.a((byte) -96)) {
               L1: {
                 if (param2 != 0) {
@@ -712,7 +712,7 @@ abstract class v extends b {
                   }
                 }
               }
-              var12 = param4.a(param5, param0, param2, param1, -2);
+              var12 = param4.a(param5, param0, param2, 0, -2);
               L4: while (true) {
                 if (var12.field_d != 0) {
                   var8 = (java.awt.Frame) var12.field_g;
@@ -744,7 +744,7 @@ abstract class v extends b {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var6;
-            stackOut_27_1 = new StringBuilder().append("v.JA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_27_1 = new StringBuilder().append("v.JA(").append(param0).append(44).append(0).append(44).append(param2).append(44).append(80).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -774,9 +774,6 @@ abstract class v extends b {
 
     final static int d(int param0, int param1, int param2) {
         int var3 = param1 >> 31 & -1 + param2;
-        if (param0 >= -70) {
-            return -85;
-        }
         return ((param1 >>> 31) + param1) % param2 - -var3;
     }
 

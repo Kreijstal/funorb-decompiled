@@ -9,19 +9,11 @@ final class vl {
     int field_e;
 
     final static String a(int param0, boolean param1, int param2) {
-        if (!param1) {
-          vl.a((byte) -39);
-          return param0 + "/" + param2;
-        } else {
-          return param0 + "/" + param2;
-        }
+        return param0 + "/" + param2;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
-        if (param0 != 113) {
-            return;
-        }
         field_b = null;
     }
 

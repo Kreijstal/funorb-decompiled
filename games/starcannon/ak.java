@@ -22,12 +22,12 @@ final class ak {
     dl[] field_s;
     private int field_o;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
-        int var1 = -101 / ((param0 - 41) / 44);
+        int var1 = -101;
     }
 
-    private final void a(byte[] param0, int param1) {
+    private final void a(byte[] param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -497,7 +497,8 @@ final class ak {
                     }
                   }
                   if (var5 == null) {
-                    ec.a((byte) 27);
+                    int discarded$10 = 27;
+                    ec.a();
                     return;
                   } else {
                     L4: {
@@ -511,16 +512,16 @@ final class ak {
                         var9_int = 1;
                         L5: while (true) {
                           if (var6 <= var9_int) {
-                            String[][] dupTemp$6 = new String[3][var7];
-                            var5.field_n = dupTemp$6;
-                            var9 = dupTemp$6;
+                            String[][] dupTemp$11 = new String[3][var7];
+                            var5.field_n = dupTemp$11;
+                            var9 = dupTemp$11;
                             var10 = new String[3][var7];
-                            long[][] dupTemp$7 = new long[3][var7];
-                            var5.field_g = dupTemp$7;
-                            var11 = dupTemp$7;
-                            int[][] dupTemp$8 = new int[3][var8 * var7];
-                            var5.field_o = dupTemp$8;
-                            var12 = dupTemp$8;
+                            long[][] dupTemp$12 = new long[3][var7];
+                            var5.field_g = dupTemp$12;
+                            var11 = dupTemp$12;
+                            int[][] dupTemp$13 = new int[3][var8 * var7];
+                            var5.field_o = dupTemp$13;
+                            var12 = dupTemp$13;
                             var13 = 0;
                             var14 = 0;
                             var15 = 0;
@@ -551,9 +552,9 @@ final class ak {
                                         if (var8 <= var26) {
                                           break L7;
                                         } else {
-                                          int incrementValue$9 = var16;
+                                          int incrementValue$14 = var16;
                                           var16++;
-                                          var12[0][incrementValue$9] = var2.f((byte) -101);
+                                          var12[0][incrementValue$14] = var2.f((byte) -101);
                                           var26++;
                                           continue L8;
                                         }
@@ -566,7 +567,8 @@ final class ak {
                                     if (var22 == null) {
                                       break L9;
                                     } else {
-                                      if (mc.a(var22, 0)) {
+                                      int discarded$15 = 0;
+                                      if (mc.a(var22)) {
                                         var9[1][var14] = we.field_i;
                                         var10[1][var14] = null;
                                         var11[1][var14] = var23;
@@ -577,9 +579,9 @@ final class ak {
                                           if (var8 <= var26) {
                                             break L9;
                                           } else {
-                                            int incrementValue$10 = var17;
+                                            int incrementValue$16 = var17;
                                             var17++;
-                                            var12[1][incrementValue$10] = var2.f((byte) -94);
+                                            var12[1][incrementValue$16] = var2.f((byte) -94);
                                             var26++;
                                             continue L10;
                                           }
@@ -607,9 +609,9 @@ final class ak {
                                           if (var26 >= var8) {
                                             break L11;
                                           } else {
-                                            int incrementValue$11 = var18;
+                                            int incrementValue$17 = var18;
                                             var18++;
-                                            var12[2][incrementValue$11] = var2.f((byte) -99);
+                                            var12[2][incrementValue$17] = var2.f((byte) -99);
                                             var26++;
                                             continue L12;
                                           }
@@ -650,7 +652,8 @@ final class ak {
               } else {
                 if (var3 != 1) {
                   hc.a((Throwable) null, "HS1: " + oe.a(-109), (byte) 70);
-                  ec.a((byte) 27);
+                  int discarded$18 = 27;
+                  ec.a();
                   break L1;
                 } else {
                   var4 = var2.i(-1174051992);
@@ -674,7 +677,8 @@ final class ak {
                       var7_ref_re.b(4);
                       break L1;
                     } else {
-                      ec.a((byte) 27);
+                      int discarded$19 = 27;
+                      ec.a();
                       return;
                     }
                   }
@@ -1110,7 +1114,8 @@ final class ak {
                     }
                 }
             }
-            this.a(param0, -111);
+            int discarded$0 = -111;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "ak.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

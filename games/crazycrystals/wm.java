@@ -10,14 +10,15 @@ final class wm {
     static long field_d;
     static int field_e;
 
-    final static wj[] a(int param0) {
+    final static wj[] a() {
         int var2 = 0;
         int var3 = CrazyCrystals.field_B;
         wj[] var1 = new wj[mg.field_a];
         for (var2 = 0; var2 < mg.field_a; var2++) {
             var1[var2] = new wj(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], ui.field_c[var2], gh.field_z);
         }
-        ok.a(2188450);
+        int discarded$0 = 2188450;
+        ok.a();
         return var1;
     }
 
@@ -28,7 +29,8 @@ final class wm {
         if (!(null == sp.field_a)) {
             sp.field_a.i((byte) -99);
         }
-        String var1 = vg.c((byte) 104);
+        int discarded$0 = 104;
+        String var1 = vg.c();
         mk.field_b = new vk(var1, (String) null, true, false, false);
         qe.field_g.b(-3264, (qm) (Object) jm.field_d);
         if (param0 != -12) {
@@ -45,7 +47,7 @@ final class wm {
         }
     }
 
-    final static void a(int param0, int param1, dl param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, dl param2, int param3) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -69,25 +71,25 @@ final class wm {
         try {
           L0: {
             var9_int = param3 + param2.field_v + param0;
-            var10 = param2.field_v + (param3 + param0) + param6;
+            var10 = param2.field_v + (param3 + param0) + 30;
             var11 = (param2.field_u >> 1) + (param1 + param2.field_t);
-            kh.a(var9_int, 0, var10, var11 + param5);
-            param2.d(param3 - 1, -1 + param1, param7);
-            param2.d(-1 + param3, 1 + param1, param7);
+            kh.a(var9_int, 0, var10, var11);
+            param2.d(param3 - 1, -1 + param1, 80);
+            param2.d(-1 + param3, 1 + param1, 80);
             kh.a(mc.field_m);
-            kh.a(1 + var9_int, 0, var10 - -1, param5 + var11);
-            param2.d(param3 - -1, -1 + param1, param7);
-            param2.d(param3 + 1, 1 + param1, param7);
+            kh.a(1 + var9_int, 0, var10 - -1, var11);
+            param2.d(param3 - -1, -1 + param1, 80);
+            param2.d(param3 + 1, 1 + param1, 80);
             kh.a(mc.field_m);
             var10 = param3 + param2.field_l + param2.field_v - param0;
-            var9_int = -param0 + param2.field_l + (param2.field_v + param3 - param6);
-            kh.a(var9_int, -param5 + var11, var10, 480);
-            param2.d(param3 - 1, -1 + param1, param7);
-            param2.d(param3 - 1, param1 - -1, param7);
+            var9_int = -param0 + param2.field_l + (param2.field_v + param3 - 30);
+            kh.a(var9_int, var11, var10, 480);
+            param2.d(param3 - 1, -1 + param1, 80);
+            param2.d(param3 - 1, param1 - -1, 80);
             kh.a(mc.field_m);
-            kh.a(1 + var9_int, var11 + -param5, 1 + var10, param4);
-            param2.d(param3 - -1, param1 + -1, param7);
-            param2.d(param3 - -1, param1 - -1, param7);
+            kh.a(1 + var9_int, var11, 1 + var10, 480);
+            param2.d(param3 - -1, param1 + -1, 80);
+            param2.d(param3 - -1, param1 - -1, 80);
             kh.a(mc.field_m);
             break L0;
           }
@@ -119,7 +121,7 @@ final class wm {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 0 + 41);
+          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param3 + 44 + 480 + 44 + 0 + 44 + 30 + 44 + 80 + 44 + 0 + 41);
         }
     }
 

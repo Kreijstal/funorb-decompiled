@@ -17,7 +17,7 @@ final class fg extends kj implements cc, sg {
     static int field_N;
     private ng field_J;
 
-    final static void i(int param0) {
+    final static void i() {
         eb.field_m = false;
         hl.field_e = false;
         fk.a(true, -1);
@@ -35,7 +35,7 @@ final class fg extends kj implements cc, sg {
         ((fg) this).field_Q.i(param0 ^ -22617);
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a() {
         da var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -52,13 +52,13 @@ final class fg extends kj implements cc, sg {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    af.b(9245, param0);
+                    af.b(9245, 4);
                     var2 = ji.field_q.c(-270);
                     continue L2;
                   }
                 }
               } else {
-                mg.a(-127, var4, param0);
+                mg.a(-127, var4, 4);
                 var4 = (rd) (Object) bb.field_d.c(-270);
                 continue L1;
               }
@@ -67,11 +67,11 @@ final class fg extends kj implements cc, sg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2_ref, "fg.J(" + param0 + 44 + 0 + 41);
+          throw oj.a((Throwable) (Object) var2_ref, "fg.J(" + 4 + 44 + 0 + 41);
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_M = null;
     }
 
@@ -362,7 +362,8 @@ final class fg extends kj implements cc, sg {
             }
             L13: {
               var8 = ea.field_b;
-              var9 = lg.a(gi.b(12476), 126);
+              int discarded$3 = 126;
+              var9 = lg.a(gi.b(12476));
               if (sd.field_e == var9) {
                 var8 = wl.field_d;
                 break L13;
@@ -376,13 +377,13 @@ final class fg extends kj implements cc, sg {
               }
             }
             L14: {
-              bg dupTemp$2 = new bg(10, ((fg) this).field_i, ((fg) this).field_p - 20, 25, (ee) (Object) ((fg) this).field_T, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((fg) this).a(0, (ee) (Object) dupTemp$2);
+              bg dupTemp$4 = new bg(10, ((fg) this).field_i, ((fg) this).field_p - 20, 25, (ee) (Object) ((fg) this).field_T, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((fg) this).a(0, (ee) (Object) dupTemp$4);
               ((fg) this).field_i = ((fg) this).field_i + (5 + ((ee) (Object) var12).field_l);
-              bg dupTemp$3 = new bg(10, ((fg) this).field_i, ((fg) this).field_p + -20, 25, (ee) (Object) ((fg) this).field_Q, false, 80, 3, var7, 16777215, bd.field_n);
-              var13 = dupTemp$3;
-              ((fg) this).a(0, (ee) (Object) dupTemp$3);
+              bg dupTemp$5 = new bg(10, ((fg) this).field_i, ((fg) this).field_p + -20, 25, (ee) (Object) ((fg) this).field_Q, false, 80, 3, var7, 16777215, bd.field_n);
+              var13 = dupTemp$5;
+              ((fg) this).a(0, (ee) (Object) dupTemp$5);
               ((fg) this).field_i = ((fg) this).field_i + (5 + ((ee) (Object) var13).field_l);
               ((fg) this).field_J.field_k = (gg) this;
               if (null == ((fg) this).field_O) {
@@ -537,7 +538,8 @@ final class fg extends kj implements cc, sg {
               }
             }
           }
-          kb.a(((fg) this).field_T.field_v, ((fg) this).field_Q.field_v, (byte) 44);
+          int discarded$2 = 44;
+          kb.a(((fg) this).field_T.field_v, ((fg) this).field_Q.field_v);
           break L0;
         }
         var2 = 83 % ((46 - param0) / 56);
@@ -821,7 +823,8 @@ final class fg extends kj implements cc, sg {
             L1: {
               if (param0 != ((fg) this).field_J) {
                 if (((fg) this).field_O == param0) {
-                  k.a(-14956);
+                  int discarded$638 = -14956;
+                  k.a();
                   break L1;
                 } else {
                   if (((fg) this).field_R != param0) {
@@ -846,7 +849,8 @@ final class fg extends kj implements cc, sg {
                         fd.a(-2068);
                         break L1;
                       } else {
-                        ek.h(1);
+                        int discarded$639 = 1;
+                        ek.h();
                         break L1;
                       }
                     }

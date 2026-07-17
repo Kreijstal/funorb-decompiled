@@ -55,7 +55,8 @@ final class uh extends vm {
                 if (param0.equals((Object) (Object) ((uh) this).field_t)) {
                   break L1;
                 } else {
-                  var4 = sb.b(param0, true);
+                  int discarded$2 = 1;
+                  var4 = sb.b(param0);
                   if (var4 != null) {
                     if (null == var4.field_e) {
                       ((uh) this).field_t = param0;
@@ -140,27 +141,14 @@ final class uh extends vm {
 
     final static int a(boolean param0, int param1) {
         int var2 = 0;
-        int var3 = 0;
-        L0: {
-          var2 = 0;
-          if ((param1 & 7) != 0) {
+        if (!((param1 & 7) == 0)) {
             var2 = 8 - (param1 & 7);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0) {
-          un discarded$2 = uh.i(-54);
-          var3 = var2 + param1;
-          return var3;
-        } else {
-          var3 = var2 + param1;
-          return var3;
-        }
+        int var3 = var2 + param1;
+        return var3;
     }
 
-    final static void j(int param0) {
+    final static void j() {
         if (!(ad.field_b)) {
             throw new IllegalStateException();
         }
@@ -174,7 +162,7 @@ final class uh extends vm {
         ((uh) this).field_t = null;
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_u = null;
         field_r = null;
         field_m = null;
@@ -218,7 +206,8 @@ final class uh extends vm {
           L0: {
             var3_int = -38 / ((-49 - param0) / 62);
             var5 = (CharSequence) (Object) param1;
-            if (!eb.a(var5, -1)) {
+            int discarded$11 = -1;
+            if (!eb.a(var5)) {
               stackOut_2_0 = qk.field_b;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -226,7 +215,8 @@ final class uh extends vm {
               L1: {
                 if (!param1.equals((Object) (Object) ((uh) this).field_t)) {
                   L2: {
-                    var4 = sb.b(param1, true);
+                    int discarded$12 = 1;
+                    var4 = sb.b(param1);
                     if (var4 == null) {
                       break L2;
                     } else {

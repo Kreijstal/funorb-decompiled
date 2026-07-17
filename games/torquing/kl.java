@@ -25,14 +25,11 @@ final class kl extends lf {
             var2.b(0, 0);
             de.field_a = new t(var3, -cl.field_a.field_t + var4);
             de.field_a.e();
-            if (param0 != 66) {
-                field_o = null;
-            }
             var2.b(0, -cl.field_a.field_t);
             de.field_a.field_r = cl.field_a.field_t;
             r.a(126);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "kl.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "kl.D(" + 66 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -67,19 +64,14 @@ final class kl extends lf {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        if (param1 == 16011) {
-          if (param2 >= kn.field_e) {
-            if (qg.field_z >= param0) {
-              if (param3 >= j.field_q) {
-                if (qk.field_p < param4) {
-                  ha.a(param2, param5, -126, param0, param3, param4);
-                  return;
-                } else {
-                  ta.a(0, param4, param3, param5, param2, param0);
-                  return;
-                }
-              } else {
+        if (param2 >= kn.field_e) {
+          if (qg.field_z >= param0) {
+            if (param3 >= j.field_q) {
+              if (qk.field_p < param4) {
                 ha.a(param2, param5, -126, param0, param3, param4);
+                return;
+              } else {
+                ta.a(0, param4, param3, param5, param2, param0);
                 return;
               }
             } else {
@@ -91,6 +83,7 @@ final class kl extends lf {
             return;
           }
         } else {
+          ha.a(param2, param5, -126, param0, param3, param4);
           return;
         }
     }

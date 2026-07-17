@@ -10,39 +10,47 @@ abstract class ta {
     static String field_f;
 
     final static boolean a(byte param0) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
         L0: {
-          L1: {
+          if (param0 == 60) {
+            break L0;
+          } else {
+            field_f = null;
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
             if (ri.field_a < 20) {
-              break L1;
+              break L2;
             } else {
               if (!ph.a((byte) 71)) {
-                break L1;
+                break L2;
               } else {
-                L2: {
+                L3: {
                   if (0 >= ei.field_t) {
-                    break L2;
+                    break L3;
                   } else {
                     if (hd.g((byte) 80)) {
-                      break L2;
+                      break L3;
                     } else {
-                      break L1;
+                      break L2;
                     }
                   }
                 }
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
+                stackOut_8_0 = 0;
+                stackIn_9_0 = stackOut_8_0;
+                break L1;
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          break L0;
+          stackOut_7_0 = 1;
+          stackIn_9_0 = stackOut_7_0;
+          break L1;
         }
-        return stackIn_7_0 != 0;
+        return stackIn_9_0 != 0;
     }
 
     public static void b(int param0) {
@@ -144,10 +152,11 @@ abstract class ta {
                       } else {
                         L6: {
                           var7 = param1.charAt(var6);
-                          if (fg.a((char) var7, 0)) {
+                          int discarded$2 = 0;
+                          if (fg.a((char) var7)) {
                             var8 = sf.a(-1514, (char) var7);
                             if (var8 != 0) {
-                              StringBuilder discarded$1 = var5.append(var8);
+                              StringBuilder discarded$3 = var5.append(var8);
                               break L6;
                             } else {
                               break L6;

@@ -120,7 +120,7 @@ final class qg extends mf {
         ((qg) this).field_j = false;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_k = null;
     }
 
@@ -188,7 +188,8 @@ final class qg extends mf {
               }
             }
             var5 = (CharSequence) (Object) param1;
-            if (lc.a(var5, 13684)) {
+            int discarded$5 = 13684;
+            if (lc.a(var5)) {
               L2: {
                 if (!param1.equals((Object) (Object) ((qg) this).field_i)) {
                   L3: {

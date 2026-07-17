@@ -88,17 +88,9 @@ final class wa {
                 }
               }
               L3: {
-                if (param0 == -1979588528) {
-                  break L3;
-                } else {
-                  field_a = null;
-                  break L3;
-                }
-              }
-              L4: {
                 var34 = -param11 + param9;
                 if (param11 != param15) {
-                  L5: {
+                  L4: {
                     var22 = param13 << 16;
                     var21 = param13 << 16;
                     var30 = param8 << 16;
@@ -118,7 +110,7 @@ final class wa {
                       var23 = (param3 + -param13 << 16) / var35;
                       var31 = (-param8 + param1 << 16) / var35;
                       var32 = (-param8 + param2 << 16) / var34;
-                      break L5;
+                      break L4;
                     } else {
                       var31 = (param2 + -param8 << 16) / var34;
                       var23 = (-param13 + param12 << 16) / var34;
@@ -130,11 +122,11 @@ final class wa {
                       var20 = var36;
                       var28 = (param7 - param10 << 16) / var35;
                       var32 = (param1 - param8 << 16) / var35;
-                      break L5;
+                      break L4;
                     }
                   }
-                  L6: {
-                    L7: {
+                  L5: {
+                    L6: {
                       if (param11 < 0) {
                         if (param15 < 0) {
                           param11 = param15 + -param11;
@@ -147,7 +139,7 @@ final class wa {
                           var18 = var18 + var20 * param11;
                           var25 = var25 + param11 * var27;
                           param11 = param15;
-                          break L6;
+                          break L5;
                         } else {
                           param11 = -param11;
                           var30 = var30 + param11 * var32;
@@ -159,54 +151,54 @@ final class wa {
                           var25 = var25 + var27 * param11;
                           var26 = var26 + var28 * param11;
                           param11 = 0;
-                          break L7;
+                          break L6;
                         }
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                     var36 = vn.field_h[param11];
-                    L8: while (true) {
+                    L7: while (true) {
                       if (~param11 <= ~param15) {
-                        break L6;
+                        break L5;
                       } else {
-                        L9: {
+                        L8: {
                           var37 = var17_int >> 16;
                           if (~vn.field_k < ~var37) {
                             var38 = (var18 >> 16) + -(var17_int >> 16);
                             if (0 == var38) {
                               if (var37 < 0) {
-                                break L9;
+                                break L8;
                               } else {
                                 if (var37 >= vn.field_k) {
-                                  break L9;
+                                  break L8;
                                 } else {
                                   hc.a(0, param16, var38, var29, -32263, var36 + var37, var25, var21, 0, 0);
-                                  break L9;
+                                  break L8;
                                 }
                               }
                             } else {
-                              L10: {
+                              L9: {
                                 var39 = (-var21 + var22) / var38;
                                 var40 = (var26 + -var25) / var38;
                                 var41 = (-var29 + var30) / var38;
                                 if (~vn.field_k >= ~(var37 - -var38)) {
                                   var38 = vn.field_k - var37 + -1;
-                                  break L10;
+                                  break L9;
                                 } else {
-                                  break L10;
+                                  break L9;
                                 }
                               }
                               if (var37 >= 0) {
                                 hc.a(var39, param16, var38, var29, -32263, var36 + var37, var25, var21, var40, var41);
-                                break L9;
+                                break L8;
                               } else {
-                                hc.a(var39, param16, var37 + var38, var29 - var37 * var41, param0 + 1979556265, var36, -(var37 * var40) + var25, var21 - var39 * var37, var40, var41);
-                                break L9;
+                                hc.a(var39, param16, var37 + var38, var29 - var37 * var41, -32263, var36, -(var37 * var40) + var25, var21 - var39 * var37, var40, var41);
+                                break L8;
                               }
                             }
                           } else {
-                            break L9;
+                            break L8;
                           }
                         }
                         param11++;
@@ -222,14 +214,14 @@ final class wa {
                           var36 = var36 + ra.field_f;
                           var21 = var21 + var23;
                           var25 = var25 + var27;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
                   }
                   var36 = param9 + -param15;
                   if (var36 != 0) {
-                    L11: {
+                    L10: {
                       var37 = param4 << 16;
                       var38 = param12 << 16;
                       var39 = param5 << 16;
@@ -238,13 +230,13 @@ final class wa {
                         var30 = param1 << 16;
                         var22 = param3 << 16;
                         var18 = param6 << 16;
-                        break L11;
+                        break L10;
                       } else {
                         var25 = param7 << 16;
                         var29 = param1 << 16;
                         var17_int = param6 << 16;
                         var21 = param3 << 16;
-                        break L11;
+                        break L10;
                       }
                     }
                     var40 = param2 << 16;
@@ -256,7 +248,7 @@ final class wa {
                     var24 = (-var22 + var38) / var36;
                     var32 = (-var30 + var40) / var36;
                     var23 = (-var21 + var38) / var36;
-                    break L4;
+                    break L3;
                   } else {
                     var24 = 0;
                     var20 = 0;
@@ -266,10 +258,10 @@ final class wa {
                     var27 = 0;
                     var23 = 0;
                     var31 = 0;
-                    break L4;
+                    break L3;
                   }
                 } else {
-                  L12: {
+                  L11: {
                     if (param11 == param9) {
                       var31 = 0;
                       var26 = param7;
@@ -287,7 +279,7 @@ final class wa {
                       var30 = param1;
                       var29 = param8;
                       var28 = 0;
-                      break L12;
+                      break L11;
                     } else {
                       var35 = param9 - param15;
                       if (param14 >= param6) {
@@ -307,7 +299,7 @@ final class wa {
                         var30 = param8 << 16;
                         var31 = (-param1 + param2 << 16) / var35;
                         var27 = (param5 - param7 << 16) / var35;
-                        break L12;
+                        break L11;
                       } else {
                         var22 = param3 << 16;
                         var25 = param10 << 16;
@@ -325,11 +317,11 @@ final class wa {
                         var31 = (param2 - param8 << 16) / var34;
                         var32 = (param2 - param1 << 16) / var35;
                         var20 = (-param6 + param4 << 16) / var35;
-                        break L12;
+                        break L11;
                       }
                     }
                   }
-                  L13: {
+                  L12: {
                     if (param11 < 0) {
                       param11 = Math.min(-param11, param15 - param11);
                       var17_int = var17_int + param11 * var19;
@@ -341,16 +333,16 @@ final class wa {
                       var22 = var22 + var24 * param11;
                       var21 = var21 + param11 * var23;
                       param11 = 0;
-                      break L13;
+                      break L12;
                     } else {
-                      break L13;
+                      break L12;
                     }
                   }
                   var33 = 0;
-                  break L4;
+                  break L3;
                 }
               }
-              L14: {
+              L13: {
                 if (param11 < 0) {
                   param11 = -param11;
                   var25 = var25 + var27 * param11;
@@ -362,53 +354,53 @@ final class wa {
                   var18 = var18 + param11 * var20;
                   var30 = var30 + var32 * param11;
                   param11 = 0;
-                  break L14;
+                  break L13;
                 } else {
-                  break L14;
+                  break L13;
                 }
               }
               var35 = vn.field_h[param11];
-              L15: while (true) {
+              L14: while (true) {
                 if (param11 >= param9) {
                   return;
                 } else {
-                  L16: {
+                  L15: {
                     var36 = var17_int >> 16;
                     if (vn.field_k > var36) {
                       var37 = (var18 >> 16) - (var17_int >> 16);
                       if (var37 == 0) {
                         if (0 > var36) {
-                          break L16;
+                          break L15;
                         } else {
                           if (~vn.field_k < ~var36) {
                             hc.a(0, param16, var37, var29, -32263, var35 + var36, var25, var21, 0, 0);
-                            break L16;
+                            break L15;
                           } else {
-                            break L16;
+                            break L15;
                           }
                         }
                       } else {
-                        L17: {
+                        L16: {
                           var38 = (-var21 + var22) / var37;
                           var39 = (-var25 + var26) / var37;
                           var40 = (var30 - var29) / var37;
                           if (var36 - -var37 >= vn.field_k) {
                             var37 = vn.field_k - var36 - 1;
-                            break L17;
+                            break L16;
                           } else {
-                            break L17;
+                            break L16;
                           }
                         }
                         if (var36 < 0) {
                           hc.a(var38, param16, var36 + var37, -(var40 * var36) + var29, -32263, var35, -(var39 * var36) + var25, var21 - var38 * var36, var39, var40);
-                          break L16;
+                          break L15;
                         } else {
                           hc.a(var38, param16, var37, var29, -32263, var36 - -var35, var25, var21, var39, var40);
-                          break L16;
+                          break L15;
                         }
                       }
                     } else {
-                      break L16;
+                      break L15;
                     }
                   }
                   param11++;
@@ -424,7 +416,7 @@ final class wa {
                     var35 = var35 + ra.field_f;
                     var17_int = var17_int + var19;
                     var30 = var30 + var32;
-                    continue L15;
+                    continue L14;
                   }
                 }
               }
@@ -433,7 +425,7 @@ final class wa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_e = null;
         field_f = null;

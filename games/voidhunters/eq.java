@@ -43,7 +43,8 @@ final class eq extends rqa {
                 break L1;
               }
             }
-            kmb.a((String) param0[0].field_b, 18700);
+            int discarded$2 = 18700;
+            kmb.a((String) param0[0].field_b);
             stackOut_2_0 = new nc((Object) (Object) "void");
             stackIn_3_0 = stackOut_2_0;
             break L0;

@@ -6,7 +6,7 @@ final class ek {
     static String field_b;
     static String field_c;
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         ch.field_b = true;
         mj.field_d = 0;
         di.field_d = null;
@@ -14,9 +14,9 @@ final class ek {
         qk.field_e = new dn(param0);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
-        int var1 = 34 % ((param0 - -63) / 45);
+        int var1 = 0;
         field_c = null;
         field_b = null;
     }

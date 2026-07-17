@@ -16,7 +16,7 @@ final class li implements Runnable {
     static v[] field_h;
     private int field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         int var1 = 40;
         field_i = null;
         field_f = null;
@@ -423,7 +423,7 @@ final class li implements Runnable {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         bi.a(vh.field_b, id.field_M - -84, 640, 335, 0, 128);
         hk.field_H.b(vh.field_b, id.field_M + 84);
     }

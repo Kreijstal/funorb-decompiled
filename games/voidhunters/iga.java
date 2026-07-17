@@ -6,7 +6,9 @@ final class iga extends rqa {
 
     public static void b(boolean param0) {
         field_o = null;
-        field_o = null;
+        if (!param0) {
+            field_o = null;
+        }
     }
 
     iga(String param0, Class[] param1, String param2) {

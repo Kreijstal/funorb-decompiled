@@ -9,27 +9,13 @@ final class oi {
         field_a = null;
     }
 
-    final static sm a(byte param0) {
+    final static sm a() {
         sm var1 = new sm(fm.field_E, rh.field_d, fj.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], pn.field_b[0], cq.field_y);
         go.b(0);
         return var1;
     }
 
     final static void a(int param0, byte param1) {
-        if (param1 >= 9) {
-          if (param0 != 50) {
-            throw new IllegalArgumentException();
-          } else {
-            return;
-          }
-        } else {
-          field_a = null;
-          if (param0 != 50) {
-            throw new IllegalArgumentException();
-          } else {
-            return;
-          }
-        }
     }
 
     static {

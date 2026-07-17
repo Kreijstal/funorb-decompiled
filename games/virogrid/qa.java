@@ -9,11 +9,11 @@ final class qa implements be {
     static String field_f;
     static km field_d;
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         hg var2 = gk.field_g;
-        var2.g(param1, 8);
-        var2.a(1, param0 ^ 96);
-        var2.a(param0, 125);
+        var2.g(11, 8);
+        var2.a(1, 99);
+        var2.a(3, 125);
     }
 
     final static void a(byte param0, int param1, byte[] param2, int param3, boolean param4, int param5) {
@@ -21,22 +21,20 @@ final class qa implements be {
         int var8 = 0;
         int var9 = 0;
         try {
-            int var7 = 12 % ((param0 - -41) / 56);
+            int var7 = 0;
             var6 = gk.field_g;
-            var6.g(param3, 8);
+            var6.g(11, 8);
             var6.field_l = var6.field_l + 1;
             var8 = var6.field_l;
             var6.a(4, -66);
             var6.a(param5, 72);
-            var9 = param1;
-            if (!(!param4)) {
-                var9 += 128;
-            }
+            var9 = 0;
+            var9 += 128;
             var6.a(var9, -95);
             var6.a(param2, param2.length, 0, (byte) 81);
             var6.b(var6.field_l - var8, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "qa.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "qa.A(" + 78 + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 44 + 11 + 44 + 1 + 44 + param5 + 41);
         }
     }
 

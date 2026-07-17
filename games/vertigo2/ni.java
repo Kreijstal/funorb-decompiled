@@ -12,28 +12,25 @@ final class ni {
     static boolean field_f;
 
     final static void a(byte param0, int param1, int param2, int param3, mp param4, mp param5) {
-        eb.field_h = param1;
-        if (param0 <= 105) {
-            return;
-        }
+        eb.field_h = 5;
         try {
             td.field_a = param5;
-            vo.field_y = param2;
-            hc.field_a = param3;
+            vo.field_y = 10;
+            hc.field_a = 20;
             od.field_Jb = param4;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ni.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "ni.B(" + 107 + 44 + 5 + 44 + 10 + 44 + 20 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static va a(boolean param0) {
+    final static va a() {
         if (!(ek.field_F != null)) {
             ek.field_F = new va(bl.field_N, 20, 0, 0, 0, 11579568, -1, 0, 0, bl.field_N.field_z, -1, 2147483647, true);
         }
         return ek.field_F;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_b = null;
         field_d = null;
         field_c = null;

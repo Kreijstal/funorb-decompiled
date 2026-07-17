@@ -23,7 +23,7 @@ final class on {
         return var2;
     }
 
-    final static String a(boolean param0) {
+    final static String a() {
         if (sc.field_q) {
             return null;
         }
@@ -74,7 +74,7 @@ final class on {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_i = null;
         field_g = null;
         field_a = null;

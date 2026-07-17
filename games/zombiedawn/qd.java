@@ -9,7 +9,7 @@ final class qd {
     static String field_d;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -18,22 +18,12 @@ final class qd {
     }
 
     final static void a(boolean param0, int param1) {
-        if (param1 >= 7) {
-          if (param0) {
-            ac.field_m = 0;
-            bo.field_i = true;
-            oc.field_c = -1.0f;
-            i.field_V = 0.0f;
-            lg.a(4, (byte) -78);
-            wo.field_wb = false;
-            return;
-          } else {
-            bo.field_i = false;
-            return;
-          }
-        } else {
-          return;
-        }
+        ac.field_m = 0;
+        bo.field_i = true;
+        oc.field_c = -1.0f;
+        i.field_V = 0.0f;
+        lg.a(4, (byte) -78);
+        wo.field_wb = false;
     }
 
     static {

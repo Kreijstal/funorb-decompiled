@@ -19,7 +19,8 @@ abstract class km extends gf {
         L0: {
           var3 = BrickABrac.field_J ? 1 : 0;
           if (im.field_e <= 0) {
-            pa.a(true);
+            int discarded$2 = 1;
+            pa.a();
             break L0;
           } else {
             var2 = (-50 + im.field_e) * 640 / 50;
@@ -35,7 +36,8 @@ abstract class km extends gf {
           }
         }
         if (param0 < -14) {
-          pg.d(0);
+          int discarded$3 = 0;
+          pg.d();
           return;
         } else {
           return;
@@ -76,11 +78,9 @@ abstract class km extends gf {
     private final void c(boolean param0, int param1) {
         if (((km) this).field_h.field_j != -1) {
             if (param1 != ((km) this).field_h.field_j) {
-                j.a(ta.field_e[0], -106, lh.g((byte) -44) / 4);
+                int discarded$0 = -44;
+                j.a(ta.field_e[0], -106, lh.g() / 4);
             }
-        }
-        if (!param0) {
-            ((km) this).field_j = -36;
         }
     }
 
@@ -354,7 +354,7 @@ abstract class km extends gf {
         return false;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -498,10 +498,12 @@ abstract class km extends gf {
                         if (((km) this).field_h.a((byte) 113)) {
                           if (og.h(-26090)) {
                             sl.field_z = -2;
-                            dk.a(sb.field_b, true, 0, param1, 46);
+                            int discarded$9 = 46;
+                            dk.a(sb.field_b, true, 0, param1);
                             break L0;
                           } else {
-                            cb.b(true);
+                            int discarded$10 = 1;
+                            cb.b();
                             break L0;
                           }
                         } else {
@@ -544,7 +546,8 @@ abstract class km extends gf {
                                             if (!((km) this).field_h.b(-103)) {
                                               break L2;
                                             } else {
-                                              if (lh.g((byte) -44) > 0) {
+                                              int discarded$11 = -44;
+                                              if (lh.g() > 0) {
                                                 ma.a((byte) -113, 0);
                                                 var7 = 1;
                                                 break L2;
@@ -557,7 +560,8 @@ abstract class km extends gf {
                                             if (!((km) this).field_h.a(-1)) {
                                               break L3;
                                             } else {
-                                              if (~lh.g((byte) -44) <= ~re.e((byte) 44)) {
+                                              int discarded$12 = -44;
+                                              if (~lh.g() <= ~re.e((byte) 44)) {
                                                 break L3;
                                               } else {
                                                 ma.a((byte) 47, re.e((byte) 31));
@@ -570,7 +574,8 @@ abstract class km extends gf {
                                             if (!((km) this).field_h.g((byte) -57)) {
                                               break L4;
                                             } else {
-                                              if (lh.g((byte) -44) > 0) {
+                                              int discarded$13 = -44;
+                                              if (lh.g() > 0) {
                                                 k.d((byte) 116);
                                                 var7 = 1;
                                                 break L4;
@@ -583,11 +588,13 @@ abstract class km extends gf {
                                             if (!((km) this).field_h.c(-98)) {
                                               break L5;
                                             } else {
-                                              if (lh.g((byte) -44) >= re.e((byte) 90)) {
+                                              int discarded$14 = -44;
+                                              if (lh.g() >= re.e((byte) 90)) {
                                                 break L5;
                                               } else {
                                                 var7 = 1;
-                                                th.a((byte) -63);
+                                                int discarded$15 = -63;
+                                                th.a();
                                                 break L5;
                                               }
                                             }
@@ -666,7 +673,8 @@ abstract class km extends gf {
                                                       if (!((km) this).field_h.a((byte) 113)) {
                                                         break L0;
                                                       } else {
-                                                        da.f((byte) 122);
+                                                        int discarded$16 = 122;
+                                                        da.f();
                                                         break L0;
                                                       }
                                                     } else {
@@ -678,7 +686,8 @@ abstract class km extends gf {
                                                             L9: {
                                                               var12 = null;
                                                               he.a((String) null, true, (byte) 123);
-                                                              if (!ib.a(pl.field_b, -1)) {
+                                                              int discarded$17 = -1;
+                                                              if (!ib.a(pl.field_b)) {
                                                                 if (null != fj.field_Ub) {
                                                                   stackOut_142_0 = 5;
                                                                   stackIn_143_0 = stackOut_142_0;
@@ -1018,42 +1027,39 @@ abstract class km extends gf {
           L0: {
             var7_int = param3;
             var8 = param2;
-            if (param4) {
-              var9 = 0;
-              var10 = 0;
-              var11 = 0;
-              L1: while (true) {
-                if (var11 >= 29) {
-                  break L0;
-                } else {
-                  L2: {
-                    if ((1 << var11 & param1.field_S) != 0) {
-                      oc.a(var8, var11, var7_int, param1, param0, (byte) 115);
-                      var7_int += 25;
-                      var9++;
-                      if (var9 != param5) {
-                        break L2;
-                      } else {
-                        var10++;
-                        if (var10 == param6) {
-                          return;
-                        } else {
-                          var9 = 0;
-                          var8 += 25;
-                          var7_int = param3;
-                          break L2;
-                        }
-                      }
-                    } else {
+            var9 = 0;
+            var10 = 0;
+            var11 = 0;
+            L1: while (true) {
+              if (var11 >= 29) {
+                break L0;
+              } else {
+                L2: {
+                  if ((1 << var11 & param1.field_S) != 0) {
+                    int discarded$7 = 115;
+                    oc.a(var8, var11, var7_int, param1, param0);
+                    var7_int += 25;
+                    var9++;
+                    if (var9 != param5) {
                       break L2;
+                    } else {
+                      var10++;
+                      if (var10 == param6) {
+                        return;
+                      } else {
+                        var9 = 0;
+                        var8 += 25;
+                        var7_int = param3;
+                        break L2;
+                      }
                     }
+                  } else {
+                    break L2;
                   }
-                  var11++;
-                  continue L1;
                 }
+                var11++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1109,7 +1115,7 @@ abstract class km extends gf {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 44 + param3 + 44 + 1 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -1144,79 +1150,67 @@ abstract class km extends gf {
     }
 
     final static void a(int param0, int param1, long param2, String param3, int param4) {
-        RuntimeException runtimeException = null;
+        RuntimeException var6 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              ep.field_k = param0;
-              bo.field_l = true;
-              wd.field_z = param4;
-              gn.field_E = param2;
-              ba.field_z = param3;
-              if (param1 == 29295) {
-                break L1;
-              } else {
-                km.b(48);
-                break L1;
-              }
-            }
+            ep.field_k = param0;
+            bo.field_l = true;
+            wd.field_z = param4;
+            gn.field_E = param2;
+            ba.field_z = param3;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("km.P(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var6 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var6;
+            stackOut_2_1 = new StringBuilder().append("km.P(").append(param0).append(44).append(29295).append(44).append(param2).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param4 + 41);
+          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param4 + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_o = null;
         field_n = null;
-        if (param0 >= -57) {
-            Object var2 = null;
-            km.a((ak) null, (j) null, 113, 61, false, -53, 18);
-        }
         field_k = null;
     }
 

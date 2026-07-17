@@ -15,7 +15,7 @@ final class nr extends oh {
     static bi[] field_r;
     static qb field_l;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_r = null;
         field_o = null;
         field_l = null;
@@ -28,9 +28,6 @@ final class nr extends oh {
     }
 
     final static java.awt.Container a(int param0) {
-        if (param0 < 53) {
-            return null;
-        }
         if (!(null == uf.field_b)) {
             return (java.awt.Container) (Object) uf.field_b;
         }

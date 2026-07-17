@@ -18,7 +18,6 @@ final class rj implements Runnable {
         lb var2 = null;
         Throwable var3 = null;
         int var4 = 0;
-        Object var5 = null;
         Throwable decompiledCaughtException = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         ((rj) this).field_a = true;
@@ -31,7 +30,8 @@ final class rj implements Runnable {
               var1_int = 0;
               L1: while (true) {
                 if (2 <= var1_int) {
-                  ao.a(10L, 1);
+                  int discarded$2 = 1;
+                  ao.a(10L);
                   mb.a(-75, (Object) null, ((rj) this).field_f);
                   continue L0;
                 } else {
@@ -55,8 +55,8 @@ final class rj implements Runnable {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Exception) (Object) decompiledCaughtException;
-          var5 = null;
-          jh.a((Throwable) (Object) var1, (String) null, (byte) 20);
+          int discarded$3 = 20;
+          jh.a((Throwable) (Object) var1, (String) null);
           ((rj) this).field_a = false;
           return;
         } catch (java.lang.Throwable decompiledCaughtParameter1) {

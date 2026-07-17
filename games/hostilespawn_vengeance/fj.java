@@ -214,13 +214,13 @@ final class fj extends le {
         }
     }
 
-    final static Boolean k(int param0) {
+    final static Boolean k() {
         Boolean var1 = ii.field_h;
         ii.field_h = null;
         return var1;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_Sb = null;
         field_Tb = null;
         field_Kb = null;
@@ -734,13 +734,13 @@ final class fj extends le {
         return stackIn_3_0;
     }
 
-    final static void a(int param0, m param1, boolean param2) {
+    final static void a(int param0, m param1) {
         en var5 = null;
         int var4 = 0;
         try {
             var5 = s.field_b;
             en var3 = var5;
-            var5.i(19319, param0);
+            var5.i(19319, 6);
             var5.field_i = var5.field_i + 1;
             var4 = var5.field_i;
             var5.d(106, 1);
@@ -755,103 +755,27 @@ final class fj extends le {
             param1.field_o = var5.d(8195);
             var5.a(var5.field_i + -var4, -19720);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "fj.S(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "fj.S(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
     private final int a(int param0, boolean param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        var5 = 0;
-        var6 = ((fj) this).field_Qb.field_sb + -((fj) this).field_Mb.field_sb;
-        if (param2 <= -22) {
-          L0: {
-            if (var6 > 0) {
-              var7 = ((fj) this).field_Mb.field_zb;
-              var8 = -param3 + param0;
-              var5 = (var8 * var7 + var6 / 2) / var6;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (!param1) {
-            L1: {
-              if (var5 <= param0 - param3) {
-                break L1;
-              } else {
-                var5 = param0 + -param3;
-                break L1;
-              }
-            }
-            if (var5 >= 0) {
-              return var5;
-            } else {
-              var5 = 0;
-              return var5;
-            }
-          } else {
-            L2: {
-              if (0 <= var5) {
-                break L2;
-              } else {
-                var5 = 0;
-                break L2;
-              }
-            }
-            if (-param3 + param0 >= var5) {
-              return var5;
-            } else {
-              var5 = -param3 + param0;
-              return var5;
-            }
-          }
-        } else {
-          L3: {
-            ((fj) this).a(-95, -63, 115, -27);
-            if (var6 > 0) {
-              var7 = ((fj) this).field_Mb.field_zb;
-              var8 = -param3 + param0;
-              var5 = (var8 * var7 + var6 / 2) / var6;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          if (!param1) {
-            L4: {
-              if (var5 <= param0 - param3) {
-                break L4;
-              } else {
-                var5 = param0 + -param3;
-                break L4;
-              }
-            }
-            if (var5 >= 0) {
-              return var5;
-            } else {
-              var5 = 0;
-              return var5;
-            }
-          } else {
-            L5: {
-              if (0 <= var5) {
-                break L5;
-              } else {
-                var5 = 0;
-                break L5;
-              }
-            }
-            if (-param3 + param0 >= var5) {
-              return var5;
-            } else {
-              var5 = -param3 + param0;
-              return var5;
-            }
-          }
+        int var5 = 0;
+        int var6 = ((fj) this).field_Qb.field_sb + -((fj) this).field_Mb.field_sb;
+        if (!(var6 <= 0)) {
+            var7 = ((fj) this).field_Mb.field_zb;
+            var8 = -param3 + param0;
+            var5 = (var8 * var7 + var6 / 2) / var6;
         }
+        if (var5 > param0 - param3) {
+            var5 = param0 + -param3;
+        }
+        if (!(var5 >= 0)) {
+            var5 = 0;
+        }
+        return var5;
     }
 
     final boolean j(int param0) {
@@ -929,14 +853,11 @@ final class fj extends le {
     final static void a(byte[] param0, int param1, int param2, File param3) throws IOException {
         FileOutputStream var4 = null;
         try {
-            if (param1 != 15445) {
-                field_Ob = 85;
-            }
             var4 = new FileOutputStream(param3);
             var4.write(param0, 0, param2);
             var4.close();
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "fj.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "fj.C(" + (param0 != null ? "{...}" : "null") + 44 + 15445 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

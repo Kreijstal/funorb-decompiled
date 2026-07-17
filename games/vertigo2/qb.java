@@ -40,7 +40,8 @@ final class qb implements Runnable {
         try {
           L0: {
             var2_int = -68 % ((param1 - 30) / 50);
-            stackOut_0_0 = tn.a(10, true, param0, -128);
+            int discarded$2 = -128;
+            stackOut_0_0 = tn.a(10, true, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -77,13 +78,9 @@ final class qb implements Runnable {
         return stackIn_1_0;
     }
 
-    final static int a(int param0, int param1, boolean param2, int param3) {
-        if (param3 != 10000) {
-            Object var5 = null;
-            boolean discarded$0 = qb.a((CharSequence) null, -15);
-            return pk.a(1);
-        }
-        return pk.a(1);
+    final static int a(int param0, int param1, boolean param2) {
+        int discarded$0 = 1;
+        return pk.a();
     }
 
     protected final void finalize() {
@@ -201,7 +198,8 @@ final class qb implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((qb) this).field_g.getFile() + "\n\n");
-                      var3.write(bo.a(var5, -711));
+                      int discarded$1 = -711;
+                      var3.write(bo.a(var5));
                       ((qb) this).field_k = new DataInputStream(var4.getInputStream());
                       break L7;
                     } else {
@@ -274,7 +272,7 @@ final class qb implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_f = null;

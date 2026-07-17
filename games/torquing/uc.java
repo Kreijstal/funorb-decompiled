@@ -476,7 +476,8 @@ abstract class uc extends ta {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_J = hm.a(true, var7, 16);
+                                    int discarded$4 = 16;
+                                    field_J = hm.a(true, var7);
                                     break L1;
                                   }
                                 } else {
@@ -489,7 +490,8 @@ abstract class uc extends ta {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_w = hm.a(true, var6, 16);
+                              int discarded$5 = 16;
+                              field_w = hm.a(true, var6);
                               break L1;
                             }
                           } else {
@@ -502,7 +504,8 @@ abstract class uc extends ta {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_C = hm.a(true, var5, 16);
+                        int discarded$6 = 16;
+                        field_C = hm.a(true, var5);
                         break L1;
                       }
                     } else {
@@ -520,7 +523,8 @@ abstract class uc extends ta {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_G = hm.a(true, var3, 16);
+                int discarded$7 = 16;
+                field_G = hm.a(true, var3);
                 break L1;
               }
             }
@@ -832,7 +836,10 @@ abstract class uc extends ta {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = ke.a(field_L, ' ', false, 0);
+          int discarded$8 = 0;
+          int discarded$9 = 0;
+          int discarded$10 = 32;
+          StringBuilder discarded$11 = ke.a(field_L);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -868,9 +875,9 @@ abstract class uc extends ta {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_L.append(60);
-                        StringBuilder discarded$7 = field_L.append(var15);
-                        StringBuilder discarded$8 = field_L.append(62);
+                        StringBuilder discarded$12 = field_L.append(60);
+                        StringBuilder discarded$13 = field_L.append(var15);
+                        StringBuilder discarded$14 = field_L.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1057,7 +1064,7 @@ abstract class uc extends ta {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_L.append(var14);
+                        StringBuilder discarded$15 = field_L.append(var14);
                         var14 = (char)(ka.a(false, (char) var14) & 255);
                         var4 = var4 + ((uc) this).field_N[var14];
                         if (((uc) this).field_z == null) {

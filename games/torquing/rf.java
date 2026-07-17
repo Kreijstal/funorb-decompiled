@@ -12,7 +12,7 @@ final class rf extends pc {
     static ei field_t;
     static int[] field_r;
 
-    final static sm[] a(byte param0) {
+    final static sm[] a() {
         int var2 = 0;
         int var3 = Torquing.field_u;
         sm[] var1 = new sm[ti.field_g];
@@ -159,7 +159,7 @@ final class rf extends pc {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_x = null;
         field_q = null;
         field_r = null;

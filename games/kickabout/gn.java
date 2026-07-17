@@ -10,9 +10,9 @@ class gn {
     final static boolean a(byte param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackOut_36_0 = 0;
+        int stackOut_35_0 = 0;
         if (param1) {
           if (bl.field_m[param2] >= bl.field_m[param3]) {
             if (bl.field_m[param2] > bl.field_m[param3]) {
@@ -23,30 +23,26 @@ class gn {
               } else {
                 if (w.field_a[param2] <= w.field_a[param3]) {
                   var4 = qp.field_G[param2] + (fo.field_j[param2] - -ln.field_B[param2]);
-                  if (param0 == 8) {
-                    var5 = ln.field_B[param3] + qp.field_G[param3] + fo.field_j[param3];
-                    if (var5 > var4) {
-                      return true;
-                    } else {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param2 >= param3) {
-                            stackOut_40_0 = 0;
-                            stackIn_41_0 = stackOut_40_0;
-                            break L0;
-                          } else {
-                            stackOut_39_0 = 1;
-                            stackIn_41_0 = stackOut_39_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_41_0 != 0;
-                      }
-                    }
+                  var5 = ln.field_B[param3] + qp.field_G[param3] + fo.field_j[param3];
+                  if (var5 > var4) {
+                    return true;
                   } else {
-                    return false;
+                    if (var4 > var5) {
+                      return false;
+                    } else {
+                      L0: {
+                        if (param2 >= param3) {
+                          stackOut_36_0 = 0;
+                          stackIn_37_0 = stackOut_36_0;
+                          break L0;
+                        } else {
+                          stackOut_35_0 = 1;
+                          stackIn_37_0 = stackOut_35_0;
+                          break L0;
+                        }
+                      }
+                      return stackIn_37_0 != 0;
+                    }
                   }
                 } else {
                   return false;
@@ -64,23 +60,19 @@ class gn {
               } else {
                 if (bl.field_m[param3] >= bl.field_m[param2]) {
                   var4 = qp.field_G[param2] + (fo.field_j[param2] - -ln.field_B[param2]);
-                  if (param0 == 8) {
-                    var5 = ln.field_B[param3] + qp.field_G[param3] + fo.field_j[param3];
-                    if (var5 > var4) {
-                      return true;
-                    } else {
-                      if (var4 <= var5) {
-                        if (param2 >= param3) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return false;
-                      }
-                    }
+                  var5 = ln.field_B[param3] + qp.field_G[param3] + fo.field_j[param3];
+                  if (var5 > var4) {
+                    return true;
                   } else {
-                    return false;
+                    if (var4 <= var5) {
+                      if (param2 >= param3) {
+                        return false;
+                      } else {
+                        return true;
+                      }
+                    } else {
+                      return false;
+                    }
                   }
                 } else {
                   return false;
@@ -126,16 +118,13 @@ class gn {
         int var5 = 0;
         int var6 = Kickabout.field_G;
         String var4 = Integer.toBinaryString(param0);
-        if (param1 != -28745) {
-            return;
-        }
         try {
             for (var5 = 0; param2 - var4.length() > var5; var5++) {
                 StringBuilder discarded$0 = param3.append(48);
             }
             StringBuilder discarded$1 = param3.append(var4);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "gn.QB(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "gn.QB(" + param0 + 44 + -28745 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -168,30 +157,13 @@ class gn {
     }
 
     final static boolean a(int param0, char param1) {
-        Object var3 = null;
-        if (param0 == 12105) {
-          if (param1 >= 48) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (param1 < 48) {
             return false;
-          }
-        } else {
-          var3 = null;
-          gn.a(-48, 1, 77, (StringBuilder) null);
-          if (param1 >= 48) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (param1 > 57) {
+            return false;
+        }
+        return true;
     }
 
     static {

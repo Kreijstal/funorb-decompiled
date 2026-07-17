@@ -23,7 +23,7 @@ abstract class jf {
 
     abstract void a(int param0, int param1);
 
-    final static uf a(java.applet.Applet param0, byte param1) {
+    final static uf a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         uf[] var3 = null;
@@ -55,13 +55,15 @@ abstract class jf {
         var6 = wizardrun.field_H;
         try {
           L0: {
-            var2 = sg.a("jagex-last-login-method", param0, 0);
+            int discarded$4 = 0;
+            var2 = sg.a("jagex-last-login-method", param0);
             if (var2 == null) {
               stackOut_3_0 = ra.field_j;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var3 = p.l((byte) 100);
+              int discarded$5 = 100;
+              var3 = p.l();
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {
@@ -207,7 +209,7 @@ abstract class jf {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_g = null;
@@ -236,7 +238,8 @@ abstract class jf {
             if (!param0) {
               L1: {
                 kl.a(0, (java.awt.Component) (Object) param1);
-                gj.a((java.awt.Component) (Object) param1, 98);
+                int discarded$2 = 98;
+                gj.a((java.awt.Component) (Object) param1);
                 if (vc.field_K == null) {
                   break L1;
                 } else {

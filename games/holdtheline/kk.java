@@ -73,7 +73,7 @@ final class kk extends hl {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_i = null;
     }
@@ -112,12 +112,16 @@ final class kk extends hl {
     }
 
     final static hj[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param3 >= -69) {
-          field_k = -0.09486949443817139f;
-          return ak.a(param1, param0, 1, 0, param2, 1, 0, 3, 1);
-        } else {
-          return ak.a(param1, param0, 1, 0, param2, 1, 0, 3, 1);
-        }
+        int discarded$0 = 1;
+        int discarded$1 = 3;
+        int discarded$2 = 0;
+        int discarded$3 = 1;
+        int discarded$4 = 65793;
+        int discarded$5 = 0;
+        int discarded$6 = 1;
+        int discarded$7 = 0;
+        int discarded$8 = 0;
+        return ak.a();
     }
 
     static {

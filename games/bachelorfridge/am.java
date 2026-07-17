@@ -14,12 +14,9 @@ abstract class am extends vf {
     private int field_H;
     private int field_P;
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_Q = null;
         field_R = null;
-        if (!param0) {
-            field_K = -59L;
-        }
         field_M = null;
     }
 
@@ -49,7 +46,7 @@ abstract class am extends vf {
             var5 = 194;
             var4 = 22;
             var6 = 169;
-            var9 = 83 / ((-16 - param1) / 56);
+            var9 = 83;
             var7 = 0;
             var8 = 35 + param0;
             L1: while (true) {

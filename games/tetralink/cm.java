@@ -45,64 +45,49 @@ final class cm {
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
         int stackOut_7_0 = 0;
         var4 = TetraLink.field_J;
         try {
-          L0: {
-            var3_int = 1;
-            L1: while (true) {
-              if (1 >= param2) {
-                if (1 != param2) {
-                  if (param1 >= 80) {
-                    stackOut_12_0 = var3_int;
-                    stackIn_13_0 = stackOut_12_0;
-                    break L0;
-                  } else {
-                    stackOut_10_0 = -51;
-                    stackIn_11_0 = stackOut_10_0;
-                    return stackIn_11_0;
-                  }
-                } else {
-                  stackOut_7_0 = param0 * var3_int;
-                  stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0;
-                }
+          var3_int = 1;
+          L0: while (true) {
+            if (1 >= param2) {
+              if (1 != param2) {
+                return var3_int;
               } else {
-                L2: {
-                  if ((1 & param2) == 0) {
-                    break L2;
-                  } else {
-                    var3_int = var3_int * param0;
-                    break L2;
-                  }
-                }
-                param0 = param0 * param0;
-                param2 = param2 >> 1;
-                continue L1;
+                stackOut_7_0 = param0 * var3_int;
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0;
               }
+            } else {
+              L1: {
+                if ((1 & param2) == 0) {
+                  break L1;
+                } else {
+                  var3_int = var3_int * param0;
+                  break L1;
+                }
+              }
+              param0 = param0 * param0;
+              param2 = param2 >> 1;
+              continue L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var3, "cm.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) var3, "cm.B(" + param0 + 44 + 91 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_F = null;
         field_q = null;
         field_b = null;
         field_x = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         sj.field_g = new nd(sa.field_h, hl.field_gb, sn.field_c, bk.field_i, (hl) (Object) vd.field_c, ek.field_n);
     }
 

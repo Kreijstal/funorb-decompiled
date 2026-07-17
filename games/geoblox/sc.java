@@ -28,7 +28,7 @@ abstract class sc {
         return var4;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
     }
 

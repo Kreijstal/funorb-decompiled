@@ -22,7 +22,8 @@ final class vk {
               return 1;
             } else {
               if (ii.field_c == param0) {
-                if (wh.a(((vk) this).field_g, false)) {
+                int discarded$2 = 0;
+                if (wh.a(((vk) this).field_g)) {
                   return 1;
                 } else {
                   return 0;
@@ -37,7 +38,8 @@ final class vk {
                 return 1;
               } else {
                 if (ii.field_c == param0) {
-                  if (!wh.a(((vk) this).field_g, false)) {
+                  int discarded$3 = 0;
+                  if (!wh.a(((vk) this).field_g)) {
                     return 0;
                   } else {
                     return 1;
@@ -55,7 +57,7 @@ final class vk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_e = null;
     }

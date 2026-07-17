@@ -132,7 +132,7 @@ final class dg extends rl {
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         L0: {
           if (ce.field_m.field_m != vd.field_k) {
             ma.field_N = ma.field_N + (ce.field_m.field_m - vd.field_k);
@@ -151,7 +151,8 @@ final class dg extends rl {
           }
         }
         if (0 < jo.field_e) {
-          ed.j(120);
+          int discarded$2 = 120;
+          ed.j();
           return;
         } else {
           return;

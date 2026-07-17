@@ -32,32 +32,32 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
         Class stackIn_14_0 = null;
         Class stackIn_17_0 = null;
         Class stackIn_21_0 = null;
-        Class stackIn_26_0 = null;
-        Class stackIn_30_0 = null;
+        Class stackIn_24_0 = null;
+        Class stackIn_28_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
+        String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         Class stackOut_2_0 = null;
         Class stackOut_6_0 = null;
         Class stackOut_10_0 = null;
         Class stackOut_20_0 = null;
-        Class stackOut_29_0 = null;
-        Class stackOut_25_0 = null;
+        Class stackOut_27_0 = null;
+        Class stackOut_23_0 = null;
         Class stackOut_16_0 = null;
         Class stackOut_13_0 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         try {
           L0: {
             if (param1.equals((Object) (Object) "B")) {
@@ -82,26 +82,19 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
                         stackIn_21_0 = stackOut_20_0;
                         return stackIn_21_0;
                       } else {
-                        L1: {
-                          if (param0 == 0) {
-                            break L1;
-                          } else {
-                            field_c = null;
-                            break L1;
-                          }
-                        }
+                        field_c = null;
                         if (!param1.equals((Object) (Object) "D")) {
                           if (param1.equals((Object) (Object) "C")) {
-                            stackOut_29_0 = Character.TYPE;
-                            stackIn_30_0 = stackOut_29_0;
+                            stackOut_27_0 = Character.TYPE;
+                            stackIn_28_0 = stackOut_27_0;
                             break L0;
                           } else {
                             return Class.forName(param1);
                           }
                         } else {
-                          stackOut_25_0 = Double.TYPE;
-                          stackIn_26_0 = stackOut_25_0;
-                          return stackIn_26_0;
+                          stackOut_23_0 = Double.TYPE;
+                          stackIn_24_0 = stackOut_23_0;
+                          return stackIn_24_0;
                         }
                       }
                     } else {
@@ -120,35 +113,35 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var2;
-            stackOut_31_1 = new StringBuilder().append("ue.D(").append(param0).append(44);
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackOut_29_0 = (RuntimeException) var2;
+            stackOut_29_1 = new StringBuilder().append("ue.D(").append(0).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
-              break L2;
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L1;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
-              break L2;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
         }
-        return stackIn_30_0;
+        return stackIn_28_0;
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -157,7 +150,7 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0) {
         if (wb.field_R > 0) {
         }
         w.field_r = w.field_r + param0;

@@ -6,7 +6,7 @@ final class nm {
     static qr field_c;
     static int field_a;
 
-    final static void a(int[] param0, int[] param1, byte param2) {
+    final static void a(int[] param0, int[] param1) {
         try {
             eo.a(param0, param1, param1.length - 1, true, 0);
         } catch (RuntimeException runtimeException) {
@@ -14,7 +14,7 @@ final class nm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }

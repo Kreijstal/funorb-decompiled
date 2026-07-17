@@ -6,7 +6,7 @@ import java.lang.String;
 final class vq {
     static int field_a;
 
-    final static void a(ob param0, qb param1, int param2, int param3) {
+    final static void a(ob param0, qb param1, int param2) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;
@@ -315,28 +315,30 @@ final class vq {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              if (jp.a(param1, (byte) -105)) {
+              int discarded$14 = -105;
+              if (jp.a(param1)) {
                 stackOut_6_0 = wb.field_f;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               } else {
                 if (po.field_b == 2) {
-                  if (!ti.a(param1, true)) {
+                  int discarded$15 = 1;
+                  if (!ti.a(param1)) {
                     if (100 <= oi.field_e) {
                       stackOut_16_0 = mi.field_a;
                       stackIn_17_0 = stackOut_16_0;
                       return stackIn_17_0;
                     } else {
-                      if (da.a(param0 + -30108, param1)) {
+                      if (da.a(-30106, param1)) {
                         stackOut_20_0 = re.a(qq.field_N, 4371, new String[1]);
                         stackIn_21_0 = stackOut_20_0;
                         return stackIn_21_0;
                       } else {
                         var5 = js.field_f;
-                        var5.h(param2, param0 ^ 253);
+                        var5.h(param2, 255);
                         var5.field_j = var5.field_j + 1;
                         var4 = var5.field_j;
-                        var5.c(param0, (byte) -97);
+                        var5.c(2, (byte) -97);
                         var5.a(param1, (byte) 0);
                         var5.b(var5.field_j + -var4, (byte) 119);
                         stackOut_22_0 = null;
@@ -362,7 +364,7 @@ final class vq {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("vq.B(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("vq.B(").append(2).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;

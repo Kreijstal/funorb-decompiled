@@ -15,7 +15,7 @@ final class ec {
         }
     }
 
-    final static int b(byte param0) {
+    final static int b() {
         int var1 = 0;
         var1 = 0;
         if (2 > rk.field_d) {
@@ -117,23 +117,11 @@ final class ec {
         }
     }
 
-    final static void a(byte param0) {
-        if (null == m.field_b) {
-          if (param0 != 27) {
-            ec.a(72);
+    final static void a() {
+        if (null != m.field_b) {
+            m.field_b.b((byte) -52);
+            m.field_b = null;
             return;
-          } else {
-            return;
-          }
-        } else {
-          m.field_b.b((byte) -52);
-          m.field_b = null;
-          if (param0 == 27) {
-            return;
-          } else {
-            ec.a(72);
-            return;
-          }
         }
     }
 

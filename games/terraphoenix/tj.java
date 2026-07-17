@@ -38,12 +38,13 @@ final class tj extends si implements n {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$2 = tj.a((CharSequence) null, 66);
+                String discarded$4 = tj.a((CharSequence) null, 66);
                 break L1;
               }
             }
             L2: {
-              var2 = hi.a(qd.a(-113, param0), -12382);
+              int discarded$5 = -12382;
+              var2 = hi.a(qd.a(-113, param0));
               if (var2 != null) {
                 break L2;
               } else {
@@ -97,7 +98,7 @@ final class tj extends si implements n {
         }
     }
 
-    public static void p(int param0) {
+    public static void p() {
         field_ub = null;
     }
 
@@ -119,22 +120,22 @@ final class tj extends si implements n {
         String var4_ref = null;
         oi var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         var6 = Terraphoenix.field_V;
         try {
           L0: {
@@ -173,47 +174,39 @@ final class tj extends si implements n {
             }
             L2: {
               var5 = new oi((si) this, be.field_x, var4_ref);
-              if (param1 == -110) {
-                break L2;
-              } else {
-                ((tj) this).q(102);
-                break L2;
-              }
-            }
-            L3: {
               if (param0.field_i) {
                 if (!param0.field_a) {
                   eb discarded$2 = var5.a((byte) 23, (sc) this, rj.field_e);
-                  break L3;
+                  break L2;
                 } else {
                   ((tj) this).a((gl) (Object) new cl((tj) this), -86);
                   return;
                 }
               } else {
-                L4: {
+                L3: {
                   if (!((tj) this).field_xb) {
                     if (param0.field_c == 5) {
                       var5.a(11, hf.field_u, (byte) -65);
                       var5.a(17, ed.field_c, (byte) 54);
-                      break L4;
+                      break L3;
                     } else {
                       var5.a(-1, gd.field_b, (byte) -120);
-                      break L4;
+                      break L3;
                     }
                   } else {
                     eb discarded$3 = var5.a((byte) 23, (sc) this, rj.field_e);
-                    break L4;
+                    break L3;
                   }
                 }
                 if (3 == param0.field_c) {
                   var5.a(7, mi.field_i, (byte) 118);
-                  break L3;
+                  break L2;
                 } else {
                   if (param0.field_c != 6) {
-                    break L3;
+                    break L2;
                   } else {
                     var5.a(9, fc.field_b, (byte) -117);
-                    break L3;
+                    break L2;
                   }
                 }
               }
@@ -223,33 +216,33 @@ final class tj extends si implements n {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var4 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var4;
-            stackOut_30_1 = new StringBuilder().append("tj.S(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackOut_28_0 = (RuntimeException) var4;
+            stackOut_28_1 = new StringBuilder().append("tj.S(");
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
-              break L5;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L4;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
-              break L5;
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L4;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 44 + param2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + -110 + 44 + param2 + 41);
         }
     }
 

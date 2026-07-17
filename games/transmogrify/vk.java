@@ -71,7 +71,7 @@ final class vk {
         return stackIn_3_0;
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] a(int param0) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3_ref_byte__ = null;

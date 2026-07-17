@@ -237,8 +237,8 @@ final class dbb extends rqa {
         try {
           L0: {
             var11_int = 57 / ((param2 - 17) / 51);
-            var12 = new byte[param5 * (param6 * param7)];
-            toa.a(param6, param8, param5, param10, param1, (byte) -61, param4, param9, 0, param0, param3, param7, var12);
+            var12 = new byte[262144];
+            toa.a(128, param8, 16, param10, param1, (byte) -61, param4, param9, 0, param0, 8, 128, var12);
             stackOut_0_0 = (byte[]) var12;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -248,7 +248,7 @@ final class dbb extends rqa {
           L1: {
             var11 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var11;
-            stackOut_2_1 = new StringBuilder().append("dbb.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_2_1 = new StringBuilder().append("dbb.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(8).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -271,7 +271,7 @@ final class dbb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 16 + 44 + 128 + 44 + 128 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
         }
         return stackIn_1_0;
     }

@@ -9,7 +9,7 @@ final class kg {
     private String field_f;
     private boolean field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         int var1 = 0;
     }

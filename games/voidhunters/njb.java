@@ -117,7 +117,7 @@ final class njb extends rqa {
           L0: {
             L1: {
               L2: {
-                param0 = ne.a((char)param1, (byte) 121, "", param0);
+                param0 = ne.a('_', (byte) 121, "", param0);
                 var3 = cm.a((byte) -87, param2);
                 if (0 != param0.indexOf(param2)) {
                   break L2;
@@ -167,7 +167,7 @@ final class njb extends rqa {
           }
           L4: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(95).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;

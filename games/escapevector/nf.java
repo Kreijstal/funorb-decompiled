@@ -18,16 +18,8 @@ abstract class nf extends fl {
 
     final static void b(int param0, int param1) {
         ee.field_a = cb.field_b[param0];
-        if (param1 != 15) {
-          field_y = null;
-          md.field_H = tc.field_i[param0];
-          gj.field_g = jj.field_c[param0];
-          return;
-        } else {
-          md.field_H = tc.field_i[param0];
-          gj.field_g = jj.field_c[param0];
-          return;
-        }
+        md.field_H = tc.field_i[param0];
+        gj.field_g = jj.field_c[param0];
     }
 
     final static void g(int param0) {

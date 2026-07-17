@@ -57,7 +57,8 @@ final class qe extends ng {
                     var4 = var4 + k.field_D;
                     break L3;
                   } else {
-                    var6 = vh.a(true, se.field_E[var3_int], true);
+                    int discarded$3 = 1;
+                    var6 = vh.a(true, se.field_E[var3_int]);
                     var4 = var4 + hj.field_a;
                     var7 = bi.field_h + -(var6 >> 1);
                     if (!ef.a(var4, -kk.field_z + var7, -78, (cl.field_m << 1) + pb.field_j, (kk.field_z << 1) + var6, param0, param2)) {
@@ -140,7 +141,7 @@ final class qe extends ng {
           L0: {
             var2_int = param1.length();
             if (0 != var2_int) {
-              if (var2_int <= param0) {
+              if (var2_int <= 255) {
                 var3 = di.a(-108, '.', param1);
                 if (var3.length >= 2) {
                   var4 = var3;
@@ -184,7 +185,7 @@ final class qe extends ng {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("qe.K(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("qe.K(").append(255).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -253,8 +254,9 @@ final class qe extends ng {
         try {
           L0: {
             if (c.a(param1, false, param2, param3)) {
-              var5_int = 9 / ((param0 - -58) / 59);
-              stackOut_3_0 = ea.a(param4.b(-122, param3, param2), (byte) 71);
+              var5_int = 9;
+              int discarded$2 = 71;
+              stackOut_3_0 = ea.a(param4.b(-122, param3, param2));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -268,7 +270,7 @@ final class qe extends ng {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("qe.A(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("qe.A(").append(39).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -321,7 +323,7 @@ final class qe extends ng {
         return stackIn_4_0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_e = null;
         field_g = null;
         field_c = null;

@@ -133,7 +133,7 @@ final class li extends df implements vb {
         return stackIn_13_0 != 0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;

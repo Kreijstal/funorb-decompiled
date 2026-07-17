@@ -26,7 +26,7 @@ abstract class vb extends kf implements jl {
 
     abstract boolean k(int param0);
 
-    final static void g(byte param0) {
+    final static void g() {
         Object var2 = null;
         qf.a("", -99, (String) null);
     }
@@ -42,13 +42,10 @@ abstract class vb extends kf implements jl {
 
     void a(byte param0, qf param1) {
         try {
-            if (param0 < 74) {
-                field_S = null;
-            }
             ((vb) this).field_W = param1;
             ((vb) this).field_W.field_g = (vb) this;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "vb.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "vb.H(" + 88 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -423,13 +420,13 @@ abstract class vb extends kf implements jl {
         return stackIn_10_0;
     }
 
-    final static String a(char param0, int param1, int param2) {
+    final static String a(char param0, int param1) {
         int var4 = 0;
         int var5 = client.field_A ? 1 : 0;
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = 0; var4 < param1; var4++) {
-            var6[var4] = param0;
+            var6[var4] = '*';
         }
         return new String(var6);
     }

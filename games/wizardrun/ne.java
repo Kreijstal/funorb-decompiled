@@ -41,7 +41,7 @@ final class ne {
         this(param0, false);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_b = null;
         field_h = null;
         field_d = null;
@@ -49,7 +49,7 @@ final class ne {
         field_a = null;
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         int var1 = 0;
         var1 = -55;
         if (!ol.field_b) {
@@ -67,7 +67,7 @@ final class ne {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

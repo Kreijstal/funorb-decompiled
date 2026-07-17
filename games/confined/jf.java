@@ -32,7 +32,7 @@ abstract class jf {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
     }
@@ -149,9 +149,9 @@ abstract class jf {
 
     final static void a(kg param0, java.math.BigInteger param1, kg param2, int param3, java.math.BigInteger param4) {
         try {
-            id.a(param2, param1, 44, param3, param0.field_m, param4, param0.field_n);
+            id.a(param2, param1, 44, 0, param0.field_m, param4, param0.field_n);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "jf.M(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "jf.M(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 0 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -163,22 +163,18 @@ abstract class jf {
         var4 = Confined.field_J ? 1 : 0;
         var5 = ah.l(20253);
         var2 = var5;
-        if (param0 > 123) {
-          var3 = 0;
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (param1 != var5[var3].field_e) {
-                var3++;
-                continue L0;
-              } else {
-                return var5[var3];
-              }
+        var3 = 0;
+        L0: while (true) {
+          if (var5.length > var3) {
+            if (param1 != var5[var3].field_e) {
+              var3++;
+              continue L0;
             } else {
-              return null;
+              return var5[var3];
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 
@@ -195,7 +191,7 @@ abstract class jf {
 
     abstract void a(boolean param0, Object param1, byte param2);
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -207,9 +203,9 @@ abstract class jf {
           return;
         } else {
           L0: {
-            var3 = param1 + -135;
-            var4 = -35 + param2;
-            var5 = param0;
+            var3 = 185;
+            var4 = 205;
+            var5 = 256;
             if (tg.field_H >= 75) {
               break L0;
             } else {
@@ -225,12 +221,14 @@ abstract class jf {
               break L1;
             }
           }
-          vm.a(mi.field_a, -8409);
+          int discarded$3 = -8409;
+          vm.a(mi.field_a);
           ti.b();
           fn.d();
           of.a(false);
           if (var5 >= 256) {
-            ib.b(false);
+            int discarded$4 = 0;
+            ib.b();
             if (tg.field_H >= 150) {
               ad.field_b.a(var3 - -15, var4 - -10, var5);
               var6 = tg.field_H + -125;
@@ -450,7 +448,8 @@ abstract class jf {
           } else {
             L21: {
               fn.b(0, 0, fn.field_g, fn.field_l, 0, -var5 + 256);
-              ib.b(false);
+              int discarded$5 = 0;
+              ib.b();
               if (tg.field_H >= 150) {
                 ad.field_b.a(var3 - -15, var4 - -10, var5);
                 break L21;

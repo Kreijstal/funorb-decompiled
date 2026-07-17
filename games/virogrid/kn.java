@@ -12,7 +12,7 @@ final class kn extends ec {
     int field_H;
     static String field_J;
 
-    final static void g(int param0) {
+    final static void g() {
         la.field_g = 0;
     }
 
@@ -43,7 +43,8 @@ final class kn extends ec {
             return;
         }
         mg var5 = new mg(((kn) this).field_x.field_g, ((kn) this).field_x.field_m);
-        kb.a(var5, 16865);
+        int discarded$0 = 16865;
+        kb.a(var5);
         ((kn) this).field_x.a(param0, 0, 0, param3);
         ai.a(true);
         var5.a(param1 - -((kn) this).field_l, ((kn) this).field_u + param2, ((kn) this).field_H);
@@ -462,9 +463,6 @@ final class kn extends ec {
 
     final static String a(String param0, byte param1, String param2, String param3) {
         int var5 = Virogrid.field_F ? 1 : 0;
-        if (param1 != -33) {
-            return null;
-        }
         int var4 = param0.indexOf(param3);
         while (var4 != -1) {
             param0 = param0.substring(0, var4) + param2 + param0.substring(var4 + param3.length());
@@ -531,32 +529,24 @@ final class kn extends ec {
         return stackIn_13_0 != 0;
     }
 
-    final static u f(int param0) {
+    final static u f() {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         u var2 = null;
-        u stackIn_5_0 = null;
+        u stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
-        u stackOut_4_0 = null;
+        u stackOut_3_0 = null;
         try {
-          L0: {
-            var1_int = 0;
-            if (param0 == 256) {
-              break L0;
-            } else {
-              field_L = null;
-              break L0;
-            }
-          }
-          L1: while (true) {
+          var1_int = 0;
+          L0: while (true) {
             var2 = dm.field_v.a(var1_int, (byte) 35);
             if (var2.field_o) {
-              stackOut_4_0 = (u) var2;
-              stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0;
+              stackOut_3_0 = (u) var2;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             } else {
               var1_int++;
-              continue L1;
+              continue L0;
             }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {

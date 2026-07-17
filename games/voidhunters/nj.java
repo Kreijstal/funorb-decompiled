@@ -143,7 +143,7 @@ final class nj implements dja {
         return (tv[]) (Object) new af[param1];
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 

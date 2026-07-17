@@ -6,7 +6,7 @@ final class rf {
     static double[] field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -16,7 +16,7 @@ final class rf {
         throw new IllegalStateException();
     }
 
-    final static void a(mn param0, double param1, oi param2, dj param3, double[] param4, boolean param5) {
+    final static void a(mn param0, double param1, oi param2, dj param3, double[] param4) {
         double var7_double = 0.0;
         double var9 = 0.0;
         double var11 = 0.0;

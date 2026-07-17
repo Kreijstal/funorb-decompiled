@@ -11,7 +11,7 @@ final class bq {
     static String field_f;
     static jp[][] field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_c = null;
@@ -20,28 +20,25 @@ final class bq {
     }
 
     final static mf a(int param0, int param1, boolean param2, int param3, boolean param4) {
-        if (param0 != -6) {
-            field_c = null;
-        }
-        return go.a(param4, param3, false, param1, param2, true);
+        int discarded$0 = 1;
+        return go.a(param4, param3, false, param1, param2);
     }
 
-    final static km a(int param0, int param1) {
+    final static km a(int param0) {
         return pg.field_k[param0];
     }
 
-    final static void a(boolean param0, int param1, byte param2) {
+    final static void a(boolean param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
+        String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         String[] var10 = null;
         String[] var11 = null;
-        String var12 = null;
-        String var13 = null;
         int stackIn_65_0 = 0;
         int stackIn_68_0 = 0;
         String[] stackIn_74_0 = null;
@@ -58,11 +55,11 @@ final class bq {
         String[] stackIn_82_0 = null;
         int stackIn_82_1 = 0;
         String stackIn_82_2 = null;
-        int stackIn_91_0 = 0;
+        int stackIn_90_0 = 0;
+        int stackIn_105_0 = 0;
         int stackIn_106_0 = 0;
         int stackIn_107_0 = 0;
-        int stackIn_108_0 = 0;
-        int stackIn_108_1 = 0;
+        int stackIn_107_1 = 0;
         int stackOut_64_0 = 0;
         int stackOut_63_0 = 0;
         int stackOut_67_0 = 0;
@@ -83,13 +80,13 @@ final class bq {
         String[] stackOut_74_0 = null;
         int stackOut_74_1 = 0;
         String stackOut_74_2 = null;
-        int stackOut_105_0 = 0;
-        int stackOut_107_0 = 0;
-        int stackOut_107_1 = 0;
+        int stackOut_104_0 = 0;
         int stackOut_106_0 = 0;
         int stackOut_106_1 = 0;
-        int stackOut_90_0 = 0;
+        int stackOut_105_0 = 0;
+        int stackOut_105_1 = 0;
         int stackOut_89_0 = 0;
+        int stackOut_88_0 = 0;
         L0: {
           var9 = BrickABrac.field_J ? 1 : 0;
           ik.field_j = true;
@@ -275,7 +272,7 @@ final class bq {
                       var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, ff.field_a);
                       break L12;
                     } else {
-                      var3_int = qb.a(kg.field_h, m.field_b, param2 ^ -87, ni.field_Wb, df.field_d);
+                      var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, df.field_d);
                       break L12;
                     }
                   }
@@ -376,7 +373,7 @@ final class bq {
                 }
               }
             } else {
-              var3_int = qb.a(kg.field_h, m.field_b, param2 ^ -87, ni.field_Wb, up.field_x);
+              var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, up.field_x);
               var4 = 2 - -var3_int;
               BrickABrac.field_K = new int[var4];
               qh.field_i = new String[var4];
@@ -441,148 +438,148 @@ final class bq {
         }
         mh.field_H.field_r = ri.field_I.length;
         var3_int = 0;
-        if (param2 == 104) {
-          var4 = 0;
-          L23: while (true) {
-            if (var4 >= qh.field_i.length) {
-              L24: {
-                if (ih.field_p == 2) {
-                  var10 = rg.field_k;
-                  var5 = 0;
-                  L25: while (true) {
-                    if (var10.length <= var5) {
-                      var11 = h.field_F;
-                      var5 = 0;
-                      L26: while (true) {
-                        if (var11.length <= var5) {
-                          break L24;
-                        } else {
-                          L27: {
-                            var13 = var11[var5];
-                            var7 = hm.a(false, var13, 0);
-                            if (var3_int >= var7) {
-                              break L27;
-                            } else {
-                              break L27;
-                            }
+        var4 = 0;
+        L23: while (true) {
+          if (var4 >= qh.field_i.length) {
+            L24: {
+              if (ih.field_p == 2) {
+                var10 = rg.field_k;
+                var5 = 0;
+                L25: while (true) {
+                  if (var10.length <= var5) {
+                    var11 = h.field_F;
+                    var5 = 0;
+                    L26: while (true) {
+                      if (var11.length <= var5) {
+                        break L24;
+                      } else {
+                        L27: {
+                          var6_ref_String = var11[var5];
+                          int discarded$4 = 0;
+                          var7 = hm.a(false, var6_ref_String);
+                          if (var3_int >= var7) {
+                            break L27;
+                          } else {
+                            break L27;
                           }
-                          var5++;
-                          continue L26;
                         }
+                        var5++;
+                        continue L26;
                       }
-                    } else {
-                      L28: {
-                        var12 = var10[var5];
-                        var7 = hm.a(false, var12, param2 + -104);
-                        if (var7 <= var3_int) {
-                          break L28;
-                        } else {
-                          break L28;
-                        }
-                      }
-                      var5++;
-                      continue L25;
                     }
-                  }
-                } else {
-                  break L24;
-                }
-              }
-              jj.field_c = mh.field_H.field_r * (kn.field_y + jb.field_H << 1);
-              np.field_b = wi.field_k - (var3_int >> 1);
-              ci.field_u = -(var3_int >> 1) + (var3_int + wi.field_k);
-              var4 = 0;
-              L29: while (true) {
-                if (qh.field_i.length <= var4) {
-                  jq.field_r = -(jj.field_c >> 1) + w.field_k;
-                  ce.field_a = new int[qh.field_i.length][];
-                  var4 = 0;
-                  var5 = jq.field_r;
-                  L30: while (true) {
-                    if (var4 >= qh.field_i.length) {
-                      L31: {
-                        if (ih.field_p != 2) {
-                          mh.field_H.a(qo.b(120, po.field_a, pq.field_k), 0, param0, (byte) -127);
-                          break L31;
-                        } else {
-                          mh.field_H.a(-1, -1, param0, (byte) -128);
-                          break L31;
-                        }
+                  } else {
+                    L28: {
+                      var6_ref_String = var10[var5];
+                      int discarded$5 = 0;
+                      var7 = hm.a(false, var6_ref_String);
+                      if (var7 <= var3_int) {
+                        break L28;
+                      } else {
+                        break L28;
                       }
-                      return;
-                    } else {
-                      L32: {
-                        var6 = BrickABrac.field_K[var4];
-                        if (var6 >= 0) {
-                          var7 = hm.a(true, qh.field_i[var4], param2 + -104);
-                          var8 = wi.field_k - (var7 >> 1);
-                          var5 = var5 + kn.field_y;
-                          ce.field_a[var4] = new int[4];
-                          ce.field_a[var4][0] = -cn.field_c + var8;
-                          ce.field_a[var4][1] = var5;
-                          ce.field_a[var4][2] = (cn.field_c << 1) + var7;
-                          var5 = var5 + (kn.field_y + ((jb.field_H << 1) - -b.field_c));
-                          ce.field_a[var4][3] = (jb.field_H << 1) + b.field_c;
-                          break L32;
-                        } else {
-                          var5 = var5 + pe.field_s;
-                          break L32;
-                        }
-                      }
-                      var4++;
-                      continue L30;
                     }
+                    var5++;
+                    continue L25;
                   }
-                } else {
-                  L33: {
-                    stackOut_105_0 = jj.field_c;
-                    stackIn_107_0 = stackOut_105_0;
-                    stackIn_106_0 = stackOut_105_0;
-                    if (BrickABrac.field_K[var4] >= 0) {
-                      stackOut_107_0 = stackIn_107_0;
-                      stackOut_107_1 = b.field_c;
-                      stackIn_108_0 = stackOut_107_0;
-                      stackIn_108_1 = stackOut_107_1;
-                      break L33;
-                    } else {
-                      stackOut_106_0 = stackIn_106_0;
-                      stackOut_106_1 = pe.field_s;
-                      stackIn_108_0 = stackOut_106_0;
-                      stackIn_108_1 = stackOut_106_1;
-                      break L33;
-                    }
-                  }
-                  jj.field_c = stackIn_108_0 + stackIn_108_1;
-                  var4++;
-                  continue L29;
                 }
+              } else {
+                break L24;
               }
-            } else {
-              L34: {
-                if (BrickABrac.field_K[var4] < 0) {
-                  stackOut_90_0 = 0;
-                  stackIn_91_0 = stackOut_90_0;
-                  break L34;
-                } else {
-                  stackOut_89_0 = 1;
-                  stackIn_91_0 = stackOut_89_0;
-                  break L34;
-                }
-              }
-              L35: {
-                var5 = hm.a(stackIn_91_0 != 0, qh.field_i[var4], 0);
-                if (var5 <= var3_int) {
-                  break L35;
-                } else {
-                  break L35;
-                }
-              }
-              var4++;
-              continue L23;
             }
+            jj.field_c = mh.field_H.field_r * (kn.field_y + jb.field_H << 1);
+            np.field_b = wi.field_k - (var3_int >> 1);
+            ci.field_u = -(var3_int >> 1) + (var3_int + wi.field_k);
+            var4 = 0;
+            L29: while (true) {
+              if (qh.field_i.length <= var4) {
+                jq.field_r = -(jj.field_c >> 1) + w.field_k;
+                ce.field_a = new int[qh.field_i.length][];
+                var4 = 0;
+                var5 = jq.field_r;
+                L30: while (true) {
+                  if (var4 >= qh.field_i.length) {
+                    L31: {
+                      if (ih.field_p != 2) {
+                        mh.field_H.a(qo.b(120, po.field_a, pq.field_k), 0, param0, (byte) -127);
+                        break L31;
+                      } else {
+                        mh.field_H.a(-1, -1, param0, (byte) -128);
+                        break L31;
+                      }
+                    }
+                    return;
+                  } else {
+                    L32: {
+                      var6 = BrickABrac.field_K[var4];
+                      if (var6 >= 0) {
+                        int discarded$6 = 0;
+                        var7 = hm.a(true, qh.field_i[var4]);
+                        var8 = wi.field_k - (var7 >> 1);
+                        var5 = var5 + kn.field_y;
+                        ce.field_a[var4] = new int[4];
+                        ce.field_a[var4][0] = -cn.field_c + var8;
+                        ce.field_a[var4][1] = var5;
+                        ce.field_a[var4][2] = (cn.field_c << 1) + var7;
+                        var5 = var5 + (kn.field_y + ((jb.field_H << 1) - -b.field_c));
+                        ce.field_a[var4][3] = (jb.field_H << 1) + b.field_c;
+                        break L32;
+                      } else {
+                        var5 = var5 + pe.field_s;
+                        break L32;
+                      }
+                    }
+                    var4++;
+                    continue L30;
+                  }
+                }
+              } else {
+                L33: {
+                  stackOut_104_0 = jj.field_c;
+                  stackIn_106_0 = stackOut_104_0;
+                  stackIn_105_0 = stackOut_104_0;
+                  if (BrickABrac.field_K[var4] >= 0) {
+                    stackOut_106_0 = stackIn_106_0;
+                    stackOut_106_1 = b.field_c;
+                    stackIn_107_0 = stackOut_106_0;
+                    stackIn_107_1 = stackOut_106_1;
+                    break L33;
+                  } else {
+                    stackOut_105_0 = stackIn_105_0;
+                    stackOut_105_1 = pe.field_s;
+                    stackIn_107_0 = stackOut_105_0;
+                    stackIn_107_1 = stackOut_105_1;
+                    break L33;
+                  }
+                }
+                jj.field_c = stackIn_107_0 + stackIn_107_1;
+                var4++;
+                continue L29;
+              }
+            }
+          } else {
+            L34: {
+              if (BrickABrac.field_K[var4] < 0) {
+                stackOut_89_0 = 0;
+                stackIn_90_0 = stackOut_89_0;
+                break L34;
+              } else {
+                stackOut_88_0 = 1;
+                stackIn_90_0 = stackOut_88_0;
+                break L34;
+              }
+            }
+            L35: {
+              int discarded$7 = 0;
+              var5 = hm.a(stackIn_90_0 != 0, qh.field_i[var4]);
+              if (var5 <= var3_int) {
+                break L35;
+              } else {
+                break L35;
+              }
+            }
+            var4++;
+            continue L23;
           }
-        } else {
-          return;
         }
     }
 

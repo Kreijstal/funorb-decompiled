@@ -23,7 +23,7 @@ final class fc {
             var1_ref = (ja) (Object) a.field_d.g(0);
             L1: while (true) {
               if (var1_ref == null) {
-                var2 = 12 % ((-69 - param0) / 38);
+                var2 = 0;
                 var1_ref = (ja) (Object) bh.field_c.g(0);
                 L2: while (true) {
                   if (var1_ref == null) {
@@ -81,7 +81,7 @@ final class fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "fc.B(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1, "fc.B(" + 19 + 41);
         }
     }
 
@@ -89,18 +89,17 @@ final class fc {
         if (!(hj.field_a != 11)) {
             w.a(31);
         }
-        if (!param0) {
-            return;
-        }
         try {
-            qc.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
-            i.a(0, (byte) 117, param1, 0);
+            int discarded$0 = -40;
+            qc.a(pb.field_s, oi.field_e, lb.field_a);
+            int discarded$1 = 0;
+            i.a(0, (byte) 117, param1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fc.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fc.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_g = null;
         field_d = null;

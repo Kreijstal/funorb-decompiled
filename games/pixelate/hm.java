@@ -9,7 +9,7 @@ final class hm {
     static String field_d;
     static int field_b;
 
-    final static og a(int param0, byte[] param1, int param2) {
+    final static og a(int param0, byte[] param1) {
         og var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -115,11 +115,12 @@ final class hm {
                 } else {
                   var2_int = param1.indexOf('@');
                   if (var2_int != -1) {
-                    var3 = param1.substring(param0, var2_int);
+                    var3 = param1.substring(0, var2_int);
                     var4 = param1.substring(var2_int - -1);
                     var5 = wf.a(false, var3);
                     if (var5 == null) {
-                      stackOut_11_0 = jf.a(var4, param0 ^ -4384);
+                      int discarded$2 = -4384;
+                      stackOut_11_0 = jf.a(var4);
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
                     } else {
@@ -144,7 +145,7 @@ final class hm {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("hm.C(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("hm.C(").append(0).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -172,7 +173,7 @@ final class hm {
         return stackIn_12_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -180,7 +181,7 @@ final class hm {
         field_d = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         oo.field_f = -1;
         qg.field_b = null;
         re.field_h = false;
@@ -191,14 +192,18 @@ final class hm {
 
     final synchronized static long a(int param0) {
         long var1 = 0L;
-        var1 = System.currentTimeMillis();
-        if (var1 < wa.field_h) {
-          qj.field_d = qj.field_d + (wa.field_h + -var1);
-          wa.field_h = var1;
-          return var1 - -qj.field_d;
+        if (param0 == 64) {
+          var1 = System.currentTimeMillis();
+          if (var1 < wa.field_h) {
+            qj.field_d = qj.field_d + (wa.field_h + -var1);
+            wa.field_h = var1;
+            return var1 - -qj.field_d;
+          } else {
+            wa.field_h = var1;
+            return var1 - -qj.field_d;
+          }
         } else {
-          wa.field_h = var1;
-          return var1 - -qj.field_d;
+          return 86L;
         }
     }
 

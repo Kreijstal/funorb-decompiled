@@ -77,36 +77,37 @@ final class i extends ka implements e {
         for (var15 = 0; var15 < var12; var15++) {
             var18 = param2.field_g[var15];
             var21 = var18;
-            var17 = jm.a(var21.field_e, 0);
-            int incrementValue$4 = var14;
-            var14++;
-            var13[incrementValue$4] = var18.field_b;
+            int discarded$4 = 0;
+            var17 = jm.a(var21.field_e);
             int incrementValue$5 = var14;
             var14++;
-            var13[incrementValue$5] = var17.field_g;
+            var13[incrementValue$5] = var18.field_b;
             int incrementValue$6 = var14;
             var14++;
-            var13[incrementValue$6] = var17.field_b;
+            var13[incrementValue$6] = var17.field_g;
             int incrementValue$7 = var14;
             var14++;
-            var13[incrementValue$7] = var17.field_e;
+            var13[incrementValue$7] = var17.field_b;
             int incrementValue$8 = var14;
             var14++;
-            var13[incrementValue$8] = var17.field_d;
+            var13[incrementValue$8] = var17.field_e;
             int incrementValue$9 = var14;
             var14++;
-            var13[incrementValue$9] = var17.field_f;
+            var13[incrementValue$9] = var17.field_d;
             int incrementValue$10 = var14;
             var14++;
-            var13[incrementValue$10] = var17.field_a ? -1 : 0;
+            var13[incrementValue$10] = var17.field_f;
+            int incrementValue$11 = var14;
+            var14++;
+            var13[incrementValue$11] = var17.field_a ? -1 : 0;
         }
         int var20 = 0;
         var15 = var20;
         while (var20 < var12) {
             var19 = param2.field_g[var20];
-            int incrementValue$11 = var14;
+            int incrementValue$12 = var14;
             var14++;
-            var13[incrementValue$11] = var19.field_a;
+            var13[incrementValue$12] = var19.field_a;
             var20++;
         }
         this.R(((i) this).field_d, ((i) this).field_b, param2.field_s, param2.field_D, param2.field_v, param2.field_G, param2.field_x, param2.field_p, param2.field_z, param2.field_j, param2.field_k, param2.field_o, param2.field_K, param2.field_E, param2.field_m, param2.field_r, param2.field_M, param2.field_b, param2.field_u, param2.field_y, param2.field_d, param2.field_w, param2.field_B, param2.field_e, param2.field_t, param2.field_i, param2.field_H, param2.field_F, param2.field_a, param2.field_C, param2.field_J, param2.field_n, param2.field_L, param2.field_f, param2.field_I, var28, var8, var9, param3, param4, param5, param6, var29);

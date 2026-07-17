@@ -129,7 +129,7 @@ final class tta extends rqa {
         try {
           L0: {
             if (param1.b((byte) 100)) {
-              var4_int = 110 / ((param0 - 72) / 43);
+              var4_int = -36;
               stackOut_3_0 = param3 + " - " + param1.b(-124) + "%";
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -144,7 +144,7 @@ final class tta extends rqa {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("tta.B(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("tta.B(").append(-93).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -222,7 +222,7 @@ final class tta extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

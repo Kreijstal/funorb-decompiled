@@ -15,14 +15,14 @@ final class ai {
     static int field_b;
     static int[] field_a;
 
-    final static ah a(boolean param0, int param1, boolean param2, int param3, byte param4, boolean param5) {
+    final static ah a(boolean param0, int param1, boolean param2, int param3, byte param4) {
         try {
             Object var6 = null;
             Object var7 = null;
             bo var8 = null;
-            ah stackIn_16_0 = null;
+            ah stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            ah stackOut_15_0 = null;
+            ah stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -70,17 +70,9 @@ final class ai {
                     break L3;
                   }
                 }
-                L6: {
-                  var8 = mb.field_u.a(param1, 80, (sk) var7, (sk) var6, param2);
-                  if (!param0) {
-                    break L6;
-                  } else {
-                    var8.d(5127);
-                    break L6;
-                  }
-                }
-                stackOut_15_0 = new ah((hk) (Object) var8, param5, param3);
-                stackIn_16_0 = stackOut_15_0;
+                var8 = mb.field_u.a(param1, 80, (sk) var7, (sk) var6, false);
+                stackOut_13_0 = new ah((hk) (Object) var8, true, 1);
+                stackIn_14_0 = stackOut_13_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -88,7 +80,7 @@ final class ai {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_16_0;
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -320,7 +312,7 @@ final class ai {
         return var1;
     }
 
-    final static int c(byte param0) {
+    final static int c() {
         if (vd.field_a >= 2) {
           L0: {
             if (0 != th.field_l) {

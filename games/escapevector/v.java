@@ -7,15 +7,11 @@ final class v {
 
     final static void a(int param0, int param1) {
         if (!(null == bk.field_r)) {
-            bk.field_r.b(param0 ^ -9, param1);
-        }
-        if (param0 != 8) {
-            int[] discarded$0 = v.a(120);
-            return;
+            bk.field_r.b(-1, param1);
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -94,7 +90,7 @@ final class v {
         return new int[8];
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

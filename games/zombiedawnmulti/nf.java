@@ -19,31 +19,29 @@ final class nf {
         ma stackIn_3_0 = null;
         ma stackIn_6_0 = null;
         ma stackIn_9_0 = null;
-        Object stackIn_12_0 = null;
-        ma stackIn_18_0 = null;
-        ma stackIn_21_0 = null;
+        ma stackIn_16_0 = null;
+        ma stackIn_19_0 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ma stackOut_20_0 = null;
-        ma stackOut_17_0 = null;
-        Object stackOut_11_0 = null;
+        ma stackOut_18_0 = null;
+        ma stackOut_15_0 = null;
         ma stackOut_8_0 = null;
         ma stackOut_5_0 = null;
         ma stackOut_2_0 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -52,31 +50,25 @@ final class nf {
               if (var2_int <= 255) {
                 var3 = mk.a('.', false, param1);
                 if (2 <= var3.length) {
-                  if (param0 >= 79) {
-                    var4 = var3;
-                    var5 = 0;
-                    L1: while (true) {
-                      if (var5 >= var4.length) {
-                        stackOut_20_0 = pg.a(var3[-1 + var3.length], (byte) -86);
-                        stackIn_21_0 = stackOut_20_0;
-                        break L0;
+                  var4 = var3;
+                  var5 = 0;
+                  L1: while (true) {
+                    if (var5 >= var4.length) {
+                      stackOut_18_0 = pg.a(var3[-1 + var3.length], (byte) -86);
+                      stackIn_19_0 = stackOut_18_0;
+                      break L0;
+                    } else {
+                      var6 = var4[var5];
+                      var7 = lq.a((byte) 1, var6);
+                      if (var7 != null) {
+                        stackOut_15_0 = (ma) var7;
+                        stackIn_16_0 = stackOut_15_0;
+                        return stackIn_16_0;
                       } else {
-                        var6 = var4[var5];
-                        var7 = lq.a((byte) 1, var6);
-                        if (var7 != null) {
-                          stackOut_17_0 = (ma) var7;
-                          stackIn_18_0 = stackOut_17_0;
-                          return stackIn_18_0;
-                        } else {
-                          var5++;
-                          continue L1;
-                        }
+                        var5++;
+                        continue L1;
                       }
                     }
-                  } else {
-                    stackOut_11_0 = null;
-                    stackIn_12_0 = stackOut_11_0;
-                    return (ma) (Object) stackIn_12_0;
                   }
                 } else {
                   stackOut_8_0 = jo.field_e;
@@ -98,33 +90,33 @@ final class nf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("nf.A(").append(param0).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_20_0 = (RuntimeException) var2;
+            stackOut_20_1 = new StringBuilder().append("nf.A(").append(125).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
               break L2;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
-        return stackIn_21_0;
+        return stackIn_19_0;
     }
 
     static {

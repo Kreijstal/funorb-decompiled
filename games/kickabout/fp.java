@@ -123,10 +123,6 @@ class fp extends gn {
     }
 
     final static vn a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
-        if (param7) {
-            Object var13 = null;
-            boolean discarded$0 = fp.a(100, (Class) null);
-        }
         int var10 = ev.field_B[param1];
         int var11 = ev.field_B[param6];
         boolean[][][] var12 = je.field_g[param0].field_l;
@@ -224,7 +220,10 @@ class fp extends gn {
                         var19 = 0;
                         L5: while (true) {
                           if (var19 >= 3) {
-                            os.a(var18, false, hh.field_g, dh.field_i, (byte) -96, false, true);
+                            int discarded$3 = 1;
+                            int discarded$4 = 0;
+                            int discarded$5 = -96;
+                            os.a(var18, false, hh.field_g, dh.field_i);
                             ei.a(var8, var7, var13, var9, var14, (byte) -125, var18, var15);
                             var16++;
                             continue L3;
@@ -280,7 +279,7 @@ class fp extends gn {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_p = null;
         field_n = null;

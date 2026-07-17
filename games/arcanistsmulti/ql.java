@@ -8,7 +8,7 @@ final class ql {
     static int[] field_b;
     private String field_d;
 
-    final static void a(jg param0, byte param1) {
+    final static void a(jg param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         jg var3 = null;
@@ -120,7 +120,7 @@ final class ql {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -310,14 +310,15 @@ final class ql {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_e = null;
     }
 
     final static kc a(int param0) {
-        return mc.a((byte) 21);
+        int discarded$0 = 21;
+        return mc.a();
     }
 
     final static qb[] a(int param0, byte param1, int param2, int param3) {
@@ -325,10 +326,7 @@ final class ql {
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         qb[] var7 = new qb[9];
         qb[] var4 = var7;
-        var7[0] = ce.b(param0, param3, 21385);
-        if (param1 < 69) {
-            return null;
-        }
+        var7[0] = ce.b(1, param3, 21385);
         for (var5 = 1; var5 < 9; var5++) {
             var7[var5] = var7[0];
         }
@@ -421,9 +419,6 @@ final class ql {
     final static int a(int param0, int param1, int param2, int param3) {
         if (de.field_j >= param2 + (param1 + param3)) {
             return param3 + param1;
-        }
-        if (param0 != 10) {
-            field_e = null;
         }
         if (!(param3 + -param2 < 0)) {
             return param3 + -param2;

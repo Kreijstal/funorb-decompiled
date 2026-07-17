@@ -7,13 +7,14 @@ final class df extends a {
     private String field_j;
     private boolean field_k;
 
-    final static void a(int param0, boolean param1) {
+    final static void a() {
         we.field_h = 0;
         ua.field_L = 0;
         wd.field_a = 0;
         ti.field_e = uc.field_e;
         qh.field_b = new sf(2);
-        qh.field_b.a(true, -1, ad.a(ad.field_m, gb.field_j, param0), param0 + 121);
+        int discarded$0 = 0;
+        qh.field_b.a(true, -1, ad.a(ad.field_m, gb.field_j), 121);
     }
 
     final String a(String param0, boolean param1) {
@@ -53,12 +54,13 @@ final class df extends a {
                 break L1;
               } else {
                 var5 = null;
-                String discarded$2 = ((df) this).a((String) null, true);
+                String discarded$4 = ((df) this).a((String) null, true);
                 break L1;
               }
             }
             var6 = (CharSequence) (Object) param0;
-            var3 = sj.a(var6, 0);
+            int discarded$5 = 0;
+            var3 = sj.a(var6);
             if (var3 != null) {
               stackOut_4_0 = (String) var3;
               stackIn_5_0 = stackOut_4_0;
@@ -136,7 +138,7 @@ final class df extends a {
         }
     }
 
-    final static void h(int param0) {
+    final static void h() {
         kd.field_c = -1;
         s.field_ib = null;
         bf.field_a = -1;

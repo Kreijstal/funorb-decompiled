@@ -58,7 +58,7 @@ final class ji extends rqa {
         return stackIn_10_0 != 0;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         ana var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -202,7 +202,7 @@ final class ji extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_p = null;
     }

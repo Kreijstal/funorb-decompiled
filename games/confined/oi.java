@@ -109,7 +109,8 @@ final class oi extends rk {
                         kg.field_o = g.a(-26547, vb.field_d, false, (String) null, param2);
                         break L4;
                       } else {
-                        kg.field_o = sh.a(12831, param4, param2, false);
+                        int discarded$10 = 0;
+                        kg.field_o = sh.a(12831, param4, param2);
                         break L4;
                       }
                     }
@@ -209,13 +210,14 @@ final class oi extends rk {
                     } else {
                       L11: {
                         vb.field_d = e.field_c.h((byte) -68);
-                        int discarded$7 = e.field_c.c(32);
-                        int discarded$8 = e.field_c.c(32);
+                        int discarded$11 = e.field_c.c(32);
+                        int discarded$12 = e.field_c.c(32);
                         sg.field_x = e.field_c.a((byte) 25);
                         var6_ref = e.field_c.e((byte) 102);
                         var7 = e.field_c.c(32);
                         if (0 != (var7 & 1)) {
-                          wl.a(1607962024);
+                          int discarded$13 = 1607962024;
+                          wl.a();
                           break L11;
                         } else {
                           break L11;
@@ -260,9 +262,9 @@ final class oi extends rk {
                         if (!na.field_W) {
                           break L15;
                         } else {
-                          int discarded$9 = e.field_c.c(32);
-                          int discarded$10 = e.field_c.c(32);
-                          int discarded$11 = e.field_c.f((byte) 51);
+                          int discarded$14 = e.field_c.c(32);
+                          int discarded$15 = e.field_c.c(32);
+                          int discarded$16 = e.field_c.f((byte) 51);
                           hd.field_b = e.field_c.a((byte) 25);
                           ka.field_F = new byte[hd.field_b];
                           var8 = 0;
@@ -298,7 +300,8 @@ final class oi extends rk {
                       L18: {
                         sg.field_y = false;
                         if (var6_ref != null) {
-                          qc.a(var6_ref, ii.b(false), -1);
+                          int discarded$17 = -1;
+                          qc.a(var6_ref, ii.b(false));
                           break L18;
                         } else {
                           break L18;
@@ -312,7 +315,7 @@ final class oi extends rk {
                             if (!ul.field_W) {
                               try {
                                 L21: {
-                                  Object discarded$12 = kf.a(93, "unzap", ii.b(false));
+                                  Object discarded$18 = kf.a(93, "unzap", ii.b(false));
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -330,7 +333,7 @@ final class oi extends rk {
                         }
                         try {
                           L23: {
-                            Object discarded$13 = kf.a((byte) 53, "zap", ii.b(false), new Object[1]);
+                            Object discarded$19 = kf.a((byte) 53, "zap", ii.b(false), new Object[1]);
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {

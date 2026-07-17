@@ -162,7 +162,7 @@ final class wq {
         return (int)(1000000000L / td.field_g);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -171,7 +171,7 @@ final class wq {
         field_e = null;
     }
 
-    final static wf a(ga param0, int param1) {
+    final static wf a(ga param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -246,15 +246,15 @@ final class wq {
         return stackIn_1_0;
     }
 
-    final static void a(int param0, pd param1, int param2, pd param3, int param4, boolean param5) {
+    final static void a(int param0, pd param1, int param2, pd param3) {
         try {
-            wb.field_db = param4;
-            pb.field_b = param0;
+            wb.field_db = 15;
+            pb.field_b = 5;
             li.field_E = param3;
             vk.field_I = param1;
-            ne.field_tb = param2;
+            ne.field_tb = 10;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "wq.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + 0 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "wq.D(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 10 + 44 + (param3 != null ? "{...}" : "null") + 44 + 15 + 44 + 0 + 41);
         }
     }
 

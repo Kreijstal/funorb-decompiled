@@ -11,15 +11,14 @@ final class cf implements Iterator {
     static volatile int field_a;
 
     final static cr a(boolean param0) {
-        return pp.f(-126);
+        int discarded$0 = -126;
+        return pp.f();
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param0 != 31077) {
-            return true;
-        }
         if (!(de.field_f != 13)) {
-            on.a(9110);
+            int discarded$0 = 9110;
+            on.a();
             return true;
         }
         if (!(de.field_f != 102)) {
@@ -29,7 +28,7 @@ final class cf implements Iterator {
         if (ji.field_n == null) {
             return false;
         }
-        if (!ji.field_n.a(param1, false, param2)) {
+        if (!ji.field_n.a(13, false, 15)) {
             return false;
         }
         return true;
@@ -137,7 +136,7 @@ final class cf implements Iterator {
         ((cf) this).field_c = null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -21;
         field_b = null;
     }
@@ -167,7 +166,8 @@ final class cf implements Iterator {
         try {
           L0: {
             if (param0 > 68) {
-              stackOut_3_0 = li.a(10, true, param1, true);
+              int discarded$2 = 1;
+              stackOut_3_0 = li.a(10, true, param1);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -245,7 +245,8 @@ final class cf implements Iterator {
         try {
           L0: {
             var3_int = 83 % ((param2 - 8) / 48);
-            stackOut_0_0 = li.a(param0, true, param1, true);
+            int discarded$2 = 1;
+            stackOut_0_0 = li.a(16, true, param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -254,7 +255,7 @@ final class cf implements Iterator {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("cf.F(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("cf.F(").append(16).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

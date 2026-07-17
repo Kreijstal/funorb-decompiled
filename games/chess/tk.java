@@ -18,8 +18,8 @@ final class tk {
         qf.field_c = 0;
         pj.field_f = new int[3];
         int var2 = -38;
-        ik.field_i = new ld[param0 * 15];
-        fh.field_b = param0;
+        ik.field_i = new ld[3000];
+        fh.field_b = 200;
     }
 
     final boolean a(byte param0) {
@@ -42,48 +42,16 @@ final class tk {
         }
     }
 
-    final static void a(int param0) {
-        if (param0 != -2919) {
-          L0: {
-            field_e = 41;
-            if (null != mh.field_d) {
-              mh.field_d.c();
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          L1: {
-            if (null != kn.field_F) {
-              kn.field_F.c();
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
-        } else {
-          L2: {
-            if (null != mh.field_d) {
-              mh.field_d.c();
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (null != kn.field_F) {
-              kn.field_F.c();
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          return;
+    final static void a() {
+        if (!(null == mh.field_d)) {
+            mh.field_d.c();
+        }
+        if (!(null == kn.field_F)) {
+            kn.field_F.c();
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_f = null;
         field_c = null;

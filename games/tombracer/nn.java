@@ -6,11 +6,11 @@ final class nn {
     static vna field_a;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static void a(int param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

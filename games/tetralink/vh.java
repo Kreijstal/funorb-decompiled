@@ -10,7 +10,7 @@ abstract class vh {
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = 75 % ((62 - param0) / 63);
+        int var1 = 0;
         field_a = null;
         field_e = null;
     }

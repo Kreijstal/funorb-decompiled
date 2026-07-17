@@ -926,8 +926,8 @@ final class w implements hc {
                       if (var12.field_Kb != null) {
                         var31 += 2;
                         var37 = new StringBuilder(64);
-                        StringBuilder discarded$4 = var37.append(np.field_Eb);
-                        StringBuilder discarded$5 = var37.append(var12.field_Kb[0]);
+                        StringBuilder discarded$5 = var37.append(np.field_Eb);
+                        StringBuilder discarded$6 = var37.append(var12.field_Kb[0]);
                         var38_int = 1;
                         L40: while (true) {
                           if (var38_int >= var12.field_gc) {
@@ -938,8 +938,8 @@ final class w implements hc {
                             var31 = var31 + sh.field_c * var39;
                             break L39;
                           } else {
-                            StringBuilder discarded$6 = var37.append(", ");
-                            StringBuilder discarded$7 = var37.append(var12.field_Kb[var38_int]);
+                            StringBuilder discarded$7 = var37.append(", ");
+                            StringBuilder discarded$8 = var37.append(var12.field_Kb[var38_int]);
                             var38_int++;
                             continue L40;
                           }
@@ -971,7 +971,8 @@ final class w implements hc {
                   }
                 }
                 L42: {
-                  var33 = cq.a(var12.field_Ab, var32, (byte) 112);
+                  int discarded$9 = 112;
+                  var33 = cq.a(var12.field_Ab, var32);
                   var34 = var33;
                   var34 = var33;
                   if (var33 != null) {
@@ -1275,7 +1276,7 @@ final class w implements hc {
         return stackIn_11_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -1357,7 +1358,8 @@ final class w implements hc {
             if (!param1) {
               break L6;
             } else {
-              if (vd.a((byte) 82)) {
+              int discarded$2 = 82;
+              if (vd.a()) {
                 su.field_c = (jb) (Object) np.field_Jb.b((byte) 125);
                 break L6;
               } else {
@@ -1379,7 +1381,7 @@ final class w implements hc {
             break L7;
           } else {
             var5 = null;
-            ag discarded$1 = w.a((vm) null, -103);
+            ag discarded$3 = w.a((vm) null, -103);
             break L7;
           }
         }

@@ -74,7 +74,7 @@ final class ie {
         return (pp) (Object) stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

@@ -15,7 +15,7 @@ final class mm extends ne {
     static String field_j;
     int field_p;
 
-    final static di a(ec param0, boolean param1) {
+    final static di a(ec param0) {
         di var2 = null;
         RuntimeException var2_ref = null;
         di stackIn_1_0 = null;
@@ -77,7 +77,7 @@ final class mm extends ne {
         return stackIn_1_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_j = null;
         field_s = null;
@@ -87,7 +87,7 @@ final class mm extends ne {
         throw new Error();
     }
 
-    final static int a(CharSequence param0, boolean param1, int param2, int param3) {
+    final static int a(CharSequence param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -97,24 +97,24 @@ final class mm extends ne {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_42_0 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        String stackIn_46_2 = null;
+        int stackIn_39_0 = 0;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_41_0 = 0;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
+        int stackOut_38_0 = 0;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        String stackOut_41_2 = null;
         var11 = DungeonAssault.field_K;
         try {
           L0: {
@@ -133,8 +133,8 @@ final class mm extends ne {
                       if (var5 == 0) {
                         throw new NumberFormatException();
                       } else {
-                        stackOut_41_0 = var6;
-                        stackIn_42_0 = stackOut_41_0;
+                        stackOut_38_0 = var6;
+                        stackIn_39_0 = stackOut_38_0;
                         break L0;
                       }
                     } else {
@@ -147,13 +147,7 @@ final class mm extends ne {
                             if (var9 != 43) {
                               break L3;
                             } else {
-                              if (param1) {
-                                var8++;
-                                var8++;
-                                continue L2;
-                              } else {
-                                break L3;
-                              }
+                              break L3;
                             }
                           } else {
                             var4_int = 1;
@@ -218,6 +212,7 @@ final class mm extends ne {
                           var5 = 1;
                           var6 = var10;
                           var8++;
+                          var8++;
                           continue L2;
                         } else {
                           throw new NumberFormatException();
@@ -236,33 +231,33 @@ final class mm extends ne {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) var4;
-            stackOut_43_1 = new StringBuilder().append("mm.B(");
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackOut_40_0 = (RuntimeException) var4;
+            stackOut_40_1 = new StringBuilder().append("mm.B(");
+            stackIn_42_0 = stackOut_40_0;
+            stackIn_42_1 = stackOut_40_1;
+            stackIn_41_0 = stackOut_40_0;
+            stackIn_41_1 = stackOut_40_1;
             if (param0 == null) {
-              stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
-              stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
+              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_2 = "null";
+              stackIn_43_0 = stackOut_42_0;
+              stackIn_43_1 = stackOut_42_1;
+              stackIn_43_2 = stackOut_42_2;
               break L9;
             } else {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
+              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
+              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_2 = "{...}";
+              stackIn_43_0 = stackOut_41_0;
+              stackIn_43_1 = stackOut_41_1;
+              stackIn_43_2 = stackOut_41_2;
               break L9;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param1 + 44 + param2 + 44 + 3703 + 41);
+          throw vk.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 44 + 1 + 44 + param2 + 44 + 3703 + 41);
         }
-        return stackIn_42_0;
+        return stackIn_39_0;
     }
 
     static {

@@ -15,7 +15,6 @@ final class ea {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        Object var4 = null;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -42,15 +41,6 @@ final class ea {
             var2_int = -1 + param1.length;
             L1: while (true) {
               if (var2_int < 0) {
-                L2: {
-                  if (param0) {
-                    break L2;
-                  } else {
-                    var4 = null;
-                    int discarded$2 = ea.a(true, (int[]) null);
-                    break L2;
-                  }
-                }
                 stackOut_9_0 = -1;
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
@@ -68,10 +58,10 @@ final class ea {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("ea.E(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("ea.E(").append(1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -83,7 +73,7 @@ final class ea {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L3;
+              break L2;
             } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
@@ -91,7 +81,7 @@ final class ea {
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L3;
+              break L2;
             }
           }
           throw qb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
@@ -99,7 +89,7 @@ final class ea {
         return stackIn_10_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_h = null;
     }
@@ -130,7 +120,7 @@ final class ea {
         }
     }
 
-    final static java.awt.Container b(int param0) {
+    final static java.awt.Container b() {
         if (null != cb.field_o) {
             return (java.awt.Container) (Object) cb.field_o;
         }

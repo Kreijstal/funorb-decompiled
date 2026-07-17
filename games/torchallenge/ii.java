@@ -56,7 +56,7 @@ final class ii {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_h = null;
         field_j = null;
         field_g = null;
@@ -227,53 +227,49 @@ final class ii {
                 } else {
                   var6_int = param4 - -(param5 * qg.field_g);
                   var7 = qg.field_g - param0;
-                  if (param3 == 4) {
-                    param5 = -param1;
-                    L6: while (true) {
-                      if (param5 >= 0) {
-                        break L0;
-                      } else {
-                        param4 = -param0;
-                        L7: while (true) {
-                          if (0 <= param4) {
-                            var6_int = var6_int + var7;
-                            param5++;
-                            continue L6;
-                          } else {
-                            L8: {
-                              var8 = qg.field_i[var6_int];
-                              if ((255 & var8 >> 8) <= param2) {
+                  param5 = -param1;
+                  L6: while (true) {
+                    if (param5 >= 0) {
+                      break L0;
+                    } else {
+                      param4 = -param0;
+                      L7: while (true) {
+                        if (0 <= param4) {
+                          var6_int = var6_int + var7;
+                          param5++;
+                          continue L6;
+                        } else {
+                          L8: {
+                            var8 = qg.field_i[var6_int];
+                            if ((255 & var8 >> 8) <= 64) {
+                              break L8;
+                            } else {
+                              if ((var8 & 65280) >> 8 >= (var8 & 16711680) >> 16) {
+                                L9: {
+                                  var9 = ((var8 & 16711680) >> 15) + -60;
+                                  if (var9 > 255) {
+                                    var9 = 255;
+                                    break L9;
+                                  } else {
+                                    break L9;
+                                  }
+                                }
+                                var10 = var8 & 65280;
+                                var10 = 65280 & -(var10 >> 5) + (var10 >> 1);
+                                var11 = 31 & var8 >> 3;
+                                qg.field_i[var6_int] = p.a(p.a(var9 << 16, var10), var11);
                                 break L8;
                               } else {
-                                if ((var8 & 65280) >> 8 >= (var8 & 16711680) >> 16) {
-                                  L9: {
-                                    var9 = ((var8 & 16711680) >> 15) + -60;
-                                    if (var9 > 255) {
-                                      var9 = 255;
-                                      break L9;
-                                    } else {
-                                      break L9;
-                                    }
-                                  }
-                                  var10 = var8 & 65280;
-                                  var10 = 65280 & -(var10 >> 5) + (var10 >> 1);
-                                  var11 = 31 & var8 >> 3;
-                                  qg.field_i[var6_int] = p.a(p.a(var9 << 16, var10), var11);
-                                  break L8;
-                                } else {
-                                  break L8;
-                                }
+                                break L8;
                               }
                             }
-                            var6_int++;
-                            param4++;
-                            continue L7;
                           }
+                          var6_int++;
+                          param4++;
+                          continue L7;
                         }
                       }
                     }
-                  } else {
-                    return;
                   }
                 }
               }
@@ -283,7 +279,7 @@ final class ii {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var6, "ii.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw oj.a((Throwable) (Object) var6, "ii.G(" + param0 + 44 + param1 + 44 + 64 + 44 + 4 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

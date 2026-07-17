@@ -5,15 +5,19 @@ final class lg {
     static String field_a;
     static String field_b;
 
-    public static void a(byte param0) {
-        field_b = null;
-        if (param0 <= 73) {
-            return;
-        }
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
+            field_b = null;
             field_a = null;
-        } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "lg.B(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var1, "lg.B(" + 76 + 41);
         }
     }
 

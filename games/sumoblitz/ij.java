@@ -10,24 +10,21 @@ final class ij {
         int var4 = 0;
         ts[] var5 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        var5 = pb.a(96);
+        int discarded$2 = 96;
+        var5 = pb.a();
         var2 = var5;
-        if (param0 == 10341) {
-          var3 = 0;
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (param1 != var5[var3].field_b) {
-                var3++;
-                continue L0;
-              } else {
-                return var5[var3];
-              }
+        var3 = 0;
+        L0: while (true) {
+          if (var5.length > var3) {
+            if (param1 != var5[var3].field_b) {
+              var3++;
+              continue L0;
             } else {
-              return null;
+              return var5[var3];
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 

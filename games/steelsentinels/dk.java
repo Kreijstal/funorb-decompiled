@@ -34,7 +34,7 @@ final class dk {
         return null;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
         field_h = null;
     }
@@ -341,7 +341,7 @@ final class dk {
         }
     }
 
-    final static byte[] a(boolean param0, Object param1, int param2) {
+    final static byte[] a(boolean param0, Object param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         gb var4 = null;
@@ -465,13 +465,10 @@ final class dk {
         return null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
-        bf.field_Fb = param3;
-        o.field_b = param1;
-        if (param0 > 0) {
-            field_h = null;
-        }
-        vg.field_c = param2;
+    final static void a() {
+        bf.field_Fb = 1146810;
+        o.field_b = 0;
+        vg.field_c = 16777215;
     }
 
     dk(int param0) {

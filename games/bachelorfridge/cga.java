@@ -17,15 +17,13 @@ abstract class cga extends eo {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_23_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_10_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_22_0 = 0;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -34,9 +32,9 @@ abstract class cga extends eo {
                 break L1;
               } else {
                 if (param1 < 128) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0 != 0;
+                  stackOut_8_0 = 1;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0 != 0;
                 } else {
                   break L1;
                 }
@@ -53,51 +51,45 @@ abstract class cga extends eo {
                 }
               }
             }
-            if (param0 == 255) {
-              L3: {
-                if (param1 == 0) {
-                  break L3;
-                } else {
-                  var6 = on.field_s;
-                  var2 = var6;
-                  var3 = 0;
-                  L4: while (true) {
-                    if (var6.length <= var3) {
-                      break L3;
+            L3: {
+              if (param1 == 0) {
+                break L3;
+              } else {
+                var6 = on.field_s;
+                var2 = var6;
+                var3 = 0;
+                L4: while (true) {
+                  if (var6.length <= var3) {
+                    break L3;
+                  } else {
+                    var4 = var6[var3];
+                    if (param1 == var4) {
+                      stackOut_19_0 = 1;
+                      stackIn_20_0 = stackOut_19_0;
+                      return stackIn_20_0 != 0;
                     } else {
-                      var4 = var6[var3];
-                      if (param1 == var4) {
-                        stackOut_17_0 = 1;
-                        stackIn_18_0 = stackOut_17_0;
-                        return stackIn_18_0 != 0;
-                      } else {
-                        var3++;
-                        continue L4;
-                      }
+                      var3++;
+                      continue L4;
                     }
                   }
                 }
               }
-              stackOut_20_0 = 0;
-              stackIn_21_0 = stackOut_20_0;
-              break L0;
-            } else {
-              stackOut_10_0 = 1;
-              stackIn_11_0 = stackOut_10_0;
-              return stackIn_11_0 != 0;
             }
+            stackOut_22_0 = 0;
+            stackIn_23_0 = stackOut_22_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2_ref, "cga.C(" + param0 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) var2_ref, "cga.C(" + 255 + 44 + param1 + 41);
         }
-        return stackIn_21_0 != 0;
+        return stackIn_23_0 != 0;
     }
 
     abstract int e(int param0);
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_r = null;
     }
 

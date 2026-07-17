@@ -49,14 +49,14 @@ final class rg {
         int stackOut_1_0 = 0;
         try {
           L0: {
-            if (~vn.field_d != param1) {
+            if (vn.field_d != 13) {
               if (102 != vn.field_d) {
                 L1: {
                   L2: {
                     if (null == nn.field_q) {
                       break L2;
                     } else {
-                      if (!nn.field_q.b(param1 ^ -122, param0, param2)) {
+                      if (!nn.field_q.b(116, param0, param2)) {
                         break L2;
                       } else {
                         stackOut_10_0 = 1;
@@ -71,13 +71,14 @@ final class rg {
                 }
                 break L0;
               } else {
-                nn.field_q.e(param1 ^ -89);
+                nn.field_q.e(85);
                 stackOut_4_0 = 1;
                 stackIn_5_0 = stackOut_4_0;
                 return stackIn_5_0 != 0;
               }
             } else {
-              uc.c(3);
+              int discarded$2 = 3;
+              uc.c();
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
               return stackIn_2_0 != 0;
@@ -86,7 +87,7 @@ final class rg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "rg.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) var3, "rg.C(" + param0 + 44 + -14 + 44 + param2 + 41);
         }
         return stackIn_13_0 != 0;
     }
@@ -217,14 +218,14 @@ final class rg {
         return stackIn_47_0 != 0;
     }
 
-    final static void a(eg param0, byte param1) {
+    final static void a(eg param0) {
         byte[] var2 = null;
         int var3 = 0;
         int var4 = 0;
         L0: {
           var3 = ArcanistsMulti.field_G ? 1 : 0;
           gn.field_e = param0;
-          var2 = tj.a("text_game_name", param1 ^ -75);
+          var2 = tj.a("text_game_name", -93);
           if (null == var2) {
             break L0;
           } else {
@@ -368,7 +369,7 @@ final class rg {
           }
         }
         L16: {
-          var2 = tj.a("text_x_hasbeendefeated", param1 ^ -75);
+          var2 = tj.a("text_x_hasbeendefeated", -93);
           if (var2 == null) {
             break L16;
           } else {
@@ -449,7 +450,7 @@ final class rg {
           }
         }
         L25: {
-          var2 = tj.a("spellstrings,6", param1 + -142);
+          var2 = tj.a("spellstrings,6", -120);
           if (var2 != null) {
             vm.field_d[6] = sc.a((byte) 110, var2);
             break L25;
@@ -458,7 +459,7 @@ final class rg {
           }
         }
         L26: {
-          var2 = tj.a("spellstrings,7", param1 + -122);
+          var2 = tj.a("spellstrings,7", -100);
           if (var2 != null) {
             vm.field_d[7] = sc.a((byte) 115, var2);
             break L26;
@@ -521,7 +522,7 @@ final class rg {
           }
         }
         L33: {
-          var2 = tj.a("spellstrings,14", param1 + -106);
+          var2 = tj.a("spellstrings,14", -84);
           if (null == var2) {
             break L33;
           } else {
@@ -719,7 +720,7 @@ final class rg {
           }
         }
         L55: {
-          var2 = tj.a("spellstrings,36", param1 + -120);
+          var2 = tj.a("spellstrings,36", -98);
           if (var2 != null) {
             vm.field_d[36] = sc.a((byte) 115, var2);
             break L55;
@@ -728,7 +729,7 @@ final class rg {
           }
         }
         L56: {
-          var2 = tj.a("spellstrings,37", param1 + -116);
+          var2 = tj.a("spellstrings,37", -94);
           if (null == var2) {
             break L56;
           } else {
@@ -800,7 +801,7 @@ final class rg {
           }
         }
         L64: {
-          var2 = tj.a("spellstrings,45", param1 + -147);
+          var2 = tj.a("spellstrings,45", -125);
           if (null == var2) {
             break L64;
           } else {
@@ -818,7 +819,7 @@ final class rg {
           }
         }
         L66: {
-          var2 = tj.a("spellstrings,47", param1 ^ -108);
+          var2 = tj.a("spellstrings,47", -126);
           if (var2 != null) {
             vm.field_d[47] = sc.a((byte) 114, var2);
             break L66;
@@ -845,7 +846,7 @@ final class rg {
           }
         }
         L69: {
-          var2 = tj.a("spellstrings,50", param1 ^ -104);
+          var2 = tj.a("spellstrings,50", -114);
           if (var2 == null) {
             break L69;
           } else {
@@ -872,7 +873,7 @@ final class rg {
           }
         }
         L72: {
-          var2 = tj.a("spellstrings,53", param1 ^ -128);
+          var2 = tj.a("spellstrings,53", -106);
           if (null == var2) {
             break L72;
           } else {
@@ -881,7 +882,7 @@ final class rg {
           }
         }
         L73: {
-          var2 = tj.a("spellstrings,54", param1 + -103);
+          var2 = tj.a("spellstrings,54", -81);
           if (var2 == null) {
             break L73;
           } else {
@@ -908,7 +909,7 @@ final class rg {
           }
         }
         L76: {
-          var2 = tj.a("spellstrings,57", param1 ^ -126);
+          var2 = tj.a("spellstrings,57", -108);
           if (null == var2) {
             break L76;
           } else {
@@ -917,7 +918,7 @@ final class rg {
           }
         }
         L77: {
-          var2 = tj.a("spellstrings,58", param1 + -117);
+          var2 = tj.a("spellstrings,58", -95);
           if (null != var2) {
             vm.field_d[58] = sc.a((byte) 110, var2);
             break L77;
@@ -926,7 +927,7 @@ final class rg {
           }
         }
         L78: {
-          var2 = tj.a("spellstrings,59", param1 ^ -128);
+          var2 = tj.a("spellstrings,59", -106);
           if (var2 != null) {
             vm.field_d[59] = sc.a((byte) 89, var2);
             break L78;
@@ -989,7 +990,7 @@ final class rg {
           }
         }
         L85: {
-          var2 = tj.a("spellstrings,66", param1 ^ -71);
+          var2 = tj.a("spellstrings,66", -81);
           if (var2 == null) {
             break L85;
           } else {
@@ -1088,7 +1089,7 @@ final class rg {
           }
         }
         L96: {
-          var2 = tj.a("spellstrings,77", param1 + -116);
+          var2 = tj.a("spellstrings,77", -94);
           if (null == var2) {
             break L96;
           } else {
@@ -1106,7 +1107,7 @@ final class rg {
           }
         }
         L98: {
-          var2 = tj.a("spellstrings,79", param1 ^ -124);
+          var2 = tj.a("spellstrings,79", -110);
           if (var2 == null) {
             break L98;
           } else {
@@ -1187,7 +1188,7 @@ final class rg {
           }
         }
         L107: {
-          var2 = tj.a("spellstrings,88", param1 ^ -77);
+          var2 = tj.a("spellstrings,88", -91);
           if (null != var2) {
             vm.field_d[88] = sc.a((byte) 103, var2);
             break L107;
@@ -1214,7 +1215,7 @@ final class rg {
           }
         }
         L110: {
-          var2 = tj.a("spellstrings,91", param1 ^ -79);
+          var2 = tj.a("spellstrings,91", -89);
           if (null != var2) {
             vm.field_d[91] = sc.a((byte) 92, var2);
             break L110;
@@ -1259,7 +1260,7 @@ final class rg {
           }
         }
         L115: {
-          var2 = tj.a("spellstrings,96", param1 + -101);
+          var2 = tj.a("spellstrings,96", -79);
           if (null == var2) {
             break L115;
           } else {
@@ -1286,7 +1287,7 @@ final class rg {
           }
         }
         L118: {
-          var2 = tj.a("spellstrings,99", param1 + -122);
+          var2 = tj.a("spellstrings,99", -100);
           if (null == var2) {
             break L118;
           } else {
@@ -1367,7 +1368,7 @@ final class rg {
           }
         }
         L127: {
-          var2 = tj.a("spellstrings,108", param1 ^ -110);
+          var2 = tj.a("spellstrings,108", -124);
           if (null == var2) {
             break L127;
           } else {
@@ -1448,7 +1449,7 @@ final class rg {
           }
         }
         L136: {
-          var2 = tj.a("spellstrings,117", param1 ^ -65);
+          var2 = tj.a("spellstrings,117", -87);
           if (null != var2) {
             vm.field_d[117] = sc.a((byte) 127, var2);
             break L136;
@@ -1493,7 +1494,7 @@ final class rg {
           }
         }
         L141: {
-          var2 = tj.a("spellstrings,122", param1 + -94);
+          var2 = tj.a("spellstrings,122", -72);
           if (null != var2) {
             vm.field_d[122] = sc.a((byte) 122, var2);
             break L141;
@@ -1511,7 +1512,7 @@ final class rg {
           }
         }
         L143: {
-          var2 = tj.a("spellstrings,124", param1 + -129);
+          var2 = tj.a("spellstrings,124", -107);
           if (var2 != null) {
             vm.field_d[124] = sc.a((byte) 99, var2);
             break L143;
@@ -1529,7 +1530,7 @@ final class rg {
           }
         }
         L145: {
-          var2 = tj.a("spellstrings,126", param1 ^ -105);
+          var2 = tj.a("spellstrings,126", -127);
           if (null != var2) {
             vm.field_d[126] = sc.a((byte) 118, var2);
             break L145;
@@ -1547,7 +1548,7 @@ final class rg {
           }
         }
         L147: {
-          var2 = tj.a("spellstrings,128", param1 + -133);
+          var2 = tj.a("spellstrings,128", -111);
           if (null != var2) {
             vm.field_d[128] = sc.a((byte) 107, var2);
             break L147;
@@ -1583,7 +1584,7 @@ final class rg {
           }
         }
         L151: {
-          var2 = tj.a("spellstrings,132", param1 + -108);
+          var2 = tj.a("spellstrings,132", -86);
           if (var2 == null) {
             break L151;
           } else {
@@ -1592,7 +1593,7 @@ final class rg {
           }
         }
         L152: {
-          var2 = tj.a("spellstrings,133", param1 + -106);
+          var2 = tj.a("spellstrings,133", -84);
           if (null == var2) {
             break L152;
           } else {
@@ -1619,7 +1620,7 @@ final class rg {
           }
         }
         L155: {
-          var2 = tj.a("spellstrings,136", param1 ^ -74);
+          var2 = tj.a("spellstrings,136", -96);
           if (var2 != null) {
             vm.field_d[136] = sc.a((byte) 113, var2);
             break L155;
@@ -1682,7 +1683,7 @@ final class rg {
           }
         }
         L162: {
-          var2 = tj.a("spellstrings,143", param1 ^ -75);
+          var2 = tj.a("spellstrings,143", -93);
           if (null != var2) {
             vm.field_d[143] = sc.a((byte) 101, var2);
             break L162;
@@ -1691,7 +1692,7 @@ final class rg {
           }
         }
         L163: {
-          var2 = tj.a("spellstrings,144", param1 + -122);
+          var2 = tj.a("spellstrings,144", -100);
           if (null != var2) {
             vm.field_d[144] = sc.a((byte) 118, var2);
             break L163;
@@ -1700,7 +1701,7 @@ final class rg {
           }
         }
         L164: {
-          var2 = tj.a("spellstrings,145", param1 + -93);
+          var2 = tj.a("spellstrings,145", -71);
           if (null == var2) {
             break L164;
           } else {
@@ -1718,7 +1719,7 @@ final class rg {
           }
         }
         L166: {
-          var2 = tj.a("spellstrings,147", param1 + -107);
+          var2 = tj.a("spellstrings,147", -85);
           if (null != var2) {
             vm.field_d[147] = sc.a((byte) 102, var2);
             break L166;
@@ -1736,7 +1737,7 @@ final class rg {
           }
         }
         L168: {
-          var2 = tj.a("spellstrings,149", param1 + -96);
+          var2 = tj.a("spellstrings,149", -74);
           if (var2 == null) {
             break L168;
           } else {
@@ -1817,7 +1818,7 @@ final class rg {
           }
         }
         L177: {
-          var2 = tj.a("reqachievement", param1 + -128);
+          var2 = tj.a("reqachievement", -106);
           if (null == var2) {
             break L177;
           } else {
@@ -1835,7 +1836,7 @@ final class rg {
           }
         }
         L179: {
-          var2 = tj.a("needhatsfortime", param1 ^ -114);
+          var2 = tj.a("needhatsfortime", -104);
           if (null == var2) {
             break L179;
           } else {
@@ -1844,7 +1845,7 @@ final class rg {
           }
         }
         L180: {
-          var2 = tj.a("spellnames,0", param1 + -136);
+          var2 = tj.a("spellnames,0", -114);
           if (var2 != null) {
             tc.field_w[0] = sc.a((byte) 113, var2);
             break L180;
@@ -1880,7 +1881,7 @@ final class rg {
           }
         }
         L184: {
-          var2 = tj.a("spellnames,4", param1 ^ -115);
+          var2 = tj.a("spellnames,4", -101);
           if (var2 == null) {
             break L184;
           } else {
@@ -1952,7 +1953,7 @@ final class rg {
           }
         }
         L192: {
-          var2 = tj.a("spellnames,12", param1 ^ -66);
+          var2 = tj.a("spellnames,12", -88);
           if (var2 != null) {
             tc.field_w[12] = sc.a((byte) 117, var2);
             break L192;
@@ -2033,7 +2034,7 @@ final class rg {
           }
         }
         L201: {
-          var2 = tj.a("spellnames,21", param1 + -101);
+          var2 = tj.a("spellnames,21", -79);
           if (null == var2) {
             break L201;
           } else {
@@ -2042,7 +2043,7 @@ final class rg {
           }
         }
         L202: {
-          var2 = tj.a("spellnames,22", param1 + -129);
+          var2 = tj.a("spellnames,22", -107);
           if (null != var2) {
             tc.field_w[22] = sc.a((byte) 87, var2);
             break L202;
@@ -2051,7 +2052,7 @@ final class rg {
           }
         }
         L203: {
-          var2 = tj.a("spellnames,23", param1 ^ -78);
+          var2 = tj.a("spellnames,23", -92);
           if (null == var2) {
             break L203;
           } else {
@@ -2069,7 +2070,7 @@ final class rg {
           }
         }
         L205: {
-          var2 = tj.a("spellnames,25", param1 ^ -95);
+          var2 = tj.a("spellnames,25", -73);
           if (null == var2) {
             break L205;
           } else {
@@ -2123,7 +2124,7 @@ final class rg {
           }
         }
         L211: {
-          var2 = tj.a("spellnames,31", param1 + -97);
+          var2 = tj.a("spellnames,31", -75);
           if (var2 != null) {
             tc.field_w[31] = sc.a((byte) 98, var2);
             break L211;
@@ -2150,7 +2151,7 @@ final class rg {
           }
         }
         L214: {
-          var2 = tj.a("spellnames,34", param1 ^ -79);
+          var2 = tj.a("spellnames,34", -89);
           if (null == var2) {
             break L214;
           } else {
@@ -2159,7 +2160,7 @@ final class rg {
           }
         }
         L215: {
-          var2 = tj.a("spellnames,35", param1 + -134);
+          var2 = tj.a("spellnames,35", -112);
           if (null == var2) {
             break L215;
           } else {
@@ -2213,7 +2214,7 @@ final class rg {
           }
         }
         L221: {
-          var2 = tj.a("spellnames,41", param1 ^ -70);
+          var2 = tj.a("spellnames,41", -84);
           if (null == var2) {
             break L221;
           } else {
@@ -2276,7 +2277,7 @@ final class rg {
           }
         }
         L228: {
-          var2 = tj.a("spellnames,48", param1 + -145);
+          var2 = tj.a("spellnames,48", -123);
           if (null != var2) {
             tc.field_w[48] = sc.a((byte) 86, var2);
             break L228;
@@ -2294,7 +2295,7 @@ final class rg {
           }
         }
         L230: {
-          var2 = tj.a("spellnames,50", param1 + -124);
+          var2 = tj.a("spellnames,50", -102);
           if (var2 != null) {
             tc.field_w[50] = sc.a((byte) 103, var2);
             break L230;
@@ -2330,7 +2331,7 @@ final class rg {
           }
         }
         L234: {
-          var2 = tj.a("spellnames,54", param1 ^ -74);
+          var2 = tj.a("spellnames,54", -96);
           if (null != var2) {
             tc.field_w[54] = sc.a((byte) 117, var2);
             break L234;
@@ -2357,7 +2358,7 @@ final class rg {
           }
         }
         L237: {
-          var2 = tj.a("spellnames,57", param1 + -143);
+          var2 = tj.a("spellnames,57", -121);
           if (null == var2) {
             break L237;
           } else {
@@ -2411,7 +2412,7 @@ final class rg {
           }
         }
         L243: {
-          var2 = tj.a("spellnames,63", param1 ^ -96);
+          var2 = tj.a("spellnames,63", -74);
           if (var2 == null) {
             break L243;
           } else {
@@ -2456,7 +2457,7 @@ final class rg {
           }
         }
         L248: {
-          var2 = tj.a("spellnames,68", param1 ^ -118);
+          var2 = tj.a("spellnames,68", -100);
           if (var2 != null) {
             tc.field_w[68] = sc.a((byte) 121, var2);
             break L248;
@@ -2474,7 +2475,7 @@ final class rg {
           }
         }
         L250: {
-          var2 = tj.a("spellnames,70", param1 ^ -114);
+          var2 = tj.a("spellnames,70", -104);
           if (var2 == null) {
             break L250;
           } else {
@@ -2501,7 +2502,7 @@ final class rg {
           }
         }
         L253: {
-          var2 = tj.a("spellnames,73", param1 + -140);
+          var2 = tj.a("spellnames,73", -118);
           if (null == var2) {
             break L253;
           } else {
@@ -2510,7 +2511,7 @@ final class rg {
           }
         }
         L254: {
-          var2 = tj.a("spellnames,74", param1 ^ -75);
+          var2 = tj.a("spellnames,74", -93);
           if (null == var2) {
             break L254;
           } else {
@@ -2519,7 +2520,7 @@ final class rg {
           }
         }
         L255: {
-          var2 = tj.a("spellnames,75", param1 + -120);
+          var2 = tj.a("spellnames,75", -98);
           if (var2 == null) {
             break L255;
           } else {
@@ -2528,7 +2529,7 @@ final class rg {
           }
         }
         L256: {
-          var2 = tj.a("spellnames,76", param1 ^ -100);
+          var2 = tj.a("spellnames,76", -118);
           if (null != var2) {
             tc.field_w[76] = sc.a((byte) 86, var2);
             break L256;
@@ -2546,7 +2547,7 @@ final class rg {
           }
         }
         L258: {
-          var2 = tj.a("spellnames,78", param1 ^ -110);
+          var2 = tj.a("spellnames,78", -124);
           if (var2 == null) {
             break L258;
           } else {
@@ -2564,7 +2565,7 @@ final class rg {
           }
         }
         L260: {
-          var2 = tj.a("spellnames,80", param1 ^ -91);
+          var2 = tj.a("spellnames,80", -77);
           if (null != var2) {
             tc.field_w[80] = sc.a((byte) 127, var2);
             break L260;
@@ -2573,7 +2574,7 @@ final class rg {
           }
         }
         L261: {
-          var2 = tj.a("spellnames,81", param1 ^ -122);
+          var2 = tj.a("spellnames,81", -112);
           if (null != var2) {
             tc.field_w[81] = sc.a((byte) 123, var2);
             break L261;
@@ -2582,7 +2583,7 @@ final class rg {
           }
         }
         L262: {
-          var2 = tj.a("spellnames,82", param1 ^ -118);
+          var2 = tj.a("spellnames,82", -100);
           if (var2 == null) {
             break L262;
           } else {
@@ -2591,7 +2592,7 @@ final class rg {
           }
         }
         L263: {
-          var2 = tj.a("spellnames,83", param1 ^ -105);
+          var2 = tj.a("spellnames,83", -127);
           if (null == var2) {
             break L263;
           } else {
@@ -2627,7 +2628,7 @@ final class rg {
           }
         }
         L267: {
-          var2 = tj.a("spellnames,87", param1 ^ -84);
+          var2 = tj.a("spellnames,87", -70);
           if (var2 != null) {
             tc.field_w[87] = sc.a((byte) 90, var2);
             break L267;
@@ -2681,7 +2682,7 @@ final class rg {
           }
         }
         L273: {
-          var2 = tj.a("spellnames,93", param1 + -146);
+          var2 = tj.a("spellnames,93", -124);
           if (null == var2) {
             break L273;
           } else {
@@ -2690,7 +2691,7 @@ final class rg {
           }
         }
         L274: {
-          var2 = tj.a("spellnames,94", param1 + -139);
+          var2 = tj.a("spellnames,94", -117);
           if (null != var2) {
             tc.field_w[94] = sc.a((byte) 92, var2);
             break L274;
@@ -2744,7 +2745,7 @@ final class rg {
           }
         }
         L280: {
-          var2 = tj.a("spellnames,100", param1 + -99);
+          var2 = tj.a("spellnames,100", -77);
           if (var2 != null) {
             tc.field_w[100] = sc.a((byte) 97, var2);
             break L280;
@@ -2753,7 +2754,7 @@ final class rg {
           }
         }
         L281: {
-          var2 = tj.a("spellnames,101", param1 ^ -96);
+          var2 = tj.a("spellnames,101", -74);
           if (null != var2) {
             tc.field_w[101] = sc.a((byte) 99, var2);
             break L281;
@@ -2798,7 +2799,7 @@ final class rg {
           }
         }
         L286: {
-          var2 = tj.a("spellnames,106", param1 ^ -70);
+          var2 = tj.a("spellnames,106", -84);
           if (null != var2) {
             tc.field_w[106] = sc.a((byte) 113, var2);
             break L286;
@@ -2825,7 +2826,7 @@ final class rg {
           }
         }
         L289: {
-          var2 = tj.a("spellnames,109", param1 ^ -76);
+          var2 = tj.a("spellnames,109", -94);
           if (null == var2) {
             break L289;
           } else {
@@ -2888,7 +2889,7 @@ final class rg {
           }
         }
         L296: {
-          var2 = tj.a("spellnames,116", param1 + -142);
+          var2 = tj.a("spellnames,116", -120);
           if (null == var2) {
             break L296;
           } else {
@@ -2906,7 +2907,7 @@ final class rg {
           }
         }
         L298: {
-          var2 = tj.a("spellnames,118", param1 ^ -98);
+          var2 = tj.a("spellnames,118", -120);
           if (null != var2) {
             tc.field_w[118] = sc.a((byte) 124, var2);
             break L298;
@@ -2924,7 +2925,7 @@ final class rg {
           }
         }
         L300: {
-          var2 = tj.a("spellnames,120", param1 + -118);
+          var2 = tj.a("spellnames,120", -96);
           if (null == var2) {
             break L300;
           } else {
@@ -3041,7 +3042,7 @@ final class rg {
           }
         }
         L313: {
-          var2 = tj.a("spellnames,133", param1 ^ -104);
+          var2 = tj.a("spellnames,133", -114);
           if (null == var2) {
             break L313;
           } else {
@@ -3068,7 +3069,7 @@ final class rg {
           }
         }
         L316: {
-          var2 = tj.a("spellnames,136", param1 + -103);
+          var2 = tj.a("spellnames,136", -81);
           if (null == var2) {
             break L316;
           } else {
@@ -3077,7 +3078,7 @@ final class rg {
           }
         }
         L317: {
-          var2 = tj.a("spellnames,137", param1 + -126);
+          var2 = tj.a("spellnames,137", -104);
           if (var2 != null) {
             tc.field_w[137] = sc.a((byte) 101, var2);
             break L317;
@@ -3086,7 +3087,7 @@ final class rg {
           }
         }
         L318: {
-          var2 = tj.a("spellnames,138", param1 + -97);
+          var2 = tj.a("spellnames,138", -75);
           if (null == var2) {
             break L318;
           } else {
@@ -3113,7 +3114,7 @@ final class rg {
           }
         }
         L321: {
-          var2 = tj.a("spellnames,141", param1 + -93);
+          var2 = tj.a("spellnames,141", -71);
           if (var2 == null) {
             break L321;
           } else {
@@ -3149,7 +3150,7 @@ final class rg {
           }
         }
         L325: {
-          var2 = tj.a("spellnames,145", param1 ^ -105);
+          var2 = tj.a("spellnames,145", -127);
           if (var2 != null) {
             tc.field_w[145] = sc.a((byte) 113, var2);
             break L325;
@@ -3176,7 +3177,7 @@ final class rg {
           }
         }
         L328: {
-          var2 = tj.a("spellnames,148", param1 ^ -91);
+          var2 = tj.a("spellnames,148", -77);
           if (var2 != null) {
             tc.field_w[148] = sc.a((byte) 95, var2);
             break L328;
@@ -3185,7 +3186,7 @@ final class rg {
           }
         }
         L329: {
-          var2 = tj.a("spellnames,149", param1 + -142);
+          var2 = tj.a("spellnames,149", -120);
           if (var2 != null) {
             tc.field_w[149] = sc.a((byte) 97, var2);
             break L329;
@@ -3212,7 +3213,7 @@ final class rg {
           }
         }
         L332: {
-          var2 = tj.a("spellnames,152", param1 + -141);
+          var2 = tj.a("spellnames,152", -119);
           if (null == var2) {
             break L332;
           } else {
@@ -3239,7 +3240,7 @@ final class rg {
           }
         }
         L335: {
-          var2 = tj.a("spellnames,155", param1 + -107);
+          var2 = tj.a("spellnames,155", -85);
           if (null != var2) {
             tc.field_w[155] = sc.a((byte) 122, var2);
             break L335;
@@ -3284,7 +3285,7 @@ final class rg {
           }
         }
         L340: {
-          var2 = tj.a("achievement_names,2", param1 + -106);
+          var2 = tj.a("achievement_names,2", -84);
           if (null != var2) {
             rb.field_n[2] = sc.a((byte) 99, var2);
             break L340;
@@ -3311,7 +3312,7 @@ final class rg {
           }
         }
         L343: {
-          var2 = tj.a("achievement_names,5", param1 + -127);
+          var2 = tj.a("achievement_names,5", -105);
           if (null != var2) {
             rb.field_n[5] = sc.a((byte) 86, var2);
             break L343;
@@ -3320,7 +3321,7 @@ final class rg {
           }
         }
         L344: {
-          var2 = tj.a("achievement_names,6", param1 ^ -70);
+          var2 = tj.a("achievement_names,6", -84);
           if (var2 == null) {
             break L344;
           } else {
@@ -3338,7 +3339,7 @@ final class rg {
           }
         }
         L346: {
-          var2 = tj.a("achievement_names,8", param1 ^ -108);
+          var2 = tj.a("achievement_names,8", -126);
           if (null == var2) {
             break L346;
           } else {
@@ -3428,7 +3429,7 @@ final class rg {
           }
         }
         L356: {
-          var2 = tj.a("achievement_names,18", param1 + -126);
+          var2 = tj.a("achievement_names,18", -104);
           if (var2 == null) {
             break L356;
           } else {
@@ -3455,7 +3456,7 @@ final class rg {
           }
         }
         L359: {
-          var2 = tj.a("achievement_names,21", param1 ^ -120);
+          var2 = tj.a("achievement_names,21", -98);
           if (var2 == null) {
             break L359;
           } else {
@@ -3464,7 +3465,7 @@ final class rg {
           }
         }
         L360: {
-          var2 = tj.a("achievement_names,22", param1 ^ -98);
+          var2 = tj.a("achievement_names,22", -120);
           if (var2 != null) {
             rb.field_n[22] = sc.a((byte) 91, var2);
             break L360;
@@ -3509,7 +3510,7 @@ final class rg {
           }
         }
         L365: {
-          var2 = tj.a("achievement_names,27", param1 ^ -89);
+          var2 = tj.a("achievement_names,27", -79);
           if (var2 != null) {
             rb.field_n[27] = sc.a((byte) 120, var2);
             break L365;
@@ -3545,7 +3546,7 @@ final class rg {
           }
         }
         L369: {
-          var2 = tj.a("achievement_names,31", param1 + -115);
+          var2 = tj.a("achievement_names,31", -93);
           if (null == var2) {
             break L369;
           } else {
@@ -3599,7 +3600,7 @@ final class rg {
           }
         }
         L375: {
-          var2 = tj.a("achievement_names,37", param1 ^ -94);
+          var2 = tj.a("achievement_names,37", -76);
           if (var2 == null) {
             break L375;
           } else {
@@ -3608,7 +3609,7 @@ final class rg {
           }
         }
         L376: {
-          var2 = tj.a("achievement_names,38", param1 + -141);
+          var2 = tj.a("achievement_names,38", -119);
           if (var2 != null) {
             rb.field_n[38] = sc.a((byte) 124, var2);
             break L376;
@@ -3662,7 +3663,7 @@ final class rg {
           }
         }
         L382: {
-          var2 = tj.a("achievement_names,44", param1 ^ -109);
+          var2 = tj.a("achievement_names,44", -123);
           if (var2 != null) {
             rb.field_n[44] = sc.a((byte) 101, var2);
             break L382;
@@ -3671,7 +3672,7 @@ final class rg {
           }
         }
         L383: {
-          var2 = tj.a("achievement_names,45", param1 ^ -101);
+          var2 = tj.a("achievement_names,45", -115);
           if (var2 == null) {
             break L383;
           } else {
@@ -3752,7 +3753,7 @@ final class rg {
           }
         }
         L392: {
-          var2 = tj.a("achievement_names,54", param1 + -103);
+          var2 = tj.a("achievement_names,54", -81);
           if (null != var2) {
             rb.field_n[54] = sc.a((byte) 88, var2);
             break L392;
@@ -3833,7 +3834,7 @@ final class rg {
           }
         }
         L401: {
-          var2 = tj.a("achievement_names,63", param1 + -142);
+          var2 = tj.a("achievement_names,63", -120);
           if (var2 == null) {
             break L401;
           } else {
@@ -3851,7 +3852,7 @@ final class rg {
           }
         }
         L403: {
-          var2 = tj.a("achievement_names,65", param1 + -115);
+          var2 = tj.a("achievement_names,65", -93);
           if (var2 == null) {
             break L403;
           } else {
@@ -3860,7 +3861,7 @@ final class rg {
           }
         }
         L404: {
-          var2 = tj.a("achievement_names,66", param1 ^ -108);
+          var2 = tj.a("achievement_names,66", -126);
           if (var2 == null) {
             break L404;
           } else {
@@ -3869,7 +3870,7 @@ final class rg {
           }
         }
         L405: {
-          var2 = tj.a("achievement_names,67", param1 + -123);
+          var2 = tj.a("achievement_names,67", -101);
           if (var2 != null) {
             rb.field_n[67] = sc.a((byte) 104, var2);
             break L405;
@@ -3932,7 +3933,7 @@ final class rg {
           }
         }
         L412: {
-          var2 = tj.a("achievement_names,74", param1 ^ -108);
+          var2 = tj.a("achievement_names,74", -126);
           if (var2 != null) {
             rb.field_n[74] = sc.a((byte) 117, var2);
             break L412;
@@ -3950,7 +3951,7 @@ final class rg {
           }
         }
         L414: {
-          var2 = tj.a("achievement_names,76", param1 ^ -103);
+          var2 = tj.a("achievement_names,76", -113);
           if (null == var2) {
             break L414;
           } else {
@@ -4058,7 +4059,7 @@ final class rg {
           }
         }
         L426: {
-          var2 = tj.a("achievement_names,88", param1 ^ -101);
+          var2 = tj.a("achievement_names,88", -115);
           if (var2 != null) {
             rb.field_n[88] = sc.a((byte) 116, var2);
             break L426;
@@ -4067,7 +4068,7 @@ final class rg {
           }
         }
         L427: {
-          var2 = tj.a("achievement_names,89", param1 + -104);
+          var2 = tj.a("achievement_names,89", -82);
           if (var2 == null) {
             break L427;
           } else {
@@ -4085,7 +4086,7 @@ final class rg {
           }
         }
         L429: {
-          var2 = tj.a("achievement_names,91", param1 + -106);
+          var2 = tj.a("achievement_names,91", -84);
           if (null != var2) {
             rb.field_n[91] = sc.a((byte) 107, var2);
             break L429;
@@ -4121,7 +4122,7 @@ final class rg {
           }
         }
         L433: {
-          var2 = tj.a("achievement_criteria,0", param1 ^ -119);
+          var2 = tj.a("achievement_criteria,0", -97);
           if (null != var2) {
             af.field_Bb[0] = sc.a((byte) 123, var2);
             break L433;
@@ -4166,7 +4167,7 @@ final class rg {
           }
         }
         L438: {
-          var2 = tj.a("achievement_criteria,5", param1 + -141);
+          var2 = tj.a("achievement_criteria,5", -119);
           if (null == var2) {
             break L438;
           } else {
@@ -4229,7 +4230,7 @@ final class rg {
           }
         }
         L445: {
-          var2 = tj.a("achievement_criteria,12", param1 + -142);
+          var2 = tj.a("achievement_criteria,12", -120);
           if (var2 == null) {
             break L445;
           } else {
@@ -4247,7 +4248,7 @@ final class rg {
           }
         }
         L447: {
-          var2 = tj.a("achievement_criteria,14", param1 + -125);
+          var2 = tj.a("achievement_criteria,14", -103);
           if (null != var2) {
             af.field_Bb[14] = sc.a((byte) 97, var2);
             break L447;
@@ -4256,7 +4257,7 @@ final class rg {
           }
         }
         L448: {
-          var2 = tj.a("achievement_criteria,15", param1 ^ -119);
+          var2 = tj.a("achievement_criteria,15", -97);
           if (null != var2) {
             af.field_Bb[15] = sc.a((byte) 109, var2);
             break L448;
@@ -4265,7 +4266,7 @@ final class rg {
           }
         }
         L449: {
-          var2 = tj.a("achievement_criteria,16", param1 + -130);
+          var2 = tj.a("achievement_criteria,16", -108);
           if (var2 == null) {
             break L449;
           } else {
@@ -4319,7 +4320,7 @@ final class rg {
           }
         }
         L455: {
-          var2 = tj.a("achievement_criteria,22", param1 + -126);
+          var2 = tj.a("achievement_criteria,22", -104);
           if (var2 == null) {
             break L455;
           } else {
@@ -4355,7 +4356,7 @@ final class rg {
           }
         }
         L459: {
-          var2 = tj.a("achievement_criteria,26", param1 + -97);
+          var2 = tj.a("achievement_criteria,26", -75);
           if (null == var2) {
             break L459;
           } else {
@@ -4436,7 +4437,7 @@ final class rg {
           }
         }
         L468: {
-          var2 = tj.a("achievement_criteria,35", param1 ^ -115);
+          var2 = tj.a("achievement_criteria,35", -101);
           if (var2 != null) {
             af.field_Bb[35] = sc.a((byte) 120, var2);
             break L468;
@@ -4481,7 +4482,7 @@ final class rg {
           }
         }
         L473: {
-          var2 = tj.a("achievement_criteria,40", param1 ^ -71);
+          var2 = tj.a("achievement_criteria,40", -81);
           if (var2 == null) {
             break L473;
           } else {
@@ -4535,7 +4536,7 @@ final class rg {
           }
         }
         L479: {
-          var2 = tj.a("achievement_criteria,46", param1 + -144);
+          var2 = tj.a("achievement_criteria,46", -122);
           if (var2 != null) {
             af.field_Bb[46] = sc.a((byte) 114, var2);
             break L479;
@@ -4553,7 +4554,7 @@ final class rg {
           }
         }
         L481: {
-          var2 = tj.a("achievement_criteria,48", param1 ^ -107);
+          var2 = tj.a("achievement_criteria,48", -125);
           if (var2 == null) {
             break L481;
           } else {
@@ -4607,7 +4608,7 @@ final class rg {
           }
         }
         L487: {
-          var2 = tj.a("achievement_criteria,54", param1 ^ -123);
+          var2 = tj.a("achievement_criteria,54", -109);
           if (null == var2) {
             break L487;
           } else {
@@ -4625,7 +4626,7 @@ final class rg {
           }
         }
         L489: {
-          var2 = tj.a("achievement_criteria,56", param1 ^ -111);
+          var2 = tj.a("achievement_criteria,56", -121);
           if (null == var2) {
             break L489;
           } else {
@@ -4661,7 +4662,7 @@ final class rg {
           }
         }
         L493: {
-          var2 = tj.a("achievement_criteria,60", param1 ^ -90);
+          var2 = tj.a("achievement_criteria,60", -80);
           if (var2 == null) {
             break L493;
           } else {
@@ -4724,7 +4725,7 @@ final class rg {
           }
         }
         L500: {
-          var2 = tj.a("achievement_criteria,67", param1 ^ -105);
+          var2 = tj.a("achievement_criteria,67", -127);
           if (null != var2) {
             af.field_Bb[67] = sc.a((byte) 115, var2);
             break L500;
@@ -4796,7 +4797,7 @@ final class rg {
           }
         }
         L508: {
-          var2 = tj.a("achievement_criteria,75", param1 + -110);
+          var2 = tj.a("achievement_criteria,75", -88);
           if (var2 != null) {
             af.field_Bb[75] = sc.a((byte) 91, var2);
             break L508;
@@ -4823,7 +4824,7 @@ final class rg {
           }
         }
         L511: {
-          var2 = tj.a("achievement_criteria,78", param1 + -124);
+          var2 = tj.a("achievement_criteria,78", -102);
           if (null != var2) {
             af.field_Bb[78] = sc.a((byte) 110, var2);
             break L511;
@@ -4850,7 +4851,7 @@ final class rg {
           }
         }
         L514: {
-          var2 = tj.a("achievement_criteria,81", param1 ^ -81);
+          var2 = tj.a("achievement_criteria,81", -71);
           if (var2 != null) {
             af.field_Bb[81] = sc.a((byte) 96, var2);
             break L514;
@@ -4904,7 +4905,7 @@ final class rg {
           }
         }
         L520: {
-          var2 = tj.a("achievement_criteria,87", param1 + -137);
+          var2 = tj.a("achievement_criteria,87", -115);
           if (null == var2) {
             break L520;
           } else {
@@ -4922,7 +4923,7 @@ final class rg {
           }
         }
         L522: {
-          var2 = tj.a("achievement_criteria,89", param1 + -126);
+          var2 = tj.a("achievement_criteria,89", -104);
           if (null != var2) {
             af.field_Bb[89] = sc.a((byte) 126, var2);
             break L522;
@@ -4940,7 +4941,7 @@ final class rg {
           }
         }
         L524: {
-          var2 = tj.a("achievement_criteria,91", param1 ^ -125);
+          var2 = tj.a("achievement_criteria,91", -107);
           if (var2 != null) {
             af.field_Bb[91] = sc.a((byte) 91, var2);
             break L524;
@@ -5030,7 +5031,7 @@ final class rg {
           }
         }
         L534: {
-          var2 = tj.a("keycode_scrollleft", param1 + -119);
+          var2 = tj.a("keycode_scrollleft", -97);
           if (var2 == null) {
             break L534;
           } else {
@@ -5057,7 +5058,7 @@ final class rg {
           }
         }
         L537: {
-          var2 = tj.a("keycode_c", param1 ^ -104);
+          var2 = tj.a("keycode_c", -114);
           if (null == var2) {
             break L537;
           } else {
@@ -5183,7 +5184,7 @@ final class rg {
           }
         }
         L551: {
-          var2 = tj.a("gameopt_buttonnames,0,2", param1 + -142);
+          var2 = tj.a("gameopt_buttonnames,0,2", -120);
           if (null != var2) {
             rm.field_l[0][2] = sc.a((byte) 107, var2);
             break L551;
@@ -5210,7 +5211,7 @@ final class rg {
           }
         }
         L554: {
-          var2 = tj.a("gameopt_buttonnames,0,5", param1 + -112);
+          var2 = tj.a("gameopt_buttonnames,0,5", -90);
           if (null == var2) {
             break L554;
           } else {
@@ -5246,7 +5247,7 @@ final class rg {
           }
         }
         L558: {
-          var2 = tj.a("gameopt_tooltipnames,0,0", param1 + -92);
+          var2 = tj.a("gameopt_tooltipnames,0,0", -70);
           if (var2 != null) {
             jh.field_d[0][0] = sc.a((byte) 91, var2);
             break L558;
@@ -5255,7 +5256,7 @@ final class rg {
           }
         }
         L559: {
-          var2 = tj.a("gameopt_tooltipnames,0,1", param1 ^ -123);
+          var2 = tj.a("gameopt_tooltipnames,0,1", -109);
           if (null == var2) {
             break L559;
           } else {
@@ -5273,7 +5274,7 @@ final class rg {
           }
         }
         L561: {
-          var2 = tj.a("gameopt_tooltipnames,0,3", param1 + -140);
+          var2 = tj.a("gameopt_tooltipnames,0,3", -118);
           if (null == var2) {
             break L561;
           } else {
@@ -5309,7 +5310,7 @@ final class rg {
           }
         }
         L565: {
-          var2 = tj.a("gameopt_tooltipnames,1,0", param1 ^ -84);
+          var2 = tj.a("gameopt_tooltipnames,1,0", -70);
           if (null == var2) {
             break L565;
           } else {
@@ -5345,7 +5346,7 @@ final class rg {
           }
         }
         L569: {
-          var2 = tj.a("gameopt_tooltipnames,1,4", param1 ^ -71);
+          var2 = tj.a("gameopt_tooltipnames,1,4", -81);
           if (var2 != null) {
             jh.field_d[1][4] = sc.a((byte) 116, var2);
             break L569;
@@ -5363,7 +5364,7 @@ final class rg {
           }
         }
         L571: {
-          var2 = tj.a("gameopt_tooltipnames,1,6", param1 + -132);
+          var2 = tj.a("gameopt_tooltipnames,1,6", -110);
           if (null != var2) {
             jh.field_d[1][6] = sc.a((byte) 105, var2);
             break L571;
@@ -5417,7 +5418,7 @@ final class rg {
           }
         }
         L577: {
-          var2 = tj.a("instructions_pages,0", param1 ^ -121);
+          var2 = tj.a("instructions_pages,0", -111);
           if (null == var2) {
             break L577;
           } else {
@@ -5444,7 +5445,7 @@ final class rg {
           }
         }
         L580: {
-          var2 = tj.a("instructions_pages,3", param1 + -146);
+          var2 = tj.a("instructions_pages,3", -124);
           if (null == var2) {
             break L580;
           } else {
@@ -5462,7 +5463,7 @@ final class rg {
           }
         }
         L582: {
-          var2 = tj.a("instructions_pages,5", param1 ^ -124);
+          var2 = tj.a("instructions_pages,5", -110);
           if (var2 == null) {
             break L582;
           } else {
@@ -5480,7 +5481,7 @@ final class rg {
           }
         }
         L584: {
-          var2 = tj.a("instructions_pages,7", param1 ^ -114);
+          var2 = tj.a("instructions_pages,7", -104);
           if (var2 == null) {
             break L584;
           } else {
@@ -5516,7 +5517,7 @@ final class rg {
           }
         }
         L588: {
-          var2 = tj.a("instructions_pages,11", param1 ^ -101);
+          var2 = tj.a("instructions_pages,11", -115);
           if (var2 == null) {
             break L588;
           } else {
@@ -5534,7 +5535,7 @@ final class rg {
           }
         }
         L590: {
-          var2 = tj.a("yourname", param1 ^ -76);
+          var2 = tj.a("yourname", -94);
           if (null != var2) {
             k.field_p = sc.a((byte) 107, var2);
             break L590;
@@ -5543,7 +5544,7 @@ final class rg {
           }
         }
         L591: {
-          var2 = tj.a("castingspace", param1 + -97);
+          var2 = tj.a("castingspace", -75);
           if (var2 != null) {
             li.field_I = sc.a((byte) 90, var2);
             break L591;
@@ -5579,7 +5580,7 @@ final class rg {
           }
         }
         L595: {
-          var2 = tj.a("youhavenoplatipusesavailaible", param1 ^ -113);
+          var2 = tj.a("youhavenoplatipusesavailaible", -103);
           if (null == var2) {
             break L595;
           } else {
@@ -5615,7 +5616,7 @@ final class rg {
           }
         }
         L599: {
-          var2 = tj.a("nowands", param1 ^ -104);
+          var2 = tj.a("nowands", -114);
           if (null != var2) {
             jl.field_l = sc.a((byte) 109, var2);
             break L599;
@@ -5669,7 +5670,7 @@ final class rg {
           }
         }
         L605: {
-          var2 = tj.a("tit6", param1 ^ -93);
+          var2 = tj.a("tit6", -75);
           if (var2 == null) {
             break L605;
           } else {
@@ -5696,7 +5697,7 @@ final class rg {
           }
         }
         L608: {
-          var2 = tj.a("dsc4", param1 + -117);
+          var2 = tj.a("dsc4", -95);
           if (var2 != null) {
             lm.field_h = sc.a((byte) 94, var2);
             break L608;
@@ -5723,7 +5724,7 @@ final class rg {
           }
         }
         L611: {
-          var2 = tj.a("tit3", param1 + -94);
+          var2 = tj.a("tit3", -72);
           if (null == var2) {
             break L611;
           } else {
@@ -5741,7 +5742,7 @@ final class rg {
           }
         }
         L613: {
-          var2 = tj.a("tit2", param1 ^ -82);
+          var2 = tj.a("tit2", -72);
           if (var2 == null) {
             break L613;
           } else {
@@ -5759,7 +5760,7 @@ final class rg {
           }
         }
         L615: {
-          var2 = tj.a("tit1", param1 ^ -66);
+          var2 = tj.a("tit1", -88);
           if (var2 != null) {
             rj.field_d = sc.a((byte) 96, var2);
             break L615;
@@ -5813,7 +5814,7 @@ final class rg {
           }
         }
         L621: {
-          var2 = tj.a("wandstobuy5", param1 + -95);
+          var2 = tj.a("wandstobuy5", -73);
           if (var2 != null) {
             aj.field_b = sc.a((byte) 92, var2);
             break L621;
@@ -5903,7 +5904,7 @@ final class rg {
           }
         }
         L631: {
-          var2 = tj.a("overdisc", param1 + -120);
+          var2 = tj.a("overdisc", -98);
           if (null == var2) {
             break L631;
           } else {
@@ -5930,7 +5931,7 @@ final class rg {
           }
         }
         L634: {
-          var2 = tj.a("underbook", param1 ^ -127);
+          var2 = tj.a("underbook", -105);
           if (null == var2) {
             break L634;
           } else {
@@ -5984,7 +5985,7 @@ final class rg {
           }
         }
         L640: {
-          var2 = tj.a("stonebook", param1 + -93);
+          var2 = tj.a("stonebook", -71);
           if (var2 == null) {
             break L640;
           } else {
@@ -6029,7 +6030,7 @@ final class rg {
           }
         }
         L645: {
-          var2 = tj.a("naturedisc", param1 ^ -124);
+          var2 = tj.a("naturedisc", -110);
           if (null == var2) {
             break L645;
           } else {
@@ -6038,2200 +6039,2192 @@ final class rg {
           }
         }
         L646: {
-          if (param1 == 22) {
+          var2 = tj.a("naturebook", -71);
+          if (null == var2) {
             break L646;
           } else {
-            field_e = null;
+            nf.field_e = sc.a((byte) 101, var2);
             break L646;
           }
         }
         L647: {
-          var2 = tj.a("naturebook", param1 + -93);
+          var2 = tj.a("oceandisc", -93);
           if (null == var2) {
             break L647;
           } else {
-            nf.field_e = sc.a((byte) 101, var2);
+            mi.field_s = sc.a((byte) 95, var2);
             break L647;
           }
         }
         L648: {
-          var2 = tj.a("oceandisc", -93);
-          if (null == var2) {
+          var2 = tj.a("oceanbook", -92);
+          if (null != var2) {
+            oo.field_r = sc.a((byte) 117, var2);
             break L648;
           } else {
-            mi.field_s = sc.a((byte) 95, var2);
             break L648;
           }
         }
         L649: {
-          var2 = tj.a("oceanbook", -92);
-          if (null != var2) {
-            oo.field_r = sc.a((byte) 117, var2);
+          var2 = tj.a("cogsdisc", -115);
+          if (var2 == null) {
             break L649;
           } else {
+            uk.field_f = sc.a((byte) 89, var2);
             break L649;
           }
         }
         L650: {
-          var2 = tj.a("cogsdisc", param1 ^ -101);
-          if (var2 == null) {
+          var2 = tj.a("cogsbook", -107);
+          if (var2 != null) {
+            j.field_c = sc.a((byte) 102, var2);
             break L650;
           } else {
-            uk.field_f = sc.a((byte) 89, var2);
             break L650;
           }
         }
         L651: {
-          var2 = tj.a("cogsbook", -107);
+          var2 = tj.a("choosespellsmoredetail", -84);
           if (var2 != null) {
-            j.field_c = sc.a((byte) 102, var2);
+            tn.field_Ib = sc.a((byte) 94, var2);
             break L651;
           } else {
             break L651;
           }
         }
         L652: {
-          var2 = tj.a("choosespellsmoredetail", -84);
-          if (var2 != null) {
-            tn.field_Ib = sc.a((byte) 94, var2);
+          var2 = tj.a("choosespells", -111);
+          if (null != var2) {
+            vl.field_l = sc.a((byte) 121, var2);
             break L652;
           } else {
             break L652;
           }
         }
         L653: {
-          var2 = tj.a("choosespells", -111);
+          var2 = tj.a("buyfor3", -86);
           if (null != var2) {
-            vl.field_l = sc.a((byte) 121, var2);
+            ej.field_P = sc.a((byte) 117, var2);
             break L653;
           } else {
             break L653;
           }
         }
         L654: {
-          var2 = tj.a("buyfor3", -86);
+          var2 = tj.a("buyfor2", -116);
           if (null != var2) {
-            ej.field_P = sc.a((byte) 117, var2);
+            gi.field_l = sc.a((byte) 99, var2);
             break L654;
           } else {
             break L654;
           }
         }
         L655: {
-          var2 = tj.a("buyfor2", -116);
+          var2 = tj.a("notenoughwands", -115);
           if (null != var2) {
-            gi.field_l = sc.a((byte) 99, var2);
+            jk.field_d = sc.a((byte) 104, var2);
             break L655;
           } else {
             break L655;
           }
         }
         L656: {
-          var2 = tj.a("notenoughwands", param1 + -137);
-          if (null != var2) {
-            jk.field_d = sc.a((byte) 104, var2);
+          var2 = tj.a("buyasmember", -125);
+          if (var2 == null) {
             break L656;
           } else {
+            gg.field_g = sc.a((byte) 88, var2);
             break L656;
           }
         }
         L657: {
-          var2 = tj.a("buyasmember", param1 ^ -107);
-          if (var2 == null) {
+          var2 = tj.a("spellbooknotpur", -72);
+          if (null != var2) {
+            ra.field_i = sc.a((byte) 90, var2);
             break L657;
           } else {
-            gg.field_g = sc.a((byte) 88, var2);
             break L657;
           }
         }
         L658: {
-          var2 = tj.a("spellbooknotpur", param1 + -94);
-          if (null != var2) {
-            ra.field_i = sc.a((byte) 90, var2);
+          var2 = tj.a("spellbooknotaquired", -118);
+          if (var2 != null) {
+            vf.field_h = sc.a((byte) 125, var2);
             break L658;
           } else {
             break L658;
           }
         }
         L659: {
-          var2 = tj.a("spellbooknotaquired", -118);
-          if (var2 != null) {
-            vf.field_h = sc.a((byte) 125, var2);
+          var2 = tj.a("chosesspells", -115);
+          if (var2 == null) {
             break L659;
           } else {
+            tc.field_F = sc.a((byte) 118, var2);
             break L659;
           }
         }
         L660: {
-          var2 = tj.a("chosesspells", -115);
-          if (var2 == null) {
+          var2 = tj.a("sort1", -74);
+          if (null == var2) {
             break L660;
           } else {
-            tc.field_F = sc.a((byte) 118, var2);
+            ij.field_Cb = sc.a((byte) 125, var2);
             break L660;
           }
         }
         L661: {
-          var2 = tj.a("sort1", -74);
-          if (null == var2) {
+          var2 = tj.a("sort0", -96);
+          if (var2 == null) {
             break L661;
           } else {
-            ij.field_Cb = sc.a((byte) 125, var2);
+            me.field_N = sc.a((byte) 112, var2);
             break L661;
           }
         }
         L662: {
-          var2 = tj.a("sort0", -96);
+          var2 = tj.a("waitingforawards", -99);
           if (var2 == null) {
             break L662;
           } else {
-            me.field_N = sc.a((byte) 112, var2);
+            nj.field_b = sc.a((byte) 117, var2);
             break L662;
           }
         }
         L663: {
-          var2 = tj.a("waitingforawards", -99);
+          var2 = tj.a("mostbounce", -76);
           if (var2 == null) {
             break L663;
           } else {
-            nj.field_b = sc.a((byte) 117, var2);
+            gk.field_a = sc.a((byte) 107, var2);
             break L663;
           }
         }
         L664: {
-          var2 = tj.a("mostbounce", -76);
-          if (var2 == null) {
+          var2 = tj.a("mostfit", -108);
+          if (var2 != null) {
+            rk.field_S = sc.a((byte) 108, var2);
             break L664;
           } else {
-            gk.field_a = sc.a((byte) 107, var2);
             break L664;
           }
         }
         L665: {
-          var2 = tj.a("mostfit", -108);
+          var2 = tj.a("mosthonor", -109);
           if (var2 != null) {
-            rk.field_S = sc.a((byte) 108, var2);
+            nj.field_i = sc.a((byte) 98, var2);
             break L665;
           } else {
             break L665;
           }
         }
         L666: {
-          var2 = tj.a("mosthonor", -109);
-          if (var2 != null) {
-            nj.field_i = sc.a((byte) 98, var2);
+          var2 = tj.a("mostcruel", -98);
+          if (null == var2) {
             break L666;
           } else {
+            gi.field_i = sc.a((byte) 115, var2);
             break L666;
           }
         }
         L667: {
-          var2 = tj.a("mostcruel", -98);
-          if (null == var2) {
+          var2 = tj.a("mostresil", -111);
+          if (var2 != null) {
+            co.field_b = sc.a((byte) 95, var2);
             break L667;
           } else {
-            gi.field_i = sc.a((byte) 115, var2);
             break L667;
           }
         }
         L668: {
-          var2 = tj.a("mostresil", -111);
-          if (var2 != null) {
-            co.field_b = sc.a((byte) 95, var2);
+          var2 = tj.a("minionmaster", -101);
+          if (var2 == null) {
             break L668;
           } else {
+            ao.field_a = sc.a((byte) 98, var2);
             break L668;
           }
         }
         L669: {
-          var2 = tj.a("minionmaster", -101);
+          var2 = tj.a("dragonmaster", -108);
           if (var2 == null) {
             break L669;
           } else {
-            ao.field_a = sc.a((byte) 98, var2);
+            ob.field_X = sc.a((byte) 118, var2);
             break L669;
           }
         }
         L670: {
-          var2 = tj.a("dragonmaster", -108);
+          var2 = tj.a("impmaster", -94);
           if (var2 == null) {
             break L670;
           } else {
-            ob.field_X = sc.a((byte) 118, var2);
+            ed.field_Eb = sc.a((byte) 109, var2);
             break L670;
           }
         }
         L671: {
-          var2 = tj.a("impmaster", param1 ^ -76);
+          var2 = tj.a("mostcrap", -72);
           if (var2 == null) {
             break L671;
           } else {
-            ed.field_Eb = sc.a((byte) 109, var2);
+            wk.field_h = sc.a((byte) 125, var2);
             break L671;
           }
         }
         L672: {
-          var2 = tj.a("mostcrap", -72);
-          if (var2 == null) {
+          var2 = tj.a("mostwet", -125);
+          if (null != var2) {
+            q.field_J = sc.a((byte) 119, var2);
             break L672;
           } else {
-            wk.field_h = sc.a((byte) 125, var2);
             break L672;
           }
         }
         L673: {
-          var2 = tj.a("mostwet", param1 + -147);
-          if (null != var2) {
-            q.field_J = sc.a((byte) 119, var2);
+          var2 = tj.a("mostskill", -107);
+          if (var2 != null) {
+            be.field_a = sc.a((byte) 111, var2);
             break L673;
           } else {
             break L673;
           }
         }
         L674: {
-          var2 = tj.a("mostskill", -107);
-          if (var2 != null) {
-            be.field_a = sc.a((byte) 111, var2);
+          var2 = tj.a("mostkill", -86);
+          if (var2 == null) {
             break L674;
           } else {
+            tl.field_e = sc.a((byte) 90, var2);
             break L674;
           }
         }
         L675: {
-          var2 = tj.a("mostkill", -86);
-          if (var2 == null) {
+          var2 = tj.a("mostminion", -124);
+          if (null == var2) {
             break L675;
           } else {
-            tl.field_e = sc.a((byte) 90, var2);
+            ej.field_N = sc.a((byte) 124, var2);
             break L675;
           }
         }
         L676: {
-          var2 = tj.a("mostminion", -124);
+          var2 = tj.a("mostannoying", -124);
           if (null == var2) {
             break L676;
           } else {
-            ej.field_N = sc.a((byte) 124, var2);
+            qa.field_p = sc.a((byte) 103, var2);
             break L676;
           }
         }
         L677: {
-          var2 = tj.a("mostannoying", param1 ^ -110);
-          if (null == var2) {
+          var2 = tj.a("mostpower", -103);
+          if (null != var2) {
+            tm.field_e = sc.a((byte) 109, var2);
             break L677;
           } else {
-            qa.field_p = sc.a((byte) 103, var2);
             break L677;
           }
         }
         L678: {
-          var2 = tj.a("mostpower", -103);
-          if (null != var2) {
-            tm.field_e = sc.a((byte) 109, var2);
+          var2 = tj.a("mostdamage", -109);
+          if (var2 == null) {
             break L678;
           } else {
+            lo.field_v = sc.a((byte) 120, var2);
             break L678;
           }
         }
         L679: {
-          var2 = tj.a("mostdamage", param1 + -131);
-          if (var2 == null) {
+          var2 = tj.a("mostzombiemonkies", -72);
+          if (null == var2) {
             break L679;
           } else {
-            lo.field_v = sc.a((byte) 120, var2);
+            lj.field_q = sc.a((byte) 101, var2);
             break L679;
           }
         }
         L680: {
-          var2 = tj.a("mostzombiemonkies", -72);
-          if (null == var2) {
+          var2 = tj.a("gameoutoftime", -119);
+          if (null != var2) {
+            ff.field_d = sc.a((byte) 114, var2);
             break L680;
           } else {
-            lj.field_q = sc.a((byte) 101, var2);
             break L680;
           }
         }
         L681: {
-          var2 = tj.a("gameoutoftime", param1 + -141);
+          var2 = tj.a("drawgame", -98);
           if (null != var2) {
-            ff.field_d = sc.a((byte) 114, var2);
+            th.field_a = sc.a((byte) 109, var2);
             break L681;
           } else {
             break L681;
           }
         }
         L682: {
-          var2 = tj.a("drawgame", -98);
-          if (null != var2) {
-            th.field_a = sc.a((byte) 109, var2);
+          var2 = tj.a("winnerdash", -84);
+          if (null == var2) {
             break L682;
           } else {
+            rn.field_K = sc.a((byte) 116, var2);
             break L682;
           }
         }
         L683: {
-          var2 = tj.a("winnerdash", -84);
-          if (null == var2) {
+          var2 = tj.a("pressstart", -94);
+          if (null != var2) {
+            qe.field_s = sc.a((byte) 115, var2);
             break L683;
           } else {
-            rn.field_K = sc.a((byte) 116, var2);
             break L683;
           }
         }
         L684: {
-          var2 = tj.a("pressstart", -94);
-          if (null != var2) {
-            qe.field_s = sc.a((byte) 115, var2);
+          var2 = tj.a("currentlyyourturnpressstart", -74);
+          if (null == var2) {
             break L684;
           } else {
+            ae.field_d = sc.a((byte) 118, var2);
             break L684;
           }
         }
         L685: {
-          var2 = tj.a("currentlyyourturnpressstart", -74);
-          if (null == var2) {
+          var2 = tj.a("ins55", -73);
+          if (var2 == null) {
             break L685;
           } else {
-            ae.field_d = sc.a((byte) 118, var2);
+            ao.field_b = sc.a((byte) 95, var2);
             break L685;
           }
         }
         L686: {
-          var2 = tj.a("ins55", param1 + -95);
-          if (var2 == null) {
+          var2 = tj.a("ins54", -72);
+          if (null == var2) {
             break L686;
           } else {
-            ao.field_b = sc.a((byte) 95, var2);
+            lo.field_t = sc.a((byte) 108, var2);
             break L686;
           }
         }
         L687: {
-          var2 = tj.a("ins54", -72);
-          if (null == var2) {
+          var2 = tj.a("ins53", -123);
+          if (var2 != null) {
+            lm.field_d = sc.a((byte) 112, var2);
             break L687;
           } else {
-            lo.field_t = sc.a((byte) 108, var2);
             break L687;
           }
         }
         L688: {
-          var2 = tj.a("ins53", -123);
-          if (var2 != null) {
-            lm.field_d = sc.a((byte) 112, var2);
+          var2 = tj.a("ins52", -111);
+          if (var2 == null) {
             break L688;
           } else {
+            wn.field_A = sc.a((byte) 127, var2);
             break L688;
           }
         }
         L689: {
-          var2 = tj.a("ins52", -111);
-          if (var2 == null) {
+          var2 = tj.a("ins51", -75);
+          if (null != var2) {
+            sc.field_S = sc.a((byte) 110, var2);
             break L689;
           } else {
-            wn.field_A = sc.a((byte) 127, var2);
             break L689;
           }
         }
         L690: {
-          var2 = tj.a("ins51", param1 ^ -93);
-          if (null != var2) {
-            sc.field_S = sc.a((byte) 110, var2);
+          var2 = tj.a("ins50", -122);
+          if (var2 == null) {
             break L690;
           } else {
+            oo.field_q = sc.a((byte) 94, var2);
             break L690;
           }
         }
         L691: {
-          var2 = tj.a("ins50", -122);
-          if (var2 == null) {
+          var2 = tj.a("ins49", -93);
+          if (null == var2) {
             break L691;
           } else {
-            oo.field_q = sc.a((byte) 94, var2);
+            dn.field_Bb = sc.a((byte) 101, var2);
             break L691;
           }
         }
         L692: {
-          var2 = tj.a("ins49", param1 ^ -75);
+          var2 = tj.a("ins48", -83);
           if (null == var2) {
             break L692;
           } else {
-            dn.field_Bb = sc.a((byte) 101, var2);
+            hn.field_o = sc.a((byte) 93, var2);
             break L692;
           }
         }
         L693: {
-          var2 = tj.a("ins48", -83);
-          if (null == var2) {
+          var2 = tj.a("ins47", -98);
+          if (var2 != null) {
+            ah.field_e = sc.a((byte) 90, var2);
             break L693;
           } else {
-            hn.field_o = sc.a((byte) 93, var2);
             break L693;
           }
         }
         L694: {
-          var2 = tj.a("ins47", param1 + -120);
+          var2 = tj.a("ins46", -119);
           if (var2 != null) {
-            ah.field_e = sc.a((byte) 90, var2);
+            rk.field_J = sc.a((byte) 93, var2);
             break L694;
           } else {
             break L694;
           }
         }
         L695: {
-          var2 = tj.a("ins46", -119);
-          if (var2 != null) {
-            rk.field_J = sc.a((byte) 93, var2);
+          var2 = tj.a("ins45", -124);
+          if (var2 == null) {
             break L695;
           } else {
+            kn.field_pb = sc.a((byte) 119, var2);
             break L695;
           }
         }
         L696: {
-          var2 = tj.a("ins45", -124);
-          if (var2 == null) {
+          var2 = tj.a("ins44", -97);
+          if (null == var2) {
             break L696;
           } else {
-            kn.field_pb = sc.a((byte) 119, var2);
+            na.field_Tb = sc.a((byte) 103, var2);
             break L696;
           }
         }
         L697: {
-          var2 = tj.a("ins44", -97);
-          if (null == var2) {
+          var2 = tj.a("ins43", -105);
+          if (var2 == null) {
             break L697;
           } else {
-            na.field_Tb = sc.a((byte) 103, var2);
+            ne.field_j = sc.a((byte) 100, var2);
             break L697;
           }
         }
         L698: {
-          var2 = tj.a("ins43", -105);
-          if (var2 == null) {
+          var2 = tj.a("ins42", -109);
+          if (null == var2) {
             break L698;
           } else {
-            ne.field_j = sc.a((byte) 100, var2);
+            an.field_m = sc.a((byte) 95, var2);
             break L698;
           }
         }
         L699: {
-          var2 = tj.a("ins42", -109);
-          if (null == var2) {
+          var2 = tj.a("ins41", -108);
+          if (null != var2) {
+            fo.field_j = sc.a((byte) 122, var2);
             break L699;
           } else {
-            an.field_m = sc.a((byte) 95, var2);
             break L699;
           }
         }
         L700: {
-          var2 = tj.a("ins41", -108);
-          if (null != var2) {
-            fo.field_j = sc.a((byte) 122, var2);
+          var2 = tj.a("ins40", -125);
+          if (var2 == null) {
             break L700;
           } else {
+            an.field_n = sc.a((byte) 117, var2);
             break L700;
           }
         }
         L701: {
-          var2 = tj.a("ins40", -125);
-          if (var2 == null) {
+          var2 = tj.a("spacewands", -124);
+          if (var2 != null) {
+            dk.field_g = sc.a((byte) 86, var2);
             break L701;
           } else {
-            an.field_n = sc.a((byte) 117, var2);
             break L701;
           }
         }
         L702: {
-          var2 = tj.a("spacewands", -124);
-          if (var2 != null) {
-            dk.field_g = sc.a((byte) 86, var2);
+          var2 = tj.a("spacewand", -75);
+          if (null != var2) {
+            wn.field_x = sc.a((byte) 118, var2);
             break L702;
           } else {
             break L702;
           }
         }
         L703: {
-          var2 = tj.a("spacewand", param1 + -97);
-          if (null != var2) {
-            wn.field_x = sc.a((byte) 118, var2);
+          var2 = tj.a("ins39", -100);
+          if (null == var2) {
             break L703;
           } else {
+            hh.field_a = sc.a((byte) 102, var2);
             break L703;
           }
         }
         L704: {
-          var2 = tj.a("ins39", param1 + -122);
-          if (null == var2) {
+          var2 = tj.a("ins38", -103);
+          if (var2 != null) {
+            km.field_b = sc.a((byte) 91, var2);
             break L704;
           } else {
-            hh.field_a = sc.a((byte) 102, var2);
             break L704;
           }
         }
         L705: {
-          var2 = tj.a("ins38", -103);
-          if (var2 != null) {
-            km.field_b = sc.a((byte) 91, var2);
+          var2 = tj.a("ins37", -75);
+          if (var2 == null) {
             break L705;
           } else {
+            i.field_h = sc.a((byte) 110, var2);
             break L705;
           }
         }
         L706: {
-          var2 = tj.a("ins37", -75);
-          if (var2 == null) {
+          var2 = tj.a("ins36", -115);
+          if (var2 != null) {
+            tn.field_Kb = sc.a((byte) 121, var2);
             break L706;
           } else {
-            i.field_h = sc.a((byte) 110, var2);
             break L706;
           }
         }
         L707: {
-          var2 = tj.a("ins36", -115);
-          if (var2 != null) {
-            tn.field_Kb = sc.a((byte) 121, var2);
+          var2 = tj.a("ins35", -77);
+          if (null == var2) {
             break L707;
           } else {
+            tk.field_m = sc.a((byte) 121, var2);
             break L707;
           }
         }
         L708: {
-          var2 = tj.a("ins35", -77);
-          if (null == var2) {
+          var2 = tj.a("ins34", -119);
+          if (var2 == null) {
             break L708;
           } else {
-            tk.field_m = sc.a((byte) 121, var2);
+            oa.field_b = sc.a((byte) 100, var2);
             break L708;
           }
         }
         L709: {
-          var2 = tj.a("ins34", -119);
-          if (var2 == null) {
+          var2 = tj.a("ins33", -89);
+          if (null != var2) {
+            hc.field_a = sc.a((byte) 106, var2);
             break L709;
           } else {
-            oa.field_b = sc.a((byte) 100, var2);
             break L709;
           }
         }
         L710: {
-          var2 = tj.a("ins33", param1 + -111);
-          if (null != var2) {
-            hc.field_a = sc.a((byte) 106, var2);
+          var2 = tj.a("ins32", -106);
+          if (null == var2) {
             break L710;
           } else {
+            u.field_m = sc.a((byte) 89, var2);
             break L710;
           }
         }
         L711: {
-          var2 = tj.a("ins32", -106);
-          if (null == var2) {
+          var2 = tj.a("ins31", -117);
+          if (var2 != null) {
+            lh.field_h = sc.a((byte) 107, var2);
             break L711;
           } else {
-            u.field_m = sc.a((byte) 89, var2);
             break L711;
           }
         }
         L712: {
-          var2 = tj.a("ins31", -117);
-          if (var2 != null) {
-            lh.field_h = sc.a((byte) 107, var2);
+          var2 = tj.a("ins30", -87);
+          if (null != var2) {
+            ue.field_a = sc.a((byte) 110, var2);
             break L712;
           } else {
             break L712;
           }
         }
         L713: {
-          var2 = tj.a("ins30", -87);
+          var2 = tj.a("ins29", -92);
           if (null != var2) {
-            ue.field_a = sc.a((byte) 110, var2);
+            n.field_e = sc.a((byte) 93, var2);
             break L713;
           } else {
             break L713;
           }
         }
         L714: {
-          var2 = tj.a("ins29", -92);
-          if (null != var2) {
-            n.field_e = sc.a((byte) 93, var2);
+          var2 = tj.a("ins28", -86);
+          if (null == var2) {
             break L714;
           } else {
+            jd.field_e = sc.a((byte) 86, var2);
             break L714;
           }
         }
         L715: {
-          var2 = tj.a("ins28", param1 ^ -68);
-          if (null == var2) {
+          var2 = tj.a("ins27", -76);
+          if (var2 == null) {
             break L715;
           } else {
-            jd.field_e = sc.a((byte) 86, var2);
+            me.field_P = sc.a((byte) 126, var2);
             break L715;
           }
         }
         L716: {
-          var2 = tj.a("ins27", -76);
+          var2 = tj.a("ins26", -120);
           if (var2 == null) {
             break L716;
           } else {
-            me.field_P = sc.a((byte) 126, var2);
+            gb.field_e = sc.a((byte) 124, var2);
             break L716;
           }
         }
         L717: {
-          var2 = tj.a("ins26", -120);
+          var2 = tj.a("ins26b", -114);
           if (var2 == null) {
             break L717;
           } else {
-            gb.field_e = sc.a((byte) 124, var2);
+            jn.field_b = sc.a((byte) 112, var2);
             break L717;
           }
         }
         L718: {
-          var2 = tj.a("ins26b", -114);
+          var2 = tj.a("ins25", -88);
           if (var2 == null) {
             break L718;
           } else {
-            jn.field_b = sc.a((byte) 112, var2);
+            om.field_L = sc.a((byte) 96, var2);
             break L718;
           }
         }
         L719: {
-          var2 = tj.a("ins25", -88);
+          var2 = tj.a("ins24", -121);
           if (var2 == null) {
             break L719;
           } else {
-            om.field_L = sc.a((byte) 96, var2);
+            sn.field_J = sc.a((byte) 106, var2);
             break L719;
           }
         }
         L720: {
-          var2 = tj.a("ins24", -121);
+          var2 = tj.a("ins23", -108);
           if (var2 == null) {
             break L720;
           } else {
-            sn.field_J = sc.a((byte) 106, var2);
+            rc.field_f = sc.a((byte) 122, var2);
             break L720;
           }
         }
         L721: {
-          var2 = tj.a("ins23", -108);
+          var2 = tj.a("ins22", -103);
           if (var2 == null) {
             break L721;
           } else {
-            rc.field_f = sc.a((byte) 122, var2);
+            hn.field_i = sc.a((byte) 110, var2);
             break L721;
           }
         }
         L722: {
-          var2 = tj.a("ins22", -103);
-          if (var2 == null) {
+          var2 = tj.a("ins21", -103);
+          if (var2 != null) {
+            qj.field_b = sc.a((byte) 106, var2);
             break L722;
           } else {
-            hn.field_i = sc.a((byte) 110, var2);
             break L722;
           }
         }
         L723: {
-          var2 = tj.a("ins21", -103);
-          if (var2 != null) {
-            qj.field_b = sc.a((byte) 106, var2);
+          var2 = tj.a("ins20", -127);
+          if (null == var2) {
             break L723;
           } else {
+            jf.field_i = sc.a((byte) 113, var2);
             break L723;
           }
         }
         L724: {
-          var2 = tj.a("ins20", -127);
-          if (null == var2) {
+          var2 = tj.a("ins19", -125);
+          if (var2 == null) {
             break L724;
           } else {
-            jf.field_i = sc.a((byte) 113, var2);
+            am.field_b = sc.a((byte) 99, var2);
             break L724;
           }
         }
         L725: {
-          var2 = tj.a("ins19", param1 + -147);
-          if (var2 == null) {
+          var2 = tj.a("ins18", -111);
+          if (null == var2) {
             break L725;
           } else {
-            am.field_b = sc.a((byte) 99, var2);
+            mn.field_q = sc.a((byte) 125, var2);
             break L725;
           }
         }
         L726: {
-          var2 = tj.a("ins18", -111);
-          if (null == var2) {
+          var2 = tj.a("ins17", -97);
+          if (var2 == null) {
             break L726;
           } else {
-            mn.field_q = sc.a((byte) 125, var2);
+            oj.field_a = sc.a((byte) 115, var2);
             break L726;
           }
         }
         L727: {
-          var2 = tj.a("ins17", -97);
-          if (var2 == null) {
+          var2 = tj.a("ins16", -105);
+          if (null != var2) {
+            ma.field_S = sc.a((byte) 121, var2);
             break L727;
           } else {
-            oj.field_a = sc.a((byte) 115, var2);
             break L727;
           }
         }
         L728: {
-          var2 = tj.a("ins16", -105);
+          var2 = tj.a("ins15", -91);
           if (null != var2) {
-            ma.field_S = sc.a((byte) 121, var2);
+            lc.field_o = sc.a((byte) 124, var2);
             break L728;
           } else {
             break L728;
           }
         }
         L729: {
-          var2 = tj.a("ins15", -91);
-          if (null != var2) {
-            lc.field_o = sc.a((byte) 124, var2);
+          var2 = tj.a("ins14", -123);
+          if (var2 != null) {
+            p.field_h = sc.a((byte) 116, var2);
             break L729;
           } else {
             break L729;
           }
         }
         L730: {
-          var2 = tj.a("ins14", -123);
-          if (var2 != null) {
-            p.field_h = sc.a((byte) 116, var2);
+          var2 = tj.a("ins13", -85);
+          if (var2 == null) {
             break L730;
           } else {
+            pm.field_g = sc.a((byte) 106, var2);
             break L730;
           }
         }
         L731: {
-          var2 = tj.a("ins13", -85);
-          if (var2 == null) {
+          var2 = tj.a("ins12", -86);
+          if (null == var2) {
             break L731;
           } else {
-            pm.field_g = sc.a((byte) 106, var2);
+            cf.field_e = sc.a((byte) 123, var2);
             break L731;
           }
         }
         L732: {
-          var2 = tj.a("ins12", param1 + -108);
-          if (null == var2) {
+          var2 = tj.a("ins11", -111);
+          if (null != var2) {
+            lf.field_d = sc.a((byte) 108, var2);
             break L732;
           } else {
-            cf.field_e = sc.a((byte) 123, var2);
             break L732;
           }
         }
         L733: {
-          var2 = tj.a("ins11", -111);
+          var2 = tj.a("ins10", -78);
           if (null != var2) {
-            lf.field_d = sc.a((byte) 108, var2);
+            vf.field_p = sc.a((byte) 127, var2);
             break L733;
           } else {
             break L733;
           }
         }
         L734: {
-          var2 = tj.a("ins10", -78);
-          if (null != var2) {
-            vf.field_p = sc.a((byte) 127, var2);
+          var2 = tj.a("ins9", -94);
+          if (var2 == null) {
             break L734;
           } else {
+            ch.field_e = sc.a((byte) 103, var2);
             break L734;
           }
         }
         L735: {
-          var2 = tj.a("ins9", param1 ^ -76);
+          var2 = tj.a("ins8", -90);
           if (var2 == null) {
             break L735;
           } else {
-            ch.field_e = sc.a((byte) 103, var2);
+            cc.field_b = sc.a((byte) 126, var2);
             break L735;
           }
         }
         L736: {
-          var2 = tj.a("ins8", -90);
+          var2 = tj.a("ins7", -79);
           if (var2 == null) {
             break L736;
           } else {
-            cc.field_b = sc.a((byte) 126, var2);
+            qm.field_l = sc.a((byte) 105, var2);
             break L736;
           }
         }
         L737: {
-          var2 = tj.a("ins7", -79);
-          if (var2 == null) {
+          var2 = tj.a("ins6", -94);
+          if (var2 != null) {
+            md.field_e = sc.a((byte) 99, var2);
             break L737;
           } else {
-            qm.field_l = sc.a((byte) 105, var2);
             break L737;
           }
         }
         L738: {
-          var2 = tj.a("ins6", -94);
-          if (var2 != null) {
-            md.field_e = sc.a((byte) 99, var2);
+          var2 = tj.a("ins5", -97);
+          if (null == var2) {
             break L738;
           } else {
+            fj.field_g = sc.a((byte) 103, var2);
             break L738;
           }
         }
         L739: {
-          var2 = tj.a("ins5", -97);
-          if (null == var2) {
+          var2 = tj.a("ins4", -99);
+          if (var2 != null) {
+            fd.field_c = sc.a((byte) 119, var2);
             break L739;
           } else {
-            fj.field_g = sc.a((byte) 103, var2);
             break L739;
           }
         }
         L740: {
-          var2 = tj.a("ins4", -99);
-          if (var2 != null) {
-            fd.field_c = sc.a((byte) 119, var2);
+          var2 = tj.a("ins3", -77);
+          if (var2 == null) {
             break L740;
           } else {
+            cn.field_J = sc.a((byte) 115, var2);
             break L740;
           }
         }
         L741: {
-          var2 = tj.a("ins3", -77);
-          if (var2 == null) {
+          var2 = tj.a("ins3_free", -90);
+          if (var2 != null) {
+            cb.field_d = sc.a((byte) 117, var2);
             break L741;
           } else {
-            cn.field_J = sc.a((byte) 115, var2);
             break L741;
           }
         }
         L742: {
-          var2 = tj.a("ins3_free", param1 + -112);
-          if (var2 != null) {
-            cb.field_d = sc.a((byte) 117, var2);
+          var2 = tj.a("ins2", -120);
+          if (null == var2) {
             break L742;
           } else {
+            ud.field_u = sc.a((byte) 94, var2);
             break L742;
           }
         }
         L743: {
-          var2 = tj.a("ins2", -120);
-          if (null == var2) {
+          var2 = tj.a("ins1", -76);
+          if (var2 != null) {
+            nj.field_j = sc.a((byte) 107, var2);
             break L743;
           } else {
-            ud.field_u = sc.a((byte) 94, var2);
             break L743;
           }
         }
         L744: {
-          var2 = tj.a("ins1", -76);
-          if (var2 != null) {
-            nj.field_j = sc.a((byte) 107, var2);
+          var2 = tj.a("ins0", -112);
+          if (null == var2) {
             break L744;
           } else {
+            wm.field_J = sc.a((byte) 118, var2);
             break L744;
           }
         }
         L745: {
-          var2 = tj.a("ins0", -112);
-          if (null == var2) {
+          var2 = tj.a("skincolour", -77);
+          if (var2 == null) {
             break L745;
           } else {
-            wm.field_J = sc.a((byte) 118, var2);
+            ka.field_l = sc.a((byte) 91, var2);
             break L745;
           }
         }
         L746: {
-          var2 = tj.a("skincolour", param1 + -99);
-          if (var2 == null) {
+          var2 = tj.a("haircolour", -111);
+          if (var2 != null) {
+            th.field_j = sc.a((byte) 94, var2);
             break L746;
           } else {
-            ka.field_l = sc.a((byte) 91, var2);
             break L746;
           }
         }
         L747: {
-          var2 = tj.a("haircolour", param1 + -133);
-          if (var2 != null) {
-            th.field_j = sc.a((byte) 94, var2);
+          var2 = tj.a("secondarycolour", -113);
+          if (null == var2) {
             break L747;
           } else {
+            ce.field_j = sc.a((byte) 98, var2);
             break L747;
           }
         }
         L748: {
-          var2 = tj.a("secondarycolour", param1 ^ -103);
-          if (null == var2) {
+          var2 = tj.a("primarycolour", -116);
+          if (var2 == null) {
             break L748;
           } else {
-            ce.field_j = sc.a((byte) 98, var2);
+            gg.field_f = sc.a((byte) 111, var2);
             break L748;
           }
         }
         L749: {
-          var2 = tj.a("primarycolour", -116);
-          if (var2 == null) {
+          var2 = tj.a("pressentertocont", -116);
+          if (var2 != null) {
+            sk.field_c = sc.a((byte) 91, var2);
             break L749;
           } else {
-            gg.field_f = sc.a((byte) 111, var2);
             break L749;
           }
         }
         L750: {
-          var2 = tj.a("pressentertocont", -116);
-          if (var2 != null) {
-            sk.field_c = sc.a((byte) 91, var2);
+          var2 = tj.a("rechargespell", -104);
+          if (null != var2) {
+            mj.field_x = sc.a((byte) 121, var2);
             break L750;
           } else {
             break L750;
           }
         }
         L751: {
-          var2 = tj.a("rechargespell", -104);
-          if (null != var2) {
-            mj.field_x = sc.a((byte) 121, var2);
+          var2 = tj.a("chargeleft", -100);
+          if (null == var2) {
             break L751;
           } else {
+            tc.field_z = sc.a((byte) 88, var2);
             break L751;
           }
         }
         L752: {
-          var2 = tj.a("chargeleft", -100);
-          if (null == var2) {
+          var2 = tj.a("chargesleft", -91);
+          if (var2 == null) {
             break L752;
           } else {
-            tc.field_z = sc.a((byte) 88, var2);
+            tk.field_s = sc.a((byte) 107, var2);
             break L752;
           }
         }
         L753: {
-          var2 = tj.a("chargesleft", -91);
+          var2 = tj.a("turnleft", -83);
           if (var2 == null) {
             break L753;
           } else {
-            tk.field_s = sc.a((byte) 107, var2);
+            tg.field_g = sc.a((byte) 122, var2);
             break L753;
           }
         }
         L754: {
-          var2 = tj.a("turnleft", param1 + -105);
+          var2 = tj.a("turnsleft", -72);
           if (var2 == null) {
             break L754;
           } else {
-            tg.field_g = sc.a((byte) 122, var2);
+            ki.field_x = sc.a((byte) 110, var2);
             break L754;
           }
         }
         L755: {
-          var2 = tj.a("turnsleft", -72);
-          if (var2 == null) {
+          var2 = tj.a("licheblocks", -128);
+          if (var2 != null) {
+            oi.field_a = sc.a((byte) 102, var2);
             break L755;
           } else {
-            ki.field_x = sc.a((byte) 110, var2);
             break L755;
           }
         }
         L756: {
-          var2 = tj.a("licheblocks", -128);
+          var2 = tj.a("unitcapreached", -108);
           if (var2 != null) {
-            oi.field_a = sc.a((byte) 102, var2);
+            tk.field_p = sc.a((byte) 104, var2);
             break L756;
           } else {
             break L756;
           }
         }
         L757: {
-          var2 = tj.a("unitcapreached", -108);
+          var2 = tj.a("shiningpowerblocks", -106);
           if (var2 != null) {
-            tk.field_p = sc.a((byte) 104, var2);
+            bj.field_sb = sc.a((byte) 116, var2);
             break L757;
           } else {
             break L757;
           }
         }
         L758: {
-          var2 = tj.a("shiningpowerblocks", -106);
-          if (var2 != null) {
-            bj.field_sb = sc.a((byte) 116, var2);
+          var2 = tj.a("alreadycastled", -94);
+          if (null != var2) {
+            qa.field_k = sc.a((byte) 111, var2);
             break L758;
           } else {
             break L758;
           }
         }
         L759: {
-          var2 = tj.a("alreadycastled", -94);
-          if (null != var2) {
-            qa.field_k = sc.a((byte) 111, var2);
+          var2 = tj.a("togglehelp", -116);
+          if (null == var2) {
             break L759;
           } else {
+            mk.field_L = sc.a((byte) 109, var2);
             break L759;
           }
         }
         L760: {
-          var2 = tj.a("togglehelp", -116);
-          if (null == var2) {
+          var2 = tj.a("verses", -101);
+          if (var2 != null) {
+            sb.field_c = sc.a((byte) 95, var2);
             break L760;
           } else {
-            mk.field_L = sc.a((byte) 109, var2);
             break L760;
           }
         }
         L761: {
-          var2 = tj.a("verses", param1 + -123);
-          if (var2 != null) {
-            sb.field_c = sc.a((byte) 95, var2);
+          var2 = tj.a("tut53", -82);
+          if (null != var2) {
+            q.field_F = sc.a((byte) 97, var2);
             break L761;
           } else {
             break L761;
           }
         }
         L762: {
-          var2 = tj.a("tut53", -82);
-          if (null != var2) {
-            q.field_F = sc.a((byte) 97, var2);
+          var2 = tj.a("tut52", -107);
+          if (var2 != null) {
+            oc.field_h = sc.a((byte) 123, var2);
             break L762;
           } else {
             break L762;
           }
         }
         L763: {
-          var2 = tj.a("tut52", -107);
+          var2 = tj.a("tut51", -99);
           if (var2 != null) {
-            oc.field_h = sc.a((byte) 123, var2);
+            vd.field_j = sc.a((byte) 88, var2);
             break L763;
           } else {
             break L763;
           }
         }
         L764: {
-          var2 = tj.a("tut51", param1 + -121);
-          if (var2 != null) {
-            vd.field_j = sc.a((byte) 88, var2);
+          var2 = tj.a("tut50", -111);
+          if (var2 == null) {
             break L764;
           } else {
+            mo.field_l = sc.a((byte) 120, var2);
             break L764;
           }
         }
         L765: {
-          var2 = tj.a("tut50", -111);
+          var2 = tj.a("tut49", -112);
           if (var2 == null) {
             break L765;
           } else {
-            mo.field_l = sc.a((byte) 120, var2);
+            bb.field_d = sc.a((byte) 119, var2);
             break L765;
           }
         }
         L766: {
-          var2 = tj.a("tut49", -112);
-          if (var2 == null) {
+          var2 = tj.a("tut48", -101);
+          if (null == var2) {
             break L766;
           } else {
-            bb.field_d = sc.a((byte) 119, var2);
+            jl.field_e = sc.a((byte) 110, var2);
             break L766;
           }
         }
         L767: {
-          var2 = tj.a("tut48", param1 + -123);
-          if (null == var2) {
+          var2 = tj.a("tut47", -102);
+          if (null != var2) {
+            fk.field_i = sc.a((byte) 97, var2);
             break L767;
           } else {
-            jl.field_e = sc.a((byte) 110, var2);
             break L767;
           }
         }
         L768: {
-          var2 = tj.a("tut47", -102);
-          if (null != var2) {
-            fk.field_i = sc.a((byte) 97, var2);
+          var2 = tj.a("tut46", -93);
+          if (var2 == null) {
             break L768;
           } else {
+            bh.field_a = sc.a((byte) 108, var2);
             break L768;
           }
         }
         L769: {
-          var2 = tj.a("tut46", -93);
-          if (var2 == null) {
+          var2 = tj.a("tut45", -79);
+          if (null != var2) {
+            dc.field_g = sc.a((byte) 102, var2);
             break L769;
           } else {
-            bh.field_a = sc.a((byte) 108, var2);
             break L769;
           }
         }
         L770: {
-          var2 = tj.a("tut45", -79);
+          var2 = tj.a("tut44", -121);
           if (null != var2) {
-            dc.field_g = sc.a((byte) 102, var2);
+            tc.field_y = sc.a((byte) 114, var2);
             break L770;
           } else {
             break L770;
           }
         }
         L771: {
-          var2 = tj.a("tut44", param1 + -143);
+          var2 = tj.a("tut43", -122);
           if (null != var2) {
-            tc.field_y = sc.a((byte) 114, var2);
+            r.field_c = sc.a((byte) 118, var2);
             break L771;
           } else {
             break L771;
           }
         }
         L772: {
-          var2 = tj.a("tut43", param1 + -144);
+          var2 = tj.a("tut42", -70);
           if (null != var2) {
-            r.field_c = sc.a((byte) 118, var2);
+            pa.field_f = sc.a((byte) 108, var2);
             break L772;
           } else {
             break L772;
           }
         }
         L773: {
-          var2 = tj.a("tut42", -70);
-          if (null != var2) {
-            pa.field_f = sc.a((byte) 108, var2);
+          var2 = tj.a("tut41", -126);
+          if (null == var2) {
             break L773;
           } else {
+            ol.field_e = sc.a((byte) 88, var2);
             break L773;
           }
         }
         L774: {
-          var2 = tj.a("tut41", -126);
-          if (null == var2) {
+          var2 = tj.a("tut40", -110);
+          if (var2 == null) {
             break L774;
           } else {
-            ol.field_e = sc.a((byte) 88, var2);
+            to.field_o = sc.a((byte) 96, var2);
             break L774;
           }
         }
         L775: {
-          var2 = tj.a("tut40", param1 ^ -124);
-          if (var2 == null) {
+          var2 = tj.a("tut39", -78);
+          if (null != var2) {
+            tc.field_E = sc.a((byte) 111, var2);
             break L775;
           } else {
-            to.field_o = sc.a((byte) 96, var2);
             break L775;
           }
         }
         L776: {
-          var2 = tj.a("tut39", -78);
-          if (null != var2) {
-            tc.field_E = sc.a((byte) 111, var2);
+          var2 = tj.a("tut38", -110);
+          if (null == var2) {
             break L776;
           } else {
+            va.field_b = sc.a((byte) 121, var2);
             break L776;
           }
         }
         L777: {
-          var2 = tj.a("tut38", -110);
-          if (null == var2) {
+          var2 = tj.a("tut37", -101);
+          if (null != var2) {
+            af.field_Cb = sc.a((byte) 113, var2);
             break L777;
           } else {
-            va.field_b = sc.a((byte) 121, var2);
             break L777;
           }
         }
         L778: {
-          var2 = tj.a("tut37", -101);
-          if (null != var2) {
-            af.field_Cb = sc.a((byte) 113, var2);
+          var2 = tj.a("tut36", -114);
+          if (null == var2) {
             break L778;
           } else {
+            mk.field_M = sc.a((byte) 126, var2);
             break L778;
           }
         }
         L779: {
-          var2 = tj.a("tut36", param1 + -136);
-          if (null == var2) {
+          var2 = tj.a("tut35", -93);
+          if (var2 == null) {
             break L779;
           } else {
-            mk.field_M = sc.a((byte) 126, var2);
+            bm.field_a = sc.a((byte) 92, var2);
             break L779;
           }
         }
         L780: {
-          var2 = tj.a("tut35", -93);
+          var2 = tj.a("tut34", -109);
           if (var2 == null) {
             break L780;
           } else {
-            bm.field_a = sc.a((byte) 92, var2);
+            io.field_u = sc.a((byte) 108, var2);
             break L780;
           }
         }
         L781: {
-          var2 = tj.a("tut34", -109);
-          if (var2 == null) {
+          var2 = tj.a("tut33", -100);
+          if (var2 != null) {
+            uj.field_b = sc.a((byte) 121, var2);
             break L781;
           } else {
-            io.field_u = sc.a((byte) 108, var2);
             break L781;
           }
         }
         L782: {
-          var2 = tj.a("tut33", param1 + -122);
-          if (var2 != null) {
-            uj.field_b = sc.a((byte) 121, var2);
+          var2 = tj.a("tut32", -96);
+          if (null == var2) {
             break L782;
           } else {
+            jd.field_c = sc.a((byte) 122, var2);
             break L782;
           }
         }
         L783: {
-          var2 = tj.a("tut32", -96);
-          if (null == var2) {
+          var2 = tj.a("tut31", -86);
+          if (var2 == null) {
             break L783;
           } else {
-            jd.field_c = sc.a((byte) 122, var2);
+            eb.field_c = sc.a((byte) 112, var2);
             break L783;
           }
         }
         L784: {
-          var2 = tj.a("tut31", param1 + -108);
-          if (var2 == null) {
+          var2 = tj.a("tut30", -92);
+          if (null != var2) {
+            ui.field_u = sc.a((byte) 114, var2);
             break L784;
           } else {
-            eb.field_c = sc.a((byte) 112, var2);
             break L784;
           }
         }
         L785: {
-          var2 = tj.a("tut30", -92);
-          if (null != var2) {
-            ui.field_u = sc.a((byte) 114, var2);
+          var2 = tj.a("tut29", -115);
+          if (var2 == null) {
             break L785;
           } else {
+            ub.field_f = sc.a((byte) 109, var2);
             break L785;
           }
         }
         L786: {
-          var2 = tj.a("tut29", param1 + -137);
+          var2 = tj.a("tut28", -128);
           if (var2 == null) {
             break L786;
           } else {
-            ub.field_f = sc.a((byte) 109, var2);
+            gh.field_o = sc.a((byte) 113, var2);
             break L786;
           }
         }
         L787: {
-          var2 = tj.a("tut28", param1 ^ -106);
-          if (var2 == null) {
+          var2 = tj.a("tut27", -125);
+          if (var2 != null) {
+            e.field_D = sc.a((byte) 104, var2);
             break L787;
           } else {
-            gh.field_o = sc.a((byte) 113, var2);
             break L787;
           }
         }
         L788: {
-          var2 = tj.a("tut27", param1 + -147);
-          if (var2 != null) {
-            e.field_D = sc.a((byte) 104, var2);
+          var2 = tj.a("tut26", -107);
+          if (null == var2) {
             break L788;
           } else {
+            gn.field_f = sc.a((byte) 105, var2);
             break L788;
           }
         }
         L789: {
-          var2 = tj.a("tut26", -107);
-          if (null == var2) {
+          var2 = tj.a("tut25", -115);
+          if (null != var2) {
+            ag.field_x = sc.a((byte) 110, var2);
             break L789;
           } else {
-            gn.field_f = sc.a((byte) 105, var2);
             break L789;
           }
         }
         L790: {
-          var2 = tj.a("tut25", -115);
-          if (null != var2) {
-            ag.field_x = sc.a((byte) 110, var2);
+          var2 = tj.a("tut24", -88);
+          if (var2 != null) {
+            qe.field_n = sc.a((byte) 119, var2);
             break L790;
           } else {
             break L790;
           }
         }
         L791: {
-          var2 = tj.a("tut24", -88);
-          if (var2 != null) {
-            qe.field_n = sc.a((byte) 119, var2);
+          var2 = tj.a("tut23", -75);
+          if (var2 == null) {
             break L791;
           } else {
+            be.field_h = sc.a((byte) 108, var2);
             break L791;
           }
         }
         L792: {
-          var2 = tj.a("tut23", param1 + -97);
-          if (var2 == null) {
+          var2 = tj.a("tut22", -99);
+          if (null == var2) {
             break L792;
           } else {
-            be.field_h = sc.a((byte) 108, var2);
+            qn.field_jb = sc.a((byte) 90, var2);
             break L792;
           }
         }
         L793: {
-          var2 = tj.a("tut22", -99);
+          var2 = tj.a("tut21", -119);
           if (null == var2) {
             break L793;
           } else {
-            qn.field_jb = sc.a((byte) 90, var2);
+            nb.field_f = sc.a((byte) 115, var2);
             break L793;
           }
         }
         L794: {
-          var2 = tj.a("tut21", -119);
-          if (null == var2) {
+          var2 = tj.a("tut20", -71);
+          if (null != var2) {
+            lh.field_d = sc.a((byte) 96, var2);
             break L794;
           } else {
-            nb.field_f = sc.a((byte) 115, var2);
             break L794;
           }
         }
         L795: {
-          var2 = tj.a("tut20", -71);
-          if (null != var2) {
-            lh.field_d = sc.a((byte) 96, var2);
+          var2 = tj.a("tut19", -106);
+          if (var2 == null) {
             break L795;
           } else {
+            ra.field_g = sc.a((byte) 92, var2);
             break L795;
           }
         }
         L796: {
-          var2 = tj.a("tut19", param1 ^ -128);
-          if (var2 == null) {
+          var2 = tj.a("tut18", -84);
+          if (null == var2) {
             break L796;
           } else {
-            ra.field_g = sc.a((byte) 92, var2);
+            tf.field_h = sc.a((byte) 122, var2);
             break L796;
           }
         }
         L797: {
-          var2 = tj.a("tut18", -84);
-          if (null == var2) {
+          var2 = tj.a("tut17", -74);
+          if (var2 == null) {
             break L797;
           } else {
-            tf.field_h = sc.a((byte) 122, var2);
+            ub.field_d = sc.a((byte) 119, var2);
             break L797;
           }
         }
         L798: {
-          var2 = tj.a("tut17", param1 + -96);
-          if (var2 == null) {
+          var2 = tj.a("tut16", -121);
+          if (null != var2) {
+            nj.field_h = sc.a((byte) 94, var2);
             break L798;
           } else {
-            ub.field_d = sc.a((byte) 119, var2);
             break L798;
           }
         }
         L799: {
-          var2 = tj.a("tut16", -121);
-          if (null != var2) {
-            nj.field_h = sc.a((byte) 94, var2);
+          var2 = tj.a("tut15", -92);
+          if (var2 != null) {
+            mk.field_N = sc.a((byte) 111, var2);
             break L799;
           } else {
             break L799;
           }
         }
         L800: {
-          var2 = tj.a("tut15", -92);
-          if (var2 != null) {
-            mk.field_N = sc.a((byte) 111, var2);
+          var2 = tj.a("tut14", -92);
+          if (null != var2) {
+            td.field_D = sc.a((byte) 120, var2);
             break L800;
           } else {
             break L800;
           }
         }
         L801: {
-          var2 = tj.a("tut14", -92);
-          if (null != var2) {
-            td.field_D = sc.a((byte) 120, var2);
+          var2 = tj.a("tut13", -102);
+          if (var2 != null) {
+            wi.field_i = sc.a((byte) 115, var2);
             break L801;
           } else {
             break L801;
           }
         }
         L802: {
-          var2 = tj.a("tut13", param1 + -124);
-          if (var2 != null) {
-            wi.field_i = sc.a((byte) 115, var2);
+          var2 = tj.a("tut12", -90);
+          if (null != var2) {
+            vi.field_D = sc.a((byte) 97, var2);
             break L802;
           } else {
             break L802;
           }
         }
         L803: {
-          var2 = tj.a("tut12", -90);
-          if (null != var2) {
-            vi.field_D = sc.a((byte) 97, var2);
+          var2 = tj.a("tut11", -124);
+          if (var2 == null) {
             break L803;
           } else {
+            ke.field_E = sc.a((byte) 109, var2);
             break L803;
           }
         }
         L804: {
-          var2 = tj.a("tut11", param1 + -146);
-          if (var2 == null) {
+          var2 = tj.a("tut10", -77);
+          if (var2 != null) {
+            mk.field_R = sc.a((byte) 86, var2);
             break L804;
           } else {
-            ke.field_E = sc.a((byte) 109, var2);
             break L804;
           }
         }
         L805: {
-          var2 = tj.a("tut10", -77);
-          if (var2 != null) {
-            mk.field_R = sc.a((byte) 86, var2);
+          var2 = tj.a("tut9", -116);
+          if (null == var2) {
             break L805;
           } else {
+            ie.field_Mb = sc.a((byte) 110, var2);
             break L805;
           }
         }
         L806: {
-          var2 = tj.a("tut9", -116);
+          var2 = tj.a("tut8", -122);
           if (null == var2) {
             break L806;
           } else {
-            ie.field_Mb = sc.a((byte) 110, var2);
+            re.field_m = sc.a((byte) 118, var2);
             break L806;
           }
         }
         L807: {
-          var2 = tj.a("tut8", -122);
+          var2 = tj.a("tut7", -123);
           if (null == var2) {
             break L807;
           } else {
-            re.field_m = sc.a((byte) 118, var2);
+            kj.field_f = sc.a((byte) 100, var2);
             break L807;
           }
         }
         L808: {
-          var2 = tj.a("tut7", -123);
-          if (null == var2) {
+          var2 = tj.a("tut6", -75);
+          if (null != var2) {
+            oi.field_b = sc.a((byte) 90, var2);
             break L808;
           } else {
-            kj.field_f = sc.a((byte) 100, var2);
             break L808;
           }
         }
         L809: {
-          var2 = tj.a("tut6", -75);
+          var2 = tj.a("tut5", -89);
           if (null != var2) {
-            oi.field_b = sc.a((byte) 90, var2);
+            sk.field_i = sc.a((byte) 121, var2);
             break L809;
           } else {
             break L809;
           }
         }
         L810: {
-          var2 = tj.a("tut5", param1 ^ -79);
+          var2 = tj.a("tut4", -96);
           if (null != var2) {
-            sk.field_i = sc.a((byte) 121, var2);
+            ej.field_Q = sc.a((byte) 114, var2);
             break L810;
           } else {
             break L810;
           }
         }
         L811: {
-          var2 = tj.a("tut4", -96);
-          if (null != var2) {
-            ej.field_Q = sc.a((byte) 114, var2);
+          var2 = tj.a("tut3", -99);
+          if (var2 == null) {
             break L811;
           } else {
+            we.field_a = sc.a((byte) 117, var2);
             break L811;
           }
         }
         L812: {
-          var2 = tj.a("tut3", -99);
-          if (var2 == null) {
+          var2 = tj.a("tut2", -125);
+          if (null != var2) {
+            ic.field_c = sc.a((byte) 110, var2);
             break L812;
           } else {
-            we.field_a = sc.a((byte) 117, var2);
             break L812;
           }
         }
         L813: {
-          var2 = tj.a("tut2", -125);
+          var2 = tj.a("tut1", -128);
           if (null != var2) {
-            ic.field_c = sc.a((byte) 110, var2);
+            ab.field_s = sc.a((byte) 99, var2);
             break L813;
           } else {
             break L813;
           }
         }
         L814: {
-          var2 = tj.a("tut1", param1 ^ -106);
-          if (null != var2) {
-            ab.field_s = sc.a((byte) 99, var2);
+          var2 = tj.a("tut0", -102);
+          if (var2 == null) {
             break L814;
           } else {
+            vc.field_f = sc.a((byte) 99, var2);
             break L814;
           }
         }
         L815: {
-          var2 = tj.a("tut0", -102);
-          if (var2 == null) {
+          var2 = tj.a("youfallenintowater4", -85);
+          if (null != var2) {
+            bc.field_a = sc.a((byte) 115, var2);
             break L815;
           } else {
-            vc.field_f = sc.a((byte) 99, var2);
             break L815;
           }
         }
         L816: {
-          var2 = tj.a("youfallenintowater4", -85);
+          var2 = tj.a("youfallenintowater3", -123);
           if (null != var2) {
-            bc.field_a = sc.a((byte) 115, var2);
+            ck.field_g = sc.a((byte) 92, var2);
             break L816;
           } else {
             break L816;
           }
         }
         L817: {
-          var2 = tj.a("youfallenintowater3", param1 + -145);
-          if (null != var2) {
-            ck.field_g = sc.a((byte) 92, var2);
+          var2 = tj.a("youfallenintowater2", -108);
+          if (var2 != null) {
+            ml.field_K = sc.a((byte) 105, var2);
             break L817;
           } else {
             break L817;
           }
         }
         L818: {
-          var2 = tj.a("youfallenintowater2", -108);
-          if (var2 != null) {
-            ml.field_K = sc.a((byte) 105, var2);
+          var2 = tj.a("youfallenintowater", -106);
+          if (null != var2) {
+            in.field_Kb = sc.a((byte) 107, var2);
             break L818;
           } else {
             break L818;
           }
         }
         L819: {
-          var2 = tj.a("youfallenintowater", -106);
-          if (null != var2) {
-            in.field_Kb = sc.a((byte) 107, var2);
+          var2 = tj.a("timeleftcolon", -89);
+          if (var2 == null) {
             break L819;
           } else {
+            co.field_i = sc.a((byte) 86, var2);
             break L819;
           }
         }
         L820: {
-          var2 = tj.a("timeleftcolon", param1 + -111);
+          var2 = tj.a("unpack10", -92);
           if (var2 == null) {
             break L820;
           } else {
-            co.field_i = sc.a((byte) 86, var2);
+            md.field_d = sc.a((byte) 112, var2);
             break L820;
           }
         }
         L821: {
-          var2 = tj.a("unpack10", param1 ^ -78);
-          if (var2 == null) {
+          var2 = tj.a("unpack9", -98);
+          if (null != var2) {
+            mn.field_v = sc.a((byte) 120, var2);
             break L821;
           } else {
-            md.field_d = sc.a((byte) 112, var2);
             break L821;
           }
         }
         L822: {
-          var2 = tj.a("unpack9", param1 + -120);
-          if (null != var2) {
-            mn.field_v = sc.a((byte) 120, var2);
+          var2 = tj.a("unpack8", -79);
+          if (null == var2) {
             break L822;
           } else {
+            fl.field_c = sc.a((byte) 86, var2);
             break L822;
           }
         }
         L823: {
-          var2 = tj.a("unpack8", -79);
+          var2 = tj.a("unpack7", -103);
           if (null == var2) {
             break L823;
           } else {
-            fl.field_c = sc.a((byte) 86, var2);
+            ld.field_j = sc.a((byte) 119, var2);
             break L823;
           }
         }
         L824: {
-          var2 = tj.a("unpack7", -103);
-          if (null == var2) {
+          var2 = tj.a("unpack6", -74);
+          if (var2 != null) {
+            fe.field_m = sc.a((byte) 91, var2);
             break L824;
           } else {
-            ld.field_j = sc.a((byte) 119, var2);
             break L824;
           }
         }
         L825: {
-          var2 = tj.a("unpack6", -74);
-          if (var2 != null) {
-            fe.field_m = sc.a((byte) 91, var2);
+          var2 = tj.a("unpack5", -125);
+          if (null != var2) {
+            wh.field_j = sc.a((byte) 97, var2);
             break L825;
           } else {
             break L825;
           }
         }
         L826: {
-          var2 = tj.a("unpack5", -125);
-          if (null != var2) {
-            wh.field_j = sc.a((byte) 97, var2);
+          var2 = tj.a("unpack4", -126);
+          if (var2 != null) {
+            ba.field_b = sc.a((byte) 88, var2);
             break L826;
           } else {
             break L826;
           }
         }
         L827: {
-          var2 = tj.a("unpack4", -126);
+          var2 = tj.a("unpack3", -80);
           if (var2 != null) {
-            ba.field_b = sc.a((byte) 88, var2);
+            go.field_h = sc.a((byte) 126, var2);
             break L827;
           } else {
             break L827;
           }
         }
         L828: {
-          var2 = tj.a("unpack3", -80);
-          if (var2 != null) {
-            go.field_h = sc.a((byte) 126, var2);
+          var2 = tj.a("unpacknature", -74);
+          if (null == var2) {
             break L828;
           } else {
+            tl.field_g = sc.a((byte) 100, var2);
             break L828;
           }
         }
         L829: {
-          var2 = tj.a("unpacknature", param1 ^ -96);
-          if (null == var2) {
+          var2 = tj.a("unpackocean", -99);
+          if (var2 != null) {
+            lo.field_s = sc.a((byte) 101, var2);
             break L829;
           } else {
-            tl.field_g = sc.a((byte) 100, var2);
             break L829;
           }
         }
         L830: {
-          var2 = tj.a("unpackocean", -99);
-          if (var2 != null) {
-            lo.field_s = sc.a((byte) 101, var2);
+          var2 = tj.a("unpackcogs", -83);
+          if (null != var2) {
+            ma.field_I = sc.a((byte) 118, var2);
             break L830;
           } else {
             break L830;
           }
         }
         L831: {
-          var2 = tj.a("unpackcogs", -83);
-          if (null != var2) {
-            ma.field_I = sc.a((byte) 118, var2);
+          var2 = tj.a("unpack2", -85);
+          if (null == var2) {
             break L831;
           } else {
+            vm.field_f = sc.a((byte) 112, var2);
             break L831;
           }
         }
         L832: {
-          var2 = tj.a("unpack2", -85);
-          if (null == var2) {
+          var2 = tj.a("unpace1", -98);
+          if (var2 == null) {
             break L832;
           } else {
-            vm.field_f = sc.a((byte) 112, var2);
+            ee.field_a = sc.a((byte) 107, var2);
             break L832;
           }
         }
         L833: {
-          var2 = tj.a("unpace1", -98);
-          if (var2 == null) {
+          var2 = tj.a("unpack0", -89);
+          if (var2 != null) {
+            vi.field_Q = sc.a((byte) 97, var2);
             break L833;
           } else {
-            ee.field_a = sc.a((byte) 107, var2);
             break L833;
           }
         }
         L834: {
-          var2 = tj.a("unpack0", -89);
+          var2 = tj.a("hahahiddenisthis", -118);
           if (var2 != null) {
-            vi.field_Q = sc.a((byte) 97, var2);
+            wk.field_k = sc.a((byte) 123, var2);
             break L834;
           } else {
             break L834;
           }
         }
         L835: {
-          var2 = tj.a("hahahiddenisthis", -118);
+          var2 = tj.a("blueteam", -120);
           if (var2 != null) {
-            wk.field_k = sc.a((byte) 123, var2);
+            cn.field_I = sc.a((byte) 87, var2);
             break L835;
           } else {
             break L835;
           }
         }
         L836: {
-          var2 = tj.a("blueteam", param1 + -142);
-          if (var2 != null) {
-            cn.field_I = sc.a((byte) 87, var2);
+          var2 = tj.a("redteam", -121);
+          if (null != var2) {
+            b.field_d = sc.a((byte) 94, var2);
             break L836;
           } else {
             break L836;
           }
         }
         L837: {
-          var2 = tj.a("redteam", -121);
-          if (null != var2) {
-            b.field_d = sc.a((byte) 94, var2);
+          var2 = tj.a("rumrumrum", -100);
+          if (null == var2) {
             break L837;
           } else {
+            uh.field_l = sc.a((byte) 114, var2);
             break L837;
           }
         }
         L838: {
-          var2 = tj.a("rumrumrum", -100);
-          if (null == var2) {
+          var2 = tj.a("mosletitle", -119);
+          if (var2 != null) {
+            b.field_c = sc.a((byte) 126, var2);
             break L838;
           } else {
-            uh.field_l = sc.a((byte) 114, var2);
             break L838;
           }
         }
         L839: {
-          var2 = tj.a("mosletitle", -119);
-          if (var2 != null) {
-            b.field_c = sc.a((byte) 126, var2);
+          var2 = tj.a("skycastlepower", -87);
+          if (null != var2) {
+            qj.field_f = sc.a((byte) 109, var2);
             break L839;
           } else {
             break L839;
           }
         }
         L840: {
-          var2 = tj.a("skycastlepower", param1 + -109);
+          var2 = tj.a("skycastletitle", -119);
           if (null != var2) {
-            qj.field_f = sc.a((byte) 109, var2);
+            ck.field_c = sc.a((byte) 102, var2);
             break L840;
           } else {
             break L840;
           }
         }
         L841: {
-          var2 = tj.a("skycastletitle", -119);
-          if (null != var2) {
-            ck.field_c = sc.a((byte) 102, var2);
+          var2 = tj.a("summonclickonscreen", -87);
+          if (null == var2) {
             break L841;
           } else {
+            vn.field_a = sc.a((byte) 87, var2);
             break L841;
           }
         }
         L842: {
-          var2 = tj.a("summonclickonscreen", -87);
-          if (null == var2) {
+          var2 = tj.a("timetimetime", -111);
+          if (null != var2) {
+            mf.field_e = sc.a((byte) 101, var2);
             break L842;
           } else {
-            vn.field_a = sc.a((byte) 87, var2);
             break L842;
           }
         }
         L843: {
-          var2 = tj.a("timetimetime", -111);
-          if (null != var2) {
-            mf.field_e = sc.a((byte) 101, var2);
+          var2 = tj.a("yaywecanswim", -113);
+          if (null == var2) {
             break L843;
           } else {
+            fg.field_i = sc.a((byte) 104, var2);
             break L843;
           }
         }
         L844: {
-          var2 = tj.a("yaywecanswim", param1 ^ -103);
+          var2 = tj.a("natureisgoodaswell", -128);
           if (null == var2) {
             break L844;
           } else {
-            fg.field_i = sc.a((byte) 104, var2);
+            dk.field_f = sc.a((byte) 87, var2);
             break L844;
           }
         }
         L845: {
-          var2 = tj.a("natureisgoodaswell", -128);
-          if (null == var2) {
+          var2 = tj.a("morehealingwtf", -90);
+          if (var2 != null) {
+            pb.field_l = sc.a((byte) 97, var2);
             break L845;
           } else {
-            dk.field_f = sc.a((byte) 87, var2);
             break L845;
           }
         }
         L846: {
-          var2 = tj.a("morehealingwtf", param1 + -112);
-          if (var2 != null) {
-            pb.field_l = sc.a((byte) 97, var2);
+          var2 = tj.a("respawnpoint", -108);
+          if (null == var2) {
             break L846;
           } else {
+            sl.field_M = sc.a((byte) 96, var2);
             break L846;
           }
         }
         L847: {
-          var2 = tj.a("respawnpoint", -108);
-          if (null == var2) {
+          var2 = tj.a("bouncyminions", -114);
+          if (var2 != null) {
+            pk.field_b = sc.a((byte) 124, var2);
             break L847;
           } else {
-            sl.field_M = sc.a((byte) 96, var2);
             break L847;
           }
         }
         L848: {
-          var2 = tj.a("bouncyminions", -114);
+          var2 = tj.a("speedsrecharges", -128);
           if (var2 != null) {
-            pk.field_b = sc.a((byte) 124, var2);
+            lc.field_p = sc.a((byte) 103, var2);
             break L848;
           } else {
             break L848;
           }
         }
         L849: {
-          var2 = tj.a("speedsrecharges", -128);
-          if (var2 != null) {
-            lc.field_p = sc.a((byte) 103, var2);
+          var2 = tj.a("damageresist", -82);
+          if (null == var2) {
             break L849;
           } else {
+            ik.field_a = sc.a((byte) 123, var2);
             break L849;
           }
         }
         L850: {
-          var2 = tj.a("damageresist", -82);
-          if (null == var2) {
+          var2 = tj.a("flamup", -99);
+          if (var2 == null) {
             break L850;
           } else {
-            ik.field_a = sc.a((byte) 123, var2);
+            uh.field_q = sc.a((byte) 121, var2);
             break L850;
           }
         }
         L851: {
-          var2 = tj.a("flamup", param1 + -121);
-          if (var2 == null) {
+          var2 = tj.a("familarpowers", -85);
+          if (var2 != null) {
+            nb.field_c = sc.a((byte) 100, var2);
             break L851;
           } else {
-            uh.field_q = sc.a((byte) 121, var2);
             break L851;
           }
         }
         L852: {
-          var2 = tj.a("familarpowers", -85);
-          if (var2 != null) {
-            nb.field_c = sc.a((byte) 100, var2);
+          var2 = tj.a("mustbeamemeberforanimals", -92);
+          if (var2 == null) {
             break L852;
           } else {
+            kc.field_M = sc.a((byte) 114, var2);
             break L852;
           }
         }
         L853: {
-          var2 = tj.a("mustbeamemeberforanimals", param1 ^ -78);
-          if (var2 == null) {
+          var2 = tj.a("famtitle", -85);
+          if (null != var2) {
+            db.field_d = sc.a((byte) 119, var2);
             break L853;
           } else {
-            kc.field_M = sc.a((byte) 114, var2);
             break L853;
           }
         }
         L854: {
-          var2 = tj.a("famtitle", param1 ^ -67);
+          var2 = tj.a("tp4", -87);
           if (null != var2) {
-            db.field_d = sc.a((byte) 119, var2);
+            va.field_a = sc.a((byte) 89, var2);
             break L854;
           } else {
             break L854;
           }
         }
         L855: {
-          var2 = tj.a("tp4", -87);
+          var2 = tj.a("tp3", -123);
           if (null != var2) {
-            va.field_a = sc.a((byte) 89, var2);
+            nm.field_d = sc.a((byte) 127, var2);
             break L855;
           } else {
             break L855;
           }
         }
         L856: {
-          var2 = tj.a("tp3", -123);
-          if (null != var2) {
-            nm.field_d = sc.a((byte) 127, var2);
+          var2 = tj.a("tp2", -95);
+          if (null == var2) {
             break L856;
           } else {
+            jl.field_f = sc.a((byte) 117, var2);
             break L856;
           }
         }
         L857: {
-          var2 = tj.a("tp2", -95);
-          if (null == var2) {
+          var2 = tj.a("tp0", -96);
+          if (null != var2) {
+            hl.field_i = sc.a((byte) 88, var2);
             break L857;
           } else {
-            jl.field_f = sc.a((byte) 117, var2);
             break L857;
           }
         }
         L858: {
-          var2 = tj.a("tp0", -96);
-          if (null != var2) {
-            hl.field_i = sc.a((byte) 88, var2);
+          var2 = tj.a("tptitle", -97);
+          if (var2 != null) {
+            gl.field_a = sc.a((byte) 119, var2);
             break L858;
           } else {
             break L858;
           }
         }
         L859: {
-          var2 = tj.a("tptitle", -97);
-          if (var2 != null) {
-            gl.field_a = sc.a((byte) 119, var2);
+          var2 = tj.a("earnlessnowhehe", -88);
+          if (var2 == null) {
             break L859;
           } else {
+            ck.field_e = sc.a((byte) 92, var2);
             break L859;
           }
         }
         L860: {
-          var2 = tj.a("earnlessnowhehe", param1 + -110);
+          var2 = tj.a("tradeinnowdammit", -85);
           if (var2 == null) {
             break L860;
           } else {
-            ck.field_e = sc.a((byte) 92, var2);
+            vh.field_h = sc.a((byte) 104, var2);
             break L860;
           }
         }
         L861: {
-          var2 = tj.a("tradeinnowdammit", -85);
-          if (var2 == null) {
+          var2 = tj.a("earnedlotstradeinnow", -93);
+          if (null == var2) {
             break L861;
           } else {
-            vh.field_h = sc.a((byte) 104, var2);
+            ti.field_F = sc.a((byte) 117, var2);
             break L861;
           }
         }
         L862: {
-          var2 = tj.a("earnedlotstradeinnow", param1 ^ -75);
-          if (null == var2) {
+          var2 = tj.a("youaredamagedhahaha", -72);
+          if (var2 != null) {
+            qn.field_kb = sc.a((byte) 90, var2);
             break L862;
           } else {
-            ti.field_F = sc.a((byte) 117, var2);
             break L862;
           }
         }
         L863: {
-          var2 = tj.a("youaredamagedhahaha", -72);
+          var2 = tj.a("sorryonlyonceperturn", -70);
           if (var2 != null) {
-            qn.field_kb = sc.a((byte) 90, var2);
+            hc.field_g = sc.a((byte) 110, var2);
             break L863;
           } else {
             break L863;
           }
         }
         L864: {
-          var2 = tj.a("sorryonlyonceperturn", -70);
+          var2 = tj.a("nocastwhileflying", -81);
           if (var2 != null) {
-            hc.field_g = sc.a((byte) 110, var2);
+            sc.field_T = sc.a((byte) 117, var2);
             break L864;
           } else {
             break L864;
           }
         }
         L865: {
-          var2 = tj.a("nocastwhileflying", -81);
-          if (var2 != null) {
-            sc.field_T = sc.a((byte) 117, var2);
+          var2 = tj.a("nocastvinewhileflying", -99);
+          if (null != var2) {
+            rc.field_l = sc.a((byte) 109, var2);
             break L865;
           } else {
             break L865;
           }
         }
         L866: {
-          var2 = tj.a("nocastvinewhileflying", -99);
-          if (null != var2) {
-            rc.field_l = sc.a((byte) 109, var2);
+          var2 = tj.a("wateronlyspell", -128);
+          if (var2 != null) {
+            bj.field_jb = sc.a((byte) 116, var2);
             break L866;
           } else {
             break L866;
           }
         }
         L867: {
-          var2 = tj.a("wateronlyspell", param1 + -150);
-          if (var2 != null) {
-            bj.field_jb = sc.a((byte) 116, var2);
+          var2 = tj.a("arcanzeroblocks", -82);
+          if (null == var2) {
             break L867;
           } else {
+            s.field_a = sc.a((byte) 104, var2);
             break L867;
           }
         }
         L868: {
-          var2 = tj.a("arcanzeroblocks", -82);
-          if (null == var2) {
+          var2 = tj.a("youareentangled", -82);
+          if (null != var2) {
+            String discarded$5 = sc.a((byte) 118, var2);
             break L868;
           } else {
-            s.field_a = sc.a((byte) 104, var2);
             break L868;
           }
         }
         L869: {
-          var2 = tj.a("youareentangled", -82);
+          var2 = tj.a("levelx", -125);
           if (null != var2) {
-            String discarded$5 = sc.a((byte) 118, var2);
+            bk.field_H = sc.a((byte) 121, var2);
             break L869;
           } else {
             break L869;
           }
         }
         L870: {
-          var2 = tj.a("levelx", -125);
-          if (null != var2) {
-            bk.field_H = sc.a((byte) 121, var2);
+          var2 = tj.a("alreadyatmax", -108);
+          if (var2 != null) {
+            rc.field_i = sc.a((byte) 98, var2);
             break L870;
           } else {
             break L870;
           }
         }
         L871: {
-          var2 = tj.a("alreadyatmax", -108);
-          if (var2 != null) {
-            rc.field_i = sc.a((byte) 98, var2);
+          var2 = tj.a("notenoughhp", -119);
+          if (null == var2) {
             break L871;
           } else {
+            hm.field_b = sc.a((byte) 108, var2);
             break L871;
           }
         }
         L872: {
-          var2 = tj.a("notenoughhp", param1 + -141);
+          var2 = tj.a("poweringupfamiliar", -75);
           if (null == var2) {
             break L872;
           } else {
-            hm.field_b = sc.a((byte) 108, var2);
+            kj.field_b = sc.a((byte) 105, var2);
             break L872;
           }
         }
         L873: {
-          var2 = tj.a("poweringupfamiliar", -75);
-          if (null == var2) {
+          var2 = tj.a("starttut", -77);
+          if (var2 != null) {
+            me.field_Q = sc.a((byte) 127, var2);
             break L873;
           } else {
-            kj.field_b = sc.a((byte) 105, var2);
             break L873;
           }
         }
         L874: {
-          var2 = tj.a("starttut", -77);
+          var2 = tj.a("gotosandbox", -103);
           if (var2 != null) {
-            me.field_Q = sc.a((byte) 127, var2);
+            mo.field_d = sc.a((byte) 120, var2);
             break L874;
           } else {
             break L874;
           }
         }
         L875: {
-          var2 = tj.a("gotosandbox", -103);
-          if (var2 != null) {
-            mo.field_d = sc.a((byte) 120, var2);
+          var2 = tj.a("brats", -74);
+          if (null == var2) {
             break L875;
           } else {
+            ui.field_q = sc.a((byte) 119, var2);
             break L875;
           }
         }
         L876: {
-          var2 = tj.a("brats", -74);
-          if (null == var2) {
+          var2 = tj.a("bwins", -99);
+          if (var2 == null) {
             break L876;
           } else {
-            ui.field_q = sc.a((byte) 119, var2);
+            mj.field_y = sc.a((byte) 117, var2);
             break L876;
           }
         }
         L877: {
-          var2 = tj.a("bwins", param1 ^ -117);
-          if (var2 == null) {
+          var2 = tj.a("cogscaps", -90);
+          if (var2 != null) {
+            ie.field_Rb = sc.a((byte) 106, var2);
             break L877;
           } else {
-            mj.field_y = sc.a((byte) 117, var2);
             break L877;
           }
         }
         L878: {
-          var2 = tj.a("cogscaps", param1 ^ -80);
-          if (var2 != null) {
-            ie.field_Rb = sc.a((byte) 106, var2);
+          var2 = tj.a("oceancaps", -99);
+          if (null != var2) {
+            fo.field_i = sc.a((byte) 114, var2);
             break L878;
           } else {
             break L878;
           }
         }
         L879: {
-          var2 = tj.a("oceancaps", param1 + -121);
-          if (null != var2) {
-            fo.field_i = sc.a((byte) 114, var2);
+          var2 = tj.a("naturecaps", -88);
+          if (null == var2) {
             break L879;
           } else {
+            ra.field_e = sc.a((byte) 111, var2);
             break L879;
           }
         }
         L880: {
-          var2 = tj.a("naturecaps", -88);
-          if (null == var2) {
+          var2 = tj.a("overcaps", -95);
+          if (var2 == null) {
             break L880;
           } else {
-            ra.field_e = sc.a((byte) 111, var2);
+            go.field_f = sc.a((byte) 122, var2);
             break L880;
           }
         }
         L881: {
-          var2 = tj.a("overcaps", -95);
-          if (var2 == null) {
+          var2 = tj.a("underdarkcaps", -89);
+          if (null != var2) {
+            di.field_b = sc.a((byte) 127, var2);
             break L881;
           } else {
-            go.field_f = sc.a((byte) 122, var2);
             break L881;
           }
         }
         L882: {
-          var2 = tj.a("underdarkcaps", -89);
-          if (null != var2) {
-            di.field_b = sc.a((byte) 127, var2);
+          var2 = tj.a("frostcaps", -80);
+          if (var2 != null) {
+            pc.field_a = sc.a((byte) 107, var2);
             break L882;
           } else {
             break L882;
           }
         }
         L883: {
-          var2 = tj.a("frostcaps", -80);
-          if (var2 != null) {
-            pc.field_a = sc.a((byte) 107, var2);
+          var2 = tj.a("stonecaps", -85);
+          if (null == var2) {
             break L883;
           } else {
+            ra.field_b = sc.a((byte) 87, var2);
             break L883;
           }
         }
         L884: {
-          var2 = tj.a("stonecaps", -85);
-          if (null == var2) {
+          var2 = tj.a("stormcaps", -99);
+          if (null != var2) {
+            hm.field_a = sc.a((byte) 90, var2);
             break L884;
           } else {
-            ra.field_b = sc.a((byte) 87, var2);
             break L884;
           }
         }
         L885: {
-          var2 = tj.a("stormcaps", -99);
-          if (null != var2) {
-            hm.field_a = sc.a((byte) 90, var2);
+          var2 = tj.a("flamecaps", -116);
+          if (var2 == null) {
             break L885;
           } else {
+            ve.field_s = sc.a((byte) 87, var2);
             break L885;
           }
         }
         L886: {
-          var2 = tj.a("flamecaps", -116);
-          if (var2 == null) {
+          var2 = tj.a("whensummoning", -121);
+          if (var2 != null) {
+            kl.field_F = sc.a((byte) 109, var2);
             break L886;
           } else {
-            ve.field_s = sc.a((byte) 87, var2);
             break L886;
           }
         }
         L887: {
-          var2 = tj.a("whensummoning", -121);
-          if (var2 != null) {
-            kl.field_F = sc.a((byte) 109, var2);
-            break L887;
-          } else {
-            break L887;
-          }
-        }
-        L888: {
-          var2 = tj.a("optionscreen", param1 + -110);
+          var2 = tj.a("optionscreen", -88);
           if (var2 == null) {
-            break L888;
+            break L887;
           } else {
             jk.field_j = sc.a((byte) 116, var2);
-            break L888;
+            break L887;
           }
         }
         gn.field_e = null;
-        L889: {
+        L888: {
           if (var3 == 0) {
-            break L889;
+            break L888;
           } else {
             var4 = dc.field_b;
             var4++;
             dc.field_b = var4;
-            break L889;
+            break L888;
           }
         }
     }

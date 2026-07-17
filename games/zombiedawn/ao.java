@@ -81,7 +81,7 @@ final class ao extends fb {
         return stackIn_3_0;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_I = null;
         int var1 = 0;
         field_G = null;

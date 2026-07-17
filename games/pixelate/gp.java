@@ -28,22 +28,22 @@ final class gp extends ak {
     final static void a(boolean param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
+        String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
         RuntimeException stackOut_29_0 = null;
         StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
         try {
           L0: {
             L1: {
@@ -77,7 +77,8 @@ final class gp extends ak {
                     var3_int = 1;
                     if (param2 == 10) {
                       var3_int = 0;
-                      dm.i((byte) -51);
+                      int discarded$2 = -51;
+                      dm.i();
                       break L4;
                     } else {
                       break L4;
@@ -124,45 +125,37 @@ final class gp extends ak {
                 }
               }
             }
-            L8: {
-              if (param0) {
-                break L8;
-              } else {
-                field_Hb = null;
-                break L8;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var3 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var3;
-            stackOut_29_1 = new StringBuilder().append("gp.I(").append(param0).append(44);
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackOut_27_0 = (RuntimeException) var3;
+            stackOut_27_1 = new StringBuilder().append("gp.I(").append(1).append(44);
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
-              break L9;
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L8;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
-              break L9;
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
+              break L8;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param2 + 41);
         }
     }
 
@@ -384,22 +377,11 @@ final class gp extends ak {
     }
 
     private final void a(boolean param0, int param1, int param2) {
-        if (param0) {
-          field_Jb = null;
-          ((gp) this).field_Ib.field_nb = ((gp) this).field_nb;
-          ((gp) this).field_Ib.field_K = -param2 + (((gp) this).field_K - param1);
-          ((gp) this).field_Fb.field_D = 0;
-          ((gp) this).field_Fb.field_K = -param2 + (((gp) this).field_K - param1);
-          ((gp) this).field_Gb.a(-param2 + ((gp) this).field_K, ((gp) this).field_Fb.field_nb, ((gp) this).field_nb, ((gp) this).field_Ib.field_nb, -((gp) this).field_Fb.field_S, param2, 0, -1);
-          return;
-        } else {
-          ((gp) this).field_Ib.field_nb = ((gp) this).field_nb;
-          ((gp) this).field_Ib.field_K = -param2 + (((gp) this).field_K - param1);
-          ((gp) this).field_Fb.field_D = 0;
-          ((gp) this).field_Fb.field_K = -param2 + (((gp) this).field_K - param1);
-          ((gp) this).field_Gb.a(-param2 + ((gp) this).field_K, ((gp) this).field_Fb.field_nb, ((gp) this).field_nb, ((gp) this).field_Ib.field_nb, -((gp) this).field_Fb.field_S, param2, 0, -1);
-          return;
-        }
+        ((gp) this).field_Ib.field_nb = ((gp) this).field_nb;
+        ((gp) this).field_Ib.field_K = -param2 + (((gp) this).field_K - param1);
+        ((gp) this).field_Fb.field_D = 0;
+        ((gp) this).field_Fb.field_K = -param2 + (((gp) this).field_K - param1);
+        ((gp) this).field_Gb.a(-param2 + ((gp) this).field_K, ((gp) this).field_Fb.field_nb, ((gp) this).field_nb, ((gp) this).field_Ib.field_nb, -((gp) this).field_Fb.field_S, param2, 0, -1);
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
@@ -417,58 +399,30 @@ final class gp extends ak {
 
     private final boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6) {
         int var8 = 0;
-        if (param3) {
-          var8 = 1;
-          if (param5 != 7736) {
-            uj discarded$4 = gp.a(-48, -99L);
-            ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
-            this.a(false, param4, param2, param0, (byte) 127);
-            return var8 != 0;
+        if (!param3) {
+          if (((gp) this).field_W) {
+            if (param6) {
+              var8 = 0;
+              ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
+              this.a(false, param4, param2, param0, (byte) 127);
+              return var8 != 0;
+            } else {
+              var8 = 1;
+              ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
+              this.a(false, param4, param2, param0, (byte) 127);
+              return var8 != 0;
+            }
           } else {
+            var8 = 0;
             ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
             this.a(false, param4, param2, param0, (byte) 127);
             return var8 != 0;
           }
         } else {
-          if (((gp) this).field_W) {
-            if (!param6) {
-              var8 = 1;
-              if (param5 != 7736) {
-                uj discarded$5 = gp.a(-48, -99L);
-                ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
-                this.a(false, param4, param2, param0, (byte) 127);
-                return var8 != 0;
-              } else {
-                ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
-                this.a(false, param4, param2, param0, (byte) 127);
-                return var8 != 0;
-              }
-            } else {
-              var8 = 0;
-              if (param5 != 7736) {
-                uj discarded$6 = gp.a(-48, -99L);
-                ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
-                this.a(false, param4, param2, param0, (byte) 127);
-                return var8 != 0;
-              } else {
-                ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
-                this.a(false, param4, param2, param0, (byte) 127);
-                return var8 != 0;
-              }
-            }
-          } else {
-            var8 = 0;
-            if (param5 != 7736) {
-              uj discarded$7 = gp.a(-48, -99L);
-              ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
-              this.a(false, param4, param2, param0, (byte) 127);
-              return var8 != 0;
-            } else {
-              ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
-              this.a(false, param4, param2, param0, (byte) 127);
-              return var8 != 0;
-            }
-          }
+          var8 = 1;
+          ((gp) this).field_Fb.a(param1, (byte) -128, var8 != 0, ((gp) this).field_Ib.field_nb);
+          this.a(false, param4, param2, param0, (byte) 127);
+          return var8 != 0;
         }
     }
 
@@ -488,7 +442,7 @@ final class gp extends ak {
         int var5 = -81 / ((param0 - -15) / 62);
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_Hb = null;
         field_Eb = null;
         field_Kb = null;

@@ -51,7 +51,8 @@ final class i {
         try {
           L0: {
             if (param2 == -28494) {
-              stackOut_3_0 = this.a(param0, (int[]) null, param1, 0);
+              int discarded$2 = 0;
+              stackOut_3_0 = this.a(param0, (int[]) null, param1);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -246,11 +247,12 @@ final class i {
         try {
           L0: {
             var5_int = ((i) this).field_b.a(param2, false);
-            var6 = 119 % ((-50 - param1) / 44);
+            var6 = 0;
             if (var5_int >= 0) {
               var7 = ((i) this).field_b.a((byte) 6, var5_int, param3);
               if (var7 >= 0) {
-                stackOut_6_0 = this.a(var7, var5_int, param0, -1884086484);
+                int discarded$2 = -1884086484;
+                stackOut_6_0 = this.a(var7, var5_int, param0);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -292,7 +294,7 @@ final class i {
           }
           L2: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param1).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(-122).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -345,7 +347,7 @@ final class i {
         return stackIn_7_0;
     }
 
-    private final be a(String param0, int[] param1, String param2, int param3) {
+    private final be a(String param0, int[] param1, String param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -531,14 +533,16 @@ final class i {
           if (((i) this).field_b.a((byte) 20) != 1) {
             var4_int = 113 / ((-60 - param1) / 54);
             if (1 == ((i) this).field_b.d(param0, 0)) {
-              stackOut_5_0 = this.a(0, param0, param2, -1884086484);
+              int discarded$4 = -1884086484;
+              stackOut_5_0 = this.a(0, param0, param2);
               stackIn_6_0 = stackOut_5_0;
               return stackIn_6_0;
             } else {
               throw new RuntimeException();
             }
           } else {
-            stackOut_1_0 = this.a(param0, 0, param2, -1884086484);
+            int discarded$5 = -1884086484;
+            stackOut_1_0 = this.a(param0, 0, param2);
             stackIn_2_0 = stackOut_1_0;
             return stackIn_2_0;
           }
@@ -574,7 +578,7 @@ final class i {
         }
     }
 
-    private final be a(int param0, int param1, int[] param2, int param3) {
+    private final be a(int param0, int param1, int[] param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -685,7 +689,7 @@ final class i {
         return stackIn_16_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         int var1 = -46;
         field_e = null;

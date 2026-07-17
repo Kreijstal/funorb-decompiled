@@ -17,11 +17,11 @@ final class t extends oha {
     final static void a(int param0, vr param1) {
         try {
             vw.field_a = new pn[3];
-            vw.field_a[param0] = (pn) (Object) new id(param1);
+            vw.field_a[0] = (pn) (Object) new id(param1);
             vw.field_a[1] = (pn) (Object) new pla(param1);
             vw.field_a[2] = (pn) (Object) new kn(param1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "t.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "t.G(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

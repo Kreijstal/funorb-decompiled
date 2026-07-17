@@ -4,7 +4,7 @@
 final class rhb extends rqa {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 
@@ -53,11 +53,11 @@ final class rhb extends rqa {
             if (tc.field_c == sp.field_o) {
               L1: {
                 var2_long = wt.a(false);
-                if (param0 == cd.field_c) {
+                if (0 == cd.field_c) {
                   break L1;
                 } else {
                   if (kcb.field_p < 0) {
-                    var4_ref_c = (c) (Object) mlb.field_q.d(param0);
+                    var4_ref_c = (c) (Object) mlb.field_q.d(0);
                     if (var4_ref_c == null) {
                       break L1;
                     } else {
@@ -141,7 +141,7 @@ final class rhb extends rqa {
                     var6 = 0;
                     L6: while (true) {
                       if (var6 >= vja.field_a) {
-                        mlb.field_q.b(param0 ^ -10258, (ksa) (Object) var5);
+                        mlb.field_q.b(-10258, (ksa) (Object) var5);
                         kcb.field_p = -1;
                         continue L3;
                       } else {
@@ -164,7 +164,7 @@ final class rhb extends rqa {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var2;
-            stackOut_34_1 = new StringBuilder().append("rhb.C(").append(param0).append(44);
+            stackOut_34_1 = new StringBuilder().append("rhb.C(").append(0).append(44);
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;

@@ -151,7 +151,7 @@ final class v {
         }
     }
 
-    final static int a(byte[] param0, int param1, byte param2) {
+    final static int a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -222,16 +222,13 @@ final class v {
             ch.field_c = new ti(var3, var4 * 3 / 4);
             ch.field_c.e();
             var2.f(0, 0);
-            if (param0 < 86) {
-                field_a = null;
-            }
             tb.field_e = new ti(var3, -ch.field_c.field_m + var4);
             tb.field_e.e();
             var2.f(0, -ch.field_c.field_m);
             tb.field_e.field_l = ch.field_c.field_m;
             fi.c(true);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "v.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "v.A(" + 118 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

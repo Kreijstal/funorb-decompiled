@@ -750,25 +750,23 @@ final class ba extends sr {
     ba() {
     }
 
-    final static void a(int param0, boolean param1) {
-        if (!n.a(false)) {
+    final static void a() {
+        int discarded$2 = 0;
+        if (!n.a()) {
             return;
         }
         on.a(0, 0, on.field_g, on.field_f, 0, 192);
         mr.field_Z.a(0, 0, (byte) -103);
-        if (param0 <= 108) {
-            field_n = null;
-        }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_n = null;
         field_q = null;
         field_p = null;
         field_o = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

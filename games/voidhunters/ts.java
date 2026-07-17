@@ -8,11 +8,10 @@ final class ts {
 
     final static void a(int param0) {
         Object var1 = null;
-        Object var1_ref = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        var1_ref = (Object) (Object) wj.field_q;
-        synchronized (var1_ref) {
+        var1 = (Object) (Object) wj.field_q;
+        synchronized (var1) {
           L0: {
             hu.field_b = am.field_q;
             rpa.field_b = rpa.field_b + 1;
@@ -22,14 +21,10 @@ final class ts {
             hda.field_a = false;
             pba.field_o = ro.field_a;
             oq.field_H = cma.field_a;
-            if (param0 == 1001) {
-              qs.field_a = nlb.field_p;
-              ro.field_a = 0;
-              ds.field_g = tda.field_K;
-              break L0;
-            } else {
-              return;
-            }
+            qs.field_a = nlb.field_p;
+            ro.field_a = 0;
+            ds.field_g = tda.field_K;
+            break L0;
           }
         }
     }
@@ -39,9 +34,6 @@ final class ts {
         var2.h(24335, param1);
         var2.c(0, 1);
         var2.c(0, 1);
-        if (param0) {
-            ts.a(-12);
-        }
     }
 
     ts(qfa param0, long param1, int param2) {
@@ -53,7 +45,7 @@ final class ts {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.addMouseListener((java.awt.event.MouseListener) (Object) wj.field_q);
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wj.field_q);
@@ -204,7 +196,7 @@ final class ts {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

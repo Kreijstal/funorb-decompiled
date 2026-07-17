@@ -4,7 +4,7 @@
 final class rib extends rqa {
     static String field_o;
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) gha.field_q);
             int var2_int = 0;
@@ -87,7 +87,7 @@ final class rib extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
     }
 

@@ -82,14 +82,11 @@ final class wlb extends rqa {
         }
     }
 
-    public static void e(byte param0) {
-        if (param0 != -70) {
-            field_o = -17;
-        }
+    public static void e() {
         field_q = null;
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -201,120 +198,112 @@ final class wlb extends rqa {
         int[] var109 = null;
         int[] var110 = null;
         int[][] var111 = null;
-        L0: {
-          var16 = null;
-          var17 = null;
-          var18 = null;
-          var19 = null;
-          var22 = null;
-          var24 = null;
-          var25 = null;
-          var27 = null;
-          var29 = null;
-          var30 = null;
-          var31 = null;
-          var32 = null;
-          var34 = null;
-          var36 = null;
-          var38 = null;
-          var39 = null;
-          var40 = null;
-          var44 = null;
-          var46 = null;
-          var48 = null;
-          var50 = null;
-          var52 = null;
-          var54 = null;
-          var56 = null;
-          var58 = null;
-          var60 = null;
-          var14 = VoidHunters.field_G;
-          hab.field_g = new wfb[56];
-          var16_ref = new wfb(new int[6], 0, 0);
-          var16_ref.a(1, new lsb(5, 0, 0));
-          var16_ref.a(param0 + -27, new lsb(2, -2, -2048));
-          var16_ref.a(102, new lsb(2, 2, 2048));
-          var16_ref.a(param0 ^ -56, new lsb(-1, 0, 0));
-          var16_ref.a(-120, new lsb(-5, 0, 4096));
-          hab.field_g[0] = var16_ref;
-          var16_ref.field_w = new int[][]{new int[14], new int[6]};
-          hab.field_g[1] = new wfb(new int[8], 0, 0);
-          hab.field_g[1].a(-119, new lsb(40, 0, 0));
-          hab.field_g[1].a(53, new lsb(0, 40, 2048));
-          hab.field_g[1].a(-9, new lsb(-40, 0, 4096));
-          hab.field_g[1].a(18, new lsb(0, -40, -2048));
-          hab.field_g[1].a(1024, true);
-          hab.field_g[1].field_h = 1024;
-          hab.field_g[2] = new wfb(new int[8], 0, 0);
-          hab.field_g[2].a(10, new lsb(10, 0, 0));
-          hab.field_g[2].a(31, new lsb(0, 10, 2048));
-          hab.field_g[2].a(-120, new lsb(-10, 0, 4096));
-          hab.field_g[2].a(param0 + -71, new lsb(0, -10, -2048));
-          hab.field_g[2].a(1024, true);
-          var17_ref = new wfb(new int[6], 0, 0);
-          var17_ref.field_t = new aqa();
-          var17_ref.field_w = new int[][]{new int[12]};
-          hab.field_g[12] = var17_ref;
-          var17_ref.field_a = 5;
-          var18_ref = new wfb(new int[6], 0, 0);
-          var18_ref.field_t = new aqa();
-          var18_ref.field_a = 5;
-          hab.field_g[13] = var18_ref;
-          var18_ref.field_w = new int[][]{new int[14]};
-          var19_ref = new wfb(new int[6], 0, 0);
-          var19_ref.field_t = new aqa(46);
-          var19_ref.a((byte) -128, 5);
-          var19_ref.field_w = new int[][]{new int[14]};
-          var19_ref.field_a = 5;
-          hab.field_g[46] = var19_ref;
-          hab.field_g[14] = new wfb(new int[6], -2, 0);
-          hab.field_g[14].field_c = new qjb(11);
-          hab.field_g[14].field_w = new int[][]{new int[12]};
-          hab.field_g[14].field_a = 0;
-          hab.field_g[15] = new wfb(new int[8], -5, 0);
-          hab.field_g[15].field_c = new qjb(0);
-          hab.field_g[15].field_a = 0;
-          hab.field_g[15].field_w = new int[][]{new int[16]};
-          hab.field_g[16] = new wfb(new int[8], -10, 0);
-          hab.field_g[16].field_c = new qjb(3);
-          hab.field_g[16].field_w = new int[][]{new int[18]};
-          hab.field_g[16].field_a = 0;
-          hab.field_g[27] = new wfb(new int[8], -8, 0);
-          hab.field_g[27].field_c = new qjb(8);
-          hab.field_g[27].a((byte) -118, 2);
-          hab.field_g[27].field_w = new int[][]{new int[14]};
-          hab.field_g[27].field_a = 4;
-          hab.field_g[17] = new wfb(new int[8], -10, 0);
-          hab.field_g[17].field_c = new qjb(1);
-          hab.field_g[17].field_a = 0;
-          hab.field_g[19] = new wfb(new int[8], -35, 0);
-          hab.field_g[19].a(20, new lsb(40, 0, 0));
-          hab.field_g[19].field_e = new kma();
-          hab.field_g[20] = new wfb(new int[8], -15, 0);
-          hab.field_g[20].a(74, new lsb(20, 0, 0));
-          hab.field_g[20].field_e = new kma();
-          hab.field_g[29] = new wfb(new int[8], -5, 0);
-          hab.field_g[29].a(12, new lsb(5, 0, 0));
-          hab.field_g[29].a(-115, new lsb(0, 5, 2048));
-          hab.field_g[29].a(param0 + -190, new lsb(0, -5, -2048));
-          hab.field_g[29].field_a = 2;
-          hab.field_g[23] = new wfb(new int[8], -3, 0);
-          hab.field_g[23].field_c = new qjb(4);
-          hab.field_g[23].field_w = new int[][]{new int[18]};
-          hab.field_g[23].field_a = 0;
-          hab.field_g[24] = new wfb(new int[8], -4, 0);
-          hab.field_g[24].field_c = new qjb(6);
-          hab.field_g[24].field_w = new int[][]{new int[18]};
-          hab.field_g[24].field_a = 0;
-          hab.field_g[25] = new wfb(new int[8], -8, 0);
-          hab.field_g[25].field_c = new qjb(7);
-          if (param0 == 64) {
-            break L0;
-          } else {
-            wlb.e((byte) 124);
-            break L0;
-          }
-        }
+        var16 = null;
+        var17 = null;
+        var18 = null;
+        var19 = null;
+        var22 = null;
+        var24 = null;
+        var25 = null;
+        var27 = null;
+        var29 = null;
+        var30 = null;
+        var31 = null;
+        var32 = null;
+        var34 = null;
+        var36 = null;
+        var38 = null;
+        var39 = null;
+        var40 = null;
+        var44 = null;
+        var46 = null;
+        var48 = null;
+        var50 = null;
+        var52 = null;
+        var54 = null;
+        var56 = null;
+        var58 = null;
+        var60 = null;
+        var14 = VoidHunters.field_G;
+        hab.field_g = new wfb[56];
+        var16_ref = new wfb(new int[6], 0, 0);
+        var16_ref.a(1, new lsb(5, 0, 0));
+        var16_ref.a(37, new lsb(2, -2, -2048));
+        var16_ref.a(102, new lsb(2, 2, 2048));
+        var16_ref.a(-120, new lsb(-1, 0, 0));
+        var16_ref.a(-120, new lsb(-5, 0, 4096));
+        hab.field_g[0] = var16_ref;
+        var16_ref.field_w = new int[][]{new int[14], new int[6]};
+        hab.field_g[1] = new wfb(new int[8], 0, 0);
+        hab.field_g[1].a(-119, new lsb(40, 0, 0));
+        hab.field_g[1].a(53, new lsb(0, 40, 2048));
+        hab.field_g[1].a(-9, new lsb(-40, 0, 4096));
+        hab.field_g[1].a(18, new lsb(0, -40, -2048));
+        hab.field_g[1].a(1024, true);
+        hab.field_g[1].field_h = 1024;
+        hab.field_g[2] = new wfb(new int[8], 0, 0);
+        hab.field_g[2].a(10, new lsb(10, 0, 0));
+        hab.field_g[2].a(31, new lsb(0, 10, 2048));
+        hab.field_g[2].a(-120, new lsb(-10, 0, 4096));
+        hab.field_g[2].a(-7, new lsb(0, -10, -2048));
+        hab.field_g[2].a(1024, true);
+        var17_ref = new wfb(new int[6], 0, 0);
+        var17_ref.field_t = new aqa();
+        var17_ref.field_w = new int[][]{new int[12]};
+        hab.field_g[12] = var17_ref;
+        var17_ref.field_a = 5;
+        var18_ref = new wfb(new int[6], 0, 0);
+        var18_ref.field_t = new aqa();
+        var18_ref.field_a = 5;
+        hab.field_g[13] = var18_ref;
+        var18_ref.field_w = new int[][]{new int[14]};
+        var19_ref = new wfb(new int[6], 0, 0);
+        var19_ref.field_t = new aqa(46);
+        var19_ref.a((byte) -128, 5);
+        var19_ref.field_w = new int[][]{new int[14]};
+        var19_ref.field_a = 5;
+        hab.field_g[46] = var19_ref;
+        hab.field_g[14] = new wfb(new int[6], -2, 0);
+        hab.field_g[14].field_c = new qjb(11);
+        hab.field_g[14].field_w = new int[][]{new int[12]};
+        hab.field_g[14].field_a = 0;
+        hab.field_g[15] = new wfb(new int[8], -5, 0);
+        hab.field_g[15].field_c = new qjb(0);
+        hab.field_g[15].field_a = 0;
+        hab.field_g[15].field_w = new int[][]{new int[16]};
+        hab.field_g[16] = new wfb(new int[8], -10, 0);
+        hab.field_g[16].field_c = new qjb(3);
+        hab.field_g[16].field_w = new int[][]{new int[18]};
+        hab.field_g[16].field_a = 0;
+        hab.field_g[27] = new wfb(new int[8], -8, 0);
+        hab.field_g[27].field_c = new qjb(8);
+        hab.field_g[27].a((byte) -118, 2);
+        hab.field_g[27].field_w = new int[][]{new int[14]};
+        hab.field_g[27].field_a = 4;
+        hab.field_g[17] = new wfb(new int[8], -10, 0);
+        hab.field_g[17].field_c = new qjb(1);
+        hab.field_g[17].field_a = 0;
+        hab.field_g[19] = new wfb(new int[8], -35, 0);
+        hab.field_g[19].a(20, new lsb(40, 0, 0));
+        hab.field_g[19].field_e = new kma();
+        hab.field_g[20] = new wfb(new int[8], -15, 0);
+        hab.field_g[20].a(74, new lsb(20, 0, 0));
+        hab.field_g[20].field_e = new kma();
+        hab.field_g[29] = new wfb(new int[8], -5, 0);
+        hab.field_g[29].a(12, new lsb(5, 0, 0));
+        hab.field_g[29].a(-115, new lsb(0, 5, 2048));
+        hab.field_g[29].a(-126, new lsb(0, -5, -2048));
+        hab.field_g[29].field_a = 2;
+        hab.field_g[23] = new wfb(new int[8], -3, 0);
+        hab.field_g[23].field_c = new qjb(4);
+        hab.field_g[23].field_w = new int[][]{new int[18]};
+        hab.field_g[23].field_a = 0;
+        hab.field_g[24] = new wfb(new int[8], -4, 0);
+        hab.field_g[24].field_c = new qjb(6);
+        hab.field_g[24].field_w = new int[][]{new int[18]};
+        hab.field_g[24].field_a = 0;
+        hab.field_g[25] = new wfb(new int[8], -8, 0);
+        hab.field_g[25].field_c = new qjb(7);
         hab.field_g[25].field_a = 0;
         hab.field_g[25].field_w = new int[][]{new int[20]};
         hab.field_g[26] = new wfb(new int[8], -6, 0);
@@ -345,14 +334,14 @@ final class wlb extends rqa {
         hab.field_g[47].field_w = new int[][]{new int[52]};
         hab.field_g[47].field_q = 0;
         var1_int = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (hab.field_g.length <= var1_int) {
             var1_int = 2560;
             var2 = (int)((double)var1_int * Math.sin(1.0471975511965976));
             hab.field_g[30] = new wfb(new int[6], -var2, 0);
             var3 = 1365;
             hab.field_g[30].a(-119, new lsb(0, var1_int / 2, var3));
-            hab.field_g[30].a(param0 + 50, new lsb(0, -var1_int / 2, -var3));
+            hab.field_g[30].a(114, new lsb(0, -var1_int / 2, -var3));
             hab.field_g[30].a(106, 15);
             hab.field_g[30].field_a = 2;
             var20 = new wfb(new int[10], -var1_int, 0);
@@ -402,7 +391,7 @@ final class wlb extends rqa {
             var5 = var1_int;
             var6 = uca.a(var5, (byte) 9, new int[6], var4);
             var25_ref = new wfb(var6, -var2, 0);
-            var25_ref.a(param0 + 43, 15);
+            var25_ref.a(107, 15);
             var25_ref.field_a = 3;
             hab.field_g[37] = var25_ref;
             var25_ref.field_B = 0;
@@ -490,7 +479,7 @@ final class wlb extends rqa {
             var6 = var33;
             var34_ref = new wfb(var6, -fnb.field_b / 2, fnb.field_b / 2);
             ta.a(var97, 120, var34_ref);
-            var34_ref.a(param0 + 63, 15);
+            var34_ref.a(127, 15);
             var34_ref.field_a = 2;
             var34_ref.field_A = new int[][]{new int[5], new int[4]};
             hab.field_g[38] = var34_ref;
@@ -503,7 +492,7 @@ final class wlb extends rqa {
             var6 = var35;
             var36_ref = new wfb(var6, -fnb.field_b / 2, -fnb.field_b / 2);
             ta.a(var98, 119, var36_ref);
-            var36_ref.a(param0 + 44, 15);
+            var36_ref.a(108, 15);
             var36_ref.field_A = new int[][]{new int[5], new int[4]};
             hab.field_g[39] = var36_ref;
             var36_ref.field_a = 2;
@@ -566,7 +555,7 @@ final class wlb extends rqa {
             var101 = qfa.a(1, var100);
             var44_ref = new wfb(var101, 0, 0);
             ta.a(var101, 114, var44_ref);
-            var44_ref.a(param0 ^ 49, 15);
+            var44_ref.a(113, 15);
             var44_ref.field_s = true;
             var8_ref_wfb = var44_ref;
             hab.field_g[3] = var44_ref;
@@ -590,7 +579,7 @@ final class wlb extends rqa {
             var103 = uca.a(var5, (byte) 9, new int[18], var4);
             var48_ref = new wfb(var103, 0, 0);
             ta.a(var103, 116, var48_ref);
-            var48_ref.a(param0 + 42, 15);
+            var48_ref.a(106, 15);
             var8_ref_wfb = var48_ref;
             var48_ref.field_s = true;
             hab.field_g[5] = var48_ref;
@@ -601,7 +590,7 @@ final class wlb extends rqa {
             var104 = uca.a(var5, (byte) 9, new int[10], var4);
             var50_ref = new wfb(var104, 0, 0);
             ta.a(var104, 124, var50_ref);
-            var50_ref.a(param0 ^ 92, new lsb(-fnb.field_b, 0, 0));
+            var50_ref.a(28, new lsb(-fnb.field_b, 0, 0));
             var50_ref.a(120, 15);
             var50_ref.field_s = true;
             var8_ref_wfb = var50_ref;
@@ -613,7 +602,7 @@ final class wlb extends rqa {
             var105 = uca.a(var5, (byte) 9, new int[16], var4);
             var52_ref = new wfb(var105, 0, 0);
             ta.a(var105, 122, var52_ref);
-            var52_ref.a(param0 ^ 37, 15);
+            var52_ref.a(101, 15);
             var8_ref_wfb = var52_ref;
             var52_ref.field_s = true;
             hab.field_g[7] = var52_ref;
@@ -623,7 +612,7 @@ final class wlb extends rqa {
             var5 = -fnb.field_b / 2;
             var106 = uca.a(var5, (byte) 9, new int[11], var4);
             var54_ref = new wfb(var106, 0, 0);
-            ta.a(var106, param0 ^ 51, var54_ref);
+            ta.a(var106, 115, var54_ref);
             var54_ref.a(104, 15);
             var8_ref_wfb = var54_ref;
             var54_ref.field_s = true;
@@ -673,7 +662,7 @@ final class wlb extends rqa {
             var61 = var78;
             var7_ref_int__ = var61;
             var8 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var8 >= var110.length) {
                 hab.field_g[22] = new wfb(var110, 0, 0);
                 var62 = hab.field_g[22];
@@ -684,48 +673,48 @@ final class wlb extends rqa {
                 var62.field_p = var62.field_p >> 8;
                 var62.field_u = var62.field_u >> 16;
                 var4_ref_Random = new Random(135435642L);
-                hab.field_g[21] = jba.a(new int[3][], 1000L, 12, var4_ref_Random, mgb.a((int) param0, 47), 2500L);
-                hab.field_g[48] = jba.a(new int[3][], 1000L, 12, var4_ref_Random, mgb.a((int) param0, 61), 2500L);
-                hab.field_g[49] = jba.a(new int[3][], 500L, 12, var4_ref_Random, param0 + 45, 1250L);
-                hab.field_g[50] = jba.a(new int[3][], 500L, 12, var4_ref_Random, mgb.a((int) param0, -10), 1250L);
+                hab.field_g[21] = jba.a(new int[3][], 1000L, 12, var4_ref_Random, mgb.a(64, 47), 2500L);
+                hab.field_g[48] = jba.a(new int[3][], 1000L, 12, var4_ref_Random, mgb.a(64, 61), 2500L);
+                hab.field_g[49] = jba.a(new int[3][], 500L, 12, var4_ref_Random, 109, 1250L);
+                hab.field_g[50] = jba.a(new int[3][], 500L, 12, var4_ref_Random, mgb.a(64, -10), 1250L);
                 hab.field_g[52] = jba.a(new int[3][], 1500L, 12, var4_ref_Random, -127, 3000L);
                 hab.field_g[53] = jba.a(new int[3][], 1500L, 12, var4_ref_Random, 123, 3000L);
-                hab.field_g[54] = jba.a(new int[3][], 250L, 10, var4_ref_Random, mgb.a((int) param0, -108), 625L);
+                hab.field_g[54] = jba.a(new int[3][], 250L, 10, var4_ref_Random, mgb.a(64, -108), 625L);
                 hab.field_g[55] = jba.a(new int[3][], 250L, 10, var4_ref_Random, 122, 625L);
                 oea.field_o = 0;
                 gn.field_m = 0;
                 var4 = 0;
                 var5 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var5 >= hab.field_g.length) {
                     kg.field_p = new int[var4];
                     feb.field_b = new int[var4];
                     return;
                   } else {
-                    L4: {
+                    L3: {
                       if (tnb.a(130, var5)) {
                         gn.field_m = gn.field_m + 1;
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                    L4: {
+                      if (fbb.b(var5, 15923)) {
                         break L4;
                       } else {
                         break L4;
                       }
                     }
                     L5: {
-                      if (fbb.b(var5, 15923)) {
+                      if (tr.a(125, var5)) {
+                        oea.field_o = oea.field_o + 1;
                         break L5;
                       } else {
                         break L5;
                       }
                     }
                     L6: {
-                      if (tr.a(125, var5)) {
-                        oea.field_o = oea.field_o + 1;
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    L7: {
                       var111 = hab.field_g[var5].field_w;
                       var95 = var111;
                       var79 = var95;
@@ -734,59 +723,59 @@ final class wlb extends rqa {
                       if (var6_array != null) {
                         var15 = 0;
                         var7 = var15;
-                        L8: while (true) {
+                        L7: while (true) {
                           if (var15 >= var111.length) {
-                            break L7;
+                            break L6;
                           } else {
-                            L9: {
+                            L8: {
                               var8 = var111[var15].length;
                               if (var8 > var4) {
                                 var4 = var8;
-                                break L9;
+                                break L8;
                               } else {
-                                break L9;
+                                break L8;
                               }
                             }
                             var15++;
-                            continue L8;
+                            continue L7;
                           }
                         }
                       } else {
                         var7 = hab.field_g[var5].field_v.length;
                         if (var7 > var4) {
                           var4 = var7;
-                          break L7;
+                          break L6;
                         } else {
-                          break L7;
+                          break L6;
                         }
                       }
                     }
                     var5++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 var9 = (8192 * (var8 >> 1) - -8192) / var6_int;
                 var10 = (long)fc.a(var9, (byte) -86) * var4_long >> 8;
-                var12 = var4_long * (long)eu.a(var9, param0 ^ 12) >> 8;
+                var12 = var4_long * (long)eu.a(var9, 76) >> 8;
                 var7_ref_int__[var8] = (int)var10;
                 var7_ref_int__[var8 + 1] = (int)var12;
                 var8 += 2;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            L10: {
+            L9: {
               if (hab.field_g[var1_int] != null) {
                 hab.field_g[var1_int].a(1, 89, true);
-                hab.field_g[var1_int].a(8, param0 + -1, false);
-                break L10;
+                hab.field_g[var1_int].a(8, 63, false);
+                break L9;
               } else {
-                break L10;
+                break L9;
               }
             }
             var1_int++;
-            continue L1;
+            continue L0;
           }
         }
     }

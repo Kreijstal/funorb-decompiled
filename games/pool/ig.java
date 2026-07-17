@@ -137,7 +137,7 @@ abstract class ig extends gg implements pe {
 
     abstract String a(String param0, int param1);
 
-    final static void a(dd param0, byte param1) {
+    final static void a(dd param0) {
         RuntimeException var2 = null;
         int var9 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -205,7 +205,7 @@ abstract class ig extends gg implements pe {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_k = null;
         field_j = null;

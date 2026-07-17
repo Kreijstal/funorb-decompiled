@@ -8,7 +8,7 @@ final class cp {
     static int field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 2;
         field_b = null;

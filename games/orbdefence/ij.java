@@ -30,7 +30,8 @@ final class ij extends fh implements java.awt.image.ImageProducer, java.awt.imag
               if (var4 == null) {
                 break L0;
               } else {
-                nk.a(param1, var4, 14);
+                int discarded$4 = 14;
+                nk.a(param1, var4);
                 var4 = (mj) (Object) nd.field_b.d(853);
                 continue L2;
               }
@@ -80,7 +81,7 @@ final class ij extends fh implements java.awt.image.ImageProducer, java.awt.imag
         nc.field_cb[4] = new ja(4);
         kg.a(30, 468, 32, (byte) -128, new int[4], 2, 400);
         nc.field_cb[2] = new ja(2);
-        if (param0 < tc.field_b) {
+        if (0 < tc.field_b) {
           if (ug.a((byte) 94, wc.field_c)) {
             kg.a(50, 288, 32, (byte) -96, new int[7], 1, 200);
             nc.field_cb[1] = new ja(1);
@@ -136,20 +137,17 @@ final class ij extends fh implements java.awt.image.ImageProducer, java.awt.imag
 
     final static void a(int param0, String param1, hj param2) {
         try {
-            if (param0 > -26) {
-                field_h = null;
-            }
             hc.field_l = param2;
             pj.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ij.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "ij.L(" + -63 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
     }
 

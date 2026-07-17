@@ -62,165 +62,63 @@ final class nma extends rra {
         ((nma) this).field_k = param3;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_l = null;
         field_m = null;
     }
 
     final static int b(boolean param0, int param1) {
         int var2 = 0;
-        if (param1 == 0) {
-          return 0;
-        } else {
-          if (param1 <= 0) {
-            if (!param0) {
-              L0: {
-                var2 = 2;
-                if (param1 < -65536) {
-                  var2 += 16;
-                  param1 = param1 >> 16;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                if (param1 < -256) {
-                  param1 = param1 >> 8;
-                  var2 += 8;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                if (param1 < -16) {
-                  var2 += 4;
-                  param1 = param1 >> 4;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (param1 < -4) {
-                  var2 += 2;
-                  param1 = param1 >> 2;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (param1 < -2) {
-                  param1 = param1 >> 1;
-                  var2++;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              return var2;
-            } else {
-              L5: {
-                field_m = null;
-                var2 = 2;
-                if (param1 < -65536) {
-                  var2 += 16;
-                  param1 = param1 >> 16;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                if (param1 < -256) {
-                  param1 = param1 >> 8;
-                  var2 += 8;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              L7: {
-                if (param1 < -16) {
-                  var2 += 4;
-                  param1 = param1 >> 4;
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              L8: {
-                if (param1 < -4) {
-                  var2 += 2;
-                  param1 = param1 >> 2;
-                  break L8;
-                } else {
-                  break L8;
-                }
-              }
-              L9: {
-                if (param1 < -2) {
-                  param1 = param1 >> 1;
-                  var2++;
-                  break L9;
-                } else {
-                  break L9;
-                }
-              }
-              return var2;
-            }
-          } else {
-            L10: {
-              var2 = 1;
-              if (param1 <= 65535) {
-                break L10;
-              } else {
+        if (!(param1 != 0)) {
+            return 0;
+        }
+        if (param1 > 0) {
+            var2 = 1;
+            if (param1 > 65535) {
                 param1 = param1 >> 16;
                 var2 += 16;
-                break L10;
-              }
             }
-            L11: {
-              if (param1 > 255) {
+            if (!(param1 <= 255)) {
                 var2 += 8;
                 param1 = param1 >> 8;
-                break L11;
-              } else {
-                break L11;
-              }
             }
-            L12: {
-              if (15 >= param1) {
-                break L12;
-              } else {
+            if (15 < param1) {
                 var2 += 4;
                 param1 = param1 >> 4;
-                break L12;
-              }
             }
-            L13: {
-              if (param1 <= 3) {
-                break L13;
-              } else {
+            if (param1 > 3) {
                 var2 += 2;
                 param1 = param1 >> 2;
-                break L13;
-              }
             }
-            L14: {
-              if (1 < param1) {
+            if (!(1 >= param1)) {
                 param1 = param1 >> 1;
                 var2++;
-                break L14;
-              } else {
-                break L14;
-              }
             }
             return var2;
-          }
         }
+        field_m = null;
+        var2 = 2;
+        if (!(param1 >= -65536)) {
+            var2 += 16;
+            param1 = param1 >> 16;
+        }
+        if (!(param1 >= -256)) {
+            param1 = param1 >> 8;
+            var2 += 8;
+        }
+        if (!(param1 >= -16)) {
+            var2 += 4;
+            param1 = param1 >> 4;
+        }
+        if (!(param1 >= -4)) {
+            var2 += 2;
+            param1 = param1 >> 2;
+        }
+        if (!(param1 >= -2)) {
+            param1 = param1 >> 1;
+            var2++;
+        }
+        return var2;
     }
 
     final void a(byte param0, int param1, int param2) {

@@ -42,7 +42,7 @@ final class ff extends vd {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_x = null;
         field_v = null;
     }

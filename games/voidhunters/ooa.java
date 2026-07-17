@@ -224,10 +224,7 @@ final class ooa extends llb {
         int var8 = -32 % ((param4 - 15) / 35);
     }
 
-    public static void h(int param0) {
-        if (param0 <= 18) {
-            return;
-        }
+    public static void h() {
         field_zb = null;
     }
 
@@ -370,20 +367,12 @@ final class ooa extends llb {
                 }
               }
             }
-            L4: {
-              if (param4 == -17572) {
-                break L4;
-              } else {
-                ooa.h(79);
-                break L4;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var10, "ooa.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw rta.a((Throwable) (Object) var10, "ooa.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -17572 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
         }
     }
 

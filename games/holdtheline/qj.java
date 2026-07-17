@@ -147,8 +147,9 @@ final class qj extends ub {
         field_J = null;
     }
 
-    final static void h(int param0) {
-        pc.field_b = si.n(-49);
+    final static void h() {
+        int discarded$0 = -49;
+        pc.field_b = si.n();
         ka.field_b = new qj();
         cg.a((byte) -109, true, true);
     }

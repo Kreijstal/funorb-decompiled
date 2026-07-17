@@ -9,7 +9,7 @@ final class kk implements Runnable {
     private boolean field_e;
     int field_f;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_d = null;
     }
@@ -360,9 +360,6 @@ final class kk implements Runnable {
         synchronized (((kk) this).field_c) {
             ((kk) this).field_c.a(-1, (fl) (Object) param1);
             ((kk) this).field_f = ((kk) this).field_f + 1;
-            if (param0 != -3) {
-                field_a = null;
-            }
             ((Object) (Object) ((kk) this).field_c).notifyAll();
         }
     }

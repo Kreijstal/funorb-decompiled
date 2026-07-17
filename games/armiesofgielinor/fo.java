@@ -7,7 +7,7 @@ final class fo {
     private boolean field_c;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -20,7 +20,8 @@ final class fo {
 
     final boolean a(int param0) {
         if (param0 <= 8) {
-            fo.a(true);
+            int discarded$0 = 1;
+            fo.a();
         }
         return ((fo) this).field_c;
     }

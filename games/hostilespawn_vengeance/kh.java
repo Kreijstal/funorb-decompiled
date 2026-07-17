@@ -137,7 +137,7 @@ final class kh extends w {
         ((kh) this).field_gb.field_d[param0] = param3;
         int var5 = ((kh) this).field_db[param0];
         int var6 = (((kh) this).field_gb.field_d[param0] << 12) - var5;
-        int var7 = -97 % ((param2 - 58) / 42);
+        int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         if (!(0 <= var6)) {
@@ -312,7 +312,7 @@ final class kh extends w {
         }
     }
 
-    private final void h(int param0) {
+    private final void h() {
         int var2 = 0;
         int var3 = HostileSpawn.field_I ? 1 : 0;
         for (var2 = 0; var2 < 16; var2++) {
@@ -339,30 +339,30 @@ final class kh extends w {
         ((kh) this).field_db = new int[16];
         ((kh) this).field_Y = new int[16];
         ((kh) this).field_W = 256;
-        this.h(381);
+        int discarded$0 = 381;
+        this.h();
     }
 
     private final synchronized void a(int param0, int param1, mn param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        Object var6 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
@@ -370,18 +370,9 @@ final class kh extends w {
             var4_int = 0;
             L1: while (true) {
               if (var4_int >= 16) {
-                L2: {
-                  if (param1 == -17) {
-                    break L2;
-                  } else {
-                    var6 = null;
-                    kh.a((ji) null, -104, (byte) -19, false);
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
-                this.b(var4_int, param0, param1 ^ -128, ((kh) this).field_gb.field_d[var4_int]);
+                this.b(var4_int, param0, 111, ((kh) this).field_gb.field_d[var4_int]);
                 var4_int++;
                 continue L1;
               }
@@ -389,33 +380,33 @@ final class kh extends w {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("kh.EB(").append(param0).append(44).append(param1).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("kh.EB(").append(param0).append(44).append(-17).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -425,7 +416,8 @@ final class kh extends w {
         ((kh) this).field_Y = new int[16];
         ((kh) this).field_W = 256;
         try {
-            this.h(381);
+            int discarded$0 = 381;
+            this.h();
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
@@ -437,7 +429,8 @@ final class kh extends w {
                 Object var6 = null;
                 kh.a((ji) null, -112, (byte) 83, true);
             }
-            this.h(381);
+            int discarded$0 = 381;
+            this.h();
             super.a(param0, (byte) 125, param2, param3);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "kh.Q(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);

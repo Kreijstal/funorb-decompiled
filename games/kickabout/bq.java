@@ -179,7 +179,8 @@ final class bq {
                 vj.field_g.field_R = fs.a(vj.field_g.field_mb, 3, 1, 11579568, 8421504, (byte) 97);
                 mc.field_d.a(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb + -24) - 2);
                 kt.field_i.a(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
-                bs.a(0);
+                int discarded$1 = 0;
+                bs.a();
                 break L0;
               } else {
                 L9: {
@@ -367,7 +368,7 @@ final class bq {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;
@@ -414,7 +415,8 @@ final class bq {
                       }
                     }
                     var5 = new java.net.URL(param1.getCodeBase(), var4);
-                    param1.getAppletContext().showDocument(qr.a(param1, var5, 3), "_self");
+                    int discarded$2 = 3;
+                    param1.getAppletContext().showDocument(qr.a(param1, var5), "_self");
                     break L0;
                   } else {
                     return;

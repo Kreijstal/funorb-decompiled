@@ -692,12 +692,9 @@ final class tc extends qb {
         try {
             ((tc) this).field_B = param2;
             ((tc) this).field_v = 1048576;
-            if (!param0) {
-                tc.a((byte) 14);
-            }
             ((tc) this).field_A = param1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "tc.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "tc.G(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -867,7 +864,9 @@ final class tc extends qb {
               if (var4 == null) {
                 break L0;
               } else {
-                ro.a(var4, param0, 124);
+                int discarded$8 = 124;
+                int discarded$9 = 7;
+                ro.a(var4);
                 var4 = (pm) (Object) li.field_a.a(4);
                 continue L1;
               }
@@ -876,7 +875,7 @@ final class tc extends qb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2, "tc.L(" + param0 + 44 + -112 + 41);
+          throw vk.a((Throwable) (Object) var2, "tc.L(" + 7 + 44 + -112 + 41);
         }
     }
 

@@ -69,7 +69,7 @@ final class th {
                 } else {
                   var8_int = 0;
                   L2: while (true) {
-                    var8_int = param0.indexOf((int) param2, var8_int);
+                    var8_int = param0.indexOf('_', var8_int);
                     if (var8_int >= 0) {
                       var6 = var6 + var7;
                       var8_int++;
@@ -83,7 +83,7 @@ final class th {
               var8 = new StringBuilder(var6);
               var9 = 0;
               L3: while (true) {
-                var10 = param0.indexOf((int) param2, var9);
+                var10 = param0.indexOf('_', var9);
                 if (var10 < 0) {
                   StringBuilder discarded$3 = var8.append(param0.substring(var9));
                   stackOut_12_0 = var8.toString();
@@ -132,7 +132,7 @@ final class th {
           }
           L5: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44).append(95).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -160,7 +160,7 @@ final class th {
         return stackIn_13_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_c = null;
         field_a = null;

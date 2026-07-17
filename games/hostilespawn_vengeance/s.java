@@ -13,7 +13,8 @@ final class s {
 
     final static void a(int param0, fd param1, int param2, int param3, kd param4, java.awt.Component param5, boolean param6, int param7) {
         try {
-            ug.a(param3, param6, 10);
+            int discarded$0 = 10;
+            ug.a(param3, param6);
             uj.field_m = ug.a(param1, param5, 0, param0);
             eb.field_e = ug.a(param1, param5, 1, param2);
             oa.field_b = new wm();
@@ -245,7 +246,7 @@ final class s {
         return stackIn_7_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_a = null;

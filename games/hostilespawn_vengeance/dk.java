@@ -15,51 +15,30 @@ class dk extends am {
     dk field_j;
 
     final static String a(byte param0, long param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        Object var10 = null;
         uh.field_h.setTime(new Date(param1));
-        var3 = uh.field_h.get(7);
-        var4 = uh.field_h.get(5);
-        var5 = uh.field_h.get(2);
-        if (param0 != -41) {
-          var10 = null;
-          dk.a((cl) null, -84, 103);
-          var6 = uh.field_h.get(1);
-          var7 = uh.field_h.get(11);
-          var8 = uh.field_h.get(12);
-          var9 = uh.field_h.get(13);
-          return gb.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        } else {
-          var6 = uh.field_h.get(1);
-          var7 = uh.field_h.get(11);
-          var8 = uh.field_h.get(12);
-          var9 = uh.field_h.get(13);
-          return gb.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        }
+        int var3 = uh.field_h.get(7);
+        int var4 = uh.field_h.get(5);
+        int var5 = uh.field_h.get(2);
+        int var6 = uh.field_h.get(1);
+        int var7 = uh.field_h.get(11);
+        int var8 = uh.field_h.get(12);
+        int var9 = uh.field_h.get(13);
+        return gb.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     static long a(long param0, long param1) {
         return param0 & param1;
     }
 
-    final static void a(cl param0, int param1, int param2) {
+    final static void a(cl param0) {
         en var3 = null;
         try {
             var3 = s.field_b;
-            var3.i(19319, param1);
-            var3.d(param2 ^ 97, param0.field_m);
-            if (param2 != 10) {
-                field_m = null;
-            }
+            var3.i(19319, 2);
+            var3.d(107, param0.field_m);
             var3.a((byte) -120, param0.field_n);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "dk.OB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "dk.OB(" + (param0 != null ? "{...}" : "null") + 44 + 2 + 44 + 10 + 41);
         }
     }
 

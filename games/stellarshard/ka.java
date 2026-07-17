@@ -295,7 +295,7 @@ class ka extends gg {
         return (((ka) this).field_r[((ka) this).field_k + -2] << 8 & 65280) + (255 & ((ka) this).field_r[((ka) this).field_k - 1]);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_n = null;
         field_l = null;
         field_m = null;
@@ -892,9 +892,6 @@ class ka extends gg {
         int fieldTemp$1 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
         ((ka) this).field_r[fieldTemp$1] = (byte)(int)(param1 >> 40);
-        if (param0 != 8) {
-            return;
-        }
         int fieldTemp$2 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
         ((ka) this).field_r[fieldTemp$2] = (byte)(int)(param1 >> 32);

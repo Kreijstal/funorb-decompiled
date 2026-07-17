@@ -590,7 +590,7 @@ public final class Chess extends gb {
         }
     }
 
-    private final void p(int param0) {
+    private final void p() {
         b.field_e = new bn(4, 2, 1);
         int discarded$0 = b.field_e.a(-66, 0, -66);
         int discarded$1 = b.field_e.a(66, 0, -66);
@@ -693,9 +693,11 @@ public final class Chess extends gb {
           }
         }
         L1: {
-          int discarded$4 = ea.h((byte) -16);
+          int discarded$30 = -16;
+          int discarded$31 = ea.h();
           fl.field_n = ib.a(true);
-          la.b(-49);
+          int discarded$32 = -49;
+          la.b();
           if (fk.field_q.d((byte) -125)) {
             break L1;
           } else {
@@ -712,16 +714,16 @@ public final class Chess extends gb {
                 if (~ib.field_a >= ~bc.field_b) {
                   break L3;
                 } else {
-                  int fieldTemp$5 = bc.field_b + 2;
+                  int fieldTemp$33 = bc.field_b + 2;
                   bc.field_b = bc.field_b + 2;
-                  rf.b(80, fieldTemp$5);
+                  rf.b(80, fieldTemp$33);
                   break L3;
                 }
               }
               if (bc.field_b > ib.field_a) {
-                int fieldTemp$6 = bc.field_b - 2;
+                int fieldTemp$34 = bc.field_b - 2;
                 bc.field_b = bc.field_b - 2;
-                rf.b(80, fieldTemp$6);
+                rf.b(80, fieldTemp$34);
                 break L2;
               } else {
                 break L2;
@@ -737,7 +739,8 @@ public final class Chess extends gb {
           } else {
             if (rm.field_R.field_b) {
               b.a(true);
-              om.a(119);
+              int discarded$35 = 119;
+              om.a();
               break L4;
             } else {
               break L4;
@@ -765,7 +768,8 @@ public final class Chess extends gb {
         L6: {
           ((Chess) this).b(stackIn_19_1 != 0, (byte) 31);
           if (ic.field_b) {
-            this.o(111);
+            int discarded$36 = 111;
+            this.o();
             ic.field_b = false;
             break L6;
           } else {
@@ -774,7 +778,8 @@ public final class Chess extends gb {
         }
         L7: {
           r.field_Eb = r.field_Eb + 1;
-          tl.k(31553);
+          int discarded$37 = 31553;
+          tl.k();
           if (qh.field_b == null) {
             break L7;
           } else {
@@ -788,13 +793,16 @@ public final class Chess extends gb {
         }
         L8: {
           nh.a();
-          nh.c(370, ec.c((byte) -63) + 240);
-          if (je.h(30065)) {
+          int discarded$38 = -63;
+          nh.c(370, ec.c() + 240);
+          int discarded$39 = 30065;
+          if (je.h()) {
             ((Chess) this).m(-122);
-            if (je.h(30065)) {
+            int discarded$40 = 30065;
+            if (je.h()) {
               L9: {
                 if (vd.p(-77)) {
-                  boolean discarded$7 = this.b(19763, false);
+                  boolean discarded$41 = this.b(19763, false);
                   break L9;
                 } else {
                   break L9;
@@ -819,10 +827,12 @@ public final class Chess extends gb {
                   } else {
                     if (n.field_e == n.field_f) {
                       L11: {
-                        var2 = kg.b(true);
+                        int discarded$42 = 1;
+                        var2 = kg.b();
                         if (var2 == 1) {
                           ia.field_l = true;
-                          hj.a(0, -2, false);
+                          int discarded$43 = 0;
+                          hj.a(0, -2);
                           break L11;
                         } else {
                           break L11;
@@ -885,7 +895,8 @@ public final class Chess extends gb {
                     if (var2 != 2) {
                       break L13;
                     } else {
-                      dh.a(bh.i(81), true);
+                      int discarded$44 = 1;
+                      dh.a(bh.i(81));
                       break L13;
                     }
                   }
@@ -895,7 +906,8 @@ public final class Chess extends gb {
               } else {
                 L16: {
                   if (0 == n.field_e) {
-                    var2 = wf.c(true);
+                    int discarded$45 = 1;
+                    var2 = wf.c();
                     if (var2 == 2) {
                       b.a(true);
                       break L16;
@@ -903,13 +915,15 @@ public final class Chess extends gb {
                       if (var2 != 3) {
                         if (var2 == 4) {
                           a.field_d = true;
-                          hj.a(0, -6, false);
+                          int discarded$46 = 0;
+                          hj.a(0, -6);
                           break L16;
                         } else {
                           break L16;
                         }
                       } else {
-                        fk.a(true, 15);
+                        int discarded$47 = 15;
+                        fk.a(true);
                         break L16;
                       }
                     }
@@ -946,7 +960,9 @@ public final class Chess extends gb {
             L18: while (true) {
               var12 = (ac) (Object) tg.field_e.f(1184188328);
               if (var12 != null) {
-                tl.a(var12, 4, (byte) 117);
+                int discarded$48 = 117;
+                int discarded$49 = 4;
+                tl.a(var12);
                 continue L18;
               } else {
                 break L17;
@@ -982,12 +998,17 @@ public final class Chess extends gb {
                       }
                     }
                   }
-                  sc.a(-116, 2);
+                  int discarded$50 = 2;
+                  int discarded$51 = -116;
+                  sc.a();
                   ka.a((byte) -76, 3);
                   q.a(4, 97);
                   m.a(5, 0);
-                  h.a(7, 0);
-                  dj.a(true);
+                  int discarded$52 = 0;
+                  int discarded$53 = 7;
+                  h.a();
+                  int discarded$54 = 1;
+                  dj.a();
                   if (var2 != 1) {
                     L24: {
                       if (pk.field_j) {
@@ -1064,8 +1085,11 @@ public final class Chess extends gb {
             if (9 != wg.field_B) {
               if (wg.field_B == 14) {
                 de.a(-31645);
-                hg.a(rl.field_a.length, 1024, aj.a(false), ak.a(8, 1045), o.b((byte) 19), ak.a(2000, 1045), true, 150, cn.a(11520), ai.field_h);
-                il.a(hj.b(63910), sj.a((byte) -57), (byte) 15);
+                int discarded$55 = 11520;
+                hg.a(rl.field_a.length, 1024, aj.a(false), ak.a(8, 1045), o.b((byte) 19), ak.a(2000, 1045), true, 150, cn.a(), ai.field_h);
+                int discarded$56 = 63910;
+                int discarded$57 = 15;
+                il.a(hj.b(), sj.a((byte) -57));
                 wn.field_f = true;
                 qk.field_h = -2;
                 s.field_O = 0;
@@ -1228,7 +1252,8 @@ public final class Chess extends gb {
                                     var4 = tk.field_h.c(true);
                                     var5 = tk.field_h.g(0);
                                     ((un) var2_ref).field_B.a(var3, var5, (uk) (Object) ((un) var2_ref).field_t, -65, var4);
-                                    eb.a(var5, ((un) var2_ref).field_t.field_f[var4] & -16773121, ((un) var2_ref).field_t.field_f[var3] & -16773121, 3);
+                                    int discarded$58 = 3;
+                                    eb.a(var5, ((un) var2_ref).field_t.field_f[var4] & -16773121, ((un) var2_ref).field_t.field_f[var3] & -16773121);
                                     ((un) var2_ref).b((byte) 26);
                                     continue L19;
                                   }
@@ -1363,7 +1388,8 @@ public final class Chess extends gb {
                             oc.field_p = null;
                             hl.field_h = true;
                             nh.a();
-                            nh.c(370, 240 - -ec.c((byte) -63));
+                            int discarded$59 = -63;
+                            nh.c(370, 240 - -ec.c());
                             var10 = eg.a(var8.field_B.field_f, 0, var8.field_B.field_k);
                             if (var10 != -2) {
                               qk.field_h = 3;
@@ -1399,15 +1425,17 @@ public final class Chess extends gb {
     }
 
     final void e(byte param0) {
-        tk.a(-2919);
+        int discarded$0 = -2919;
+        tk.a();
         int var2 = -63 / ((-31 - param0) / 42);
         if (!(rm.field_R == null)) {
             b.a(true);
         }
-        ao.b(-25220);
+        int discarded$1 = -25220;
+        ao.b();
     }
 
-    private final void j(byte param0) {
+    private final void j() {
         nj.a(-20, mm.field_e, 92.0f);
         ((Chess) this).a(true);
         cm.field_s = jn.a("logo", 8221, "", mm.field_d);
@@ -1435,7 +1463,8 @@ public final class Chess extends gb {
         dc.field_n[11] = cm.field_s;
         dc.field_n[10] = null;
         dc.field_n[0] = cm.field_s;
-        this.k((byte) 117);
+        int discarded$0 = 117;
+        this.k();
         jd.field_c = qm.a(1, "", "help", mm.field_d);
         ph.field_l = jn.a("clock", 8221, "", mm.field_d);
         ja.field_g = jn.a("clock_button", 8221, "", mm.field_d);
@@ -1470,7 +1499,8 @@ public final class Chess extends gb {
         }
         var6 = stackIn_3_0;
         var2 = var6;
-        if (!je.h(30065)) {
+        int discarded$2 = 30065;
+        if (!je.h()) {
           if (!qi.field_l) {
             cg.a(-12, (java.awt.Canvas) var6);
             return;
@@ -1589,7 +1619,7 @@ public final class Chess extends gb {
         }
     }
 
-    private final void u(int param0) {
+    private final void u() {
         int var2 = 0;
         int var3 = 0;
         short[] var4_ref_short__ = null;
@@ -1757,7 +1787,8 @@ public final class Chess extends gb {
           }
         }
         L14: {
-          this.p(0);
+          int discarded$3 = 0;
+          this.p();
           kl.field_k[0] = null;
           var3 = qm.field_g;
           if (1 == var3) {
@@ -1833,8 +1864,10 @@ public final class Chess extends gb {
                         ig.field_f[0] = null;
                         nh.a(0.6000000238418579f);
                         nh.a();
-                        nh.c(370, ec.c((byte) -63) + 240);
-                        this.d(true);
+                        int discarded$4 = -63;
+                        nh.c(370, ec.c() + 240);
+                        int discarded$5 = 1;
+                        this.d();
                         return;
                       } else {
                         n.field_b[var5] = null;
@@ -1933,75 +1966,67 @@ public final class Chess extends gb {
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         var5 = field_G;
         try {
           L0: {
-            L1: {
-              var6 = param1.field_x;
-              var3 = var6;
-              var4 = -1 + var6.length;
-              if (!param0) {
-                break L1;
-              } else {
-                ((Chess) this).a(true);
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var6 = param1.field_x;
+            var3 = var6;
+            var4 = -1 + var6.length;
+            L1: while (true) {
               if (var4 < 0) {
                 break L0;
               } else {
-                var3[var4] = s.a(var3[var4], 1);
+                var6[var4] = s.a(var6[var4], 1);
                 var4--;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3_ref;
-            stackOut_6_1 = new StringBuilder().append("Chess.T(").append(param0).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_1 = new StringBuilder().append("Chess.T(").append(0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L3;
-            } else {
               stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
               stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L3;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -2038,11 +2063,12 @@ public final class Chess extends gb {
         ke.field_g = ao.a(mm.field_d, "turntime_icons", 2993, "");
     }
 
-    private final void o(int param0) {
+    private final void o() {
         if (td.field_o != null) {
             q.a(5, td.field_o);
             td.field_o = null;
-            ob.f(0);
+            int discarded$0 = 0;
+            ob.f();
         }
         mm.field_d = ri.a(1, (byte) 127);
         lc.field_m = ri.a(2, (byte) 127);
@@ -2055,7 +2081,7 @@ public final class Chess extends gb {
         ca.field_b = ri.a(13, (byte) 127);
     }
 
-    private final void s(int param0) {
+    private final void s() {
         int var2 = 0;
         int var3 = field_G;
         nj.a(-20, mm.field_e, 85.0f);
@@ -2076,7 +2102,7 @@ public final class Chess extends gb {
         gh.field_b = ai.a(27176, "button_frame", "", mm.field_d);
     }
 
-    private final void d(boolean param0) {
+    private final void d() {
         int[] var2 = null;
         int[] var3 = null;
         int[] var4 = null;
@@ -2119,7 +2145,8 @@ public final class Chess extends gb {
             dj.field_t = ub.field_d[1][1].c();
             ph.field_j.b(48);
             nh.a();
-            nh.c(370, ec.c((byte) -63) + 240);
+            int discarded$1 = -63;
+            nh.c(370, ec.c() + 240);
             var8_int = 0;
             L1: while (true) {
               if (2 <= var8_int) {
@@ -2309,7 +2336,7 @@ public final class Chess extends gb {
         }
     }
 
-    private final void l(byte param0) {
+    private final void l() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2734,14 +2761,15 @@ public final class Chess extends gb {
                 }
               }
               L6: while (true) {
-                if (!kf.d(18954)) {
+                int discarded$2 = 18954;
+                if (!kf.d()) {
                   break L0;
                 } else {
                   L7: {
                     if (!wn.field_f) {
                       break L7;
                     } else {
-                      boolean discarded$1 = tl.a(12, 13, 123, 15);
+                      boolean discarded$3 = tl.a(12, 13, 123, 15);
                       break L7;
                     }
                   }
@@ -2823,31 +2851,27 @@ public final class Chess extends gb {
         try {
           L0: {
             tf.field_l[param4] = bn.a(lg.field_b, param1, param2);
-            tf.field_l[param4].a(param5, param5, param5, param0);
+            tf.field_l[param4].a(param5, param5, param5, 2);
             da.field_w[param4] = new bn(new bn[1], 1);
-            if (param3) {
-              var15 = da.field_w[param4].field_j;
-              var14 = var15;
-              var13 = var14;
-              var12 = var13;
-              var11 = var12;
-              var7_array = var11;
-              var8 = new byte[var15.length];
-              var9 = da.field_w[param4].field_j.length - 1;
-              L1: while (true) {
-                if (var9 < 0) {
-                  da.field_w[param4].field_D = var8;
-                  da.field_w[param4].a(((Chess) this).field_H);
-                  break L0;
-                } else {
-                  var11[var9] = (short) 0;
-                  var8[var9] = (byte) -36;
-                  var9--;
-                  continue L1;
-                }
+            var15 = da.field_w[param4].field_j;
+            var14 = var15;
+            var13 = var14;
+            var12 = var13;
+            var11 = var12;
+            var7_array = var11;
+            var8 = new byte[var15.length];
+            var9 = da.field_w[param4].field_j.length - 1;
+            L1: while (true) {
+              if (var9 < 0) {
+                da.field_w[param4].field_D = var8;
+                da.field_w[param4].a(((Chess) this).field_H);
+                break L0;
+              } else {
+                var11[var9] = (short) 0;
+                var8[var9] = (byte) -36;
+                var9--;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2855,7 +2879,7 @@ public final class Chess extends gb {
           L2: {
             var7 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var7;
-            stackOut_8_1 = new StringBuilder().append("Chess.U(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("Chess.U(").append(2).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -2903,7 +2927,7 @@ public final class Chess extends gb {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 1 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -2963,15 +2987,18 @@ public final class Chess extends gb {
                       if (cb.field_e == null) {
                         break L2;
                       } else {
-                        ba.a(cb.field_e, -102, 3);
+                        int discarded$14 = 3;
+                        ba.a(cb.field_e, -102);
                         break L2;
                       }
                     }
                     L3: {
-                      um.a(5);
+                      int discarded$15 = 5;
+                      um.a();
                       qk.field_h = ge.field_bb;
                       if (a.field_d) {
-                        fk.a(false, 15);
+                        int discarded$16 = 15;
+                        fk.a(false);
                         break L3;
                       } else {
                         break L3;
@@ -3004,10 +3031,12 @@ public final class Chess extends gb {
               if (ji.field_S == 16) {
                 L4: {
                   if (ga.a(true)) {
-                    uh.j(-3750);
+                    int discarded$17 = -3750;
+                    uh.j();
                     break L4;
                   } else {
-                    db.h(12082);
+                    int discarded$18 = 12082;
+                    db.h();
                     break L4;
                   }
                 }
@@ -3043,7 +3072,8 @@ public final class Chess extends gb {
                         } else {
                           oc.field_p.a((byte) -39, true);
                           L8: while (true) {
-                            if (!kf.d(18954)) {
+                            int discarded$19 = 18954;
+                            if (!kf.d()) {
                               break L7;
                             } else {
                               if (oc.field_p.f(-111)) {
@@ -3074,7 +3104,8 @@ public final class Chess extends gb {
                             ae.field_e[jc.field_f].a((byte) -125);
                             break L6;
                           } else {
-                            this.l((byte) 106);
+                            int discarded$20 = 106;
+                            this.l();
                             break L6;
                           }
                         }
@@ -3120,12 +3151,13 @@ public final class Chess extends gb {
                       }
                     }
                     L12: while (true) {
-                      if (!kf.d(18954)) {
+                      int discarded$21 = 18954;
+                      if (!kf.d()) {
                         break L9;
                       } else {
                         L13: {
                           if (wn.field_f) {
-                            boolean discarded$3 = tl.a(12, 13, 94, 15);
+                            boolean discarded$22 = tl.a(12, 13, 94, 15);
                             break L13;
                           } else {
                             break L13;
@@ -3135,12 +3167,12 @@ public final class Chess extends gb {
                           if (!hl.field_h) {
                             break L14;
                           } else {
-                            boolean discarded$4 = pd.field_Lb.f(26);
+                            boolean discarded$23 = pd.field_Lb.f(26);
                             break L14;
                           }
                         }
                         if (hj.field_i) {
-                          boolean discarded$5 = oc.field_p.f(57);
+                          boolean discarded$24 = oc.field_p.f(57);
                           continue L12;
                         } else {
                           continue L12;
@@ -3170,7 +3202,8 @@ public final class Chess extends gb {
                 break L0;
               } else {
                 aa.field_f = aa.field_f + 1;
-                nh.c(370, 240 + ec.c((byte) -63));
+                int discarded$25 = -63;
+                nh.c(370, 240 + ec.c());
                 vk.field_e = true;
                 t.field_Q = true;
                 var5 = ug.field_b * ug.field_b;
@@ -3182,7 +3215,8 @@ public final class Chess extends gb {
             } else {
               if (aa.field_f > 0) {
                 aa.field_f = aa.field_f - 1;
-                nh.c(370, ec.c((byte) -63) + 240);
+                int discarded$26 = -63;
+                nh.c(370, ec.c() + 240);
                 t.field_Q = true;
                 vk.field_e = true;
                 var5 = ug.field_b * ug.field_b;
@@ -3229,7 +3263,8 @@ public final class Chess extends gb {
               if (null == pd.field_Rb) {
                 break L19;
               } else {
-                db.a(11, pd.field_Rb.g((byte) -121), 28113);
+                int discarded$27 = 28113;
+                db.a(11, pd.field_Rb.g((byte) -121));
                 break L19;
               }
             }
@@ -3246,7 +3281,7 @@ public final class Chess extends gb {
         ((Chess) this).a(16742, 15, "Chess");
     }
 
-    private final void r(int param0) {
+    private final void r() {
         km var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -3287,293 +3322,487 @@ public final class Chess extends gb {
     final void f(byte param0) {
         int var3 = field_G;
         Chess.v(2137);
-        ef.a(27706);
+        int discarded$0 = 27706;
+        ef.a();
         jc.d(-31);
-        ic.a(false);
-        dn.a(82);
-        me.a(18854);
+        int discarded$1 = 0;
+        ic.a();
+        int discarded$2 = 82;
+        dn.a();
+        int discarded$3 = 18854;
+        me.a();
         dd.b();
         nh.c();
-        vc.a(0);
-        fi.b(124);
-        q.a(5);
-        i.a(0);
-        jl.a(-1699);
-        gb.f(-113);
+        int discarded$4 = 0;
+        vc.a();
+        int discarded$5 = 124;
+        fi.b();
+        int discarded$6 = 5;
+        q.a();
+        int discarded$7 = 0;
+        i.a();
+        int discarded$8 = -1699;
+        jl.a();
+        int discarded$9 = -113;
+        gb.f();
         ae.a(122);
         fa.a((byte) -53);
-        qk.a(true);
-        rl.b(1);
-        ek.b((byte) 30);
+        int discarded$10 = 1;
+        qk.a();
+        int discarded$11 = 1;
+        rl.b();
+        int discarded$12 = 30;
+        ek.b();
         wb.d();
-        um.d((byte) 73);
+        int discarded$13 = 73;
+        um.d();
         lh.a();
-        jf.a((byte) -8);
+        int discarded$14 = -8;
+        jf.a();
         p.f((byte) -128);
-        ud.a((byte) -109);
-        gi.a(true);
-        il.a(91);
-        bb.b(-16987);
-        rn.a(-2);
-        ti.a(3411);
-        ng.a((byte) -85);
+        int discarded$15 = -109;
+        ud.a();
+        int discarded$16 = 1;
+        gi.a();
+        int discarded$17 = 91;
+        il.a();
+        int discarded$18 = -16987;
+        bb.b();
+        int discarded$19 = -2;
+        rn.a();
+        int discarded$20 = 3411;
+        ti.a();
+        int discarded$21 = -85;
+        ng.a();
         li.a(-69);
-        wh.a((byte) -46);
+        int discarded$22 = -46;
+        wh.a();
         ld.a(0);
-        vk.a((byte) -14);
-        wk.a(-26815);
-        ca.a((byte) -102);
-        gm.a(6);
-        vj.a(-97);
-        rh.a(104);
+        int discarded$23 = -14;
+        vk.a();
+        int discarded$24 = -26815;
+        wk.a();
+        int discarded$25 = -102;
+        ca.a();
+        int discarded$26 = 6;
+        gm.a();
+        int discarded$27 = -97;
+        vj.a();
+        int discarded$28 = 104;
+        rh.a();
         a.a(-9);
-        gg.c(0);
+        int discarded$29 = 0;
+        gg.c();
         fe.a((byte) 106);
-        aa.d(0);
+        int discarded$30 = 0;
+        aa.d();
         un.a((byte) 123);
-        oh.b(-16534);
+        int discarded$31 = -16534;
+        oh.b();
         eb.a(-29115);
         wm.b((byte) -108);
-        hj.c(64655);
-        lc.b((byte) -9);
-        hn.a(false);
+        int discarded$32 = 64655;
+        hj.c();
+        int discarded$33 = -9;
+        lc.b();
+        int discarded$34 = 0;
+        hn.a();
         o.a((byte) -91);
-        tn.a(-2);
+        int discarded$35 = -2;
+        tn.a();
         md.d();
-        vl.f(-1);
+        int discarded$36 = -1;
+        vl.f();
         mc.a((byte) 47);
-        pi.b(-107);
-        qb.a((byte) -113);
-        ue.a(6);
-        he.a(false);
-        pd.n(0);
+        int discarded$37 = -107;
+        pi.b();
+        int discarded$38 = -113;
+        qb.a();
+        int discarded$39 = 6;
+        ue.a();
+        int discarded$40 = 0;
+        he.a();
+        int discarded$41 = 0;
+        pd.n();
         ei.d((byte) -55);
-        ci.i(-128);
+        int discarded$42 = -128;
+        ci.i();
         cf.k(5);
-        ok.f((byte) 3);
-        dh.d((byte) -75);
+        int discarded$43 = 3;
+        ok.f();
+        int discarded$44 = -75;
+        dh.d();
         nb.f((byte) -33);
-        pc.k(0);
-        r.m(92);
-        kl.a((byte) -66);
-        qd.a(27265);
+        int discarded$45 = 0;
+        pc.k();
+        int discarded$46 = 92;
+        r.m();
+        int discarded$47 = -66;
+        kl.a();
+        int discarded$48 = 27265;
+        qd.a();
         al.d();
         mi.c((byte) 124);
-        sh.c(-119);
-        of.c(false);
+        int discarded$49 = -119;
+        sh.c();
+        int discarded$50 = 0;
+        of.c();
         le.a(-485);
-        bo.a(-39);
-        tb.b((byte) -99);
-        in.b((byte) 23);
-        an.a((byte) -109);
-        ln.k(0);
+        int discarded$51 = -39;
+        bo.a();
+        int discarded$52 = -99;
+        tb.b();
+        int discarded$53 = 23;
+        in.b();
+        int discarded$54 = -109;
+        an.a();
+        int discarded$55 = 0;
+        ln.k();
         dk.b(12000);
-        ce.a(true);
-        lj.a(87);
-        pj.a(-6145);
-        ua.a(1007);
-        rd.a(32286);
-        ie.a(-1962602524);
-        fm.l(-9);
+        int discarded$56 = 1;
+        ce.a();
+        int discarded$57 = 87;
+        lj.a();
+        int discarded$58 = -6145;
+        pj.a();
+        int discarded$59 = 1007;
+        ua.a();
+        int discarded$60 = 32286;
+        rd.a();
+        int discarded$61 = -1962602524;
+        ie.a();
+        int discarded$62 = -9;
+        fm.l();
         vd.l((byte) -106);
-        ch.m(30);
+        int discarded$63 = 30;
+        ch.m();
         vn.j((byte) 5);
-        ol.h(106);
-        ii.a(82);
+        int discarded$64 = 106;
+        ol.h();
+        int discarded$65 = 82;
+        ii.a();
         wf.a(35);
-        s.g((byte) -93);
-        vg.b(125);
-        tg.a((byte) 93);
+        int discarded$66 = -93;
+        s.g();
+        int discarded$67 = 125;
+        vg.b();
+        int discarded$68 = 93;
+        tg.a();
         n.a(-123);
-        rc.a(1);
-        gh.a(-1);
-        tl.f((byte) -105);
-        id.a(23111);
-        mm.a(120);
+        int discarded$69 = 1;
+        rc.a();
+        int discarded$70 = -1;
+        gh.a();
+        int discarded$71 = -105;
+        tl.f();
+        int discarded$72 = 23111;
+        id.a();
+        int discarded$73 = 120;
+        mm.a();
         hb.a(false);
-        sn.a((byte) -65);
-        wg.b(69);
+        int discarded$74 = -65;
+        sn.a();
+        int discarded$75 = 69;
+        wg.b();
         cd.a(1570);
         qe.k(2);
-        nk.l(8);
+        int discarded$76 = 8;
+        nk.l();
         sc.a(-26862);
         hd.a((byte) -2);
         fk.d((byte) 1);
         l.c((byte) -26);
         wa.b();
-        b.a(-17436);
+        int discarded$77 = -17436;
+        b.a();
         gf.a(540);
         cb.a(-1);
-        ga.a(-124);
-        af.a(-123);
+        int discarded$78 = -124;
+        ga.a();
+        int discarded$79 = -123;
+        af.a();
         pk.b((byte) -100);
-        lg.a(85);
-        jj.a(7);
+        int discarded$80 = 85;
+        lg.a();
+        int discarded$81 = 7;
+        jj.a();
         uc.a(-112);
-        be.a((byte) 122);
-        dm.a((byte) 123);
-        ke.a((byte) -105);
-        gl.a((byte) 67);
-        ej.a((byte) -30);
+        int discarded$82 = 122;
+        be.a();
+        int discarded$83 = 123;
+        dm.a();
+        int discarded$84 = -105;
+        ke.a();
+        int discarded$85 = 67;
+        gl.a();
+        int discarded$86 = -30;
+        ej.a();
         jg.l(10000536);
         uk.c(-1);
-        bc.a(10);
-        bi.a((byte) 60);
-        hm.a((byte) 76);
+        int discarded$87 = 10;
+        bc.a();
+        int discarded$88 = 60;
+        bi.a();
+        int discarded$89 = 76;
+        hm.a();
         int var2 = 98 % ((-27 - param0) / 55);
         w.k(-13077);
-        fl.b(true);
-        eg.b(-1);
+        int discarded$90 = 1;
+        fl.b();
+        int discarded$91 = -1;
+        eg.b();
         fg.a(true);
-        va.a((byte) 121);
-        pe.a((byte) 71);
-        ig.a(-49);
-        ob.b(false);
-        ad.a(-82);
-        cc.e((byte) 109);
-        gd.a((byte) 84);
+        int discarded$92 = 121;
+        va.a();
+        int discarded$93 = 71;
+        pe.a();
+        int discarded$94 = -49;
+        ig.a();
+        int discarded$95 = 0;
+        ob.b();
+        int discarded$96 = -82;
+        ad.a();
+        int discarded$97 = 109;
+        cc.e();
+        int discarded$98 = 84;
+        gd.a();
         tc.i(-7588);
         da.e(16);
-        jh.a((byte) -93);
-        ab.g(-115);
+        int discarded$99 = -93;
+        jh.a();
+        int discarded$100 = -115;
+        ab.g();
         sl.a((byte) 59);
         ge.k(0);
         hl.a(true);
         hi.c();
-        am.c((byte) 119);
-        fn.a(-86);
-        em.b(3);
-        rb.b(-18067);
-        lk.a(0);
-        sg.a((byte) 124);
+        int discarded$101 = 119;
+        am.c();
+        int discarded$102 = -86;
+        fn.a();
+        int discarded$103 = 3;
+        em.b();
+        int discarded$104 = -18067;
+        rb.b();
+        int discarded$105 = 0;
+        lk.a();
+        int discarded$106 = 124;
+        sg.a();
         la.a(69);
         g.a(-20905);
-        qm.a((byte) -6);
-        qh.a(-99);
-        f.a(-24420);
+        int discarded$107 = -6;
+        qm.a();
+        int discarded$108 = -99;
+        qh.a();
+        int discarded$109 = -24420;
+        f.a();
         en.a();
         ia.a(256);
-        ql.a((byte) 109);
-        vh.a(102);
-        nd.a(84);
-        nj.c(-10406);
-        ka.a((byte) -122);
-        sj.a(true);
+        int discarded$110 = 109;
+        ql.a();
+        int discarded$111 = 102;
+        vh.a();
+        int discarded$112 = 84;
+        nd.a();
+        int discarded$113 = -10406;
+        nj.c();
+        int discarded$114 = -122;
+        ka.a();
+        int discarded$115 = 1;
+        sj.a();
         ub.b((byte) 80);
         mf.f(0);
         fb.h(-1);
-        kn.e((byte) 127);
-        k.h((byte) -24);
+        int discarded$116 = 127;
+        kn.e();
+        int discarded$117 = -24;
+        k.h();
         eh.i(888706465);
-        ma.f((byte) -96);
+        int discarded$118 = -96;
+        ma.f();
         qj.a(124);
         m.a(false);
         dg.a();
-        ib.a(-12374);
+        int discarded$119 = -12374;
+        ib.a();
         qf.a((byte) -46);
-        th.a(0);
+        int discarded$120 = 0;
+        th.a();
         rf.a(9);
-        di.g((byte) -54);
-        kj.a((byte) 115);
-        qc.a(7);
+        int discarded$121 = -54;
+        di.g();
+        int discarded$122 = 115;
+        kj.a();
+        int discarded$123 = 7;
+        qc.a();
         j.d((byte) -84);
-        dj.d((byte) -114);
-        v.a((byte) -117);
-        wn.b(false);
-        oa.a(17);
-        kh.b(64);
+        int discarded$124 = -114;
+        dj.d();
+        int discarded$125 = -117;
+        v.a();
+        int discarded$126 = 0;
+        wn.b();
+        int discarded$127 = 17;
+        oa.a();
+        int discarded$128 = 64;
+        kh.b();
         si.c(23);
-        de.a((byte) -120);
-        tm.a((byte) 76);
+        int discarded$129 = -120;
+        de.a();
+        int discarded$130 = 76;
+        tm.a();
         og.a();
-        td.a(5239);
+        int discarded$131 = 5239;
+        td.a();
         cl.a(12);
         df.b(-6);
-        vi.a((byte) 116);
-        kf.c((byte) -101);
-        dl.b(7);
-        d.k(-110);
-        kd.l(-4403);
-        qa.a(-1);
-        kg.c(false);
-        bg.n(2491);
-        qn.m(-14);
-        bj.k(45);
-        rm.a(850101921);
-        t.a(8);
+        int discarded$132 = 116;
+        vi.a();
+        int discarded$133 = -101;
+        kf.c();
+        int discarded$134 = 7;
+        dl.b();
+        int discarded$135 = -110;
+        d.k();
+        int discarded$136 = -4403;
+        kd.l();
+        int discarded$137 = -1;
+        qa.a();
+        int discarded$138 = 0;
+        kg.c();
+        int discarded$139 = 2491;
+        bg.n();
+        int discarded$140 = -14;
+        qn.m();
+        int discarded$141 = 45;
+        bj.k();
+        int discarded$142 = 850101921;
+        rm.a();
+        int discarded$143 = 8;
+        t.a();
         se.e((byte) 67);
-        jn.e((byte) -61);
-        ea.g((byte) -44);
+        int discarded$144 = -61;
+        jn.e();
+        int discarded$145 = -44;
+        ea.g();
         ki.b(true);
         vm.c(true);
-        ni.a(0);
-        ba.c(false);
-        od.b(false);
+        int discarded$146 = 0;
+        ni.a();
+        int discarded$147 = 0;
+        ba.c();
+        int discarded$148 = 0;
+        od.b();
         nc.e((byte) -116);
-        cg.a(1);
-        fc.a(-29306);
-        ri.h(1);
-        ih.i((byte) 48);
-        bh.j(0);
+        int discarded$149 = 1;
+        cg.a();
+        int discarded$150 = -29306;
+        fc.a();
+        int discarded$151 = 1;
+        ri.h();
+        int discarded$152 = 48;
+        ih.i();
+        int discarded$153 = 0;
+        bh.j();
         bf.d(false);
-        ah.d((byte) 83);
+        int discarded$154 = 83;
+        ah.d();
         ja.a((byte) -115);
-        ml.a((byte) -122);
-        kb.i(-15237);
-        ji.i(5849);
+        int discarded$155 = -122;
+        ml.a();
+        int discarded$156 = -15237;
+        kb.i();
+        int discarded$157 = 5849;
+        ji.i();
         bl.a(0);
-        cn.b(7043);
-        cm.a(false);
-        hg.a((byte) -76);
+        int discarded$158 = 7043;
+        cn.b();
+        int discarded$159 = 0;
+        cm.a();
+        int discarded$160 = -76;
+        hg.a();
         el.e((byte) 125);
-        mn.a(32768);
+        int discarded$161 = 32768;
+        mn.a();
         gn.a();
-        bd.a(-40);
-        ik.a((byte) -120);
-        hc.a(false);
-        fd.c((byte) 101);
-        ak.a(21296);
+        int discarded$162 = -40;
+        bd.a();
+        int discarded$163 = -120;
+        ik.a();
+        int discarded$164 = 0;
+        hc.a();
+        int discarded$165 = 101;
+        fd.c();
+        int discarded$166 = 21296;
+        ak.a();
         ao.a(1);
-        pg.c((byte) 11);
-        hh.c((byte) 109);
+        int discarded$167 = 11;
+        pg.c();
+        int discarded$168 = 109;
+        hh.c();
         sf.c(103);
-        wj.a(-3);
+        int discarded$169 = -3;
+        wj.a();
         wc.b(true);
-        hk.c((byte) -42);
-        vf.b(false);
-        lf.j(1839839976);
-        ve.l(103);
+        int discarded$170 = -42;
+        hk.c();
+        int discarded$171 = 0;
+        vf.b();
+        int discarded$172 = 1839839976;
+        lf.j();
+        int discarded$173 = 103;
+        ve.l();
         bk.a(true);
-        ac.c((byte) -119);
+        int discarded$174 = -119;
+        ac.c();
         mh.a(3);
-        tk.b((byte) 77);
+        int discarded$175 = 77;
+        tk.b();
         tf.a(false);
-        ed.a((byte) -31);
+        int discarded$176 = -31;
+        ed.a();
         aj.a(0);
-        e.a(99);
+        int discarded$177 = 99;
+        e.a();
         h.a(1187598372);
         jd.a(false);
-        ph.b(0);
-        sk.c(10);
-        ec.d((byte) 98);
-        oj.a((byte) 52);
-        pa.c((byte) -117);
-        dc.d(5);
-        ij.b(255);
-        uj.c((byte) -118);
+        int discarded$178 = 0;
+        ph.b();
+        int discarded$179 = 10;
+        sk.c();
+        int discarded$180 = 98;
+        ec.d();
+        int discarded$181 = 52;
+        oj.a();
+        int discarded$182 = -117;
+        pa.c();
+        int discarded$183 = 5;
+        dc.d();
+        int discarded$184 = 255;
+        ij.b();
+        int discarded$185 = -118;
+        uj.c();
         om.c((byte) -126);
-        ai.a(-125);
-        fj.a((byte) 126);
-        uh.k(16);
-        tj.i(-19374);
+        int discarded$186 = -125;
+        ai.a();
+        int discarded$187 = 126;
+        fj.a();
+        int discarded$188 = 16;
+        uh.k();
+        int discarded$189 = -19374;
+        tj.i();
         db.d(true);
         qi.b((byte) 79);
-        oc.h(0);
+        int discarded$190 = 0;
+        oc.h();
         ag.a(9604);
         re.a(-7101);
-        mk.a((byte) -95);
-        jb.c(350);
-        sa.a(-20127);
+        int discarded$191 = -95;
+        mk.a();
+        int discarded$192 = 350;
+        jb.c();
+        int discarded$193 = -20127;
+        sa.a();
         ((Chess) this).field_H = null;
         ((Chess) this).field_w = null;
     }
@@ -3582,61 +3811,60 @@ public final class Chess extends gb {
         int var3 = 0;
         int var4 = 0;
         Object var5 = null;
-        Object var6 = null;
         var4 = field_G;
-        ab.h(param0 + -19759);
+        int discarded$18 = 4;
+        ab.h();
         if (null == lc.field_m) {
           if (null != tk.field_g) {
-            nj.a(param0 ^ -19745, ae.field_a, 70.0f);
+            nj.a(-20, ae.field_a, 70.0f);
             ((Chess) this).a(true);
-            this.n(33);
+            int discarded$19 = 33;
+            this.n();
             tk.field_g = null;
-            ob.f(0);
+            int discarded$20 = 0;
+            ob.f();
             return false;
           } else {
-            L0: {
-              if (param0 == 19763) {
-                break L0;
-              } else {
-                var5 = null;
-                km discarded$3 = this.a(16, (km) null);
-                break L0;
-              }
-            }
             if (null == li.field_g) {
               if (null == mm.field_d) {
                 if (wg.field_q != null) {
                   kd.a((byte) -90, new sn(wg.field_q.a("", 30045, "huffman")));
                   wg.field_q = null;
-                  ob.f(param0 ^ 19763);
+                  int discarded$21 = 0;
+                  ob.f();
                   return false;
                 } else {
                   if (null == lg.field_b) {
-                    um.b(param0 + -19123);
+                    int discarded$22 = 640;
+                    um.b();
                     var3 = 0;
-                    L1: while (true) {
+                    L0: while (true) {
                       if (var3 >= 12) {
                         qk.field_h = 0;
                         jc.field_f = 0;
-                        bf.a(true, 50);
+                        int discarded$23 = 50;
+                        int discarded$24 = 1;
+                        bf.a();
                         if (vi.a(-3)) {
                           return true;
                         } else {
-                          gf.field_d = vc.a(param0 + -19841, 4);
+                          gf.field_d = vc.a(-78, 4);
                           return true;
                         }
                       } else {
                         ae.field_e[var3] = new aa(var3);
                         var3++;
-                        continue L1;
+                        continue L0;
                       }
                     }
                   } else {
                     nj.a(-20, q.field_c, 97.0f);
                     ((Chess) this).a(true);
-                    this.u(-21);
+                    int discarded$25 = -21;
+                    this.u();
                     lg.field_b = null;
-                    ob.f(0);
+                    int discarded$26 = 0;
+                    ob.f();
                     return false;
                   }
                 }
@@ -3645,55 +3873,59 @@ public final class Chess extends gb {
                   if (((Chess) this).field_F != 1) {
                     if (((Chess) this).field_F != 2) {
                       if (((Chess) this).field_F != 3) {
-                        L2: {
+                        L1: {
                           if (((Chess) this).field_F == 4) {
                             mm.field_d = null;
-                            break L2;
+                            break L1;
                           } else {
-                            break L2;
+                            break L1;
                           }
                         }
-                        var6 = null;
+                        var5 = null;
                         eg.a(rl.field_a, ek.field_f, -109, true, f.field_b, new km[1][], wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (km[][]) null);
                         ig.field_h = wf.field_Q;
                         tk.b(200, 93);
                         hm.field_e = null;
-                        ob.f(0);
+                        int discarded$27 = 0;
+                        ob.f();
                         return false;
                       } else {
-                        this.r(-128);
+                        int discarded$28 = -128;
+                        this.r();
                         ((Chess) this).field_F = 4;
                         return false;
                       }
                     } else {
-                      this.j((byte) 16);
+                      int discarded$29 = 16;
+                      this.j();
                       ((Chess) this).field_F = 3;
                       return false;
                     }
                   } else {
-                    this.q(param0 + -19818);
+                    this.q(-55);
                     ((Chess) this).field_F = 2;
                     return false;
                   }
                 } else {
-                  this.s(16231);
+                  int discarded$30 = 16231;
+                  this.s();
                   ((Chess) this).field_F = 1;
                   return false;
                 }
               }
             } else {
-              nj.a(param0 ^ -19745, qe.field_O, 75.0f);
+              nj.a(-20, qe.field_O, 75.0f);
               ((Chess) this).a(true);
               var3 = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (7 <= var3) {
-                  L4: {
+                  L3: {
                     gl.field_b = pf.a(li.field_g, "", "fanfare");
                     if (null != gl.field_b) {
-                      boolean discarded$4 = ka.field_a.a(pg.field_o, param0 + -19887, 0, gl.field_b, s.field_S);
-                      break L4;
+                      boolean discarded$31 = ka.field_a.a(pg.field_o, -124, 0, gl.field_b, s.field_S);
+                      break L3;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                   fk.field_q.c((byte) -61);
@@ -3702,142 +3934,143 @@ public final class Chess extends gb {
                   s.field_S = null;
                   li.field_g = null;
                   pg.field_o = null;
-                  ob.f(0);
+                  int discarded$32 = 0;
+                  ob.f();
                   return false;
                 } else {
-                  L5: {
+                  L4: {
                     el.field_y[var3] = pf.a(li.field_g, "", "chess" + (1 + var3));
                     if (null != el.field_y[var3]) {
-                      boolean discarded$5 = fk.field_q.a(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], s.field_S);
-                      break L5;
+                      boolean discarded$33 = fk.field_q.a(pg.field_o, -99, 0, el.field_y[var3], s.field_S);
+                      break L4;
                     } else {
-                      break L5;
+                      break L4;
                     }
                   }
                   var3++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }
           }
         } else {
-          L6: {
+          L5: {
             if (!lc.field_m.c((byte) 118)) {
-              break L6;
+              break L5;
             } else {
               if (!lc.field_m.b((byte) -40)) {
-                break L6;
+                break L5;
               } else {
-                L7: {
+                L6: {
                   if (!tk.field_g.c((byte) 127)) {
-                    break L7;
+                    break L6;
                   } else {
                     if (!tk.field_g.b((byte) -40)) {
-                      break L7;
+                      break L6;
                     } else {
-                      L8: {
+                      L7: {
                         if (!pg.field_o.c((byte) 126)) {
-                          break L8;
+                          break L7;
                         } else {
                           if (!pg.field_o.b((byte) -40)) {
-                            break L8;
+                            break L7;
                           } else {
-                            L9: {
+                            L8: {
                               if (!li.field_g.c((byte) 121)) {
-                                break L9;
+                                break L8;
                               } else {
                                 if (!li.field_g.b((byte) -40)) {
-                                  break L9;
+                                  break L8;
                                 } else {
-                                  L10: {
+                                  L9: {
                                     if (!mm.field_d.c((byte) 121)) {
-                                      break L10;
+                                      break L9;
                                     } else {
                                       if (!mm.field_d.b((byte) -40)) {
-                                        break L10;
+                                        break L9;
                                       } else {
-                                        L11: {
+                                        L10: {
                                           if (!wg.field_q.c((byte) 121)) {
-                                            break L11;
+                                            break L10;
                                           } else {
                                             if (!wg.field_q.b((byte) -40)) {
-                                              break L11;
+                                              break L10;
                                             } else {
-                                              L12: {
-                                                L13: {
+                                              L11: {
+                                                L12: {
                                                   if (!lg.field_b.c((byte) 122)) {
-                                                    break L13;
+                                                    break L12;
                                                   } else {
                                                     if (lg.field_b.b((byte) -40)) {
-                                                      break L12;
+                                                      break L11;
                                                     } else {
-                                                      break L13;
+                                                      break L12;
                                                     }
                                                   }
                                                 }
                                                 nj.a(-20, ji.a(ve.field_Qb, "", hh.field_j, lg.field_b, (byte) 36), 56.0f);
-                                                break L12;
+                                                break L11;
                                               }
-                                              L14: {
+                                              L13: {
                                                 if (!bo.field_d.c((byte) 127)) {
-                                                  break L14;
+                                                  break L13;
                                                 } else {
                                                   if (!bo.field_d.b((byte) -40)) {
-                                                    break L14;
+                                                    break L13;
                                                   } else {
-                                                    L15: {
+                                                    L14: {
                                                       if (!hm.field_e.c((byte) 118)) {
-                                                        break L15;
+                                                        break L14;
                                                       } else {
                                                         if (hm.field_e.b("basic", 100)) {
-                                                          L16: {
+                                                          L15: {
                                                             if (!hm.field_e.c((byte) 122)) {
-                                                              break L16;
+                                                              break L15;
                                                             } else {
-                                                              if (!hm.field_e.b("roman12", param0 + -19663)) {
-                                                                break L16;
+                                                              if (!hm.field_e.b("roman12", 100)) {
+                                                                break L15;
                                                               } else {
-                                                                L17: {
+                                                                L16: {
                                                                   if (!f.field_b.c((byte) 123)) {
-                                                                    break L17;
+                                                                    break L16;
                                                                   } else {
-                                                                    if (!f.field_b.b("roman12", param0 + -19663)) {
-                                                                      break L17;
+                                                                    if (!f.field_b.b("roman12", 100)) {
+                                                                      break L16;
                                                                     } else {
-                                                                      L18: {
+                                                                      L17: {
                                                                         if (!hm.field_e.c((byte) 123)) {
-                                                                          break L18;
+                                                                          break L17;
                                                                         } else {
                                                                           if (!hm.field_e.b("kartika13", 100)) {
-                                                                            break L18;
+                                                                            break L17;
                                                                           } else {
-                                                                            L19: {
+                                                                            L18: {
                                                                               if (!f.field_b.c((byte) 127)) {
-                                                                                break L19;
+                                                                                break L18;
                                                                               } else {
                                                                                 if (!f.field_b.b("kartika13", 100)) {
-                                                                                  break L19;
+                                                                                  break L18;
                                                                                 } else {
-                                                                                  L20: {
+                                                                                  L19: {
                                                                                     if (!hm.field_e.c((byte) 118)) {
-                                                                                      break L20;
+                                                                                      break L19;
                                                                                     } else {
                                                                                       if (!hm.field_e.b("lobby", 100)) {
-                                                                                        break L20;
+                                                                                        break L19;
                                                                                       } else {
-                                                                                        L21: {
+                                                                                        L20: {
                                                                                           if (!f.field_b.c((byte) 118)) {
-                                                                                            break L21;
+                                                                                            break L20;
                                                                                           } else {
                                                                                             if (!f.field_b.b("lobby", 100)) {
-                                                                                              break L21;
+                                                                                              break L20;
                                                                                             } else {
-                                                                                              L22: {
+                                                                                              L21: {
                                                                                                 if (!ca.field_b.c((byte) 123)) {
-                                                                                                  break L22;
+                                                                                                  break L21;
                                                                                                 } else {
                                                                                                   if (!ca.field_b.b((byte) -40)) {
-                                                                                                    break L22;
+                                                                                                    break L21;
                                                                                                   } else {
                                                                                                     if (!param1) {
                                                                                                       return false;
@@ -3847,7 +4080,8 @@ public final class Chess extends gb {
                                                                                                       ((Chess) this).a(true);
                                                                                                       s.field_S = new fe(lc.field_m, tk.field_g);
                                                                                                       lc.field_m = null;
-                                                                                                      ob.f(0);
+                                                                                                      int discarded$34 = 0;
+                                                                                                      ob.f();
                                                                                                       return false;
                                                                                                     }
                                                                                                   }
@@ -3858,7 +4092,7 @@ public final class Chess extends gb {
                                                                                             }
                                                                                           }
                                                                                         }
-                                                                                        nj.a(param0 ^ -19745, ji.a(sn.field_d, "lobby", nc.field_P, f.field_b, (byte) 126), 17.0f);
+                                                                                        nj.a(-20, ji.a(sn.field_d, "lobby", nc.field_P, f.field_b, (byte) 126), 17.0f);
                                                                                         return false;
                                                                                       }
                                                                                     }
@@ -3886,7 +4120,7 @@ public final class Chess extends gb {
                                                           nj.a(-20, ji.a(gb.field_o, "roman12", k.field_V, hm.field_e, (byte) 118), 11.0f);
                                                           return false;
                                                         } else {
-                                                          break L15;
+                                                          break L14;
                                                         }
                                                       }
                                                     }
@@ -3895,7 +4129,7 @@ public final class Chess extends gb {
                                                   }
                                                 }
                                               }
-                                              nj.a(param0 + -19783, ji.a(sn.field_d, "", nc.field_P, bo.field_d, (byte) 49), 63.0f);
+                                              nj.a(-20, ji.a(sn.field_d, "", nc.field_P, bo.field_d, (byte) 49), 63.0f);
                                               return false;
                                             }
                                           }
@@ -3915,7 +4149,8 @@ public final class Chess extends gb {
                           }
                         }
                       }
-                      nj.a(-20, sc.a(ej.field_d, pg.field_o, 0, sk.field_u, (byte) -47), 20.0f);
+                      int discarded$35 = -47;
+                      nj.a(-20, sc.a(ej.field_d, pg.field_o, 0, sk.field_u), 20.0f);
                       return false;
                     }
                   }
@@ -3956,7 +4191,7 @@ public final class Chess extends gb {
             var3 = new km(2 * param1.field_w, param1.field_t * 2);
             var3.e();
             param1.a(0, 0, wb.field_h, wb.field_c);
-            wb.e(param0, 2, 0, 0, wb.field_h, wb.field_c);
+            wb.e(2, 2, 0, 0, wb.field_h, wb.field_c);
             ph.field_j.b(48);
             stackOut_0_0 = (km) var3;
             stackIn_1_0 = stackOut_0_0;
@@ -3967,7 +4202,7 @@ public final class Chess extends gb {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("Chess.IA(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("Chess.IA(").append(2).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -3995,7 +4230,7 @@ public final class Chess extends gb {
         return stackIn_1_0;
     }
 
-    private final void k(byte param0) {
+    private final void k() {
         tb.field_a = new km(270, 325);
         tb.field_a.field_r = 145;
         tb.field_a.e();
@@ -4007,11 +4242,13 @@ public final class Chess extends gb {
         tb.field_a.d();
     }
 
-    private final void n(int param0) {
+    private final void n() {
         int var2 = 0;
         int var3 = 0;
         var3 = field_G;
-        um.field_l[0] = g.a((byte) -34, 33);
+        int discarded$4 = 33;
+        int discarded$5 = -34;
+        um.field_l[0] = g.a();
         var2 = 1;
         L0: while (true) {
           if (var2 >= 13) {

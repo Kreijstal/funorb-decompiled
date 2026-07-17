@@ -34,10 +34,11 @@ final class af {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var2_int = -19 % ((param0 - 22) / 63);
+            var2_int = 0;
             if (param1 != null) {
               var3 = new bm(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, aj.field_a, a.field_e);
-              oc.a((byte) -21);
+              int discarded$2 = -21;
+              oc.a();
               stackOut_3_0 = (bm) var3;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -50,7 +51,7 @@ final class af {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("af.E(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("af.E(").append(119).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -78,7 +79,7 @@ final class af {
         return stackIn_4_0;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (!(null != df.field_l)) {
             return;
         }
@@ -94,62 +95,43 @@ final class af {
     public static void a(int param0) {
         field_f = null;
         field_c = null;
-        if (param0 != 4) {
-          field_c = null;
-          field_e = null;
-          field_g = null;
-          field_a = null;
-          return;
-        } else {
-          field_e = null;
-          field_g = null;
-          field_a = null;
-          return;
-        }
+        field_e = null;
+        field_g = null;
+        field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         kc var1 = (kc) (Object) rd.field_C.h(-11151);
         if (!(var1 != null)) {
-            eg.a((byte) 126);
+            int discarded$0 = 126;
+            eg.a();
             return;
         }
         lh var2 = dh.field_N;
-        int discarded$0 = var2.h(23);
-        int discarded$1 = var2.h(97);
-        int discarded$2 = var2.h(-104);
-        int discarded$3 = var2.h(113);
+        int discarded$1 = var2.h(23);
+        int discarded$2 = var2.h(97);
+        int discarded$3 = var2.h(-104);
+        int discarded$4 = var2.h(113);
         var1.a(-16175);
     }
 
     final static nh[] a(int param0, int param1, int param2, byte param3, int param4) {
-        nh[] var5 = null;
-        nh[] var6 = null;
-        var6 = new nh[9];
-        var5 = var6;
-        nh dupTemp$4 = mi.a(param1, (byte) -96, param0);
-        var6[6] = dupTemp$4;
-        var5[3] = dupTemp$4;
-        var5[2] = dupTemp$4;
-        var5[1] = dupTemp$4;
-        var5[0] = dupTemp$4;
-        nh dupTemp$5 = mi.a(param1, (byte) -85, param2);
-        var6[8] = dupTemp$5;
-        var5[7] = dupTemp$5;
-        var5[5] = dupTemp$5;
-        if (param3 != 32) {
-          return null;
-        } else {
-          L0: {
-            if (param4 != 0) {
-              var6[4] = mi.a(64, (byte) -109, param4);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return var5;
+        nh[] var6 = new nh[9];
+        nh[] var5 = var6;
+        nh dupTemp$0 = mi.a(1, (byte) -96, param0);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        nh dupTemp$1 = mi.a(1, (byte) -85, param2);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
+        if (!(param4 == 0)) {
+            var6[4] = mi.a(64, (byte) -109, param4);
         }
+        return var5;
     }
 
     static {

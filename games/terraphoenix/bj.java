@@ -11,7 +11,7 @@ final class bj {
     static String field_h;
     static ci field_e;
 
-    final static String a(CharSequence[] param0, byte param1) {
+    final static String a(CharSequence[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
@@ -34,8 +34,9 @@ final class bj {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = -110 / ((param1 - 15) / 48);
-            stackOut_0_0 = ve.a(-10537, param0, param0.length, 0);
+            var2_int = 55;
+            int discarded$2 = 0;
+            stackOut_0_0 = ve.a(-10537, param0, param0.length);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -67,12 +68,12 @@ final class bj {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -103 + 41);
         }
         return stackIn_1_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_e = null;
         field_c = null;

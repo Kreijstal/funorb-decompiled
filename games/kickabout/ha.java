@@ -11,9 +11,6 @@ final class ha extends i {
     static int field_I;
 
     final static ki b(int param0, int param1, int param2) {
-        if (param0 != 1) {
-            return null;
-        }
         return new ki(1, param1, param2, (byte) 0, (byte) 0);
     }
 
@@ -552,7 +549,8 @@ final class ha extends i {
 
     private static void $cfr$clinit() {
         field_J = "To server list";
-        field_F = st.c(-23091);
+        int discarded$0 = -23091;
+        field_F = st.c();
         field_I = 0;
     }
 }

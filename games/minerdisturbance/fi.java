@@ -5,25 +5,25 @@ final class fi {
     static boolean[] field_a;
     static ea[] field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
 
     final static void a(byte param0, bj param1, hg param2, int param3) {
         try {
-            kc.field_d = param3 * pl.b((byte) -116) / 1000;
+            int discarded$0 = -116;
+            kc.field_d = param3 * pl.b() / 1000;
             gn.a(param1, (byte) -101);
-            hj.a(param1, 347664612);
-            if (param0 <= 94) {
-                field_a = null;
-            }
-            dn.a(param1, (byte) 29);
+            int discarded$1 = 347664612;
+            hj.a(param1);
+            int discarded$2 = 29;
+            dn.a(param1);
             ul.a(8);
             ii.a(140);
             mn.field_x = -kc.field_d;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "fi.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "fi.A(" + 104 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 

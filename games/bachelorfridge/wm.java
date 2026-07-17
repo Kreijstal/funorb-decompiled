@@ -5,7 +5,7 @@ final class wm extends pu {
     static String field_l;
     private static String field_z;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_l = null;
     }
 

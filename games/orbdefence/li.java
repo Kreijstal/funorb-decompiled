@@ -389,33 +389,29 @@ final class li {
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
-            if (param3 < -85) {
-              var5_int = 0;
-              L1: while (true) {
-                if (vf.field_a.length <= var5_int) {
-                  break L0;
-                } else {
-                  param0 = vf.field_a[var5_int];
-                  var6 = var5_int << 4;
-                  L2: while (true) {
-                    int incrementValue$12 = param0;
-                    param0--;
-                    if (incrementValue$12 == 0) {
-                      var5_int++;
-                      continue L1;
-                    } else {
-                      int incrementValue$13 = var6;
-                      var6++;
-                      param1 = dm.field_g[incrementValue$13];
-                      param2[param4[param1]] = param2[param4[param1]] + 1;
-                      dm.field_g[param2[param4[param1]]] = param1;
-                      continue L2;
-                    }
+            var5_int = 0;
+            L1: while (true) {
+              if (vf.field_a.length <= var5_int) {
+                break L0;
+              } else {
+                param0 = vf.field_a[var5_int];
+                var6 = var5_int << 4;
+                L2: while (true) {
+                  int incrementValue$12 = param0;
+                  param0--;
+                  if (incrementValue$12 == 0) {
+                    var5_int++;
+                    continue L1;
+                  } else {
+                    int incrementValue$13 = var6;
+                    var6++;
+                    param1 = dm.field_g[incrementValue$13];
+                    param2[param4[param1]] = param2[param4[param1]] + 1;
+                    dm.field_g[param2[param4[param1]]] = param1;
+                    continue L2;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -448,7 +444,7 @@ final class li {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param3).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(-86).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

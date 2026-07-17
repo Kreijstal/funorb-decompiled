@@ -6,7 +6,7 @@ final class cf extends rna implements ntb {
     private int field_c;
     static String field_a;
 
-    final static void d(int param0) {
+    final static void d() {
         if (!(efb.field_b == null)) {
             efb.field_b.field_b = false;
         }
@@ -518,7 +518,8 @@ final class cf extends rna implements ntb {
     final static void b(int param0) {
         msa.field_s = brb.f((byte) 62);
         qn.field_h = new ida();
-        lva.e((byte) 117);
+        int discarded$3 = 117;
+        lva.e();
         if (param0 != 32) {
             cf.b(3);
         }

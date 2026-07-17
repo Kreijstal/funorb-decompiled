@@ -223,7 +223,8 @@ final class lf {
         int stackOut_146_1 = 0;
         L0: {
           var9 = ArmiesOfGielinor.field_M ? 1 : 0;
-          this.a((byte) -118);
+          int discarded$1 = -118;
+          this.a();
           ((lf) this).field_J = ((lf) this).field_J + 1;
           var2 = 8;
           var3 = -((lf) this).field_j + ((lf) this).field_a;
@@ -1910,7 +1911,7 @@ final class lf {
         return stackIn_4_0 != 0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_i = null;
         field_v = null;
         field_q = null;
@@ -1919,7 +1920,7 @@ final class lf {
         field_h = null;
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         vj var3 = null;
         int var4 = 0;
@@ -2152,8 +2153,10 @@ final class lf {
 
     private final void a(int param0) {
         int var2 = ((lf) this).field_x.field_i >> 16;
-        wp var3 = we.a(var2, true);
-        io.a(var3, (byte) -34);
+        int discarded$0 = 1;
+        wp var3 = we.a(var2);
+        int discarded$5 = -34;
+        io.a(var3);
         if (param0 != -313055120) {
             return;
         }
@@ -2167,7 +2170,7 @@ final class lf {
         }
     }
 
-    final static om a(cf param0, bv param1, kl param2, byte param3) {
+    final static om a(cf param0, bv param1, kl param2) {
         om var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -2222,7 +2225,8 @@ final class lf {
         try {
           L0: {
             var5 = -1;
-            var4 = na.a(param1, 44);
+            int discarded$2 = 44;
+            var4 = na.a(param1);
             var4.field_G = param0;
             var4.field_H = param2;
             stackOut_0_0 = (om) var4;

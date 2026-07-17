@@ -15,7 +15,7 @@ final class nb {
     static String field_h;
     static boolean field_f;
 
-    final static int a(nl param0, int param1) {
+    final static int a(nl param0) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -103,7 +103,7 @@ final class nb {
         return da.field_h.a(false) > 0 ? true : false;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -231,44 +231,40 @@ final class pl {
         var19 = Pool.field_O;
         try {
           L0: {
-            if (param10 == -26182) {
-              var12_int = param2;
-              var13 = param4;
-              L1: while (true) {
-                L2: {
-                  if (param8 <= var12_int) {
+            var12_int = 0;
+            var13 = 0;
+            L1: while (true) {
+              L2: {
+                if (param8 <= var12_int) {
+                  break L2;
+                } else {
+                  if (var13 >= param1) {
                     break L2;
                   } else {
-                    if (var13 >= param1) {
-                      break L2;
-                    } else {
-                      L3: {
-                        var14 = param11[var12_int] + -param3[0];
-                        var15 = -param3[1] + param6[var12_int];
-                        var16 = -param3[2] + param7[var12_int];
-                        var17 = var14 * param3[3] - -(param3[4] * var15) + param3[5] * var16 >> 7;
-                        var18 = param3[8] * var16 + var14 * param3[6] + param3[7] * var15 >> 7;
-                        var16 = var15 * param3[10] + var14 * param3[9] - -(param3[11] * var16) >> 16;
-                        if (0 != var16) {
-                          break L3;
-                        } else {
-                          var16 = -1;
-                          break L3;
-                        }
+                    L3: {
+                      var14 = param11[var12_int] + -param3[0];
+                      var15 = -param3[1] + param6[var12_int];
+                      var16 = -param3[2] + param7[var12_int];
+                      var17 = var14 * param3[3] - -(param3[4] * var15) + param3[5] * var16 >> 7;
+                      var18 = param3[8] * var16 + var14 * param3[6] + param3[7] * var15 >> 7;
+                      var16 = var15 * param3[10] + var14 * param3[9] - -(param3[11] * var16) >> 16;
+                      if (0 != var16) {
+                        break L3;
+                      } else {
+                        var16 = -1;
+                        break L3;
                       }
-                      param5[var12_int] = fb.field_q + (qh.field_b + var17 / var16);
-                      param0[var12_int] = var18 / var16 + fb.field_d + qh.field_c;
-                      param9[var12_int] = var16;
-                      var12_int++;
-                      var13++;
-                      continue L1;
                     }
+                    param5[var12_int] = fb.field_q + (qh.field_b + var17 / var16);
+                    param0[var12_int] = var18 / var16 + fb.field_d + qh.field_c;
+                    param9[var12_int] = var16;
+                    var12_int++;
+                    var13++;
+                    continue L1;
                   }
                 }
-                break L0;
               }
-            } else {
-              return;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -301,7 +297,7 @@ final class pl {
           }
           L5: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44).append(0).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -326,7 +322,7 @@ final class pl {
           }
           L6: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param4).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(0).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -426,7 +422,7 @@ final class pl {
           }
           L10: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param10).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(-26182).append(44);
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;

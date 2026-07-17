@@ -337,7 +337,8 @@ final class ga extends bc {
               }
             }
             ((ga) this).field_t.a(param1, param0, param2, (ga) this, (byte) 44);
-            ie.b((byte) -9);
+            int discarded$1 = -9;
+            ie.b();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -476,7 +477,7 @@ final class ga extends bc {
             var6 = 0;
             var7 = 0;
             var8 = param4.length();
-            var9 = param0;
+            var9 = 0;
             L2: while (true) {
               if (var9 >= var8) {
                 L3: {
@@ -535,7 +536,7 @@ final class ga extends bc {
           L7: {
             var5 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("ga.P(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("ga.P(").append(0).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -718,7 +719,7 @@ final class ga extends bc {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_s = null;
         field_w = null;
         field_x = null;

@@ -125,14 +125,12 @@ final class km {
     }
 
     final static void a(byte param0, int param1) {
-        og.field_b = 100 * param1 / 150;
-        og.field_o = 400 * param1 / 150;
+        og.field_b = 33;
+        og.field_o = 133;
         if (param0 > -18) {
-          return;
-        } else {
-          og.field_a = (param1 << 16) / 150;
-          return;
+            return;
         }
+        og.field_a = 21845;
     }
 
     final ca a(byte param0) {
@@ -209,7 +207,7 @@ final class km {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -227,7 +225,7 @@ final class km {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void a(long param0) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -267,7 +265,7 @@ final class km {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_b = null;
     }
 

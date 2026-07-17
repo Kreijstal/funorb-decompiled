@@ -53,7 +53,8 @@ final class fc extends qk {
             }
           } else {
             if (((fc) this).field_Pb <= 0) {
-              this.p((byte) -119);
+              int discarded$7 = -119;
+              this.p();
               ((fc) this).d(((fc) this).field_F, -26109);
               break L2;
             } else {
@@ -323,7 +324,7 @@ final class fc extends qk {
         ha.field_d = (fc) this;
     }
 
-    private final void p(byte param0) {
+    private final void p() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

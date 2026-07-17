@@ -9,7 +9,7 @@ final class bl {
     static float field_f;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_e = null;
@@ -24,17 +24,17 @@ final class bl {
             var5.i(19319, param2);
             var5.field_i = var5.field_i + 1;
             var4 = var5.field_i;
-            var5.d(105, param0);
+            var5.d(105, 1);
             var5.d(96, param1.field_i);
             var5.c(-97, param1.field_m);
             var5.b(param1.field_r, 25251);
-            var5.b(param1.field_l, param0 ^ 25250);
+            var5.b(param1.field_l, 25251);
             var5.b(param1.field_k, 25251);
             var5.b(param1.field_h, 25251);
-            int discarded$0 = var5.f(var4, param0 + -70);
+            int discarded$0 = var5.f(var4, -69);
             var5.a(-var4 + var5.field_i, -19720);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "bl.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "bl.B(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -45,16 +45,9 @@ final class bl {
     final static boolean a(int param0, boolean param1, byte param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
-        int stackIn_28_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_52_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_43_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackOut_35_0 = 0;
+        int stackOut_34_0 = 0;
         if (!param1) {
           if (hi.field_n[param0] >= hi.field_n[param3]) {
             if (hi.field_n[param0] > hi.field_n[param3]) {
@@ -69,35 +62,14 @@ final class bl {
                   if (var4 < var5) {
                     return true;
                   } else {
-                    if (param2 != -72) {
-                      var6 = null;
-                      bl.a(-109, (ne) null, 30);
-                      if (var5 >= var4) {
-                        if (param0 >= param3) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      } else {
+                    if (var5 >= var4) {
+                      if (param0 >= param3) {
                         return false;
+                      } else {
+                        return true;
                       }
                     } else {
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param0 >= param3) {
-                            stackOut_27_0 = 0;
-                            stackIn_28_0 = stackOut_27_0;
-                            break L0;
-                          } else {
-                            stackOut_26_0 = 1;
-                            stackIn_28_0 = stackOut_26_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_28_0 != 0;
-                      }
+                      return false;
                     }
                   }
                 } else {
@@ -120,42 +92,21 @@ final class bl {
                   if (var4 < var5) {
                     return true;
                   } else {
-                    if (param2 == -72) {
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L1: {
-                          if (param0 >= param3) {
-                            stackOut_51_0 = 0;
-                            stackIn_52_0 = stackOut_51_0;
-                            break L1;
-                          } else {
-                            stackOut_50_0 = 1;
-                            stackIn_52_0 = stackOut_50_0;
-                            break L1;
-                          }
-                        }
-                        return stackIn_52_0 != 0;
-                      }
+                    if (var5 < var4) {
+                      return false;
                     } else {
-                      var6 = null;
-                      bl.a(-109, (ne) null, 30);
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L2: {
-                          if (param0 >= param3) {
-                            stackOut_44_0 = 0;
-                            stackIn_45_0 = stackOut_44_0;
-                            break L2;
-                          } else {
-                            stackOut_43_0 = 1;
-                            stackIn_45_0 = stackOut_43_0;
-                            break L2;
-                          }
+                      L0: {
+                        if (param0 >= param3) {
+                          stackOut_35_0 = 0;
+                          stackIn_36_0 = stackOut_35_0;
+                          break L0;
+                        } else {
+                          stackOut_34_0 = 1;
+                          stackIn_36_0 = stackOut_34_0;
+                          break L0;
                         }
-                        return stackIn_45_0 != 0;
                       }
+                      return stackIn_36_0 != 0;
                     }
                   }
                 } else {

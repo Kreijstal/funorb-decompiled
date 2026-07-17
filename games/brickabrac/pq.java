@@ -235,126 +235,18 @@ final class pq extends nm {
     final static void a(int param0, boolean param1) {
         int var3 = 0;
         L0: {
-          L1: {
-            var3 = BrickABrac.field_J ? 1 : 0;
-            if (param1) {
-              break L1;
+          var3 = BrickABrac.field_J ? 1 : 0;
+          if (param1) {
+            break L0;
+          } else {
+            if (null != o.field_e) {
+              return;
             } else {
-              if (null != o.field_e) {
-                break L0;
-              } else {
-                break L1;
-              }
+              break L0;
             }
           }
-          hc.field_c = false;
-          break L0;
         }
-        if (param0 < -111) {
-          L2: {
-            if (param1) {
-              if (ml.field_b > 0) {
-                ml.field_b = ml.field_b - 1;
-                break L2;
-              } else {
-                if (pe.field_j <= 0) {
-                  if (eg.field_m > 0) {
-                    eg.field_m = eg.field_m - 1;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  pe.field_j = pe.field_j - 1;
-                  break L2;
-                }
-              }
-            } else {
-              if (null == o.field_e) {
-                if (nl.field_f == null) {
-                  hc.field_c = false;
-                  if (pe.field_j > 0) {
-                    pe.field_j = pe.field_j - 1;
-                    break L2;
-                  } else {
-                    if (eg.field_m > 0) {
-                      eg.field_m = eg.field_m - 1;
-                      break L2;
-                    } else {
-                      if (~ml.field_b > ~hj.field_Yb) {
-                        L3: {
-                          if (ml.field_b == 0) {
-                            h.g((byte) -24);
-                            break L3;
-                          } else {
-                            break L3;
-                          }
-                        }
-                        ml.field_b = ml.field_b + 1;
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                } else {
-                  if (ml.field_b > 0) {
-                    ml.field_b = ml.field_b - 1;
-                    break L2;
-                  } else {
-                    if (0 < eg.field_m) {
-                      eg.field_m = eg.field_m - 1;
-                      break L2;
-                    } else {
-                      if (~hj.field_Yb >= ~pe.field_j) {
-                        break L2;
-                      } else {
-                        L4: {
-                          if (pe.field_j != 0) {
-                            break L4;
-                          } else {
-                            vl.a(true, -122);
-                            break L4;
-                          }
-                        }
-                        pe.field_j = pe.field_j + 1;
-                        break L2;
-                      }
-                    }
-                  }
-                }
-              } else {
-                if (ml.field_b <= 0) {
-                  if (0 >= pe.field_j) {
-                    if (~hj.field_Yb < ~eg.field_m) {
-                      L5: {
-                        if (eg.field_m == 0) {
-                          vl.a(false, -64);
-                          break L5;
-                        } else {
-                          break L5;
-                        }
-                      }
-                      eg.field_m = eg.field_m + 1;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    pe.field_j = pe.field_j - 1;
-                    break L2;
-                  }
-                } else {
-                  ml.field_b = ml.field_b - 1;
-                  break L2;
-                }
-              }
-            }
-          }
-          return;
-        } else {
-          return;
-        }
+        hc.field_c = false;
     }
 
     public static void a(byte param0) {

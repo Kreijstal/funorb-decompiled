@@ -74,7 +74,7 @@ final class kw {
         ((kw) this).field_e = param0 ? true : false;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (!nb.field_f) {
             throw new IllegalStateException();
         }
@@ -96,9 +96,6 @@ final class kw {
         int var3 = Kickabout.field_G;
         try {
             var2 = (hn) (Object) da.field_h.g(24009);
-            if (param0 < 104) {
-                field_i = -30;
-            }
             while (var2 != null) {
                 if (!(5 != var2.field_i)) {
                     var2.c((byte) -109);
@@ -108,20 +105,15 @@ final class kw {
             var2 = new hn(5, new int[1]);
             ii.a(var2, 118);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "kw.B(" + param0 + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "kw.B(" + 123 + 44 + param1 + 41);
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_b = null;
         field_a = null;
         field_g = null;
         field_f = null;
-        if (param0 != -122) {
-            field_a = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -133,7 +125,7 @@ final class kw {
         return ((kw) this).field_d;
     }
 
-    final static void b(boolean param0, byte param1) {
+    final static void b(boolean param0) {
         int var2 = 0;
         Object var2_ref = null;
         int var3 = 0;
@@ -198,7 +190,8 @@ final class kw {
               break L0;
             } else {
               if (!dr.field_a) {
-                rm.a(false);
+                int discarded$14 = 0;
+                rm.a();
                 if (!dr.field_a) {
                   wt.field_x = el.field_A;
                   us.field_j = n.field_m;
@@ -314,7 +307,7 @@ final class kw {
                       L8: {
                         L9: {
                           var2_ref = stackIn_155_0;
-                          wu discarded$12 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                          wu discarded$15 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                           vd.field_c = nl.field_p;
                           dn.field_yb = sm.field_q;
                           ip.field_a = wj.field_A;
@@ -430,7 +423,7 @@ final class kw {
                     L17: {
                       L18: {
                         var2_ref = stackIn_129_0;
-                        wu discarded$13 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                        wu discarded$16 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                         vd.field_c = nl.field_p;
                         dn.field_yb = sm.field_q;
                         ip.field_a = wj.field_A;
@@ -487,7 +480,8 @@ final class kw {
           if (!param0) {
             if (dr.field_a) {
               L21: {
-                im.h(634588072);
+                int discarded$17 = 634588072;
+                im.h();
                 if (!dr.field_a) {
                   wt.field_x = el.field_A;
                   us.field_j = n.field_m;
@@ -520,7 +514,7 @@ final class kw {
                     }
                   }
                   var2_ref = stackIn_111_0;
-                  wu discarded$14 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                  wu discarded$18 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                   break L21;
                 }
               }
@@ -606,7 +600,7 @@ final class kw {
                     }
                   }
                   var2_ref = stackIn_91_0;
-                  wu discarded$15 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                  wu discarded$19 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                   break L28;
                 }
               }
@@ -788,7 +782,7 @@ final class kw {
               L45: {
                 L46: {
                   var2_ref = stackIn_61_0;
-                  wu discarded$16 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                  wu discarded$20 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                   vd.field_c = nl.field_p;
                   dn.field_yb = sm.field_q;
                   ip.field_a = wj.field_A;
@@ -966,7 +960,7 @@ final class kw {
             L59: {
               L60: {
                 var2_ref = stackIn_18_0;
-                wu discarded$17 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                wu discarded$21 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                 vd.field_c = nl.field_p;
                 dn.field_yb = sm.field_q;
                 ip.field_a = wj.field_A;

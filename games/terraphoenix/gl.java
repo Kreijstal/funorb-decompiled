@@ -633,57 +633,126 @@ class gl extends uf {
           } else {
             if (vj.field_P != 0) {
               if (var5 != 0) {
-                L0: {
-                  boolean discarded$1 = ((gl) this).a((gl) this, param1, vj.field_P, ef.field_j, param2, jb.field_b, (byte) 37);
-                  if (ma.field_I == 0) {
-                    break L0;
-                  } else {
-                    L1: {
-                      if (!((gl) this).a(false, mm.field_c, param2, param1, ma.field_I, (gl) this, lm.field_c)) {
-                        break L1;
-                      } else {
-                        param0 = false;
-                        if (var7 == 0) {
-                          break L0;
-                        } else {
-                          break L1;
-                        }
-                      }
-                    }
+                boolean discarded$1 = ((gl) this).a((gl) this, param1, vj.field_P, ef.field_j, param2, jb.field_b, (byte) 37);
+                if (ma.field_I != 0) {
+                  if (!((gl) this).a(false, mm.field_c, param2, param1, ma.field_I, (gl) this, lm.field_c)) {
                     if (var5 == 0) {
-                      break L0;
+                      if (oh.field_f == 0) {
+                        if (0 != ab.field_k) {
+                          ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
+                          var6 = oj.field_w;
+                          if (var6 != null) {
+                            if (!(var6.field_r instanceof fe)) {
+                              oj.field_w = null;
+                              ab.field_k = oh.field_f;
+                              b.a((byte) 16, ((gl) this).f(105));
+                              return param0;
+                            } else {
+                              ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
+                              oj.field_w = null;
+                              ab.field_k = oh.field_f;
+                              b.a((byte) 16, ((gl) this).f(105));
+                              return param0;
+                            }
+                          } else {
+                            ab.field_k = oh.field_f;
+                            b.a((byte) 16, ((gl) this).f(105));
+                            return param0;
+                          }
+                        } else {
+                          ab.field_k = oh.field_f;
+                          b.a((byte) 16, ((gl) this).f(105));
+                          return param0;
+                        }
+                      } else {
+                        ab.field_k = oh.field_f;
+                        b.a((byte) 16, ((gl) this).f(105));
+                        return param0;
+                      }
                     } else {
                       ((gl) this).e(-23);
-                      break L0;
-                    }
-                  }
-                }
-                if (oh.field_f == 0) {
-                  if (0 != ab.field_k) {
-                    L2: {
-                      ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
-                      var6 = oj.field_w;
-                      if (var6 == null) {
-                        break L2;
-                      } else {
-                        if (!(var6.field_r instanceof fe)) {
-                          oj.field_w = null;
-                          break L2;
+                      if (oh.field_f == 0) {
+                        if (0 != ab.field_k) {
+                          ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
+                          var6 = oj.field_w;
+                          if (var6 != null) {
+                            if (!(var6.field_r instanceof fe)) {
+                              oj.field_w = null;
+                              ab.field_k = oh.field_f;
+                              b.a((byte) 16, ((gl) this).f(105));
+                              return param0;
+                            } else {
+                              ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
+                              oj.field_w = null;
+                              ab.field_k = oh.field_f;
+                              b.a((byte) 16, ((gl) this).f(105));
+                              return param0;
+                            }
+                          } else {
+                            ab.field_k = oh.field_f;
+                            b.a((byte) 16, ((gl) this).f(105));
+                            return param0;
+                          }
                         } else {
-                          ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
-                          oj.field_w = null;
-                          break L2;
+                          ab.field_k = oh.field_f;
+                          b.a((byte) 16, ((gl) this).f(105));
+                          return param0;
                         }
+                      } else {
+                        ab.field_k = oh.field_f;
+                        b.a((byte) 16, ((gl) this).f(105));
+                        return param0;
                       }
                     }
-                    if (var7 != 0) {
-                      if (var5 != 0) {
-                        if (ma.field_I != 0) {
-                          ((gl) this).e(-31);
+                  } else {
+                    param0 = false;
+                    if (oh.field_f == 0) {
+                      if (0 != ab.field_k) {
+                        ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
+                        var6 = oj.field_w;
+                        if (var6 != null) {
+                          if (!(var6.field_r instanceof fe)) {
+                            oj.field_w = null;
+                            ab.field_k = oh.field_f;
+                            b.a((byte) 16, ((gl) this).f(105));
+                            return param0;
+                          } else {
+                            ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
+                            oj.field_w = null;
+                            ab.field_k = oh.field_f;
+                            b.a((byte) 16, ((gl) this).f(105));
+                            return param0;
+                          }
+                        } else {
+                          ab.field_k = oh.field_f;
+                          b.a((byte) 16, ((gl) this).f(105));
+                          return param0;
+                        }
+                      } else {
+                        ab.field_k = oh.field_f;
+                        b.a((byte) 16, ((gl) this).f(105));
+                        return param0;
+                      }
+                    } else {
+                      ab.field_k = oh.field_f;
+                      b.a((byte) 16, ((gl) this).f(105));
+                      return param0;
+                    }
+                  }
+                } else {
+                  if (oh.field_f == 0) {
+                    if (0 != ab.field_k) {
+                      ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
+                      var6 = oj.field_w;
+                      if (var6 != null) {
+                        if (!(var6.field_r instanceof fe)) {
+                          oj.field_w = null;
                           ab.field_k = oh.field_f;
                           b.a((byte) 16, ((gl) this).f(105));
                           return param0;
                         } else {
+                          ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
+                          oj.field_w = null;
                           ab.field_k = oh.field_f;
                           b.a((byte) 16, ((gl) this).f(105));
                           return param0;
@@ -703,67 +772,71 @@ class gl extends uf {
                     b.a((byte) 16, ((gl) this).f(105));
                     return param0;
                   }
-                } else {
-                  ab.field_k = oh.field_f;
-                  b.a((byte) 16, ((gl) this).f(105));
-                  return param0;
                 }
               } else {
-                L3: {
+                L0: {
                   if (ma.field_I == 0) {
-                    break L3;
+                    break L0;
                   } else {
-                    L4: {
-                      if (!((gl) this).a(false, mm.field_c, param2, param1, ma.field_I, (gl) this, lm.field_c)) {
-                        break L4;
+                    if (!((gl) this).a(false, mm.field_c, param2, param1, ma.field_I, (gl) this, lm.field_c)) {
+                      if (var5 == 0) {
+                        break L0;
                       } else {
-                        param0 = false;
-                        if (var7 == 0) {
-                          break L3;
+                        ((gl) this).e(-23);
+                        if (oh.field_f == 0) {
+                          if (0 != ab.field_k) {
+                            ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
+                            var6 = oj.field_w;
+                            if (var6 != null) {
+                              if (!(var6.field_r instanceof fe)) {
+                                oj.field_w = null;
+                                ab.field_k = oh.field_f;
+                                b.a((byte) 16, ((gl) this).f(105));
+                                return param0;
+                              } else {
+                                ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
+                                oj.field_w = null;
+                                ab.field_k = oh.field_f;
+                                b.a((byte) 16, ((gl) this).f(105));
+                                return param0;
+                              }
+                            } else {
+                              ab.field_k = oh.field_f;
+                              b.a((byte) 16, ((gl) this).f(105));
+                              return param0;
+                            }
+                          } else {
+                            ab.field_k = oh.field_f;
+                            b.a((byte) 16, ((gl) this).f(105));
+                            return param0;
+                          }
                         } else {
-                          break L4;
+                          ab.field_k = oh.field_f;
+                          b.a((byte) 16, ((gl) this).f(105));
+                          return param0;
                         }
                       }
-                    }
-                    if (var5 == 0) {
-                      break L3;
                     } else {
-                      L5: {
-                        ((gl) this).e(-23);
+                      L1: {
+                        param0 = false;
                         if (oh.field_f != 0) {
-                          break L5;
+                          break L1;
                         } else {
                           if (0 == ab.field_k) {
-                            break L5;
+                            break L1;
                           } else {
-                            L6: {
-                              ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
-                              var6 = oj.field_w;
-                              if (var6 == null) {
-                                break L6;
-                              } else {
-                                if (!(var6.field_r instanceof fe)) {
-                                  oj.field_w = null;
-                                  break L6;
-                                } else {
-                                  ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
-                                  oj.field_w = null;
-                                  break L6;
-                                }
-                              }
-                            }
-                            if (var7 == 0) {
-                              break L5;
+                            ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
+                            var6 = oj.field_w;
+                            if (var6 == null) {
+                              break L1;
                             } else {
-                              if (var5 == 0) {
-                                break L5;
+                              if (!(var6.field_r instanceof fe)) {
+                                oj.field_w = null;
+                                break L1;
                               } else {
-                                if (ma.field_I != 0) {
-                                  ((gl) this).e(-31);
-                                  break L5;
-                                } else {
-                                  break L5;
-                                }
+                                ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
+                                oj.field_w = null;
+                                break L1;
                               }
                             }
                           }
@@ -779,74 +852,23 @@ class gl extends uf {
                   if (0 != ab.field_k) {
                     ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
                     var6 = oj.field_w;
-                    if (var6 == null) {
-                      if (var7 != 0) {
-                        if (var5 != 0) {
-                          if (ma.field_I != 0) {
-                            ((gl) this).e(-31);
-                            ab.field_k = oh.field_f;
-                            b.a((byte) 16, ((gl) this).f(105));
-                            return param0;
-                          } else {
-                            ab.field_k = oh.field_f;
-                            b.a((byte) 16, ((gl) this).f(105));
-                            return param0;
-                          }
-                        } else {
-                          ab.field_k = oh.field_f;
-                          b.a((byte) 16, ((gl) this).f(105));
-                          return param0;
-                        }
-                      } else {
-                        ab.field_k = oh.field_f;
-                        b.a((byte) 16, ((gl) this).f(105));
-                        return param0;
-                      }
-                    } else {
+                    if (var6 != null) {
                       if (!(var6.field_r instanceof fe)) {
-                        L7: {
-                          oj.field_w = null;
-                          if (var7 == 0) {
-                            break L7;
-                          } else {
-                            if (var5 == 0) {
-                              break L7;
-                            } else {
-                              if (ma.field_I != 0) {
-                                ((gl) this).e(-31);
-                                break L7;
-                              } else {
-                                break L7;
-                              }
-                            }
-                          }
-                        }
+                        oj.field_w = null;
                         ab.field_k = oh.field_f;
                         b.a((byte) 16, ((gl) this).f(105));
                         return param0;
                       } else {
                         ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
-                        L8: {
-                          oj.field_w = null;
-                          if (var7 == 0) {
-                            break L8;
-                          } else {
-                            if (var5 == 0) {
-                              break L8;
-                            } else {
-                              if (ma.field_I != 0) {
-                                ((gl) this).e(-31);
-                                break L8;
-                              } else {
-                                break L8;
-                              }
-                            }
-                          }
-                        }
+                        oj.field_w = null;
                         ab.field_k = oh.field_f;
                         b.a((byte) 16, ((gl) this).f(105));
                         return param0;
                       }
+                    } else {
+                      ab.field_k = oh.field_f;
+                      b.a((byte) 16, ((gl) this).f(105));
+                      return param0;
                     }
                   } else {
                     ab.field_k = oh.field_f;
@@ -860,61 +882,64 @@ class gl extends uf {
                 }
               }
             } else {
-              L9: {
+              L2: {
                 if (ma.field_I == 0) {
-                  break L9;
+                  break L2;
                 } else {
-                  L10: {
-                    if (!((gl) this).a(false, mm.field_c, param2, param1, ma.field_I, (gl) this, lm.field_c)) {
-                      break L10;
+                  if (!((gl) this).a(false, mm.field_c, param2, param1, ma.field_I, (gl) this, lm.field_c)) {
+                    if (var5 == 0) {
+                      break L2;
                     } else {
-                      param0 = false;
-                      if (var7 == 0) {
-                        break L9;
-                      } else {
-                        break L10;
-                      }
-                    }
-                  }
-                  if (var5 == 0) {
-                    break L9;
-                  } else {
-                    L11: {
-                      ((gl) this).e(-23);
-                      if (oh.field_f != 0) {
-                        break L11;
-                      } else {
-                        if (0 == ab.field_k) {
-                          break L11;
+                      L3: {
+                        ((gl) this).e(-23);
+                        if (oh.field_f != 0) {
+                          break L3;
                         } else {
-                          L12: {
+                          if (0 == ab.field_k) {
+                            break L3;
+                          } else {
                             ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
                             var6 = oj.field_w;
                             if (var6 == null) {
-                              break L12;
+                              break L3;
                             } else {
                               if (!(var6.field_r instanceof fe)) {
                                 oj.field_w = null;
-                                break L12;
+                                break L3;
                               } else {
                                 ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
                                 oj.field_w = null;
-                                break L12;
+                                break L3;
                               }
                             }
                           }
-                          if (var7 == 0) {
-                            break L11;
+                        }
+                      }
+                      ab.field_k = oh.field_f;
+                      b.a((byte) 16, ((gl) this).f(105));
+                      return param0;
+                    }
+                  } else {
+                    L4: {
+                      param0 = false;
+                      if (oh.field_f != 0) {
+                        break L4;
+                      } else {
+                        if (0 == ab.field_k) {
+                          break L4;
+                        } else {
+                          ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
+                          var6 = oj.field_w;
+                          if (var6 == null) {
+                            break L4;
                           } else {
-                            if (var5 == 0) {
-                              break L11;
+                            if (!(var6.field_r instanceof fe)) {
+                              oj.field_w = null;
+                              break L4;
                             } else {
-                              if (ma.field_I != 0) {
-                                ((gl) this).e(-31);
-                                break L11;
-                              } else {
-                                break L11;
-                              }
+                              ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
+                              oj.field_w = null;
+                              break L4;
                             }
                           }
                         }
@@ -930,74 +955,23 @@ class gl extends uf {
                 if (0 != ab.field_k) {
                   ((gl) this).a(79, ef.field_j, param2, param1, jb.field_b, (gl) this);
                   var6 = oj.field_w;
-                  if (var6 == null) {
-                    if (var7 != 0) {
-                      if (var5 != 0) {
-                        if (ma.field_I == 0) {
-                          ab.field_k = oh.field_f;
-                          b.a((byte) 16, ((gl) this).f(105));
-                          return param0;
-                        } else {
-                          ((gl) this).e(-31);
-                          ab.field_k = oh.field_f;
-                          b.a((byte) 16, ((gl) this).f(105));
-                          return param0;
-                        }
-                      } else {
-                        ab.field_k = oh.field_f;
-                        b.a((byte) 16, ((gl) this).f(105));
-                        return param0;
-                      }
-                    } else {
-                      ab.field_k = oh.field_f;
-                      b.a((byte) 16, ((gl) this).f(105));
-                      return param0;
-                    }
-                  } else {
+                  if (var6 != null) {
                     if (!(var6.field_r instanceof fe)) {
-                      L13: {
-                        oj.field_w = null;
-                        if (var7 == 0) {
-                          break L13;
-                        } else {
-                          if (var5 == 0) {
-                            break L13;
-                          } else {
-                            if (ma.field_I != 0) {
-                              ((gl) this).e(-31);
-                              break L13;
-                            } else {
-                              break L13;
-                            }
-                          }
-                        }
-                      }
+                      oj.field_w = null;
                       ab.field_k = oh.field_f;
                       b.a((byte) 16, ((gl) this).f(105));
                       return param0;
                     } else {
                       ((fe) (Object) var6.field_r).a((hj) null, var6, 98);
-                      L14: {
-                        oj.field_w = null;
-                        if (var7 == 0) {
-                          break L14;
-                        } else {
-                          if (var5 == 0) {
-                            break L14;
-                          } else {
-                            if (ma.field_I != 0) {
-                              ((gl) this).e(-31);
-                              break L14;
-                            } else {
-                              break L14;
-                            }
-                          }
-                        }
-                      }
+                      oj.field_w = null;
                       ab.field_k = oh.field_f;
                       b.a((byte) 16, ((gl) this).f(105));
                       return param0;
                     }
+                  } else {
+                    ab.field_k = oh.field_f;
+                    b.a((byte) 16, ((gl) this).f(105));
+                    return param0;
                   }
                 } else {
                   ab.field_k = oh.field_f;
@@ -1268,37 +1242,37 @@ class gl extends uf {
     final void a(Hashtable param0, int param1, byte param2, StringBuilder param3) {
         RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
+        String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
         RuntimeException stackOut_25_0 = null;
         StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
         RuntimeException stackOut_27_0 = null;
         StringBuilder stackOut_27_1 = null;
         String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         var6 = Terraphoenix.field_V;
         try {
           L0: {
@@ -1337,102 +1311,88 @@ class gl extends uf {
             }
             L5: {
               if (((gl) this).field_l != null) {
-                L6: {
-                  StringBuilder discarded$12 = param3.append(" renderer=");
-                  if (((gl) this).field_l instanceof gl) {
-                    break L6;
-                  } else {
-                    StringBuilder discarded$13 = param3.append(((gl) this).field_l);
-                    if (var6 == 0) {
-                      break L5;
-                    } else {
-                      break L6;
-                    }
-                  }
+                StringBuilder discarded$12 = param3.append(" renderer=");
+                if (((gl) this).field_l instanceof gl) {
+                  param3 = ((gl) this).a(34, param3, 1 + param1, param0);
+                  break L5;
+                } else {
+                  StringBuilder discarded$13 = param3.append(((gl) this).field_l);
+                  break L5;
                 }
-                param3 = ((gl) this).a(34, param3, 1 + param1, param0);
-                break L5;
               } else {
                 break L5;
               }
             }
-            L7: {
+            L6: {
               if (null != ((gl) this).field_r) {
-                L8: {
-                  StringBuilder discarded$14 = param3.append(" listener=");
-                  if (((gl) this).field_r instanceof gl) {
-                    break L8;
-                  } else {
-                    StringBuilder discarded$15 = param3.append(((gl) this).field_r);
-                    if (var6 == 0) {
-                      break L7;
-                    } else {
-                      break L8;
-                    }
-                  }
+                StringBuilder discarded$14 = param3.append(" listener=");
+                if (((gl) this).field_r instanceof gl) {
+                  param3 = ((gl) this).a(34, param3, param1 - -1, param0);
+                  break L6;
+                } else {
+                  StringBuilder discarded$15 = param3.append(((gl) this).field_r);
+                  break L6;
                 }
-                param3 = ((gl) this).a(34, param3, param1 - -1, param0);
-                break L7;
               } else {
-                break L7;
+                break L6;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L7: {
             var5 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var5;
-            stackOut_25_1 = new StringBuilder().append("gl.QB(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackOut_23_0 = (RuntimeException) var5;
+            stackOut_23_1 = new StringBuilder().append("gl.QB(");
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L7;
+            } else {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
+            if (param3 == null) {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L8;
+            } else {
               stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
               stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
-              break L9;
-            } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
-              break L9;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L8;
             }
           }
-          L10: {
-            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
-            if (param3 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
-              break L10;
-            } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
-              break L10;
-            }
-          }
-          throw qk.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
         }
     }
 
@@ -1446,75 +1406,75 @@ class gl extends uf {
           var4 = ((gl) this).d((byte) 107);
           var5_int = 0;
           L0: while (true) {
-            L1: {
-              if (var4 < var5_int) {
-                break L1;
+            if (var4 < var5_int) {
+              int discarded$2 = 19290;
+              var5 = ml.e();
+              if (var5 == null) {
+                return;
               } else {
-                ((gl) this).a(param1, -116, var5_int, param2);
-                var5_int++;
-                if (var6 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
+                vc.field_c.b(lb.field_b, var5, ea.field_m, 4473924);
+                return;
               }
-            }
-            var5 = ml.e(19290);
-            if (var5 == null) {
-              return;
             } else {
-              vc.field_c.b(lb.field_b, var5, ea.field_m, 4473924);
-              return;
+              ((gl) this).a(param1, -116, var5_int, param2);
+              var5_int++;
+              continue L0;
             }
           }
         } else {
           field_m = -77;
           var4 = ((gl) this).d((byte) 107);
           var5_int = 0;
-          L2: while (true) {
-            L3: {
-              if (var4 < var5_int) {
-                break L3;
+          L1: while (true) {
+            if (var4 < var5_int) {
+              int discarded$3 = 19290;
+              var5 = ml.e();
+              if (var5 == null) {
+                return;
               } else {
-                ((gl) this).a(param1, -116, var5_int, param2);
-                var5_int++;
-                if (var6 == 0) {
-                  continue L2;
-                } else {
-                  break L3;
-                }
+                vc.field_c.b(lb.field_b, var5, ea.field_m, 4473924);
+                return;
               }
-            }
-            var5 = ml.e(19290);
-            if (var5 == null) {
-              return;
             } else {
-              vc.field_c.b(lb.field_b, var5, ea.field_m, 4473924);
-              return;
+              ((gl) this).a(param1, -116, var5_int, param2);
+              var5_int++;
+              continue L1;
             }
           }
         }
     }
 
     final static void c(byte param0) {
-        if (q.field_Jb != 10) {
-          if (mi.a((byte) -108)) {
-            da.field_f = true;
-            gl.c((byte) -35);
+        if (q.field_Jb == 10) {
+          ag.a(8468);
+          q.field_Jb = 11;
+          da.field_f = true;
+          if (param0 > 107) {
             return;
           } else {
-            ag.a(8468);
-            q.field_Jb = 11;
-            da.field_f = true;
             gl.c((byte) -35);
             return;
           }
         } else {
-          ag.a(8468);
-          q.field_Jb = 11;
-          da.field_f = true;
-          gl.c((byte) -35);
-          return;
+          if (!mi.a((byte) -108)) {
+            ag.a(8468);
+            q.field_Jb = 11;
+            da.field_f = true;
+            if (param0 <= 107) {
+              gl.c((byte) -35);
+              return;
+            } else {
+              return;
+            }
+          } else {
+            da.field_f = true;
+            if (param0 > 107) {
+              return;
+            } else {
+              gl.c((byte) -35);
+              return;
+            }
+          }
         }
     }
 

@@ -135,7 +135,8 @@ final class isa extends rqa {
                     if (var3_int <= var5) {
                       break L3;
                     } else {
-                      if (!haa.a(param0.charAt(var5), true)) {
+                      int discarded$5 = 1;
+                      if (!haa.a(param0.charAt(var5))) {
                         break L3;
                       } else {
                         var5++;
@@ -175,7 +176,8 @@ final class isa extends rqa {
                           if (var3_int <= var5) {
                             break L6;
                           } else {
-                            if (!haa.a(param0.charAt(var5), true)) {
+                            int discarded$6 = 1;
+                            if (!haa.a(param0.charAt(var5))) {
                               break L6;
                             } else {
                               var5++;
@@ -193,9 +195,9 @@ final class isa extends rqa {
                             if (62 == param0.charAt(var5)) {
                               var5++;
                               var10 = lob.a(-88, (CharSequence) (Object) var9);
-                              StringBuilder discarded$3 = var6.append(param0.substring(var7, var8));
+                              StringBuilder discarded$7 = var6.append(param0.substring(var7, var8));
                               var7 = var5;
-                              StringBuilder discarded$4 = var6.append(param1[var10]);
+                              StringBuilder discarded$8 = var6.append(param1[var10]);
                               continue L4;
                             } else {
                               continue L4;
@@ -204,7 +206,7 @@ final class isa extends rqa {
                         }
                       }
                     } else {
-                      StringBuilder discarded$5 = var6.append(param0.substring(var7));
+                      StringBuilder discarded$9 = var6.append(param0.substring(var7));
                       stackOut_28_0 = var6.toString();
                       stackIn_29_0 = stackOut_28_0;
                       break L0;

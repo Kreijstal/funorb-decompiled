@@ -9,7 +9,7 @@ final class bi {
     static boolean field_f;
     static String[] field_b;
 
-    final static void b(int param0) {
+    final static void b() {
     }
 
     final static re a(long param0, int param1, String param2, boolean param3, String param4) {
@@ -144,7 +144,7 @@ final class bi {
         return (re) (Object) stackIn_11_0;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -192,9 +192,6 @@ final class bi {
     }
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            return;
-        }
         field_e = null;
         field_a = null;
         field_c = null;

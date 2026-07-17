@@ -45,9 +45,9 @@ final class wa {
             }
           }
         }
-        param2 = param2 + param1;
+        param2 = param2;
         var4 = param2 - 2;
-        var8 = param1;
+        var8 = 0;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {
@@ -95,12 +95,12 @@ final class wa {
 
     private final static void a(int[] param0, int param1, int param2, int param3) {
         wa.a();
-        wa.a(param0, param1, param2);
+        wa.a(param0, 0, param2);
         wa.a(param3);
     }
 
     final static void b(int[] param0, int param1, int param2) {
-        wa.a(param0, 0, param0.length, param1, param2, (int[]) null, (int[]) null);
+        wa.a(param0, 0, param0.length, 16711680, param2, (int[]) null, (int[]) null);
     }
 
     private final static boolean d() {
@@ -350,7 +350,7 @@ final class wa {
                     var5 = param2[var7] + param3[var7] + wb.field_i;
                 }
             }
-            wb.e(var4, var6, var5 - var4, param0, param1);
+            wb.e(var4, var6, var5 - var4, 16711680, param1);
         }
     }
 
@@ -378,7 +378,7 @@ final class wa {
             }
         }
         wa.a();
-        wa.a(param0, param1, param2);
-        wa.a(param3, param4, param5, param6);
+        wa.a(param0, 0, param2);
+        wa.a(16711680, param4, param5, param6);
     }
 }

@@ -152,40 +152,37 @@ final class wl {
           L0: {
             var8 = new pa(param1.a(-2, "", "logo.fo3d"));
             var10 = var8;
-            if (param0 == -2681) {
-              var3 = var10.j(-119);
-              var10.l(8);
-              ll.field_h = ue.a(-8191, var10);
-              qc.field_a = new vg[var3];
-              ok.field_d = new int[var3][];
-              var4 = 0;
-              L1: while (true) {
-                if (var3 <= var4) {
-                  var10.m(8);
-                  var9 = 0;
-                  var4 = var9;
-                  L2: while (true) {
-                    if (var9 >= var3) {
-                      break L0;
-                    } else {
-                      var5 = qc.field_a[var9];
-                      var5.a(6, 6, param0 + 2682, 6, 1);
-                      var5.b(-101);
-                      var6 = new int[]{var5.field_e + var5.field_p >> 1, var5.field_K + var5.field_N >> 1, var5.field_h + var5.field_B >> 1};
-                      ok.field_d[var9] = var6;
-                      var5.a((byte) 109, -var6[0], -var6[2], -var6[1]);
-                      var9++;
-                      continue L2;
-                    }
+            var3 = var10.j(-119);
+            var10.l(8);
+            ll.field_h = ue.a(-8191, var10);
+            qc.field_a = new vg[var3];
+            ok.field_d = new int[var3][];
+            var4 = 0;
+            L1: while (true) {
+              if (var3 <= var4) {
+                var10.m(8);
+                var9 = 0;
+                var4 = var9;
+                L2: while (true) {
+                  if (var9 >= var3) {
+                    break L0;
+                  } else {
+                    var5 = qc.field_a[var9];
+                    var5.a(6, 6, 1, 6, 1);
+                    var5.b(-101);
+                    var6 = new int[]{var5.field_e + var5.field_p >> 1, var5.field_K + var5.field_N >> 1, var5.field_h + var5.field_B >> 1};
+                    ok.field_d[var9] = var6;
+                    var5.a((byte) 109, -var6[0], -var6[2], -var6[1]);
+                    var9++;
+                    continue L2;
                   }
-                } else {
-                  qc.field_a[var4] = nd.a(var8, (byte) -25);
-                  var4++;
-                  continue L1;
                 }
+              } else {
+                int discarded$1 = -25;
+                qc.field_a[var4] = nd.a(var8);
+                var4++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,7 +190,7 @@ final class wl {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("wl.A(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("wl.A(").append(-2681).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -264,7 +261,8 @@ final class wl {
           L3: {
             var2 = stackIn_5_0;
             sf.a(16);
-            ch.b(false);
+            int discarded$5 = 0;
+            ch.b();
             ef.field_k = ef.field_k + 1;
             qa.field_h = qa.field_h + 1;
             if (dk.field_a > 4) {
@@ -343,7 +341,8 @@ final class wl {
               L10: {
                 oi.a(true, true, true);
                 rc.c((byte) -82);
-                qh.d(true);
+                int discarded$6 = 1;
+                qh.d();
                 sd.a(126);
                 sd.b(-121);
                 if (ee.field_o <= 0) {
@@ -601,7 +600,8 @@ final class wl {
                   }
                   oi.a(false, true, true);
                   rc.c((byte) -82);
-                  qh.d(true);
+                  int discarded$7 = 1;
+                  qh.d();
                   sd.a(126);
                   sd.b(121);
                   o.a(5, true);
@@ -622,7 +622,7 @@ final class wl {
               ij.field_z = false;
               rj.field_d = null;
               eb.field_n = false;
-              qe discarded$1 = wb.field_p.c((byte) 29, aa.field_g);
+              qe discarded$8 = wb.field_p.c((byte) 29, aa.field_g);
               if (0 < wb.field_p.field_db) {
                 L32: {
                   ub.field_i = false;
@@ -795,7 +795,8 @@ final class wl {
                       }
                     }
                   }
-                  qh.d(true);
+                  int discarded$9 = 1;
+                  qh.d();
                   sd.a(124);
                   sd.b(120);
                   o.a(5, true);
@@ -915,7 +916,7 @@ final class wl {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         try {
             le.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -1040,7 +1041,7 @@ final class wl {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -1140,7 +1141,8 @@ final class wl {
               if (null != fj.field_m) {
                 break L5;
               } else {
-                uf.c(-7668);
+                int discarded$3 = -7668;
+                uf.c();
                 break L5;
               }
             }
@@ -1249,14 +1251,15 @@ final class wl {
                         }
                       }
                     }
-                    bj.a((byte) 71);
+                    int discarded$4 = 71;
+                    bj.a();
                     L17: while (true) {
                       if (null == db.field_D.c((byte) -69)) {
                         qh.field_J = 0;
                         fk.field_t = 0;
                         return;
                       } else {
-                        da discarded$1 = db.field_D.a((byte) 101);
+                        da discarded$5 = db.field_D.a((byte) 101);
                         continue L17;
                       }
                     }

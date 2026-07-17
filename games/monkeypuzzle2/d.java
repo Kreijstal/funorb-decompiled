@@ -40,13 +40,14 @@ final class d extends ug {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    f.a(param0, 22492);
+                    f.a(4, 22492);
                     var2 = cj.field_a.d((byte) 63);
                     continue L3;
                   }
                 }
               } else {
-                pf.a((byte) -104, var4, param0);
+                int discarded$2 = 4;
+                pf.a((byte) -104, var4);
                 var4 = (vl) (Object) ob.field_s.d((byte) 63);
                 continue L1;
               }
@@ -55,11 +56,11 @@ final class d extends ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var2_ref, "d.A(" + param0 + 44 + param1 + 41);
+          throw la.a((Throwable) (Object) var2_ref, "d.A(" + 4 + 44 + param1 + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
     }
 

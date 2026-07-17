@@ -8,7 +8,7 @@ final class sn {
     static ld field_c;
     static ea field_a;
 
-    final static byte[] a(byte[] param0, ld param1, int param2, int param3) {
+    final static byte[] a(byte[] param0, ld param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -51,7 +51,7 @@ final class sn {
         var8 = MinerDisturbance.field_ab;
         try {
           L0: {
-            var4_int = param1.c((byte) -110, param2);
+            var4_int = param1.c((byte) -110, 16);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -155,15 +155,12 @@ final class sn {
               break L7;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + -110 + 41);
+          throw lj.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 16 + 44 + -110 + 41);
         }
         return stackIn_16_0;
     }
 
-    final static boolean a(byte param0) {
-        if (param0 < 81) {
-            return false;
-        }
+    final static boolean a() {
         return ke.field_U.a((byte) 16);
     }
 

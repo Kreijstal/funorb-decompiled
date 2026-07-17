@@ -29,7 +29,7 @@ final class pf {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = 65 / ((-27 - param0) / 52);
+            var3_int = 65;
             stackOut_0_0 = sp.a(ra.a(param1, 100, param2), -124);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -39,7 +39,7 @@ final class pf {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("pf.A(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("pf.A(").append(-88).append(44);
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

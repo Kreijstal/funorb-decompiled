@@ -12,7 +12,7 @@ final class ig {
     static int field_g;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_d = null;
         field_a = null;
@@ -60,8 +60,9 @@ final class ig {
         String stackOut_9_2 = null;
         try {
           L0: {
-            if (tj.a(param3, param0, param4, (byte) 83)) {
-              var5_int = 9 % ((param2 - 19) / 53);
+            int discarded$7 = 83;
+            if (tj.a(param3, param0, param4)) {
+              var5_int = 1;
               stackOut_3_0 = sh.a(-1, param1.a(param3, param0, 5847));
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -99,7 +100,7 @@ final class ig {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(-122).append(44).append(param3).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

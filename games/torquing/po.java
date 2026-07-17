@@ -90,10 +90,10 @@ final class po extends am {
     private final void b(int param0, int param1) {
         ((po) this).field_A = (param1 & 255) << 4;
         ((po) this).field_v = (param1 & 16711680) >> 12;
-        ((po) this).field_s = param1 >> 4 & param0;
+        ((po) this).field_s = param1 >> 4 & 4080;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_x = null;
         int var1 = 0;
         field_y = null;

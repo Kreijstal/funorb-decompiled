@@ -192,7 +192,8 @@ final class vl extends ok {
               }
             }
             L2: {
-              var2_int = g.g(1);
+              int discarded$3 = 1;
+              var2_int = g.g();
               if (var2_int >= 0) {
                 L3: {
                   var3 = 3158064;
@@ -205,7 +206,8 @@ final class vl extends ok {
                     break L3;
                   } else {
                     var7 = (199 + var5) / 200;
-                    var5 = jh.a(re.field_c, param1, var5 / var7, false);
+                    int discarded$4 = 0;
+                    var5 = jh.a(re.field_c, param1, var5 / var7);
                     var6 = var6 * var7;
                     break L3;
                   }
@@ -231,7 +233,7 @@ final class vl extends ok {
                 ll.f(var9, var10, 6 + var5, var6 - -6, var3);
                 ll.c(1 + var9, 1 + var10, var5 + 4, var6 + 4, var4);
                 if (1 < var7) {
-                  int discarded$1 = re.field_c.a(param1, var9 - -3, re.field_c.field_H + (var10 - (-3 + re.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
+                  int discarded$5 = re.field_c.a(param1, var9 - -3, re.field_c.field_H + (var10 - (-3 + re.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
                   break L2;
                 } else {
                   re.field_c.c(param1, var9 - -3, var10 + (3 + re.field_c.field_H), var3, -1);
@@ -333,7 +335,7 @@ final class vl extends ok {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_E = null;
         int var1 = 79;
         field_J = null;

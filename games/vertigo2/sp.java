@@ -152,20 +152,12 @@ abstract class sp extends nm {
         var8 = param2;
         L0: while (true) {
           if (var4 <= var7) {
-            L1: {
-              var6 = 169;
-              var4 = 22;
-              var5 = 194;
-              if (param0 < -92) {
-                break L1;
-              } else {
-                ((sp) this).a((byte) -71);
-                break L1;
-              }
-            }
+            var6 = 169;
+            var4 = 22;
+            var5 = 194;
             var7 = 0;
             var8 = 35 + param2;
-            L2: while (true) {
+            L1: while (true) {
               if (var4 <= var7) {
                 qo.field_y.e(-90 + (param1 + ((sp) this).field_n), 10 + param2);
                 kj.a(1, ((sp) this).field_n + -10, param1 + 5, bh.field_a, param2 - -35);
@@ -175,7 +167,7 @@ abstract class sp extends nm {
                 var6 = 127;
                 var7 = 0;
                 var8 = param2 - -57;
-                L3: while (true) {
+                L2: while (true) {
                   if (var7 >= var4) {
                     return;
                   } else {
@@ -185,7 +177,7 @@ abstract class sp extends nm {
                     bi.b(-6 + (param1 - -((sp) this).field_n), var8, 6, var9);
                     var8++;
                     var7++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -195,51 +187,51 @@ abstract class sp extends nm {
                 bi.b(-6 + ((sp) this).field_n + param1, var8, 6, var9);
                 var7++;
                 var8++;
-                continue L2;
+                continue L1;
               }
             }
           } else {
             if (bi.field_f <= var8) {
               if (bi.field_c > var8) {
-                L4: {
+                L3: {
                   var9 = (var6 - var5) * var7 / var4 + var5;
                   var10 = 0;
                   var11 = ((sp) this).field_n;
                   if (var7 <= 20) {
-                    L5: while (true) {
+                    L4: while (true) {
                       if (var10 > 20) {
-                        break L4;
+                        break L3;
                       } else {
                         var12 = (-var10 + 20) * (20 - var10) + (20 + -var7) * (20 + -var7);
                         if (var12 <= 462) {
                           if (var12 < 420) {
-                            break L4;
+                            break L3;
                           } else {
                             var13 = var9 * (-var12 + 462) / 42;
                             var13 = var13 | (var13 << 16 | var13 << 8);
                             bi.field_l[var10 + (bi.field_e * var8 - -param1)] = var13;
                             var10++;
-                            continue L5;
+                            continue L4;
                           }
                         } else {
                           var10++;
-                          continue L5;
+                          continue L4;
                         }
                       }
                     }
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
-                L6: {
+                L5: {
                   if (var7 <= 20) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
-                    L7: while (true) {
-                      L8: {
+                    L6: while (true) {
+                      L7: {
                         if (var13 > 20) {
-                          break L8;
+                          break L7;
                         } else {
                           var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
                           if (462 >= var14) {
@@ -247,25 +239,25 @@ abstract class sp extends nm {
                               var12 = var11 - -1;
                               var13++;
                               var11++;
-                              continue L7;
+                              continue L6;
                             } else {
                               var15 = (-var14 + 462) * var9 / 42;
                               var15 = var15 | (var15 << 8 | var15 << 16);
                               bi.field_l[param1 + (bi.field_e * var8 - -var11)] = var15;
                               var13++;
                               var11++;
-                              continue L7;
+                              continue L6;
                             }
                           } else {
-                            break L8;
+                            break L7;
                           }
                         }
                       }
                       var11 = var12;
-                      break L6;
+                      break L5;
                     }
                   } else {
-                    break L6;
+                    break L5;
                   }
                 }
                 var9 = var9 | (var9 << 16 | var9 << 8);
@@ -298,14 +290,14 @@ abstract class sp extends nm {
         return super.a(-1);
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_P = null;
         field_Q = null;
         field_U = null;
         field_K = null;
     }
 
-    final static ud e(byte param0) {
+    final static ud e() {
         int var1 = 0;
         int var2_int = 0;
         IllegalArgumentException var2 = null;

@@ -67,17 +67,17 @@ final class ai {
                     }
                   }
                   L3: {
-                    if (cl.field_A != param0) {
+                    if (cl.field_A != 2) {
                       break L3;
                     } else {
                       re.field_y = new gj((java.net.Socket) wj.field_j.field_g, qi.field_a);
                       var2 = new oa(13);
                       qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
-                      var2.f(param0 + 6387, 15);
+                      var2.f(6389, 15);
                       var2.a(-109, dk.field_h);
                       re.field_y.a((byte) 9, var2.field_g, 13, 0);
                       cl.field_A = cl.field_A + 1;
-                      ob.field_G = 30000L + lk.a(param0 ^ 2);
+                      ob.field_G = 30000L + lk.a(0);
                       break L3;
                     }
                   }
@@ -96,7 +96,7 @@ final class ai {
                       } else {
                         var1_int = re.field_y.c(1);
                         if (var1_int != 0) {
-                          stackOut_26_0 = og.a(param0, var1_int);
+                          stackOut_26_0 = og.a(2, var1_int);
                           stackIn_27_0 = stackOut_26_0;
                           return stackIn_27_0;
                         } else {
@@ -111,7 +111,7 @@ final class ai {
                     stackIn_37_0 = stackOut_36_0;
                     break L0;
                   } else {
-                    oh.field_h.a(ck.field_A, (Object) (Object) re.field_y, param0 + 18);
+                    oh.field_h.a(ck.field_A, (Object) (Object) re.field_y, 20);
                     re.field_y = null;
                     cl.field_A = 0;
                     wj.field_j = null;
@@ -134,7 +134,7 @@ final class ai {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;

@@ -19,27 +19,25 @@ final class am extends gb implements n {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_F = null;
         int var1 = 25;
         field_H = null;
         field_K = null;
     }
 
-    final static void a(fa param0, boolean param1, fa param2, fa param3, byte param4) {
+    final static void a(fa param0, boolean param1, fa param2, fa param3) {
         try {
             vc.field_a = gl.b("", 20);
-            vc.field_a.a(false, param4 + 87);
-            if (param4 != -22) {
-                Object var6 = null;
-                am.a((byte) 119, (java.awt.Canvas) null);
-            }
-            gi.a(param3, param2, param0, param4 + -2018);
-            nd.c((byte) -11);
+            vc.field_a.a(false, 65);
+            int discarded$0 = -2040;
+            gi.a(param3, param2, param0);
+            int discarded$1 = -11;
+            nd.c();
             qe.field_f = og.field_a;
             pe.field_a = og.field_a;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "am.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "am.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + -22 + 41);
         }
     }
 
@@ -61,7 +59,7 @@ final class am extends gb implements n {
         }
     }
 
-    final static void g(byte param0) {
+    final static void g() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -137,7 +135,8 @@ final class am extends gb implements n {
         try {
           L0: {
             L1: {
-              hk.a((java.awt.Component) (Object) param1, (byte) 93);
+              int discarded$3 = 93;
+              hk.a((java.awt.Component) (Object) param1);
               ei.a((java.awt.Component) (Object) param1, -24289);
               var2_int = -55 / ((param0 - -23) / 48);
               if (null != lk.field_d) {
@@ -394,7 +393,7 @@ final class am extends gb implements n {
         }
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -431,7 +430,8 @@ final class am extends gb implements n {
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  if (nd.a((char) var3, 127)) {
+                  int discarded$5 = 127;
+                  if (nd.a((char) var3)) {
                     break L2;
                   } else {
                     if (!gb.a((byte) 41, (char) var3)) {

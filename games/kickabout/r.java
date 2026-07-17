@@ -26,38 +26,50 @@ final class r {
         throw new IllegalStateException();
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         fd.h(0);
         if (null != ic.field_d) {
           L0: {
             hm.a(-120, ic.field_d);
-            gs.d(98);
-            vp.c(-107);
-            ba.b((byte) 44);
-            if (cr.b(0)) {
+            int discarded$12 = 98;
+            gs.d();
+            int discarded$13 = -107;
+            vp.c();
+            int discarded$14 = 44;
+            ba.b();
+            int discarded$15 = 0;
+            if (cr.b()) {
               or.field_d.b(1, (byte) -106);
-              c.a(0, false);
+              int discarded$16 = 0;
+              c.a(0);
               break L0;
             } else {
               break L0;
             }
           }
-          lr.b((byte) -116);
+          int discarded$17 = -116;
+          lr.b();
           return;
         } else {
           L1: {
-            gs.d(98);
-            vp.c(-107);
-            ba.b((byte) 44);
-            if (cr.b(0)) {
+            int discarded$18 = 98;
+            gs.d();
+            int discarded$19 = -107;
+            vp.c();
+            int discarded$20 = 44;
+            ba.b();
+            int discarded$21 = 0;
+            if (cr.b()) {
               or.field_d.b(1, (byte) -106);
-              c.a(0, false);
+              int discarded$22 = 0;
+              c.a(0);
               break L1;
             } else {
               break L1;
             }
           }
-          lr.b((byte) -116);
+          int discarded$23 = -116;
+          lr.b();
           return;
         }
     }

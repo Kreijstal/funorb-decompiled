@@ -18,7 +18,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
         }
     }
 
-    private final synchronized void e(byte param0) {
+    private final synchronized void e() {
         if (!(((hq) this).field_g != null)) {
             return;
         }
@@ -42,7 +42,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;
@@ -108,42 +108,35 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
         ((hq) this).field_f = new int[((hq) this).field_d * ((hq) this).field_e];
         ((hq) this).field_h = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
         ((hq) this).field_j = ((hq) this).field_k.createImage((java.awt.image.ImageProducer) this);
-        this.e((byte) 105);
-        boolean discarded$9 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
+        int discarded$0 = 105;
+        this.e();
+        boolean discarded$10 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
         if (param0 != 4904) {
             return;
         }
         try {
-            this.e((byte) 105);
-            boolean discarded$10 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
-            this.e((byte) 105);
-            boolean discarded$11 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
+            int discarded$11 = 105;
+            this.e();
+            boolean discarded$12 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
+            int discarded$13 = 105;
+            this.e();
+            boolean discarded$14 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "hq.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 59;
         field_i = null;
     }
 
     private final synchronized void a(int param0, int param1, byte param2, int param3, int param4) {
-        Object var7 = null;
         if (((hq) this).field_g == null) {
           return;
         } else {
-          L0: {
-            ((hq) this).field_g.setPixels(param1, param0, param3, param4, ((hq) this).field_h, ((hq) this).field_f, ((hq) this).field_e * param0 + param1, ((hq) this).field_e);
-            ((hq) this).field_g.imageComplete(2);
-            if (param2 == 31) {
-              break L0;
-            } else {
-              var7 = null;
-              ((hq) this).a(39, -33, -57, (java.awt.Canvas) null);
-              break L0;
-            }
-          }
+          ((hq) this).field_g.setPixels(param1, param0, param3, param4, ((hq) this).field_h, ((hq) this).field_f, ((hq) this).field_e * param0 + param1, ((hq) this).field_e);
+          ((hq) this).field_g.imageComplete(2);
           return;
         }
     }

@@ -60,7 +60,7 @@ final class wn extends l {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_j = null;
         field_n = null;
         field_i = null;
@@ -68,7 +68,7 @@ final class wn extends l {
         field_m = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ji.a((byte) -51, af.field_a, 6);
         ji.a((byte) -82, el.field_h, 8);
         if (!pg.a((byte) -126)) {

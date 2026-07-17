@@ -283,7 +283,7 @@ final class ol extends om {
             var3.field_j = param2.field_j;
             var3.field_c = param2.field_c;
             var3.field_g = param2.field_g;
-            var4 = 101 % ((param1 - 67) / 51);
+            var4 = 0;
             stackOut_0_0 = (wj) var3;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -318,7 +318,7 @@ final class ol extends om {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(120).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

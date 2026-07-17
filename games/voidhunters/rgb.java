@@ -113,7 +113,7 @@ final class rgb extends dmb implements ntb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
     }
 

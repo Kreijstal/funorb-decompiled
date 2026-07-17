@@ -84,9 +84,9 @@ final class bo extends rqa {
             bk.field_w.q(-77);
             param1.b(bk.field_w, -117);
             bk.field_w.r(32712);
-            int var2_int = 1 % ((param0 - 38) / 57);
+            int var2_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bo.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bo.B(" + 103 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

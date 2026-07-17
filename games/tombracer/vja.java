@@ -16,23 +16,15 @@ final class vja extends ib {
         if (param1 <= 0L) {
           return;
         } else {
-          if (param1 % 10L == 0L) {
+          if (param1 % 10L != 0L) {
+            fsa.a(9, param1);
+            field_b = null;
+            return;
+          } else {
             fsa.a(9, param1 + -1L);
             fsa.a(9, 1L);
-            if (param0 == 0) {
-              return;
-            } else {
-              field_b = null;
-              return;
-            }
-          } else {
-            fsa.a(param0 + 9, param1);
-            if (param0 == 0) {
-              return;
-            } else {
-              field_b = null;
-              return;
-            }
+            field_b = null;
+            return;
           }
         }
     }
@@ -47,7 +39,7 @@ final class vja extends ib {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -60,7 +52,7 @@ final class vja extends ib {
         }
     }
 
-    final static kia b(int param0) {
+    final static kia b() {
         return la.field_k;
     }
 

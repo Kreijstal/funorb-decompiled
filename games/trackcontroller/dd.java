@@ -20,11 +20,11 @@ class dd extends ic {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 
-    final static boolean c(byte param0) {
+    final static boolean c() {
         return ij.field_d.a(-119);
     }
 
-    final static nj d(byte param0) {
+    final static nj d() {
         if (!(hf.field_f != fd.field_h)) {
             throw new IllegalStateException();
         }
@@ -35,12 +35,7 @@ class dd extends ic {
         return h.field_c;
     }
 
-    public static void b(int param0) {
-        if (param0 != -3674) {
-            field_p = null;
-            field_p = null;
-            return;
-        }
+    public static void b() {
         field_p = null;
     }
 

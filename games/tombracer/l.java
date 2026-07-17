@@ -45,78 +45,70 @@ class l extends cg {
     private final int b(int param0, rta param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == -2421) {
-                break L1;
-              } else {
-                ((l) this).field_t = true;
-                break L1;
-              }
-            }
             var3_int = ((l) this).field_A[param1.field_k];
             if (var3_int >= 8192) {
-              stackOut_5_0 = 16384 - ((128 + -param1.field_h) * (-var3_int + 16384) + 32 >> 6);
-              stackIn_6_0 = stackOut_5_0;
+              stackOut_3_0 = 16384 - ((128 + -param1.field_h) * (-var3_int + 16384) + 32 >> 6);
+              stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
-              stackOut_3_0 = var3_int * param1.field_h + 32 >> 6;
-              stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              stackOut_1_0 = var3_int * param1.field_h + 32 >> 6;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("l.VA(").append(param0).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("l.VA(").append(-2421).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return stackIn_6_0;
+        return stackIn_4_0;
     }
 
     final synchronized boolean a(byte param0) {
@@ -945,9 +937,6 @@ class l extends cg {
     private final void a(int param0, boolean param1, int param2) {
         int var4 = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
-        if (!param1) {
-            this.b(-1, 47);
-        }
         if (~((l) this).field_k[param0] != ~param2) {
             ((l) this).field_k[param0] = param2;
             for (var4 = 0; var4 < 128; var4++) {
@@ -1086,55 +1075,47 @@ class l extends cg {
         var3 = (rta) (Object) ((l) this).field_v.field_l.f(-80);
         L0: while (true) {
           if (var3 == null) {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                this.a(-124, (byte) 75, -116, -85);
-                break L1;
-              }
-            }
             return;
           } else {
-            L2: {
-              L3: {
+            L1: {
+              L2: {
                 if (param1 < 0) {
-                  break L3;
+                  break L2;
                 } else {
                   if (param1 != var3.field_k) {
-                    break L2;
+                    break L1;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
               }
-              L4: {
+              L3: {
                 if (null == var3.field_x) {
-                  break L4;
+                  break L3;
                 } else {
-                  L5: {
+                  L4: {
                     var3.field_x.d(kta.field_d / 100);
                     if (!var3.field_x.m()) {
-                      break L5;
+                      break L4;
                     } else {
                       ((l) this).field_v.field_m.a((cg) (Object) var3.field_x);
-                      break L5;
+                      break L4;
                     }
                   }
                   var3.a(5806);
-                  break L4;
+                  break L3;
                 }
               }
-              L6: {
+              L5: {
                 if (var3.field_t < 0) {
                   ((l) this).field_I[var3.field_k][var3.field_m] = null;
-                  break L6;
+                  break L5;
                 } else {
-                  break L6;
+                  break L5;
                 }
               }
               var3.p(100);
-              break L2;
+              break L1;
             }
             var3 = (rta) (Object) ((l) this).field_v.field_l.e(118);
             continue L0;
@@ -1358,7 +1339,7 @@ class l extends cg {
     }
 
     private final void a(int param0, byte param1, int param2, int param3) {
-        int var5 = -31 % ((-47 - param1) / 56);
+        int var5 = 0;
     }
 
     final synchronized int a() {
@@ -1803,7 +1784,8 @@ class l extends cg {
                     if (var10 != null) {
                       break L5;
                     } else {
-                      var10 = rb.a(param2, var9, 15);
+                      int discarded$1 = 15;
+                      var10 = rb.a(param2, var9);
                       if (var10 == null) {
                         var6_int = 0;
                         break L4;
@@ -1925,10 +1907,6 @@ class l extends cg {
 
     private final void a(int param0, byte param1, int param2) {
         ((l) this).field_D[param0] = param2;
-        if (param1 <= 75) {
-            Object var5 = null;
-            int discarded$0 = this.b(-126, (rta) null);
-        }
     }
 
     private final void d(int param0) {
@@ -2075,9 +2053,6 @@ class l extends cg {
     }
 
     private final void c(int param0, int param1, int param2) {
-        if (param1 <= 101) {
-            ((l) this).field_u = null;
-        }
         ((l) this).field_O[param0] = param2;
         ((l) this).field_l[param0] = sea.c(-128, param2);
         this.a(param0, true, param2);
@@ -2119,7 +2094,7 @@ class l extends cg {
           if ((((l) this).field_M[param2] & 2) == 0) {
             break L0;
           } else {
-            var5 = (rta) (Object) ((l) this).field_v.field_l.b(param1 + 3);
+            var5 = (rta) (Object) ((l) this).field_v.field_l.b(3);
             L1: while (true) {
               if (var5 == null) {
                 break L0;
@@ -2168,11 +2143,11 @@ class l extends cg {
               var7.field_q = (param0 << 8) + -(32767 & var10.field_g[param0]);
               var7.field_t = -1;
               var7.field_i = 0;
-              var7.field_w = param1;
+              var7.field_w = 0;
               var7.field_A = 0;
               var7.field_f = 0;
               if (0 == ((l) this).field_q[param2]) {
-                var7.field_x = qia.a(var6, this.a(param1 + -71, var7), this.a(var7, 113), this.b(-2421, var7));
+                var7.field_x = qia.a(var6, this.a(-71, var7), this.a(var7, 113), this.b(-2421, var7));
                 break L3;
               } else {
                 L4: {
@@ -2253,9 +2228,6 @@ class l extends cg {
 
     private final synchronized void a(int param0, boolean param1) {
         ((l) this).field_w.a();
-        if (param0 != -191040664) {
-            return;
-        }
         ((l) this).field_x = null;
         this.a(param1, -124);
     }

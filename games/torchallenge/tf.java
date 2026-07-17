@@ -30,7 +30,7 @@ final class tf {
     private byte[] field_q;
     static eg field_x;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_u = null;
         field_j = null;
         field_w = null;
@@ -183,7 +183,7 @@ final class tf {
                     }
                   }
                   L11: {
-                    var10 = 36 % ((param0 - -33) / 36);
+                    var10 = 0;
                     ((tf) this).field_r = var9 - -1;
                     ((tf) this).field_A = new int[((tf) this).field_r][];
                     if (var7 != 0) {
@@ -439,7 +439,7 @@ final class tf {
           L36: {
             var3 = decompiledCaughtException;
             stackOut_99_0 = (RuntimeException) var3;
-            stackOut_99_1 = new StringBuilder().append("tf.A(").append(param0).append(44);
+            stackOut_99_1 = new StringBuilder().append("tf.A(").append(-123).append(44);
             stackIn_101_0 = stackOut_99_0;
             stackIn_101_1 = stackOut_99_1;
             stackIn_100_0 = stackOut_99_0;
@@ -469,7 +469,8 @@ final class tf {
     tf(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            ((tf) this).field_k = k.a(param0, param0.length, 0);
+            int discarded$0 = 0;
+            ((tf) this).field_k = k.a(param0, param0.length);
             if (((tf) this).field_k != param1) {
                 throw new RuntimeException();
             }

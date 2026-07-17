@@ -6,57 +6,15 @@ final class mk {
     static int[] field_c;
     static kn field_b;
 
-    final static boolean a(byte param0) {
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0 == 38) {
-          if (10 <= op.field_i) {
-            if (kb.field_h) {
-              return false;
-            } else {
-              L0: {
-                if (oo.a(16158)) {
-                  stackOut_15_0 = 0;
-                  stackIn_16_0 = stackOut_15_0;
-                  break L0;
-                } else {
-                  stackOut_14_0 = 1;
-                  stackIn_16_0 = stackOut_14_0;
-                  break L0;
-                }
-              }
-              return stackIn_16_0 != 0;
-            }
-          } else {
+    final static boolean a() {
+        if (10 > op.field_i) {
             return false;
-          }
-        } else {
-          mk.a(true);
-          if (10 <= op.field_i) {
-            if (kb.field_h) {
-              return false;
-            } else {
-              L1: {
-                if (oo.a(16158)) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
-            return false;
-          }
         }
+        if (kb.field_h) {
+            return false;
+        }
+        int discarded$4 = 16158;
+        return !oo.a() ? true : false;
     }
 
     final static void a(boolean param0) {

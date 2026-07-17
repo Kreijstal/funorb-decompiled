@@ -16,7 +16,7 @@ final class je {
         int var5 = 0;
         qm[] var6 = null;
         var5 = client.field_A ? 1 : 0;
-        var3 = -128 / ((param0 - -53) / 58);
+        var3 = 128;
         var6 = vj.e(-23521);
         var2 = var6;
         var4 = 0;
@@ -357,7 +357,7 @@ final class je {
         return stackIn_39_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_b = null;
     }

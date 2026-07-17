@@ -7,7 +7,7 @@ final class tma extends ana {
     static ws field_w;
     static int field_v;
 
-    private final void b(boolean param0) {
+    private final void b() {
     }
 
     tma(gj param0, l param1) {
@@ -132,7 +132,7 @@ final class tma extends ana {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_w = null;
         field_x = null;
     }
@@ -140,9 +140,9 @@ final class tma extends ana {
     final boolean c(byte param0) {
         int var2 = 0;
         if (!((tma) this).field_y.field_p) {
-          int fieldTemp$2 = ((tma) this).field_l - 1;
+          int fieldTemp$4 = ((tma) this).field_l - 1;
           ((tma) this).field_l = ((tma) this).field_l - 1;
-          if (0 <= fieldTemp$2) {
+          if (0 <= fieldTemp$4) {
             if (((tma) this).field_l != 25) {
               return false;
             } else {
@@ -152,7 +152,8 @@ final class tma extends ana {
             }
           } else {
             var2 = 97 / ((param0 - 71) / 47);
-            this.b(false);
+            int discarded$5 = 0;
+            this.b();
             return true;
           }
         } else {
@@ -160,7 +161,7 @@ final class tma extends ana {
         }
     }
 
-    final static void a(int[][] param0, int param1) {
+    final static void a(int[][] param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -215,7 +216,7 @@ final class tma extends ana {
         }
     }
 
-    final static cj a(lu param0, byte param1) {
+    final static cj a(lu param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         cj stackIn_9_0 = null;
@@ -255,12 +256,14 @@ final class tma extends ana {
               return stackIn_9_0;
             } else {
               if (var2_int == 1) {
-                stackOut_13_0 = ig.a(param0, 104);
+                int discarded$2 = 104;
+                stackOut_13_0 = ig.a(param0);
                 stackIn_14_0 = stackOut_13_0;
                 return stackIn_14_0;
               } else {
                 if (var2_int == 4) {
-                  stackOut_18_0 = ba.a(param0, (byte) 119);
+                  int discarded$3 = 119;
+                  stackOut_18_0 = ba.a(param0);
                   stackIn_19_0 = stackOut_18_0;
                   return stackIn_19_0;
                 } else {

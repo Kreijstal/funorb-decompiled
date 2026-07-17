@@ -7,108 +7,27 @@ final class am {
     static String field_b;
     static boolean field_c;
 
-    final static kc a(int param0, boolean param1, int param2, int param3, int param4) {
-        Object var5 = null;
-        kc var5_ref = null;
+    final static kc a(int param0, boolean param1, int param2, int param3) {
+        kc var5 = null;
         int var6 = 0;
-        kc var7 = null;
-        kc var8 = null;
-        vj stackIn_7_0 = null;
-        vj stackIn_8_0 = null;
-        vj stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        vj stackIn_17_0 = null;
-        vj stackIn_18_0 = null;
-        vj stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        vj stackOut_16_0 = null;
-        vj stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        vj stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        vj stackOut_6_0 = null;
-        vj stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        vj stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        var5 = null;
         var6 = client.field_A ? 1 : 0;
-        if (!param1) {
-          var5_ref = (kc) (Object) dg.field_e.c((byte) 49);
-          L0: while (true) {
-            if (var5_ref != null) {
-              if (param3 != var5_ref.field_n) {
-                L1: {
-                  stackOut_16_0 = dg.field_e;
-                  stackIn_18_0 = stackOut_16_0;
-                  stackIn_17_0 = stackOut_16_0;
-                  if (param1) {
-                    stackOut_18_0 = (vj) (Object) stackIn_18_0;
-                    stackOut_18_1 = 0;
-                    stackIn_19_0 = stackOut_18_0;
-                    stackIn_19_1 = stackOut_18_1;
-                    break L1;
-                  } else {
-                    stackOut_17_0 = (vj) (Object) stackIn_17_0;
-                    stackOut_17_1 = 1;
-                    stackIn_19_0 = stackOut_17_0;
-                    stackIn_19_1 = stackOut_17_1;
-                    break L1;
-                  }
-                }
-                var5_ref = (kc) (Object) ((vj) (Object) stackIn_19_0).d(stackIn_19_1 != 0);
-                continue L0;
-              } else {
-                return var5_ref;
-              }
+        var5 = (kc) (Object) dg.field_e.c((byte) 49);
+        L0: while (true) {
+          if (var5 != null) {
+            if (param3 != var5.field_n) {
+              var5 = (kc) (Object) dg.field_e.d(true);
+              continue L0;
             } else {
-              var8 = new kc();
-              var8.field_n = param3;
-              var8.field_o = param4;
-              var8.field_v = param2;
-              dg.field_e.a((bh) (Object) var8, 2777);
-              wb.a(var8, param0, 60);
-              return var8;
+              return var5;
             }
-          }
-        } else {
-          kc discarded$1 = am.a(9, false, 66, -99, 40);
-          var5_ref = (kc) (Object) dg.field_e.c((byte) 49);
-          L2: while (true) {
-            if (var5_ref != null) {
-              if (param3 != var5_ref.field_n) {
-                L3: {
-                  stackOut_6_0 = dg.field_e;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_7_0 = stackOut_6_0;
-                  if (param1) {
-                    stackOut_8_0 = (vj) (Object) stackIn_8_0;
-                    stackOut_8_1 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    stackIn_9_1 = stackOut_8_1;
-                    break L3;
-                  } else {
-                    stackOut_7_0 = (vj) (Object) stackIn_7_0;
-                    stackOut_7_1 = 1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
-                    break L3;
-                  }
-                }
-                var5_ref = (kc) (Object) ((vj) (Object) stackIn_9_0).d(stackIn_9_1 != 0);
-                continue L2;
-              } else {
-                return var5_ref;
-              }
-            } else {
-              var7 = new kc();
-              var7.field_n = param3;
-              var7.field_o = param4;
-              var7.field_v = param2;
-              dg.field_e.a((bh) (Object) var7, 2777);
-              wb.a(var7, param0, 60);
-              return var7;
-            }
+          } else {
+            var5 = new kc();
+            var5.field_n = param3;
+            var5.field_o = 10;
+            var5.field_v = 1;
+            dg.field_e.a((bh) (Object) var5, 2777);
+            wb.a(var5, 3, 60);
+            return var5;
           }
         }
     }
@@ -122,7 +41,7 @@ final class am {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;

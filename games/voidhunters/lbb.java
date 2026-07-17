@@ -51,7 +51,7 @@ final class lbb implements ntb {
           L0: {
             L1: {
               var5 = (lbb) (Object) param0;
-              boolean discarded$3 = tja.a((ntb[]) (Object) var5.field_g, 1, (ntb[]) (Object) var5.field_g, false, 5547);
+              boolean discarded$4 = tja.a((ntb[]) (Object) var5.field_g, 1, (ntb[]) (Object) var5.field_g, false, 5547);
               if (null == var5.field_i) {
                 break L1;
               } else {
@@ -122,7 +122,7 @@ final class lbb implements ntb {
               }
             }
             if (param1 < -19) {
-              qdb discarded$4 = var5.field_i;
+              qdb discarded$5 = var5.field_i;
               L8: {
                 if (var5.field_i == null) {
                   break L8;
@@ -137,7 +137,8 @@ final class lbb implements ntb {
                 }
               }
               L9: {
-                if (!ikb.a(var5.field_j, var5.field_j, false)) {
+                int discarded$6 = 0;
+                if (!ikb.a(var5.field_j, var5.field_j)) {
                   break L9;
                 } else {
                   System.out.println("int[] teamscores has changed. ");
@@ -145,7 +146,7 @@ final class lbb implements ntb {
                   break L9;
                 }
               }
-              qqb discarded$5 = var5.field_f;
+              qqb discarded$7 = var5.field_f;
               L10: {
                 if (null == var5.field_f) {
                   break L10;
@@ -237,8 +238,9 @@ final class lbb implements ntb {
             L1: {
               var8 = new bea();
               var9 = var8;
-              var9.field_d = this.a((byte) 120);
-              if (!qab.a(param0 + 92, ((lbb) this).d(6472))) {
+              int discarded$2 = 120;
+              var9.field_d = this.a();
+              if (!qab.a(92, ((lbb) this).d(6472))) {
                 break L1;
               } else {
                 var10 = new Random((long)var9.field_d);
@@ -253,7 +255,7 @@ final class lbb implements ntb {
               if (vpa.a((byte) -125)) {
                 var11 = ih.field_f[param1.field_e.d(6472)];
                 qa.a(202, "missions_started_" + var11, 1);
-                qa.a(param0 + 202, "missions_started", 1);
+                qa.a(202, "missions_started", 1);
                 var5_int = 0;
                 L3: while (true) {
                   if (var5_int >= var9.field_c.length) {
@@ -262,7 +264,7 @@ final class lbb implements ntb {
                     L4: {
                       var6 = var8.field_c[var5_int];
                       if (0 < var6) {
-                        qa.a(param0 + 202, "votes_for_" + ih.field_f[var5_int], var6);
+                        qa.a(202, "votes_for_" + ih.field_f[var5_int], var6);
                         break L4;
                       } else {
                         break L4;
@@ -276,11 +278,12 @@ final class lbb implements ntb {
                 break L2;
               }
             }
-            this.b(-1);
+            int discarded$3 = -1;
+            this.b();
             ((lbb) this).c(5, -7, 0);
             ((lbb) this).field_b = -1;
             ((lbb) this).field_e = 0;
-            var4 = param0;
+            var4 = 0;
             L5: while (true) {
               if (var4 >= param1.field_c.length) {
                 break L0;
@@ -299,7 +302,7 @@ final class lbb implements ntb {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3;
-            stackOut_15_1 = new StringBuilder().append("lbb.NA(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("lbb.NA(").append(0).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -371,94 +374,86 @@ final class lbb implements ntb {
         RuntimeException var3 = null;
         tfa var4 = null;
         int var5 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        int stackOut_10_0 = 0;
+        int stackOut_7_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
         String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
-            if (!param0) {
-              var3_int = 0;
-              L1: while (true) {
-                if (var3_int >= param1.field_c.length) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
-                  break L0;
-                } else {
-                  L2: {
-                    var4 = param1.a(var3_int, (byte) 59);
-                    if (!var4.field_a) {
+            var3_int = 0;
+            L1: while (true) {
+              if (var3_int >= param1.field_c.length) {
+                stackOut_10_0 = 0;
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
+              } else {
+                L2: {
+                  var4 = param1.a(var3_int, (byte) 59);
+                  if (!var4.field_a) {
+                    break L2;
+                  } else {
+                    if (54 != var4.field_b) {
                       break L2;
                     } else {
-                      if (54 != var4.field_b) {
-                        break L2;
-                      } else {
-                        stackOut_8_0 = 1;
-                        stackIn_9_0 = stackOut_8_0;
-                        return stackIn_9_0 != 0;
-                      }
+                      stackOut_7_0 = 1;
+                      stackIn_8_0 = stackOut_7_0;
+                      return stackIn_8_0 != 0;
                     }
                   }
-                  var3_int++;
-                  continue L1;
                 }
+                var3_int++;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("lbb.E(").append(param0).append(44);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("lbb.E(").append(0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L3;
-            } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        return stackIn_12_0 != 0;
+        return stackIn_11_0 != 0;
     }
 
     final void a(Random param0, int param1, rsb param2) {
@@ -562,7 +557,9 @@ final class lbb implements ntb {
                           if (var14 < 0) {
                             L6: {
                               if (var11 == var10) {
-                                var15 = ccb.a(param0, var20, (byte) -21, false);
+                                int discarded$2 = 0;
+                                int discarded$3 = -21;
+                                var15 = ccb.a(param0, var4_array);
                                 var13.field_h = var15;
                                 var4_array[var15] = var4_array[var15] + 1;
                                 break L6;
@@ -1033,7 +1030,7 @@ final class lbb implements ntb {
                         if (dn.a((tv[]) (Object) var5.field_g, false, 1, (tv[]) (Object) var5.field_g, -22)) {
                           break L2;
                         } else {
-                          qdb discarded$2 = var5.field_i;
+                          qdb discarded$3 = var5.field_i;
                           L3: {
                             if (var5.field_i == null) {
                               break L3;
@@ -1045,10 +1042,11 @@ final class lbb implements ntb {
                               }
                             }
                           }
-                          if (wpb.a(var5.field_j, var5.field_j, (byte) 28)) {
+                          int discarded$4 = 28;
+                          if (wpb.a(var5.field_j, var5.field_j)) {
                             break L2;
                           } else {
-                            qqb discarded$3 = var5.field_f;
+                            qqb discarded$5 = var5.field_f;
                             L4: {
                               if (var5.field_f == null) {
                                 break L4;
@@ -1154,7 +1152,7 @@ final class lbb implements ntb {
           L0: {
             var4_int = -2147483648;
             var5 = -1;
-            var7 = 28 / ((-37 - param1) / 47);
+            var7 = 28;
             var6 = 0;
             L1: while (true) {
               if (param0.field_c.length <= var6) {
@@ -1209,7 +1207,7 @@ final class lbb implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + -128 + 44 + param2 + 41);
         }
     }
 
@@ -1248,7 +1246,6 @@ final class lbb implements ntb {
         tfa var5 = null;
         int var6 = 0;
         int var7 = 0;
-        Object stackIn_11_0 = null;
         int[] stackIn_13_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -1259,7 +1256,6 @@ final class lbb implements ntb {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         int[] stackOut_12_0 = null;
-        Object stackOut_10_0 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
         RuntimeException stackOut_16_0 = null;
@@ -1275,15 +1271,9 @@ final class lbb implements ntb {
             var4 = 0;
             L1: while (true) {
               if (param1.field_c.length <= var4) {
-                if (param0 == -63) {
-                  stackOut_12_0 = (int[]) var3;
-                  stackIn_13_0 = stackOut_12_0;
-                  break L0;
-                } else {
-                  stackOut_10_0 = null;
-                  stackIn_11_0 = stackOut_10_0;
-                  return (int[]) (Object) stackIn_11_0;
-                }
+                stackOut_12_0 = (int[]) var3;
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
               } else {
                 L2: {
                   var5 = param1.a(var4, (byte) 59);
@@ -1313,7 +1303,7 @@ final class lbb implements ntb {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("lbb.S(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("lbb.S(").append(-63).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -1393,7 +1383,8 @@ final class lbb implements ntb {
               }
             }
             L2: {
-              var5.field_g = (et[]) (Object) sqb.a((tv[]) (Object) var5.field_g, (tv[]) (Object) var5.field_g, 1, mja.field_p, false);
+              int discarded$3 = 0;
+              var5.field_g = (et[]) (Object) sqb.a((tv[]) (Object) var5.field_g, (tv[]) (Object) var5.field_g, 1, mja.field_p);
               if (var5.field_i == null) {
                 var5.field_i = null;
                 break L2;
@@ -1463,12 +1454,14 @@ final class lbb implements ntb {
     }
 
     public static void a(boolean param0) {
-        boolean discarded$0 = lbb.a(111, -111, (byte) -58);
+        if (!param0) {
+            boolean discarded$0 = lbb.a(111, -111, (byte) -58);
+        }
         field_c = null;
         field_h = null;
     }
 
-    private final int a(byte param0) {
+    private final int a() {
         return ((lbb) this).field_i.field_d;
     }
 
@@ -1672,7 +1665,7 @@ final class lbb implements ntb {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         if (!(((lbb) this).field_i != null)) {
             return;
         }
@@ -1868,7 +1861,7 @@ final class lbb implements ntb {
               var9 = this.a((byte) -63, param1);
               var3 = var9;
               var4 = -var9[1] + var9[0];
-              var5 = param0;
+              var5 = -1;
               if (var4 > 1) {
                 var5 = 0;
                 break L1;
@@ -1905,7 +1898,7 @@ final class lbb implements ntb {
           L4: {
             var3_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3_ref;
-            stackOut_11_1 = new StringBuilder().append("lbb.N(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("lbb.N(").append(-1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -2299,11 +2292,13 @@ final class lbb implements ntb {
                               }
                               L12: {
                                 if (unb.field_o) {
-                                  var16 = pba.b(false).a(3, false);
+                                  int discarded$2 = 0;
+                                  var16 = pba.b().a(3, false);
                                   var16.a(true, param0, param2 ^ -112);
                                   break L12;
                                 } else {
-                                  var15 = bkb.a(0);
+                                  int discarded$3 = 0;
+                                  var15 = bkb.a();
                                   var15.a(true, param0, param2 ^ 104);
                                   break L12;
                                 }

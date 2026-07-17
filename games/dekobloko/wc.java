@@ -33,7 +33,7 @@ final class wc extends bh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_q = null;
         field_r = null;
     }
@@ -65,7 +65,7 @@ final class wc extends bh {
         String stackOut_15_2 = null;
         var5 = client.field_A ? 1 : 0;
         try {
-          var3 = rb.a(param0, (byte) 19, param1);
+          var3 = rb.a(false, (byte) 19, param1);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
@@ -92,7 +92,7 @@ final class wc extends bh {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("wc.A(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("wc.A(").append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

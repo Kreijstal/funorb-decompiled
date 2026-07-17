@@ -22,7 +22,7 @@ final class aj {
     static java.awt.Color field_p;
     static td field_q;
 
-    private final void a(int param0, String param1, int param2, byte param3) {
+    private final void a(int param0, String param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -200,10 +200,12 @@ final class aj {
         if (param0 != 1) {
             qk discarded$0 = aj.a(38, 2);
         }
-        return lf.a(true, false, 1, param1, (byte) -70, false);
+        int discarded$1 = 0;
+        int discarded$2 = -70;
+        return lf.a(true, false, 1, param1);
     }
 
-    private final void b(int param0, String param1, int param2, byte param3) {
+    private final void b(int param0, String param1, int param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -436,14 +438,11 @@ final class aj {
         }
     }
 
-    final static String a(byte param0) {
+    final static String a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = Main.field_T;
-        if (param0 != 92) {
-            return null;
-        }
         String var1 = "(" + ni.field_d + " " + hc.field_f + " " + sb.field_a + ") " + pd.field_l;
         if (al.field_a <= 0) {
         } else {
@@ -506,10 +505,12 @@ final class aj {
             }
             L2: {
               if (((aj) this).field_b) {
-                this.a(param3, param2, param0, (byte) 115);
+                int discarded$5 = 115;
+                this.a(param3, param2, param0);
                 break L2;
               } else {
-                this.b(param3, param2, param0, (byte) -115);
+                int discarded$6 = -115;
+                this.b(param3, param2, param0);
                 break L2;
               }
             }

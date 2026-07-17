@@ -71,7 +71,7 @@ final class si {
         String stackOut_12_2 = null;
         try {
           L0: {
-            if (param3.a(param1 ^ param1)) {
+            if (param3.a(0)) {
               stackOut_3_0 = param2 + " - " + param3.b((byte) 110) + "%";
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -111,7 +111,7 @@ final class si {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(2147483647).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -183,7 +183,8 @@ final class si {
     final si a(boolean param0, byte param1) {
         ((si) this).field_h = param0 ? true : false;
         if (param1 != 73) {
-            si.a(false);
+            int discarded$0 = 0;
+            si.a();
             return (si) this;
         }
         return (si) this;
@@ -608,7 +609,7 @@ final class si {
         return (si) this;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
         field_m = null;
         field_g = null;

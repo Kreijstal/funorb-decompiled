@@ -6,7 +6,7 @@ final class fk {
     static bd field_c;
     static String field_b;
 
-    final static void a(byte param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -64,7 +64,7 @@ final class fk {
         throw new IllegalStateException();
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
         int var1 = 10;

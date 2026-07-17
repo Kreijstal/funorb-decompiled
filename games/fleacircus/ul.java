@@ -36,10 +36,11 @@ final class ul extends gj implements nk, da {
         super.b(param0, param1, param2, param3);
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         L0: {
           L1: {
-            if (o.c((byte) 39)) {
+            int discarded$4 = 39;
+            if (o.c()) {
               break L1;
             } else {
               if (((ul) this).field_H.field_i.length() <= 0) {
@@ -159,7 +160,7 @@ final class ul extends gj implements nk, da {
           L0: {
             L1: {
               if (param1 == ((ul) this).field_H) {
-                boolean discarded$2 = ((ul) this).field_J.a((qa) this, -123);
+                boolean discarded$4 = ((ul) this).field_J.a((qa) this, -123);
                 break L1;
               } else {
                 break L1;
@@ -169,7 +170,8 @@ final class ul extends gj implements nk, da {
               if (((ul) this).field_J != param1) {
                 break L2;
               } else {
-                this.e((byte) -32);
+                int discarded$5 = -32;
+                this.e();
                 break L2;
               }
             }
@@ -216,37 +218,9 @@ final class ul extends gj implements nk, da {
     }
 
     final static void a(int param0, int param1) {
-        L0: {
-          nf.field_K = (param1 & 48) >> 4;
-          if (nf.field_K <= 2) {
-            break L0;
-          } else {
+        nf.field_K = (param1 & 48) >> 4;
+        if (nf.field_K > 2) {
             nf.field_K = 2;
-            break L0;
-          }
-        }
-        if (param0 != 18398) {
-          return;
-        } else {
-          L1: {
-            fk.field_C = (param1 & 13) >> 2;
-            oj.field_k = param1 & 3;
-            if (2 >= fk.field_C) {
-              break L1;
-            } else {
-              fk.field_C = 2;
-              break L1;
-            }
-          }
-          L2: {
-            if (oj.field_k <= 2) {
-              break L2;
-            } else {
-              oj.field_k = 2;
-              break L2;
-            }
-          }
-          return;
         }
     }
 
@@ -418,16 +392,19 @@ final class ul extends gj implements nk, da {
                           break L1;
                         }
                       } else {
-                        vi.c((byte) -124);
+                        int discarded$9 = -124;
+                        vi.c();
                         break L1;
                       }
                     }
                   } else {
-                    oh.d(false);
+                    int discarded$10 = 0;
+                    oh.d();
                     break L1;
                   }
                 } else {
-                  this.e((byte) -32);
+                  int discarded$11 = -32;
+                  this.e();
                   break L1;
                 }
               }

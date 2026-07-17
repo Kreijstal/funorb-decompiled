@@ -104,17 +104,13 @@ final class ek extends gi {
             if (de.field_q.field_b == 0) {
               return false;
             } else {
-              long dupTemp$1 = la.a(false);
-              ck.field_e = dupTemp$1;
-              el.field_rb = dupTemp$1;
+              long dupTemp$2 = la.a(false);
+              ck.field_e = dupTemp$2;
+              el.field_rb = dupTemp$2;
               if (de.field_q.field_b != 1) {
                 tl.field_O = sg.field_b;
-                if (!param0) {
-                  return false;
-                } else {
-                  de.field_q = null;
-                  return true;
-                }
+                de.field_q = null;
+                return true;
               } else {
                 try {
                   L1: {
@@ -146,19 +142,11 @@ final class ek extends gi {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   tl.field_O = sg.field_b;
-                  if (!param0) {
-                    return false;
-                  } else {
-                    de.field_q = null;
-                    return true;
-                  }
-                }
-                if (!param0) {
-                  return false;
-                } else {
                   de.field_q = null;
                   return true;
                 }
+                de.field_q = null;
+                return true;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -237,14 +225,20 @@ final class ek extends gi {
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         if (null != el.field_sb) {
             el.field_sb.h();
+            if (!(k.field_J == null)) {
+                k.field_J.h();
+            }
             return;
+        }
+        if (!(k.field_J == null)) {
+            k.field_J.h();
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_l = null;
         field_t = null;
         field_q = null;

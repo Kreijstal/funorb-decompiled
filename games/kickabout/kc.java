@@ -86,7 +86,7 @@ final class kc {
         ((kc) this).field_e = null;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_g = null;
     }
@@ -148,43 +148,35 @@ final class kc {
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= ug.field_c.length) {
-                L2: {
-                  if (param0) {
-                    break L2;
-                  } else {
-                    field_g = null;
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
                 var3 = ug.field_c[var2_int].b();
                 var4 = 0;
                 var5 = 0;
                 var6 = -1 + var3.field_y.length;
-                L3: while (true) {
+                L2: while (true) {
                   if (var6 < 0) {
                     sp.field_Hb[var2_int] = var3;
                     var2_int++;
                     continue L1;
                   } else {
-                    L4: {
+                    L3: {
                       if (var3.field_y[var6] < -1) {
                         var3.field_y[var6] = var4;
-                        break L4;
+                        break L3;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
-                    L5: {
+                    L4: {
                       if (-1 != var6 % var3.field_o) {
-                        break L5;
+                        break L4;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                     var6--;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -192,10 +184,10 @@ final class kc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("kc.G(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("kc.G(").append(1).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -207,7 +199,7 @@ final class kc {
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
-              break L6;
+              break L5;
             } else {
               stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
               stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
@@ -215,7 +207,7 @@ final class kc {
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
               stackIn_18_2 = stackOut_16_2;
-              break L6;
+              break L5;
             }
           }
           throw nb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);

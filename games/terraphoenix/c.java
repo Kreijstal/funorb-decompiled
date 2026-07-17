@@ -219,7 +219,7 @@ final class c implements Iterator {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

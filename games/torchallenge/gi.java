@@ -20,7 +20,7 @@ final class gi {
         return (java.applet.Applet) (Object) mj.field_c;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
         field_a = null;

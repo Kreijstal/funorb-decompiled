@@ -1,0 +1,6761 @@
+{
+  "formatVersion": 1,
+  "signatures": {
+    "aa.a(B)V": {
+      "newSignature": "aa.a()V",
+      "owner": "aa",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "aa.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -14,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ab.a(B)V": {
+      "newSignature": "ab.a()V",
+      "owner": "ab",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ab.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 98,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ac.a(I)V": {
+      "newSignature": "ac.a()V",
+      "owner": "ac",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ac.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 105,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ac.a(Ljava/lang/String;I)Z": {
+      "newSignature": "ac.a(Ljava/lang/String;)Z",
+      "owner": "ac",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;I)Z",
+      "newDescriptor": "(Ljava/lang/String;)Z",
+      "callSiteSignatures": [
+        "ac.a(Ljava/lang/String;I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -23797,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "af.a(Ljava/applet/Applet;B)V": {
+      "newSignature": "af.a(Ljava/applet/Applet;)V",
+      "owner": "af",
+      "name": "a",
+      "oldDescriptor": "(Ljava/applet/Applet;B)V",
+      "newDescriptor": "(Ljava/applet/Applet;)V",
+      "callSiteSignatures": [
+        "af.a(Ljava/applet/Applet;B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "B",
+          "value": -9,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "af.d(B)V": {
+      "newSignature": "af.d()V",
+      "owner": "af",
+      "name": "d",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "af.d(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -127,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "ag.a(I)V": {
+      "newSignature": "ag.a()V",
+      "owner": "ag",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ag.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 10,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ai.a(B)V": {
+      "newSignature": "ai.a()V",
+      "owner": "ai",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ai.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 116,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "aj.a(B)Ljava/lang/String;": {
+      "newSignature": "aj.a()Ljava/lang/String;",
+      "owner": "aj",
+      "name": "a",
+      "oldDescriptor": "(B)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "aj.a(B)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 107,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ak.a(I)V": {
+      "newSignature": "ak.a()V",
+      "owner": "ak",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ak.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 119,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ak.a(Lkk;I)V": {
+      "newSignature": "ak.a(Lkk;)V",
+      "owner": "ak",
+      "name": "a",
+      "oldDescriptor": "(Lkk;I)V",
+      "newDescriptor": "(Lkk;)V",
+      "callSiteSignatures": [
+        "ak.a(Lkk;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 4,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ak.a(Lkk;Lkk;Lkk;I)V": {
+      "newSignature": "ak.a(Lkk;Lkk;Lkk;)V",
+      "owner": "ak",
+      "name": "a",
+      "oldDescriptor": "(Lkk;Lkk;Lkk;I)V",
+      "newDescriptor": "(Lkk;Lkk;Lkk;)V",
+      "callSiteSignatures": [
+        "ak.a(Lkk;Lkk;Lkk;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 127,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "b.a([BI[BII)I": {
+      "newSignature": "b.a([BI[BI)I",
+      "owner": "b",
+      "name": "a",
+      "oldDescriptor": "([BI[BII)I",
+      "newDescriptor": "([BI[BI)I",
+      "callSiteSignatures": [
+        "b.a([BI[BII)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 4,
+          "descriptor": "I",
+          "value": 9,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ba.a(B)V": {
+      "newSignature": "ba.a()V",
+      "owner": "ba",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ba.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 113,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ba.a(IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)I": {
+      "newSignature": "ba.a(IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I",
+      "owner": "ba",
+      "name": "a",
+      "oldDescriptor": "(IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)I",
+      "newDescriptor": "(IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I",
+      "callSiteSignatures": [
+        "ba.a(IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 6,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "ba.a(Ljava/lang/String;Z)Z": {
+      "newSignature": "ba.a(Ljava/lang/String;)Z",
+      "owner": "ba",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;Z)Z",
+      "newDescriptor": "(Ljava/lang/String;)Z",
+      "callSiteSignatures": [
+        "ba.a(Ljava/lang/String;Z)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "bb.a(Z)V": {
+      "newSignature": "bb.a()V",
+      "owner": "bb",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "bb.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "bc.c(I)V": {
+      "newSignature": "bc.c()V",
+      "owner": "bc",
+      "name": "c",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "bc.c(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 32,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "be.c(B)Ljava/awt/Container;": {
+      "newSignature": "be.c()Ljava/awt/Container;",
+      "owner": "be",
+      "name": "c",
+      "oldDescriptor": "(B)Ljava/awt/Container;",
+      "newDescriptor": "()Ljava/awt/Container;",
+      "callSiteSignatures": [
+        "be.c(B)Ljava/awt/Container;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -128,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "bf.a(B)V": {
+      "newSignature": "bf.a()V",
+      "owner": "bf",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "bf.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -125,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "bf.b(I)V": {
+      "newSignature": "bf.b()V",
+      "owner": "bf",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "bf.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -2,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "bg.a(I)V": {
+      "newSignature": "bg.a()V",
+      "owner": "bg",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "bg.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 61,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "bg.a(Lbe;I)Z": {
+      "newSignature": "bg.a(Lbe;)Z",
+      "owner": "bg",
+      "name": "a",
+      "oldDescriptor": "(Lbe;I)Z",
+      "newDescriptor": "(Lbe;)Z",
+      "callSiteSignatures": [
+        "bg.a(Lbe;I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -2,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "bg.a(Ljava/applet/Applet;I)Ljava/lang/String;": {
+      "newSignature": "bg.a(Ljava/applet/Applet;)Ljava/lang/String;",
+      "owner": "bg",
+      "name": "a",
+      "oldDescriptor": "(Ljava/applet/Applet;I)Ljava/lang/String;",
+      "newDescriptor": "(Ljava/applet/Applet;)Ljava/lang/String;",
+      "callSiteSignatures": [
+        "bg.a(Ljava/applet/Applet;I)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -22004,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "bj.a(Z)V": {
+      "newSignature": "bj.a()V",
+      "owner": "bj",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "bj.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "bk.j(I)V": {
+      "newSignature": "bk.j()V",
+      "owner": "bk",
+      "name": "j",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "bk.j(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "bk.k(I)V": {
+      "newSignature": "bk.k()V",
+      "owner": "bk",
+      "name": "k",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "bk.k(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -122,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "bk.m(I)V": {
+      "newSignature": "bk.m()V",
+      "owner": "bk",
+      "name": "m",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "bk.m(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -62,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "bl.a(B)I": {
+      "newSignature": "bl.a()I",
+      "owner": "bl",
+      "name": "a",
+      "oldDescriptor": "(B)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "bl.a(B)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -124,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "c.a(B)V": {
+      "newSignature": "c.a()V",
+      "owner": "c",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "c.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 107,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "c.a(Ljava/lang/String;I)Lj;": {
+      "newSignature": "c.a(Ljava/lang/String;)Lj;",
+      "owner": "c",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;I)Lj;",
+      "newDescriptor": "(Ljava/lang/String;)Lj;",
+      "callSiteSignatures": [
+        "c.a(Ljava/lang/String;I)Lj;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 30692,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "ca.a(I)V": {
+      "newSignature": "ca.a()V",
+      "owner": "ca",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ca.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 118,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ca.a(Ljava/lang/String;I)Lj;": {
+      "newSignature": "ca.a(Ljava/lang/String;)Lj;",
+      "owner": "ca",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;I)Lj;",
+      "newDescriptor": "(Ljava/lang/String;)Lj;",
+      "callSiteSignatures": [
+        "ca.a(Ljava/lang/String;I)Lj;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 647,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cb.a(B)V": {
+      "newSignature": "cb.a()V",
+      "owner": "cb",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "cb.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 120,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cb.b(B)V": {
+      "newSignature": "cb.b()V",
+      "owner": "cb",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "cb.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -107,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cd.c(I)V": {
+      "newSignature": "cd.c()V",
+      "owner": "cd",
+      "name": "c",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "cd.c(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 11352,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cf.a(B)Z": {
+      "newSignature": "cf.a()Z",
+      "owner": "cf",
+      "name": "a",
+      "oldDescriptor": "(B)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "cf.a(B)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 41,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cf.a(I[BII)[B": {
+      "newSignature": "cf.a(I[BI)[B",
+      "owner": "cf",
+      "name": "a",
+      "oldDescriptor": "(I[BII)[B",
+      "newDescriptor": "(I[BI)[B",
+      "callSiteSignatures": [
+        "cf.a(I[BII)[B"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": -6196,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cf.d(I)V": {
+      "newSignature": "cf.d()V",
+      "owner": "cf",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "cf.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 29211,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cg.a(B)V": {
+      "newSignature": "cg.a()V",
+      "owner": "cg",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "cg.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 118,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ch.f(B)V": {
+      "newSignature": "ch.f()V",
+      "owner": "ch",
+      "name": "f",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ch.f(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -86,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ch.g(B)V": {
+      "newSignature": "ch.g()V",
+      "owner": "ch",
+      "name": "g",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ch.g(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -111,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ch.h(B)V": {
+      "newSignature": "ch.h()V",
+      "owner": "ch",
+      "name": "h",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ch.h(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 100,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ch.i(I)V": {
+      "newSignature": "ch.i()V",
+      "owner": "ch",
+      "name": "i",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ch.i(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 3,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ch.j(I)I": {
+      "newSignature": "ch.j()I",
+      "owner": "ch",
+      "name": "j",
+      "oldDescriptor": "(I)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "ch.j(I)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -80,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ch.k(I)V": {
+      "newSignature": "ch.k()V",
+      "owner": "ch",
+      "name": "k",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ch.k(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -6,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ch.p(I)V": {
+      "newSignature": "ch.p()V",
+      "owner": "ch",
+      "name": "p",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ch.p(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 113,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ci.a(IIIZZ)V": {
+      "newSignature": "ci.a(III)V",
+      "owner": "ci",
+      "name": "a",
+      "oldDescriptor": "(IIIZZ)V",
+      "newDescriptor": "(III)V",
+      "callSiteSignatures": [
+        "ci.a(IIIZZ)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 4,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cj.a(IZ)V": {
+      "newSignature": "cj.a()V",
+      "owner": "cj",
+      "name": "a",
+      "oldDescriptor": "(IZ)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "cj.a(IZ)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 6,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 1,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cj.d(I)V": {
+      "newSignature": "cj.d()V",
+      "owner": "cj",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "cj.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 97,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "cl.a(II)V": {
+      "newSignature": "cl.a()V",
+      "owner": "cl",
+      "name": "a",
+      "oldDescriptor": "(II)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "cl.a(II)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 7,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 7,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "cl.a(Lkk;B)V": {
+      "newSignature": "cl.a(Lkk;)V",
+      "owner": "cl",
+      "name": "a",
+      "oldDescriptor": "(Lkk;B)V",
+      "newDescriptor": "(Lkk;)V",
+      "callSiteSignatures": [
+        "cl.a(Lkk;B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "B",
+          "value": -123,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "da.a(ZI)V": {
+      "newSignature": "da.a(Z)V",
+      "owner": "da",
+      "name": "a",
+      "oldDescriptor": "(ZI)V",
+      "newDescriptor": "(Z)V",
+      "callSiteSignatures": [
+        "da.a(ZI)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "da.d(B)V": {
+      "newSignature": "da.d()V",
+      "owner": "da",
+      "name": "d",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "da.d(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -42,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "da.e(I)V": {
+      "newSignature": "da.e()V",
+      "owner": "da",
+      "name": "e",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "da.e(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 80,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "db.a(IILqj;IIB)V": {
+      "newSignature": "db.a(IILqj;II)V",
+      "owner": "db",
+      "name": "a",
+      "oldDescriptor": "(IILqj;IIB)V",
+      "newDescriptor": "(IILqj;II)V",
+      "callSiteSignatures": [
+        "db.a(IILqj;IIB)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 5,
+          "descriptor": "B",
+          "value": -128,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "db.b(Z)V": {
+      "newSignature": "db.b()V",
+      "owner": "db",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "db.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "dd.b(I)V": {
+      "newSignature": "dd.b()V",
+      "owner": "dd",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "dd.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -3674,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "dd.c(B)Z": {
+      "newSignature": "dd.c()Z",
+      "owner": "dd",
+      "name": "c",
+      "oldDescriptor": "(B)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "dd.c(B)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 55,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "dd.d(B)Lnj;": {
+      "newSignature": "dd.d()Lnj;",
+      "owner": "dd",
+      "name": "d",
+      "oldDescriptor": "(B)Lnj;",
+      "newDescriptor": "()Lnj;",
+      "callSiteSignatures": [
+        "dd.d(B)Lnj;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 91,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "dg.a(B)V": {
+      "newSignature": "dg.a()V",
+      "owner": "dg",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "dg.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 16,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "dg.b(Z)Lqj;": {
+      "newSignature": "dg.b()Lqj;",
+      "owner": "dg",
+      "name": "b",
+      "oldDescriptor": "(Z)Lqj;",
+      "newDescriptor": "()Lqj;",
+      "callSiteSignatures": [
+        "dg.b(Z)Lqj;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "dh.a(IIII)Lnk;": {
+      "newSignature": "dh.a()Lnk;",
+      "owner": "dh",
+      "name": "a",
+      "oldDescriptor": "(IIII)Lnk;",
+      "newDescriptor": "()Lnk;",
+      "callSiteSignatures": [
+        "dh.a(IIII)Lnk;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 5,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -1,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 1,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "dh.d(I)V": {
+      "newSignature": "dh.d()V",
+      "owner": "dh",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "dh.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -8,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "dh.e(I)[Lqj;": {
+      "newSignature": "dh.e()[Lqj;",
+      "owner": "dh",
+      "name": "e",
+      "oldDescriptor": "(I)[Lqj;",
+      "newDescriptor": "()[Lqj;",
+      "callSiteSignatures": [
+        "dh.e(I)[Lqj;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 2,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "dj.a(I)V": {
+      "newSignature": "dj.a()V",
+      "owner": "dj",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "dj.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -60,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "dk.a(I)V": {
+      "newSignature": "dk.a()V",
+      "owner": "dk",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "dk.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 9888,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "e.a(I)V": {
+      "newSignature": "e.a()V",
+      "owner": "e",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "e.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -1102,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ea.a(Z)V": {
+      "newSignature": "ea.a()V",
+      "owner": "ea",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ea.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ec.a(I)Lqj;": {
+      "newSignature": "ec.a()Lqj;",
+      "owner": "ec",
+      "name": "a",
+      "oldDescriptor": "(I)Lqj;",
+      "newDescriptor": "()Lqj;",
+      "callSiteSignatures": [
+        "ec.a(I)Lqj;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ed.a(B)V": {
+      "newSignature": "ed.a()V",
+      "owner": "ed",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ed.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -94,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ee.a(B)V": {
+      "newSignature": "ee.a()V",
+      "owner": "ee",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ee.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 73,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ef.a(I)V": {
+      "newSignature": "ef.a()V",
+      "owner": "ef",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ef.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 27887,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ef.a(Lvk;II)V": {
+      "newSignature": "ef.a(Lvk;)V",
+      "owner": "ef",
+      "name": "a",
+      "oldDescriptor": "(Lvk;II)V",
+      "newDescriptor": "(Lvk;)V",
+      "callSiteSignatures": [
+        "ef.a(Lvk;II)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 2,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 10,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "ei.a(B)Ljava/lang/String;": {
+      "newSignature": "ei.a()Ljava/lang/String;",
+      "owner": "ei",
+      "name": "a",
+      "oldDescriptor": "(B)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "ei.a(B)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 116,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ei.a(Lqj;I)V": {
+      "newSignature": "ei.a(Lqj;)V",
+      "owner": "ei",
+      "name": "a",
+      "oldDescriptor": "(Lqj;I)V",
+      "newDescriptor": "(Lqj;)V",
+      "callSiteSignatures": [
+        "ei.a(Lqj;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -1,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "ei.d(I)V": {
+      "newSignature": "ei.d()V",
+      "owner": "ei",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ei.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -18601,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ei.e(I)V": {
+      "newSignature": "ei.e()V",
+      "owner": "ei",
+      "name": "e",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ei.e(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 73,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ej.b(I)V": {
+      "newSignature": "ej.b()V",
+      "owner": "ej",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ej.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 17,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "el.c(Z)V": {
+      "newSignature": "el.c()V",
+      "owner": "el",
+      "name": "c",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "el.c(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "el.j(I)Ljava/lang/Boolean;": {
+      "newSignature": "el.j()Ljava/lang/Boolean;",
+      "owner": "el",
+      "name": "j",
+      "oldDescriptor": "(I)Ljava/lang/Boolean;",
+      "newDescriptor": "()Ljava/lang/Boolean;",
+      "callSiteSignatures": [
+        "el.j(I)Ljava/lang/Boolean;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 2,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "f.a(B)V": {
+      "newSignature": "f.a()V",
+      "owner": "f",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "f.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 113,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "fb.a(ZILjava/awt/Color;Ljava/lang/String;B)V": {
+      "newSignature": "fb.a(ZILjava/awt/Color;Ljava/lang/String;)V",
+      "owner": "fb",
+      "name": "a",
+      "oldDescriptor": "(ZILjava/awt/Color;Ljava/lang/String;B)V",
+      "newDescriptor": "(ZILjava/awt/Color;Ljava/lang/String;)V",
+      "callSiteSignatures": [
+        "fb.a(ZILjava/awt/Color;Ljava/lang/String;B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 4,
+          "descriptor": "B",
+          "value": -103,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "fc.a(ZZZI)Ljava/lang/String;": {
+      "newSignature": "fc.a(ZZZ)Ljava/lang/String;",
+      "owner": "fc",
+      "name": "a",
+      "oldDescriptor": "(ZZZI)Ljava/lang/String;",
+      "newDescriptor": "(ZZZ)Ljava/lang/String;",
+      "callSiteSignatures": [
+        "fc.a(ZZZI)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 12105912,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "fd.a(B)V": {
+      "newSignature": "fd.a()V",
+      "owner": "fd",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "fd.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 111,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "fe.a(Lbh;I)V": {
+      "newSignature": "fe.a(Lbh;)V",
+      "owner": "fe",
+      "name": "a",
+      "oldDescriptor": "(Lbh;I)V",
+      "newDescriptor": "(Lbh;)V",
+      "callSiteSignatures": [
+        "fe.a(Lbh;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 2,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "fe.j(I)V": {
+      "newSignature": "fe.j()V",
+      "owner": "fe",
+      "name": "j",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "fe.j(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -127,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "fh.a(I)Z": {
+      "newSignature": "fh.a()Z",
+      "owner": "fh",
+      "name": "a",
+      "oldDescriptor": "(I)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "fh.a(I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 520,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "fi.e(I)[Laa;": {
+      "newSignature": "fi.e()[Laa;",
+      "owner": "fi",
+      "name": "e",
+      "oldDescriptor": "(I)[Laa;",
+      "newDescriptor": "()[Laa;",
+      "callSiteSignatures": [
+        "fi.e(I)[Laa;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "g.f(I)V": {
+      "newSignature": "g.f()V",
+      "owner": "g",
+      "name": "f",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "g.f(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -96,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "g.g(I)I": {
+      "newSignature": "g.g()I",
+      "owner": "g",
+      "name": "g",
+      "oldDescriptor": "(I)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "g.g(I)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ga.a(B)V": {
+      "newSignature": "ga.a()V",
+      "owner": "ga",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ga.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 72,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "gd.c(I)V": {
+      "newSignature": "gd.c()V",
+      "owner": "gd",
+      "name": "c",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "gd.c(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -3,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ge.j(I)Ljava/lang/String;": {
+      "newSignature": "ge.j()Ljava/lang/String;",
+      "owner": "ge",
+      "name": "j",
+      "oldDescriptor": "(I)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "ge.j(I)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 11844,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ge.k(I)Ljava/lang/String;": {
+      "newSignature": "ge.k()Ljava/lang/String;",
+      "owner": "ge",
+      "name": "k",
+      "oldDescriptor": "(I)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "ge.k(I)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "gf.a(B)V": {
+      "newSignature": "gf.a()V",
+      "owner": "gf",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "gf.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 46,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "gh.a(I)Z": {
+      "newSignature": "gh.a()Z",
+      "owner": "gh",
+      "name": "a",
+      "oldDescriptor": "(I)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "gh.a(I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 3100,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "gh.b(I)V": {
+      "newSignature": "gh.b()V",
+      "owner": "gh",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "gh.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 8462,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "gi.a(ZLgi;I)V": {
+      "newSignature": "gi.a(ZLgi;)V",
+      "owner": "gi",
+      "name": "a",
+      "oldDescriptor": "(ZLgi;I)V",
+      "newDescriptor": "(ZLgi;)V",
+      "callSiteSignatures": [
+        "gi.a(ZLgi;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 11,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "gj.a(B)I": {
+      "newSignature": "gj.a()I",
+      "owner": "gj",
+      "name": "a",
+      "oldDescriptor": "(B)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "gj.a(B)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -119,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "gj.a(ILnk;I)V": {
+      "newSignature": "gj.a(ILnk;)V",
+      "owner": "gj",
+      "name": "a",
+      "oldDescriptor": "(ILnk;I)V",
+      "newDescriptor": "(ILnk;)V",
+      "callSiteSignatures": [
+        "gj.a(ILnk;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 5,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "gj.b(B)V": {
+      "newSignature": "gj.b()V",
+      "owner": "gj",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "gj.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -103,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "gk.a(B)V": {
+      "newSignature": "gk.a()V",
+      "owner": "gk",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "gk.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -126,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "gl.a(Ljava/lang/String;[Ljava/lang/String;IB)V": {
+      "newSignature": "gl.a(Ljava/lang/String;[Ljava/lang/String;I)V",
+      "owner": "gl",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;[Ljava/lang/String;IB)V",
+      "newDescriptor": "(Ljava/lang/String;[Ljava/lang/String;I)V",
+      "callSiteSignatures": [
+        "gl.a(Ljava/lang/String;[Ljava/lang/String;IB)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "B",
+          "value": 113,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "gl.j(I)V": {
+      "newSignature": "gl.j()V",
+      "owner": "gl",
+      "name": "j",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "gl.j(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -101,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ha.a(Ljava/lang/String;I)Loi;": {
+      "newSignature": "ha.a(Ljava/lang/String;)Loi;",
+      "owner": "ha",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;I)Loi;",
+      "newDescriptor": "(Ljava/lang/String;)Loi;",
+      "callSiteSignatures": [
+        "ha.a(Ljava/lang/String;I)Loi;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -125,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ha.d(I)V": {
+      "newSignature": "ha.d()V",
+      "owner": "ha",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ha.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 4,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hb.a(JI)V": {
+      "newSignature": "hb.a(J)V",
+      "owner": "hb",
+      "name": "a",
+      "oldDescriptor": "(JI)V",
+      "newDescriptor": "(J)V",
+      "callSiteSignatures": [
+        "hb.a(JI)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -89,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hb.a(Z)V": {
+      "newSignature": "hb.a()V",
+      "owner": "hb",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "hb.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "he.a(B)V": {
+      "newSignature": "he.a()V",
+      "owner": "he",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "he.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -64,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hf.a([BIIZZ)Z": {
+      "newSignature": "hf.a([BIIZ)Z",
+      "owner": "hf",
+      "name": "a",
+      "oldDescriptor": "([BIIZZ)Z",
+      "newDescriptor": "([BIIZ)Z",
+      "callSiteSignatures": [
+        "hf.a([BIIZZ)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 4,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hf.a(I)V": {
+      "newSignature": "hf.a()V",
+      "owner": "hf",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "hf.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 6,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "hf.a(Loh;IIIZIILoh;IILna;IIILna;IIILna;II)V": {
+      "newSignature": "hf.a(Loh;IIIZIILoh;IILna;IIILna;IIILna;)V",
+      "owner": "hf",
+      "name": "a",
+      "oldDescriptor": "(Loh;IIIZIILoh;IILna;IIILna;IIILna;II)V",
+      "newDescriptor": "(Loh;IIIZIILoh;IILna;IIILna;IIILna;)V",
+      "callSiteSignatures": [
+        "hf.a(Loh;IIIZIILoh;IILna;IIILna;IIILna;II)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 19,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 4
+        },
+        {
+          "index": 20,
+          "descriptor": "I",
+          "value": 240,
+          "discoveredIteration": 4
+        }
+      ]
+    },
+    "hh.a(B)V": {
+      "newSignature": "hh.a()V",
+      "owner": "hh",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "hh.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 111,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hh.b(B)V": {
+      "newSignature": "hh.b()V",
+      "owner": "hh",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "hh.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 52,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hi.b(III)V": {
+      "newSignature": "hi.b()V",
+      "owner": "hi",
+      "name": "b",
+      "oldDescriptor": "(III)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "hi.b(III)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 320,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -122,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 240,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hi.c(B)V": {
+      "newSignature": "hi.c()V",
+      "owner": "hi",
+      "name": "c",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "hi.c(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -81,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hj.a(IIIIB)Lti;": {
+      "newSignature": "hj.a()Lti;",
+      "owner": "hj",
+      "name": "a",
+      "oldDescriptor": "(IIIIB)Lti;",
+      "newDescriptor": "()Lti;",
+      "callSiteSignatures": [
+        "hj.a(IIIIB)Lti;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 3,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 10,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 1,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 10,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 4,
+          "descriptor": "B",
+          "value": -102,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hk.a(I)V": {
+      "newSignature": "hk.a()V",
+      "owner": "hk",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "hk.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -88,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hl.a(II)V": {
+      "newSignature": "hl.a()V",
+      "owner": "hl",
+      "name": "a",
+      "oldDescriptor": "(II)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "hl.a(II)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 10,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "hl.n(I)I": {
+      "newSignature": "hl.n()I",
+      "owner": "hl",
+      "name": "n",
+      "oldDescriptor": "(I)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "hl.n(I)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 127,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ia.a(Z)V": {
+      "newSignature": "ia.a()V",
+      "owner": "ia",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ia.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ia.b(Z)I": {
+      "newSignature": "ia.b()I",
+      "owner": "ia",
+      "name": "b",
+      "oldDescriptor": "(Z)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "ia.b(Z)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ib.a(B)V": {
+      "newSignature": "ib.a()V",
+      "owner": "ib",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ib.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -78,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ic.a(I)Z": {
+      "newSignature": "ic.a()Z",
+      "owner": "ic",
+      "name": "a",
+      "oldDescriptor": "(I)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "ic.a(I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ie.a(B)V": {
+      "newSignature": "ie.a()V",
+      "owner": "ie",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ie.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 93,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ie.a(Ljava/lang/String;I)Z": {
+      "newSignature": "ie.a(Ljava/lang/String;)Z",
+      "owner": "ie",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;I)Z",
+      "newDescriptor": "(Ljava/lang/String;)Z",
+      "callSiteSignatures": [
+        "ie.a(Ljava/lang/String;I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 2,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ie.b(I)V": {
+      "newSignature": "ie.b()V",
+      "owner": "ie",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ie.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 82,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ii.a(B)V": {
+      "newSignature": "ii.a()V",
+      "owner": "ii",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ii.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -62,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "ii.b(Z)I": {
+      "newSignature": "ii.b()I",
+      "owner": "ii",
+      "name": "b",
+      "oldDescriptor": "(Z)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "ii.b(Z)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ii.f(I)V": {
+      "newSignature": "ii.f()V",
+      "owner": "ii",
+      "name": "f",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ii.f(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -5146,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ij.a(B)V": {
+      "newSignature": "ij.a()V",
+      "owner": "ij",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ij.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -109,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ij.c(I)V": {
+      "newSignature": "ij.c()V",
+      "owner": "ij",
+      "name": "c",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ij.c(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -18515,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "il.b(B)V": {
+      "newSignature": "il.b()V",
+      "owner": "il",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "il.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 66,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "j.a(I)V": {
+      "newSignature": "j.a()V",
+      "owner": "j",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "j.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -75,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "j.a(Ljava/awt/Component;I)V": {
+      "newSignature": "j.a(Ljava/awt/Component;)V",
+      "owner": "j",
+      "name": "a",
+      "oldDescriptor": "(Ljava/awt/Component;I)V",
+      "newDescriptor": "(Ljava/awt/Component;)V",
+      "callSiteSignatures": [
+        "j.a(Ljava/awt/Component;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 103,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ja.c(I)V": {
+      "newSignature": "ja.c()V",
+      "owner": "ja",
+      "name": "c",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ja.c(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "jb.a(BZLnb;ILjava/awt/Component;ILuf;I)V": {
+      "newSignature": "jb.a(BZLnb;ILjava/awt/Component;ILuf;)V",
+      "owner": "jb",
+      "name": "a",
+      "oldDescriptor": "(BZLnb;ILjava/awt/Component;ILuf;I)V",
+      "newDescriptor": "(BZLnb;ILjava/awt/Component;ILuf;)V",
+      "callSiteSignatures": [
+        "jb.a(BZLnb;ILjava/awt/Component;ILuf;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 7,
+          "descriptor": "I",
+          "value": 22050,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "jb.a(I)V": {
+      "newSignature": "jb.a()V",
+      "owner": "jb",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "jb.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -111,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "jb.a(Ljava/lang/String;ZZI)V": {
+      "newSignature": "jb.a(Ljava/lang/String;ZZ)V",
+      "owner": "jb",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;ZZI)V",
+      "newDescriptor": "(Ljava/lang/String;ZZ)V",
+      "callSiteSignatures": [
+        "jb.a(Ljava/lang/String;ZZI)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "jc.a(B)Lic;": {
+      "newSignature": "jc.a()Lic;",
+      "owner": "jc",
+      "name": "a",
+      "oldDescriptor": "(B)Lic;",
+      "newDescriptor": "()Lic;",
+      "callSiteSignatures": [
+        "jc.a(B)Lic;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 97,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "jd.a(I)V": {
+      "newSignature": "jd.a()V",
+      "owner": "jd",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "jd.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -12814,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "jd.a(Ljava/lang/String;I)Loi;": {
+      "newSignature": "jd.a(Ljava/lang/String;)Loi;",
+      "owner": "jd",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;I)Loi;",
+      "newDescriptor": "(Ljava/lang/String;)Loi;",
+      "callSiteSignatures": [
+        "jd.a(Ljava/lang/String;I)Loi;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 255,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "jf.e(I)V": {
+      "newSignature": "jf.e()V",
+      "owner": "jf",
+      "name": "e",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "jf.e(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 640,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "jh.a(I)V": {
+      "newSignature": "jh.a()V",
+      "owner": "jh",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "jh.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -128,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "jh.a(Loh;Ljava/lang/String;IZ)I": {
+      "newSignature": "jh.a(Loh;Ljava/lang/String;I)I",
+      "owner": "jh",
+      "name": "a",
+      "oldDescriptor": "(Loh;Ljava/lang/String;IZ)I",
+      "newDescriptor": "(Loh;Ljava/lang/String;I)I",
+      "callSiteSignatures": [
+        "jh.a(Loh;Ljava/lang/String;IZ)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "jk.a(I)V": {
+      "newSignature": "jk.a()V",
+      "owner": "jk",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "jk.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -99,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ka.a(Ljava/lang/CharSequence;ZI)Z": {
+      "newSignature": "ka.a(Ljava/lang/CharSequence;)Z",
+      "owner": "ka",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/CharSequence;ZI)Z",
+      "newDescriptor": "(Ljava/lang/CharSequence;)Z",
+      "callSiteSignatures": [
+        "ka.a(Ljava/lang/CharSequence;ZI)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": -2,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ka.a(Z)V": {
+      "newSignature": "ka.a()V",
+      "owner": "ka",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ka.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kb.a(I)V": {
+      "newSignature": "kb.a()V",
+      "owner": "kb",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kb.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 14,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kc.b(I)V": {
+      "newSignature": "kc.b()V",
+      "owner": "kc",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kc.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -107,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "ke.a(II)V": {
+      "newSignature": "ke.a()V",
+      "owner": "ke",
+      "name": "a",
+      "oldDescriptor": "(II)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ke.a(II)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -101,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 2,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ke.b(II)[B": {
+      "newSignature": "ke.b(I)[B",
+      "owner": "ke",
+      "name": "b",
+      "oldDescriptor": "(II)[B",
+      "newDescriptor": "(I)[B",
+      "callSiteSignatures": [
+        "ke.b(II)[B"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -30001,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kf.a(I)V": {
+      "newSignature": "kf.a()V",
+      "owner": "kf",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kf.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 4,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "kf.a(Ljava/lang/String;Z)Loi;": {
+      "newSignature": "kf.a(Ljava/lang/String;)Loi;",
+      "owner": "kf",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;Z)Loi;",
+      "newDescriptor": "(Ljava/lang/String;)Loi;",
+      "callSiteSignatures": [
+        "kf.a(Ljava/lang/String;Z)Loi;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kf.b(I)V": {
+      "newSignature": "kf.b()V",
+      "owner": "kf",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kf.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -1688814815,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kg.a(I)V": {
+      "newSignature": "kg.a()V",
+      "owner": "kg",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kg.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kh.a(Lkk;Ljava/lang/String;Lkk;Ljava/lang/String;I)Lck;": {
+      "newSignature": "kh.a(Lkk;Ljava/lang/String;Lkk;Ljava/lang/String;)Lck;",
+      "owner": "kh",
+      "name": "a",
+      "oldDescriptor": "(Lkk;Ljava/lang/String;Lkk;Ljava/lang/String;I)Lck;",
+      "newDescriptor": "(Lkk;Ljava/lang/String;Lkk;Ljava/lang/String;)Lck;",
+      "callSiteSignatures": [
+        "kh.a(Lkk;Ljava/lang/String;Lkk;Ljava/lang/String;I)Lck;"
+      ],
+      "removedParameters": [
+        {
+          "index": 4,
+          "descriptor": "I",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kh.c(I)V": {
+      "newSignature": "kh.c()V",
+      "owner": "kh",
+      "name": "c",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kh.c(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 61,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ki.a(I)V": {
+      "newSignature": "ki.a()V",
+      "owner": "ki",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ki.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 49,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kj.a(B)Lng;": {
+      "newSignature": "kj.a()Lng;",
+      "owner": "kj",
+      "name": "a",
+      "oldDescriptor": "(B)Lng;",
+      "newDescriptor": "()Lng;",
+      "callSiteSignatures": [
+        "kj.a(B)Lng;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 106,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "kj.b(Z)V": {
+      "newSignature": "kj.b()V",
+      "owner": "kj",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kj.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kj.d(I)V": {
+      "newSignature": "kj.d()V",
+      "owner": "kj",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kj.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 250,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kk.a(I)V": {
+      "newSignature": "kk.a()V",
+      "owner": "kk",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kk.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -1,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "kk.b(B)Z": {
+      "newSignature": "kk.b()Z",
+      "owner": "kk",
+      "name": "b",
+      "oldDescriptor": "(B)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "kk.b(B)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -128,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "kl.a(I)V": {
+      "newSignature": "kl.a()V",
+      "owner": "kl",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "kl.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 119,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "l.a(II)V": {
+      "newSignature": "l.a()V",
+      "owner": "l",
+      "name": "a",
+      "oldDescriptor": "(II)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "l.a(II)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -30422,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 4,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "l.h(I)Ljava/lang/String;": {
+      "newSignature": "l.h()Ljava/lang/String;",
+      "owner": "l",
+      "name": "h",
+      "oldDescriptor": "(I)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "l.h(I)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "la.d(Z)V": {
+      "newSignature": "la.d()V",
+      "owner": "la",
+      "name": "d",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "la.d(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lb.c(Z)V": {
+      "newSignature": "lb.c()V",
+      "owner": "lb",
+      "name": "c",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "lb.c(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lb.e(B)V": {
+      "newSignature": "lb.e()V",
+      "owner": "lb",
+      "name": "e",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "lb.e(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 82,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lb.j(I)V": {
+      "newSignature": "lb.j()V",
+      "owner": "lb",
+      "name": "j",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "lb.j(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 29388,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lb.r(I)I": {
+      "newSignature": "lb.r()I",
+      "owner": "lb",
+      "name": "r",
+      "oldDescriptor": "(I)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "lb.r(I)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lc.j(I)V": {
+      "newSignature": "lc.j()V",
+      "owner": "lc",
+      "name": "j",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "lc.j(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 112,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ld.a(I)V": {
+      "newSignature": "ld.a()V",
+      "owner": "ld",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ld.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -16723,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ld.a(ZZ)V": {
+      "newSignature": "ld.a(Z)V",
+      "owner": "ld",
+      "name": "a",
+      "oldDescriptor": "(ZZ)V",
+      "newDescriptor": "(Z)V",
+      "callSiteSignatures": [
+        "ld.a(ZZ)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "le.a(I)Lrd;": {
+      "newSignature": "le.a()Lrd;",
+      "owner": "le",
+      "name": "a",
+      "oldDescriptor": "(I)Lrd;",
+      "newDescriptor": "()Lrd;",
+      "callSiteSignatures": [
+        "le.a(I)Lrd;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -1461,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "le.b(I)V": {
+      "newSignature": "le.b()V",
+      "owner": "le",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "le.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -128,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lf.f(B)V": {
+      "newSignature": "lf.f()V",
+      "owner": "lf",
+      "name": "f",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "lf.f(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -71,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lg.a(I)Lh;": {
+      "newSignature": "lg.a()Lh;",
+      "owner": "lg",
+      "name": "a",
+      "oldDescriptor": "(I)Lh;",
+      "newDescriptor": "()Lh;",
+      "callSiteSignatures": [
+        "lg.a(I)Lh;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 124,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lg.b(I)V": {
+      "newSignature": "lg.b()V",
+      "owner": "lg",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "lg.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 16228,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lh.c(B)V": {
+      "newSignature": "lh.c()V",
+      "owner": "lh",
+      "name": "c",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "lh.c(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -44,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "li.a(B)V": {
+      "newSignature": "li.a()V",
+      "owner": "li",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "li.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 111,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "li.d(I)Ljava/lang/String;": {
+      "newSignature": "li.d()Ljava/lang/String;",
+      "owner": "li",
+      "name": "d",
+      "oldDescriptor": "(I)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "li.d(I)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -579139480,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "lj.a(Lfc;Lfc;I)V": {
+      "newSignature": "lj.a(Lfc;Lfc;)V",
+      "owner": "lj",
+      "name": "a",
+      "oldDescriptor": "(Lfc;Lfc;I)V",
+      "newDescriptor": "(Lfc;Lfc;)V",
+      "callSiteSignatures": [
+        "lj.a(Lfc;Lfc;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": -126,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ll.a([IIIIIIII)V": {
+      "newSignature": "ll.a([IIIIIII)V",
+      "owner": "ll",
+      "name": "a",
+      "oldDescriptor": "([IIIIIIII)V",
+      "newDescriptor": "([IIIIIII)V",
+      "callSiteSignatures": [
+        "ll.a([IIIIIIII)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 7,
+          "descriptor": "I",
+          "value": 140,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "ma.a(B)V": {
+      "newSignature": "ma.a()V",
+      "owner": "ma",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ma.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -50,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ma.a(IBI[Lng;[BI)Lde;": {
+      "newSignature": "ma.a(IBI[Lng;[B)Lde;",
+      "owner": "ma",
+      "name": "a",
+      "oldDescriptor": "(IBI[Lng;[BI)Lde;",
+      "newDescriptor": "(IBI[Lng;[B)Lde;",
+      "callSiteSignatures": [
+        "ma.a(IBI[Lng;[BI)Lde;"
+      ],
+      "removedParameters": [
+        {
+          "index": 5,
+          "descriptor": "I",
+          "value": 15252224,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mb.a(ILjava/lang/CharSequence;IZ)Z": {
+      "newSignature": "mb.a(ILjava/lang/CharSequence;)Z",
+      "owner": "mb",
+      "name": "a",
+      "oldDescriptor": "(ILjava/lang/CharSequence;IZ)Z",
+      "newDescriptor": "(ILjava/lang/CharSequence;)Z",
+      "callSiteSignatures": [
+        "mb.a(ILjava/lang/CharSequence;IZ)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 10,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 3,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mb.b(B)V": {
+      "newSignature": "mb.b()V",
+      "owner": "mb",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mb.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -36,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mc.b(Z)V": {
+      "newSignature": "mc.b()V",
+      "owner": "mc",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mc.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "md.a(Z)V": {
+      "newSignature": "md.a()V",
+      "owner": "md",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "md.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "me.a(B)V": {
+      "newSignature": "me.a()V",
+      "owner": "me",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "me.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 41,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "me.a(Ldh;II)V": {
+      "newSignature": "me.a(Ldh;)V",
+      "owner": "me",
+      "name": "a",
+      "oldDescriptor": "(Ldh;II)V",
+      "newDescriptor": "(Ldh;)V",
+      "callSiteSignatures": [
+        "me.a(Ldh;II)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 5,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "me.d(I)[Lng;": {
+      "newSignature": "me.d()[Lng;",
+      "owner": "me",
+      "name": "d",
+      "oldDescriptor": "(I)[Lng;",
+      "newDescriptor": "()[Lng;",
+      "callSiteSignatures": [
+        "me.d(I)[Lng;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -104,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mf.a(B)V": {
+      "newSignature": "mf.a()V",
+      "owner": "mf",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mf.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -53,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mf.b(B)V": {
+      "newSignature": "mf.b()V",
+      "owner": "mf",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mf.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -103,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "mg.a(B)I": {
+      "newSignature": "mg.a()I",
+      "owner": "mg",
+      "name": "a",
+      "oldDescriptor": "(B)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "mg.a(B)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -29,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mg.a(ZIIII)V": {
+      "newSignature": "mg.a(ZIII)V",
+      "owner": "mg",
+      "name": "a",
+      "oldDescriptor": "(ZIIII)V",
+      "newDescriptor": "(ZIII)V",
+      "callSiteSignatures": [
+        "mg.a(ZIIII)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 4,
+          "descriptor": "I",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mg.a(ZZII)V": {
+      "newSignature": "mg.a(ZZI)V",
+      "owner": "mg",
+      "name": "a",
+      "oldDescriptor": "(ZZII)V",
+      "newDescriptor": "(ZZI)V",
+      "callSiteSignatures": [
+        "mg.a(ZZII)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 390,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mg.b(B)I": {
+      "newSignature": "mg.b()I",
+      "owner": "mg",
+      "name": "b",
+      "oldDescriptor": "(B)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "mg.b(B)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 125,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mg.c(B)V": {
+      "newSignature": "mg.c()V",
+      "owner": "mg",
+      "name": "c",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mg.c(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -114,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mg.d(B)V": {
+      "newSignature": "mg.d()V",
+      "owner": "mg",
+      "name": "d",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mg.d(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -55,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mh.d(I)V": {
+      "newSignature": "mh.d()V",
+      "owner": "mh",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mh.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -24011,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mh.e(I)Z": {
+      "newSignature": "mh.e()Z",
+      "owner": "mh",
+      "name": "e",
+      "oldDescriptor": "(I)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "mh.e(I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 127,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "mi.k(I)V": {
+      "newSignature": "mi.k()V",
+      "owner": "mi",
+      "name": "k",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mi.k(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 10228,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mj.a(I)V": {
+      "newSignature": "mj.a()V",
+      "owner": "mj",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mj.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 208,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "mj.b(I)V": {
+      "newSignature": "mj.b()V",
+      "owner": "mj",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "mj.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -2069072125,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "na.a(I)V": {
+      "newSignature": "na.a()V",
+      "owner": "na",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "na.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -4775,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "na.a(ILla;[BI)[B": {
+      "newSignature": "na.a(ILla;[B)[B",
+      "owner": "na",
+      "name": "a",
+      "oldDescriptor": "(ILla;[BI)[B",
+      "newDescriptor": "(ILla;[B)[B",
+      "callSiteSignatures": [
+        "na.a(ILla;[BI)[B"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 16,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nb.a(Ljava/lang/String;ZI)V": {
+      "newSignature": "nb.a(Ljava/lang/String;Z)V",
+      "owner": "nb",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;ZI)V",
+      "newDescriptor": "(Ljava/lang/String;Z)V",
+      "callSiteSignatures": [
+        "nb.a(Ljava/lang/String;ZI)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": -16257,
+          "discoveredIteration": 4
+        }
+      ]
+    },
+    "nb.b(Lha;B)I": {
+      "newSignature": "nb.b(Lha;)I",
+      "owner": "nb",
+      "name": "b",
+      "oldDescriptor": "(Lha;B)I",
+      "newDescriptor": "(Lha;)I",
+      "callSiteSignatures": [
+        "nb.b(Lha;B)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "B",
+          "value": 105,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nb.e(I)V": {
+      "newSignature": "nb.e()V",
+      "owner": "nb",
+      "name": "e",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nb.e(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -17313,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "nd.a(Lkk;III)[Lng;": {
+      "newSignature": "nd.a(Lkk;II)[Lng;",
+      "owner": "nd",
+      "name": "a",
+      "oldDescriptor": "(Lkk;III)[Lng;",
+      "newDescriptor": "(Lkk;II)[Lng;",
+      "callSiteSignatures": [
+        "nd.a(Lkk;III)[Lng;"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 16777215,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "nd.b(Z)V": {
+      "newSignature": "nd.b()V",
+      "owner": "nd",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nd.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ne.a(I)V": {
+      "newSignature": "ne.a()V",
+      "owner": "ne",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ne.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -29615,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nf.a(I)V": {
+      "newSignature": "nf.a()V",
+      "owner": "nf",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nf.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 66,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nf.a(ZLjava/lang/String;Ljava/lang/String;B)V": {
+      "newSignature": "nf.a(ZLjava/lang/String;Ljava/lang/String;)V",
+      "owner": "nf",
+      "name": "a",
+      "oldDescriptor": "(ZLjava/lang/String;Ljava/lang/String;B)V",
+      "newDescriptor": "(ZLjava/lang/String;Ljava/lang/String;)V",
+      "callSiteSignatures": [
+        "nf.a(ZLjava/lang/String;Ljava/lang/String;B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "B",
+          "value": -105,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nf.b(I)V": {
+      "newSignature": "nf.b()V",
+      "owner": "nf",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nf.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 261211,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nh.a(I)V": {
+      "newSignature": "nh.a()V",
+      "owner": "nh",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nh.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -104,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ni.a(II)V": {
+      "newSignature": "ni.a()V",
+      "owner": "ni",
+      "name": "a",
+      "oldDescriptor": "(II)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ni.a(II)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -127,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 2,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ni.g(I)V": {
+      "newSignature": "ni.g()V",
+      "owner": "ni",
+      "name": "g",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ni.g(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 112,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nj.a(B)V": {
+      "newSignature": "nj.a()V",
+      "owner": "nj",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nj.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 125,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "nj.a(Lq;B)V": {
+      "newSignature": "nj.a(Lq;)V",
+      "owner": "nj",
+      "name": "a",
+      "oldDescriptor": "(Lq;B)V",
+      "newDescriptor": "(Lq;)V",
+      "callSiteSignatures": [
+        "nj.a(Lq;B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "B",
+          "value": 94,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nj.b(B)V": {
+      "newSignature": "nj.b()V",
+      "owner": "nj",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nj.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -98,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "nk.b(Z)V": {
+      "newSignature": "nk.b()V",
+      "owner": "nk",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nk.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nk.d(I)V": {
+      "newSignature": "nk.d()V",
+      "owner": "nk",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nk.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 23985,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "nl.a(B)V": {
+      "newSignature": "nl.a()V",
+      "owner": "nl",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "nl.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -96,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "nl.b(B)I": {
+      "newSignature": "nl.b()I",
+      "owner": "nl",
+      "name": "b",
+      "oldDescriptor": "(B)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "nl.b(B)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 104,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "o.b(B)V": {
+      "newSignature": "o.b()V",
+      "owner": "o",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "o.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 88,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ob.a(Lbe;IZ)V": {
+      "newSignature": "ob.a(Lbe;I)V",
+      "owner": "ob",
+      "name": "a",
+      "oldDescriptor": "(Lbe;IZ)V",
+      "newDescriptor": "(Lbe;I)V",
+      "callSiteSignatures": [
+        "ob.a(Lbe;IZ)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ob.c(B)V": {
+      "newSignature": "ob.c()V",
+      "owner": "ob",
+      "name": "c",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ob.c(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -68,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ob.g(I)Z": {
+      "newSignature": "ob.g()Z",
+      "owner": "ob",
+      "name": "g",
+      "oldDescriptor": "(I)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "ob.g(I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -26998,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "ob.h(I)V": {
+      "newSignature": "ob.h()V",
+      "owner": "ob",
+      "name": "h",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ob.h(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 16473,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "oc.a(B)V": {
+      "newSignature": "oc.a()V",
+      "owner": "oc",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "oc.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -63,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "od.a(I)V": {
+      "newSignature": "od.a()V",
+      "owner": "od",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "od.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 8192,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "oe.a(I)V": {
+      "newSignature": "oe.a()V",
+      "owner": "oe",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "oe.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "oe.a(Ljava/lang/CharSequence;BZ)Ljava/lang/String;": {
+      "newSignature": "oe.a(Ljava/lang/CharSequence;B)Ljava/lang/String;",
+      "owner": "oe",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/CharSequence;BZ)Ljava/lang/String;",
+      "newDescriptor": "(Ljava/lang/CharSequence;B)Ljava/lang/String;",
+      "callSiteSignatures": [
+        "oe.a(Ljava/lang/CharSequence;BZ)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "oe.a(ZLkk;Lkk;Lkk;I)V": {
+      "newSignature": "oe.a(ZLkk;Lkk;Lkk;)V",
+      "owner": "oe",
+      "name": "a",
+      "oldDescriptor": "(ZLkk;Lkk;Lkk;I)V",
+      "newDescriptor": "(ZLkk;Lkk;Lkk;)V",
+      "callSiteSignatures": [
+        "oe.a(ZLkk;Lkk;Lkk;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 4,
+          "descriptor": "I",
+          "value": -28484,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "of.a(Ljava/applet/Applet;Ljava/net/URL;Z)Ljava/net/URL;": {
+      "newSignature": "of.a(Ljava/applet/Applet;Ljava/net/URL;)Ljava/net/URL;",
+      "owner": "of",
+      "name": "a",
+      "oldDescriptor": "(Ljava/applet/Applet;Ljava/net/URL;Z)Ljava/net/URL;",
+      "newDescriptor": "(Ljava/applet/Applet;Ljava/net/URL;)Ljava/net/URL;",
+      "callSiteSignatures": [
+        "of.a(Ljava/applet/Applet;Ljava/net/URL;Z)Ljava/net/URL;"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "of.b(Z)V": {
+      "newSignature": "of.b()V",
+      "owner": "of",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "of.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "og.a(ZLnj;I)V": {
+      "newSignature": "og.a(ZLnj;)V",
+      "owner": "og",
+      "name": "a",
+      "oldDescriptor": "(ZLnj;I)V",
+      "newDescriptor": "(ZLnj;)V",
+      "callSiteSignatures": [
+        "og.a(ZLnj;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 7,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "og.f(B)V": {
+      "newSignature": "og.f()V",
+      "owner": "og",
+      "name": "f",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "og.f(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -83,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "og.v(I)V": {
+      "newSignature": "og.v()V",
+      "owner": "og",
+      "name": "v",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "og.v(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -106,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "oi.a(I)V": {
+      "newSignature": "oi.a()V",
+      "owner": "oi",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "oi.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -13,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "oi.a(I[Lqj;ILoh;Loh;IIII[Lqj;IZIII)V": {
+      "newSignature": "oi.a(I[Lqj;ILoh;Loh;IIII[Lqj;IZ)V",
+      "owner": "oi",
+      "name": "a",
+      "oldDescriptor": "(I[Lqj;ILoh;Loh;IIII[Lqj;IZIII)V",
+      "newDescriptor": "(I[Lqj;ILoh;Loh;IIII[Lqj;IZ)V",
+      "callSiteSignatures": [
+        "oi.a(I[Lqj;ILoh;Loh;IIII[Lqj;IZIII)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 12,
+          "descriptor": "I",
+          "value": 18,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 13,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 14,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "oj.a(B)V": {
+      "newSignature": "oj.a()V",
+      "owner": "oj",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "oj.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -116,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "oj.a(IZZLpf;[I[IZ)V": {
+      "newSignature": "oj.a(IZZLpf;[I[I)V",
+      "owner": "oj",
+      "name": "a",
+      "oldDescriptor": "(IZZLpf;[I[IZ)V",
+      "newDescriptor": "(IZZLpf;[I[I)V",
+      "callSiteSignatures": [
+        "oj.a(IZZLpf;[I[IZ)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 6,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "oj.a(Ljava/lang/String;II)Lhk;": {
+      "newSignature": "oj.a(Ljava/lang/String;I)Lhk;",
+      "owner": "oj",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;II)Lhk;",
+      "newDescriptor": "(Ljava/lang/String;I)Lhk;",
+      "callSiteSignatures": [
+        "oj.a(Ljava/lang/String;II)Lhk;"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ok.d(B)V": {
+      "newSignature": "ok.d()V",
+      "owner": "ok",
+      "name": "d",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ok.d(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -7,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ol.e(I)V": {
+      "newSignature": "ol.e()V",
+      "owner": "ol",
+      "name": "e",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ol.e(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 256,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "p.a(B)V": {
+      "newSignature": "p.a()V",
+      "owner": "p",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "p.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 25,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "p.b(B)V": {
+      "newSignature": "p.b()V",
+      "owner": "p",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "p.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 117,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "pa.a(B)V": {
+      "newSignature": "pa.a()V",
+      "owner": "pa",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "pa.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -125,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "pa.b(B)Z": {
+      "newSignature": "pa.b()Z",
+      "owner": "pa",
+      "name": "b",
+      "oldDescriptor": "(B)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "pa.b(B)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 91,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "pb.a(B)Z": {
+      "newSignature": "pb.a()Z",
+      "owner": "pb",
+      "name": "a",
+      "oldDescriptor": "(B)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "pb.a(B)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -88,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "pb.a(IILkk;Lkk;B)Lck;": {
+      "newSignature": "pb.a(IILkk;Lkk;)Lck;",
+      "owner": "pb",
+      "name": "a",
+      "oldDescriptor": "(IILkk;Lkk;B)Lck;",
+      "newDescriptor": "(IILkk;Lkk;)Lck;",
+      "callSiteSignatures": [
+        "pb.a(IILkk;Lkk;B)Lck;"
+      ],
+      "removedParameters": [
+        {
+          "index": 4,
+          "descriptor": "B",
+          "value": 126,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "pc.a(Z)V": {
+      "newSignature": "pc.a()V",
+      "owner": "pc",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "pc.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "pl.a(BLjava/lang/CharSequence;Z)Z": {
+      "newSignature": "pl.a(BLjava/lang/CharSequence;)Z",
+      "owner": "pl",
+      "name": "a",
+      "oldDescriptor": "(BLjava/lang/CharSequence;Z)Z",
+      "newDescriptor": "(BLjava/lang/CharSequence;)Z",
+      "callSiteSignatures": [
+        "pl.a(BLjava/lang/CharSequence;Z)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "pl.a(I)V": {
+      "newSignature": "pl.a()V",
+      "owner": "pl",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "pl.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "pl.b(I)V": {
+      "newSignature": "pl.b()V",
+      "owner": "pl",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "pl.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -3570,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "pl.c(I)V": {
+      "newSignature": "pl.c()V",
+      "owner": "pl",
+      "name": "c",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "pl.c(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -30877,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "q.a(Ljava/applet/Applet;I)V": {
+      "newSignature": "q.a(Ljava/applet/Applet;)V",
+      "owner": "q",
+      "name": "a",
+      "oldDescriptor": "(Ljava/applet/Applet;I)V",
+      "newDescriptor": "(Ljava/applet/Applet;)V",
+      "callSiteSignatures": [
+        "q.a(Ljava/applet/Applet;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -1,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "q.a(Z)V": {
+      "newSignature": "q.a()V",
+      "owner": "q",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "q.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "qa.a(Z)V": {
+      "newSignature": "qa.a()V",
+      "owner": "qa",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "qa.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "qc.a(Ljava/net/Proxy;B)Ljava/net/Socket;": {
+      "newSignature": "qc.a(Ljava/net/Proxy;)Ljava/net/Socket;",
+      "owner": "qc",
+      "name": "a",
+      "oldDescriptor": "(Ljava/net/Proxy;B)Ljava/net/Socket;",
+      "newDescriptor": "(Ljava/net/Proxy;)Ljava/net/Socket;",
+      "callSiteSignatures": [
+        "qc.a(Ljava/net/Proxy;B)Ljava/net/Socket;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "B",
+          "value": 66,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "qd.a(I)V": {
+      "newSignature": "qd.a()V",
+      "owner": "qd",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "qd.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 106,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "qf.a(B)V": {
+      "newSignature": "qf.a()V",
+      "owner": "qf",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "qf.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 98,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "qg.a(Lq;Z)V": {
+      "newSignature": "qg.a(Lq;)V",
+      "owner": "qg",
+      "name": "a",
+      "oldDescriptor": "(Lq;Z)V",
+      "newDescriptor": "(Lq;)V",
+      "callSiteSignatures": [
+        "qg.a(Lq;Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "qg.b(I)Ljava/lang/String;": {
+      "newSignature": "qg.b()Ljava/lang/String;",
+      "owner": "qg",
+      "name": "b",
+      "oldDescriptor": "(I)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "qg.b(I)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 32,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "qh.a(I)V": {
+      "newSignature": "qh.a()V",
+      "owner": "qh",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "qh.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -51,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "qi.a(IIBII)[Lqj;": {
+      "newSignature": "qi.a()[Lqj;",
+      "owner": "qi",
+      "name": "a",
+      "oldDescriptor": "(IIBII)[Lqj;",
+      "newDescriptor": "()[Lqj;",
+      "callSiteSignatures": [
+        "qi.a(IIBII)[Lqj;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 65793,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 2,
+          "descriptor": "B",
+          "value": 116,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 4,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "qi.a(Ljava/lang/String;I)V": {
+      "newSignature": "qi.a(Ljava/lang/String;)V",
+      "owner": "qi",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;I)V",
+      "newDescriptor": "(Ljava/lang/String;)V",
+      "callSiteSignatures": [
+        "qi.a(Ljava/lang/String;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "qi.b(I)V": {
+      "newSignature": "qi.b()V",
+      "owner": "qi",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "qi.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 8770,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "qi.c(I)[Lbl;": {
+      "newSignature": "qi.c()[Lbl;",
+      "owner": "qi",
+      "name": "c",
+      "oldDescriptor": "(I)[Lbl;",
+      "newDescriptor": "()[Lbl;",
+      "callSiteSignatures": [
+        "qi.c(I)[Lbl;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 19664,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "qk.a(B)V": {
+      "newSignature": "qk.a()V",
+      "owner": "qk",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "qk.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 40,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "r.a(Ljava/lang/CharSequence;I)Ljava/lang/String;": {
+      "newSignature": "r.a(Ljava/lang/CharSequence;)Ljava/lang/String;",
+      "owner": "r",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/CharSequence;I)Ljava/lang/String;",
+      "newDescriptor": "(Ljava/lang/CharSequence;)Ljava/lang/String;",
+      "callSiteSignatures": [
+        "r.a(Ljava/lang/CharSequence;I)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": -11133,
+          "discoveredIteration": 4
+        }
+      ]
+    },
+    "r.b(Z)Z": {
+      "newSignature": "r.b()Z",
+      "owner": "r",
+      "name": "b",
+      "oldDescriptor": "(Z)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "r.b(Z)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 3
+        }
+      ]
+    },
+    "r.d(I)V": {
+      "newSignature": "r.d()V",
+      "owner": "r",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "r.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "r.e(I)I": {
+      "newSignature": "r.e()I",
+      "owner": "r",
+      "name": "e",
+      "oldDescriptor": "(I)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "r.e(I)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -12364,
+          "discoveredIteration": 4
+        }
+      ]
+    },
+    "r.f(I)V": {
+      "newSignature": "r.f()V",
+      "owner": "r",
+      "name": "f",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "r.f(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -635,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "rb.b(I)V": {
+      "newSignature": "rb.b()V",
+      "owner": "rb",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "rb.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -2857,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rd.a(I)V": {
+      "newSignature": "rd.a()V",
+      "owner": "rd",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "rd.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 1,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "rd.a(Ljf;II)V": {
+      "newSignature": "rd.a(Ljf;)V",
+      "owner": "rd",
+      "name": "a",
+      "oldDescriptor": "(Ljf;II)V",
+      "newDescriptor": "(Ljf;)V",
+      "callSiteSignatures": [
+        "rd.a(Ljf;II)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 4,
+          "discoveredIteration": 2
+        },
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 7,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "rd.b(I)V": {
+      "newSignature": "rd.b()V",
+      "owner": "rd",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "rd.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 3,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "re.b(I)V": {
+      "newSignature": "re.b()V",
+      "owner": "re",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "re.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 57,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "re.d(I)V": {
+      "newSignature": "re.d()V",
+      "owner": "re",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "re.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 8865,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rf.a(I)V": {
+      "newSignature": "rf.a()V",
+      "owner": "rf",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "rf.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rf.a(Luf;Z)[Lji;": {
+      "newSignature": "rf.a(Luf;)[Lji;",
+      "owner": "rf",
+      "name": "a",
+      "oldDescriptor": "(Luf;Z)[Lji;",
+      "newDescriptor": "(Luf;)[Lji;",
+      "callSiteSignatures": [
+        "rf.a(Luf;Z)[Lji;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rf.b(I)Z": {
+      "newSignature": "rf.b()Z",
+      "owner": "rf",
+      "name": "b",
+      "oldDescriptor": "(I)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "rf.b(I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 120,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rg.a(I)V": {
+      "newSignature": "rg.a()V",
+      "owner": "rg",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "rg.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 17883,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rh.a(Ljava/applet/Applet;B)V": {
+      "newSignature": "rh.a(Ljava/applet/Applet;)V",
+      "owner": "rh",
+      "name": "a",
+      "oldDescriptor": "(Ljava/applet/Applet;B)V",
+      "newDescriptor": "(Ljava/applet/Applet;)V",
+      "callSiteSignatures": [
+        "rh.a(Ljava/applet/Applet;B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "B",
+          "value": 33,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ri.b([[IB)J": {
+      "newSignature": "ri.b([[I)J",
+      "owner": "ri",
+      "name": "b",
+      "oldDescriptor": "([[IB)J",
+      "newDescriptor": "([[I)J",
+      "callSiteSignatures": [
+        "ri.b([[IB)J"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "B",
+          "value": -66,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ri.c(B)V": {
+      "newSignature": "ri.c()V",
+      "owner": "ri",
+      "name": "c",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ri.c(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -4,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ri.d(I)Z": {
+      "newSignature": "ri.d()Z",
+      "owner": "ri",
+      "name": "d",
+      "oldDescriptor": "(I)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "ri.d(I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 102,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ri.f(I)V": {
+      "newSignature": "ri.f()V",
+      "owner": "ri",
+      "name": "f",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ri.f(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -111,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ri.i(I)Lja;": {
+      "newSignature": "ri.i()Lja;",
+      "owner": "ri",
+      "name": "i",
+      "oldDescriptor": "(I)Lja;",
+      "newDescriptor": "()Lja;",
+      "callSiteSignatures": [
+        "ri.i(I)Lja;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 123,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rj.a(B)V": {
+      "newSignature": "rj.a()V",
+      "owner": "rj",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "rj.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 59,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "rj.a(CI)Z": {
+      "newSignature": "rj.a(C)Z",
+      "owner": "rj",
+      "name": "a",
+      "oldDescriptor": "(CI)Z",
+      "newDescriptor": "(C)Z",
+      "callSiteSignatures": [
+        "rj.a(CI)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 122,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rk.r(I)V": {
+      "newSignature": "rk.r()V",
+      "owner": "rk",
+      "name": "r",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "rk.r(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 13,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rk.s(I)I": {
+      "newSignature": "rk.s()I",
+      "owner": "rk",
+      "name": "s",
+      "oldDescriptor": "(I)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "rk.s(I)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -1,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "rk.t(I)V": {
+      "newSignature": "rk.t()V",
+      "owner": "rk",
+      "name": "t",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "rk.t(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 4210752,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "rl.b(Z)V": {
+      "newSignature": "rl.b()V",
+      "owner": "rl",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "rl.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "s.a(B)V": {
+      "newSignature": "s.a()V",
+      "owner": "s",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "s.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 49,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "sa.b(Z)V": {
+      "newSignature": "sa.b()V",
+      "owner": "sa",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "sa.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "sa.j(I)V": {
+      "newSignature": "sa.j()V",
+      "owner": "sa",
+      "name": "j",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "sa.j(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 75,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "sd.a(B)V": {
+      "newSignature": "sd.a()V",
+      "owner": "sd",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "sd.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -108,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "sf.a(Ljava/lang/CharSequence;CI)I": {
+      "newSignature": "sf.a(Ljava/lang/CharSequence;C)I",
+      "owner": "sf",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/CharSequence;CI)I",
+      "newDescriptor": "(Ljava/lang/CharSequence;C)I",
+      "callSiteSignatures": [
+        "sf.a(Ljava/lang/CharSequence;CI)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 11109,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "sf.b(Z)V": {
+      "newSignature": "sf.b()V",
+      "owner": "sf",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "sf.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "sf.j(I)Z": {
+      "newSignature": "sf.j()Z",
+      "owner": "sf",
+      "name": "j",
+      "oldDescriptor": "(I)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "sf.j(I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -4409,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "sg.a(IIIIII)V": {
+      "newSignature": "sg.a(IIIII)V",
+      "owner": "sg",
+      "name": "a",
+      "oldDescriptor": "(IIIIII)V",
+      "newDescriptor": "(IIIII)V",
+      "callSiteSignatures": [
+        "sg.a(IIIIII)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 5,
+          "descriptor": "I",
+          "value": -733,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "si.a(B)V": {
+      "newSignature": "si.a()V",
+      "owner": "si",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "si.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 47,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "sl.b(B)V": {
+      "newSignature": "sl.b()V",
+      "owner": "sl",
+      "name": "b",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "sl.b(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -51,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "td.i(I)V": {
+      "newSignature": "td.i()V",
+      "owner": "td",
+      "name": "i",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "td.i(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "te.a(B)V": {
+      "newSignature": "te.a()V",
+      "owner": "te",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "te.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -89,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "th.d(I)V": {
+      "newSignature": "th.d()V",
+      "owner": "th",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "th.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -31574,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "th.e(I)V": {
+      "newSignature": "th.e()V",
+      "owner": "th",
+      "name": "e",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "th.e(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "th.f(I)Lkh;": {
+      "newSignature": "th.f()Lkh;",
+      "owner": "th",
+      "name": "f",
+      "oldDescriptor": "(I)Lkh;",
+      "newDescriptor": "()Lkh;",
+      "callSiteSignatures": [
+        "th.f(I)Lkh;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 93,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ti.a(B)V": {
+      "newSignature": "ti.a()V",
+      "owner": "ti",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ti.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -58,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ti.a(Ljava/lang/String;Lkk;Ljava/lang/String;I)Lng;": {
+      "newSignature": "ti.a(Ljava/lang/String;Lkk;Ljava/lang/String;)Lng;",
+      "owner": "ti",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;Lkk;Ljava/lang/String;I)Lng;",
+      "newDescriptor": "(Ljava/lang/String;Lkk;Ljava/lang/String;)Lng;",
+      "callSiteSignatures": [
+        "ti.a(Ljava/lang/String;Lkk;Ljava/lang/String;I)Lng;"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 17,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "ti.c(B)V": {
+      "newSignature": "ti.c()V",
+      "owner": "ti",
+      "name": "c",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ti.c(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -121,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "TrackController.r(I)V": {
+      "newSignature": "TrackController.r()V",
+      "owner": "TrackController",
+      "name": "r",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "TrackController.r(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -23,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "TrackController.s(I)V": {
+      "newSignature": "TrackController.s()V",
+      "owner": "TrackController",
+      "name": "s",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "TrackController.s(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "u.a(B)V": {
+      "newSignature": "u.a()V",
+      "owner": "u",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "u.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 105,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "u.a(Ljava/lang/String;Z)Loi;": {
+      "newSignature": "u.a(Ljava/lang/String;)Loi;",
+      "owner": "u",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/String;Z)Loi;",
+      "newDescriptor": "(Ljava/lang/String;)Loi;",
+      "callSiteSignatures": [
+        "u.a(Ljava/lang/String;Z)Loi;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ub.a(B)V": {
+      "newSignature": "ub.a()V",
+      "owner": "ub",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ub.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 12,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ud.a(Z)V": {
+      "newSignature": "ud.a()V",
+      "owner": "ud",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ud.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "uf.a(ZILjava/lang/String;B)Lce;": {
+      "newSignature": "uf.a(ZILjava/lang/String;)Lce;",
+      "owner": "uf",
+      "name": "a",
+      "oldDescriptor": "(ZILjava/lang/String;B)Lce;",
+      "newDescriptor": "(ZILjava/lang/String;)Lce;",
+      "callSiteSignatures": [
+        "uf.a(ZILjava/lang/String;B)Lce;"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "B",
+          "value": -126,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ug.a(Lug;I)V": {
+      "newSignature": "ug.a(Lug;)V",
+      "owner": "ug",
+      "name": "a",
+      "oldDescriptor": "(Lug;I)V",
+      "newDescriptor": "(Lug;)V",
+      "callSiteSignatures": [
+        "ug.a(Lug;I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 256,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "uh.a(B)V": {
+      "newSignature": "uh.a()V",
+      "owner": "uh",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "uh.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 104,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "uh.a(ICB)Ljava/lang/String;": {
+      "newSignature": "uh.a(I)Ljava/lang/String;",
+      "owner": "uh",
+      "name": "a",
+      "oldDescriptor": "(ICB)Ljava/lang/String;",
+      "newDescriptor": "(I)Ljava/lang/String;",
+      "callSiteSignatures": [
+        "uh.a(ICB)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "C",
+          "value": 42,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 2,
+          "descriptor": "B",
+          "value": 20,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ui.g(I)V": {
+      "newSignature": "ui.g()V",
+      "owner": "ui",
+      "name": "g",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "ui.g(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 95,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "uj.a(I)Ljava/lang/String;": {
+      "newSignature": "uj.a()Ljava/lang/String;",
+      "owner": "uj",
+      "name": "a",
+      "oldDescriptor": "(I)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "uj.a(I)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -119,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "uk.a(I)I": {
+      "newSignature": "uk.a()I",
+      "owner": "uk",
+      "name": "a",
+      "oldDescriptor": "(I)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "uk.a(I)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "uk.a(Ljava/lang/CharSequence;I)I": {
+      "newSignature": "uk.a(Ljava/lang/CharSequence;)I",
+      "owner": "uk",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/CharSequence;I)I",
+      "newDescriptor": "(Ljava/lang/CharSequence;)I",
+      "callSiteSignatures": [
+        "uk.a(Ljava/lang/CharSequence;I)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "I",
+          "value": 10,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "uk.b(I)V": {
+      "newSignature": "uk.b()V",
+      "owner": "uk",
+      "name": "b",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "uk.b(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 10,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "v.e(I)V": {
+      "newSignature": "v.e()V",
+      "owner": "v",
+      "name": "e",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "v.e(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 6,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "va.a(I)I": {
+      "newSignature": "va.a()I",
+      "owner": "va",
+      "name": "a",
+      "oldDescriptor": "(I)I",
+      "newDescriptor": "()I",
+      "callSiteSignatures": [
+        "va.a(I)I"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 93,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "va.c(I)V": {
+      "newSignature": "va.c()V",
+      "owner": "va",
+      "name": "c",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "va.c(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 20300,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vb.a(I)V": {
+      "newSignature": "vb.a()V",
+      "owner": "vb",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "vb.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -114,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vd.a(Lbe;B)V": {
+      "newSignature": "vd.a(Lbe;)V",
+      "owner": "vd",
+      "name": "a",
+      "oldDescriptor": "(Lbe;B)V",
+      "newDescriptor": "(Lbe;)V",
+      "callSiteSignatures": [
+        "vd.a(Lbe;B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "B",
+          "value": -69,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vd.b(Z)V": {
+      "newSignature": "vd.b()V",
+      "owner": "vd",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "vd.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vd.c(Z)Ljava/lang/String;": {
+      "newSignature": "vd.c()Ljava/lang/String;",
+      "owner": "vd",
+      "name": "c",
+      "oldDescriptor": "(Z)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "vd.c(Z)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vd.j(I)Z": {
+      "newSignature": "vd.j()Z",
+      "owner": "vd",
+      "name": "j",
+      "oldDescriptor": "(I)Z",
+      "newDescriptor": "()Z",
+      "callSiteSignatures": [
+        "vd.j(I)Z"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -21109,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vd.k(I)V": {
+      "newSignature": "vd.k()V",
+      "owner": "vd",
+      "name": "k",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "vd.k(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 123,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vd.m(I)Ljava/lang/String;": {
+      "newSignature": "vd.m()Ljava/lang/String;",
+      "owner": "vd",
+      "name": "m",
+      "oldDescriptor": "(I)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "vd.m(I)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -9700,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "ve.a(IIILpf;Z)V": {
+      "newSignature": "ve.a(IIILpf;)V",
+      "owner": "ve",
+      "name": "a",
+      "oldDescriptor": "(IIILpf;Z)V",
+      "newDescriptor": "(IIILpf;)V",
+      "callSiteSignatures": [
+        "ve.a(IIILpf;Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 4,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "vh.g(I)V": {
+      "newSignature": "vh.g()V",
+      "owner": "vh",
+      "name": "g",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "vh.g(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 32,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vh.h(I)V": {
+      "newSignature": "vh.h()V",
+      "owner": "vh",
+      "name": "h",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "vh.h(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -2532,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vi.a(I)V": {
+      "newSignature": "vi.a()V",
+      "owner": "vi",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "vi.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -25590,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vj.a(I)V": {
+      "newSignature": "vj.a()V",
+      "owner": "vj",
+      "name": "a",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "vj.a(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 18775,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vj.a(ZZZI)Ljava/lang/String;": {
+      "newSignature": "vj.a(ZZZ)Ljava/lang/String;",
+      "owner": "vj",
+      "name": "a",
+      "oldDescriptor": "(ZZZI)Ljava/lang/String;",
+      "newDescriptor": "(ZZZ)Ljava/lang/String;",
+      "callSiteSignatures": [
+        "vj.a(ZZZI)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 118,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vk.b(Z)Ljava/lang/String;": {
+      "newSignature": "vk.b()Ljava/lang/String;",
+      "owner": "vk",
+      "name": "b",
+      "oldDescriptor": "(Z)Ljava/lang/String;",
+      "newDescriptor": "()Ljava/lang/String;",
+      "callSiteSignatures": [
+        "vk.b(Z)Ljava/lang/String;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vk.d(I)V": {
+      "newSignature": "vk.d()V",
+      "owner": "vk",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "vk.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 2,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "vl.e(B)V": {
+      "newSignature": "vl.e()V",
+      "owner": "vl",
+      "name": "e",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "vl.e(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 9,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "w.b(Z)V": {
+      "newSignature": "w.b()V",
+      "owner": "w",
+      "name": "b",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "w.b(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "w.r(I)V": {
+      "newSignature": "w.r()V",
+      "owner": "w",
+      "name": "r",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "w.r(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "wd.a(Ljava/lang/StringBuilder;CII)Ljava/lang/StringBuilder;": {
+      "newSignature": "wd.a(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;",
+      "owner": "wd",
+      "name": "a",
+      "oldDescriptor": "(Ljava/lang/StringBuilder;CII)Ljava/lang/StringBuilder;",
+      "newDescriptor": "(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;",
+      "callSiteSignatures": [
+        "wd.a(Ljava/lang/StringBuilder;CII)Ljava/lang/StringBuilder;"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "C",
+          "value": 32,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 2,
+          "descriptor": "I",
+          "value": 0,
+          "discoveredIteration": 1
+        },
+        {
+          "index": 3,
+          "descriptor": "I",
+          "value": 1,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "wd.p(I)V": {
+      "newSignature": "wd.p()V",
+      "owner": "wd",
+      "name": "p",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "wd.p(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 35,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "wd.q(I)Lk;": {
+      "newSignature": "wd.q()Lk;",
+      "owner": "wd",
+      "name": "q",
+      "oldDescriptor": "(I)Lk;",
+      "newDescriptor": "()Lk;",
+      "callSiteSignatures": [
+        "wd.q(I)Lk;"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": 11782,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "we.a(B)V": {
+      "newSignature": "we.a()V",
+      "owner": "we",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "we.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": 57,
+          "discoveredIteration": 2
+        }
+      ]
+    },
+    "wf.a(B)V": {
+      "newSignature": "wf.a()V",
+      "owner": "wf",
+      "name": "a",
+      "oldDescriptor": "(B)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "wf.a(B)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "B",
+          "value": -123,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "wi.a(Z)V": {
+      "newSignature": "wi.a()V",
+      "owner": "wi",
+      "name": "a",
+      "oldDescriptor": "(Z)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "wi.a(Z)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "wl.a(JZ)V": {
+      "newSignature": "wl.a(J)V",
+      "owner": "wl",
+      "name": "a",
+      "oldDescriptor": "(JZ)V",
+      "newDescriptor": "(J)V",
+      "callSiteSignatures": [
+        "wl.a(JZ)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 1,
+          "descriptor": "Z",
+          "value": 0,
+          "discoveredIteration": 1
+        }
+      ]
+    },
+    "wl.d(I)V": {
+      "newSignature": "wl.d()V",
+      "owner": "wl",
+      "name": "d",
+      "oldDescriptor": "(I)V",
+      "newDescriptor": "()V",
+      "callSiteSignatures": [
+        "wl.d(I)V"
+      ],
+      "removedParameters": [
+        {
+          "index": 0,
+          "descriptor": "I",
+          "value": -99,
+          "discoveredIteration": 2
+        }
+      ]
+    }
+  }
+}

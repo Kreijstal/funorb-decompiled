@@ -83,13 +83,13 @@ final class ue extends fa {
         return ka.field_W != null ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_t = null;
         field_q = null;
     }
 
-    final static void b(int param0, byte param1) {
+    final static void b() {
         fa var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -106,13 +106,13 @@ final class ue extends fa {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    ro.a(126, param0);
+                    ro.a(126, 4);
                     var2 = tj.field_z.f(1504642273);
                     continue L2;
                   }
                 }
               } else {
-                id.a((byte) -117, var4, param0);
+                id.a((byte) -117, var4, 4);
                 var4 = (hf) (Object) dh.field_a.f(1504642273);
                 continue L1;
               }
@@ -121,7 +121,7 @@ final class ue extends fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2_ref, "ue.B(" + param0 + 44 + 42 + 41);
+          throw aa.a((Throwable) (Object) var2_ref, "ue.B(" + 4 + 44 + 42 + 41);
         }
     }
 

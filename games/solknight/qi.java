@@ -479,7 +479,7 @@ final class qi extends ej {
           if (param0.field_i.length == 0) {
             return null;
           } else {
-            return new qi(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * gj.field_s)), param2 << 6);
+            return new qi(param0, (int)((long)param0.field_j * 256L * 100L / (long)(100 * gj.field_s)), param2 << 6);
           }
         } else {
           return null;

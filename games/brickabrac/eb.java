@@ -11,7 +11,7 @@ final class eb extends ff {
     static int field_n;
     static boolean field_l;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_r = null;
         field_m = null;
         field_p = null;
@@ -139,7 +139,7 @@ final class eb extends ff {
             }
             L2: {
               param0.field_jc = param1.l(255);
-              param0.field_kc = param1.l(param2 ^ 255);
+              param0.field_kc = param1.l(255);
               var4_int = param1.l(255);
               stackOut_4_0 = (om) param0;
               stackIn_6_0 = stackOut_4_0;
@@ -163,7 +163,7 @@ final class eb extends ff {
               stackOut_7_0 = (om) param0;
               stackIn_9_0 = stackOut_7_0;
               stackIn_8_0 = stackOut_7_0;
-              if ((64 & var4_int) == param2) {
+              if ((64 & var4_int) == 0) {
                 stackOut_9_0 = (om) (Object) stackIn_9_0;
                 stackOut_9_1 = 0;
                 stackIn_10_0 = stackOut_9_0;
@@ -277,7 +277,7 @@ final class eb extends ff {
             }
             L10: {
               var5 = stackIn_26_0;
-              param1.a(0, param0.field_Tb, param2 ^ 125, param0.field_Tb.length);
+              param1.a(0, param0.field_Tb, 125, param0.field_Tb.length);
               if ((var4_int & 2) == 0) {
                 stackOut_28_0 = 0;
                 stackIn_29_0 = stackOut_28_0;
@@ -303,7 +303,7 @@ final class eb extends ff {
             L12: {
               param0.field_xc = param1.g(-32768);
               var7 = param1.field_l;
-              param0.field_Fc = param1.d(~param2);
+              param0.field_Fc = param1.d(-1);
               if (var6 != 0) {
                 param0.field_Qb = new String[param0.field_cc];
                 param1.field_l = var7;
@@ -377,7 +377,7 @@ final class eb extends ff {
               break L15;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + param2 + 44 + param3 + 41);
+          throw qb.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + 0 + 44 + param3 + 41);
         }
     }
 

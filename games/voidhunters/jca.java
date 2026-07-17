@@ -5,12 +5,12 @@ final class jca extends rqa {
     static String field_o;
     static String field_p;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_p = null;
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int a(int param0, int param1) {
         int var3 = param1 >> 16;
         int var4 = 65535 & param1;
         int var5 = param0 >> 16;

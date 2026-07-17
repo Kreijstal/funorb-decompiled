@@ -47,7 +47,7 @@ final class tp {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         field_e = null;

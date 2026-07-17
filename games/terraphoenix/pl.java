@@ -23,27 +23,23 @@ final class pl extends gb implements jf, n, rg {
         nj var3 = null;
         RuntimeException var3_ref = null;
         nj stackIn_8_0 = null;
-        byte[] stackIn_11_0 = null;
-        byte[] stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         nj stackOut_7_0 = null;
-        byte[] stackOut_12_0 = null;
-        byte[] stackOut_10_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         try {
           L0: {
             if (param0 != null) {
@@ -60,17 +56,9 @@ final class pl extends gb implements jf, n, rg {
                 ((ke) (Object) var3).a(param0, false);
                 stackOut_7_0 = (nj) var3;
                 stackIn_8_0 = stackOut_7_0;
-                return (Object) (Object) stackIn_8_0;
+                break L0;
               } else {
-                if (!param1) {
-                  stackOut_12_0 = (byte[]) param0;
-                  stackIn_13_0 = stackOut_12_0;
-                  break L0;
-                } else {
-                  stackOut_10_0 = li.a(0, param0);
-                  stackIn_11_0 = stackOut_10_0;
-                  return (Object) (Object) stackIn_11_0;
-                }
+                return (Object) (Object) li.a(0, param0);
               }
             } else {
               return null;
@@ -80,33 +68,33 @@ final class pl extends gb implements jf, n, rg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("pl.N(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_10_0 = (RuntimeException) var3_ref;
+            stackOut_10_1 = new StringBuilder().append("pl.N(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 44 + param2 + 41);
         }
-        return (Object) (Object) stackIn_13_0;
+        return (Object) (Object) stackIn_8_0;
     }
 
     private final int a(int param0, boolean param1, String param2, gl param3, int param4) {
@@ -148,7 +136,7 @@ final class pl extends gb implements jf, n, rg {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = new j(20, param4, 120 + param0, 25, param3, param1, 120, 3, qk.field_e, 16777215, param2);
+            var8 = new j(20, param4, 290, 25, param3, false, 120, 3, qk.field_e, 16777215, param2);
             ((pl) this).b((byte) 95, (gl) (Object) var8);
             var7 = new dd(((v) (Object) param3).a(29730));
             ((pl) this).b((byte) 95, (gl) (Object) var7);
@@ -162,7 +150,7 @@ final class pl extends gb implements jf, n, rg {
           L1: {
             var6 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("pl.G(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("pl.G(").append(170).append(44).append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -252,13 +240,19 @@ final class pl extends gb implements jf, n, rg {
         ah dupTemp$1 = new ah(10000536);
         ((pl) this).field_U.field_l = (cj) (Object) dupTemp$1;
         ((pl) this).field_H.field_l = (cj) (Object) dupTemp$1;
+        int discarded$2 = 9;
         String var2 = ij.a(new String[2], -1, h.field_d);
         int var3 = 20;
         var3 = var3 + this.a(g.field_nb, (gl) (Object) ((pl) this).field_S, 170, 16777215, var3);
-        var3 = var3 + (5 + this.a(false, 20, "", (gl) (Object) ((pl) this).field_I, bh.field_h, var3, 170));
+        int discarded$3 = 170;
+        var3 = var3 + (5 + this.a(false, 20, "", (gl) (Object) ((pl) this).field_I, bh.field_h, var3));
         var3 = var3 + this.a(eb.field_E, (gl) (Object) ((pl) this).field_H, 170, 16777215, var3);
-        var3 = var3 + (5 + this.a(q.field_Kb, (gl) (Object) ((pl) this).field_U, var3, ej.field_N, 170, 16777215));
-        var3 = var3 + (this.a(im.field_b, (gl) (Object) ((pl) this).field_J, var3, ag.field_b, 170, 16777215) + 5);
+        int discarded$4 = 16777215;
+        int discarded$5 = 170;
+        var3 = var3 + (5 + this.a(q.field_Kb, (gl) (Object) ((pl) this).field_U, var3, ej.field_N));
+        int discarded$6 = 16777215;
+        int discarded$7 = 170;
+        var3 = var3 + (this.a(im.field_b, (gl) (Object) ((pl) this).field_J, var3, ag.field_b) + 5);
         var3 = var3 + this.a(170, false, ig.field_d, (gl) (Object) ((pl) this).field_R, var3);
         j var4 = new j(46, var3, ((pl) this).field_p + -90, 25, (gl) (Object) ((pl) this).field_W, true, ((pl) this).field_p + -120, 5, ra.field_l, 11579568, p.field_b);
         ((pl) this).b((byte) 95, (gl) (Object) var4);
@@ -292,7 +286,8 @@ final class pl extends gb implements jf, n, rg {
                 fd.c(-113);
             } else {
                 if (param0 == ((pl) this).field_O) {
-                    boolean discarded$0 = this.h((byte) -111);
+                    int discarded$0 = -111;
+                    boolean discarded$1 = this.h();
                 }
             }
             int var6_int = 105 / ((param4 - -5) / 57);
@@ -301,7 +296,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final int a(String param0, gl param1, int param2, String param3, int param4, int param5) {
+    private final int a(String param0, gl param1, int param2, String param3) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -353,7 +348,8 @@ final class pl extends gb implements jf, n, rg {
         String stackOut_9_2 = null;
         try {
           L0: {
-            stackOut_0_0 = this.a(false, 35, param0, param1, param3, param2, param4);
+            int discarded$2 = 170;
+            stackOut_0_0 = this.a(false, 35, param0, param1, param3, param2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -435,7 +431,7 @@ final class pl extends gb implements jf, n, rg {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param4 + 44 + 16777215 + 41);
+          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 170 + 44 + 16777215 + 41);
         }
         return stackIn_1_0;
     }
@@ -452,7 +448,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final boolean h(byte param0) {
+    private final boolean h() {
         if (!(this.i((byte) -100))) {
             return false;
         }
@@ -585,7 +581,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final int a(boolean param0, int param1, String param2, gl param3, String param4, int param5, int param6) {
+    private final int a(boolean param0, int param1, String param2, gl param3, String param4, int param5) {
         RuntimeException var8 = null;
         ki var9 = null;
         j var10 = null;
@@ -639,9 +635,9 @@ final class pl extends gb implements jf, n, rg {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var10 = new j(20, param5, 120 + param6, 25, param3, param0, 120, 3, qk.field_e, 16777215, param4);
+            var10 = new j(20, param5, 290, 25, param3, false, 120, 3, qk.field_e, 16777215, param4);
             ((pl) this).b((byte) 95, (gl) (Object) var10);
-            var9 = new ki(((v) (Object) param3).a(29730), param2, 126, var10.field_n + param5, 50 + param6, param1);
+            var9 = new ki(((v) (Object) param3).a(29730), param2, 126, var10.field_n + param5, 220, param1);
             var9.field_r = (sc) this;
             ((pl) this).b((byte) 95, (gl) (Object) var9);
             stackOut_0_0 = var9.field_n + var10.field_n;
@@ -653,7 +649,7 @@ final class pl extends gb implements jf, n, rg {
           L1: {
             var8 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var8;
-            stackOut_2_1 = new StringBuilder().append("pl.S(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("pl.S(").append(0).append(44).append(param1).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -726,7 +722,7 @@ final class pl extends gb implements jf, n, rg {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param5 + 44 + param6 + 41);
+          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param5 + 44 + 170 + 41);
         }
         return stackIn_1_0;
     }
@@ -773,7 +769,7 @@ final class pl extends gb implements jf, n, rg {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var6 = new j(20, param4, 120 + param2, 25, param1, false, 120, 3, qk.field_e, param3, param0);
+            var6 = new j(20, param4, 290, 25, param1, false, 120, 3, qk.field_e, 16777215, param0);
             ((pl) this).b((byte) 95, (gl) (Object) var6);
             stackOut_0_0 = var6.field_n;
             stackIn_1_0 = stackOut_0_0;
@@ -832,7 +828,7 @@ final class pl extends gb implements jf, n, rg {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 170 + 44 + 16777215 + 44 + param4 + 41);
         }
         return stackIn_1_0;
     }
@@ -938,7 +934,7 @@ final class pl extends gb implements jf, n, rg {
         return stackIn_15_0 != 0;
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_G = null;
         field_V = null;
     }
@@ -956,7 +952,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final String g(byte param0) {
+    private final String g() {
         return "</col></u>";
     }
 

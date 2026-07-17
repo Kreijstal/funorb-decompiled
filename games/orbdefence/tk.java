@@ -14,7 +14,7 @@ abstract class tk extends o {
     static int field_n;
     static String[] field_r;
 
-    final static boolean a(ki param0, int param1) {
+    final static boolean a(ki param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -244,7 +244,8 @@ abstract class tk extends o {
                 break L1;
               }
             }
-            stackOut_2_0 = we.a(10, 87, param1, true);
+            int discarded$2 = 1;
+            stackOut_2_0 = we.a(10, 87, param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

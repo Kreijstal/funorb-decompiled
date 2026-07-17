@@ -13,12 +13,9 @@ final class le {
         this(-1, 1000000, 1000000);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
-        if (param0 != 1000000) {
-            field_a = null;
-        }
     }
 
     final void a(byte[] param0, int param1, mg param2) {
@@ -165,7 +162,7 @@ final class le {
     private le(int param0, int param1, int param2) {
     }
 
-    final static ik a(int param0, ki param1, int param2) {
+    final static ik a(int param0, ki param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

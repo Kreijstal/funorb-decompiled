@@ -13,14 +13,13 @@ final class jl extends wf {
     static int field_j;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        Object var11 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = Transmogrify.field_A ? 1 : 0;
         try {
@@ -29,33 +28,24 @@ final class jl extends wf {
               sb.d(param0, param1, 1 + param3, 10000536);
               sb.d(param0, param1 - -param4, 1 + param3, 12105912);
               var5_int = 1;
-              if (param2 == 13612) {
+              var6 = param4;
+              if (sb.field_e > param1 - -var5_int) {
+                var5_int = -param1 + sb.field_e;
                 break L1;
               } else {
-                var11 = null;
-                jl.a((java.awt.Component) null, 106);
                 break L1;
               }
             }
             L2: {
-              var6 = param4;
-              if (sb.field_e > param1 - -var5_int) {
-                var5_int = -param1 + sb.field_e;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
               if (sb.field_f >= param1 + var6) {
-                break L3;
+                break L2;
               } else {
                 var6 = -param1 + sb.field_f;
-                break L3;
+                break L2;
               }
             }
             var7 = var5_int;
-            L4: while (true) {
+            L3: while (true) {
               if (var7 >= var6) {
                 break L0;
               } else {
@@ -64,18 +54,18 @@ final class jl extends wf {
                 sb.field_h[param0 + (param1 - -var7) * sb.field_c] = var9;
                 sb.field_h[sb.field_c * (var7 + param1) + param0 - -param3] = var9;
                 var7++;
-                continue L4;
+                continue L3;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var5, "jl.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ch.a((Throwable) (Object) var5, "jl.C(" + param0 + 44 + param1 + 44 + 13612 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -101,8 +91,10 @@ final class jl extends wf {
               var3 = var9.d((byte) 106);
               if (var2 != 0) {
                 if (var2 != 1) {
-                  d.a((Throwable) null, 46, "LR1: " + ik.q(48));
-                  pc.a(1);
+                  int discarded$4 = 48;
+                  d.a((Throwable) null, 46, "LR1: " + ik.q());
+                  int discarded$5 = 1;
+                  pc.a();
                   break L1;
                 } else {
                   var4 = var9.k(128);
@@ -128,7 +120,8 @@ final class jl extends wf {
                       }
                     }
                     if (var5 == null) {
-                      pc.a(1);
+                      int discarded$6 = 1;
+                      pc.a();
                       return;
                     } else {
                       var5.c(5);
@@ -139,7 +132,8 @@ final class jl extends wf {
               } else {
                 var4_ref_oi = (oi) (Object) qd.field_d.a((byte) -95);
                 if (var4_ref_oi == null) {
-                  pc.a(1);
+                  int discarded$7 = 1;
+                  pc.a();
                   return;
                 } else {
                   L5: {
@@ -170,24 +164,16 @@ final class jl extends wf {
                 }
               }
             }
-            L7: {
-              if (param0 == 1) {
-                break L7;
-              } else {
-                field_j = -22;
-                break L7;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "jl.B(" + param0 + 41);
+          throw ch.a((Throwable) (Object) var1, "jl.B(" + 1 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
     }
 
@@ -195,68 +181,60 @@ final class jl extends wf {
         throw new Error();
     }
 
-    final static void a(java.awt.Component param0, int param1) {
-        RuntimeException runtimeException = null;
+    final static void a(java.awt.Component param0) {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              param0.addMouseListener((java.awt.event.MouseListener) (Object) hi.field_e);
-              param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) hi.field_e);
-              param0.addFocusListener((java.awt.event.FocusListener) (Object) hi.field_e);
-              if (param1 == 0) {
-                break L1;
-              } else {
-                jl.d(-37);
-                break L1;
-              }
-            }
+            param0.addMouseListener((java.awt.event.MouseListener) (Object) hi.field_e);
+            param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) hi.field_e);
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) hi.field_e);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("jl.D(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("jl.D(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw ch.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
         }
     }
 

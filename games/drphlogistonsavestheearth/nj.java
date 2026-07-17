@@ -91,7 +91,8 @@ final class nj {
                           if (((nj) this).field_b != 512) {
                             break L6;
                           } else {
-                            this.a(8);
+                            int discarded$2 = 8;
+                            this.a();
                             ((nj) this).field_g = 0;
                             ((nj) this).field_b = 0;
                             break L6;
@@ -117,7 +118,8 @@ final class nj {
                             if (512 != ((nj) this).field_b) {
                               break L8;
                             } else {
-                              this.a(8);
+                              int discarded$3 = 8;
+                              this.a();
                               ((nj) this).field_g = 0;
                               ((nj) this).field_b = 0;
                               break L8;
@@ -178,7 +180,7 @@ final class nj {
         }
     }
 
-    final static boolean a(java.applet.Applet param0, int param1) {
+    final static boolean a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -269,7 +271,8 @@ final class nj {
                     case 8: {
                         try {
                             var2 = "tuhstatbut";
-                            var3 = (String) pb.a("getcookies", param0, true);
+                            int discarded$2 = 1;
+                            var3 = (String) pb.a("getcookies", param0);
                             var4 = ki.a((byte) -95, ';', var3);
                             var5 = 0;
                             statePc = 9;
@@ -487,13 +490,14 @@ final class nj {
                 } else {
                   L2: while (true) {
                     if (((nj) this).field_g >= 64) {
-                      this.a(8);
+                      int discarded$4 = 8;
+                      this.a();
                       ((nj) this).field_g = 0;
                       break L1;
                     } else {
-                      int fieldTemp$2 = ((nj) this).field_g;
+                      int fieldTemp$5 = ((nj) this).field_g;
                       ((nj) this).field_g = ((nj) this).field_g + 1;
-                      ((nj) this).field_k[fieldTemp$2] = (byte) 0;
+                      ((nj) this).field_k[fieldTemp$5] = (byte) 0;
                       continue L2;
                     }
                   }
@@ -502,7 +506,8 @@ final class nj {
               L3: while (true) {
                 if (32 <= ((nj) this).field_g) {
                   kg.a(((nj) this).field_m, 0, ((nj) this).field_k, 32, 32);
-                  this.a(8);
+                  int discarded$6 = 8;
+                  this.a();
                   var4_int = 0;
                   var5 = param0;
                   L4: while (true) {
@@ -524,9 +529,9 @@ final class nj {
                     }
                   }
                 } else {
-                  int fieldTemp$3 = ((nj) this).field_g;
+                  int fieldTemp$7 = ((nj) this).field_g;
                   ((nj) this).field_g = ((nj) this).field_g + 1;
-                  ((nj) this).field_k[fieldTemp$3] = (byte) 0;
+                  ((nj) this).field_k[fieldTemp$7] = (byte) 0;
                   continue L3;
                 }
               }
@@ -602,7 +607,7 @@ final class nj {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_c = null;
         field_f = null;
@@ -630,22 +635,18 @@ final class nj {
             break L1;
           }
         }
-        if (param2 < -52) {
-          L2: {
-            if (!param3) {
-              break L2;
-            } else {
-              var4++;
-              break L2;
-            }
+        L2: {
+          if (!param3) {
+            break L2;
+          } else {
+            var4++;
+            break L2;
           }
-          return tf.field_nb[var4];
-        } else {
-          return null;
         }
+        return tf.field_nb[var4];
     }
 
-    final static java.awt.Frame a(int param0, int param1, bl param2, boolean param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, bl param2) {
         RuntimeException var6 = null;
         fl[] var6_array = null;
         int var7_int = 0;
@@ -655,36 +656,37 @@ final class nj {
         fl[] var10 = null;
         il var11 = null;
         Object stackIn_10_0 = null;
-        Object stackIn_27_0 = null;
-        Object stackIn_30_0 = null;
-        java.awt.Frame stackIn_32_0 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
+        Object stackIn_26_0 = null;
+        Object stackIn_29_0 = null;
+        java.awt.Frame stackIn_31_0 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_37_2 = null;
+        String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_9_0 = null;
-        java.awt.Frame stackOut_31_0 = null;
-        Object stackOut_29_0 = null;
-        Object stackOut_26_0 = null;
+        java.awt.Frame stackOut_30_0 = null;
+        Object stackOut_28_0 = null;
+        Object stackOut_25_0 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        String stackOut_35_2 = null;
         RuntimeException stackOut_33_0 = null;
         StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
+        String stackOut_33_2 = null;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
             if (param2.a(-20)) {
               L1: {
                 if (param1 == 0) {
-                  var10 = eb.a(param2, true);
+                  int discarded$1 = 1;
+                  var10 = eb.a(param2);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -698,7 +700,7 @@ final class nj {
                         }
                       } else {
                         L3: {
-                          if (var10[var8].field_g != param4) {
+                          if (var10[var8].field_g != 640) {
                             break L3;
                           } else {
                             break L3;
@@ -717,37 +719,29 @@ final class nj {
                   break L1;
                 }
               }
-              L4: {
-                var11 = param2.a(param4, param5, param0, 0, param1);
-                if (!param3) {
-                  break L4;
-                } else {
-                  field_o = null;
-                  break L4;
-                }
-              }
-              L5: while (true) {
+              var11 = param2.a(640, 480, 0, 0, param1);
+              L4: while (true) {
                 if (var11.field_b != 0) {
                   var7 = (java.awt.Frame) var11.field_g;
                   if (null != var7) {
                     if (var11.field_b != 2) {
-                      stackOut_31_0 = (java.awt.Frame) var7;
-                      stackIn_32_0 = stackOut_31_0;
+                      stackOut_30_0 = (java.awt.Frame) var7;
+                      stackIn_31_0 = stackOut_30_0;
                       break L0;
                     } else {
                       ce.a(param2, var7, (byte) -47);
-                      stackOut_29_0 = null;
-                      stackIn_30_0 = stackOut_29_0;
-                      return (java.awt.Frame) (Object) stackIn_30_0;
+                      stackOut_28_0 = null;
+                      stackIn_29_0 = stackOut_28_0;
+                      return (java.awt.Frame) (Object) stackIn_29_0;
                     }
                   } else {
-                    stackOut_26_0 = null;
-                    stackIn_27_0 = stackOut_26_0;
-                    return (java.awt.Frame) (Object) stackIn_27_0;
+                    stackOut_25_0 = null;
+                    stackIn_26_0 = stackOut_25_0;
+                    return (java.awt.Frame) (Object) stackIn_26_0;
                   }
                 } else {
                   kk.a(10L, true);
-                  continue L5;
+                  continue L4;
                 }
               }
             } else {
@@ -756,44 +750,44 @@ final class nj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var6 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) var6;
-            stackOut_33_1 = new StringBuilder().append("nj.G(").append(param0).append(44).append(param1).append(44);
-            stackIn_36_0 = stackOut_33_0;
-            stackIn_36_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackOut_32_0 = (RuntimeException) var6;
+            stackOut_32_1 = new StringBuilder().append("nj.G(").append(0).append(44).append(param1).append(44);
+            stackIn_35_0 = stackOut_32_0;
+            stackIn_35_1 = stackOut_32_1;
+            stackIn_33_0 = stackOut_32_0;
+            stackIn_33_1 = stackOut_32_1;
             if (param2 == null) {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
-              break L6;
+              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
+              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_2 = "null";
+              stackIn_36_0 = stackOut_35_0;
+              stackIn_36_1 = stackOut_35_1;
+              stackIn_36_2 = stackOut_35_2;
+              break L5;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "{...}";
-              stackIn_37_0 = stackOut_34_0;
-              stackIn_37_1 = stackOut_34_1;
-              stackIn_37_2 = stackOut_34_2;
-              break L6;
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "{...}";
+              stackIn_36_0 = stackOut_33_0;
+              stackIn_36_1 = stackOut_33_1;
+              stackIn_36_2 = stackOut_33_2;
+              break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ie.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + 0 + 44 + 640 + 44 + 480 + 41);
         }
-        return stackIn_32_0;
+        return stackIn_31_0;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var8 = 0;
+        int var7 = 0;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = 0;
         var3 = 0;
@@ -839,14 +833,14 @@ final class nj {
                                 }
                               } else {
                                 ((nj) this).field_i[var3] = ((nj) this).field_q[var3];
-                                var8 = 0;
-                                var4 = var8;
+                                var7 = 0;
+                                var4 = var7;
                                 var5 = 56;
                                 L8: while (true) {
-                                  if (var8 < 8) {
-                                    ((nj) this).field_i[var3] = ff.a(((nj) this).field_i[var3], qb.field_c[var8][rk.a(255, (int)(((nj) this).field_h[rk.a(7, var3 + -var8)] >>> var5))]);
+                                  if (var7 < 8) {
+                                    ((nj) this).field_i[var3] = ff.a(((nj) this).field_i[var3], qb.field_c[var7][rk.a(255, (int)(((nj) this).field_h[rk.a(7, var3 + -var7)] >>> var5))]);
                                     var5 -= 8;
-                                    var8++;
+                                    var7++;
                                     continue L8;
                                   } else {
                                     var3++;

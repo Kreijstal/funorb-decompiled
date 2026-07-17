@@ -253,19 +253,15 @@ final class ub {
           } else {
             if (param1 < 3) {
               var2 = "";
-              if (param0 >= 19) {
-                var3 = 0;
-                L1: while (true) {
-                  if (var3 >= cd.field_a[param1].field_n.length) {
-                    return var2;
-                  } else {
-                    var2 = var2 + var3 + ": " + cd.field_a[param1].field_n[var3].field_J + "\n";
-                    var3++;
-                    continue L1;
-                  }
+              var3 = 0;
+              L1: while (true) {
+                if (var3 >= cd.field_a[param1].field_n.length) {
+                  return var2;
+                } else {
+                  var2 = var2 + var3 + ": " + cd.field_a[param1].field_n[var3].field_J + "\n";
+                  var3++;
+                  continue L1;
                 }
-              } else {
-                return null;
               }
             } else {
               break L0;
@@ -304,9 +300,6 @@ final class ub {
 
     final static void a(boolean param0, boolean param1) {
         ij.field_w = !param1 ? new ea(ob.field_O, eb.field_c) : new ea(ur.field_x, uj.field_l);
-        if (param0) {
-            return;
-        }
         lk.field_a = new je(0L, (je) null);
         lk.field_a.a((je) (Object) ij.field_w.field_a, 126);
         lk.field_a.a(mp.field_Lb, 97);
@@ -319,7 +312,7 @@ final class ub {
         je.a(27, param1);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -489,7 +482,7 @@ final class ub {
         String stackOut_15_2 = null;
         try {
           L0: {
-            var8_int = -39 / ((-87 - param5) / 33);
+            var8_int = 13;
             var9 = new vb(param4, param1, param7, param0, param6, param3, param2);
             if (var9.b(param6, param3, true)) {
               stackOut_3_0 = (vb) var9;
@@ -581,7 +574,7 @@ final class ub {
           }
           L4: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(17).append(44).append(param6).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

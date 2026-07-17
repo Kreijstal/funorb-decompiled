@@ -38,9 +38,6 @@ final class wg extends od {
     private int field_t;
 
     private final void d(int param0, int param1, int param2) {
-        if (param0 != 127) {
-            return;
-        }
         ((wg) this).field_Q[param1] = param2;
     }
 
@@ -283,36 +280,32 @@ final class wg extends od {
                 return;
               } else {
                 if (var3 != 176) {
-                  if (param0 == 63) {
-                    if (var3 != 192) {
-                      if (var3 == 208) {
-                        var4 = 15 & param1;
-                        var5 = 127 & param1 >> 8;
-                        this.c(var4, 2, var5);
+                  if (var3 != 192) {
+                    if (var3 == 208) {
+                      var4 = 15 & param1;
+                      var5 = 127 & param1 >> 8;
+                      this.c(var4, 2, var5);
+                      return;
+                    } else {
+                      if (224 == var3) {
+                        var4 = param1 & 15;
+                        var5 = ((32752 & param1) >> 8) + ((8323282 & param1) >> 9);
+                        this.d(127, var4, var5);
                         return;
                       } else {
-                        if (224 == var3) {
-                          var4 = param1 & 15;
-                          var5 = ((32752 & param1) >> 8) + ((8323282 & param1) >> 9);
-                          this.d(param0 + 64, var4, var5);
+                        var3 = 255 & param1;
+                        if (var3 == 255) {
+                          this.a(true, 13396);
                           return;
                         } else {
-                          var3 = 255 & param1;
-                          if (var3 == 255) {
-                            this.a(true, param0 + 13333);
-                            return;
-                          } else {
-                            return;
-                          }
+                          return;
                         }
                       }
-                    } else {
-                      var4 = 15 & param1;
-                      var5 = (param1 & 32587) >> 8;
-                      this.a(var4, 22519, ((wg) this).field_M[var4] - -var5);
-                      return;
                     }
                   } else {
+                    var4 = 15 & param1;
+                    var5 = (param1 & 32587) >> 8;
+                    this.a(var4, 22519, ((wg) this).field_M[var4] - -var5);
                     return;
                   }
                 } else {
@@ -484,7 +477,7 @@ final class wg extends od {
                   }
                   L20: {
                     if (var5 == 121) {
-                      this.b(var4, param0 + 193);
+                      this.b(var4, 256);
                       break L20;
                     } else {
                       break L20;
@@ -696,7 +689,7 @@ final class wg extends od {
         }
     }
 
-    private final int b(pl param0, boolean param1) {
+    private final int b(pl param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -832,9 +825,6 @@ final class wg extends od {
 
     private final void a(int param0, boolean param1, int param2) {
         ((wg) this).field_n[param2] = param0;
-        if (!param1) {
-            ((wg) this).field_z = null;
-        }
         ((wg) this).field_G[param2] = (int)(0.5 + Math.pow(2.0, 0.00054931640625 * (double)param0) * 2097152.0);
     }
 
@@ -862,19 +852,12 @@ final class wg extends od {
     private final synchronized void b(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = CrazyCrystals.field_B;
-        if (param0 >= param1) {
-            ((wg) this).field_J[param0] = 256;
-        } else {
-            for (var4 = 0; var4 < 16; var4++) {
-                ((wg) this).field_J[var4] = 256;
-            }
+        for (var4 = 0; var4 < 16; var4++) {
+            ((wg) this).field_J[var4] = 256;
         }
     }
 
     private final void a(byte param0, int param1, int param2) {
-        if (param0 < 31) {
-            this.a(32, false, -33, 108);
-        }
         ((wg) this).field_C[param2] = param1;
         ((wg) this).field_M[param2] = pf.b(param1, -128);
         this.a(param2, 22519, param1);
@@ -883,9 +866,6 @@ final class wg extends od {
     private final void a(boolean param0, int param1) {
         int var3 = 0;
         int var4 = CrazyCrystals.field_B;
-        if (param1 != 13396) {
-            return;
-        }
         if (param0) {
             this.a(-33, -1);
         } else {
@@ -904,9 +884,6 @@ final class wg extends od {
     }
 
     private final void c(int param0, int param1, int param2) {
-        if (param1 != 2) {
-            ((wg) this).field_E = null;
-        }
     }
 
     final synchronized void a(int param0, rm param1, boolean param2) {
@@ -1117,14 +1094,11 @@ final class wg extends od {
         int var6 = 0;
         int var7 = CrazyCrystals.field_B;
         try {
-            this.b(param0, param1 + -8306);
+            this.b(param0, -114);
             ((wg) this).field_u.a(param2.field_g);
             ((wg) this).field_B = 0L;
             ((wg) this).field_k = param3 ? true : false;
             var5_int = ((wg) this).field_u.a();
-            if (param1 != 8192) {
-                ((wg) this).field_m = null;
-            }
             for (var6 = 0; var5_int > var6; var6++) {
                 ((wg) this).field_u.c(var6);
                 ((wg) this).field_u.d(var6);
@@ -1134,16 +1108,13 @@ final class wg extends od {
             ((wg) this).field_o = ((wg) this).field_u.field_h[((wg) this).field_H];
             ((wg) this).field_A = ((wg) this).field_u.b(((wg) this).field_o);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "wg.BA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "wg.BA(" + param0 + 44 + 8192 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
     private final void a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = CrazyCrystals.field_B;
-        if (param1 != 22519) {
-            return;
-        }
         if (((wg) this).field_L[param0] != param2) {
             ((wg) this).field_L[param0] = param2;
             for (var4 = 0; 128 > var4; var4++) {
@@ -1155,62 +1126,54 @@ final class wg extends od {
     private final void a(int param0, int param1) {
         pl var3 = null;
         int var4 = 0;
-        L0: {
-          var4 = CrazyCrystals.field_B;
-          var3 = (pl) (Object) ((wg) this).field_m.field_k.g(32073);
-          if (param0 == -33) {
-            break L0;
-          } else {
-            this.c(12, -19);
-            break L0;
-          }
-        }
-        L1: while (true) {
+        var4 = CrazyCrystals.field_B;
+        var3 = (pl) (Object) ((wg) this).field_m.field_k.g(32073);
+        L0: while (true) {
           if (var3 == null) {
             return;
           } else {
-            L2: {
-              L3: {
+            L1: {
+              L2: {
                 if (param1 < 0) {
-                  break L3;
+                  break L2;
                 } else {
                   if (var3.field_i == param1) {
-                    break L3;
-                  } else {
                     break L2;
+                  } else {
+                    break L1;
                   }
                 }
               }
-              L4: {
+              L3: {
                 if (var3.field_v == null) {
-                  break L4;
+                  break L3;
                 } else {
-                  L5: {
+                  L4: {
                     var3.field_v.d(id.field_m / 100);
                     if (!var3.field_v.e()) {
-                      break L5;
+                      break L4;
                     } else {
                       ((wg) this).field_m.field_l.b((od) (Object) var3.field_v);
-                      break L5;
+                      break L4;
                     }
                   }
                   var3.d(12426);
-                  break L4;
+                  break L3;
                 }
               }
-              L6: {
+              L5: {
                 if (var3.field_l >= 0) {
-                  break L6;
+                  break L5;
                 } else {
                   ((wg) this).field_z[var3.field_i][var3.field_y] = null;
-                  break L6;
+                  break L5;
                 }
               }
               var3.a(false);
-              break L2;
+              break L1;
             }
             var3 = (pl) (Object) ((wg) this).field_m.field_k.a(false);
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -1280,7 +1243,7 @@ final class wg extends od {
             break L0;
           }
         }
-        var10 = (dk) (Object) ((wg) this).field_D.a((long)((wg) this).field_L[param3], param1);
+        var10 = (dk) (Object) ((wg) this).field_D.a((long)((wg) this).field_L[param3], 0);
         var11 = var10;
         if (var11 == null) {
           return;
@@ -1305,12 +1268,15 @@ final class wg extends od {
               var7.field_x = 0;
               var7.field_f = 0;
               var7.field_r = 0;
-              if (((wg) this).field_v[param3] == param1) {
-                var7.field_v = kg.b(var6, this.a(var7, false), this.b(var7, false), this.a(var7, param1 + 255));
+              if (((wg) this).field_v[param3] == 0) {
+                int discarded$3 = 0;
+                int discarded$4 = 255;
+                var7.field_v = kg.b(var6, this.a(var7, false), this.b(var7), this.a(var7));
                 break L3;
               } else {
                 L4: {
-                  var7.field_v = kg.b(var6, this.a(var7, false), 0, this.a(var7, param1 + 255));
+                  int discarded$5 = 255;
+                  var7.field_v = kg.b(var6, this.a(var7, false), 0, this.a(var7));
                   stackOut_15_0 = this;
                   stackOut_15_1 = 2;
                   stackOut_15_2 = (pl) var7;
@@ -1376,7 +1342,7 @@ final class wg extends od {
                 break L6;
               }
             }
-            ((wg) this).field_m.field_k.b(param1, (jb) (Object) var7);
+            ((wg) this).field_m.field_k.b(0, (jb) (Object) var7);
             ((wg) this).field_z[param3][param2] = var7;
             return;
           }
@@ -1384,7 +1350,7 @@ final class wg extends od {
     }
 
     private final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = -102 / ((param0 - 8) / 46);
+        int var5 = -51;
     }
 
     final synchronized void d(int param0) {
@@ -1613,9 +1579,6 @@ final class wg extends od {
     private final void a(int param0, boolean param1, int param2, int param3) {
         pl var6 = null;
         int var7 = CrazyCrystals.field_B;
-        if (param1) {
-            return;
-        }
         pl var8 = ((wg) this).field_z[param0][param3];
         if (!(var8 != null)) {
             return;
@@ -1881,7 +1844,9 @@ final class wg extends od {
               }
             }
             if (var9 == 0) {
-              param3.field_v.a(param3.field_k, this.b(param3, false), this.a(param3, 255));
+              int discarded$2 = 0;
+              int discarded$3 = 255;
+              param3.field_v.a(param3.field_k, this.b(param3), this.a(param3));
               stackOut_66_0 = 0;
               stackIn_67_0 = stackOut_66_0;
               break L0;
@@ -1985,81 +1950,73 @@ final class wg extends od {
         return stackIn_67_0 != 0;
     }
 
-    private final int a(pl param0, int param1) {
+    private final int a(pl param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        int stackOut_5_0 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
-            if (param1 == 255) {
-              var3_int = ((wg) this).field_q[param0.field_i];
-              if (8192 > var3_int) {
-                stackOut_6_0 = 32 + var3_int * param0.field_u >> 6;
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                stackOut_4_0 = 16384 - ((128 + -param0.field_u) * (16384 - var3_int) - -32 >> 6);
-                stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0;
-              }
+            var3_int = ((wg) this).field_q[param0.field_i];
+            if (8192 > var3_int) {
+              stackOut_5_0 = 32 + var3_int * param0.field_u >> 6;
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
             } else {
-              stackOut_1_0 = 95;
-              stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              stackOut_3_0 = 16384 - ((128 + -param0.field_u) * (16384 - var3_int) - -32 >> 6);
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("wg.T(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("wg.T(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L1;
-            } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L1;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 255 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_6_0;
     }
 
     final synchronized void a(int param0, int param1, byte param2) {
@@ -2088,11 +2045,11 @@ final class wg extends od {
           ((wg) this).field_Q[param0] = 8192;
           ((wg) this).field_j[param0] = 0;
           ((wg) this).field_F[param0] = 8192;
-          this.d(param1 + -343, param0);
-          this.c(param1 + -230, param0);
+          this.d(-87, param0);
+          this.c(26, param0);
           ((wg) this).field_E[param0] = 0;
           ((wg) this).field_p[param0] = 32767;
-          ((wg) this).field_I[param0] = param1;
+          ((wg) this).field_I[param0] = 256;
           ((wg) this).field_v[param0] = 0;
           this.a(8192, true, param0);
           return;

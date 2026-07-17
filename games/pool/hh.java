@@ -9,7 +9,7 @@ final class hh {
     static String field_b;
     static int field_e;
 
-    final static vh a(byte param0) {
+    final static vh a() {
         return vb.field_m.field_Rb;
     }
 

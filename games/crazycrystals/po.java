@@ -364,7 +364,8 @@ final class po extends tb {
             ((po) this).field_k = 1;
             ((po) this).field_m = true;
             ((po) this).field_p = param1;
-            var8 = this.a(param1, param0, param3, (byte) 13);
+            int discarded$0 = 13;
+            var8 = this.a(param1, param0, param3);
             var7 = param1.a(param0);
             if (param4) {
                 ((po) this).field_m = true;
@@ -455,7 +456,8 @@ final class po extends tb {
               }
               ((po) this).field_m = true;
               ((po) this).field_p = param4;
-              var9 = this.a(param4, param1, param3, (byte) 13);
+              int discarded$1 = 13;
+              var9 = this.a(param4, param1, param3);
               var10 = var9;
               var10.field_e[0] = -param4.a(param1) + param2;
               var10.field_e[param1.length()] = param2;
@@ -520,7 +522,7 @@ final class po extends tb {
         }
     }
 
-    private final bh a(vc param0, String param1, int param2, byte param3) {
+    private final bh a(vc param0, String param1, int param2) {
         bh var5 = null;
         RuntimeException var5_ref = null;
         bh var6 = null;
@@ -647,7 +649,8 @@ final class po extends tb {
             ((po) this).field_n = param1;
             ((po) this).field_k = param2;
             ((po) this).field_p = param4;
-            var7 = this.a(param4, param1, param0, (byte) 13);
+            int discarded$0 = 13;
+            var7 = this.a(param4, param1, param0);
             var8 = var7;
             var7.field_e[0] = param3;
             var8.field_e[param1.length()] = param4.a(param1) + param3;

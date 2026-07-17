@@ -57,14 +57,15 @@ final class nf {
         if (param2 <= 69) {
             nf.a(-90, 1, 93);
         }
-        this.a(-7008);
+        int discarded$0 = -7008;
+        this.a();
     }
 
-    final static int c(byte param0) {
+    final static int c() {
         return qi.b(ag.field_k, 1);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_j = null;
         field_E = null;
     }
@@ -77,7 +78,8 @@ final class nf {
             ((nf) this).field_q[var5] = (short)(((nf) this).field_q[var5] + param1);
             ((nf) this).field_K[var5] = (short)(((nf) this).field_K[var5] + param3);
         }
-        this.a(-7008);
+        int discarded$0 = -7008;
+        this.a();
         if (param2 != -9121) {
             ((nf) this).field_g = null;
         }
@@ -347,7 +349,7 @@ final class nf {
         return el.b(30000, p.field_k);
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((nf) this).field_D = false;
     }
 

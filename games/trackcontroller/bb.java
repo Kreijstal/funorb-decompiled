@@ -6,7 +6,7 @@ final class bb {
     static qj[] field_b;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -16,18 +16,14 @@ final class bb {
         int var5 = 0;
         var5 = TrackController.field_F ? 1 : 0;
         var4 = param0.indexOf(param3);
-        if (param1 == -82) {
-          L0: while (true) {
-            if (-1 == var4) {
-              return param0;
-            } else {
-              param0 = param0.substring(0, var4) + param2 + param0.substring(var4 + param3.length());
-              var4 = param0.indexOf(param3, var4 + param2.length());
-              continue L0;
-            }
+        L0: while (true) {
+          if (-1 == var4) {
+            return param0;
+          } else {
+            param0 = param0.substring(0, var4) + param2 + param0.substring(var4 + param3.length());
+            var4 = param0.indexOf(param3, var4 + param2.length());
+            continue L0;
           }
-        } else {
-          return null;
         }
     }
 

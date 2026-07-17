@@ -78,7 +78,7 @@ final class kd {
         vn.a(param0, param1);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_i = null;
         int var1 = -52;

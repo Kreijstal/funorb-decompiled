@@ -159,13 +159,13 @@ final class fr extends ma {
         }
     }
 
-    final static void a(int param0, kg param1, int param2) {
+    final static void a(int param0, kg param1) {
         oq var6 = null;
         int var4 = 0;
         try {
             var6 = ej.field_j;
             oq var3 = var6;
-            var6.b(false, param2);
+            var6.b(false, 6);
             var6.field_v = var6.field_v + 1;
             var4 = var6.field_v;
             var6.a(1, false);
@@ -175,13 +175,13 @@ final class fr extends ma {
             } else {
                 var6.a(0, false);
             }
-            int var5 = 48 / ((param0 - 52) / 40);
+            int var5 = 48;
             int discarded$0 = var6.d(-1, var4);
             var6.field_v = var6.field_v - 4;
             param1.field_o = var6.b(true);
             var6.b(-var4 + var6.field_v, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "fr.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "fr.D(" + 98 + 44 + (param1 != null ? "{...}" : "null") + 44 + 6 + 41);
         }
     }
 

@@ -14,23 +14,17 @@ final class bl extends ug {
     int field_l;
     int field_h;
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
-        if (param0 != 0) {
-            return;
-        }
         field_o = null;
         field_g = null;
     }
 
     final static void a(int param0, lg param1) {
         try {
-            if (param0 != 50) {
-                bl.a(87);
-            }
             ve.a(82, 0, 0, param1);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "bl.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "bl.B(" + 50 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

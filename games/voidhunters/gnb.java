@@ -204,7 +204,7 @@ final class gnb {
                     L3: {
                       jaggl.OpenGL.glLinkProgramARB(var3_long);
                       jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, hg.field_a, 0);
-                      if (0 == hg.field_a[param0]) {
+                      if (0 == hg.field_a[0]) {
                         L4: {
                           if (0 != hg.field_a[0]) {
                             break L4;
@@ -276,7 +276,7 @@ final class gnb {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var3;
-            stackOut_27_1 = new StringBuilder().append("gnb.B(").append(param0).append(44);
+            stackOut_27_1 = new StringBuilder().append("gnb.B(").append(0).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -371,11 +371,11 @@ final class gnb {
         ((gnb) this).field_e = null;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_f = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(cgb.field_a)) {
             throw new IllegalStateException();
         }

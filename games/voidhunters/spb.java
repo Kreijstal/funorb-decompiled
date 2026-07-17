@@ -4,13 +4,13 @@
 final class spb {
     static String field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!(null != psb.field_b)) {
             return;
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
     }
 
@@ -30,9 +30,9 @@ final class spb {
     final static void a(byte param0, dqb param1) {
         try {
             eob.field_o = param1;
-            int var2_int = 12 % ((param0 - 19) / 37);
+            int var2_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "spb.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "spb.D(" + -22 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

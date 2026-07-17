@@ -38,7 +38,7 @@ final class jc {
         return var2;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         String var2 = null;
         if (null != i.field_c) {
             var2 = i.field_c;
@@ -70,36 +70,36 @@ final class jc {
         int var14 = 0;
         int var15 = 0;
         var15 = Chess.field_G;
-        var9 = param6 - (-param1 - param4);
-        var10 = new km[]{new km(var9, var9), new km(param0, var9), new km(var9, var9), new km(var9, param0), new km(64, 64), new km(var9, param0), new km(var9, var9), new km(param0, var9), new km(var9, var9)};
+        var9 = 3;
+        var10 = new km[]{new km(var9, var9), new km(3, var9), new km(var9, var9), new km(var9, 3), new km(64, 64), new km(var9, 3), new km(var9, var9), new km(3, var9), new km(var9, var9)};
         var11_ref_km__ = var10;
         var12 = 0;
         L0: while (true) {
           if (var11_ref_km__.length <= var12) {
             var11 = 0;
             L1: while (true) {
-              if (var11 >= param6) {
+              if (var11 >= 1) {
                 var11 = 0;
                 L2: while (true) {
-                  if (var11 >= param6) {
+                  if (var11 >= 1) {
                     var11 = 0;
                     L3: while (true) {
-                      if (var11 >= param0) {
+                      if (var11 >= 3) {
                         var11 = 0;
                         L4: while (true) {
-                          if (var11 >= param0 >> 1) {
+                          if (var11 >= 1) {
                             return var10;
                           } else {
                             var12 = 0;
                             L5: while (true) {
-                              if (param4 <= var12) {
+                              if (var12 >= 1) {
                                 var11++;
                                 continue L4;
                               } else {
-                                var10[1].field_x[(-1 + (-var12 + var9)) * param0 + var11] = param7;
-                                var10[3].field_x[var11 * var9 - (1 + (-var9 - -var12))] = param7;
-                                var10[7].field_x[var11 + var12 * param0] = param7;
-                                var10[5].field_x[var12 + var9 * var11] = param7;
+                                var10[1].field_x[(-1 + (-var12 + var9)) * 3 + var11] = 65793;
+                                var10[3].field_x[var11 * var9 - (1 + (-var9 - -var12))] = 65793;
+                                var10[7].field_x[var11 + var12 * 3] = 65793;
+                                var10[5].field_x[var12 + var9 * var11] = 65793;
                                 var12++;
                                 continue L5;
                               }
@@ -109,11 +109,11 @@ final class jc {
                       } else {
                         var12 = 0;
                         L6: while (true) {
-                          if (var12 < param6) {
-                            var10[7].field_x[var11 + (-var12 + (var9 - 1)) * param0] = param2;
-                            var10[5].field_x[var11 * var9 + var9 - 1 + -var12] = param2;
-                            var10[1].field_x[var11 + var12 * param0] = param5;
-                            var10[3].field_x[var12 + var9 * var11] = param5;
+                          if (var12 < 1) {
+                            var10[7].field_x[var11 + (-var12 + (var9 - 1)) * 3] = 0;
+                            var10[5].field_x[var11 * var9 + var9 - 1 + -var12] = 0;
+                            var10[1].field_x[var11 + var12 * 3] = 0;
+                            var10[3].field_x[var12 + var9 * var11] = 0;
                             var12++;
                             continue L6;
                           } else {
@@ -127,11 +127,11 @@ final class jc {
                     var12 = 0;
                     L7: while (true) {
                       if (var9 > var12) {
-                        var10[0].field_x[var12 + var9 * var11] = param5;
-                        var10[0].field_x[var11 + var9 * var12] = param5;
+                        var10[0].field_x[var12 + var9 * var11] = 0;
+                        var10[0].field_x[var11 + var9 * var12] = 0;
                         if (-var11 + var9 > var12) {
-                          var10[2].field_x[var12 + var11 * var9] = param5;
-                          var10[6].field_x[var12 * var9 + var11] = param5;
+                          var10[2].field_x[var12 + var11 * var9] = 0;
+                          var10[6].field_x[var12 * var9 + var11] = 0;
                           var12++;
                           continue L7;
                         } else {
@@ -149,10 +149,10 @@ final class jc {
                 var12 = 0;
                 L8: while (true) {
                   if (var12 < var9) {
-                    var10[6].field_x[var9 * (var9 - var11 + -1) + var12] = param2;
-                    var10[8].field_x[var12 + var9 * (-1 + (var9 - var11))] = param2;
-                    var10[2].field_x[var9 * var12 - (var11 + (1 + -var9))] = param2;
-                    var10[8].field_x[-var11 + (-1 + var9 + var9 * var12)] = param2;
+                    var10[6].field_x[var9 * (var9 - var11 + -1) + var12] = 0;
+                    var10[8].field_x[var12 + var9 * (-1 + (var9 - var11))] = 0;
+                    var10[2].field_x[var9 * var12 - (var11 + (1 + -var9))] = 0;
+                    var10[8].field_x[-var11 + (-1 + var9 + var9 * var12)] = 0;
                     var12++;
                     continue L8;
                   } else {
@@ -170,7 +170,7 @@ final class jc {
                 var12++;
                 continue L0;
               } else {
-                var13.field_x[var14] = param3;
+                var13.field_x[var14] = 0;
                 var14++;
                 continue L9;
               }
@@ -423,95 +423,89 @@ final class jc {
           return;
         } else {
           L0: {
-            if (param1 == -117) {
+            var3 = 185;
+            var4 = 205;
+            var5 = 256;
+            if (sl.field_a < 75) {
+              var5 = (sl.field_a << 8) / 75;
               break L0;
             } else {
-              field_c = null;
               break L0;
             }
           }
           L1: {
-            var3 = 185;
-            var4 = -35 + param0;
-            var5 = 256;
-            if (sl.field_a < 75) {
-              var5 = (sl.field_a << 8) / 75;
+            if (sl.field_a > 200) {
+              var5 = (-sl.field_a + 250 << 8) / 50;
               break L1;
             } else {
               break L1;
             }
           }
           L2: {
-            if (sl.field_a > 200) {
-              var5 = (-sl.field_a + 250 << 8) / 50;
+            tl.a((byte) -67, gf.field_f);
+            nh.a();
+            wb.b();
+            int discarded$2 = 9;
+            di.k();
+            if (var5 < 256) {
+              wb.b(0, 0, wb.field_h, wb.field_c, 0, -var5 + 256);
               break L2;
             } else {
               break L2;
             }
           }
           L3: {
-            tl.a((byte) -67, gf.field_f);
-            nh.a();
-            wb.b();
-            di.k(9);
-            if (var5 < 256) {
-              wb.b(0, 0, wb.field_h, wb.field_c, 0, -var5 + 256);
+            int discarded$3 = 28773;
+            fd.a();
+            if (sl.field_a >= 150) {
+              v.field_i.b(15 + var3, var4 + 10, var5);
               break L3;
             } else {
+              gf.field_f.c(var3, var4);
               break L3;
             }
           }
           L4: {
-            fd.a(28773);
-            if (sl.field_a >= 150) {
-              v.field_i.b(15 + var3, var4 + 10, var5);
-              break L4;
-            } else {
-              gf.field_f.c(var3, var4);
-              break L4;
-            }
-          }
-          L5: {
             var6 = sl.field_a - 125;
             if (var6 <= 0) {
-              break L5;
+              break L4;
             } else {
               if (50 <= var6) {
-                break L5;
+                break L4;
               } else {
                 if (var6 >= 20) {
                   if (var6 >= 30) {
                     var7 = (50 - var6) * 256 / 20;
                     tg.field_u.d(var3, var4, var7);
-                    break L5;
+                    break L4;
                   } else {
                     tg.field_u.d(var3, var4, 256);
-                    break L5;
+                    break L4;
                   }
                 } else {
                   var7 = 256 * var6 / 20;
                   tg.field_u.d(var3, var4, var7);
-                  break L5;
+                  break L4;
                 }
               }
             }
           }
-          L6: {
+          L5: {
             var6 = -140 + sl.field_a;
             if (var6 <= 0) {
-              break L6;
+              break L5;
             } else {
-              L7: {
+              L6: {
                 var7 = 256;
                 if (var6 >= 20) {
-                  break L7;
+                  break L6;
                 } else {
                   var7 = var6 * 256 / 20;
-                  break L7;
+                  break L6;
                 }
               }
               re.field_u.b(var3 - -15, var4 - -10, var5 * var7 >> 8);
-              break L6;
+              break L5;
             }
           }
           return;

@@ -491,7 +491,7 @@ final class cd {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_c = null;
         field_h = null;
     }

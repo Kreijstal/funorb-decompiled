@@ -88,7 +88,7 @@ final class tnb extends rqa {
         return waa.field_D[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ena.field_o[var6] + "-" + var7 + " " + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + ":" + var10 / 10 + var10 % 10 + " GMT";
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_p = null;
         int var1 = -32;
     }

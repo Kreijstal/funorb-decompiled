@@ -11,10 +11,7 @@ final class wqa implements dja {
     }
 
     final static boolean a(boolean param0, int param1) {
-        if (param0) {
-            return true;
-        }
-        return param1 >= 0 ? true : false;
+        return param1 >= 0;
     }
 
     public final tv[] a(int param0, int param1) {
@@ -28,15 +25,12 @@ final class wqa implements dja {
     final static void a(int param0, bc param1, int param2, int param3, bc param4, int param5) {
         ih.field_e = param5;
         pva.field_g = param0;
-        if (param2 <= 112) {
-            return;
-        }
         try {
             vhb.field_d = param1;
             hwa.field_q = param3;
             ska.field_o = param4;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "wqa.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "wqa.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 114 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
     }
 

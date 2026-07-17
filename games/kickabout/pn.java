@@ -37,7 +37,7 @@ final class pn extends ij {
         }
     }
 
-    final static boolean g(int param0) {
+    final static boolean g() {
         return null == e.field_m ? vb.field_k : true;
     }
 

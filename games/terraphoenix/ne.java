@@ -34,7 +34,7 @@ final class ne implements Iterator {
         return (Object) (Object) var1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -32;
         field_b = null;
     }

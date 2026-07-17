@@ -100,7 +100,7 @@ final class ida extends mc {
         }
     }
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void a(boolean param0, String param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -209,7 +209,7 @@ final class ida extends mc {
         }
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_x = null;
         int var1 = 0;
         field_w = null;
@@ -239,7 +239,7 @@ final class ida extends mc {
         ((ida) this).field_v = new ij();
     }
 
-    final static void a(faa param0, byte param1) {
+    final static void a(faa param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -284,7 +284,6 @@ final class ida extends mc {
             RuntimeException stackIn_63_0 = null;
             StringBuilder stackIn_63_1 = null;
             String stackIn_63_2 = null;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_60_0 = null;
             StringBuilder stackOut_60_1 = null;
@@ -320,13 +319,7 @@ final class ida extends mc {
                           if (var5 >= var16.field_i) {
                             int discarded$1 = param0.g(1595, var4);
                             var16.b(-3846);
-                            if (param1 >= 77) {
-                              decompiledRegionSelector0 = 0;
-                              break L0;
-                            } else {
-                              decompiledRegionSelector0 = 1;
-                              break L0;
-                            }
+                            break L0;
                           } else {
                             L3: {
                               if (var16.field_k[var5] == 0) {
@@ -532,12 +525,7 @@ final class ida extends mc {
                   break L23;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + 44 + param1 + 41);
-            }
-            if (decompiledRegionSelector0 == 0) {
-              return;
-            } else {
-              return;
+              throw rta.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + 44 + 127 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -251,7 +251,8 @@ final class dc {
                       break L4;
                     } else {
                       var3_int = 0;
-                      d.d((byte) -77);
+                      int discarded$2 = -77;
+                      d.d();
                       break L4;
                     }
                   }
@@ -335,11 +336,11 @@ final class dc {
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean b() {
         return kh.field_o == mg.field_b;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

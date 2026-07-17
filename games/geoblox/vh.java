@@ -10,7 +10,7 @@ final class vh extends ee implements pl {
     static dm field_G;
     static String field_E;
 
-    final static na a(int param0, rh param1, int param2, boolean param3) {
+    final static na a(int param0, rh param1, int param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         na stackIn_4_0 = null;

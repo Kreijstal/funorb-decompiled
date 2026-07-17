@@ -11,7 +11,7 @@ final class wh extends lj {
     static String[] field_F;
     int field_D;
 
-    final static vd a(byte param0) {
+    final static vd a() {
         int var1 = 0;
         if (null == fa.field_i) {
           fa.field_i = new vd();
@@ -32,10 +32,7 @@ final class wh extends lj {
         }
     }
 
-    public static void h(int param0) {
-        if (param0 != 43) {
-            return;
-        }
+    public static void h() {
         field_F = null;
         field_I = null;
     }
@@ -155,7 +152,7 @@ final class wh extends lj {
         return stackIn_21_0 != 0;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         tj.field_w[46] = 72;
         tj.field_w[61] = 27;
         tj.field_w[91] = 42;
@@ -171,7 +168,7 @@ final class wh extends lj {
         tj.field_w[93] = 43;
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         Object var1 = null;
         int var2 = 0;
         int var3 = 0;

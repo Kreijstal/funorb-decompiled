@@ -20,17 +20,40 @@ final class lc {
     private String field_c;
 
     final static boolean a(int param0, int param1) {
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
         if (param1 >= -26) {
+          L0: {
             field_n = null;
-            if (!(-1 != param0)) {
-                return true;
+            if ((1 & o.field_d) == 0) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
             }
-            return (1 << param0 & o.field_d) != 0 ? true : false;
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if ((1 & o.field_d) == 0) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
         }
-        if (!(-1 != param0)) {
-            return true;
-        }
-        return (1 << param0 & o.field_d) != 0 ? true : false;
     }
 
     final static void a(String[][] param0, tp[] param1, byte param2, String[] param3, int param4, String[] param5, String[][] param6, mf param7, mf param8, mf param9, int[] param10, jp[][] param11, int param12, boolean param13, jp[][] param14, byte[] param15, byte[] param16, int[] param17, int param18) {
@@ -252,7 +275,7 @@ final class lc {
           L0: {
             L1: {
               var21 = null;
-              pf.a(param18, param15, param8, param3, -27460, param13, param14, param7, param12, param10, (String[]) null, param11, param1, 1, param16, param0, param5, param6, param17, param9);
+              pf.a(param18, param15, param8, param3, -27460, true, param14, param7, param12, param10, (String[]) null, param11, param1, 1, param16, param0, param5, param6, param17, param9);
               if (param2 == 47) {
                 break L1;
               } else {
@@ -518,7 +541,7 @@ final class lc {
           }
           L12: {
             stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44).append(param12).append(44).append(param13).append(44);
+            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44).append(param12).append(44).append(1).append(44);
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;

@@ -18,7 +18,7 @@ final class br extends oe implements java.awt.image.ImageProducer {
         }
     }
 
-    private final synchronized void a(int param0, int param1, int param2, int param3, boolean param4) {
+    private final synchronized void a(int param0, int param1, int param2, int param3) {
         if (((br) this).field_k == null) {
             return;
         }
@@ -308,10 +308,11 @@ final class br extends oe implements java.awt.image.ImageProducer {
         java.awt.Shape var9 = null;
         try {
             int var10 = -117 / ((param4 - 65) / 59);
-            this.a(param3, param6, param0, param1, false);
+            int discarded$0 = 0;
+            this.a(param3, param6, param0, param1);
             var9 = param5.getClip();
             param5.clipRect(param2, param7, param0, param3);
-            boolean discarded$0 = param5.drawImage(((br) this).field_j, param2 - param6, -param1 + param7, (java.awt.image.ImageObserver) (Object) ((br) this).field_i);
+            boolean discarded$1 = param5.drawImage(((br) this).field_j, param2 - param6, -param1 + param7, (java.awt.image.ImageObserver) (Object) ((br) this).field_i);
             param5.setClip(var9);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "br.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
@@ -322,7 +323,7 @@ final class br extends oe implements java.awt.image.ImageProducer {
         return ((br) this).field_k == param0;
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String a(Throwable param0) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
@@ -425,17 +426,18 @@ final class br extends oe implements java.awt.image.ImageProducer {
         }
     }
 
-    final static void f(int param0) {
+    final static void f() {
         fp var1 = (fp) (Object) ks.field_d.d(268435455);
         if (var1 == null) {
-            te.b(true);
+            int discarded$0 = 1;
+            te.b();
             return;
         }
         dl var2 = nm.field_c;
-        int discarded$0 = var2.a((byte) 115);
-        int discarded$1 = var2.a((byte) 107);
-        int discarded$2 = var2.a((byte) 113);
-        int discarded$3 = var2.a((byte) 109);
+        int discarded$1 = var2.a((byte) 115);
+        int discarded$2 = var2.a((byte) 107);
+        int discarded$3 = var2.a((byte) 113);
+        int discarded$4 = var2.a((byte) 109);
         var1.c(-125);
     }
 

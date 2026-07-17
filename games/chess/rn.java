@@ -6,7 +6,7 @@ final class rn {
     static int field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
     }
 
@@ -45,53 +45,49 @@ final class rn {
             var9 = var8 / 2;
             var10 = param2 + (var9 + param3);
             var11 = 0;
-            if (param1 <= -127) {
-              var12 = 0;
-              L2: while (true) {
-                if (var12 >= 6) {
-                  break L0;
-                } else {
-                  L3: {
-                    L4: {
-                      if (var12 >= 5) {
-                        break L4;
+            var12 = 0;
+            L2: while (true) {
+              if (var12 >= 6) {
+                break L0;
+              } else {
+                L3: {
+                  L4: {
+                    if (var12 >= 5) {
+                      break L4;
+                    } else {
+                      if (null == g.field_d[var12]) {
+                        var12++;
+                        break L3;
                       } else {
-                        if (null == g.field_d[var12]) {
-                          var12++;
-                          break L3;
-                        } else {
-                          break L4;
-                        }
+                        break L4;
                       }
                     }
-                    var13 = 3 - -((-6 + uh.field_m.field_pb - -2) * var11 / (qm.field_d - -1));
-                    var11++;
-                    var7 = -var13 + 1 + (-6 + (uh.field_m.field_pb - -2)) * var11 / (1 + qm.field_d);
-                    if (var12 < 5) {
-                      g.field_d[var12].a(var6_int, var8, -2147483648, var7, var13);
-                      t.field_K[var12].a(param3, var9 - param3, -2147483648, var7, 0);
-                      ig.field_i[var12].a(var9, param2, -2147483648, -param4 + var7 + -param4, param4);
-                      mf.field_l[var12].a(var10, -var10 + var8 - param3, -2147483648, -param4 + var7 + -param4, param4);
-                      var12++;
-                      break L3;
-                    } else {
-                      bj.field_jb.a(var6_int, var8, -2147483648, var7, var13);
-                      var12++;
-                      break L3;
-                    }
                   }
-                  var12++;
-                  continue L2;
+                  var13 = 3 - -((-6 + uh.field_m.field_pb - -2) * var11 / (qm.field_d - -1));
+                  var11++;
+                  var7 = -var13 + 1 + (-6 + (uh.field_m.field_pb - -2)) * var11 / (1 + qm.field_d);
+                  if (var12 < 5) {
+                    g.field_d[var12].a(var6_int, var8, -2147483648, var7, var13);
+                    t.field_K[var12].a(param3, var9 - param3, -2147483648, var7, 0);
+                    ig.field_i[var12].a(var9, param2, -2147483648, -param4 + var7 + -param4, param4);
+                    mf.field_l[var12].a(var10, -var10 + var8 - param3, -2147483648, -param4 + var7 + -param4, param4);
+                    var12++;
+                    break L3;
+                  } else {
+                    bj.field_jb.a(var6_int, var8, -2147483648, var7, var13);
+                    var12++;
+                    break L3;
+                  }
                 }
+                var12++;
+                continue L2;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var6, "rn.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fk.a((Throwable) (Object) var6, "rn.B(" + param0 + 44 + -128 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

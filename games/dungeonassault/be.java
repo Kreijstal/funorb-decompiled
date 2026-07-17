@@ -209,7 +209,7 @@ final class be extends ip {
         return stackIn_9_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_q = null;
         field_s = null;
         field_m = null;

@@ -8,7 +8,7 @@ final class hl extends li {
     int field_r;
     long field_p;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_o = null;
         field_q = null;
     }
@@ -57,7 +57,8 @@ final class hl extends li {
               L2: {
                 param1 = cn.a((byte) -126, "", '_', param1);
                 var4 = 127 / ((-8 - param0) / 36);
-                var3 = mq.a(param2, false);
+                int discarded$2 = 0;
+                var3 = mq.a(param2);
                 if (-1 != param1.indexOf(param2)) {
                   break L2;
                 } else {

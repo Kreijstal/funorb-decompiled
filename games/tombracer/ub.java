@@ -38,7 +38,7 @@ final class ub {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         od var1 = null;
         int var2 = TombRacer.field_G ? 1 : 0;
         try {
@@ -88,7 +88,7 @@ final class ub {
           L0: {
             ((ub) this).field_e = new Object[param1.length];
             lua.a(param1, 0, ((ub) this).field_e, 0, param1.length);
-            ((ub) this).field_f = param0;
+            ((ub) this).field_f = 0;
             var3_int = 0;
             L1: while (true) {
               if (((ub) this).field_e.length <= var3_int) {
@@ -112,7 +112,7 @@ final class ub {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("ub.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("ub.C(").append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -139,7 +139,7 @@ final class ub {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_i = null;
         field_g = null;

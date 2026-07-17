@@ -11,7 +11,7 @@ final class n {
     static oc field_d;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_h = null;
         field_c = null;
@@ -43,7 +43,8 @@ final class n {
             hg.a(1, (java.awt.Component) (Object) param0);
             if (param1 >= 115) {
               L1: {
-                no.a((java.awt.Component) (Object) param0, 0);
+                int discarded$3 = 0;
+                no.a((java.awt.Component) (Object) param0);
                 if (null == nh.field_w) {
                   break L1;
                 } else {
@@ -100,8 +101,8 @@ final class n {
           return;
         } else {
           L0: {
-            var3 = -135 + param0;
-            var4 = param1 + -35;
+            var3 = 185;
+            var4 = 205;
             var5 = 256;
             if (gi.field_a < 75) {
               var5 = (gi.field_a << 8) / 75;
@@ -122,7 +123,8 @@ final class n {
             fk.a(rc.field_h, -23095);
             id.a();
             de.b();
-            cg.f(252566882);
+            int discarded$1 = 252566882;
+            cg.f();
             if (var5 < 256) {
               de.e(0, 0, de.field_e, de.field_j, 0, -var5 + 256);
               break L2;

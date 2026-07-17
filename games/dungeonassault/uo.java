@@ -12,7 +12,7 @@ final class uo {
     static String field_e;
     static cn field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_c = null;
         field_d = null;

@@ -178,7 +178,7 @@ final class ik implements Iterable {
         return stackIn_3_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         lc var4 = null;
@@ -195,13 +195,15 @@ final class ik implements Iterable {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    h.a(param0, var5, (byte) 78);
+                    int discarded$6 = 78;
+                    h.a(5, var5);
                     var5 = (fj) (Object) ti.field_b.b(-118);
                     continue L2;
                   }
                 }
               } else {
-                ud.a((byte) -109, var4, param0);
+                int discarded$7 = 5;
+                ud.a((byte) -109, var4);
                 var4 = (lc) (Object) hc.field_a.b(-37);
                 continue L1;
               }
@@ -210,7 +212,7 @@ final class ik implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2, "ik.F(" + param0 + 44 + 18897 + 41);
+          throw fc.a((Throwable) (Object) var2, "ik.F(" + 5 + 44 + 18897 + 41);
         }
     }
 
@@ -247,7 +249,8 @@ final class ik implements Iterable {
               }
             }
             if (l.a(param1 ^ -24921, param2, param3, param0)) {
-              stackOut_5_0 = fi.b(255);
+              int discarded$2 = 255;
+              stackOut_5_0 = fi.b();
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

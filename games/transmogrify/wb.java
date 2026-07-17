@@ -44,7 +44,7 @@ final class wb {
         field_d = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;

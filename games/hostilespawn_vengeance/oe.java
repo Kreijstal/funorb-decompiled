@@ -50,7 +50,7 @@ final class oe implements Iterator {
         field_g = null;
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         ((oe) this).field_f = null;
         ((oe) this).field_e = 1;
         ((oe) this).field_b = ((oe) this).field_c.field_f[0].field_g;
@@ -90,59 +90,29 @@ final class oe implements Iterator {
         var9 = HostileSpawn.field_I ? 1 : 0;
         if (param2 >= param5) {
           if (param2 >= param6) {
-            if (param6 <= param5) {
-              t.a(si.field_i, false, param4, param2, param0, param6, param5, param7, param3);
-              if (param1 == -121) {
-                return;
-              } else {
-                field_d = null;
-                return;
-              }
-            } else {
+            if (param6 > param5) {
               t.a(si.field_i, false, param4, param2, param0, param5, param6, param3, param7);
-              if (param1 == -121) {
-                return;
-              } else {
-                field_d = null;
-                return;
-              }
+              return;
+            } else {
+              t.a(si.field_i, false, param4, param2, param0, param6, param5, param7, param3);
+              return;
             }
           } else {
             t.a(si.field_i, false, param4, param6, param3, param5, param2, param0, param7);
-            if (param1 == -121) {
-              return;
-            } else {
-              field_d = null;
-              return;
-            }
+            return;
           }
         } else {
           if (param5 >= param6) {
-            if (param2 >= param6) {
-              t.a(si.field_i, false, param4, param5, param7, param6, param2, param0, param3);
-              if (param1 == -121) {
-                return;
-              } else {
-                field_d = null;
-                return;
-              }
-            } else {
+            if (param2 < param6) {
               t.a(si.field_i, false, param4, param5, param7, param2, param6, param3, param0);
-              if (param1 == -121) {
-                return;
-              } else {
-                field_d = null;
-                return;
-              }
+              return;
+            } else {
+              t.a(si.field_i, false, param4, param5, param7, param6, param2, param0, param3);
+              return;
             }
           } else {
             t.a(si.field_i, false, param4, param6, param3, param2, param5, param7, param0);
-            if (param1 == -121) {
-              return;
-            } else {
-              field_d = null;
-              return;
-            }
+            return;
           }
         }
     }
@@ -151,7 +121,8 @@ final class oe implements Iterator {
         ((oe) this).field_f = null;
         try {
             ((oe) this).field_c = param0;
-            this.a((byte) 105);
+            int discarded$0 = 105;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "oe.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

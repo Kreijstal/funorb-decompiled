@@ -200,27 +200,14 @@ final class vn extends v implements fd, aa {
     }
 
     final static String a(char param0, int param1, int param2) {
-        char[] var3 = null;
         int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
-        var5 = SteelSentinels.field_G;
-        var6 = new char[param2];
-        var3 = var6;
-        var4 = 0;
-        L0: while (true) {
-          if (param2 <= var4) {
-            if (param1 != -7477) {
-              return null;
-            } else {
-              return new String(var3);
-            }
-          } else {
-            var6[var4] = param0;
-            var4++;
-            continue L0;
-          }
+        int var5 = SteelSentinels.field_G;
+        char[] var6 = new char[param2];
+        char[] var3 = var6;
+        for (var4 = 0; param2 > var4; var4++) {
+            var6[var4] = '*';
         }
+        return new String(var3);
     }
 
     final static void c(int param0) {

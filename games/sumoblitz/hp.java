@@ -8,7 +8,7 @@ final class hp extends ht {
     private int field_k;
     static int[] field_o;
 
-    public static void d(int param0) {
+    public static void d() {
         field_o = null;
         field_n = null;
         field_l = null;
@@ -37,7 +37,7 @@ final class hp extends ht {
         }
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

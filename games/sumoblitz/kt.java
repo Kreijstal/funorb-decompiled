@@ -77,7 +77,7 @@ final class kt {
         return stackIn_4_0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         tn.b((byte) -113);
     }
 
@@ -194,7 +194,7 @@ final class kt {
         return stackIn_30_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

@@ -4,7 +4,7 @@
 final class wea extends rqa {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 
@@ -91,14 +91,9 @@ final class wea extends rqa {
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= ub.field_f.length) {
-                if (param0 == -25915) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  break L0;
-                } else {
-                  field_o = null;
-                  return false;
-                }
+                stackOut_10_0 = 0;
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
               } else {
                 if (param1 == ub.field_f[var2_int]) {
                   stackOut_5_0 = 1;
@@ -114,7 +109,7 @@ final class wea extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "wea.C(" + param0 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) var2, "wea.C(" + -25915 + 44 + param1 + 41);
         }
         return stackIn_11_0 != 0;
     }

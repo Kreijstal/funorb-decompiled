@@ -5,7 +5,7 @@ final class qi extends rqa {
     static String field_o;
     static llb field_p;
 
-    final static int[] a(int param0, boolean param1, int[] param2, byte param3) {
+    final static int[] a(int param0, boolean param1, int[] param2) {
         RuntimeException var4 = null;
         int[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -64,7 +64,7 @@ final class qi extends rqa {
         return stackIn_1_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
     }

@@ -46,7 +46,7 @@ final class lj {
               if (!gf.d()) {
                 break L0;
               } else {
-                tc.c(gf.field_g - -param2, gf.field_a - -param5, gf.field_b - gf.field_g, param0, param1);
+                tc.c(gf.field_g - -param2, gf.field_a - -param5, gf.field_b - gf.field_g, 0, param1);
                 continue L2;
               }
             }
@@ -56,7 +56,7 @@ final class lj {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6;
-            stackOut_7_1 = new StringBuilder().append("lj.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_7_1 = new StringBuilder().append("lj.A(").append(0).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

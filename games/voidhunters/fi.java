@@ -5,7 +5,7 @@ final class fi extends rqa {
     static fdb field_o;
     static dja field_p;
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
     }

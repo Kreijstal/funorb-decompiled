@@ -23,10 +23,12 @@ final class tg extends ik {
     }
 
     final static ma d(byte param0) {
-        return new ma(we.a(29084), ek.a(-86));
+        int discarded$0 = 29084;
+        int discarded$1 = -86;
+        return new ma(we.a(), ek.a());
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_x = null;
         field_w = null;
         int var1 = 0;

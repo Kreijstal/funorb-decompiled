@@ -95,7 +95,7 @@ final class hi {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_h = null;
     }

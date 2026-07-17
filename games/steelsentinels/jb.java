@@ -91,16 +91,13 @@ final class jb extends kd {
         }
     }
 
-    final static wk[] g(int param0) {
+    final static wk[] g() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = SteelSentinels.field_G;
-        if (param0 != 7) {
-            return null;
-        }
         wk[] var1 = new wk[rl.field_d];
         for (var2 = 0; rl.field_d > var2; var2++) {
             var3 = le.field_L[var2] * ca.field_r[var2];
@@ -111,7 +108,8 @@ final class jb extends kd {
             }
             var1[var2] = new wk(un.field_n, eb.field_n, rl.field_a[var2], oa.field_M[var2], le.field_L[var2], ca.field_r[var2], var5);
         }
-        uh.a(9324);
+        int discarded$0 = 9324;
+        uh.a();
         return var1;
     }
 
@@ -1102,7 +1100,7 @@ final class jb extends kd {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_S = null;
         field_L = null;
         field_Q = null;
@@ -1115,7 +1113,7 @@ final class jb extends kd {
         field_A = null;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         kc.field_y = null;
         int var1 = -122;
     }

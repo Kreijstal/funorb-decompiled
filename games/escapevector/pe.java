@@ -5,7 +5,7 @@ final class pe {
     int field_b;
     int field_a;
 
-    final static eo a(int param0) {
+    final static eo a() {
         return (eo) (Object) new qf();
     }
 

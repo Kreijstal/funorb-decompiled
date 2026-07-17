@@ -120,25 +120,25 @@ final class qv extends ci {
         return var15;
     }
 
-    final static int[][] a(boolean param0, int param1, int param2, float param3, int param4, byte param5, int param6, int param7, int param8) {
+    final static int[][] a(boolean param0, int param1, int param2, float param3, int param4, byte param5) {
         int var11 = 0;
         int var12 = TombRacer.field_G ? 1 : 0;
         if (param5 >= -46) {
             field_m = -82;
         }
-        int[][] var15 = new int[param8][param4];
+        int[][] var15 = new int[256][64];
         int[][] var14 = var15;
         int[][] var13 = var14;
         int[][] var9 = var13;
         lva var10 = new lva();
         var10.field_x = (int)(param3 * 4096.0f);
-        var10.field_n = param2;
-        var10.field_s = param0 ? true : false;
-        var10.field_w = param7;
-        var10.field_u = param6;
+        var10.field_n = 3;
+        var10.field_s = false;
+        var10.field_w = 4;
+        var10.field_u = 4;
         var10.b((byte) 116);
-        uta.a(0, param8, param4);
-        for (var11 = 0; var11 < param8; var11++) {
+        uta.a(0, 256, 64);
+        for (var11 = 0; var11 < 256; var11++) {
             var10.a(var15[var11], -1, var11);
         }
         return var9;
@@ -229,7 +229,7 @@ final class qv extends ci {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_o = null;
     }
 

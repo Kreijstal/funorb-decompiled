@@ -8,11 +8,11 @@ final class vk implements os {
     static String[] field_c;
     static byte[] field_b;
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return al.field_j;
     }
 
-    final static int c(int param0) {
+    final static int c() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

@@ -129,7 +129,8 @@ final class hj implements Runnable {
               var1_int = 0;
               L1: while (true) {
                 if (2 <= var1_int) {
-                  wl.a(10L, false);
+                  int discarded$2 = 0;
+                  wl.a(10L);
                   f.a((Object) null, (byte) -127, ((hj) this).field_d);
                   continue L0;
                 } else {
@@ -786,7 +787,7 @@ final class hj implements Runnable {
         }
     }
 
-    final static ti a(int param0, int param1, int param2, int param3, byte param4) {
+    final static ti a() {
         ti var5 = null;
         int var6 = 0;
         var6 = TrackController.field_F ? 1 : 0;
@@ -794,14 +795,14 @@ final class hj implements Runnable {
         L0: while (true) {
           if (var5 == null) {
             var5 = new ti();
-            var5.field_l = param3;
-            var5.field_k = param2;
-            var5.field_i = param1;
+            var5.field_l = 10;
+            var5.field_k = 1;
+            var5.field_i = 10;
             ea.field_s.a((byte) -105, (fc) (Object) var5);
-            mc.a(false, param0, var5);
+            mc.a(false, 3, var5);
             return var5;
           } else {
-            if (var5.field_i != param1) {
+            if (var5.field_i != 10) {
               var5 = (ti) (Object) ea.field_s.a(10);
               continue L0;
             } else {

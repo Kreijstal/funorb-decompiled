@@ -4,10 +4,7 @@
 final class eo extends rqa {
     static int[] field_o;
 
-    final static boolean a(int param0) {
-        if (param0 != 61848) {
-            return true;
-        }
+    final static boolean a() {
         if (!mgb.field_o) {
             return false;
         }
@@ -84,7 +81,7 @@ final class eo extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_o = null;
     }
 

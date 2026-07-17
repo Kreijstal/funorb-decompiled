@@ -6,7 +6,7 @@ final class oe {
     static int field_a;
     static String[] field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
@@ -85,7 +85,7 @@ final class oe {
                         }
                       }
                       var5 = 39;
-                      var8 = 77 / ((-51 - param0) / 52);
+                      var8 = 77;
                       if (var5 < 0) {
                         decompiledRegionSelector0 = 0;
                         break L0;
@@ -172,7 +172,7 @@ final class oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var3, "oe.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw pf.a((Throwable) (Object) var3, "oe.A(" + -118 + 44 + param1 + 44 + param2 + 41);
         }
         if (decompiledRegionSelector0 == 0) {
           return;

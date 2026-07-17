@@ -14,24 +14,10 @@ final class ef extends lk {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
-            try {
+            {
               L0: {
-                L1: {
-                  if (param0 == 11) {
-                    break L1;
-                  } else {
-                    ef.a(true);
-                    break L1;
-                  }
-                }
                 Thread.sleep(param1);
                 break L0;
-              }
-            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var3 = (InterruptedException) (Object) decompiledCaughtException;
-                break L2;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -72,7 +58,8 @@ final class ef extends lk {
             if (((ef) this).field_m.a((byte) 86, param1) != qj.field_c) {
               L1: {
                 if (!param1.equals((Object) (Object) ((ef) this).field_l)) {
-                  var3 = hi.a(param1, true);
+                  int discarded$2 = 1;
+                  var3 = hi.a(param1);
                   if (var3.a(true)) {
                     ((ef) this).field_l = param1;
                     ((ef) this).field_k = var3.b(17);
@@ -145,10 +132,10 @@ final class ef extends lk {
         return stackIn_14_0;
     }
 
-    final static void a(int param0, byte param1) {
-        cj.field_a = 400 * param0 / 150;
-        cj.field_c = 100 * param0 / 150;
-        cj.field_d = (param0 << 16) / 150;
+    final static void a() {
+        cj.field_a = 133;
+        cj.field_c = 33;
+        cj.field_d = 21845;
     }
 
     ef(ae param0, ae param1) {
@@ -237,9 +224,6 @@ final class ef extends lk {
 
     public static void a(boolean param0) {
         field_n = null;
-        if (param0) {
-            return;
-        }
         field_o = null;
     }
 

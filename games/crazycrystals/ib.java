@@ -6,12 +6,12 @@ abstract class ib extends ij {
     int field_n;
     static int[] field_l;
 
-    public static void g(int param0) {
+    public static void g() {
         field_l = null;
         field_m = null;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         sc var1 = null;
         int var2 = 0;
         md var3 = null;

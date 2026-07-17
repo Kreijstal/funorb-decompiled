@@ -39,7 +39,7 @@ abstract class kc extends qd {
         ((kc) this).field_I = 0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_P = null;
         field_U = null;
         field_N = null;
@@ -72,7 +72,7 @@ abstract class kc extends qd {
             var5 = 194;
             var4 = 22;
             var6 = 169;
-            var8 = 77 / ((-57 - param1) / 53);
+            var8 = 77;
             var7 = 0;
             var9 = param2 + 35;
             L1: while (true) {
@@ -204,7 +204,8 @@ abstract class kc extends qd {
         }
         ((kc) this).field_R = ((kc) this).field_f;
         if (param2 != 120) {
-            kc.a(false);
+            int discarded$0 = 0;
+            kc.a();
         }
         ((kc) this).field_L = param1;
         ((kc) this).field_I = 0;

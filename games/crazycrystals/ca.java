@@ -15,41 +15,16 @@ final class ca extends jb {
     final static String a(String param0, int param1, String param2, String param3) {
         int var4 = 0;
         int var5 = 0;
-        String stackIn_4_0 = null;
-        String stackIn_6_0 = null;
-        String stackOut_3_0 = null;
-        L0: {
-          var5 = CrazyCrystals.field_B;
-          var4 = param2.indexOf(param3);
-          if (param1 == 0) {
-            break L0;
+        var5 = CrazyCrystals.field_B;
+        var4 = param2.indexOf(param3);
+        L0: while (true) {
+          if (var4 == -1) {
+            return param2;
           } else {
-            field_m = -105;
-            break L0;
+            param2 = param2.substring(0, var4) + param0 + param2.substring(var4 + param3.length());
+            var4 = param2.indexOf(param3, param0.length() + var4);
+            continue L0;
           }
-        }
-        L1: while (true) {
-          L2: {
-            if (var4 == -1) {
-              break L2;
-            } else {
-              param2 = param2.substring(0, var4) + param0 + param2.substring(var4 + param3.length());
-              stackOut_3_0 = (String) param2;
-              stackIn_6_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
-              if (var5 != 0) {
-                return stackIn_6_0;
-              } else {
-                var4 = ((String) (Object) stackIn_4_0).indexOf(param3, param0.length() + var4);
-                if (var5 == 0) {
-                  continue L1;
-                } else {
-                  break L2;
-                }
-              }
-            }
-          }
-          return param2;
         }
     }
 
@@ -76,9 +51,9 @@ final class ca extends jb {
         try {
           L0: {
             L1: {
-              kh.f(param1, param2, 17, 10000536);
+              kh.f(param1, param2, 1 + param4, 10000536);
               var5_int = 70 / ((param0 - -78) / 42);
-              kh.f(param1, param2 - -param3, 17, 12105912);
+              kh.f(param1, param2 - -param3, 1 + param4, 12105912);
               var6 = 1;
               if (kh.field_b > param2 + var6) {
                 var6 = -param2 + kh.field_b;
@@ -104,24 +79,16 @@ final class ca extends jb {
                 var9 = var8 * 48 / param3 + 152;
                 var10 = var9 | (var9 << 8 | var9 << 16);
                 kh.field_i[param1 + kh.field_l * (var8 + param2)] = var10;
-                kh.field_i[16 + param1 + kh.field_l * (var8 + param2)] = var10;
+                kh.field_i[param4 + param1 + kh.field_l * (var8 + param2)] = var10;
                 var8++;
-                if (var11 == 0) {
-                  if (var11 == 0) {
-                    continue L3;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
+                continue L3;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var5, "ca.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 16 + 41);
+          throw dn.a((Throwable) (Object) var5, "ca.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -129,15 +96,15 @@ final class ca extends jb {
         int var6 = 0;
         int var7 = 0;
         int stackIn_5_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_43_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackOut_35_0 = 0;
+        int stackOut_34_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_13_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         rc.field_b[be.field_c] = param3;
@@ -151,17 +118,17 @@ final class ca extends jb {
               cd.field_u[be.field_c] = param5;
               var6 = param5 + param1 + param0;
               if (var6 == 0) {
-                stackOut_42_0 = 0;
-                stackIn_43_0 = stackOut_42_0;
+                stackOut_35_0 = 0;
+                stackIn_36_0 = stackOut_35_0;
                 break L0;
               } else {
-                stackOut_41_0 = 1000 * param0 / var6;
-                stackIn_43_0 = stackOut_41_0;
+                stackOut_34_0 = 1000 * param0 / var6;
+                stackIn_36_0 = stackOut_34_0;
                 break L0;
               }
             }
             L1: {
-              var7 = stackIn_43_0;
+              var7 = stackIn_36_0;
               jk.field_g[be.field_c] = var7;
               be.field_c = be.field_c + 1;
               if (~db.field_i < ~var7) {
@@ -179,12 +146,7 @@ final class ca extends jb {
                 break L2;
               }
             }
-            if (param4) {
-              return;
-            } else {
-              ca.a((byte) 11, -117, 22, 53, 16);
-              return;
-            }
+            return;
           } else {
             L3: {
               em.field_i = param2;
@@ -193,17 +155,17 @@ final class ca extends jb {
               cd.field_u[be.field_c] = param5;
               var6 = param5 + param1 + param0;
               if (var6 == 0) {
-                stackOut_30_0 = 0;
-                stackIn_31_0 = stackOut_30_0;
+                stackOut_25_0 = 0;
+                stackIn_26_0 = stackOut_25_0;
                 break L3;
               } else {
-                stackOut_29_0 = 1000 * param0 / var6;
-                stackIn_31_0 = stackOut_29_0;
+                stackOut_24_0 = 1000 * param0 / var6;
+                stackIn_26_0 = stackOut_24_0;
                 break L3;
               }
             }
             L4: {
-              var7 = stackIn_31_0;
+              var7 = stackIn_26_0;
               jk.field_g[be.field_c] = var7;
               be.field_c = be.field_c + 1;
               if (~db.field_i < ~var7) {
@@ -221,12 +183,7 @@ final class ca extends jb {
                 break L5;
               }
             }
-            if (param4) {
-              return;
-            } else {
-              ca.a((byte) 11, -117, 22, 53, 16);
-              return;
-            }
+            return;
           }
         } else {
           db.field_i = param2;
@@ -238,17 +195,17 @@ final class ca extends jb {
               cd.field_u[be.field_c] = param5;
               var6 = param5 + param1 + param0;
               if (var6 == 0) {
-                stackOut_17_0 = 0;
-                stackIn_18_0 = stackOut_17_0;
+                stackOut_14_0 = 0;
+                stackIn_15_0 = stackOut_14_0;
                 break L6;
               } else {
-                stackOut_16_0 = 1000 * param0 / var6;
-                stackIn_18_0 = stackOut_16_0;
+                stackOut_13_0 = 1000 * param0 / var6;
+                stackIn_15_0 = stackOut_13_0;
                 break L6;
               }
             }
             L7: {
-              var7 = stackIn_18_0;
+              var7 = stackIn_15_0;
               jk.field_g[be.field_c] = var7;
               be.field_c = be.field_c + 1;
               if (~db.field_i < ~var7) {
@@ -266,12 +223,7 @@ final class ca extends jb {
                 break L8;
               }
             }
-            if (!param4) {
-              ca.a((byte) 11, -117, 22, 53, 16);
-              return;
-            } else {
-              return;
-            }
+            return;
           } else {
             L9: {
               dk.field_l[be.field_c] = param0;
@@ -307,12 +259,7 @@ final class ca extends jb {
                 break L11;
               }
             }
-            if (param4) {
-              return;
-            } else {
-              ca.a((byte) 11, -117, 22, 53, 16);
-              return;
-            }
+            return;
           }
         }
     }

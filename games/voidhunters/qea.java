@@ -81,7 +81,9 @@ final class qea extends rqa {
 
     public static void b(boolean param0) {
         field_r = null;
-        qea.a(-19, -41, true, 117, -123, 114, 51);
+        if (!param0) {
+            qea.a(-19, -41, true, 117, -123, 114, 51);
+        }
     }
 
     final static void a(byte param0, int param1) {

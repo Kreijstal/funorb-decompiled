@@ -55,7 +55,7 @@ final class ff {
                     } else {
                       int incrementValue$81 = var10;
                       var10++;
-                      var4[incrementValue$81] = param1;
+                      var4[incrementValue$81] = 0;
                       var14++;
                       continue L1;
                     }
@@ -67,7 +67,7 @@ final class ff {
             return;
           }
         } else {
-          df.b(0, 0, df.field_e, df.field_f, param1);
+          df.b(0, 0, df.field_e, df.field_f, 0);
           return;
         }
     }

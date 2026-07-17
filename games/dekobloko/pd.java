@@ -12,7 +12,7 @@ final class pd {
     static hl[] field_g;
     static mg field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_i = null;
@@ -24,7 +24,7 @@ final class pd {
         field_c = null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

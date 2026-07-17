@@ -233,7 +233,8 @@ final class una implements ntb {
         try {
           L0: {
             L1: {
-              qha.b(false);
+              int discarded$5 = 0;
+              qha.b();
               if (param0 == -2374) {
                 break L1;
               } else {
@@ -520,7 +521,8 @@ final class una implements ntb {
                     if (var3.field_e != var3.field_e) {
                       break L2;
                     } else {
-                      if (!wpb.a(var3.field_d, var3.field_d, (byte) 28)) {
+                      int discarded$3 = 28;
+                      if (!wpb.a(var3.field_d, var3.field_d)) {
                         stackOut_6_0 = 0;
                         stackIn_7_0 = stackOut_6_0;
                         break L1;
@@ -574,7 +576,8 @@ final class una implements ntb {
         una var3 = null;
         try {
             var3 = (una) (Object) param1;
-            var3.field_b = (bba[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) var3.field_b, 1, vtb.field_o, false);
+            int discarded$0 = 0;
+            var3.field_b = (bba[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) var3.field_b, 1, vtb.field_o);
             var3.field_e = var3.field_e;
             if (param0 <= 54) {
                 ((una) this).field_d = null;
@@ -706,7 +709,7 @@ final class una implements ntb {
           L0: {
             L1: {
               var5 = (una) (Object) param0;
-              boolean discarded$1 = tja.a((ntb[]) (Object) var5.field_b, 1, (ntb[]) (Object) var5.field_b, false, 5547);
+              boolean discarded$2 = tja.a((ntb[]) (Object) var5.field_b, 1, (ntb[]) (Object) var5.field_b, false, 5547);
               var4 = 0;
               if (dn.a((tv[]) (Object) var5.field_b, false, 1, (tv[]) (Object) var5.field_b, 115)) {
                 var4 = 1;
@@ -735,7 +738,8 @@ final class una implements ntb {
               }
             }
             L4: {
-              if (!ikb.a(var5.field_d, var5.field_d, false)) {
+              int discarded$3 = 0;
+              if (!ikb.a(var5.field_d, var5.field_d)) {
                 break L4;
               } else {
                 var4 = 1;
@@ -924,7 +928,7 @@ final class una implements ntb {
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         int var2 = 0;
         bba[] var3 = null;
         int var4 = 0;
@@ -1049,7 +1053,8 @@ final class una implements ntb {
     final void a(int param0, bba param1) {
         try {
             ((una) this).field_b = (bba[]) (Object) ija.a((Object) (Object) param1, (Object[]) (Object) ((una) this).field_b, param0, vtb.field_o);
-            this.d((byte) -111);
+            int discarded$0 = -111;
+            this.d();
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "una.U(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }

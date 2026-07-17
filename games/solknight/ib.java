@@ -13,20 +13,17 @@ final class ib extends gg {
     static dh field_l;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
     }
 
     final static o a(int param0, boolean param1, int param2) {
-        int var5 = SolKnight.field_L ? 1 : 0;
-        o var3 = new o(param0, param0);
         int var4 = 0;
-        if (!param1) {
-            field_j = -85;
-        }
-        while (var4 < var3.field_v.length) {
-            var3.field_v[var4] = param2;
-            var4++;
+        int var5 = SolKnight.field_L ? 1 : 0;
+        o var6 = new o(param0, param0);
+        o var3 = var6;
+        for (var4 = 0; var4 < var3.field_v.length; var4++) {
+            var6.field_v[var4] = param2;
         }
         return var3;
     }

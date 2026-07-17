@@ -23,20 +23,21 @@ final class s extends gf {
         }
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_ib = null;
         field_hb = null;
         field_jb = null;
     }
 
-    final static String o(int param0) {
+    final static String o() {
         String var1 = "";
         if (!(ve.field_a == null)) {
             var1 = ve.field_a.j(-19569);
         }
-        int var2 = -90 % ((param0 - 58) / 51);
+        int var2 = 0;
         if (var1.length() == 0) {
-            var1 = qe.a((byte) 127);
+            int discarded$0 = 127;
+            var1 = qe.a();
         }
         if (!(var1.length() != 0)) {
             var1 = je.field_a;
@@ -44,7 +45,7 @@ final class s extends gf {
         return var1;
     }
 
-    final static void n(int param0) {
+    final static void n() {
         if (!(null == kj.field_P)) {
             kj.field_P.a();
         }

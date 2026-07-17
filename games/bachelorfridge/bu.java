@@ -24,7 +24,7 @@ final class bu extends kj {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_j = null;
         field_g = null;
         int var1 = -81;
@@ -32,13 +32,10 @@ final class bu extends kj {
 
     final static void a(int param0, kv param1) {
         uc.d(125);
-        if (param0 != 0) {
-            return;
-        }
         try {
             dg.a(param1.field_v, param1.field_n, param1.field_o);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "bu.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "bu.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

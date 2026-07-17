@@ -321,79 +321,71 @@ final class pp extends lq {
 
     final static void a(int param0, String[] param1) {
         RuntimeException var2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
-              if (param0 == 18267) {
+              if (null == wm.field_u) {
                 break L1;
               } else {
-                pp.b(-60);
+                wm.field_u.field_L.a(param1, -48);
                 break L1;
               }
             }
             L2: {
-              if (null == wm.field_u) {
-                break L2;
-              } else {
-                wm.field_u.field_L.a(param1, -48);
-                break L2;
-              }
-            }
-            L3: {
               if (ki.field_n == null) {
-                break L3;
+                break L2;
               } else {
                 ki.field_n.field_G.a(param1, -71);
-                break L3;
+                break L2;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("pp.I(").append(param0).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("pp.I(").append(18267).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L4;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L4;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -483,287 +475,283 @@ final class pp extends lq {
         var10 = Kickabout.field_G;
         try {
           L0: {
-            if (param0 == 1) {
-              L1: {
-                if (0 != rm.field_C) {
-                  L2: {
-                    if (rm.field_C != 1) {
-                      if (rm.field_C != 2) {
-                        if (rm.field_C == 3) {
-                          oi.field_e = new oh[]{};
-                          break L2;
-                        } else {
-                          break L1;
-                        }
+            L1: {
+              if (0 != rm.field_C) {
+                L2: {
+                  if (rm.field_C != 1) {
+                    if (rm.field_C != 2) {
+                      if (rm.field_C == 3) {
+                        oi.field_e = new oh[]{};
+                        break L2;
                       } else {
-                        oi.field_e = new oh[9];
-                        oi.field_e[0] = new oh(ng.field_j[0], -345, 132);
-                        oi.field_e[1] = new oh(ng.field_j[1], -157, 510);
-                        oi.field_e[2] = new oh(ng.field_j[1], -170, 1294);
-                        oi.field_e[3] = new oh(ng.field_j[0], -245, 1384);
-                        oi.field_e[4] = new oh(ng.field_j[0], 690, -220);
-                        oi.field_e[5] = new oh(ng.field_j[1], 1086, 910);
-                        oi.field_e[6] = new oh(ng.field_j[0], 920, 1294);
-                        oi.field_e[7] = new oh(tm.field_w, -150, 940);
-                        oi.field_e[8] = new oh(tm.field_w, 925, 214);
                         break L1;
                       }
                     } else {
-                      var13 = bn.field_E[0];
-                      var7 = var13;
-                      var7 = var13;
-                      var2 = bn.field_E[1];
-                      var7 = var2;
-                      var7 = var2;
-                      var14 = bn.field_E[2];
-                      var7 = var14;
-                      var7 = var14;
-                      var4 = bn.field_E[3];
-                      var7 = var4;
-                      var7 = var4;
-                      oi.field_e = new oh[28];
-                      var5 = 0;
-                      var6 = 0;
-                      L3: while (true) {
-                        if (var6 >= 8) {
-                          var6 = 0;
-                          L4: while (true) {
-                            if (var6 >= 12) {
-                              break L2;
-                            } else {
-                              L5: {
-                                if (p.a((byte) -24, 2) == 0) {
-                                  stackOut_34_0 = ng.field_j[0];
-                                  stackIn_35_0 = stackOut_34_0;
-                                  break L5;
-                                } else {
-                                  stackOut_33_0 = ng.field_j[1];
-                                  stackIn_35_0 = stackOut_33_0;
-                                  break L5;
-                                }
-                              }
-                              L6: {
-                                var7 = stackIn_35_0;
-                                var8 = el.a(29430, 50, 130 * var6 + -300);
-                                var9 = el.a(29430, 50, -290);
-                                if ((1 & var6) == 0) {
-                                  var9 += 1674;
-                                  break L6;
-                                } else {
-                                  break L6;
-                                }
-                              }
-                              int incrementValue$15 = var5;
-                              var5++;
-                              oi.field_e[incrementValue$15] = new oh(var7, var8, var9);
-                              var6++;
-                              continue L4;
-                            }
-                          }
-                        } else {
-                          L7: {
-                            var7_int = el.a(param0 + 29429, 20, -170);
-                            var8 = -50 + var6 / 2 * 400;
-                            if ((1 & var6) != 0) {
-                              var8 = var8 + el.a(29430, 20, 120);
-                              break L7;
-                            } else {
-                              break L7;
-                            }
-                          }
-                          L8: {
-                            int incrementValue$16 = var5;
-                            var5++;
-                            stackOut_23_0 = oi.field_e;
-                            stackOut_23_1 = incrementValue$16;
-                            stackOut_23_2 = null;
-                            stackOut_23_3 = null;
-                            stackIn_25_0 = stackOut_23_0;
-                            stackIn_25_1 = stackOut_23_1;
-                            stackIn_25_2 = stackOut_23_2;
-                            stackIn_25_3 = stackOut_23_3;
-                            stackIn_24_0 = stackOut_23_0;
-                            stackIn_24_1 = stackOut_23_1;
-                            stackIn_24_2 = stackOut_23_2;
-                            stackIn_24_3 = stackOut_23_3;
-                            if (var6 != 0) {
-                              stackOut_25_0 = (oh[]) (Object) stackIn_25_0;
-                              stackOut_25_1 = stackIn_25_1;
-                              stackOut_25_2 = null;
-                              stackOut_25_3 = null;
-                              stackOut_25_4 = (ut) var13;
-                              stackIn_26_0 = stackOut_25_0;
-                              stackIn_26_1 = stackOut_25_1;
-                              stackIn_26_2 = stackOut_25_2;
-                              stackIn_26_3 = stackOut_25_3;
-                              stackIn_26_4 = stackOut_25_4;
-                              break L8;
-                            } else {
-                              stackOut_24_0 = (oh[]) (Object) stackIn_24_0;
-                              stackOut_24_1 = stackIn_24_1;
-                              stackOut_24_2 = null;
-                              stackOut_24_3 = null;
-                              stackOut_24_4 = (ut) var2;
-                              stackIn_26_0 = stackOut_24_0;
-                              stackIn_26_1 = stackOut_24_1;
-                              stackIn_26_2 = stackOut_24_2;
-                              stackIn_26_3 = stackOut_24_3;
-                              stackIn_26_4 = stackOut_24_4;
-                              break L8;
-                            }
-                          }
-                          L9: {
-                            stackIn_26_0[stackIn_26_1] = new oh(stackIn_26_4, var7_int, var8);
-                            int incrementValue$17 = var5;
-                            var5++;
-                            stackOut_26_0 = oi.field_e;
-                            stackOut_26_1 = incrementValue$17;
-                            stackOut_26_2 = null;
-                            stackOut_26_3 = null;
-                            stackIn_28_0 = stackOut_26_0;
-                            stackIn_28_1 = stackOut_26_1;
-                            stackIn_28_2 = stackOut_26_2;
-                            stackIn_28_3 = stackOut_26_3;
-                            stackIn_27_0 = stackOut_26_0;
-                            stackIn_27_1 = stackOut_26_1;
-                            stackIn_27_2 = stackOut_26_2;
-                            stackIn_27_3 = stackOut_26_3;
-                            if (var6 != 0) {
-                              stackOut_28_0 = (oh[]) (Object) stackIn_28_0;
-                              stackOut_28_1 = stackIn_28_1;
-                              stackOut_28_2 = null;
-                              stackOut_28_3 = null;
-                              stackOut_28_4 = (ut) var14;
-                              stackIn_29_0 = stackOut_28_0;
-                              stackIn_29_1 = stackOut_28_1;
-                              stackIn_29_2 = stackOut_28_2;
-                              stackIn_29_3 = stackOut_28_3;
-                              stackIn_29_4 = stackOut_28_4;
-                              break L9;
-                            } else {
-                              stackOut_27_0 = (oh[]) (Object) stackIn_27_0;
-                              stackOut_27_1 = stackIn_27_1;
-                              stackOut_27_2 = null;
-                              stackOut_27_3 = null;
-                              stackOut_27_4 = (ut) var4;
-                              stackIn_29_0 = stackOut_27_0;
-                              stackIn_29_1 = stackOut_27_1;
-                              stackIn_29_2 = stackOut_27_2;
-                              stackIn_29_3 = stackOut_27_3;
-                              stackIn_29_4 = stackOut_27_4;
-                              break L9;
-                            }
-                          }
-                          stackIn_29_0[stackIn_29_1] = new oh(stackIn_29_4, 896 - var7_int + -20, var8);
-                          var6++;
-                          continue L3;
-                        }
-                      }
+                      oi.field_e = new oh[9];
+                      oi.field_e[0] = new oh(ng.field_j[0], -345, 132);
+                      oi.field_e[1] = new oh(ng.field_j[1], -157, 510);
+                      oi.field_e[2] = new oh(ng.field_j[1], -170, 1294);
+                      oi.field_e[3] = new oh(ng.field_j[0], -245, 1384);
+                      oi.field_e[4] = new oh(ng.field_j[0], 690, -220);
+                      oi.field_e[5] = new oh(ng.field_j[1], 1086, 910);
+                      oi.field_e[6] = new oh(ng.field_j[0], 920, 1294);
+                      oi.field_e[7] = new oh(tm.field_w, -150, 940);
+                      oi.field_e[8] = new oh(tm.field_w, 925, 214);
+                      break L1;
                     }
-                  }
-                  break L1;
-                } else {
-                  oi.field_e = new oh[34];
-                  var1_int = 0;
-                  int incrementValue$18 = var1_int;
-                  var1_int++;
-                  oi.field_e[incrementValue$18] = new oh(ao.field_c, -100, -100);
-                  int incrementValue$19 = var1_int;
-                  var1_int++;
-                  oi.field_e[incrementValue$19] = new oh(pi.field_a, 60, -180);
-                  int incrementValue$20 = var1_int;
-                  var1_int++;
-                  oi.field_e[incrementValue$20] = new oh(ng.field_j[0], 280, -280);
-                  int incrementValue$21 = var1_int;
-                  var1_int++;
-                  oi.field_e[incrementValue$21] = new oh(ao.field_c, -190, 1184);
-                  int incrementValue$22 = var1_int;
-                  var1_int++;
-                  oi.field_e[incrementValue$22] = new oh(pi.field_a, -280, 994);
-                  int incrementValue$23 = var1_int;
-                  var1_int++;
-                  oi.field_e[incrementValue$23] = new oh(pi.field_a, -160, 1047);
-                  int incrementValue$24 = var1_int;
-                  var1_int++;
-                  oi.field_e[incrementValue$24] = new oh(ng.field_j[0], 660, -260);
-                  int incrementValue$25 = var1_int;
-                  var1_int++;
-                  oi.field_e[incrementValue$25] = new oh(ng.field_j[1], 800, -240);
-                  var2_int = 0;
-                  L10: while (true) {
-                    if (var2_int >= 8) {
-                      var2_int = 0;
-                      L11: while (true) {
-                        if (var2_int >= 16) {
-                          int incrementValue$26 = var1_int;
-                          var1_int++;
-                          oi.field_e[incrementValue$26] = new oh(ng.field_j[0], 650, 1354);
-                          int incrementValue$27 = var1_int;
-                          var1_int++;
-                          oi.field_e[incrementValue$27] = new oh(ng.field_j[1], 800, 1364);
-                          break L1;
-                        } else {
-                          L12: {
-                            if (p.a((byte) -24, 2) != 1) {
-                              stackOut_14_0 = ng.field_j[1];
-                              stackIn_15_0 = stackOut_14_0;
-                              break L12;
-                            } else {
-                              stackOut_13_0 = ng.field_j[0];
-                              stackIn_15_0 = stackOut_13_0;
-                              break L12;
+                  } else {
+                    var13 = bn.field_E[0];
+                    var7 = var13;
+                    var7 = var13;
+                    var2 = bn.field_E[1];
+                    var7 = var2;
+                    var7 = var2;
+                    var14 = bn.field_E[2];
+                    var7 = var14;
+                    var7 = var14;
+                    var4 = bn.field_E[3];
+                    var7 = var4;
+                    var7 = var4;
+                    oi.field_e = new oh[28];
+                    var5 = 0;
+                    var6 = 0;
+                    L3: while (true) {
+                      if (var6 >= 8) {
+                        var6 = 0;
+                        L4: while (true) {
+                          if (var6 >= 12) {
+                            break L2;
+                          } else {
+                            L5: {
+                              if (p.a((byte) -24, 2) == 0) {
+                                stackOut_34_0 = ng.field_j[0];
+                                stackIn_35_0 = stackOut_34_0;
+                                break L5;
+                              } else {
+                                stackOut_33_0 = ng.field_j[1];
+                                stackIn_35_0 = stackOut_33_0;
+                                break L5;
+                              }
                             }
+                            L6: {
+                              var7 = stackIn_35_0;
+                              var8 = el.a(29430, 50, 130 * var6 + -300);
+                              var9 = el.a(29430, 50, -290);
+                              if ((1 & var6) == 0) {
+                                var9 += 1674;
+                                break L6;
+                              } else {
+                                break L6;
+                              }
+                            }
+                            int incrementValue$15 = var5;
+                            var5++;
+                            oi.field_e[incrementValue$15] = new oh(var7, var8, var9);
+                            var6++;
+                            continue L4;
                           }
-                          var12 = stackIn_15_0;
-                          var7 = var12;
-                          var7 = var12;
-                          var3 = var12;
-                          var4_int = el.a(29430, 70, 976);
-                          var5 = el.a(29430, 1, -200 + 100 * var2_int);
-                          int incrementValue$28 = var1_int;
-                          var1_int++;
-                          oi.field_e[incrementValue$28] = new oh(var12, var4_int, var5);
-                          var2_int++;
-                          continue L11;
                         }
-                      }
-                    } else {
-                      L13: {
-                        if (p.a((byte) -24, 2) == 1) {
-                          stackOut_8_0 = ng.field_j[0];
-                          stackIn_9_0 = stackOut_8_0;
-                          break L13;
-                        } else {
-                          stackOut_7_0 = ng.field_j[1];
-                          stackIn_9_0 = stackOut_7_0;
-                          break L13;
+                      } else {
+                        L7: {
+                          var7_int = el.a(29430, 20, -170);
+                          var8 = -50 + var6 / 2 * 400;
+                          if ((1 & var6) != 0) {
+                            var8 = var8 + el.a(29430, 20, 120);
+                            break L7;
+                          } else {
+                            break L7;
+                          }
                         }
+                        L8: {
+                          int incrementValue$16 = var5;
+                          var5++;
+                          stackOut_23_0 = oi.field_e;
+                          stackOut_23_1 = incrementValue$16;
+                          stackOut_23_2 = null;
+                          stackOut_23_3 = null;
+                          stackIn_25_0 = stackOut_23_0;
+                          stackIn_25_1 = stackOut_23_1;
+                          stackIn_25_2 = stackOut_23_2;
+                          stackIn_25_3 = stackOut_23_3;
+                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_24_1 = stackOut_23_1;
+                          stackIn_24_2 = stackOut_23_2;
+                          stackIn_24_3 = stackOut_23_3;
+                          if (var6 != 0) {
+                            stackOut_25_0 = (oh[]) (Object) stackIn_25_0;
+                            stackOut_25_1 = stackIn_25_1;
+                            stackOut_25_2 = null;
+                            stackOut_25_3 = null;
+                            stackOut_25_4 = (ut) var13;
+                            stackIn_26_0 = stackOut_25_0;
+                            stackIn_26_1 = stackOut_25_1;
+                            stackIn_26_2 = stackOut_25_2;
+                            stackIn_26_3 = stackOut_25_3;
+                            stackIn_26_4 = stackOut_25_4;
+                            break L8;
+                          } else {
+                            stackOut_24_0 = (oh[]) (Object) stackIn_24_0;
+                            stackOut_24_1 = stackIn_24_1;
+                            stackOut_24_2 = null;
+                            stackOut_24_3 = null;
+                            stackOut_24_4 = (ut) var2;
+                            stackIn_26_0 = stackOut_24_0;
+                            stackIn_26_1 = stackOut_24_1;
+                            stackIn_26_2 = stackOut_24_2;
+                            stackIn_26_3 = stackOut_24_3;
+                            stackIn_26_4 = stackOut_24_4;
+                            break L8;
+                          }
+                        }
+                        L9: {
+                          stackIn_26_0[stackIn_26_1] = new oh(stackIn_26_4, var7_int, var8);
+                          int incrementValue$17 = var5;
+                          var5++;
+                          stackOut_26_0 = oi.field_e;
+                          stackOut_26_1 = incrementValue$17;
+                          stackOut_26_2 = null;
+                          stackOut_26_3 = null;
+                          stackIn_28_0 = stackOut_26_0;
+                          stackIn_28_1 = stackOut_26_1;
+                          stackIn_28_2 = stackOut_26_2;
+                          stackIn_28_3 = stackOut_26_3;
+                          stackIn_27_0 = stackOut_26_0;
+                          stackIn_27_1 = stackOut_26_1;
+                          stackIn_27_2 = stackOut_26_2;
+                          stackIn_27_3 = stackOut_26_3;
+                          if (var6 != 0) {
+                            stackOut_28_0 = (oh[]) (Object) stackIn_28_0;
+                            stackOut_28_1 = stackIn_28_1;
+                            stackOut_28_2 = null;
+                            stackOut_28_3 = null;
+                            stackOut_28_4 = (ut) var14;
+                            stackIn_29_0 = stackOut_28_0;
+                            stackIn_29_1 = stackOut_28_1;
+                            stackIn_29_2 = stackOut_28_2;
+                            stackIn_29_3 = stackOut_28_3;
+                            stackIn_29_4 = stackOut_28_4;
+                            break L9;
+                          } else {
+                            stackOut_27_0 = (oh[]) (Object) stackIn_27_0;
+                            stackOut_27_1 = stackIn_27_1;
+                            stackOut_27_2 = null;
+                            stackOut_27_3 = null;
+                            stackOut_27_4 = (ut) var4;
+                            stackIn_29_0 = stackOut_27_0;
+                            stackIn_29_1 = stackOut_27_1;
+                            stackIn_29_2 = stackOut_27_2;
+                            stackIn_29_3 = stackOut_27_3;
+                            stackIn_29_4 = stackOut_27_4;
+                            break L9;
+                          }
+                        }
+                        stackIn_29_0[stackIn_29_1] = new oh(stackIn_29_4, 896 - var7_int + -20, var8);
+                        var6++;
+                        continue L3;
                       }
-                      var11 = stackIn_9_0;
-                      var13 = var11;
-                      var7 = var13;
-                      var13 = var11;
-                      var3 = var11;
-                      var4_int = el.a(29430, 70, -220);
-                      var5 = el.a(29430, 10, var2_int * 110 + -20);
-                      int incrementValue$29 = var1_int;
-                      var1_int++;
-                      oi.field_e[incrementValue$29] = new oh(var11, var4_int, var5);
-                      var2_int++;
-                      continue L10;
                     }
                   }
                 }
+                break L1;
+              } else {
+                oi.field_e = new oh[34];
+                var1_int = 0;
+                int incrementValue$18 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$18] = new oh(ao.field_c, -100, -100);
+                int incrementValue$19 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$19] = new oh(pi.field_a, 60, -180);
+                int incrementValue$20 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$20] = new oh(ng.field_j[0], 280, -280);
+                int incrementValue$21 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$21] = new oh(ao.field_c, -190, 1184);
+                int incrementValue$22 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$22] = new oh(pi.field_a, -280, 994);
+                int incrementValue$23 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$23] = new oh(pi.field_a, -160, 1047);
+                int incrementValue$24 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$24] = new oh(ng.field_j[0], 660, -260);
+                int incrementValue$25 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$25] = new oh(ng.field_j[1], 800, -240);
+                var2_int = 0;
+                L10: while (true) {
+                  if (var2_int >= 8) {
+                    var2_int = 0;
+                    L11: while (true) {
+                      if (var2_int >= 16) {
+                        int incrementValue$26 = var1_int;
+                        var1_int++;
+                        oi.field_e[incrementValue$26] = new oh(ng.field_j[0], 650, 1354);
+                        int incrementValue$27 = var1_int;
+                        var1_int++;
+                        oi.field_e[incrementValue$27] = new oh(ng.field_j[1], 800, 1364);
+                        break L1;
+                      } else {
+                        L12: {
+                          if (p.a((byte) -24, 2) != 1) {
+                            stackOut_14_0 = ng.field_j[1];
+                            stackIn_15_0 = stackOut_14_0;
+                            break L12;
+                          } else {
+                            stackOut_13_0 = ng.field_j[0];
+                            stackIn_15_0 = stackOut_13_0;
+                            break L12;
+                          }
+                        }
+                        var12 = stackIn_15_0;
+                        var7 = var12;
+                        var7 = var12;
+                        var3 = var12;
+                        var4_int = el.a(29430, 70, 976);
+                        var5 = el.a(29430, 1, -200 + 100 * var2_int);
+                        int incrementValue$28 = var1_int;
+                        var1_int++;
+                        oi.field_e[incrementValue$28] = new oh(var12, var4_int, var5);
+                        var2_int++;
+                        continue L11;
+                      }
+                    }
+                  } else {
+                    L13: {
+                      if (p.a((byte) -24, 2) == 1) {
+                        stackOut_8_0 = ng.field_j[0];
+                        stackIn_9_0 = stackOut_8_0;
+                        break L13;
+                      } else {
+                        stackOut_7_0 = ng.field_j[1];
+                        stackIn_9_0 = stackOut_7_0;
+                        break L13;
+                      }
+                    }
+                    var11 = stackIn_9_0;
+                    var13 = var11;
+                    var7 = var13;
+                    var13 = var11;
+                    var3 = var11;
+                    var4_int = el.a(29430, 70, -220);
+                    var5 = el.a(29430, 10, var2_int * 110 + -20);
+                    int incrementValue$29 = var1_int;
+                    var1_int++;
+                    oi.field_e[incrementValue$29] = new oh(var11, var4_int, var5);
+                    var2_int++;
+                    continue L10;
+                  }
+                }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "pp.H(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "pp.H(" + 1 + 41);
         }
     }
 
@@ -831,7 +819,7 @@ final class pp extends lq {
         try {
           L0: {
             L1: {
-              if ((((pp) this).field_l.field_i[param4.field_q] & 4) == param0) {
+              if ((((pp) this).field_l.field_i[param4.field_q] & 4) == 0) {
                 break L1;
               } else {
                 if (0 <= param4.field_s) {
@@ -931,7 +919,7 @@ final class pp extends lq {
           L7: {
             var7 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var7;
-            stackOut_21_1 = new StringBuilder().append("pp.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_21_1 = new StringBuilder().append("pp.G(").append(0).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;

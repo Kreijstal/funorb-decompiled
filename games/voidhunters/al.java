@@ -10,21 +10,10 @@ final class al implements hf {
     int[] field_e;
     int field_d;
 
-    final static void a(int param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
-        if (param0 >= -84) {
-          field_a = null;
-          kca.field_a = qga.field_b.a(-1);
-          var2 = (CharSequence) (Object) kca.field_a;
-          ffb.field_e = jwa.a(false, var2);
-          return;
-        } else {
-          kca.field_a = qga.field_b.a(-1);
-          var3 = (CharSequence) (Object) kca.field_a;
-          ffb.field_e = jwa.a(false, var3);
-          return;
-        }
+    final static void a() {
+        kca.field_a = qga.field_b.a(-1);
+        CharSequence var2 = (CharSequence) (Object) kca.field_a;
+        ffb.field_e = jwa.a(false, var2);
     }
 
     final static void a(ksa param0, ksa param1, int param2) {

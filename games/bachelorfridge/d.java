@@ -62,7 +62,7 @@ final class d extends lq implements lja {
         int var5 = -15 % ((-20 - param0) / 54);
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_E = null;
         field_H = null;
         field_D = null;

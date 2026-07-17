@@ -135,7 +135,7 @@ final class nn extends ne {
         }
     }
 
-    private final void b(gd param0, int param1) {
+    private final void b(gd param0) {
         ie var3 = null;
         int var4 = DungeonAssault.field_K;
         try {
@@ -180,7 +180,8 @@ final class nn extends ne {
           L0: {
             L1: {
               if (param0.field_M != null) {
-                param0.field_M.b(param0, 29339);
+                int discarded$2 = 29339;
+                param0.field_M.b(param0);
                 break L1;
               } else {
                 break L1;

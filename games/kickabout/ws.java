@@ -23,21 +23,23 @@ final class ws {
             if (vj.field_c == 10) {
               break L2;
             } else {
-              if (!vr.d(1)) {
+              int discarded$6 = 1;
+              if (!vr.d()) {
                 break L2;
               } else {
                 break L1;
               }
             }
           }
-          uc.g((byte) -54);
+          int discarded$7 = -54;
+          uc.g();
           vj.field_c = 11;
           break L1;
         }
         m.field_h = true;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -63,7 +65,8 @@ final class ws {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              if (vt.a(param0, true)) {
+              int discarded$8 = 1;
+              if (vt.a(param0)) {
                 stackOut_7_0 = 1;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0 != 0;
@@ -115,10 +118,7 @@ final class ws {
         return stackIn_23_0 != 0;
     }
 
-    public static void a(int param0) {
-        if (param0 != -25514) {
-            field_d = null;
-        }
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;

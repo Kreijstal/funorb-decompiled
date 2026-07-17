@@ -13,18 +13,11 @@ final class jm extends ji {
     static int field_G;
 
     final static void d(int param0, int param1) {
-        mi var2 = null;
-        var2 = uh.field_Wb;
+        mi var2 = uh.field_Wb;
         var2.j(param1, 119);
-        var2.f(2, param0 ^ 108);
+        var2.f(2, 109);
         var2.f(4, 101);
         var2.f(hr.i(104), -97);
-        if (param0 != 1) {
-          field_D = null;
-          return;
-        } else {
-          return;
-        }
     }
 
     final int[][] b(int param0, int param1) {
@@ -316,26 +309,30 @@ final class jm extends ji {
         if (((jm) this).field_A != null) {
           if (param0 > -98) {
             field_E = null;
-            this.g(2);
+            int discarded$8 = 2;
+            this.g();
             return;
           } else {
-            this.g(2);
+            int discarded$9 = 2;
+            this.g();
             return;
           }
         } else {
           this.a(1, (byte) 59);
           if (param0 <= -98) {
-            this.g(2);
+            int discarded$10 = 2;
+            this.g();
             return;
           } else {
             field_E = null;
-            this.g(2);
+            int discarded$11 = 2;
+            this.g();
             return;
           }
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_C = null;
         field_H = null;
         field_E = null;
@@ -344,11 +341,8 @@ final class jm extends ji {
         field_B = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
-        if (param2 != 915) {
-            return true;
-        }
-        return ch.a(param1, (byte) 63, param0, 12);
+    final static boolean a() {
+        return ch.a(13, (byte) 63, 15, 12);
     }
 
     final void a(byte param0, int param1, ed param2) {
@@ -440,7 +434,7 @@ final class jm extends ji {
         }
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -623,10 +617,12 @@ final class jm extends ji {
                         break L1;
                       } else {
                         L2: {
-                          if (jq.a(var4.charAt(param1), -96)) {
+                          int discarded$24 = -96;
+                          if (jq.a(var4.charAt(0))) {
                             break L2;
                           } else {
-                            if (jq.a(var4.charAt(-1 + var4.length()), -96)) {
+                            int discarded$25 = -96;
+                            if (jq.a(var4.charAt(-1 + var4.length()))) {
                               break L2;
                             } else {
                               var5 = 0;
@@ -643,7 +639,8 @@ final class jm extends ji {
                                 } else {
                                   L4: {
                                     var7 = param0.charAt(var6);
-                                    if (!jq.a((char) var7, -96)) {
+                                    int discarded$26 = -96;
+                                    if (!jq.a((char) var7)) {
                                       var5 = 0;
                                       break L4;
                                     } else {
@@ -714,7 +711,7 @@ final class jm extends ji {
               break L6;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + param1 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + 0 + 44 + param2 + 41);
         }
         return stackIn_34_0 != 0;
     }

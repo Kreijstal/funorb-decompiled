@@ -193,7 +193,7 @@ final class le {
         field_d = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         m var1 = null;
         jd var2 = null;
         var1 = (m) (Object) gg.field_b.a((byte) 51);

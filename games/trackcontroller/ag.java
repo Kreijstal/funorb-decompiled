@@ -12,7 +12,7 @@ final class ag {
     String field_h;
     static String[] field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         int var1 = 33;
         field_a = null;

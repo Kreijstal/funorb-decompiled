@@ -76,7 +76,7 @@ final class uo extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(asb param0, asb param1, asb param2, int param3) {
+    final static void a(asb param0, asb param1, asb param2) {
         RuntimeException var4 = null;
         caa[] var5 = null;
         caa[][] var6 = null;
@@ -147,14 +147,15 @@ final class uo extends rqa {
           L0: {
             vsa.field_p = wjb.a(param1, true, "commonui", "frame_top");
             oqa.field_q = wjb.a(param1, true, "commonui", "frame_bottom");
-            wf.field_a = gra.a(param1, "jagex_logo_grey", "commonui", true);
+            int discarded$2 = 1;
+            wf.field_a = gra.a(param1, "jagex_logo_grey", "commonui");
             eia.field_o = wjb.a(param1, true, "commonui", "button");
             ps.field_a = hma.a("commonui", -90, param1, "validation");
             web.field_o = (no) (Object) vda.a(0, "commonui", param1, param2, "arezzo12");
             loa.field_o = (no) (Object) vda.a(0, "commonui", param1, param2, "arezzo14");
             vob.field_r = (no) (Object) vda.a(0, "commonui", param1, param2, "arezzo14bold");
             var17 = new phb(param0.a("", true, "button.gif"), (java.awt.Component) (Object) igb.field_a);
-            caa discarded$1 = ef.a("dropdown", "commonui", -60, param1);
+            caa discarded$3 = ef.a("dropdown", "commonui", -60, param1);
             var5 = qu.a(-124, "commonui", "screen_options", param1);
             cw.field_p = new caa[4];
             tw.field_f = new caa[4];

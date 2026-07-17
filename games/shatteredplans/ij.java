@@ -36,9 +36,6 @@ final class ij {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         ei.a(false, param4, param1, -12394, param5, param3, param0);
-        if (!param2) {
-            field_a = null;
-        }
     }
 
     final static fp b(int param0) {
@@ -46,7 +43,7 @@ final class ij {
         return (fp) (Object) new gs();
     }
 
-    final static qh b(byte param0) {
+    final static qh b() {
         tm.field_k = new qh(250, 60, 150, 186, ib.field_c.toUpperCase());
         fe var1 = new fe(-16 + (tm.field_k.field_k - -tm.field_k.field_m), tm.field_k.field_t + 2, 11, 11, -1, (bi) null, "X", 16711680);
         var1.field_h = (Object) (Object) tm.field_k;
@@ -60,7 +57,7 @@ final class ij {
         return tm.field_k;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

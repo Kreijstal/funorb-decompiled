@@ -20,9 +20,9 @@ final class wa {
     final static void a(int param0, int param1, int param2, cn param3, int param4, int param5) {
         try {
             param3.h(param4, param5);
-            db.field_v.b(Integer.toString(param0), 20 + param4, (param3.field_v + la.field_b.field_H >> 1) + param5, param2, param1);
+            db.field_v.b(Integer.toString(param0), 20 + param4, (param3.field_v + la.field_b.field_H >> 1) + param5, param2, -1);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "wa.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "wa.A(" + param0 + 44 + -1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -85,7 +85,7 @@ final class wa {
         return ((wa) this).a(4318);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_b = null;
         field_m = null;
         field_j = null;
@@ -95,12 +95,9 @@ final class wa {
 
     final static void a(int param0, cn param1) {
         try {
-            if (param0 < 116) {
-                field_m = null;
-            }
             ol.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "wa.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "wa.C(" + 123 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

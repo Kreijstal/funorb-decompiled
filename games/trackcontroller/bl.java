@@ -99,7 +99,7 @@ final class bl {
                 ((kj) var18).field_m = new int[((kj) var18).field_n];
                 ((kj) var18).field_v = new ce[((kj) var18).field_n];
                 ((kj) var18).field_p = new byte[((kj) var18).field_n][][];
-                var5 = param0;
+                var5 = 0;
                 L1: while (true) {
                   if (((kj) var18).field_n <= var5) {
                     si.field_a.a((byte) -121, (fc) var18);
@@ -109,7 +109,7 @@ final class bl {
                       L2: {
                         L3: {
                           L4: {
-                            var6_int = param3.h(param0 ^ 16383);
+                            var6_int = param3.h(16383);
                             if (0 == var6_int) {
                               break L4;
                             } else {
@@ -128,7 +128,7 @@ final class bl {
                                       }
                                     }
                                   }
-                                  var20 = param3.g(param0);
+                                  var20 = param3.g(0);
                                   var8 = param3.g(0);
                                   var9 = param3.h(16383);
                                   var10 = new String[var9];
@@ -186,9 +186,9 @@ final class bl {
                             }
                           }
                           L10: {
-                            var16 = param3.g(param0);
+                            var16 = param3.g(0);
                             var7 = var16;
-                            var15 = param3.g(param0);
+                            var15 = param3.g(0);
                             var8 = var15;
                             var9 = 0;
                             if (var6_int == 1) {
@@ -200,7 +200,7 @@ final class bl {
                           }
                           ((kj) var18).field_m[var5] = var6_int;
                           ((kj) var18).field_u[var5] = var9;
-                          ((kj) var18).field_j[var5] = param2.a(ma.a(param0, -26462), var15, ve.a((byte) 11, var16));
+                          ((kj) var18).field_j[var5] = param2.a(ma.a(0, -26462), var15, ve.a((byte) 11, var16));
                           break L3;
                         }
                         break L2;
@@ -237,7 +237,7 @@ final class bl {
               L16: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_36_0 = (RuntimeException) var4;
-                stackOut_36_1 = new StringBuilder().append("bl.D(").append(param0).append(44).append(param1).append(44);
+                stackOut_36_1 = new StringBuilder().append("bl.D(").append(0).append(44).append(param1).append(44);
                 stackIn_38_0 = stackOut_36_0;
                 stackIn_38_1 = stackOut_36_1;
                 stackIn_37_0 = stackOut_36_0;
@@ -298,7 +298,7 @@ final class bl {
         throw new IllegalStateException();
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         try {
             IOException var1 = null;
             int var1_int = 0;

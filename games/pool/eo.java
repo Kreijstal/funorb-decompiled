@@ -18,7 +18,7 @@ final class eo extends vh {
     static int field_Lb;
     static int field_Tb;
 
-    public static void f(byte param0) {
+    public static void f() {
         field_Rb = null;
         field_Xb = null;
     }
@@ -31,14 +31,7 @@ final class eo extends vh {
         oq var4 = null;
         kh var6 = null;
         kh var7 = null;
-        if (param1 == ka.field_r) {
-          if (param2 != 11) {
-            field_Rb = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param1 != ka.field_r) {
           var6 = (kh) (Object) lf.field_a.a((long)ka.field_r, false);
           var7 = var6;
           ka.field_r = param1;
@@ -48,12 +41,7 @@ final class eo extends vh {
             var4.a(3, false);
             var4.a(11, false);
             var4.a((byte) -81, param1);
-            if (param2 == 11) {
-              return;
-            } else {
-              field_Rb = null;
-              return;
-            }
+            return;
           } else {
             var7.field_bc = null;
             var4 = ej.field_j;
@@ -61,13 +49,10 @@ final class eo extends vh {
             var4.a(3, false);
             var4.a(11, false);
             var4.a((byte) -81, param1);
-            if (param2 == 11) {
-              return;
-            } else {
-              field_Rb = null;
-              return;
-            }
+            return;
           }
+        } else {
+          return;
         }
     }
 

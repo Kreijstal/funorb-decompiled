@@ -11,7 +11,7 @@ final class hg extends qb {
     md field_q;
     mb field_o;
 
-    private final void a(lp param0, int[] param1, int param2, int param3, int param4, boolean param5) {
+    private final void a(lp param0, int[] param1, int param2, int param3, int param4) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -1411,12 +1411,14 @@ final class hg extends qb {
                   var4_int = param1;
                   L2: while (true) {
                     if (var5 <= var6.field_H) {
-                      this.a(var6, param0, var4_int - -var5, var4_int, var5, true);
+                      int discarded$2 = 1;
+                      this.a(var6, param0, var4_int - -var5, var4_int, var5);
                       var6.field_H = var6.field_H - var5;
                       var6 = (lp) (Object) ((hg) this).field_q.a(4);
                       continue L1;
                     } else {
-                      this.a(var6, param0, var5 + var4_int, var4_int, var6.field_H, true);
+                      int discarded$3 = 1;
+                      this.a(var6, param0, var5 + var4_int, var4_int, var6.field_H);
                       var5 = var5 - var6.field_H;
                       var4_int = var4_int + var6.field_H;
                       if (((hg) this).field_m.a(118, var4_int, var5, var6, param0)) {

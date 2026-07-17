@@ -13,7 +13,7 @@ final class jm extends ae {
     private int field_q;
     static String field_p;
 
-    final static void d(byte param0) {
+    final static void d() {
         oo.i(4, 4, 0, 0, oo.field_b, oo.field_l);
     }
 
@@ -81,51 +81,43 @@ final class jm extends ae {
         ((jm) this).field_j = param5;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean a() {
         int var4 = 0;
-        int stackIn_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
         L0: {
-          if (param1 == -23936) {
-            break L0;
-          } else {
-            field_p = null;
-            break L0;
-          }
-        }
-        L1: {
           if (null == ki.field_e) {
-            break L1;
+            break L0;
           } else {
             if (sj.field_p == 13) {
               ki.field_e = null;
               return true;
             } else {
-              break L1;
+              break L0;
             }
           }
         }
         if (!sq.field_N) {
-          L2: {
+          L1: {
             if (ee.field_b) {
-              break L2;
+              break L1;
             } else {
               if (sj.field_p == 9) {
-                break L2;
+                break L1;
               } else {
                 if (sj.field_p == 10) {
-                  break L2;
+                  break L1;
                 } else {
                   if (11 == sj.field_p) {
-                    break L2;
+                    break L1;
                   } else {
-                    L3: {
+                    L2: {
                       if (sj.field_p != 80) {
-                        break L3;
+                        break L2;
                       } else {
                         if (!uk.a((byte) -111)) {
-                          break L3;
+                          break L2;
                         } else {
                           sq.field_N = true;
                           return true;
@@ -138,45 +130,45 @@ final class jm extends ae {
               }
             }
           }
-          return ai.a(false, param0, param2);
+          return ai.a(false, 13, 15);
         } else {
           if (uk.a((byte) -120)) {
-            L4: {
-              if (!wl.a(param3, 60, param0)) {
-                stackOut_10_0 = 0;
-                stackIn_11_0 = stackOut_10_0;
-                break L4;
+            L3: {
+              if (!wl.a(12, 60, 13)) {
+                stackOut_8_0 = 0;
+                stackIn_9_0 = stackOut_8_0;
+                break L3;
               } else {
-                stackOut_9_0 = 1;
-                stackIn_11_0 = stackOut_9_0;
-                break L4;
+                stackOut_7_0 = 1;
+                stackIn_9_0 = stackOut_7_0;
+                break L3;
               }
             }
-            L5: {
-              L6: {
-                var4 = stackIn_11_0;
+            L4: {
+              L5: {
+                var4 = stackIn_9_0;
                 if (sj.field_p == 80) {
-                  break L6;
+                  break L5;
                 } else {
                   if (sj.field_p != 84) {
-                    break L5;
+                    break L4;
                   } else {
-                    break L6;
+                    break L5;
                   }
                 }
               }
               var4 = 1;
               sq.field_N = false;
-              break L5;
+              break L4;
             }
-            L7: {
+            L6: {
               if (sj.field_p == 13) {
                 pf.a(-77);
                 var4 = 1;
                 sq.field_N = false;
-                break L7;
+                break L6;
               } else {
-                break L7;
+                break L6;
               }
             }
             return var4 != 0;
@@ -194,36 +186,28 @@ final class jm extends ae {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
             L1: {
-              if (param1) {
-                break L1;
-              } else {
-                boolean discarded$1 = jm.a(-68, -96, -28, 88);
-                break L1;
-              }
-            }
-            L2: {
               if (param3 == null) {
-                break L2;
+                break L1;
               } else {
                 if (0 < param5) {
                   var6_int = param3[0].field_z;
@@ -236,18 +220,18 @@ final class jm extends ae {
                   var9 = param2 + var6_int;
                   var10 = param5 + param2 - var7;
                   param2 = var9;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (param2 >= var10) {
                       oo.b(ki.field_d);
                       break L0;
                     } else {
                       param3[1].g(param2, param4, param0);
                       param2 = param2 + var8;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
@@ -255,33 +239,33 @@ final class jm extends ae {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
-            stackOut_12_1 = new StringBuilder().append("jm.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_1 = new StringBuilder().append("jm.H(").append(param0).append(44).append(1).append(44).append(param2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L4;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L4;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param4 + 44 + param5 + 41);
+          throw fa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -293,10 +277,8 @@ final class jm extends ae {
         if (param0) {
             var4 += 2;
         }
-        if (param1) {
-            var4++;
-        }
-        int var5 = 127 / ((param2 - 28) / 38);
+        var4++;
+        int var5 = 63;
         return pg.field_d[var4];
     }
 

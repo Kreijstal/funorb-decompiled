@@ -13,15 +13,12 @@ final class fk extends gg {
     int field_o;
 
     final static void a(int param0, java.awt.Component param1) {
-        if (param0 != -28092) {
-            return;
-        }
         try {
             param1.setFocusTraversalKeysEnabled(false);
             param1.addKeyListener((java.awt.event.KeyListener) (Object) pk.field_e);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) pk.field_e);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "fk.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "fk.B(" + -28092 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -36,7 +33,7 @@ final class fk extends gg {
         field_q = null;
     }
 
-    final static hl d(int param0) {
+    final static hl d() {
         return ok.field_b;
     }
 
@@ -88,7 +85,8 @@ final class fk extends gg {
               if (param3 >= 71) {
                 L0: {
                   if (ej.field_k.startsWith("win")) {
-                    if (li.a(param2, (byte) -5)) {
+                    int discarded$8 = -5;
+                    if (li.a(param2)) {
                       return;
                     } else {
                       break L0;

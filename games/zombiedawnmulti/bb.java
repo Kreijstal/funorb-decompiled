@@ -13,7 +13,7 @@ final class bb extends br {
     static String field_i;
     byte[] field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_g = null;
         field_n = null;
@@ -23,12 +23,9 @@ final class bb extends br {
         field_k = null;
     }
 
-    final static String c(int param0) {
+    final static String c() {
         if (dj.field_k == id.field_B) {
             return am.field_a;
-        }
-        if (param0 != -19385) {
-            return null;
         }
         return s.field_a;
     }

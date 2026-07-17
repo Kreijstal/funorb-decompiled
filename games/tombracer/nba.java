@@ -5,7 +5,7 @@ final class nba {
     static int field_b;
     static int[] field_a;
 
-    final static void a(ff param0, la param1, byte param2) {
+    final static void a(ff param0, la param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_9_0 = null;
@@ -119,20 +119,20 @@ final class nba {
         }
     }
 
-    final static void a(fia param0, sq param1, int param2, int param3, int param4, java.awt.Component param5, int param6, boolean param7) {
+    final static void a(fia param0, sq param1, int param2, int param3, int param4, java.awt.Component param5) {
         try {
-            kta.a(param3, param7, 10);
-            ipa.field_P = kta.a(param0, param5, 0, param4);
-            int var8_int = 22 % ((50 - param6) / 54);
-            gg.field_b = kta.a(param0, param5, 1, param2);
+            kta.a(22050, true, 10);
+            ipa.field_P = kta.a(param0, param5, 0, 22050);
+            int var8_int = 0;
+            gg.field_b = kta.a(param0, param5, 1, 1024);
             kva.field_n = new en();
-            ov.field_p = param2;
+            ov.field_p = 1024;
             gg.field_b.b((cg) (Object) kva.field_n);
             tva.field_d = param1;
             tva.field_d.a((byte) 100, ff.field_w);
             ipa.field_P.b((cg) (Object) tva.field_d);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "nba.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "nba.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 1024 + 44 + 22050 + 44 + 22050 + 44 + (param5 != null ? "{...}" : "null") + 44 + -45 + 44 + 1 + 41);
         }
     }
 

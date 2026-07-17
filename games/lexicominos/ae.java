@@ -13,8 +13,8 @@ final class ae extends kf {
     static pk[] field_J;
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -47,12 +47,7 @@ final class ae extends kf {
             var7 = var5_int;
             L3: while (true) {
               if (var6 <= var7) {
-                if (param0) {
-                  break L0;
-                } else {
-                  field_J = null;
-                  return;
-                }
+                break L0;
               } else {
                 var8 = 48 * var7 / param3 + 152;
                 var9 = var8 | (var8 << 16 | var8 << 8);
@@ -66,7 +61,7 @@ final class ae extends kf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var5, "ae.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ld.a((Throwable) (Object) var5, "ae.A(" + 1 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -74,10 +69,11 @@ final class ae extends kf {
         if (param0 != 0) {
             return true;
         }
-        return pb.c(true);
+        int discarded$0 = 1;
+        return pb.c();
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_J = null;
         field_E = null;
         field_M = null;

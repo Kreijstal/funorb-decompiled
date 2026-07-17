@@ -16,7 +16,7 @@ final class mm extends mh {
         }
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
@@ -44,7 +44,7 @@ final class mm extends mh {
           L0: {
             if (null != gd.field_b) {
               L1: {
-                var2_int = -66 / ((30 - param1) / 42);
+                var2_int = -22;
                 if (param0.toLowerCase().indexOf(gd.field_b.toLowerCase()) < 0) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
@@ -90,7 +90,7 @@ final class mm extends mh {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + -128 + 41);
         }
         return stackIn_6_0 != 0;
     }
@@ -281,19 +281,11 @@ final class mm extends mh {
         ((mm) this).field_Rb.field_P = 0;
         ((mm) this).field_Qb.field_cb = ((mm) this).field_cb;
         ((mm) this).field_Qb.field_Ib = -param2 + ((mm) this).field_Ib - param1;
-        if (param0 != -45) {
-          ((mm) this).a(-40, (byte) -114, -15, 122, 34, 27, 42);
-          ((mm) this).field_Rb.field_Ib = -param1 + (((mm) this).field_Ib + -param2);
-          ((mm) this).field_Ub.a(-param1 + ((mm) this).field_Ib, ((mm) this).field_Qb.field_cb, ((mm) this).field_cb, (byte) -110, param1, -((mm) this).field_Rb.field_zb, ((mm) this).field_Rb.field_cb, 0);
-          return;
-        } else {
-          ((mm) this).field_Rb.field_Ib = -param1 + (((mm) this).field_Ib + -param2);
-          ((mm) this).field_Ub.a(-param1 + ((mm) this).field_Ib, ((mm) this).field_Qb.field_cb, ((mm) this).field_cb, (byte) -110, param1, -((mm) this).field_Rb.field_zb, ((mm) this).field_Rb.field_cb, 0);
-          return;
-        }
+        ((mm) this).field_Rb.field_Ib = -param1 + (((mm) this).field_Ib + -param2);
+        ((mm) this).field_Ub.a(-param1 + ((mm) this).field_Ib, ((mm) this).field_Qb.field_cb, ((mm) this).field_cb, (byte) -110, param1, -((mm) this).field_Rb.field_zb, ((mm) this).field_Rb.field_cb, 0);
     }
 
-    final static void h(int param0) {
+    final static void h() {
         l var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

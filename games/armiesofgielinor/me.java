@@ -25,7 +25,7 @@ final class me {
         ((me) this).field_b = param0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
     }
@@ -83,7 +83,8 @@ final class me {
               rs.field_t = param4;
               qd.field_G = param1;
               var7 = (CharSequence) (Object) param1;
-              wm.field_b = k.a(var7, false);
+              int discarded$2 = 0;
+              wm.field_b = k.a(var7);
               dj.field_e = param3;
               var6 = fg.a(-11, uj.field_n, param2, vs.field_g, hf.field_f);
               vs.a(256, var6);

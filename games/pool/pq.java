@@ -42,9 +42,11 @@ final class pq {
     static volatile int field_f;
 
     final void d(byte param0) {
-        this.c((byte) 119);
+        int discarded$0 = 119;
+        this.c();
         int var2 = -74 / ((param0 - 33) / 40);
-        this.h(50);
+        int discarded$1 = 50;
+        this.h();
         ((pq) this).field_v = 0;
         if (((pq) this).field_q != null) {
             if (((pq) this).field_q.field_n == 0) {
@@ -216,7 +218,7 @@ final class pq {
         }
     }
 
-    private final void h(int param0) {
+    private final void h() {
         ((pq) this).field_t = 0;
         ((pq) this).field_u = 0;
         ((pq) this).field_l = 0;
@@ -463,7 +465,7 @@ final class pq {
         }
     }
 
-    final static void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6) {
+    final static void a(float param0, float param1, float param2, float param3, float param4, float param5) {
         L0: {
           L1: {
             if (null == ta.field_h) {
@@ -541,7 +543,9 @@ final class pq {
         if (param0 != -14770) {
           return -91L;
         } else {
-          return od.a((long)((pq) this).field_I, (long)((pq) this).field_I, false) - -od.a((long)((pq) this).field_t, (long)((pq) this).field_t, false);
+          int discarded$4 = 0;
+          int discarded$5 = 0;
+          return od.a((long)((pq) this).field_I, (long)((pq) this).field_I) - -od.a((long)((pq) this).field_t, (long)((pq) this).field_t);
         }
     }
 
@@ -645,7 +649,9 @@ final class pq {
                     }
                   }
                 }
-                var2 = bm.a(-104, od.a((long)((pq) this).field_l, (long)((pq) this).field_l, false) + od.a((long)((pq) this).field_h, (long)((pq) this).field_h, false));
+                int discarded$4 = 0;
+                int discarded$5 = 0;
+                var2 = bm.a(-104, od.a((long)((pq) this).field_l, (long)((pq) this).field_l) + od.a((long)((pq) this).field_h, (long)((pq) this).field_h));
                 if (var2 != 0L) {
                   L5: {
                     if (-2147483648L > var2) {
@@ -657,7 +663,9 @@ final class pq {
                           ((pq) this).field_h = lh.a((int)var2, (byte) -104, (long)((pq) this).field_h);
                           ((pq) this).field_A = -aj.a(dr.field_f, false, ((pq) this).field_l) / 50;
                           ((pq) this).field_u = -aj.a(dr.field_f, false, ((pq) this).field_h) / 50;
-                          var4 = od.a((long)((pq) this).field_A, (long)((pq) this).field_A, false) + od.a((long)((pq) this).field_u, (long)((pq) this).field_u, false);
+                          int discarded$6 = 0;
+                          int discarded$7 = 0;
+                          var4 = od.a((long)((pq) this).field_A, (long)((pq) this).field_A) + od.a((long)((pq) this).field_u, (long)((pq) this).field_u);
                           var6 = ((pq) this).e(-14770);
                           if (var6 < var4) {
                             var8_long = bm.a(-104, var4);
@@ -763,9 +771,11 @@ final class pq {
         }
         if (((pq) this).field_s) {
             System.out.print("{");
-            System.out.print(lo.a((long)((pq) this).field_g, 7697781));
+            int discarded$0 = 7697781;
+            System.out.print(lo.a((long)((pq) this).field_g));
             System.out.print(",");
-            System.out.print(lo.a((long)((pq) this).field_k, 7697781));
+            int discarded$1 = 7697781;
+            System.out.print(lo.a((long)((pq) this).field_k));
             System.out.print(" ");
             ((pq) this).field_x.b(param0 ^ -79);
             System.out.print("}");
@@ -784,7 +794,7 @@ final class pq {
         return 1;
     }
 
-    private final void c(byte param0) {
+    private final void c() {
         ((pq) this).field_d = 0;
         ((pq) this).field_a = 0;
         ((pq) this).field_n = 0;

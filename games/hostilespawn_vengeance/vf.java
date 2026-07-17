@@ -7,7 +7,7 @@ final class vf extends ph {
     static String field_I;
     static String field_J;
 
-    final static boolean l(int param0) {
+    final static boolean l() {
         return uh.field_o;
     }
 
@@ -108,7 +108,7 @@ final class vf extends ph {
           L0: {
             var10 = uj.field_p.field_e;
             var11 = uj.field_p.field_g;
-            var12 = -101 % ((-33 - param3) / 43);
+            var12 = 0;
             var22 = ln.field_a.field_o;
             var14 = param4;
             L1: while (true) {
@@ -237,7 +237,7 @@ final class vf extends ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var7, "vf.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw wg.a((Throwable) (Object) var7, "vf.D(" + param0 + 44 + param1 + 44 + param2 + 44 + 28 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -340,7 +340,7 @@ final class vf extends ph {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -27;
         field_G = null;
         field_I = null;
@@ -408,7 +408,7 @@ final class vf extends ph {
         return var2 + param1;
     }
 
-    final static void k(int param0) {
+    final static void k() {
         RuntimeException var1 = null;
         int var2 = 0;
         ne var3 = null;

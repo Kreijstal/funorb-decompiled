@@ -247,7 +247,7 @@ final class di extends qe {
         ((di) this).field_p = false;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_r = null;
         field_q = null;
         field_v = null;
@@ -256,7 +256,7 @@ final class di extends qe {
         field_n = null;
     }
 
-    final static id c(byte param0) {
+    final static id c() {
         if (null == ca.field_Q) {
           ca.field_Q = new id();
           ca.field_Q.a((byte) 119, dj.field_h);
@@ -274,7 +274,7 @@ final class di extends qe {
         }
     }
 
-    final static void a(sc param0, int param1, boolean param2) {
+    final static void a(sc param0, int param1) {
         try {
             la.a(-1, 256, true, param0);
             int var3_int = -19 / ((param1 - 65) / 42);

@@ -683,7 +683,7 @@ class i extends jb {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_w = null;
         field_E = null;
         field_A = null;

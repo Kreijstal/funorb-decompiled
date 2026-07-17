@@ -9,13 +9,14 @@ final class nr extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$2 = ((nr) this).field_l - 1;
+        int fieldTemp$4 = ((nr) this).field_l - 1;
         ((nr) this).field_l = ((nr) this).field_l - 1;
-        if (0 <= fieldTemp$2) {
+        if (0 <= fieldTemp$4) {
           if (((nr) this).field_l != 25) {
             return false;
           } else {
-            this.f(121);
+            int discarded$5 = 121;
+            this.f();
             return false;
           }
         } else {
@@ -30,7 +31,7 @@ final class nr extends ana {
         int var4 = 0;
         try {
             var6 = sja.field_fb;
-            var6.c(param0, (byte) 116);
+            var6.c(4, (byte) 116);
             var6.field_g = var6.field_g + 1;
             var4 = var6.field_g;
             var6.d(1, 0);
@@ -44,7 +45,7 @@ final class nr extends ana {
             var6.b((byte) 85, -var4 + var6.field_g);
             int var5 = 47 % ((1 - param2) / 47);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nr.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "nr.E(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -64,12 +65,9 @@ final class nr extends ana {
     }
 
     private final void d(int param0) {
-        if (param0 != -26) {
-            ((nr) this).field_x = null;
-        }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         pp var3 = null;
         ad var4 = null;
         int var5 = 0;
@@ -96,7 +94,7 @@ final class nr extends ana {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_w = null;
         field_v = null;
         field_y = null;

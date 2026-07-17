@@ -27,7 +27,8 @@ final class p extends uc {
             return;
         }
         ((p) this).field_e.a(157, gj.field_n, 26, (byte) 76, 325);
-        boolean discarded$0 = this.c((byte) 69);
+        int discarded$0 = 69;
+        boolean discarded$1 = this.c();
     }
 
     private final void a(int param0, int param1, int param2, boolean param3) {
@@ -41,101 +42,125 @@ final class p extends uc {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        uj stackIn_18_0 = null;
-        uj stackIn_19_0 = null;
-        uj stackIn_20_0 = null;
-        String stackIn_20_1 = null;
-        uj stackOut_17_0 = null;
-        uj stackOut_19_0 = null;
-        String stackOut_19_1 = null;
-        uj stackOut_18_0 = null;
-        String stackOut_18_1 = null;
-        var14 = CrazyCrystals.field_B;
-        var5 = 12640511;
-        var6 = 157;
-        var7 = 168;
-        if (param0 == -17) {
-          L0: {
-            var8 = 26;
-            il.a(var8, false, param1, var6, var7, false);
-            var9 = 0;
-            if (param2 != 0) {
-              if (1 != param2) {
-                if (param2 != 2) {
-                  if (param2 == 3) {
-                    gj.field_m.b(cc.field_b, ((p) this).field_g, param1 - -17, var9, -1);
-                    ak.a((byte) 61, ((p) this).field_g, param1, qd.field_r, var5);
-                    break L0;
-                  } else {
-                    if (qh.field_k != param2) {
-                      if (param2 == rk.field_g) {
-                        L1: {
-                          var10 = gj.field_m.a(q.field_d);
-                          var11 = gj.field_m.a(fk.field_t);
-                          var12 = gj.field_m.a(vk.field_D);
-                          if (var12 <= var11) {
-                            break L1;
-                          } else {
-                            var11 = var12;
-                            break L1;
-                          }
-                        }
-                        L2: {
-                          var13 = 240 + (var10 + -var11) / 2;
-                          gj.field_m.b(q.field_d, var13, 17 + param1, var9, -1);
-                          stackOut_17_0 = gj.field_m;
-                          stackIn_19_0 = stackOut_17_0;
-                          stackIn_18_0 = stackOut_17_0;
-                          if (jm.field_j) {
-                            stackOut_19_0 = (uj) (Object) stackIn_19_0;
-                            stackOut_19_1 = fk.field_t;
-                            stackIn_20_0 = stackOut_19_0;
-                            stackIn_20_1 = stackOut_19_1;
-                            break L2;
-                          } else {
-                            stackOut_18_0 = (uj) (Object) stackIn_18_0;
-                            stackOut_18_1 = vk.field_D;
-                            stackIn_20_0 = stackOut_18_0;
-                            stackIn_20_1 = stackOut_18_1;
-                            break L2;
-                          }
-                        }
-                        ((uj) (Object) stackIn_20_0).a(stackIn_20_1, var13, param1 + 17, var9, -1);
-                        break L0;
-                      } else {
-                        if (sj.field_c == param2) {
-                          gj.field_m.c(nd.field_k, 240, 17 + param1, var9, -1);
-                          break L0;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        uj stackIn_22_0 = null;
+        uj stackIn_23_0 = null;
+        uj stackIn_24_0 = null;
+        String stackIn_24_1 = null;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        uj stackOut_21_0 = null;
+        uj stackOut_23_0 = null;
+        String stackOut_23_1 = null;
+        uj stackOut_22_0 = null;
+        String stackOut_22_1 = null;
+        L0: {
+          var14 = CrazyCrystals.field_B;
+          if (!param3) {
+            stackOut_2_0 = 12640511;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 16777215;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        L1: {
+          var5 = stackIn_3_0;
+          var6 = 157;
+          var7 = 168;
+          var8 = 26;
+          int discarded$1 = 0;
+          il.a(var8, param3, param1, var6, var7);
+          if (param3) {
+            stackOut_5_0 = 1;
+            stackIn_6_0 = stackOut_5_0;
+            break L1;
+          } else {
+            stackOut_4_0 = 0;
+            stackIn_6_0 = stackOut_4_0;
+            break L1;
+          }
+        }
+        L2: {
+          var9 = stackIn_6_0;
+          if (param2 != 0) {
+            if (1 != param2) {
+              if (param2 != 2) {
+                if (param2 == 3) {
+                  gj.field_m.b(cc.field_b, ((p) this).field_g, param1 - -17, var9, -1);
+                  ak.a((byte) 61, ((p) this).field_g, param1, qd.field_r, var5);
+                  break L2;
+                } else {
+                  if (qh.field_k != param2) {
+                    if (param2 == rk.field_g) {
+                      L3: {
+                        var10 = gj.field_m.a(q.field_d);
+                        var11 = gj.field_m.a(fk.field_t);
+                        var12 = gj.field_m.a(vk.field_D);
+                        if (var12 <= var11) {
+                          break L3;
                         } else {
-                          break L0;
+                          var11 = var12;
+                          break L3;
                         }
                       }
+                      L4: {
+                        var13 = 240 + (var10 + -var11) / 2;
+                        gj.field_m.b(q.field_d, var13, 17 + param1, var9, -1);
+                        stackOut_21_0 = gj.field_m;
+                        stackIn_23_0 = stackOut_21_0;
+                        stackIn_22_0 = stackOut_21_0;
+                        if (jm.field_j) {
+                          stackOut_23_0 = (uj) (Object) stackIn_23_0;
+                          stackOut_23_1 = fk.field_t;
+                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_24_1 = stackOut_23_1;
+                          break L4;
+                        } else {
+                          stackOut_22_0 = (uj) (Object) stackIn_22_0;
+                          stackOut_22_1 = vk.field_D;
+                          stackIn_24_0 = stackOut_22_0;
+                          stackIn_24_1 = stackOut_22_1;
+                          break L4;
+                        }
+                      }
+                      ((uj) (Object) stackIn_24_0).a(stackIn_24_1, var13, param1 + 17, var9, -1);
+                      break L2;
                     } else {
-                      gj.field_m.c(vl.field_e, 240, param1 - -17, var9, -1);
-                      break L0;
+                      if (sj.field_c == param2) {
+                        gj.field_m.c(nd.field_k, 240, 17 + param1, var9, -1);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
                     }
+                  } else {
+                    gj.field_m.c(vl.field_e, 240, param1 - -17, var9, -1);
+                    break L2;
                   }
-                } else {
-                  gj.field_m.b(fa.field_m, ((p) this).field_g, param1 - -17, var9, -1);
-                  ak.a((byte) 61, ((p) this).field_g, param1, gi.field_m, var5);
-                  break L0;
                 }
               } else {
-                gj.field_m.c(jd.field_J, 240, 17 + param1, var9, -1);
-                break L0;
+                gj.field_m.b(fa.field_m, ((p) this).field_g, param1 - -17, var9, -1);
+                ak.a((byte) 61, ((p) this).field_g, param1, gi.field_m, var5);
+                break L2;
               }
             } else {
-              gj.field_m.c(nc.field_k, 240, 17 + param1, var9, -1);
-              break L0;
+              gj.field_m.c(jd.field_J, 240, 17 + param1, var9, -1);
+              break L2;
             }
+          } else {
+            gj.field_m.c(nc.field_k, 240, 17 + param1, var9, -1);
+            break L2;
           }
-          return;
-        } else {
-          return;
         }
     }
 
-    private final boolean c(byte param0) {
+    private final boolean c() {
         int var2 = 0;
         int var3 = 0;
         int stackIn_70_0 = 0;
@@ -161,7 +186,8 @@ final class p extends uc {
             if (!((p) this).field_e.a(true)) {
               break L1;
             } else {
-              hc.a(true, false);
+              int discarded$2 = 0;
+              hc.a(true);
               uh.field_p = null;
               return true;
             }
@@ -363,7 +389,8 @@ final class p extends uc {
             if (!((p) this).field_e.a(true)) {
               break L17;
             } else {
-              qc.a(((p) this).field_e.field_i, 0);
+              int discarded$3 = 0;
+              qc.a(((p) this).field_e.field_i);
               ((p) this).field_e.a(-1, true, -1);
               return true;
             }
@@ -411,7 +438,8 @@ final class p extends uc {
         }
         if (pj.field_q != 13) {
             ((p) this).field_e.f(0);
-            return this.c((byte) 69);
+            int discarded$0 = 69;
+            return this.c();
         }
         uh.field_p = null;
         return true;

@@ -10,36 +10,21 @@ final class jjb {
     aia[] field_c;
     ob field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        if (!li.field_i) {
-          dma.d(param4, param3, param5, param1, param0);
-          if (param2 == 17634) {
+        if (li.field_i) {
+          if (ne.field_v) {
+            og.field_r.aa(0, 0, param5, param1, 0, 0);
             return;
           } else {
-            field_f = null;
             return;
           }
         } else {
-          if (!ne.field_v) {
-            if (param2 != 17634) {
-              field_f = null;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            og.field_r.aa(param4, param3, param5, param1, param0, 0);
-            if (param2 == 17634) {
-              return;
-            } else {
-              field_f = null;
-              return;
-            }
-          }
+          dma.d(0, 0, param5, param1, 0);
+          return;
         }
     }
 
@@ -90,29 +75,36 @@ final class jjb {
                       if (16 <= var2_int) {
                         break L1;
                       } else {
-                        var24 = ppb.a(pjb.field_vb, var2_int * 32768, true, 32768);
+                        int discarded$8 = 32768;
+                        int discarded$9 = 1;
+                        var24 = ppb.a(pjb.field_vb, var2_int * 32768);
                         ((jjb) this).field_c[var2_int] = new aia(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
                         var2_int++;
                         continue L3;
                       }
                     }
                   } else {
-                    var23 = ppb.a(pra.field_p, 32768 * var2_int, true, 32768);
+                    int discarded$10 = 32768;
+                    int discarded$11 = 1;
+                    var23 = ppb.a(pra.field_p, 32768 * var2_int);
                     ((jjb) this).field_e[var2_int] = new aia(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
                     var2_int++;
                     continue L2;
                   }
                 }
               } else {
-                var20 = ffb.a(false, pra.field_p, true);
+                int discarded$12 = 1;
+                var20 = ffb.a(false, pra.field_p);
                 ((jjb) this).field_b = new ob(param0, 6410, 128, 128, 16, var20, 6410);
-                var21 = ffb.a(false, pjb.field_vb, true);
+                int discarded$13 = 1;
+                var21 = ffb.a(false, pjb.field_vb);
                 ((jjb) this).field_g = new ob(param0, 6410, 128, 128, 16, var21, 6410);
                 var10 = param0.field_yb;
                 if (!var10.a(92)) {
                   break L1;
                 } else {
-                  var22 = ffb.a(false, lda.field_o, true);
+                  int discarded$14 = 1;
+                  var22 = ffb.a(false, lda.field_o);
                   ((jjb) this).field_a = new ob(param0, 6408, 128, 128, 16);
                   var4 = new ob(param0, 6409, 128, 128, 16, var22, 6409);
                   if (!var10.a(2.0f, -28279, var4, ((jjb) this).field_a)) {
@@ -121,7 +113,7 @@ final class jjb {
                     var4.e(0);
                     return;
                   } else {
-                    boolean discarded$1 = ((jjb) this).field_a.c(9729);
+                    boolean discarded$15 = ((jjb) this).field_a.c(9729);
                     var4.e(0);
                     return;
                   }

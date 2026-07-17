@@ -156,7 +156,7 @@ final class js {
                     }
                     case 1: {
                         try {
-                            var2_int = -84 / ((param0 - -5) / 55);
+                            var2_int = 84;
                             if (!sq.field_o) {
                                 statePc = 4;
                             } else {
@@ -322,7 +322,7 @@ final class js {
                     case 17: {
                         var2 = (RuntimeException) (Object) caughtException;
                         stackOut_17_0 = (RuntimeException) var2;
-                        stackOut_17_1 = new StringBuilder().append("js.G(").append(param0).append(44);
+                        stackOut_17_1 = new StringBuilder().append("js.G(").append(-83).append(44);
                         stackIn_19_0 = stackOut_17_0;
                         stackIn_19_1 = stackOut_17_1;
                         stackIn_18_0 = stackOut_17_0;
@@ -374,7 +374,7 @@ final class js {
         return d.field_a.field_Eb;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int a(int param0) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;
@@ -384,13 +384,10 @@ final class js {
         return param0 + 1;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_a = null;
         field_h = null;
         field_c = null;
-        if (param0 <= 58) {
-            return;
-        }
         field_f = null;
         field_b = null;
         field_i = null;

@@ -444,7 +444,7 @@ final class go {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         int var1 = 0;
         field_g = null;

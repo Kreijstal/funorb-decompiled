@@ -18,7 +18,8 @@ final class pda extends rqa {
                     nv.a(param2, 102, param3, param0, param1, param5);
                     return;
                   } else {
-                    rg.a(param5, param0, param1, param2, param3, param6, 120);
+                    int discarded$1 = 120;
+                    rg.a(param5, param0, param1, param2, param3, param6);
                     return;
                   }
                 } else {

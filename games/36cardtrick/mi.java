@@ -13,7 +13,7 @@ class mi extends ff {
         return hc.field_h;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_c = null;
     }
 
@@ -32,9 +32,9 @@ class mi extends ff {
     final static void a(int param0, ib param1, int param2, int param3) {
         try {
             gh.a(li.a(param1, param2, param3), (byte) -111);
-            int var4_int = 81 % ((31 - param0) / 46);
+            int var4_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "mi.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "mi.G(" + 118 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 

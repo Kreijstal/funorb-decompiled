@@ -35,7 +35,7 @@ final class qe extends lm {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_A = null;
         int var1 = 33;
         field_w = null;
@@ -117,7 +117,7 @@ final class qe extends lm {
         }
     }
 
-    final static eh a(String param0, int param1, byte param2) {
+    final static eh a(String param0, int param1) {
         eg var3 = null;
         RuntimeException var3_ref = null;
         eg stackIn_1_0 = null;
@@ -269,9 +269,10 @@ final class qe extends lm {
                           stackIn_19_2 = stackOut_18_2;
                           break L3;
                         } else {
+                          int discarded$2 = 63;
                           stackOut_17_0 = (char[]) (Object) stackIn_17_0;
                           stackOut_17_1 = stackIn_17_1;
-                          stackOut_17_2 = cm.a((byte) var6, 63);
+                          stackOut_17_2 = cm.a((byte) var6);
                           stackIn_19_0 = stackOut_17_0;
                           stackIn_19_1 = stackOut_17_1;
                           stackIn_19_2 = stackOut_17_2;
@@ -318,9 +319,10 @@ final class qe extends lm {
                             stackIn_10_2 = stackOut_9_2;
                             break L5;
                           } else {
+                            int discarded$3 = 63;
                             stackOut_8_0 = (char[]) (Object) stackIn_8_0;
                             stackOut_8_1 = stackIn_8_1;
-                            stackOut_8_2 = cm.a((byte) var6, 63);
+                            stackOut_8_2 = cm.a((byte) var6);
                             stackIn_10_0 = stackOut_8_0;
                             stackIn_10_1 = stackOut_8_1;
                             stackIn_10_2 = stackOut_8_2;

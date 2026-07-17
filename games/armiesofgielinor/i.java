@@ -365,7 +365,7 @@ final class i extends je {
         }
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_Nb = null;
         field_Ob = null;
         field_Lb = null;
@@ -696,7 +696,7 @@ final class i extends je {
         try {
           L0: {
             param4 += 8;
-            var6_int = param3.field_Z.a(param3.field_X, -(param3.field_O * param1) + param0, param3.field_pb);
+            var6_int = param3.field_Z.a(param3.field_X, -(param3.field_O * 2) + param0, param3.field_pb);
             param3.a(var6_int, -20500, param0, param4, 0);
             param4 = param4 + var6_int;
             param2.a(param3, 57);
@@ -709,7 +709,7 @@ final class i extends je {
           L1: {
             var6 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("i.J(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("i.J(").append(param0).append(44).append(2).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -762,7 +762,7 @@ final class i extends je {
         return stackIn_1_0;
     }
 
-    final static void n(int param0) {
+    final static void n() {
         int[] var2 = new int[3];
         int[] var1 = var2;
         var2[2] = 16777215;
@@ -903,7 +903,8 @@ final class i extends je {
             ((i) this).field_Tb.field_G = tq.a(11579568, false, ((i) this).field_Tb.field_ob, 2105376, 3, 8421504);
             var18 = 13 + var15_int + 13;
             var19 = var16 + 34;
-            var20 = jp.a(param0, param2, var18, -1);
+            int discarded$3 = -1;
+            var20 = jp.a(param0, param2, var18);
             var21 = pd.a(var19, 0, param1, param3);
             ((i) this).a(var19, -20500, var18, var21, var20);
             break L0;
@@ -1021,7 +1022,7 @@ final class i extends je {
                   if (param11 == null) {
                     break L6;
                   } else {
-                    StringBuilder discarded$1 = ((i) this).field_Jb.append(param11);
+                    StringBuilder discarded$4 = ((i) this).field_Jb.append(param11);
                     break L6;
                   }
                 }
@@ -1160,7 +1161,8 @@ final class i extends je {
                     ((i) this).field_Tb.field_G = tq.a(11579568, false, ((i) this).field_Tb.field_ob, 2105376, 3, 8421504);
                     var23 = var19 + 26;
                     var24 = 10 + (var17 + (var22 + 24));
-                    var25 = jp.a(param0, param2, var23, -1);
+                    int discarded$5 = -1;
+                    var25 = jp.a(param0, param2, var23);
                     var26 = pd.a(var24, 0, param1, param3);
                     ((i) this).a(var24, -20500, var23, var26, var25);
                     break L0;
@@ -1221,7 +1223,8 @@ final class i extends je {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        cd.a(108, param2, param1, 2);
+        int discarded$6 = 2;
+        cd.a(108, param2, param1);
         if (param0) {
             Object var4 = null;
             i.a((wk[]) null, -22, 63, (byte) 45, 53, 9);

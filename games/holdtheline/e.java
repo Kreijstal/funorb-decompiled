@@ -9,7 +9,7 @@ final class e {
     static float[] field_e;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_b = null;
@@ -69,8 +69,9 @@ final class e {
         var6 = HoldTheLine.field_D;
         try {
           L0: {
-            var7 = ta.a((byte) 72);
-            var4 = param1;
+            int discarded$2 = 72;
+            var7 = ta.a();
+            var4 = 0;
             var5 = fk.a(25, '[') + param2 + 93;
             L1: while (true) {
               L2: {
@@ -105,7 +106,7 @@ final class e {
                       }
                     }
                   }
-                  stackOut_12_0 = var7.c(param1 ^ 3);
+                  stackOut_12_0 = var7.c(3);
                   stackIn_13_0 = stackOut_12_0;
                   break L0;
                 }
@@ -142,7 +143,7 @@ final class e {
           }
           L6: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(0).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

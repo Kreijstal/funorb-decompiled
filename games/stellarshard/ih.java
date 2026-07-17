@@ -13,12 +13,33 @@ final class ih {
     }
 
     final synchronized static long a(byte param0) {
-        long var1 = System.currentTimeMillis();
-        if (!(bh.field_c <= var1)) {
-            gg.field_a = gg.field_a + (bh.field_c - var1);
+        long var1 = 0L;
+        if (param0 != -98) {
+          L0: {
+            ih.a(-100);
+            var1 = System.currentTimeMillis();
+            if (bh.field_c > var1) {
+              gg.field_a = gg.field_a + (bh.field_c - var1);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          bh.field_c = var1;
+          return gg.field_a + var1;
+        } else {
+          L1: {
+            var1 = System.currentTimeMillis();
+            if (bh.field_c > var1) {
+              gg.field_a = gg.field_a + (bh.field_c - var1);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          bh.field_c = var1;
+          return gg.field_a + var1;
         }
-        bh.field_c = var1;
-        return gg.field_a + var1;
     }
 
     static int a(int param0, int param1) {
@@ -39,7 +60,7 @@ final class ih {
         qd.field_j.requestFocus();
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         if (null == ob.field_b) {
             return false;
         }

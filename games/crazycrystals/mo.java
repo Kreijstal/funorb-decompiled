@@ -11,12 +11,12 @@ final class mo extends jb {
     static int field_l;
     int field_j;
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var2 = null;
         da.a(dg.field_a, 114, (String) null);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void a(int param0, int param1, int param2, int param3) {
         gh.field_w = param3;
         kb.field_h = param1;
         io.field_O = param0;

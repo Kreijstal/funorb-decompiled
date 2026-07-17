@@ -170,7 +170,7 @@ final class hqa extends kca {
         return stackIn_7_0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_j = null;
     }
 

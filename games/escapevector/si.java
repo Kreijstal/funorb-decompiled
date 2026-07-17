@@ -40,80 +40,76 @@ final class si extends fl {
         var9 = EscapeVector.field_A;
         try {
           L0: {
-            if (param0 == 10691) {
-              L1: {
-                if (param2 == 1) {
-                  ((si) this).field_s = bb.a(-128, param1.c(false), '<');
-                  break L1;
-                } else {
-                  if (param2 != 2) {
-                    if (param2 == 3) {
-                      var4_int = param1.e(0);
-                      ((si) this).field_q = new int[var4_int][];
-                      ((si) this).field_x = new int[var4_int];
-                      var5 = 0;
-                      L2: while (true) {
-                        if (var4_int <= var5) {
-                          break L1;
-                        } else {
-                          L3: {
-                            var6 = param1.f(1952);
-                            var7 = kf.a((byte) -57, var6);
-                            if (var7 != null) {
-                              ((si) this).field_x[var5] = var6;
-                              ((si) this).field_q[var5] = new int[var7.field_d];
-                              var8 = 0;
-                              L4: while (true) {
-                                if (var7.field_d <= var8) {
-                                  break L3;
-                                } else {
-                                  ((si) this).field_q[var5][var8] = param1.f(n.a(param0, 11875));
-                                  var8++;
-                                  continue L4;
-                                }
-                              }
-                            } else {
-                              break L3;
-                            }
-                          }
-                          var5++;
-                          continue L2;
-                        }
-                      }
-                    } else {
-                      if (param2 != 4) {
+            L1: {
+              if (param2 == 1) {
+                ((si) this).field_s = bb.a(-128, param1.c(false), '<');
+                break L1;
+              } else {
+                if (param2 != 2) {
+                  if (param2 == 3) {
+                    var4_int = param1.e(0);
+                    ((si) this).field_q = new int[var4_int][];
+                    ((si) this).field_x = new int[var4_int];
+                    var5 = 0;
+                    L2: while (true) {
+                      if (var4_int <= var5) {
                         break L1;
                       } else {
-                        break L1;
+                        L3: {
+                          var6 = param1.f(1952);
+                          var7 = kf.a((byte) -57, var6);
+                          if (var7 != null) {
+                            ((si) this).field_x[var5] = var6;
+                            ((si) this).field_q[var5] = new int[var7.field_d];
+                            var8 = 0;
+                            L4: while (true) {
+                              if (var7.field_d <= var8) {
+                                break L3;
+                              } else {
+                                ((si) this).field_q[var5][var8] = param1.f(n.a(10691, 11875));
+                                var8++;
+                                continue L4;
+                              }
+                            }
+                          } else {
+                            break L3;
+                          }
+                        }
+                        var5++;
+                        continue L2;
                       }
                     }
                   } else {
-                    var4_int = param1.e(param0 ^ 10691);
-                    ((si) this).field_z = new int[var4_int];
-                    var5 = 0;
-                    L5: while (true) {
-                      if (var5 >= var4_int) {
-                        break L1;
-                      } else {
-                        ((si) this).field_z[var5] = param1.f(1952);
-                        var5++;
-                        continue L5;
-                      }
+                    if (param2 != 4) {
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  }
+                } else {
+                  var4_int = param1.e(0);
+                  ((si) this).field_z = new int[var4_int];
+                  var5 = 0;
+                  L5: while (true) {
+                    if (var5 >= var4_int) {
+                      break L1;
+                    } else {
+                      ((si) this).field_z[var5] = param1.f(1952);
+                      var5++;
+                      continue L5;
                     }
                   }
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("si.A(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("si.A(").append(10691).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -235,7 +231,7 @@ final class si extends fl {
         field_u = null;
     }
 
-    final static void a(float param0, String param1, boolean param2, byte param3) {
+    final static void a(float param0, String param1, boolean param2) {
         try {
             if (!(null != jb.field_r)) {
                 jb.field_r = new w(bo.field_F, dj.field_b);
@@ -243,7 +239,8 @@ final class si extends fl {
             }
             jb.field_r.a(-100, param1, param0, param2);
             em.d();
-            se.a(true, 17113);
+            int discarded$0 = 17113;
+            se.a(true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "si.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 14 + 41);
         }
@@ -274,7 +271,7 @@ final class si extends fl {
         try {
           L0: {
             L1: {
-              var2_int = 100 % ((param0 - -19) / 57);
+              var2_int = 0;
               var3 = param1.getParameter("username");
               if (var3 == null) {
                 break L1;
@@ -296,7 +293,7 @@ final class si extends fl {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("si.F(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("si.F(").append(82).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;

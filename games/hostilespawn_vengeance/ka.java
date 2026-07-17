@@ -98,7 +98,7 @@ final class ka extends hi {
         return stackIn_7_0;
     }
 
-    final static void a(int param0, p param1, int param2, int param3) {
+    final static void a(int param0, p param1, int param2) {
         try {
             jj.field_j[0].a((double)param2, (double)param0, false, (double)128 + param1.field_c, 128);
         } catch (RuntimeException runtimeException) {
@@ -106,7 +106,7 @@ final class ka extends hi {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_o = null;
         int var1 = 102;
         field_p = null;

@@ -10,7 +10,7 @@ final class pe {
     static String field_b;
     static w field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_c = null;
@@ -18,7 +18,7 @@ final class pe {
         field_d = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -107,75 +107,67 @@ final class pe {
         try {
             int var2_int = 0;
             IOException var2 = null;
+            int stackIn_11_0 = 0;
             int stackIn_13_0 = 0;
-            int stackIn_15_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            int stackOut_10_0 = 0;
             int stackOut_12_0 = 0;
-            int stackOut_14_0 = 0;
-            L0: {
-              if (param0 == 25973) {
-                break L0;
-              } else {
-                field_b = null;
-                break L0;
-              }
-            }
             if (de.field_V.field_n < param1) {
               if (qc.field_s == null) {
                 return false;
               } else {
                 try {
-                  L1: {
+                  L0: {
                     var2_int = qc.field_s.b(0);
                     if (var2_int <= 0) {
-                      L2: {
+                      L1: {
                         if (var2_int < 0) {
                           si.a(69);
-                          break L2;
+                          break L1;
                         } else {
-                          if (sl.a(param0 + -25974) <= 30000L) {
+                          if (sl.a(-1) <= 30000L) {
                             decompiledRegionSelector0 = 0;
-                            break L1;
+                            break L0;
                           } else {
                             si.a(69);
-                            break L2;
+                            break L1;
                           }
                         }
                       }
                       decompiledRegionSelector0 = 1;
-                      break L1;
+                      break L0;
                     } else {
-                      L3: {
+                      L2: {
                         if (-de.field_V.field_n + param1 >= var2_int) {
-                          break L3;
+                          break L2;
                         } else {
                           var2_int = -de.field_V.field_n + param1;
-                          break L3;
+                          break L2;
                         }
                       }
                       qc.field_s.a(var2_int, de.field_V.field_n, (byte) 17, de.field_V.field_r);
                       p.field_a = ik.a(4);
                       de.field_V.field_n = de.field_V.field_n + var2_int;
                       if (param1 > de.field_V.field_n) {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
-                        return stackIn_13_0 != 0;
+                        stackOut_10_0 = 0;
+                        stackIn_11_0 = stackOut_10_0;
+                        return stackIn_11_0 != 0;
                       } else {
                         de.field_V.field_n = 0;
-                        stackOut_14_0 = 1;
-                        stackIn_15_0 = stackOut_14_0;
-                        return stackIn_15_0 != 0;
+                        stackOut_12_0 = 1;
+                        stackIn_13_0 = stackOut_12_0;
+                        return stackIn_13_0 != 0;
                       }
                     }
                   }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L4: {
+                  L3: {
                     var2 = (IOException) (Object) decompiledCaughtException;
                     si.a(96);
                     decompiledRegionSelector0 = 1;
-                    break L4;
+                    break L3;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {

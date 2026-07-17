@@ -79,7 +79,7 @@ final class k extends cb {
         super(param0);
     }
 
-    final static void f(int param0) {
+    final static void f() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -174,7 +174,8 @@ final class k extends cb {
         try {
           L0: {
             L1: {
-              if (dg.a(param0, -115) != null) {
+              int discarded$10 = -115;
+              if (dg.a(param0) != null) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -190,7 +191,7 @@ final class k extends cb {
                 break L2;
               } else {
                 var4 = null;
-                ag discarded$2 = ((k) this).a((String) null, -75);
+                ag discarded$11 = ((k) this).a((String) null, -75);
                 break L2;
               }
             }

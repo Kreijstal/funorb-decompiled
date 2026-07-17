@@ -13,23 +13,13 @@ final class md {
     static eh field_h;
 
     final static mg[] a(boolean param0, int param1) {
-        mg[] var2 = null;
-        mg[] var3 = null;
-        if (!param0) {
-          boolean discarded$2 = md.a(2);
-          var3 = new mg[9];
-          var2 = var3;
-          var3[4] = eg.a(64, (byte) 40, param1);
-          return var2;
-        } else {
-          var3 = new mg[9];
-          var2 = var3;
-          var3[4] = eg.a(64, (byte) 40, param1);
-          return var2;
-        }
+        mg[] var3 = new mg[9];
+        mg[] var2 = var3;
+        var3[4] = eg.a(64, (byte) 40, param1);
+        return var2;
     }
 
-    final static ck a(String[] args, int param1) {
+    final static ck a(String[] args) {
         ck var2 = null;
         RuntimeException var2_ref = null;
         ck stackIn_1_0 = null;
@@ -92,10 +82,6 @@ final class md {
     }
 
     final static boolean a(int param0) {
-        if (param0 != 11265) {
-            aj discarded$0 = md.a((byte) -50);
-            return true;
-        }
         return true;
     }
 
@@ -136,12 +122,13 @@ final class md {
               gg.field_D.a(sb.field_b[1], (byte) -42);
               gg.field_D.a(sb.field_b[2], (byte) -42);
               gg.field_D.a(sb.field_b[3], (byte) -42);
-              kl.a(gg.field_D, (byte) 111);
+              int discarded$2 = 111;
+              kl.a(gg.field_D);
               gg.field_D.a((byte) -126, param3);
               param4.a(false, gg.field_D);
               gk.field_g.field_l = 0;
               if (param0) {
-                gk.field_g.a(18, param1 ^ -122);
+                gk.field_g.a(18, -122);
                 break L1;
               } else {
                 gk.field_g.a(16, 61);
@@ -204,9 +191,10 @@ final class md {
                 break L7;
               }
             }
-            nl.a(on.field_a, gg.field_D, (jc) (Object) gk.field_g, ch.field_i, param1);
+            int discarded$3 = 0;
+            nl.a(on.field_a, gg.field_D, (jc) (Object) gk.field_g, ch.field_i);
             gk.field_g.c(-var5_int + gk.field_g.field_l, -3991);
-            al.b(~param1, -1);
+            al.b(-1, -1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -214,7 +202,7 @@ final class md {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("md.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_21_1 = new StringBuilder().append("md.C(").append(param0).append(44).append(0).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -241,7 +229,7 @@ final class md {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_i = null;
         field_c = null;
         field_e = null;
@@ -250,25 +238,12 @@ final class md {
         field_h = null;
     }
 
-    final static aj a(byte param0) {
-        Object var2 = null;
-        if (vf.field_f != null) {
-          if (param0 > -102) {
-            var2 = null;
-            md.a(false, -13, true, -83, (bk) null);
-            return vf.field_f;
-          } else {
-            return vf.field_f;
-          }
-        } else {
+    final static aj a() {
+        if (vf.field_f == null) {
           vf.field_f = new aj(dk.field_j, 20, 0, 0, 0, 11579568, -1, 0, 0, dk.field_j.field_H, -1, 2147483647, true);
-          if (param0 <= -102) {
-            return vf.field_f;
-          } else {
-            var2 = null;
-            md.a(false, -13, true, -83, (bk) null);
-            return vf.field_f;
-          }
+          return vf.field_f;
+        } else {
+          return vf.field_f;
         }
     }
 

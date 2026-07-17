@@ -143,9 +143,6 @@ class hbb extends f {
     }
 
     private final void a(int param0, int param1, boolean param2, int param3) {
-        if (!param2) {
-            this.a(-128, false);
-        }
     }
 
     private final int a(int param0, fkb param1) {
@@ -279,78 +276,70 @@ class hbb extends f {
     private final int b(int param0, fkb param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 9259) {
-                break L1;
-              } else {
-                f discarded$2 = ((hbb) this).c();
-                break L1;
-              }
-            }
             var3_int = ((hbb) this).field_o[param1.field_o];
             if (var3_int >= 8192) {
-              stackOut_5_0 = -((16384 + -var3_int) * (-param1.field_u + 128) - -32 >> 6) + 16384;
-              stackIn_6_0 = stackOut_5_0;
+              stackOut_3_0 = -((16384 + -var3_int) * (-param1.field_u + 128) - -32 >> 6) + 16384;
+              stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
-              stackOut_3_0 = 32 + param1.field_u * var3_int >> 6;
-              stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              stackOut_1_0 = 32 + param1.field_u * var3_int >> 6;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("hbb.W(").append(param0).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("hbb.W(").append(9259).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return stackIn_6_0;
+        return stackIn_4_0;
     }
 
     private final void a(int param0, int param1, int param2) {
@@ -935,7 +924,8 @@ class hbb extends f {
                   break L20;
                 }
               }
-              param3.field_j.a(param3.field_k, this.b(param3, 0), this.b(9259, param3));
+              int discarded$1 = 0;
+              param3.field_j.a(param3.field_k, this.b(param3), this.b(9259, param3));
               stackOut_65_0 = 0;
               stackIn_66_0 = stackOut_65_0;
               break L0;
@@ -1010,7 +1000,9 @@ class hbb extends f {
 
     public static void c(boolean param0) {
         field_N = null;
-        hbb.c(false);
+        if (!param0) {
+            hbb.c(false);
+        }
     }
 
     synchronized void b(int param0, byte param1, int param2) {
@@ -1086,7 +1078,7 @@ class hbb extends f {
         return (f) (Object) ((hbb) this).field_k;
     }
 
-    private final int b(fkb param0, int param1) {
+    private final int b(fkb param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -2062,7 +2054,7 @@ class hbb extends f {
                     }
                   }
                 }
-                var5 = (fkb) (Object) ((hbb) this).field_k.field_k.a(param1 + -1155545385);
+                var5 = (fkb) (Object) ((hbb) this).field_k.field_k.a(-1155566844);
                 continue L1;
               }
             }
@@ -2121,7 +2113,8 @@ class hbb extends f {
                 ((hbb) this).a(stackIn_18_1, stackIn_18_2 != 0, true);
                 break L3;
               } else {
-                var7.field_j = fga.b(var6, this.a(param1 ^ -21404, var7), this.b(var7, 0), this.b(9259, var7));
+                int discarded$1 = 0;
+                var7.field_j = fga.b(var6, this.a(73, var7), this.b(var7), this.b(9259, var7));
                 break L3;
               }
             }
@@ -2155,14 +2148,6 @@ class hbb extends f {
                 break L6;
               }
             }
-            L8: {
-              if (param1 == -21459) {
-                break L8;
-              } else {
-                this.b(84, -87, 32);
-                break L8;
-              }
-            }
             ((hbb) this).field_k.field_k.b(-10258, (ksa) (Object) var7);
             ((hbb) this).field_O[param3][param2] = var7;
             return;
@@ -2192,7 +2177,7 @@ class hbb extends f {
         fkb var3 = null;
         int var4 = 0;
         var4 = VoidHunters.field_G;
-        var3 = (fkb) (Object) ((hbb) this).field_k.field_k.d(param0);
+        var3 = (fkb) (Object) ((hbb) this).field_k.field_k.d(0);
         L0: while (true) {
           if (var3 == null) {
             return;

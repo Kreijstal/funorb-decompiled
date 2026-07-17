@@ -50,7 +50,8 @@ final class tf {
               L2: while (true) {
                 if (var3.field_c != 0) {
                   if (var3.field_c != 1) {
-                    gf.a(100L, -10309);
+                    int discarded$18 = -10309;
+                    gf.a(100L);
                     continue L1;
                   } else {
                     var3_int = -23 / ((-22 - param0) / 52);
@@ -59,7 +60,8 @@ final class tf {
                     break L0;
                   }
                 } else {
-                  gf.a(10L, -10309);
+                  int discarded$19 = -10309;
+                  gf.a(10L);
                   continue L2;
                 }
               }
@@ -122,7 +124,7 @@ final class tf {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
     }
 

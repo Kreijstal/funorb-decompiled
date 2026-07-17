@@ -7,7 +7,7 @@ final class ld {
     static long field_b;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
     }
 

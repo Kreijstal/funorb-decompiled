@@ -2320,14 +2320,14 @@ final class sb implements vc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
         field_c = null;
         field_d = null;
     }
 
-    final static void a(mf param0, mf param1, int param2) {
+    final static void a(mf param0, mf param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -2474,7 +2474,23 @@ final class sb implements vc {
     }
 
     private final boolean c(int param0) {
-        return ((sb) this).b(59) || pf.field_p;
+        int stackIn_5_0 = 0;
+        int stackOut_3_0 = 0;
+        if (param0 == -25437) {
+          if (!((sb) this).b(param0 + 25496)) {
+            if (pf.field_p) {
+              return true;
+            } else {
+              return false;
+            }
+          } else {
+            stackOut_3_0 = 1;
+            stackIn_5_0 = stackOut_3_0;
+            return stackIn_5_0 != 0;
+          }
+        } else {
+          return true;
+        }
     }
 
     static {

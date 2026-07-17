@@ -8,7 +8,7 @@ final class tna extends loa {
     static String field_b;
     static int field_f;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_e = null;
@@ -46,19 +46,11 @@ final class tna extends loa {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= ara.field_xb) {
-                    L3: {
-                      if (param0 == 16599) {
-                        break L3;
-                      } else {
-                        field_b = null;
-                        break L3;
-                      }
-                    }
                     int dupTemp$4 = param1.a(false);
                     baa.field_b[dupTemp$4] = baa.field_b[dupTemp$4] + 1;
                     var2_int = 0;
                     var3 = 0;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var3 >= ara.field_xb) {
                         ara.field_xb = var2_int;
                         int fieldTemp$5 = ara.field_xb;
@@ -66,37 +58,37 @@ final class tna extends loa {
                         wea.field_d[fieldTemp$5] = param1;
                         break L0;
                       } else {
-                        L5: {
-                          L6: {
+                        L4: {
+                          L5: {
                             if (param1.field_d == wea.field_d[var3].field_d) {
                               var4 = wea.field_d[var3].a(false);
                               if (sd.field_K >= baa.field_b[var4]) {
-                                break L6;
+                                break L5;
                               } else {
                                 baa.field_b[var4] = baa.field_b[var4] - 1;
-                                break L5;
+                                break L4;
                               }
                             } else {
-                              break L6;
+                              break L5;
                             }
                           }
                           int incrementValue$6 = var2_int;
                           var2_int++;
                           wea.field_d[incrementValue$6] = wea.field_d[var3];
-                          break L5;
+                          break L4;
                         }
                         var3++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
-                    L7: {
+                    L6: {
                       if (wea.field_d[var2_int].field_d == param1.field_d) {
                         int dupTemp$7 = wea.field_d[var2_int].a(false);
                         baa.field_b[dupTemp$7] = baa.field_b[dupTemp$7] + 1;
-                        break L7;
+                        break L6;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                     var2_int++;
@@ -112,10 +104,10 @@ final class tna extends loa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("tna.A(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("tna.A(").append(16599).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -127,7 +119,7 @@ final class tna extends loa {
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
-              break L8;
+              break L7;
             } else {
               stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
               stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
@@ -135,7 +127,7 @@ final class tna extends loa {
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
               stackIn_25_2 = stackOut_23_2;
-              break L8;
+              break L7;
             }
           }
           throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);

@@ -27,17 +27,14 @@ final class cr extends ma {
             iq.field_j = true;
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
-            if (param0 != 16) {
-                field_p = null;
-            }
             var4 = -1L;
             nn.a(var4, (byte) -120, param1, var3, var2);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "cr.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "cr.D(" + 16 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_o = null;
         field_p = null;
         field_t = null;

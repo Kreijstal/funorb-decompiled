@@ -15,36 +15,35 @@ final class r {
         jp.a(-24 + qo.field_o, (byte) 116, 640, hd.field_q, 5, 0, v.field_c);
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void a(int param0, int param1, boolean param2) {
         int var4 = 0;
         jh.field_O.b(param1, param0);
-        if (param3 == -40) {
-          if (param2) {
-            L0: {
-              var4 = qk.field_e % jh.field_O.field_F * 2;
-              if (jh.field_O.field_F <= var4) {
-                var4 = jh.field_O.field_F + (-var4 + jh.field_O.field_F);
-                break L0;
-              } else {
-                break L0;
-              }
+        if (param2) {
+          L0: {
+            var4 = qk.field_e % jh.field_O.field_F * 2;
+            if (jh.field_O.field_F <= var4) {
+              var4 = jh.field_O.field_F + (-var4 + jh.field_O.field_F);
+              break L0;
+            } else {
+              break L0;
             }
-            if (10 > var4) {
-              var4 = 10;
-              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
+          }
+          if (10 > var4) {
+            var4 = 10;
+            int discarded$3 = -113;
+            uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0);
+            return;
+          } else {
+            if (-40 + jh.field_O.field_F < var4) {
+              var4 = jh.field_O.field_F - 40;
+              int discarded$4 = -113;
+              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0);
               return;
             } else {
-              if (-40 + jh.field_O.field_F < var4) {
-                var4 = jh.field_O.field_F - 40;
-                uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
-                return;
-              } else {
-                uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
-                return;
-              }
+              int discarded$5 = -113;
+              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0);
+              return;
             }
-          } else {
-            return;
           }
         } else {
           return;

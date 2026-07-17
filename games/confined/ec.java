@@ -10,7 +10,7 @@ final class ec extends RuntimeException {
     static long field_e;
     Throwable field_b;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -315,7 +315,7 @@ final class ec extends RuntimeException {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
     }

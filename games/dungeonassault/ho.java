@@ -14,7 +14,7 @@ final class ho implements Iterator {
     private qi field_h;
     private int field_a;
 
-    private final void a(byte param0) {
+    private final void a() {
         ((ho) this).field_a = 1;
         ((ho) this).field_g = null;
         ((ho) this).field_d = ((ho) this).field_h.field_d[0].field_e;
@@ -36,7 +36,7 @@ final class ho implements Iterator {
         field_e = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -76,7 +76,8 @@ final class ho implements Iterator {
                   }
                 }
                 stackIn_17_0.field_w = stackIn_17_1 != 0;
-                lb.a(true);
+                int discarded$506 = 1;
+                lb.a();
                 break L0;
               } else {
                 L3: {
@@ -96,7 +97,8 @@ final class ho implements Iterator {
                           }
                         }
                       }
-                      ac.field_s = ac.field_s + ib.a(um.field_i[var1_int].field_n, 918);
+                      int discarded$507 = 918;
+                      ac.field_s = ac.field_s + ib.a(um.field_i[var1_int].field_n);
                       break L3;
                     }
                   } else {
@@ -161,7 +163,7 @@ final class ho implements Iterator {
         return false;
     }
 
-    final static void a(qg param0, Object param1, byte param2) {
+    final static void a(qg param0, Object param1) {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var3_int = 0;
@@ -302,7 +304,8 @@ final class ho implements Iterator {
         ((ho) this).field_g = null;
         try {
             ((ho) this).field_h = param0;
-            this.a((byte) 67);
+            int discarded$0 = 67;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "ho.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

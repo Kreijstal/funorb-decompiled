@@ -111,129 +111,125 @@ final class cn extends pp {
               }
             }
             var7_int = 1 + param6.field_q;
-            if (param0 < -60) {
-              var8 = 1;
-              L2: while (true) {
-                if (-1 + param6.field_p <= var8) {
-                  var7_int = 0;
-                  var8 = 0;
-                  L3: while (true) {
-                    if (param6.field_p <= var8) {
-                      break L0;
-                    } else {
-                      var9 = param3[param3.length * var8 / param6.field_p];
-                      var10 = 0;
-                      L4: while (true) {
-                        if (param1 <= var10) {
-                          var7_int = var7_int + (param6.field_q + -param1);
-                          var8++;
-                          continue L3;
-                        } else {
-                          L5: {
-                            var11 = 255 & param6.field_v[var7_int];
-                            var12 = 255 & param2.field_v[var7_int];
-                            var13 = 0;
-                            var13 = var13 | (65280 & (var9 >> 16) * var11) << 8;
-                            var13 = var13 | 65280 & ((65280 & var9) >> 8) * var11;
-                            var13 = var13 | (65280 & var11 * (255 & var9)) >> 8;
-                            if (param6.field_v[var7_int] < 0) {
-                              break L5;
-                            } else {
-                              tla.a(param4 + var10, -1898743704, var13, var8 + param5, var12);
-                              break L5;
-                            }
+            var8 = 1;
+            L2: while (true) {
+              if (-1 + param6.field_p <= var8) {
+                var7_int = 0;
+                var8 = 0;
+                L3: while (true) {
+                  if (param6.field_p <= var8) {
+                    break L0;
+                  } else {
+                    var9 = param3[param3.length * var8 / param6.field_p];
+                    var10 = 0;
+                    L4: while (true) {
+                      if (param1 <= var10) {
+                        var7_int = var7_int + (param6.field_q + -param1);
+                        var8++;
+                        continue L3;
+                      } else {
+                        L5: {
+                          var11 = 255 & param6.field_v[var7_int];
+                          var12 = 255 & param2.field_v[var7_int];
+                          var13 = 0;
+                          var13 = var13 | (65280 & (var9 >> 16) * var11) << 8;
+                          var13 = var13 | 65280 & ((65280 & var9) >> 8) * var11;
+                          var13 = var13 | (65280 & var11 * (255 & var9)) >> 8;
+                          if (param6.field_v[var7_int] < 0) {
+                            break L5;
+                          } else {
+                            tla.a(param4 + var10, -1898743704, var13, var8 + param5, var12);
+                            break L5;
                           }
-                          var7_int++;
-                          var10++;
-                          continue L4;
                         }
+                        var7_int++;
+                        var10++;
+                        continue L4;
                       }
-                    }
-                  }
-                } else {
-                  var9 = 1;
-                  L6: while (true) {
-                    if (param1 <= var9) {
-                      var7_int = var7_int + (param6.field_q + -param1 - -1);
-                      var8++;
-                      continue L2;
-                    } else {
-                      L7: {
-                        var10 = 255 & param6.field_v[var7_int];
-                        if ((param6.field_v[param6.field_q + var7_int] & 255) <= var10) {
-                          break L7;
-                        } else {
-                          var10 = param6.field_v[var7_int + param6.field_q] & 255;
-                          break L7;
-                        }
-                      }
-                      L8: {
-                        if ((255 & param6.field_v[-param6.field_q + var7_int]) <= var10) {
-                          break L8;
-                        } else {
-                          var10 = 255 & param6.field_v[-param6.field_q + var7_int];
-                          break L8;
-                        }
-                      }
-                      L9: {
-                        if (var10 >= (param6.field_v[param6.field_q + var7_int + 1] & 255)) {
-                          break L9;
-                        } else {
-                          var10 = 255 & param6.field_v[1 + param6.field_q + var7_int];
-                          break L9;
-                        }
-                      }
-                      L10: {
-                        if ((255 & param6.field_v[-1 + (-param6.field_q + var7_int)]) > var10) {
-                          var10 = param6.field_v[-param6.field_q + var7_int - 1] & 255;
-                          break L10;
-                        } else {
-                          break L10;
-                        }
-                      }
-                      L11: {
-                        if ((param6.field_v[param6.field_q + (var7_int - 1)] & 255) <= var10) {
-                          break L11;
-                        } else {
-                          var10 = 255 & param6.field_v[-1 + var7_int + param6.field_q];
-                          break L11;
-                        }
-                      }
-                      L12: {
-                        if (var10 >= (param6.field_v[1 + -param6.field_q + var7_int] & 255)) {
-                          break L12;
-                        } else {
-                          var10 = 255 & param6.field_v[1 + (-param6.field_q + var7_int)];
-                          break L12;
-                        }
-                      }
-                      L13: {
-                        if (var10 < (255 & param6.field_v[var7_int + 1])) {
-                          var10 = param6.field_v[var7_int + 1] & 255;
-                          break L13;
-                        } else {
-                          break L13;
-                        }
-                      }
-                      L14: {
-                        if (var10 >= (param6.field_v[var7_int - 1] & 255)) {
-                          break L14;
-                        } else {
-                          var10 = 255 & param6.field_v[var7_int + -1];
-                          break L14;
-                        }
-                      }
-                      int incrementValue$1 = var7_int;
-                      var7_int++;
-                      param2.field_v[incrementValue$1] = var10;
-                      var9++;
-                      continue L6;
                     }
                   }
                 }
+              } else {
+                var9 = 1;
+                L6: while (true) {
+                  if (param1 <= var9) {
+                    var7_int = var7_int + (param6.field_q + -param1 - -1);
+                    var8++;
+                    continue L2;
+                  } else {
+                    L7: {
+                      var10 = 255 & param6.field_v[var7_int];
+                      if ((param6.field_v[param6.field_q + var7_int] & 255) <= var10) {
+                        break L7;
+                      } else {
+                        var10 = param6.field_v[var7_int + param6.field_q] & 255;
+                        break L7;
+                      }
+                    }
+                    L8: {
+                      if ((255 & param6.field_v[-param6.field_q + var7_int]) <= var10) {
+                        break L8;
+                      } else {
+                        var10 = 255 & param6.field_v[-param6.field_q + var7_int];
+                        break L8;
+                      }
+                    }
+                    L9: {
+                      if (var10 >= (param6.field_v[param6.field_q + var7_int + 1] & 255)) {
+                        break L9;
+                      } else {
+                        var10 = 255 & param6.field_v[1 + param6.field_q + var7_int];
+                        break L9;
+                      }
+                    }
+                    L10: {
+                      if ((255 & param6.field_v[-1 + (-param6.field_q + var7_int)]) > var10) {
+                        var10 = param6.field_v[-param6.field_q + var7_int - 1] & 255;
+                        break L10;
+                      } else {
+                        break L10;
+                      }
+                    }
+                    L11: {
+                      if ((param6.field_v[param6.field_q + (var7_int - 1)] & 255) <= var10) {
+                        break L11;
+                      } else {
+                        var10 = 255 & param6.field_v[-1 + var7_int + param6.field_q];
+                        break L11;
+                      }
+                    }
+                    L12: {
+                      if (var10 >= (param6.field_v[1 + -param6.field_q + var7_int] & 255)) {
+                        break L12;
+                      } else {
+                        var10 = 255 & param6.field_v[1 + (-param6.field_q + var7_int)];
+                        break L12;
+                      }
+                    }
+                    L13: {
+                      if (var10 < (255 & param6.field_v[var7_int + 1])) {
+                        var10 = param6.field_v[var7_int + 1] & 255;
+                        break L13;
+                      } else {
+                        break L13;
+                      }
+                    }
+                    L14: {
+                      if (var10 >= (param6.field_v[var7_int - 1] & 255)) {
+                        break L14;
+                      } else {
+                        var10 = 255 & param6.field_v[var7_int + -1];
+                        break L14;
+                      }
+                    }
+                    int incrementValue$1 = var7_int;
+                    var7_int++;
+                    param2.field_v[incrementValue$1] = var10;
+                    var9++;
+                    continue L6;
+                  }
+                }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -241,7 +237,7 @@ final class cn extends pp {
           L15: {
             var7 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var7;
-            stackOut_38_1 = new StringBuilder().append("cn.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_38_1 = new StringBuilder().append("cn.B(").append(-63).append(44).append(param1).append(44);
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -318,15 +314,17 @@ final class cn extends pp {
         }
     }
 
-    final static kka a(byte param0, int param1) {
+    final static kka a() {
         kka var2 = new kka();
         gs.field_l.a((bw) (Object) var2, true);
-        ah.a(4, 4);
-        int var3 = 89 % ((66 - param0) / 56);
+        int discarded$0 = 4;
+        int discarded$1 = 4;
+        ah.a();
+        int var3 = 1;
         return var2;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_i = null;
         field_j = null;
         field_k = null;

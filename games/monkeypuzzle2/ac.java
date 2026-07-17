@@ -7,7 +7,7 @@ final class ac {
     static String field_d;
     static ba field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         int var1 = -106;
@@ -133,9 +133,9 @@ final class ac {
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) we.field_n);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) we.field_n);
             lf.field_a = 0;
-            int var2_int = -63 / ((-17 - param0) / 37);
+            int var2_int = -31;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ac.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "ac.B(" + -117 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

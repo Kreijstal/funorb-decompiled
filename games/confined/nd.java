@@ -6,16 +6,13 @@ abstract class nd extends jl {
     static String field_u;
     int field_t;
 
-    public static void c(int param0) {
+    public static void c() {
         field_u = null;
-        if (param0 != 30661) {
-            field_u = null;
-        }
     }
 
     abstract boolean f(byte param0);
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -92,7 +89,7 @@ abstract class nd extends jl {
         return stackIn_19_0 != 0;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

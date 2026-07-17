@@ -22,14 +22,15 @@ final class qj {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = -7;
-        hl.field_a = ea.b(120);
+        int discarded$0 = 120;
+        hl.field_a = ea.b();
         lg.field_w = new ji();
         na.a(true, 2591221, true);
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -58,7 +59,8 @@ final class qj {
                 break L1;
               } else {
                 var3 = (CharSequence) (Object) var2;
-                if (ci.a(var3, 2) != 0L) {
+                int discarded$2 = 2;
+                if (ci.a(var3) != 0L) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {

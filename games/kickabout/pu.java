@@ -231,7 +231,7 @@ final class pu extends hd implements lv {
             L4: {
               stackIn_8_3[stackIn_8_4] = stackIn_8_5;
               var8 = new vn(stackIn_8_2, 2);
-              var10 = -10 % ((param3 - -49) / 51);
+              var10 = 0;
               var9 = (short)param5;
               var11 = (short)param6;
               var12 = new vn(var8, true, false, true, true);
@@ -422,7 +422,7 @@ final class pu extends hd implements lv {
           }
           L21: {
             stackOut_57_0 = (RuntimeException) (Object) stackIn_57_0;
-            stackOut_57_1 = ((StringBuilder) (Object) stackIn_57_1).append(stackIn_57_2).append(44).append(param3).append(44);
+            stackOut_57_1 = ((StringBuilder) (Object) stackIn_57_1).append(stackIn_57_2).append(44).append(-103).append(44);
             stackIn_59_0 = stackOut_57_0;
             stackIn_59_1 = stackOut_57_1;
             stackIn_58_0 = stackOut_57_0;
@@ -472,7 +472,7 @@ final class pu extends hd implements lv {
         int var4 = fieldTemp$0;
         or.field_d.a(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
         or.field_d.c(62, -var4 + or.field_d.field_n);
-        int var5 = 83 % ((40 - param0) / 43);
+        int var5 = 2;
     }
 
     public final int a(int param0) {
@@ -486,7 +486,7 @@ final class pu extends hd implements lv {
         return var2;
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_Ab = null;
         field_Fb = null;
         field_Db = null;

@@ -6,7 +6,7 @@ final class bk extends ana {
     private cv field_x;
     static String field_w;
 
-    public static void e(int param0) {
+    public static void e() {
         field_w = null;
         field_v = null;
     }
@@ -20,7 +20,7 @@ final class bk extends ana {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((bk) this).field_x.field_l.a(124, ((bk) this).field_q.field_h);
@@ -41,12 +41,13 @@ final class bk extends ana {
     final boolean c(byte param0) {
         int var2 = 0;
         var2 = -106 % ((71 - param0) / 47);
-        int fieldTemp$2 = ((bk) this).field_l - 1;
+        int fieldTemp$4 = ((bk) this).field_l - 1;
         ((bk) this).field_l = ((bk) this).field_l - 1;
-        if (fieldTemp$2 >= 0) {
+        if (fieldTemp$4 >= 0) {
           if (25 == ((bk) this).field_l) {
             wf.a(69, (byte) 127);
-            this.b(true);
+            int discarded$5 = 1;
+            this.b();
             return false;
           } else {
             return false;

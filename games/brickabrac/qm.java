@@ -8,7 +8,7 @@ final class qm {
     static String field_e;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -20,7 +20,7 @@ final class qm {
             int var2 = 0;
             Throwable var3 = null;
             Throwable decompiledCaughtException = null;
-            var2 = 25 / ((42 - param0) / 40);
+            var2 = -25;
             try {
               L0: {
                 Object discarded$1 = ne.a(new Object[1], 78, uc.e((byte) -82), "resizing");

@@ -11,7 +11,7 @@ final class ff {
     static String field_f;
     static String field_d;
 
-    final static void b(int param0) {
+    final static void b() {
         ph.field_f = ec.b(false);
         u.field_b = new i();
         hl.a(true, 24574, true);
@@ -167,7 +167,7 @@ final class ff {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = -53;
         ga.field_E = new nc();
     }
@@ -225,8 +225,8 @@ final class ff {
             try {
               L0: {
                 L1: {
-                  te.field_N = new jd(param11);
-                  id.field_c = new jd(param7);
+                  te.field_N = new jd(5000);
+                  id.field_c = new jd(5000);
                   if (!param9) {
                     stackOut_2_0 = 0;
                     stackIn_3_0 = stackOut_2_0;
@@ -251,27 +251,23 @@ final class ff {
                 }
                 b.field_b = stackIn_6_0 != 0;
                 lc.field_l = param8;
-                if (param3 > 87) {
-                  ia.field_kb = param6;
-                  qa.field_n = param1;
-                  ci.field_jb = param10;
-                  al.field_n = param4;
-                  jj.field_s = param0;
-                  ki.field_C = param5;
-                  jh.field_f = param12;
-                  wk.field_b = param13;
-                  if (qa.field_n.field_b == null) {
-                    break L0;
-                  } else {
-                    {
-                      L3: {
-                        pj.field_D = new hb(qa.field_n.field_b, 64, 0);
-                        break L3;
-                      }
-                    }
-                    return;
-                  }
+                ia.field_kb = param6;
+                qa.field_n = param1;
+                ci.field_jb = param10;
+                al.field_n = param4;
+                jj.field_s = param0;
+                ki.field_C = param5;
+                jh.field_f = param12;
+                wk.field_b = param13;
+                if (qa.field_n.field_b == null) {
+                  break L0;
                 } else {
+                  {
+                    L3: {
+                      pj.field_D = new hb(qa.field_n.field_b, 64, 0);
+                      break L3;
+                    }
+                  }
                   return;
                 }
               }
@@ -305,7 +301,7 @@ final class ff {
               }
               L5: {
                 stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param2).append(44).append(110).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(5000).append(44);
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
@@ -328,7 +324,7 @@ final class ff {
                   break L5;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 44 + param13 + 41);
+              throw fc.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param9 + 44 + param10 + 44 + 5000 + 44 + param12 + 44 + param13 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

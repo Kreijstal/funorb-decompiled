@@ -286,7 +286,7 @@ final class ok extends wi {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_y = null;
         field_s = null;
         field_B = null;

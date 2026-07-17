@@ -289,7 +289,7 @@ final class so extends ji {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_z = null;
     }
 

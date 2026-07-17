@@ -11,7 +11,7 @@ final class ck {
     static String field_d;
     static int[] field_g;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_g = null;
         field_d = null;

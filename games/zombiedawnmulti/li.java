@@ -25,7 +25,7 @@ final class li extends qc {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_E = null;
         field_z = null;
     }

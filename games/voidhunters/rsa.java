@@ -102,7 +102,7 @@ final class rsa extends rqa {
         return stackIn_9_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

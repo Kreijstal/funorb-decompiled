@@ -10,190 +10,96 @@ final class ud extends sf implements he {
     private fw field_bb;
 
     final static void b(int param0, boolean param1, int param2, int param3) {
-        if (!param1) {
-          L0: {
-            if (param2 != 0) {
-              break L0;
-            } else {
-              if (param0 != ol.field_B) {
-                ol.field_B = param0;
-                kr.field_J = true;
-                ae.a(896, param3);
-                break L0;
-              } else {
-                L1: {
-                  if (param2 != 1) {
-                    break L1;
-                  } else {
-                    if (va.field_D != param0) {
-                      va.field_D = param0;
-                      kr.field_J = true;
-                      ae.a(896, param3);
-                      break L1;
-                    } else {
-                      if (2 == param2) {
-                        if (cd.field_c != param0) {
-                          cd.field_c = param0;
-                          kr.field_J = true;
-                          ae.a(896, param3);
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        return;
-                      }
-                    }
-                  }
-                }
-                if (2 == param2) {
-                  if (cd.field_c == param0) {
-                    return;
-                  } else {
-                    cd.field_c = param0;
-                    kr.field_J = true;
-                    ae.a(896, param3);
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
-          }
-          L2: {
-            if (param2 != 1) {
-              break L2;
-            } else {
-              if (va.field_D != param0) {
-                va.field_D = param0;
-                kr.field_J = true;
-                ae.a(896, param3);
-                break L2;
-              } else {
-                if (2 == param2) {
-                  if (cd.field_c == param0) {
-                    return;
-                  } else {
-                    cd.field_c = param0;
-                    kr.field_J = true;
-                    ae.a(896, param3);
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
-          }
-          if (2 == param2) {
-            if (cd.field_c != param0) {
-              cd.field_c = param0;
+        L0: {
+          if (param2 != 0) {
+            break L0;
+          } else {
+            if (param0 != ol.field_B) {
+              ol.field_B = param0;
               kr.field_J = true;
               ae.a(896, param3);
-              return;
+              break L0;
             } else {
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
-          field_X = null;
-          if (param2 == 0) {
-            L3: {
-              if (param0 != ol.field_B) {
-                ol.field_B = param0;
-                kr.field_J = true;
-                ae.a(896, param3);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            if (param2 == 1) {
-              L4: {
-                if (va.field_D != param0) {
-                  va.field_D = param0;
-                  kr.field_J = true;
-                  ae.a(896, param3);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              if (2 == param2) {
-                if (cd.field_c != param0) {
-                  cd.field_c = param0;
-                  kr.field_J = true;
-                  ae.a(896, param3);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              if (2 == param2) {
-                if (cd.field_c != param0) {
-                  cd.field_c = param0;
-                  kr.field_J = true;
-                  ae.a(896, param3);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            L5: {
-              if (param2 != 1) {
-                break L5;
-              } else {
-                if (va.field_D != param0) {
-                  va.field_D = param0;
-                  kr.field_J = true;
-                  ae.a(896, param3);
-                  break L5;
-                } else {
-                  L6: {
-                    if (2 != param2) {
-                      break L6;
-                    } else {
-                      if (cd.field_c == param0) {
-                        break L6;
-                      } else {
-                        cd.field_c = param0;
-                        kr.field_J = true;
-                        ae.a(896, param3);
-                        break L6;
-                      }
-                    }
+              if (param2 == 1) {
+                L1: {
+                  if (va.field_D != param0) {
+                    va.field_D = param0;
+                    kr.field_J = true;
+                    ae.a(896, param3);
+                    break L1;
+                  } else {
+                    break L1;
                   }
+                }
+                if (2 == param2) {
+                  if (cd.field_c != param0) {
+                    cd.field_c = param0;
+                    kr.field_J = true;
+                    ae.a(896, param3);
+                    return;
+                  } else {
+                    return;
+                  }
+                } else {
+                  return;
+                }
+              } else {
+                if (2 == param2) {
+                  if (cd.field_c == param0) {
+                    return;
+                  } else {
+                    cd.field_c = param0;
+                    kr.field_J = true;
+                    ae.a(896, param3);
+                    return;
+                  }
+                } else {
                   return;
                 }
               }
-            }
-            if (2 == param2) {
-              if (cd.field_c == param0) {
-                return;
-              } else {
-                cd.field_c = param0;
-                kr.field_J = true;
-                ae.a(896, param3);
-                return;
-              }
-            } else {
-              return;
             }
           }
         }
+        L2: {
+          if (param2 != 1) {
+            break L2;
+          } else {
+            if (va.field_D != param0) {
+              va.field_D = param0;
+              kr.field_J = true;
+              ae.a(896, param3);
+              break L2;
+            } else {
+              if (2 == param2) {
+                if (cd.field_c == param0) {
+                  return;
+                } else {
+                  cd.field_c = param0;
+                  kr.field_J = true;
+                  ae.a(896, param3);
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
+          }
+        }
+        if (2 == param2) {
+          if (cd.field_c == param0) {
+            return;
+          } else {
+            cd.field_c = param0;
+            kr.field_J = true;
+            ae.a(896, param3);
+            return;
+          }
+        } else {
+          return;
+        }
     }
 
-    private final fw a(String param0, qo param1, int param2) {
+    private final fw a(String param0, qo param1) {
         fw var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -374,7 +280,8 @@ final class ud extends sf implements he {
             var4.field_w = 80;
             var4.field_k = (kh) (Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((ud) this).a((byte) 10, var4);
-            ((ud) this).field_bb = this.a(pd.field_f, (qo) this, 93);
+            int discarded$2 = 93;
+            ((ud) this).field_bb = this.a(pd.field_f, (qo) this);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -465,7 +372,8 @@ final class ud extends sf implements he {
             if (param4 != ((ud) this).field_bb) {
               break L0;
             } else {
-              this.i((byte) 60);
+              int discarded$2 = 60;
+              this.i();
               return;
             }
           }
@@ -520,7 +428,7 @@ final class ud extends sf implements he {
         }
     }
 
-    private final void i(byte param0) {
+    private final void i() {
         if (!(((ud) this).field_L)) {
             return;
         }

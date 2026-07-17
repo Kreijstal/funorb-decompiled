@@ -10,7 +10,7 @@ final class fl {
     static fm field_b;
     private boolean field_a;
 
-    final static qe c(int param0) {
+    final static qe c() {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         qe var2 = null;
@@ -42,15 +42,15 @@ final class fl {
             return td.field_b.a(nj.field_f, ke.field_a, false);
         }
         if (un.field_l) {
-            return vl.b(102, param2, param1);
+            return vl.b(102, 15, 13);
         }
-        if (hn.a(param1, param2, 0)) {
+        if (hn.a(13, 15, 0)) {
             return true;
         }
         if (!(!lh.field_g)) {
             return false;
         }
-        return go.a(param0, -35, param1);
+        return go.a(12, -35, 13);
     }
 
     final boolean d(int param0) {
@@ -150,7 +150,7 @@ final class fl {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_c = null;
         field_f = null;

@@ -43,7 +43,7 @@ final class fg {
         throw new IllegalStateException();
     }
 
-    final static ro a(String param0, byte param1) {
+    final static ro a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -100,7 +100,8 @@ final class fg {
                   L1: while (true) {
                     if (var5 >= var4.length) {
                       var6 = -15;
-                      stackOut_19_0 = oq.a(var3[var3.length - 1], false);
+                      int discarded$2 = 0;
+                      stackOut_19_0 = oq.a(var3[var3.length - 1]);
                       stackIn_20_0 = stackOut_19_0;
                       break L0;
                     } else {

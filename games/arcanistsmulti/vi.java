@@ -59,9 +59,6 @@ abstract class vi extends df {
 
     final static void a(int param0, int param1, int param2, int param3) {
         to.field_m = param3;
-        if (param0 != -1) {
-            return;
-        }
         p.field_c = param2;
         sl.field_T = param1;
     }

@@ -396,9 +396,6 @@ final class kj extends ia {
 
     private final void a(byte param0, int param1) {
         pc var3 = null;
-        if (param0 != 39) {
-            this.b((byte) -85, -70);
-        }
         if (!((((kj) this).field_m[param1] & 2) == 0)) {
             var3 = (pc) (Object) ((kj) this).field_I.field_l.g(0);
             while (var3 != null) {
@@ -1529,15 +1526,8 @@ final class kj extends ia {
     private final synchronized void a(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Geoblox.field_C;
-        if (param1 >= 0) {
-            ((kj) this).field_L[param1] = 256;
-        } else {
-            for (var4 = 0; var4 < 16; var4++) {
-                ((kj) this).field_L[var4] = 256;
-            }
-        }
-        if (param0 != 74) {
-            this.a((byte) 100, 93);
+        for (var4 = 0; var4 < 16; var4++) {
+            ((kj) this).field_L[var4] = 256;
         }
     }
 
@@ -1671,41 +1661,33 @@ final class kj extends ia {
         } else {
           L0: {
             ((kj) this).field_j[param3][param1] = null;
-            if (param0 == 23327) {
-              break L0;
-            } else {
-              ((kj) this).field_U = -124;
-              break L0;
-            }
-          }
-          L1: {
             if ((((kj) this).field_m[param3] & 2) == 0) {
               var7.field_y = 0;
-              break L1;
+              break L0;
             } else {
-              var6 = (pc) (Object) ((kj) this).field_I.field_l.g(param0 ^ 23327);
-              L2: while (true) {
+              var6 = (pc) (Object) ((kj) this).field_I.field_l.g(0);
+              L1: while (true) {
                 if (var6 == null) {
-                  break L1;
+                  break L0;
                 } else {
-                  L3: {
+                  L2: {
                     if (var7.field_t != var6.field_t) {
-                      break L3;
+                      break L2;
                     } else {
                       if (0 <= var6.field_y) {
-                        break L3;
+                        break L2;
                       } else {
                         if (var7 == var6) {
-                          break L3;
+                          break L2;
                         } else {
                           var7.field_y = 0;
-                          break L1;
+                          break L0;
                         }
                       }
                     }
                   }
                   var6 = (pc) (Object) ((kj) this).field_I.field_l.d(1);
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -1716,58 +1698,50 @@ final class kj extends ia {
 
     private final void b(int param0, int param1) {
         pc var3 = null;
-        var3 = (pc) (Object) ((kj) this).field_I.field_l.g(param0 + -100);
+        var3 = (pc) (Object) ((kj) this).field_I.field_l.g(0);
         L0: while (true) {
           if (var3 == null) {
-            L1: {
-              if (param0 == 100) {
-                break L1;
-              } else {
-                ((kj) this).field_x = -48L;
-                break L1;
-              }
-            }
             return;
           } else {
-            L2: {
-              L3: {
+            L1: {
+              L2: {
                 if (param1 < 0) {
-                  break L3;
+                  break L2;
                 } else {
                   if (param1 == var3.field_t) {
-                    break L3;
-                  } else {
                     break L2;
+                  } else {
+                    break L1;
                   }
                 }
               }
-              L4: {
+              L3: {
                 if (null != var3.field_u) {
-                  L5: {
+                  L4: {
                     var3.field_u.c(qk.field_j / 100);
                     if (var3.field_u.g()) {
                       ((kj) this).field_I.field_m.a((ia) (Object) var3.field_u);
-                      break L5;
+                      break L4;
                     } else {
-                      break L5;
+                      break L4;
                     }
                   }
                   var3.b(-1);
-                  break L4;
+                  break L3;
                 } else {
-                  break L4;
+                  break L3;
                 }
               }
-              L6: {
+              L5: {
                 if (var3.field_y < 0) {
                   ((kj) this).field_j[var3.field_t][var3.field_D] = null;
-                  break L6;
+                  break L5;
                 } else {
-                  break L6;
+                  break L5;
                 }
               }
               var3.a(false);
-              break L2;
+              break L1;
             }
             var3 = (pc) (Object) ((kj) this).field_I.field_l.d(1);
             continue L0;
@@ -2029,7 +2003,7 @@ final class kj extends ia {
                     }
                   }
                 }
-                var5 = (pc) (Object) ((kj) this).field_I.field_l.b(~param0);
+                var5 = (pc) (Object) ((kj) this).field_I.field_l.b(0);
                 continue L1;
               }
             }
@@ -2058,7 +2032,7 @@ final class kj extends ia {
               var7.field_o = 0;
               var7.field_k = 0;
               var7.field_y = -1;
-              if (param0 == ~((kj) this).field_u[param1]) {
+              if (((kj) this).field_u[param1] == 0) {
                 var7.field_u = kl.a(var6, this.a(92, var7), this.a((byte) 117, var7), this.a(var7, 761736646));
                 break L3;
               } else {
@@ -2141,17 +2115,10 @@ final class kj extends ia {
     }
 
     private final void c(int param0, int param1, int param2) {
-        if (param0 > -107) {
-            return;
-        }
         ((kj) this).field_y[param2] = param1;
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        if (param0 != -40) {
-            Object var6 = null;
-            ((kj) this).a((int[]) null, -107, 119);
-        }
     }
 
     final synchronized void d(int param0) {
@@ -2177,14 +2144,6 @@ final class kj extends ia {
               }
             }
             break L0;
-          }
-        }
-        L2: {
-          if (param0 == -11099) {
-            break L2;
-          } else {
-            field_J = 4;
-            break L2;
           }
         }
     }

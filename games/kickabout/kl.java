@@ -23,7 +23,7 @@ final class kl {
     private int[][] field_j;
     lf[] field_s;
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -65,7 +65,7 @@ final class kl {
         field_m = null;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int fieldTemp$0 = va.field_J + 1;
         va.field_J = va.field_J + 1;
         if (32 <= fieldTemp$0) {
@@ -225,7 +225,7 @@ final class kl {
                     ((kl) this).field_i = new int[((kl) this).field_d];
                     ((kl) this).field_c = new int[((kl) this).field_d];
                     ((kl) this).field_e = new int[((kl) this).field_d];
-                    var10 = 48 / ((param0 - -40) / 37);
+                    var10 = 48;
                     ((kl) this).field_f = new int[((kl) this).field_d];
                     if (var6 != 0) {
                       ((kl) this).field_l = new int[((kl) this).field_d];
@@ -466,7 +466,7 @@ final class kl {
           L34: {
             var3 = decompiledCaughtException;
             stackOut_102_0 = (RuntimeException) var3;
-            stackOut_102_1 = new StringBuilder().append("kl.A(").append(param0).append(44);
+            stackOut_102_1 = new StringBuilder().append("kl.A(").append(26).append(44);
             stackIn_104_0 = stackOut_102_0;
             stackIn_104_1 = stackOut_102_1;
             stackIn_103_0 = stackOut_102_0;

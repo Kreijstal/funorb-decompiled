@@ -47,14 +47,16 @@ final class gg extends rm {
                   hf.a(le.field_m, -1);
                   tc.c();
                   var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -((gg) this).field_K << 10, 4096);
-                  dm.b((byte) -10);
+                  int discarded$8 = -10;
+                  dm.b();
                   le.field_m.b(-var16.field_o + var5, -var16.field_v + var6, 256);
                   return;
                 } else {
                   le.field_m = new hj(var9, var10);
                   hf.a(le.field_m, -1);
                   var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -((gg) this).field_K << 10, 4096);
-                  dm.b((byte) -10);
+                  int discarded$9 = -10;
+                  dm.b();
                   le.field_m.b(-var16.field_o + var5, -var16.field_v + var6, 256);
                   return;
                 }
@@ -62,7 +64,8 @@ final class gg extends rm {
                 le.field_m = new hj(var9, var10);
                 hf.a(le.field_m, -1);
                 var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -((gg) this).field_K << 10, 4096);
-                dm.b((byte) -10);
+                int discarded$10 = -10;
+                dm.b();
                 le.field_m.b(-var16.field_o + var5, -var16.field_v + var6, 256);
                 return;
               }
@@ -70,7 +73,8 @@ final class gg extends rm {
               le.field_m = new hj(var9, var10);
               hf.a(le.field_m, -1);
               var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -((gg) this).field_K << 10, 4096);
-              dm.b((byte) -10);
+              int discarded$11 = -10;
+              dm.b();
               le.field_m.b(-var16.field_o + var5, -var16.field_v + var6, 256);
               return;
             }
@@ -102,14 +106,16 @@ final class gg extends rm {
                     hf.a(le.field_m, -1);
                     tc.c();
                     var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -((gg) this).field_K << 10, 4096);
-                    dm.b((byte) -10);
+                    int discarded$12 = -10;
+                    dm.b();
                     le.field_m.b(-var15.field_o + var5, -var15.field_v + var6, 256);
                     return;
                   } else {
                     le.field_m = new hj(var9, var10);
                     hf.a(le.field_m, -1);
                     var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -((gg) this).field_K << 10, 4096);
-                    dm.b((byte) -10);
+                    int discarded$13 = -10;
+                    dm.b();
                     le.field_m.b(-var15.field_o + var5, -var15.field_v + var6, 256);
                     return;
                   }
@@ -117,7 +123,8 @@ final class gg extends rm {
                   le.field_m = new hj(var9, var10);
                   hf.a(le.field_m, -1);
                   var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -((gg) this).field_K << 10, 4096);
-                  dm.b((byte) -10);
+                  int discarded$14 = -10;
+                  dm.b();
                   le.field_m.b(-var15.field_o + var5, -var15.field_v + var6, 256);
                   return;
                 }
@@ -125,7 +132,8 @@ final class gg extends rm {
                 le.field_m = new hj(var9, var10);
                 hf.a(le.field_m, -1);
                 var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -((gg) this).field_K << 10, 4096);
-                dm.b((byte) -10);
+                int discarded$15 = -10;
+                dm.b();
                 le.field_m.b(-var15.field_o + var5, -var15.field_v + var6, 256);
                 return;
               }

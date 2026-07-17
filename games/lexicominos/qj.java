@@ -11,99 +11,43 @@ final class qj extends re {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void g(boolean param0) {
+    public static void g() {
         field_db = null;
         field_fb = null;
         field_eb = null;
     }
 
     final static String h(int param0) {
-        String var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
-        String stackIn_8_0 = null;
-        String stackIn_18_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_17_0 = null;
-        var5 = Lexicominos.field_L ? 1 : 0;
-        var6 = "(" + vh.field_b + " " + df.field_a + " " + wl.field_i + ") " + pg.field_d;
-        if (param0 <= -83) {
-          if (0 < a.field_c) {
-            var1 = var6 + ":";
-            var2 = 0;
-            L0: while (true) {
-              if (var2 < a.field_c) {
-                L1: {
-                  stackOut_7_0 = var1 + 32;
-                  stackIn_18_0 = stackOut_7_0;
-                  stackIn_8_0 = stackOut_7_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
-                    L2: {
-                      L3: {
-                        var7 = stackIn_8_0;
-                        var3 = 255 & ig.field_a.field_j[var2];
-                        var4 = var3 >> 4;
-                        var3 = var3 & 15;
-                        if (var4 < 10) {
-                          break L3;
-                        } else {
-                          var4 += 55;
-                          if (var5 == 0) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                      var4 += 48;
-                      break L2;
-                    }
-                    L4: {
-                      L5: {
-                        if (var3 < 10) {
-                          break L5;
-                        } else {
-                          var3 += 55;
-                          if (var5 == 0) {
-                            break L4;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      var3 += 48;
-                      break L4;
-                    }
-                    var8 = var7 + (char)var4;
-                    var1 = var8 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                      continue L0;
-                    } else {
-                      stackOut_17_0 = (String) var1;
-                      stackIn_18_0 = stackOut_17_0;
-                      break L1;
-                    }
-                  }
-                }
-                return stackIn_18_0;
-              } else {
-                return var1;
-              }
-            }
-          } else {
-            return var6;
-          }
-        } else {
-          return null;
+        int var5 = Lexicominos.field_L ? 1 : 0;
+        String var1 = "(" + vh.field_b + " " + df.field_a + " " + wl.field_i + ") " + pg.field_d;
+        if (param0 > -83) {
+            return null;
         }
+        if (0 < a.field_c) {
+            var1 = var1 + ":";
+            for (var2 = 0; var2 < a.field_c; var2++) {
+                var1 = var1 + 32;
+                var3 = 255 & ig.field_a.field_j[var2];
+                var4 = var3 >> 4;
+                var3 = var3 & 15;
+                if (var4 >= 10) {
+                    var4 += 55;
+                } else {
+                    var4 += 48;
+                }
+                if (var3 >= 10) {
+                    var3 += 55;
+                } else {
+                    var3 += 48;
+                }
+                var1 = var1 + (char)var4;
+                var1 = var1 + (char)var3;
+            }
+        }
+        return var1;
     }
 
     final void b(int param0, w param1) {
@@ -171,69 +115,61 @@ final class qj extends re {
 
     final static byte[] a(int param0, String param1) {
         RuntimeException var2 = null;
-        byte[] stackIn_3_0 = null;
+        byte[] stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_2_0 = null;
+        byte[] stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 33) {
-                break L1;
-              } else {
-                qj.g(true);
-                break L1;
-              }
-            }
-            stackOut_2_0 = hc.field_eb.a((byte) 127, param1, "");
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = hc.field_eb.a((byte) 127, param1, "");
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("qj.BA(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("qj.BA(").append(33).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     static {

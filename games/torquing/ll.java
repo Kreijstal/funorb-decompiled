@@ -10,7 +10,7 @@ final class ll extends kj {
     private int field_k;
     static int field_g;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_m = null;
     }
 

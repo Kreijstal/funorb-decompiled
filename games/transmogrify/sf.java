@@ -40,7 +40,8 @@ final class sf extends ik implements df {
               }
               break L0;
             } else {
-              wl.a(true, false, 170);
+              int discarded$2 = 170;
+              wl.a(true, false);
               return;
             }
           }
@@ -228,56 +229,64 @@ final class sf extends ik implements df {
               re.field_h.a();
               u.field_a.a();
               bd.field_q = bd.field_q - 1;
-              if (0 != bd.field_q) {
+              if (param0 >= 106) {
                 break L1;
+              } else {
+                field_kb = null;
+                break L1;
+              }
+            }
+            L2: {
+              if (0 != bd.field_q) {
+                break L2;
               } else {
                 bd.field_q = 200;
                 var1 = (od) (Object) lb.field_f.a((byte) -95);
-                L2: while (true) {
+                L3: while (true) {
                   if (var1 == null) {
                     if (nc.field_q != null) {
                       var1 = (od) (Object) nc.field_q.a((byte) -95);
-                      L3: while (true) {
+                      L4: while (true) {
                         if (var1 == null) {
-                          break L1;
+                          break L2;
                         } else {
-                          L4: {
+                          L5: {
                             if (!var1.field_i.b(8)) {
                               var1.c(5);
-                              break L4;
+                              break L5;
                             } else {
-                              break L4;
+                              break L5;
                             }
                           }
                           var1 = (od) (Object) nc.field_q.a(true);
-                          continue L3;
+                          continue L4;
                         }
                       }
                     } else {
-                      break L1;
+                      break L2;
                     }
                   } else {
-                    L5: {
+                    L6: {
                       if (var1.field_i.b(8)) {
-                        break L5;
+                        break L6;
                       } else {
                         var1.c(5);
-                        break L5;
+                        break L6;
                       }
                     }
                     var1 = (od) (Object) lb.field_f.a(true);
-                    continue L2;
+                    continue L3;
                   }
                 }
               }
             }
-            L6: {
+            L7: {
               if (null == jk.field_D) {
-                break L6;
+                break L7;
               } else {
                 if (!jk.field_D.a((byte) -54)) {
                   d.field_e = null;
-                  break L6;
+                  break L7;
                 } else {
                   return;
                 }
@@ -288,7 +297,7 @@ final class sf extends ik implements df {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1_ref, "sf.IA(" + 107 + 41);
+          throw ch.a((Throwable) (Object) var1_ref, "sf.IA(" + param0 + 41);
         }
     }
 
@@ -341,7 +350,7 @@ final class sf extends ik implements df {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_kb = null;
     }
 

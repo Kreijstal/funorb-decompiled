@@ -5,7 +5,7 @@ final class sh extends to {
     static String[] field_v;
     static int field_u;
 
-    public static void d(byte param0) {
+    public static void d() {
         int var1 = 81;
         field_v = null;
     }
@@ -101,7 +101,7 @@ final class sh extends to {
         }
     }
 
-    final static wu a(dl param0, byte param1) {
+    final static wu a(dl param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -138,23 +138,47 @@ final class sh extends to {
                 var4 = tn.a(-64, param0) ? 1 : 0;
                 var5 = new wu();
                 var5.field_r = (short)param0.b((byte) 87, 16);
-                var5.field_z = ua.a(param0, var5.field_z, 0, 16);
-                var5.field_P = ua.a(param0, var5.field_P, 0, 16);
-                var5.field_F = ua.a(param0, var5.field_F, 0, 16);
+                int discarded$39 = 16;
+                int discarded$40 = 0;
+                var5.field_z = ua.a(param0, var5.field_z);
+                int discarded$41 = 16;
+                int discarded$42 = 0;
+                var5.field_P = ua.a(param0, var5.field_P);
+                int discarded$43 = 16;
+                int discarded$44 = 0;
+                var5.field_F = ua.a(param0, var5.field_F);
                 var5.field_K = (short)param0.b((byte) 119, 16);
-                var5.field_I = ua.a(param0, var5.field_I, 0, 16);
-                var5.field_t = ua.a(param0, var5.field_t, 0, 16);
-                var5.field_m = ua.a(param0, var5.field_m, 0, 16);
+                int discarded$45 = 16;
+                int discarded$46 = 0;
+                var5.field_I = ua.a(param0, var5.field_I);
+                int discarded$47 = 16;
+                int discarded$48 = 0;
+                var5.field_t = ua.a(param0, var5.field_t);
+                int discarded$49 = 16;
+                int discarded$50 = 0;
+                var5.field_m = ua.a(param0, var5.field_m);
                 if (var3 == 0) {
                   break L1;
                 } else {
                   var5.field_q = (short)param0.b((byte) 83, 16);
-                  var5.field_H = ua.a(param0, var5.field_H, 0, 16);
-                  var5.field_L = ua.a(param0, var5.field_L, 0, 16);
-                  var5.field_n = ua.a(param0, var5.field_n, 0, 16);
-                  var5.field_B = ua.a(param0, var5.field_B, 0, 16);
-                  var5.field_g = ua.a(param0, var5.field_g, 0, 16);
-                  var5.field_D = ua.a(param0, var5.field_D, 0, 16);
+                  int discarded$51 = 16;
+                  int discarded$52 = 0;
+                  var5.field_H = ua.a(param0, var5.field_H);
+                  int discarded$53 = 16;
+                  int discarded$54 = 0;
+                  var5.field_L = ua.a(param0, var5.field_L);
+                  int discarded$55 = 16;
+                  int discarded$56 = 0;
+                  var5.field_n = ua.a(param0, var5.field_n);
+                  int discarded$57 = 16;
+                  int discarded$58 = 0;
+                  var5.field_B = ua.a(param0, var5.field_B);
+                  int discarded$59 = 16;
+                  int discarded$60 = 0;
+                  var5.field_g = ua.a(param0, var5.field_g);
+                  int discarded$61 = 16;
+                  int discarded$62 = 0;
+                  var5.field_D = ua.a(param0, var5.field_D);
                   break L1;
                 }
               }
@@ -162,12 +186,22 @@ final class sh extends to {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$1 = param0.b((byte) 84, 16);
-                  var5.field_G = ua.a(param0, var5.field_G, 0, 16);
-                  var5.field_d = ua.a(param0, var5.field_d, 0, 16);
-                  var5.field_y = ua.a(param0, var5.field_y, 0, 16);
-                  var5.field_C = ua.a(param0, var5.field_C, 0, 16);
-                  var5.field_v = ua.a(param0, var5.field_v, 0, 16);
+                  int discarded$63 = param0.b((byte) 84, 16);
+                  int discarded$64 = 16;
+                  int discarded$65 = 0;
+                  var5.field_G = ua.a(param0, var5.field_G);
+                  int discarded$66 = 16;
+                  int discarded$67 = 0;
+                  var5.field_d = ua.a(param0, var5.field_d);
+                  int discarded$68 = 16;
+                  int discarded$69 = 0;
+                  var5.field_y = ua.a(param0, var5.field_y);
+                  int discarded$70 = 16;
+                  int discarded$71 = 0;
+                  var5.field_C = ua.a(param0, var5.field_C);
+                  int discarded$72 = 16;
+                  int discarded$73 = 0;
+                  var5.field_v = ua.a(param0, var5.field_v);
                   break L2;
                 }
               }
@@ -175,7 +209,9 @@ final class sh extends to {
                 if (!tn.a(122, param0)) {
                   break L3;
                 } else {
-                  var5.field_u = ua.a(param0, var5.field_u, 0, 16);
+                  int discarded$74 = 16;
+                  int discarded$75 = 0;
+                  var5.field_u = ua.a(param0, var5.field_u);
                   break L3;
                 }
               }
@@ -183,7 +219,9 @@ final class sh extends to {
                 if (!tn.a(83, param0)) {
                   break L4;
                 } else {
-                  var5.field_x = ao.a(param0, var5.field_x, true, 16);
+                  int discarded$76 = 16;
+                  int discarded$77 = 1;
+                  var5.field_x = ao.a(param0, var5.field_x);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {

@@ -59,50 +59,47 @@ final class rh extends fa {
         try {
           L0: {
             tm.field_X = h.field_N;
-            if (param0) {
-              L1: {
-                if (param3 == 255) {
-                  L2: {
-                    if (um.field_r >= 13) {
-                      stackOut_11_0 = 0;
-                      stackIn_12_0 = stackOut_11_0;
-                      break L2;
-                    } else {
-                      stackOut_10_0 = 1;
-                      stackIn_12_0 = stackOut_10_0;
-                      break L2;
-                    }
+            L1: {
+              if (param3 == 255) {
+                L2: {
+                  if (um.field_r >= 13) {
+                    stackOut_11_0 = 0;
+                    stackIn_12_0 = stackOut_11_0;
+                    break L2;
+                  } else {
+                    stackOut_10_0 = 1;
+                    stackIn_12_0 = stackOut_10_0;
+                    break L2;
                   }
-                  v.field_b = pk.a(stackIn_12_0 != 0, 5731);
-                  break L1;
-                } else {
-                  L3: {
-                    if (param3 < 100) {
-                      break L3;
-                    } else {
-                      if (param3 <= 105) {
-                        v.field_b = fk.a((byte) 117, param2);
-                        break L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  v.field_b = pa.a(param3, param1, (byte) -120);
-                  break L1;
                 }
+                int discarded$1 = 5731;
+                v.field_b = pk.a(stackIn_12_0 != 0);
+                break L1;
+              } else {
+                L3: {
+                  if (param3 < 100) {
+                    break L3;
+                  } else {
+                    if (param3 <= 105) {
+                      v.field_b = fk.a((byte) 117, param2);
+                      break L1;
+                    } else {
+                      break L3;
+                    }
+                  }
+                }
+                v.field_b = pa.a(param3, param1, (byte) -120);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("rh.B(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("rh.B(").append(1).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -159,7 +156,7 @@ final class rh extends fa {
         te.b(false, 93);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_r = null;
         field_u = null;
         field_y = null;

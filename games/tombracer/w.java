@@ -119,7 +119,8 @@ final class w extends sqa {
                     }
                   }
                   L4: {
-                    if (!qqa.a(param0, mga.field_j, var5, true)) {
+                    int discarded$5 = 1;
+                    if (!qqa.a(param0, mga.field_j, var5)) {
                       break L4;
                     } else {
                       if (var4 != 0) {
@@ -137,16 +138,17 @@ final class w extends sqa {
                         if (param0.field_g.length != param0.field_h - -1) {
                           L6: {
                             var6 = param0.c((byte) 52);
-                            if (qqa.a(param0, mga.field_j, var6, true)) {
+                            int discarded$6 = 1;
+                            if (qqa.a(param0, mga.field_j, var6)) {
                               break L6;
                             } else {
                               if (dia.field_q != var6) {
                                 if (uqa.field_w == var6) {
-                                  StringBuilder discarded$3 = var8.append((char)var6);
+                                  StringBuilder discarded$7 = var8.append((char)var6);
                                   break L5;
                                 } else {
                                   param0.field_h = param0.field_h - 1;
-                                  StringBuilder discarded$4 = var8.append((char)var5);
+                                  StringBuilder discarded$8 = var8.append((char)var5);
                                   break L5;
                                 }
                               } else {
@@ -175,20 +177,12 @@ final class w extends sqa {
                     var4 = stackIn_24_0;
                     continue L1;
                   } else {
-                    StringBuilder discarded$5 = var8.append((char)var5);
+                    StringBuilder discarded$9 = var8.append((char)var5);
                     continue L1;
                   }
                 }
               }
-              L8: {
-                param2.b((byte) -59, (vg) (Object) new gka(var8.toString()));
-                if (param1 == -58) {
-                  break L8;
-                } else {
-                  field_d = null;
-                  break L8;
-                }
-              }
+              param2.b((byte) -59, (vg) (Object) new gka(var8.toString()));
               stackOut_27_0 = var5;
               stackIn_28_0 = stackOut_27_0;
               break L0;
@@ -196,7 +190,7 @@ final class w extends sqa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var3 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var3;
             stackOut_29_1 = new StringBuilder().append("w.O(");
@@ -211,7 +205,7 @@ final class w extends sqa {
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
-              break L9;
+              break L8;
             } else {
               stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
               stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
@@ -219,12 +213,12 @@ final class w extends sqa {
               stackIn_32_0 = stackOut_30_0;
               stackIn_32_1 = stackOut_30_1;
               stackIn_32_2 = stackOut_30_2;
-              break L9;
+              break L8;
             }
           }
-          L10: {
+          L9: {
             stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(param1).append(44);
+            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(-58).append(44);
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -236,7 +230,7 @@ final class w extends sqa {
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
-              break L10;
+              break L9;
             } else {
               stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
               stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
@@ -244,7 +238,7 @@ final class w extends sqa {
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
               stackIn_35_2 = stackOut_33_2;
-              break L10;
+              break L9;
             }
           }
           throw tba.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 41);
@@ -562,7 +556,7 @@ final class w extends sqa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_f = null;
     }

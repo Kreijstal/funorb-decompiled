@@ -314,9 +314,6 @@ class gb extends gl implements sf {
     }
 
     final static void g(int param0) {
-        if (param0 != -17464) {
-            field_z = null;
-        }
         if (!(null == ig.field_e)) {
             ig.field_e.a((byte) -126);
             ig.field_e = null;
@@ -720,44 +717,36 @@ class gb extends gl implements sf {
     }
 
     final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
-        int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          if (param3 == 76) {
-            break L0;
-          } else {
-            field_A = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (param2 < param0) {
-              break L2;
+              break L1;
             } else {
               if (param2 >= param0 - -param5) {
-                break L2;
+                break L1;
               } else {
                 if (param1 > param4) {
-                  break L2;
+                  break L1;
                 } else {
                   if (param4 >= param6 + param1) {
-                    break L2;
-                  } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
                     break L1;
+                  } else {
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L0;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
-          break L1;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_6_0 != 0;
     }
 
     final static boolean a(byte param0, char param1) {
@@ -793,7 +782,7 @@ class gb extends gl implements sf {
         return stackIn_6_0 != 0;
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         int var4 = Terraphoenix.field_V;
         k var2 = new k(((gb) this).field_C);
         gl var3 = (gl) (Object) var2.a((byte) -13);
@@ -814,13 +803,15 @@ class gb extends gl implements sf {
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 < 45) {
-            this.c(false);
+            int discarded$0 = 0;
+            this.c();
         }
         super.a(param0, (byte) 122, param2, param3, param4);
-        this.c(false);
+        int discarded$1 = 0;
+        this.c();
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_B = null;
         field_z = null;
         field_E = null;

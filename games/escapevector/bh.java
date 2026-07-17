@@ -15,7 +15,7 @@ final class bh extends vj {
         di.field_g.a((byte) -128, param0);
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int var1 = -59;
         if (!(bk.field_r == null)) {
             bk.field_r.a((byte) 87);
@@ -34,7 +34,7 @@ final class bh extends vj {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_e = null;
     }
 

@@ -84,10 +84,10 @@ final class tba extends rqa {
                         return stackIn_21_0;
                       } else {
                         var5 = dpa.field_p;
-                        var5.h(param0 ^ 24333, param2);
+                        var5.h(24335, param2);
                         var5.field_e = var5.field_e + 1;
                         var4 = var5.field_e;
-                        var5.c(0, param0);
+                        var5.c(0, 2);
                         var5.a(true, param1);
                         var5.e(var5.field_e + -var4, -129);
                         stackOut_22_0 = null;
@@ -113,7 +113,7 @@ final class tba extends rqa {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("tba.C(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("tba.C(").append(2).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -148,7 +148,7 @@ final class tba extends rqa {
         }
     }
 
-    final static Boolean a(int param0) {
+    final static Boolean a() {
         int var1 = 0;
         Boolean var2 = ehb.field_f;
         ehb.field_f = null;

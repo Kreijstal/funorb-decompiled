@@ -144,7 +144,7 @@ final class kh extends dc {
         ((kh) this).field_s = ((kh) this).field_P * ((kh) this).field_y + ((kh) this).field_L;
     }
 
-    private final boolean a(int param0, boolean param1, boolean param2) {
+    private final boolean a(int param0, boolean param1) {
         int var5 = 0;
         int var6 = 0;
         double[] var7 = null;
@@ -234,7 +234,7 @@ final class kh extends dc {
         ((kh) this).field_R = ((kh) this).field_cb + ((kh) this).field_y * ((kh) this).field_x;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_fb = null;
         field_gb = null;
         field_W = null;
@@ -252,13 +252,15 @@ final class kh extends dc {
             return true;
         }
         if (0.001 * (var5 - ((kh) this).field_X) > ((kh) this).field_K) {
-            return this.a(param2 - 1, param0, true);
+            int discarded$0 = 1;
+            return this.a(param2 - 1, param0);
         }
         double var7 = (-((kh) this).field_X + var5) / ((kh) this).field_K;
         double var9 = ((kh) this).field_x * var7 + ((kh) this).field_cb;
         double var11 = var7 * ((kh) this).field_P + ((kh) this).field_L;
         if (var14.a(var11, var9, (byte) 29, param2)) {
-            return this.a(-1 + param2, param0, true);
+            int discarded$1 = 1;
+            return this.a(-1 + param2, param0);
         }
         return false;
     }
@@ -270,7 +272,7 @@ final class kh extends dc {
         }
     }
 
-    final static void h(int param0) {
+    final static void h() {
         int var1 = 0;
         tj.field_z[45] = 26;
         tj.field_z[46] = 72;
@@ -296,14 +298,6 @@ final class kh extends dc {
         double var33 = 0.0;
         double var35 = 0.0;
         double var37 = 0.0;
-        L0: {
-          if (param1 == -32) {
-            break L0;
-          } else {
-            field_fb = null;
-            break L0;
-          }
-        }
         param5 = param5 - param10;
         param7 = param7 - param9;
         param8 = param8 - param3;
@@ -328,15 +322,15 @@ final class kh extends dc {
           if (var33 < 0.0) {
             var35 = ((kh) this).field_K * var25 + (var21 * ((kh) this).field_x + var23 * ((kh) this).field_P);
             if (0.0001 * var33 >= var35) {
-              L1: {
+              L0: {
                 var37 = var33 / var35;
                 if (!param2) {
-                  break L1;
+                  break L0;
                 } else {
                   if (var37 >= ((kh) this).field_y) {
                     return false;
                   } else {
-                    break L1;
+                    break L0;
                   }
                 }
               }
@@ -376,7 +370,8 @@ final class kh extends dc {
         lc var15 = var14;
         double var6 = var14.field_r[param0];
         if (((kh) this).field_K > 0.001 * (-((kh) this).field_X + var6)) {
-            return this.a(param0, param2, true);
+            int discarded$0 = 1;
+            return this.a(param0, param2);
         }
         double var8 = (-((kh) this).field_X + var6) / ((kh) this).field_K;
         double var10 = ((kh) this).field_cb + var8 * ((kh) this).field_x;
@@ -384,7 +379,8 @@ final class kh extends dc {
         if (!var15.a(var12, var10, (byte) 55, param0)) {
             return false;
         }
-        return this.a(param0, param2, true);
+        int discarded$1 = 1;
+        return this.a(param0, param2);
     }
 
     final static String a(byte[] param0, int param1, int param2, int param3) {
@@ -417,7 +413,7 @@ final class kh extends dc {
         try {
           L0: {
             var4 = new char[param1];
-            var5 = param2;
+            var5 = 0;
             var6 = 0;
             L1: while (true) {
               if (~param1 >= ~var6) {
@@ -490,7 +486,7 @@ final class kh extends dc {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + 0 + 44 + param3 + 41);
         }
         return stackIn_13_0;
     }

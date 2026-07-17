@@ -132,7 +132,7 @@ abstract class sg extends ta {
         return stackIn_9_0 != 0;
     }
 
-    final static void k(int param0) {
+    final static void k() {
         Object var2 = null;
         ed.a((String) null, 0, "");
     }
@@ -165,7 +165,8 @@ abstract class sg extends ta {
             ul.d();
             ((sg) this).a(0, 0, -9111);
             super.a(-param0 - ((sg) this).field_n, param1, param2, -((sg) this).field_s + -param3);
-            oc.g((byte) -105);
+            int discarded$2 = -105;
+            oc.g();
             me.field_f.a(param3 + ((sg) this).field_s, param0 - -((sg) this).field_n, ((sg) this).field_D);
             return;
           } else {
@@ -193,7 +194,7 @@ abstract class sg extends ta {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static boolean c(boolean param0) {
+    final static boolean c() {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_4_0 = 0;
@@ -233,30 +234,30 @@ abstract class sg extends ta {
         int var8 = 0;
         e stackIn_4_0 = null;
         e stackIn_8_0 = null;
-        e stackIn_13_0 = null;
-        e stackIn_18_0 = null;
-        e stackIn_21_0 = null;
+        e stackIn_11_0 = null;
+        e stackIn_16_0 = null;
+        e stackIn_19_0 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         e stackOut_3_0 = null;
         e stackOut_7_0 = null;
-        e stackOut_20_0 = null;
-        e stackOut_17_0 = null;
-        e stackOut_12_0 = null;
+        e stackOut_18_0 = null;
+        e stackOut_15_0 = null;
+        e stackOut_10_0 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -271,75 +272,68 @@ abstract class sg extends ta {
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
-                L1: {
-                  if (param0 == -1326) {
-                    break L1;
-                  } else {
-                    field_B = -11;
-                    break L1;
-                  }
-                }
                 var3 = g.a(-121, '.', param1);
                 if (var3.length >= 2) {
                   var4 = var3;
                   var5 = 0;
-                  L2: while (true) {
+                  L1: while (true) {
                     if (var5 >= var4.length) {
-                      stackOut_20_0 = dh.a(var3[-1 + var3.length], (byte) 118);
-                      stackIn_21_0 = stackOut_20_0;
+                      int discarded$2 = 118;
+                      stackOut_18_0 = dh.a(var3[-1 + var3.length]);
+                      stackIn_19_0 = stackOut_18_0;
                       break L0;
                     } else {
                       var6 = var4[var5];
                       var7 = eg.b(0, var6);
                       if (var7 == null) {
                         var5++;
-                        continue L2;
+                        continue L1;
                       } else {
-                        stackOut_17_0 = (e) var7;
-                        stackIn_18_0 = stackOut_17_0;
-                        return stackIn_18_0;
+                        stackOut_15_0 = (e) var7;
+                        stackIn_16_0 = stackOut_15_0;
+                        return stackIn_16_0;
                       }
                     }
                   }
                 } else {
-                  stackOut_12_0 = oc.field_M;
-                  stackIn_13_0 = stackOut_12_0;
-                  return stackIn_13_0;
+                  stackOut_10_0 = oc.field_M;
+                  stackIn_11_0 = stackOut_10_0;
+                  return stackIn_11_0;
                 }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("sg.QB(").append(param0).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_20_0 = (RuntimeException) var2;
+            stackOut_20_1 = new StringBuilder().append("sg.QB(").append(-1326).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L3;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L2;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L3;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
-        return stackIn_21_0;
+        return stackIn_19_0;
     }
 
     final pj b(byte param0) {
@@ -350,7 +344,7 @@ abstract class sg extends ta {
         return (pj) this;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_F = null;
         field_E = null;
         int var1 = 15;

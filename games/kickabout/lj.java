@@ -137,20 +137,12 @@ final class lj extends gn {
         return stackIn_5_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_j = null;
         field_m = null;
-        if (param0 >= -23) {
-          field_g = null;
-          field_l = null;
-          field_k = null;
-          return;
-        } else {
-          field_l = null;
-          field_k = null;
-          return;
-        }
+        field_l = null;
+        field_k = null;
     }
 
     final static int a(int param0, boolean param1) {

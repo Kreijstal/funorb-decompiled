@@ -13,13 +13,15 @@ abstract class kva implements ura {
     int field_e;
 
     protected final void finalize() throws Throwable {
-        this.d(3);
+        int discarded$0 = 3;
+        this.d();
         super.finalize();
     }
 
-    private final void d(int param0) {
+    private final void d() {
         if (((kva) this).field_a > 0) {
-            ((kva) this).field_h.b(((kva) this).field_a, 117, this.c((byte) 61));
+            int discarded$0 = 61;
+            ((kva) this).field_h.b(((kva) this).field_a, 117, this.c());
             ((kva) this).field_a = 0;
         }
     }
@@ -69,7 +71,8 @@ abstract class kva implements ura {
               if (0 >= param4) {
                 break L1;
               } else {
-                if (!bd.a(param4, (byte) -95)) {
+                int discarded$2 = -95;
+                if (!bd.a(param4)) {
                   throw new IllegalArgumentException("");
                 } else {
                   break L1;
@@ -80,7 +83,8 @@ abstract class kva implements ura {
               if (param1 <= 0) {
                 break L2;
               } else {
-                if (bd.a(param1, (byte) -95)) {
+                int discarded$3 = -95;
+                if (bd.a(param1)) {
                   break L2;
                 } else {
                   throw new IllegalArgumentException("");
@@ -363,7 +367,7 @@ abstract class kva implements ura {
         }
     }
 
-    private final int c(byte param0) {
+    private final int c() {
         int var2 = ((kva) this).field_f.field_a * ((kva) this).field_b.field_h * ((kva) this).field_d;
         return !((kva) this).field_c ? var2 : 4 * var2 / 3;
     }
@@ -432,7 +436,8 @@ abstract class kva implements ura {
               if (param3 <= 0) {
                 break L2;
               } else {
-                if (bd.a(param3, (byte) -95)) {
+                int discarded$2 = -95;
+                if (bd.a(param3)) {
                   break L2;
                 } else {
                   throw new IllegalArgumentException("");
@@ -443,7 +448,8 @@ abstract class kva implements ura {
               if (param2 <= 0) {
                 break L3;
               } else {
-                if (!bd.a(param2, (byte) -95)) {
+                int discarded$3 = -95;
+                if (!bd.a(param2)) {
                   throw new IllegalArgumentException("");
                 } else {
                   break L3;
@@ -558,9 +564,10 @@ abstract class kva implements ura {
         }
     }
 
-    private final void a(int param0, byte param1) {
-        ((kva) this).field_h.field_Nb = ((kva) this).field_h.field_Nb - param0;
-        ((kva) this).field_h.field_Nb = ((kva) this).field_h.field_Nb + this.c((byte) 61);
+    private final void a() {
+        ((kva) this).field_h.field_Nb = ((kva) this).field_h.field_Nb;
+        int discarded$0 = 61;
+        ((kva) this).field_h.field_Nb = ((kva) this).field_h.field_Nb + this.c();
     }
 
     final static void d(byte param0) {
@@ -632,7 +639,8 @@ abstract class kva implements ura {
               if (param3 <= 0) {
                 break L1;
               } else {
-                if (bd.a(param3, (byte) -95)) {
+                int discarded$7 = -95;
+                if (bd.a(param3)) {
                   break L1;
                 } else {
                   throw new IllegalArgumentException("");
@@ -643,7 +651,8 @@ abstract class kva implements ura {
               if (param2 <= 0) {
                 break L2;
               } else {
-                if (!bd.a(param2, (byte) -95)) {
+                int discarded$8 = -95;
+                if (!bd.a(param2)) {
                   throw new IllegalArgumentException("");
                 } else {
                   break L2;
@@ -706,21 +715,21 @@ abstract class kva implements ura {
                           var24++;
                           continue L6;
                         } else {
-                          int incrementValue$5 = var22;
+                          int incrementValue$9 = var22;
                           var22++;
-                          var14 = var10[incrementValue$5];
-                          int incrementValue$6 = var22;
+                          var14 = var10[incrementValue$9];
+                          int incrementValue$10 = var22;
                           var22++;
-                          var15 = var10[incrementValue$6];
-                          int incrementValue$7 = var23;
+                          var15 = var10[incrementValue$10];
+                          int incrementValue$11 = var23;
                           var23++;
-                          var16 = var10[incrementValue$7];
+                          var16 = var10[incrementValue$11];
                           var19 = (var14 & 65483) >> 8;
                           var18 = var14 >> 16 & 255;
                           var21 = var14 >> 24 & 255;
-                          int incrementValue$8 = var23;
+                          int incrementValue$12 = var23;
                           var23++;
-                          var17 = var10[incrementValue$8];
+                          var17 = var10[incrementValue$12];
                           var20 = var14 & 255;
                           var18 = var18 + ((var15 & 16720391) >> 16);
                           var20 = var20 + (255 & var15);
@@ -734,9 +743,9 @@ abstract class kva implements ura {
                           var19 = var19 + (255 & var17 >> 8);
                           var18 = var18 + (var17 >> 16 & 255);
                           var21 = var21 + (255 & var17 >> 24);
-                          int incrementValue$9 = var13;
+                          int incrementValue$13 = var13;
                           var13++;
-                          var11[incrementValue$9] = knb.a(dla.a(255, var20 >> 2), knb.a(dla.a(1020, var19) << 6, knb.a(dla.a(var21, 1020) << 22, dla.a(16711680, var18 << 14))));
+                          var11[incrementValue$13] = knb.a(dla.a(255, var20 >> 2), knb.a(dla.a(1020, var19) << 6, knb.a(dla.a(var21, 1020) << 22, dla.a(16711680, var18 << 14))));
                           var25++;
                           continue L7;
                         }
@@ -810,7 +819,9 @@ abstract class kva implements ura {
             jaggl.OpenGL.glGenTextures(1, uqa.field_o, 0);
             ((kva) this).field_a = uqa.field_o[0];
             this.c(0);
-            this.a(0, (byte) -118);
+            int discarded$0 = -118;
+            int discarded$1 = 0;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "kva.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
         }

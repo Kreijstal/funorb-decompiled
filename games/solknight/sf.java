@@ -65,17 +65,18 @@ final class sf {
             var3[var4_int] = ig.field_H[fi.a(255, (int) var2[var4_int])];
         }
         o var4 = new o(kl.field_a, we.field_e, ph.field_h[param0], qf.field_d[0], sa.field_l[0], uj.field_b[0], var3);
-        og.a((byte) -97);
+        int discarded$0 = -97;
+        og.a();
         return var4;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         int var1 = -9;
         field_i = null;
     }
 
-    final static Boolean d(int param0) {
+    final static Boolean d() {
         Boolean var1 = n.field_b;
         n.field_b = null;
         return var1;
@@ -169,20 +170,22 @@ final class sf {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         L0: {
           L1: {
             if (10 == fj.field_i) {
               break L1;
             } else {
-              if (!rd.b(6144)) {
+              int discarded$6 = 6144;
+              if (!rd.b()) {
                 break L1;
               } else {
                 break L0;
               }
             }
           }
-          jd.n(-110);
+          int discarded$7 = -110;
+          jd.n();
           fj.field_i = 11;
           break L0;
         }
@@ -410,9 +413,6 @@ final class sf {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         vg.field_I[kg.field_c] = param2;
-        if (param1) {
-            o discarded$0 = sf.b(32);
-        }
         pd.field_e[kg.field_c] = kg.field_c;
         qg.field_c[kg.field_c] = param0;
         if (param0 > be.field_I) {

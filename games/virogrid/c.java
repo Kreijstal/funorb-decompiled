@@ -94,11 +94,12 @@ final class c {
                           if (!bn.a(-110, (char) var7)) {
                             break L6;
                           } else {
-                            var8 = dm.a((char) var7, (byte) 4);
+                            int discarded$2 = 4;
+                            var8 = dm.a((char) var7);
                             if (var8 == 0) {
                               break L6;
                             } else {
-                              StringBuilder discarded$1 = var5.append(var8);
+                              StringBuilder discarded$3 = var5.append(var8);
                               break L6;
                             }
                           }
@@ -199,7 +200,7 @@ final class c {
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var4_int = param3.c((byte) -78, param2);
+            var4_int = param3.c((byte) -78, 16);
             if (param1 <= -5) {
               if (var4_int != 0) {
                 L1: {
@@ -288,7 +289,7 @@ final class c {
           }
           L7: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44).append(16).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;

@@ -8,7 +8,7 @@ final class hp extends oj {
     static wk field_A;
     private boolean field_B;
 
-    final static void a(li param0, int param1, int param2) {
+    final static void a(li param0, int param1) {
         bv var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -83,7 +83,7 @@ final class hp extends oj {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_A = null;
     }
 
@@ -496,7 +496,9 @@ final class hp extends oj {
                   break L2;
                 }
               }
-              hf.a(param0, (byte) 9, true);
+              int discarded$15 = 1;
+              int discarded$16 = 9;
+              hf.a(param0);
               if (param1 == -26661) {
                 break L0;
               } else {

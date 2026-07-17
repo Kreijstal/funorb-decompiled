@@ -27,22 +27,14 @@ final class gh extends dk {
             var4 = (hb) (Object) hi.field_f.c(-3905);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  var2 = sd.field_d.c(-3905);
-                  if (param0 < -27) {
-                    break L2;
-                  } else {
-                    field_A = null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
+                var2 = sd.field_d.c(-3905);
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
                     u.a(4, 1);
                     var2 = sd.field_d.a(-16913);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -55,7 +47,7 @@ final class gh extends dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2_ref, "gh.A(" + param0 + 44 + 4 + 41);
+          throw sd.a((Throwable) (Object) var2_ref, "gh.A(" + -89 + 44 + 4 + 41);
         }
     }
 

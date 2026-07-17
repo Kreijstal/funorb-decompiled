@@ -17,7 +17,7 @@ final class ik {
     static String field_k;
     int field_h;
 
-    final static String[] a(byte[] param0, int param1) {
+    final static String[] a(byte[] param0) {
         tn var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -44,7 +44,8 @@ final class ik {
         var5 = HoldTheLine.field_D;
         try {
           L0: {
-            var2 = ta.a((byte) 72);
+            int discarded$2 = 72;
+            var2 = ta.a();
             var3 = 0;
             var4 = 0;
             L1: while (true) {
@@ -131,7 +132,7 @@ final class ik {
         return stackIn_15_0;
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean a(CharSequence param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -153,7 +154,9 @@ final class ik {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = ne.a(10, param0, true, 106);
+            int discarded$4 = 106;
+            int discarded$5 = 1;
+            stackOut_0_0 = ne.a(10, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

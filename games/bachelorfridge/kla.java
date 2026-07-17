@@ -94,7 +94,7 @@ final class kla extends ana {
         return stackIn_8_0;
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         oha discarded$0 = al.a(109, ((kla) this).field_v.field_k);
         aga var2 = ((kla) this).field_v.field_l.a(36, ((kla) this).field_q.field_h);
         int[][] discarded$1 = ((kla) this).field_v.d((byte) 27);
@@ -186,16 +186,18 @@ final class kla extends ana {
     }
 
     final static hh e(int param0) {
-        String var1 = waa.a(true);
+        int discarded$0 = 1;
+        String var1 = waa.a();
         if (var1 != null) {
             if (!(var1.indexOf('@') < 0)) {
                 var1 = "";
             }
         }
-        return new hh(waa.a(true), hha.e(1071140296));
+        int discarded$1 = 1;
+        return new hh(waa.a(), hha.e(1071140296));
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         L0: {
           if (!o.d((byte) 54)) {
             if (bf.field_h[wca.field_n] != null) {
@@ -257,7 +259,7 @@ final class kla extends ana {
         }
     }
 
-    private final void g(byte param0) {
+    private final void g() {
     }
 
     public static void d(int param0) {
@@ -309,8 +311,10 @@ final class kla extends ana {
         ((kla) this).field_l = ((kla) this).field_l - 1;
         if (fieldTemp$0 >= 0) {
             if (!(((kla) this).field_l != 25)) {
-                this.e((byte) -60);
-                this.f((byte) 118);
+                int discarded$1 = -60;
+                this.e();
+                int discarded$2 = 118;
+                this.f();
             }
             if (!(((kla) this).field_l != 15)) {
                 jja.a(128, -1, 12);
@@ -321,7 +325,8 @@ final class kla extends ana {
             ((kla) this).field_q.field_s.a(-1907, 10 + ((kla) this).field_l);
             return false;
         }
-        this.g((byte) 23);
+        int discarded$3 = 23;
+        this.g();
         return true;
     }
 
@@ -334,7 +339,7 @@ final class kla extends ana {
         }
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((kla) this).field_v.field_l.a(53, ((kla) this).field_q.field_h);

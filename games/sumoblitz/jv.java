@@ -5,35 +5,21 @@ final class jv {
     static int field_b;
     static int field_a;
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         sm.a((byte) 127, param0, false);
     }
 
     final static void a(boolean param0, byte param1, boolean param2) {
-        if (param0) {
-          lk.b(0, 0, lk.field_b, lk.field_c, 0, 192);
-          if (param1 == -71) {
+        if (!param0) {
+            lk.b();
             vt.a(param0, true);
             return;
-          } else {
-            field_b = 40;
-            vt.a(param0, true);
-            return;
-          }
-        } else {
-          lk.b();
-          if (param1 == -71) {
-            vt.a(param0, true);
-            return;
-          } else {
-            field_b = 40;
-            vt.a(param0, true);
-            return;
-          }
         }
+        lk.b(0, 0, lk.field_b, lk.field_c, 0, 192);
+        vt.a(param0, true);
     }
 
-    final static void a(int param0, String[] param1, String param2, boolean param3) {
+    final static void a(int param0, String[] param1, String param2) {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -86,7 +72,8 @@ final class jv {
               } else {
                 var4 = param1;
                 as.a(256, var4);
-                jh.field_z = qr.a(param1, 8192);
+                int discarded$2 = 8192;
+                jh.field_z = qr.a(param1);
                 return;
               }
             }

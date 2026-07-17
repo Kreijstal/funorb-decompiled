@@ -28,7 +28,7 @@ final class m {
     static int[] field_w;
     static String[] field_n;
 
-    public static void b(int param0) {
+    public static void b() {
         field_q = null;
         field_w = null;
         field_y = null;
@@ -323,7 +323,7 @@ final class m {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         ib.field_b = new ki();
         hb.field_x.c((gm) (Object) ib.field_b, 33);
     }

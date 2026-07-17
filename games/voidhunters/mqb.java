@@ -264,7 +264,7 @@ final class mqb extends anb implements ntb, utb {
         return ((mqb) this).field_w;
     }
 
-    public static void j(byte param0) {
+    public static void j() {
         field_x = null;
         field_C = null;
     }

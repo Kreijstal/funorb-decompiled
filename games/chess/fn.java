@@ -11,24 +11,12 @@ final class fn {
     static int field_c;
 
     final static void a(byte param0, boolean param1) {
-        L0: {
-          if (!lk.a((byte) 114)) {
-            break L0;
-          } else {
+        if (lk.a((byte) 114)) {
             param1 = false;
-            break L0;
-          }
         }
-        if (param0 != -119) {
-          fn.a(108);
-          lf.a(-1, param1);
-          kb.f((byte) 100);
-          return;
-        } else {
-          lf.a(-1, param1);
-          kb.f((byte) 100);
-          return;
-        }
+        lf.a(-1, param1);
+        int discarded$0 = 100;
+        kb.f();
     }
 
     final static a a(int param0, int param1, int param2, int param3, int param4, jk param5) {
@@ -66,7 +54,7 @@ final class fn {
                 break L1;
               }
             }
-            var9 = in.a(param0, param4, param5, param2, 3160, param1);
+            var9 = in.a(0, param4, param5, 0, 3160, param1);
             var6 = var9;
             if (var9 != null) {
               var7 = new a();
@@ -87,7 +75,7 @@ final class fn {
           L2: {
             var6_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("fn.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_7_1 = new StringBuilder().append("fn.C(").append(0).append(44).append(param1).append(44).append(0).append(44).append(param3).append(44).append(param4).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -182,14 +170,8 @@ final class fn {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
-        if (param0 >= -3) {
-            field_c = 55;
-            field_e = null;
-            field_d = null;
-            return;
-        }
         field_e = null;
         field_d = null;
     }
@@ -202,19 +184,10 @@ final class fn {
             if (pd.a(-26057, param3, param2)) {
               return true;
             } else {
-              if (param1 == 23012) {
-                if (kh.field_o) {
-                  return false;
-                } else {
-                  return ba.b(param0, param2, -101);
-                }
+              if (kh.field_o) {
+                return false;
               } else {
-                field_f = null;
-                if (kh.field_o) {
-                  return false;
-                } else {
-                  return ba.b(param0, param2, -101);
-                }
+                return ba.b(param0, param2, -101);
               }
             }
           } else {

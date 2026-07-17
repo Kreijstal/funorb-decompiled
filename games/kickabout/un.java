@@ -8,7 +8,7 @@ final class un {
     static int[] field_a;
     static ml field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_c = null;
@@ -16,7 +16,7 @@ final class un {
         field_a = null;
     }
 
-    final static void a(nu param0, int param1, int param2) {
+    final static void a(nu param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -84,7 +84,7 @@ final class un {
         }
     }
 
-    final synchronized static byte[] a(int param0, boolean param1) {
+    final synchronized static byte[] a(int param0) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;

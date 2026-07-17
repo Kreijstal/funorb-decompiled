@@ -9,11 +9,12 @@ final class dj {
     static java.math.BigInteger field_c;
     static int field_e;
 
-    final static void b(int param0) {
-        rf.field_B[bk.d(23196)].a(0, 0, 102);
+    final static void b() {
+        int discarded$0 = 23196;
+        rf.field_B[bk.d()].a(0, 0, 102);
     }
 
-    final static ci[] c(int param0) {
+    final static ci[] c() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -34,12 +35,9 @@ final class dj {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_c = null;
-        if (param0 > -47) {
-            field_e = 55;
-        }
     }
 
     static {

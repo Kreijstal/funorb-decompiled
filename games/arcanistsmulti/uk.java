@@ -46,11 +46,12 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$2 = uk.a((CharSequence) null, (byte) 121);
+                String discarded$4 = uk.a((CharSequence) null, (byte) 121);
                 break L1;
               }
             }
-            stackOut_2_0 = vk.a(false, param0, -123);
+            int discarded$5 = -123;
+            stackOut_2_0 = vk.a(false, param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -107,7 +108,7 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_f = null;

@@ -3,31 +3,27 @@
  */
 final class ka {
     final static int a(int param0, int param1, int param2) {
-        if (param0 == 24316) {
-          if (bl.field_n == null) {
-            return -1;
-          } else {
-            if (gb.field_d <= param1) {
-              if (param1 < gb.field_d + bl.field_n.field_o) {
-                L0: {
-                  if (param2 < ua.field_c) {
+        if (bl.field_n == null) {
+          return -1;
+        } else {
+          if (gb.field_d <= param1) {
+            if (param1 < gb.field_d + bl.field_n.field_o) {
+              L0: {
+                if (param2 < ua.field_c) {
+                  break L0;
+                } else {
+                  if (bl.field_n.field_k + ua.field_c <= param2) {
                     break L0;
                   } else {
-                    if (bl.field_n.field_k + ua.field_c <= param2) {
-                      break L0;
-                    } else {
-                      return 0;
-                    }
+                    return 0;
                   }
                 }
-                if (ce.field_a <= param1) {
-                  if (param1 < bl.field_n.field_o + ce.field_a) {
-                    if (param2 >= ug.field_q) {
-                      if (param2 < ug.field_q + bl.field_n.field_k) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
+              }
+              if (ce.field_a <= param1) {
+                if (param1 < bl.field_n.field_o + ce.field_a) {
+                  if (param2 >= ug.field_q) {
+                    if (param2 < ug.field_q + bl.field_n.field_k) {
+                      return 1;
                     } else {
                       return -1;
                     }
@@ -38,23 +34,7 @@ final class ka {
                   return -1;
                 }
               } else {
-                if (ce.field_a <= param1) {
-                  if (param1 < bl.field_n.field_o + ce.field_a) {
-                    if (param2 >= ug.field_q) {
-                      if (param2 >= ug.field_q + bl.field_n.field_k) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
+                return -1;
               }
             } else {
               if (ce.field_a <= param1) {
@@ -75,13 +55,29 @@ final class ka {
                 return -1;
               }
             }
+          } else {
+            if (ce.field_a <= param1) {
+              if (param1 < bl.field_n.field_o + ce.field_a) {
+                if (param2 >= ug.field_q) {
+                  if (param2 >= ug.field_q + bl.field_n.field_k) {
+                    return -1;
+                  } else {
+                    return 1;
+                  }
+                } else {
+                  return -1;
+                }
+              } else {
+                return -1;
+              }
+            } else {
+              return -1;
+            }
           }
-        } else {
-          return -37;
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

@@ -232,7 +232,8 @@ final class cda implements ntb, ofa {
         }
         try {
             var3.field_b = var3.field_b;
-            var3.field_a = (jo[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, dp.field_b, false);
+            int discarded$0 = 0;
+            var3.field_a = (jo[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, dp.field_b);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "cda.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
@@ -388,13 +389,10 @@ final class cda implements ntb, ofa {
     }
 
     final static void a(int param0, String param1, String param2) {
-        if (param0 > -11) {
-            return;
-        }
         try {
             kma.a(param1, false, -17833, param2);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "cda.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "cda.I(" + -41 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -462,33 +460,33 @@ final class cda implements ntb, ofa {
     }
 
     final jo a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        jo var5 = null;
         int var6 = 0;
-        jo var7 = null;
         L0: {
           var6 = VoidHunters.field_G;
           if (null == ((cda) this).field_a) {
             break L0;
           } else {
-            var5 = 0;
+            var5_int = 0;
             L1: while (true) {
-              if (var5 >= ((cda) this).field_a.length) {
+              if (var5_int >= ((cda) this).field_a.length) {
                 break L0;
               } else {
-                if (((cda) this).field_a[var5].field_h == param1) {
-                  if (param2 == ((cda) this).field_a[var5].field_b) {
-                    if (param3 == ((cda) this).field_a[var5].field_f) {
-                      return ((cda) this).field_a[var5];
+                if (((cda) this).field_a[var5_int].field_h == param1) {
+                  if (param2 == ((cda) this).field_a[var5_int].field_b) {
+                    if (param3 == ((cda) this).field_a[var5_int].field_f) {
+                      return ((cda) this).field_a[var5_int];
                     } else {
-                      var5++;
+                      var5_int++;
                       continue L1;
                     }
                   } else {
-                    var5++;
+                    var5_int++;
                     continue L1;
                   }
                 } else {
-                  var5++;
+                  var5_int++;
                   continue L1;
                 }
               }
@@ -496,7 +494,7 @@ final class cda implements ntb, ofa {
           }
         }
         L2: {
-          var7 = new jo(param1, param2, param3);
+          var5 = new jo(param1, param2, param3);
           if (param0 > 118) {
             break L2;
           } else {
@@ -504,9 +502,10 @@ final class cda implements ntb, ofa {
             break L2;
           }
         }
-        ((cda) this).field_a = (jo[]) (Object) qlb.a((Object[]) (Object) ((cda) this).field_a, (Object) (Object) var7, dp.field_b, true, true, 1);
+        int discarded$1 = 1;
+        ((cda) this).field_a = (jo[]) (Object) qlb.a((Object[]) (Object) ((cda) this).field_a, (Object) (Object) var5, dp.field_b, true, true);
         ((cda) this).a(125);
-        return var7;
+        return var5;
     }
 
     final void a(int param0) {

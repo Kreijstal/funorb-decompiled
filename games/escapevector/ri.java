@@ -5,12 +5,12 @@ final class ri {
     static String field_a;
     static hh field_b;
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void a(int param0, int param1) {
         bg.field_f = param1;
         oj.field_M = param0;
     }
 
-    final static StringBuilder a(int param0, char param1, StringBuilder param2, byte param3) {
+    final static StringBuilder a(int param0, char param1, StringBuilder param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -37,15 +37,15 @@ final class ri {
         try {
           L0: {
             var4_int = param2.length();
-            param2.setLength(param0);
+            param2.setLength(0);
             var5 = var4_int;
             L1: while (true) {
-              if (var5 >= param0) {
+              if (var5 >= 0) {
                 stackOut_4_0 = (StringBuilder) param2;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                param2.setCharAt(var5, param1);
+                param2.setCharAt(var5, ' ');
                 var5++;
                 continue L1;
               }
@@ -56,7 +56,7 @@ final class ri {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("ri.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("ri.A(").append(0).append(44).append(32).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -84,12 +84,12 @@ final class ri {
         return stackIn_5_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         rl var3 = null;
@@ -201,7 +201,8 @@ final class ri {
                             }
                           } else {
                             L10: {
-                              km.a((n) (Object) var15, 1238559653);
+                              int discarded$1 = 1238559653;
+                              km.a((n) (Object) var15);
                               if (var6_int != 0) {
                                 af.a(1, hk.field_n, wk.field_d, oc.field_u, var6_int, bk.field_s);
                                 break L10;

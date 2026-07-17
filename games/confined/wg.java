@@ -8,14 +8,14 @@ final class wg {
     static long[] field_d;
     static int field_a;
 
-    final static java.awt.Container b(byte param0) {
+    final static java.awt.Container b() {
         if (!(null == wh.field_cb)) {
             return (java.awt.Container) (Object) wh.field_cb;
         }
         return (java.awt.Container) (Object) ii.b(false);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         int var1 = 12;
     }

@@ -178,7 +178,8 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 if (param2.length() == 0) {
                     var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                 } else {
-                    var5 = var7 + "; Expires=" + bf.a(la.a(false) - -94608000000L, (byte) -29) + "; Max-Age=" + 94608000L;
+                    int discarded$0 = -29;
+                    var5 = var7 + "; Expires=" + bf.a(la.a(false) - -94608000000L) + "; Max-Age=" + 94608000L;
                 }
                 pb.a(true, "document.cookie=\"" + var5 + "\"", param0);
                 if (param1 <= 6) {
@@ -399,7 +400,7 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         hl.field_c.a((gi) (Object) var1, 255);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 0;
         field_b = null;

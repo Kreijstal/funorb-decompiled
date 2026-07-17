@@ -49,17 +49,16 @@ final class hk {
     }
 
     final boolean b(int param0) {
-        byte[] var27 = null;
-        byte[] var28 = null;
-        byte[] var25 = null;
-        byte[] var22 = null;
-        byte[] var19 = null;
-        byte[] var17 = null;
         byte[] var2_ref_byte__ = null;
-        byte[] var29 = null;
-        byte[] var26 = null;
-        byte[] var23 = null;
+        byte[] var24 = null;
+        byte[] var22 = null;
         byte[] var20 = null;
+        byte[] var18 = null;
+        byte[] var17 = null;
+        byte[] var25 = null;
+        byte[] var23 = null;
+        byte[] var21 = null;
+        byte[] var19 = null;
         byte[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -76,20 +75,21 @@ final class hk {
         int var16 = TombRacer.field_G ? 1 : 0;
         if (!(null != ((hk) this).field_f)) {
             if (null == ui.field_c) {
-                var27 = gaa.a(4.0f, 16.0f, 128, (jg) (Object) new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
-                ui.field_c = bw.a(270, var27, false);
+                var2_ref_byte__ = gaa.a(4.0f, 16.0f, 128, (jg) (Object) new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
+                int discarded$0 = 0;
+                ui.field_c = bw.a(270, var2_ref_byte__);
             }
-            var28 = ir.a(ui.field_c, 13588, false);
-            var25 = var28;
-            var22 = var25;
-            var19 = var22;
-            var17 = var19;
+            var24 = ir.a(ui.field_c, 13588, false);
+            var22 = var24;
+            var20 = var22;
+            var18 = var20;
+            var17 = var18;
             var2_ref_byte__ = var17;
-            var29 = new byte[var28.length * 4];
-            var26 = var29;
-            var23 = var26;
-            var20 = var23;
-            var3 = var20;
+            var25 = new byte[var24.length * 4];
+            var23 = var25;
+            var21 = var23;
+            var19 = var21;
+            var3 = var19;
             var4 = 0;
             for (var5 = 0; 16 > var5; var5++) {
                 var6 = 16384 * var5;
@@ -102,24 +102,24 @@ final class hk {
                         var13 = (float)((var2_ref_byte__[var12 + var10] & 255) + -(255 & var2_ref_byte__[var12 + var11]));
                         var14 = (float)((var2_ref_byte__[(127 & var12 + -1) + var9] & 255) - (255 & var2_ref_byte__[var9 - -(127 & 1 + var12)]));
                         var15 = (float)(128.0 / Math.sqrt((double)(var14 * var14 + 16384.0f + var13 * var13)));
-                        int incrementValue$0 = var4;
-                        var4++;
-                        var3[incrementValue$0] = (byte)(int)(127.0f + var14 * var15);
                         int incrementValue$1 = var4;
                         var4++;
-                        var3[incrementValue$1] = (byte)(int)(128.0f * var15 + 127.0f);
+                        var3[incrementValue$1] = (byte)(int)(127.0f + var14 * var15);
                         int incrementValue$2 = var4;
                         var4++;
-                        var3[incrementValue$2] = (byte)(int)(var15 * var13 + 127.0f);
+                        var3[incrementValue$2] = (byte)(int)(128.0f * var15 + 127.0f);
                         int incrementValue$3 = var4;
                         var4++;
-                        int incrementValue$4 = var6;
+                        var3[incrementValue$3] = (byte)(int)(var15 * var13 + 127.0f);
+                        int incrementValue$4 = var4;
+                        var4++;
+                        int incrementValue$5 = var6;
                         var6++;
-                        var3[incrementValue$3] = var2_ref_byte__[incrementValue$4];
+                        var3[incrementValue$4] = var2_ref_byte__[incrementValue$5];
                     }
                 }
             }
-            ((hk) this).field_f = ((hk) this).field_b.a(var29, gpa.field_a, (byte) -41, 128, 128, 16);
+            ((hk) this).field_f = ((hk) this).field_b.a(var25, gpa.field_a, (byte) -41, 128, 128, 16);
         }
         int var2 = -20 % ((23 - param0) / 48);
         return null != ((hk) this).field_f ? true : false;
@@ -170,7 +170,6 @@ final class hk {
             RuntimeException stackIn_67_0 = null;
             StringBuilder stackIn_67_1 = null;
             String stackIn_67_2 = null;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_64_0 = null;
             StringBuilder stackOut_64_1 = null;
@@ -204,13 +203,7 @@ final class hk {
                           if (var5 >= var16.field_f) {
                             int discarded$1 = param1.g(var4, 64);
                             var16.p(75);
-                            if (param0) {
-                              decompiledRegionSelector0 = 0;
-                              break L0;
-                            } else {
-                              decompiledRegionSelector0 = 1;
-                              break L0;
-                            }
+                            break L0;
                           } else {
                             L3: {
                               if (0 == var16.field_m[var5]) {
@@ -408,7 +401,7 @@ final class hk {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_64_0 = (RuntimeException) var2;
-                stackOut_64_1 = new StringBuilder().append("hk.E(").append(param0).append(44);
+                stackOut_64_1 = new StringBuilder().append("hk.E(").append(1).append(44);
                 stackIn_66_0 = stackOut_64_0;
                 stackIn_66_1 = stackOut_64_1;
                 stackIn_65_0 = stackOut_64_0;
@@ -433,11 +426,6 @@ final class hk {
               }
               throw tba.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + 41);
             }
-            if (decompiledRegionSelector0 == 0) {
-              return;
-            } else {
-              return;
-            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -452,7 +440,7 @@ final class hk {
         field_e = null;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean a(int param0, int param1) {
         return (param0 & 50560) != 0;
     }
 
@@ -523,14 +511,16 @@ final class hk {
                       if (16 <= var2_int) {
                         break L3;
                       } else {
-                        var18 = ua.a(lt.field_f, 32768, var2_int * 32768, false);
+                        int discarded$3 = 0;
+                        var18 = ua.a(lt.field_f, 32768, var2_int * 32768);
                         ((hk) this).field_a[var2_int] = ((hk) this).field_b.a(128, var18, true, wo.field_i, -77, 128);
                         var2_int++;
                         continue L5;
                       }
                     }
                   } else {
-                    var17 = ua.a(ak.field_o, 32768, 32768 * var2_int, false);
+                    int discarded$4 = 0;
+                    var17 = ua.a(ak.field_o, 32768, 32768 * var2_int);
                     ((hk) this).field_d[var2_int] = ((hk) this).field_b.a(128, var17, true, wo.field_i, -117, 128);
                     var2_int++;
                     continue L4;
@@ -540,7 +530,7 @@ final class hk {
                 var15 = ir.a(ak.field_o, 13588, false);
                 ((hk) this).field_c = ((hk) this).field_b.a(var15, wo.field_i, (byte) -97, 128, 128, 16);
                 var16 = ir.a(lt.field_f, 13588, false);
-                lv discarded$1 = ((hk) this).field_b.a(var16, wo.field_i, (byte) -84, 128, 128, 16);
+                lv discarded$5 = ((hk) this).field_b.a(var16, wo.field_i, (byte) -84, 128, 128, 16);
                 break L3;
               }
             }

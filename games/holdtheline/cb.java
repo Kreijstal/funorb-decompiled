@@ -209,7 +209,8 @@ final class cb extends gd {
               }
             }
             var4 = (CharSequence) (Object) param0;
-            if (!ff.a(var4, 8192)) {
+            int discarded$9 = 8192;
+            if (!ff.a(var4)) {
               stackOut_4_0 = g.field_k;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;

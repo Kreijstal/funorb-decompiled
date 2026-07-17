@@ -11,20 +11,18 @@ final class aw extends ana {
     final static void a(boolean param0, int param1, vr param2, vr param3, vr param4) {
         try {
             ut.field_m = ida.a("", -203);
-            if (param1 != -12472) {
-                aw.e((byte) -127);
-            }
-            ut.field_m.a(false, param1 ^ -1537021683);
+            ut.field_m.a(false, 1537025605);
             nm.a(param2, param3, 111, param4);
-            nga.b((byte) 113);
+            int discarded$0 = 113;
+            nga.b();
             ola.field_p = tn.field_a;
             dka.field_G = tn.field_a;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "aw.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "aw.C(" + param0 + 44 + -12472 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         op var3 = null;
         aga var4 = null;
         int var6 = 0;
@@ -107,8 +105,10 @@ final class aw extends ana {
         ((aw) this).field_l = ((aw) this).field_l - 1;
         if (fieldTemp$0 >= 0) {
             if (((aw) this).field_l == 25) {
-                this.f((byte) -124);
-                this.g((byte) 69);
+                int discarded$1 = -124;
+                this.f();
+                int discarded$2 = 69;
+                this.g();
             }
             return false;
         }
@@ -122,7 +122,7 @@ final class aw extends ana {
         }
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var6 = ((aw) this).field_z.field_l.a(106, ((aw) this).field_q.field_h);
@@ -142,14 +142,11 @@ final class aw extends ana {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_x = null;
         field_y = null;
         field_v = null;
         field_w = null;
-        if (param0 != 26) {
-            field_y = null;
-        }
     }
 
     aw(gj param0, ica param1) {

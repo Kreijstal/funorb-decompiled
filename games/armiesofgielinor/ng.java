@@ -30,8 +30,9 @@ final class ng {
     private int field_o;
     private wk[] field_i;
 
-    private final boolean q(int param0) {
-        if (this.s(4)) {
+    private final boolean q() {
+        int discarded$2 = 4;
+        if (this.s()) {
           return false;
         } else {
           if (this.b((byte) -88)) {
@@ -51,11 +52,8 @@ final class ng {
         return var3;
     }
 
-    public static void w(int param0) {
+    public static void w() {
         field_s = null;
-        if (param0 != 0) {
-            field_v = -114;
-        }
     }
 
     private final boolean h(int param0) {
@@ -96,7 +94,7 @@ final class ng {
         }
     }
 
-    private final int o(int param0) {
+    private final int o() {
         int var2 = 0;
         int var3 = 0;
         String var4 = null;
@@ -139,7 +137,8 @@ final class ng {
         if (!((ng) this).field_x) {
             return;
         }
-        this.B(7);
+        int discarded$0 = 7;
+        this.B();
         this.a(param0 + -6812);
         if (param0 != 6815) {
             return;
@@ -147,14 +146,12 @@ final class ng {
         this.e((byte) -8);
     }
 
-    private final void t(int param0) {
-        int var2 = this.o(114);
+    private final void t() {
+        int discarded$0 = 114;
+        int var2 = this.o();
         int var3 = ((ng) this).field_e.a(' ') << 1;
         int var4 = ((ng) this).field_l[3].field_A + ((ng) this).field_l[5].field_A;
-        if (param0 != 0) {
-            return;
-        }
-        int var5 = ((ng) this).field_n.c(param0 ^ 26787);
+        int var5 = ((ng) this).field_n.c(26787);
         ((ng) this).field_d = var2 + (var3 - -var5) + var4;
     }
 
@@ -163,7 +160,7 @@ final class ng {
         int var3 = -28 % ((-31 - param1) / 34);
     }
 
-    private final void j(int param0) {
+    private final void j() {
         int var2 = this.d((byte) -88);
         int var3 = this.i(1);
         int var4 = var3 / var2;
@@ -196,10 +193,8 @@ final class ng {
     private final void a(boolean param0, boolean param1, byte param2, int param3) {
         ((ng) this).field_n.a(param0, param3, -2, param1);
         ((ng) this).field_y.a(param0, param3, -2, param1);
-        this.a((byte) 116);
-        if (param2 != 16) {
-            return;
-        }
+        int discarded$0 = 116;
+        this.a();
         ((ng) this).field_c = false;
         if (!((ng) this).field_x) {
             return;
@@ -241,8 +236,10 @@ final class ng {
             var3_int = 54 % ((15 - param0) / 63);
             ((ng) this).field_o = 0;
             ((ng) this).field_r = ((ng) this).field_A.length;
-            this.y(0);
-            this.p(-101);
+            int discarded$4 = 0;
+            this.y();
+            int discarded$5 = -101;
+            this.p();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -277,7 +274,7 @@ final class ng {
         }
     }
 
-    private final boolean s(int param0) {
+    private final boolean s() {
         int var2 = ((ng) this).field_h;
         int var3 = ((ng) this).field_h + ((ng) this).field_g;
         if (qn.field_a > var2) {
@@ -285,9 +282,6 @@ final class ng {
         }
         if (var3 > qn.field_f) {
             return false;
-        }
-        if (param0 != 4) {
-            return true;
         }
         return true;
     }
@@ -331,7 +325,7 @@ final class ng {
         ((ng) this).field_x = false;
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         L0: {
           if (!((ng) this).field_n.b(false)) {
             break L0;
@@ -351,7 +345,7 @@ final class ng {
         }
     }
 
-    private final void m(int param0) {
+    private final void m() {
         int var2 = 0;
         int var3 = 0;
         ((ng) this).field_f = ((ng) this).field_d;
@@ -409,9 +403,6 @@ final class ng {
                 ((ng) this).field_u = ((ng) this).a(param2, (byte) -128, param1);
             }
         }
-        if (param0 != 58) {
-            this.v(104);
-        }
         ((ng) this).field_n.b(param2, param1, 0);
         ((ng) this).field_y.b(param2, param1, 0);
     }
@@ -421,10 +412,11 @@ final class ng {
         return ((ng) this).field_c;
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         int var2 = this.n(-88);
         int var3 = this.k(-105) - -this.i(1);
-        int var4 = this.E(1);
+        int discarded$0 = 1;
+        int var4 = this.E();
         ((ng) this).field_y.b(var3, -128, var2, var4);
     }
 
@@ -438,10 +430,12 @@ final class ng {
         return var4;
     }
 
-    private final void p(int param0) {
+    private final void p() {
         this.C(-25621);
-        this.j(96);
-        this.z(1773277345);
+        int discarded$0 = 96;
+        this.j();
+        int discarded$1 = 1773277345;
+        this.z();
     }
 
     final void e(boolean param0) {
@@ -460,7 +454,7 @@ final class ng {
         return var6;
     }
 
-    private final void B(int param0) {
+    private final void B() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -490,7 +484,8 @@ final class ng {
     }
 
     private final void f(int param0) {
-        int var2 = this.n(-91) + this.E(1);
+        int discarded$0 = 1;
+        int var2 = this.n(-91) + this.E();
         int var3 = this.k(-100);
         if (param0 <= 22) {
             ((ng) this).field_c = false;
@@ -499,9 +494,10 @@ final class ng {
         ((ng) this).field_n.b(var3, -125, var2, var4);
     }
 
-    private final void z(int param0) {
+    private final void z() {
         int var2 = 3;
-        int var3 = this.E(1);
+        int discarded$0 = 1;
+        int var3 = this.E();
         int var4 = var3 / var2;
         ((ng) this).field_y.a(0, (byte) 47, ((ng) this).field_f, var3, var4);
         ((ng) this).field_p = ((ng) this).field_y.a(false);
@@ -523,7 +519,7 @@ final class ng {
         return ((ng) this).field_t;
     }
 
-    final static rn a(String param0, int param1) {
+    final static rn a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -956,7 +952,7 @@ final class ng {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         wk var1 = null;
         RuntimeException var1_ref = null;
         wk var2 = null;
@@ -967,11 +963,13 @@ final class ng {
         try {
           L0: {
             var1 = new wk(540, 140);
-            vn.a(var1, 3);
+            int discarded$6 = 3;
+            vn.a(var1);
             tm.a();
             qn.b();
             ib.field_j = 0;
-            rb.e(9);
+            int discarded$7 = 9;
+            rb.e();
             var2 = var1.g();
             var3 = 0;
             L1: while (true) {
@@ -1019,7 +1017,7 @@ final class ng {
         }
     }
 
-    private final int E(int param0) {
+    private final int E() {
         int var2 = this.n(-128);
         int var3 = ((ng) this).field_n.c(26787);
         int var4 = ((ng) this).field_l[5].field_A;
@@ -1034,13 +1032,16 @@ final class ng {
     }
 
     private final void C(int param0) {
-        this.c((byte) -4);
-        this.m(0);
+        int discarded$0 = -4;
+        this.c();
+        int discarded$1 = 0;
+        this.m();
         this.f(param0 ^ -25718);
         if (param0 != -25621) {
             return;
         }
-        this.f((byte) 120);
+        int discarded$2 = 120;
+        this.f();
     }
 
     final int b(int param0) {
@@ -1053,17 +1054,19 @@ final class ng {
             field_s = null;
         }
         this.C(param3 + -25621);
-        this.v(-1);
+        int discarded$0 = -1;
+        this.v();
         this.a((byte) 58, param4, param0);
         this.a(param2, param1, (byte) 16, param5);
     }
 
-    private final void c(byte param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         ((ng) this).field_k = ((ng) this).field_h;
         ((ng) this).field_w = ((ng) this).field_g;
-        if (!this.s(4)) {
+        int discarded$2 = 4;
+        if (!this.s()) {
           L0: {
             if (this.b((byte) -105)) {
               L1: {
@@ -1137,7 +1140,8 @@ final class ng {
         if (param0 == 3) {
           var3 = var2 + this.i(param0 ^ 2);
           var4 = this.n(-116);
-          var5 = var4 - -this.E(1);
+          int discarded$2 = 1;
+          var5 = var4 - -this.E();
           var6 = ((ng) this).field_p;
           qn.b(((ng) this).field_j);
           qn.b(var4, var2, var5, var3);
@@ -1171,7 +1175,7 @@ final class ng {
         }
     }
 
-    final static void x(int param0) {
+    final static void x() {
         qf.field_e = null;
         mb.field_F = null;
         ed.field_e = null;
@@ -1227,7 +1231,7 @@ final class ng {
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            ds.field_a = new wk[op.field_c[param1].length];
+            ds.field_a = new wk[op.field_c[0].length];
             le.field_c = new wk[op.field_c[0].length];
             vo.field_d = param0;
             im.field_y = param2;
@@ -1277,7 +1281,7 @@ final class ng {
           }
           L3: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(0).append(44);
             stackIn_13_0 = stackOut_10_0;
             stackIn_13_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -1311,12 +1315,14 @@ final class ng {
         }
     }
 
-    private final void y(int param0) {
-        this.d(124);
-        this.t(0);
+    private final void y() {
+        int discarded$0 = 124;
+        this.d();
+        int discarded$1 = 0;
+        this.t();
     }
 
-    private final void v(int param0) {
+    private final void v() {
         int var3 = 0;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (((ng) this).field_x) {
@@ -1333,20 +1339,13 @@ final class ng {
               }
             }
             L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                boolean discarded$1 = this.s(100);
-                break L1;
-              }
-            }
-            L2: {
-              if (this.q(-87)) {
+              int discarded$1 = -87;
+              if (this.q()) {
                 ((ng) this).field_n.d(-124);
-                break L2;
+                break L1;
               } else {
                 ((ng) this).field_n.b((byte) -65);
-                break L2;
+                break L1;
               }
             }
             return;
@@ -1619,7 +1618,8 @@ final class ng {
         int var5 = this.k(-101);
         int var6 = this.d((byte) -111);
         int var8 = -30 / ((param1 - -89) / 32);
-        int var7 = this.E(1);
+        int discarded$0 = 1;
+        int var7 = this.E();
         for (var9 = ((ng) this).field_m; ((ng) this).field_z > var9; var9++) {
             if (mo.a(param0, var4, var5, param2, var7, (byte) -101, var6)) {
                 return var9;
@@ -1629,7 +1629,7 @@ final class ng {
         return -1;
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var2 = this.d((byte) -111);
         int var3 = ((ng) this).field_r * var2;
         int var4 = ((ng) this).field_l[1].field_x - -((ng) this).field_l[7].field_x;

@@ -6,7 +6,7 @@ final class da {
     static float[][] field_b;
     static int[] field_c;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         if (ci.field_a == null) {
             return false;
         }
@@ -16,7 +16,7 @@ final class da {
         return true;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_b = null;
     }

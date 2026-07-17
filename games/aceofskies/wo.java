@@ -41,11 +41,13 @@ final class wo extends wf {
             }
             {
                 if (var2_int >= 0) {
-                    if (gm.g(-1) <= 30000L) {
+                    int discarded$3 = -1;
+                    if (gm.g() <= 30000L) {
                         return false;
                     }
                 }
-                te.b(true);
+                int discarded$4 = 1;
+                te.b();
             }
             return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -55,7 +57,7 @@ final class wo extends wf {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_n = null;
         field_e = null;
         int var1 = 1;

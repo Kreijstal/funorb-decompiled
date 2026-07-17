@@ -68,7 +68,7 @@ final class rk implements Runnable {
         if (param3 < 10) {
             return null;
         }
-        return this.a((Object) (Object) param2, 0, param0, !param1 ? 1 : 22, (byte) 125);
+        return this.a((Object) (Object) param2, 0, param0, 1, (byte) 125);
     }
 
     public final void run() {
@@ -150,7 +150,8 @@ final class rk implements Runnable {
                         } else {
                           try {
                             L9: {
-                              var1_ref.field_f = (Object) (Object) dd.a((String) var1_ref.field_e, var1_ref.field_c, -105).a((byte) 97);
+                              int discarded$7 = -105;
+                              var1_ref.field_f = (Object) (Object) dd.a((String) var1_ref.field_e, var1_ref.field_c).a((byte) 97);
                               break L9;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -224,7 +225,7 @@ final class rk implements Runnable {
                                                   ((rk) this).field_x.a((java.awt.Frame) var1_ref.field_e, -70);
                                                   break L8;
                                                 } else {
-                                                  Object discarded$6 = Class.forName("il").getMethod("exit", new Class[0]).invoke(((rk) this).field_m, new Object[0]);
+                                                  Object discarded$8 = Class.forName("il").getMethod("exit", new Class[0]).invoke(((rk) this).field_m, new Object[0]);
                                                   break L8;
                                                 }
                                               } else {
@@ -249,7 +250,7 @@ final class rk implements Runnable {
                                                             ((rk) this).field_d.a(0, var3_int, var4_int);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$7 = Class.forName("wr").getDeclaredMethod("movemouse", new Class[2]).invoke(((rk) this).field_h, new Object[2]);
+                                                            Object discarded$9 = Class.forName("wr").getDeclaredMethod("movemouse", new Class[2]).invoke(((rk) this).field_h, new Object[2]);
                                                             break L8;
                                                           }
                                                         } else {
@@ -281,7 +282,7 @@ final class rk implements Runnable {
                                                             ((rk) this).field_d.a(var3_int != 0, var4_ref2, -4);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$8 = Class.forName("wr").getDeclaredMethod("showcursor", new Class[2]).invoke(((rk) this).field_h, new Object[2]);
+                                                            Object discarded$10 = Class.forName("wr").getDeclaredMethod("showcursor", new Class[2]).invoke(((rk) this).field_h, new Object[2]);
                                                             break L8;
                                                           }
                                                         }
@@ -293,7 +294,7 @@ final class rk implements Runnable {
                                                       } else {
                                                         if (var2_int == 17) {
                                                           var3_array = (Object[]) var1_ref.field_e;
-                                                          Object discarded$9 = Class.forName("wr").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((rk) this).field_h, new Object[5]);
+                                                          Object discarded$11 = Class.forName("wr").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((rk) this).field_h, new Object[5]);
                                                           break L8;
                                                         } else {
                                                           break L14;
@@ -320,7 +321,7 @@ final class rk implements Runnable {
                                                             var5 = 0;
                                                             L17: while (true) {
                                                               if (~var5 <= ~var3_ref5.length()) {
-                                                                Process discarded$10 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var3_ref5 + "\"");
+                                                                Process discarded$12 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var3_ref5 + "\"");
                                                                 var1_ref.field_f = null;
                                                                 break L15;
                                                               } else {
@@ -354,7 +355,7 @@ final class rk implements Runnable {
                                               var1_ref.field_f = (Object) (Object) var3_ref6;
                                               var3_ref6.setResizable(false);
                                               if (!((rk) this).field_p) {
-                                                Object discarded$11 = Class.forName("il").getMethod("enter", new Class[5]).invoke(((rk) this).field_m, new Object[5]);
+                                                Object discarded$13 = Class.forName("il").getMethod("enter", new Class[5]).invoke(((rk) this).field_m, new Object[5]);
                                                 break L8;
                                               } else {
                                                 ((rk) this).field_x.a(var1_ref.field_c >>> 16, 17, var3_ref6, 65535 & var1_ref.field_c, var1_ref.field_b >> 16, 65535 & var1_ref.field_b);
@@ -564,79 +565,73 @@ final class rk implements Runnable {
 
     private final static fs a(String param0, int param1, byte param2, String param3) {
         try {
-            String var7_ref = null;
             String var4 = null;
             Object[] var5 = null;
             String[] var5_array = null;
             int var6 = 0;
-            Object var7 = null;
+            String var7 = null;
             Exception var8 = null;
             fs var8_ref = null;
-            fs stackIn_14_0 = null;
+            fs stackIn_12_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            fs stackOut_13_0 = null;
-            var7_ref = null;
-            if (param2 == -97) {
-              L0: {
-                if (param1 == 33) {
-                  var4 = "jagex_" + param3 + "_preferences" + param0 + "_rc.dat";
+            fs stackOut_11_0 = null;
+            L0: {
+              if (param1 == 33) {
+                var4 = "jagex_" + param3 + "_preferences" + param0 + "_rc.dat";
+                break L0;
+              } else {
+                if (param1 == 34) {
+                  var4 = "jagex_" + param3 + "_preferences" + param0 + "_wip.dat";
                   break L0;
                 } else {
-                  if (param1 == 34) {
-                    var4 = "jagex_" + param3 + "_preferences" + param0 + "_wip.dat";
-                    break L0;
-                  } else {
-                    var4 = "jagex_" + param3 + "_preferences" + param0 + ".dat";
-                    break L0;
-                  }
+                  var4 = "jagex_" + param3 + "_preferences" + param0 + ".dat";
+                  break L0;
                 }
               }
-              var5_array = new String[]{"c:/rscache/", "/rscache/", field_i, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
-              var6 = 0;
-              L1: while (true) {
-                if (var6 < var5_array.length) {
-                  L2: {
-                    var7_ref = var5_array[var6];
-                    if (var7_ref.length() <= 0) {
+            }
+            var5_array = new String[]{"c:/rscache/", "/rscache/", field_i, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
+            var6 = 0;
+            L1: while (true) {
+              if (var6 < var5_array.length) {
+                L2: {
+                  var7 = var5_array[var6];
+                  if (var7.length() <= 0) {
+                    break L2;
+                  } else {
+                    if (new File(var7).exists()) {
                       break L2;
                     } else {
-                      if (new File(var7_ref).exists()) {
-                        break L2;
-                      } else {
-                        var6++;
-                        continue L1;
-                      }
-                    }
-                  }
-                  try {
-                    L3: {
-                      var8_ref = new fs(new File(var7_ref, var4), "rw", 10000L);
-                      stackOut_13_0 = (fs) var8_ref;
-                      stackIn_14_0 = stackOut_13_0;
-                      decompiledRegionSelector0 = 0;
-                      break L3;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L4: {
-                      var8 = (Exception) (Object) decompiledCaughtException;
                       var6++;
-                      decompiledRegionSelector0 = 1;
-                      break L4;
+                      continue L1;
                     }
                   }
-                  if (decompiledRegionSelector0 == 0) {
-                    return stackIn_14_0;
-                  } else {
-                    continue L1;
-                  }
-                } else {
-                  return null;
                 }
+                try {
+                  L3: {
+                    var8_ref = new fs(new File(var7, var4), "rw", 10000L);
+                    stackOut_11_0 = (fs) var8_ref;
+                    stackIn_12_0 = stackOut_11_0;
+                    decompiledRegionSelector0 = 0;
+                    break L3;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L4: {
+                    var8 = (Exception) (Object) decompiledCaughtException;
+                    var6++;
+                    decompiledRegionSelector0 = 1;
+                    break L4;
+                  }
+                }
+                if (decompiledRegionSelector0 == 0) {
+                  return stackIn_12_0;
+                } else {
+                  continue L1;
+                }
+              } else {
+                return null;
               }
-            } else {
-              return null;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

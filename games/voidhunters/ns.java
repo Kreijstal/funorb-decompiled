@@ -17,7 +17,7 @@ final class ns implements dja {
         return (tv) (Object) new tr();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

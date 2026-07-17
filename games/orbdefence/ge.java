@@ -85,9 +85,6 @@ abstract class ge {
             return var2;
         }
         var2 = 2;
-        if (param0) {
-            return -68;
-        }
         if (!(param1 >= -65536)) {
             param1 = param1 >> 16;
             var2 += 16;

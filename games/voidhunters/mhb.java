@@ -46,7 +46,7 @@ final class mhb extends rqa {
             var3 = new caa(0, 0, 0);
             var3.field_g = param1.field_g;
             var3.field_e = param1.field_e;
-            var4 = 50 / ((param0 - 20) / 62);
+            var4 = 50;
             var3.field_d = param1.field_d;
             var3.field_j = param1.field_j;
             var3.field_a = param1.field_a;
@@ -62,7 +62,7 @@ final class mhb extends rqa {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("mhb.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("mhb.B(").append(94).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

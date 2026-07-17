@@ -38,11 +38,11 @@ final class vk {
         }
     }
 
-    final synchronized static void b(boolean param0) {
+    final synchronized static void b() {
         field_a = field_a + 1;
     }
 
-    final synchronized static void a(boolean param0) {
+    final synchronized static void a() {
         field_a = field_a - 1;
         if (!(0 != field_a)) {
             vk.a((byte) 119);

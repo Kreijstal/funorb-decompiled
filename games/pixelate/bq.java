@@ -598,27 +598,26 @@ final class bq {
         return param0 | param1;
     }
 
-    final static boolean a(byte param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        if (param0 != -124) {
-            bq.a((byte) -16);
-        }
+    final static boolean a(byte param0, int param1, int param2, boolean param3) {
         if (!(!tm.a((byte) 117))) {
-            vd.a(param3, param1, param4, (byte) -86);
+            vd.a(param3, 15, 13, (byte) -86);
             if (null != eg.field_n) {
-                if (!(!eg.field_n.a(param4, param6, false, param5, param3))) {
+                if (!(!eg.field_n.a(13, 11, false, 0, param3))) {
                     jp.a(71);
                     param3 = false;
                 }
             }
-            sm.a(param4, param3, 0);
-            gb.a((byte) 120, param3, param2);
+            int discarded$0 = 0;
+            sm.a(13, param3);
+            int discarded$1 = 14;
+            gb.a((byte) 120, param3);
             param3 = false;
         }
         return param3;
     }
 
-    public static void a(byte param0) {
-        int var1 = 60 % ((param0 - 61) / 61);
+    public static void a() {
+        int var1 = 0;
         field_a = null;
         field_b = null;
     }

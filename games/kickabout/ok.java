@@ -25,102 +25,94 @@ final class ok {
         short[] var17 = null;
         short[] var19 = null;
         int[] var20 = null;
-        eg stackIn_10_0 = null;
+        eg stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        eg stackOut_9_0 = null;
+        eg stackOut_7_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var10 = Kickabout.field_G;
         try {
           L0: {
-            L1: {
-              var11 = new vn(gw.field_f[param1], true, false, true, true);
-              var12 = var11;
-              var19 = var12.field_p;
-              var17 = var19;
-              var15 = var17;
-              var13 = var15;
-              var4 = var13;
-              if (param0 < -8) {
-                break L1;
-              } else {
-                ok.a(-88);
-                break L1;
-              }
-            }
+            var11 = new vn(gw.field_f[param1], true, false, true, true);
+            var12 = var11;
+            var19 = var12.field_p;
+            var17 = var19;
+            var15 = var17;
+            var13 = var15;
+            var4 = var13;
             var5 = dq.a((byte) -34, 16777200, param2) - -1;
             var5 = 8355711 & var5 >> 1;
             var6 = wk.a(var5, 63);
             var7 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var7 >= var19.length) {
                 var20 = gt.field_f;
                 var8 = var20[0] * t.field_o[1024] >> 16;
                 var9 = t.field_f[1024] * var20[0] >> 16;
-                stackOut_9_0 = var11.b(var20[2], var20[3], var8, var20[1], var9);
-                stackIn_10_0 = stackOut_9_0;
+                stackOut_7_0 = var11.b(var20[2], var20[3], var8, var20[1], var9);
+                stackIn_8_0 = stackOut_7_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   if (var19[var7] == 935) {
                     var4[var7] = (short)var6;
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 var7++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("ok.B(").append(param0).append(44).append(param1).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_1 = new StringBuilder().append("ok.B(").append(-49).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L4;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L4;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        return stackIn_10_0;
+        return stackIn_8_0;
     }
 
-    final static byte[] a(CharSequence param0, byte param1) {
+    final static byte[] a(CharSequence param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

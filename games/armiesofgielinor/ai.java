@@ -80,7 +80,7 @@ final class ai extends hs {
         return stackIn_3_0 != 0;
     }
 
-    final static int a(bv param0, boolean param1) {
+    final static int a(bv param0) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -102,7 +102,11 @@ final class ai extends hs {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = de.a(-102, param0, 4, 14, 30, 20);
+            int discarded$8 = 20;
+            int discarded$9 = 30;
+            int discarded$10 = 14;
+            int discarded$11 = 4;
+            stackOut_0_0 = de.a(-102, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -246,7 +250,8 @@ final class ai extends hs {
 
     final void a(int param0, int param1, int param2, kb param3) {
         super.a(param0, param1, param2, param3);
-        this.f((byte) -3);
+        int discarded$0 = -3;
+        this.f();
         if (param0 != 32722) {
             return;
         }
@@ -257,7 +262,7 @@ final class ai extends hs {
         }
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (((ai) this).field_K != null) {
             if (((ai) this).field_S.field_E.field_w <= ((ai) this).field_S.field_w) {
@@ -942,7 +947,8 @@ final class ai extends hs {
                       break L4;
                     }
                   }
-                  this.f((byte) -3);
+                  int discarded$14 = -3;
+                  this.f();
                   return;
                 } else {
                   L6: {
@@ -1025,7 +1031,8 @@ final class ai extends hs {
                       break L9;
                     }
                   }
-                  this.f((byte) -3);
+                  int discarded$15 = -3;
+                  this.f();
                   return;
                 }
               } else {
@@ -1122,7 +1129,8 @@ final class ai extends hs {
                       break L15;
                     }
                   }
-                  this.f((byte) -3);
+                  int discarded$16 = -3;
+                  this.f();
                   return;
                 } else {
                   L17: {
@@ -1205,7 +1213,8 @@ final class ai extends hs {
                       break L20;
                     }
                   }
-                  this.f((byte) -3);
+                  int discarded$17 = -3;
+                  this.f();
                   return;
                 }
               }
@@ -1303,7 +1312,8 @@ final class ai extends hs {
                     break L26;
                   }
                 }
-                this.f((byte) -3);
+                int discarded$18 = -3;
+                this.f();
                 return;
               } else {
                 L28: {
@@ -1386,7 +1396,8 @@ final class ai extends hs {
                     break L31;
                   }
                 }
-                this.f((byte) -3);
+                int discarded$19 = -3;
+                this.f();
                 return;
               }
             }
@@ -1487,7 +1498,8 @@ final class ai extends hs {
                       break L37;
                     }
                   }
-                  this.f((byte) -3);
+                  int discarded$20 = -3;
+                  this.f();
                   return;
                 } else {
                   L39: {
@@ -1570,7 +1582,8 @@ final class ai extends hs {
                       break L42;
                     }
                   }
-                  this.f((byte) -3);
+                  int discarded$21 = -3;
+                  this.f();
                   return;
                 }
               } else {
@@ -1667,7 +1680,8 @@ final class ai extends hs {
                       break L48;
                     }
                   }
-                  this.f((byte) -3);
+                  int discarded$22 = -3;
+                  this.f();
                   return;
                 } else {
                   L50: {
@@ -1750,7 +1764,8 @@ final class ai extends hs {
                       break L53;
                     }
                   }
-                  this.f((byte) -3);
+                  int discarded$23 = -3;
+                  this.f();
                   return;
                 }
               }
@@ -1848,7 +1863,8 @@ final class ai extends hs {
                     break L59;
                   }
                 }
-                this.f((byte) -3);
+                int discarded$24 = -3;
+                this.f();
                 return;
               } else {
                 L61: {
@@ -1931,7 +1947,8 @@ final class ai extends hs {
                     break L64;
                   }
                 }
-                this.f((byte) -3);
+                int discarded$25 = -3;
+                this.f();
                 return;
               }
             }
@@ -2049,7 +2066,8 @@ final class ai extends hs {
                 break L72;
               }
             }
-            this.f((byte) -3);
+            int discarded$26 = -3;
+            this.f();
             return;
           } else {
             L74: {
@@ -2132,13 +2150,14 @@ final class ai extends hs {
                 break L77;
               }
             }
-            this.f((byte) -3);
+            int discarded$27 = -3;
+            this.f();
             return;
           }
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_U = null;
         field_P = null;
         field_T = null;

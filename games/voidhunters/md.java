@@ -5,7 +5,7 @@ final class md extends le {
     static ij field_j;
     private ev[] field_i;
 
-    final static void b(int param0, int param1) {
+    final static void b() {
         RuntimeException var2 = null;
         int var3 = 0;
         ik var4 = null;
@@ -22,13 +22,15 @@ final class md extends le {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    eva.a(var5, -60, param0);
+                    int discarded$8 = 5;
+                    int discarded$9 = -60;
+                    eva.a(var5);
                     var5 = (br) (Object) ca.field_p.a((byte) 112);
                     continue L2;
                   }
                 }
               } else {
-                aeb.a(param0, -21584, var4);
+                aeb.a(5, -21584, var4);
                 var4 = (ik) (Object) mhb.field_o.a((byte) 8);
                 continue L1;
               }
@@ -37,7 +39,7 @@ final class md extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "md.D(" + param0 + 44 + 0 + 41);
+          throw rta.a((Throwable) (Object) var2, "md.D(" + 5 + 44 + 0 + 41);
         }
     }
 
@@ -175,7 +177,8 @@ final class md extends le {
                               break L4;
                             } else {
                               if (3 == var6) {
-                                ((md) this).field_i[var4_int] = (ev) (Object) uea.a(param2, -87);
+                                int discarded$1 = -87;
+                                ((md) this).field_i[var4_int] = (ev) (Object) uea.a(param2);
                                 break L4;
                               } else {
                                 break L4;

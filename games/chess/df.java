@@ -333,7 +333,8 @@ final class df {
 
     final static void a(byte param0) {
         L0: {
-          sa.a(new int[1], 342, 27, 410, 6, 297, 27690);
+          int discarded$5 = 27690;
+          sa.a(new int[1], 342, 27, 410, 6, 297);
           if (param0 == 102) {
             break L0;
           } else {
@@ -343,14 +344,18 @@ final class df {
         }
         L1: {
           ae.field_e[6] = new aa(6);
-          sa.a(new int[2], 440, 27, 410, 4, 200, 27690);
+          int discarded$6 = 27690;
+          sa.a(new int[2], 440, 27, 410, 4, 200);
           ae.field_e[4] = new aa(4);
           if (!vi.a(-3)) {
-            sa.a(new int[7], 455, 27, 190, 1, 185, 27690);
+            int discarded$7 = 27690;
+            sa.a(new int[7], 455, 27, 190, 1, 185);
             ae.field_e[1] = new aa(1);
-            sa.a(new int[9], 455, 27, 190, 2, 185, 27690);
+            int discarded$8 = 27690;
+            sa.a(new int[9], 455, 27, 190, 2, 185);
             ae.field_e[2] = new aa(2);
-            sa.a(new int[7], 455, 27, 190, 11, 185, 27690);
+            int discarded$9 = 27690;
+            sa.a(new int[7], 455, 27, 190, 11, 185);
             ae.field_e[11] = new aa(11);
             break L1;
           } else {
@@ -509,7 +514,7 @@ final class df {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         pg.a((byte) -18, ng.field_c);
     }
 

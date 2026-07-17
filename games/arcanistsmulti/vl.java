@@ -12,7 +12,7 @@ final class vl extends pg {
     int field_n;
     static ll[] field_i;
 
-    final static void d(byte param0) {
+    final static void d() {
         RuntimeException var1 = null;
         byte[] var1_array = null;
         int var2 = 0;
@@ -37,9 +37,9 @@ final class vl extends pg {
             var9 = var10;
             var1_array = var9;
             var2 = 0;
-            int incrementValue$6 = var2;
+            int incrementValue$7 = var2;
             var2++;
-            var8[incrementValue$6] = (byte) 0;
+            var8[incrementValue$7] = (byte) 0;
             var3 = 0;
             L1: while (true) {
               if (4 <= var3) {
@@ -50,26 +50,27 @@ final class vl extends pg {
                     L3: while (true) {
                       if (16 <= var3) {
                         L4: {
-                          if (lc.a((byte) 112)) {
+                          int discarded$8 = 112;
+                          if (lc.a()) {
                             break L4;
                           } else {
-                            f discarded$7 = tf.a(6, -25866, var12);
+                            f discarded$9 = tf.a(6, -25866, var12);
                             break L4;
                           }
                         }
                         break L0;
                       } else {
-                        int incrementValue$8 = var2;
+                        int incrementValue$10 = var2;
                         var2++;
-                        var1_array[incrementValue$8] = (byte)b.field_f[var3];
+                        var1_array[incrementValue$10] = (byte)b.field_f[var3];
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    int incrementValue$9 = var2;
+                    int incrementValue$11 = var2;
                     var2++;
-                    var1_array[incrementValue$9] = (byte)so.field_c[var3];
+                    var1_array[incrementValue$11] = (byte)so.field_c[var3];
                     var3++;
                     continue L2;
                   }
@@ -114,14 +115,14 @@ final class vl extends pg {
                   if (~var6 <= ~var4.length) {
                     L10: {
                       if (var5 != -1) {
-                        int incrementValue$10 = var2;
+                        int incrementValue$12 = var2;
                         var2++;
-                        var1_array[incrementValue$10] = (byte)var5;
+                        var1_array[incrementValue$12] = (byte)var5;
                         break L10;
                       } else {
-                        int incrementValue$11 = var2;
+                        int incrementValue$13 = var2;
                         var2++;
-                        var1_array[incrementValue$11] = (byte) 0;
+                        var1_array[incrementValue$13] = (byte) 0;
                         break L10;
                       }
                     }
@@ -160,14 +161,14 @@ final class vl extends pg {
 
     final static void a(byte param0, ij param1) {
         try {
-            int var2_int = 72 % ((param0 - 77) / 38);
+            int var2_int = 0;
             co.field_f.a((kc) (Object) param1, 9);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "vl.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "vl.A(" + 121 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_l = null;
         field_i = null;
@@ -181,10 +182,6 @@ final class vl extends pg {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        char[] var8 = null;
-        char[] var9 = null;
-        char[] var10 = null;
-        char[] var11 = null;
         String stackIn_19_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -208,7 +205,7 @@ final class vl extends pg {
           L0: {
             L1: {
               var2_int = param1.length();
-              var3 = 21 / ((param0 - 40) / 54);
+              var3 = 21;
               if (var2_int <= 20) {
                 break L1;
               } else {
@@ -216,15 +213,11 @@ final class vl extends pg {
                 break L1;
               }
             }
-            var11 = new char[var2_int];
-            var10 = var11;
-            var9 = var10;
-            var8 = var9;
-            var4 = var8;
+            var4 = new char[var2_int];
             var5 = 0;
             L2: while (true) {
               if (var2_int <= var5) {
-                stackOut_18_0 = new String(var11);
+                stackOut_18_0 = new String(var4);
                 stackIn_19_0 = stackOut_18_0;
                 break L0;
               } else {
@@ -281,7 +274,7 @@ final class vl extends pg {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2;
-            stackOut_20_1 = new StringBuilder().append("vl.B(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("vl.B(").append(106).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;

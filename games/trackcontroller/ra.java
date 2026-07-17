@@ -705,7 +705,6 @@ final class ra extends sl {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
         int stackIn_23_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_25_0 = 0;
@@ -737,9 +736,9 @@ final class ra extends sl {
                     if ((1 & param0) != 1) {
                       break L2;
                     } else {
-                      int incrementValue$2 = var6;
+                      int incrementValue$1 = var6;
                       var6--;
-                      if (incrementValue$2 == 0) {
+                      if (incrementValue$1 == 0) {
                         return 1 << var7;
                       } else {
                         break L2;
@@ -780,28 +779,19 @@ final class ra extends sl {
               }
             }
             L6: {
-              if (param2 == 16384) {
-                break L6;
-              } else {
-                var12 = null;
-                hg discarded$3 = ra.a(-59, (byte[]) null);
-                break L6;
-              }
-            }
-            L7: {
               var8 = (-var7 + 9) * var7 / 2 + (var6 - 1);
               var9 = 1 << var8;
               if ((var9 & ((ra) this).field_B[param3][param1]) == 0) {
                 stackOut_22_0 = 0;
                 stackIn_23_0 = stackOut_22_0;
-                break L7;
+                break L6;
               } else {
                 stackOut_21_0 = 1;
                 stackIn_23_0 = stackOut_21_0;
-                break L7;
+                break L6;
               }
             }
-            L8: {
+            L7: {
               var10 = stackIn_23_0;
               ((ra) this).field_B[param3][param1] = (short)ma.a((int) ((ra) this).field_B[param3][param1], var9);
               stackOut_23_0 = 1;
@@ -812,13 +802,13 @@ final class ra extends sl {
                 stackOut_25_1 = var6;
                 stackIn_26_0 = stackOut_25_0;
                 stackIn_26_1 = stackOut_25_1;
-                break L8;
+                break L7;
               } else {
                 stackOut_24_0 = stackIn_24_0;
                 stackOut_24_1 = var7;
                 stackIn_26_0 = stackOut_24_0;
                 stackIn_26_1 = stackOut_24_1;
-                break L8;
+                break L7;
               }
             }
             return stackIn_26_0 << stackIn_26_1;

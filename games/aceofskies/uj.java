@@ -5,7 +5,7 @@ final class uj {
     static gk field_b;
     static float[][] field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -35,13 +35,15 @@ final class uj {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = kn.a(param0, param2, param5, param4, param3, 29742);
+            int discarded$6 = 29742;
+            int discarded$7 = 0;
+            var8 = kn.a(param0, param2, param5, 0);
             var6 = var8;
             if (var8 != null) {
               var7 = new hj();
               var7.field_a = var8;
-              java.awt.Component discarded$2 = var7.field_a.add((java.awt.Component) (Object) var7);
-              var7.setBounds(0, param1, param2, param5);
+              java.awt.Component discarded$8 = var7.field_a.add((java.awt.Component) (Object) var7);
+              var7.setBounds(0, 0, param2, param5);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();
               stackOut_3_0 = (hj) var7;
@@ -79,7 +81,7 @@ final class uj {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 44 + param2 + 44 + 0 + 44 + 0 + 44 + param5 + 41);
         }
         return stackIn_4_0;
     }

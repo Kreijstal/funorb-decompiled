@@ -85,7 +85,7 @@ final class wab extends rqa {
                 var4 = 0;
                 L2: while (true) {
                   if (var4 >= mma.field_a) {
-                    var4 = param0;
+                    var4 = 0;
                     L3: while (true) {
                       if (mma.field_a <= var4) {
                         var4 = 0;
@@ -277,7 +277,7 @@ final class wab extends rqa {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_50_0 = (RuntimeException) var2;
-            stackOut_50_1 = new StringBuilder().append("wab.B(").append(param0).append(44);
+            stackOut_50_1 = new StringBuilder().append("wab.B(").append(0).append(44);
             stackIn_52_0 = stackOut_50_0;
             stackIn_52_1 = stackOut_50_1;
             stackIn_51_0 = stackOut_50_0;

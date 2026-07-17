@@ -7,8 +7,8 @@ final class il {
     static String field_b;
     static float[] field_d;
 
-    public static void a(int param0) {
-        int var1 = -102 % ((param0 - -9) / 36);
+    public static void a() {
+        int var1 = 0;
         field_b = null;
         field_d = null;
         field_a = null;
@@ -39,9 +39,10 @@ final class il {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var4_int = 115 / ((-67 - param0) / 52);
+            var4_int = -115;
             if (qg.a(param2, param3, (byte) -27, param1)) {
-              stackOut_3_0 = eg.b(false);
+              int discarded$2 = 0;
+              stackOut_3_0 = eg.b();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -55,7 +56,7 @@ final class il {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("il.A(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("il.A(").append(21).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -83,7 +84,7 @@ final class il {
         return stackIn_4_0;
     }
 
-    final static jg a(int param0, int param1, int param2, int param3, byte param4) {
+    final static jg a(int param0, int param1, int param2) {
         jg var5 = null;
         int var6 = 0;
         var6 = HoldTheLine.field_D;
@@ -91,11 +92,11 @@ final class il {
         L0: while (true) {
           if (var5 == null) {
             var5 = new jg();
-            var5.field_n = param0;
-            var5.field_l = param3;
+            var5.field_n = 5;
+            var5.field_l = 10;
             var5.field_i = param2;
             pc.field_e.a((byte) -114, (hl) (Object) var5);
-            gd.a(var5, (byte) 86, param1);
+            gd.a(var5, (byte) 86, 3);
             return var5;
           } else {
             if (var5.field_i == param2) {

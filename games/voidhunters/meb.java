@@ -8,7 +8,7 @@ final class meb implements wwa {
     private int field_e;
     static float[] field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
     }

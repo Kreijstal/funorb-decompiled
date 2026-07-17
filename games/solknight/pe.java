@@ -6,7 +6,7 @@ abstract class pe extends ec {
     int field_o;
     static volatile boolean field_n;
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         if (null == fc.field_l) {
             return false;
         }

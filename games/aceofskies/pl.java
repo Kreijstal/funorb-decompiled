@@ -5,7 +5,7 @@ final class pl {
     private long field_a;
     private int field_b;
 
-    final static void a(int param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -65,15 +65,10 @@ final class pl {
     }
 
     private final int a(int param0, int param1) {
-        if (param1 != -5825) {
-          rl discarded$2 = ((pl) this).b(-43, -86);
-          return 15 & (int)(((pl) this).field_a >> rl.field_e * param0);
-        } else {
-          return 15 & (int)(((pl) this).field_a >> rl.field_e * param0);
-        }
+        return 15 & (int)(((pl) this).field_a >> rl.field_e * param0);
     }
 
-    private final void a(rl param0, int param1) {
+    private final void a(rl param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -128,11 +123,10 @@ final class pl {
         }
     }
 
-    final static void c(int param0, int param1) {
+    final static void c() {
         RuntimeException var2 = null;
         int var3 = 0;
         ga var4 = null;
-        uc var5 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = AceOfSkies.field_G ? 1 : 0;
         try {
@@ -140,22 +134,9 @@ final class pl {
             var4 = (ga) (Object) tq.field_d.d(268435455);
             L1: while (true) {
               if (var4 == null) {
-                if (param1 == 0) {
-                  var5 = (uc) (Object) nh.field_g.d(268435455);
-                  L2: while (true) {
-                    if (var5 == null) {
-                      break L0;
-                    } else {
-                      ag.a(param0, 5, var5);
-                      var5 = (uc) (Object) nh.field_g.b((byte) 103);
-                      continue L2;
-                    }
-                  }
-                } else {
-                  return;
-                }
+                break L0;
               } else {
-                ac.a(0, param0, var4);
+                ac.a(0, 3, var4);
                 var4 = (ga) (Object) tq.field_d.b((byte) 103);
                 continue L1;
               }
@@ -164,7 +145,7 @@ final class pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2, "pl.F(" + param0 + 44 + param1 + 41);
+          throw pn.a((Throwable) (Object) var2, "pl.F(" + 3 + 44 + 0 + 41);
         }
     }
 
@@ -177,38 +158,50 @@ final class pl {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, boolean param15) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         int var17 = 0;
         var17 = AceOfSkies.field_G ? 1 : 0;
         if (param1 >= param8) {
           if (param4 <= param1) {
             if (param8 >= param4) {
               md.a(param1, param0, param12, param13, param14, vp.field_j, param11, param9, param3, param5, param2, param6, param7, param10, param8, param4, (byte) -46);
-              pl.c(70, -13);
+              int discarded$12 = -13;
+              int discarded$13 = 70;
+              pl.c();
               return;
             } else {
               md.a(param1, param0, param6, param7, param3, vp.field_j, param9, param11, param14, param5, param2, param12, param13, param10, param4, param8, (byte) -24);
-              pl.c(70, -13);
+              int discarded$14 = -13;
+              int discarded$15 = 70;
+              pl.c();
               return;
             }
           } else {
             md.a(param4, param9, param6, param10, param3, vp.field_j, param0, param11, param2, param12, param14, param5, param13, param7, param1, param8, (byte) -120);
-            pl.c(70, -13);
+            int discarded$16 = -13;
+            int discarded$17 = 70;
+            pl.c();
             return;
           }
         } else {
           if (param4 > param8) {
             md.a(param4, param9, param5, param13, param2, vp.field_j, param11, param0, param3, param12, param14, param6, param10, param7, param8, param1, (byte) -70);
-            pl.c(70, -13);
+            int discarded$18 = -13;
+            int discarded$19 = 70;
+            pl.c();
             return;
           } else {
             if (param1 < param4) {
               md.a(param8, param11, param5, param7, param2, vp.field_j, param9, param0, param14, param6, param3, param12, param10, param13, param4, param1, (byte) -65);
-              pl.c(70, -13);
+              int discarded$20 = -13;
+              int discarded$21 = 70;
+              pl.c();
               return;
             } else {
               md.a(param8, param11, param12, param10, param14, vp.field_j, param0, param9, param2, param6, param3, param5, param7, param13, param1, param4, (byte) -102);
-              pl.c(70, -13);
+              int discarded$22 = -13;
+              int discarded$23 = 70;
+              pl.c();
               return;
             }
           }
@@ -241,7 +234,8 @@ final class pl {
               if (param0.length <= var2_int) {
                 break L0;
               } else {
-                this.a(param0[var2_int], 15258);
+                int discarded$6 = 15258;
+                this.a(param0[var2_int]);
                 var2_int++;
                 continue L1;
               }
@@ -287,7 +281,7 @@ final class pl {
         return ((pl) this).field_b;
     }
 
-    final static String b(int param0) {
+    final static String b() {
         int var1 = 1;
         return nm.field_c.h(-17883);
     }

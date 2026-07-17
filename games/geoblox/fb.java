@@ -12,12 +12,12 @@ final class fb extends hf {
     int field_f;
     fb field_h;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_m = null;
         field_j = null;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -40,7 +40,7 @@ final class fb extends hf {
           L0: {
             if (!Character.isISOControl(param0)) {
               if (!pf.a(-123, param0)) {
-                var2_int = -88 / ((18 - param1) / 43);
+                var2_int = -88;
                 var6 = hd.field_D;
                 var4 = 0;
                 L1: while (true) {
@@ -91,7 +91,7 @@ final class fb extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "fb.B(" + param0 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) var2, "fb.B(" + param0 + 44 + -47 + 41);
         }
         return stackIn_20_0 != 0;
     }

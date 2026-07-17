@@ -45,7 +45,7 @@ final class mh {
         if (2 < ii.field_Q) {
           L1: {
             ii.field_Q = 2;
-            if (v.field_d > param0) {
+            if (v.field_d > 2) {
               v.field_d = 2;
               break L1;
             } else {
@@ -55,7 +55,7 @@ final class mh {
           return;
         } else {
           L2: {
-            if (v.field_d > param0) {
+            if (v.field_d > 2) {
               v.field_d = 2;
               break L2;
             } else {

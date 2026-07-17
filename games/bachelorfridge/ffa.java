@@ -165,15 +165,10 @@ final class ffa extends kj {
                                                                                     if (38 == var2) {
                                                                                       return (k) (Object) new qca();
                                                                                     } else {
-                                                                                      if (var2 != 39) {
-                                                                                        if (param0 != -16) {
-                                                                                          field_i = null;
-                                                                                          return null;
-                                                                                        } else {
-                                                                                          return null;
-                                                                                        }
-                                                                                      } else {
+                                                                                      if (var2 == 39) {
                                                                                         return (k) (Object) new qb();
+                                                                                      } else {
+                                                                                        return null;
                                                                                       }
                                                                                     }
                                                                                   }
@@ -242,12 +237,12 @@ final class ffa extends kj {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         try {
             re.field_D = param0;
-            ep.a(param1, 8192);
+            ep.a(12, 8192);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ffa.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ffa.C(" + (param0 != null ? "{...}" : "null") + 44 + 12 + 41);
         }
     }
 
@@ -262,7 +257,7 @@ final class ffa extends kj {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_j = null;
         field_h = null;
         field_i = null;

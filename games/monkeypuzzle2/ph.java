@@ -7,7 +7,7 @@ final class ph {
     static String field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;
@@ -66,7 +66,8 @@ final class ph {
         try {
           L0: {
             if (!bg.a(4826, param2)) {
-              if (sg.a(param2, false)) {
+              int discarded$8 = 0;
+              if (sg.a(param2)) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0 != 0;
@@ -82,7 +83,7 @@ final class ph {
                       stackIn_17_0 = stackOut_16_0;
                       return stackIn_17_0 != 0;
                     } else {
-                      var3_int = -121 % ((param1 - 42) / 59);
+                      var3_int = 0;
                       if (!ue.a(param2, param0, (byte) -84)) {
                         if (!di.a(95, param0, param2)) {
                           stackOut_24_0 = 1;
@@ -142,7 +143,7 @@ final class ph {
           }
           L2: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(param1).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(-67).append(44);
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;

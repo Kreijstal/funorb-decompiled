@@ -5,7 +5,7 @@ final class am {
     private tl field_b;
     static int field_a;
 
-    final static rh a(al param0, boolean param1) {
+    final static rh a(al param0) {
         RuntimeException var2 = null;
         rh stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

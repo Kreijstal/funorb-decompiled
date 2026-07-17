@@ -16,25 +16,14 @@ final class wo implements Iterator {
             var3_int = fo.a(param2[param1 + 2], (byte) -128, var3_int);
             param2[param1] = param2[param1] / var3_int;
             param2[1 + param1] = param2[1 + param1] / var3_int;
-            if (param0 != 49) {
-                wo.a(-112, 3, 4, -83, true, -82);
-            }
             param2[2 + param1] = param2[2 + param1] / var3_int;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "wo.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "wo.E(" + 49 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param4 != param2) {
-          L0: {
-            if (param0 >= 110) {
-              break L0;
-            } else {
-              wo.a(-31);
-              break L0;
-            }
-          }
           if (param1 - param4 >= kn.field_e) {
             if (qg.field_z >= param1 - -param4) {
               if (j.field_q <= -param2 + param3) {
@@ -79,32 +68,18 @@ final class wo implements Iterator {
         return ((wo) this).field_a.field_a != ((wo) this).field_c;
     }
 
-    final static void a(int param0) {
-        String var1 = null;
-        if (!ff.field_a) {
-          throw new IllegalStateException();
-        } else {
-          L0: {
-            if (null != gn.field_m) {
-              gn.field_m.b(true);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          var1 = kf.a(17241);
-          un.field_k = new pe(var1, (String) null, true, false, false);
-          dc.field_a.a((gm) (Object) hb.field_x, (byte) 82);
-          hb.field_x.c((gm) (Object) un.field_k, 33);
-          if (param0 <= 22) {
-            field_d = null;
-            hb.field_x.j(0);
-            return;
-          } else {
-            hb.field_x.j(0);
-            return;
-          }
+    final static void a() {
+        if (!(ff.field_a)) {
+            throw new IllegalStateException();
         }
+        if (!(null == gn.field_m)) {
+            gn.field_m.b(true);
+        }
+        String var1 = kf.a(17241);
+        un.field_k = new pe(var1, (String) null, true, false, false);
+        dc.field_a.a((gm) (Object) hb.field_x, (byte) 82);
+        hb.field_x.c((gm) (Object) un.field_k, 33);
+        hb.field_x.j(0);
     }
 
     public final Object next() {
@@ -131,30 +106,26 @@ final class wo implements Iterator {
             int incrementValue$4 = param5;
             param5++;
             di.a(param0, (byte) -118, param1, qd.field_a[incrementValue$4], param3);
-            if (param4) {
-              int incrementValue$5 = param2;
-              param2--;
-              di.a(param0, (byte) -122, param1, qd.field_a[incrementValue$5], param3);
-              var6_int = param5;
-              L1: while (true) {
-                if (param2 < var6_int) {
-                  break L0;
-                } else {
-                  var7 = qd.field_a[var6_int];
-                  var7[param3] = param1;
-                  var7[param0] = param1;
-                  var6_int++;
-                  continue L1;
-                }
+            int incrementValue$5 = param2;
+            param2--;
+            di.a(param0, (byte) -122, param1, qd.field_a[incrementValue$5], param3);
+            var6_int = param5;
+            L1: while (true) {
+              if (param2 < var6_int) {
+                break L0;
+              } else {
+                var7 = qd.field_a[var6_int];
+                var7[param3] = param1;
+                var7[param0] = param1;
+                var6_int++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var6, "wo.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw rb.a((Throwable) (Object) var6, "wo.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 1 + 44 + param5 + 41);
         }
     }
 

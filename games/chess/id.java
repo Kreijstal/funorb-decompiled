@@ -55,14 +55,14 @@ final class id {
 
     final static void a(int param0, int param1, int param2, km[] param3, boolean param4, byte param5, lh param6, int param7, km[] param8, int param9, int param10, int param11) {
         try {
-            int var12_int = 19 % ((-8 - param5) / 42);
-            n.a(param6, param7, param4, param3, param1, param2, param10, param11, param0, param6, param9, 126, param10, param11, param8);
+            int var12_int = 1;
+            n.a(param6, 8, param4, param3, 320, 2, param10, param11, 240, param6, 8, 126, param10, param11, param8);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "id.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + param10 + 44 + param11 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "id.A(" + 240 + 44 + 320 + 44 + 2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + -105 + 44 + (param6 != null ? "{...}" : "null") + 44 + 8 + 44 + (param8 != null ? "{...}" : "null") + 44 + 8 + 44 + param10 + 44 + param11 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

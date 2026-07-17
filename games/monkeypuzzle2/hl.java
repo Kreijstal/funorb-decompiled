@@ -103,58 +103,46 @@ final class hl {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_9_0 = 0;
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
             var3_int = 2147483647;
             var4 = 0;
-            if (param0 == 1) {
-              L1: while (true) {
-                if (17 <= var4) {
-                  stackOut_10_0 = var3_int;
-                  stackIn_11_0 = stackOut_10_0;
-                  break L0;
-                } else {
-                  L2: {
-                    var5 = -param2 + (int)pe.field_d[var4].field_e[0];
-                    var6 = (int)pe.field_d[var4].field_e[1] + -param1;
-                    if (var5 * var5 + var6 * var6 < var3_int) {
-                      var3_int = var6 * var6 + var5 * var5;
-                      break L2;
-                    } else {
-                      var4++;
-                      break L2;
-                    }
+            L1: while (true) {
+              if (17 <= var4) {
+                stackOut_9_0 = var3_int;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                L2: {
+                  var5 = -param2 + (int)pe.field_d[var4].field_e[0];
+                  var6 = (int)pe.field_d[var4].field_e[1] + -param1;
+                  if (var5 * var5 + var6 * var6 < var3_int) {
+                    var3_int = var6 * var6 + var5 * var5;
+                    break L2;
+                  } else {
+                    var4++;
+                    break L2;
                   }
-                  var4++;
-                  continue L1;
                 }
+                var4++;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = -108;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var3, "hl.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw la.a((Throwable) (Object) var3, "hl.B(" + 1 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_11_0;
+        return stackIn_10_0;
     }
 
     final static void a(byte param0, boolean param1) {
         ll.a((byte) 91, false, param1);
-        if (param0 == -60) {
-            return;
-        }
-        int discarded$0 = hl.a(34, -93, -26);
     }
 
     public static void c(int param0) {

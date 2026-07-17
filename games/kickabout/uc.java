@@ -20,7 +20,7 @@ final class uc extends tm {
         super(param0, param1, param2);
     }
 
-    final static int h(byte param0) {
+    final static int h() {
         return -nb.field_k + so.field_e;
     }
 
@@ -128,7 +128,8 @@ final class uc extends tm {
         try {
           L0: {
             if (ia.field_c) {
-              ov.a(param0, 0);
+              int discarded$2 = 0;
+              ov.a(param0);
               return;
             } else {
               stackOut_5_0 = -27054;
@@ -207,7 +208,7 @@ final class uc extends tm {
         }
     }
 
-    final static void a(long param0, int param1, int param2) {
+    final static void a(long param0, int param1) {
         ml var4 = or.field_d;
         var4.b(param1, (byte) -94);
         var4.field_n = var4.field_n + 1;
@@ -217,7 +218,7 @@ final class uc extends tm {
         var4.c(62, var4.field_n - var5);
     }
 
-    final static void g(byte param0) {
+    final static void g() {
         ou.a(0);
         hk.field_G = true;
         po.field_f = true;

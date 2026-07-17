@@ -140,6 +140,10 @@ final class ll {
         field_c = null;
         field_a = null;
         field_e = null;
+        if (param0) {
+            Object var2 = null;
+            boolean discarded$0 = ll.a((String) null, (byte) 37, (String) null);
+        }
     }
 
     static {

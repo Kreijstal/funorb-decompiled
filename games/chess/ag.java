@@ -10,23 +10,20 @@ final class ag {
     static String[] field_d;
     static int[] field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
     }
 
     final static void a(int param0, boolean param1, float param2, String param3) {
         try {
-            if (param0 != 11819) {
-                ag.a(-62);
-            }
             if (null == mk.field_e) {
                 mk.field_e = new ch(jh.field_e, qf.field_g);
                 jh.field_e.b((mf) (Object) mk.field_e, (byte) -105);
             }
-            mk.field_e.a(param3, param2, param1, param0 + -11945);
+            mk.field_e.a(param3, param2, param1, -126);
             wb.b();
             qe.a((byte) -31, true);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ag.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ag.B(" + 11819 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -37,9 +34,6 @@ final class ag {
     public static void a(int param0) {
         field_a = null;
         field_c = null;
-        if (param0 != 9604) {
-            return;
-        }
         field_g = null;
         field_b = null;
         field_d = null;

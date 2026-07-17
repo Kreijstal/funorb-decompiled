@@ -301,9 +301,11 @@ final class ka extends ma {
         int stackOut_17_9 = 0;
         int stackOut_17_10 = 0;
         int stackOut_17_11 = 0;
-        sb.c((byte) 123);
+        int discarded$8 = 123;
+        sb.c();
         if (hh.field_a == tc.field_Tb) {
-          gn.b(-29550);
+          int discarded$9 = -29550;
+          gn.b();
           return;
         } else {
           L0: {

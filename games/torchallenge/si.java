@@ -290,7 +290,8 @@ final class si extends ic {
                 break L2;
               } else {
                 if (!param0.equals((Object) (Object) ji.field_k.a(0))) {
-                  ji.field_k = og.a(param0, true);
+                  int discarded$2 = 1;
+                  ji.field_k = og.a(param0);
                   break L2;
                 } else {
                   break L2;
@@ -337,14 +338,12 @@ final class si extends ic {
     final static void a(boolean param0, ka[] param1, int param2, int param3) {
         try {
             gb.field_f = new h(param1);
-            if (!param0) {
-                si.a(-13, (int[][]) null, 101, (int[][][]) null, -87, 90);
-            }
             i.field_m = param3;
             mg.field_d = param2;
-            rf.m(62);
+            int discarded$0 = 62;
+            rf.m();
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "si.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "si.B(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -377,7 +376,7 @@ final class si extends ic {
         }
     }
 
-    final static void a(int param0, int[][] param1, int param2, int[][][] param3, int param4, int param5) {
+    final static void a(int param0, int[][] param1, int param2, int[][][] param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -423,24 +422,16 @@ final class si extends ic {
             var9 = 0;
             L1: while (true) {
               if (2 <= var9) {
-                L2: {
-                  la.field_f.a(param5 + 104);
-                  if (param5 == 1) {
-                    break L2;
-                  } else {
-                    field_L = null;
-                    break L2;
-                  }
-                }
+                la.field_f.a(105);
                 break L0;
               } else {
                 var10 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var10 > 1) {
                     var9++;
                     continue L1;
                   } else {
-                    L4: {
+                    L3: {
                       sf.field_d[var9][param2][var10].d();
                       qg.a(ae.field_y);
                       var6_int = param3[param2][var10][1] - param3[param2][var10][0];
@@ -450,13 +441,13 @@ final class si extends ic {
                         od.a(nj.field_e[var9][var6_int + -1], var8);
                         qg.b(ae.field_y);
                         la.field_f.a(-38);
-                        break L4;
+                        break L3;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                     var10++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -464,7 +455,7 @@ final class si extends ic {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var6 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var6;
             stackOut_13_1 = new StringBuilder().append("si.DA(").append(param0).append(44);
@@ -479,7 +470,7 @@ final class si extends ic {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L5;
+              break L4;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -487,10 +478,10 @@ final class si extends ic {
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L5;
+              break L4;
             }
           }
-          L6: {
+          L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param2).append(44);
             stackIn_18_0 = stackOut_16_0;
@@ -504,7 +495,7 @@ final class si extends ic {
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L6;
+              break L5;
             } else {
               stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
               stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
@@ -512,10 +503,10 @@ final class si extends ic {
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
               stackIn_19_2 = stackOut_17_2;
-              break L6;
+              break L5;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param4 + 44 + param5 + 41);
+          throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param4 + 44 + 1 + 41);
         }
     }
 
@@ -568,11 +559,11 @@ final class si extends ic {
 
     final static String a(boolean param0, int param1, boolean param2, boolean param3) {
         int var4 = 0;
+        if (!(!param3)) {
+            var4 += 4;
+        }
         if (!(!param2)) {
             var4 += 2;
-        }
-        if (!(!param0)) {
-            var4++;
         }
         if (param1 != 8586514) {
             String discarded$0 = si.a(false, 58, false, false);
@@ -580,7 +571,7 @@ final class si extends ic {
         return ii.field_g[var4];
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_K = null;
         int var1 = 0;
         field_H = null;

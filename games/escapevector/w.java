@@ -17,7 +17,7 @@ final class w extends vg {
         ((w) this).field_cb.field_G = false;
     }
 
-    final static rk[] c(boolean param0) {
+    final static rk[] c() {
         return bf.field_M;
     }
 
@@ -43,7 +43,7 @@ final class w extends vg {
         }
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_fb = null;
         field_hb = null;
         field_ab = null;

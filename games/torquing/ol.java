@@ -26,9 +26,9 @@ final class ol {
                     hp.a("document.cookie=\"" + var5 + "\"", 27476, param2);
                 } catch (Throwable throwable) {
                 }
-                j.a(param1, param2);
+                j.a(true, param2);
             } catch (RuntimeException runtimeException) {
-                throw rb.a((Throwable) (Object) runtimeException, "ol.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw rb.a((Throwable) (Object) runtimeException, "ol.E(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -226,12 +226,12 @@ final class ol {
         return kj.field_d.h((byte) 118);
     }
 
-    final static int b(int param0) {
+    final static int b() {
         int var1 = -85;
         return 1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_f = null;
         field_e = null;

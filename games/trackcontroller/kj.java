@@ -18,23 +18,20 @@ final class kj extends fc {
     static int field_o;
     static int field_k;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_l = null;
         field_s = null;
         field_q = null;
         field_t = null;
     }
 
-    final static ng a(byte param0) {
+    final static ng a() {
         ng var1 = new ng(ab.field_a, qe.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], qk.field_M[0], qe.field_z);
-        if (param0 < 51) {
-            return null;
-        }
         ff.b(60);
         return var1;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         if (-vi.field_c != fb.field_a) {
             if (-vi.field_c + 250 == fb.field_a) {
             }
@@ -140,9 +137,6 @@ final class kj extends fc {
     final static char a(byte param0, byte param1) {
         int var3 = 0;
         int var2 = param1 & 255;
-        if (param0 >= -3) {
-            ng discarded$0 = kj.a((byte) 117);
-        }
         if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }

@@ -25,7 +25,7 @@ final class ci {
     int field_a;
     int field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_g = null;
         field_h = null;
@@ -33,7 +33,7 @@ final class ci {
         field_p = null;
     }
 
-    private final void a(byte[] param0, byte param1) {
+    private final void a(byte[] param0) {
         RuntimeException var3 = null;
         ob var3_ref = null;
         int var4 = 0;
@@ -77,7 +77,8 @@ final class ci {
         try {
           L0: {
             L1: {
-              var17 = new ob(pa.a(param0, 200));
+              int discarded$5 = 200;
+              var17 = new ob(pa.a(param0));
               var3_ref = var17;
               var4 = var17.j(-89);
               if (var4 < 5) {
@@ -140,9 +141,9 @@ final class ci {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$4 = var8 + var17.f(-20976);
-                            var8 = dupTemp$4;
-                            ((ci) this).field_q[var10] = dupTemp$4;
+                            int dupTemp$6 = var8 + var17.f(-20976);
+                            var8 = dupTemp$6;
+                            ((ci) this).field_q[var10] = dupTemp$6;
                             if (((ci) this).field_q[var10] > var9) {
                               var9 = ((ci) this).field_q[var10];
                               break L8;
@@ -161,9 +162,9 @@ final class ci {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$5 = var8 + var17.d(true);
-                            var8 = dupTemp$5;
-                            ((ci) this).field_q[var10] = dupTemp$5;
+                            int dupTemp$7 = var8 + var17.d(true);
+                            var8 = dupTemp$7;
+                            ((ci) this).field_q[var10] = dupTemp$7;
                             if (((ci) this).field_q[var10] <= var9) {
                               break L10;
                             } else {
@@ -268,10 +269,10 @@ final class ci {
                                             continue L20;
                                           } else {
                                             L23: {
-                                              int dupTemp$6 = var8 + var17.f(-20976);
-                                              var8 = dupTemp$6;
-                                              ((ci) this).field_k[var11][var14] = dupTemp$6;
-                                              var15 = dupTemp$6;
+                                              int dupTemp$8 = var8 + var17.f(-20976);
+                                              var8 = dupTemp$8;
+                                              ((ci) this).field_k[var11][var14] = dupTemp$8;
+                                              var15 = dupTemp$8;
                                               if (var13 < var15) {
                                                 var13 = var15;
                                                 break L23;
@@ -321,10 +322,10 @@ final class ci {
                                             continue L25;
                                           } else {
                                             L28: {
-                                              int dupTemp$7 = var8 + var17.d(true);
-                                              var8 = dupTemp$7;
-                                              ((ci) this).field_k[var11][var14] = dupTemp$7;
-                                              var15 = dupTemp$7;
+                                              int dupTemp$9 = var8 + var17.d(true);
+                                              var8 = dupTemp$9;
+                                              ((ci) this).field_k[var11][var14] = dupTemp$9;
+                                              var15 = dupTemp$9;
                                               if (var15 > var13) {
                                                 var13 = var15;
                                                 break L28;
@@ -463,7 +464,8 @@ final class ci {
                     }
                 }
             }
-            this.a(param0, (byte) 86);
+            int discarded$0 = 86;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "ci.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

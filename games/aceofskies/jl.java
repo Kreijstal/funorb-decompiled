@@ -15,7 +15,7 @@ final class jl extends sk {
     private jagdx.IDirect3DVertexShader field_i;
     private jagdx.IDirect3DVertexShader field_p;
 
-    private final void c(byte param0) {
+    private final void c() {
         jagdx.IDirect3DVertexShader var2 = null;
         int var3 = 86;
         jagdx.IDirect3DDevice var4 = ((jl) this).field_j.field_Rc;
@@ -29,7 +29,8 @@ final class jl extends sk {
         if (!(((jl) this).field_f == var2)) {
             ((jl) this).field_f = var2;
             ((jl) this).field_j.a(var2, 5243);
-            this.f(-48);
+            int discarded$0 = -48;
+            this.f();
             ((jl) this).c(404277666);
             ((jl) this).d(18580);
             ((jl) this).b((byte) -25);
@@ -37,7 +38,7 @@ final class jl extends sk {
             ((jl) this).a(10);
         }
         var6.a(0.0f, -1.0f, field_o, 0.0f, (float)var5, 11);
-        int discarded$0 = var4.a(12, field_o);
+        int discarded$1 = var4.a(12, field_o);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -308,7 +309,8 @@ final class jl extends sk {
           ((jl) this).field_b.a(true, 2, true, dl.field_p, false);
           ((jl) this).field_b.a(un.field_i, 0, 0);
           ((jl) this).field_b.a(0, (byte) 45);
-          this.c((byte) -111);
+          int discarded$2 = -111;
+          this.c();
           return;
         } else {
           ((jl) this).field_b.a(1, (byte) 123);
@@ -318,7 +320,8 @@ final class jl extends sk {
           ((jl) this).field_b.a(true, 2, true, dl.field_p, false);
           ((jl) this).field_b.a(un.field_i, 0, 0);
           ((jl) this).field_b.a(0, (byte) 45);
-          this.c((byte) -111);
+          int discarded$3 = -111;
+          this.c();
           return;
         }
     }
@@ -443,7 +446,7 @@ final class jl extends sk {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         int var2 = 0;
         ec var2_ref_ec = null;
         jagdx.IDirect3DDevice var3 = null;

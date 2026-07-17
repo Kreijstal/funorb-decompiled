@@ -299,57 +299,47 @@ final class dh extends aj implements df {
     }
 
     final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        RuntimeException var10 = null;
-        int[] var10_array = null;
+        int[] var10 = null;
+        RuntimeException var10_ref = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        Object var17 = null;
-        int[] var18 = null;
+        int[] var17 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         var16 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
             L1: while (true) {
               param9--;
               if (0 > param9) {
-                L2: {
-                  if (param2 == 99) {
-                    break L2;
-                  } else {
-                    var17 = null;
-                    java.net.URL discarded$1 = dh.a((java.applet.Applet) null, (byte) -5, (java.net.URL) null);
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
-                var18 = param3;
-                var10_array = var18;
+                var17 = param3;
+                var10 = var17;
                 var11 = param5;
                 var12 = param4;
                 var13 = param6;
                 var14 = param8;
-                var15 = (16711422 & var18[var11]) >> 1;
-                var10_array[var11] = (vg.c(var14, 33529506) >> 17) + (vg.c(16711680, var12 >> 1) - -vg.c(65280, var13 >> 9) + var15);
+                var15 = (16711422 & var17[var11]) >> 1;
+                var10[var11] = (vg.c(var14, 33529506) >> 17) + (vg.c(16711680, var12 >> 1) - -vg.c(65280, var13 >> 9) + var15);
                 param4 = param4 + param1;
                 param5++;
                 param8 = param8 + param7;
@@ -360,40 +350,37 @@ final class dh extends aj implements df {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var10 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var10;
-            stackOut_6_1 = new StringBuilder().append("dh.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+          L2: {
+            var10_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var10_ref;
+            stackOut_4_1 = new StringBuilder().append("dh.A(").append(param0).append(44).append(param1).append(44).append(99).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L3;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L3;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw ch.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
         }
     }
 
-    public static void l(int param0) {
-        if (param0 != -1) {
-            return;
-        }
+    public static void l() {
         field_B = null;
     }
 
@@ -538,9 +525,6 @@ final class dh extends aj implements df {
 
     final static int b(int param0, int param1, int param2) {
         int var3 = param2 >>> 31;
-        if (param0 != 15) {
-            dh.l(125);
-        }
         return (param2 + var3) / param1 + -var3;
     }
 

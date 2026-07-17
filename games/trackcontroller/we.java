@@ -8,13 +8,11 @@ abstract class we {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            kc.a(param1, param0 ^ 1263, "");
-            if (param0 != 0) {
-                we.a((byte) 108);
-            }
-            q.a(param1, param0 + -1);
+            kc.a(param1, 1263, "");
+            int discarded$0 = -1;
+            q.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "we.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "we.D(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -111,7 +109,7 @@ abstract class we {
           L0: {
             var8 = ra.field_C;
             var9 = var8;
-            var9.c(param0, 7);
+            var9.c(3, 7);
             var9.field_k = var9.field_k + 1;
             var4 = var9.field_k;
             var9.a(1, (byte) -119);
@@ -142,7 +140,7 @@ abstract class we {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("we.B(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("we.B(").append(3).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -169,12 +167,9 @@ abstract class we {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
-        if (param0 < 15) {
-            field_a = null;
-        }
     }
 
     static {

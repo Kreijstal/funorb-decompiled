@@ -9,13 +9,13 @@ final class oh {
     final static void a(int param0, int param1, m param2, int param3, int param4, int param5) {
         try {
             kd.b((byte) 107);
-            int var6_int = 72 % ((param4 - -78) / 44);
+            int var6_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oh.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oh.B(" + 320 + 44 + 240 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + -128 + 44 + param5 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

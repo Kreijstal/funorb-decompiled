@@ -261,9 +261,9 @@ final class m {
               var7 = param1 - 6;
               var8 = param3 + 3;
               var9 = param0 + -6;
-              var10 = 415;
+              var10 = 3 + param5;
               var11 = var7 * param4 / 12200;
-              fk.field_d.c("<img=1>", param3, 412 - -param0, 1021128, -1);
+              fk.field_d.c("<img=1>", param3, param5 - -param0, 1021128, -1);
               if (param4 <= 12200) {
                 break L2;
               } else {
@@ -274,8 +274,8 @@ final class m {
             }
             L3: {
               pb.a(var8, var10, var11, var9, var6_int);
-              pb.h(param3, 412, param1, param0, 4408131);
-              pb.d(6100 * param1 / 12200 + param3, 412, param0, 4408131);
+              pb.h(param3, param5, param1, param0, 4408131);
+              pb.d(6100 * param1 / 12200 + param3, param5, param0, 4408131);
               var12 = ej.field_C;
               var13 = param3 - -(param1 / 4);
               if (6100 >= param4) {
@@ -299,10 +299,10 @@ final class m {
                     if (oh.field_f >= param1 + param3) {
                       break L5;
                     } else {
-                      if (412 > pi.field_c) {
+                      if (param5 > pi.field_c) {
                         break L5;
                       } else {
-                        if (pi.field_c >= param0 + 412) {
+                        if (pi.field_c >= param0 + param5) {
                           break L5;
                         } else {
                           L6: {
@@ -319,7 +319,7 @@ final class m {
                           var15 = stackIn_21_0;
                           var16 = db.a(bf.field_zb, param2 + -7846, new String[2]);
                           var17 = param3 - -(param1 / 2);
-                          var18 = 394;
+                          var18 = param5 + -18;
                           var19 = 8 + fk.field_d.c(var16);
                           var20 = 13;
                           var17 = var17 - var19 / 2;
@@ -335,13 +335,13 @@ final class m {
                 break L0;
               } else {
                 L7: {
-                  pb.d(var13 + -(var7 / 4), 408, 3, var14);
-                  pb.d(var7 / 4 + var13, 408, 3, var14);
-                  pb.g(var13 - var7 / 4, 408, var7 / 2, var14);
-                  pb.d(var13 - var7 / 4, 412 + (param0 + 1), 2, var14);
-                  pb.d(var13 + var7 / 4, 412 + param0 - -1, 2, var14);
-                  pb.g(var13 - var7 / 4, 3 + (412 - -param0), var7 / 2, var14);
-                  fk.field_d.a(var12, var13, 407, var14, -1);
+                  pb.d(var13 + -(var7 / 4), -4 + param5, 3, var14);
+                  pb.d(var7 / 4 + var13, -4 + param5, 3, var14);
+                  pb.g(var13 - var7 / 4, -4 + param5, var7 / 2, var14);
+                  pb.d(var13 - var7 / 4, param5 + (param0 + 1), 2, var14);
+                  pb.d(var13 + var7 / 4, param5 + param0 - -1, 2, var14);
+                  pb.g(var13 - var7 / 4, 3 + (param5 - -param0), var7 / 2, var14);
+                  fk.field_d.a(var12, var13, -5 + param5, var14, -1);
                   if (param4 <= 6100) {
                     stackOut_12_0 = 4210752;
                     stackIn_13_0 = stackOut_12_0;
@@ -363,7 +363,7 @@ final class m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var6, "m.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 412 + 41);
+          throw ci.a((Throwable) (Object) var6, "m.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -698,7 +698,7 @@ final class m {
         return stackIn_66_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_h = null;
         field_b = null;
@@ -887,7 +887,7 @@ final class m {
         return stackIn_16_0;
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean a(CharSequence param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -909,7 +909,8 @@ final class m {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = ne.a((byte) -118, param0, false);
+            int discarded$2 = 0;
+            stackOut_0_0 = ne.a((byte) -118, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

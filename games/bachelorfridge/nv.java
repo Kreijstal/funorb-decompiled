@@ -74,7 +74,8 @@ final class nv extends sna {
             if (((nv) this).field_Hb[param1] == null) {
               if (((nv) this).field_yb[param1] == -1) {
                 js.a(121);
-                ki.g(-26);
+                int discarded$133 = -26;
+                ki.g();
                 break L0;
               } else {
                 L1: {
@@ -102,8 +103,10 @@ final class nv extends sna {
                 var8 = null;
                 no.a(var5, gk.field_d, 110, (String) null, bd.field_k, param2);
                 ob.a(eaa.field_a, (byte) -47, gk.field_d, var5, bd.field_k);
-                ki.g(-26);
-                vca.c(true);
+                int discarded$134 = -26;
+                ki.g();
+                int discarded$135 = 1;
+                vca.c();
                 break L0;
               }
             } else {
@@ -157,23 +160,15 @@ final class nv extends sna {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         int var4 = 0;
-        int stackIn_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_18_0 = 0;
         L0: {
-          if (param2 < -82) {
-            break L0;
-          } else {
-            field_wb = null;
-            break L0;
-          }
-        }
-        L1: {
           if (jea.field_c == null) {
-            break L1;
+            break L0;
           } else {
             if (13 != gf.field_k) {
-              break L1;
+              break L0;
             } else {
               jea.field_c = null;
               return true;
@@ -182,42 +177,42 @@ final class nv extends sna {
         }
         if (lna.field_q) {
           if (cn.d((byte) 64)) {
-            L2: {
+            L1: {
               if (!vaa.a(param3, 1, param0)) {
-                stackOut_21_0 = 0;
-                stackIn_22_0 = stackOut_21_0;
-                break L2;
+                stackOut_19_0 = 0;
+                stackIn_20_0 = stackOut_19_0;
+                break L1;
               } else {
-                stackOut_20_0 = 1;
-                stackIn_22_0 = stackOut_20_0;
-                break L2;
+                stackOut_18_0 = 1;
+                stackIn_20_0 = stackOut_18_0;
+                break L1;
               }
             }
-            L3: {
-              L4: {
-                var4 = stackIn_22_0;
+            L2: {
+              L3: {
+                var4 = stackIn_20_0;
                 if (gf.field_k == 80) {
-                  break L4;
+                  break L3;
                 } else {
                   if (gf.field_k != 84) {
-                    break L3;
+                    break L2;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
               }
               var4 = 1;
               lna.field_q = false;
-              break L3;
+              break L2;
             }
-            L5: {
+            L4: {
               if (gf.field_k != 13) {
-                break L5;
+                break L4;
               } else {
                 bea.d(-125);
                 var4 = 1;
                 lna.field_q = false;
-                break L5;
+                break L4;
               }
             }
             return var4 != 0;
@@ -225,15 +220,15 @@ final class nv extends sna {
             return false;
           }
         } else {
-          L6: {
+          L5: {
             if (gm.field_k) {
-              break L6;
+              break L5;
             } else {
               if (gf.field_k == 9) {
-                break L6;
+                break L5;
               } else {
                 if (gf.field_k == 10) {
-                  break L6;
+                  break L5;
                 } else {
                   if (11 != gf.field_k) {
                     if (gf.field_k != 80) {
@@ -247,7 +242,7 @@ final class nv extends sna {
                       }
                     }
                   } else {
-                    break L6;
+                    break L5;
                   }
                 }
               }
@@ -664,7 +659,8 @@ final class nv extends sna {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  ki.g(-26);
+                  int discarded$2 = -26;
+                  ki.g();
                   return true;
                 }
               }

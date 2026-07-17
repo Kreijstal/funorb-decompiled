@@ -30,13 +30,13 @@ final class tc extends am {
         char[] stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         int stackIn_17_2 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         char[] stackOut_14_0 = null;
         int stackOut_14_1 = 0;
@@ -54,20 +54,21 @@ final class tc extends am {
         char[] stackOut_9_0 = null;
         int stackOut_9_1 = 0;
         int stackOut_9_2 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
         var7 = Kickabout.field_G;
         try {
           L0: {
             L1: {
               if (param0 == 1) {
                 ((tc) this).field_r = param2.a(-118);
+                tc.a(true, 105, -26, -11);
                 break L1;
               } else {
                 if (param0 == 2) {
@@ -77,6 +78,7 @@ final class tc extends am {
                   var5 = 0;
                   L2: while (true) {
                     if (var4_int <= var5) {
+                      tc.a(true, 105, -26, -11);
                       break L1;
                     } else {
                       L3: {
@@ -119,6 +121,7 @@ final class tc extends am {
                     var5 = 0;
                     L4: while (true) {
                       if (var4_int <= var5) {
+                        tc.a(true, 105, -26, -11);
                         break L1;
                       } else {
                         L5: {
@@ -155,54 +158,48 @@ final class tc extends am {
                     }
                   } else {
                     if (param0 != 4) {
+                      tc.a(true, 105, -26, -11);
                       break L1;
                     } else {
                       ((tc) this).field_t = true;
+                      tc.a(true, 105, -26, -11);
                       break L1;
                     }
                   }
                 }
               }
             }
-            L6: {
-              if (!param1) {
-                break L6;
-              } else {
-                tc.a(true, 105, -26, -11);
-                break L6;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var4;
-            stackOut_22_1 = new StringBuilder().append("tc.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_25_0 = (RuntimeException) var4;
+            stackOut_25_1 = new StringBuilder().append("tc.A(").append(param0).append(44).append(0).append(44);
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L7;
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
+              break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L7;
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
+              break L6;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
         }
     }
 
@@ -296,7 +293,8 @@ final class tc extends am {
                               if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                                 break L4;
                               } else {
-                                ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                                int discarded$10 = -113;
+                                ka.a(dc.field_d, cf.field_Db);
                                 break L4;
                               }
                             }
@@ -327,7 +325,8 @@ final class tc extends am {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                           break L5;
                         } else {
-                          ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                          int discarded$11 = -113;
+                          ka.a(dc.field_d, cf.field_Db);
                           break L5;
                         }
                       }
@@ -366,7 +365,8 @@ final class tc extends am {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                           break L7;
                         } else {
-                          ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                          int discarded$12 = -113;
+                          ka.a(dc.field_d, cf.field_Db);
                           break L7;
                         }
                       }
@@ -394,7 +394,8 @@ final class tc extends am {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                         break L8;
                       } else {
-                        ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                        int discarded$13 = -113;
+                        ka.a(dc.field_d, cf.field_Db);
                         return;
                       }
                     }
@@ -417,7 +418,8 @@ final class tc extends am {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                         break L9;
                       } else {
-                        ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                        int discarded$14 = -113;
+                        ka.a(dc.field_d, cf.field_Db);
                         return;
                       }
                     }
@@ -442,7 +444,8 @@ final class tc extends am {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                         break L10;
                       } else {
-                        ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                        int discarded$15 = -113;
+                        ka.a(dc.field_d, cf.field_Db);
                         return;
                       }
                     }
@@ -464,7 +467,8 @@ final class tc extends am {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                         break L11;
                       } else {
-                        ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                        int discarded$16 = -113;
+                        ka.a(dc.field_d, cf.field_Db);
                         return;
                       }
                     }
@@ -495,7 +499,8 @@ final class tc extends am {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                           break L13;
                         } else {
-                          ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                          int discarded$17 = -113;
+                          ka.a(dc.field_d, cf.field_Db);
                           break L13;
                         }
                       }
@@ -520,7 +525,8 @@ final class tc extends am {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                           break L14;
                         } else {
-                          ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                          int discarded$18 = -113;
+                          ka.a(dc.field_d, cf.field_Db);
                           break L14;
                         }
                       }
@@ -542,7 +548,8 @@ final class tc extends am {
                   if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                     break L15;
                   } else {
-                    ka.a(dc.field_d, cf.field_Db, (byte) -113);
+                    int discarded$19 = -113;
+                    ka.a(dc.field_d, cf.field_Db);
                     return;
                   }
                 }

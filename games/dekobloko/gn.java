@@ -11,7 +11,7 @@ final class gn {
     static String[][] field_c;
     static volatile long field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_d = null;
@@ -67,8 +67,6 @@ final class gn {
                     break L1;
                   } else {
                     var3 = (Object) (Object) rb.field_l;
-                    var4 = var3;
-                    var4 = var3;
                     break L1;
                   }
                 }
@@ -86,7 +84,8 @@ final class gn {
                   }
                 }
               }
-              stackOut_10_0 = pl.a((String) var4, (String) var3, false, param0, -1);
+              int discarded$2 = -1;
+              stackOut_10_0 = pl.a((String) var4, (String) var3, false, param0);
               stackIn_11_0 = stackOut_10_0;
               break L0;
             } else {
@@ -153,12 +152,10 @@ final class gn {
         return stackIn_11_0;
     }
 
-    final static void b(int param0) {
-        if (param0 != -29550) {
-            return;
-        }
+    final static void b() {
         ef.f((byte) 53);
-        uf.k(-4840);
+        int discarded$0 = -4840;
+        uf.k();
     }
 
     static {

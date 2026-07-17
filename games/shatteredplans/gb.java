@@ -11,7 +11,7 @@ final class gb extends oh {
     int field_h;
     static int field_i;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_n = null;
         field_m = null;
         field_o = null;
@@ -73,7 +73,8 @@ final class gb extends oh {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            if (gq.a(param1, true, -4)) {
+            int discarded$6 = -4;
+            if (gq.a(param1, true)) {
               var2_int = 0;
               var3 = -2 / ((param0 - -7) / 59);
               L1: while (true) {

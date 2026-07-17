@@ -170,7 +170,7 @@ final class iu extends ao {
         return stackIn_3_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_f = null;
         field_e = null;

@@ -265,7 +265,7 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static bi a(boolean param0) {
+    final static bi a() {
         int[] var20 = null;
         int[] var16 = null;
         int[] var13 = null;

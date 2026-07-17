@@ -32,7 +32,7 @@ final class oa {
                     var3 = param0.getParameter("cookieprefix");
                     var4 = param0.getParameter("cookiehost");
                     var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
-                    if (!(param1 != ~param2.length())) {
+                    if (!(param2.length() != 0)) {
                         var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     nc.a((byte) -51, param0, "document.cookie=\"" + var5 + "\"");
@@ -40,7 +40,7 @@ final class oa {
                 }
                 me.a((byte) 121, param0);
             } catch (RuntimeException runtimeException) {
-                throw dh.a((Throwable) (Object) runtimeException, "oa.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw dh.a((Throwable) (Object) runtimeException, "oa.A(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -49,7 +49,7 @@ final class oa {
         }
     }
 
-    final static String a(String param0, int param1) {
+    final static String a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -124,7 +124,7 @@ final class oa {
         return stackIn_5_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_e = null;
         field_b = null;

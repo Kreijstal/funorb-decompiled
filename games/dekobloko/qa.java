@@ -11,7 +11,7 @@ final class qa extends wk {
     static volatile int field_t;
     static float[] field_r;
 
-    final static w d(int param0) {
+    final static w d() {
         return tb.field_b.field_Ob;
     }
 

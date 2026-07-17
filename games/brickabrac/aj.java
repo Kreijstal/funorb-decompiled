@@ -6,31 +6,24 @@ final class aj {
     static String field_b;
     static jp[][] field_a;
 
-    public static void b(int param0) {
-        if (param0 != -789103103) {
-          int discarded$2 = aj.a(57, -37, 115);
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          return;
-        }
+    public static void b() {
+        field_c = null;
+        field_a = null;
+        field_b = null;
     }
 
     final static mf a(int param0, boolean param1) {
         if (!param1) {
           field_b = null;
-          return go.a(false, param0, false, 1, true, true);
+          int discarded$4 = 1;
+          return go.a(false, param0, false, 1, true);
         } else {
-          return go.a(false, param0, false, 1, true, true);
+          int discarded$5 = 1;
+          return go.a(false, param0, false, 1, true);
         }
     }
 
-    final static mh a(int param0) {
+    final static mh a() {
         return rl.field_e.field_Rb;
     }
 
@@ -50,7 +43,7 @@ final class aj {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            var3_int = param0;
+            var3_int = 0;
             var4 = mi.field_d;
             L1: while (true) {
               if (kn.field_E.length <= var3_int) {
@@ -87,7 +80,7 @@ final class aj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var3, "aj.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw qb.a((Throwable) (Object) var3, "aj.A(" + 0 + 44 + param1 + 44 + param2 + 41);
         }
         return stackIn_15_0;
     }

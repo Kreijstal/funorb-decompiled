@@ -317,7 +317,7 @@ final class vj {
         return var2;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
         field_a = null;
         field_d = null;

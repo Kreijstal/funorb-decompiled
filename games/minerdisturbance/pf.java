@@ -12,7 +12,7 @@ final class pf {
     private String field_b;
     static int field_i;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_e = null;
         field_f = null;
@@ -95,51 +95,47 @@ final class pf {
             var5_int = 0;
             var6 = -1;
             var7 = 1;
-            if (param3 == -19453) {
-              L1: while (true) {
-                if (var7 >= param1.length()) {
-                  break L0;
-                } else {
-                  L2: {
-                    var8 = param1.charAt(var7);
-                    if (var8 == 60) {
-                      var6 = param4.field_d[0] + (var5_int >> 8) - -param0.a(param1.substring(0, var7));
-                      break L2;
-                    } else {
-                      break L2;
-                    }
+            L1: while (true) {
+              if (var7 >= param1.length()) {
+                break L0;
+              } else {
+                L2: {
+                  var8 = param1.charAt(var7);
+                  if (var8 == 60) {
+                    var6 = param4.field_d[0] + (var5_int >> 8) - -param0.a(param1.substring(0, var7));
+                    break L2;
+                  } else {
+                    break L2;
                   }
-                  L3: {
-                    if (var6 != -1) {
-                      param4.field_d[var7] = var6;
-                      break L3;
-                    } else {
-                      L4: {
-                        if (32 == var8) {
-                          var5_int = var5_int + param2;
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      param4.field_d[var7] = (var5_int >> 8) + param4.field_d[0] - (-param0.a(param1.substring(0, 1 + var7)) - -param0.a((char) var8));
-                      break L3;
-                    }
-                  }
-                  L5: {
-                    if (var8 == 62) {
-                      var6 = -1;
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  var7++;
-                  continue L1;
                 }
+                L3: {
+                  if (var6 != -1) {
+                    param4.field_d[var7] = var6;
+                    break L3;
+                  } else {
+                    L4: {
+                      if (32 == var8) {
+                        var5_int = var5_int + param2;
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    param4.field_d[var7] = (var5_int >> 8) + param4.field_d[0] - (-param0.a(param1.substring(0, 1 + var7)) - -param0.a((char) var8));
+                    break L3;
+                  }
+                }
+                L5: {
+                  if (var8 == 62) {
+                    var6 = -1;
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                var7++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,7 +193,7 @@ final class pf {
           }
           L8: {
             stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(44).append(param2).append(44).append(-19453).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -225,7 +221,7 @@ final class pf {
     }
 
     final static void a(int param0, boolean param1) {
-        mb.field_b.a(0, param0, -114);
+        mb.field_b.a(0, 0, -114);
     }
 
     pf(String param0, boolean param1) {

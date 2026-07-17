@@ -231,19 +231,20 @@ final class jsa extends qr {
         }
     }
 
-    final static iu[] b(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 != 2) {
-          field_z = null;
-          return hi.a(param0, 1, param3, 1, 0, 1, 3, true, param2);
-        } else {
-          return hi.a(param0, 1, param3, 1, 0, 1, 3, true, param2);
-        }
+    final static iu[] b() {
+        int discarded$0 = 0;
+        int discarded$1 = 1;
+        int discarded$2 = 3;
+        int discarded$3 = 1;
+        int discarded$4 = 0;
+        int discarded$5 = 1;
+        int discarded$6 = 0;
+        int discarded$7 = 1;
+        int discarded$8 = 65793;
+        return hi.a();
     }
 
     final static void a(boolean param0, int param1) {
-        if (param0) {
-            return;
-        }
         bf.field_a = param1;
     }
 

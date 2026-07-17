@@ -157,7 +157,7 @@ final class al {
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            var3_int = param0;
+            var3_int = 0;
             var4 = param2.length();
             var5 = 0;
             L1: while (true) {
@@ -184,7 +184,7 @@ final class al {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("al.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_9_1 = new StringBuilder().append("al.D(").append(0).append(44).append(param1).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -283,7 +283,7 @@ final class al {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         System.out.println("Error: " + qk.a(param0, "%0a", "\n", -127));
     }
 
@@ -693,7 +693,7 @@ final class al {
         return stackIn_6_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_m = null;
         field_d = null;

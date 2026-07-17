@@ -22,8 +22,8 @@ final class ad extends bw {
         int var3 = BachelorFridge.field_y;
         gca var2 = (gca) (Object) ((ad) this).field_n.b((byte) 90);
         if (param0 != -121) {
-            Object var4 = null;
-            nv discarded$0 = ad.a((sna) null, (jc) null, (sna) null, (sna) null, false);
+            int discarded$0 = 0;
+            nv discarded$1 = ad.a((sna) null, (jc) null, (sna) null, (sna) null);
         }
         while (var2 != null) {
             if (!(!(var2 instanceof c))) {
@@ -84,7 +84,7 @@ final class ad extends bw {
         return false;
     }
 
-    final static nv a(sna param0, jc param1, sna param2, sna param3, boolean param4) {
+    final static nv a(sna param0, jc param1, sna param2, sna param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -232,7 +232,8 @@ final class ad extends bw {
                       var13_ref_jc = bga.field_l.a((byte) 105, param1.field_u[var12]);
                       var8[var12] = var13_ref_jc.field_s;
                       var9[var12] = param1.field_p[var12];
-                      var11[var12] = ad.a(param0, var13_ref_jc, param2, param3, false);
+                      int discarded$1 = 0;
+                      var11[var12] = ad.a(param0, var13_ref_jc, param2, param3);
                       var12++;
                       continue L4;
                     }

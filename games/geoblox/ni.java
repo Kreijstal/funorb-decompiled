@@ -18,21 +18,19 @@ final class ni extends ee implements pl {
             return;
         }
         hk[] var7 = new hk[param1];
-        hk[] var3 = var7;
+        hk[] var8 = var7;
+        hk[] var3 = var8;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < ((ni) this).field_D; var5++) {
             var7[var5] = ((ni) this).field_F[var5];
             var4[var5] = ((ni) this).field_H[var5];
         }
-        ((ni) this).field_F = var3;
+        ((ni) this).field_F = var8;
         ((ni) this).field_H = var4;
         ((ni) this).field_D = param1;
-        if (param0 != -11272) {
-            ((ni) this).field_G = null;
-        }
     }
 
-    final static void a(rh param0, int param1) {
+    final static void a(rh param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -65,7 +63,8 @@ final class ni extends ee implements pl {
             var10 = var8;
             var3 = var10.c((byte) 34);
             var10.k(8);
-            l.field_i = jc.a(var10, true);
+            int discarded$2 = 1;
+            l.field_i = jc.a(var10);
             bm.field_l = new nf[var3];
             pi.field_R = new int[var3][];
             var4 = 0;
@@ -89,7 +88,8 @@ final class ni extends ee implements pl {
                   }
                 }
               } else {
-                bm.field_l[var4] = uh.a(var8, (byte) 113);
+                int discarded$3 = 113;
+                bm.field_l[var4] = uh.a(var8);
                 var4++;
                 continue L1;
               }
@@ -396,7 +396,7 @@ final class ni extends ee implements pl {
         }
     }
 
-    final static nc a(byte[] param0, int param1) {
+    final static nc a(byte[] param0) {
         nc var2 = null;
         RuntimeException var2_ref = null;
         nc stackIn_4_0 = null;

@@ -15,18 +15,13 @@ final class hb {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11, boolean param12, int param13) {
+    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11, boolean param12) {
         ad.field_I = null;
         oh.e((byte) -128);
-        param11 = wq.a(param11, param9, param6, param2, param7, 0, (byte) -83);
-        qh.a(param11, param4, param1, param3, param5, param9, param0, -1, param12, param10);
-        la.a(param3, param4, -1);
-        if (!param8) {
-            field_b = null;
-        } else {
-            dl.a(0, param4, 0, param11);
-            return;
-        }
+        param11 = wq.a(param11, 11, 14, 15, 13, 0, (byte) -83);
+        qh.a(param11, param4, 65524, param3, 65528, 11, true, -1, param12, param10);
+        int discarded$0 = -1;
+        la.a(param3, param4);
         dl.a(0, param4, 0, param11);
     }
 

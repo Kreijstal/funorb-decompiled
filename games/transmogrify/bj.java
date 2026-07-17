@@ -42,32 +42,29 @@ class bj extends kb {
     private boolean field_F;
     private kg field_Y;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_X = null;
-        if (param0 >= -42) {
-            field_P = null;
-        }
         field_P = null;
     }
 
     private final void a(int param0, bj param1) {
         RuntimeException var3 = null;
+        RuntimeException stackIn_100_0 = null;
+        StringBuilder stackIn_100_1 = null;
+        RuntimeException stackIn_101_0 = null;
+        StringBuilder stackIn_101_1 = null;
         RuntimeException stackIn_102_0 = null;
         StringBuilder stackIn_102_1 = null;
-        RuntimeException stackIn_103_0 = null;
-        StringBuilder stackIn_103_1 = null;
-        RuntimeException stackIn_104_0 = null;
-        StringBuilder stackIn_104_1 = null;
-        String stackIn_104_2 = null;
+        String stackIn_102_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_99_0 = null;
+        StringBuilder stackOut_99_1 = null;
         RuntimeException stackOut_101_0 = null;
         StringBuilder stackOut_101_1 = null;
-        RuntimeException stackOut_103_0 = null;
-        StringBuilder stackOut_103_1 = null;
-        String stackOut_103_2 = null;
-        RuntimeException stackOut_102_0 = null;
-        StringBuilder stackOut_102_1 = null;
-        String stackOut_102_2 = null;
+        String stackOut_101_2 = null;
+        RuntimeException stackOut_100_0 = null;
+        StringBuilder stackOut_100_1 = null;
+        String stackOut_100_2 = null;
         try {
           L0: {
             L1: {
@@ -370,45 +367,37 @@ class bj extends kb {
                 break L1;
               }
             }
-            L38: {
-              if (param0 == -10583) {
-                break L38;
-              } else {
-                bj.c((byte) 114);
-                break L38;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L39: {
+          L38: {
             var3 = decompiledCaughtException;
-            stackOut_101_0 = (RuntimeException) var3;
-            stackOut_101_1 = new StringBuilder().append("bj.G(").append(param0).append(44);
-            stackIn_103_0 = stackOut_101_0;
-            stackIn_103_1 = stackOut_101_1;
-            stackIn_102_0 = stackOut_101_0;
-            stackIn_102_1 = stackOut_101_1;
+            stackOut_99_0 = (RuntimeException) var3;
+            stackOut_99_1 = new StringBuilder().append("bj.G(").append(-10583).append(44);
+            stackIn_101_0 = stackOut_99_0;
+            stackIn_101_1 = stackOut_99_1;
+            stackIn_100_0 = stackOut_99_0;
+            stackIn_100_1 = stackOut_99_1;
             if (param1 == null) {
-              stackOut_103_0 = (RuntimeException) (Object) stackIn_103_0;
-              stackOut_103_1 = (StringBuilder) (Object) stackIn_103_1;
-              stackOut_103_2 = "null";
-              stackIn_104_0 = stackOut_103_0;
-              stackIn_104_1 = stackOut_103_1;
-              stackIn_104_2 = stackOut_103_2;
-              break L39;
+              stackOut_101_0 = (RuntimeException) (Object) stackIn_101_0;
+              stackOut_101_1 = (StringBuilder) (Object) stackIn_101_1;
+              stackOut_101_2 = "null";
+              stackIn_102_0 = stackOut_101_0;
+              stackIn_102_1 = stackOut_101_1;
+              stackIn_102_2 = stackOut_101_2;
+              break L38;
             } else {
-              stackOut_102_0 = (RuntimeException) (Object) stackIn_102_0;
-              stackOut_102_1 = (StringBuilder) (Object) stackIn_102_1;
-              stackOut_102_2 = "{...}";
-              stackIn_104_0 = stackOut_102_0;
-              stackIn_104_1 = stackOut_102_1;
-              stackIn_104_2 = stackOut_102_2;
-              break L39;
+              stackOut_100_0 = (RuntimeException) (Object) stackIn_100_0;
+              stackOut_100_1 = (StringBuilder) (Object) stackIn_100_1;
+              stackOut_100_2 = "{...}";
+              stackIn_102_0 = stackOut_100_0;
+              stackIn_102_1 = stackOut_100_1;
+              stackIn_102_2 = stackOut_100_2;
+              break L38;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_104_0, stackIn_104_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_102_0, stackIn_102_2 + 41);
         }
     }
 
@@ -421,13 +410,14 @@ class bj extends kb {
             if (param3 >= -100) {
                 field_X = null;
             }
-            gl.a((byte) -126, param1, param0, param4.field_g, param2, param4.field_h, 0);
+            int discarded$0 = 0;
+            gl.a((byte) -126, param1, param0, param4.field_g, param2, param4.field_h);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "bj.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         if (null != wg.field_d) {
             wg.field_d.r(77);
         }

@@ -8,7 +8,8 @@ final class nm extends vo implements sca {
     static String field_j;
 
     final static void a(iu param0, byte param1) {
-        gb.a(-29711);
+        int discarded$2 = -29711;
+        gb.a();
         if (param1 < 88) {
             return;
         }
@@ -56,7 +57,7 @@ final class nm extends vo implements sca {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_l = null;
         field_j = null;

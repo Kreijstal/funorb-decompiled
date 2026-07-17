@@ -170,14 +170,15 @@ final class hca {
         int var2 = 74 % ((82 - param0) / 32);
     }
 
-    final static ee[] b(int param0) {
+    final static ee[] b() {
         int var2 = 0;
         int var3 = BachelorFridge.field_y;
         ee[] var1 = new ee[ok.field_vb];
         for (var2 = 0; ok.field_vb > var2; var2++) {
             var1[var2] = new ee(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], baa.field_P[var2], hk.field_f);
         }
-        al.b(-18073);
+        int discarded$0 = -18073;
+        al.b();
         return var1;
     }
 

@@ -8,87 +8,16 @@ abstract class tb {
     abstract long b(int param0);
 
     final static String a(String param0, String param1, boolean param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
-        String stackIn_5_0 = null;
-        String stackIn_7_0 = null;
-        String stackIn_11_0 = null;
-        String stackIn_13_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_6_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_12_0 = null;
-        var5 = Lexicominos.field_L ? 1 : 0;
-        if (param2) {
-          var4 = param1.indexOf(param0);
-          L0: while (true) {
-            L1: {
-              L2: {
-                if (var4 == -1) {
-                  break L2;
-                } else {
-                  param1 = param1.substring(0, var4) + param3 + param1.substring(param0.length() + var4);
-                  stackOut_4_0 = (String) param1;
-                  stackIn_7_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
-                    var4 = ((String) (Object) stackIn_5_0).indexOf(param0, param3.length() + var4);
-                    if (var5 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
-              stackOut_6_0 = (String) param1;
-              stackIn_7_0 = stackOut_6_0;
-              break L1;
-            }
-            return stackIn_7_0;
-          }
-        } else {
-          field_a = null;
-          var4 = param1.indexOf(param0);
-          L3: while (true) {
-            L4: {
-              L5: {
-                if (var4 == -1) {
-                  break L5;
-                } else {
-                  param1 = param1.substring(0, var4) + param3 + param1.substring(param0.length() + var4);
-                  stackOut_10_0 = (String) param1;
-                  stackIn_13_0 = stackOut_10_0;
-                  stackIn_11_0 = stackOut_10_0;
-                  if (var5 != 0) {
-                    break L4;
-                  } else {
-                    var4 = ((String) (Object) stackIn_11_0).indexOf(param0, param3.length() + var4);
-                    if (var5 == 0) {
-                      continue L3;
-                    } else {
-                      break L5;
-                    }
-                  }
-                }
-              }
-              stackOut_12_0 = (String) param1;
-              stackIn_13_0 = stackOut_12_0;
-              break L4;
-            }
-            return stackIn_13_0;
-          }
+        int var5 = Lexicominos.field_L ? 1 : 0;
+        int var4 = param1.indexOf(param0);
+        while (var4 != -1) {
+            param1 = param1.substring(0, var4) + param3 + param1.substring(param0.length() + var4);
+            var4 = param1.indexOf(param0, param3.length() + var4);
         }
+        return param1;
     }
 
     public static void a(int param0) {
-        if (param0 != 255) {
-            String discarded$0 = tb.a((String) null, (String) null, true, (String) null);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
@@ -105,28 +34,26 @@ abstract class tb {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
         Object stackIn_5_0 = null;
-        pk stackIn_29_0 = null;
+        pk stackIn_27_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pk stackOut_28_0 = null;
+        pk stackOut_26_0 = null;
         Object stackOut_4_0 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
@@ -185,60 +112,35 @@ abstract class tb {
                     var6 = 0;
                     var7 = 0;
                     L5: while (true) {
-                      L6: {
-                        L7: {
-                          L8: {
-                            if (var5.field_J.length <= var7) {
-                              break L8;
-                            } else {
-                              var10 = ~var6;
-                              var9 = ~(var5.field_J[var7] & 255);
-                              if (var8 != 0) {
-                                if (var9 != var10) {
-                                  break L6;
-                                } else {
-                                  break L7;
-                                }
-                              } else {
-                                L9: {
-                                  if (var9 >= var10) {
-                                    break L9;
-                                  } else {
-                                    var6 = 255 & var5.field_J[var7];
-                                    break L9;
-                                  }
-                                }
-                                var7++;
-                                if (var8 == 0) {
-                                  continue L5;
-                                } else {
-                                  break L8;
-                                }
-                              }
-                            }
-                          }
-                          if (0 != var6) {
-                            break L6;
-                          } else {
-                            break L7;
-                          }
-                        }
-                        var5.field_J = null;
-                        if (var8 == 0) {
+                      if (var5.field_J.length <= var7) {
+                        if (0 != var6) {
+                          var5.field_N = (byte)(1 + var6);
                           break L4;
                         } else {
-                          break L6;
+                          var5.field_J = null;
+                          break L4;
                         }
+                      } else {
+                        L6: {
+                          if ((var5.field_J[var7] & 255) <= var6) {
+                            var7++;
+                            break L6;
+                          } else {
+                            var6 = 255 & var5.field_J[var7];
+                            var7++;
+                            break L6;
+                          }
+                        }
+                        var7++;
+                        continue L5;
                       }
-                      var5.field_N = (byte)(1 + var6);
-                      break L4;
                     }
                   } else {
                     break L4;
                   }
                 }
-                stackOut_28_0 = (pk) var5;
-                stackIn_29_0 = stackOut_28_0;
+                stackOut_26_0 = (pk) var5;
+                stackIn_27_0 = stackOut_26_0;
                 break L0;
               } else {
                 stackOut_4_0 = null;
@@ -251,35 +153,35 @@ abstract class tb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L7: {
             var2 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var2;
-            stackOut_30_1 = new StringBuilder().append("tb.I(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackOut_28_0 = (RuntimeException) var2;
+            stackOut_28_1 = new StringBuilder().append("tb.I(");
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
-              break L10;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L7;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
-              break L10;
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L7;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param1 + 41);
         }
-        return stackIn_29_0;
+        return stackIn_27_0;
     }
 
     final int a(byte param0, long param1) {

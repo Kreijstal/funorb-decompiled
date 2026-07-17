@@ -38,9 +38,9 @@ final class qg {
                 param2 = field_l - param1;
             }
             var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
+            var6 = 85 * param4;
+            var7 = 85 * param4;
+            var8 = 85 * param4;
             var12 = param0 + param1 * field_g;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_i[var12] >> 16 & 255) * var5;
@@ -408,8 +408,8 @@ final class qg {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        qg.a(field_i, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
-        qg.a(field_i, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
+        qg.a(field_i, 0, 0 * field_g, param0, 0, param4, field_g - param4, param5);
+        qg.a(field_i, 0, 0 * field_g, param1, 0, param5, field_g - param4, 0, param4);
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
@@ -456,7 +456,7 @@ final class qg {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -465,7 +465,7 @@ final class qg {
           }
         }
         L1: {
-          var10 = field_g - param4 - param5 - param3;
+          var10 = field_g - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -475,7 +475,7 @@ final class qg {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_g >= var12) {
             break L2;
           } else {
@@ -495,7 +495,7 @@ final class qg {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -652,7 +652,7 @@ final class qg {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_c) {
+                      if (param5 + var19 + param3 >= field_c) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -712,9 +712,9 @@ final class qg {
                 param2 = field_c - param0;
             }
             var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
+            var6 = 85 * param4;
+            var7 = 85 * param4;
+            var8 = 85 * param4;
             var12 = param0 + param1 * field_g;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_i[var12] >> 16 & 255) * var5;
@@ -957,7 +957,7 @@ final class qg {
           he.a(var34, 0, param8);
           he.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -966,8 +966,8 @@ final class qg {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_g;
-          var15 = param4 + param3;
+          var14 = var13 * field_g;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_f) {
             break L3;
@@ -987,7 +987,7 @@ final class qg {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -996,7 +996,7 @@ final class qg {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_g;
+                  var19 = (0 - param3) * field_g;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1007,7 +1007,7 @@ final class qg {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_f - param4 - param5 - param3;
+                      var18 = field_f - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1249,7 +1249,7 @@ final class qg {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_l) {
+                      if (var13 + param5 + param3 >= field_l) {
                         var14 = var14 + field_g;
                         break L26;
                       } else {
@@ -1778,20 +1778,20 @@ final class qg {
           L1: {
             var6 = param0 + param4;
             var7 = param1 + param4;
-            var8 = param0 + param2 - param4 - 1;
-            var9 = param1 + param3 - param4 - 1;
+            var8 = param0 + 36 - param4 - 1;
+            var9 = param1 + 36 - param4 - 1;
             if (field_c <= field_a) {
               break L1;
             } else {
               if (field_l > field_k) {
-                if (param0 + param2 <= field_a) {
+                if (param0 + 36 <= field_a) {
                   break L1;
                 } else {
                   L2: {
                     if (param0 >= field_c) {
                       break L2;
                     } else {
-                      if (param1 + param3 < field_k) {
+                      if (param1 + 36 < field_k) {
                         break L2;
                       } else {
                         if (param1 < field_l) {
@@ -1812,13 +1812,13 @@ final class qg {
                               if (param0 < field_a) {
                                 break L4;
                               } else {
-                                if (param0 + param2 >= field_c) {
+                                if (param0 + 36 >= field_c) {
                                   break L4;
                                 } else {
                                   if (param1 < field_k) {
                                     break L4;
                                   } else {
-                                    if (param1 + param3 < field_l) {
+                                    if (param1 + 36 < field_l) {
                                       var22 = var12;
                                       L5: while (true) {
                                         if (var22 > var14) {
@@ -1897,10 +1897,10 @@ final class qg {
                                 }
                               }
                             }
-                            qg.c(param0, param1 + var18, param3 - var18 - var18, param5);
-                            qg.c(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-                            qg.b(param0 + var18, param1, param2 - var18 - var18, param5);
-                            qg.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+                            qg.c(param0, param1 + var18, 36 - var18 - var18, param5);
+                            qg.c(param0 + 35, param1 + var18, 36 - var18 - var18, param5);
+                            qg.b(param0 + var18, param1, 36 - var18 - var18, param5);
+                            qg.b(param0 + var18, param1 + 35, 36 - var18 - var18, param5);
                             L11: while (true) {
                               L12: {
                                 int incrementValue$3 = var19;
@@ -2070,7 +2070,7 @@ final class qg {
           }
           return;
         } else {
-          qg.b(param0, param1, param2, param3, param5);
+          qg.b(param0, param1, 36, 36, param5);
           return;
         }
     }

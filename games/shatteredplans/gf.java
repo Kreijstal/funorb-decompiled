@@ -76,8 +76,8 @@ final class gf {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        gf.a(field_h, 0, param2 + param3 * field_b, param0, param2, param4, field_b - param4, param5);
-        gf.a(field_h, 0, param2 + param3 * field_b, param1, param3, param5, field_b - param4, param2, param4);
+        gf.a(field_h, 0, 0 * field_b, param0, 0, param4, field_b - param4, param5);
+        gf.a(field_h, 0, 0 * field_b, param1, 0, param5, field_b - param4, 0, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -1071,7 +1071,7 @@ final class gf {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var13 = (0 * var11 + (param5 & 16711935) * var12 & -16711936) + (0 * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -1363,7 +1363,7 @@ final class gf {
           ps.a(var34, 0, param8);
           ps.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -1372,8 +1372,8 @@ final class gf {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_b;
-          var15 = param4 + param3;
+          var14 = var13 * field_b;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_k) {
             break L3;
@@ -1393,7 +1393,7 @@ final class gf {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1402,7 +1402,7 @@ final class gf {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_b;
+                  var19 = (0 - param3) * field_b;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1413,7 +1413,7 @@ final class gf {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_k - param4 - param5 - param3;
+                      var18 = field_k - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1655,7 +1655,7 @@ final class gf {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_f) {
+                      if (var13 + param5 + param3 >= field_f) {
                         var14 = var14 + field_b;
                         break L26;
                       } else {
@@ -2305,7 +2305,7 @@ final class gf {
                         var22 = var20 + var14 * field_b;
                         var23 = 65536 - var7 >> 8;
                         var24 = var7 >> 8;
-                        var25 = ((param5 & 16711935) * var23 + (param6 & 16711935) * var24 & -16711936) + ((param5 & 65280) * var23 + (param6 & 65280) * var24 & 16711680) >>> 8;
+                        var25 = (0 * var23 + (param6 & 16711935) * var24 & -16711936) + (0 * var23 + (param6 & 65280) * var24 & 16711680) >>> 8;
                         var26 = var20;
                         L14: while (true) {
                           if (var26 > var21) {
@@ -2330,7 +2330,7 @@ final class gf {
                 } else {
                   var25 = 65536 - var7 >> 8;
                   var26 = var7 >> 8;
-                  var27 = ((param5 & 16711935) * var25 + (param6 & 16711935) * var26 & -16711936) + ((param5 & 65280) * var25 + (param6 & 65280) * var26 & 16711680) >>> 8;
+                  var27 = (0 * var25 + (param6 & 16711935) * var26 & -16711936) + (0 * var25 + (param6 & 65280) * var26 & 16711680) >>> 8;
                   var28 = var20;
                   L15: while (true) {
                     if (var28 >= var21) {
@@ -2376,7 +2376,7 @@ final class gf {
                       var22 = var20 + var14 * field_b;
                       var23 = 65536 - var7 >> 8;
                       var24 = var7 >> 8;
-                      var25 = ((param5 & 16711935) * var23 + (param6 & 16711935) * var24 & -16711936) + ((param5 & 65280) * var23 + (param6 & 65280) * var24 & 16711680) >>> 8;
+                      var25 = (0 * var23 + (param6 & 16711935) * var24 & -16711936) + (0 * var23 + (param6 & 65280) * var24 & 16711680) >>> 8;
                       var26 = var20;
                       L20: while (true) {
                         if (var26 >= var21) {
@@ -2409,7 +2409,7 @@ final class gf {
             }
           }
         } else {
-          gf.e(param0, param1, param2, param3, param5, param6);
+          gf.e(param0, param1, param2, param3, 0, param6);
           return;
         }
     }
@@ -3316,7 +3316,7 @@ final class gf {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -3325,7 +3325,7 @@ final class gf {
           }
         }
         L1: {
-          var10 = field_b - param4 - param5 - param3;
+          var10 = field_b - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -3335,7 +3335,7 @@ final class gf {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_b >= var12) {
             break L2;
           } else {
@@ -3355,7 +3355,7 @@ final class gf {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -3512,7 +3512,7 @@ final class gf {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_l) {
+                      if (param5 + var19 + param3 >= field_l) {
                         break L18;
                       } else {
                         param1 = param0[var17];

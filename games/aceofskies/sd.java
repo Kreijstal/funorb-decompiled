@@ -43,7 +43,7 @@ final class sd extends hh {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_d = null;
         field_j = null;
@@ -57,12 +57,7 @@ final class sd extends hh {
     }
 
     final static gk a(boolean param0, int param1, boolean param2, boolean param3, int param4) {
-        if (param3) {
-          field_m = null;
-          return lc.a(param2, param0, false, (byte) -65, param1, param4);
-        } else {
-          return lc.a(param2, param0, false, (byte) -65, param1, param4);
-        }
+        return lc.a(true, false, false, (byte) -65, 1, param4);
     }
 
     final void a(int param0, int param1, rt param2) {

@@ -129,7 +129,8 @@ final class ha extends ka {
             if (param3 >= -94) {
                 int discarded$0 = ha.k(109);
             }
-            rl.a(-13791, param1, param0, param4, param2.field_r, param2.field_k, 0);
+            int discarded$1 = 0;
+            rl.a(-13791, param1, param0, param4, param2.field_r, param2.field_k);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "ha.J(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }

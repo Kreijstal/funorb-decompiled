@@ -7,7 +7,7 @@ final class sa extends RuntimeException {
     String field_d;
     static double field_c;
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -198,17 +198,14 @@ final class sa extends RuntimeException {
         }
     }
 
-    final static String a(boolean param0) {
-        if (!param0) {
-            return null;
-        }
+    final static String a() {
         if (!(kd.field_b != tf.field_d)) {
             return oj.field_a;
         }
         return hg.field_d;
     }
 
-    final static boolean a(d param0, byte param1) {
+    final static boolean a(d param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;

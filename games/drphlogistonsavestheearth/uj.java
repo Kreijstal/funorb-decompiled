@@ -6,7 +6,7 @@ final class uj extends gi {
     static ge field_h;
     static qe field_j;
 
-    public static void d(int param0) {
+    public static void d() {
         field_h = null;
         field_j = null;
         field_i = null;
@@ -58,7 +58,7 @@ final class uj extends gi {
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
-            var4_int = param0.e(param2, (byte) 18);
+            var4_int = param0.e(16, (byte) 18);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -142,7 +142,7 @@ final class uj extends gi {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(16).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -218,14 +218,6 @@ final class uj extends gi {
           }
         }
         if (p.field_a.field_c < 4) {
-          L3: {
-            if (param0 == 85) {
-              break L3;
-            } else {
-              field_h = null;
-              break L3;
-            }
-          }
           return -1;
         } else {
           return 1;

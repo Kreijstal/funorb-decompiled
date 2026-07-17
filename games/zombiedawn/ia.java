@@ -9,7 +9,7 @@ final class ia {
     static rb field_e;
     static vn[] field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_a = null;

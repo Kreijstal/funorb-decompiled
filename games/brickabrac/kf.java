@@ -232,12 +232,13 @@ final class kf extends k {
             if (dc.a(var5, -125)) {
               L1: {
                 var6 = (CharSequence) (Object) param0;
-                var3_int = fl.a(var6, -28734);
+                int discarded$4 = -28734;
+                var3_int = fl.a(var6);
                 if (param1 == 106) {
                   break L1;
                 } else {
                   var4 = null;
-                  jp[] discarded$2 = kf.a((String) null, (String) null, (mf) null, -17);
+                  jp[] discarded$5 = kf.a((String) null, (String) null, (mf) null, -17);
                   break L1;
                 }
               }
@@ -367,7 +368,7 @@ final class kf extends k {
         return (String) (Object) stackIn_5_0;
     }
 
-    final static String a(boolean param0, CharSequence param1, int param2) {
+    final static String a(boolean param0, CharSequence param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -379,30 +380,30 @@ final class kf extends k {
         String stackIn_9_0 = null;
         String stackIn_14_0 = null;
         String stackIn_19_0 = null;
-        String stackIn_30_0 = null;
-        String stackIn_35_0 = null;
+        String stackIn_29_0 = null;
+        String stackIn_34_0 = null;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
+        String stackIn_39_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
-        String stackOut_34_0 = null;
-        String stackOut_29_0 = null;
+        String stackOut_33_0 = null;
+        String stackOut_28_0 = null;
         String stackOut_18_0 = null;
         String stackOut_13_0 = null;
         String stackOut_8_0 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
+        RuntimeException stackOut_36_0 = null;
+        StringBuilder stackOut_36_1 = null;
         RuntimeException stackOut_38_0 = null;
         StringBuilder stackOut_38_1 = null;
         String stackOut_38_2 = null;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
+        String stackOut_37_2 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -435,8 +436,8 @@ final class kf extends k {
                                 L4: while (true) {
                                   if (var6 >= param1.length()) {
                                     if (var5 > 0) {
-                                      stackOut_34_0 = q.field_g;
-                                      stackIn_35_0 = stackOut_34_0;
+                                      stackOut_33_0 = q.field_g;
+                                      stackIn_34_0 = stackOut_33_0;
                                       break L0;
                                     } else {
                                       return null;
@@ -452,21 +453,14 @@ final class kf extends k {
                                         break L5;
                                       }
                                     }
-                                    L6: {
-                                      if (2 > var5) {
-                                        break L6;
-                                      } else {
-                                        if (param0) {
-                                          break L6;
-                                        } else {
-                                          stackOut_29_0 = pq.field_n;
-                                          stackIn_30_0 = stackOut_29_0;
-                                          return stackIn_30_0;
-                                        }
-                                      }
+                                    if (2 > var5) {
+                                      var6++;
+                                      continue L4;
+                                    } else {
+                                      stackOut_28_0 = pq.field_n;
+                                      stackIn_29_0 = stackOut_28_0;
+                                      return stackIn_29_0;
                                     }
-                                    var6++;
-                                    continue L4;
                                   }
                                 }
                               }
@@ -495,35 +489,35 @@ final class kf extends k {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var3 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) var3;
-            stackOut_37_1 = new StringBuilder().append("kf.A(").append(param0).append(44);
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackOut_36_0 = (RuntimeException) var3;
+            stackOut_36_1 = new StringBuilder().append("kf.A(").append(0).append(44);
+            stackIn_38_0 = stackOut_36_0;
+            stackIn_38_1 = stackOut_36_1;
+            stackIn_37_0 = stackOut_36_0;
+            stackIn_37_1 = stackOut_36_1;
             if (param1 == null) {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
-              break L7;
-            } else {
               stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
               stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
-              break L7;
+              stackOut_38_2 = "null";
+              stackIn_39_0 = stackOut_38_0;
+              stackIn_39_1 = stackOut_38_1;
+              stackIn_39_2 = stackOut_38_2;
+              break L6;
+            } else {
+              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
+              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_2 = "{...}";
+              stackIn_39_0 = stackOut_37_0;
+              stackIn_39_1 = stackOut_37_1;
+              stackIn_39_2 = stackOut_37_2;
+              break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + 3 + 41);
+          throw qb.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + 3 + 41);
         }
-        return stackIn_35_0;
+        return stackIn_34_0;
     }
 
     final static void a(String param0, byte param1, java.applet.Applet param2) {
@@ -567,7 +561,8 @@ final class kf extends k {
                 L0: {
                   if (param1 <= -111) {
                     var3 = new java.net.URL(param2.getCodeBase(), param0);
-                    var3 = hg.a(param2, var3, -1);
+                    int discarded$2 = -1;
+                    var3 = hg.a(param2, var3);
                     fk.a((byte) 94, param2, var3.toString(), true);
                     break L0;
                   } else {
@@ -699,16 +694,23 @@ final class kf extends k {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var6 = cr.a(param1, param2, param0, 2);
+            int discarded$7 = 2;
+            var6 = cr.a(param1, param2, param0);
             var4 = var6;
             var6[3].field_z = var6[3].field_C;
             var6[1].field_x = var6[1].field_D;
             var6[5].field_z = var6[5].field_C;
             var6[7].field_x = var6[7].field_D;
-            var6[1] = qb.a(var6[1], false, 8);
-            var6[7] = qb.a(var6[7], false, 8);
-            var6[3] = k.a(var6[3], 101, 8);
-            var6[5] = k.a(var6[5], 89, 8);
+            int discarded$8 = 8;
+            int discarded$9 = 0;
+            var6[1] = qb.a(var6[1]);
+            int discarded$10 = 8;
+            int discarded$11 = 0;
+            var6[7] = qb.a(var6[7]);
+            int discarded$12 = 8;
+            var6[3] = k.a(var6[3], 101);
+            int discarded$13 = 8;
+            var6[5] = k.a(var6[5], 89);
             var5 = -92 / ((-45 - param3) / 34);
             stackOut_0_0 = (jp[]) var4;
             stackIn_1_0 = stackOut_0_0;

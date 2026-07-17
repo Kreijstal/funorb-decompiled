@@ -30,7 +30,8 @@ final class pg {
           L0: {
             wl.a((java.awt.Component) (Object) param0, (byte) -3);
             var2_int = 59 / ((9 - param1) / 59);
-            g.a((java.awt.Component) (Object) param0, 0);
+            int discarded$6 = 0;
+            g.a((java.awt.Component) (Object) param0);
             if (null == jd.field_c) {
               break L0;
             } else {
@@ -70,7 +71,7 @@ final class pg {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_b = null;

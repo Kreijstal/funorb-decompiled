@@ -11,7 +11,7 @@ final class o {
     static int field_d;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_g = null;
         field_e = null;

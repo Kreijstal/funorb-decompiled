@@ -13,7 +13,8 @@ abstract class rfa extends ug implements sia {
         java.awt.Canvas var2 = null;
         int var4 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
-        var2 = kw.b((byte) -97);
+        int discarded$2 = -97;
+        var2 = kw.b();
         if (wna.c(-127)) {
           fh.a(vka.A(90), var2, param0);
           return;
@@ -40,7 +41,8 @@ abstract class rfa extends ug implements sia {
                 vca.field_c[9] = -1;
                 vca.field_c[10] = -1;
                 kra.field_c = new Vector();
-                aca.a((sia) this, 19711);
+                int discarded$0 = 19711;
+                aca.a((sia) this);
             } catch (RuntimeException runtimeException) {
                 throw tba.a((Throwable) (Object) runtimeException, "rfa.GB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
             }
@@ -67,7 +69,7 @@ abstract class rfa extends ug implements sia {
 
     public abstract void a(boolean param0, boolean param1);
 
-    public static void w(int param0) {
+    public static void w() {
         field_C = null;
         field_B = null;
     }
@@ -172,7 +174,8 @@ abstract class rfa extends ug implements sia {
                     if (dq.field_f == null) {
                       break L5;
                     } else {
-                      og.b(0);
+                      int discarded$5 = 0;
+                      og.b();
                       break L5;
                     }
                   }
@@ -186,13 +189,15 @@ abstract class rfa extends ug implements sia {
                 ((rfa) this).a(true, false);
                 break L1;
               } else {
-                if (ofa.d(true)) {
+                int discarded$6 = 1;
+                if (ofa.d()) {
                   if (sr.a(119)) {
                     au.b(false);
                     break L1;
                   } else {
                     L6: {
-                      var3 = kc.a(true);
+                      int discarded$7 = 1;
+                      var3 = kc.a();
                       if (var3 != 1) {
                         break L6;
                       } else {
@@ -274,7 +279,8 @@ abstract class rfa extends ug implements sia {
                 break L1;
               } else {
                 L12: {
-                  var3 = vk.c(107);
+                  int discarded$8 = 107;
+                  var3 = vk.c();
                   if (var3 != 2) {
                     if (var3 == 3) {
                       in.a(-30600, true);
@@ -290,7 +296,8 @@ abstract class rfa extends ug implements sia {
                       }
                     }
                   } else {
-                    og.b(0);
+                    int discarded$9 = 0;
+                    og.b();
                     break L12;
                   }
                 }
@@ -438,10 +445,10 @@ abstract class rfa extends ug implements sia {
     }
 
     final void a(boolean param0) {
+        cga var2_ref_cga = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        cga var5 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         Object stackIn_5_0 = null;
@@ -465,8 +472,10 @@ abstract class rfa extends ug implements sia {
             if (!dq.field_f.field_b) {
               break L0;
             } else {
-              og.b(0);
-              vd.b(1);
+              int discarded$8 = 0;
+              og.b();
+              int discarded$9 = 1;
+              vd.b();
               break L0;
             }
           }
@@ -518,7 +527,8 @@ abstract class rfa extends ug implements sia {
             break L3;
           }
         }
-        this.u(97);
+        int discarded$10 = 97;
+        this.u();
         L4: {
           tc.a(pg.field_y, -2886);
           if (dma.field_l.b(-4171)) {
@@ -534,11 +544,12 @@ abstract class rfa extends ug implements sia {
             break L5;
           } else {
             L6: while (true) {
-              var5 = (cga) (Object) sua.field_H.c(119);
-              if (var5 == null) {
+              var2_ref_cga = (cga) (Object) sua.field_H.c(119);
+              if (var2_ref_cga == null) {
                 break L5;
               } else {
-                woa.a(4, var5, false);
+                int discarded$11 = 0;
+                woa.a(4, var2_ref_cga);
                 continue L6;
               }
             }
@@ -546,8 +557,11 @@ abstract class rfa extends ug implements sia {
         }
         L7: {
           dra.a(param0);
-          vsa.c((byte) 120, 0);
-          if (!uma.b(-1)) {
+          int discarded$12 = 0;
+          int discarded$13 = 120;
+          vsa.c();
+          int discarded$14 = -1;
+          if (!uma.b()) {
             break L7;
           } else {
             L8: {
@@ -584,7 +598,8 @@ abstract class rfa extends ug implements sia {
               }
             }
             L12: {
-              if (uma.b(-1)) {
+              int discarded$15 = -1;
+              if (uma.b()) {
                 break L12;
               } else {
                 var3 = 0;
@@ -603,13 +618,14 @@ abstract class rfa extends ug implements sia {
 
     abstract void v(int param0);
 
-    private final void u(int param0) {
+    private final void u() {
         int var2 = 0;
         int var3 = 0;
         var3 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
         L0: while (true) {
-          if (!cj.a(vca.field_c, 0)) {
+          int discarded$6 = 0;
+          if (!cj.a(vca.field_c)) {
             return;
           } else {
             if (!((rfa) this).a(oka.field_z, vc.field_q, (byte) 105)) {

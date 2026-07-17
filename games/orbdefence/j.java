@@ -186,7 +186,8 @@ final class j {
                   }
                 }
                 L13: {
-                  var7 = hg.a(stackIn_42_0 != 0, var6, 0);
+                  int discarded$1 = 0;
+                  var7 = hg.a(stackIn_42_0 != 0, var6);
                   var8 = -(var7 >> 1) + fd.field_c;
                   if (0 > var4) {
                     break L13;
@@ -245,7 +246,7 @@ final class j {
         return param0 ^ param1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }

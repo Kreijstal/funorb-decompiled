@@ -5,15 +5,12 @@ final class hb {
     static String[] field_b;
     static String field_a;
 
-    final static void b(int param0) {
+    final static void b() {
         lk.g((byte) 89);
         kf.a(2, wp.field_j[0].field_z, nj.field_h, qa.field_o, jo.field_f, jk.field_f);
-        if (param0 <= 31) {
-            field_a = null;
-        }
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -56,7 +53,7 @@ final class hb {
             L1: {
               var9 = new k(param0);
               var3 = var9.g(31365);
-              var4 = var9.i(param1 ^ -1478490344);
+              var4 = var9.i(-1478490344);
               if (var4 < 0) {
                 break L1;
               } else {
@@ -71,13 +68,13 @@ final class hb {
                     }
                   }
                 }
-                if (var3 == param1) {
+                if (var3 == 0) {
                   var17 = new byte[var4];
                   var15 = var17;
                   var13 = var15;
                   var11 = var13;
                   var5 = var11;
-                  var9.a(0, param1 ^ -6351, var4, var17);
+                  var9.a(0, -6351, var4, var17);
                   stackOut_20_0 = (byte[]) var5;
                   stackIn_21_0 = stackOut_20_0;
                   break L0;
@@ -105,13 +102,14 @@ final class hb {
                         var10 = var12;
                         var6 = var10;
                         if (var3 == 1) {
-                          int discarded$1 = wo.a(var16, var5_int, param0, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = wo.a(var6, var5_int, param0, var4);
                           break L5;
                         } else {
                           var7 = (Object) (Object) hg.field_wb;
                           synchronized (var7) {
                             L6: {
-                              hg.field_wb.a(var16, var9, param1 + 27);
+                              hg.field_wb.a(var16, var9, 27);
                               break L6;
                             }
                           }
@@ -157,7 +155,7 @@ final class hb {
               break L7;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 0 + 41);
         }
         return stackIn_21_0;
     }
@@ -167,7 +165,7 @@ final class hb {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         hd.field_s = new fe();
         wj.field_i.a((cf) (Object) hd.field_s, (byte) 121);
     }

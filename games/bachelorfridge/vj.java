@@ -12,7 +12,7 @@ final class vj extends pu {
     static String field_l;
     static kv field_m;
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int a(int param0, int param1) {
         int var3 = 0;
         if (param0 == 1) {
           if (!ad.a(30, param1)) {
@@ -27,7 +27,7 @@ final class vj extends pu {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_p = null;
         field_m = null;
         int var1 = -1;

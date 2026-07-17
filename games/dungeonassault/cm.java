@@ -15,7 +15,7 @@ final class cm extends ii implements pf, vg {
     static int[] field_M;
     static ek field_R;
 
-    private final String i(int param0) {
+    private final String i() {
         return "</col></u>";
     }
 
@@ -88,8 +88,8 @@ final class cm extends ii implements pf, vg {
     }
 
     final static String a(boolean param0, int param1, CharSequence param2) {
-        RuntimeException var3 = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -99,30 +99,30 @@ final class cm extends ii implements pf, vg {
         String stackIn_8_0 = null;
         String stackIn_13_0 = null;
         String stackIn_18_0 = null;
-        String stackIn_28_0 = null;
-        String stackIn_35_0 = null;
+        String stackIn_26_0 = null;
+        String stackIn_33_0 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
+        String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_34_0 = null;
-        String stackOut_27_0 = null;
+        String stackOut_32_0 = null;
+        String stackOut_25_0 = null;
         String stackOut_17_0 = null;
         String stackOut_12_0 = null;
         String stackOut_7_0 = null;
         String stackOut_2_0 = null;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
         RuntimeException stackOut_36_0 = null;
         StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
+        String stackOut_36_2 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        String stackOut_35_2 = null;
         var8 = DungeonAssault.field_K;
         try {
           L0: {
@@ -152,47 +152,32 @@ final class cm extends ii implements pf, vg {
                                 var6 = 0;
                                 L4: while (true) {
                                   if (param2.length() <= var6) {
-                                    L5: {
-                                      if (param1 < -73) {
-                                        break L5;
-                                      } else {
-                                        field_S = null;
-                                        break L5;
-                                      }
-                                    }
                                     if (0 < var5) {
-                                      stackOut_34_0 = jm.field_e;
-                                      stackIn_35_0 = stackOut_34_0;
+                                      stackOut_32_0 = jm.field_e;
+                                      stackIn_33_0 = stackOut_32_0;
                                       break L0;
                                     } else {
                                       return null;
                                     }
                                   } else {
-                                    L6: {
+                                    L5: {
                                       var7 = param2.charAt(var6);
                                       if (jc.a((char) var7, 64)) {
                                         var5++;
-                                        break L6;
+                                        break L5;
                                       } else {
                                         var5 = 0;
-                                        break L6;
+                                        break L5;
                                       }
                                     }
-                                    L7: {
-                                      if (var5 < 2) {
-                                        break L7;
-                                      } else {
-                                        if (!param0) {
-                                          stackOut_27_0 = id.field_c;
-                                          stackIn_28_0 = stackOut_27_0;
-                                          return stackIn_28_0;
-                                        } else {
-                                          break L7;
-                                        }
-                                      }
+                                    if (var5 < 2) {
+                                      var6++;
+                                      continue L4;
+                                    } else {
+                                      stackOut_25_0 = id.field_c;
+                                      stackIn_26_0 = stackOut_25_0;
+                                      return stackIn_26_0;
                                     }
-                                    var6++;
-                                    continue L4;
                                   }
                                 }
                               }
@@ -223,38 +208,38 @@ final class cm extends ii implements pf, vg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L6: {
             var3 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) var3;
-            stackOut_36_1 = new StringBuilder().append("cm.CA(").append(param0).append(44).append(param1).append(44);
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackOut_34_0 = (RuntimeException) var3;
+            stackOut_34_1 = new StringBuilder().append("cm.CA(").append(0).append(44).append(-125).append(44);
+            stackIn_36_0 = stackOut_34_0;
+            stackIn_36_1 = stackOut_34_1;
+            stackIn_35_0 = stackOut_34_0;
+            stackIn_35_1 = stackOut_34_1;
             if (param2 == null) {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
-              break L8;
+              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
+              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_2 = "null";
+              stackIn_37_0 = stackOut_36_0;
+              stackIn_37_1 = stackOut_36_1;
+              stackIn_37_2 = stackOut_36_2;
+              break L6;
             } else {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
-              break L8;
+              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
+              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_2 = "{...}";
+              stackIn_37_0 = stackOut_35_0;
+              stackIn_37_1 = stackOut_35_1;
+              stackIn_37_2 = stackOut_35_2;
+              break L6;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 41);
         }
-        return stackIn_35_0;
+        return stackIn_33_0;
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_M = null;
         field_S = null;
         field_K = null;
@@ -263,17 +248,10 @@ final class cm extends ii implements pf, vg {
     }
 
     final static void a(float param0, float param1, int param2, float param3, float param4) {
-        if (param2 != -7788) {
-          field_S = null;
-          md.a(1.0f, param1, 1.0f, param0, param3, 0, param4);
-          return;
-        } else {
-          md.a(1.0f, param1, 1.0f, param0, param3, 0, param4);
-          return;
-        }
+        md.a(1.0f, param1, 1.0f, param0, param3, 0, param4);
     }
 
-    private final String a(int param0) {
+    private final String a() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -309,15 +287,18 @@ final class cm extends ii implements pf, vg {
             }
           }
           if (param0 == 0) {
-            lk.a("terms.ws", (byte) 58);
+            int discarded$6 = 58;
+            lk.a("terms.ws");
             return;
           } else {
             if (param0 == 1) {
-              lk.a("privacy.ws", (byte) 58);
+              int discarded$7 = 58;
+              lk.a("privacy.ws");
               return;
             } else {
               if (param0 == 2) {
-                lk.a("conduct.ws", (byte) 58);
+                int discarded$8 = 58;
+                lk.a("conduct.ws");
                 return;
               } else {
                 return;
@@ -478,7 +459,10 @@ final class cm extends ii implements pf, vg {
             ((cm) this).field_O = param0;
             ((cm) this).field_N = new ck(gl.field_Jb, (pg) null);
             ((cm) this).field_N.field_o = (ca) (Object) new na();
-            var7 = jk.a(new String[2], nj.field_a, 30496);
+            int discarded$3 = 120;
+            int discarded$4 = 115;
+            int discarded$5 = 30496;
+            var7 = jk.a(new String[2], nj.field_a);
             var3 = 20;
             var4 = new hh(lp.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, lp.field_C.field_H, -1, 2147483647, true);
             ((cm) this).field_L = new bh(var7, (ca) (Object) var4);
@@ -538,6 +522,7 @@ final class cm extends ii implements pf, vg {
         field_T = new ad(10, 2, 2, 0);
         field_K = "Raider escapes!";
         field_S = "Hoard";
-        field_M = rb.b(12632256, 8421504, 64);
+        int discarded$0 = 64;
+        field_M = rb.b(12632256, 8421504);
     }
 }

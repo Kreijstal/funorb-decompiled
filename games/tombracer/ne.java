@@ -16,7 +16,7 @@ final class ne {
         return gj.a((byte) 41, this.a(param1, -1));
     }
 
-    final static void a(cn param0, int param1) {
+    final static void a(cn param0) {
         fg var2 = null;
         try {
             fg.b(param0.a("headers.packvorbis", (byte) 124, ""));
@@ -71,12 +71,13 @@ final class ne {
         try {
           L0: {
             L1: {
-              var3 = hua.a(param2, 0);
+              int discarded$4 = 0;
+              var3 = hua.a(param2);
               if (param0) {
                 break L1;
               } else {
                 var4 = null;
-                boolean discarded$2 = ne.a(false, (String) null, (String) null);
+                boolean discarded$5 = ne.a(false, (String) null, (String) null);
                 break L1;
               }
             }
@@ -187,7 +188,7 @@ final class ne {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -224,15 +225,12 @@ final class ne {
     }
 
     private final void a(int param0, gj param1) {
-        if (param0 != 1) {
-            return;
-        }
         try {
             int fieldTemp$0 = ((ne) this).field_b;
             ((ne) this).field_b = ((ne) this).field_b + 1;
             ((ne) this).field_a = ((ne) this).field_a | (long)(param1.field_i << fieldTemp$0 * gj.field_f);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ne.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ne.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

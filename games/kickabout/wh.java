@@ -35,9 +35,6 @@ final class wh extends gn {
         long var3 = 0L;
         cq var5 = null;
         int var6 = Kickabout.field_G;
-        if (param0 <= 66) {
-            return;
-        }
         try {
             for (var2_int = 0; var2_int < param1.length; var2_int++) {
                 var3 = param1[var2_int].field_a;
@@ -52,13 +49,14 @@ final class wh extends gn {
             }
             gb.field_F = true;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "wh.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "wh.D(" + 99 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final void b(int param0) {
         if (((wh) this).field_r) {
-            he.a(((wh) this).field_m, true);
+            int discarded$1 = 1;
+            he.a(((wh) this).field_m);
         } else {
             mj.a(true, ((wh) this).field_m);
         }
@@ -67,7 +65,7 @@ final class wh extends gn {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = ((wh) this).field_i * mn.field_a >> 8;
         ((wh) this).field_m = vm.a(vg.field_Db[((wh) this).field_n].field_l, 100, var2, ((wh) this).field_f);
         if (!(!((wh) this).field_j)) {
@@ -82,7 +80,7 @@ final class wh extends gn {
         ((wh) this).field_o = false;
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         int var2 = 0;
         if (!(((wh) this).field_t >= ((wh) this).field_u)) {
             var2 = ((wh) this).field_t * (((wh) this).field_x / ((wh) this).field_u);
@@ -132,14 +130,16 @@ final class wh extends gn {
             if (0 == ((wh) this).field_k) {
                 ((wh) this).c((byte) -109);
             } else {
-                this.a((byte) 99);
+                int discarded$0 = 99;
+                this.a();
             }
         }
         if (param0 >= -124) {
             return;
         }
         if (((wh) this).field_o) {
-            this.g((byte) -101);
+            int discarded$1 = -101;
+            this.g();
         }
         if (((wh) this).field_g) {
             if (!(((wh) this).field_k != 0)) {
@@ -170,7 +170,8 @@ final class wh extends gn {
         ((wh) this).field_r = param4 ? true : false;
         ((wh) this).field_k = 1;
         ((wh) this).field_f = param2;
-        this.a((byte) 99);
+        int discarded$0 = 99;
+        this.a();
     }
 
     static {

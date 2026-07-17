@@ -226,7 +226,6 @@ class lf {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Object stackIn_68_0 = null;
         byte[] stackIn_70_0 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
@@ -237,7 +236,6 @@ class lf {
         String stackIn_74_2 = null;
         RuntimeException decompiledCaughtException = null;
         byte[] stackOut_69_0 = null;
-        Object stackOut_67_0 = null;
         RuntimeException stackOut_71_0 = null;
         StringBuilder stackOut_71_1 = null;
         RuntimeException stackOut_73_0 = null;
@@ -254,15 +252,9 @@ class lf {
             var4 = 0;
             L1: while (true) {
               if (var4 >= var2_int) {
-                if (param0 == 113) {
-                  stackOut_69_0 = (byte[]) var3;
-                  stackIn_70_0 = stackOut_69_0;
-                  break L0;
-                } else {
-                  stackOut_67_0 = null;
-                  stackIn_68_0 = stackOut_67_0;
-                  return (byte[]) (Object) stackIn_68_0;
-                }
+                stackOut_69_0 = (byte[]) var3;
+                stackIn_70_0 = stackOut_69_0;
+                break L0;
               } else {
                 L2: {
                   L3: {
@@ -440,7 +432,7 @@ class lf {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_71_0 = (RuntimeException) var2;
-            stackOut_71_1 = new StringBuilder().append("lf.B(").append(param0).append(44);
+            stackOut_71_1 = new StringBuilder().append("lf.B(").append(113).append(44);
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;

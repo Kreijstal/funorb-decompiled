@@ -10,7 +10,7 @@ abstract class pib implements mda {
     private boolean field_f;
     private boolean field_e;
 
-    private final void d(int param0) {
+    private final void d() {
         ((pib) this).field_g.a(117, (pib) this);
         if (!((pib) this).field_f) {
             jaggl.OpenGL.glTexParameteri(((pib) this).field_b, 10241, ((pib) this).field_e ? 9984 : 9728);
@@ -36,11 +36,11 @@ abstract class pib implements mda {
         }
     }
 
-    final static int b(byte param0) {
+    final static int b() {
         return pqa.a(false, nua.field_p);
     }
 
-    final static phb[] a(asb param0, int param1, int param2, int param3) {
+    final static phb[] a(asb param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -60,7 +60,8 @@ abstract class pib implements mda {
         String stackOut_7_2 = null;
         try {
           if (pa.a(param2, 2, param0, param1)) {
-            return uja.a(false);
+            int discarded$2 = 0;
+            return uja.a();
           } else {
             return null;
           }
@@ -110,7 +111,8 @@ abstract class pib implements mda {
           ((pib) this).field_g.a(69, (pib) this);
           jaggl.OpenGL.glGenerateMipmapEXT(((pib) this).field_b);
           ((pib) this).field_e = true;
-          this.d(-22416);
+          int discarded$2 = -22416;
+          this.d();
           this.a(param0 ^ 9729, var2);
           return true;
         } else {
@@ -174,7 +176,8 @@ abstract class pib implements mda {
         int var3 = 31 / ((param0 - -20) / 52);
         if (!(((pib) this).field_f == param1)) {
             ((pib) this).field_f = param1 ? true : false;
-            this.d(-22416);
+            int discarded$0 = -22416;
+            this.d();
         }
     }
 
@@ -184,7 +187,8 @@ abstract class pib implements mda {
           if (param1 != ((pib) this).field_e) {
             var3 = this.a((byte) 99);
             ((pib) this).field_e = true;
-            this.d(-22416);
+            int discarded$2 = -22416;
+            this.d();
             this.a(0, var3);
             break L0;
           } else {

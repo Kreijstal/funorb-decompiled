@@ -17,7 +17,7 @@ final class he {
         field_c = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         int var1 = 0;
         return !td.field_h.a(false) ? true : false;
     }

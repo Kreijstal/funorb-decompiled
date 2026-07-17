@@ -335,7 +335,7 @@ final class kma extends k {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_p = null;
         field_m = null;
         field_o = null;

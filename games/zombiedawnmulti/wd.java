@@ -45,9 +45,6 @@ final class wd extends se implements in {
         if (((wd) this).field_J >= param1) {
             return;
         }
-        if (param0 != -3481) {
-            return;
-        }
         gn[] var7 = new gn[param1];
         gn[] var3 = var7;
         int[] var4 = new int[param1];

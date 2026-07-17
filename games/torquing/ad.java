@@ -128,7 +128,8 @@ final class ad extends gf {
             if (((ad) this).field_p.a(110, param1) != so.field_u) {
               L2: {
                 if (!param1.equals((Object) (Object) ((ad) this).field_m)) {
-                  var3 = vf.a(param1, 0);
+                  int discarded$2 = 0;
+                  var3 = vf.a(param1);
                   if (var3.c(484)) {
                     ((ad) this).field_m = param1;
                     ((ad) this).field_o = var3.a(484);

@@ -13,7 +13,7 @@ final class ha extends ca {
     int field_n;
     int field_h;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_l = null;
         field_g = null;

@@ -31,7 +31,7 @@ final class vl implements kj {
             nf.a((byte) -126);
             return true;
         }
-        int var3 = 78 / ((param0 - -8) / 47);
+        int var3 = 39;
         if (!(102 != um.field_Gb)) {
             dk.field_v.h(1026);
             return true;
@@ -136,7 +136,7 @@ final class vl implements kj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_i = null;

@@ -94,11 +94,12 @@ final class aia extends vg {
               }
               L2: {
                 var9 = ((aia) this).a(0) ? 1 : 0;
-                var10 = this.h(21302) ? 1 : 0;
+                int discarded$4 = 21302;
+                var10 = this.h() ? 1 : 0;
                 if (param4 <= -55) {
                   break L2;
                 } else {
-                  int discarded$1 = ((aia) this).g(-9);
+                  int discarded$5 = ((aia) this).g(-9);
                   break L2;
                 }
               }
@@ -152,7 +153,8 @@ final class aia extends vg {
                         break L6;
                       } else {
                         if (var9 == 0) {
-                          this.a(param6, -92);
+                          int discarded$6 = -92;
+                          this.a(param6);
                           break L6;
                         } else {
                           break L6;
@@ -307,7 +309,8 @@ final class aia extends vg {
                 if (param6.a((ffa) null, ((aia) this).field_q, 2, 1, param3 - -((aia) this).field_r, param0 + ((aia) this).field_n, false, (gma) (Object) param5, ((aia) this).field_q)) {
                   ((aia) this).field_o = ((aia) this).field_o + 2;
                   ((aia) this).field_o = et.b(75, ((aia) this).field_o, 125);
-                  if (this.h(21302)) {
+                  int discarded$7 = 21302;
+                  if (this.h()) {
                     ((aia) this).field_n = (((aia) this).field_n - var12) / 4 + var12;
                     ((aia) this).field_r = var13 + (-var13 + ((aia) this).field_r) / 4;
                     break L18;
@@ -498,7 +501,8 @@ final class aia extends vg {
                 if (((aia) this).a(0)) {
                   break L5;
                 } else {
-                  if (this.h(21302)) {
+                  int discarded$2 = 21302;
+                  if (this.h()) {
                     break L5;
                   } else {
                     if (var6_int == 0) {
@@ -527,7 +531,7 @@ final class aia extends vg {
                 if (param0 > 98) {
                   break L6;
                 } else {
-                  int discarded$1 = ((aia) this).d(5);
+                  int discarded$3 = ((aia) this).d(5);
                   break L6;
                 }
               }
@@ -568,7 +572,7 @@ final class aia extends vg {
         }
     }
 
-    final static int e(int param0) {
+    final static int e() {
         if (null != baa.field_d.field_i) {
           if ((Object) (Object) kra.field_a == (Object) (Object) baa.field_d.field_i.field_b) {
             return 0;
@@ -608,7 +612,7 @@ final class aia extends vg {
         return ((aia) this).field_n;
     }
 
-    private final boolean h(int param0) {
+    private final boolean h() {
         return 20 < ((aia) this).field_o;
     }
 
@@ -627,7 +631,7 @@ final class aia extends vg {
         ((aia) this).field_m = param2;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_v = null;
         field_t = null;
         int var1 = 0;
@@ -718,72 +722,64 @@ final class aia extends vg {
 
     private final boolean a(int param0, hca param1, int param2, int param3) {
         RuntimeException var5 = null;
-        boolean stackIn_3_0 = false;
+        boolean stackIn_1_0 = false;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
+        boolean stackOut_0_0 = false;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == -196609) {
-                break L1;
-              } else {
-                ((aia) this).field_r = 31;
-                break L1;
-              }
-            }
-            stackOut_2_0 = io.a(param1.c(-28) / 2, ((aia) this).field_r + param2, (byte) -63, param1.a((byte) 55) / 2, ((aia) this).field_n + param3, param1.e(9648), ((aia) this).field_q / 2, ((aia) this).field_q / 2, param1.d(3));
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = io.a(param1.c(-28) / 2, ((aia) this).field_r + param2, (byte) -63, param1.a((byte) 55) / 2, ((aia) this).field_n + param3, param1.e(9648), ((aia) this).field_q / 2, ((aia) this).field_q / 2, param1.d(3));
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("aia.Q(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var5;
+            stackOut_2_1 = new StringBuilder().append("aia.Q(").append(-196609).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + param3 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
-    private final void a(la param0, int param1) {
+    private final void a(la param0) {
         try {
             ((aia) this).field_k = 50 - -param0.q(-120).a(50, 0);
         } catch (RuntimeException runtimeException) {

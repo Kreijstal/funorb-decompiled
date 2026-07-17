@@ -33,13 +33,8 @@ final class tg {
         return ((tg) this).field_h == ((tg) this).field_h.field_l ? true : false;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
-        if (param1 < 22) {
-          int discarded$2 = tg.a(101, false, -57, -39);
-          return rg.a(param0, param2, 13, 13);
-        } else {
-          return rg.a(param0, param2, 13, 13);
-        }
+    final static boolean a() {
+        return rg.a(12, 15, 13, 13);
     }
 
     final tf e(int param0) {
@@ -123,7 +118,7 @@ final class tg {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_e = null;
         field_f = null;
         field_b = null;
@@ -150,11 +145,9 @@ final class tg {
         ((tg) this).field_h.field_l = ((tg) this).field_h;
     }
 
-    final static int a(int param0, boolean param1, int param2, int param3) {
-        if (param3 != 17) {
-            return -27;
-        }
-        return le.h(-1993);
+    final static int a(int param0, boolean param1, int param2) {
+        int discarded$0 = -1993;
+        return le.h();
     }
 
     static {

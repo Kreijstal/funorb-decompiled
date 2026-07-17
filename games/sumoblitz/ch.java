@@ -12,7 +12,7 @@ final class ch {
     ek field_f;
     us[] field_i;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
     }
 
@@ -62,7 +62,8 @@ final class ch {
           L0: {
             L1: {
               ((ch) this).field_g = param0.field_Ic;
-              mq.a(param0, (byte) 123);
+              int discarded$5 = 123;
+              mq.a(param0);
               if (!((ch) this).field_g) {
                 ((ch) this).field_i = new us[16];
                 var2_int = 0;
@@ -88,16 +89,19 @@ final class ch {
                   }
                 }
               } else {
-                var20 = ab.a(false, ic.field_b, 0);
+                int discarded$6 = 0;
+                var20 = ab.a(false, ic.field_b);
                 ((ch) this).field_b = new ek(param0, 6410, 128, 128, 16, var20, 6410);
-                var21 = ab.a(false, qu.field_j, 0);
+                int discarded$7 = 0;
+                var21 = ab.a(false, qu.field_j);
                 ((ch) this).field_f = new ek(param0, 6410, 128, 128, 16, var21, 6410);
                 var10 = param0.field_Sb;
                 if (!var10.b((byte) -101)) {
                   break L1;
                 } else {
                   L4: {
-                    var22 = ab.a(false, dj.field_m, 0);
+                    int discarded$8 = 0;
+                    var22 = ab.a(false, dj.field_m);
                     ((ch) this).field_c = new ek(param0, 6408, 128, 128, 16);
                     var4 = new ek(param0, 6409, 128, 128, 16, var22, 6409);
                     if (!var10.a(((ch) this).field_c, 2.0f, false, var4)) {
@@ -105,7 +109,7 @@ final class ch {
                       ((ch) this).field_c = null;
                       break L4;
                     } else {
-                      boolean discarded$1 = ((ch) this).field_c.a(false);
+                      boolean discarded$9 = ((ch) this).field_c.a(false);
                       break L4;
                     }
                   }

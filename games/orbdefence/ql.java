@@ -13,55 +13,47 @@ final class ql {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_9_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
         int stackOut_10_0 = 0;
+        int stackOut_8_0 = 0;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == 256) {
-                break L1;
-              } else {
-                ql.a(58, (byte) -83);
-                break L1;
-              }
-            }
             var3_int = 1;
-            L2: while (true) {
+            L1: while (true) {
               if (param2 <= 1) {
                 if (param2 != 1) {
-                  stackOut_12_0 = var3_int;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackOut_10_0 = var3_int;
+                  stackIn_11_0 = stackOut_10_0;
                   break L0;
                 } else {
-                  stackOut_10_0 = param1 * var3_int;
-                  stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  stackOut_8_0 = param1 * var3_int;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
                 }
               } else {
-                L3: {
+                L2: {
                   if ((1 & param2) != 0) {
                     var3_int = var3_int * param1;
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 param2 = param2 >> 1;
                 param1 = param1 * param1;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var3, "ql.D(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw dd.a((Throwable) (Object) var3, "ql.D(" + 256 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
     final static void a(int param0, byte param1) {
@@ -77,19 +69,20 @@ final class ql {
             var5 = (qf) (Object) vb.field_h.b((byte) 119);
             L1: while (true) {
               if (var5 == null) {
-                var2_int = -104 / ((param1 - -19) / 32);
+                var2_int = -104;
                 var3 = (fb) (Object) mg.field_l.b((byte) 122);
                 L2: while (true) {
                   if (var3 == null) {
                     break L0;
                   } else {
-                    ia.a(-86, param0, var3);
+                    ia.a(-86, 5, var3);
                     var3 = (fb) (Object) mg.field_l.d(853);
                     continue L2;
                   }
                 }
               } else {
-                ol.a(-30329, var5, param0);
+                int discarded$2 = 5;
+                ol.a(-30329, var5);
                 var5 = (qf) (Object) vb.field_h.d(853);
                 continue L1;
               }
@@ -98,11 +91,11 @@ final class ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var2, "ql.E(" + param0 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) var2, "ql.E(" + 5 + 44 + 21 + 41);
         }
     }
 
-    final static String a(ki param0, String param1, String param2, byte param3) {
+    final static String a(ki param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
@@ -255,7 +248,7 @@ final class ql {
         return (aa) (Object) new g();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

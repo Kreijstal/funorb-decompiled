@@ -59,7 +59,7 @@ final class ej {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -108,7 +108,8 @@ final class ej {
             lk.field_D.field_k = false;
             si.field_y.field_k = true;
             c.field_U = false;
-            uc.b((byte) 84);
+            int discarded$1 = 84;
+            uc.b();
             rg.b(4);
             em.field_b = 6000;
             fb.field_e = new int[100];
@@ -146,7 +147,7 @@ final class ej {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
         field_c = null;

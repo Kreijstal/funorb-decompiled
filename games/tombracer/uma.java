@@ -6,7 +6,7 @@ final class uma {
     static boolean field_c;
     static vna field_b;
 
-    final static int a(int param0, kh param1, int param2) {
+    final static int a(int param0, kh param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -65,19 +65,20 @@ final class uma {
         return stackIn_1_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         if (10 > gda.field_c) {
             return false;
         }
         if (qga.field_m) {
             return false;
         }
-        return !o.e(540800) ? true : false;
+        int discarded$4 = 540800;
+        return !o.e() ? true : false;
     }
 
     static {

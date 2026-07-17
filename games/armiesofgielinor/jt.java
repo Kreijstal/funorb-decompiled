@@ -12,7 +12,7 @@ final class jt {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         int var1 = 72;
         if (tb.field_e == null) {
             return false;

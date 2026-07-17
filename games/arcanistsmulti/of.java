@@ -18,7 +18,7 @@ final class of implements pf {
     private int field_m;
     static String field_k;
 
-    final static void b(int param0, int param1) {
+    final static void b() {
         RuntimeException var2 = null;
         int var3 = 0;
         nk var4 = null;
@@ -31,7 +31,8 @@ final class of implements pf {
               if (var4 == null) {
                 break L0;
               } else {
-                fj.a(-26971, var4, param0);
+                int discarded$4 = 7;
+                fj.a(-26971, var4);
                 var4 = (nk) (Object) pe.field_Lb.a(0);
                 continue L1;
               }
@@ -40,7 +41,7 @@ final class of implements pf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2, "of.F(" + param0 + 44 + 16 + 41);
+          throw aa.a((Throwable) (Object) var2, "of.F(" + 7 + 44 + 16 + 41);
         }
     }
 
@@ -54,69 +55,49 @@ final class of implements pf {
         qb var12 = null;
         qb var13 = null;
         Object var14 = null;
-        Object var15 = null;
-        int[] var16 = null;
+        int[] var15 = null;
+        qb var16 = null;
+        int[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
-        qb var20 = null;
-        int[] var21 = null;
-        qb var22 = null;
-        int[] var23 = null;
-        var23 = de.field_l;
-        var21 = var23;
-        var19 = var21;
-        var18 = var19;
-        var16 = var18;
-        var6 = var16;
-        var7 = de.field_e;
-        var8 = de.field_j;
-        var9 = new qb(param0, -(2 * param0) + param1);
-        var9.a();
-        de.c(0, 0, param0, -(2 * param0) + param1, param4, param5);
-        var10 = new qb(param0, param0);
-        var10.a();
-        de.d(0, 0, param0, param0, param4);
-        var11 = new qb(16, param0);
-        var11.a();
-        de.d(0, 0, 16, param0, param4);
-        var12 = new qb(param0, param0);
-        var12.a();
-        de.d(0, 0, param0, param0, param5);
-        var13 = new qb(16, param0);
-        var13.a();
-        de.d(0, 0, 16, param0, param5);
-        var14 = null;
-        if (param2 != 1) {
-          L0: {
-            var15 = null;
-            qb[] discarded$1 = of.a(90, (byte) 7, (eg) null, 120);
-            if (param3 > 0) {
-              var20 = new qb(16, 16);
-              var14 = (Object) (Object) var20;
-              var20.a();
-              de.d(0, 0, 16, 16, param3);
-              break L0;
-            } else {
-              break L0;
-            }
+        int[] var20 = null;
+        L0: {
+          var20 = de.field_l;
+          var19 = var20;
+          var18 = var19;
+          var17 = var18;
+          var15 = var17;
+          var6 = var15;
+          var7 = de.field_e;
+          var8 = de.field_j;
+          var9 = new qb(3, -6 + param1);
+          var9.a();
+          de.c(0, 0, 3, -6 + param1, param4, param5);
+          var10 = new qb(3, 3);
+          var10.a();
+          de.d(0, 0, 3, 3, param4);
+          var11 = new qb(16, 3);
+          var11.a();
+          de.d(0, 0, 16, 3, param4);
+          var12 = new qb(3, 3);
+          var12.a();
+          de.d(0, 0, 3, 3, param5);
+          var13 = new qb(16, 3);
+          var13.a();
+          de.d(0, 0, 16, 3, param5);
+          var14 = null;
+          if (param3 > 0) {
+            var16 = new qb(16, 16);
+            var14 = (Object) (Object) var16;
+            var16.a();
+            de.d(0, 0, 16, 16, param3);
+            break L0;
+          } else {
+            break L0;
           }
-          de.a(var23, var7, var8);
-          return new qb[]{var10, var11, var10, var9, (qb) var14, var9, var12, var13, var12};
-        } else {
-          L1: {
-            if (param3 > 0) {
-              var22 = new qb(16, 16);
-              var14 = (Object) (Object) var22;
-              var22.a();
-              de.d(0, 0, 16, 16, param3);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          de.a(var23, var7, var8);
-          return new qb[]{var10, var11, var10, var9, (qb) var14, var9, var12, var13, var12};
         }
+        de.a(var20, var7, var8);
+        return new qb[]{var10, var11, var10, var9, (qb) var14, var9, var12, var13, var12};
     }
 
     final static int a(int param0, int param1) {
@@ -183,9 +164,10 @@ final class of implements pf {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var4_int = -94 % ((param1 - -80) / 35);
+            var4_int = 0;
             if (fc.a(-125, param2, param0, param3)) {
-              stackOut_3_0 = pk.a((byte) -116);
+              int discarded$2 = -116;
+              stackOut_3_0 = pk.a();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -199,7 +181,7 @@ final class of implements pf {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("of.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("of.D(").append(param0).append(44).append(-38).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -340,7 +322,7 @@ final class of implements pf {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_c = null;
         field_l = null;

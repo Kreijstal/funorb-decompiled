@@ -7,7 +7,7 @@ final class vea {
     static lqa field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
     }

@@ -10,7 +10,7 @@ final class wm extends wd implements java.awt.image.ImageProducer, java.awt.imag
     static String[] field_n;
     private java.awt.image.ImageConsumer field_m;
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         return d.a(-17840, lk.q(13));
     }
 
@@ -169,12 +169,7 @@ final class wm extends wd implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static oh[] a(byte param0, int param1, int param2) {
-        if (param0 != 28) {
-          oh[] discarded$2 = wm.a(false, -66, 87, -112);
-          return g.a(param2, param1, 1, (byte) 64);
-        } else {
-          return g.a(param2, param1, 1, (byte) 64);
-        }
+        return g.a(param2, param1, 1, (byte) 64);
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
@@ -274,10 +269,8 @@ final class wm extends wd implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static oh[] a(boolean param0, int param1, int param2, int param3) {
-        if (param0) {
-            return null;
-        }
-        return bd.a(param1, 1, param2, param3, (byte) 126);
+        int discarded$0 = 126;
+        return bd.a(param1, 1, param2, param3);
     }
 
     final static boolean b(int param0) {
@@ -295,29 +288,14 @@ final class wm extends wd implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static boolean c(int param0) {
-        if (param0 == -14688) {
-          if (null != wa.field_e) {
-            if (!qi.field_p.a((byte) 108)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+    final static boolean c() {
+        if (null == wa.field_e) {
             return false;
-          }
-        } else {
-          field_n = null;
-          if (null != wa.field_e) {
-            if (!qi.field_p.a((byte) 108)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (!qi.field_p.a((byte) 108)) {
+            return false;
+        }
+        return true;
     }
 
     static {

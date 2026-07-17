@@ -18,34 +18,19 @@ final class ve {
         return se.field_a;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         int var1 = 2;
     }
 
     final static void a(byte param0, int param1) {
-        L0: {
-          l.field_c = param1;
-          if (mg.field_d != null) {
+        l.field_c = param1;
+        if (!(mg.field_d == null)) {
             mg.field_d.b(param1, false);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0 != 43) {
-          return;
-        } else {
-          L1: {
-            if (null != wt.field_e) {
-              wt.field_e.a((byte) 125, param1);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        if (!(null == wt.field_e)) {
+            wt.field_e.a((byte) 125, param1);
         }
     }
 

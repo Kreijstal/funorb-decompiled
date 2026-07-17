@@ -148,7 +148,8 @@ class ck extends lm {
     }
 
     final static void h(int param0) {
-        jb.k((byte) -82);
+        int discarded$0 = -82;
+        jb.k();
         int var1 = 28 / ((param0 - -14) / 61);
     }
 
@@ -605,7 +606,9 @@ class ck extends lm {
 
     public static void b(boolean param0) {
         field_D = null;
-        boolean discarded$0 = ck.g(50);
+        if (!param0) {
+            boolean discarded$0 = ck.g(50);
+        }
         field_G = null;
         field_H = null;
     }

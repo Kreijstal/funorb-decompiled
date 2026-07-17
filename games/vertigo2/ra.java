@@ -2304,7 +2304,7 @@ final class ra extends sn {
           if (param0.field_s.length == 0) {
             return null;
           } else {
-            return new ra(param0, (int)((long)param0.field_r * 256L * (long)param1 / (long)(100 * dd.field_u)), param2 << 6);
+            return new ra(param0, (int)((long)param0.field_r * 256L * 100L / (long)(100 * dd.field_u)), param2 << 6);
           }
         } else {
           return null;

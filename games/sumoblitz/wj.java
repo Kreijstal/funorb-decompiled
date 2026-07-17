@@ -81,7 +81,7 @@ final class wj extends rq {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_h = null;
         field_i = null;
     }
@@ -374,7 +374,8 @@ final class wj extends rq {
                                               if (var4.field_v != 0) {
                                                 break L11;
                                               } else {
-                                                ro.a(var2, (byte) 113);
+                                                int discarded$2 = 113;
+                                                ro.a(var2);
                                                 var4.h((byte) -55);
                                                 break L11;
                                               }
@@ -402,7 +403,8 @@ final class wj extends rq {
                                               break L13;
                                             } else {
                                               if (var2.field_v == 0) {
-                                                ro.a(var4, (byte) 113);
+                                                int discarded$3 = 113;
+                                                ro.a(var4);
                                                 var2.h((byte) -55);
                                                 break L13;
                                               } else {
@@ -653,7 +655,8 @@ final class wj extends rq {
                     if (!((wj) this).field_j.field_Ac) {
                       break L2;
                     } else {
-                      ((wj) this).field_g = ve.a((byte) 103, ((wj) this).field_j, param1.a("transparent_water", "gl", -1), 34336);
+                      int discarded$2 = 34336;
+                      ((wj) this).field_g = ve.a((byte) 103, ((wj) this).field_j, param1.a("transparent_water", "gl", -1));
                       break L1;
                     }
                   }

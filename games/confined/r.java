@@ -17,15 +17,12 @@ final class r {
         }
     }
 
-    final static void a(bj param0, int param1, int param2) {
+    final static void a(bj param0) {
         lf.field_k.a((rk) (Object) param0, (byte) 67);
-        if (param1 != -1) {
-            return;
-        }
         try {
             lf.a(3, 102, param0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "r.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 3 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "r.C(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 44 + 3 + 41);
         }
     }
 

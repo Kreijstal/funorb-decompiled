@@ -290,7 +290,10 @@ abstract class m extends rc {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = ug.a(field_r, (byte) -126, ' ', 0);
+          int discarded$9 = 0;
+          int discarded$10 = 32;
+          int discarded$11 = -126;
+          StringBuilder discarded$12 = ug.a(field_r);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -326,9 +329,9 @@ abstract class m extends rc {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_r.append(60);
-                        StringBuilder discarded$7 = field_r.append(var15);
-                        StringBuilder discarded$8 = field_r.append(62);
+                        StringBuilder discarded$13 = field_r.append(60);
+                        StringBuilder discarded$14 = field_r.append(var15);
+                        StringBuilder discarded$15 = field_r.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -515,8 +518,9 @@ abstract class m extends rc {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_r.append(var14);
-                        var14 = (char)(qc.a((char) var14, true) & 255);
+                        StringBuilder discarded$16 = field_r.append(var14);
+                        int discarded$17 = 1;
+                        var14 = (char)(qc.a((char) var14) & 255);
                         var4 = var4 + ((m) this).field_v[var14];
                         if (((m) this).field_x == null) {
                           break L15;
@@ -711,7 +715,8 @@ abstract class m extends rc {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_D = oa.a(16, var7, 8192);
+                                    int discarded$4 = 8192;
+                                    field_D = oa.a(16, var7);
                                     break L1;
                                   }
                                 } else {
@@ -724,7 +729,8 @@ abstract class m extends rc {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_z = oa.a(16, var6, 8192);
+                              int discarded$5 = 8192;
+                              field_z = oa.a(16, var6);
                               break L1;
                             }
                           } else {
@@ -737,7 +743,8 @@ abstract class m extends rc {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_H = oa.a(16, var5, 8192);
+                        int discarded$6 = 8192;
+                        field_H = oa.a(16, var5);
                         break L1;
                       }
                     } else {
@@ -755,7 +762,8 @@ abstract class m extends rc {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_F = oa.a(16, var3, 8192);
+                int discarded$7 = 8192;
+                field_F = oa.a(16, var3);
                 break L1;
               }
             }
@@ -915,7 +923,8 @@ abstract class m extends rc {
     }
 
     final int a(char param0) {
-        return ((m) this).field_v[qc.a(param0, true) & 255];
+        int discarded$0 = 1;
+        return ((m) this).field_v[qc.a(param0) & 255];
     }
 
     final void c(String param0, int param1, int param2, int param3, int param4) {
@@ -1037,7 +1046,8 @@ abstract class m extends rc {
                 }
                 if (var2 == -1) {
                   L4: {
-                    var7 = (char)(qc.a((char) var7, true) & 255);
+                    int discarded$1 = 1;
+                    var7 = (char)(qc.a((char) var7) & 255);
                     var4 = var4 + ((m) this).field_v[var7];
                     if (((m) this).field_x == null) {
                       break L4;
@@ -1288,7 +1298,8 @@ abstract class m extends rc {
               }
               if (var4 == -1) {
                 L6: {
-                  var8 = (char)(qc.a((char) var8, true) & 255);
+                  int discarded$1 = 1;
+                  var8 = (char)(qc.a((char) var8) & 255);
                   if (((m) this).field_x == null) {
                     break L6;
                   } else {

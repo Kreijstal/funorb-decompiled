@@ -8,7 +8,7 @@ final class fb extends ak {
     private ak field_Fb;
     static int field_Hb;
 
-    public static void j(int param0) {
+    public static void j() {
         field_Eb = null;
         field_Gb = null;
     }
@@ -47,7 +47,7 @@ final class fb extends ak {
     final static void a(int param0, int param1) {
         pc var2 = aa.field_f;
         var2.g(param1, 15514);
-        var2.e(160, param0);
+        var2.e(160, 1);
         var2.e(160, 1);
     }
 
@@ -62,11 +62,9 @@ final class fb extends ak {
         }
     }
 
-    final static ak b(byte param0) {
-        if (param0 <= 77) {
-            return null;
-        }
-        return fd.a(0);
+    final static ak b() {
+        int discarded$0 = 0;
+        return fd.a();
     }
 
     private fb(long param0, ak param1, ak param2, String param3) {
@@ -88,28 +86,13 @@ final class fb extends ak {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        if (param1 >= 8) {
-          if (2 > param0) {
-            if (-6 > param2) {
-              return 0;
-            } else {
-              return 1;
+        if (2 > param0) {
+            if (param2 < 5) {
+                return 0;
             }
-          } else {
-            return 2;
-          }
-        } else {
-          field_Hb = -30;
-          if (2 > param0) {
-            if (-6 < param2) {
-              return 0;
-            } else {
-              return 1;
-            }
-          } else {
-            return 2;
-          }
+            return 1;
         }
+        return 2;
     }
 
     final static void a(boolean param0, String param1, eq param2, int param3) {

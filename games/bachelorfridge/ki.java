@@ -5,7 +5,7 @@ final class ki extends ana {
     static af field_w;
     private iba field_v;
 
-    private final void f(int param0) {
+    private final void f() {
         hd var4 = (hd) (Object) al.a(103, ((ki) this).field_v.field_k);
         var4 = var4;
         aga discarded$0 = ((ki) this).field_v.field_l.a(19, ((ki) this).field_q.field_h);
@@ -25,13 +25,14 @@ final class ki extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$2 = ((ki) this).field_l - 1;
+        int fieldTemp$4 = ((ki) this).field_l - 1;
         ((ki) this).field_l = ((ki) this).field_l - 1;
-        if (fieldTemp$2 <= -1) {
+        if (fieldTemp$4 <= -1) {
           if (-26 != ((ki) this).field_l) {
             return false;
           } else {
-            this.f(-1);
+            int discarded$5 = -1;
+            this.f();
             return false;
           }
         } else {
@@ -41,50 +42,19 @@ final class ki extends ana {
         }
     }
 
-    final static void g(int param0) {
+    final static void g() {
         gm.field_k = false;
-        if (da.field_d == null) {
-          if (param0 != -26) {
+        if (da.field_d != null) {
+            da.field_d.f((byte) -118);
             return;
-          } else {
-            L0: {
-              if (gk.field_d != 0) {
-                bea.d(param0 + -96);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            uga.field_x = 0;
-            return;
-          }
-        } else {
-          da.field_d.f((byte) -118);
-          if (param0 != -26) {
-            return;
-          } else {
-            L1: {
-              if (gk.field_d != 0) {
-                bea.d(param0 + -96);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            uga.field_x = 0;
-            return;
-          }
         }
     }
 
     private final void d(int param0) {
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_w = null;
-        if (param0 != -1) {
-            field_w = null;
-        }
     }
 
     static {

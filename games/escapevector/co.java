@@ -21,7 +21,7 @@ final class co {
         }
     }
 
-    final static char a(ih param0, byte param1) {
+    final static char a(ih param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -101,7 +101,8 @@ final class co {
                   } else {
                     var6 = var17[var5];
                     var7 = param0.a((char) var6);
-                    if (ml.a((char) var6, 21654)) {
+                    int discarded$2 = 21654;
+                    if (ml.a((char) var6)) {
                       L5: {
                         if (var7 <= var3) {
                           break L5;
@@ -120,7 +121,8 @@ final class co {
               } else {
                 L6: {
                   var6 = var16[var5];
-                  if (!ml.a((char) var6, 21654)) {
+                  int discarded$3 = 21654;
+                  if (!ml.a((char) var6)) {
                     break L6;
                   } else {
                     break L6;
@@ -164,7 +166,7 @@ final class co {
         return (char) stackIn_22_0;
     }
 
-    final static tk a(String param0, int param1) {
+    final static tk a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

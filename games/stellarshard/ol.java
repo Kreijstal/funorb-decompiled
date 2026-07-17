@@ -11,41 +11,21 @@ final class ol {
     private boolean field_d;
 
     private final void a(int param0, int param1, int param2) {
-        if (param0 == 31860) {
-          L0: {
-            if (param1 > ((ol) this).field_e) {
-              ((ol) this).field_e = param1;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (param1 >= ((ol) this).field_f.length) {
-            this.a(param1, 64);
-            ((ol) this).field_f[param1] = param2;
-            return;
+        L0: {
+          if (param1 > ((ol) this).field_e) {
+            ((ol) this).field_e = param1;
+            break L0;
           } else {
-            ((ol) this).field_f[param1] = param2;
-            return;
+            break L0;
           }
+        }
+        if (param1 >= ((ol) this).field_f.length) {
+          this.a(param1, 64);
+          ((ol) this).field_f[param1] = param2;
+          return;
         } else {
-          L1: {
-            field_c = 90;
-            if (param1 > ((ol) this).field_e) {
-              ((ol) this).field_e = param1;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          if (param1 < ((ol) this).field_f.length) {
-            ((ol) this).field_f[param1] = param2;
-            return;
-          } else {
-            this.a(param1, 64);
-            ((ol) this).field_f[param1] = param2;
-            return;
-          }
+          ((ol) this).field_f[param1] = param2;
+          return;
         }
     }
 
@@ -61,45 +41,22 @@ final class ol {
         int var3 = 0;
         int var4 = 0;
         var4 = stellarshard.field_B;
-        if (!param0) {
-          ((ol) this).field_b = 105;
-          var3 = ((ol) this).field_f.length;
-          L0: while (true) {
-            if (param1 < var3) {
-              return var3;
-            } else {
-              if (((ol) this).field_d) {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L0;
-                } else {
-                  var3 = var3 * ((ol) this).field_b;
-                  continue L0;
-                }
+        var3 = ((ol) this).field_f.length;
+        L0: while (true) {
+          if (param1 < var3) {
+            return var3;
+          } else {
+            if (((ol) this).field_d) {
+              if (var3 == 0) {
+                var3 = 1;
+                continue L0;
               } else {
-                var3 = var3 + ((ol) this).field_b;
+                var3 = var3 * ((ol) this).field_b;
                 continue L0;
               }
-            }
-          }
-        } else {
-          var3 = ((ol) this).field_f.length;
-          L1: while (true) {
-            if (param1 < var3) {
-              return var3;
             } else {
-              if (((ol) this).field_d) {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L1;
-                } else {
-                  var3 = var3 * ((ol) this).field_b;
-                  continue L1;
-                }
-              } else {
-                var3 = var3 + ((ol) this).field_b;
-                continue L1;
-              }
+              var3 = var3 + ((ol) this).field_b;
+              continue L0;
             }
           }
         }
@@ -187,7 +144,7 @@ final class ol {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         sj.field_F = null;
         wc.field_C = null;
     }

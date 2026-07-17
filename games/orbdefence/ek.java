@@ -13,7 +13,7 @@ final class ek implements Iterable {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (!((param0 & param1) == 0)) {
+        if (!((param0 & 7) == 0)) {
             var2 = -(param0 & 7) + 8;
         }
         int var3 = param0 - -var2;
@@ -24,19 +24,12 @@ final class ek implements Iterable {
         return (Iterator) (Object) new pl((ek) this);
     }
 
-    final static void c(int param0) {
+    final static void c() {
         pc.field_Z = false;
-        if (param0 <= 110) {
-          int discarded$6 = ek.a(28, 69);
-          int discarded$7 = cd.field_t.b((byte) 90);
-          return;
-        } else {
-          int discarded$8 = cd.field_t.b((byte) 90);
-          return;
-        }
+        int discarded$0 = cd.field_t.b((byte) 90);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
         field_e = null;
@@ -90,7 +83,7 @@ final class ek implements Iterable {
         throw new Error();
     }
 
-    final static void a(int param0) {
+    final static void a() {
     }
 
     static {

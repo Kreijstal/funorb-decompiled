@@ -18,7 +18,7 @@ class ec extends kd {
         }
     }
 
-    final static qj a(int param0) {
+    final static qj a() {
         int var4_int = 0;
         int var5 = TrackController.field_F ? 1 : 0;
         int var1 = cf.field_p[0] * j.field_f[0];

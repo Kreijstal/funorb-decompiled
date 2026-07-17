@@ -19,18 +19,15 @@ final class pe {
             eb.field_B = param1;
             tj.field_wb = param5;
             lg.field_h = param4;
-            if (param6 != 128) {
-                field_d = null;
-            }
             jg.field_kb = (h) (Object) new kg();
             t.field_c = new wh(param7);
             i.field_a = new qi(jg.field_kb, t.field_c);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "pe.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "pe.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 128 + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         field_b = null;
@@ -39,17 +36,14 @@ final class pe {
     }
 
     final static void a(int param0, pk param1, int param2, pk param3) {
-        if (param2 != 48) {
-            return;
-        }
         try {
             da.field_h = param1;
             qk.field_a = param3;
-            ch.field_c = param0;
+            ch.field_c = 480;
             tb.a(l.field_k / 2, 21361, l.field_j / 2);
-            aj.a(param3.field_p + param3.field_u, param2 + -19653, param1.field_p + param1.field_u, param3.field_u, param1.field_u);
+            aj.a(param3.field_p + param3.field_u, -19605, param1.field_p + param1.field_u, param3.field_u, param1.field_u);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "pe.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "pe.B(" + 480 + 44 + (param1 != null ? "{...}" : "null") + 44 + 48 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

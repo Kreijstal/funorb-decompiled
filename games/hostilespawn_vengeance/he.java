@@ -23,7 +23,7 @@ final class he extends ch {
         field_s = null;
     }
 
-    final static pg[] c(int param0) {
+    final static pg[] c() {
         int var2 = 0;
         int var3 = HostileSpawn.field_I ? 1 : 0;
         pg[] var1 = new pg[sc.field_c];
@@ -112,7 +112,7 @@ final class he extends ch {
               }
             }
             L4: {
-              var13 = -122 / ((20 - param5) / 48);
+              var13 = -122;
               var11 = -param2 + param1.field_e;
               var12 = -param6 + param1.field_g;
               if (var11 <= -24) {
@@ -226,7 +226,7 @@ final class he extends ch {
               break L8;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param5 + 44 + param6 + 41);
+          throw wg.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + -58 + 44 + param6 + 41);
         }
     }
 
@@ -267,45 +267,41 @@ final class he extends ch {
         String stackOut_15_2 = null;
         try {
           L0: {
-            if (param2 >= 104) {
-              L1: {
-                var7_int = (int)((param4 - (double)param0.field_j.field_e - param0.field_l.field_f) * 24.0);
-                var8 = (int)((-param0.field_l.field_a + ((double)(-param0.field_j.field_g) + param3)) * 24.0);
-                if (var7_int < -24) {
+            L1: {
+              var7_int = (int)((param4 - (double)param0.field_j.field_e - param0.field_l.field_f) * 24.0);
+              var8 = (int)((-param0.field_l.field_a + ((double)(-param0.field_j.field_g) + param3)) * 24.0);
+              if (var7_int < -24) {
+                break L1;
+              } else {
+                if (var7_int > 24) {
                   break L1;
                 } else {
-                  if (var7_int > 24) {
+                  if (var8 < -24) {
                     break L1;
                   } else {
-                    if (var8 < -24) {
+                    if (24 <= var8) {
                       break L1;
                     } else {
-                      if (24 <= var8) {
-                        break L1;
-                      } else {
-                        param1.field_z = 4;
-                        param1.field_F = 255;
-                        ci.a(1, 76);
-                        nh.a(param1, -29966);
-                        break L1;
-                      }
+                      param1.field_z = 4;
+                      param1.field_F = 255;
+                      ci.a(1, 76);
+                      nh.a(param1, -29966);
+                      break L1;
                     }
                   }
                 }
               }
-              L2: {
-                param0.field_e = param0.field_e + 2;
-                if (param0.field_e > 32) {
-                  param0.field_i = -1;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              break L0;
-            } else {
-              return;
             }
+            L2: {
+              param0.field_e = param0.field_e + 2;
+              if (param0.field_e > 32) {
+                param0.field_i = -1;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -360,7 +356,7 @@ final class he extends ch {
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw wg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 110 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

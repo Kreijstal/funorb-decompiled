@@ -13,13 +13,10 @@ abstract class df {
         try {
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) pg.field_c);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) pg.field_c);
-            if (param0) {
-                field_a = null;
-            }
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) pg.field_c);
             s.field_I = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "df.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "df.F(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

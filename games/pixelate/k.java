@@ -14,7 +14,8 @@ final class k extends nc {
     static double field_h;
 
     final long a(int param0) {
-        ((k) this).field_g = ((k) this).field_g + this.c(true);
+        int discarded$0 = 1;
+        ((k) this).field_g = ((k) this).field_g + this.c();
         if (param0 != -23239) {
             return -44L;
         }
@@ -34,7 +35,7 @@ final class k extends nc {
         }
     }
 
-    private final long c(boolean param0) {
+    private final long c() {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;
@@ -220,7 +221,8 @@ final class k extends nc {
               var6 = null;
               if (param3.indexOf('@') == -1) {
                 var7 = (CharSequence) (Object) param3;
-                var4_long = nh.a(var7, -29667);
+                int discarded$2 = -29667;
+                var4_long = nh.a(var7);
                 break L1;
               } else {
                 var6 = (Object) (Object) param3;
@@ -235,7 +237,7 @@ final class k extends nc {
                 break L2;
               }
             }
-            stackOut_5_0 = ck.a(param0, (String) var6, param1, var4_long, 96);
+            stackOut_5_0 = ck.a(param0, (String) var6, false, var4_long, 96);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }
@@ -269,7 +271,7 @@ final class k extends nc {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(0).append(44).append(param2).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;

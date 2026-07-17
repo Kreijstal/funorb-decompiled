@@ -13,7 +13,7 @@ final class em extends IOException {
     static rh field_c;
     static nd field_g;
 
-    final static void a(int param0) {
+    final static void a() {
         L0: {
           ia.field_p[4] = new int[1];
           tk.a(34, 185, new int[1], 455, -119, 4, 383);
@@ -24,7 +24,8 @@ final class em extends IOException {
           pi.field_b[8] = new t(8);
           ia.field_p[6] = new int[1];
           tk.a(70, 165, new int[1], 475, -125, 6, 295);
-          em.a(19);
+          int discarded$1 = 19;
+          em.a();
           pi.field_b[6] = new t(6);
           rh.field_c.field_d = rh.field_c.field_D.field_N * 11;
           if (wc.field_q <= 0) {
@@ -63,9 +64,7 @@ final class em extends IOException {
                 }
             }
         }
-        if (param1) {
-            em.b(-117);
-        }
+        em.b(-117);
         return -1;
     }
 
@@ -73,14 +72,14 @@ final class em extends IOException {
         super(param0);
     }
 
-    final static String c(int param0) {
+    final static String c() {
         if (!(b.field_e != null)) {
             return "";
         }
         return b.field_e;
     }
 
-    final static void a(dd param0, byte param1) {
+    final static void a(dd param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

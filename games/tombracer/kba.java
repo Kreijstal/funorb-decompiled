@@ -14,7 +14,7 @@ final class kba extends od implements wia {
     private int field_r;
     int field_n;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_u = null;
         field_k = null;
     }
@@ -49,7 +49,7 @@ final class kba extends od implements wia {
             }
             return stackIn_10_0 != 0;
           } else {
-            if (~(param1 % 4) == param0) {
+            if (param1 % 4 == 0) {
               if (param1 % 100 == 0) {
                 if (param1 % 400 != 0) {
                   return false;

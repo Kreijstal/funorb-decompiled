@@ -15,7 +15,7 @@ final class jl extends ll {
     private int field_q;
     static String field_v;
 
-    final static void b(int param0) {
+    final static void b() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -225,19 +225,15 @@ final class jl extends ll {
         return stackIn_11_0;
     }
 
-    final static void a(int param0, int param1, int param2, qj param3, qj param4, int param5) {
+    final static void a(int param0, int param1, int param2, qj param3, qj param4) {
         try {
             og.field_N = param4;
-            if (param0 > -104) {
-                Object var7 = null;
-                java.net.URL discarded$0 = jl.a(4, (java.net.URL) null, (java.applet.Applet) null);
-            }
-            e.field_d = param2;
-            na.field_e = param1;
-            vl.field_h = param5;
+            e.field_d = 12;
+            na.field_e = 12;
+            vl.field_h = 12;
             og.field_S = param3;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "jl.AA(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "jl.AA(" + -122 + 44 + 12 + 44 + 12 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 12 + 41);
         }
     }
 
@@ -377,7 +373,7 @@ final class jl extends ll {
         }
     }
 
-    final static od c(int param0) {
+    final static od c() {
         if (s.field_b == null) {
             s.field_b = new od();
             s.field_b.a(gh.field_b, -120);

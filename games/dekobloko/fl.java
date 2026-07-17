@@ -9,7 +9,7 @@ final class fl {
     static w field_b;
     static String field_e;
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         if (48 > param0) {
             return false;
         }
@@ -21,22 +21,11 @@ final class fl {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != 29047) {
-          field_c = null;
-          field_c = null;
-          field_e = null;
-          field_f = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
-          field_c = null;
-          field_e = null;
-          field_f = null;
-          field_b = null;
-          field_a = null;
-          return;
-        }
+        field_c = null;
+        field_e = null;
+        field_f = null;
+        field_b = null;
+        field_a = null;
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4) {
@@ -85,7 +74,7 @@ final class fl {
     }
 
     final static void a(int param0, tj param1, nm param2, int param3, int param4, int param5, int param6) {
-        pf var12 = null;
+        pf var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -94,25 +83,19 @@ final class fl {
             sl.a(param1.field_Rb, (int[]) null, (byte) 89, param2, (w) (Object) param1, param1.field_Yb, param1.field_cc, -1, -1);
             w.field_H.a(true, 29072);
             w.field_H.a(0, (byte) -43, (int[]) null);
-            if (param5 >= -53) {
-                int discarded$0 = fl.a((byte) 105);
-            }
             w.field_H.a(17);
-            var12 = w.field_H;
+            var7 = w.field_H;
             var8 = param3;
             var9 = param6;
-            var10 = param4;
-            var11 = param0;
-            var12.field_h.b(var9, var8, 101, var11, var10);
+            var10 = 0;
+            var11 = 0;
+            var7.field_h.b(var9, var8, 101, var11, var10);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "fl.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "fl.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + 0 + 44 + -117 + 44 + param6 + 41);
         }
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4) {
-        if (param3 != 0) {
-            return;
-        }
         vb.field_V = param1;
         hb.field_Wb = param0;
         pa.field_fb = param4;
@@ -169,37 +152,33 @@ final class fl {
             param5.a(param3, -var6_int + param4, param0 + var6_int, 0, -1);
             param5.a(param3, param4, param0 + -var6_int, 0, -1);
             param5.a(param3, param4, param0 - -var6_int, 0, -1);
-            if (param1 == 256) {
-              L2: {
-                param5.a(param3, param4 - -var6_int, -var6_int + param0, 0, -1);
-                param5.a(param3, var6_int + param4, param0, 0, -1);
-                param5.a(param3, param4 + var6_int, param0 - -var6_int, 0, -1);
-                if ((Object) (Object) w.field_kb != (Object) (Object) param5) {
-                  break L2;
-                } else {
-                  param5.a(param3, param4 + 1, -var6_int + param0, 0, -1);
-                  param5.a(param3, -1 + param4, -var6_int + param0, 0, -1);
-                  param5.a(param3, param4 - -var6_int, param0 + -1, 0, -1);
-                  param5.a(param3, param4 + -var6_int, -1 + param0, 0, -1);
-                  param5.a(param3, param4 + var6_int, param0 + 1, 0, -1);
-                  param5.a(param3, param4 + -var6_int, param0 + 1, 0, -1);
-                  param5.a(param3, param4 - -1, var6_int + param0, 0, -1);
-                  param5.a(param3, -1 + param4, var6_int + param0, 0, -1);
-                  break L2;
-                }
+            L2: {
+              param5.a(param3, param4 - -var6_int, -var6_int + param0, 0, -1);
+              param5.a(param3, var6_int + param4, param0, 0, -1);
+              param5.a(param3, param4 + var6_int, param0 - -var6_int, 0, -1);
+              if ((Object) (Object) w.field_kb != (Object) (Object) param5) {
+                break L2;
+              } else {
+                param5.a(param3, param4 + 1, -var6_int + param0, 0, -1);
+                param5.a(param3, -1 + param4, -var6_int + param0, 0, -1);
+                param5.a(param3, param4 - -var6_int, param0 + -1, 0, -1);
+                param5.a(param3, param4 + -var6_int, -1 + param0, 0, -1);
+                param5.a(param3, param4 + var6_int, param0 + 1, 0, -1);
+                param5.a(param3, param4 + -var6_int, param0 + 1, 0, -1);
+                param5.a(param3, param4 - -1, var6_int + param0, 0, -1);
+                param5.a(param3, -1 + param4, var6_int + param0, 0, -1);
+                break L2;
               }
-              param5.a(param3, param4, param0, param2, -1);
-              break L0;
-            } else {
-              return;
             }
+            param5.a(param3, param4, param0, param2, -1);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var6;
-            stackOut_9_1 = new StringBuilder().append("fl.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_9_1 = new StringBuilder().append("fl.H(").append(param0).append(44).append(256).append(44).append(param2).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -251,11 +230,7 @@ final class fl {
         }
     }
 
-    final static int a(byte param0) {
-        if (param0 != -108) {
-            int discarded$0 = fl.a(29, -113, -26, -55, -110);
-            return om.field_d;
-        }
+    final static int a() {
         return om.field_d;
     }
 

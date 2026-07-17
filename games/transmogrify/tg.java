@@ -9,7 +9,7 @@ final class tg {
     static int field_a;
     static volatile long field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
     }
 
@@ -41,8 +41,9 @@ final class tg {
         String stackOut_15_2 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
-          var3 = rb.a((byte) -84, param2, param1);
-          var4 = -98 / ((45 - param0) / 35);
+          int discarded$17 = 0;
+          var3 = rb.a((byte) -84, param2);
+          var4 = -49;
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
@@ -51,7 +52,8 @@ final class tg {
             var5 = 0;
             L0: while (true) {
               if (var5 < param2.length()) {
-                if (!bc.a(param2.charAt(var5), -161)) {
+                int discarded$18 = -161;
+                if (!bc.a(param2.charAt(var5))) {
                   stackOut_10_0 = ff.field_C;
                   stackIn_11_0 = stackOut_10_0;
                   return stackIn_11_0;
@@ -69,7 +71,7 @@ final class tg {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("tg.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("tg.C(").append(-54).append(44).append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

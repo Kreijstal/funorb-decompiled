@@ -64,7 +64,7 @@ class hf {
         }
     }
 
-    final static Object a(int param0, byte[] param1, boolean param2) {
+    final static Object a(int param0, byte[] param1) {
         l var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -226,7 +226,7 @@ class hf {
             var15 = new qc(param1);
             var16 = var15;
             var16.field_f = param1.length + -2;
-            sb.field_a = var16.b(param0);
+            sb.field_a = var16.b(true);
             rc.field_j = new int[sb.field_a];
             hl.field_K = new int[sb.field_a];
             ng.field_E = new boolean[sb.field_a];
@@ -425,7 +425,7 @@ class hf {
                   }
                 }
               } else {
-                gh.field_m[var4] = var15.b(param0);
+                gh.field_m[var4] = var15.b(true);
                 var4++;
                 continue L1;
               }
@@ -436,7 +436,7 @@ class hf {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_49_0 = (RuntimeException) var2;
-            stackOut_49_1 = new StringBuilder().append("hf.W(").append(param0).append(44);
+            stackOut_49_1 = new StringBuilder().append("hf.W(").append(1).append(44);
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;

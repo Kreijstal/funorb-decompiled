@@ -9,12 +9,9 @@ final class mm {
     static String field_e;
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = pj.a(param1 ^ -105, param0);
+        int var3 = pj.a(104, param0);
         int var4 = rf.a(param0, 255);
         int var5 = pj.a(110, param2);
-        if (param1 != -1) {
-            mm.a(44);
-        }
         int var6 = rf.a(param2, 255);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
@@ -347,11 +344,8 @@ final class mm {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
-        if (param0 < 118) {
-            field_c = null;
-        }
         field_b = null;
         field_a = null;
         field_d = null;

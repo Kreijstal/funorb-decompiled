@@ -1813,7 +1813,8 @@ final class be extends ch implements hi, vo {
           L0: {
             L1: {
               L2: {
-                if (ma.e((byte) 37)) {
+                int discarded$5 = 37;
+                if (ma.e()) {
                   break L2;
                 } else {
                   if (((be) this).field_J.field_q.length() <= 0) {
@@ -1827,7 +1828,8 @@ final class be extends ch implements hi, vo {
                   }
                 }
               }
-              oi.a(((be) this).field_J.field_q, ((be) this).field_O.field_q, (byte) -33);
+              int discarded$6 = -33;
+              oi.a(((be) this).field_J.field_q, ((be) this).field_O.field_q);
               break L1;
             }
             L3: {
@@ -3569,7 +3571,8 @@ final class be extends ch implements hi, vo {
             }
             L10: {
               var8 = ui.field_d;
-              var9 = lg.a(ao.a(13867), -18992);
+              int discarded$3 = -18992;
+              var9 = lg.a(ao.a(13867));
               if (ig.field_e != var9) {
                 if (var9 != vm.field_a) {
                   break L10;
@@ -3583,13 +3586,13 @@ final class be extends ch implements hi, vo {
               }
             }
             L11: {
-              qp dupTemp$2 = new qp(10, ((be) this).field_p, ((be) this).field_E - 20, 25, (ng) (Object) ((be) this).field_J, false, 80, 3, var7, 16777215, var8);
-              var10 = dupTemp$2;
-              ((be) this).b((ng) (Object) dupTemp$2, 80);
+              qp dupTemp$4 = new qp(10, ((be) this).field_p, ((be) this).field_E - 20, 25, (ng) (Object) ((be) this).field_J, false, 80, 3, var7, 16777215, var8);
+              var10 = dupTemp$4;
+              ((be) this).b((ng) (Object) dupTemp$4, 80);
               ((be) this).field_p = ((be) this).field_p + (((ng) (Object) var10).field_C - -5);
-              qp dupTemp$3 = new qp(10, ((be) this).field_p, -20 + ((be) this).field_E, 25, (ng) (Object) ((be) this).field_O, false, 80, 3, var7, 16777215, vk.field_qb);
-              var10 = dupTemp$3;
-              ((be) this).b((ng) (Object) dupTemp$3, 80);
+              qp dupTemp$5 = new qp(10, ((be) this).field_p, -20 + ((be) this).field_E, 25, (ng) (Object) ((be) this).field_O, false, 80, 3, var7, 16777215, vk.field_qb);
+              var10 = dupTemp$5;
+              ((be) this).b((ng) (Object) dupTemp$5, 80);
               ((be) this).field_L.field_n = (fn) this;
               ((be) this).field_p = ((be) this).field_p + (5 + ((ng) (Object) var10).field_C);
               if (((be) this).field_Q == null) {

@@ -610,7 +610,7 @@ final class as extends oj {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_E = null;
         field_y = null;
     }

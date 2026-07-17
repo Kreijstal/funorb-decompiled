@@ -104,7 +104,8 @@ final class u implements Runnable {
                     var3 = var4.getOutputStream();
                     var3.write(17);
                     var5 = (CharSequence) (Object) ("JAGGRAB " + ((u) this).field_k.getFile() + "\n\n");
-                    var3.write(ok.a(var5, (byte) 106));
+                    int discarded$4 = 106;
+                    var3.write(ok.a(var5));
                     ((u) this).field_d = new DataInputStream(var4.getInputStream());
                     break L6;
                   } else {
@@ -144,7 +145,7 @@ final class u implements Runnable {
                 }
               } else {
                 L9: {
-                  String discarded$3 = u.a(false);
+                  String discarded$5 = u.a(false);
                   if (null == ((u) this).field_i) {
                     ((u) this).field_i = ((u) this).field_a.a(5, (byte) 125, (Runnable) this);
                     break L9;
@@ -172,7 +173,7 @@ final class u implements Runnable {
               if (param0 > 45) {
                 break L11;
               } else {
-                String discarded$4 = u.a(false);
+                String discarded$6 = u.a(false);
                 break L11;
               }
             }
@@ -203,7 +204,7 @@ final class u implements Runnable {
               if (param0 > 45) {
                 break L14;
               } else {
-                String discarded$5 = u.a(false);
+                String discarded$7 = u.a(false);
                 break L14;
               }
             }

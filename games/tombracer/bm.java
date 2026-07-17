@@ -10,7 +10,7 @@ final class bm extends vg {
     static nh[] field_f;
     int field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
     }
 

@@ -7,7 +7,7 @@ final class cu implements gj {
     static wk field_b;
     static boolean field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         int var1 = 0;
         field_b = null;
@@ -17,9 +17,6 @@ final class cu implements gj {
         int var2 = 0;
         if (param1 == 0) {
             return 0;
-        }
-        if (param0 != 3) {
-            return 114;
         }
         if (param1 > 0) {
             var2 = 1;

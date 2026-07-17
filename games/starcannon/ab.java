@@ -38,11 +38,17 @@ class ab extends dk {
         }
     }
 
-    final static hl[] b(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 != -25343) {
-            return null;
-        }
-        return cc.a(1, 65793, 1, param3, 3, param0, 3, 1, param2);
+    final static hl[] b() {
+        int discarded$0 = 0;
+        int discarded$1 = 1;
+        int discarded$2 = 3;
+        int discarded$3 = 0;
+        int discarded$4 = 3;
+        int discarded$5 = 0;
+        int discarded$6 = 1;
+        int discarded$7 = 65793;
+        int discarded$8 = 1;
+        return cc.a();
     }
 
     final static void g(byte param0) {
@@ -72,11 +78,9 @@ class ab extends dk {
             if (og.field_d != null) {
               L1: {
                 var7 = og.field_d[ag.field_o];
-                var8 = var7;
-                var8 = var7;
                 if (var7 == null) {
                   if (ah.field_d != null) {
-                    int discarded$3 = ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    int discarded$5 = ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L1;
                   } else {
                     break L1;
@@ -95,10 +99,12 @@ class ab extends dk {
                     var3_int = (var8.field_x + 60) * rk.field_a / kk.field_a;
                     var4 = var3_int + -30;
                     if (cc.field_j) {
-                      n.a(var4 * -256 / 30, 199, 245, 256 * (var8.field_x - var4) / 30, var8, (byte) -2);
+                      int discarded$6 = -2;
+                      n.a(var4 * -256 / 30, 199, 245, 256 * (var8.field_x - var4) / 30, var8);
                       break L2;
                     } else {
-                      n.a(256 * (var8.field_x + -var4) / 30, 199, 245, -256 * var4 / 30, var8, (byte) -2);
+                      int discarded$7 = -2;
+                      n.a(256 * (var8.field_x + -var4) / 30, 199, 245, -256 * var4 / 30, var8);
                       break L2;
                     }
                   }
@@ -116,7 +122,7 @@ class ab extends dk {
                   L4: while (true) {
                     if (og.field_d.length <= var6) {
                       if (var3 != null) {
-                        int discarded$4 = ah.field_d.a("Screenshot(s) " + var3 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$8 = ah.field_d.a("Screenshot(s) " + var3 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L3;
                       } else {
                         break L3;
@@ -157,7 +163,7 @@ class ab extends dk {
             } else {
               L7: {
                 if (ah.field_d != null) {
-                  int discarded$5 = ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  int discarded$9 = ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L7;
                 } else {
                   break L7;
@@ -226,30 +232,26 @@ class ab extends dk {
         String stackOut_6_2 = null;
         try {
           L0: {
-            if (param0 > 27) {
-              L1: {
-                super.a(110, param1, param2, param3);
-                ((ab) this).field_E = null;
-                if (!((ab) this).field_h) {
-                  break L1;
-                } else {
-                  var5_int = -((ab) this).field_s + -param1 + pe.field_d;
-                  var6 = -param3 + la.field_c + -((ab) this).field_j;
-                  ((ab) this).field_E = this.a(var6, -256, var5_int);
-                  break L1;
-                }
+            L1: {
+              super.a(110, param1, param2, param3);
+              ((ab) this).field_E = null;
+              if (!((ab) this).field_h) {
+                break L1;
+              } else {
+                var5_int = -((ab) this).field_s + -param1 + pe.field_d;
+                var6 = -param3 + la.field_c + -((ab) this).field_j;
+                ((ab) this).field_E = this.a(var6, -256, var5_int);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) runtimeException;
-            stackOut_5_1 = new StringBuilder().append("ab.U(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("ab.U(").append(84).append(44).append(param1).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -347,47 +349,37 @@ class ab extends dk {
         oi var4 = null;
         oi var5 = null;
         int var6 = 0;
-        Object var7 = null;
-        L0: {
-          var6 = StarCannon.field_A;
-          if (param1 == -256) {
-            break L0;
-          } else {
-            var7 = null;
-            ((ab) this).a(-66, 48, (uj) null, -8);
-            break L0;
-          }
-        }
+        var6 = StarCannon.field_A;
         var4 = (oi) (Object) ((ab) this).field_C.c(-3905);
-        L1: while (true) {
+        L0: while (true) {
           if (var4 != null) {
             var5 = var4;
-            L2: while (true) {
+            L1: while (true) {
               if (var5 == null) {
                 var4 = (oi) (Object) ((ab) this).field_C.a(-16913);
-                continue L1;
+                continue L0;
               } else {
-                L3: {
+                L2: {
                   if (param2 < var5.field_g) {
-                    break L3;
+                    break L2;
                   } else {
                     if (var5.field_h > param0) {
-                      break L3;
+                      break L2;
                     } else {
                       if (var5.field_g + var5.field_k <= param2) {
-                        break L3;
+                        break L2;
                       } else {
                         if (var5.field_l + var5.field_h >= param0) {
                           return var4;
                         } else {
-                          break L3;
+                          break L2;
                         }
                       }
                     }
                   }
                 }
                 var5 = var5.field_o;
-                continue L2;
+                continue L1;
               }
             }
           } else {
@@ -607,7 +599,7 @@ class ab extends dk {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_G = null;
         field_F = null;
         field_A = null;

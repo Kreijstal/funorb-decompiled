@@ -120,7 +120,8 @@ final class fia implements Runnable {
                         if (field_o <= bva.b((byte) -107)) {
                           try {
                             L9: {
-                              var1_ref.field_f = (Object) (Object) hg.a((String) var1_ref.field_c, var1_ref.field_e, false).a(25927);
+                              int discarded$7 = 0;
+                              var1_ref.field_f = (Object) (Object) hg.a((String) var1_ref.field_c, var1_ref.field_e).a(25927);
                               break L9;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -200,7 +201,7 @@ final class fia implements Runnable {
                                                             ((fia) this).field_g.a(0, var3_int, var4_int);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$6 = Class.forName("kfa").getDeclaredMethod("movemouse", new Class[2]).invoke(((fia) this).field_t, new Object[2]);
+                                                            Object discarded$8 = Class.forName("kfa").getDeclaredMethod("movemouse", new Class[2]).invoke(((fia) this).field_t, new Object[2]);
                                                             break L8;
                                                           }
                                                         } else {
@@ -227,7 +228,7 @@ final class fia implements Runnable {
                                                           var3_int = stackIn_84_0;
                                                           var4_ref2 = (java.awt.Component) var1_ref.field_c;
                                                           if (!((fia) this).field_p) {
-                                                            Object discarded$7 = Class.forName("kfa").getDeclaredMethod("showcursor", new Class[2]).invoke(((fia) this).field_t, new Object[2]);
+                                                            Object discarded$9 = Class.forName("kfa").getDeclaredMethod("showcursor", new Class[2]).invoke(((fia) this).field_t, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((fia) this).field_g.a(var3_int != 0, -54, var4_ref2);
@@ -246,7 +247,7 @@ final class fia implements Runnable {
                                                           break L14;
                                                         } else {
                                                           var3_array = (Object[]) var1_ref.field_c;
-                                                          Object discarded$8 = Class.forName("kfa").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((fia) this).field_t, new Object[5]);
+                                                          Object discarded$10 = Class.forName("kfa").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((fia) this).field_t, new Object[5]);
                                                           break L8;
                                                         }
                                                       }
@@ -271,7 +272,7 @@ final class fia implements Runnable {
                                                             var5 = 0;
                                                             L17: while (true) {
                                                               if (~var5 <= ~var3_ref5.length()) {
-                                                                Process discarded$9 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var3_ref5 + "\"");
+                                                                Process discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var3_ref5 + "\"");
                                                                 var1_ref.field_f = null;
                                                                 break L15;
                                                               } else {
@@ -305,7 +306,7 @@ final class fia implements Runnable {
                                                 }
                                               } else {
                                                 if (!((fia) this).field_p) {
-                                                  Object discarded$10 = Class.forName("pj").getMethod("exit", new Class[0]).invoke(((fia) this).field_i, new Object[0]);
+                                                  Object discarded$12 = Class.forName("pj").getMethod("exit", new Class[0]).invoke(((fia) this).field_i, new Object[0]);
                                                   break L8;
                                                 } else {
                                                   ((fia) this).field_w.a((java.awt.Frame) var1_ref.field_c, (byte) -108);
@@ -320,7 +321,7 @@ final class fia implements Runnable {
                                                 ((fia) this).field_w.a(var3_ref6, var1_ref.field_e >>> 16, var1_ref.field_d >> 16, var1_ref.field_d & 65535, var1_ref.field_e & 65535, true);
                                                 break L8;
                                               } else {
-                                                Object discarded$11 = Class.forName("pj").getMethod("enter", new Class[5]).invoke(((fia) this).field_i, new Object[5]);
+                                                Object discarded$13 = Class.forName("pj").getMethod("enter", new Class[5]).invoke(((fia) this).field_i, new Object[5]);
                                                 break L8;
                                               }
                                             }
@@ -420,7 +421,7 @@ final class fia implements Runnable {
             Object var6 = null;
             ml discarded$0 = fia.a(-120, 43, (String) null, (String) null);
         }
-        return this.a(param3, 0, (byte) 104, (Object) (Object) param1, param2 ? 22 : 1);
+        return this.a(param3, 0, (byte) 104, (Object) (Object) param1, 1);
     }
 
     final naa a(int param0, Class[] param1, String param2, Class param3) {
@@ -654,34 +655,30 @@ final class fia implements Runnable {
         Object var7 = null;
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
-        if (param2 == 104) {
-          var6 = new naa();
-          var6.field_e = param0;
-          var6.field_d = param1;
-          var6.field_a = param4;
-          var6.field_c = param3;
-          var7 = this;
-          synchronized (var7) {
-            L0: {
-              L1: {
-                if (null != ((fia) this).field_k) {
-                  ((fia) this).field_k.field_g = var6;
-                  ((fia) this).field_k = var6;
-                  break L1;
-                } else {
-                  ((fia) this).field_l = var6;
-                  ((fia) this).field_k = var6;
-                  break L1;
-                }
+        var6 = new naa();
+        var6.field_e = param0;
+        var6.field_d = param1;
+        var6.field_a = param4;
+        var6.field_c = param3;
+        var7 = this;
+        synchronized (var7) {
+          L0: {
+            L1: {
+              if (null != ((fia) this).field_k) {
+                ((fia) this).field_k.field_g = var6;
+                ((fia) this).field_k = var6;
+                break L1;
+              } else {
+                ((fia) this).field_l = var6;
+                ((fia) this).field_k = var6;
+                break L1;
               }
-              this.notify();
-              break L0;
             }
+            this.notify();
+            break L0;
           }
-          return var6;
-        } else {
-          return null;
         }
+        return var6;
     }
 
     final naa a(int param0, int param1, int param2, byte param3, int param4) {

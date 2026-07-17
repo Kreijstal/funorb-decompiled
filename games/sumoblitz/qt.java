@@ -59,13 +59,15 @@ abstract class qt {
         if (param0 != 21) {
             return null;
         }
-        String var1 = gi.c((byte) -2);
+        int discarded$0 = -2;
+        String var1 = gi.c();
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        return new lj(gi.c((byte) -2), kc.a(param0 + -3));
+        int discarded$1 = -2;
+        return new lj(gi.c(), kc.a(param0 + -3));
     }
 
     final void b(byte param0) {

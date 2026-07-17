@@ -6546,6 +6546,7 @@ final class ww extends ka {
 
     ww(sfa param0, oc param1, int param2, int param3, int param4, int param5) {
         d var7 = null;
+        int[] var8 = null;
         int var9_int = 0;
         long[] var9 = null;
         int var10 = 0;
@@ -6608,6 +6609,7 @@ final class ww extends ka {
         float var52 = 0.0f;
         float var53 = 0.0f;
         int var54 = 0;
+        int[] var55 = null;
         jt var56 = null;
         dw var57 = null;
         long[] var58 = null;
@@ -6617,7 +6619,9 @@ final class ww extends ka {
         dw var62 = null;
         float[] var65 = null;
         float[] var66 = null;
+        int[] var67 = null;
         long[] var68 = null;
+        int[] var71 = null;
         long[] var72 = null;
         int[] var75 = null;
         long[] var76 = null;
@@ -6681,6 +6685,10 @@ final class ww extends ka {
         ((ww) this).field_kb = param1.field_e;
         ((ww) this).field_Eb = param1.field_y;
         var75 = new int[((ww) this).field_g];
+        var71 = var75;
+        var67 = var71;
+        var55 = var67;
+        var8 = var55;
         var9_int = 0;
         L0: while (true) {
           if (var9_int >= ((ww) this).field_g) {
@@ -6757,7 +6765,8 @@ final class ww extends ka {
                 }
                 ((ww) this).field_W = new float[((ww) this).field_g][];
                 ((ww) this).field_l = new float[((ww) this).field_g][];
-                var11 = qqa.a(var75, param1, ((ww) this).field_g, (byte) -6);
+                int discarded$1 = -6;
+                var11 = qqa.a(var8, param1, ((ww) this).field_g);
                 var61 = ((ww) this).field_d.a((Runnable) (Object) Thread.currentThread());
                 var77 = var61.field_d;
                 var14 = 0;

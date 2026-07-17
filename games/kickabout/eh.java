@@ -134,15 +134,18 @@ final class eh implements pk {
             Object var14 = null;
             this.a(28, (ot) null);
         }
-        mf.h((byte) -19);
-        up.e(-1456);
+        int discarded$0 = -19;
+        mf.h();
+        int discarded$1 = -1456;
+        up.e();
         sj var16 = kh.field_g;
-        sj var17 = ht.field_b;
+        sj var3 = ht.field_b;
         if (null != ht.field_c) {
             if (!(null == d.field_b)) {
                 ml.k(61, 0);
                 if (!(null != sr.field_h)) {
-                    it.a(new rj(ht.field_c, d.field_b), d.field_b, (byte) -100);
+                    int discarded$2 = -100;
+                    it.a(new rj(ht.field_c, d.field_b), d.field_b);
                 }
                 d.field_b = null;
                 ht.field_c = null;
@@ -152,7 +155,8 @@ final class eh implements pk {
         }
         if (!(ni.field_i == null)) {
             ml.k(61, 1);
-            f.a(ni.field_i, (byte) -122);
+            int discarded$3 = -122;
+            f.a(ni.field_i);
             ni.field_i = null;
             dd.a((byte) 53);
             return false;
@@ -169,11 +173,11 @@ final class eh implements pk {
             eo.field_m = se.a(bo.field_Cb, -121, "lobby", "exhibition_icons");
             eo.field_m[0] = new ut(0, 0);
             eo.field_f = jo.a(bo.field_Cb, 17369, "lobby", "orb_icons");
-            ut[] discarded$0 = se.a(bo.field_Cb, -127, "lobby", "players");
+            ut[] discarded$4 = se.a(bo.field_Cb, -127, "lobby", "players");
             tf.field_e = eo.field_q;
             un.field_d = gm.a(v.field_b, 10, "font2", bo.field_Cb, "fonts");
             q.field_d = qk.a("font", v.field_b, 75, "fonts", bo.field_Cb);
-            pb.field_C = qk.a("", var17, 105, "arialish12", var16);
+            pb.field_C = qk.a("", var3, 105, "arialish12", var16);
             var4 = new ut(16, 9);
             iw.a(-64, var4);
             on.d(4, 4, 3, 7829367);
@@ -183,7 +187,8 @@ final class eh implements pk {
             pb.field_C.a((qd[]) (Object) new kg[1], new int[1]);
             sk.a(83, 100, 10);
             var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
-            ch.a(var6, (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "locked"), (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "unachieved"), -123);
+            int discarded$5 = -123;
+            ch.a(var6, (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "locked"), (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "unachieved"));
             sh.field_g = nh.b(nh.a(var6));
             nn.field_B = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 69, "divider");
             tt.field_e = wa.a((byte) 122, "menu", bo.field_Cb, "button_left_shine");
@@ -227,8 +232,9 @@ final class eh implements pk {
                 ca.field_c[var10_int] = ri.a(tk.field_Fb[var10_int][0], param0);
             }
             kl.field_m = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 96, "help_up");
-            ut discarded$1 = bg.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
-            mf.a(se.a(bo.field_Cb, -124, "menu", "tickbox"), true);
+            ut discarded$6 = bg.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
+            int discarded$7 = 1;
+            mf.a(se.a(bo.field_Cb, -124, "menu", "tickbox"));
             sk.a(80, 100, 75);
             eq.field_h = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 93, "hammer_icon");
             ml.field_q = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy");
@@ -249,70 +255,102 @@ final class eh implements pk {
             var11 = new ut[][]{eo.field_p, null, eo.field_m, eo.field_j};
             var12 = new ut[][]{eo.field_p, null, eo.field_m, eo.field_j};
             Object var15 = null;
-            uf.a(var11, id.field_y, ow.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, jd.field_i);
+            uf.a(var11, id.field_y, ow.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var3, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, jd.field_i);
             la.field_k = da.field_k;
             qd.field_e = lr.field_n;
             wi.field_z = ja.field_Z;
             pn.field_t = 0;
             mr.a(false, 200);
             sk.a(-61, 100, 95);
-            m.a(var17, var16, 5198);
+            int discarded$8 = 5198;
+            m.a(var3, var16);
             bf.a(-70, rm.field_A, 0, (java.applet.Applet) (Object) nm.field_g, 0, 16777215);
-            Object var3 = null;
+            var3 = null;
             v.field_b = null;
             dd.a((byte) 104);
             return false;
         }
         if (!(sj.field_f == null)) {
             ml.k(61, 3);
-            cq.field_j = new ut(sj.field_f.a("background_guy.png", "", 36), (java.awt.Component) (Object) ln.l(64));
-            mk.field_a = new ut(sj.field_f.a("background.png", "", 66), (java.awt.Component) (Object) ln.l(64));
-            iu.field_k = new ut(sj.field_f.a("splash.jpg", "", 8), (java.awt.Component) (Object) ln.l(64));
-            ai.field_E = new ut(sj.field_f.a("botbar.png", "", 66), (java.awt.Component) (Object) ln.l(64));
+            int discarded$9 = 64;
+            cq.field_j = new ut(sj.field_f.a("background_guy.png", "", 36), (java.awt.Component) (Object) ln.l());
+            int discarded$10 = 64;
+            mk.field_a = new ut(sj.field_f.a("background.png", "", 66), (java.awt.Component) (Object) ln.l());
+            int discarded$11 = 64;
+            iu.field_k = new ut(sj.field_f.a("splash.jpg", "", 8), (java.awt.Component) (Object) ln.l());
+            int discarded$12 = 64;
+            ai.field_E = new ut(sj.field_f.a("botbar.png", "", 66), (java.awt.Component) (Object) ln.l());
             sk.a(-114, 23, 2);
-            vo.field_cb = nh.a(new ot(sj.field_f.a("bank_top.png", "", 3), (java.awt.Component) (Object) ln.l(64)));
-            nn.field_C = nh.a(new ot(sj.field_f.a("bank_mid.png", "", 52), (java.awt.Component) (Object) ln.l(64)));
-            du.field_i = nh.a(new ot(sj.field_f.a("bank_bot.png", "", 123), (java.awt.Component) (Object) ln.l(64)));
-            lb.field_L = nh.a(new ot(sj.field_f.a("button_lrg.png", "", 91), (java.awt.Component) (Object) ln.l(64)));
-            ll.field_m = nh.a(new ot(sj.field_f.a("button_sml.png", "", 81), (java.awt.Component) (Object) ln.l(64)));
+            int discarded$13 = 64;
+            vo.field_cb = nh.a(new ot(sj.field_f.a("bank_top.png", "", 3), (java.awt.Component) (Object) ln.l()));
+            int discarded$14 = 64;
+            nn.field_C = nh.a(new ot(sj.field_f.a("bank_mid.png", "", 52), (java.awt.Component) (Object) ln.l()));
+            int discarded$15 = 64;
+            du.field_i = nh.a(new ot(sj.field_f.a("bank_bot.png", "", 123), (java.awt.Component) (Object) ln.l()));
+            int discarded$16 = 64;
+            lb.field_L = nh.a(new ot(sj.field_f.a("button_lrg.png", "", 91), (java.awt.Component) (Object) ln.l()));
+            int discarded$17 = 64;
+            ll.field_m = nh.a(new ot(sj.field_f.a("button_sml.png", "", 81), (java.awt.Component) (Object) ln.l()));
             sk.a(122, 23, 4);
-            nn.field_K = new ot(sj.field_f.a("cone_1.png", "", 91), (java.awt.Component) (Object) ln.l(64));
-            re.field_o = new ot(sj.field_f.a("cone_2.png", "", 91), (java.awt.Component) (Object) ln.l(64));
-            uv.field_m = nh.a(new ot(sj.field_f.a("button_left.png", "", 8), (java.awt.Component) (Object) ln.l(64)));
-            uj.field_B = nh.a(new ot(sj.field_f.a("button_middle.png", "", 97), (java.awt.Component) (Object) ln.l(64)));
+            int discarded$18 = 64;
+            nn.field_K = new ot(sj.field_f.a("cone_1.png", "", 91), (java.awt.Component) (Object) ln.l());
+            int discarded$19 = 64;
+            re.field_o = new ot(sj.field_f.a("cone_2.png", "", 91), (java.awt.Component) (Object) ln.l());
+            int discarded$20 = 64;
+            uv.field_m = nh.a(new ot(sj.field_f.a("button_left.png", "", 8), (java.awt.Component) (Object) ln.l()));
+            int discarded$21 = 64;
+            uj.field_B = nh.a(new ot(sj.field_f.a("button_middle.png", "", 97), (java.awt.Component) (Object) ln.l()));
             sk.a(-114, 23, 6);
-            mf.field_Cb = nh.a(new ot(sj.field_f.a("button_right.png", "", 90), (java.awt.Component) (Object) ln.l(64)));
-            pw.field_H = (ut) (Object) new ot(sj.field_f.a("stopwatch.png", "", 101), (java.awt.Component) (Object) ln.l(64));
+            int discarded$22 = 64;
+            mf.field_Cb = nh.a(new ot(sj.field_f.a("button_right.png", "", 90), (java.awt.Component) (Object) ln.l()));
+            int discarded$23 = 64;
+            pw.field_H = (ut) (Object) new ot(sj.field_f.a("stopwatch.png", "", 101), (java.awt.Component) (Object) ln.l());
             sk.a(-58, 23, 8);
-            ut discarded$2 = nh.a(new ot(sj.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) (Object) ln.l(64)));
-            ut discarded$3 = nh.a(new ot(sj.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) (Object) ln.l(64)));
+            int discarded$24 = 64;
+            ut discarded$25 = nh.a(new ot(sj.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) (Object) ln.l()));
+            int discarded$26 = 64;
+            ut discarded$27 = nh.a(new ot(sj.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) (Object) ln.l()));
             sk.a(-105, 23, 10);
-            ut discarded$4 = nh.a(new ot(sj.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) (Object) ln.l(64)));
-            gu.field_zb = nh.a(new ot(sj.field_f.a("small_button_L.png", "", 52), (java.awt.Component) (Object) ln.l(64)));
+            int discarded$28 = 64;
+            ut discarded$29 = nh.a(new ot(sj.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) (Object) ln.l()));
+            int discarded$30 = 64;
+            gu.field_zb = nh.a(new ot(sj.field_f.a("small_button_L.png", "", 52), (java.awt.Component) (Object) ln.l()));
             sk.a(-61, 23, 12);
-            ae.field_H = nh.a(new ot(sj.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) (Object) ln.l(64)));
-            fv.field_b = nh.a(new ot(sj.field_f.a("small_button_R.png", "", 117), (java.awt.Component) (Object) ln.l(64)));
+            int discarded$31 = 64;
+            ae.field_H = nh.a(new ot(sj.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) (Object) ln.l()));
+            int discarded$32 = 64;
+            fv.field_b = nh.a(new ot(sj.field_f.a("small_button_R.png", "", 117), (java.awt.Component) (Object) ln.l()));
             sk.a(-85, 23, 14);
-            mg.field_g = nh.a(new ot(sj.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) (Object) ln.l(64)));
+            int discarded$33 = 64;
+            mg.field_g = nh.a(new ot(sj.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) (Object) ln.l()));
             sk.a(-49, 23, 16);
-            qt.field_u = nh.a(new ot(sj.field_f.a("top.png", "", 82), (java.awt.Component) (Object) ln.l(64)));
+            int discarded$34 = 64;
+            qt.field_u = nh.a(new ot(sj.field_f.a("top.png", "", 82), (java.awt.Component) (Object) ln.l()));
             sk.a(-98, 23, 18);
-            fn.field_f = new ot(sj.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) (Object) ln.l(64));
-            kn.field_J = new ut(sj.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) (Object) ln.l(64));
+            int discarded$35 = 64;
+            fn.field_f = new ot(sj.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) (Object) ln.l());
+            int discarded$36 = 64;
+            kn.field_J = new ut(sj.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) (Object) ln.l());
             sk.a(126, 23, 20);
-            vl.field_g = new ut(sj.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) (Object) ln.l(64));
-            eo.field_a = new ot(sj.field_f.a("arrow_on.png", "", 63), (java.awt.Component) (Object) ln.l(64));
-            eo.field_b = new ot(sj.field_f.a("arrow_off.png", "", 4), (java.awt.Component) (Object) ln.l(64));
+            int discarded$37 = 64;
+            vl.field_g = new ut(sj.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) (Object) ln.l());
+            int discarded$38 = 64;
+            eo.field_a = new ot(sj.field_f.a("arrow_on.png", "", 63), (java.awt.Component) (Object) ln.l());
+            int discarded$39 = 64;
+            eo.field_b = new ot(sj.field_f.a("arrow_off.png", "", 4), (java.awt.Component) (Object) ln.l());
             sk.a(-89, 23, 23);
-            this.a(11264, new ot(sj.field_f.a("achievements_large.png", "", 63), (java.awt.Component) (Object) ln.l(64)));
-            sf.field_C = (ut) (Object) new ot(sj.field_f.a("ka_logo.png", "", 37), (java.awt.Component) (Object) ln.l(64));
+            int discarded$40 = 64;
+            this.a(11264, new ot(sj.field_f.a("achievements_large.png", "", 63), (java.awt.Component) (Object) ln.l()));
+            int discarded$41 = 64;
+            sf.field_C = (ut) (Object) new ot(sj.field_f.a("ka_logo.png", "", 37), (java.awt.Component) (Object) ln.l());
             sj.field_f = null;
             dd.a((byte) 99);
             return false;
         }
         if (!(b.field_H == null)) {
             ml.k(61, 4);
-            ee.a(new ks(b.field_H.a("huffman", "", 93)), false);
+            int discarded$42 = 0;
+            ee.a(new ks(b.field_H.a("huffman", "", 93)));
             b.field_H = null;
             dd.a((byte) 78);
             return false;
@@ -343,7 +381,7 @@ final class eh implements pk {
         wc.field_k = new sn((ma) (Object) nm.field_g);
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         ut var2 = null;
         ut var3 = null;
@@ -352,25 +390,15 @@ final class eh implements pk {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        ut var9 = null;
         ut var10 = null;
-        ut var11 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = Kickabout.field_G;
         try {
           L0: {
             L1: {
-              if (param0 < -42) {
-                break L1;
-              } else {
-                var9 = null;
-                eh.a(-123, -22, (StringBuilder) null);
-                break L1;
-              }
-            }
-            L2: {
-              var10 = tv.field_b[2];
-              var11 = var10;
+              var9 = tv.field_b[2];
+              var10 = var9;
               var2 = nh.a((ot) (Object) c.field_e);
               var3 = nh.a((ot) (Object) st.field_q);
               if (rm.field_C != 0) {
@@ -381,7 +409,7 @@ final class eh implements pk {
                   var4++;
                   oi.field_e[incrementValue$30] = new oh(el.field_D, 0, 1375);
                   var5 = 0;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (12 <= var5) {
                       int incrementValue$31 = var4;
                       var4++;
@@ -399,18 +427,18 @@ final class eh implements pk {
                       var4++;
                       oi.field_e[incrementValue$35] = new oh(el.field_D, 1030, 568);
                       var5 = 0;
-                      L4: while (true) {
+                      L3: while (true) {
                         if (var5 >= 8) {
-                          break L2;
+                          break L1;
                         } else {
-                          L5: {
+                          L4: {
                             var6 = el.a(29430, 20, -170);
                             var7 = -50 - -(var5 / 2 * 400);
                             if ((1 & var5) != 0) {
                               var7 = var7 + el.a(29430, 20, 60);
-                              break L5;
+                              break L4;
                             } else {
-                              break L5;
+                              break L4;
                             }
                           }
                           int incrementValue$36 = var4;
@@ -420,26 +448,26 @@ final class eh implements pk {
                           var4++;
                           oi.field_e[incrementValue$37] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], -var6 + 876, var7);
                           var5++;
-                          continue L4;
+                          continue L3;
                         }
                       }
                     } else {
-                      L6: {
+                      L5: {
                         var6 = el.a(29430, 30, -300 - -(100 * var5));
                         var7 = el.a(29430, 60, -290);
                         if (p.a((byte) -24, 2) != 0) {
-                          break L6;
+                          break L5;
                         } else {
                           var6 = -var6 + 896;
                           var7 += 1724;
-                          break L6;
+                          break L5;
                         }
                       }
                       int incrementValue$38 = var4;
                       var4++;
                       oi.field_e[incrementValue$38] = new oh(c.field_e, var6, var7);
                       var5++;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 } else {
@@ -454,13 +482,13 @@ final class eh implements pk {
                     oi.field_e[6] = new oh(c.field_e, 925, 1294);
                     oi.field_e[7] = new oh(el.field_D, -131, 957);
                     oi.field_e[8] = new oh(el.field_D, 924, 240);
-                    break L2;
+                    break L1;
                   } else {
                     if (rm.field_C == 3) {
                       oi.field_e = new oh[]{};
-                      break L2;
+                      break L1;
                     } else {
-                      break L2;
+                      break L1;
                     }
                   }
                 }
@@ -468,7 +496,7 @@ final class eh implements pk {
                 oi.field_e = new oh[30];
                 var4 = 0;
                 var5 = 0;
-                L7: while (true) {
+                L6: while (true) {
                   if (4 <= var5) {
                     int incrementValue$39 = var4;
                     var4++;
@@ -516,7 +544,7 @@ final class eh implements pk {
                     var4++;
                     oi.field_e[incrementValue$53] = new oh(ns.field_c, -68, 1143);
                     var5 = 0;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (7 <= var5) {
                         int incrementValue$54 = var4;
                         var4++;
@@ -530,7 +558,7 @@ final class eh implements pk {
                         int incrementValue$57 = var4;
                         var4++;
                         oi.field_e[incrementValue$57] = new oh(var2, 170, 1364);
-                        break L2;
+                        break L1;
                       } else {
                         var6 = el.a(29430, 40, 956);
                         var7 = el.a(29430, 70, var5 * 150 + 200);
@@ -538,17 +566,17 @@ final class eh implements pk {
                         var4++;
                         oi.field_e[incrementValue$58] = new oh(c.field_e, var6, var7);
                         var5++;
-                        continue L8;
+                        continue L7;
                       }
                     }
                   } else {
-                    var6 = p.a((byte) -24, 896 + -var11.field_o);
-                    var7 = p.a((byte) -24, 1344 - var11.field_v);
+                    var6 = p.a((byte) -24, 896 + -var10.field_o);
+                    var7 = p.a((byte) -24, 1344 - var10.field_v);
                     int incrementValue$59 = var4;
                     var4++;
-                    oi.field_e[incrementValue$59] = new oh(var10, var6, var7);
+                    oi.field_e[incrementValue$59] = new oh(var9, var6, var7);
                     var5++;
-                    continue L7;
+                    continue L6;
                   }
                 }
               }
@@ -558,11 +586,11 @@ final class eh implements pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "eh.H(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "eh.H(" + -48 + 41);
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_f = null;
         field_b = null;
     }
@@ -576,9 +604,12 @@ final class eh implements pk {
         nm.a(0, -76, false, dq.a((byte) 79, 3, new Random()));
         ml.k(param0 ^ 12774, 7);
         t.a(0.6000000238418579f);
-        g.b(false);
-        fn.i(18);
-        ii.b(65280);
+        int discarded$16 = 0;
+        g.b();
+        int discarded$17 = 18;
+        fn.i();
+        int discarded$18 = 65280;
+        ii.b();
         ml.k(61, 8);
         td.b(param0 + -12854);
         sk.a(118, 2, 1);
@@ -586,15 +617,19 @@ final class eh implements pk {
         sk.a(84, 6, 1);
         eo.a();
         sk.a(-46, 6, 2);
-        iv.a(un.field_d, (byte) 113);
+        int discarded$19 = 113;
+        iv.a(un.field_d);
         sk.a(-89, 6, 3);
         uf.a((byte) -32);
-        cm.l(96);
+        int discarded$20 = 96;
+        cm.l();
         sk.a(-49, 6, 5);
         tu.n((byte) -10);
         ml.k(61, 10);
-        wb.b((byte) -47);
-        rf.a((byte) -124);
+        int discarded$21 = -47;
+        wb.b();
+        int discarded$22 = -124;
+        rf.a();
         sk.a(127, 4, 1);
         op.a(param0 ^ -363033958);
         sk.a(-69, 4, 2);
@@ -612,9 +647,11 @@ final class eh implements pk {
               jm.a(-5, false, -2);
               ml.k(61, 12);
               sk.a(-71, 4, 1);
-              nr.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, (hu) (Object) pb.field_C, (hu) (Object) un.field_d, (dg) (Object) new nk(), 20, 16777215, 30, (dg) (Object) new pa(true), 16777215, 9, (dg) (Object) new pa(false), 16777215);
+              int discarded$23 = 16777215;
+              nr.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, (hu) (Object) pb.field_C, (hu) (Object) un.field_d, (dg) (Object) new nk(), 20, 16777215, 30, (dg) (Object) new pa(true), 16777215, 9, (dg) (Object) new pa(false));
               sk.a(-57, 4, 2);
-              nb.a((byte) -94);
+              int discarded$24 = -94;
+              nb.a();
               sk.a(75, 4, 3);
               cm.a(param0 ^ 922092267, 50);
               Kickabout.t(param0 + -826888154);
@@ -743,7 +780,8 @@ final class eh implements pk {
           if (fn.field_b == null) {
             break L0;
           } else {
-            ad.a(fn.field_b, 1);
+            int discarded$1 = 1;
+            ad.a(fn.field_b);
             fn.field_b = null;
             dd.a((byte) 85);
             break L0;
@@ -922,169 +960,158 @@ final class eh implements pk {
         ut[] var5 = null;
         RuntimeException var5_ref = null;
         ut[] var6 = null;
-        ut[] stackIn_3_0 = null;
+        ut[] stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ut[] stackOut_2_0 = null;
+        ut[] stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
-            L1: {
-              if (param2 >= 16) {
-                break L1;
-              } else {
-                eh.a((byte) 120);
-                break L1;
-              }
-            }
             var6 = se.a(param1, -42, param0, param3);
             var5 = var6;
             var6[3].field_v = var6[3].field_w;
             var6[1].field_o = var6[1].field_q;
             var6[5].field_v = var6[5].field_w;
             var6[7].field_o = var6[7].field_q;
-            stackOut_2_0 = (ut[]) var5;
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = (ut[]) var5;
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var5_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var5_ref;
-            stackOut_4_1 = new StringBuilder().append("eh.F(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var5_ref;
+            stackOut_2_1 = new StringBuilder().append("eh.F(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
-            if (param1 == null) {
+            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(26).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param3 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
-            } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L3;
             }
           }
-          L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44);
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
-            if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
-            } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
-            }
-          }
-          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     final static void a(int param0, int param1, StringBuilder param2) {
         int var3_int = param0 >> 16;
         StringBuilder discarded$0 = param2.append(var3_int);
         int var4 = (int)(1000.0f * ((float)(65535 & param0) / 65536.0f));
-        StringBuilder discarded$6 = param2.append(46);
-        if (param1 != 100) {
-            return;
-        }
+        StringBuilder discarded$1 = param2.append(46);
         try {
-            StringBuilder discarded$7 = param2.append(var4);
+            StringBuilder discarded$2 = param2.append(var4);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "eh.I(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "eh.I(" + param0 + 44 + 100 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

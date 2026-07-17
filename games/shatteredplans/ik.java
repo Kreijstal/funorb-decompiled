@@ -7,7 +7,7 @@ final class ik extends oh {
     int field_i;
     static boolean field_h;
 
-    final static int[] a(int[] param0, int param1, byte param2) {
+    final static int[] a(int[] param0, int param1) {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -115,7 +115,7 @@ final class ik extends oh {
         return (mj) (Object) qp.field_w.a(65280, param1);
     }
 
-    final static int a(int param0) {
+    final static int a() {
         return of.field_e;
     }
 

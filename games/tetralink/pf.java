@@ -33,19 +33,15 @@ final class pf {
     }
 
     private final boolean b(int param0, int param1, int param2) {
-        if (param2 != 17) {
-          if (param1 != -20991) {
-            return false;
-          } else {
-            return false;
-          }
-        } else {
+        if (param2 == 17) {
           mm.field_y = new om(((pf) this).field_h.field_eb, ((pf) this).field_h.field_z, ((pf) this).field_h.field_Hb, ((pf) this).field_h.field_R, param0, sa.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, ek.field_n, ((pf) this).field_b, ((pf) this).field_e);
           return true;
+        } else {
+          return false;
         }
     }
 
-    private final String b(int param0) {
+    private final String b() {
         String var2 = null;
         if (null == ((pf) this).field_i) {
             var2 = ((pf) this).field_b;
@@ -56,81 +52,41 @@ final class pf {
     }
 
     private final boolean d(int param0, int param1, int param2) {
-        int var5 = 0;
-        var5 = TetraLink.field_J;
-        if (param2 != 8) {
-          if (param2 == 18) {
-            uf.a(-127, ((pf) this).field_b, ((pf) this).field_e);
-            if (param0 == -15) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            if (param2 != 11) {
-              if (param2 == 12) {
-                vj.a(((pf) this).field_f, param1, 1, 113);
-                if (param0 == -15) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                if (param2 != 13) {
-                  if (param2 == 14) {
-                    ei.d(-4210768);
-                    if (param0 == -15) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    if (20 != param2) {
-                      if (19 == param2) {
-                        boolean discarded$1 = sj.a(((pf) this).field_e, ((pf) this).field_b, ((pf) this).field_g, 60, ((pf) this).field_f);
-                        if (param0 == -15) {
-                          return true;
-                        } else {
-                          return false;
-                        }
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      em.d(-20715);
-                      if (param0 == -15) {
-                        return true;
-                      } else {
-                        return false;
-                      }
-                    }
-                  }
-                } else {
-                  vj.a(((pf) this).field_f, param1, 2, 99);
-                  if (param0 == -15) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                }
-              }
-            } else {
-              vj.a(((pf) this).field_f, param1, 0, 99);
-              if (param0 == -15) {
-                return true;
-              } else {
-                return false;
-              }
-            }
-          }
-        } else {
-          tb.a(false, ((pf) this).field_b, ((pf) this).field_e);
-          if (param0 == -15) {
+        int var5 = TetraLink.field_J;
+        if (param2 == 8) {
+            tb.a(false, ((pf) this).field_b, ((pf) this).field_e);
             return true;
-          } else {
-            return false;
-          }
         }
+        if (param2 != 18) {
+            if (param2 == 11) {
+                vj.a(((pf) this).field_f, param1, 0, 99);
+                return true;
+            }
+            if (param2 != 12) {
+                if (param2 == 13) {
+                    vj.a(((pf) this).field_f, param1, 2, 99);
+                    return true;
+                }
+                if (param2 != 14) {
+                    if (20 == param2) {
+                        int discarded$0 = -20715;
+                        em.d();
+                        return true;
+                    }
+                    if (19 != param2) {
+                        return false;
+                    }
+                    boolean discarded$1 = sj.a(((pf) this).field_e, ((pf) this).field_b, ((pf) this).field_g, 60, ((pf) this).field_f);
+                    return true;
+                }
+                ei.d(-4210768);
+                return true;
+            }
+            vj.a(((pf) this).field_f, param1, 1, 113);
+            return true;
+        }
+        uf.a(-127, ((pf) this).field_b, ((pf) this).field_e);
+        return true;
     }
 
     final void a(boolean param0) {
@@ -143,7 +99,8 @@ final class pf {
             if (~((pf) this).field_e == ~oj.field_c) {
               break L0;
             } else {
-              var3 = this.b(2);
+              int discarded$2 = 2;
+              var3 = this.b();
               var2 = var3;
               ((pf) this).field_j.a(sk.a(new String[1], qm.field_a, 125), 1, 17);
               break L0;
@@ -169,10 +126,10 @@ final class pf {
           if (var4_ref != null) {
             var6 = null;
             fi.a(0, 0, ((pf) this).field_b, 2, var4_ref, (String) null);
-            var5 = -112 % ((11 - param0) / 54);
+            var5 = 0;
             return true;
           } else {
-            var5 = -112 % ((11 - param0) / 54);
+            var5 = 0;
             return true;
           }
         } else {
@@ -183,36 +140,37 @@ final class pf {
                 if (var4_ref != null) {
                   var6 = null;
                   fi.a(0, 0, ((pf) this).field_b, 2, var4_ref, (String) null);
-                  var5 = -112 % ((11 - param0) / 54);
+                  var5 = 0;
                   return true;
                 } else {
-                  var5 = -112 % ((11 - param0) / 54);
+                  var5 = 0;
                   return true;
                 }
               } else {
                 return false;
               }
             } else {
-              var4_ref = li.a(param1, ((pf) this).field_b, 2);
+              int discarded$1 = 2;
+              var4_ref = li.a(param1, ((pf) this).field_b);
               if (var4_ref == null) {
-                var5 = -112 % ((11 - param0) / 54);
+                var5 = 0;
                 return true;
               } else {
                 var6 = null;
                 fi.a(0, 0, ((pf) this).field_b, 2, var4_ref, (String) null);
-                var5 = -112 % ((11 - param0) / 54);
+                var5 = 0;
                 return true;
               }
             }
           } else {
             var4_ref = ma.a(false, ((pf) this).field_b, param1);
             if (var4_ref == null) {
-              var5 = -112 % ((11 - param0) / 54);
+              var5 = 0;
               return true;
             } else {
               var6 = null;
               fi.a(0, 0, ((pf) this).field_b, 2, var4_ref, (String) null);
-              var5 = -112 % ((11 - param0) / 54);
+              var5 = 0;
               return true;
             }
           }
@@ -533,10 +491,13 @@ final class pf {
         if (((pf) this).field_b != null) {
           if (oj.field_c != ((pf) this).field_e) {
             if (qb.field_N != null) {
-              if (s.b(63)) {
-                var7 = tm.a(((pf) this).field_e, -26778);
+              int discarded$3 = 63;
+              if (s.b()) {
+                int discarded$4 = -26778;
+                var7 = tm.a(((pf) this).field_e);
                 var4 = sf.a(-18701, ((pf) this).field_e);
-                var5 = this.b(2);
+                int discarded$5 = 2;
+                var5 = this.b();
                 if (var4 == null) {
                   if (var7 != null) {
                     if (qb.field_N.field_kc) {
@@ -741,7 +702,8 @@ final class pf {
                     break L1;
                   } else {
                     L3: {
-                      var7 = this.b(2);
+                      int discarded$2 = 2;
+                      var7 = this.b();
                       var4_ref = var7;
                       stackOut_7_0 = ((pf) this).field_b;
                       stackIn_9_0 = stackOut_7_0;
@@ -794,7 +756,8 @@ final class pf {
                         break L5;
                       } else {
                         L6: {
-                          if (cc.a(((pf) this).field_b, (byte) -80)) {
+                          int discarded$3 = -80;
+                          if (cc.a(((pf) this).field_b)) {
                             break L6;
                           } else {
                             if (cd.field_a) {
@@ -870,72 +833,37 @@ final class pf {
     }
 
     private final boolean a(int param0, int param1, int param2) {
-        int var5 = 0;
-        var5 = TetraLink.field_J;
+        int var5 = TetraLink.field_J;
         if (0 == param0) {
-          q.a(param2, (byte) -118, ((pf) this).field_e);
-          if (param1 <= 108) {
+            q.a(param2, (byte) -118, ((pf) this).field_e);
             return true;
-          } else {
-            return true;
-          }
-        } else {
-          if (param0 == 1) {
-            qe.a(47, param2, ((pf) this).field_e);
-            if (param1 <= 108) {
-              return true;
-            } else {
-              return true;
-            }
-          } else {
-            if (param0 == 2) {
-              uf.a(param2, (byte) 110, ((pf) this).field_c);
-              if (param1 <= 108) {
-                return true;
-              } else {
-                return true;
-              }
-            } else {
-              if (param0 == 3) {
-                g.e(((pf) this).field_c, -125, param2);
-                if (param1 <= 108) {
-                  return true;
-                } else {
-                  return true;
-                }
-              } else {
-                if (10 == param0) {
-                  mi.a(3, ((pf) this).field_c, param2);
-                  if (param1 <= 108) {
-                    return true;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  if (param0 != 15) {
-                    if (param0 == 16) {
-                      g.a(param2, (byte) -123, 0);
-                      if (param1 <= 108) {
-                        return true;
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    g.a(param2, (byte) -125, ((pf) this).field_c);
-                    if (param1 <= 108) {
-                      return true;
-                    } else {
-                      return true;
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
+        if (param0 == 1) {
+            qe.a(47, param2, ((pf) this).field_e);
+            return true;
+        }
+        if (param0 == 2) {
+            uf.a(param2, (byte) 110, ((pf) this).field_c);
+            return true;
+        }
+        if (param0 == 3) {
+            g.e(((pf) this).field_c, -125, param2);
+            return true;
+        }
+        if (10 == param0) {
+            mi.a(3, ((pf) this).field_c, param2);
+            return true;
+        }
+        if (param0 == 15) {
+            g.a(param2, (byte) -125, ((pf) this).field_c);
+        } else {
+            if (param0 != 16) {
+                return false;
+            }
+            g.a(param2, (byte) -123, 0);
+            return true;
+        }
+        return true;
     }
 
     final static void a(int param0, int param1) {

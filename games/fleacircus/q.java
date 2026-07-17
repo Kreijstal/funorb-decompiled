@@ -7,7 +7,7 @@ final class q {
     static int[] field_a;
     static String[] field_b;
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String a(CharSequence param0) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -29,7 +29,9 @@ final class q {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = e.a(param0, false, 0);
+            int discarded$4 = 0;
+            int discarded$5 = 0;
+            stackOut_0_0 = e.a(param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -67,18 +69,19 @@ final class q {
     }
 
     final static rh a(int param0, int param1) {
-        if (param0 != 8192) {
-            return null;
-        }
-        return ag.a(false, param1, false, 1, true, param0 + -8191);
+        int discarded$0 = 1;
+        int discarded$1 = 1;
+        int discarded$2 = 1;
+        int discarded$3 = 0;
+        return ag.a(false, param1);
     }
 
     final static void a(boolean param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int var4 = 0;
         oa var4_ref_oa = null;
+        int var4 = 0;
         Object var5 = null;
         int var6 = 0;
         kf var9 = null;
@@ -88,28 +91,20 @@ final class q {
         var6 = fleas.field_A ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var10 = ae.field_a;
-              if (param0) {
-                break L1;
-              } else {
-                field_c = null;
-                break L1;
-              }
-            }
+            var10 = ae.field_a;
             var2 = var10.e(false);
             if (var2 == 0) {
               var9 = (kf) (Object) hd.field_a.c((byte) 47);
               if (var9 != null) {
-                L2: {
+                L1: {
                   var4 = var10.e(false);
                   if (var4 != 0) {
                     var14 = new byte[var4];
                     var10.b(var14, 0, -88, var4);
-                    break L2;
+                    break L1;
                   } else {
                     var5 = null;
-                    break L2;
+                    break L1;
                   }
                 }
                 var10.field_i = var10.field_i + 4;
@@ -126,22 +121,23 @@ final class q {
               }
             } else {
               if (1 != var2) {
-                ud.a("A1: " + ak.a(true), (Throwable) null, 0);
+                int discarded$2 = 1;
+                ud.a("A1: " + ak.a(), (Throwable) null, 0);
                 k.c(-28354);
                 return;
               } else {
                 var3 = var10.c((byte) 122);
                 var4_ref_oa = (oa) (Object) cf.field_d.c((byte) 47);
-                L3: while (true) {
-                  L4: {
+                L2: while (true) {
+                  L3: {
                     if (var4_ref_oa == null) {
-                      break L4;
+                      break L3;
                     } else {
                       if (var3 != var4_ref_oa.field_i) {
                         var4_ref_oa = (oa) (Object) cf.field_d.b((byte) -105);
-                        continue L3;
+                        continue L2;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
@@ -159,11 +155,11 @@ final class q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "q.D(" + param0 + 41);
+          throw pf.a((Throwable) (Object) var1, "q.D(" + 1 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

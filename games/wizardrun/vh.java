@@ -187,7 +187,7 @@ final class vh implements Runnable {
                                               var9_ref.field_e = (Object) (Object) var14;
                                               var14.setResizable(false);
                                               if (!((vh) this).field_j) {
-                                                Object discarded$6 = Class.forName("bj").getMethod("enter", new Class[5]).invoke(((vh) this).field_t, new Object[5]);
+                                                Object discarded$7 = Class.forName("bj").getMethod("enter", new Class[5]).invoke(((vh) this).field_t, new Object[5]);
                                                 break L8;
                                               } else {
                                                 ((vh) this).field_u.a(var9_ref.field_f >> 16, (byte) 122, var9_ref.field_d >>> 16, 65535 & var9_ref.field_d, var9_ref.field_f & 65535, var14);
@@ -199,7 +199,7 @@ final class vh implements Runnable {
                                                   ((vh) this).field_u.a(-2147483648, (java.awt.Frame) var9_ref.field_g);
                                                   break L8;
                                                 } else {
-                                                  Object discarded$7 = Class.forName("bj").getMethod("exit", new Class[0]).invoke(((vh) this).field_t, new Object[0]);
+                                                  Object discarded$8 = Class.forName("bj").getMethod("exit", new Class[0]).invoke(((vh) this).field_t, new Object[0]);
                                                   break L8;
                                                 }
                                               } else {
@@ -224,7 +224,7 @@ final class vh implements Runnable {
                                                             ((vh) this).field_x.a(var3_int, var4, (byte) 116);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$8 = Class.forName("ak").getDeclaredMethod("movemouse", new Class[2]).invoke(((vh) this).field_h, new Object[2]);
+                                                            Object discarded$9 = Class.forName("ak").getDeclaredMethod("movemouse", new Class[2]).invoke(((vh) this).field_h, new Object[2]);
                                                             break L8;
                                                           }
                                                         } else {
@@ -251,7 +251,7 @@ final class vh implements Runnable {
                                                           var3_int = stackIn_70_0;
                                                           var13 = (java.awt.Component) var9_ref.field_g;
                                                           if (!((vh) this).field_j) {
-                                                            Object discarded$9 = Class.forName("ak").getDeclaredMethod("showcursor", new Class[2]).invoke(((vh) this).field_h, new Object[2]);
+                                                            Object discarded$10 = Class.forName("ak").getDeclaredMethod("showcursor", new Class[2]).invoke(((vh) this).field_h, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((vh) this).field_x.a(0, var3_int != 0, var13);
@@ -270,7 +270,7 @@ final class vh implements Runnable {
                                                           break L13;
                                                         } else {
                                                           var12 = (Object[]) var9_ref.field_g;
-                                                          Object discarded$10 = Class.forName("ak").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((vh) this).field_h, new Object[5]);
+                                                          Object discarded$11 = Class.forName("ak").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((vh) this).field_h, new Object[5]);
                                                           break L8;
                                                         }
                                                       }
@@ -299,7 +299,7 @@ final class vh implements Runnable {
                                                             var5 = 0;
                                                             L16: while (true) {
                                                               if (var7.length() <= var5) {
-                                                                Process discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var7 + "\"");
+                                                                Process discarded$12 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var7 + "\"");
                                                                 var9_ref.field_e = null;
                                                                 break L14;
                                                               } else {
@@ -358,7 +358,8 @@ final class vh implements Runnable {
                         if (d.a((byte) 50) >= field_d) {
                           try {
                             L18: {
-                              var9_ref.field_e = (Object) (Object) mj.a((String) var9_ref.field_g, var9_ref.field_d, -1).a((byte) -128);
+                              int discarded$13 = -1;
+                              var9_ref.field_e = (Object) (Object) mj.a((String) var9_ref.field_g, var9_ref.field_d).a((byte) -128);
                               break L18;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter2) {
@@ -437,7 +438,7 @@ final class vh implements Runnable {
               }
             }
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_n, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
-            var6 = param0;
+            var6 = 0;
             L1: while (true) {
               if (var5_array.length > var6) {
                 L2: {
@@ -666,35 +667,27 @@ final class vh implements Runnable {
         Object var7 = null;
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          var6 = new jh();
-          var6.field_d = param3;
-          var6.field_g = param2;
-          var6.field_f = param1;
-          var6.field_b = param4;
-          if (!param0) {
-            break L0;
-          } else {
-            field_d = 103L;
-            break L0;
-          }
-        }
+        var6 = new jh();
+        var6.field_d = param3;
+        var6.field_g = param2;
+        var6.field_f = param1;
+        var6.field_b = param4;
         var7 = this;
         synchronized (var7) {
-          L1: {
-            L2: {
+          L0: {
+            L1: {
               if (null == ((vh) this).field_r) {
                 ((vh) this).field_o = var6;
                 ((vh) this).field_r = var6;
-                break L2;
+                break L1;
               } else {
                 ((vh) this).field_r.field_c = var6;
                 ((vh) this).field_r = var6;
-                break L2;
+                break L1;
               }
             }
             this.notify();
-            break L1;
+            break L0;
           }
         }
         return var6;

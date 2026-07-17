@@ -8,7 +8,7 @@ final class ig {
     static int field_b;
     static String field_a;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         if (di.field_x == null) {
             return false;
         }
@@ -26,7 +26,7 @@ final class ig {
             var3.d((byte) -77, param0);
             var3.field_o = var3.field_o + 1;
             var4 = var3.field_o;
-            var3.c(param1, 25564);
+            var3.c(1, 25564);
             var3.c(param2.field_r, 25564);
             var3.d(-87, param2.field_p);
             var3.a((byte) 110, param2.field_o);
@@ -36,11 +36,11 @@ final class ig {
             int discarded$0 = var3.e(-128, var4);
             var3.g(-1, var3.field_o - var4);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ig.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ig.A(" + param0 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_d = null;
         field_a = null;

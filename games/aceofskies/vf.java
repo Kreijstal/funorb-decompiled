@@ -283,7 +283,7 @@ final class vf implements Runnable {
         }
     }
 
-    final static String a(long param0, int param1) {
+    final static String a(long param0) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -434,7 +434,8 @@ final class vf implements Runnable {
                   }
                 }
               } else {
-                wf.a(1L, false);
+                int discarded$2 = 0;
+                wf.a(1L);
                 continue L1;
               }
             }

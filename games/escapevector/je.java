@@ -136,14 +136,17 @@ final class je {
         }
     }
 
-    final static void a(mf param0, hj param1, int param2, byte param3) {
+    final static void a(mf param0, hj param1, int param2) {
         try {
             hb.field_h = se.a(0) * param2 / 1000;
-            on.a(param0, -58);
-            h.a(param0, (byte) 110);
+            int discarded$0 = -58;
+            on.a(param0);
+            int discarded$1 = 110;
+            h.a(param0);
             cj.a(0, param0);
             pa.a(-83);
-            id.c(120);
+            int discarded$2 = 120;
+            id.c();
             kb.field_d = 0 - hb.field_h;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "je.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 103 + 41);
@@ -152,10 +155,6 @@ final class je {
 
     final static void a(boolean param0, String param1) {
         System.out.println("Error: " + vg.a(param1, "%0a", (byte) 111, "\n"));
-        if (param0) {
-            Object var3 = null;
-            je.a(false, (String) null);
-        }
     }
 
     static {

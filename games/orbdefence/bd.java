@@ -17,7 +17,7 @@ final class bd extends dm {
     static String field_m;
     private int field_i;
 
-    final static qg b(boolean param0) {
+    final static qg b() {
         qg var1 = new qg(sg.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], fl.field_a[0], vc.field_g);
         md.a((byte) -128);
         return var1;

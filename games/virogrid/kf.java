@@ -126,11 +126,8 @@ final class kf {
 
     final static void a(int param0, int param1, long param2, int param3, String param4, boolean param5) {
         int var7_int = 0;
-        gk.field_g.g(param0, 8);
+        gk.field_g.g(14, 8);
         gk.field_g.field_l = gk.field_g.field_l + 1;
-        if (param3 < 4) {
-            return;
-        }
         try {
             var7_int = gk.field_g.field_l;
             gk.field_g.a((byte) -66, param2);
@@ -139,7 +136,7 @@ final class kf {
             gk.field_g.a(!param5 ? 0 : 1, 125);
             gk.field_g.b(-var7_int + gk.field_g.field_l, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "kf.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "kf.E(" + 14 + 44 + param1 + 44 + param2 + 44 + 125 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
     }
 
@@ -251,28 +248,13 @@ final class kf {
     }
 
     final static boolean a(int param0, char param1) {
-        if (param0 == 0) {
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (48 > param1) {
             return false;
-          }
-        } else {
-          field_e = -105;
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (param1 > 57) {
+            return false;
+        }
+        return true;
     }
 
     final wb c(int param0) {

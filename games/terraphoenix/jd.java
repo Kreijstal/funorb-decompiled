@@ -24,7 +24,8 @@ final class jd extends vc {
     }
 
     final long a(int param0) {
-        ((jd) this).field_n = ((jd) this).field_n + this.a((byte) -82);
+        int discarded$0 = -82;
+        ((jd) this).field_n = ((jd) this).field_n + this.a();
         if (param0 <= 39) {
             return 8L;
         }
@@ -88,22 +89,16 @@ final class jd extends vc {
             var4 = (cc) (Object) qb.field_a.d(9272);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  if (!param0) {
-                    break L2;
-                  } else {
-                    jd.d(116);
-                    break L2;
-                  }
-                }
+                int discarded$2 = 116;
+                jd.d();
                 var2 = qc.field_a.d(9272);
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
                     da.a(0, param1);
                     var2 = qc.field_a.e((byte) -119);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -116,11 +111,11 @@ final class jd extends vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var2_ref, "jd.D(" + param0 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) var2_ref, "jd.D(" + 0 + 44 + param1 + 41);
         }
     }
 
-    private final long a(byte param0) {
+    private final long a() {
         int var8 = 0;
         int var9 = Terraphoenix.field_V;
         long var2 = System.nanoTime();
@@ -160,7 +155,9 @@ final class jd extends vc {
                     var4 = -40 + uf.field_f.field_r;
                 }
             }
-            lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4, 0, 80);
+            int discarded$0 = 80;
+            int discarded$1 = 0;
+            lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4);
         }
     }
 
@@ -171,14 +168,11 @@ final class jd extends vc {
         }
     }
 
-    public static void d(int param0) {
-        if (param0 != 1) {
-            field_i = null;
-        }
+    public static void d() {
         field_i = null;
     }
 
-    final static void a(dc param0, byte param1) {
+    final static void a(dc param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

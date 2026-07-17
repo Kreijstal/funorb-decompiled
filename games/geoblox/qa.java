@@ -9,7 +9,7 @@ final class qa {
     static int field_a;
     static ch field_d;
 
-    final static String a(qc param0, int param1, int param2) {
+    final static String a(qc param0) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -38,7 +38,7 @@ final class qa {
         try {
           try {
             L0: {
-              var3_int = param0.c(param1 + 1);
+              var3_int = param0.c(1);
               if (var3_int > 80) {
                 var3_int = 80;
                 break L0;
@@ -47,8 +47,8 @@ final class qa {
               }
             }
             var4 = new byte[var3_int];
-            param0.field_f = param0.field_f + vj.field_b.a(var4, param0.field_f, param0.field_j, param1, -127, var3_int);
-            var5 = bc.a(param1 ^ -103, var4, 0, var3_int);
+            param0.field_f = param0.field_f + vj.field_b.a(var4, param0.field_f, param0.field_j, 0, -127, var3_int);
+            var5 = bc.a(-103, var4, 0, var3_int);
             stackOut_3_0 = (String) var5;
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
@@ -87,11 +87,11 @@ final class qa {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + 80 + 41);
+          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 0 + 44 + 80 + 41);
         }
     }
 
-    final static qd a(byte[] param0, boolean param1) {
+    final static qd a(byte[] param0) {
         qd var2 = null;
         RuntimeException var2_ref = null;
         qd stackIn_4_0 = null;
@@ -208,7 +208,7 @@ final class qa {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var8 = 121 / ((-63 - param4) / 59);
+              var8 = 121;
               var7_int = 0;
               param5 = param5 + param3;
               var9 = param1;
@@ -475,392 +475,44 @@ final class qa {
               break L19;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw t.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + 44 + param3 + 44 + -127 + 44 + param5 + 41);
         }
         return stackIn_66_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1_int = 0;
         float var1 = 0.0f;
         int var2 = 0;
         var2 = Geoblox.field_C;
-        if (param0 >= 72) {
-          int fieldTemp$22 = af.field_c;
-          af.field_c = af.field_c - 1;
-          if (0 > fieldTemp$22) {
-            if (~uf.field_b == ~(0 - -ka.field_h)) {
-              uf.field_b = ka.field_h + 3;
-              L0: {
-                af.field_c = 20;
-                pa.field_g = pa.field_g - 1;
-                gi.field_e = gi.field_e + 1;
-                if (gi.field_e % 600 < 30) {
-                  uf.field_b = ka.field_h;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-              int fieldTemp$23 = wa.field_a;
-              wa.field_a = wa.field_a - 1;
-              if (fieldTemp$23 <= 0) {
-                int fieldTemp$24 = jf.field_j;
-                jf.field_j = jf.field_j - 1;
-                if (fieldTemp$24 <= 0) {
-                  return;
-                } else {
-                  rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                  return;
-                }
-              } else {
-                ha.field_g = wa.field_a % 15 % 2;
-                int fieldTemp$25 = jf.field_j;
-                jf.field_j = jf.field_j - 1;
-                if (fieldTemp$25 > 0) {
-                  rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              var1_int = uf.field_b + -ka.field_h;
-              if (jk.field_d == 1) {
-                if (var1_int > 1) {
-                  uf.field_b = uf.field_b - 1;
-                  L1: {
-                    af.field_c = 20;
-                    pa.field_g = pa.field_g - 1;
-                    gi.field_e = gi.field_e + 1;
-                    if (gi.field_e % 600 < 30) {
-                      uf.field_b = ka.field_h;
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                  int fieldTemp$26 = wa.field_a;
-                  wa.field_a = wa.field_a - 1;
-                  if (fieldTemp$26 <= 0) {
-                    int fieldTemp$27 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
-                    if (fieldTemp$27 <= 0) {
-                      return;
-                    } else {
-                      rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                      return;
-                    }
-                  } else {
-                    L2: {
-                      ha.field_g = wa.field_a % 15 % 2;
-                      int fieldTemp$28 = jf.field_j;
-                      jf.field_j = jf.field_j - 1;
-                      if (fieldTemp$28 <= 0) {
-                        break L2;
-                      } else {
-                        rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                        break L2;
-                      }
-                    }
-                    return;
-                  }
-                } else {
-                  L3: {
-                    L4: {
-                      if (jk.field_d != 2) {
-                        break L4;
-                      } else {
-                        if (var1_int >= 5) {
-                          break L4;
-                        } else {
-                          uf.field_b = uf.field_b + 1;
-                          break L3;
-                        }
-                      }
-                    }
-                    L5: {
-                      if (jk.field_d != 0) {
-                        break L5;
-                      } else {
-                        if (var1_int >= 3) {
-                          break L5;
-                        } else {
-                          L6: {
-                            uf.field_b = uf.field_b + 1;
-                            af.field_c = 20;
-                            pa.field_g = pa.field_g - 1;
-                            gi.field_e = gi.field_e + 1;
-                            if (gi.field_e % 600 < 30) {
-                              uf.field_b = ka.field_h;
-                              break L6;
-                            } else {
-                              break L6;
-                            }
-                          }
-                          L7: {
-                            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                            int fieldTemp$29 = wa.field_a;
-                            wa.field_a = wa.field_a - 1;
-                            if (fieldTemp$29 <= 0) {
-                              break L7;
-                            } else {
-                              ha.field_g = wa.field_a % 15 % 2;
-                              break L7;
-                            }
-                          }
-                          L8: {
-                            int fieldTemp$30 = jf.field_j;
-                            jf.field_j = jf.field_j - 1;
-                            if (fieldTemp$30 <= 0) {
-                              break L8;
-                            } else {
-                              rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                              break L8;
-                            }
-                          }
-                          return;
-                        }
-                      }
-                    }
-                    if (jk.field_d != 0) {
-                      break L3;
-                    } else {
-                      if (var1_int > 3) {
-                        uf.field_b = uf.field_b - 1;
-                        break L3;
-                      } else {
-                        L9: {
-                          af.field_c = 20;
-                          pa.field_g = pa.field_g - 1;
-                          gi.field_e = gi.field_e + 1;
-                          if (gi.field_e % 600 < 30) {
-                            uf.field_b = ka.field_h;
-                            break L9;
-                          } else {
-                            break L9;
-                          }
-                        }
-                        L10: {
-                          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                          int fieldTemp$31 = wa.field_a;
-                          wa.field_a = wa.field_a - 1;
-                          if (fieldTemp$31 <= 0) {
-                            break L10;
-                          } else {
-                            ha.field_g = wa.field_a % 15 % 2;
-                            break L10;
-                          }
-                        }
-                        L11: {
-                          int fieldTemp$32 = jf.field_j;
-                          jf.field_j = jf.field_j - 1;
-                          if (fieldTemp$32 <= 0) {
-                            break L11;
-                          } else {
-                            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                            break L11;
-                          }
-                        }
-                        return;
-                      }
-                    }
-                  }
-                  L12: {
-                    af.field_c = 20;
-                    pa.field_g = pa.field_g - 1;
-                    gi.field_e = gi.field_e + 1;
-                    if (gi.field_e % 600 < 30) {
-                      uf.field_b = ka.field_h;
-                      break L12;
-                    } else {
-                      break L12;
-                    }
-                  }
-                  L13: {
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                    int fieldTemp$33 = wa.field_a;
-                    wa.field_a = wa.field_a - 1;
-                    if (fieldTemp$33 <= 0) {
-                      break L13;
-                    } else {
-                      ha.field_g = wa.field_a % 15 % 2;
-                      break L13;
-                    }
-                  }
-                  L14: {
-                    int fieldTemp$34 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
-                    if (fieldTemp$34 <= 0) {
-                      break L14;
-                    } else {
-                      rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                      break L14;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                L15: {
-                  L16: {
-                    if (jk.field_d != 2) {
-                      break L16;
-                    } else {
-                      if (var1_int >= 5) {
-                        break L16;
-                      } else {
-                        uf.field_b = uf.field_b + 1;
-                        break L15;
-                      }
-                    }
-                  }
-                  L17: {
-                    if (jk.field_d != 0) {
-                      break L17;
-                    } else {
-                      if (var1_int >= 3) {
-                        break L17;
-                      } else {
-                        L18: {
-                          uf.field_b = uf.field_b + 1;
-                          af.field_c = 20;
-                          pa.field_g = pa.field_g - 1;
-                          gi.field_e = gi.field_e + 1;
-                          if (gi.field_e % 600 < 30) {
-                            uf.field_b = ka.field_h;
-                            break L18;
-                          } else {
-                            break L18;
-                          }
-                        }
-                        L19: {
-                          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                          int fieldTemp$35 = wa.field_a;
-                          wa.field_a = wa.field_a - 1;
-                          if (fieldTemp$35 <= 0) {
-                            break L19;
-                          } else {
-                            ha.field_g = wa.field_a % 15 % 2;
-                            break L19;
-                          }
-                        }
-                        L20: {
-                          int fieldTemp$36 = jf.field_j;
-                          jf.field_j = jf.field_j - 1;
-                          if (fieldTemp$36 <= 0) {
-                            break L20;
-                          } else {
-                            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                            break L20;
-                          }
-                        }
-                        return;
-                      }
-                    }
-                  }
-                  if (jk.field_d != 0) {
-                    break L15;
-                  } else {
-                    if (var1_int > 3) {
-                      uf.field_b = uf.field_b - 1;
-                      break L15;
-                    } else {
-                      L21: {
-                        af.field_c = 20;
-                        pa.field_g = pa.field_g - 1;
-                        gi.field_e = gi.field_e + 1;
-                        if (gi.field_e % 600 < 30) {
-                          uf.field_b = ka.field_h;
-                          break L21;
-                        } else {
-                          break L21;
-                        }
-                      }
-                      L22: {
-                        var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                        int fieldTemp$37 = wa.field_a;
-                        wa.field_a = wa.field_a - 1;
-                        if (fieldTemp$37 <= 0) {
-                          break L22;
-                        } else {
-                          ha.field_g = wa.field_a % 15 % 2;
-                          break L22;
-                        }
-                      }
-                      L23: {
-                        int fieldTemp$38 = jf.field_j;
-                        jf.field_j = jf.field_j - 1;
-                        if (fieldTemp$38 <= 0) {
-                          break L23;
-                        } else {
-                          rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                          break L23;
-                        }
-                      }
-                      return;
-                    }
-                  }
-                }
-                L24: {
-                  af.field_c = 20;
-                  pa.field_g = pa.field_g - 1;
-                  gi.field_e = gi.field_e + 1;
-                  if (gi.field_e % 600 < 30) {
-                    uf.field_b = ka.field_h;
-                    break L24;
-                  } else {
-                    break L24;
-                  }
-                }
-                L25: {
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                  int fieldTemp$39 = wa.field_a;
-                  wa.field_a = wa.field_a - 1;
-                  if (fieldTemp$39 <= 0) {
-                    break L25;
-                  } else {
-                    ha.field_g = wa.field_a % 15 % 2;
-                    break L25;
-                  }
-                }
-                L26: {
-                  int fieldTemp$40 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
-                  if (fieldTemp$40 <= 0) {
-                    break L26;
-                  } else {
-                    rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
-                    break L26;
-                  }
-                }
-                return;
-              }
-            }
-          } else {
-            L27: {
+        int fieldTemp$22 = af.field_c;
+        af.field_c = af.field_c - 1;
+        if (0 > fieldTemp$22) {
+          if (~uf.field_b == ~(0 - -ka.field_h)) {
+            uf.field_b = ka.field_h + 3;
+            L0: {
+              af.field_c = 20;
               pa.field_g = pa.field_g - 1;
               gi.field_e = gi.field_e + 1;
               if (gi.field_e % 600 < 30) {
                 uf.field_b = ka.field_h;
-                break L27;
+                break L0;
               } else {
-                break L27;
+                break L0;
               }
             }
             var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-            int fieldTemp$41 = wa.field_a;
+            int fieldTemp$23 = wa.field_a;
             wa.field_a = wa.field_a - 1;
-            if (fieldTemp$41 <= 0) {
-              int fieldTemp$42 = jf.field_j;
+            if (fieldTemp$23 <= 0) {
+              int fieldTemp$24 = jf.field_j;
               jf.field_j = jf.field_j - 1;
-              if (fieldTemp$42 <= 0) {
+              if (fieldTemp$24 <= 0) {
                 return;
               } else {
                 rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
@@ -868,18 +520,362 @@ final class qa {
               }
             } else {
               ha.field_g = wa.field_a % 15 % 2;
-              int fieldTemp$43 = jf.field_j;
+              int fieldTemp$25 = jf.field_j;
               jf.field_j = jf.field_j - 1;
-              if (fieldTemp$43 <= 0) {
+              if (fieldTemp$25 > 0) {
+                rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
                 return;
               } else {
-                rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
                 return;
               }
             }
+          } else {
+            var1_int = uf.field_b + -ka.field_h;
+            if (jk.field_d == 1) {
+              if (var1_int > 1) {
+                uf.field_b = uf.field_b - 1;
+                L1: {
+                  af.field_c = 20;
+                  pa.field_g = pa.field_g - 1;
+                  gi.field_e = gi.field_e + 1;
+                  if (gi.field_e % 600 < 30) {
+                    uf.field_b = ka.field_h;
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                int fieldTemp$26 = wa.field_a;
+                wa.field_a = wa.field_a - 1;
+                if (fieldTemp$26 <= 0) {
+                  int fieldTemp$27 = jf.field_j;
+                  jf.field_j = jf.field_j - 1;
+                  if (fieldTemp$27 <= 0) {
+                    return;
+                  } else {
+                    rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+                    return;
+                  }
+                } else {
+                  L2: {
+                    ha.field_g = wa.field_a % 15 % 2;
+                    int fieldTemp$28 = jf.field_j;
+                    jf.field_j = jf.field_j - 1;
+                    if (fieldTemp$28 <= 0) {
+                      break L2;
+                    } else {
+                      rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+                      break L2;
+                    }
+                  }
+                  return;
+                }
+              } else {
+                L3: {
+                  L4: {
+                    if (jk.field_d != 2) {
+                      break L4;
+                    } else {
+                      if (var1_int >= 5) {
+                        break L4;
+                      } else {
+                        uf.field_b = uf.field_b + 1;
+                        break L3;
+                      }
+                    }
+                  }
+                  L5: {
+                    if (jk.field_d != 0) {
+                      break L5;
+                    } else {
+                      if (var1_int >= 3) {
+                        break L5;
+                      } else {
+                        L6: {
+                          uf.field_b = uf.field_b + 1;
+                          af.field_c = 20;
+                          pa.field_g = pa.field_g - 1;
+                          gi.field_e = gi.field_e + 1;
+                          if (gi.field_e % 600 < 30) {
+                            uf.field_b = ka.field_h;
+                            break L6;
+                          } else {
+                            break L6;
+                          }
+                        }
+                        L7: {
+                          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                          int fieldTemp$29 = wa.field_a;
+                          wa.field_a = wa.field_a - 1;
+                          if (fieldTemp$29 <= 0) {
+                            break L7;
+                          } else {
+                            ha.field_g = wa.field_a % 15 % 2;
+                            break L7;
+                          }
+                        }
+                        L8: {
+                          int fieldTemp$30 = jf.field_j;
+                          jf.field_j = jf.field_j - 1;
+                          if (fieldTemp$30 <= 0) {
+                            break L8;
+                          } else {
+                            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+                            break L8;
+                          }
+                        }
+                        return;
+                      }
+                    }
+                  }
+                  if (jk.field_d != 0) {
+                    break L3;
+                  } else {
+                    if (var1_int > 3) {
+                      uf.field_b = uf.field_b - 1;
+                      break L3;
+                    } else {
+                      L9: {
+                        af.field_c = 20;
+                        pa.field_g = pa.field_g - 1;
+                        gi.field_e = gi.field_e + 1;
+                        if (gi.field_e % 600 < 30) {
+                          uf.field_b = ka.field_h;
+                          break L9;
+                        } else {
+                          break L9;
+                        }
+                      }
+                      L10: {
+                        var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                        int fieldTemp$31 = wa.field_a;
+                        wa.field_a = wa.field_a - 1;
+                        if (fieldTemp$31 <= 0) {
+                          break L10;
+                        } else {
+                          ha.field_g = wa.field_a % 15 % 2;
+                          break L10;
+                        }
+                      }
+                      L11: {
+                        int fieldTemp$32 = jf.field_j;
+                        jf.field_j = jf.field_j - 1;
+                        if (fieldTemp$32 <= 0) {
+                          break L11;
+                        } else {
+                          rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+                          break L11;
+                        }
+                      }
+                      return;
+                    }
+                  }
+                }
+                L12: {
+                  af.field_c = 20;
+                  pa.field_g = pa.field_g - 1;
+                  gi.field_e = gi.field_e + 1;
+                  if (gi.field_e % 600 < 30) {
+                    uf.field_b = ka.field_h;
+                    break L12;
+                  } else {
+                    break L12;
+                  }
+                }
+                L13: {
+                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                  int fieldTemp$33 = wa.field_a;
+                  wa.field_a = wa.field_a - 1;
+                  if (fieldTemp$33 <= 0) {
+                    break L13;
+                  } else {
+                    ha.field_g = wa.field_a % 15 % 2;
+                    break L13;
+                  }
+                }
+                L14: {
+                  int fieldTemp$34 = jf.field_j;
+                  jf.field_j = jf.field_j - 1;
+                  if (fieldTemp$34 <= 0) {
+                    break L14;
+                  } else {
+                    rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+                    break L14;
+                  }
+                }
+                return;
+              }
+            } else {
+              L15: {
+                L16: {
+                  if (jk.field_d != 2) {
+                    break L16;
+                  } else {
+                    if (var1_int >= 5) {
+                      break L16;
+                    } else {
+                      uf.field_b = uf.field_b + 1;
+                      break L15;
+                    }
+                  }
+                }
+                L17: {
+                  if (jk.field_d != 0) {
+                    break L17;
+                  } else {
+                    if (var1_int >= 3) {
+                      break L17;
+                    } else {
+                      L18: {
+                        uf.field_b = uf.field_b + 1;
+                        af.field_c = 20;
+                        pa.field_g = pa.field_g - 1;
+                        gi.field_e = gi.field_e + 1;
+                        if (gi.field_e % 600 < 30) {
+                          uf.field_b = ka.field_h;
+                          break L18;
+                        } else {
+                          break L18;
+                        }
+                      }
+                      L19: {
+                        var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                        int fieldTemp$35 = wa.field_a;
+                        wa.field_a = wa.field_a - 1;
+                        if (fieldTemp$35 <= 0) {
+                          break L19;
+                        } else {
+                          ha.field_g = wa.field_a % 15 % 2;
+                          break L19;
+                        }
+                      }
+                      L20: {
+                        int fieldTemp$36 = jf.field_j;
+                        jf.field_j = jf.field_j - 1;
+                        if (fieldTemp$36 <= 0) {
+                          break L20;
+                        } else {
+                          rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+                          break L20;
+                        }
+                      }
+                      return;
+                    }
+                  }
+                }
+                if (jk.field_d != 0) {
+                  break L15;
+                } else {
+                  if (var1_int > 3) {
+                    uf.field_b = uf.field_b - 1;
+                    break L15;
+                  } else {
+                    L21: {
+                      af.field_c = 20;
+                      pa.field_g = pa.field_g - 1;
+                      gi.field_e = gi.field_e + 1;
+                      if (gi.field_e % 600 < 30) {
+                        uf.field_b = ka.field_h;
+                        break L21;
+                      } else {
+                        break L21;
+                      }
+                    }
+                    L22: {
+                      var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                      int fieldTemp$37 = wa.field_a;
+                      wa.field_a = wa.field_a - 1;
+                      if (fieldTemp$37 <= 0) {
+                        break L22;
+                      } else {
+                        ha.field_g = wa.field_a % 15 % 2;
+                        break L22;
+                      }
+                    }
+                    L23: {
+                      int fieldTemp$38 = jf.field_j;
+                      jf.field_j = jf.field_j - 1;
+                      if (fieldTemp$38 <= 0) {
+                        break L23;
+                      } else {
+                        rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+                        break L23;
+                      }
+                    }
+                    return;
+                  }
+                }
+              }
+              L24: {
+                af.field_c = 20;
+                pa.field_g = pa.field_g - 1;
+                gi.field_e = gi.field_e + 1;
+                if (gi.field_e % 600 < 30) {
+                  uf.field_b = ka.field_h;
+                  break L24;
+                } else {
+                  break L24;
+                }
+              }
+              L25: {
+                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                int fieldTemp$39 = wa.field_a;
+                wa.field_a = wa.field_a - 1;
+                if (fieldTemp$39 <= 0) {
+                  break L25;
+                } else {
+                  ha.field_g = wa.field_a % 15 % 2;
+                  break L25;
+                }
+              }
+              L26: {
+                int fieldTemp$40 = jf.field_j;
+                jf.field_j = jf.field_j - 1;
+                if (fieldTemp$40 <= 0) {
+                  break L26;
+                } else {
+                  rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+                  break L26;
+                }
+              }
+              return;
+            }
           }
         } else {
-          return;
+          L27: {
+            pa.field_g = pa.field_g - 1;
+            gi.field_e = gi.field_e + 1;
+            if (gi.field_e % 600 < 30) {
+              uf.field_b = ka.field_h;
+              break L27;
+            } else {
+              break L27;
+            }
+          }
+          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          int fieldTemp$41 = wa.field_a;
+          wa.field_a = wa.field_a - 1;
+          if (fieldTemp$41 <= 0) {
+            int fieldTemp$42 = jf.field_j;
+            jf.field_j = jf.field_j - 1;
+            if (fieldTemp$42 <= 0) {
+              return;
+            } else {
+              rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+              return;
+            }
+          } else {
+            ha.field_g = wa.field_a % 15 % 2;
+            int fieldTemp$43 = jf.field_j;
+            jf.field_j = jf.field_j - 1;
+            if (fieldTemp$43 <= 0) {
+              return;
+            } else {
+              rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) - -(int)(var1 * uk.field_j));
+              return;
+            }
+          }
         }
     }
 

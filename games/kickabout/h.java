@@ -326,11 +326,8 @@ final class h {
         return stackIn_28_0;
     }
 
-    final static tv a(int param0) {
+    final static tv a() {
         if (vb.field_j == 0) {
-            return null;
-        }
-        if (param0 != 17475) {
             return null;
         }
         return fu.field_b[-1 + vb.field_j];

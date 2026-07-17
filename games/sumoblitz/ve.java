@@ -15,7 +15,7 @@ abstract class ve extends ms {
         return ((ve) this).field_n;
     }
 
-    final static wg a(byte param0, on param1, byte[] param2, int param3) {
+    final static wg a(byte param0, on param1, byte[] param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -139,7 +139,7 @@ abstract class ve extends ms {
         return stackIn_7_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         int var1 = -35;
         field_l = null;
@@ -147,12 +147,13 @@ abstract class ve extends ms {
 
     abstract void c(int param0);
 
-    final static ki a(int param0, boolean param1, int param2, int param3, boolean param4) {
+    final static ki a(int param0, boolean param1, int param2, int param3) {
         if (param0 != 11880) {
-          ki discarded$2 = ve.a(87, true, -113, -52, false);
-          return ng.a(param3, param0 ^ -11778, param1, param2, false, false);
+          int discarded$4 = 0;
+          ki discarded$5 = ve.a(87, true, -113, -52);
+          return ng.a(param3, param0 ^ -11778, true, param2, false, false);
         } else {
-          return ng.a(param3, param0 ^ -11778, param1, param2, false, false);
+          return ng.a(param3, param0 ^ -11778, true, param2, false, false);
         }
     }
 

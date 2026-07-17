@@ -121,17 +121,13 @@ final class pl extends bd {
         L0: while (true) {
           if (var5 == null) {
             var5 = new wj();
-            var5.field_p = param4;
-            var5.field_k = param3;
+            var5.field_p = 1;
+            var5.field_k = 10;
             var5.field_r = param1;
             lf.field_c.a((byte) -119, (tc) (Object) var5);
-            gn.a(param2, var5, 0);
-            if (param0 != 34) {
-              field_s = null;
-              return var5;
-            } else {
-              return var5;
-            }
+            int discarded$2 = 0;
+            gn.a(3, var5);
+            return var5;
           } else {
             if (param1 == var5.field_r) {
               return var5;

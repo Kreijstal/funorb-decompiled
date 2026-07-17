@@ -44,15 +44,8 @@ final class gk {
     }
 
     final static int a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        if (!param1) {
-          int discarded$2 = gk.a(-119, true, -99);
-          var3 = param0 - 1 & param2 >> 31;
-          return (param2 + (param2 >>> 31)) % param0 + var3;
-        } else {
-          var3 = param0 - 1 & param2 >> 31;
-          return (param2 + (param2 >>> 31)) % param0 + var3;
-        }
+        int var3 = param0 - 1 & param2 >> 31;
+        return (param2 + (param2 >>> 31)) % param0 + var3;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -67,7 +60,7 @@ final class gk {
         }
     }
 
-    final static String a(int param0) {
+    final static String a() {
         if (ib.field_k < 2) {
             return cl.field_a;
         }

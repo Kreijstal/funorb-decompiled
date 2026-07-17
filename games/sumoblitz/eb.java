@@ -47,20 +47,15 @@ final class eb {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        var3 = param0 - 1 & param2 >> 31;
-        if (param1 <= 87) {
-          return -115;
-        } else {
-          return ((param2 >>> 31) + param2) % param0 + var3;
-        }
+        int var3 = param0 - 1 & param2 >> 31;
+        return ((param2 >>> 31) + param2) % param0 + var3;
     }
 
     static int a(int param0, int param1) {
         return param0 & param1;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         int var1 = -15;
         field_a = null;

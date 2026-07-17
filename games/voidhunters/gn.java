@@ -77,7 +77,7 @@ final class gn extends kva implements eb {
         return param0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_k = null;
     }
 
@@ -117,10 +117,10 @@ final class gn extends kva implements eb {
         try {
           L0: {
             if (param1 != null) {
-              var6 = param1.f(param0 + -4872);
+              var6 = param1.f(-4872);
               var2 = var6;
               var3 = new ntb[var6.length];
-              var4 = param0;
+              var4 = 0;
               L1: while (true) {
                 if (var6.length <= var4) {
                   stackOut_7_0 = (ntb[]) var3;
@@ -143,7 +143,7 @@ final class gn extends kva implements eb {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2_ref;
-            stackOut_9_1 = new StringBuilder().append("gn.A(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("gn.A(").append(0).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;

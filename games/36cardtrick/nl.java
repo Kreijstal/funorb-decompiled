@@ -11,7 +11,8 @@ final class nl {
     final static void a(java.awt.Canvas param0, int param1) {
         try {
             if (cd.field_e == 11) {
-                ie.f(-11);
+                int discarded$0 = -11;
+                ie.f();
             }
             int var2_int = -107 % ((param1 - -26) / 62);
             ti.a(he.field_g, (byte) 54, ck.field_G, sg.field_b);
@@ -21,7 +22,7 @@ final class nl {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_a = null;
@@ -44,9 +45,10 @@ final class nl {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              if (!ge.b((byte) -114)) {
+              int discarded$4 = -114;
+              if (!ge.b()) {
                 L2: {
-                  cg.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, param0, ag.field_a));
+                  cg.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, true, ag.field_a));
                   if (!cg.field_e.f(-85)) {
                     break L2;
                   } else {
@@ -65,11 +67,13 @@ final class nl {
                       } else {
                         var3 = dd.field_j[cg.field_e.field_k];
                         if (var3 == 2) {
-                          re.c(3);
+                          int discarded$5 = 3;
+                          re.c();
                           break L3;
                         } else {
                           if (var3 == 5) {
-                            re.c(3);
+                            int discarded$6 = 3;
+                            re.c();
                             break L3;
                           } else {
                             break L3;
@@ -82,7 +86,8 @@ final class nl {
                     break L3;
                   } else {
                     if (v.field_R != 2) {
-                      re.c(3);
+                      int discarded$7 = 3;
+                      re.c();
                       break L3;
                     } else {
                       break L3;
@@ -133,7 +138,7 @@ final class nl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "nl.C(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "nl.C(" + 1 + 41);
         }
         return stackIn_28_0;
     }

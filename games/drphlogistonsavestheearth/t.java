@@ -95,7 +95,7 @@ final class t {
                   var10.setFont(bd.field_S);
                   var10.setColor(java.awt.Color.white);
                   var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-                  boolean discarded$1 = var9.drawImage(ac.field_h, -152 + fg.field_h / 2, bh.field_a / param3 - 18, (java.awt.image.ImageObserver) null);
+                  boolean discarded$1 = var9.drawImage(ac.field_h, -152 + fg.field_h / 2, bh.field_a / 2 - 18, (java.awt.image.ImageObserver) null);
                   break L4;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class t {
           }
           L8: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param3).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(2).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -189,7 +189,7 @@ final class t {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -200,9 +200,9 @@ final class t {
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
         int stackOut_8_0 = 0;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
@@ -211,16 +211,8 @@ final class t {
             L1: while (true) {
               if (param0 <= 1) {
                 if (1 != param0) {
-                  L2: {
-                    if (param1 == -103) {
-                      break L2;
-                    } else {
-                      field_b = -110;
-                      break L2;
-                    }
-                  }
-                  stackOut_12_0 = var3_int;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackOut_10_0 = var3_int;
+                  stackIn_11_0 = stackOut_10_0;
                   break L0;
                 } else {
                   stackOut_8_0 = var3_int * param2;
@@ -228,12 +220,12 @@ final class t {
                   return stackIn_9_0;
                 }
               } else {
-                L3: {
+                L2: {
                   if ((param0 & 1) != 0) {
                     var3_int = var3_int * param2;
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 param0 = param0 >> 1;
@@ -245,9 +237,9 @@ final class t {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var3, "t.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ie.a((Throwable) (Object) var3, "t.A(" + param0 + 44 + -103 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
     static {

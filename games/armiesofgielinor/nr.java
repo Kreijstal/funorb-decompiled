@@ -16,7 +16,7 @@ class nr {
         }
     }
 
-    final static byte[] a(CharSequence param0, boolean param1) {
+    final static byte[] a(CharSequence param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;
@@ -258,7 +258,7 @@ class nr {
         return stackIn_68_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;

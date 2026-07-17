@@ -13,11 +13,6 @@ final class rj {
     int field_h;
 
     final static void a(byte param0, int param1) {
-        if (param0 != 121) {
-            field_e = null;
-            oj.field_c = 1000000000L / (long)param1;
-            return;
-        }
         oj.field_c = 1000000000L / (long)param1;
     }
 
@@ -27,11 +22,14 @@ final class rj {
         field_g = null;
     }
 
-    final static rh a(int param0, byte param1, boolean param2, boolean param3, int param4) {
+    final static rh a(int param0, byte param1) {
         if (param1 >= -13) {
             return null;
         }
-        return am.a(-90, param0, param3, 1, param2, false);
+        int discarded$0 = 0;
+        int discarded$1 = 1;
+        int discarded$2 = 1;
+        return am.a(-90, param0, false);
     }
 
     final static boolean a(byte param0, rh param1) {
@@ -57,7 +55,7 @@ final class rj {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = 12 % ((-57 - param0) / 57);
+            var2_int = 0;
             stackOut_0_0 = param1.b(true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -67,7 +65,7 @@ final class rj {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("rj.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("rj.C(").append(-127).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

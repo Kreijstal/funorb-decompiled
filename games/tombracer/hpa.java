@@ -70,7 +70,8 @@ final class hpa extends aa {
               if (0 != param1.field_d) {
                 break L2;
               } else {
-                if (nga.c(param0 + 2)) {
+                int discarded$2 = 0;
+                if (nga.c()) {
                   break L2;
                 } else {
                   if (null != uu.field_a) {
@@ -102,7 +103,8 @@ final class hpa extends aa {
               if (param1.field_d != 1) {
                 break L4;
               } else {
-                if (nga.c(0)) {
+                int discarded$3 = 0;
+                if (nga.c()) {
                   break L4;
                 } else {
                   if (uu.field_a == null) {
@@ -137,20 +139,16 @@ final class hpa extends aa {
             hka.field_b.a(param1, 13);
             var13 = hka.field_b;
             var3 = jm.field_m;
-            if (param0 == -2) {
-              var4 = lba.field_p;
-              var13.field_f.b(var4, 0, -89, 0, var3);
-              break L0;
-            } else {
-              return;
-            }
+            var4 = lba.field_p;
+            var13.field_f.b(var4, 0, -89, 0, var3);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("hpa.A(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("hpa.A(").append(-2).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;

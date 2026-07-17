@@ -31,9 +31,9 @@ class mc extends hh {
     }
 
     final static void b(int param0, int param1) {
-        am.field_d = (param0 << 16) / 150;
-        am.field_g = 100 * param0 / 150;
-        am.field_c = param0 * 400 / 150;
+        am.field_d = 21845;
+        am.field_g = 33;
+        am.field_c = 133;
     }
 
     final static void a(byte param0, int param1, int[] param2) {
@@ -110,7 +110,8 @@ class mc extends hh {
                       break L1;
                     }
                   }
-                  o.a(121);
+                  int discarded$3 = 121;
+                  o.a();
                   ac.field_B.d((byte) -105, 61);
                   var4_int = 0;
                   var5 = 0;

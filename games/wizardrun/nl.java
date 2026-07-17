@@ -25,9 +25,6 @@ abstract class nl extends rk {
     public static void d(int param0) {
         field_t = null;
         field_w = null;
-        if (param0 <= 84) {
-            return;
-        }
         field_A = null;
         field_q = null;
     }
@@ -37,11 +34,11 @@ abstract class nl extends rk {
         int var7 = ((nl) this).field_s << 3;
         param2 = (var6 & 15) + (param2 << 4);
         param1 = (15 & var7) + (param1 << 4);
-        int var8 = -23 % ((param3 - -55) / 40);
+        int var8 = 0;
         ((nl) this).a(var6, var7, param2, param1, param0, param4);
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

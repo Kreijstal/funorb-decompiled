@@ -30,26 +30,26 @@ final class qh extends hk {
         int var6 = 0;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
-        int stackIn_29_0 = 0;
+        int stackIn_27_0 = 0;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
-        int stackOut_28_0 = 0;
+        int stackOut_26_0 = 0;
         int stackOut_9_0 = 0;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         var6 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -69,60 +69,53 @@ final class qh extends hk {
             }
             var4_int = 23 * param2 >> 2;
             if (vj.field_a[var4_int] == null) {
-              td.a((float)param1, oi.field_b, false);
-              fe.field_g.a(param0 + -9384);
+              int discarded$1 = 0;
+              td.a((float)param1, oi.field_b);
+              fe.field_g.a(-124);
               L2: while (true) {
                 if (var4_int >= 23 * (1 + param2) >> 2) {
-                  L3: {
-                    if (param0 == 9260) {
-                      break L3;
-                    } else {
-                      qh.c((byte) 33);
-                      break L3;
-                    }
-                  }
-                  stackOut_28_0 = 1;
-                  stackIn_29_0 = stackOut_28_0;
+                  stackOut_26_0 = 1;
+                  stackIn_27_0 = stackOut_26_0;
                   break L0;
                 } else {
-                  L4: {
+                  L3: {
                     vj.field_a[var4_int] = new dl[bp.field_c[var4_int]];
                     if (wk.field_c[var4_int] != null) {
-                      L5: {
+                      L4: {
                         if (wk.field_c[var4_int] != "") {
                           sd.field_R = bf.a(-1, "sprites_player_" + wk.field_c[var4_int], "", param3);
-                          break L5;
+                          break L4;
                         } else {
-                          break L5;
+                          break L4;
                         }
                       }
                       var5 = 0;
-                      L6: while (true) {
+                      L5: while (true) {
                         if (var5 >= fg.field_j[var4_int]) {
-                          L7: while (true) {
+                          L6: while (true) {
                             if (bp.field_c[var4_int] <= var5) {
-                              break L4;
+                              break L3;
                             } else {
                               vj.field_a[var4_int][var5] = sd.field_R[var5 + (vf.field_a[var4_int] + oe.field_c[var4_int])];
                               var5++;
-                              continue L7;
+                              continue L6;
                             }
                           }
                         } else {
                           vj.field_a[var4_int][var5] = sd.field_R[vf.field_a[var4_int] + var5];
                           var5++;
-                          continue L6;
+                          continue L5;
                         }
                       }
                     } else {
                       var5 = 0;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (var5 >= bp.field_c[var4_int]) {
-                          break L4;
+                          break L3;
                         } else {
                           vj.field_a[var4_int][var5] = vj.field_a[var4_int + -1][var5].c();
                           var5++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -139,35 +132,35 @@ final class qh extends hk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var4 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var4;
-            stackOut_30_1 = new StringBuilder().append("qh.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackOut_28_0 = (RuntimeException) var4;
+            stackOut_28_1 = new StringBuilder().append("qh.A(").append(9260).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
             if (param3 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
-              break L9;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L8;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
-              break L9;
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L8;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
         }
-        return stackIn_29_0 != 0;
+        return stackIn_27_0 != 0;
     }
 
     final void a(int param0, int param1, ta param2) {
@@ -285,10 +278,7 @@ final class qh extends hk {
         int var2 = -9 / ((param0 - 29) / 42);
     }
 
-    public static void c(byte param0) {
-        if (param0 <= 6) {
-            return;
-        }
+    public static void c() {
         field_o = null;
         field_g = null;
         field_h = null;

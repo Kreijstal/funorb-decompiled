@@ -8,7 +8,7 @@ final class fh implements dh {
     static int field_c;
     static dm[] field_e;
 
-    final static void b(int param0) {
+    final static void b() {
         cf.field_i = false;
         va.field_d = false;
         pc.a(-1, false);

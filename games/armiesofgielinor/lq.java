@@ -9,7 +9,7 @@ final class lq {
     static String field_a;
     static String field_f;
 
-    final static nc a(byte[] param0, int param1) {
+    final static nc a(byte[] param0) {
         nc var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_6_0 = null;
@@ -119,7 +119,7 @@ final class lq {
         return stackIn_11_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_c = null;

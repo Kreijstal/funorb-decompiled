@@ -111,7 +111,7 @@ abstract class ro {
         return stackIn_6_0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_d = null;
         field_f = null;
         field_h = null;
@@ -184,7 +184,7 @@ abstract class ro {
         return -1;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (sl.field_q == null) {
           sl.field_q = new String[37];
           sl.field_q[8] = null;
@@ -205,69 +205,66 @@ abstract class ro {
           sl.field_q[33] = gm.field_a;
           sl.field_q[32] = ek.field_C;
           sl.field_q[17] = df.field_n[0];
-          if (param0 == -52) {
-            sl.field_q[31] = vo.field_v;
-            sl.field_q[19] = ld.field_a;
-            sl.field_q[24] = mk.field_K;
-            sl.field_q[26] = nn.field_p + ue.field_F[1];
-            sl.field_q[34] = dh.field_b;
-            sl.field_q[35] = in.field_a;
-            sl.field_q[25] = ue.field_F[0] + bb.field_y;
-            sl.field_q[29] = vo.field_v;
-            sl.field_q[14] = bq.field_G[0];
-            sl.field_q[30] = vi.field_B;
-            sl.field_q[23] = sp.field_Q;
-            sl.field_q[21] = qi.field_f;
-            sl.field_q[27] = vi.field_x;
-            sl.field_q[15] = bq.field_G[1];
-            sl.field_q[18] = df.field_n[1];
-            sl.field_q[28] = gm.field_a;
-            sl.field_q[36] = ja.a(ek.field_C, (byte) -44);
-            mb.field_q = new String[23];
-            mb.field_q[7] = oe.field_vb.toLowerCase();
-            mb.field_q[17] = sl.field_q[29].toLowerCase();
-            mb.field_q[18] = sl.field_q[29].toLowerCase();
-            mb.field_q[8] = rb.field_a.toLowerCase();
-            mb.field_q[9] = rb.field_a.toLowerCase();
-            mb.field_q[6] = rr.field_A.toLowerCase();
-            mb.field_q[5] = dg.field_c.toLowerCase();
-            mb.field_q[1] = po.field_d.toLowerCase();
-            mb.field_q[2] = po.field_d.toLowerCase();
-            mb.field_q[22] = po.field_d.toLowerCase();
-            mb.field_q[4] = po.field_d.toLowerCase();
-            mb.field_q[3] = po.field_d.toLowerCase();
-            mb.field_q[13] = t.field_i.toLowerCase();
-            mb.field_q[15] = dh.field_e.toLowerCase();
-            mb.field_q[14] = lr.field_I.toLowerCase();
-            mb.field_q[19] = ek.field_C.toLowerCase();
-            mb.field_q[21] = nb.field_E.toLowerCase();
-            td.field_l = new String[11];
-            td.field_l[9] = gr.field_ab;
-            td.field_l[6] = lr.field_I;
-            td.field_l[0] = sr.field_c;
-            td.field_l[8] = rh.field_G;
-            td.field_l[4] = ri.field_z;
-            td.field_l[10] = rp.field_d;
-            qe.field_U = new String[10];
-            td.field_l[2] = or.field_l;
-            td.field_l[1] = wp.field_e;
-            td.field_l[5] = uj.field_e;
-            td.field_l[3] = ua.field_d;
-            td.field_l[7] = pe.field_t;
-            qe.field_U[0] = gg.field_s;
-            qe.field_U[5] = kf.field_a;
-            qe.field_U[7] = b.field_b;
-            qe.field_U[8] = pb.field_d;
-            qe.field_U[2] = jb.field_L;
-            qe.field_U[4] = og.field_c;
-            qe.field_U[1] = an.field_e;
-            qe.field_U[6] = b.field_a;
-            qe.field_U[3] = le.field_e;
-            qe.field_U[9] = to.field_d;
-            return;
-          } else {
-            return;
-          }
+          sl.field_q[31] = vo.field_v;
+          sl.field_q[19] = ld.field_a;
+          sl.field_q[24] = mk.field_K;
+          sl.field_q[26] = nn.field_p + ue.field_F[1];
+          sl.field_q[34] = dh.field_b;
+          sl.field_q[35] = in.field_a;
+          sl.field_q[25] = ue.field_F[0] + bb.field_y;
+          sl.field_q[29] = vo.field_v;
+          sl.field_q[14] = bq.field_G[0];
+          sl.field_q[30] = vi.field_B;
+          sl.field_q[23] = sp.field_Q;
+          sl.field_q[21] = qi.field_f;
+          sl.field_q[27] = vi.field_x;
+          sl.field_q[15] = bq.field_G[1];
+          sl.field_q[18] = df.field_n[1];
+          sl.field_q[28] = gm.field_a;
+          int discarded$1 = -44;
+          sl.field_q[36] = ja.a(ek.field_C);
+          mb.field_q = new String[23];
+          mb.field_q[7] = oe.field_vb.toLowerCase();
+          mb.field_q[17] = sl.field_q[29].toLowerCase();
+          mb.field_q[18] = sl.field_q[29].toLowerCase();
+          mb.field_q[8] = rb.field_a.toLowerCase();
+          mb.field_q[9] = rb.field_a.toLowerCase();
+          mb.field_q[6] = rr.field_A.toLowerCase();
+          mb.field_q[5] = dg.field_c.toLowerCase();
+          mb.field_q[1] = po.field_d.toLowerCase();
+          mb.field_q[2] = po.field_d.toLowerCase();
+          mb.field_q[22] = po.field_d.toLowerCase();
+          mb.field_q[4] = po.field_d.toLowerCase();
+          mb.field_q[3] = po.field_d.toLowerCase();
+          mb.field_q[13] = t.field_i.toLowerCase();
+          mb.field_q[15] = dh.field_e.toLowerCase();
+          mb.field_q[14] = lr.field_I.toLowerCase();
+          mb.field_q[19] = ek.field_C.toLowerCase();
+          mb.field_q[21] = nb.field_E.toLowerCase();
+          td.field_l = new String[11];
+          td.field_l[9] = gr.field_ab;
+          td.field_l[6] = lr.field_I;
+          td.field_l[0] = sr.field_c;
+          td.field_l[8] = rh.field_G;
+          td.field_l[4] = ri.field_z;
+          td.field_l[10] = rp.field_d;
+          qe.field_U = new String[10];
+          td.field_l[2] = or.field_l;
+          td.field_l[1] = wp.field_e;
+          td.field_l[5] = uj.field_e;
+          td.field_l[3] = ua.field_d;
+          td.field_l[7] = pe.field_t;
+          qe.field_U[0] = gg.field_s;
+          qe.field_U[5] = kf.field_a;
+          qe.field_U[7] = b.field_b;
+          qe.field_U[8] = pb.field_d;
+          qe.field_U[2] = jb.field_L;
+          qe.field_U[4] = og.field_c;
+          qe.field_U[1] = an.field_e;
+          qe.field_U[6] = b.field_a;
+          qe.field_U[3] = le.field_e;
+          qe.field_U[9] = to.field_d;
+          return;
         } else {
           return;
         }

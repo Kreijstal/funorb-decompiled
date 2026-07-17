@@ -35,37 +35,8 @@ final class vta extends vw {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param2 == 2048) {
-            break L0;
-          } else {
-            vta.c((byte) -99);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (-1 == (param1 & 2048)) {
-              break L2;
-            } else {
-              if (-1 == (param0 & 55)) {
-                break L2;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-          }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+    final static boolean a(int param0, int param1) {
+        return (param1 & 2048) != 0 && (param0 & 55) != 0;
     }
 
     final static int a(CharSequence param0, int param1) {
@@ -233,11 +204,8 @@ final class vta extends vw {
         return true;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         fua.field_g = false;
-        if (param0 < 52) {
-            field_f = null;
-        }
         ok.field_s = vc.field_q.h(255) == 0 ? true : false;
     }
 

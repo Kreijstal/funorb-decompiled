@@ -28,9 +28,6 @@ final class ci {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6) {
-        if (param0 != 30380) {
-            return;
-        }
         try {
             b.field_j[param4] = param5;
             fl.field_a[param4] = param1;
@@ -38,18 +35,18 @@ final class ci {
             i.field_r[param4] = param6;
             mc.field_b[param4] = param3;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ci.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "ci.A(" + 30380 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
-        int var1 = -69 % ((-87 - param0) / 32);
+        int var1 = 0;
         field_a = null;
         field_c = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return v.field_c;
     }
 

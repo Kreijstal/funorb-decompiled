@@ -6,18 +6,18 @@ final class af {
 
     final static void a(boolean param0, tc param1, int param2, int param3, java.awt.Component param4, int param5, int param6, qg param7) {
         try {
-            vn.a(param2, param0, 10);
-            int var8_int = 6 % ((-86 - param5) / 39);
-            ub.field_n = vn.a(param7, param4, 0, param3);
-            hm.field_n = vn.a(param7, param4, 1, param6);
+            vn.a(22050, true, 10);
+            int var8_int = 0;
+            ub.field_n = vn.a(param7, param4, 0, 22050);
+            hm.field_n = vn.a(param7, param4, 1, 2048);
             wa.field_j = new mb();
-            kc.field_U = param6;
+            kc.field_U = 2048;
             hm.field_n.a((qb) (Object) wa.field_j);
             ek.field_b = param1;
             ek.field_b.a(ql.field_d, 256);
             ub.field_n.a((qb) (Object) ek.field_b);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "af.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "af.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + 22050 + 44 + 22050 + 44 + (param4 != null ? "{...}" : "null") + 44 + -126 + 44 + 2048 + 44 + (param7 != null ? "{...}" : "null") + 41);
         }
     }
 

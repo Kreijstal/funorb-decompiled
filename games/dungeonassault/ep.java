@@ -21,7 +21,7 @@ final class ep extends un {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_g = null;
         int var1 = 0;
@@ -65,7 +65,7 @@ final class ep extends un {
         try {
           L0: {
             var3_int = param2.c(true);
-            if (param1 == ~var3_int) {
+            if (var3_int == 0) {
               stackOut_2_0 = null;
               stackIn_3_0 = stackOut_2_0;
               return (hb) (Object) stackIn_3_0;
@@ -88,7 +88,7 @@ final class ep extends un {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("ep.F(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("ep.F(").append(param0).append(44).append(-1).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -141,7 +141,8 @@ final class ep extends un {
                   }
                 }
               } else {
-                g.a(4, var5, (byte) 50);
+                int discarded$2 = 50;
+                g.a(4, var5);
                 var5 = (ak) (Object) oh.field_j.a(4);
                 continue L1;
               }

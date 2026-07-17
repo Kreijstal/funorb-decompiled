@@ -100,7 +100,8 @@ final class wb extends hs {
                 }
                 L5: {
                   var4_ref_String = stackIn_22_0;
-                  wb.a(var4_ref_String, 302, 46, 316, 88, 0);
+                  int discarded$1 = 0;
+                  wb.a(var4_ref_String, 302, 46, 316, 88);
                   stackOut_22_0 = ((wb) this).field_l;
                   stackIn_24_0 = stackOut_22_0;
                   stackIn_23_0 = stackOut_22_0;
@@ -214,23 +215,22 @@ final class wb extends hs {
 
     final static void a(int param0, String param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
-        Object var9 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         try {
           L0: {
             L1: {
@@ -242,7 +242,8 @@ final class wb extends hs {
                     vg.field_Wb = true;
                     break L1;
                   } else {
-                    hp.b(0);
+                    int discarded$3 = 0;
+                    hp.b();
                     break L1;
                   }
                 } else {
@@ -277,46 +278,37 @@ final class wb extends hs {
                 break L2;
               }
             }
-            L4: {
-              if (param5 > 70) {
-                break L4;
-              } else {
-                var9 = null;
-                wn discarded$2 = wb.a(27, (String) null, 93);
-                break L4;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var8 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var8;
-            stackOut_19_1 = new StringBuilder().append("wb.A(").append(param0).append(44);
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_17_0 = (RuntimeException) var8;
+            stackOut_17_1 = new StringBuilder().append("wb.A(").append(param0).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L5;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L4;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L5;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw nb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 73 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -396,7 +388,8 @@ final class wb extends hs {
                     if (var4_int != param1) {
                       break L3;
                     } else {
-                      this.a(var5, (byte) -64);
+                      int discarded$1 = -64;
+                      this.a(var5);
                       break L3;
                     }
                   }
@@ -489,7 +482,7 @@ final class wb extends hs {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1_int = 0;
         int var2 = 0;
         int var3 = Kickabout.field_G;
@@ -576,7 +569,7 @@ final class wb extends hs {
         return stackIn_3_0;
     }
 
-    private final void a(hd param0, byte param1) {
+    private final void a(hd param0) {
         hd var5 = null;
         try {
             ((wb) this).field_o = new hd();
@@ -770,7 +763,7 @@ final class wb extends hs {
         }
     }
 
-    final static void a(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(String param0, int param1, int param2, int param3, int param4) {
         try {
             ul.a(param2, 1, param3, true, (byte) -120, param1, 16, param4, 1, param0);
         } catch (RuntimeException runtimeException) {

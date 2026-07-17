@@ -14,7 +14,7 @@ final class uk extends qc {
     private long[] field_p;
     static String field_k;
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {

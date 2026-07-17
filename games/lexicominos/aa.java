@@ -82,7 +82,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_1_0 != 0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_g = null;
         field_i = null;
     }
@@ -166,7 +166,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_3_0;
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -215,60 +215,52 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
             var4 = 0;
             L2: while (true) {
               if (var4 >= var2_int) {
-                L3: {
-                  if (param1 <= -5) {
-                    break L3;
-                  } else {
-                    field_g = null;
-                    break L3;
-                  }
-                }
                 stackOut_20_0 = new String(var10);
                 stackIn_21_0 = stackOut_20_0;
                 break L0;
               } else {
-                L4: {
-                  L5: {
+                L3: {
+                  L4: {
                     var5 = param0.charAt(var4);
                     if (var5 < 65) {
-                      break L5;
+                      break L4;
                     } else {
                       if (var5 <= 90) {
                         var3[var4] = (char)(-65 + var5 - -97);
-                        break L4;
+                        break L3;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                   }
-                  L6: {
-                    L7: {
+                  L5: {
+                    L6: {
                       if (97 > var5) {
-                        break L7;
+                        break L6;
                       } else {
                         if (var5 <= 122) {
+                          break L5;
+                        } else {
                           break L6;
+                        }
+                      }
+                    }
+                    L7: {
+                      if (48 > var5) {
+                        break L7;
+                      } else {
+                        if (var5 <= 57) {
+                          break L5;
                         } else {
                           break L7;
                         }
                       }
                     }
-                    L8: {
-                      if (48 > var5) {
-                        break L8;
-                      } else {
-                        if (var5 <= 57) {
-                          break L6;
-                        } else {
-                          break L8;
-                        }
-                      }
-                    }
                     var3[var4] = '_';
-                    break L4;
+                    break L3;
                   }
                   var3[var4] = (char)var5;
-                  break L4;
+                  break L3;
                 }
                 var4++;
                 continue L2;
@@ -277,7 +269,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
             stackOut_22_1 = new StringBuilder().append("aa.B(");
@@ -292,7 +284,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
-              break L9;
+              break L8;
             } else {
               stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
               stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
@@ -300,10 +292,10 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
               stackIn_25_2 = stackOut_23_2;
-              break L9;
+              break L8;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + -20 + 41);
         }
         return stackIn_21_0;
     }
@@ -396,7 +388,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         if (wf.field_i < 2) {
           return 0;
         } else {

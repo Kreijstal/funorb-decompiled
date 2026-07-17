@@ -16,11 +16,11 @@ final class jd extends ac implements ae {
     static int[] field_lb;
     static String[] field_mb;
 
-    final static void m(int param0) {
+    final static void m() {
         qf.field_e = new ol(an.field_a, od.field_g, hg.field_e, bd.field_f, (gh) (Object) ol.field_Tb, qb.field_K);
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         if (!(((jd) this).field_Q)) {
             return;
         }
@@ -73,7 +73,8 @@ final class jd extends ac implements ae {
                 if (wh.field_b == param1) {
                   var3 = (Object) (Object) ff.field_gb;
                   ((jd) this).field_E = ((jd) this).field_E + 10;
-                  if (!ph.b(12412)) {
+                  int discarded$26 = 12412;
+                  if (!ph.b()) {
                     break L1;
                   } else {
                     ((jd) this).field_E = ((jd) this).field_E + 20;
@@ -98,7 +99,8 @@ final class jd extends ac implements ae {
             var4.field_x = ((jd) this).field_x;
             var4.field_p = (qk) (Object) new cn(rc.field_m, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((jd) this).a(var4, -107);
-            ((jd) this).field_ob = this.a((tn) this, jf.field_cb, 104);
+            int discarded$27 = 104;
+            ((jd) this).field_ob = this.a((tn) this, jf.field_cb);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -158,7 +160,7 @@ final class jd extends ac implements ae {
         }
     }
 
-    private final oa a(tn param0, String param1, int param2) {
+    private final oa a(tn param0, String param1) {
         oa var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -289,7 +291,8 @@ final class jd extends ac implements ae {
           L0: {
             var6_int = -73 / ((param1 - -85) / 36);
             if (param3 == ((jd) this).field_ob) {
-              this.c(true);
+              int discarded$2 = 1;
+              this.c();
               break L0;
             } else {
               return;
@@ -327,25 +330,21 @@ final class jd extends ac implements ae {
         }
     }
 
-    final static boolean a(char param0, int param1) {
-        int stackIn_9_0 = 0;
-        int stackOut_7_0 = 0;
-        if (param1 == -33) {
-          if (param0 != 160) {
-            if (param0 != 32) {
-              if (param0 != 95) {
-                if (param0 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
+    final static boolean a(char param0) {
+        int stackIn_7_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param0 != 160) {
+          if (param0 != 32) {
+            if (param0 != 95) {
+              if (param0 == 45) {
+                return true;
               } else {
-                stackOut_7_0 = 1;
-                stackIn_9_0 = stackOut_7_0;
-                return stackIn_9_0 != 0;
+                return false;
               }
             } else {
-              return true;
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              return stackIn_7_0 != 0;
             }
           } else {
             return true;
@@ -355,9 +354,9 @@ final class jd extends ac implements ae {
         }
     }
 
-    final static String a(CharSequence param0, boolean param1, int param2) {
-        RuntimeException var3 = null;
+    final static String a(CharSequence param0) {
         int var3_int = 0;
+        RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -367,32 +366,30 @@ final class jd extends ac implements ae {
         String stackIn_9_0 = null;
         String stackIn_14_0 = null;
         String stackIn_19_0 = null;
-        Object stackIn_22_0 = null;
-        String stackIn_32_0 = null;
-        String stackIn_37_0 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
+        String stackIn_29_0 = null;
+        String stackIn_34_0 = null;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        String stackIn_39_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
-        String stackOut_36_0 = null;
-        String stackOut_31_0 = null;
-        Object stackOut_21_0 = null;
+        String stackOut_33_0 = null;
+        String stackOut_28_0 = null;
         String stackOut_18_0 = null;
         String stackOut_13_0 = null;
         String stackOut_8_0 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
+        RuntimeException stackOut_36_0 = null;
+        StringBuilder stackOut_36_1 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        String stackOut_38_2 = null;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
+        String stackOut_37_2 = null;
         var8 = SteelSentinels.field_G;
         try {
           L0: {
@@ -416,56 +413,46 @@ final class jd extends ac implements ae {
                       } else {
                         if (var4.length() >= 1) {
                           L3: {
-                            if (jd.a(var4.charAt(0), -33)) {
+                            int discarded$24 = -33;
+                            if (jd.a(var4.charAt(0))) {
                               break L3;
                             } else {
-                              if (jd.a(var4.charAt(var4.length() + -1), -33)) {
+                              int discarded$25 = -33;
+                              if (jd.a(var4.charAt(var4.length() + -1))) {
                                 break L3;
                               } else {
                                 var5 = 0;
-                                if (param2 >= 81) {
-                                  var6 = 0;
-                                  L4: while (true) {
-                                    if (param0.length() <= var6) {
-                                      if (0 < var5) {
-                                        stackOut_36_0 = ad.field_g;
-                                        stackIn_37_0 = stackOut_36_0;
-                                        break L0;
-                                      } else {
-                                        return null;
-                                      }
+                                var6 = 0;
+                                L4: while (true) {
+                                  if (param0.length() <= var6) {
+                                    if (0 < var5) {
+                                      stackOut_33_0 = ad.field_g;
+                                      stackIn_34_0 = stackOut_33_0;
+                                      break L0;
                                     } else {
-                                      L5: {
-                                        var7 = param0.charAt(var6);
-                                        if (!jd.a((char) var7, -33)) {
-                                          var5 = 0;
-                                          break L5;
-                                        } else {
-                                          var5++;
-                                          break L5;
-                                        }
+                                      return null;
+                                    }
+                                  } else {
+                                    L5: {
+                                      var7 = param0.charAt(var6);
+                                      int discarded$26 = -33;
+                                      if (!jd.a((char) var7)) {
+                                        var5 = 0;
+                                        break L5;
+                                      } else {
+                                        var5++;
+                                        break L5;
                                       }
-                                      L6: {
-                                        if (var5 < 2) {
-                                          break L6;
-                                        } else {
-                                          if (!param1) {
-                                            stackOut_31_0 = jb.field_Q;
-                                            stackIn_32_0 = stackOut_31_0;
-                                            return stackIn_32_0;
-                                          } else {
-                                            break L6;
-                                          }
-                                        }
-                                      }
+                                    }
+                                    if (var5 < 2) {
                                       var6++;
                                       continue L4;
+                                    } else {
+                                      stackOut_28_0 = jb.field_Q;
+                                      stackIn_29_0 = stackOut_28_0;
+                                      return stackIn_29_0;
                                     }
                                   }
-                                } else {
-                                  stackOut_21_0 = null;
-                                  stackIn_22_0 = stackOut_21_0;
-                                  return (String) (Object) stackIn_22_0;
                                 }
                               }
                             }
@@ -491,38 +478,38 @@ final class jd extends ac implements ae {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var3 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) var3;
-            stackOut_39_1 = new StringBuilder().append("jd.Q(");
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackOut_36_0 = (RuntimeException) var3;
+            stackOut_36_1 = new StringBuilder().append("jd.Q(");
+            stackIn_38_0 = stackOut_36_0;
+            stackIn_38_1 = stackOut_36_1;
+            stackIn_37_0 = stackOut_36_0;
+            stackIn_37_1 = stackOut_36_1;
             if (param0 == null) {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
-              break L7;
+              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_2 = "null";
+              stackIn_39_0 = stackOut_38_0;
+              stackIn_39_1 = stackOut_38_1;
+              stackIn_39_2 = stackOut_38_2;
+              break L6;
             } else {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
-              break L7;
+              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
+              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_2 = "{...}";
+              stackIn_39_0 = stackOut_37_0;
+              stackIn_39_1 = stackOut_37_1;
+              stackIn_39_2 = stackOut_37_2;
+              break L6;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + 0 + 44 + 88 + 41);
         }
-        return stackIn_37_0;
+        return stackIn_34_0;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_pb = null;
         field_kb = null;
         field_sb = null;

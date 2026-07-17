@@ -14,41 +14,25 @@ final class k extends gn {
 
     final static void a(boolean param0, int param1) {
         np.field_Jb.a((gn) (Object) new hg(param1), 3);
-        if (!param0) {
-            int discarded$0 = k.b(-78);
-        }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         if (vk.field_b) {
           return -1;
         } else {
-          if (param0 <= -121) {
-            if (!bo.field_Cb.a(false, "street")) {
-              return bo.field_Cb.a("street", -16248);
-            } else {
-              vk.field_b = true;
-              oo.field_b = ng.a("cars", "street", 2, bo.field_Cb);
-              so.field_d = ng.a("signs", "street", 2, bo.field_Cb);
-              iw.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
-              return -1;
-            }
+          if (!bo.field_Cb.a(false, "street")) {
+            return bo.field_Cb.a("street", -16248);
           } else {
-            k.a(true, -119);
-            if (!bo.field_Cb.a(false, "street")) {
-              return bo.field_Cb.a("street", -16248);
-            } else {
-              vk.field_b = true;
-              oo.field_b = ng.a("cars", "street", 2, bo.field_Cb);
-              so.field_d = ng.a("signs", "street", 2, bo.field_Cb);
-              iw.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
-              return -1;
-            }
+            vk.field_b = true;
+            oo.field_b = ng.a("cars", "street", 2, bo.field_Cb);
+            so.field_d = ng.a("signs", "street", 2, bo.field_Cb);
+            iw.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
+            return -1;
           }
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_l = null;

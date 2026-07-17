@@ -44,12 +44,13 @@ final class vc {
                 break L1;
               } else {
                 var3 = null;
-                ll[] discarded$2 = vc.a((gk) null, -26, (byte) 6, 3);
+                ll[] discarded$10 = vc.a((gk) null, -26, (byte) 6, 3);
                 break L1;
               }
             }
             L2: {
-              if (kg.a(param1, (byte) 61) == null) {
+              int discarded$11 = 61;
+              if (kg.a(param1) == null) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -122,7 +123,8 @@ final class vc {
             }
           }
           if (tn.a(param0, (byte) -127, param3, param1)) {
-            return bl.b(-95);
+            int discarded$2 = -95;
+            return bl.b();
           } else {
             return null;
           }

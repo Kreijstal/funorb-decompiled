@@ -12,12 +12,12 @@ final class kl extends gg {
     int field_l;
     static String field_o;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_o = null;
         field_r = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -516,7 +516,8 @@ final class kl extends gg {
             String discarded$0 = kl.a((byte) 55);
         }
         if (var1.length() == 0) {
-            var1 = of.i(195);
+            int discarded$1 = 195;
+            var1 = of.i();
         }
         if (var1.length() == 0) {
             var1 = mg.field_k;

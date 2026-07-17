@@ -270,7 +270,7 @@ final class wl {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_l = null;
         field_k = null;
         field_g = null;
@@ -479,7 +479,8 @@ final class wl {
           if (va.field_a != 2) {
             break L2;
           } else {
-            if (!tl.d((byte) -20)) {
+            int discarded$5 = -20;
+            if (!tl.d()) {
               var3 = 0;
               break L2;
             } else {
@@ -496,7 +497,7 @@ final class wl {
                 if (rm.field_a.length() <= 0) {
                   break L3;
                 } else {
-                  StringBuilder discarded$3 = lf.a(' ', rm.field_a.length() - 1, 0, rm.field_a);
+                  StringBuilder discarded$6 = lf.a(' ', rm.field_a.length() - 1, 0, rm.field_a);
                   break L3;
                 }
               }
@@ -504,14 +505,15 @@ final class wl {
             return true;
           } else {
             var4 = pn.field_d;
-            if (og.a((char) var4, (byte) 123)) {
+            int discarded$7 = 123;
+            if (og.a((char) var4)) {
               L4: {
                 if (var3 == 0) {
                   break L4;
                 } else {
                   if (80 > rm.field_a.length()) {
                     L5: {
-                      StringBuilder discarded$4 = rm.field_a.append(var4);
+                      StringBuilder discarded$8 = rm.field_a.append(var4);
                       var5 = 485;
                       var17 = ta.field_lb;
                       var7 = var17;
@@ -585,7 +587,7 @@ final class wl {
                     if (~w.field_A.a(rm.field_a.toString()) >= ~var5) {
                       break L4;
                     } else {
-                      StringBuilder discarded$5 = lf.a(' ', -1 + rm.field_a.length(), 0, rm.field_a);
+                      StringBuilder discarded$9 = lf.a(' ', -1 + rm.field_a.length(), 0, rm.field_a);
                       break L4;
                     }
                   } else {

@@ -129,7 +129,6 @@ final class uk {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
         Object stackIn_7_0 = null;
         lj stackIn_12_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -157,15 +156,6 @@ final class uk {
             var3 = 0;
             L1: while (true) {
               if (var2_int <= var3) {
-                L2: {
-                  if (param0 == -58) {
-                    break L2;
-                  } else {
-                    var6 = null;
-                    uk.a((oh) null, 104, 43, (oh) null, -71, (byte) 23);
-                    break L2;
-                  }
-                }
                 stackOut_11_0 = mh.field_R;
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
@@ -188,10 +178,10 @@ final class uk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("uk.D(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("uk.D(").append(-58).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -203,7 +193,7 @@ final class uk {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L3;
+              break L2;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -211,7 +201,7 @@ final class uk {
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L3;
+              break L2;
             }
           }
           throw ii.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
@@ -219,18 +209,15 @@ final class uk {
         return stackIn_12_0;
     }
 
-    final static void a(oh param0, int param1, int param2, oh param3, int param4, byte param5) {
+    final static void a(oh param0, int param1, int param2, oh param3) {
         try {
-            if (param5 != 82) {
-                uk.c(1);
-            }
-            hj.field_a = param2;
+            hj.field_a = 8;
             le.field_a = param3;
-            cl.field_m = param1;
+            cl.field_m = 4;
             d.field_F = param0;
-            kk.field_z = param4;
+            kk.field_z = 8;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "uk.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "uk.A(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + 8 + 44 + (param3 != null ? "{...}" : "null") + 44 + 8 + 44 + 82 + 41);
         }
     }
 

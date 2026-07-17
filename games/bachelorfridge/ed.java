@@ -10,7 +10,7 @@ final class ed {
     static kv[] field_f;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         field_e = null;

@@ -8,7 +8,7 @@ final class ona extends sna {
     int field_wb;
     static String field_xb;
 
-    final static rga a(String param0, int param1) {
+    final static rga a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

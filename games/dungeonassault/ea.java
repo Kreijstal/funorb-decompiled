@@ -5,7 +5,7 @@ final class ea {
     static String field_a;
     static String field_b;
 
-    final static lh b(int param0) {
+    final static lh b() {
         int var1 = 0;
         if (jm.field_h == null) {
           jm.field_h = new lh();
@@ -34,7 +34,7 @@ final class ea {
         return dg.field_L;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -88,7 +88,7 @@ final class ea {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

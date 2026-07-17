@@ -7,7 +7,7 @@ abstract class qb {
     static int field_a;
     static dl field_b;
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         int var2 = 0;
         int var3_int = 0;
@@ -212,7 +212,7 @@ abstract class qb {
         int stackOut_213_1 = 0;
         L0: {
           var11 = CrazyCrystals.field_B;
-          kh.f(param0, 0, 160, 480, 0);
+          kh.f(480, 0, 160, 480, 0);
           var1_int = 480;
           if (uh.field_n) {
             break L0;
@@ -220,7 +220,8 @@ abstract class qb {
             if (uh.field_p != null) {
               break L0;
             } else {
-              if (!gn.d(false)) {
+              int discarded$13 = 0;
+              if (!gn.d()) {
                 L1: {
                   if (li.field_a != null) {
                     break L1;
@@ -266,7 +267,8 @@ abstract class qb {
             }
           }
           kh.d(480, 54, 640, 168);
-          qc.a(160, 54, 116, mg.field_b, 480, 160, 2);
+          int discarded$14 = 2;
+          qc.a(160, 54, 116, mg.field_b, 480, 160);
           kh.c();
           break L3;
         }
@@ -282,7 +284,8 @@ abstract class qb {
                   } else {
                     L9: {
                       kh.d(480, 168, 640, 270);
-                      qc.a(160, 166, 106, mg.field_b, 480, 160, 2);
+                      int discarded$15 = 2;
+                      qc.a(160, 166, 106, mg.field_b, 480, 160);
                       kh.c();
                       var2 = 480;
                       if (uh.field_n) {
@@ -291,7 +294,8 @@ abstract class qb {
                         if (null != uh.field_p) {
                           break L9;
                         } else {
-                          if (gn.d(false)) {
+                          int discarded$16 = 0;
+                          if (gn.d()) {
                             break L9;
                           } else {
                             L10: {
@@ -313,7 +317,8 @@ abstract class qb {
                       }
                     }
                     kh.d(480, 270, 640, var2);
-                    qc.a(160, 268, -268 + var2, mg.field_b, 480, 160, 2);
+                    int discarded$17 = 2;
+                    qc.a(160, 268, -268 + var2, mg.field_b, 480, 160);
                     kh.c();
                     var3_int = 182;
                     var4_int = 0;
@@ -360,8 +365,9 @@ abstract class qb {
                             if (null != ab.field_D) {
                               break L14;
                             } else {
-                              if (!gn.d(false)) {
-                                int discarded$3 = go.field_l.a(fa.field_i, 484, -go.field_l.field_o + 19 + var3_int, 152, 1000, 16760896, -1, 1, 0, 20);
+                              int discarded$18 = 0;
+                              if (!gn.d()) {
+                                int discarded$19 = go.field_l.a(fa.field_i, 484, -go.field_l.field_o + 19 + var3_int, 152, 1000, 16760896, -1, 1, 0, 20);
                                 if (!qh.field_o.isEmpty()) {
                                   break L14;
                                 } else {
@@ -401,7 +407,7 @@ abstract class qb {
                                           }
                                         }
                                       }
-                                      int discarded$4 = go.field_l.a(f.field_e, 484, -go.field_l.field_o + (15 + (4 + var3_int - -var6)), 152, 1000, var4_int, -1, 1, 0, 20);
+                                      int discarded$20 = go.field_l.a(f.field_e, 484, -go.field_l.field_o + (15 + (4 + var3_int - -var6)), 152, 1000, var4_int, -1, 1, 0, 20);
                                       break L14;
                                     } else {
                                       break L14;
@@ -423,7 +429,8 @@ abstract class qb {
                     }
                   }
                 }
-                qc.a(160, 54, var1_int - 54, mg.field_b, 480, 160, param0 ^ 482);
+                int discarded$21 = 2;
+                qc.a(160, 54, var1_int - 54, mg.field_b, 480, 160);
                 if (!qh.field_o.isEmpty()) {
                   break L6;
                 } else {
@@ -438,7 +445,8 @@ abstract class qb {
                       } else {
                         if (!go.field_i) {
                           kh.d(484, 58, 636, var1_int + -4);
-                          co.d((byte) -51);
+                          int discarded$22 = -51;
+                          co.d();
                           kh.c();
                           if (var11 == 0) {
                             break L6;
@@ -455,7 +463,8 @@ abstract class qb {
               }
             }
             kh.d(480, 168, 640, var1_int);
-            qc.a(160, 166, -166 + var1_int, mg.field_b, 480, 160, param0 + -478);
+            int discarded$23 = 2;
+            qc.a(160, 166, -166 + var1_int, mg.field_b, 480, 160);
             kh.c();
             li.field_a.b(-51);
             break L6;
@@ -467,7 +476,8 @@ abstract class qb {
               if (uh.field_p != null) {
                 break L17;
               } else {
-                if (gn.d(false)) {
+                int discarded$24 = 0;
+                if (gn.d()) {
                   break L17;
                 } else {
                   L18: {
@@ -823,7 +833,7 @@ abstract class qb {
                   }
                   L39: {
                     L40: {
-                      lb.a(stackIn_156_0, stackIn_156_1, stackIn_156_2, 632, param0 ^ 414);
+                      lb.a(stackIn_156_0, stackIn_156_1, stackIn_156_2, 632, 126);
                       var2 -= 20;
                       if (qh.field_i < 480) {
                         break L40;
@@ -1153,7 +1163,7 @@ abstract class qb {
               if (var5 == null) {
                 break L45;
               } else {
-                int discarded$5 = go.field_l.a((String) var5, 486, 54, 148, 114, 16760896, -1, 1, 1, 20);
+                int discarded$25 = go.field_l.a((String) var5, 486, 54, 148, 114, 16760896, -1, 1, 1, 20);
                 break L45;
               }
             } else {
@@ -1165,12 +1175,12 @@ abstract class qb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         try {
             field_b = null;
-            int var1_int = 107 / ((param0 - -36) / 38);
+            int var1_int = 35;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "qb.A(" + param0 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "qb.A(" + 100 + 41);
         }
     }
 

@@ -6,17 +6,22 @@ class ah extends mo {
     static int field_l;
     static String field_k;
 
-    final static void a(byte param0, int param1) {
-        mi var2 = uh.field_Wb;
-        var2.j(param1, 124);
-        if (param0 != -50) {
-            return;
-        }
+    final static void a() {
+        mi var2 = null;
+        RuntimeException var2_ref = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            var2.f(1, param0 + -46);
+          L0: {
+            var2 = uh.field_Wb;
+            var2.j(11, 124);
+            var2.f(1, -96);
             var2.f(0, -100);
-        } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ah.D(" + param0 + 44 + param1 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var2_ref, "ah.D(" + -50 + 44 + 11 + 41);
         }
     }
 
@@ -1582,7 +1587,7 @@ class ah extends mo {
         }
         L171: {
           var2 = en.a((byte) -42, "pass1,23");
-          var3 = -38 % ((46 - param0) / 52);
+          var3 = 0;
           if (null != var2) {
             km.field_w[23] = in.a(0, var2);
             break L171;

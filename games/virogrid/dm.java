@@ -15,7 +15,7 @@ abstract class dm extends wb {
 
     abstract Object b(byte param0);
 
-    public static void e(int param0) {
+    public static void e() {
         field_v = null;
         field_t = null;
         field_o = null;
@@ -127,7 +127,7 @@ abstract class dm extends wb {
         ((dm) this).field_p = param0;
     }
 
-    final static char a(char param0, byte param1) {
+    final static char a(char param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Virogrid.field_F ? 1 : 0;

@@ -8,7 +8,7 @@ final class mia implements Runnable {
     eab field_d;
     volatile boolean field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -115,89 +115,81 @@ final class mia implements Runnable {
         }
     }
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_20_0 = 0;
         var5 = VoidHunters.field_G;
         try {
           L0: {
-            if (param1) {
-              L1: {
-                if (param0 <= 0) {
-                  break L1;
+            L1: {
+              if (param0 <= 0) {
+                break L1;
+              } else {
+                if (param0 < 128) {
+                  stackOut_9_0 = 1;
+                  stackIn_10_0 = stackOut_9_0;
+                  return stackIn_10_0 != 0;
                 } else {
-                  if (param0 < 128) {
-                    stackOut_10_0 = 1;
-                    stackIn_11_0 = stackOut_10_0;
-                    return stackIn_11_0 != 0;
-                  } else {
-                    break L1;
-                  }
+                  break L1;
                 }
               }
-              L2: {
-                if (param0 < 160) {
+            }
+            L2: {
+              if (param0 < 160) {
+                break L2;
+              } else {
+                if (param0 > 255) {
                   break L2;
                 } else {
-                  if (param0 > 255) {
-                    break L2;
-                  } else {
-                    return true;
-                  }
+                  return true;
                 }
               }
-              L3: {
-                if (param0 != 0) {
-                  var6 = tu.field_c;
-                  var2 = var6;
-                  var3 = 0;
-                  L4: while (true) {
-                    if (var6.length <= var3) {
-                      break L3;
+            }
+            L3: {
+              if (param0 != 0) {
+                var6 = tu.field_c;
+                var2 = var6;
+                var3 = 0;
+                L4: while (true) {
+                  if (var6.length <= var3) {
+                    break L3;
+                  } else {
+                    var4 = var6[var3];
+                    if (var4 == param0) {
+                      stackOut_17_0 = 1;
+                      stackIn_18_0 = stackOut_17_0;
+                      return stackIn_18_0 != 0;
                     } else {
-                      var4 = var6[var3];
-                      if (var4 == param0) {
-                        stackOut_18_0 = 1;
-                        stackIn_19_0 = stackOut_18_0;
-                        return stackIn_19_0 != 0;
-                      } else {
-                        var3++;
-                        continue L4;
-                      }
+                      var3++;
+                      continue L4;
                     }
                   }
-                } else {
-                  break L3;
                 }
+              } else {
+                break L3;
               }
-              stackOut_21_0 = 0;
-              stackIn_22_0 = stackOut_21_0;
-              break L0;
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
             }
+            stackOut_20_0 = 0;
+            stackIn_21_0 = stackOut_20_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2_ref, "mia.A(" + param0 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) var2_ref, "mia.A(" + param0 + 44 + 1 + 41);
         }
-        return stackIn_22_0 != 0;
+        return stackIn_21_0 != 0;
     }
 
     mia() {

@@ -15,9 +15,6 @@ final class th {
     private int field_d;
 
     final static cr a(boolean param0) {
-        if (!param0) {
-            th.a((byte) -18);
-        }
         return pp.a((byte) 116);
     }
 
@@ -30,22 +27,22 @@ final class th {
             } else {
                 ((th) this).field_h = param0.field_a + " - " + param2 + "%";
             }
-            ((th) this).field_j = (float)((th) this).field_i * var4_float / (float)(param1 + ((th) this).field_b);
+            ((th) this).field_j = (float)((th) this).field_i * var4_float / (float)(1 + ((th) this).field_b);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "th.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "th.B(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + param2 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
-        int var1 = -62 / ((-76 - param0) / 32);
+        int var1 = -62;
         field_f = null;
         field_e = null;
         field_k = null;
         field_a = null;
     }
 
-    final static bn a(boolean param0, int[] param1, int param2) {
+    final static bn a(boolean param0, int[] param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

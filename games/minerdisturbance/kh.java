@@ -307,76 +307,68 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] a(byte[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
-        Object stackIn_2_0 = null;
-        byte[] stackIn_4_0 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        byte[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            if (param1 == -16) {
-              var2_int = param0.length;
-              var3 = new byte[var2_int];
-              ai.a(param0, 0, var3, 0, var2_int);
-              stackOut_3_0 = (byte[]) var3;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (byte[]) (Object) stackIn_2_0;
-            }
+            var2_int = param0.length;
+            var3 = new byte[var2_int];
+            ai.a(param0, 0, var3, 0, var2_int);
+            stackOut_2_0 = (byte[]) var3;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("kh.A(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("kh.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -16 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     final static void a(int param0, int param1) {
@@ -400,7 +392,8 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               if (var4 == null) {
                 break L0;
               } else {
-                tk.a(var4, param1, (byte) -102);
+                int discarded$4 = -102;
+                tk.a(var4, param1);
                 var4 = (bi) (Object) bb.field_a.b((byte) 56);
                 continue L2;
               }
@@ -478,13 +471,12 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(id param0, int param1) {
+    final static void a(id param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -510,58 +502,49 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= sb.field_p) {
-                    int dupTemp$5 = param0.a(119);
-                    c.field_c[dupTemp$5] = c.field_c[dupTemp$5] + 1;
+                    int dupTemp$4 = param0.a(119);
+                    c.field_c[dupTemp$4] = c.field_c[dupTemp$4] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
                       if (sb.field_p <= var3) {
-                        L4: {
-                          if (param1 == 14288) {
-                            break L4;
-                          } else {
-                            var6 = null;
-                            byte[] discarded$6 = kh.a((byte[]) null, (byte) -81);
-                            break L4;
-                          }
-                        }
                         sb.field_p = var2_int;
-                        int fieldTemp$7 = sb.field_p;
+                        int fieldTemp$5 = sb.field_p;
                         sb.field_p = sb.field_p + 1;
-                        im.field_a[fieldTemp$7] = param0;
+                        im.field_a[fieldTemp$5] = param0;
                         break L0;
                       } else {
-                        L5: {
-                          L6: {
+                        L4: {
+                          L5: {
                             if (param0.field_g == im.field_a[var3].field_g) {
                               var4 = im.field_a[var3].a(60);
                               if (bn.field_c < c.field_c[var4]) {
                                 c.field_c[var4] = c.field_c[var4] - 1;
-                                break L5;
+                                break L4;
                               } else {
-                                break L6;
+                                break L5;
                               }
                             } else {
-                              break L6;
+                              break L5;
                             }
                           }
-                          int incrementValue$8 = var2_int;
+                          int incrementValue$6 = var2_int;
                           var2_int++;
-                          im.field_a[incrementValue$8] = im.field_a[var3];
-                          break L5;
+                          im.field_a[incrementValue$6] = im.field_a[var3];
+                          break L4;
                         }
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    L7: {
+                    L6: {
                       if (param0.field_g == im.field_a[var2_int].field_g) {
-                        int dupTemp$9 = im.field_a[var2_int].a(126);
-                        c.field_c[dupTemp$9] = c.field_c[dupTemp$9] + 1;
-                        break L7;
+                        int dupTemp$7 = im.field_a[var2_int].a(126);
+                        c.field_c[dupTemp$7] = c.field_c[dupTemp$7] + 1;
+                        break L6;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                     var2_int++;
@@ -577,7 +560,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
             stackOut_23_1 = new StringBuilder().append("kh.E(");
@@ -592,7 +575,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
-              break L8;
+              break L7;
             } else {
               stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
               stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
@@ -600,10 +583,10 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
               stackIn_26_2 = stackOut_24_2;
-              break L8;
+              break L7;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 14288 + 41);
         }
     }
 
@@ -826,7 +809,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

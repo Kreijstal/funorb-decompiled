@@ -17,7 +17,8 @@ final class ea extends n {
 
     private final void a(byte param0) {
         ((ea) this).field_D = new hj[]{this.b(127, ((ea) this).field_C, ((ea) this).field_A), this.b(127, ((ea) this).field_M, ((ea) this).field_G)};
-        ((ea) this).field_I = this.a(-127);
+        int discarded$0 = -127;
+        ((ea) this).field_I = this.a();
         ((ea) this).field_E = ((ea) this).field_I.d();
         ((ea) this).field_L = new hj(((ea) this).field_u >> 1, ((ea) this).field_u);
         int var2 = 22 % ((param0 - 6) / 63);
@@ -36,7 +37,8 @@ final class ea extends n {
         if (65536 > ((ea) this).field_B) {
             td.a(((ea) this).field_x + var5, (((ea) this).field_x * ((ea) this).field_B >> 16) + var5, ((ea) this).field_u + var6, true, var6);
             this.a(param0 ^ -9530, var6, ((ea) this).field_D[1], var5);
-            dm.b((byte) -10);
+            int discarded$0 = -10;
+            dm.b();
         }
     }
 
@@ -79,7 +81,8 @@ final class ea extends n {
             L2: while (true) {
               if (var5_int <= var6) {
                 L3: {
-                  dm.b((byte) -10);
+                  int discarded$3 = -10;
+                  dm.b();
                   if (tc.field_d > param3 + ((ea) this).field_I.field_s) {
                     break L3;
                   } else {
@@ -87,7 +90,8 @@ final class ea extends n {
                     param2.a(-((ea) this).field_H, 0);
                     param2.a(((ea) this).field_F * 2 - ((ea) this).field_H, 0);
                     ((ea) this).field_E.d(0, 0);
-                    dm.b((byte) -10);
+                    int discarded$4 = -10;
+                    dm.b();
                     ((ea) this).field_L.a(param3, param1);
                     break L3;
                   }
@@ -103,7 +107,8 @@ final class ea extends n {
                         param2.a(-var7, 0);
                         param2.a(-var7 + ((ea) this).field_F * 2, 0);
                         ((ea) this).field_I.d(0, 0);
-                        dm.b((byte) -10);
+                        int discarded$5 = -10;
+                        dm.b();
                         ((ea) this).field_L.a(var5_int - ((ea) this).field_I.field_s, param1);
                         break L4;
                       } else {
@@ -178,7 +183,8 @@ final class ea extends n {
           var6 = 0;
           L0: while (true) {
             if (((ea) this).field_u <= var6) {
-              dm.b((byte) -10);
+              int discarded$1 = -10;
+              dm.b();
               return var14;
             } else {
               L1: {
@@ -225,7 +231,7 @@ final class ea extends n {
         }
     }
 
-    private final hj a(int param0) {
+    private final hj a() {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -246,7 +252,8 @@ final class ea extends n {
                 tc.a(var6, var5, var9 << 16 | (var9 | var9 << 8));
             }
         }
-        dm.b((byte) -10);
+        int discarded$0 = -10;
+        dm.b();
         return var4;
     }
 

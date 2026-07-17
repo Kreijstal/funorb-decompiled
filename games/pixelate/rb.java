@@ -81,7 +81,7 @@ final class rb extends de {
         return ((rb) this).field_d;
     }
 
-    private final int e(int param0) {
+    private final int e() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -262,23 +262,18 @@ final class rb extends de {
         int var7 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
         var4 = 0;
-        if (param0 == 4) {
-          L0: while (true) {
-            if (tn.field_n.length <= var4) {
-              return -1;
-            } else {
-              if (this.c(var4, (byte) 95)) {
-                var5 = this.d(var4, (byte) -89);
-                var6 = this.f(124, var4);
-                if (var5 < param1) {
-                  if (var6 < param2) {
-                    if (param1 < var5 - -32) {
-                      if (param2 < var6 - -32) {
-                        return var4;
-                      } else {
-                        var4++;
-                        continue L0;
-                      }
+        L0: while (true) {
+          if (tn.field_n.length <= var4) {
+            return -1;
+          } else {
+            if (this.c(var4, (byte) 95)) {
+              var5 = this.d(var4, (byte) -89);
+              var6 = this.f(124, var4);
+              if (var5 < param1) {
+                if (var6 < param2) {
+                  if (param1 < var5 - -32) {
+                    if (param2 < var6 - -32) {
+                      return var4;
                     } else {
                       var4++;
                       continue L0;
@@ -295,10 +290,11 @@ final class rb extends de {
                 var4++;
                 continue L0;
               }
+            } else {
+              var4++;
+              continue L0;
             }
           }
-        } else {
-          return 126;
         }
     }
 
@@ -322,29 +318,26 @@ final class rb extends de {
     }
 
     private final String a(boolean param0, int param1) {
-        if (param0) {
-          L0: {
-            if (param1 != 10) {
-              break L0;
+        L0: {
+          if (param1 != 10) {
+            break L0;
+          } else {
+            if (!this.a((byte) 66, param1)) {
+              return dq.field_a;
             } else {
-              if (!this.a((byte) 66, param1)) {
-                return dq.field_a;
-              } else {
-                break L0;
-              }
+              break L0;
             }
           }
-          return qa.field_a[param1];
-        } else {
-          return null;
         }
+        return qa.field_a[param1];
     }
 
     final void c(byte param0) {
         if (param0 >= -13) {
             return;
         }
-        la.a(((rb) this).field_l, nc.field_a, false, -25528);
+        int discarded$0 = -25528;
+        la.a(((rb) this).field_l, nc.field_a, false);
     }
 
     rb(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -361,7 +354,8 @@ final class rb extends de {
         if (16 > param0) {
           return 264 + 40 * (param0 % 8);
         } else {
-          var3 = 40 * this.e(16);
+          int discarded$2 = 16;
+          var3 = 40 * this.e();
           var4 = (-var3 + 320) / 2 + 264;
           var5 = 68 % ((39 - param1) / 56);
           var6 = 16;
@@ -387,7 +381,7 @@ final class rb extends de {
           return oo.field_c[param1];
         } else {
           L0: {
-            if (!gq.d(param0 ^ 96)) {
+            if (!gq.d(69)) {
               break L0;
             } else {
               if (!qi.field_p[param1]) {
@@ -397,24 +391,18 @@ final class rb extends de {
               }
             }
           }
-          if (param0 == 37) {
-            return pj.field_a;
-          } else {
-            return null;
-          }
+          return pj.field_a;
         }
     }
 
     private final boolean a(byte param0, int param1) {
-        if (param0 != 66) {
-            field_o = -28;
-        }
         return 0 < (1 << param1 & this.f(-109)) ? true : false;
     }
 
     private final int f(int param0, int param1) {
         int var4 = -118 / ((param0 - 91) / 33);
-        int var3 = this.e(16) != 0 ? 130 : 150;
+        int discarded$0 = 16;
+        int var3 = this.e() != 0 ? 130 : 150;
         return var3 - -(param1 / 8 * 40);
     }
 
@@ -453,7 +441,7 @@ final class rb extends de {
         return new rk(var2, var3, of.a(var4, 65536));
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_p = null;
         field_r = null;
     }

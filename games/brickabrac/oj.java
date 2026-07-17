@@ -1294,93 +1294,89 @@ final class oj extends ep {
               }
             }
             var9 = stackIn_10_0;
-            if (param4 >= 54) {
-              L4: {
-                var10 = param1.field_m >> 8;
-                var11 = param1.field_j >> 8;
-                if (param0 != 2) {
-                  break L4;
-                } else {
-                  var15 = bq.field_e[1][oo.field_w.a(-37880252, bq.field_e[1].length)];
-                  var12 = var15;
-                  var12.f((var11 + param6 * param2 + -(var15.field_x * param2) - -3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
-                  break L4;
-                }
+            L4: {
+              var10 = param1.field_m >> 8;
+              var11 = param1.field_j >> 8;
+              if (param0 != 2) {
+                break L4;
+              } else {
+                var15 = bq.field_e[1][oo.field_w.a(-37880252, bq.field_e[1].length)];
+                var12 = var15;
+                var12.f((var11 + param6 * param2 + -(var15.field_x * param2) - -3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
+                break L4;
               }
-              L5: {
-                tf.field_c[0].c(var11 / param2 + param6, var10 / param2 + param3);
-                if (var7_array != null) {
-                  var14[0].c(param6 - -(var11 / param2), param3 - -(var10 / param2));
-                  break L5;
-                } else {
-                  break L5;
-                }
+            }
+            L5: {
+              tf.field_c[0].c(var11 / param2 + param6, var10 / param2 + param3);
+              if (var7_array != null) {
+                var14[0].c(param6 - -(var11 / param2), param3 - -(var10 / param2));
+                break L5;
+              } else {
+                break L5;
               }
-              var11 += 16;
-              var12_int = 0;
-              L6: while (true) {
-                if (param1.field_F / 2 <= var12_int) {
-                  L7: {
-                    gg.field_o.c(param6 + var11 / param2, var10 / param2 + param3);
-                    if (var9 != null) {
-                      var9.c(param6 + var11 / param2, var10 / param2 + param3);
-                      break L7;
-                    } else {
-                      break L7;
-                    }
+            }
+            var11 += 16;
+            var12_int = 0;
+            L6: while (true) {
+              if (param1.field_F / 2 <= var12_int) {
+                L7: {
+                  gg.field_o.c(param6 + var11 / param2, var10 / param2 + param3);
+                  if (var9 != null) {
+                    var9.c(param6 + var11 / param2, var10 / param2 + param3);
+                    break L7;
+                  } else {
+                    break L7;
                   }
-                  var11 += 8;
-                  var12_int = 0;
-                  L8: while (true) {
-                    if (param1.field_F / 2 <= var12_int) {
-                      L9: {
-                        if (0 != param0) {
-                          break L9;
-                        } else {
-                          var12 = bq.field_e[0][oo.field_w.a(-37880252, bq.field_e[0].length)];
-                          var12.f((var11 + (16 + param6 * param2) - 3) / param2, (3 + param2 * param3 - -var10) / param2, 196);
-                          break L9;
-                        }
-                      }
-                      tf.field_c[1].c(param6 - -(var11 / param2), var10 / param2 + param3);
-                      if (var7_array != null) {
-                        var16[1].c(param6 - -(var11 / param2), param3 + var10 / param2);
-                        break L0;
+                }
+                var11 += 8;
+                var12_int = 0;
+                L8: while (true) {
+                  if (param1.field_F / 2 <= var12_int) {
+                    L9: {
+                      if (0 != param0) {
+                        break L9;
                       } else {
-                        return;
+                        var12 = bq.field_e[0][oo.field_w.a(-37880252, bq.field_e[0].length)];
+                        var12.f((var11 + (16 + param6 * param2) - 3) / param2, (3 + param2 * param3 - -var10) / param2, 196);
+                        break L9;
                       }
+                    }
+                    tf.field_c[1].c(param6 - -(var11 / param2), var10 / param2 + param3);
+                    if (var7_array != null) {
+                      var16[1].c(param6 - -(var11 / param2), param3 + var10 / param2);
+                      break L0;
                     } else {
-                      L10: {
-                        fq.field_d[1].c(var11 / param2 + param6, var10 / param2 + param3);
-                        if (var8 == null) {
-                          break L10;
-                        } else {
-                          var8[1].c(var11 / param2 + param6, param3 + var10 / param2);
-                          break L10;
-                        }
+                      return;
+                    }
+                  } else {
+                    L10: {
+                      fq.field_d[1].c(var11 / param2 + param6, var10 / param2 + param3);
+                      if (var8 == null) {
+                        break L10;
+                      } else {
+                        var8[1].c(var11 / param2 + param6, param3 + var10 / param2);
+                        break L10;
                       }
-                      var11 += 6;
-                      var12_int++;
-                      continue L8;
                     }
+                    var11 += 6;
+                    var12_int++;
+                    continue L8;
                   }
-                } else {
-                  L11: {
-                    fq.field_d[0].c(var11 / param2 + param6, param3 - -(var10 / param2));
-                    if (var8 == null) {
-                      break L11;
-                    } else {
-                      var8[0].c(var11 / param2 + param6, var10 / param2 + param3);
-                      break L11;
-                    }
-                  }
-                  var11 += 6;
-                  var12_int++;
-                  continue L6;
                 }
+              } else {
+                L11: {
+                  fq.field_d[0].c(var11 / param2 + param6, param3 - -(var10 / param2));
+                  if (var8 == null) {
+                    break L11;
+                  } else {
+                    var8[0].c(var11 / param2 + param6, var10 / param2 + param3);
+                    break L11;
+                  }
+                }
+                var11 += 6;
+                var12_int++;
+                continue L6;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1413,7 +1409,7 @@ final class oj extends ep {
           }
           L13: {
             stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-            stackOut_41_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_41_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_41_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_41_2).append(44).append(param2).append(44).append(param3).append(44).append(107).append(44);
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
@@ -1552,7 +1548,7 @@ final class oj extends ep {
         return stackIn_4_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_q = null;
         field_r = null;
         field_s = null;
@@ -1702,7 +1698,7 @@ final class oj extends ep {
         }
     }
 
-    final static int b(boolean param0) {
+    final static int b() {
         if (qg.field_A < 2) {
           return 0;
         } else {

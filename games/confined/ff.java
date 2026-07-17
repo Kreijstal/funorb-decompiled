@@ -91,14 +91,6 @@ final class ff {
     }
 
     private final void a(byte param0, java.awt.Frame param1) {
-        L0: {
-          if (param0 == 12) {
-            break L0;
-          } else {
-            ((ff) this).field_a = null;
-            break L0;
-          }
-        }
         ((ff) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
     }
 

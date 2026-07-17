@@ -475,7 +475,8 @@ final class km {
                 if (param2.length != 64) {
                     throw new RuntimeException();
                 }
-                ((km) this).field_a = tg.a(param0, param0.length, 0, 8);
+                int discarded$0 = 8;
+                ((km) this).field_a = tg.a(param0, param0.length, 0);
                 for (var4_int = 0; var4_int < 64; var4_int++) {
                     if (param2[var4_int] != ((km) this).field_a[var4_int]) {
                         throw new RuntimeException();

@@ -19,7 +19,7 @@ final class ud extends rk {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         om var4 = null;
@@ -36,13 +36,13 @@ final class ud extends rk {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    kd.a((byte) -115, param0, var5);
+                    kd.a((byte) -115, 5, var5);
                     var5 = (ca) (Object) dl.field_b.d(2123);
                     continue L2;
                   }
                 }
               } else {
-                vg.a(7932, param0, var4);
+                vg.a(7932, 5, var4);
                 var4 = (om) (Object) jd.field_f.d(2123);
                 continue L1;
               }
@@ -51,7 +51,7 @@ final class ud extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2, "ud.B(" + param0 + 44 + 118 + 41);
+          throw sd.a((Throwable) (Object) var2, "ud.B(" + 5 + 44 + 118 + 41);
         }
     }
 
@@ -101,43 +101,39 @@ final class ud extends rk {
         var5 = Confined.field_J ? 1 : 0;
         try {
           oe.field_Q = b.field_a;
-          if (!param0) {
-            if (param1 != 255) {
-              if (param1 < 100) {
+          if (param1 != 255) {
+            if (param1 < 100) {
+              ji.field_d = gd.a(4, param2, param1);
+              return;
+            } else {
+              if (param1 > 105) {
                 ji.field_d = gd.a(4, param2, param1);
                 return;
               } else {
-                if (param1 > 105) {
-                  ji.field_d = gd.a(4, param2, param1);
-                  return;
-                } else {
-                  ji.field_d = p.a(26663, param3);
-                  return;
-                }
+                ji.field_d = p.a(26663, param3);
+                return;
               }
-            } else {
-              L0: {
-                stackOut_4_0 = 125;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
-                if (13 <= wc.field_Ob) {
-                  stackOut_6_0 = stackIn_6_0;
-                  stackOut_6_1 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
-                  break L0;
-                } else {
-                  stackOut_5_0 = stackIn_5_0;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
-                  break L0;
-                }
-              }
-              ji.field_d = jj.a((byte) stackIn_7_0, stackIn_7_1 != 0);
-              return;
             }
           } else {
+            L0: {
+              stackOut_4_0 = 125;
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_5_0 = stackOut_4_0;
+              if (13 <= wc.field_Ob) {
+                stackOut_6_0 = stackIn_6_0;
+                stackOut_6_1 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                break L0;
+              } else {
+                stackOut_5_0 = stackIn_5_0;
+                stackOut_5_1 = 1;
+                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_1 = stackOut_5_1;
+                break L0;
+              }
+            }
+            ji.field_d = jj.a((byte) stackIn_7_0, stackIn_7_1 != 0);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,7 +141,7 @@ final class ud extends rk {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("ud.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("ud.A(").append(0).append(44).append(param1).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -200,10 +196,6 @@ final class ud extends rk {
     final static void a(int param0, byte param1, int param2) {
         pe.field_q = param2;
         ef.field_vb = param0;
-        if (param1 != -12) {
-            Object var4 = null;
-            ud.a(false, -13, (String) null, (String[]) null);
-        }
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int[] param7) {

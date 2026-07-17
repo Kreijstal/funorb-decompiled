@@ -265,7 +265,8 @@ final class ic extends pp {
                 break L1;
               }
             }
-            stackOut_2_0 = tw.a(je.b(param1, 100, param0), (byte) -36);
+            int discarded$2 = -36;
+            stackOut_2_0 = tw.a(je.b(param1, 100, param0));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -157,7 +157,8 @@ final class fl {
                 break L1;
               }
             }
-            stackOut_2_0 = on.a(em.a(param1, 100, param2), -48);
+            int discarded$2 = -48;
+            stackOut_2_0 = on.a(em.a(param1, 100, param2));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -194,7 +195,7 @@ final class fl {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_c = null;

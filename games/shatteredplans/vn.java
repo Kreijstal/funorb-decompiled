@@ -25,7 +25,7 @@ final class vn extends oh {
     static qr field_t;
     static qr field_y;
 
-    final static void d(int param0) {
+    final static void d() {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -70,7 +70,7 @@ final class vn extends oh {
         return new Date().getYear() + 1900;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -281,7 +281,7 @@ final class vn extends oh {
                 break L1;
               } else {
                 if (0 != param1.length()) {
-                  var2_int = param1.indexOf((int) (char)param0);
+                  var2_int = param1.indexOf('@');
                   if (-1 == var2_int) {
                     stackOut_7_0 = fg.field_a;
                     stackIn_8_0 = stackOut_7_0;
@@ -291,7 +291,8 @@ final class vn extends oh {
                     var4 = param1.substring(var2_int - -1);
                     var5 = uc.a(-77, var3);
                     if (var5 == null) {
-                      stackOut_12_0 = fg.a(var4, (byte) 111);
+                      int discarded$2 = 111;
+                      stackOut_12_0 = fg.a(var4);
                       stackIn_13_0 = stackOut_12_0;
                       break L0;
                     } else {
@@ -314,7 +315,7 @@ final class vn extends oh {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("vn.E(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("vn.E(").append(64).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

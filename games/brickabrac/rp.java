@@ -72,18 +72,10 @@ final class rp extends km {
             param5 = 0;
             L5: while (true) {
               if (param4 <= param5) {
-                L6: {
-                  if (param1 == 65280) {
-                    break L6;
-                  } else {
-                    field_y = null;
-                    break L6;
-                  }
-                }
                 break L0;
               } else {
                 param0 = -param2;
-                L7: while (true) {
+                L6: while (true) {
                   if (param0 >= 0) {
                     var7 = var7 + var6_int;
                     param5++;
@@ -94,7 +86,7 @@ final class rp extends km {
                     var7++;
                     lb.field_l[incrementValue$1] = ik.a(-16711936, ik.a(var8, 16711935) * param3) + ik.a(16711680, param3 * ik.a(65280, var8)) >>> 8;
                     param0++;
-                    continue L7;
+                    continue L6;
                   }
                 }
               }
@@ -103,7 +95,7 @@ final class rp extends km {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var6, "rp.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw qb.a((Throwable) (Object) var6, "rp.D(" + param0 + 44 + 65280 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -151,7 +143,8 @@ final class rp extends km {
                 c.field_g = c.field_g - 1;
                 if (0 == fieldTemp$1) {
                     fc.a(-59, field_s);
-                    pa.a(true);
+                    int discarded$7 = 1;
+                    pa.a();
                     sc.b(-96);
                     if (si.field_k != null) {
                         pe.field_n = si.field_k.field_m;
@@ -247,6 +240,10 @@ final class rp extends km {
         field_t = null;
         field_y = null;
         field_w = null;
+        if (param0) {
+            Object var2 = null;
+            rp.a((byte) -63, 85, -10, 116, -76, 75, -37, -95, (int[]) null, 59);
+        }
         field_r = null;
     }
 

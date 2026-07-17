@@ -202,15 +202,12 @@ class na extends rg {
         if (param1 != 0) {
             return;
         }
-        if (param2 <= 36) {
-            ((na) this).b(77, -122, 71, 117);
-        }
-        pj var9 = (pj) (Object) ((na) this).field_n;
+        pj var5 = (pj) (Object) ((na) this).field_n;
         nn var6 = ((na) this).field_P;
         if (var6 == null) {
         } else {
-            var7 = var9.a((fj) this, param3, 0);
-            var8 = var9.a(param0, 2, (fj) this);
+            var7 = var5.a((fj) this, param3, 0);
+            var8 = var5.a(param0, 2, (fj) this);
             do {
                 tj.a(2 + var6.field_n, 1, -2 + var6.field_r + var7, var8 + (var6.field_m + -2), var6.field_w - -2);
                 var6 = var6.field_s;
@@ -399,7 +396,7 @@ class na extends rg {
         }
     }
 
-    final static void f(int param0) {
+    final static void f() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

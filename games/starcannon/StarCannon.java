@@ -12,21 +12,20 @@ public final class StarCannon extends ag {
     static char field_E;
     public static int field_A;
 
-    private final void t(int param0) {
+    private final void t() {
         if (!(null == fb.field_g)) {
-            vb.a(fb.field_g, 30962);
+            int discarded$0 = 30962;
+            vb.a(fb.field_g);
             fb.field_g = null;
-            tc.j(param0 ^ -23491);
+            tc.j(32);
         }
         lj.field_h = b.a(false, 1);
         nd.field_p = b.a(false, 2);
-        if (param0 != -23523) {
-            return;
-        }
         se.field_l = b.a(false, 3);
         jg.field_F = b.a(false, 4);
         cb.field_c = b.a(false, 5);
-        ej.a(fi.field_f, lf.field_eb, param0 + 23396);
+        int discarded$1 = -127;
+        ej.a(fi.field_f, lf.field_eb);
     }
 
     private final void b(int param0, int param1) {
@@ -112,10 +111,14 @@ public final class StarCannon extends ag {
                                   L10: {
                                     var3 = af.field_y.a(vk.field_w);
                                     ba.a(24, gb.field_v, (byte) -127, -var3 + 587, 17 + var3, 455 + param0);
-                                    nb.a(param0 + 455, (byte) 122, var3 - -17, ma.field_e, -17 + -var3 + 604, 128, 24);
+                                    int discarded$13 = 24;
+                                    int discarded$14 = 128;
+                                    nb.a(param0 + 455, (byte) 122, var3 - -17, ma.field_e, -17 + -var3 + 604);
                                     af.field_y.c(vk.field_w, 596, 472 + param0, 16777215, -1);
                                     ba.a(24, ma.field_a, (byte) 21, 604, 35, 455 - -param0);
-                                    nb.a(455 - -param0, (byte) 122, 35, ha.field_a, 604, 128, 24);
+                                    int discarded$15 = 24;
+                                    int discarded$16 = 128;
+                                    nb.a(455 - -param0, (byte) 122, 35, ha.field_a, 604);
                                     vb.field_l.e(609, param0 + 460);
                                     af.field_y.a(Integer.toString(gj.field_c), 626, 472 - -param0, 16777215, -1);
                                     var4_ref_String = be.field_b;
@@ -167,11 +170,15 @@ public final class StarCannon extends ag {
                                   }
                                   var3 = af.field_y.a(var4_ref_String);
                                   ba.a(24, gb.field_v, (byte) -122, 1, var3 - -17, 455 - -param0);
-                                  nb.a(param0 + 455, (byte) 122, var3 + 17, ma.field_e, 1, 128, 24);
+                                  int discarded$17 = 24;
+                                  int discarded$18 = 128;
+                                  nb.a(param0 + 455, (byte) 122, var3 + 17, ma.field_e, 1);
                                   af.field_y.a(var4_ref_String, 10, 472 - -param0, 16777215, -1);
                                   var8 = 23 + var3;
                                   ba.a(24, ma.field_a, (byte) -115, var8 - 5, 10 + var7 * 5, param0 + 455);
-                                  nb.a(param0 + 455, (byte) 122, 10 + var7 * 5, ha.field_a, var8 + -5, 128, 24);
+                                  int discarded$19 = 24;
+                                  int discarded$20 = 128;
+                                  nb.a(param0 + 455, (byte) 122, 10 + var7 * 5, ha.field_a, var8 + -5);
                                   var9 = 0;
                                   L15: while (true) {
                                     if (var7 <= var9) {
@@ -217,7 +224,9 @@ public final class StarCannon extends ag {
                                           L20: {
                                             var3 = af.field_y.a(rd.field_o);
                                             ba.a(24, gb.field_v, (byte) -118, -var3 + 311, 17 + var3, -param0 + 1);
-                                            nb.a(1 + -param0, (byte) 122, var3 + 17, ma.field_e, 311 - var3, 128, 24);
+                                            int discarded$21 = 24;
+                                            int discarded$22 = 128;
+                                            nb.a(1 + -param0, (byte) 122, var3 + 17, ma.field_e, 311 - var3);
                                             af.field_y.c(rd.field_o, 320, -param0 + 18, 16777215, -1);
                                             var17 = Integer.toString(var9);
                                             var3 = 11 + af.field_y.a(var17);
@@ -230,7 +239,9 @@ public final class StarCannon extends ag {
                                             }
                                           }
                                           ba.a(24, ma.field_a, (byte) -113, 328, var3, -param0 + 1);
-                                          nb.a(-param0 + 1, (byte) 122, var3, ha.field_a, 328, 128, 24);
+                                          int discarded$23 = 24;
+                                          int discarded$24 = 128;
+                                          nb.a(-param0 + 1, (byte) 122, var3, ha.field_a, 328);
                                           af.field_y.a(var17, 333, -param0 + 18, 16777215, -1);
                                           break L19;
                                         } else {
@@ -311,7 +322,7 @@ public final class StarCannon extends ag {
                                             }
                                           }
                                         }
-                                        int discarded$1 = af.field_y.a(var10_ref_String, 0, 0, 640, 480, 16777215, -1, -(10 * param0) + 256, 1, 1, af.field_y.field_p);
+                                        int discarded$25 = af.field_y.a(var10_ref_String, 0, 0, 640, 480, 16777215, -1, -(10 * param0) + 256, 1, 1, af.field_y.field_p);
                                         break L9;
                                       }
                                     } else {
@@ -690,7 +701,7 @@ public final class StarCannon extends ag {
         ((StarCannon) this).a(-15028, 10, "starcannon");
     }
 
-    private final void p(int param0) {
+    private final void p() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1062,7 +1073,7 @@ public final class StarCannon extends ag {
         }
     }
 
-    private final void o(int param0) {
+    private final void o() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1074,33 +1085,33 @@ public final class StarCannon extends ag {
         bf var8 = null;
         bf var9 = null;
         int var10 = 0;
+        int stackIn_47_0 = 0;
+        int stackIn_48_0 = 0;
         int stackIn_49_0 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_51_0 = 0;
-        int stackIn_51_1 = 0;
+        int stackIn_49_1 = 0;
+        int stackIn_67_0 = 0;
+        int stackIn_68_0 = 0;
         int stackIn_69_0 = 0;
-        int stackIn_70_0 = 0;
-        int stackIn_71_0 = 0;
-        int stackIn_71_1 = 0;
+        int stackIn_69_1 = 0;
+        int stackIn_79_0 = 0;
+        int stackIn_80_0 = 0;
         int stackIn_81_0 = 0;
-        int stackIn_82_0 = 0;
-        int stackIn_83_0 = 0;
-        int stackIn_83_1 = 0;
+        int stackIn_81_1 = 0;
+        int stackOut_78_0 = 0;
         int stackOut_80_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_82_1 = 0;
-        int stackOut_81_0 = 0;
-        int stackOut_81_1 = 0;
+        int stackOut_80_1 = 0;
+        int stackOut_79_0 = 0;
+        int stackOut_79_1 = 0;
+        int stackOut_66_0 = 0;
         int stackOut_68_0 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_70_1 = 0;
-        int stackOut_69_0 = 0;
-        int stackOut_69_1 = 0;
+        int stackOut_68_1 = 0;
+        int stackOut_67_0 = 0;
+        int stackOut_67_1 = 0;
+        int stackOut_46_0 = 0;
         int stackOut_48_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_50_1 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
+        int stackOut_48_1 = 0;
+        int stackOut_47_0 = 0;
+        int stackOut_47_1 = 0;
         L0: {
           var10 = field_A;
           var2 = sh.b(-128, 3) + ua.field_c;
@@ -1116,64 +1127,56 @@ public final class StarCannon extends ag {
           }
         }
         L1: {
-          if (param0 == 0) {
-            break L1;
-          } else {
-            field_C = null;
-            break L1;
-          }
-        }
-        L2: {
           var3 = sh.b(-126, 640);
           var4 = -64 + (fi.field_e.field_f - -sh.b(91, 128));
           if (var2 != 6) {
-            break L2;
+            break L1;
           } else {
             if (!gi.field_g) {
-              break L2;
+              break L1;
             } else {
               var2 = 12;
-              break L2;
+              break L1;
             }
           }
         }
-        L3: {
-          L4: {
+        L2: {
+          L3: {
             var7 = var2;
             if (0 == var7) {
               var4 = var3;
-              break L4;
+              break L3;
             } else {
               if (var7 == 1) {
-                break L4;
+                break L3;
               } else {
-                L5: {
-                  L6: {
+                L4: {
+                  L5: {
                     if (var7 == 2) {
-                      break L6;
+                      break L5;
                     } else {
                       if (var7 == 5) {
-                        break L6;
+                        break L5;
                       } else {
-                        L7: {
+                        L6: {
                           if (var7 == 3) {
-                            break L7;
+                            break L6;
                           } else {
                             if (var7 == 9) {
-                              break L7;
+                              break L6;
                             } else {
                               if (var7 != 11) {
-                                L8: {
+                                L7: {
                                   if (4 == var7) {
-                                    break L8;
+                                    break L7;
                                   } else {
                                     if (10 != var7) {
                                       if (var7 != 6) {
                                         if (var7 != 7) {
-                                          L9: {
+                                          L8: {
                                             if (var7 != 8) {
                                               if (var7 != 13) {
-                                                L10: {
+                                                L9: {
                                                   if (var7 != 12) {
                                                     if (var7 != 14) {
                                                       if (var7 == 15) {
@@ -1189,78 +1192,78 @@ public final class StarCannon extends ag {
                                                         kc.field_P = fl.field_h;
                                                         ti.field_f.b((oa) (Object) kc.field_P);
                                                         kc.field_P.a(mc.field_b);
-                                                        break L3;
+                                                        break L2;
                                                       } else {
-                                                        break L3;
+                                                        break L2;
                                                       }
                                                     } else {
-                                                      break L10;
+                                                      break L9;
                                                     }
                                                   } else {
-                                                    break L10;
+                                                    break L9;
                                                   }
                                                 }
                                                 nf.field_e = 175;
                                                 kh.field_y.b(77, (rf) (Object) new bf(var3, -64, var4, 4));
-                                                break L3;
+                                                break L2;
                                               } else {
-                                                break L9;
+                                                break L8;
                                               }
                                             } else {
-                                              break L9;
+                                              break L8;
                                             }
                                           }
                                           var5 = null;
                                           nf.field_e = 0;
                                           var4 = -64 + var3 - -sh.b(-127, 128);
                                           var7 = 0;
-                                          L11: while (true) {
-                                            L12: {
-                                              stackOut_80_0 = ~var7;
-                                              stackIn_82_0 = stackOut_80_0;
-                                              stackIn_81_0 = stackOut_80_0;
+                                          L10: while (true) {
+                                            L11: {
+                                              stackOut_78_0 = ~var7;
+                                              stackIn_80_0 = stackOut_78_0;
+                                              stackIn_79_0 = stackOut_78_0;
                                               if (2 == nf.field_l) {
-                                                stackOut_82_0 = stackIn_82_0;
-                                                stackOut_82_1 = 10;
-                                                stackIn_83_0 = stackOut_82_0;
-                                                stackIn_83_1 = stackOut_82_1;
-                                                break L12;
+                                                stackOut_80_0 = stackIn_80_0;
+                                                stackOut_80_1 = 10;
+                                                stackIn_81_0 = stackOut_80_0;
+                                                stackIn_81_1 = stackOut_80_1;
+                                                break L11;
                                               } else {
-                                                stackOut_81_0 = stackIn_81_0;
-                                                stackOut_81_1 = 5;
-                                                stackIn_83_0 = stackOut_81_0;
-                                                stackIn_83_1 = stackOut_81_1;
-                                                break L12;
+                                                stackOut_79_0 = stackIn_79_0;
+                                                stackOut_79_1 = 5;
+                                                stackIn_81_0 = stackOut_79_0;
+                                                stackIn_81_1 = stackOut_79_1;
+                                                break L11;
                                               }
                                             }
-                                            if (stackIn_83_0 <= ~stackIn_83_1) {
-                                              break L3;
+                                            if (stackIn_81_0 <= ~stackIn_81_1) {
+                                              break L2;
                                             } else {
-                                              L13: {
+                                              L12: {
                                                 var8 = new bf(var3, -var7 * 64 - 64, var4, 2);
                                                 var8.field_h = (bf) var5;
                                                 if (var7 == 0) {
                                                   var5 = (Object) (Object) var8;
-                                                  break L13;
+                                                  break L12;
                                                 } else {
-                                                  break L13;
+                                                  break L12;
                                                 }
                                               }
-                                              kh.field_y.b(param0 + 69, (rf) (Object) var8);
+                                              kh.field_y.b(69, (rf) (Object) var8);
                                               var7++;
-                                              continue L11;
+                                              continue L10;
                                             }
                                           }
                                         } else {
                                           nf.field_e = 0;
                                           var7 = 0;
-                                          L14: while (true) {
+                                          L13: while (true) {
                                             if (var7 >= 5) {
-                                              break L3;
+                                              break L2;
                                             } else {
                                               kh.field_y.b(126, (rf) (Object) new bf(var3, -64 + 64 * -var7, var4, 1));
                                               var7++;
-                                              continue L14;
+                                              continue L13;
                                             }
                                           }
                                         }
@@ -1268,71 +1271,71 @@ public final class StarCannon extends ag {
                                         nf.field_e = 100;
                                         var7_ref = null;
                                         var8_int = 0;
-                                        L15: while (true) {
-                                          L16: {
-                                            stackOut_68_0 = var8_int;
-                                            stackIn_70_0 = stackOut_68_0;
-                                            stackIn_69_0 = stackOut_68_0;
+                                        L14: while (true) {
+                                          L15: {
+                                            stackOut_66_0 = var8_int;
+                                            stackIn_68_0 = stackOut_66_0;
+                                            stackIn_67_0 = stackOut_66_0;
                                             if (nf.field_l == 2) {
-                                              stackOut_70_0 = stackIn_70_0;
-                                              stackOut_70_1 = 2;
-                                              stackIn_71_0 = stackOut_70_0;
-                                              stackIn_71_1 = stackOut_70_1;
-                                              break L16;
+                                              stackOut_68_0 = stackIn_68_0;
+                                              stackOut_68_1 = 2;
+                                              stackIn_69_0 = stackOut_68_0;
+                                              stackIn_69_1 = stackOut_68_1;
+                                              break L15;
                                             } else {
-                                              stackOut_69_0 = stackIn_69_0;
-                                              stackOut_69_1 = 1;
-                                              stackIn_71_0 = stackOut_69_0;
-                                              stackIn_71_1 = stackOut_69_1;
-                                              break L16;
+                                              stackOut_67_0 = stackIn_67_0;
+                                              stackOut_67_1 = 1;
+                                              stackIn_69_0 = stackOut_67_0;
+                                              stackIn_69_1 = stackOut_67_1;
+                                              break L15;
                                             }
                                           }
-                                          if (stackIn_71_0 >= stackIn_71_1) {
-                                            break L5;
+                                          if (stackIn_69_0 >= stackIn_69_1) {
+                                            break L4;
                                           } else {
-                                            var9 = new bf(var3, -var8_int * 64 + -64, sh.b(param0 + 76, 128) - 64, 5);
+                                            var9 = new bf(var3, -var8_int * 64 + -64, sh.b(76, 128) - 64, 5);
                                             var9.field_h = (bf) var7_ref;
                                             var9.field_p = true;
                                             kh.field_y.b(125, (rf) (Object) var9);
                                             var7_ref = (Object) (Object) var9;
                                             var8_int++;
-                                            continue L15;
+                                            continue L14;
                                           }
                                         }
                                       }
                                     } else {
-                                      break L8;
+                                      break L7;
                                     }
                                   }
                                 }
                                 nf.field_e = 0;
                                 var7 = 0;
-                                L17: while (true) {
+                                L16: while (true) {
                                   if (var7 >= 5) {
-                                    break L3;
+                                    break L2;
                                   } else {
-                                    kh.field_y.b(param0 ^ 74, (rf) (Object) new bf(var3, -var7 * 64 - 64, var3, 1));
+                                    kh.field_y.b(74, (rf) (Object) new bf(var3, -var7 * 64 - 64, var3, 1));
                                     var7++;
-                                    continue L17;
+                                    continue L16;
                                   }
                                 }
                               } else {
-                                break L7;
+                                break L6;
                               }
                             }
                           }
                         }
                         nf.field_e = 0;
                         var7 = -8;
-                        L18: while (true) {
+                        L17: while (true) {
                           if (var7 >= 8) {
-                            break L3;
+                            break L2;
                           } else {
                             var8 = new bf(var7 * 24 + 320, -Math.abs(-64 + var7 * 64), 320 - -(var7 * 24), 1);
                             var8.field_p = true;
                             kh.field_y.b(107, (rf) (Object) var8);
                             var7++;
-                            continue L18;
+                            continue L17;
                           }
                         }
                       }
@@ -1341,60 +1344,60 @@ public final class StarCannon extends ag {
                   nf.field_e = 0;
                   var7_ref = null;
                   var8_int = 0;
-                  L19: while (true) {
-                    L20: {
-                      stackOut_48_0 = ~var8_int;
-                      stackIn_50_0 = stackOut_48_0;
-                      stackIn_49_0 = stackOut_48_0;
+                  L18: while (true) {
+                    L19: {
+                      stackOut_46_0 = ~var8_int;
+                      stackIn_48_0 = stackOut_46_0;
+                      stackIn_47_0 = stackOut_46_0;
                       if (nf.field_l == 2) {
-                        stackOut_50_0 = stackIn_50_0;
-                        stackOut_50_1 = 10;
-                        stackIn_51_0 = stackOut_50_0;
-                        stackIn_51_1 = stackOut_50_1;
-                        break L20;
+                        stackOut_48_0 = stackIn_48_0;
+                        stackOut_48_1 = 10;
+                        stackIn_49_0 = stackOut_48_0;
+                        stackIn_49_1 = stackOut_48_1;
+                        break L19;
                       } else {
-                        stackOut_49_0 = stackIn_49_0;
-                        stackOut_49_1 = 5;
-                        stackIn_51_0 = stackOut_49_0;
-                        stackIn_51_1 = stackOut_49_1;
-                        break L20;
+                        stackOut_47_0 = stackIn_47_0;
+                        stackOut_47_1 = 5;
+                        stackIn_49_0 = stackOut_47_0;
+                        stackIn_49_1 = stackOut_47_1;
+                        break L19;
                       }
                     }
-                    if (stackIn_51_0 <= ~stackIn_51_1) {
-                      break L5;
+                    if (stackIn_49_0 <= ~stackIn_49_1) {
+                      break L4;
                     } else {
-                      L21: {
+                      L20: {
                         var9 = new bf(var3, -var8_int * 64 + -64, var4, 2);
                         var9.field_h = (bf) var7_ref;
                         var9.field_p = true;
-                        kh.field_y.b(param0 ^ 102, (rf) (Object) var9);
+                        kh.field_y.b(102, (rf) (Object) var9);
                         if (var8_int == 0) {
                           var7_ref = (Object) (Object) var9;
-                          break L21;
+                          break L20;
                         } else {
-                          break L21;
+                          break L20;
                         }
                       }
                       var8_int++;
-                      continue L19;
+                      continue L18;
                     }
                   }
                 }
-                break L3;
+                break L2;
               }
             }
           }
           nf.field_e = 0;
           var7 = 0;
-          L22: while (true) {
+          L21: while (true) {
             if (var7 >= 5) {
-              break L3;
+              break L2;
             } else {
               var8 = new bf(var3, -64 + 64 * -var7, var4, 1);
               var8.field_p = true;
               kh.field_y.b(65, (rf) (Object) var8);
               var7++;
-              continue L22;
+              continue L21;
             }
           }
         }
@@ -1436,7 +1439,8 @@ public final class StarCannon extends ag {
               break L0;
             } else {
               re.a(0);
-              le.b(-36);
+              int discarded$9 = -36;
+              le.b();
               break L0;
             }
           }
@@ -1470,7 +1474,8 @@ public final class StarCannon extends ag {
         }
         L3: {
           if (fa.field_E) {
-            this.t(-23523);
+            int discarded$10 = -23523;
+            this.t();
             fa.field_E = false;
             break L3;
           } else {
@@ -1505,7 +1510,8 @@ public final class StarCannon extends ag {
                 jg.field_H = jg.field_H & ~oh.field_a.field_k;
                 oh.field_a = null;
                 jj.i(122);
-                cf.e((byte) -117);
+                int discarded$11 = -117;
+                cf.e();
                 if (field_z != 5) {
                   break L5;
                 } else {
@@ -1562,23 +1568,27 @@ public final class StarCannon extends ag {
                           break L9;
                         }
                       }
-                      nh.a(ll.b(72), 337033697);
+                      int discarded$12 = 337033697;
+                      nh.a(ll.b(72));
                       break L8;
                     }
                   }
                   if (2364824 == var2) {
-                    ie.g(-1);
+                    int discarded$13 = -1;
+                    ie.g();
                     break L5;
                   } else {
                     break L5;
                   }
                 } else {
-                  this.b(true);
+                  int discarded$14 = 1;
+                  this.b();
                   break L5;
                 }
               } else {
                 if (nh.field_e != 0) {
-                  this.b(true);
+                  int discarded$15 = 1;
+                  this.b();
                   break L5;
                 } else {
                   L10: {
@@ -1634,10 +1644,12 @@ public final class StarCannon extends ag {
         }
         nf.a(0, (byte) 95);
         L15: while (true) {
-          if (!ll.a(s.field_k, (byte) -99)) {
+          int discarded$16 = -99;
+          if (!ll.a(s.field_k)) {
             L16: {
               var2 = 0;
-              if (!se.b((byte) -91)) {
+              int discarded$17 = -91;
+              if (!se.b()) {
                 break L16;
               } else {
                 var3 = ((StarCannon) this).h((byte) 58);
@@ -1680,6 +1692,7 @@ public final class StarCannon extends ag {
         hl var7_ref_hl = null;
         int var8 = 0;
         hl var8_ref_hl = null;
+        hl var9 = null;
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
@@ -1693,10 +1706,9 @@ public final class StarCannon extends ag {
         hl[] var20 = null;
         hl var21 = null;
         hl[] var22 = null;
-        hl var23 = null;
+        int[] var23 = null;
         int[] var24 = null;
         int[] var25 = null;
-        int[] var26 = null;
         var3_ref = null;
         L0: {
           var12 = field_A;
@@ -1710,7 +1722,8 @@ public final class StarCannon extends ag {
         L1: {
           o.a(false);
           if (param0) {
-            ne.b(lh.field_I, 150);
+            int discarded$16 = 150;
+            ne.b(lh.field_I);
             break L1;
           } else {
             break L1;
@@ -1727,11 +1740,12 @@ public final class StarCannon extends ag {
               gf.field_a = ob.a("cannoneer", 116, "", jg.field_F);
               dl.field_c = ob.a("playership", param1 + 1407, "", jg.field_F);
               vc.field_m = ob.a("addons", 126, "", jg.field_F);
-              hl[] discarded$7 = ob.a("glows", 118, "", jg.field_F);
+              hl[] discarded$17 = ob.a("glows", 118, "", jg.field_F);
               sj.field_E = ob.a("boss", -36, "", jg.field_F);
               fg.field_c = ob.a("boss2", param1 ^ 1474, "", jg.field_F);
               v.field_d = ob.a("boss3", 95, "", jg.field_F);
-              af.field_w = fg.a(jg.field_F, "powerorbs", "", false);
+              int discarded$18 = 0;
+              af.field_w = fg.a(jg.field_F, "powerorbs", "");
               var15 = ob.a("shots", -75, "", jg.field_F);
               var4_int = 0;
               L2: while (true) {
@@ -1785,10 +1799,10 @@ public final class StarCannon extends ag {
                                   fh.field_r[2] = var18[2];
                                   fh.field_r[1] = var18[1];
                                   fh.field_r[5] = var18[5];
-                                  var26 = new int[256];
-                                  var25 = var26;
+                                  var25 = new int[256];
                                   var24 = var25;
-                                  var19 = var24;
+                                  var23 = var24;
+                                  var19 = var23;
                                   var10 = var19;
                                   var11 = 0;
                                   L7: while (true) {
@@ -1801,7 +1815,7 @@ public final class StarCannon extends ag {
                                           return;
                                         } else {
                                           if (fh.field_r[var14] != null) {
-                                            rh.field_f[var14] = cl.a(5, fh.field_r[var14], true, false, var26, 255);
+                                            rh.field_f[var14] = cl.a(5, fh.field_r[var14], true, false, var25, 255);
                                             var14++;
                                             continue L8;
                                           } else {
@@ -1833,9 +1847,9 @@ public final class StarCannon extends ag {
                             }
                           }
                         } else {
-                          hl dupTemp$8 = new hl(32, 32);
-                          el.field_H[var4_int] = dupTemp$8;
-                          var17 = dupTemp$8;
+                          hl dupTemp$19 = new hl(32, 32);
+                          el.field_H[var4_int] = dupTemp$19;
+                          var17 = dupTemp$19;
                           var17.e();
                           gg.field_f[-var4_int + 24].b(0, 0);
                           var17.d();
@@ -1859,10 +1873,10 @@ public final class StarCannon extends ag {
               if (null == kj.field_y[3]) {
                 ma.a(sj.field_C, -13923, 90.0f);
                 ((StarCannon) this).d((byte) 22);
-                hl discarded$9 = vk.a("", 93, "mainmenubar", jg.field_F);
+                hl discarded$20 = vk.a("", 93, "mainmenubar", jg.field_F);
                 ie.field_A = ob.a("zenon", 102, "", jg.field_F);
-                hl discarded$10 = vk.a("", 120, "moon", jg.field_F);
-                hl discarded$11 = vk.a("", param1 ^ -1487, "stars", jg.field_F);
+                hl discarded$21 = vk.a("", 120, "moon", jg.field_F);
+                hl discarded$22 = vk.a("", param1 ^ -1487, "stars", jg.field_F);
                 fh.field_q = vk.a("", param1 + 1531, "nebula", jg.field_F);
                 gj.field_e = vk.a("", 125, "titlepic", jg.field_F);
                 gb.field_r = vk.a("", 91, "title2", jg.field_F);
@@ -1910,9 +1924,11 @@ public final class StarCannon extends ag {
                 var4[0] = af.field_w[16 - -qb.field_e];
                 af.field_y.a((ne[]) (Object) var4, (int[]) null);
                 lf.field_V = vk.a("basic", 111, "unachieved", fi.field_f);
-                li.a(lf.field_V, (byte) -100);
+                int discarded$23 = -100;
+                li.a(lf.field_V);
                 sc.field_a = vk.a("basic", param1 ^ -1517, "locked", fi.field_f);
-                li.a(sc.field_a, (byte) -100);
+                int discarded$24 = -100;
+                li.a(sc.field_a);
                 var21 = vk.a("basic", 104, "orbcoin", fi.field_f);
                 var6 = a.field_b.field_p - -a.field_b.field_q;
                 el.field_J = new hl(var6, var6);
@@ -1961,7 +1977,8 @@ public final class StarCannon extends ag {
                     ne.a(50, 39);
                     qd.a(1, 50);
                     fg.field_a = new jl[8];
-                    pc.a(-5695);
+                    int discarded$25 = -5695;
+                    pc.a();
                     var7 = 0;
                     L10: while (true) {
                       if (var7 >= 8) {
@@ -1983,8 +2000,9 @@ public final class StarCannon extends ag {
                       }
                     }
                   } else {
-                    var23 = var22[var8];
-                    li.a(var23, (byte) -100);
+                    var9 = var22[var8];
+                    int discarded$26 = -100;
+                    li.a(var9);
                     var8++;
                     continue L9;
                   }
@@ -2363,9 +2381,9 @@ public final class StarCannon extends ag {
                         }
                       }
                       var12 = gf.field_c[39];
-                      fj dupTemp$6 = fj.a(var12, 100, 255 * nb.field_g / 100);
-                      var13 = dupTemp$6;
-                      ah.field_a = dupTemp$6;
+                      fj dupTemp$14 = fj.a(var12, 100, 255 * nb.field_g / 100);
+                      var13 = dupTemp$14;
+                      ah.field_a = dupTemp$14;
                       var13.d(var3);
                       var6_int = (var2 + ha.field_d + -1) / var2;
                       var7 = -300 + (var6_int * 20 + -((var12.field_i.length + -var3) * 1000 / var12.field_j));
@@ -2956,7 +2974,8 @@ public final class StarCannon extends ag {
                   } else {
                     if ((1 & ua.field_c) == 0) {
                       gd.field_d = (ua.field_c >> 1) + 2;
-                      boolean discarded$7 = v.a(new d(sh.b(-127, 640), -156, 0, 128 + sh.b(-127, 256), 16777215, 4), -4001);
+                      int discarded$15 = -4001;
+                      boolean discarded$16 = v.a(new d(sh.b(-127, 640), -156, 0, 128 + sh.b(-127, 256), 16777215, 4));
                       break L67;
                     } else {
                       break L67;
@@ -3153,7 +3172,8 @@ public final class StarCannon extends ag {
               L85: {
                 if (4 == ua.field_c) {
                   gd.field_d = 9;
-                  boolean discarded$8 = v.a(new d(sh.b(-128, 640), -156, 0, sh.b(107, 256) - -128, 16777215, 4), -4001);
+                  int discarded$17 = -4001;
+                  boolean discarded$18 = v.a(new d(sh.b(-128, 640), -156, 0, sh.b(107, 256) - -128, 16777215, 4));
                   break L85;
                 } else {
                   break L85;
@@ -3182,7 +3202,8 @@ public final class StarCannon extends ag {
               L88: {
                 if (ua.field_c == 10) {
                   gd.field_d = 10;
-                  boolean discarded$9 = v.a(new d(sh.b(8, 640), -156, 0, sh.b(-128, 256) - -128, 16777215, 4), -4001);
+                  int discarded$19 = -4001;
+                  boolean discarded$20 = v.a(new d(sh.b(8, 640), -156, 0, sh.b(-128, 256) - -128, 16777215, 4));
                   break L88;
                 } else {
                   break L88;
@@ -3213,13 +3234,15 @@ public final class StarCannon extends ag {
                   break L91;
                 } else {
                   gd.field_d = 11;
-                  boolean discarded$10 = v.a(new d(sh.b(-8, 640), -156, 0, sh.b(118, 256) + 128, 16777215, 4), -4001);
+                  int discarded$21 = -4001;
+                  boolean discarded$22 = v.a(new d(sh.b(-8, 640), -156, 0, sh.b(118, 256) + 128, 16777215, 4));
                   break L91;
                 }
               }
               if (19 == ua.field_c) {
                 gd.field_d = 12;
-                boolean discarded$11 = v.a(new d(sh.b(-128, 640), -156, 0, 128 + sh.b(2, 256), 16777215, 4), -4001);
+                int discarded$23 = -4001;
+                boolean discarded$24 = v.a(new d(sh.b(-128, 640), -156, 0, 128 + sh.b(2, 256), 16777215, 4));
                 break L36;
               } else {
                 break L36;
@@ -3338,7 +3361,8 @@ public final class StarCannon extends ag {
               if (rj.field_h != 0) {
                 break L102;
               } else {
-                this.o(0);
+                int discarded$25 = 0;
+                this.o();
                 break L102;
               }
             }
@@ -3354,14 +3378,16 @@ public final class StarCannon extends ag {
               if (2 != rj.field_h) {
                 break L104;
               } else {
-                this.k((byte) 104);
+                int discarded$26 = 104;
+                this.k();
                 break L104;
               }
             }
             if (rj.field_h != 3) {
               break L101;
             } else {
-              this.p(-256);
+              int discarded$27 = -256;
+              this.p();
               break L101;
             }
           } else {
@@ -4550,235 +4576,392 @@ public final class StarCannon extends ag {
     final void c(byte param0) {
         int var2 = 0;
         StarCannon.r(122);
-        bj.a(-1);
+        int discarded$157 = -1;
+        bj.a();
         eb.a(true);
-        pb.a(91);
-        rd.e(-29826);
-        bg.a(-115);
-        lj.b(87);
-        pc.b(-76);
-        ag.j((byte) 39);
-        ii.b((byte) 70);
+        int discarded$158 = 91;
+        pb.a();
+        int discarded$159 = -29826;
+        rd.e();
+        int discarded$160 = -115;
+        bg.a();
+        int discarded$161 = 87;
+        lj.b();
+        int discarded$162 = -76;
+        pc.b();
+        int discarded$163 = 39;
+        ag.j();
+        int discarded$164 = 70;
+        ii.b();
         th.c(1719);
-        gg.b((byte) 121);
-        wk.a(true);
+        int discarded$165 = 121;
+        gg.b();
+        int discarded$166 = 1;
+        wk.a();
         gj.a(15686);
         ki.a();
         ue.b(0);
         qe.a();
-        oh.a(-1);
+        int discarded$167 = -1;
+        oh.a();
         ec.a(82);
-        rb.g((byte) -59);
-        dd.a(-121);
+        int discarded$168 = -59;
+        rb.g();
+        int discarded$169 = -121;
+        dd.a();
         qa.a(-5504);
         mf.a(23675);
         kg.a((byte) 103);
-        r.a(-76);
+        int discarded$170 = -76;
+        r.a();
         ce.a(30518);
-        j.a(-3);
-        ri.a(-15552);
+        int discarded$171 = -3;
+        j.a();
+        int discarded$172 = -15552;
+        ri.a();
         fb.a(-113);
-        nb.a(572996488);
-        pk.a(4);
-        qi.b(0);
+        int discarded$173 = 572996488;
+        nb.a();
+        int discarded$174 = 4;
+        pk.a();
+        int discarded$175 = 0;
+        qi.b();
         vf.a(false);
-        fi.a(0);
+        int discarded$176 = 0;
+        fi.a();
         tk.a(-124);
-        cg.a(89);
-        qc.a(-1);
-        bb.b(2);
-        bf.a(15415);
-        d.a(32);
+        int discarded$177 = 89;
+        cg.a();
+        int discarded$178 = -1;
+        qc.a();
+        int discarded$179 = 2;
+        bb.b();
+        int discarded$180 = 15415;
+        bf.a();
+        int discarded$181 = 32;
+        d.a();
         jl.a(0);
-        m.b(-98);
-        lh.a((byte) -113);
+        int discarded$182 = -98;
+        m.b();
+        int discarded$183 = -113;
+        lh.a();
         wd.c();
         df.a();
         eh.g((byte) 101);
-        ef.a((byte) 27);
-        td.c(-12539);
-        sb.b(105);
+        int discarded$184 = 27;
+        ef.a();
+        int discarded$185 = -12539;
+        td.c();
+        int discarded$186 = 105;
+        sb.b();
         ed.b((byte) -61);
         rf.b(false);
         ui.d((byte) -80);
         uh.b((byte) -115);
-        md.a(-27240);
+        int discarded$187 = -27240;
+        md.a();
         var2 = 82 / ((param0 - -63) / 62);
         n.f(0);
-        gi.b(640);
-        wc.c(-1);
-        bi.b(0);
+        int discarded$188 = 640;
+        gi.b();
+        int discarded$189 = -1;
+        wc.c();
+        int discarded$190 = 0;
+        bi.b();
         ck.a(false);
-        gf.a((byte) -126);
+        int discarded$191 = -126;
+        gf.a();
         sd.a(false);
-        sc.a(0);
+        int discarded$192 = 0;
+        sc.a();
         wg.a((byte) -117);
         be.a(20342);
         tc.g(-14528);
-        ok.i((byte) -90);
-        lf.e(false);
-        lc.m(-11147);
-        ph.m(-1);
-        kh.h((byte) 126);
-        db.a(-117);
-        rg.k(-128);
-        hg.a(false);
-        ma.a((byte) 67);
-        sg.a(false);
-        g.b(-12837);
-        ak.a((byte) 94);
-        nc.b((byte) 59);
-        ti.a((byte) 13);
+        int discarded$193 = -90;
+        ok.i();
+        int discarded$194 = 0;
+        lf.e();
+        int discarded$195 = -11147;
+        lc.m();
+        int discarded$196 = -1;
+        ph.m();
+        int discarded$197 = 126;
+        kh.h();
+        int discarded$198 = -117;
+        db.a();
+        int discarded$199 = -128;
+        rg.k();
+        int discarded$200 = 0;
+        hg.a();
+        int discarded$201 = 67;
+        ma.a();
+        int discarded$202 = 0;
+        sg.a();
+        int discarded$203 = -12837;
+        g.b();
+        int discarded$204 = 94;
+        ak.a();
+        int discarded$205 = 59;
+        nc.b();
+        int discarded$206 = 13;
+        ti.a();
         je.a();
         nj.a();
         l.a();
-        ja.a((byte) 80);
-        ih.b((byte) -125);
-        jf.a(true);
-        ua.a(128);
-        ne.a(-109);
-        ia.k(36);
+        int discarded$207 = 80;
+        ja.a();
+        int discarded$208 = -125;
+        ih.b();
+        int discarded$209 = 1;
+        jf.a();
+        int discarded$210 = 128;
+        ua.a();
+        int discarded$211 = -109;
+        ne.a();
+        int discarded$212 = 36;
+        ia.k();
         fc.a(20811);
-        u.a(2);
-        hc.a(false);
-        sa.a(30334);
-        v.a((byte) -63);
-        s.a((byte) -104);
-        hh.a((byte) -22);
-        vh.h((byte) -98);
-        jh.b(126);
+        int discarded$213 = 2;
+        u.a();
+        int discarded$214 = 0;
+        hc.a();
+        int discarded$215 = 30334;
+        sa.a();
+        int discarded$216 = -63;
+        v.a();
+        int discarded$217 = -104;
+        s.a();
+        int discarded$218 = -22;
+        hh.a();
+        int discarded$219 = -98;
+        vh.h();
+        int discarded$220 = 126;
+        jh.b();
         ra.d((byte) 108);
-        tg.h(-64);
-        t.c((byte) 113);
+        int discarded$221 = -64;
+        tg.h();
+        int discarded$222 = 113;
+        t.c();
         cb.b(0);
-        la.a((byte) 1);
-        ik.d(0);
-        jb.a(-730625660);
-        pd.a((byte) 98);
-        vj.e(true);
-        fg.a((byte) 6);
+        int discarded$223 = 1;
+        la.a();
+        int discarded$224 = 0;
+        ik.d();
+        int discarded$225 = -730625660;
+        jb.a();
+        int discarded$226 = 98;
+        pd.a();
+        int discarded$227 = 1;
+        vj.e();
+        int discarded$228 = 6;
+        fg.a();
         hd.a((byte) 125);
         gl.a();
-        fd.a(-12241);
-        kl.a(21367);
-        lb.a((byte) -49);
-        ll.a(-1);
+        int discarded$229 = -12241;
+        fd.a();
+        int discarded$230 = 21367;
+        kl.a();
+        int discarded$231 = -49;
+        lb.a();
+        int discarded$232 = -1;
+        ll.a();
         ee.a((byte) 79);
-        wi.b(64);
-        bl.a(-29584);
-        ac.a((byte) -77);
-        a.a(-1);
-        pe.a((byte) 93);
-        ca.a(true);
+        int discarded$233 = 64;
+        wi.b();
+        int discarded$234 = -29584;
+        bl.a();
+        int discarded$235 = -77;
+        ac.a();
+        int discarded$236 = -1;
+        a.a();
+        int discarded$237 = 93;
+        pe.a();
+        int discarded$238 = 1;
+        ca.a();
         ai.a(0);
-        hi.a((byte) 56);
+        int discarded$239 = 56;
+        hi.a();
         te.a(-1);
         dl.a(true);
-        kk.a((byte) 63);
+        int discarded$240 = 63;
+        kk.a();
         nk.a();
-        fk.a(-4918);
+        int discarded$241 = -4918;
+        fk.a();
         va.b((byte) 80);
-        mc.a((byte) 40);
+        int discarded$242 = 40;
+        mc.a();
         ea.a((byte) 48);
-        ni.a(-81);
+        int discarded$243 = -81;
+        ni.a();
         w.b(3);
-        eg.a((byte) -118);
+        int discarded$244 = -118;
+        eg.a();
         ci.a(-124);
         bd.a((byte) -74);
-        uj.c((byte) -44);
-        dk.a(-115);
-        kf.a(0);
-        kc.a(false);
+        int discarded$245 = -44;
+        uj.c();
+        int discarded$246 = -115;
+        dk.a();
+        int discarded$247 = 0;
+        kf.a();
+        int discarded$248 = 0;
+        kc.a();
         qd.h((byte) -37);
         vk.e((byte) 73);
-        ba.c(125);
-        dh.a((byte) -107);
-        na.a(426388817);
-        ff.f(-75);
-        rc.a((byte) -14);
-        ta.a(-32769);
-        gd.a((byte) 123);
-        ha.a((byte) -62);
-        b.a(true);
-        ic.a((byte) -120);
-        wj.a(false);
-        oe.b(12);
-        le.a(-11434);
+        int discarded$249 = 125;
+        ba.c();
+        int discarded$250 = -107;
+        dh.a();
+        int discarded$251 = 426388817;
+        na.a();
+        int discarded$252 = -75;
+        ff.f();
+        int discarded$253 = -14;
+        rc.a();
+        int discarded$254 = -32769;
+        ta.a();
+        int discarded$255 = 123;
+        gd.a();
+        int discarded$256 = -62;
+        ha.a();
+        int discarded$257 = 1;
+        b.a();
+        int discarded$258 = -120;
+        ic.a();
+        int discarded$259 = 0;
+        wj.a();
+        int discarded$260 = 12;
+        oe.b();
+        int discarded$261 = -11434;
+        le.a();
         hf.b(-22720);
-        mg.c(0);
-        jk.a(-124);
-        nf.b(-109);
-        ad.f((byte) -95);
-        fe.f((byte) 73);
-        qj.l(-102);
-        fa.a(1851621384);
-        kd.a(-16);
-        ab.e((byte) 119);
+        int discarded$262 = 0;
+        mg.c();
+        int discarded$263 = -124;
+        jk.a();
+        int discarded$264 = -109;
+        nf.b();
+        int discarded$265 = -95;
+        ad.f();
+        int discarded$266 = 73;
+        fe.f();
+        int discarded$267 = -102;
+        qj.l();
+        int discarded$268 = 1851621384;
+        fa.a();
+        int discarded$269 = -16;
+        kd.a();
+        int discarded$270 = 119;
+        ab.e();
         jg.e(934716193);
-        pa.f(-200);
+        int discarded$271 = -200;
+        pa.f();
         gh.e(13329);
-        qf.d((byte) 100);
-        vg.b(-117);
-        jj.a(0);
-        el.e((byte) 115);
-        sj.f((byte) 126);
+        int discarded$272 = 100;
+        qf.d();
+        int discarded$273 = -117;
+        vg.b();
+        int discarded$274 = 0;
+        jj.a();
+        int discarded$275 = 115;
+        el.e();
+        int discarded$276 = 126;
+        sj.f();
         h.a();
-        li.b(-23);
+        int discarded$277 = -23;
+        li.b();
         se.c((byte) -2);
-        ij.b(20756);
-        ve.a(32729);
+        int discarded$278 = 20756;
+        ij.b();
+        int discarded$279 = 32729;
+        ve.a();
         tj.g(-123);
-        af.g(9392);
-        o.a(4432);
+        int discarded$280 = 9392;
+        af.g();
+        int discarded$281 = 4432;
+        o.a();
         ek.a(false);
-        bh.a(-110);
-        mi.d(1);
+        int discarded$282 = -110;
+        bh.a();
+        int discarded$283 = 1;
+        mi.d();
         ej.f(99);
-        fl.e(115);
+        int discarded$284 = 115;
+        fl.e();
         cd.a(8192);
-        wh.a(true);
-        ob.d(-18147);
-        rh.a(false);
-        gb.b(122);
-        fh.b((byte) -46);
+        int discarded$285 = 1;
+        wh.a();
+        int discarded$286 = -18147;
+        ob.d();
+        int discarded$287 = 0;
+        rh.a();
+        int discarded$288 = 122;
+        gb.b();
+        int discarded$289 = -46;
+        fh.b();
         sh.b(4);
         tf.a(18172);
-        ie.h(24288);
+        int discarded$290 = 24288;
+        ie.h();
         vc.b((byte) 35);
-        re.d(0);
-        hj.a((byte) -45);
-        ld.g(8240);
-        oj.d(-113);
-        ah.a(-91);
+        int discarded$291 = 0;
+        re.d();
+        int discarded$292 = -45;
+        hj.a();
+        int discarded$293 = 8240;
+        ld.g();
+        int discarded$294 = -113;
+        oj.d();
+        int discarded$295 = -91;
+        ah.a();
         rj.a(-1);
-        hb.a(9681);
+        int discarded$296 = 9681;
+        hb.a();
         pf.a(true);
         ig.a(-1);
-        qb.a(-115);
-        ge.a(45);
+        int discarded$297 = -115;
+        qb.a();
+        int discarded$298 = 45;
+        ge.a();
         q.b((byte) 119);
-        kj.a(0);
-        mj.a(true);
+        int discarded$299 = 0;
+        kj.a();
+        int discarded$300 = 1;
+        mj.a();
         od.a(83);
-        cl.d((byte) 121);
+        int discarded$301 = 121;
+        cl.d();
         vd.a(32);
-        ae.a((byte) 64);
-        bc.b((byte) -128);
-        we.b((byte) 95);
-        dg.d(124);
-        of.a(true);
+        int discarded$302 = 64;
+        ae.a();
+        int discarded$303 = -128;
+        bc.b();
+        int discarded$304 = 95;
+        we.b();
+        int discarded$305 = 124;
+        dg.d();
+        int discarded$306 = 1;
+        of.a();
         il.b(2147483647);
-        nh.a(false);
-        nd.g(0);
-        cc.e((byte) -98);
-        cf.f(1);
+        int discarded$307 = 0;
+        nh.a();
+        int discarded$308 = 0;
+        nd.g();
+        int discarded$309 = -98;
+        cc.e();
+        int discarded$310 = 1;
+        cf.f();
         di.f(24979);
         vb.e((byte) 114);
-        og.a((byte) 92);
-        oi.a(false);
+        int discarded$311 = 92;
+        og.a();
+        int discarded$312 = 0;
+        oi.a();
         p.a(11);
         uc.e(1);
-        sk.a(false);
+        int discarded$313 = 0;
+        sk.a();
         ((StarCannon) this).field_u = null;
     }
 
@@ -5227,7 +5410,7 @@ public final class StarCannon extends ag {
         field_y = null;
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         int var3 = 0;
         L0: {
           var3 = field_A;
@@ -5299,11 +5482,11 @@ public final class StarCannon extends ag {
           if (null == pk.field_a.c(-3905)) {
             break L5;
           } else {
-            int fieldTemp$2 = ((StarCannon) this).field_B + 1;
+            int fieldTemp$4 = ((StarCannon) this).field_B + 1;
             ((StarCannon) this).field_B = ((StarCannon) this).field_B + 1;
-            if (fieldTemp$2 == 335) {
+            if (fieldTemp$4 == 335) {
               ((StarCannon) this).field_B = 0;
-              rf discarded$3 = pk.field_a.a((byte) 39);
+              rf discarded$5 = pk.field_a.a((byte) 39);
               break L5;
             } else {
               break L5;
@@ -5317,10 +5500,12 @@ public final class StarCannon extends ag {
               if (jb.field_e == 50) {
                 L7: {
                   if (!gh.f(-23093)) {
-                    pk.b(0);
+                    int discarded$6 = 0;
+                    pk.b();
                     break L7;
                   } else {
-                    mf.a((byte) -58);
+                    int discarded$7 = -58;
+                    mf.a();
                     break L7;
                   }
                 }
@@ -5410,7 +5595,8 @@ public final class StarCannon extends ag {
             }
             qa.field_a.a(false, false);
             fc.a(param0, param4, (byte) 95, param3);
-            td.b(30000);
+            int discarded$0 = 30000;
+            td.b();
             ie.field_x = cl.field_k;
             uh.field_k = cl.field_k;
         } catch (RuntimeException runtimeException) {
@@ -5418,7 +5604,7 @@ public final class StarCannon extends ag {
         }
     }
 
-    private final void k(byte param0) {
+    private final void k() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

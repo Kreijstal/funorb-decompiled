@@ -102,7 +102,7 @@ final class ho extends nc {
         }
     }
 
-    final static void a(md param0, int param1, int param2, boolean param3, int param4) {
+    final static void a(md param0, int param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -119,7 +119,7 @@ final class ho extends nc {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        boolean stackIn_13_0 = false;
+        int stackIn_13_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_33_0 = 0;
         int stackIn_33_1 = 0;
@@ -134,7 +134,7 @@ final class ho extends nc {
         StringBuilder stackIn_65_1 = null;
         String stackIn_65_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_12_0 = false;
+        int stackOut_12_0 = 0;
         int stackOut_29_0 = 0;
         int stackOut_27_0 = 0;
         int stackOut_32_0 = 0;
@@ -153,51 +153,44 @@ final class ho extends nc {
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
+            var5_int = mb.a((byte) -31, 3 * (-param2 + param1));
+            var6 = 3 * param2;
+            int discarded$1 = 8;
+            dd.a();
+            var7 = var5_int + -10;
             L1: {
-              var5_int = mb.a((byte) -31, 3 * (-param2 + param1));
-              var6 = 3 * param2;
-              dd.a((byte) 8);
-              var7 = var5_int + -10;
-              if (param4 == 16634) {
-                break L1;
-              } else {
-                field_q = 42;
-                break L1;
-              }
-            }
-            L2: {
               if (param0.field_m <= 0) {
-                break L2;
+                break L1;
               } else {
                 if (param0.field_z == null) {
-                  break L2;
+                  break L1;
                 } else {
                   kq.a(0);
-                  break L2;
+                  break L1;
                 }
               }
             }
             tf.field_Eb = 0;
             var8 = 0;
-            L3: while (true) {
-              L4: {
-                L5: {
+            L2: while (true) {
+              L3: {
+                L4: {
                   if (param0.field_B <= var8) {
-                    break L5;
+                    break L4;
                   } else {
                     var9 = param0.field_y[var8];
                     var10 = param0.field_L[var8];
                     var11 = param0.field_H[var8];
-                    stackOut_12_0 = param3;
-                    stackIn_50_0 = stackOut_12_0 ? 1 : 0;
+                    stackOut_12_0 = 0;
+                    stackIn_50_0 = stackOut_12_0;
                     stackIn_13_0 = stackOut_12_0;
                     if (var19 != 0) {
-                      break L4;
+                      break L3;
                     } else {
-                      L6: {
-                        L7: {
-                          if (!stackIn_13_0) {
-                            break L7;
+                      L5: {
+                        L6: {
+                          if (stackIn_13_0 == 0) {
+                            break L6;
                           } else {
                             var12 = lo.field_j[var9];
                             var13 = jk.field_k[var9];
@@ -206,55 +199,55 @@ final class ho extends nc {
                             var16 = jk.field_k[var10] - var13;
                             var17 = -var13 + jk.field_k[var11];
                             if (0 > var14 * var17 - var16 * var15) {
-                              break L7;
+                              break L6;
                             } else {
                               if (var19 == 0) {
-                                break L6;
+                                break L5;
                               } else {
-                                break L7;
+                                break L6;
                               }
                             }
                           }
                         }
                         var12 = hl.field_f[var9];
                         if (-2147483648 == var12) {
-                          break L6;
+                          break L5;
                         } else {
-                          L8: {
+                          L7: {
                             var13 = hl.field_f[var10];
                             if (-2147483648 != var13) {
-                              break L8;
+                              break L7;
                             } else {
                               if (var19 == 0) {
-                                break L6;
+                                break L5;
                               } else {
-                                break L8;
+                                break L7;
                               }
                             }
                           }
                           var14 = hl.field_f[var11];
                           if (var14 == -2147483648) {
-                            break L6;
+                            break L5;
                           } else {
-                            L9: {
+                            L8: {
                               var15 = var14 + var13 + var12 - var6;
                               if (var7 >= 0) {
                                 stackOut_29_0 = var15 >> var7;
                                 stackIn_30_0 = stackOut_29_0;
-                                break L9;
+                                break L8;
                               } else {
                                 stackOut_27_0 = var15 << -var7;
                                 stackIn_30_0 = stackOut_27_0;
-                                break L9;
+                                break L8;
                               }
                             }
                             var16 = -stackIn_30_0 + hl.field_e.length + -1;
                             var17 = hl.field_e[var16];
-                            L10: while (true) {
-                              L11: {
-                                L12: {
+                            L9: while (true) {
+                              L10: {
+                                L11: {
                                   if (0 == var17 >> 4) {
-                                    break L12;
+                                    break L11;
                                   } else {
                                     var16--;
                                     stackOut_32_0 = -1;
@@ -264,25 +257,25 @@ final class ho extends nc {
                                     stackIn_33_0 = stackOut_32_0;
                                     stackIn_33_1 = stackOut_32_1;
                                     if (var19 != 0) {
-                                      break L11;
+                                      break L10;
                                     } else {
-                                      L13: {
+                                      L12: {
                                         if (stackIn_33_0 >= stackIn_33_1) {
-                                          break L13;
+                                          break L12;
                                         } else {
                                           System.err.println("Out of range!");
                                           if (var19 == 0) {
-                                            break L6;
+                                            break L5;
                                           } else {
-                                            break L13;
+                                            break L12;
                                           }
                                         }
                                       }
                                       var17 = hl.field_e[var16];
                                       if (var19 == 0) {
-                                        continue L10;
+                                        continue L9;
                                       } else {
-                                        break L12;
+                                        break L11;
                                       }
                                     }
                                   }
@@ -291,67 +284,67 @@ final class ho extends nc {
                                 stackOut_40_1 = var16 << 4;
                                 stackIn_41_0 = stackOut_40_0;
                                 stackIn_41_1 = stackOut_40_1;
-                                break L11;
+                                break L10;
                               }
-                              L14: {
+                              L13: {
                                 var18 = stackIn_41_0 + stackIn_41_1;
                                 ah.field_f[var18] = var8;
                                 hl.field_e[var16] = var17 - -1;
                                 if (param0.field_m <= 0) {
-                                  break L14;
+                                  break L13;
                                 } else {
                                   if (param0.field_z == null) {
-                                    break L14;
+                                    break L13;
                                   } else {
                                     nn.field_c[param0.field_z[var8]] = nn.field_c[param0.field_z[var8]] + 1;
-                                    break L14;
+                                    break L13;
                                   }
                                 }
                               }
                               tf.field_Eb = tf.field_Eb + 1;
-                              break L6;
+                              break L5;
                             }
                           }
                         }
                       }
                       var8++;
                       if (var19 == 0) {
-                        continue L3;
+                        continue L2;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                   }
                 }
                 stackOut_49_0 = ~param0.field_m;
                 stackIn_50_0 = stackOut_49_0;
-                break L4;
+                break L3;
               }
-              L15: {
-                L16: {
+              L14: {
+                L15: {
                   if (stackIn_50_0 >= -1) {
-                    break L16;
+                    break L15;
                   } else {
                     if (param0.field_z == null) {
-                      break L16;
+                      break L15;
                     } else {
                       var8 = 0;
                       var9 = 0;
-                      L17: while (true) {
+                      L16: while (true) {
                         if (~nn.field_c.length >= ~var9) {
-                          break L16;
+                          break L15;
                         } else {
                           var10 = nn.field_c[var9];
                           nn.field_c[var9] = var8;
                           var8 = var8 + var10;
                           var9++;
                           if (var19 != 0) {
-                            break L15;
+                            break L14;
                           } else {
                             if (var19 == 0) {
-                              continue L17;
+                              continue L16;
                             } else {
-                              break L16;
+                              break L15;
                             }
                           }
                         }
@@ -359,14 +352,14 @@ final class ho extends nc {
                     }
                   }
                 }
-                break L15;
+                break L14;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L17: {
             var5 = decompiledCaughtException;
             stackOut_61_0 = (RuntimeException) var5;
             stackOut_61_1 = new StringBuilder().append("ho.E(");
@@ -381,7 +374,7 @@ final class ho extends nc {
               stackIn_65_0 = stackOut_64_0;
               stackIn_65_1 = stackOut_64_1;
               stackIn_65_2 = stackOut_64_2;
-              break L18;
+              break L17;
             } else {
               stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
               stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
@@ -389,10 +382,10 @@ final class ho extends nc {
               stackIn_65_0 = stackOut_62_0;
               stackIn_65_1 = stackOut_62_1;
               stackIn_65_2 = stackOut_62_2;
-              break L18;
+              break L17;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw fa.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 44 + param1 + 44 + param2 + 44 + 0 + 44 + 16634 + 41);
         }
     }
 
@@ -419,7 +412,7 @@ final class ho extends nc {
         }
     }
 
-    final static int a(CharSequence param0, int param1, int param2) {
+    final static int a(CharSequence param0) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -441,21 +434,14 @@ final class ho extends nc {
         String stackOut_6_2 = null;
         try {
           L0: {
-            L1: {
-              if (param2 == 3) {
-                break L1;
-              } else {
-                field_p = null;
-                break L1;
-              }
-            }
-            stackOut_3_0 = md.a(param0, param1, -105, true);
+            int discarded$1 = 1;
+            stackOut_3_0 = md.a(param0, 16, -105);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
             stackOut_5_1 = new StringBuilder().append("ho.D(");
@@ -470,7 +456,7 @@ final class ho extends nc {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L2;
+              break L1;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -478,19 +464,19 @@ final class ho extends nc {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L2;
+              break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 16 + 44 + 3 + 41);
         }
         return stackIn_4_0;
     }
 
-    final static boolean a(java.applet.Applet param0, int param1) {
+    final static boolean a(java.applet.Applet param0) {
         try {
             String var2 = null;
-            RuntimeException var2_ref = null;
-            Throwable var2_ref2 = null;
+            Throwable var2_ref = null;
+            RuntimeException var2_ref2 = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
@@ -562,25 +548,10 @@ final class ho extends nc {
                         try {
                             var2 = "tuhstatbut";
                             var3 = (String) fo.b(param0, 13093, "getcookies");
-                            if (param1 == 61) {
-                                statePc = 7;
-                            } else {
-                                statePc = 5;
-                            }
+                            statePc = 7;
                             continue stateLoop;
                         } catch (Throwable stateCaught_4) {
                             caughtException = stateCaught_4;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            byte[] discarded$2 = ho.a(122, 9, (byte[]) null, 88);
-                            statePc = 7;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
                             statePc = 20;
                             continue stateLoop;
                         }
@@ -719,7 +690,7 @@ final class ho extends nc {
                     }
                     case 20: {
                         try {
-                            var2_ref2 = caughtException;
+                            var2_ref = caughtException;
                             statePc = 21;
                             continue stateLoop;
                         } catch (Throwable stateCaught_20) {
@@ -770,8 +741,8 @@ final class ho extends nc {
                         return stackIn_25_0 != 0;
                     }
                     case 26: {
-                        var2_ref = (RuntimeException) (Object) caughtException;
-                        stackOut_26_0 = (RuntimeException) var2_ref;
+                        var2_ref2 = (RuntimeException) (Object) caughtException;
+                        stackOut_26_0 = (RuntimeException) var2_ref2;
                         stackOut_26_1 = new StringBuilder().append("ho.I(");
                         stackIn_29_0 = stackOut_26_0;
                         stackIn_29_1 = stackOut_26_1;
@@ -805,7 +776,7 @@ final class ho extends nc {
                         continue stateLoop;
                     }
                     case 30: {
-                        throw fa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param1 + 41);
+                        throw fa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + 61 + 41);
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -824,7 +795,6 @@ final class ho extends nc {
         wl var5 = null;
         byte[] var6 = null;
         int var7 = 0;
-        Object stackIn_12_0 = null;
         byte[] stackIn_14_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -835,7 +805,6 @@ final class ho extends nc {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         byte[] stackOut_13_0 = null;
-        Object stackOut_11_0 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
         RuntimeException stackOut_18_0 = null;
@@ -885,25 +854,19 @@ final class ho extends nc {
             }
             var5 = new wl();
             var5.b(32);
-            if (param0 == 4246) {
-              var5.a(var4, param0 ^ 4262, (long)(8 * param3));
-              var6 = new byte[64];
-              var5.a(var6, param0 ^ 4247, 0);
-              stackOut_13_0 = (byte[]) var6;
-              stackIn_14_0 = stackOut_13_0;
-              break L0;
-            } else {
-              stackOut_11_0 = null;
-              stackIn_12_0 = stackOut_11_0;
-              return (byte[]) (Object) stackIn_12_0;
-            }
+            var5.a(var4, 48, (long)(8 * param3));
+            var6 = new byte[64];
+            var5.a(var6, 1, 0);
+            stackOut_13_0 = (byte[]) var6;
+            stackIn_14_0 = stackOut_13_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4_ref;
-            stackOut_15_1 = new StringBuilder().append("ho.F(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("ho.F(").append(4246).append(44).append(param1).append(44);
             stackIn_18_0 = stackOut_15_0;
             stackIn_18_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -937,7 +900,8 @@ final class ho extends nc {
             var2_int = (wn.a(-125, wf.field_m << 3) * 24 >> 16) + (175 + (4 * on.a(wf.field_m << 7, -18924) >> 16));
             oo.f(0, 0, 640, 480, 0, var2_int);
             oo.h(5, 5, 635, 475);
-            gb.a(6, 3 + ((ho) this).field_n, 469, 640 + (-((ho) this).field_n + -((ho) this).field_n), (byte) 122);
+            int discarded$0 = 122;
+            gb.a(6, 3 + ((ho) this).field_n, 469, 640 + (-((ho) this).field_n + -((ho) this).field_n));
             oo.c();
             vh.field_Lb.a(((ho) this).field_n, 136);
             vh.field_Lb.a(((ho) this).field_n, 6);

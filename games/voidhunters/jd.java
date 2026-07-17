@@ -104,7 +104,7 @@ final class jd extends rqa {
                 }
               }
               var9 = new StringBuilder(var7);
-              var10 = param2;
+              var10 = 0;
               L3: while (true) {
                 var11 = param0.indexOf(param1, var10);
                 if (var11 >= 0) {
@@ -176,7 +176,7 @@ final class jd extends rqa {
           }
           L6: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(0).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;

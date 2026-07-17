@@ -18,136 +18,82 @@ final class wj extends ud {
     final static void a(int param0, boolean param1) {
         if (hb.field_a > 0) {
           if (tf.field_d) {
-            L0: {
-              qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
-              ln.field_q.a((byte) -79, param1);
-              if (uf.field_z > 0) {
-                if (nr.field_bb) {
-                  qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
-                  de.field_b.a((byte) -79, param1);
-                  break L0;
-                } else {
-                  if (param0 >= -42) {
-                    wj.h(-57);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                if (nj.field_b <= 0) {
-                  break L0;
-                } else {
-                  L1: {
-                    if (nr.field_bb) {
-                      qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
-                      de.field_b.a((byte) -79, param1);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  if (param0 >= -42) {
-                    wj.h(-57);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              }
-            }
-            if (param0 < -42) {
-              return;
-            } else {
-              wj.h(-57);
-              return;
-            }
-          } else {
-            L2: {
-              if (uf.field_z > 0) {
-                if (nr.field_bb) {
-                  qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
-                  de.field_b.a((byte) -79, param1);
-                  break L2;
-                } else {
-                  if (param0 >= -42) {
-                    wj.h(-57);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                if (nj.field_b <= 0) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (nr.field_bb) {
-                      qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
-                      de.field_b.a((byte) -79, param1);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  if (param0 >= -42) {
-                    wj.h(-57);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              }
-            }
-            if (param0 >= -42) {
-              wj.h(-57);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          L4: {
+            qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
+            ln.field_q.a((byte) -79, param1);
             if (uf.field_z > 0) {
-              if (nr.field_bb) {
+              if (!nr.field_bb) {
+                return;
+              } else {
                 qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
                 de.field_b.a((byte) -79, param1);
-                break L4;
-              } else {
-                if (param0 < -42) {
-                  return;
-                } else {
-                  wj.h(-57);
-                  return;
-                }
+                return;
               }
             } else {
-              if (nj.field_b <= 0) {
-                break L4;
-              } else {
-                L5: {
+              if (nj.field_b > 0) {
+                L0: {
                   if (nr.field_bb) {
                     qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
                     de.field_b.a((byte) -79, param1);
-                    break L5;
+                    break L0;
                   } else {
-                    break L5;
+                    break L0;
                   }
                 }
-                if (param0 < -42) {
-                  return;
-                } else {
-                  wj.h(-57);
-                  return;
+                return;
+              } else {
+                return;
+              }
+            }
+          } else {
+            if (uf.field_z > 0) {
+              if (!nr.field_bb) {
+                return;
+              } else {
+                qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
+                de.field_b.a((byte) -79, param1);
+                return;
+              }
+            } else {
+              if (nj.field_b > 0) {
+                L1: {
+                  if (nr.field_bb) {
+                    qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
+                    de.field_b.a((byte) -79, param1);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
+                return;
+              } else {
+                return;
               }
             }
           }
-          if (param0 >= -42) {
-            wj.h(-57);
-            return;
+        } else {
+          if (uf.field_z > 0) {
+            if (!nr.field_bb) {
+              return;
+            } else {
+              qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
+              de.field_b.a((byte) -79, param1);
+              return;
+            }
           } else {
-            return;
+            if (nj.field_b > 0) {
+              L2: {
+                if (nr.field_bb) {
+                  qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
+                  de.field_b.a((byte) -79, param1);
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              return;
+            } else {
+              return;
+            }
           }
         }
     }
@@ -159,10 +105,10 @@ final class wj extends ud {
         ((wj) this).field_P = ((wj) this).field_C;
     }
 
-    final static void a(int param0, int param1) {
-        ap.field_E = param0;
+    final static void a() {
+        ap.field_E = 200;
         g.field_l = new int[3];
-        wb.field_e = new pn[param0 * 15];
+        wb.field_e = new pn[3000];
         aa.field_e = 0;
     }
 
@@ -292,13 +238,9 @@ final class wj extends ud {
         return stackIn_8_0;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_S = null;
         field_U = null;
-        if (param0 >= -33) {
-            Object var2 = null;
-            wj.a((di) null, 96, false, (ai) null);
-        }
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4, ei param5) {
@@ -329,17 +271,18 @@ final class wj extends ud {
     final static void a(di param0, int param1, boolean param2, ai param3) {
         try {
             cl.field_h = param1 * up.a(-21282) / 1000;
-            if (param2) {
-                field_S = null;
-            }
-            q.a(param0, 102);
-            oj.a(param0, (byte) -106);
+            int discarded$0 = 102;
+            q.a(param0);
+            int discarded$1 = -106;
+            oj.a(param0);
             dr.a((byte) -65, param0);
-            wk.a(-257);
-            lm.i(23);
+            int discarded$2 = -257;
+            wk.a();
+            int discarded$3 = 23;
+            lm.i();
             im.field_fc = -cl.field_h;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "wj.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "wj.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -686,7 +629,7 @@ final class wj extends ud {
         }
     }
 
-    final static boolean i(int param0) {
+    final static boolean i() {
         return null != sa.field_f || fm.field_H;
     }
 

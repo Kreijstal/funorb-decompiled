@@ -12,7 +12,7 @@ final class kb {
     final static ib a(int param0, byte param1) {
         ib var2 = new ib();
         kh.field_a.a((gg) (Object) var2, -7044);
-        v.a(2, param0);
+        v.a(2, 4);
         return var2;
     }
 
@@ -31,17 +31,23 @@ final class kb {
               }
             }
             if (var4 >= 10) {
-              if (var4 > -40 + dh.field_j.field_p) {
-                var4 = dh.field_j.field_p + -40;
-                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
+              if (var4 <= -40 + dh.field_j.field_p) {
+                int discarded$6 = 80;
+                int discarded$7 = 0;
+                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4);
                 return;
               } else {
-                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
+                var4 = dh.field_j.field_p + -40;
+                int discarded$8 = 80;
+                int discarded$9 = 0;
+                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4);
                 return;
               }
             } else {
               var4 = 10;
-              gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
+              int discarded$10 = 80;
+              int discarded$11 = 0;
+              gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4);
               return;
             }
           } else {
@@ -52,21 +58,12 @@ final class kb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
-        if (param0 != 15) {
-          field_d = null;
-          field_e = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
-          field_e = null;
-          field_d = null;
-          field_c = null;
-          return;
-        }
+        field_e = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static int a(int param0, boolean param1) {
@@ -77,7 +74,7 @@ final class kb {
         throw new IllegalStateException();
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         if (!(te.field_I == null)) {
             return;
         }

@@ -18,11 +18,14 @@ final class an extends dr {
         super(param0, param1, param2);
     }
 
-    final static void h(int param0) {
-        int var1 = hw.a(true);
-        int var2 = so.a(25213);
+    final static void h() {
+        int discarded$0 = 1;
+        int var1 = hw.a();
+        int discarded$1 = 25213;
+        int var2 = so.a();
         sg.field_c.a((byte) -111, var2 + (ov.field_b << 1), co.field_f - b.field_k, var1 - -(b.field_k << 1), -ov.field_b + rk.field_r);
-        pj.h(15);
+        int discarded$2 = 15;
+        pj.h();
     }
 
     final nd a(int param0, nd[] param1) {

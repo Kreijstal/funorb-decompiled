@@ -48,8 +48,14 @@ abstract class pd extends nv {
         }
     }
 
-    final static void b(int param0) {
-        ooa.field_e = fba.a(8, 0.4000000059604645f, 8, true, 4, 1, 2048, 35);
+    final static void b() {
+        int discarded$0 = 35;
+        int discarded$1 = 2048;
+        int discarded$2 = 1;
+        int discarded$3 = 4;
+        int discarded$4 = 1;
+        int discarded$5 = 8;
+        ooa.field_e = fba.a(8, 0.4000000059604645f);
         int var1 = 0;
     }
 
@@ -394,7 +400,7 @@ abstract class pd extends nv {
 
     abstract void g(byte param0);
 
-    public static void l(int param0) {
+    public static void l() {
         field_p = null;
     }
 
@@ -411,21 +417,10 @@ abstract class pd extends nv {
     }
 
     final static void a(byte param0, int param1) {
-        kh var2 = null;
-        if (param0 != 34) {
-          field_p = null;
-          var2 = ql.field_k;
-          var2.k(param1, param0 + -3022);
-          var2.i(1, 0);
-          var2.i(3, 0);
-          return;
-        } else {
-          var2 = ql.field_k;
-          var2.k(param1, param0 + -3022);
-          var2.i(1, 0);
-          var2.i(3, 0);
-          return;
-        }
+        kh var2 = ql.field_k;
+        var2.k(param1, -2988);
+        var2.i(1, 0);
+        var2.i(3, 0);
     }
 
     final static int a(int[] param0, int param1) {

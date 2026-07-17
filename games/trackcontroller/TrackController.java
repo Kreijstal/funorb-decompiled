@@ -15,7 +15,7 @@ public final class TrackController extends ch {
         ((TrackController) this).a((byte) -123, "trackcontroller", 12);
     }
 
-    private final void s(int param0) {
+    private final void s() {
         int var2 = 0;
         int var3 = 0;
         int stackIn_21_0 = 0;
@@ -31,9 +31,9 @@ public final class TrackController extends ch {
           var3 = field_F ? 1 : 0;
           if (dd.field_o == 0) {
             L1: {
-              int fieldTemp$1 = na.field_b + 1;
+              int fieldTemp$8 = na.field_b + 1;
               na.field_b = na.field_b + 1;
-              if (fieldTemp$1 >= 0) {
+              if (fieldTemp$8 >= 0) {
                 break L1;
               } else {
                 L2: {
@@ -111,7 +111,8 @@ public final class TrackController extends ch {
                           }
                         }
                         L9: while (true) {
-                          if (!mh.e(127)) {
+                          int discarded$9 = 127;
+                          if (!mh.e()) {
                             break L3;
                           } else {
                             continue L9;
@@ -184,7 +185,8 @@ public final class TrackController extends ch {
                   }
                 }
                 L15: while (true) {
-                  if (!mh.e(127)) {
+                  int discarded$10 = 127;
+                  if (!mh.e()) {
                     break L3;
                   } else {
                     continue L15;
@@ -230,7 +232,10 @@ public final class TrackController extends ch {
                       }
                     }
                     ib.field_a = stackIn_21_0;
-                    oi.a(26, gb.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, gb.field_l, -3748, true, 18, 0, 0);
+                    int discarded$11 = 0;
+                    int discarded$12 = 0;
+                    int discarded$13 = 18;
+                    oi.a(26, gb.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, gb.field_l, -3748, true);
                     break L18;
                   } else {
                     break L18;
@@ -282,10 +287,12 @@ public final class TrackController extends ch {
               } else {
                 L21: {
                   if (ag.b(74)) {
-                    te.a((byte) -89);
+                    int discarded$14 = -89;
+                    te.a();
                     break L21;
                   } else {
-                    v.e(6);
+                    int discarded$15 = 6;
+                    v.e();
                     break L21;
                   }
                 }
@@ -305,7 +312,8 @@ public final class TrackController extends ch {
         if (!(null == og.field_rb)) {
             oj.a(-111);
         }
-        ei.d(-18601);
+        int discarded$0 = -18601;
+        ei.d();
     }
 
     final void a(int param0) {
@@ -370,7 +378,8 @@ public final class TrackController extends ch {
                     }
                     L3: {
                       L4: {
-                        db.a(480, 0, na.field_c, 640, 0, (byte) -128);
+                        int discarded$5 = -128;
+                        db.a(480, 0, na.field_c, 640, 0);
                         gd.field_x = false;
                         if (~sc.field_g != ~ib.field_a) {
                           break L4;
@@ -429,7 +438,9 @@ public final class TrackController extends ch {
                           break L6;
                         }
                       }
-                      ci.a(var3 + 1, -(var3 << 3) + 256, 16769381, false, false);
+                      int discarded$6 = 0;
+                      int discarded$7 = 0;
+                      ci.a(var3 + 1, -(var3 << 3) + 256, 16769381);
                       break L3;
                     }
                     L10: {
@@ -457,7 +468,8 @@ public final class TrackController extends ch {
                             break L12;
                           }
                         }
-                        var5 = ii.b(false);
+                        int discarded$8 = 0;
+                        var5 = ii.b();
                         cl.a(nd.field_L, -(var3 >> 1) + 320 + -nd.field_L[0].field_t, nd.field_L[0].field_q + var5 + nd.field_L[6].field_q, -(var5 >> 1) + 240 - nd.field_L[0].field_q, var3 - (-nd.field_L[0].field_t + -nd.field_L[2].field_t), 4);
                         nl.a(-77);
                         break L11;
@@ -477,7 +489,8 @@ public final class TrackController extends ch {
                       }
                     }
                     L14: {
-                      if (!ob.g(-26998)) {
+                      int discarded$9 = -26998;
+                      if (!ob.g()) {
                         break L14;
                       } else {
                         if (ag.b(18)) {
@@ -545,238 +558,378 @@ public final class TrackController extends ch {
 
     final void e(int param0) {
         TrackController.q(-29224);
-        cb.a((byte) 120);
+        int discarded$0 = 120;
+        cb.a();
         ja.c(false);
-        kk.a(-1);
-        bg.a(61);
+        int discarded$1 = -1;
+        kk.a();
+        int discarded$2 = 61;
+        bg.a();
         vb.a(true);
-        ib.a((byte) -78);
-        ii.f(-5146);
-        ia.a(true);
+        int discarded$3 = -78;
+        ib.a();
+        int discarded$4 = -5146;
+        ii.f();
+        int discarded$5 = 1;
+        ia.a();
         lj.a(param0 ^ 5);
-        uk.b(10);
-        od.a(8192);
-        we.a((byte) 57);
+        int discarded$6 = 10;
+        uk.b();
+        int discarded$7 = 8192;
+        od.a();
+        int discarded$8 = 57;
+        we.a();
         ch.n(-8511);
-        nl.a((byte) -96);
+        int discarded$9 = -96;
+        nl.a();
         re.b((byte) -91);
-        ej.b(17);
+        int discarded$10 = 17;
+        ej.b();
         h.b(-31279);
         ll.c();
         oh.a();
-        e.a(-1102);
-        qf.a((byte) 98);
+        int discarded$11 = -1102;
+        e.a();
+        int discarded$12 = 98;
+        qf.a();
         be.i(3);
         qg.b(false);
-        ai.a((byte) 116);
-        o.b((byte) 88);
+        int discarded$13 = 116;
+        ai.a();
+        int discarded$14 = 88;
+        o.b();
         uj.b(param0 ^ 105);
         dk.a(true);
         tf.a(-1);
         kc.a(param0 ^ 107);
         q.a(param0 ^ 5);
-        qd.a(106);
-        he.a((byte) -64);
-        oj.a((byte) -116);
+        int discarded$15 = 106;
+        qd.a();
+        int discarded$16 = -64;
+        he.a();
+        int discarded$17 = -116;
+        oj.a();
         wj.c(param0 ^ -6527);
         sk.a((byte) 111);
-        gf.a((byte) 46);
+        int discarded$18 = 46;
+        gf.a();
         jc.a(-79);
         ri.a(-107);
         mg.a(-8381);
-        gj.b((byte) -103);
+        int discarded$19 = -103;
+        gj.b();
         ea.d((byte) 96);
-        md.a(false);
-        sd.a((byte) -108);
+        int discarded$20 = 0;
+        md.a();
+        int discarded$21 = -108;
+        sd.a();
         wg.c(param0 + 6778);
         il.b(-1);
-        bc.c(32);
+        int discarded$22 = 32;
+        bc.c();
         fc.b((byte) 118);
         nb.d((byte) 84);
         id.a(param0 + -104);
-        ha.d(4);
+        int discarded$23 = 4;
+        ha.d();
         fa.c();
         ol.f(param0 ^ -109);
         oa.e();
         qe.e(1048576);
-        kb.a(14);
-        cd.c(11352);
-        na.a(-4775);
+        int discarded$24 = 14;
+        kb.a();
+        int discarded$25 = 11352;
+        cd.c();
+        int discarded$26 = -4775;
+        na.a();
         fk.a(param0 + 14829);
-        pa.a((byte) -125);
-        ac.a(105);
-        p.b((byte) 117);
+        int discarded$27 = -125;
+        pa.a();
+        int discarded$28 = 105;
+        ac.a();
+        int discarded$29 = 117;
+        p.b();
         ra.a(param0 + -208);
-        pc.a(true);
-        vi.a(-25590);
-        wi.a(false);
+        int discarded$30 = 1;
+        pc.a();
+        int discarded$31 = -25590;
+        vi.a();
+        int discarded$32 = 0;
+        wi.a();
         pb.a(false);
-        bb.a(true);
-        ld.a(-16723);
-        vl.e((byte) 9);
-        og.v(-106);
-        rk.t(4210752);
+        int discarded$33 = 1;
+        bb.a();
+        int discarded$34 = -16723;
+        ld.a();
+        int discarded$35 = 9;
+        vl.e();
+        int discarded$36 = -106;
+        og.v();
+        int discarded$37 = 4210752;
+        rk.t();
         jj.e((byte) 105);
-        vd.b(false);
-        sf.b(false);
-        rl.b(false);
-        bk.k(-122);
-        kh.c(61);
-        rd.b(3);
-        mj.b(-2069072125);
-        ab.a((byte) 98);
+        int discarded$38 = 0;
+        vd.b();
+        int discarded$39 = 0;
+        sf.b();
+        int discarded$40 = 0;
+        rl.b();
+        int discarded$41 = -122;
+        bk.k();
+        int discarded$42 = 61;
+        kh.c();
+        int discarded$43 = 3;
+        rd.b();
+        int discarded$44 = -2069072125;
+        mj.b();
+        int discarded$45 = 98;
+        ab.a();
         gk.a(69);
         gb.d(-126);
-        fd.a((byte) 111);
+        int discarded$46 = 111;
+        fd.a();
         g.a((byte) 12);
         sl.a((byte) 107);
-        me.a((byte) 41);
-        u.a((byte) 105);
+        int discarded$47 = 41;
+        me.a();
+        int discarded$48 = 105;
+        u.a();
         pg.a();
-        c.a((byte) 107);
+        int discarded$49 = 107;
+        c.a();
         hj.a(param0 ^ -3863);
-        la.d(false);
-        jk.a(-99);
-        wf.a((byte) -123);
-        qa.a(true);
-        vj.a(18775);
+        int discarded$50 = 0;
+        la.d();
+        int discarded$51 = -99;
+        jk.a();
+        int discarded$52 = -123;
+        wf.a();
+        int discarded$53 = 1;
+        qa.a();
+        int discarded$54 = 18775;
+        vj.a();
         ta.a(param0 ^ 13730);
-        nh.a(-104);
+        int discarded$55 = -104;
+        nh.a();
         kd.a((byte) 86);
-        oe.a(-1);
+        int discarded$56 = -1;
+        oe.a();
         fh.a((byte) 125);
         b.a();
-        nf.b(261211);
-        da.e(80);
-        mb.b((byte) -36);
-        hi.c((byte) -81);
-        hf.a(6);
-        lh.c((byte) -44);
-        gd.c(-3);
+        int discarded$57 = 261211;
+        nf.b();
+        int discarded$58 = 80;
+        da.e();
+        int discarded$59 = -36;
+        mb.b();
+        int discarded$60 = -81;
+        hi.c();
+        int discarded$61 = 6;
+        hf.a();
+        int discarded$62 = -44;
+        lh.c();
+        int discarded$63 = -3;
+        gd.c();
         tc.b((byte) -121);
-        rg.a(17883);
+        int discarded$64 = 17883;
+        rg.a();
         tk.f(48);
-        pl.c(-30877);
-        w.b(true);
+        int discarded$65 = -30877;
+        pl.c();
+        int discarded$66 = 1;
+        w.b();
         bd.a(44);
         ic.b((byte) -56);
         ig.b();
         ml.c();
-        mf.b((byte) -103);
-        cg.a((byte) 118);
+        int discarded$67 = -103;
+        mf.b();
+        int discarded$68 = 118;
+        cg.a();
         pf.a(110);
-        ef.a(27887);
+        int discarded$69 = 27887;
+        ef.a();
         fg.a(-14138);
         fb.a(param0 ^ 30493);
-        ak.a(119);
-        kg.a(-1);
+        int discarded$70 = 119;
+        ak.a();
+        int discarded$71 = -1;
+        kg.a();
         ug.g(param0 ^ -13);
-        bj.a(false);
+        int discarded$72 = 0;
+        bj.a();
         te.a(param0 ^ -18);
         sb.a((byte) 123);
-        kj.b(false);
+        int discarded$73 = 0;
+        kj.b();
         ke.a(false);
-        s.a((byte) 49);
-        ij.c(-18515);
+        int discarded$74 = 49;
+        s.a();
+        int discarded$75 = -18515;
+        ij.c();
         gi.c((byte) -127);
-        gh.b(8462);
-        jd.a(-12814);
-        rb.b(-2857);
+        int discarded$76 = 8462;
+        gh.b();
+        int discarded$77 = -12814;
+        jd.a();
+        int discarded$78 = -2857;
+        rb.b();
         al.d(param0 ^ -59);
         rh.i(param0 + -222);
-        ok.d((byte) -7);
-        wd.p(35);
+        int discarded$79 = -7;
+        ok.d();
+        int discarded$80 = 35;
+        wd.p();
         hl.l(param0 ^ -66);
         ue.b(param0 ^ -18);
-        ie.b(82);
+        int discarded$81 = 82;
+        ie.b();
         df.b();
-        kf.b(-1688814815);
-        ob.c((byte) -68);
-        lg.b(16228);
-        ki.a(49);
-        hb.a(false);
-        si.a((byte) 47);
+        int discarded$82 = -1688814815;
+        kf.b();
+        int discarded$83 = -68;
+        ob.c();
+        int discarded$84 = 16228;
+        lg.b();
+        int discarded$85 = 49;
+        ki.a();
+        int discarded$86 = 0;
+        hb.a();
+        int discarded$87 = 47;
+        si.a();
         ff.a(-1);
-        rf.a(0);
-        hk.a(-88);
-        dj.a(-60);
-        ub.a((byte) 12);
-        ca.a(118);
+        int discarded$88 = 0;
+        rf.a();
+        int discarded$89 = -88;
+        hk.a();
+        int discarded$90 = -60;
+        dj.a();
+        int discarded$91 = 12;
+        ub.a();
+        int discarded$92 = 118;
+        ca.a();
         ji.a((byte) -64);
-        wl.d(-99);
-        oc.a((byte) -63);
-        bf.a((byte) -125);
-        mh.d(-24011);
-        uh.a((byte) 104);
-        sa.b(true);
-        lf.f((byte) -71);
+        int discarded$93 = -99;
+        wl.d();
+        int discarded$94 = -63;
+        oc.a();
+        int discarded$95 = -125;
+        bf.a();
+        int discarded$96 = -24011;
+        mh.d();
+        int discarded$97 = 104;
+        uh.a();
+        int discarded$98 = 1;
+        sa.b();
+        int discarded$99 = -71;
+        lf.f();
         lb.n(-85);
-        dg.a((byte) 16);
-        nd.b(false);
-        el.c(false);
+        int discarded$100 = 16;
+        dg.a();
+        int discarded$101 = 0;
+        nd.b();
+        int discarded$102 = 0;
+        el.c();
         ua.j(param0 + -219);
         ed.j(param0 + -3726);
         di.c((byte) 73);
-        ka.a(true);
-        fe.j(-127);
-        qk.a((byte) 40);
+        int discarded$103 = 1;
+        ka.a();
+        int discarded$104 = -127;
+        fe.j();
+        int discarded$105 = 40;
+        qk.a();
         vf.a();
-        f.a((byte) 113);
+        int discarded$106 = 113;
+        f.a();
         pi.b(param0 + -105);
         cj.e(4);
-        qh.a(-51);
+        int discarded$107 = -51;
+        qh.a();
         fj.e((byte) 118);
-        mc.b(false);
-        aa.a((byte) -14);
-        ga.a((byte) 72);
-        rj.a((byte) 59);
-        vh.g(32);
+        int discarded$108 = 0;
+        mc.b();
+        int discarded$109 = -14;
+        aa.a();
+        int discarded$110 = 72;
+        ga.a();
+        int discarded$111 = 59;
+        rj.a();
+        int discarded$112 = 32;
+        vh.g();
         ad.i(param0 ^ 104);
         qc.a(true);
-        kl.a(119);
+        int discarded$113 = 119;
+        kl.a();
         ee.a(31399);
-        hh.b((byte) 52);
-        ti.c((byte) -121);
-        ag.a(10);
-        li.a((byte) 111);
-        vk.d(2);
+        int discarded$114 = 52;
+        hh.b();
+        int discarded$115 = -121;
+        ti.c();
+        int discarded$116 = 10;
+        ag.a();
+        int discarded$117 = 111;
+        li.a();
+        int discarded$118 = 2;
+        vk.d();
         dc.c((byte) 97);
-        ne.a(-29615);
-        dd.b(-3674);
+        int discarded$119 = -29615;
+        ne.a();
+        int discarded$120 = -3674;
+        dd.b();
         ql.c(42);
-        ma.a((byte) -50);
-        gl.j(-101);
+        int discarded$121 = -50;
+        ma.a();
+        int discarded$122 = -101;
+        gl.j();
         jf.d(640);
         sg.a(-8217);
-        nk.d(23985);
-        dh.d(-8);
-        th.e(0);
-        cf.d(29211);
-        le.b(-128);
+        int discarded$123 = 23985;
+        nk.d();
+        int discarded$124 = -8;
+        dh.d();
+        int discarded$125 = 0;
+        th.e();
+        int discarded$126 = 29211;
+        cf.d();
+        int discarded$127 = -128;
+        le.b();
         nj.b(71);
-        j.a(-75);
-        ba.a((byte) 113);
+        int discarded$128 = -75;
+        j.a();
+        int discarded$129 = 113;
+        ba.a();
         wa.d(param0 + -202);
-        lc.j(112);
+        int discarded$130 = 112;
+        lc.j();
         bl.a(-113);
         ec.b((byte) -49);
-        of.b(false);
+        int discarded$131 = 0;
+        of.b();
         sc.a(param0 ^ 150);
         mk.a((byte) -3);
-        r.d(-1);
-        ei.e(73);
+        int discarded$132 = -1;
+        r.d();
+        int discarded$133 = 73;
+        ei.e();
         qi.a(param0 ^ param0);
-        va.c(20300);
-        af.d((byte) -127);
+        int discarded$134 = 20300;
+        va.c();
+        int discarded$135 = -127;
+        af.d();
         ui.h(256);
         l.g(param0 ^ 105);
         hd.d((byte) 69);
-        ni.g(112);
-        jb.a(-111);
+        int discarded$136 = 112;
+        ni.g();
+        int discarded$137 = -111;
+        jb.a();
         fi.d(param0 + -5759);
-        ud.a(true);
+        int discarded$138 = 1;
+        ud.a();
         v.d(0);
-        oi.a(-13);
+        int discarded$139 = -13;
+        oi.a();
         ((TrackController) this).field_t = null;
     }
 
@@ -821,7 +974,8 @@ public final class TrackController extends ch {
         int stackOut_45_1 = 0;
         L0: {
           var3 = field_F ? 1 : 0;
-          ii.a((byte) -62);
+          int discarded$17 = -62;
+          ii.a();
           if (og.field_rb == null) {
             break L0;
           } else {
@@ -829,7 +983,8 @@ public final class TrackController extends ch {
               break L0;
             } else {
               oj.a(-78);
-              ed.a((byte) -94);
+              int discarded$18 = -94;
+              ed.a();
               break L0;
             }
           }
@@ -864,7 +1019,8 @@ public final class TrackController extends ch {
           if (!ag.field_e) {
             break L2;
           } else {
-            this.r(-23);
+            int discarded$19 = -23;
+            this.r();
             ag.field_e = false;
             break L2;
           }
@@ -875,10 +1031,11 @@ public final class TrackController extends ch {
           } else {
             ((TrackController) this).l(-122);
             if (ga.a(114)) {
-              if (!ic.a(1)) {
+              int discarded$20 = 1;
+              if (!ic.a()) {
                 return;
               } else {
-                boolean discarded$1 = this.b(467, false);
+                boolean discarded$21 = this.b(467, false);
                 return;
               }
             } else {
@@ -886,7 +1043,11 @@ public final class TrackController extends ch {
                 break L3;
               } else {
                 il.field_e = sl.a(4, -124);
-                vd.field_G = dh.a(5, -1, 0, 1);
+                int discarded$22 = 1;
+                int discarded$23 = 0;
+                int discarded$24 = -1;
+                int discarded$25 = 5;
+                vd.field_G = dh.a();
                 break L3;
               }
             }
@@ -897,8 +1058,10 @@ public final class TrackController extends ch {
             if (il.field_e == null) {
               if (vd.field_G == null) {
                 if (!ag.b(116)) {
-                  if (!ob.g(-26998)) {
-                    this.s(0);
+                  int discarded$26 = -26998;
+                  if (!ob.g()) {
+                    int discarded$27 = 0;
+                    this.s();
                     break L4;
                   } else {
                     L5: {
@@ -940,7 +1103,8 @@ public final class TrackController extends ch {
                               break L7;
                             }
                           }
-                          af.a(gd.b((byte) 77), (byte) -9);
+                          int discarded$28 = -9;
+                          af.a(gd.b((byte) 77));
                           break L4;
                         }
                       }
@@ -949,13 +1113,18 @@ public final class TrackController extends ch {
                   }
                 } else {
                   if (dd.field_o != 0) {
-                    this.s(0);
+                    int discarded$29 = 0;
+                    this.s();
                     break L4;
                   } else {
                     L8: {
-                      var2 = rk.s(-1);
+                      int discarded$30 = -1;
+                      var2 = rk.s();
                       if (var2 == 3) {
-                        oi.a(26, gb.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, gb.field_l, -3748, true, 18, 0, 0);
+                        int discarded$31 = 0;
+                        int discarded$32 = 0;
+                        int discarded$33 = 18;
+                        oi.a(26, gb.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, gb.field_l, -3748, true);
                         break L8;
                       } else {
                         if (2 != var2) {
@@ -1092,7 +1261,7 @@ public final class TrackController extends ch {
     public TrackController() {
     }
 
-    private final void r(int param0) {
+    private final void r() {
         if (!(null == ed.field_I)) {
             vk.a(3, ed.field_I);
             ed.field_I = null;
@@ -1130,6 +1299,7 @@ public final class TrackController extends ch {
             ng[] var4_ref_ng__ = null;
             int var5 = 0;
             oh var5_ref_oh = null;
+            qj var6_ref_qj = null;
             int var6 = 0;
             int[] var6_ref_int__ = null;
             int var7_int = 0;
@@ -1148,24 +1318,23 @@ public final class TrackController extends ch {
             int var18 = 0;
             int[] var19 = null;
             qj[] var20 = null;
-            qj var21 = null;
-            qj[] var22 = null;
+            qj[] var21 = null;
+            qj var22 = null;
             qj var23 = null;
-            qj var24 = null;
-            qj[] var25 = null;
+            qj[] var24 = null;
+            qj var25 = null;
             qj var26 = null;
             qj var27 = null;
-            qj var28 = null;
-            byte[] var30 = null;
-            BufferedReader var32 = null;
-            int[] var33 = null;
-            byte[] var35 = null;
-            int[] var37 = null;
-            byte[] var39 = null;
-            int[] var41 = null;
+            byte[] var29 = null;
+            BufferedReader var31 = null;
+            int[] var32 = null;
+            byte[] var34 = null;
+            int[] var36 = null;
+            byte[] var38 = null;
+            int[] var40 = null;
+            byte[] var41 = null;
             byte[] var42 = null;
             byte[] var43 = null;
-            byte[] var44 = null;
             String stackIn_91_0 = null;
             String stackOut_90_0 = null;
             String stackOut_89_0 = null;
@@ -1173,7 +1342,7 @@ public final class TrackController extends ch {
             if (null == el.field_L) {
               if (sg.field_a == null) {
                 if (null != j.field_h) {
-                  ud.a(param0 ^ 339, 75.0f, ld.field_a);
+                  ud.a(128, 75.0f, ld.field_a);
                   ((TrackController) this).a(160);
                   od.field_d = new jc(j.field_h, lh.field_C);
                   va.field_d[0] = cc.a(j.field_h, "", "track_wrong_password").b();
@@ -1190,16 +1359,16 @@ public final class TrackController extends ch {
                   nd.field_G[10] = 48;
                   va.field_d[11] = cc.a(j.field_h, "", "block_disconnect_placeholder").b();
                   va.field_d[12] = cc.a(j.field_h, "", "cannot_push_placeholder").b();
-                  var42 = va.field_d[10].field_j;
-                  var43 = new byte[oa.field_h * 5 / 50];
-                  var39 = var43;
-                  var35 = var39;
-                  var30 = var35;
-                  var4_ref_byte__ = var30;
+                  var41 = va.field_d[10].field_j;
+                  var42 = new byte[oa.field_h * 5 / 50];
+                  var38 = var42;
+                  var34 = var38;
+                  var29 = var34;
+                  var4_ref_byte__ = var29;
                   var5 = 0;
                   L0: while (true) {
-                    if (var5 >= var42.length) {
-                      va.field_d[10] = new ik(oa.field_h, var4_ref_byte__, 0, var43.length);
+                    if (var5 >= var41.length) {
+                      va.field_d[10] = new ik(oa.field_h, var4_ref_byte__, 0, var42.length);
                       var5 = 0;
                       L1: while (true) {
                         if (var5 >= 13) {
@@ -1220,7 +1389,7 @@ public final class TrackController extends ch {
                         }
                       }
                     } else {
-                      var4_ref_byte__[var5] = var42[var5];
+                      var4_ref_byte__[var5] = var41[var5];
                       var5++;
                       continue L0;
                     }
@@ -1234,7 +1403,7 @@ public final class TrackController extends ch {
                           fj.field_P.b(true);
                           od.field_d = null;
                           wl.field_l = null;
-                          qi.d(param0 ^ 399);
+                          qi.d(92);
                           return false;
                         } else {
                           if (fj.field_P.a(wl.field_l, (byte) -27, 176400, od.field_d, pf.field_P[var3])) {
@@ -1254,7 +1423,7 @@ public final class TrackController extends ch {
                         L4: while (true) {
                           if (32 <= var4) {
                             ia.field_b.a(-91);
-                            qi.d(param0 + -438);
+                            qi.d(29);
                             return false;
                           } else {
                             var5 = var4 * 65536 / 32;
@@ -1278,56 +1447,50 @@ public final class TrackController extends ch {
                         }
                       } else {
                         L6: {
-                          if (param0 == 467) {
-                            break L6;
-                          } else {
-                            TrackController.q(109);
-                            break L6;
-                          }
-                        }
-                        L7: {
                           if (null == rl.field_D) {
-                            break L7;
+                            break L6;
                           } else {
-                            mj.a(208);
+                            int discarded$12 = 208;
+                            mj.a();
                             gj.field_f = new ea[31];
-                            var44 = rl.field_D.a("", param0 ^ -468, "levels.txt");
-                            var32 = new BufferedReader((Reader) (Object) new InputStreamReader((InputStream) (Object) new ByteArrayInputStream(var44)));
+                            var43 = rl.field_D.a("", -1, "levels.txt");
+                            var31 = new BufferedReader((Reader) (Object) new InputStreamReader((InputStream) (Object) new ByteArrayInputStream(var43)));
                             var5 = 0;
-                            L8: while (true) {
+                            L7: while (true) {
                               if (31 <= var5) {
-                                var32.close();
+                                var31.close();
                                 tk.field_p = new mg[17];
                                 qh.field_b = gj.field_f[0];
                                 rl.field_D = null;
                                 var5 = 0;
-                                L9: while (true) {
+                                L8: while (true) {
                                   if (var5 >= 17) {
-                                    L10: {
+                                    L9: {
                                       if (jj.s(125)) {
                                         ib.field_a = 0;
                                         sc.field_g = 0;
-                                        break L10;
+                                        break L9;
                                       } else {
                                         ib.field_a = 1;
                                         sc.field_g = 1;
-                                        break L10;
+                                        break L9;
                                       }
                                     }
                                     ti.a(-123, 50);
                                     fe.a(true, pf.field_P[0], 256);
-                                    rk.r(13);
-                                    break L7;
+                                    int discarded$13 = 13;
+                                    rk.r();
+                                    break L6;
                                   } else {
                                     tk.field_p[var5] = new mg((TrackController) this, var5);
                                     var5++;
-                                    continue L9;
+                                    continue L8;
                                   }
                                 }
                               } else {
-                                gj.field_f[var5] = new ea(1 + var5, var32.readLine());
+                                gj.field_f[var5] = new ea(1 + var5, var31.readLine());
                                 var5++;
-                                continue L8;
+                                continue L7;
                               }
                             }
                           }
@@ -1344,7 +1507,7 @@ public final class TrackController extends ch {
                     pf.field_P[2] = wb.a(sk.field_j, "", "track controller level complete");
                     pf.field_P[3] = wb.a(sk.field_j, "", "track controller game over");
                     sk.field_j = null;
-                    qi.d(param0 + -359);
+                    qi.d(108);
                     return false;
                   }
                 }
@@ -1358,78 +1521,78 @@ public final class TrackController extends ch {
                 bb.field_b = ib.a(10, "", sg.field_a, "achievements");
                 var20 = bb.field_b;
                 var5 = 0;
-                L11: while (true) {
+                L10: while (true) {
                   if (~var5 <= ~var20.length) {
                     na.field_c = ab.a("", -15383, "bgtile", sg.field_a);
                     cd.field_c = new qj(640, 480);
                     cd.field_c.a();
                     var4 = 0;
-                    L12: while (true) {
+                    L11: while (true) {
                       if (var4 >= 480) {
                         ll.b(20, 30, 600, 383, 3894145, 11980506);
                         ll.f(0, 0, 640, 480, 0);
                         ab.a("", -15383, "titlescreen2", sg.field_a).e(0, 0);
                         ia.field_b.a(-91);
                         nd.field_L = ib.a(10, "", sg.field_a, "frame");
-                        gb.field_l = ib.a(param0 + -457, "", sg.field_a, "buttonframe");
+                        gb.field_l = ib.a(10, "", sg.field_a, "buttonframe");
                         aa.field_a = ib.a(10, "", sg.field_a, "buttonframe38");
                         var4 = 0;
-                        L13: while (true) {
+                        L12: while (true) {
                           if (var4 >= 9) {
                             ii.field_r = ib.a(10, "", sg.field_a, "tiles");
                             ha.field_m = new qj[9];
                             ha.field_m[4] = ii.field_r[0];
                             var4 = 0;
-                            L14: while (true) {
+                            L13: while (true) {
                               if (var4 >= 9) {
-                                L15: {
+                                L14: {
                                   if (ui.a(0, true)) {
                                     stackOut_90_0 = "halloween";
                                     stackIn_91_0 = stackOut_90_0;
-                                    break L15;
+                                    break L14;
                                   } else {
                                     stackOut_89_0 = "";
                                     stackIn_91_0 = stackOut_89_0;
-                                    break L15;
+                                    break L14;
                                   }
                                 }
                                 var4_ref_String = stackIn_91_0;
-                                var22 = ib.a(10, var4_ref_String, sg.field_a, "man");
+                                var21 = ib.a(10, var4_ref_String, sg.field_a, "man");
                                 da.field_p = new qj[64][4];
-                                pd.a((Object[]) (Object) var22, 0, (Object[]) (Object) da.field_p[0], 0, 4);
-                                pd.a((Object[]) (Object) var22, 4, (Object[]) (Object) da.field_p[32], 0, 4);
-                                j.field_b = ib.a(param0 ^ 473, var4_ref_String, sg.field_a, "man_face");
+                                pd.a((Object[]) (Object) var21, 0, (Object[]) (Object) da.field_p[0], 0, 4);
+                                pd.a((Object[]) (Object) var21, 4, (Object[]) (Object) da.field_p[32], 0, 4);
+                                j.field_b = ib.a(10, var4_ref_String, sg.field_a, "man_face");
                                 hk.field_a = ib.a(10, "", sg.field_a, "smoke");
                                 kg.field_e = ib.a(10, "", sg.field_a, "tickbox");
-                                var25 = ib.a(10, "", sg.field_a, "titlebg");
+                                var24 = ib.a(10, "", sg.field_a, "titlebg");
                                 var7 = ib.a(10, "", sg.field_a, "titles");
                                 al.field_z = new qj[1 + var7.length];
                                 var8 = 0;
-                                L16: while (true) {
+                                L15: while (true) {
                                   if (~var7.length >= ~var8) {
                                     var8_ref_qj = ab.a("", -15383, "titlegameach", sg.field_a);
-                                    qj dupTemp$6 = new qj(var8_ref_qj.field_s, var8_ref_qj.field_v);
-                                    al.field_z[var7.length] = dupTemp$6;
-                                    var26 = dupTemp$6;
-                                    var26.a();
-                                    cl.a(var25, 0, var8_ref_qj.field_v, 0, var8_ref_qj.field_s, param0 ^ 471);
+                                    qj dupTemp$14 = new qj(var8_ref_qj.field_s, var8_ref_qj.field_v);
+                                    al.field_z[var7.length] = dupTemp$14;
+                                    var25 = dupTemp$14;
+                                    var25.a();
+                                    cl.a(var24, 0, var8_ref_qj.field_v, 0, var8_ref_qj.field_s, 4);
                                     var8_ref_qj.e(0, 0);
                                     fd.field_d = ab.a("", -15383, "exhibit", sg.field_a);
                                     var8 = ba.field_b.field_G + 26;
-                                    qj dupTemp$7 = new qj(156, var8);
-                                    ai.field_a = dupTemp$7;
-                                    var27 = dupTemp$7;
-                                    var9 = var27;
-                                    qj dupTemp$8 = new qj(156, var8);
-                                    al.field_t = dupTemp$8;
-                                    var28 = dupTemp$8;
-                                    var10 = var28;
-                                    qj dupTemp$9 = new qj(156, var8);
-                                    bf.field_o = dupTemp$9;
-                                    var11 = dupTemp$9;
-                                    qj dupTemp$10 = new qj(156, var8);
-                                    vl.field_K = dupTemp$10;
-                                    var12 = dupTemp$10;
+                                    qj dupTemp$15 = new qj(156, var8);
+                                    ai.field_a = dupTemp$15;
+                                    var26 = dupTemp$15;
+                                    var9 = var26;
+                                    qj dupTemp$16 = new qj(156, var8);
+                                    al.field_t = dupTemp$16;
+                                    var27 = dupTemp$16;
+                                    var10 = var27;
+                                    qj dupTemp$17 = new qj(156, var8);
+                                    bf.field_o = dupTemp$17;
+                                    var11 = dupTemp$17;
+                                    qj dupTemp$18 = new qj(156, var8);
+                                    vl.field_K = dupTemp$18;
+                                    var12 = dupTemp$18;
                                     var13 = var9;
                                     var14 = var10;
                                     var12.field_r = 467;
@@ -1443,11 +1606,11 @@ public final class TrackController extends ch {
                                     var17 = var11;
                                     var12.field_o = 178;
                                     var17.field_o = 178;
-                                    var27.a();
+                                    var26.a();
                                     cl.a(aa.field_a, 0, var8, 0, 156, 4);
                                     bk.field_E.b(na.field_d, 78, bk.field_E.field_G, 0, -1);
                                     ba.field_b.b(bl.field_d, 78, ba.field_b.field_G + bk.field_E.field_G, 15252224, -1);
-                                    var28.a();
+                                    var27.a();
                                     cl.a(aa.field_a, 0, var8, 0, 156, 4);
                                     bk.field_E.b(na.field_d, 78, bk.field_E.field_G, 1, -1);
                                     ba.field_b.b(bl.field_d, 78, bk.field_E.field_G + ba.field_b.field_G, 15252224, -1);
@@ -1461,76 +1624,76 @@ public final class TrackController extends ch {
                                     ba.field_b.b(th.field_i, 78, bk.field_E.field_G - -ba.field_b.field_G, 15252224, -1);
                                     ia.field_b.a(-91);
                                     sg.field_a = null;
-                                    qi.d(param0 + -407);
+                                    qi.d(60);
                                     return false;
                                   } else {
-                                    var23 = var7[var8];
-                                    qj dupTemp$11 = new qj(var23.field_s, var23.field_v);
-                                    al.field_z[var8] = dupTemp$11;
-                                    var24 = dupTemp$11;
-                                    var24.a();
-                                    cl.a(var25, 0, var23.field_v, 0, var23.field_s, 4);
-                                    var23.e(0, 0);
+                                    var22 = var7[var8];
+                                    qj dupTemp$19 = new qj(var22.field_s, var22.field_v);
+                                    al.field_z[var8] = dupTemp$19;
+                                    var23 = dupTemp$19;
+                                    var23.a();
+                                    cl.a(var24, 0, var22.field_v, 0, var22.field_s, 4);
+                                    var22.e(0, 0);
                                     var8++;
-                                    continue L16;
+                                    continue L15;
                                   }
                                 }
                               } else {
-                                L17: {
+                                L16: {
                                   if (var4 != 4) {
-                                    L18: {
+                                    L17: {
                                       ha.field_m[var4] = nd.field_L[var4].b();
                                       ha.field_m[var4].a();
                                       var5 = 0;
                                       var6 = 0;
                                       var7_int = 2;
                                       if (0 != var4 % 3) {
-                                        break L18;
+                                        break L17;
                                       } else {
                                         var5 = -2 + ll.field_d;
+                                        break L17;
+                                      }
+                                    }
+                                    L18: {
+                                      if (3 > var4) {
+                                        var6 = ll.field_k + -2;
+                                        break L18;
+                                      } else {
                                         break L18;
                                       }
                                     }
                                     L19: {
-                                      if (3 > var4) {
-                                        var6 = ll.field_k + -2;
+                                      var8 = 2;
+                                      if (var4 % 3 != 1) {
                                         break L19;
                                       } else {
+                                        var7_int = ll.field_d;
                                         break L19;
                                       }
                                     }
                                     L20: {
-                                      var8 = 2;
-                                      if (var4 % 3 != 1) {
-                                        break L20;
-                                      } else {
-                                        var7_int = ll.field_d;
-                                        break L20;
-                                      }
-                                    }
-                                    L21: {
-                                      L22: {
+                                      L21: {
                                         if (3 == var4) {
-                                          break L22;
+                                          break L21;
                                         } else {
                                           if (5 != var4) {
-                                            break L21;
+                                            break L20;
                                           } else {
-                                            break L22;
+                                            break L21;
                                           }
                                         }
                                       }
                                       var8 = ll.field_k;
-                                      break L21;
+                                      break L20;
                                     }
                                     ll.c(var5, var6, var7_int, var8, 9073738);
-                                    break L17;
+                                    break L16;
                                   } else {
-                                    break L17;
+                                    break L16;
                                   }
                                 }
                                 var4++;
-                                continue L14;
+                                continue L13;
                               }
                             }
                           } else {
@@ -1539,140 +1702,144 @@ public final class TrackController extends ch {
                             gb.field_l[var4].field_s = gb.field_l[var4].field_t;
                             gb.field_l[var4].field_v = gb.field_l[var4].field_q;
                             var4++;
-                            continue L13;
+                            continue L12;
                           }
                         }
                       } else {
                         var5 = 0;
-                        L23: while (true) {
+                        L22: while (true) {
                           if (var5 >= 640) {
                             var4 = var4 + na.field_c.field_v;
-                            continue L12;
+                            continue L11;
                           } else {
                             na.field_c.h(var5, var4);
                             var5 = var5 + na.field_c.field_s;
-                            continue L23;
+                            continue L22;
                           }
                         }
                       }
                     }
                   } else {
-                    var21 = var20[var5];
-                    var23 = var21;
-                    var23 = var21;
-                    ei.a(var21, -1);
+                    var6_ref_qj = var20[var5];
+                    var22 = var6_ref_qj;
+                    var22 = var6_ref_qj;
+                    int discarded$20 = -1;
+                    ei.a(var6_ref_qj);
                     var5++;
-                    continue L11;
+                    continue L10;
                   }
                 }
               }
             } else {
-              L24: {
+              L23: {
                 if (!el.field_L.c(111)) {
-                  break L24;
+                  break L23;
                 } else {
                   if (!el.field_L.b("basic", (byte) -3)) {
-                    break L24;
+                    break L23;
                   } else {
                     if (el.field_L.b("comic12", (byte) -3)) {
                       if (el.field_L.b("kartika13", (byte) -3)) {
                         if (fb.field_b.b("comic12", (byte) -3)) {
                           if (fb.field_b.b("kartika13", (byte) -3)) {
-                            L25: {
-                              if (!rl.field_D.c(param0 + -374)) {
-                                break L25;
+                            L24: {
+                              if (!rl.field_D.c(93)) {
+                                break L24;
                               } else {
                                 if (rl.field_D.a((byte) 48)) {
-                                  L26: {
+                                  L25: {
                                     if (ui.a(0, true)) {
-                                      L27: {
+                                      L26: {
                                         if (!sg.field_a.c(-115)) {
-                                          break L27;
+                                          break L26;
                                         } else {
                                           if (!sg.field_a.b("halloween", (byte) -3)) {
-                                            break L27;
-                                          } else {
                                             break L26;
+                                          } else {
+                                            break L25;
                                           }
                                         }
                                       }
-                                      ud.a(param0 ^ 339, 11.0f, wf.a("halloween", sa.field_K, gj.field_e, sg.field_a, param0 ^ 479));
+                                      ud.a(128, 11.0f, wf.a("halloween", sa.field_K, gj.field_e, sg.field_a, 12));
                                       return false;
                                     } else {
-                                      break L26;
+                                      break L25;
                                     }
                                   }
-                                  L28: {
+                                  L27: {
                                     if (!sg.field_a.c(91)) {
-                                      break L28;
+                                      break L27;
                                     } else {
                                       if (!sg.field_a.b("", (byte) -3)) {
-                                        break L28;
+                                        break L27;
                                       } else {
-                                        L29: {
+                                        L28: {
                                           if (!sg.field_a.c(106)) {
-                                            break L29;
+                                            break L28;
                                           } else {
                                             if (sg.field_a.b("", (byte) -3)) {
-                                              L30: {
+                                              L29: {
                                                 if (!si.field_c.c(-109)) {
-                                                  break L30;
+                                                  break L29;
                                                 } else {
                                                   if (si.field_c.a((byte) 48)) {
-                                                    L31: {
+                                                    L30: {
                                                       if (!j.field_h.c(96)) {
-                                                        break L31;
+                                                        break L30;
                                                       } else {
                                                         if (!j.field_h.a((byte) 48)) {
-                                                          break L31;
+                                                          break L30;
                                                         } else {
-                                                          L32: {
+                                                          L31: {
                                                             if (!wl.field_l.c(121)) {
-                                                              break L32;
+                                                              break L31;
                                                             } else {
                                                               if (!wl.field_l.a((byte) 48)) {
-                                                                break L32;
+                                                                break L31;
                                                               } else {
-                                                                if (!lh.field_C.c(param0 + -357)) {
-                                                                  break L32;
+                                                                if (!lh.field_C.c(110)) {
+                                                                  break L31;
                                                                 } else {
                                                                   if (lh.field_C.a((byte) 48)) {
-                                                                    L33: {
+                                                                    L32: {
                                                                       if (!sk.field_j.c(-73)) {
-                                                                        break L33;
+                                                                        break L32;
                                                                       } else {
                                                                         if (sk.field_j.a((byte) 48)) {
-                                                                          ud.a(param0 ^ 339, 70.0f, cg.field_d);
+                                                                          ud.a(128, 70.0f, cg.field_d);
                                                                           if (!param1) {
                                                                             return false;
                                                                           } else {
-                                                                            L34: {
+                                                                            L33: {
                                                                               mf.c((byte) 114);
                                                                               ((TrackController) this).a(160);
                                                                               vj.field_a = ab.a("basic", -15383, "unachieved", el.field_L);
-                                                                              ei.a(vj.field_a, -1);
+                                                                              int discarded$21 = -1;
+                                                                              ei.a(vj.field_a);
                                                                               ii.field_p = ab.a("basic", -15383, "locked", el.field_L);
-                                                                              ei.a(ii.field_p, -1);
+                                                                              int discarded$22 = -1;
+                                                                              ei.a(ii.field_p);
                                                                               dc.field_p = ab.a("basic", -15383, "orbcoin", el.field_L);
-                                                                              var3_ref_byte__ = si.field_c.a("", param0 ^ -468, "tcfont");
-                                                                              var4_ref_ng__ = ie.a("", sg.field_a, "tcfont", param0 + -341);
-                                                                              var5_ref_oh = (oh) (Object) ma.a(6488064, (byte) -123, 2, var4_ref_ng__, var3_ref_byte__, 15252224);
+                                                                              var3_ref_byte__ = si.field_c.a("", -1, "tcfont");
+                                                                              var4_ref_ng__ = ie.a("", sg.field_a, "tcfont", 126);
+                                                                              int discarded$23 = 15252224;
+                                                                              var5_ref_oh = (oh) (Object) ma.a(6488064, (byte) -123, 2, var4_ref_ng__, var3_ref_byte__);
                                                                               bk.field_E = var5_ref_oh;
-                                                                              var41 = ((de) (Object) var5_ref_oh).field_M[0];
-                                                                              var37 = var41;
-                                                                              var33 = var37;
-                                                                              var19 = var33;
+                                                                              var40 = ((de) (Object) var5_ref_oh).field_M[0];
+                                                                              var36 = var40;
+                                                                              var32 = var36;
+                                                                              var19 = var32;
                                                                               var6_ref_int__ = var19;
                                                                               if (9 <= ((de) (Object) var5_ref_oh).field_M.length) {
-                                                                                break L34;
+                                                                                break L33;
                                                                               } else {
                                                                                 ((de) (Object) var5_ref_oh).field_M = new int[9][];
-                                                                                break L34;
+                                                                                break L33;
                                                                               }
                                                                             }
-                                                                            ((de) (Object) var5_ref_oh).field_M[0] = var41;
+                                                                            ((de) (Object) var5_ref_oh).field_M[0] = var40;
                                                                             var7_int = 1;
-                                                                            L35: while (true) {
+                                                                            L34: while (true) {
                                                                               if (var7_int >= 9) {
                                                                                 ((de) (Object) var5_ref_oh).field_M[1][1] = 8110658;
                                                                                 ((de) (Object) var5_ref_oh).field_M[2][1] = 4473924;
@@ -1691,22 +1858,22 @@ public final class TrackController extends ch {
                                                                                 qi.d(71);
                                                                                 return false;
                                                                               } else {
-                                                                                ((de) (Object) var5_ref_oh).field_M[var7_int] = new int[var41.length];
-                                                                                pd.a(var6_ref_int__, 0, ((de) (Object) var5_ref_oh).field_M[var7_int], 0, var41.length);
+                                                                                ((de) (Object) var5_ref_oh).field_M[var7_int] = new int[var40.length];
+                                                                                pd.a(var6_ref_int__, 0, ((de) (Object) var5_ref_oh).field_M[var7_int], 0, var40.length);
                                                                                 var7_int++;
-                                                                                continue L35;
+                                                                                continue L34;
                                                                               }
                                                                             }
                                                                           }
                                                                         } else {
-                                                                          break L33;
+                                                                          break L32;
                                                                         }
                                                                       }
                                                                     }
-                                                                    ud.a(param0 + -339, 65.0f, wf.a("", ob.field_w, wa.field_j, sk.field_j, 4));
+                                                                    ud.a(128, 65.0f, wf.a("", ob.field_w, wa.field_j, sk.field_j, 4));
                                                                     return false;
                                                                   } else {
-                                                                    break L32;
+                                                                    break L31;
                                                                   }
                                                                 }
                                                               }
@@ -1720,14 +1887,14 @@ public final class TrackController extends ch {
                                                     ud.a(128, 40.0f, wf.a("", fc.field_f, ql.field_q, j.field_h, 23));
                                                     return false;
                                                   } else {
-                                                    break L30;
+                                                    break L29;
                                                   }
                                                 }
                                               }
-                                              ud.a(param0 + -339, 31.0f, wf.a("", fd.field_f, v.field_c, si.field_c, param0 + -394));
+                                              ud.a(128, 31.0f, wf.a("", fd.field_f, v.field_c, si.field_c, 73));
                                               return false;
                                             } else {
-                                              break L29;
+                                              break L28;
                                             }
                                           }
                                         }
@@ -1736,25 +1903,25 @@ public final class TrackController extends ch {
                                       }
                                     }
                                   }
-                                  ud.a(param0 + -339, 30.0f, wf.a("", sa.field_K, gj.field_e, sg.field_a, 91));
+                                  ud.a(128, 30.0f, wf.a("", sa.field_K, gj.field_e, sg.field_a, 91));
                                   return false;
                                 } else {
-                                  break L25;
+                                  break L24;
                                 }
                               }
                             }
-                            ud.a(128, 6.0f, wf.a("", lf.field_W, ei.field_k, rl.field_D, param0 + -413));
+                            ud.a(128, 6.0f, wf.a("", lf.field_W, ei.field_k, rl.field_D, 54));
                             return false;
                           } else {
                             ud.a(128, 3.0f, wf.a("kartika13", fd.field_f, v.field_c, fb.field_b, 62));
                             return false;
                           }
                         } else {
-                          ud.a(param0 ^ 339, 3.0f, wf.a("comic12", fd.field_f, v.field_c, fb.field_b, param0 ^ 399));
+                          ud.a(128, 3.0f, wf.a("comic12", fd.field_f, v.field_c, fb.field_b, 92));
                           return false;
                         }
                       } else {
-                        ud.a(param0 + -339, 3.0f, wf.a("kartika13", fd.field_f, v.field_c, el.field_L, param0 + -431));
+                        ud.a(128, 3.0f, wf.a("kartika13", fd.field_f, v.field_c, el.field_L, 36));
                         return false;
                       }
                     } else {
@@ -1764,7 +1931,7 @@ public final class TrackController extends ch {
                   }
                 }
               }
-              ud.a(128, 2.0f, wf.a("basic", sa.field_K, gj.field_e, el.field_L, param0 ^ 413));
+              ud.a(128, 2.0f, wf.a("basic", sa.field_K, gj.field_e, el.field_L, 78));
               return false;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

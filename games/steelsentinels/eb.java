@@ -13,7 +13,7 @@ final class eb extends ia {
     static String field_r;
     static wk[] field_p;
 
-    final static boolean b(String param0, int param1) {
+    final static boolean b(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -93,7 +93,7 @@ final class eb extends ia {
         return stackIn_9_0 != 0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_u = null;
         field_t = null;
         field_r = null;
@@ -365,7 +365,7 @@ final class eb extends ia {
               cc.field_bc = new gh(0L, param4);
               in.field_d = new gh(0L, (gh) null);
               te.field_f = new gh(0L, param1);
-              vd.field_d = new gh((long)param0, param3);
+              vd.field_d = new gh(0L, param3);
               vd.field_d.field_L = pl.field_X;
               te.field_f.a(vd.field_d, 122);
               wh.field_e = new gh(0L, sb.field_ab);
@@ -385,7 +385,7 @@ final class eb extends ia {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("eb.A(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("eb.A(").append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -613,7 +613,9 @@ final class eb extends ia {
           }
           return new na(param1);
         } else {
-          bg.field_F = cd.a((gi) (Object) var8, 80, (byte) -100);
+          int discarded$2 = -100;
+          int discarded$3 = 80;
+          bg.field_F = cd.a((gi) (Object) var8);
           bc.field_ob = null;
           return new na(param1);
         }

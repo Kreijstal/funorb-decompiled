@@ -29,9 +29,6 @@ final class vq extends oq {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (param1 != 1273378209) {
-            field_E = null;
-        }
         int var3 = 4 - -ip.field_r.a(-37880252, -4 + param0);
         int var4 = ip.field_r.a(-37880252, -8 + param2) + 8;
         ob.field_E.a((nm) (Object) new nj(var3, var4, oq.field_x + ip.field_r.a(-37880252, qb.field_w), fr.field_k - -ip.field_r.a(-37880252, ag.field_E)), (byte) 3);
@@ -45,7 +42,8 @@ final class vq extends oq {
         }
         lb.b(0, 0, 640, 480);
         ((vq) this).g(124);
-        pg.d(0);
+        int discarded$0 = 0;
+        pg.d();
         ((vq) this).a(0);
     }
 

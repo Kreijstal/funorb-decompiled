@@ -15,7 +15,7 @@ final class sm {
         }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         try {
             IOException var1 = null;
             int var1_int = 0;

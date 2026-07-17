@@ -78,9 +78,9 @@ final class no extends en {
 
     private final void a(String param0, kb param1, int param2, int param3, int param4) {
         try {
-            gl.field_e.c(param0, param4 - (-param1.field_B - (param1.field_l >> 1)), param1.field_p + (param2 - 5), param3, -1);
+            gl.field_e.c(param0, param4 - (-param1.field_B - (param1.field_l >> 1)), param1.field_p + (param2 - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "no.N(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "no.N(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 16777215 + 44 + param4 + 41);
         }
     }
 
@@ -93,7 +93,7 @@ final class no extends en {
         }
     }
 
-    final static void a(bv param0, uo param1, int param2, int param3) {
+    final static void a(bv param0, uo param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
@@ -142,7 +142,8 @@ final class no extends en {
               } else {
                 var5 = mt.a(param0, true);
                 var6 = param0.a(false);
-                var7 = ej.a(param0, true);
+                int discarded$2 = 1;
+                var7 = ej.a(param0);
                 var8 = param0.a(false) + -var6;
                 kq.a(var6, -24232, var8, var7, param0);
                 param1.a(var7, param0, var5, (byte) 37);
@@ -245,7 +246,7 @@ final class no extends en {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_N = null;
         field_U = null;
         field_P = null;
@@ -287,7 +288,7 @@ final class no extends en {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         tf.a((byte) -99, ag.d((byte) -111));
     }
 
@@ -310,27 +311,14 @@ final class no extends en {
     }
 
     final static String a(char param0, boolean param1, int param2) {
-        char[] var3 = null;
         int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var6 = new char[param2];
-        var3 = var6;
-        if (!param1) {
-          return null;
-        } else {
-          var4 = 0;
-          L0: while (true) {
-            if (param2 <= var4) {
-              return new String(var6);
-            } else {
-              var6[var4] = param0;
-              var4++;
-              continue L0;
-            }
-          }
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        char[] var6 = new char[param2];
+        char[] var3 = var6;
+        for (var4 = 0; param2 > var4; var4++) {
+            var6[var4] = '*';
         }
+        return new String(var6);
     }
 
     private no(kh param0, boolean param1) {

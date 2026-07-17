@@ -30,7 +30,8 @@ final class cj {
         field_d = param3 - param1;
         cj.a();
         if (field_a.length < field_d) {
-            field_a = new int[rd.a(field_d, false)];
+            int discarded$0 = 0;
+            field_a = new int[rd.a(field_d)];
         }
         int var4 = param1 * ed.field_h + param0;
         for (var5 = 0; var5 < field_d; var5++) {

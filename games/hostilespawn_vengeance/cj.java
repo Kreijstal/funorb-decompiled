@@ -8,7 +8,7 @@ class cj extends ph {
     private mm field_J;
     static int field_I;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
@@ -132,7 +132,8 @@ class cj extends ph {
               }
             }
             if (rl.a(2884, param3, param4, param2)) {
-              stackOut_5_0 = li.a(param0.a(false, param2, param4), 5116);
+              int discarded$2 = 5116;
+              stackOut_5_0 = li.a(param0.a(false, param2, param4));
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -204,15 +205,12 @@ class cj extends ph {
         if (param3 != 0) {
             return;
         }
-        mi var9 = (mi) (Object) ((cj) this).field_h;
-        if (param2 <= 42) {
-            field_K = null;
-        }
+        mi var5 = (mi) (Object) ((cj) this).field_h;
         mm var6 = ((cj) this).field_J;
         if (var6 == null) {
         } else {
-            var7 = var9.a(param1, -1, (ag) this);
-            var8 = var9.a(-1, (ag) this, param0);
+            var7 = var5.a(param1, -1, (ag) this);
+            var8 = var5.a(-1, (ag) this, param0);
             do {
                 bh.a(2 + var6.field_i, -2 + var6.field_p + var8, (byte) 65, -2 + (var7 - -var6.field_l), 2 + var6.field_o);
                 var6 = var6.field_j;
@@ -511,12 +509,11 @@ class cj extends ph {
     }
 
     final static uj a(int param0, int param1) {
-        if (param1 != 5) {
-            field_K = null;
-        }
         uj var2 = new uj();
         ve.field_b.a((am) (Object) var2, 109);
-        pe.a((byte) 51, param0);
+        int discarded$0 = 6;
+        int discarded$1 = 51;
+        pe.a();
         return var2;
     }
 
@@ -627,38 +624,28 @@ class cj extends ph {
         mm var4 = null;
         mm var5 = null;
         int var6 = 0;
-        Object var7 = null;
-        L0: {
-          var6 = HostileSpawn.field_I ? 1 : 0;
-          if (param0 == -2) {
-            break L0;
-          } else {
-            var7 = null;
-            nc discarded$2 = cj.a((gb) null, 119, -67, (gb) null, 52);
-            break L0;
-          }
-        }
+        var6 = HostileSpawn.field_I ? 1 : 0;
         var4 = (mm) (Object) ((cj) this).field_G.g(-109);
-        L1: while (true) {
+        L0: while (true) {
           if (var4 != null) {
             var5 = var4;
-            L2: while (true) {
+            L1: while (true) {
               if (var5 == null) {
                 var4 = (mm) (Object) ((cj) this).field_G.a(12684);
-                continue L1;
+                continue L0;
               } else {
-                L3: {
+                L2: {
                   if (param2 < var5.field_l) {
-                    break L3;
+                    break L2;
                   } else {
                     if (param1 < var5.field_p) {
-                      break L3;
+                      break L2;
                     } else {
                       if (var5.field_l - -var5.field_o <= param2) {
-                        break L3;
+                        break L2;
                       } else {
                         if (param1 > var5.field_i + var5.field_p) {
-                          break L3;
+                          break L2;
                         } else {
                           return var4;
                         }
@@ -667,7 +654,7 @@ class cj extends ph {
                   }
                 }
                 var5 = var5.field_j;
-                continue L2;
+                continue L1;
               }
             }
           } else {

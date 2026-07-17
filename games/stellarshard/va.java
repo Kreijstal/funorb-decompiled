@@ -86,7 +86,7 @@ final class va extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_a = null;
         field_b = null;

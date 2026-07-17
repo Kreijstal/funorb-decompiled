@@ -15,33 +15,33 @@ final class uh {
     byte[] field_c;
     int field_j;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         int var1 = 0;
         field_d = null;
     }
 
-    final static String a(int param0, char param1, byte param2) {
+    final static String a(int param0) {
         int var4 = 0;
         int var5 = TrackController.field_F ? 1 : 0;
         char[] var6 = new char[param0];
         char[] var3 = var6;
         for (var4 = 0; param0 > var4; var4++) {
-            var6[var4] = param1;
+            var6[var4] = '*';
         }
         return new String(var6);
     }
 
     final static void a(int param0, na param1, int param2, int param3, int param4, na param5) {
         try {
-            of.field_f = param0;
+            of.field_f = 0;
             mk.field_a = param5;
-            int var6_int = 43 % ((49 - param3) / 32);
-            mb.field_c = param4;
-            na.field_e = param2;
+            int var6_int = 3;
+            mb.field_c = 10;
+            na.field_e = 0;
             nh.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "uh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "uh.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + -97 + 44 + 10 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 

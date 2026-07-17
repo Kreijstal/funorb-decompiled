@@ -6,7 +6,7 @@ final class cua {
     private cka field_a;
     long field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -128,7 +128,8 @@ final class cua {
             return;
         }
         try {
-            nt.a(param1, -1978);
+            int discarded$0 = -1978;
+            nt.a(param1);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "cua.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }

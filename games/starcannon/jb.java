@@ -13,20 +13,20 @@ final class jb {
     private int field_g;
     static long[] field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_h = null;
         field_c = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         int var1 = 0;
         int stackIn_4_0 = 0;
         int stackOut_2_0 = 0;
         int stackOut_3_0 = 0;
         L0: {
           L1: {
-            var1 = -9 / ((param0 - -66) / 52);
+            var1 = 9;
             if (m.field_b == null) {
               break L1;
             } else {
@@ -101,13 +101,14 @@ final class jb {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((jb) this).field_d[var2_int] = param0[var2_int];
             }
-            this.c(119);
+            int discarded$0 = 119;
+            this.c();
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "jb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void c(int param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

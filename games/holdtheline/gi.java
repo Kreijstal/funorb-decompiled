@@ -20,29 +20,29 @@ final class gi extends v implements pi {
     }
 
     final static void a(int param0, int param1, int param2, hj[] param3, int param4) {
-        RuntimeException var5 = null;
+        RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var10 = HoldTheLine.field_D;
         try {
           L0: {
@@ -51,32 +51,24 @@ final class gi extends v implements pi {
                 break L1;
               } else {
                 if (param4 > 0) {
-                  L2: {
-                    var5_int = param3[0].field_o;
-                    var6 = param3[2].field_o;
-                    var7 = param3[1].field_o;
-                    param3[0].a(param2, param0);
-                    param3[2].a(-var6 + (param2 + param4), param0);
-                    tc.b(hi.field_W);
-                    tc.e(var5_int + param2, param0, -var6 + param4 + param2, param3[1].field_v + param0);
-                    if (param1 == 14191) {
-                      break L2;
-                    } else {
-                      field_J = null;
-                      break L2;
-                    }
-                  }
+                  var5_int = param3[0].field_o;
+                  var6 = param3[2].field_o;
+                  var7 = param3[1].field_o;
+                  param3[0].a(param2, param0);
+                  param3[2].a(-var6 + (param2 + param4), param0);
+                  tc.b(hi.field_W);
+                  tc.e(var5_int + param2, param0, -var6 + param4 + param2, param3[1].field_v + param0);
                   var8 = param2 + var5_int;
                   var9 = param2 - (-param4 - -var6);
                   param2 = var8;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (var9 <= param2) {
                       tc.a(hi.field_W);
                       break L0;
                     } else {
                       param3[1].a(param2, param0);
                       param2 = param2 + var7;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 } else {
@@ -88,33 +80,33 @@ final class gi extends v implements pi {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("gi.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) runtimeException;
+            stackOut_9_1 = new StringBuilder().append("gi.G(").append(param0).append(44).append(14191).append(44).append(param2).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param3 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L4;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L4;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param4 + 41);
+          throw kk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param4 + 41);
         }
     }
 
@@ -205,7 +197,8 @@ final class gi extends v implements pi {
                         return;
                       }
                     } else {
-                      ((gi) this).field_F[var4_int] = ok.a((CharSequence) (Object) param0[var4_int], -6126).replace(' ', ' ');
+                      int discarded$1 = -6126;
+                      ((gi) this).field_F[var4_int] = ok.a((CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }

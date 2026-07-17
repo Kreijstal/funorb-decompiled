@@ -202,7 +202,7 @@ abstract class gd {
 
     abstract void b(int param0);
 
-    final static void a(int param0, int param1, jn param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, jn param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -242,73 +242,71 @@ abstract class gd {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            if (param3 >= 59) {
-              L1: {
-                if (ul.field_f != 1) {
-                  stackOut_5_0 = 0;
-                  stackIn_6_0 = stackOut_5_0;
-                  break L1;
+            L1: {
+              if (ul.field_f != 1) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L1;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              }
+            }
+            var6_int = stackIn_6_0;
+            var7 = 0;
+            L2: while (true) {
+              L3: {
+                if (var6_int == 0) {
+                  stackOut_9_0 = 50;
+                  stackIn_10_0 = stackOut_9_0;
+                  break L3;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L1;
+                  stackOut_8_0 = 25;
+                  stackIn_10_0 = stackOut_8_0;
+                  break L3;
                 }
               }
-              var6_int = stackIn_6_0;
-              var7 = 0;
-              L2: while (true) {
-                L3: {
-                  if (var6_int == 0) {
-                    stackOut_9_0 = 50;
-                    stackIn_10_0 = stackOut_9_0;
-                    break L3;
-                  } else {
-                    stackOut_8_0 = 25;
-                    stackIn_10_0 = stackOut_8_0;
-                    break L3;
-                  }
-                }
-                if (stackIn_10_0 <= var7) {
-                  var7 = 0;
-                  L4: while (true) {
-                    L5: {
-                      if (var6_int == 0) {
-                        stackOut_15_0 = 30;
-                        stackIn_16_0 = stackOut_15_0;
-                        break L5;
-                      } else {
-                        stackOut_14_0 = 25;
-                        stackIn_16_0 = stackOut_14_0;
-                        break L5;
-                      }
-                    }
-                    if (stackIn_16_0 <= var7) {
-                      break L0;
+              if (stackIn_10_0 <= var7) {
+                var7 = 0;
+                L4: while (true) {
+                  L5: {
+                    if (var6_int == 0) {
+                      stackOut_15_0 = 30;
+                      stackIn_16_0 = stackOut_15_0;
+                      break L5;
                     } else {
-                      var8 = new float[]{0.0f, (float)(-(1 + fi.a(param0, he.field_o, (byte) -96)))};
-                      float[] dupTemp$1 = kt.a((byte) -20, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
-                      var11 = dupTemp$1;
-                      var8 = dupTemp$1;
-                      param2.a((ms) (Object) new as(64, param4 - -((int)var11[0] << 11), ((int)var11[1] << 11) + param1, 16711680, -(int)var11[0] << 8, -(int)var11[1] << 8, 1), (byte) 39);
-                      var7++;
-                      continue L4;
+                      stackOut_14_0 = 25;
+                      stackIn_16_0 = stackOut_14_0;
+                      break L5;
                     }
                   }
-                } else {
-                  var8 = new float[]{0.0f, (float)(-(fi.a(param0, he.field_o, (byte) -96) + 1))};
-                  var15 = kt.a((byte) -81, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
-                  var14 = var15;
-                  var13 = var14;
-                  var12 = var13;
-                  var10 = var12;
-                  var8 = var10;
-                  param2.a((ms) (Object) new as(64, ((int)var15[0] << 11) + param4, ((int)var15[1] << 11) + param1, 16711680, -(int)var15[0] << 8, -(int)var15[1] << 8, 0), (byte) 39);
-                  var7++;
-                  continue L2;
+                  if (stackIn_16_0 <= var7) {
+                    break L0;
+                  } else {
+                    int discarded$3 = -96;
+                    var8 = new float[]{0.0f, (float)(-(1 + fi.a(10, he.field_o)))};
+                    float[] dupTemp$4 = kt.a((byte) -20, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
+                    var11 = dupTemp$4;
+                    var8 = dupTemp$4;
+                    param2.a((ms) (Object) new as(64, param4 - -((int)var11[0] << 11), ((int)var11[1] << 11) + param1, 16711680, -(int)var11[0] << 8, -(int)var11[1] << 8, 1), (byte) 39);
+                    var7++;
+                    continue L4;
+                  }
                 }
+              } else {
+                int discarded$5 = -96;
+                var8 = new float[]{0.0f, (float)(-(fi.a(10, he.field_o) + 1))};
+                var15 = kt.a((byte) -81, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
+                var14 = var15;
+                var13 = var14;
+                var12 = var13;
+                var10 = var12;
+                var8 = var10;
+                param2.a((ms) (Object) new as(64, ((int)var15[0] << 11) + param4, ((int)var15[1] << 11) + param1, 16711680, -(int)var15[0] << 8, -(int)var15[1] << 8, 0), (byte) 39);
+                var7++;
+                continue L2;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -316,7 +314,7 @@ abstract class gd {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var6;
-            stackOut_19_1 = new StringBuilder().append("gd.M(").append(param0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("gd.M(").append(10).append(44).append(param1).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -339,7 +337,7 @@ abstract class gd {
               break L6;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param3 + 44 + param4 + 44 + 16711680 + 41);
+          throw qo.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 61 + 44 + param4 + 44 + 16711680 + 41);
         }
     }
 
@@ -350,7 +348,7 @@ abstract class gd {
 
     abstract void a(boolean param0, byte param1, Object param2);
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         rd var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -497,6 +495,12 @@ abstract class gd {
 
     public static void a(boolean param0) {
         field_o = null;
+        if (param0) {
+            lh discarded$0 = gd.a((byte) -88, 27);
+            field_a = null;
+            field_k = null;
+            return;
+        }
         field_a = null;
         field_k = null;
     }

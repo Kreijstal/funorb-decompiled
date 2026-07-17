@@ -19,24 +19,44 @@ final class h extends ug {
     final static void i(int param0) {
         int var2 = 0;
         var2 = SteelSentinels.field_G;
-        if (null != fk.field_i) {
-          if (fk.field_i.field_J) {
-            if (0 == (fk.field_i.field_X.field_X & 1 << ed.field_j)) {
-              if (0 == fk.field_i.field_X.field_X) {
-                if ((fk.field_i.field_N | 1 << ed.field_j) != -1 + (1 << fk.field_i.field_X.field_kb)) {
-                  ti.field_A[12] = cl.field_i;
-                  return;
+        if (param0 == -1) {
+          if (null != fk.field_i) {
+            if (fk.field_i.field_J) {
+              if (0 == (fk.field_i.field_X.field_X & 1 << ed.field_j)) {
+                if (0 == fk.field_i.field_X.field_X) {
+                  if ((fk.field_i.field_N | 1 << ed.field_j) != -1 + (1 << fk.field_i.field_X.field_kb)) {
+                    ti.field_A[12] = cl.field_i;
+                    return;
+                  } else {
+                    ti.field_A[12] = jh.field_g;
+                    return;
+                  }
                 } else {
-                  ti.field_A[12] = jh.field_g;
+                  ti.field_A[12] = nl.field_Z;
                   return;
                 }
               } else {
-                ti.field_A[12] = nl.field_Z;
+                ti.field_A[12] = ch.field_H;
                 return;
               }
             } else {
-              ti.field_A[12] = ch.field_H;
-              return;
+              if ((1 << ed.field_j & fk.field_i.field_X.field_X) == 0) {
+                if (0 == fk.field_i.field_X.field_X) {
+                  if ((1 << fk.field_i.field_X.field_kb) + -1 != (1 << ed.field_j | fk.field_i.field_N)) {
+                    ti.field_A[12] = dg.field_a;
+                    return;
+                  } else {
+                    ti.field_A[12] = hm.field_d;
+                    return;
+                  }
+                } else {
+                  ti.field_A[12] = ih.field_p;
+                  return;
+                }
+              } else {
+                ti.field_A[12] = ig.field_d;
+                return;
+              }
             }
           } else {
             if ((1 << ed.field_j & fk.field_i.field_X.field_X) == 0) {
@@ -58,23 +78,7 @@ final class h extends ug {
             }
           }
         } else {
-          if ((1 << ed.field_j & fk.field_i.field_X.field_X) == 0) {
-            if (0 == fk.field_i.field_X.field_X) {
-              if ((1 << fk.field_i.field_X.field_kb) + -1 != (1 << ed.field_j | fk.field_i.field_N)) {
-                ti.field_A[12] = dg.field_a;
-                return;
-              } else {
-                ti.field_A[12] = hm.field_d;
-                return;
-              }
-            } else {
-              ti.field_A[12] = ih.field_p;
-              return;
-            }
-          } else {
-            ti.field_A[12] = ig.field_d;
-            return;
-          }
+          return;
         }
     }
 
@@ -590,7 +594,7 @@ final class h extends ug {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_T = null;
         field_Y = null;
         field_X = null;

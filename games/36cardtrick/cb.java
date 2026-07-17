@@ -7,7 +7,7 @@ final class cb extends qb {
     static gd field_g;
     static int field_i;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_j = null;
         field_g = null;
@@ -18,13 +18,9 @@ final class cb extends qb {
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;
         param1 = param1 | param1 >>> 4;
-        if (param0 != -85) {
-          return 125;
-        } else {
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return param1 + 1;
-        }
+        param1 = param1 | param1 >>> 8;
+        param1 = param1 | param1 >>> 16;
+        return param1 + 1;
     }
 
     private cb() throws Throwable {

@@ -431,8 +431,10 @@ final class eg extends tk {
                   }
                 }
                 ((eg) this).field_u = (pm) param0;
-                this.g(0);
-                this.a(param1, (byte) -50);
+                int discarded$2 = 0;
+                this.g();
+                int discarded$3 = -50;
+                this.a(param1);
                 ((eg) this).field_h = null;
                 ((eg) this).field_i.field_u = 0;
                 L4: while (true) {
@@ -573,7 +575,7 @@ final class eg extends tk {
         } else {
           if (var5 >= var4) {
             L1: {
-              var6 = -30 / (param2 / 39);
+              var6 = -15;
               if (param3 <= param1) {
                 stackOut_27_0 = 0;
                 stackIn_28_0 = stackOut_27_0;
@@ -591,7 +593,7 @@ final class eg extends tk {
         }
     }
 
-    private final void g(int param0) {
+    private final void g() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -651,7 +653,7 @@ final class eg extends tk {
         }
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void a(boolean param0) {
         try {
             IOException iOException = null;
             Exception var4 = null;

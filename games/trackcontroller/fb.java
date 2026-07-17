@@ -5,7 +5,7 @@ final class fb {
     static int field_a;
     static kk field_b;
 
-    final static void a(boolean param0, int param1, java.awt.Color param2, String param3, byte param4) {
+    final static void a(boolean param0, int param1, java.awt.Color param2, String param3) {
         java.awt.Graphics var5 = null;
         Exception var5_ref = null;
         RuntimeException var5_ref2 = null;
@@ -120,12 +120,9 @@ final class fb {
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) hd.field_p);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) hd.field_p);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) hd.field_p);
-            if (param0 >= -99) {
-                fb.a(-114);
-            }
             db.field_bb = 0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "fb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "fb.C(" + -113 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

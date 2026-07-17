@@ -9,49 +9,24 @@ final class fd extends o {
     static String field_o;
     static String field_l;
 
-    final static void a(int param0) {
-        h var1_ref = null;
-        Object var1 = null;
-        if (param0 != 28773) {
-            fd.a(66, -74, -52L);
-            var1_ref = (h) (Object) tm.field_a.c(56);
-            if (!(var1_ref != null)) {
-                throw new IllegalStateException();
-            }
-            wb.a(var1_ref.field_q, var1_ref.field_j, var1_ref.field_r);
-            wb.b(var1_ref.field_l, var1_ref.field_o, var1_ref.field_p, var1_ref.field_k);
-            var1_ref.field_q = null;
-            ni.field_c.a((o) (Object) var1_ref, (byte) 105);
-            return;
-        }
-        var1_ref = (h) (Object) tm.field_a.c(56);
-        if (!(var1_ref != null)) {
+    final static void a() {
+        h var1 = (h) (Object) tm.field_a.c(56);
+        if (!(var1 != null)) {
             throw new IllegalStateException();
         }
-        wb.a(var1_ref.field_q, var1_ref.field_j, var1_ref.field_r);
-        wb.b(var1_ref.field_l, var1_ref.field_o, var1_ref.field_p, var1_ref.field_k);
-        var1_ref.field_q = null;
-        ni.field_c.a((o) (Object) var1_ref, (byte) 105);
+        wb.a(var1.field_q, var1.field_j, var1.field_r);
+        wb.b(var1.field_l, var1.field_o, var1.field_p, var1.field_k);
+        var1.field_q = null;
+        ni.field_c.a((o) (Object) var1, (byte) 105);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        Object var5 = null;
-        if (param1 != 7) {
-          var5 = null;
-          fd.a((byte) 74, (um) null);
-          le.field_f = param3;
-          kj.field_h = param0;
-          kg.field_V = param2;
-          return;
-        } else {
-          le.field_f = param3;
-          kj.field_h = param0;
-          kg.field_V = param2;
-          return;
-        }
+        le.field_f = param3;
+        kj.field_h = param0;
+        kg.field_V = param2;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = -41;
         field_o = null;
         field_l = null;
@@ -61,11 +36,11 @@ final class fd extends o {
         hi var2 = null;
         try {
             hi.b(param1.a("headers.packvorbis", 30045, ""));
-            int var3 = -89 / ((-60 - param0) / 43);
+            int var3 = -89;
             var2 = hi.a(param1, "jagex logo2.packvorbis", "");
             lm discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "fd.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "fd.D(" + -103 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

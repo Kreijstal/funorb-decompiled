@@ -79,62 +79,13 @@ final class sh implements Iterator {
     }
 
     final static boolean a(boolean param0, int param1) {
-        int stackIn_5_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        if (param1 < 0) {
-          L0: {
-            if (0 != (1 + param1) % 4) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
-            } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
-              break L0;
-            }
-          }
-          return stackIn_5_0 != 0;
-        } else {
-          if (!param0) {
-            if (param1 < 1582) {
-              L1: {
-                if (0 != param1 % 4) {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
-                  break L1;
-                } else {
-                  stackOut_11_0 = 1;
-                  stackIn_13_0 = stackOut_11_0;
-                  break L1;
-                }
-              }
-              return stackIn_13_0 != 0;
-            } else {
-              if (param1 % 4 == 0) {
-                if (param1 % 100 != 0) {
-                  return true;
-                } else {
-                  if (0 == param1 % 400) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                }
-              } else {
-                return false;
-              }
-            }
-          } else {
+        if (param1 >= 0) {
             return true;
-          }
         }
+        return 0 == (1 + param1) % 4 ? true : false;
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         ((sh) this).field_b = 1;
         ((sh) this).field_d = null;
         ((sh) this).field_a = ((sh) this).field_g.field_e[0].field_a;
@@ -144,7 +95,8 @@ final class sh implements Iterator {
         ((sh) this).field_d = null;
         try {
             ((sh) this).field_g = param0;
-            this.a((byte) -39);
+            int discarded$0 = -39;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "sh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

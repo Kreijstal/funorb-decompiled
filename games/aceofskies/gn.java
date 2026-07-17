@@ -71,7 +71,8 @@ final class gn {
         try {
           L0: {
             L1: {
-              qf.a(param3.field_f, param2, 25215, param0, param3.field_g, param1, 0);
+              int discarded$2 = 0;
+              qf.a(param3.field_f, param2, 25215, param0, param3.field_g, param1);
               if (param4 >= 34) {
                 break L1;
               } else {

@@ -9,7 +9,7 @@ final class pv extends i {
     static int[] field_J;
     static int field_H;
 
-    public static void g(byte param0) {
+    public static void g() {
         field_F = null;
         field_G = null;
         field_J = null;

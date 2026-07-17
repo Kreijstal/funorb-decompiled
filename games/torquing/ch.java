@@ -13,7 +13,7 @@ final class ch extends am {
               var7 = Torquing.field_u;
               var4 = q.field_b[param1];
               var5 = dp.field_a[param2];
-              var6 = (float)Math.atan2((double)(-2048 + var4), (double)(var5 - param0));
+              var6 = (float)Math.atan2((double)(-2048 + var4), (double)(var5 - 2048));
               if ((double)var6 < -3.141592653589793) {
                 break L2;
               } else {
@@ -143,7 +143,7 @@ final class ch extends am {
         return var3;
     }
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] a(byte[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

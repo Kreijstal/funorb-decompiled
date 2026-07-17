@@ -568,7 +568,9 @@ class gk extends rk {
         try {
             ((gk) this).field_s = param2;
             ((gk) this).field_t = param1;
-            ((gk) this).field_n = vc.a(param2, 0, 0);
+            int discarded$0 = 0;
+            int discarded$1 = 0;
+            ((gk) this).field_n = vc.a(param2);
             ((gk) this).field_n.c(param3);
             ((gk) this).field_n.c(param4);
             param0.field_z.a((rk) this, (byte) 106);

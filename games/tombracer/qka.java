@@ -10,7 +10,7 @@ final class qka extends qra {
     private boolean field_q;
     private fna[] field_p;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_m = null;
         field_o = null;
         field_s = null;
@@ -372,17 +372,17 @@ final class qka extends qra {
                     L6: {
                       var13 = 7829367;
                       if (-2 != ((qka) this).field_c.field_z) {
-                        int discarded$5 = be.a(gl.a((byte) 93, ga.field_K.toUpperCase(), new String[1]).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 + -243, -50 + var11, 0, (byte) 60, 100);
+                        int discarded$7 = be.a(gl.a((byte) 93, ga.field_K.toUpperCase(), new String[1]).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 + -243, -50 + var11, 0, (byte) 60, 100);
                         break L6;
                       } else {
-                        int discarded$6 = be.a(paa.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 + -243, -50 + var11, 0, (byte) 60, 100);
+                        int discarded$8 = be.a(paa.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 + -243, -50 + var11, 0, (byte) 60, 100);
                         break L6;
                       }
                     }
                     if (!((qka) this).field_c.g(69, var22)) {
                       break L5;
                     } else {
-                      int discarded$7 = be.a(w.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
+                      int discarded$9 = be.a(w.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
                       break L5;
                     }
                   } else {
@@ -405,7 +405,8 @@ final class qka extends qra {
               var8 = var4 + -80;
               kq.field_a.a(var7 - (kq.field_a.a() >> 1), var8 - (kq.field_a.c() >> 1));
               var9 = ((qka) this).field_h.m(-1);
-              if (pl.a((byte) 64) != var9) {
+              int discarded$10 = 64;
+              if (pl.a() != var9) {
                 stackOut_3_0 = 0;
                 stackIn_4_0 = stackOut_3_0;
                 break L7;
@@ -426,7 +427,7 @@ final class qka extends qra {
               }
             }
             L9: {
-              int discarded$8 = be.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
+              int discarded$11 = be.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
               oka.a(((qka) this).field_h.a(((qka) this).field_h.field_x, false).toUpperCase(), wga.field_a[((qka) this).field_h.field_x], eda.field_f, -1, -15 + var4, var3, -1);
               if (((qka) this).field_c.field_z < 0) {
                 oka.a(wpa.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
@@ -540,7 +541,7 @@ final class qka extends qra {
                           break L14;
                         } else {
                           var16 = var14 - var17;
-                          int discarded$9 = be.a(gl.a((byte) 121, qw.field_g, new String[2]), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
+                          int discarded$12 = be.a(gl.a((byte) 121, qw.field_g, new String[2]), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
                           break L14;
                         }
                       }
@@ -552,7 +553,8 @@ final class qka extends qra {
             }
           }
         }
-        se.f((byte) -6);
+        int discarded$13 = -6;
+        se.f();
         var3 = 0;
         L18: while (true) {
           if (~var3 <= ~((qka) this).field_p.length) {

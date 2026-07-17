@@ -12,7 +12,7 @@ final class ab {
     static String field_h;
     static String field_e;
 
-    final static boolean a(di param0, boolean param1) {
+    final static boolean a(di param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -71,7 +71,7 @@ final class ab {
         return stackIn_3_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_a = null;
         field_i = null;
@@ -81,28 +81,20 @@ final class ab {
         field_c = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
-            L0: {
-              if (param0 == 25692) {
-                break L0;
-              } else {
-                field_d = null;
-                break L0;
-              }
-            }
             try {
-              L1: {
-                Object discarded$1 = mo.a("resizing", new Object[1], param0 ^ 25619, hk.d(116));
-                break L1;
+              L0: {
+                Object discarded$1 = mo.a("resizing", new Object[1], 79, hk.d(116));
+                break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
+              L1: {
                 var2 = decompiledCaughtException;
-                break L2;
+                break L1;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

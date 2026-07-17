@@ -13,12 +13,9 @@ abstract class vq extends dqa implements lca {
     void a(int param0, wta param1) {
         try {
             ((vq) this).field_z = param1;
-            if (param0 <= 73) {
-                eeb discarded$0 = ((vq) this).a(68);
-            }
             ((vq) this).field_z.field_c = (vq) this;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vq.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vq.K(" + 75 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -142,7 +139,7 @@ abstract class vq extends dqa implements lca {
 
     abstract int f(int param0);
 
-    public static void i(byte param0) {
+    public static void i() {
         field_y = null;
         int var1 = -9;
         field_w = null;
@@ -151,7 +148,7 @@ abstract class vq extends dqa implements lca {
 
     abstract int c(boolean param0);
 
-    final static int g(int param0) {
+    final static int g() {
         try {
             IOException var1 = null;
             int var1_int = 0;

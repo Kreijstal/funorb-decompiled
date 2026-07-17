@@ -133,7 +133,7 @@ final class jf implements dh {
         }
     }
 
-    final static java.awt.Container a(boolean param0) {
+    final static java.awt.Container a() {
         if (sg.field_a != null) {
             return (java.awt.Container) (Object) sg.field_a;
         }
@@ -150,34 +150,29 @@ final class jf implements dh {
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         var16 = Geoblox.field_C;
         try {
           L0: {
             L1: while (true) {
               param7--;
               if (param7 < 0) {
-                if (param2 == 33423689) {
-                  break L0;
-                } else {
-                  field_c = -7;
-                  return;
-                }
+                break L0;
               } else {
                 var17 = param9;
                 var10 = var17;
@@ -199,41 +194,41 @@ final class jf implements dh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var10_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var10_ref;
-            stackOut_6_1 = new StringBuilder().append("jf.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_4_0 = (RuntimeException) var10_ref;
+            stackOut_4_1 = new StringBuilder().append("jf.F(").append(param0).append(44).append(param1).append(44).append(33423689).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param9 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         int var1 = 0;
         field_b = null;
     }
 
-    final static void a(dm[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(dm[] param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -322,75 +317,65 @@ final class jf implements dh {
         }
     }
 
-    final static byte[] a(CharSequence param0, byte param1) {
+    final static byte[] a(CharSequence param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Object var7 = null;
-        byte[] stackIn_70_0 = null;
+        byte[] stackIn_68_0 = null;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        RuntimeException stackIn_71_0 = null;
+        StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        String stackIn_74_2 = null;
+        String stackIn_72_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_69_0 = null;
+        byte[] stackOut_67_0 = null;
+        RuntimeException stackOut_69_0 = null;
+        StringBuilder stackOut_69_1 = null;
         RuntimeException stackOut_71_0 = null;
         StringBuilder stackOut_71_1 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        String stackOut_73_2 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
+        String stackOut_71_2 = null;
+        RuntimeException stackOut_70_0 = null;
+        StringBuilder stackOut_70_1 = null;
+        String stackOut_70_2 = null;
         var6 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              if (param1 >= 117) {
-                break L1;
-              } else {
-                var7 = null;
-                jf.a(25, 87, -85, 85, 111, -85, 50, 110, -77, (int[]) null);
-                break L1;
-              }
-            }
             var2_int = param0.length();
             var3 = new byte[var2_int];
             var4 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var2_int <= var4) {
-                stackOut_69_0 = (byte[]) var3;
-                stackIn_70_0 = stackOut_69_0;
+                stackOut_67_0 = (byte[]) var3;
+                stackIn_68_0 = stackOut_67_0;
                 break L0;
               } else {
-                L3: {
-                  L4: {
-                    L5: {
+                L2: {
+                  L3: {
+                    L4: {
                       var5 = param0.charAt(var4);
                       if (var5 <= 0) {
-                        break L5;
+                        break L4;
                       } else {
                         if (var5 < 128) {
-                          break L4;
+                          break L3;
                         } else {
-                          break L5;
+                          break L4;
                         }
                       }
                     }
-                    L6: {
+                    L5: {
                       if (var5 < 160) {
-                        break L6;
+                        break L5;
                       } else {
                         if (255 < var5) {
-                          break L6;
+                          break L5;
                         } else {
-                          break L4;
+                          break L3;
                         }
                       }
                     }
@@ -400,48 +385,48 @@ final class jf implements dh {
                           if (8222 != var5) {
                             if (var5 == 8230) {
                               var3[var4] = (byte) -123;
-                              break L3;
+                              break L2;
                             } else {
                               if (var5 != 8224) {
                                 if (var5 != 8225) {
                                   if (var5 != 710) {
                                     if (var5 == 8240) {
                                       var3[var4] = (byte) -119;
-                                      break L3;
+                                      break L2;
                                     } else {
                                       if (352 == var5) {
                                         var3[var4] = (byte) -118;
-                                        break L3;
+                                        break L2;
                                       } else {
                                         if (8249 == var5) {
                                           var3[var4] = (byte) -117;
-                                          break L3;
+                                          break L2;
                                         } else {
                                           if (338 != var5) {
                                             if (var5 == 381) {
                                               var3[var4] = (byte) -114;
-                                              break L3;
+                                              break L2;
                                             } else {
                                               if (8216 == var5) {
                                                 var3[var4] = (byte) -111;
-                                                break L3;
+                                                break L2;
                                               } else {
                                                 if (8217 == var5) {
                                                   var3[var4] = (byte) -110;
-                                                  break L3;
+                                                  break L2;
                                                 } else {
                                                   if (var5 != 8220) {
                                                     if (var5 == 8221) {
                                                       var3[var4] = (byte) -108;
-                                                      break L3;
+                                                      break L2;
                                                     } else {
                                                       if (var5 == 8226) {
                                                         var3[var4] = (byte) -107;
-                                                        break L3;
+                                                        break L2;
                                                       } else {
                                                         if (8211 == var5) {
                                                           var3[var4] = (byte) -106;
-                                                          break L3;
+                                                          break L2;
                                                         } else {
                                                           if (var5 != 8212) {
                                                             if (var5 != 732) {
@@ -449,129 +434,129 @@ final class jf implements dh {
                                                                 if (var5 != 353) {
                                                                   if (var5 == 8250) {
                                                                     var3[var4] = (byte) -101;
-                                                                    break L3;
+                                                                    break L2;
                                                                   } else {
                                                                     if (var5 == 339) {
                                                                       var3[var4] = (byte) -100;
-                                                                      break L3;
+                                                                      break L2;
                                                                     } else {
                                                                       if (var5 == 382) {
                                                                         var3[var4] = (byte) -98;
-                                                                        break L3;
+                                                                        break L2;
                                                                       } else {
                                                                         if (var5 != 376) {
                                                                           var3[var4] = (byte) 63;
-                                                                          break L3;
+                                                                          break L2;
                                                                         } else {
                                                                           var3[var4] = (byte) -97;
-                                                                          break L3;
+                                                                          break L2;
                                                                         }
                                                                       }
                                                                     }
                                                                   }
                                                                 } else {
                                                                   var3[var4] = (byte) -102;
-                                                                  break L3;
+                                                                  break L2;
                                                                 }
                                                               } else {
                                                                 var3[var4] = (byte) -103;
-                                                                break L3;
+                                                                break L2;
                                                               }
                                                             } else {
                                                               var3[var4] = (byte) -104;
-                                                              break L3;
+                                                              break L2;
                                                             }
                                                           } else {
                                                             var3[var4] = (byte) -105;
-                                                            break L3;
+                                                            break L2;
                                                           }
                                                         }
                                                       }
                                                     }
                                                   } else {
                                                     var3[var4] = (byte) -109;
-                                                    break L3;
+                                                    break L2;
                                                   }
                                                 }
                                               }
                                             }
                                           } else {
                                             var3[var4] = (byte) -116;
-                                            break L3;
+                                            break L2;
                                           }
                                         }
                                       }
                                     }
                                   } else {
                                     var3[var4] = (byte) -120;
-                                    break L3;
+                                    break L2;
                                   }
                                 } else {
                                   var3[var4] = (byte) -121;
-                                  break L3;
+                                  break L2;
                                 }
                               } else {
                                 var3[var4] = (byte) -122;
-                                break L3;
+                                break L2;
                               }
                             }
                           } else {
                             var3[var4] = (byte) -124;
-                            break L3;
+                            break L2;
                           }
                         } else {
                           var3[var4] = (byte) -125;
-                          break L3;
+                          break L2;
                         }
                       } else {
                         var3[var4] = (byte) -126;
-                        break L3;
+                        break L2;
                       }
                     } else {
                       var3[var4] = (byte) -128;
-                      break L3;
+                      break L2;
                     }
                   }
                   var3[var4] = (byte)var5;
                   var4++;
-                  break L3;
+                  break L2;
                 }
                 var4++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
-            stackOut_71_0 = (RuntimeException) var2;
-            stackOut_71_1 = new StringBuilder().append("jf.C(");
-            stackIn_73_0 = stackOut_71_0;
-            stackIn_73_1 = stackOut_71_1;
-            stackIn_72_0 = stackOut_71_0;
-            stackIn_72_1 = stackOut_71_1;
+            stackOut_69_0 = (RuntimeException) var2;
+            stackOut_69_1 = new StringBuilder().append("jf.C(");
+            stackIn_71_0 = stackOut_69_0;
+            stackIn_71_1 = stackOut_69_1;
+            stackIn_70_0 = stackOut_69_0;
+            stackIn_70_1 = stackOut_69_1;
             if (param0 == null) {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
-              stackOut_73_2 = "null";
-              stackIn_74_0 = stackOut_73_0;
-              stackIn_74_1 = stackOut_73_1;
-              stackIn_74_2 = stackOut_73_2;
-              break L7;
+              stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
+              stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
+              stackOut_71_2 = "null";
+              stackIn_72_0 = stackOut_71_0;
+              stackIn_72_1 = stackOut_71_1;
+              stackIn_72_2 = stackOut_71_2;
+              break L6;
             } else {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
-              stackOut_72_2 = "{...}";
-              stackIn_74_0 = stackOut_72_0;
-              stackIn_74_1 = stackOut_72_1;
-              stackIn_74_2 = stackOut_72_2;
-              break L7;
+              stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
+              stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
+              stackOut_70_2 = "{...}";
+              stackIn_72_0 = stackOut_70_0;
+              stackIn_72_1 = stackOut_70_1;
+              stackIn_72_2 = stackOut_70_2;
+              break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + 44 + 127 + 41);
         }
-        return stackIn_70_0;
+        return stackIn_68_0;
     }
 
     jf(m param0, int param1, int param2, int param3, int param4, int param5, int param6) {

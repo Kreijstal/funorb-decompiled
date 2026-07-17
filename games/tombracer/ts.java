@@ -179,7 +179,9 @@ final class ts {
                 if (!var4.f(6, 10915)) {
                   break L8;
                 } else {
-                  this.a((byte) 82, 5);
+                  int discarded$2 = 5;
+                  int discarded$3 = 82;
+                  this.a();
                   break L7;
                 }
               }
@@ -261,14 +263,11 @@ final class ts {
     }
 
     final static void a(byte param0, String param1, boolean param2) {
-        if (param0 != -63) {
-            return;
-        }
         try {
             ub.field_c = nla.field_a;
             dd.field_a = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ts.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ts.F(" + -63 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -776,7 +775,7 @@ final class ts {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void a() {
         int var3 = 0;
         int var4 = 0;
         csa var5 = null;
@@ -810,59 +809,55 @@ final class ts {
         var6 = var5.c(-41);
         var7 = var5.a((byte) 55);
         var8 = 0;
-        if (param0 == 82) {
-          var9 = 50;
-          var10 = 0;
-          L1: while (true) {
-            if (5 <= var10) {
-              return;
-            } else {
-              var11 = 1;
-              L2: while (true) {
-                if (var11 != 0) {
-                  if (var9 > var8) {
-                    var8++;
-                    var12 = var6 / 2 - -((ts) this).field_c.q(param0 + -41).a(var3 - var6, 0);
-                    var13 = ((ts) this).field_c.q(param0 + -195).a(var4 + -var7, 0) + var7 / 2;
-                    var14 = -var12 + ((ts) this).field_c.u(-53).d(3) >> 16;
-                    var15 = -var13 + ((ts) this).field_c.u(-79).e(param0 ^ 9698) >> 16;
-                    if (4096 > var15 * var15 + var14 * var14) {
-                      continue L2;
-                    } else {
-                      L3: {
-                        if (!((ts) this).field_c.a((ffa) null, var7, 2, 1, var13, var12, false, (gma) null, var6)) {
-                          stackOut_15_0 = 0;
-                          stackIn_16_0 = stackOut_15_0;
-                          break L3;
-                        } else {
-                          stackOut_14_0 = 1;
-                          stackIn_16_0 = stackOut_14_0;
-                          break L3;
-                        }
-                      }
-                      var11 = stackIn_16_0;
-                      if (var11 == 0) {
-                        var5.a(1434528720, var13, var12);
-                        var5.a(true, true, ((ts) this).field_c, 0, 0, -1, (fsa) null);
-                        ((ts) this).field_d[var10] = (fsa) (Object) var5.u(kha.b((int) param0, -24));
-                        continue L2;
+        var9 = 50;
+        var10 = 0;
+        L1: while (true) {
+          if (5 <= var10) {
+            return;
+          } else {
+            var11 = 1;
+            L2: while (true) {
+              if (var11 != 0) {
+                if (var9 > var8) {
+                  var8++;
+                  var12 = var6 / 2 - -((ts) this).field_c.q(41).a(var3 - var6, 0);
+                  var13 = ((ts) this).field_c.q(-113).a(var4 + -var7, 0) + var7 / 2;
+                  var14 = -var12 + ((ts) this).field_c.u(-53).d(3) >> 16;
+                  var15 = -var13 + ((ts) this).field_c.u(-79).e(9648) >> 16;
+                  if (4096 > var15 * var15 + var14 * var14) {
+                    continue L2;
+                  } else {
+                    L3: {
+                      if (!((ts) this).field_c.a((ffa) null, var7, 2, 1, var13, var12, false, (gma) null, var6)) {
+                        stackOut_15_0 = 0;
+                        stackIn_16_0 = stackOut_15_0;
+                        break L3;
                       } else {
-                        continue L2;
+                        stackOut_14_0 = 1;
+                        stackIn_16_0 = stackOut_14_0;
+                        break L3;
                       }
                     }
-                  } else {
-                    var10++;
-                    continue L1;
+                    var11 = stackIn_16_0;
+                    if (var11 == 0) {
+                      var5.a(1434528720, var13, var12);
+                      var5.a(true, true, ((ts) this).field_c, 0, 0, -1, (fsa) null);
+                      ((ts) this).field_d[var10] = (fsa) (Object) var5.u(kha.b(82, -24));
+                      continue L2;
+                    } else {
+                      continue L2;
+                    }
                   }
                 } else {
                   var10++;
                   continue L1;
                 }
+              } else {
+                var10++;
+                continue L1;
               }
             }
           }
-        } else {
-          return;
         }
     }
 
@@ -874,10 +869,18 @@ final class ts {
         fsa[] var6 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         if (null != ((ts) this).field_f) {
-          var6 = ((ts) this).field_f;
-          var2 = var6;
+          L0: {
+            var6 = ((ts) this).field_f;
+            var2 = var6;
+            if (!param0) {
+              break L0;
+            } else {
+              dt discarded$2 = this.a((byte) 106);
+              break L0;
+            }
+          }
           var3 = 0;
-          L0: while (true) {
+          L1: while (true) {
             if (var3 >= var6.length) {
               ((ts) this).field_f = null;
               return;
@@ -885,7 +888,7 @@ final class ts {
               var4 = var6[var3];
               ((ts) this).field_c.a(var4, 2);
               var3++;
-              continue L0;
+              continue L1;
             }
           }
         } else {
@@ -912,26 +915,25 @@ final class ts {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        Object var24 = null;
-        int stackIn_12_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
+        String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
         RuntimeException stackOut_26_0 = null;
         StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         var23 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -960,38 +962,29 @@ final class ts {
             L3: {
               var7_int = jj.a(param5, (byte) -104);
               var8 = 0;
-              if (param0 > 51) {
-                break L3;
-              } else {
-                var24 = null;
-                ts.a((byte) -93, (String) null, false);
-                break L3;
-              }
-            }
-            L4: {
               if (param4 > param3) {
-                stackOut_11_0 = param3;
-                stackIn_12_0 = stackOut_11_0;
-                break L4;
+                stackOut_9_0 = param3;
+                stackIn_10_0 = stackOut_9_0;
+                break L3;
               } else {
-                stackOut_10_0 = param4;
-                stackIn_12_0 = stackOut_10_0;
-                break L4;
+                stackOut_8_0 = param4;
+                stackIn_10_0 = stackOut_8_0;
+                break L3;
               }
             }
-            var9 = stackIn_12_0;
+            var9 = stackIn_10_0;
             var10 = param3 >> 1;
             var11 = param4 >> 1;
             var12 = param1;
             var13 = new byte[var7_int * var11 * var10];
-            L5: while (true) {
+            L4: while (true) {
               jaggl.OpenGL.glTexImage2Dub(param2, var8, param6, param3, param4, 0, param5, 5121, var12, 0);
               if (var9 <= 1) {
                 break L0;
               } else {
                 var16 = param3 * var7_int;
                 var17 = 0;
-                L6: while (true) {
+                L5: while (true) {
                   if (var17 >= var7_int) {
                     var14 = var13;
                     var13 = var12;
@@ -1002,24 +995,24 @@ final class ts {
                     var9 = var9 >> 1;
                     var11 = var11 >> 1;
                     var10 = var10 >> 1;
-                    continue L5;
+                    continue L4;
                   } else {
                     var18 = var17;
                     var19 = var17;
                     var20 = var16 + var19;
                     var21 = 0;
-                    L7: while (true) {
+                    L6: while (true) {
                       if (var21 >= var11) {
                         var17++;
-                        continue L6;
+                        continue L5;
                       } else {
                         var22 = 0;
-                        L8: while (true) {
+                        L7: while (true) {
                           if (var22 >= var10) {
                             var20 = var20 + var16;
                             var19 = var19 + var16;
                             var21++;
-                            continue L7;
+                            continue L6;
                           } else {
                             var15 = param1[var19];
                             var19 = var19 + var7_int;
@@ -1032,7 +1025,7 @@ final class ts {
                             var13[var18] = (byte)(var15 >> 2);
                             var18 = var18 + var7_int;
                             var22++;
-                            continue L8;
+                            continue L7;
                           }
                         }
                       }
@@ -1044,33 +1037,33 @@ final class ts {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var7 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var7;
-            stackOut_26_1 = new StringBuilder().append("ts.K(").append(param0).append(44);
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackOut_24_0 = (RuntimeException) var7;
+            stackOut_24_1 = new StringBuilder().append("ts.K(").append(53).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
-              break L9;
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
-              break L9;
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

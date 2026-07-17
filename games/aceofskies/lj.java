@@ -46,11 +46,12 @@ final class lj implements ir {
                 break L1;
               } else {
                 var4 = null;
-                int discarded$2 = lj.a(-124, (byte[]) null, 84);
+                int discarded$4 = lj.a(-124, (byte[]) null, 84);
                 break L1;
               }
             }
-            stackOut_2_0 = cl.a(0, param1, param2, (byte) -105);
+            int discarded$5 = -105;
+            stackOut_2_0 = cl.a(0, param1, param2);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -211,7 +212,7 @@ final class lj implements ir {
         field_e = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         if (l.field_c > 32) {
             var1 = l.field_c % 32;
@@ -219,17 +220,9 @@ final class lj implements ir {
                 var1 = 32;
             }
             ve.a((byte) 43, l.field_c - var1);
-            if (param0 > 97) {
-                return;
-            }
-            lj.a(true);
             return;
         }
         ve.a((byte) 43, 0);
-        if (param0 > 97) {
-            return;
-        }
-        lj.a(true);
     }
 
     lj(hc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {

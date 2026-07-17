@@ -228,7 +228,7 @@ final class vk extends jf {
         return stackIn_4_0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -242,81 +242,73 @@ final class vk extends jf {
         try {
           L0: {
             L1: {
-              if (param0 < -116) {
-                break L1;
-              } else {
-                field_e = null;
-                break L1;
-              }
-            }
-            L2: {
               var1_int = -16000;
               var2 = -7680;
               var3 = ud.field_k;
               if (kf.field_G == null) {
-                break L2;
+                break L1;
               } else {
                 var5 = kf.field_G.length + -1;
-                L3: while (true) {
+                L2: while (true) {
                   if (var5 <= 0) {
                     var5 = 0;
                     if (kf.field_G.length <= var5) {
-                      break L2;
+                      break L1;
                     } else {
-                      L4: {
+                      L3: {
                         if (kf.field_G[var5] == null) {
                           var5++;
-                          break L4;
+                          break L3;
                         } else {
                           kf.field_G[var5] = kf.field_G[var5].b(15);
                           var5++;
-                          break L4;
+                          break L3;
                         }
                       }
                       var5++;
                       var5++;
-                      break L2;
+                      break L1;
                     }
                   } else {
                     if (null == kf.field_G[var5]) {
                       var5--;
                       var5--;
-                      continue L3;
+                      continue L2;
                     } else {
                       if (kf.field_G[var5].field_j < 25) {
                         var5--;
                         var5--;
-                        continue L3;
+                        continue L2;
                       } else {
                         if (kf.field_G[var5].field_j == 31) {
                           var5--;
-                          continue L3;
+                          continue L2;
                         } else {
-                          L5: {
+                          L4: {
                             if (Math.abs(kf.field_G[var5].field_a) - -Math.abs(-7680 + kf.field_G[var5].field_b) >= Math.abs(var1_int) + Math.abs(var2 - 7680)) {
-                              break L5;
+                              break L4;
                             } else {
                               if (kf.field_G[var5].field_b >= 7040) {
-                                break L5;
+                                break L4;
                               } else {
                                 var1_int = kf.field_G[var5].field_c * 15 + kf.field_G[var5].field_a;
                                 var2 = kf.field_G[var5].field_d * 15 + kf.field_G[var5].field_b;
-                                break L5;
+                                break L4;
                               }
                             }
                           }
-                          L6: {
+                          L5: {
                             if (null == kf.field_G[-1 + var5]) {
-                              break L6;
+                              break L5;
                             } else {
                               if (kf.field_G[-1 + var5].field_j < 25) {
-                                break L6;
+                                break L5;
                               } else {
                                 if (31 != kf.field_G[var5 + -1].field_j) {
                                   var5--;
-                                  continue L3;
+                                  continue L2;
                                 } else {
-                                  break L6;
+                                  break L5;
                                 }
                               }
                             }
@@ -325,7 +317,7 @@ final class vk extends jf {
                           kf.field_G[var5] = kf.field_G[-1 + var5];
                           kf.field_G[var5 - 1] = var4_ref_rb;
                           var5--;
-                          continue L3;
+                          continue L2;
                         }
                       }
                     }
@@ -333,43 +325,55 @@ final class vk extends jf {
                 }
               }
             }
-            L7: {
+            L6: {
               if (-16000 == var1_int) {
                 var1_int = 0;
+                break L6;
+              } else {
+                break L6;
+              }
+            }
+            L7: {
+              if (0 <= ve.field_b) {
+                ic.field_t = ic.field_t - (lc.field_h >>> 17) * ud.field_k;
+                bi.field_i = bi.field_i - ud.field_k;
+                ud.field_k = 0;
                 break L7;
               } else {
                 break L7;
               }
             }
             L8: {
-              if (0 <= ve.field_b) {
-                ic.field_t = ic.field_t - (lc.field_h >>> 17) * ud.field_k;
-                bi.field_i = bi.field_i - ud.field_k;
-                ud.field_k = 0;
-                break L8;
-              } else {
-                break L8;
-              }
-            }
-            L9: {
               if (~ud.field_k >= ~qh.field_a[7]) {
-                break L9;
+                break L8;
               } else {
                 var4 = ud.field_k + -qh.field_a[7];
                 ic.field_t = ic.field_t - (lc.field_h >>> 17) * var4;
                 bi.field_i = bi.field_i - var4;
                 ud.field_k = qh.field_a[7];
-                break L9;
+                break L8;
               }
             }
-            L10: {
+            L9: {
               wg.field_e = (wg.field_e * 9 + var2) / 10;
               sk.field_o = (sk.field_o * 9 - -var1_int) / 10;
               if (qh.field_a[7] / 10 <= var3) {
-                break L10;
+                break L9;
               } else {
                 if (~ud.field_k <= ~(qh.field_a[7] / 10)) {
                   vk.a(250, (byte) 89, 5);
+                  break L9;
+                } else {
+                  break L9;
+                }
+              }
+            }
+            L10: {
+              if (var3 >= qh.field_a[7] * 3 / 10) {
+                break L10;
+              } else {
+                if (~ud.field_k <= ~(qh.field_a[7] * 3 / 10)) {
+                  vk.a(249, (byte) 89, 6);
                   break L10;
                 } else {
                   break L10;
@@ -377,36 +381,24 @@ final class vk extends jf {
               }
             }
             L11: {
-              if (var3 >= qh.field_a[7] * 3 / 10) {
+              if (~(6 * qh.field_a[7] / 10) >= ~var3) {
                 break L11;
               } else {
-                if (~ud.field_k <= ~(qh.field_a[7] * 3 / 10)) {
-                  vk.a(249, (byte) 89, 6);
+                if (~(qh.field_a[7] * 6 / 10) < ~ud.field_k) {
                   break L11;
                 } else {
+                  vk.a(248, (byte) 89, 7);
                   break L11;
                 }
               }
             }
             L12: {
-              if (~(6 * qh.field_a[7] / 10) >= ~var3) {
-                break L12;
-              } else {
-                if (~(qh.field_a[7] * 6 / 10) < ~ud.field_k) {
-                  break L12;
-                } else {
-                  vk.a(248, (byte) 89, 7);
-                  break L12;
-                }
-              }
-            }
-            L13: {
               if (~var3 <= ~qh.field_a[7]) {
-                break L13;
+                break L12;
               } else {
                 if (~ud.field_k <= ~qh.field_a[7]) {
                   vk.a(247, (byte) 89, 8);
-                  break L13;
+                  break L12;
                 } else {
                   return;
                 }
@@ -417,11 +409,11 @@ final class vk extends jf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1, "vk.J(" + param0 + 41);
+          throw fc.a((Throwable) (Object) var1, "vk.J(" + -126 + 41);
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_e = null;
         field_i = null;
     }
@@ -434,20 +426,10 @@ final class vk extends jf {
           jl.field_d = jl.field_d | var3;
           lc.field_t.a((gg) (Object) new la(param2), -7044);
           if (oa.field_n) {
-            if (param1 == 89) {
-              return;
-            } else {
-              vk.b((byte) 46);
-              return;
-            }
+            return;
           } else {
             w.field_a.a((gg) (Object) new bl(param2, param0, bi.field_i, ic.field_t, lc.field_h, lk.field_e), -7044);
-            if (param1 == 89) {
-              return;
-            } else {
-              vk.b((byte) 46);
-              return;
-            }
+            return;
           }
         } else {
           return;

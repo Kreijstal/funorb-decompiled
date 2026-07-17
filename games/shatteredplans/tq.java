@@ -57,13 +57,10 @@ final class tq {
         if (!(param1 < ((tq) this).field_d.length)) {
             this.a((byte) -45, param1);
         }
-        if (param0 != 95) {
-            return;
-        }
         try {
             ((tq) this).field_d[param1] = param2;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "tq.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "tq.D(" + 95 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -84,9 +81,6 @@ final class tq {
     }
 
     private final void a(byte param0, int param1) {
-        if (param0 != -45) {
-            return;
-        }
         String[] var3 = new String[this.a(param1, 231)];
         ps.a((Object[]) (Object) ((tq) this).field_d, 0, (Object[]) (Object) var3, 0, ((tq) this).field_d.length);
         ((tq) this).field_d = var3;

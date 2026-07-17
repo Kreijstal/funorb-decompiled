@@ -872,33 +872,13 @@ final class tn {
     }
 
     final static void a(boolean param0) {
-        if (param0) {
-          L0: {
-            field_e = null;
-            if (null != oj.field_Ub) {
-              oj.field_Ub.b(4155);
-              oj.field_Ub = null;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
-        } else {
-          L1: {
-            if (null != oj.field_Ub) {
-              oj.field_Ub.b(4155);
-              oj.field_Ub = null;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        if (!(null == oj.field_Ub)) {
+            oj.field_Ub.b(4155);
+            oj.field_Ub = null;
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         var1 = -1;
         if (p.field_h == ca.field_M.field_b) {

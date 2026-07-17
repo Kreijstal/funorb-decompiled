@@ -8,7 +8,7 @@ final class wh {
     static String field_d;
     static pb field_a;
 
-    final static byte[] a(int param0, ha param1, byte[] param2, byte param3) {
+    final static byte[] a(int param0, ha param1, byte[] param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -55,7 +55,7 @@ final class wh {
         try {
           L0: {
             var4_int = 1;
-            var5 = param1.e(param0, 8);
+            var5 = param1.e(16, 8);
             if (0 != var5) {
               L1: {
                 L2: {
@@ -113,7 +113,7 @@ final class wh {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("wh.C(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("wh.C(").append(16).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -176,7 +176,7 @@ final class wh {
         return wb.field_c;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -186,7 +186,8 @@ final class wh {
         if (param0 > -31) {
             return;
         }
-        gg.field_f = ee.a(5, 0, (byte) -119, 1);
+        int discarded$0 = 1;
+        gg.field_f = ee.a(5, 0, (byte) -119);
     }
 
     static {

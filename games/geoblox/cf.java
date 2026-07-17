@@ -8,7 +8,7 @@ final class cf extends q {
     static String field_j;
     static boolean field_i;
 
-    final static void h(int param0) {
+    final static void h() {
         sj.a(k.c(108), (byte) 110);
     }
 
@@ -108,7 +108,7 @@ final class cf extends q {
         return stackIn_11_0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_j = null;
     }
 
@@ -183,11 +183,11 @@ final class cf extends q {
         return (String) (Object) stackIn_6_0;
     }
 
-    final static qi a(int param0, int param1) {
+    final static qi a() {
         qi var2 = new qi();
         k.field_e.a(-49, (hf) (Object) var2);
         int var3 = 34;
-        re.b(-78, param0);
+        re.b(-78, 4);
         return var2;
     }
 

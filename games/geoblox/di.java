@@ -50,7 +50,7 @@ final class di {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -52;
         field_e = null;
         field_c = null;
@@ -73,13 +73,13 @@ final class di {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    gf.a(param0, 125);
+                    gf.a(6, 125);
                     var2 = qa.field_e.d(1);
                     continue L2;
                   }
                 }
               } else {
-                o.a(param0, var4, param1 + -21718);
+                o.a(6, var4, param1 + -21718);
                 var4 = (wc) (Object) l.field_g.d(1);
                 continue L1;
               }
@@ -88,7 +88,7 @@ final class di {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "di.B(" + param0 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) var2_ref, "di.B(" + 6 + 44 + param1 + 41);
         }
     }
 

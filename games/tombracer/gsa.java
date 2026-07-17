@@ -325,7 +325,7 @@ final class gsa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_w = null;
         field_s = null;
         field_y = null;

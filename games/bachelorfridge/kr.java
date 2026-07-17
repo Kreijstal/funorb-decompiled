@@ -13,17 +13,14 @@ final class kr extends sna {
         var3.c(param2, (byte) 126);
         var3.d(2, 0);
         var3.d(0, 0);
-        if (param0 <= 62) {
-            return;
-        }
         try {
             var3.d(param1.field_i, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kr.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "kr.A(" + 93 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_zb = null;
         int var1 = 0;
         field_xb = null;

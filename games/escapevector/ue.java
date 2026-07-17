@@ -22,18 +22,15 @@ class ue extends hc {
         int var7 = 0;
         int var8 = 0;
         super.a(param0, (byte) 87, param2, param3);
-        if (param1 <= 85) {
-            ((ue) this).field_D = null;
-        }
         if (param2 != 0) {
             return;
         }
-        ao var9 = (ao) (Object) ((ue) this).field_s;
+        ao var5 = (ao) (Object) ((ue) this).field_s;
         bl var6 = ((ue) this).field_E;
         if (var6 == null) {
         } else {
-            var7 = var9.a((byte) -113, (hm) this, param3);
-            var8 = var9.a((hm) this, param0, -16956);
+            var7 = var5.a((byte) -113, (hm) this, param3);
+            var8 = var5.a((hm) this, param0, -16956);
             do {
                 ic.a(false, 2 + var6.field_j, var6.field_i + var7 - 2, var6.field_n - -2, -2 + var8 - -var6.field_g);
                 var6 = var6.field_k;

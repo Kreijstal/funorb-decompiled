@@ -14,7 +14,7 @@ abstract class db extends ec {
     static int field_o;
     int field_s;
 
-    final static void a(jd param0, byte param1) {
+    final static void a(jd param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -395,7 +395,8 @@ abstract class db extends ec {
                       return;
                     }
                   } else {
-                    hi.a((Throwable) null, "A1: " + oc.a(false), 1);
+                    int discarded$1 = 1;
+                    hi.a((Throwable) null, "A1: " + oc.a(false));
                     je.a(false);
                     break L1;
                   }
@@ -424,9 +425,6 @@ abstract class db extends ec {
     private final void a(int param0, int param1, int param2, boolean param3, int param4) {
         int var6 = ((db) this).field_q << 3;
         param1 = (param1 << 4) - -(var6 & 15);
-        if (!param3) {
-            ((db) this).field_t = 49;
-        }
         int var7 = ((db) this).field_r << 3;
         param4 = (param4 << 4) - -(15 & var7);
         ((db) this).a(var6, var7, param1, param4, param2, param0);
@@ -440,33 +438,27 @@ abstract class db extends ec {
         var3 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == 36951) {
-                break L1;
-              } else {
-                field_o = 120;
-                break L1;
-              }
-            }
             var4 = (dj) (Object) sa.field_n.a((byte) 51);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
-                dc.a(var4, 7, (byte) 46);
+                int discarded$8 = 46;
+                int discarded$9 = 7;
+                dc.a(var4);
                 var4 = (dj) (Object) sa.field_n.b(-46);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2, "db.H(" + param0 + 44 + 7 + 41);
+          throw fc.a((Throwable) (Object) var2, "db.H(" + 36951 + 44 + 7 + 41);
         }
     }
 
-    final static char a(byte param0, boolean param1) {
+    final static char a(byte param0) {
         int var3 = 0;
         int var2 = 255 & param0;
         if (!(0 != var2)) {

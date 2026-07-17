@@ -9,7 +9,7 @@ final class qlb implements dja {
         return null;
     }
 
-    final static Object[] a(Object[] param0, Object param1, dja param2, boolean param3, boolean param4, int param5) {
+    final static Object[] a(Object[] param0, Object param1, dja param2, boolean param3, boolean param4) {
         RuntimeException var6 = null;
         tv[] var6_array = null;
         int var6_int = 0;
@@ -281,7 +281,8 @@ final class qlb implements dja {
         if (param0 != -75) {
             qlb.b((byte) 0);
         }
-        kl.a(vpa.b((byte) -119), 0);
+        int discarded$0 = 0;
+        kl.a(vpa.b((byte) -119));
     }
 
     public final tv[] a(int param0, int param1) {

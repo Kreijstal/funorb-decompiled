@@ -35,7 +35,8 @@ final class op extends ae {
                 break L1;
               }
             }
-            if (!op.a(120)) {
+            int discarded$22 = 120;
+            if (!op.a()) {
               L2: {
                 if (rn.field_f == null) {
                   break L2;
@@ -51,13 +52,13 @@ final class op extends ae {
               }
               return;
             } else {
-              boolean discarded$15 = me.field_k.a(jk.field_g, (byte) -27, fg.field_j, true);
+              boolean discarded$23 = me.field_k.a(jk.field_g, (byte) -27, fg.field_j, true);
               me.field_k.h((byte) -109);
               L3: while (true) {
                 if (!ba.c(-1)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = me.field_k.a(param0 + -2, pn.field_d, sj.field_p);
+                  boolean discarded$24 = me.field_k.a(param0 + -2, pn.field_d, sj.field_p);
                   continue L3;
                 }
               }
@@ -70,30 +71,15 @@ final class op extends ae {
         }
     }
 
-    final static String a(boolean param0, boolean param1, int param2, boolean param3) {
+    final static String a(boolean param0, boolean param1) {
         int var4 = 0;
-        var4 = 0;
-        if (param2 != 4) {
-          return null;
-        } else {
-          L0: {
-            if (param1) {
-              var4 += 4;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          L1: {
-            if (param0) {
-              var4 += 2;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return t.field_f[var4];
+        if (!(!param1)) {
+            var4 += 4;
         }
+        if (!(!param0)) {
+            var4 += 2;
+        }
+        return t.field_f[var4];
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
@@ -118,18 +104,15 @@ final class op extends ae {
         }
     }
 
-    private final static boolean a(int param0) {
-        int var1 = 0;
-        var1 = -19 / ((70 - param0) / 45);
-        if (me.field_k != null) {
-          if (me.field_k.j((byte) -122) == null) {
+    private final static boolean a() {
+        int var1 = 19;
+        if (me.field_k == null) {
             return false;
-          } else {
-            return true;
-          }
-        } else {
-          return false;
         }
+        if (me.field_k.j((byte) -122) == null) {
+            return false;
+        }
+        return true;
     }
 
     final void a(int param0, qd param1) {
@@ -195,7 +178,7 @@ final class op extends ae {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_o = null;
         field_l = null;
         field_m = null;

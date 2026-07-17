@@ -11,13 +11,10 @@ final class eh {
     static int field_d;
     static wm field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_h = null;
         field_c = null;
-        if (!param0) {
-            return;
-        }
         field_b = null;
         field_f = null;
     }
@@ -117,7 +114,7 @@ final class eh {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         hk var1 = (hk) (Object) ak.field_i.b(-27493);
         if (var1 == null) {
             throw new IllegalStateException();

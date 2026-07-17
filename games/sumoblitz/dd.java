@@ -18,7 +18,7 @@ final class dd extends hf implements ai {
     private nd field_U;
     private wp field_P;
 
-    private final wp g(byte param0) {
+    private final wp g() {
         if (!(null == gk.field_o)) {
             return ((dd) this).field_T;
         }
@@ -170,16 +170,17 @@ final class dd extends hf implements ai {
                         var5 = 0;
                         L4: while (true) {
                           if (var5 >= var3_ref_cd__.length) {
-                            cb.a(((dd) this).field_Z, true);
+                            int discarded$4 = 1;
+                            cb.a(((dd) this).field_Z);
                             break L1;
                           } else {
                             L5: {
                               if (null == var3_ref_cd__[var5]) {
                                 break L5;
                               } else {
-                                int incrementValue$1 = var4;
+                                int incrementValue$5 = var4;
                                 var4++;
-                                ((dd) this).field_Z[incrementValue$1] = var3_ref_cd__[var5];
+                                ((dd) this).field_Z[incrementValue$5] = var3_ref_cd__[var5];
                                 break L5;
                               }
                             }
@@ -295,10 +296,11 @@ final class dd extends hf implements ai {
             }
             L13: {
               var3 = stackIn_37_0;
+              int discarded$6 = 9;
               stackOut_37_0 = this;
               stackIn_39_0 = stackOut_37_0;
               stackIn_38_0 = stackOut_37_0;
-              if (vs.b((byte) 9)) {
+              if (vs.b()) {
                 stackOut_39_0 = this;
                 stackOut_39_1 = 0;
                 stackIn_40_0 = stackOut_39_0;
@@ -524,7 +526,8 @@ final class dd extends hf implements ai {
             }
             L26: {
               ((dd) this).field_S = false;
-              var6 = this.g((byte) -2);
+              int discarded$7 = -2;
+              var6 = this.g();
               if (var6 == null) {
                 break L26;
               } else {
@@ -1157,7 +1160,7 @@ final class dd extends hf implements ai {
         return stackIn_1_0;
     }
 
-    private final void e(boolean param0) {
+    private final void e() {
         int var3 = 0;
         wp var4 = null;
         int var5 = Sumoblitz.field_L ? 1 : 0;
@@ -1170,35 +1173,35 @@ final class dd extends hf implements ai {
     }
 
     private final void a(wp param0, int param1) {
+        RuntimeException runtimeException = null;
         wp var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         cd var5 = null;
         wp stackIn_3_0 = null;
         wp stackIn_4_0 = null;
         wp stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         wp stackOut_2_0 = null;
         wp stackOut_4_0 = null;
         int stackOut_4_1 = 0;
         wp stackOut_3_0 = null;
         int stackOut_3_1 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -1211,8 +1214,9 @@ final class dd extends hf implements ai {
             }
             L2: {
               ((dd) this).field_O = param0;
-              boolean discarded$3 = param0.a((pk) this, (byte) 61);
-              var3 = this.g((byte) -2);
+              boolean discarded$6 = param0.a((pk) this, (byte) 61);
+              int discarded$7 = -2;
+              var3 = this.g();
               stackOut_2_0 = ((dd) this).field_Q;
               stackIn_4_0 = stackOut_2_0;
               stackIn_3_0 = stackOut_2_0;
@@ -1232,70 +1236,67 @@ final class dd extends hf implements ai {
             }
             L3: {
               stackIn_5_0.field_x = stackIn_5_1 != 0;
-              if (param0 == ((dd) this).field_T) {
-                if (var3 == param0) {
-                  if (null != ((dd) this).field_ab) {
+              if (param0 != ((dd) this).field_T) {
+                break L3;
+              } else {
+                if (var3 != param0) {
+                  break L3;
+                } else {
+                  if (null == ((dd) this).field_ab) {
+                    break L3;
+                  } else {
                     L4: {
                       var4 = ((dd) this).field_ab.g(param1 + -126);
                       var5 = ((dd) this).field_Z[var4];
                       if (var5.field_a != vv.field_b.field_s) {
                         break L4;
                       } else {
-                        if (vv.field_b.field_c != var5.field_g) {
-                          break L4;
-                        } else {
-                          this.e(true);
+                        if (vv.field_b.field_c == var5.field_g) {
                           break L3;
+                        } else {
+                          break L4;
                         }
                       }
                     }
                     ((dd) this).field_Q.field_x = true;
-                    this.e(true);
-                    break L3;
-                  } else {
-                    this.e(true);
                     break L3;
                   }
-                } else {
-                  this.e(true);
-                  break L3;
                 }
-              } else {
-                this.e(true);
-                break L3;
               }
             }
+            int discarded$8 = 1;
+            this.e();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var3_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var3_ref;
-            stackOut_18_1 = new StringBuilder().append("dd.O(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            runtimeException = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) runtimeException;
+            stackOut_14_1 = new StringBuilder().append("dd.O(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
               break L5;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 41);
         }
     }
 
@@ -1306,7 +1307,8 @@ final class dd extends hf implements ai {
           var3 = Sumoblitz.field_L ? 1 : 0;
           if (((dd) this).field_O == ((dd) this).field_X) {
             ib.d(1);
-            um.b(0);
+            int discarded$38 = 0;
+            um.b();
             break L0;
           } else {
             if (((dd) this).field_Y != ((dd) this).field_O) {
@@ -1331,7 +1333,8 @@ final class dd extends hf implements ai {
               }
             } else {
               ib.d(1);
-              ua.f(-5812);
+              int discarded$39 = -5812;
+              ua.f();
               break L0;
             }
           }
@@ -1501,7 +1504,7 @@ final class dd extends hf implements ai {
                       if (!var7.field_k) {
                         break L3;
                       } else {
-                        boolean discarded$2 = var7.a((pk) this, (byte) 61);
+                        boolean discarded$9 = var7.a((pk) this, (byte) 61);
                         break L3;
                       }
                     }
@@ -1518,7 +1521,8 @@ final class dd extends hf implements ai {
               if (((dd) this).field_W) {
                 break L4;
               } else {
-                if (!vs.b((byte) 9)) {
+                int discarded$10 = 9;
+                if (!vs.b()) {
                   this.k(84);
                   ((dd) this).field_E.a((byte) 124, (pk) (Object) new dd(((dd) this).field_E));
                   break L4;

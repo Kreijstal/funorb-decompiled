@@ -10,7 +10,7 @@ final class ua {
     static String field_d;
     static String field_g;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_f = null;
         field_c = null;
@@ -99,8 +99,9 @@ final class ua {
         String stackOut_15_2 = null;
         try {
           L0: {
-            mq.a(param17, new mp(param1), param10, param9, param8, param18, param13, param14, param2, new mp(param7), (byte) 88, param4, param6, param3, param11, param20, param12, param0, param15, new mp(param16), param5);
-            var21_int = 93 % ((33 - param19) / 55);
+            int discarded$1 = 240;
+            mq.a(0, new mp(param1), 0, param9, 12, param18, 16777215, 16777215, 320, new mp(param7), (byte) 88, 480, 10, param3, param11, param20, 16777215, 12, param15, new mp(param16));
+            var21_int = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +109,7 @@ final class ua {
           L1: {
             var21 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var21;
-            stackOut_2_1 = new StringBuilder().append("ua.A(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ua.A(").append(12).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -133,7 +134,7 @@ final class ua {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(320).append(44).append(param3).append(44).append(480).append(44).append(240).append(44).append(10).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -158,7 +159,7 @@ final class ua {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param8).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(12).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -183,7 +184,7 @@ final class ua {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param10).append(44).append(param11).append(44).append(param12).append(44).append(param13).append(44).append(param14).append(44).append(param15).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(0).append(44).append(param11).append(44).append(16777215).append(44).append(16777215).append(44).append(16777215).append(44).append(param15).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -208,7 +209,7 @@ final class ua {
           }
           L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param17).append(44).append(param18).append(44).append(param19).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(0).append(44).append(param18).append(44).append(92).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

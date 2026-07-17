@@ -10,7 +10,7 @@ final class dm {
     static long field_c;
     static String field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_d = null;

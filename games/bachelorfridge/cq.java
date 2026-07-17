@@ -7,7 +7,7 @@ final class cq extends bw {
     static jg field_g;
     bw field_h;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_g = null;
         int var1 = -118;
     }

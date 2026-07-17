@@ -136,7 +136,7 @@ final class ue {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

@@ -26,7 +26,7 @@ final class ek extends ht {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
     }
 
@@ -37,7 +37,7 @@ final class ek extends ht {
         ((ek) this).field_m = -1;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -248,19 +248,12 @@ final class ek extends ht {
         }
     }
 
-    final static void b(boolean param0, int param1) {
-        mf var2 = null;
-        var2 = mf.a(rc.field_l[param1], 100, 96);
-        if (!param0) {
-          ek.b(true, 27);
-          var2.c(-1);
-          dj discarded$4 = qq.a(18416, var2);
-          return;
-        } else {
-          var2.c(-1);
-          dj discarded$5 = qq.a(18416, var2);
-          return;
-        }
+    final static void b() {
+        int discarded$0 = 96;
+        int discarded$1 = 100;
+        mf var2 = mf.a(rc.field_l[0]);
+        var2.c(-1);
+        dj discarded$2 = qq.a(18416, var2);
     }
 
     static {

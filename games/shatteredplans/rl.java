@@ -264,7 +264,7 @@ final class rl {
         if (param0 != -1) {
             return null;
         }
-        return cc.a(param2, false, param3, param0 + 12001, param1, param4);
+        return cc.a(param2, false, param3, param0 + 12001, true, param4);
     }
 
     private final String b(int param0, String param1) {

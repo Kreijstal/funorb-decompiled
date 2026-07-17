@@ -41,7 +41,8 @@ final class uj extends mk {
         try {
           L0: {
             var4 = (CharSequence) (Object) param1;
-            if (vq.a(var4, true)) {
+            int discarded$5 = 1;
+            if (vq.a(var4)) {
               L1: {
                 if (param0 == -3137) {
                   break L1;
@@ -230,13 +231,10 @@ final class uj extends mk {
         return stackIn_17_0;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_n = null;
         field_o = null;
         field_l = null;
-        if (param0 != 29151) {
-            field_j = -105;
-        }
     }
 
     final void g(int param0) {
@@ -248,7 +246,7 @@ final class uj extends mk {
         ((uj) this).field_m = null;
     }
 
-    final static me[] c(byte param0) {
+    final static me[] c() {
         return new me[]{jk.field_b, na.field_G, oa.field_F, vh.field_l, tl.field_i, nn.field_c, ab.field_d, lg.field_e, du.field_e, kb.field_y, lo.field_q, nf.field_Ib, rs.field_v, kq.field_M};
     }
 

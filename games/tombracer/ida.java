@@ -17,30 +17,16 @@ final class ida {
         field_b = null;
     }
 
-    final static String a(long param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+    final static String a(long param0) {
         qla.field_b.setTime(new Date(param0));
-        var3 = qla.field_b.get(7);
-        var4 = qla.field_b.get(5);
-        var5 = qla.field_b.get(2);
-        var6 = qla.field_b.get(1);
-        var7 = qla.field_b.get(11);
-        if (param1 != -1) {
-          field_a = null;
-          var8 = qla.field_b.get(12);
-          var9 = qla.field_b.get(13);
-          return mr.field_x[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.field_p[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        } else {
-          var8 = qla.field_b.get(12);
-          var9 = qla.field_b.get(13);
-          return mr.field_x[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.field_p[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        }
+        int var3 = qla.field_b.get(7);
+        int var4 = qla.field_b.get(5);
+        int var5 = qla.field_b.get(2);
+        int var6 = qla.field_b.get(1);
+        int var7 = qla.field_b.get(11);
+        int var8 = qla.field_b.get(12);
+        int var9 = qla.field_b.get(13);
+        return mr.field_x[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.field_p[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     static {

@@ -11,11 +11,10 @@ final class ac extends al {
     static boolean field_r;
     static ll field_q;
 
-    private final void a(byte param0, int param1) {
-        this.b(false, 2);
-        if (param0 != 0) {
-            ((ac) this).a((byte) -7, true);
-        }
+    private final void a() {
+        int discarded$0 = 2;
+        int discarded$1 = 0;
+        this.b();
     }
 
     final void b(int param0, int param1, int param2) {
@@ -63,7 +62,9 @@ final class ac extends al {
                   }
                 }
               }
-              this.a((byte) 0, 4);
+              int discarded$4 = 4;
+              int discarded$5 = 0;
+              this.a();
               break L0;
             } else {
               break L0;
@@ -423,69 +424,61 @@ final class ac extends al {
           }
         }
         L4: {
-          if (param2 == 82) {
-            break L4;
-          } else {
-            field_o = null;
-            break L4;
-          }
-        }
-        L5: {
           if (param1 != bn.field_i) {
-            break L5;
+            break L4;
           } else {
             if (!((ac) this).field_b.field_j) {
-              L6: {
+              L5: {
                 if (-1 != hn.field_q[param1]) {
                   ah.field_tb.c(-20 + vh.field_b - -qg.field_a[param1], param3 + id.field_M + to.field_c[param1] - -17);
-                  break L6;
+                  break L5;
                 } else {
-                  break L6;
+                  break L5;
                 }
               }
               if (pd.field_a[param1] == -1) {
-                break L5;
+                break L4;
               } else {
                 if (this.a(param1 + 3, -1, 117)) {
                   ah.field_tb.b(vh.field_b - (-qg.field_a[param1] - 55), id.field_M - (-to.field_c[param1] - param3 + -17));
-                  break L5;
+                  break L4;
                 } else {
-                  break L5;
+                  break L4;
                 }
               }
             } else {
-              break L5;
+              break L4;
             }
           }
         }
-        L7: {
+        L6: {
           if (be.field_j <= 0) {
-            L8: {
+            L7: {
               var7 = wm.field_e;
               var8 = 12 + wm.field_e;
               if (param1 != 1) {
-                break L8;
+                break L7;
               } else {
                 wd.field_y.b(vh.field_b + (qg.field_a[param1] - -2), param3 + (id.field_M + to.field_c[param1]) + -17, 50 + wd.field_z[var7] / 2);
-                break L8;
+                break L7;
               }
             }
-            L9: {
+            L8: {
               if (var8 >= 50) {
                 var8 -= 50;
-                break L9;
+                break L8;
               } else {
-                break L9;
+                break L8;
               }
             }
             if (param1 != 2) {
-              break L7;
+              break L6;
             } else {
               wd.field_y.b(2 + qg.field_a[param1] + vh.field_b, -17 + (param3 + id.field_M) - -to.field_c[param1], 50 + wd.field_z[var8] / 2);
-              break L7;
+              break L6;
             }
           } else {
-            break L7;
+            break L6;
           }
         }
     }
@@ -895,7 +888,7 @@ final class ac extends al {
         }
     }
 
-    final static void a(ec param0, boolean param1, java.awt.Component param2, rj param3, int param4, int param5) {
+    final static void a(ec param0, boolean param1, java.awt.Component param2, rj param3) {
         RuntimeException var6 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -945,7 +938,10 @@ final class ac extends al {
         String stackOut_9_2 = null;
         try {
           L0: {
-            wn.a(param4, param3, 1024, param2, param0, param4, param1, -112);
+            int discarded$6 = -112;
+            int discarded$7 = 1;
+            int discarded$8 = 22050;
+            wn.a(22050, param3, 1024, param2, param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -978,7 +974,7 @@ final class ac extends al {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(1).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -1026,7 +1022,7 @@ final class ac extends al {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param4 + 44 + -97 + 41);
+          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 22050 + 44 + -97 + 41);
         }
     }
 
@@ -1052,7 +1048,7 @@ final class ac extends al {
     }
 
     private final void a(int param0, byte param1) {
-        int var3 = -9 / ((param1 - -11) / 63);
+        int var3 = 9;
         cc.field_k = new vn(640, 341);
         cc.field_k.a();
         bi.d();
@@ -1110,7 +1106,7 @@ final class ac extends al {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         if (vk.field_b != null) {
           return;
         } else {
@@ -1163,14 +1159,9 @@ final class ac extends al {
         }
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void b() {
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
-        if (!(!param0)) {
-            sh.field_a = -1;
-            ((ac) this).field_h = ((ac) this).field_p;
-            ((ac) this).field_b = ((ac) this).field_n;
-        }
         bn.field_i = -1;
         for (var3 = 0; var3 < 4; var3++) {
             aa.field_a[var3] = 128;

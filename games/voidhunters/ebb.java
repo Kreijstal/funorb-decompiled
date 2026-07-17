@@ -5,7 +5,7 @@ final class ebb {
     static dja field_a;
     static boolean field_b;
 
-    final static void a(byte param0) {
+    final static void a() {
         ola.field_p = null;
     }
 

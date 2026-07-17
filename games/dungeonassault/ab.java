@@ -106,71 +106,58 @@ final class ab {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_17_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_7_0 = 0;
         var8 = DungeonAssault.field_K;
         try {
           L0: {
-            L1: {
-              if (param0 == -776726687) {
-                break L1;
-              } else {
-                ab.b(-127);
-                break L1;
-              }
-            }
             var3_int = 0;
             var4 = jm.field_c;
-            L2: while (true) {
+            L1: while (true) {
               if (go.field_A.length <= var3_int) {
-                stackOut_16_0 = -1;
-                stackIn_17_0 = stackOut_16_0;
+                stackOut_14_0 = -1;
+                stackIn_15_0 = stackOut_14_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = to.field_c[var3_int];
                   if (var5 >= 0) {
-                    var6 = og.a(true, go.field_A[var3_int], param0 ^ 776707894);
+                    int discarded$26 = -30633;
+                    var6 = og.a(true, go.field_A[var3_int]);
                     var4 = var4 + ci.field_j;
                     var7 = vo.field_r + -(var6 >> 1);
                     if (ec.a(var4, mj.field_g + (h.field_q << 1), param1, (oh.field_t << 1) + var6, -oh.field_t + var7, param2, 100)) {
-                      stackOut_9_0 = var5;
-                      stackIn_10_0 = stackOut_9_0;
-                      return stackIn_10_0;
+                      stackOut_7_0 = var5;
+                      stackIn_8_0 = stackOut_7_0;
+                      return stackIn_8_0;
                     } else {
                       var4 = var4 + (mj.field_g + ci.field_j + (h.field_q << 1));
                       var3_int++;
-                      break L3;
+                      break L2;
                     }
                   } else {
                     var4 = var4 + ag.field_a;
                     var3_int++;
-                    break L3;
+                    break L2;
                   }
                 }
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var3, "ab.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) var3, "ab.C(" + -776726687 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_17_0;
+        return stackIn_15_0;
     }
 
-    public static void b(int param0) {
-        if (param0 != 1781937827) {
-            field_c = 85;
-            field_b = null;
-            field_d = null;
-            return;
-        }
+    public static void b() {
         field_b = null;
         field_d = null;
     }
@@ -179,7 +166,7 @@ final class ab {
         throw new IllegalStateException();
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         return kc.field_U;
     }
 

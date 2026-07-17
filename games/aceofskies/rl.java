@@ -24,7 +24,7 @@ final class rl {
         int var3 = 0;
         int var4 = 0;
         var4 = AceOfSkies.field_G ? 1 : 0;
-        var2 = 49 / ((-9 - param1) / 45);
+        var2 = 24;
         var3 = param0;
         if (var3 == 0) {
           return field_b;
@@ -80,74 +80,41 @@ final class rl {
     }
 
     final static int a(int param0, int param1) {
-        if (param0 == 4) {
-          if (param1 != 6406) {
-            if (6409 != param1) {
-              if (param1 == 32841) {
-                return 1;
-              } else {
-                if (param1 != 6410) {
-                  if (param1 != 6407) {
-                    if (param1 == 6408) {
-                      return 4;
-                    } else {
-                      throw new IllegalArgumentException("");
-                    }
+        if (param1 != 6406) {
+          if (6409 != param1) {
+            if (param1 == 32841) {
+              return 1;
+            } else {
+              if (param1 != 6410) {
+                if (param1 != 6407) {
+                  if (param1 == 6408) {
+                    return 4;
                   } else {
-                    return 3;
+                    throw new IllegalArgumentException("");
                   }
                 } else {
-                  return 2;
+                  return 3;
                 }
+              } else {
+                return 2;
               }
-            } else {
-              return 1;
             }
           } else {
             return 1;
           }
         } else {
-          field_k = null;
-          if (param1 != 6406) {
-            if (6409 != param1) {
-              if (param1 == 32841) {
-                return 1;
-              } else {
-                if (param1 != 6410) {
-                  if (param1 != 6407) {
-                    if (param1 == 6408) {
-                      return 4;
-                    } else {
-                      throw new IllegalArgumentException("");
-                    }
-                  } else {
-                    return 3;
-                  }
-                } else {
-                  return 2;
-                }
-              }
-            } else {
-              return 1;
-            }
-          } else {
-            return 1;
-          }
+          return 1;
         }
     }
 
     final static boolean a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param0 == -21) {
-          if (param1 >= param5) {
-            if (param1 < param5 + param3) {
-              if (param6 <= param2) {
-                if (param6 + param4 <= param2) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param1 >= param5) {
+          if (param1 < param5 + param3) {
+            if (param6 <= param2) {
+              if (param6 + param4 <= param2) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;
@@ -156,29 +123,13 @@ final class rl {
             return false;
           }
         } else {
-          rl discarded$6 = rl.a(122, (byte) -53);
-          if (param1 >= param5) {
-            if (param1 < param5 + param3) {
-              if (param6 <= param2) {
-                if (param6 + param4 <= param2) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
+          return false;
         }
     }
 
-    final static void a(byte param0) {
-        gg.b((byte) -98);
+    final static void a() {
+        int discarded$0 = -98;
+        gg.b();
         nm.field_a = true;
         nf.field_a = true;
         vn.field_f.e((byte) 89);

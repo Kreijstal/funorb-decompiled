@@ -54,7 +54,7 @@ abstract class hf extends sj {
         }
     }
 
-    final static void i(byte param0) {
+    final static void i() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -266,7 +266,7 @@ abstract class hf extends sj {
         }
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_pb = null;
         field_Ab = null;
         field_zb = null;
@@ -286,58 +286,34 @@ abstract class hf extends sj {
           if (((hf) this).field_kb == hi.field_b) {
             int fieldTemp$2 = ((hf) this).field_lb + 1;
             ((hf) this).field_lb = ((hf) this).field_lb + 1;
-            if (fieldTemp$2 != ((hf) this).field_jb) {
-              ((hf) this).field_rb.field_H = 256 + -((((hf) this).field_lb << 8) / ((hf) this).field_jb);
-              if (param0 != -90) {
-                return false;
-              } else {
-                return super.f((byte) -90);
-              }
-            } else {
+            if (fieldTemp$2 == ((hf) this).field_jb) {
               ((hf) this).field_kb = ec.field_i;
-              ((hf) this).b(12 - -((hf) this).field_xb.field_x, ((hf) this).field_vb, ((hf) this).field_tb + 12 - -((hf) this).field_xb.field_s, param0 ^ -22358);
+              ((hf) this).b(12 - -((hf) this).field_xb.field_x, ((hf) this).field_vb, ((hf) this).field_tb + 12 - -((hf) this).field_xb.field_s, 22284);
               ((hf) this).field_lb = 0;
               ((hf) this).field_rb.field_H = 0;
-              if (param0 != -90) {
-                return false;
-              } else {
-                return super.f((byte) -90);
-              }
+              return super.f((byte) -90);
+            } else {
+              ((hf) this).field_rb.field_H = 256 + -((((hf) this).field_lb << 8) / ((hf) this).field_jb);
+              return super.f((byte) -90);
             }
           } else {
             if (lp.field_o == ((hf) this).field_kb) {
               int fieldTemp$3 = ((hf) this).field_lb + 1;
               ((hf) this).field_lb = ((hf) this).field_lb + 1;
-              if (fieldTemp$3 == ((hf) this).field_qb) {
+              if (fieldTemp$3 != ((hf) this).field_qb) {
+                ((hf) this).field_rb.field_H = (((hf) this).field_lb << 8) / ((hf) this).field_qb;
+                return super.f((byte) -90);
+              } else {
                 ((hf) this).field_kb = null;
                 ((hf) this).field_rb.field_H = 256;
-                if (param0 != -90) {
-                  return false;
-                } else {
-                  return super.f((byte) -90);
-                }
-              } else {
-                ((hf) this).field_rb.field_H = (((hf) this).field_lb << 8) / ((hf) this).field_qb;
-                if (param0 != -90) {
-                  return false;
-                } else {
-                  return super.f((byte) -90);
-                }
-              }
-            } else {
-              if (param0 != -90) {
-                return false;
-              } else {
                 return super.f((byte) -90);
               }
+            } else {
+              return super.f((byte) -90);
             }
           }
         } else {
-          if (param0 != -90) {
-            return false;
-          } else {
-            return super.f((byte) -90);
-          }
+          return super.f((byte) -90);
         }
     }
 

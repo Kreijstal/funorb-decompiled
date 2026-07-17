@@ -8,17 +8,14 @@ final class cm {
 
     final static de a(int param0, int param1, int param2, int param3) {
         de var4 = new de();
-        if (param0 != 128) {
-            return null;
-        }
         var4.field_l = param2;
         var4.field_h = new int[1];
         ke.field_B.a((am) (Object) var4, 103);
-        km.a(var4, param0 + -19874, param1);
+        km.a(var4, -19746, 5);
         return var4;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -34,7 +31,8 @@ final class cm {
                   if (ca.field_a <= 0) {
                     break L2;
                   } else {
-                    if (wa.b(0)) {
+                    int discarded$2 = 0;
+                    if (wa.b()) {
                       break L2;
                     } else {
                       break L1;
@@ -55,7 +53,7 @@ final class cm {
     }
 
     final static void a(int param0, int param1, int param2) {
-        ne var3 = new ne(param0, param2, param1, 0, 0, 0);
+        ne var3 = new ne(param0, param2, 0, 0, 0, 0);
         if (!ta.p(3)) {
             if (gn.field_k[param0] <= param2) {
                 gn.field_k[param0] = 1 + param2;
@@ -66,7 +64,7 @@ final class cm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

@@ -89,10 +89,6 @@ final class dd extends wd {
     }
 
     private final int b(byte param0, float param1) {
-        if (param0 > -120) {
-            Object var4 = null;
-            ql discarded$0 = dd.a((byte) -17, (byte[]) null);
-        }
         return (int)((float)((dd) this).field_O + this.e(param1, 6) * (float)(-((dd) this).field_O + ((dd) this).field_N));
     }
 
@@ -244,7 +240,7 @@ final class dd extends wd {
               param3.a(0, vl.field_a);
               da.field_p.field_l = 0;
               if (param4) {
-                da.field_p.f(param0 ^ 111, 18);
+                da.field_p.f(111, 18);
                 break L1;
               } else {
                 da.field_p.f(111, 16);
@@ -256,7 +252,7 @@ final class dd extends wd {
               var5_int = da.field_p.field_l;
               da.field_p.a((byte) -58, oi.field_b);
               da.field_p.a((byte) -84, ih.field_i);
-              var6 = param0;
+              var6 = 0;
               if (hc.field_b) {
                 var6 = var6 | 1;
                 break L2;
@@ -317,7 +313,7 @@ final class dd extends wd {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("dd.U(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_21_1 = new StringBuilder().append("dd.U(").append(0).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -379,44 +375,40 @@ final class dd extends wd {
           L0: {
             var5_int = param3 + (param1 * tc.field_j + -1);
             var6 = 0;
-            if (param0 == 7090) {
-              var7 = param2.field_y;
-              L1: while (true) {
-                if (var7 <= 0) {
-                  break L0;
-                } else {
-                  var8 = param2.field_s;
-                  L2: while (true) {
-                    if (var8 <= 0) {
-                      var5_int = var5_int + (tc.field_j - param2.field_s);
-                      var7--;
-                      continue L1;
-                    } else {
-                      L3: {
-                        if (param2.field_z[var6] != 0) {
-                          if (param2.field_z[var6] == 16777215) {
-                            var5_int++;
-                            tc.field_b[var5_int] = param4;
-                            break L3;
-                          } else {
-                            var5_int++;
-                            tc.field_b[var5_int] = param2.field_z[var6];
-                            break L3;
-                          }
+            var7 = param2.field_y;
+            L1: while (true) {
+              if (var7 <= 0) {
+                break L0;
+              } else {
+                var8 = param2.field_s;
+                L2: while (true) {
+                  if (var8 <= 0) {
+                    var5_int = var5_int + (tc.field_j - param2.field_s);
+                    var7--;
+                    continue L1;
+                  } else {
+                    L3: {
+                      if (param2.field_z[var6] != 0) {
+                        if (param2.field_z[var6] == 16777215) {
+                          var5_int++;
+                          tc.field_b[var5_int] = param4;
+                          break L3;
                         } else {
                           var5_int++;
+                          tc.field_b[var5_int] = param2.field_z[var6];
                           break L3;
                         }
+                      } else {
+                        var5_int++;
+                        break L3;
                       }
-                      var6++;
-                      var8--;
-                      continue L2;
                     }
+                    var6++;
+                    var8--;
+                    continue L2;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -424,7 +416,7 @@ final class dd extends wd {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var5;
-            stackOut_15_1 = new StringBuilder().append("dd.M(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("dd.M(").append(7090).append(44).append(param1).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -536,7 +528,8 @@ final class dd extends wd {
     }
 
     final qm a(float param0, boolean param1) {
-        float var3 = (float)this.b(param0, true);
+        int discarded$0 = 1;
+        float var3 = (float)this.b(param0);
         float var4 = (float)((dd) this).field_R.field_h + param0 * (float)(((dd) this).field_P.field_h + -((dd) this).field_R.field_h) + ((dd) this).field_D * var3;
         if (param1) {
             field_H = null;
@@ -552,11 +545,11 @@ final class dd extends wd {
         return ((dd) this).g(-1);
     }
 
-    private final int b(float param0, boolean param1) {
+    private final int b(float param0) {
         return (int)((float)((dd) this).field_I + this.e(param0, 124) * (float)(-((dd) this).field_I + ((dd) this).field_C));
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_H = null;
         field_E = null;
     }
@@ -655,7 +648,7 @@ final class dd extends wd {
           L0: {
             var5_float = 0.0f;
             var6 = null;
-            var7 = param0;
+            var7 = 0;
             L1: while (true) {
               if (param2.field_e <= var7) {
                 stackOut_29_0 = var6;
@@ -767,7 +760,7 @@ final class dd extends wd {
           L9: {
             var5 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var5;
-            stackOut_31_1 = new StringBuilder().append("dd.JA(").append(param0).append(44);
+            stackOut_31_1 = new StringBuilder().append("dd.JA(").append(0).append(44);
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;

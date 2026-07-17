@@ -14,15 +14,12 @@ final class gh implements t {
     private int field_i;
     private int field_h;
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_c = null;
     }
 
-    final static boolean a(int param0) {
-        if (param0 != 3100) {
-            return false;
-        }
+    final static boolean a() {
         if (null == r.field_i) {
             return false;
         }

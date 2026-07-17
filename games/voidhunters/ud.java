@@ -8,7 +8,7 @@ final class ud extends gea {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_R = null;
     }
 

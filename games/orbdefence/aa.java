@@ -7,7 +7,7 @@ abstract class aa {
     static nh field_d;
     static String field_a;
 
-    final static byte[] a(se param0, byte[] param1, int param2, int param3) {
+    final static byte[] a(se param0, byte[] param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -50,7 +50,7 @@ abstract class aa {
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
-            var4_int = param0.h(param2, 8);
+            var4_int = param0.h(16, 8);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -154,7 +154,7 @@ abstract class aa {
               break L7;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + 20783 + 41);
+          throw dd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 16 + 44 + 20783 + 41);
         }
         return stackIn_16_0;
     }

@@ -80,7 +80,7 @@ final class ah {
         }
     }
 
-    final static void a(o param0, boolean param1) {
+    final static void a(o param0) {
         try {
             dc.field_j = param0;
         } catch (RuntimeException runtimeException) {
@@ -88,7 +88,7 @@ final class ah {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_i = null;
         field_a = null;
@@ -148,14 +148,16 @@ final class ah {
             if (param1 == 7) {
               return;
             } else {
-              ah.b(true);
+              int discarded$6 = 1;
+              ah.b();
               return;
             }
           } else {
             if (param1 == 7) {
               return;
             } else {
-              ah.b(true);
+              int discarded$7 = 1;
+              ah.b();
               return;
             }
           }
@@ -359,7 +361,8 @@ final class ah {
                   if (param1 == 7) {
                     break L26;
                   } else {
-                    ah.b(true);
+                    int discarded$8 = 1;
+                    ah.b();
                     break L26;
                   }
                 }
@@ -502,7 +505,8 @@ final class ah {
               if (param1 == 7) {
                 return;
               } else {
-                ah.b(true);
+                int discarded$9 = 1;
+                ah.b();
                 return;
               }
             } else {
@@ -524,7 +528,8 @@ final class ah {
               }
               td.field_e[var4 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
               if (param1 != 7) {
-                ah.b(true);
+                int discarded$10 = 1;
+                ah.b();
                 return;
               } else {
                 return;
@@ -602,7 +607,8 @@ final class ah {
             }
             td.field_e[var4 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
             if (param1 != 7) {
-              ah.b(true);
+              int discarded$11 = 1;
+              ah.b();
               return;
             } else {
               return;
@@ -639,7 +645,7 @@ final class ah {
           L0: {
             var7 = id.field_c;
             var8 = var7;
-            var8.e(param1, -2147483648);
+            var8.e(3, -2147483648);
             var8.field_m = var8.field_m + 1;
             var4 = var8.field_m;
             var8.c(-118, 1);
@@ -649,7 +655,7 @@ final class ah {
             var8.b(param2.field_k, false);
             var8.b(param2.field_j, false);
             var8.b(param2.field_t, false);
-            var8.b(param2.field_q, param0);
+            var8.b(param2.field_q, false);
             var8.c(-105, param2.field_r.length);
             var5 = 0;
             L1: while (true) {
@@ -669,7 +675,7 @@ final class ah {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("ah.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("ah.C(").append(0).append(44).append(3).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -727,17 +733,13 @@ final class ah {
         }
     }
 
-    final static void b(boolean param0) {
-        if (param0) {
-          if (lk.field_e > 0) {
-            if (!oa.field_n) {
-              if (bi.field_b != null) {
-                return;
-              } else {
-                bi.field_b = tk.a(bi.field_i, 15, new int[1], 65520, 3, lc.field_h, (byte) -115, ic.field_t, lk.field_e);
-                return;
-              }
+    final static void b() {
+        if (lk.field_e > 0) {
+          if (!oa.field_n) {
+            if (bi.field_b != null) {
+              return;
             } else {
+              bi.field_b = tk.a(bi.field_i, 15, new int[1], 65520, 3, lc.field_h, (byte) -115, ic.field_t, lk.field_e);
               return;
             }
           } else {

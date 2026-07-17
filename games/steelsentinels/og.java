@@ -6,24 +6,16 @@ final class og {
     static long field_b;
     static String field_c;
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 <= -79) {
-            break L0;
-          } else {
-            og.a((byte) -45);
-            break L0;
-          }
-        }
         if (ub.field_e != null) {
           var1 = (Object) (Object) ub.field_e;
           synchronized (var1) {
-            L1: {
+            L0: {
               ub.field_e = null;
-              break L1;
+              break L0;
             }
           }
           return;
@@ -32,11 +24,8 @@ final class og {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
-        if (param0 > -61) {
-            return;
-        }
         field_c = null;
     }
 
@@ -45,6 +34,9 @@ final class og {
             return;
         }
         cl.a(118, false, 4);
+        if (param0 != -5213) {
+            field_c = null;
+        }
     }
 
     final static int a(boolean param0) {

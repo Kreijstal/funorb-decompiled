@@ -17,82 +17,74 @@ final class cl extends kn implements wg, sh {
     static String field_M;
     private hc field_Q;
 
-    final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
+    final static void a(java.awt.Canvas param0) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
             try {
               L1: {
-                L2: {
-                  if (param3 == 310) {
-                    break L2;
-                  } else {
-                    field_M = null;
-                    break L2;
-                  }
-                }
                 var4 = param0.getGraphics();
-                bj.field_e.a(param1, param3 + -197, var4, param2);
+                bj.field_e.a(0, 113, var4, 0);
                 var4.dispose();
                 break L1;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L3: {
+              L2: {
                 var4_ref = (Exception) (Object) decompiledCaughtException;
                 param0.repaint();
-                break L3;
+                break L2;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L4: {
+          L3: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("cl.E(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_4_0 = (RuntimeException) var4_ref2;
+            stackOut_4_1 = new StringBuilder().append("cl.E(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L4;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L4;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 44 + 0 + 44 + 310 + 41);
         }
     }
 
@@ -206,7 +198,7 @@ final class cl extends kn implements wg, sh {
         }
     }
 
-    public static void o(int param0) {
+    public static void o() {
         field_M = null;
     }
 
@@ -731,7 +723,7 @@ final class cl extends kn implements wg, sh {
         return stackIn_11_0 != 0;
     }
 
-    final static void p(int param0) {
+    final static void p() {
         int var1 = 0;
         if (ee.field_J <= 32) {
             fc.a(0, (byte) 44);
@@ -742,14 +734,11 @@ final class cl extends kn implements wg, sh {
             }
             fc.a(-var1 + ee.field_J, (byte) 112);
         }
-        if (param0 < 1) {
-            Object var2 = null;
-            cl.a((java.awt.Canvas) null, 116, -52, -33);
-        }
     }
 
     final static void q(int param0) {
-        pj.a(u.b(-4440) < mk.b(45) ? true : false, (byte) -119);
+        int discarded$4 = -4440;
+        pj.a(u.b() < mk.b(45) ? true : false, (byte) -119);
         if (param0 > -59) {
             field_I = 80;
         }
@@ -766,7 +755,6 @@ final class cl extends kn implements wg, sh {
         int var8 = 0;
         int var9 = 0;
         Object stackIn_3_0 = null;
-        Object stackIn_14_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
@@ -775,7 +763,6 @@ final class cl extends kn implements wg, sh {
         StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_13_0 = null;
         Object stackOut_2_0 = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
@@ -816,48 +803,43 @@ final class cl extends kn implements wg, sh {
                     }
                   }
                 }
-                if (param0 == -95) {
-                  var4 = -var2_int + var3;
-                  if (1 <= var4) {
-                    if (var4 <= 12) {
-                      var5 = new StringBuilder(var4);
-                      var6 = var2_int;
-                      L4: while (true) {
-                        if (var3 <= var6) {
-                          if (var5.length() != 0) {
-                            return var5.toString();
-                          } else {
-                            return null;
-                          }
+                var4 = -var2_int + var3;
+                if (1 <= var4) {
+                  if (var4 <= 12) {
+                    var5 = new StringBuilder(var4);
+                    var6 = var2_int;
+                    L4: while (true) {
+                      if (var3 <= var6) {
+                        if (var5.length() != 0) {
+                          return var5.toString();
                         } else {
-                          L5: {
-                            var7 = param1.charAt(var6);
-                            if (wj.a((char) var7, 96)) {
-                              var8 = ha.a(242, (char) var7);
-                              if (0 == var8) {
-                                break L5;
-                              } else {
-                                StringBuilder discarded$1 = var5.append(var8);
-                                break L5;
-                              }
+                          return null;
+                        }
+                      } else {
+                        L5: {
+                          var7 = param1.charAt(var6);
+                          int discarded$2 = 96;
+                          if (wj.a((char) var7)) {
+                            var8 = ha.a(242, (char) var7);
+                            if (0 == var8) {
+                              break L5;
                             } else {
+                              StringBuilder discarded$3 = var5.append(var8);
                               break L5;
                             }
+                          } else {
+                            break L5;
                           }
-                          var6++;
-                          continue L4;
                         }
+                        var6++;
+                        continue L4;
                       }
-                    } else {
-                      return null;
                     }
                   } else {
                     return null;
                   }
                 } else {
-                  stackOut_13_0 = null;
-                  stackIn_14_0 = stackOut_13_0;
-                  return (String) (Object) stackIn_14_0;
+                  return null;
                 }
               }
             }
@@ -871,7 +853,7 @@ final class cl extends kn implements wg, sh {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var2;
-            stackOut_31_1 = new StringBuilder().append("cl.D(").append(param0).append(44);
+            stackOut_31_1 = new StringBuilder().append("cl.D(").append(-95).append(44);
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -932,7 +914,8 @@ final class cl extends kn implements wg, sh {
                       break L1;
                     } else {
                       if (!((cl) this).field_O) {
-                        nm.a(-6145);
+                        int discarded$49 = -6145;
+                        nm.a();
                         break L1;
                       } else {
                         hk.c(-121);

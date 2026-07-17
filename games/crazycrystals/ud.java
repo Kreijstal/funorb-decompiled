@@ -26,13 +26,10 @@ abstract class ud extends en {
                 param1.a(param1.field_f, 6, ((ud) this).field_R + 6, param1.field_g, (byte) -52);
                 ((ud) this).field_V = new th(param1);
             }
-            ((ud) this).b((qm) (Object) ((ud) this).field_V, param0 + 26550);
-            if (param0 != -26498) {
-                ((ud) this).k(103);
-            }
+            ((ud) this).b((qm) (Object) ((ud) this).field_V, 52);
             ((ud) this).field_X = null;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ud.OA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "ud.OA(" + -26498 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -177,7 +174,7 @@ abstract class ud extends en {
         String stackOut_14_2 = null;
         try {
           L0: {
-            if (super.a(param0, param1, param2, param3)) {
+            if (super.a(param0, 19279, param2, param3)) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -212,7 +209,7 @@ abstract class ud extends en {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var5;
-            stackOut_13_1 = new StringBuilder().append("ud.AA(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("ud.AA(").append(param0).append(44).append(19279).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -240,7 +237,7 @@ abstract class ud extends en {
         return stackIn_12_0 != 0;
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_bb = null;
         field_S = null;
     }
@@ -248,42 +245,38 @@ abstract class ud extends en {
     boolean g(byte param0) {
         int var3 = 0;
         var3 = CrazyCrystals.field_B;
-        if (param0 == 8) {
-          if (((ud) this).field_Q != null) {
-            if (((ud) this).field_Q == jh.field_f) {
-              int fieldTemp$2 = ((ud) this).field_Y + 1;
+        if (((ud) this).field_Q != null) {
+          if (((ud) this).field_Q == jh.field_f) {
+            int fieldTemp$2 = ((ud) this).field_Y + 1;
+            ((ud) this).field_Y = ((ud) this).field_Y + 1;
+            if (((ud) this).field_T != fieldTemp$2) {
+              ((ud) this).field_V.field_z = 256 - (((ud) this).field_Y << 8) / ((ud) this).field_T;
+              return super.g((byte) 8);
+            } else {
+              ((ud) this).field_Q = ok.field_b;
+              ((ud) this).a(((ud) this).field_ab, ((ud) this).field_X.field_f + (12 + ((ud) this).field_R), (byte) -93, ((ud) this).field_X.field_g + 12);
+              ((ud) this).field_Y = 0;
+              ((ud) this).field_V.field_z = 0;
+              return super.g((byte) 8);
+            }
+          } else {
+            if (mi.field_D == ((ud) this).field_Q) {
+              int fieldTemp$3 = ((ud) this).field_Y + 1;
               ((ud) this).field_Y = ((ud) this).field_Y + 1;
-              if (((ud) this).field_T != fieldTemp$2) {
-                ((ud) this).field_V.field_z = 256 - (((ud) this).field_Y << 8) / ((ud) this).field_T;
+              if (fieldTemp$3 != ((ud) this).field_W) {
+                ((ud) this).field_V.field_z = (((ud) this).field_Y << 8) / ((ud) this).field_W;
                 return super.g((byte) 8);
               } else {
-                ((ud) this).field_Q = ok.field_b;
-                ((ud) this).a(((ud) this).field_ab, ((ud) this).field_X.field_f + (12 + ((ud) this).field_R), (byte) -93, ((ud) this).field_X.field_g + 12);
-                ((ud) this).field_Y = 0;
-                ((ud) this).field_V.field_z = 0;
+                ((ud) this).field_V.field_z = 256;
+                ((ud) this).field_Q = null;
                 return super.g((byte) 8);
               }
             } else {
-              if (mi.field_D == ((ud) this).field_Q) {
-                int fieldTemp$3 = ((ud) this).field_Y + 1;
-                ((ud) this).field_Y = ((ud) this).field_Y + 1;
-                if (fieldTemp$3 != ((ud) this).field_W) {
-                  ((ud) this).field_V.field_z = (((ud) this).field_Y << 8) / ((ud) this).field_W;
-                  return super.g((byte) 8);
-                } else {
-                  ((ud) this).field_V.field_z = 256;
-                  ((ud) this).field_Q = null;
-                  return super.g((byte) 8);
-                }
-              } else {
-                return super.g((byte) 8);
-              }
+              return super.g((byte) 8);
             }
-          } else {
-            return super.g((byte) 8);
           }
         } else {
-          return true;
+          return super.g((byte) 8);
         }
     }
 
@@ -384,7 +377,7 @@ abstract class ud extends en {
                     var10.drawRect(0, 0, 303, 33);
                     var10.fillRect(2, 2, 3 * param2, 30);
                     var10.setColor(java.awt.Color.black);
-                    var10.drawRect(param1, 1, 301, 31);
+                    var10.drawRect(1, 1, 301, 31);
                     var10.fillRect(2 - -(param2 * 3), 2, -(param2 * 3) + 300, 30);
                     var10.setFont(fg.field_i);
                     var10.setColor(java.awt.Color.white);
@@ -457,7 +450,7 @@ abstract class ud extends en {
           }
           L9: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(1).append(44).append(param2).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -484,7 +477,7 @@ abstract class ud extends en {
         }
     }
 
-    final static int a(CharSequence param0, int param1, byte param2, boolean param3) {
+    final static int a(CharSequence param0, int param1, byte param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -495,24 +488,24 @@ abstract class ud extends en {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int stackIn_43_0 = 0;
+        int stackIn_42_0 = 0;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        String stackIn_47_2 = null;
+        String stackIn_46_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_42_0 = 0;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
+        int stackOut_41_0 = 0;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
         RuntimeException stackOut_45_0 = null;
         StringBuilder stackOut_45_1 = null;
         String stackOut_45_2 = null;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        String stackOut_44_2 = null;
         var12 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -532,8 +525,8 @@ abstract class ud extends en {
                       if (var5 == 0) {
                         throw new NumberFormatException();
                       } else {
-                        stackOut_42_0 = var6;
-                        stackIn_43_0 = stackOut_42_0;
+                        stackOut_41_0 = var6;
+                        stackIn_42_0 = stackOut_41_0;
                         break L0;
                       }
                     } else {
@@ -551,13 +544,9 @@ abstract class ud extends en {
                             if (var10 != 43) {
                               break L3;
                             } else {
-                              if (!param3) {
-                                break L3;
-                              } else {
-                                var9++;
-                                var9++;
-                                continue L2;
-                              }
+                              var9++;
+                              var9++;
+                              continue L2;
                             }
                           }
                         }
@@ -635,33 +624,33 @@ abstract class ud extends en {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) var4;
-            stackOut_44_1 = new StringBuilder().append("ud.RB(");
-            stackIn_46_0 = stackOut_44_0;
-            stackIn_46_1 = stackOut_44_1;
-            stackIn_45_0 = stackOut_44_0;
-            stackIn_45_1 = stackOut_44_1;
+            stackOut_43_0 = (RuntimeException) var4;
+            stackOut_43_1 = new StringBuilder().append("ud.RB(");
+            stackIn_45_0 = stackOut_43_0;
+            stackIn_45_1 = stackOut_43_1;
+            stackIn_44_0 = stackOut_43_0;
+            stackIn_44_1 = stackOut_43_1;
             if (param0 == null) {
-              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
-              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
-              break L9;
-            } else {
               stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
               stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
-              stackOut_45_2 = "{...}";
-              stackIn_47_0 = stackOut_45_0;
-              stackIn_47_1 = stackOut_45_1;
-              stackIn_47_2 = stackOut_45_2;
+              stackOut_45_2 = "null";
+              stackIn_46_0 = stackOut_45_0;
+              stackIn_46_1 = stackOut_45_1;
+              stackIn_46_2 = stackOut_45_2;
+              break L9;
+            } else {
+              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
+              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_2 = "{...}";
+              stackIn_46_0 = stackOut_44_0;
+              stackIn_46_1 = stackOut_44_1;
+              stackIn_46_2 = stackOut_44_2;
               break L9;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_47_0, stackIn_47_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param1 + 44 + param2 + 44 + 1 + 41);
         }
-        return stackIn_43_0;
+        return stackIn_42_0;
     }
 
     static {

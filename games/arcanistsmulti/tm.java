@@ -10,7 +10,7 @@ final class tm {
     static String field_f;
     static String field_e;
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_a = null;
         field_e = null;
@@ -18,7 +18,7 @@ final class tm {
         field_c = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -73,36 +73,7 @@ final class tm {
     }
 
     final static boolean a(boolean param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0) {
-            break L0;
-          } else {
-            int discarded$2 = tm.a(126, (byte) -31);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (null == ch.field_c) {
-              break L2;
-            } else {
-              if (!ob.field_eb.a((byte) 74)) {
-                break L2;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-          }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        return null != ch.field_c && ob.field_eb.a((byte) 74);
     }
 
     static {

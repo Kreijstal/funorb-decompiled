@@ -424,7 +424,7 @@ final class pj extends ql {
         }
     }
 
-    final static int a(s param0, s param1, int param2) {
+    final static int a(s param0, s param1) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;

@@ -9,42 +9,42 @@ final class kk {
     static int[] field_a;
     static String[] field_d;
 
-    final static java.net.URL a(java.net.URL param0, java.applet.Applet param1, int param2) {
+    final static java.net.URL a(java.net.URL param0, java.applet.Applet param1) {
         Object var3 = null;
         Object var4 = null;
-        java.net.URL stackIn_10_0 = null;
+        java.net.URL stackIn_8_0 = null;
+        Object stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        Object stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
         Object stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         Object stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
         Object stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        Object stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        Object stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        java.net.URL stackOut_9_0 = null;
+        java.net.URL stackOut_7_0 = null;
+        Object stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
         Object stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        Object stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        Object stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        Object stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         Object stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
-        Object stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        Object stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        Object stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        Object stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -75,77 +75,69 @@ final class kk {
                 }
               }
             }
-            L3: {
-              if (param2 == 4767999) {
-                break L3;
-              } else {
-                field_c = null;
-                break L3;
-              }
-            }
-            stackOut_9_0 = th.a((String) var3, -1, param0, -1, (String) var4);
-            stackIn_10_0 = stackOut_9_0;
+            stackOut_7_0 = th.a((String) var3, -1, param0, -1, (String) var4);
+            stackIn_8_0 = stackOut_7_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = (Object) (Object) decompiledCaughtException;
-            stackOut_11_0 = var3;
-            stackOut_11_1 = new StringBuilder().append("kk.A(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_9_0 = var3;
+            stackOut_9_1 = new StringBuilder().append("kk.A(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
+              stackOut_11_0 = stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_12_0 = stackIn_12_0;
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
+            } else {
               stackOut_13_0 = stackIn_13_0;
               stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L4;
-            } else {
-              stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
               break L4;
             }
           }
-          L5: {
-            stackOut_14_0 = stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
-            if (param1 == null) {
-              stackOut_16_0 = stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L5;
-            } else {
-              stackOut_15_0 = stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L5;
-            }
-          }
-          throw ie.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 4767999 + 41);
         }
-        return stackIn_10_0;
+        return stackIn_8_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -223,14 +215,15 @@ final class kk {
           L0: {
             ob.field_f = cl.a("commonui", param1, -125, "frame_top");
             kc.field_i = cl.a("commonui", param1, -115, "frame_bottom");
-            ck.field_l = qk.a("commonui", param1, "jagex_logo_grey", true);
+            int discarded$3 = 1;
+            ck.field_l = qk.a("commonui", param1, "jagex_logo_grey");
             rk.field_d = cl.a("commonui", param1, -120, "button");
             ja.field_n = ea.a("validation", "commonui", 0, param1);
             u.field_d = (rf) (Object) qg.a(param2, "arezzo12", "commonui", param1, 126);
             uh.field_i = (rf) (Object) qg.a(param2, "arezzo14", "commonui", param1, -100);
             wi.field_e = (rf) (Object) qg.a(param2, "arezzo14bold", "commonui", param1, 106);
             var18 = new nh(param3.a("button.gif", "", 24874), (java.awt.Component) (Object) n.field_g);
-            he discarded$1 = eh.a("commonui", (byte) -45, param1, "dropdown");
+            he discarded$4 = eh.a("commonui", (byte) -45, param1, "dropdown");
             var5 = ij.a("screen_options", (byte) 113, param1, "commonui");
             al.field_d = new he[4];
             qb.field_b = new he[4];
@@ -255,7 +248,7 @@ final class kk {
                     var9 = var18.field_w;
                     aj.a(true);
                     var18.c();
-                    var11 = 101 % ((22 - param0) / 61);
+                    var11 = 0;
                     wj.e(0, 0, wj.field_k, wj.field_c);
                     var16 = new nh(var9, var9);
                     var19 = var16;
@@ -279,7 +272,8 @@ final class kk {
                         var9++;
                         continue L2;
                       } else {
-                        var15[var11] = a.a(var5[var9], var22[var11], (byte) -122);
+                        int discarded$5 = -122;
+                        var15[var11] = a.a(var5[var9], var22[var11]);
                         var11++;
                         continue L3;
                       }
@@ -298,7 +292,7 @@ final class kk {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("kk.B(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("kk.B(").append(88).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

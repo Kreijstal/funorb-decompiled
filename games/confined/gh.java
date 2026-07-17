@@ -16,7 +16,7 @@ final class gh implements Iterable {
     static String field_d;
     static java.awt.Font field_f;
 
-    final static int a(boolean param0) {
+    final static int a() {
         return nh.field_b;
     }
 

@@ -73,7 +73,7 @@ final class esa {
         String stackOut_22_2 = null;
         try {
           L0: {
-            var4_int = -26 / ((param2 - 18) / 61);
+            var4_int = 13;
             if (!param1.b(-56)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
@@ -167,7 +167,7 @@ final class esa {
           }
           L5: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(-128).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -237,7 +237,7 @@ final class esa {
         return ((esa) this).field_d;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

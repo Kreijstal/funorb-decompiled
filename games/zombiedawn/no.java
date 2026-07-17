@@ -123,7 +123,11 @@ final class no extends fb {
 
     public static void b(boolean param0) {
         field_G = null;
-        no.b(false);
+        if (!param0) {
+            no.b(false);
+            field_E = null;
+            return;
+        }
         field_E = null;
     }
 

@@ -9,7 +9,7 @@ final class of {
     static StringBuilder field_e;
     static pd field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_e = null;
@@ -17,7 +17,7 @@ final class of {
         field_f = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         de.field_c[21] = ak.field_c;
         de.field_c[19] = dk.field_a;
         de.field_c[12] = pf.field_f;

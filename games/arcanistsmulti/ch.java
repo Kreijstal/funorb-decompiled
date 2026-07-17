@@ -19,7 +19,7 @@ final class ch {
         ((ch) this).field_g = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_h = null;

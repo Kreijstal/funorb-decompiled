@@ -14,7 +14,7 @@ final class kd extends se {
     private oo field_o;
     private boolean field_q;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_l = null;
         field_m = null;
         field_j = null;
@@ -23,21 +23,22 @@ final class kd extends se {
         field_n = null;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = CrazyCrystals.field_B;
         try {
           L0: {
-            if (md.l(-81)) {
-              boolean discarded$15 = kf.field_h.a(eb.field_l, false, true, vl.field_a);
+            int discarded$21 = -81;
+            if (md.l()) {
+              boolean discarded$22 = kf.field_h.a(eb.field_l, false, true, vl.field_a);
               kf.field_h.b(false);
               L1: while (true) {
                 if (!ge.b(-65)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = kf.field_h.a(pj.field_q, false, c.field_p);
+                  boolean discarded$23 = kf.field_h.a(pj.field_q, false, c.field_p);
                   continue L1;
                 }
               }
@@ -49,7 +50,8 @@ final class kd extends se {
                   if (!ph.field_E.field_d) {
                     break L2;
                   } else {
-                    no.e((byte) -23);
+                    int discarded$24 = -23;
+                    no.e();
                     kf.field_h.b(-3264, (qm) (Object) new gn(kf.field_h, ab.field_A));
                     break L2;
                   }
@@ -113,7 +115,8 @@ final class kd extends se {
                 if (param0.equals((Object) (Object) ((kd) this).field_p)) {
                   break L1;
                 } else {
-                  var3 = ke.a(param0, 28515);
+                  int discarded$2 = 28515;
+                  var3 = ke.a(param0);
                   if (var3.b(param1 ^ 82)) {
                     ((kd) this).field_p = param0;
                     ((kd) this).field_q = var3.a((byte) 47);

@@ -16,7 +16,7 @@ final class vn {
     static String field_e;
     private wk[] field_b;
 
-    private final void b(byte param0) {
+    private final void b() {
         ((vn) this).field_d = new ia(((vn) this).field_b, ((vn) this).field_m, ((vn) this).field_i, "Attacker", 0, 0);
         ((vn) this).field_h = new ia(((vn) this).field_b, ((vn) this).field_m, ((vn) this).field_i, "Defender", 0, 0);
         ((vn) this).field_a = new ia(((vn) this).field_b, ((vn) this).field_m, ((vn) this).field_i, "Run Attack", 0, 0);
@@ -130,7 +130,7 @@ final class vn {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, boolean param3, int param4, boolean param5) {
+    private final void a(boolean param0, int param1, int param2, boolean param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -499,15 +499,13 @@ final class vn {
         }
     }
 
-    final static void a(wk param0, int param1) {
-        if (param1 != 3) {
-            return;
-        }
+    final static void a(wk param0) {
         try {
-            rq.a((byte) -56);
+            int discarded$0 = -56;
+            rq.a();
             qn.a(param0.field_B, param0.field_A, param0.field_x);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "vn.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "vn.F(" + (param0 != null ? "{...}" : "null") + 44 + 3 + 41);
         }
     }
 
@@ -527,7 +525,7 @@ final class vn {
         var4 = 0;
         L0: while (true) {
           if (var4 >= ((vn) this).field_l.length) {
-            var5 = 67 / ((-58 - param0) / 63);
+            var5 = 67;
             var7 = 0;
             var4 = var7;
             L1: while (true) {
@@ -578,7 +576,8 @@ final class vn {
             ((vn) this).field_m = param2;
             ((vn) this).field_i = param3;
             ((vn) this).field_f = param1;
-            this.b((byte) -49);
+            int discarded$0 = -49;
+            this.b();
             this.c((byte) -103);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "vn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
@@ -628,9 +627,6 @@ final class vn {
         if (!(param1 != 7)) {
             return ((vn) this).field_l[4].e(true);
         }
-        if (param0 != -101) {
-            this.a(true, 53, -58, false, -8, false);
-        }
         if (param1 == 8) {
             return ((vn) this).field_l[5].e(true);
         }
@@ -676,10 +672,11 @@ final class vn {
             }
             return;
         }
-        this.a(param3, param0, param4, param5, param2, false);
+        int discarded$0 = 0;
+        this.a(param3, param0, param4, param5, param2);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_e = null;
         field_g = null;

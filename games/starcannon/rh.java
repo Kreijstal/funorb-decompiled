@@ -12,7 +12,7 @@ final class rh extends rf {
     static hl[] field_f;
     static int field_i;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_j = null;
         field_f = null;
         field_g = null;
@@ -23,7 +23,7 @@ final class rh extends rf {
         throw new Error();
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 0;
         int stackIn_6_0 = 0;
         int stackOut_4_0 = 0;
@@ -58,7 +58,7 @@ final class rh extends rf {
         return stackIn_6_0 != 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void a(int param0, int param1, int param2, int param3) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -123,7 +123,7 @@ final class rh extends rf {
                         } else {
                           L8: {
                             var8 = ki.field_a[var6_int];
-                            if ((var8 & 65280) >> 8 <= param4) {
+                            if ((var8 & 65280) >> 8 <= 64) {
                               break L8;
                             } else {
                               break L8;
@@ -146,21 +146,18 @@ final class rh extends rf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var6, "rh.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 1 + 41);
+          throw sd.a((Throwable) (Object) var6, "rh.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 64 + 44 + 1 + 41);
         }
     }
 
     final static hb a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         hb var8 = new hb(param7, param0, param2, param4, param3, param1);
         hi.field_f.b(101, (rf) (Object) var8);
-        if (param5 != -1893600464) {
-            rh.a(false);
-        }
-        hb.a(-16, param6, var8);
+        hb.a(-16, 4, var8);
         return var8;
     }
 
-    final static void a(ia param0, byte param1) {
+    final static void a(ia param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;

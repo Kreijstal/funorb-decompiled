@@ -13,7 +13,7 @@ final class ke extends ai {
     static String field_n;
     int field_g;
 
-    final static void a(java.awt.Canvas param0, boolean param1, boolean param2) {
+    final static void a(java.awt.Canvas param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -36,39 +36,40 @@ final class ke extends ai {
         var4 = Bounce.field_N;
         try {
           L0: {
-            if (param2) {
-              if (10 > sa.field_k) {
-                L1: {
-                  var3_int = 0;
-                  if (!ae.field_b) {
-                    break L1;
-                  } else {
-                    ae.field_b = false;
-                    var3_int = 1;
-                    break L1;
-                  }
+            if (10 > sa.field_k) {
+              L1: {
+                var3_int = 0;
+                if (!ae.field_b) {
+                  break L1;
+                } else {
+                  ae.field_b = false;
+                  var3_int = 1;
+                  break L1;
                 }
-                ai.a(var3_int != 0, da.field_d, -24, mj.b((byte) -26), jk.a((byte) -105));
-                break L0;
+              }
+              int discarded$10 = -26;
+              ai.a(var3_int != 0, da.field_d, -24, mj.b(), jk.a((byte) -105));
+              break L0;
+            } else {
+              if (!tk.c(250)) {
+                na.a();
+                int discarded$11 = 320;
+                int discarded$12 = -66;
+                int discarded$13 = 240;
+                pc.a();
+                qi.a(param0, 0, 0, -25971);
+                return;
               } else {
-                if (!tk.c(250)) {
-                  na.a();
-                  pc.a(240, (byte) -66, 320);
+                if (mh.field_U == 0) {
+                  of.a(false, param1, (byte) -48);
                   qi.a(param0, 0, 0, -25971);
                   return;
                 } else {
-                  if (mh.field_U == 0) {
-                    of.a(false, param1, (byte) -48);
-                    qi.a(param0, 0, 0, -25971);
-                    return;
-                  } else {
-                    i.a(param0, 0);
-                    return;
-                  }
+                  int discarded$14 = 0;
+                  i.a(param0);
+                  return;
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +100,7 @@ final class ke extends ai {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + 1 + 41);
         }
     }
 
@@ -113,7 +114,7 @@ final class ke extends ai {
         return param0 - -1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_l = null;
         field_n = null;

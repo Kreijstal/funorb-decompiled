@@ -117,7 +117,7 @@ abstract class na {
 
     abstract void a(boolean param0);
 
-    public static void b(int param0) {
+    public static void b() {
         field_l = null;
     }
 

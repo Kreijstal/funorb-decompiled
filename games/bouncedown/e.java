@@ -62,7 +62,7 @@ class e {
         wf var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_s) {
             break L0;
           } else {
@@ -72,7 +72,7 @@ class e {
         }
         L1: {
           cb.a(param0, 0, var3);
-          ((e) this).field_b = ((e) this).field_b - 256;
+          ((e) this).field_b = ((e) this).field_b - param1;
           if (((e) this).field_t == null) {
             break L1;
           } else {
@@ -239,7 +239,7 @@ class e {
           if (((e) this).field_t == null) {
             break L17;
           } else {
-            ((e) this).field_t.a(param0, 0, 256);
+            ((e) this).field_t.a(param0, 0, param1);
             break L17;
           }
         }
@@ -276,7 +276,8 @@ class e {
                       field_k = null;
                       break L0;
                     } else {
-                      wh.a(50L, 19406);
+                      int discarded$1 = 19406;
+                      wh.a(50L);
                       continue L2;
                     }
                   }
@@ -308,35 +309,9 @@ class e {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_r = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_s = stackIn_7_0 != 0;
-              field_l = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_r = 22050;
+        field_s = true;
+        field_l = 10;
     }
 
     private final static void b(wf param0) {
@@ -649,12 +624,12 @@ class e {
     }
 
     private final void a(int param0) {
-        ((e) this).field_b = ((e) this).field_b - 256;
+        ((e) this).field_b = ((e) this).field_b - param0;
         if (((e) this).field_b < 0) {
             ((e) this).field_b = 0;
         }
         if (((e) this).field_t != null) {
-            ((e) this).field_t.a(256);
+            ((e) this).field_t.a(param0);
             return;
         }
     }

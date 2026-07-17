@@ -13,44 +13,36 @@ final class mp extends td {
     }
 
     final static boolean a(boolean param0, char param1) {
-        int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          if (param0) {
-            break L0;
-          } else {
-            mp.b(-30);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (param1 == 160) {
-              break L2;
+              break L1;
             } else {
               if (param1 == 32) {
-                break L2;
+                break L1;
               } else {
                 if (param1 == 95) {
-                  break L2;
+                  break L1;
                 } else {
                   if (45 != param1) {
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    break L1;
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    break L0;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 1;
-          stackIn_9_0 = stackOut_7_0;
-          break L1;
+          stackOut_5_0 = 1;
+          stackIn_7_0 = stackOut_5_0;
+          break L0;
         }
-        return stackIn_9_0 != 0;
+        return stackIn_7_0 != 0;
     }
 
     final ii a(op param0, int param1) {
@@ -155,7 +147,7 @@ final class mp extends td {
         return param0 | param1;
     }
 
-    final static long a(CharSequence param0, boolean param1) {
+    final static long a(CharSequence param0) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -289,10 +281,7 @@ final class mp extends td {
         return stackIn_23_0;
     }
 
-    public static void b(int param0) {
-        if (param0 != 95) {
-            field_q = null;
-        }
+    public static void b() {
         field_p = null;
         field_s = null;
         field_q = null;

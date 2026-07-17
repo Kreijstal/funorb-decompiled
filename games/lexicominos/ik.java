@@ -611,71 +611,67 @@ class ik implements rd, ub {
         var5 = var15.toString();
         var2 = var5;
         var11 = var5;
-        if (param0 > -21) {
-          return null;
-        } else {
-          var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
-          var7 = var6.readLine();
-          var2 = var7;
-          var11 = var7;
-          L1: while (true) {
-            var8 = var6.readLine();
-            var2 = var8;
-            var11 = var8;
-            var2 = var11;
-            if (var8 != null) {
-              L2: {
-                var9 = var8.indexOf('(');
-                var10 = var8.indexOf(')', 1 + var9);
-                if (var9 == -1) {
-                  var11 = var8;
-                  var2 = var11;
-                  var2 = var11;
-                  break L2;
-                } else {
-                  var11 = var8.substring(0, var9);
-                  break L2;
-                }
+        var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
+        var7 = var6.readLine();
+        var2 = var7;
+        var11 = var7;
+        L1: while (true) {
+          var8 = var6.readLine();
+          var2 = var8;
+          var11 = var8;
+          var2 = var11;
+          if (var8 != null) {
+            L2: {
+              var9 = var8.indexOf('(');
+              var10 = var8.indexOf(')', 1 + var9);
+              if (var9 == -1) {
+                var11 = var8;
+                var2 = var11;
+                var2 = var11;
+                break L2;
+              } else {
+                var11 = var8.substring(0, var9);
+                break L2;
               }
-              L3: {
-                var16 = var11.trim();
-                var2 = var16;
-                var2 = var16;
-                var17 = var16.substring(var16.lastIndexOf(' ') - -1);
-                var2 = var17;
-                var2 = var17;
-                var18 = var17.substring(1 + var17.lastIndexOf('\t'));
-                var2 = var18;
-                var2 = var18;
-                var19 = var2 + var18;
-                var2 = var19;
-                var2 = var19;
-                if (var9 == -1) {
-                  break L3;
-                } else {
-                  if (var10 != -1) {
-                    var12 = var8.indexOf(".java:", var9);
-                    if (var12 < 0) {
-                      break L3;
-                    } else {
-                      var2 = var19 + var8.substring(5 + var12, var10);
-                      break L3;
-                    }
-                  } else {
-                    var2 = var2 + 32;
-                    continue L1;
-                  }
-                }
-              }
-              var2 = var2 + 32;
-              continue L1;
-            } else {
-              var2 = var11;
-              var11 = var2;
-              var2 = var11;
-              var2 = var2 + "| " + var7;
-              return var2;
             }
+            L3: {
+              var16 = var11.trim();
+              var2 = var16;
+              var2 = var16;
+              var17 = var16.substring(var16.lastIndexOf(' ') - -1);
+              var2 = var17;
+              var2 = var17;
+              var18 = var17.substring(1 + var17.lastIndexOf('\t'));
+              var2 = var18;
+              var2 = var18;
+              var19 = var2 + var18;
+              var2 = var19;
+              var2 = var19;
+              if (var9 == -1) {
+                break L3;
+              } else {
+                if (var10 != -1) {
+                  var12 = var8.indexOf(".java:", var9);
+                  if (var12 < 0) {
+                    break L3;
+                  } else {
+                    var2 = var19 + var8.substring(5 + var12, var10);
+                    break L3;
+                  }
+                } else {
+                  var2 = var2 + 32;
+                  continue L1;
+                }
+              }
+            }
+            var2 = var2 + 32;
+            continue L1;
+          } else {
+            var2 = var11;
+            var11 = var2;
+            var2 = var11;
+            var2 = var2 + "| " + var7;
+            return var2;
           }
         }
     }
@@ -989,7 +985,8 @@ class ik implements rd, ub {
             }
             L2: {
               if (!((ik) this).field_i) {
-                this.b(param0, -54);
+                int discarded$2 = -54;
+                this.b(param0);
                 break L2;
               } else {
                 ((kk) (Object) param0.field_w).a(((ik) this).field_f, ((ik) this).field_p, ((ik) this).field_n, ((ik) this).field_m, ((ik) this).a(param0, 227), this.a((byte) -49, param0), -125, ((ik) this).c(349, param0));
@@ -1075,69 +1072,61 @@ class ik implements rd, ub {
 
     private final int a(int param0, w param1, int param2, int param3) {
         RuntimeException var5 = null;
-        int stackIn_3_0 = 0;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
+        int stackOut_0_0 = 0;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 40) {
-                break L1;
-              } else {
-                field_g = null;
-                break L1;
-              }
-            }
-            stackOut_2_0 = param3 + param1.field_p + (param2 + param1.field_t + ((ik) this).field_a);
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = param3 + param1.field_p + (param2 + param1.field_t + ((ik) this).field_a);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("ik.E(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var5;
+            stackOut_2_1 = new StringBuilder().append("ik.E(").append(40).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 44 + param3 + 41);
+          throw ld.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + param3 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     public final int a(w param0, int param1) {
@@ -1287,7 +1276,7 @@ class ik implements rd, ub {
         return stackIn_3_0;
     }
 
-    private final void b(w param0, int param1) {
+    private final void b(w param0) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

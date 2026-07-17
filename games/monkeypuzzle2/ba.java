@@ -12,7 +12,7 @@ abstract class ba {
     int field_g;
     static String field_h;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
@@ -30,7 +30,7 @@ abstract class ba {
             } else {
               oa.field_H = oi.field_e[o.field_b];
               rd.field_p = ia.field_d[o.field_b];
-              o.field_b = o.field_b - param0 & 127;
+              o.field_b = o.field_b - -1 & 127;
               stackOut_5_0 = 1;
               stackIn_6_0 = stackOut_5_0;
               break L0;

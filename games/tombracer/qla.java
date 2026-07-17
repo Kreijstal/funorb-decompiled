@@ -339,7 +339,7 @@ final class qla {
         return stackIn_40_0;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -433,7 +433,7 @@ final class qla {
                     }
                   }
                   stackOut_22_0 = 20;
-                  stackOut_22_1 = (77 - param1) / 37;
+                  stackOut_22_1 = 5;
                   stackIn_23_0 = stackOut_22_0;
                   stackIn_23_1 = stackOut_22_1;
                   break L2;
@@ -480,7 +480,7 @@ final class qla {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + -127 + 41);
         }
     }
 
@@ -697,7 +697,8 @@ final class qla {
                                                   } else {
                                                     try {
                                                       L16: {
-                                                        var11_int = jb.a((CharSequence) (Object) var10.substring(4), (byte) 70);
+                                                        int discarded$1 = 70;
+                                                        var11_int = jb.a((CharSequence) (Object) var10.substring(4));
                                                         var6 = var6 + param1[var11_int].d();
                                                         var5 = -1;
                                                         decompiledRegionSelector0 = 0;
@@ -1167,7 +1168,8 @@ final class qla {
                                                             if (null != param3) {
                                                               try {
                                                                 L23: {
-                                                                  var20_int = jb.a((CharSequence) (Object) var19.substring(4), (byte) 70);
+                                                                  int discarded$1 = 70;
+                                                                  var20_int = jb.a((CharSequence) (Object) var19.substring(4));
                                                                   var17 = var17 + param3[var20_int].d();
                                                                   var12 = -1;
                                                                   decompiledRegionSelector0 = 0;
@@ -1841,7 +1843,8 @@ final class qla {
                                           }
                                           try {
                                             L16: {
-                                              var13_int = jb.a((CharSequence) (Object) var12_ref_String.substring(4), (byte) 70);
+                                              int discarded$2 = 70;
+                                              var13_int = jb.a((CharSequence) (Object) var12_ref_String.substring(4));
                                               var6 = -1;
                                               var7 = var7 + param1[var13_int].d();
                                               if (param3 >= var7) {
@@ -1943,7 +1946,7 @@ final class qla {
                   if (stackIn_80_0 == 0) {
                     break L20;
                   } else {
-                    int discarded$1 = ((qla) this).a((String) null, (byte) -79);
+                    int discarded$3 = ((qla) this).a((String) null, (byte) -79);
                     break L20;
                   }
                 }
@@ -2061,8 +2064,8 @@ final class qla {
                             var2 = param1.getParameter("cookieprefix");
                             var3 = var2 + "settings";
                             var4 = (String) lb.b(param1, 2864, "getcookies");
-                            var5 = rga.a(param0 + 32287, var4, ';');
-                            var6 = param0;
+                            var5 = rga.a(32287, var4, ';');
+                            var6 = 0;
                             statePc = 2;
                             continue stateLoop;
                         } catch (Throwable stateCaught_1) {
@@ -2256,7 +2259,7 @@ final class qla {
                     case 22: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_22_0 = (RuntimeException) var2_ref;
-                        stackOut_22_1 = new StringBuilder().append("qla.L(").append(param0).append(44);
+                        stackOut_22_1 = new StringBuilder().append("qla.L(").append(0).append(44);
                         stackIn_25_0 = stackOut_22_0;
                         stackIn_25_1 = stackOut_22_1;
                         stackIn_23_0 = stackOut_22_0;
@@ -2303,7 +2306,6 @@ final class qla {
 
     final static String a(boolean param0, String param1) {
         RuntimeException var2 = null;
-        Object stackIn_2_0 = null;
         String stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -2314,7 +2316,6 @@ final class qla {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_8_0 = null;
@@ -2325,22 +2326,16 @@ final class qla {
         String stackOut_6_2 = null;
         try {
           L0: {
-            if (param0) {
-              stackOut_3_0 = "Loaded.";
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
-            }
+            stackOut_3_0 = "Loaded.";
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("qla.B(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("qla.B(").append(1).append(44);
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -2850,16 +2845,20 @@ final class qla {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_f = null;
             field_b = null;
             field_i = null;
-            if (param0 != -63) {
-                String discarded$0 = qla.a(true, (String) null);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "qla.F(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var1, "qla.F(" + -63 + 41);
         }
     }
 

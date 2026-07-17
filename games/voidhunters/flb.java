@@ -92,14 +92,11 @@ final class flb extends rqa {
             bpa.field_c.field_R = param1;
             bpa.field_c.field_s = param3;
             fgb.field_l.field_L = fgb.field_l.field_L + fgb.field_l.field_hb;
-            fgb.field_l.field_hb = param2;
-            if (param0 != 19204) {
-                flb.a(98);
-            }
+            fgb.field_l.field_hb = 0;
             bpa.field_c.field_hb = bpa.field_c.field_hb - fgb.field_l.field_hb;
             fgb.field_l.field_L = fgb.field_l.field_L - fgb.field_l.field_hb;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "flb.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "flb.B(" + 19204 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 

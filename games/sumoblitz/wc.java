@@ -28,7 +28,7 @@ final class wc {
         }
     }
 
-    final static boolean a(ki param0, int param1) {
+    final static boolean a(ki param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;

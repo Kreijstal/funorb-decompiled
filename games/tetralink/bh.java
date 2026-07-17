@@ -96,26 +96,26 @@ class bh extends mc {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_16_0 = 0;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
+        String stackIn_42_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_14_0 = 0;
         int stackOut_13_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_9_0 = 0;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
         RuntimeException stackOut_41_0 = null;
         StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
+        String stackOut_41_2 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
         var3 = TetraLink.field_J;
         try {
           L0: {
@@ -212,42 +212,34 @@ class bh extends mc {
               break L2;
             }
             L8: {
-              if (param0 <= -54) {
-                break L8;
-              } else {
-                field_o = null;
-                break L8;
-              }
-            }
-            L9: {
               sc.field_c = param1;
               if (fl.field_s) {
-                break L9;
+                break L8;
               } else {
                 if (gd.field_Mb <= ec.field_i) {
-                  break L9;
+                  break L8;
                 } else {
                   if (qd.field_T) {
                     fi.field_Db = sj.field_e;
                     ec.field_i = 0;
                     ph.field_z = hl.field_cb;
-                    break L9;
+                    break L8;
                   } else {
-                    break L9;
+                    break L8;
                   }
                 }
               }
             }
-            L10: {
+            L9: {
               if (!fl.field_s) {
-                break L10;
+                break L9;
               } else {
                 if (co.field_n == ec.field_i) {
                   ec.field_i = 0;
                   fl.field_s = false;
-                  break L10;
+                  break L9;
                 } else {
-                  break L10;
+                  break L9;
                 }
               }
             }
@@ -257,37 +249,37 @@ class bh extends mc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var2 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) var2;
-            stackOut_41_1 = new StringBuilder().append("bh.UA(").append(param0).append(44);
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackOut_39_0 = (RuntimeException) var2;
+            stackOut_39_1 = new StringBuilder().append("bh.UA(").append(-57).append(44);
+            stackIn_41_0 = stackOut_39_0;
+            stackIn_41_1 = stackOut_39_1;
+            stackIn_40_0 = stackOut_39_0;
+            stackIn_40_1 = stackOut_39_1;
             if (param1 == null) {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
-              break L11;
+              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
+              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_2 = "null";
+              stackIn_42_0 = stackOut_41_0;
+              stackIn_42_1 = stackOut_41_1;
+              stackIn_42_2 = stackOut_41_2;
+              break L10;
             } else {
-              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
-              break L11;
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "{...}";
+              stackIn_42_0 = stackOut_40_0;
+              stackIn_42_1 = stackOut_40_1;
+              stackIn_42_2 = stackOut_40_2;
+              break L10;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 41);
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         if (wb.field_c >= 224) {
             qn.a(256, 128);
@@ -594,7 +586,7 @@ class bh extends mc {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_o = null;
         field_n = null;
         field_s = null;
@@ -1056,7 +1048,7 @@ class bh extends mc {
         ((bh) this).field_u[fieldTemp$1] = (byte)param0;
     }
 
-    final static int h(byte param0) {
+    final static int h() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -1130,7 +1122,8 @@ class bh extends mc {
     }
 
     bh(int param0) {
-        ((bh) this).field_u = pe.a(param0, (byte) -2);
+        int discarded$0 = -2;
+        ((bh) this).field_u = pe.a(param0);
         ((bh) this).field_t = 0;
     }
 

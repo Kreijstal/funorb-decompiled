@@ -21,18 +21,9 @@ final class sm extends cr {
     }
 
     private final void a(byte param0, int param1) {
-        int var3 = 0;
         ((sm) this).field_Hb.a(79, ((sm) this).field_Hb.j(-21391), ((sm) this).field_db, 0, 0);
-        if (param0 > -63) {
-          field_Kb = null;
-          var3 = ((sm) this).field_Hb.field_Fb + param1;
-          ((sm) this).field_Jb.a(80, ((sm) this).field_Fb + -var3, ((sm) this).field_db, 0, var3);
-          return;
-        } else {
-          var3 = ((sm) this).field_Hb.field_Fb + param1;
-          ((sm) this).field_Jb.a(80, ((sm) this).field_Fb + -var3, ((sm) this).field_db, 0, var3);
-          return;
-        }
+        int var3 = ((sm) this).field_Hb.field_Fb + param1;
+        ((sm) this).field_Jb.a(80, ((sm) this).field_Fb + -var3, ((sm) this).field_db, 0, var3);
     }
 
     private sm(long param0, cr param1, cr param2, String param3) {

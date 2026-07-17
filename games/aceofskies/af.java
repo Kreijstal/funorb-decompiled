@@ -7,7 +7,7 @@ abstract class af {
     static vd[] field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 47;
         field_b = null;

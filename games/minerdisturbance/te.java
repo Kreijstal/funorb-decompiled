@@ -13,7 +13,7 @@ final class te implements uj {
         return "Add Walrus";
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -33,7 +33,7 @@ final class te implements uj {
         return param0 ^ param1;
     }
 
-    final static int a(int param0) {
+    final static int a() {
         int var1 = 0;
         if (2 <= af.field_u) {
           var1 = 0;

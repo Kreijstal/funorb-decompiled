@@ -333,7 +333,8 @@ final class lua implements ntb, ofa {
         }
         try {
             var3.field_a = var3.field_a;
-            var3.field_b = (qob[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) var3.field_b, 1, rma.field_c, false);
+            int discarded$0 = 0;
+            var3.field_b = (qob[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) var3.field_b, 1, rma.field_c);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "lua.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }

@@ -157,14 +157,14 @@ final class fe {
     }
 
     final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7) {
-        fe.a(param0, param1, param2, param3, param4, param5, param6, 0, true);
+        fe.a(param0, param1, param2, param3, param4, param5, 0, 0, true);
     }
 
     final static void a(String param0, int param1, int param2, int param3, int[] param4, boolean param5, int param6, int param7) {
         int var12 = 0;
-        field_d[0] = param3 << (param5 ? 1 : 0);
+        field_d[0] = param3 << 1;
         int var8 = field_i.a(param0, field_d, field_k);
-        int var9 = field_i.field_v >> (param5 ? 1 : 0);
+        int var9 = field_i.field_v >> 1;
         int var10 = var9 * var8;
         int var11 = 0;
         if (param7 == 1) {
@@ -175,13 +175,13 @@ final class fe {
             }
         }
         for (var12 = 0; var12 < var8; var12++) {
-            fe.c(field_k[var12], param1, param2 + var11 + var9 * var12, param4, param5);
+            fe.c(field_k[var12], param1, param2 + var11 + var9 * var12, param4, true);
         }
     }
 
-    final static void b(String param0, int param1, int param2, int[] param3, boolean param4) {
-        param1 = param1 - (field_i.a(param0) >> (param4 ? 1 : 0));
-        fe.a(param0, param1, param2, param3, param4);
+    final static void b(String param0, int param1, int param2, int[] param3) {
+        param1 = param1 - (field_i.a(param0) >> 1);
+        fe.a(param0, param1, param2, param3, true);
     }
 
     final static int a(int param0) {
@@ -214,17 +214,17 @@ final class fe {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, wk[] param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         param4[0].e(param0, param1, 128);
-        param4[1].e(param0 + param2 - param4[0].field_y, param1, 128);
+        param4[1].e(param0 + 100 - param4[0].field_y, param1, 128);
         param4[2].e(param0, param1 + param3 - param4[0].field_v, 128);
-        param4[3].e(param0 + param2 - param4[0].field_y, param1 + param3 - param4[0].field_v, 128);
+        param4[3].e(param0 + 100 - param4[0].field_y, param1 + param3 - param4[0].field_v, 128);
         var6 = param1;
         var7 = param3 - param4[0].field_v;
-        var8 = param2 - param4[0].field_y;
+        var8 = 100 - param4[0].field_y;
         param1 = 0;
         L0: while (true) {
           if (param1 >= param3) {
@@ -232,7 +232,7 @@ final class fe {
           } else {
             if (param1 >= param4[0].field_v) {
               if (param1 < var7) {
-                qn.d(param0, var6, param0 + param2 - 1, var6, 0, 128);
+                qn.d(param0, var6, param0 + 99, var6, 0, 128);
                 var6++;
                 param1++;
                 continue L0;
@@ -610,16 +610,12 @@ final class fe {
             field_i.b(param0, 0, field_i.field_H + 3, 0, -1);
             qn.a(var5, var6, var7);
             fe.c();
-            if (param4) {
-                fe.b(field_g, param1, param2, var8, param3);
-            } else {
-                fe.c(field_g, param1, param2, var8, param3);
-            }
+            fe.b(field_g, param1, param2, var8, param3);
             return;
         }
     }
 
-    final static void d(String param0, int param1, int param2, int param3, boolean param4) {
+    final static void d(String param0, int param1, int param2, int param3) {
         param1 = param1 - (field_i.a(param0) >> 1);
         fe.a(param0, param1, param2, param3, true);
     }
@@ -638,26 +634,26 @@ final class fe {
         int var16 = 0;
         int var17 = 0;
         var6 = new wk[4];
-        var6[0] = new wk(param2, param4[0].field_v);
-        var6[3] = new wk(param2, param4[0].field_v);
-        var6[1] = new wk(param4[0].field_y, param3 - param4[0].field_v * 2);
-        var6[2] = new wk(param4[0].field_y, param3 - param4[0].field_v * 2);
+        var6[0] = new wk(640, param4[0].field_v);
+        var6[3] = new wk(640, param4[0].field_v);
+        var6[1] = new wk(param4[0].field_y, 480 - param4[0].field_v * 2);
+        var6[2] = new wk(param4[0].field_y, 480 - param4[0].field_v * 2);
         var9 = 0;
         var10 = 0;
         var11 = 0;
-        var12 = (param5.length << 16) / param3;
+        var12 = (param5.length << 16) / 480;
         var13 = 0;
         var14 = 0;
         L0: while (true) {
-          if (var14 >= param3) {
+          if (var14 >= 480) {
             return var6;
           } else {
             var11 = param5[var13 >> 16];
             var13 = var13 + var12;
             if (var14 >= param4[0].field_v) {
-              if (var14 >= param3 - param4[0].field_v) {
+              if (var14 >= 480 - param4[0].field_v) {
                 L1: {
-                  if (var14 != param3 - param4[0].field_v) {
+                  if (var14 != 480 - param4[0].field_v) {
                     break L1;
                   } else {
                     var9 = 0;
@@ -667,15 +663,15 @@ final class fe {
                 var8 = 6;
                 var15 = 0;
                 L2: while (true) {
-                  if (var15 < param2) {
+                  if (var15 < 640) {
                     L3: {
                       if (var15 >= param4[0].field_y) {
-                        if (param2 - var15 > param4[0].field_y) {
+                        if (640 - var15 > param4[0].field_y) {
                           var7 = 1;
                           break L3;
                         } else {
                           L4: {
-                            if (param2 - var15 != param4[0].field_y) {
+                            if (640 - var15 != param4[0].field_y) {
                               break L4;
                             } else {
                               var10 = 0;
@@ -702,7 +698,7 @@ final class fe {
                           break L5;
                         }
                       }
-                      var6[3].field_B[var15 + (var14 - param3 + param4[0].field_v) * param2] = var17;
+                      var6[3].field_B[var15 + (var14 - 480 + param4[0].field_v) * 640] = var17;
                       var15++;
                       continue L2;
                     } else {
@@ -770,15 +766,15 @@ final class fe {
               var8 = 0;
               var15 = 0;
               L10: while (true) {
-                if (var15 < param2) {
+                if (var15 < 640) {
                   L11: {
                     if (var15 >= param4[0].field_y) {
-                      if (param2 - var15 > param4[0].field_y) {
+                      if (640 - var15 > param4[0].field_y) {
                         var7 = 1;
                         break L11;
                       } else {
                         L12: {
-                          if (param2 - var15 != param4[0].field_y) {
+                          if (640 - var15 != param4[0].field_y) {
                             break L12;
                           } else {
                             var10 = 0;
@@ -805,7 +801,7 @@ final class fe {
                         break L13;
                       }
                     }
-                    var6[0].field_B[var15 + var14 * param2] = var17;
+                    var6[0].field_B[var15 + var14 * 640] = var17;
                     var15++;
                     continue L10;
                   } else {
@@ -962,11 +958,11 @@ final class fe {
         int var19 = 0;
         L0: {
           var4 = 1;
-          var5 = param2 * param2;
-          var6 = (param2 - var4) * (param2 - var4);
+          var5 = 100;
+          var6 = (10 - var4) * (10 - var4);
           var7 = var5 - var6;
-          var8 = param0 - param2 - 1;
-          var9 = param0 + param2 + 1;
+          var8 = 77;
+          var9 = 99;
           if (var8 >= qn.field_j) {
             break L0;
           } else {
@@ -985,8 +981,8 @@ final class fe {
               }
             }
             L2: {
-              var10 = param1 - param2 - 1;
-              var11 = param1 + param2 + 1;
+              var10 = param1 - 11;
+              var11 = param1 + 11;
               if (var10 >= qn.field_a) {
                 break L2;
               } else {
@@ -1075,7 +1071,7 @@ final class fe {
                         continue L8;
                       } else {
                         if (!fe.c(var15, var14)) {
-                          var16 = param0 - var15;
+                          var16 = 88 - var15;
                           var17 = param1 - var14;
                           var18 = var16 * var16 + var17 * var17;
                           if (var18 < var5) {
@@ -1148,9 +1144,9 @@ final class fe {
         }
     }
 
-    final static void c(String param0, int param1, int param2, int param3, boolean param4) {
-        param1 = param1 - (field_i.a(param0) >> (param4 ? 2 : 1));
-        fe.a(param0, param1, param2, param3, param4);
+    final static void c(String param0, int param1, int param2, int param3) {
+        param1 = param1 - (field_i.a(param0) >> 2);
+        fe.a(param0, param1, param2, param3, true);
     }
 
     private final static int a(int param0, int param1, int param2) {
@@ -1263,7 +1259,7 @@ final class fe {
         }
     }
 
-    final static void b(String param0, int param1, int param2, int param3, boolean param4) {
+    final static void b(String param0, int param1, int param2, int param3) {
         int var7 = 0;
         field_d[0] = param3 << 1;
         int var5 = field_i.a(param0, field_d, field_k);
@@ -1273,7 +1269,7 @@ final class fe {
         }
     }
 
-    final static int b(int param0, int param1) {
+    final static int b(int param0) {
         int var2 = (param0 & 16711935) * 128 >>> 8;
         int var3 = (param0 & 65280) * 128 >>> 8;
         return var2 & 16711935 | var3 & 65280;
@@ -1519,35 +1515,18 @@ final class fe {
     }
 
     final static void a(String param0, int param1, int param2, int[] param3, int param4, boolean param5) {
-        L0: {
-          if (param4 != 0) {
-            if (param4 != 1) {
-              if (param4 != 2) {
-                return;
-              } else {
-                fe.b(param0, param1, param2, param3, param5);
-                break L0;
-              }
-            } else {
-              fe.b(param0, param1, param2, param5);
-              fe.c(param0, param1, param2, param3, param5);
-              break L0;
-            }
-          } else {
-            fe.a(param0, param1, param2, param5);
-            fe.a(param0, param1, param2, param3, param5);
-            break L0;
-          }
-        }
+        fe.b(param0, param1, param2, param5);
+        fe.c(param0, param1, param2, param3, param5);
     }
 
-    final static void a(String param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void a(String param0, int param1, int param2, int param3) {
         int var8 = 0;
         field_d[0] = param3 << 1;
         int var6 = field_i.a(param0, field_d, field_k);
         int var7 = field_i.field_v >> 1;
         for (var8 = 0; var8 < var6; var8++) {
-            fe.c(field_k[var8], param1, param2 + var7 * var8, param4, true);
+            int discarded$0 = 1;
+            fe.c(field_k[var8], param1, param2 + var7 * var8, 16777215);
         }
     }
 
@@ -1734,13 +1713,13 @@ final class fe {
     }
 
     final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7, String param8, boolean param9, int[] param10) {
-        fe.b(param0, param1, param2, param3, param4, param5, param6, param7);
+        fe.b(param0, param1, param2, param3, param4, param5, 0, 128);
         int var11 = param0 + param2 / 2;
-        int var12 = param1 + field_i.field_v / (param9 ? 2 : 1) - 4;
-        fe.a(param8, var11, var12, param10, 1, param9);
+        int var12 = param1 + field_i.field_v / 2 - 4;
+        fe.a(param8, var11, var12, param10, 1, true);
     }
 
-    final static void a(String param0, int param1, int param2, int param3, int[] param4, boolean param5) {
+    final static void a(String param0, int param1, int param2, int param3, int[] param4) {
         fe.a(param0, param1, param2, param3, param4, true, 0, 0);
     }
 

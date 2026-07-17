@@ -15,8 +15,8 @@ final class ia extends un {
     static int field_s;
     static hn[] field_x;
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
-        jl.a(jk.field_f, (byte) -97, jo.field_f, param2, param1, param0, nj.field_h);
+    final static void a(int param0, int param1, boolean param2) {
+        jl.a(jk.field_f, (byte) -97, jo.field_f, param2, 180, 320, nj.field_h);
     }
 
     final String a(String param0, int param1) {
@@ -65,14 +65,16 @@ final class ia extends un {
             if (var4.length() != 0) {
               var5 = var4;
               if (!gn.b((byte) 62, var5)) {
-                if (ol.a(var5, false)) {
+                int discarded$10 = 0;
+                if (ol.a(var5)) {
                   stackOut_8_0 = bi.field_c;
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
                 } else {
                   if (!qa.a((byte) -125, var5)) {
                     if (param1 == -1276425040) {
-                      if (!this.b(param0, -1)) {
+                      int discarded$11 = -1;
+                      if (!this.b(param0)) {
                         if (var6.length() <= 0) {
                           stackOut_31_0 = eb.field_y;
                           stackIn_32_0 = stackOut_31_0;
@@ -293,7 +295,7 @@ final class ia extends un {
         return stackIn_8_0 != 0;
     }
 
-    private final boolean b(String param0, int param1) {
+    private final boolean b(String param0) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -397,7 +399,7 @@ final class ia extends un {
         return stackIn_13_0 != 0;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_w = null;
         field_v = null;
         field_y = null;
@@ -449,12 +451,14 @@ final class ia extends un {
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
             } else {
-              if (!lb.a(var3, var4, (byte) -10)) {
+              int discarded$13 = -10;
+              if (!lb.a(var3, var4)) {
                 stackOut_8_0 = jq.field_b;
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
-                if (this.b(param1, -1)) {
+                int discarded$14 = -1;
+                if (this.b(param1)) {
                   stackOut_12_0 = jq.field_b;
                   stackIn_13_0 = stackOut_12_0;
                   break L0;

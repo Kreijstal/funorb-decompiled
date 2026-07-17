@@ -251,7 +251,7 @@ class qk {
         field_r = null;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -479,7 +479,7 @@ class qk {
         ia var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_q) {
             break L0;
           } else {
@@ -489,7 +489,7 @@ class qk {
         }
         L1: {
           sf.a(param0, 0, var3);
-          ((qk) this).field_u = ((qk) this).field_u - 256;
+          ((qk) this).field_u = ((qk) this).field_u - param1;
           if (((qk) this).field_k == null) {
             break L1;
           } else {
@@ -656,7 +656,7 @@ class qk {
           if (((qk) this).field_k == null) {
             break L17;
           } else {
-            ((qk) this).field_k.a(param0, 0, 256);
+            ((qk) this).field_k.a(param0, 0, param1);
             break L17;
           }
         }
@@ -664,12 +664,12 @@ class qk {
     }
 
     private final void b(int param0) {
-        ((qk) this).field_u = ((qk) this).field_u - 256;
+        ((qk) this).field_u = ((qk) this).field_u - param0;
         if (((qk) this).field_u < 0) {
             ((qk) this).field_u = 0;
         }
         if (((qk) this).field_k != null) {
-            ((qk) this).field_k.b(256);
+            ((qk) this).field_k.b(param0);
             return;
         }
     }

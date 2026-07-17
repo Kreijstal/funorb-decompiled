@@ -15,9 +15,6 @@ abstract class mn extends tc {
     static String field_q;
 
     final static void a(boolean param0, int param1, int param2, byte param3, int param4, int param5) {
-        if (param3 <= 64) {
-            return;
-        }
         if (param0) {
             return;
         }

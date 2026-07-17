@@ -45,9 +45,9 @@ final class rj {
             }
           }
         }
-        param2 = param2 + param1;
+        param2 = param2;
         var4 = param2 - 2;
-        var8 = param1;
+        var8 = 0;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {
@@ -92,7 +92,7 @@ final class rj {
     final static void a(ha param0, int[] param1, int param2, int param3, int param4) {
         Object var6 = null;
         Object var5 = null;
-        rj.a(param0, param1, param2, param3, param4, (int[]) null, (int[]) null);
+        rj.a(param0, param1, 0, param3, param4, (int[]) null, (int[]) null);
     }
 
     private final static void a(int param0) {
@@ -347,7 +347,7 @@ final class rj {
           }
         }
         rj.b();
-        rj.a(param1, param2, param3);
+        rj.a(param1, 0, param3);
         rj.a(var15[1]);
         L1: while (true) {
           if (!rj.b(var15[3])) {

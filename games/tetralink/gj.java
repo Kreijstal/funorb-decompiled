@@ -13,16 +13,13 @@ final class gj {
         ve.field_b = param2;
         lk.field_wb = param1;
         mc.field_b = param3;
-        if (param0 <= 68) {
-            gj.a((byte) -35);
-        }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static void a(ve param0, int param1, int param2, int param3) {
+    final static void a(ve param0, int param1, int param2) {
         try {
             ng.field_D = param1;
             nm.field_o = param0;

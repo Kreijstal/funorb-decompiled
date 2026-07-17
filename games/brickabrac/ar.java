@@ -423,7 +423,7 @@ final class ar {
         }
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         return af.field_u;
     }
 

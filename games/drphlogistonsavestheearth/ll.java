@@ -13,18 +13,13 @@ final class ll extends lk {
         return j.field_V;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_p = null;
         field_o = null;
     }
 
     final static void a(int param0, String param1) {
-        if (param0 != -1054) {
-          return;
-        } else {
-          System.out.println("Error: " + qb.a("%0a", (byte) 127, "\n", param1));
-          return;
-        }
+        System.out.println("Error: " + qb.a("%0a", (byte) 127, "\n", param1));
     }
 
     ll(long param0, String param1) {

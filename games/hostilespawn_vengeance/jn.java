@@ -13,7 +13,7 @@ final class jn extends fc {
     static vm field_G;
     static vl field_H;
 
-    final static void l(int param0) {
+    final static void l() {
         Object var2 = null;
         ij.a((byte) -17, (ji) null);
     }
@@ -42,7 +42,8 @@ final class jn extends fc {
                   var9 = new bd(((jn) this).field_A.field_s, ((jn) this).field_A.field_x);
                   sb.a(var9, -125);
                   ((jn) this).field_A.a(0, 0, (byte) 60, param3);
-                  eh.b(false);
+                  int discarded$2 = 0;
+                  eh.b();
                   var9.b(((jn) this).field_v + param1, param0 - -((jn) this).field_m, ((jn) this).field_D);
                   return;
                 }
@@ -60,7 +61,8 @@ final class jn extends fc {
                   var8 = new bd(((jn) this).field_A.field_s, ((jn) this).field_A.field_x);
                   sb.a(var8, -125);
                   ((jn) this).field_A.a(0, 0, (byte) 60, param3);
-                  eh.b(false);
+                  int discarded$3 = 0;
+                  eh.b();
                   var8.b(((jn) this).field_v + param1, param0 - -((jn) this).field_m, ((jn) this).field_D);
                   return;
                 }
@@ -72,25 +74,14 @@ final class jn extends fc {
         }
     }
 
-    public static void k(int param0) {
-        Object var2 = null;
+    public static void k() {
         field_E = null;
         field_K = null;
         field_H = null;
         field_F = null;
-        if (param0 != 608) {
-          var2 = null;
-          jn.a((int[]) null, 33, 96, 74, -62);
-          field_B = null;
-          field_I = null;
-          field_G = null;
-          return;
-        } else {
-          field_B = null;
-          field_I = null;
-          field_G = null;
-          return;
-        }
+        field_B = null;
+        field_I = null;
+        field_G = null;
     }
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4) {
@@ -214,40 +205,16 @@ final class jn extends fc {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        if (param0 != 100) {
-          L0: {
-            field_I = null;
-            if (param1 > 0) {
-              si.d(32, 32, 608, 440);
-              vg.field_c.a(param2, 0, param1);
-              si.c();
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
-        } else {
-          L1: {
-            if (param1 > 0) {
-              si.d(32, 32, 608, 440);
-              vg.field_c.a(param2, 0, param1);
-              si.c();
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        if (!(param1 <= 0)) {
+            si.d(32, 32, 608, 440);
+            vg.field_c.a(0, 0, param1);
+            si.c();
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         q.field_d = 21845;
         q.field_k = 33;
-        if (param0 != 256) {
-            return;
-        }
         q.field_h = 133;
     }
 

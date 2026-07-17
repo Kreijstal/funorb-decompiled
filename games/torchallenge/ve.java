@@ -181,7 +181,7 @@ final class ve {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_b = null;
         field_a = null;

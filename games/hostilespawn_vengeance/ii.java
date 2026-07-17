@@ -26,7 +26,7 @@ final class ii {
         return ((ii) this).field_a;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_h = null;
         field_c = null;
         field_d = null;
@@ -137,7 +137,7 @@ final class ii {
         }
     }
 
-    final static String c(byte param0) {
+    final static String c() {
         int var1 = 0;
         if (!re.field_k) {
           if (fb.field_l >= ui.field_e) {

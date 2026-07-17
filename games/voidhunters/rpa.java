@@ -61,14 +61,16 @@ final class rpa implements jaa {
         sg var7 = null;
         var6 = VoidHunters.field_G;
         if (param0 == 0) {
-          return gqb.a(true);
+          int discarded$8 = 1;
+          return gqb.a();
         } else {
           var7 = new sg();
           var3 = var7;
           var4 = new ml(param0);
           var5 = param0;
           if (var5 == 3) {
-            waa.a(var4, 18632);
+            int discarded$9 = 18632;
+            waa.a(var4);
             var7.field_k = var4;
             var7.e((byte) 119);
             var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -76,7 +78,8 @@ final class rpa implements jaa {
           } else {
             if (var5 != 7) {
               if (var5 == 8) {
-                mc.a(var4, 27);
+                int discarded$10 = 27;
+                mc.a(var4);
                 var7.field_k = var4;
                 var7.e((byte) 119);
                 var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -84,7 +87,8 @@ final class rpa implements jaa {
               } else {
                 if (var5 != 9) {
                   if (10 == var5) {
-                    hr.a(var4, 116);
+                    int discarded$11 = 116;
+                    hr.a(var4);
                     var7.field_k = var4;
                     var7.e((byte) 119);
                     var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -154,14 +158,16 @@ final class rpa implements jaa {
                                       var7.field_k.a((byte) -128, (anb) (Object) var7);
                                       return var7;
                                     } else {
-                                      wnb.a(var4, (byte) -10);
+                                      int discarded$12 = -10;
+                                      wnb.a(var4);
                                       var7.field_k = var4;
                                       var7.e((byte) 119);
                                       var7.field_k.a((byte) -128, (anb) (Object) var7);
                                       return var7;
                                     }
                                   } else {
-                                    eqb.a(var4, 14670);
+                                    int discarded$13 = 14670;
+                                    eqb.a(var4);
                                     var7.field_k = var4;
                                     var7.e((byte) 119);
                                     var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -171,7 +177,8 @@ final class rpa implements jaa {
                               }
                             }
                           } else {
-                            ir.a(var4, (byte) 127);
+                            int discarded$14 = 127;
+                            ir.a(var4);
                             var7.field_k = var4;
                             var7.e((byte) 119);
                             var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -182,7 +189,8 @@ final class rpa implements jaa {
                     }
                   }
                 } else {
-                  tkb.a(var4, -77);
+                  int discarded$15 = -77;
+                  tkb.a(var4);
                   var7.field_k = var4;
                   var7.e((byte) 119);
                   var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -244,7 +252,7 @@ final class rpa implements jaa {
         }
     }
 
-    private final void a(aia param0, int param1, int param2, int param3) {
+    private final void a(aia param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
@@ -287,7 +295,7 @@ final class rpa implements jaa {
                   throw new RuntimeException();
                 }
               }
-              param0.a(((rpa) this).field_d, vbb.field_o[param2], param1, false);
+              param0.a(((rpa) this).field_d, vbb.field_o[param2], 0, false);
               ((rpa) this).field_h[param2] = (mda) (Object) param0;
               ((rpa) this).field_g = ((rpa) this).field_g | var5_int;
               break L0;
@@ -323,7 +331,7 @@ final class rpa implements jaa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 44 + param2 + 44 + 77 + 41);
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 44 + param2 + 44 + 77 + 41);
         }
     }
 
@@ -444,7 +452,7 @@ final class rpa implements jaa {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_c = null;
     }
 
@@ -489,7 +497,8 @@ final class rpa implements jaa {
         try {
           L0: {
             L1: {
-              this.a(param2, 0, param0, 77);
+              int discarded$2 = 77;
+              this.a(param2, 0, param0);
               if (param1 <= -124) {
                 break L1;
               } else {

@@ -16,14 +16,14 @@ final class re implements Iterator {
     static String field_c;
     private int field_k;
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = -2;
         ((re) this).field_f = null;
         ((re) this).field_k = 1;
         ((re) this).field_a = ((re) this).field_b.field_h[0].field_e;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_j = null;
         field_h = null;
         field_i = null;
@@ -173,7 +173,8 @@ final class re implements Iterator {
         ((re) this).field_f = null;
         try {
             ((re) this).field_b = param0;
-            this.a(-116);
+            int discarded$0 = -116;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

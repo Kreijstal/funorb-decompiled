@@ -124,7 +124,7 @@ final class gr extends oh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
     }
 

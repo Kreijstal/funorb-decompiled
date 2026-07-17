@@ -29,8 +29,9 @@ final class va {
         }
     }
 
-    final static boolean b(int param0) {
-        return ql.a(dg.a(false), -15);
+    final static boolean b() {
+        int discarded$0 = -15;
+        return ql.a(dg.a(false));
     }
 
     final static fa a(int param0, int param1) {
@@ -42,21 +43,18 @@ final class va {
         }
     }
 
-    final static void a(int param0, int param1, int param2, ci param3, pk param4, int param5, int param6, int param7, boolean param8, int param9, int param10) {
-        nl.field_a = param9;
-        lm.field_b = param7;
-        if (param8) {
-            return;
-        }
+    final static void a(int param0, int param1, int param2, ci param3, pk param4) {
+        nl.field_a = 135;
+        lm.field_b = 0;
         try {
             ha.field_p = 1500;
-            fi.field_q = param0;
-            ee.field_h = param1;
-            fg.field_a = param5;
-            ad.field_h = param6;
+            fi.field_q = 0;
+            ee.field_h = 0;
+            fg.field_a = 135;
+            ad.field_h = 0;
             p.field_e = param3;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "va.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + 1500 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "va.C(" + 0 + 44 + 0 + 44 + 16777215 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 135 + 44 + 0 + 44 + 0 + 44 + 0 + 44 + 135 + 44 + 1500 + 41);
         }
     }
 

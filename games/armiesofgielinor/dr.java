@@ -19,7 +19,7 @@ abstract class dr extends ms {
 
     abstract nd a(int param0, nd[] param1);
 
-    public static void d(byte param0) {
+    public static void d() {
         field_D = null;
         field_v = null;
         field_y = null;
@@ -164,7 +164,8 @@ abstract class dr extends ms {
                     L2: {
                       if (param2[var5].field_e) {
                         L3: {
-                          var6 = cq.a(param2[var5].field_c, (byte) -75);
+                          int discarded$1 = -75;
+                          var6 = cq.a(param2[var5].field_c);
                           if (Boolean.TYPE != var6) {
                             break L3;
                           } else {

@@ -7,22 +7,13 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
     static String field_a;
     static String field_b;
 
-    public static void b(int param0) {
-        if (param0 != 128) {
-          field_d = null;
-          field_d = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
-          field_d = null;
-          field_b = null;
-          field_a = null;
-          return;
-        }
+    public static void b() {
+        field_d = null;
+        field_b = null;
+        field_a = null;
     }
 
-    final static void a(int param0, cc param1, mm param2, int param3, int param4, cc param5, int param6, mm param7, int param8, int param9, cc param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, cc param1, mm param2, int param3, int param4, cc param5, int param6, mm param7, int param8, int param9, cc param10) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -103,13 +94,18 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         String stackOut_15_2 = null;
         try {
           L0: {
-            lk.a(param7, true, param2, param8);
-            var21_int = 80 % ((param12 - -81) / 39);
-            s.a(param6, param20, (byte) -91, param0, param16);
-            pj.a(31004, param15, param14);
-            ci.a(param10, param13, param4, (byte) -63, param11, param5);
-            gk.a(param19, param18, (byte) -75, param1);
-            wf.a(param17, param3, param9, true);
+            int discarded$5 = 480;
+            lk.a(param7, true, param2);
+            var21_int = 0;
+            s.a(14, 20, (byte) -91, 16, 20);
+            pj.a(31004, 320, 240);
+            ci.a(param10, 32, 5, (byte) -63, 4, param5);
+            gk.a(20, 20, (byte) -75, param1);
+            int discarded$6 = 1;
+            int discarded$7 = 0;
+            int discarded$8 = 0;
+            int discarded$9 = 1;
+            wf.a();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +113,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           L1: {
             var21 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var21;
-            stackOut_2_1 = new StringBuilder().append("n.D(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("n.D(").append(16).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -167,7 +163,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(0).append(44).append(5).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -192,7 +188,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param6).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(14).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -217,7 +213,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           }
           L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param8).append(44).append(param9).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(480).append(44).append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -240,7 +236,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param11 + 44 + param12 + 44 + param13 + 44 + param14 + 44 + param15 + 44 + param16 + 44 + param17 + 44 + param18 + 44 + param19 + 44 + param20 + 41);
+          throw dh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 4 + 44 + -6 + 44 + 32 + 44 + 240 + 44 + 320 + 44 + 20 + 44 + 1 + 44 + 20 + 44 + 20 + 44 + 20 + 41);
         }
     }
 
@@ -570,7 +566,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         return (int)(1000000000L / ul.field_g);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         int var2 = 0;
         var2 = client.field_A ? 1 : 0;
@@ -580,20 +576,23 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           var1 = bb.field_e;
           if (0 >= var1) {
             cl.field_r.n(-127);
-            em.a(-1199770620);
+            int discarded$3 = -1199770620;
+            em.a();
             return;
           } else {
             if (var1 == 1) {
               ed.field_d = aa.field_d;
               ed.field_d = db.a(new CharSequence[3], -62);
               cl.field_r.n(-127);
-              em.a(-1199770620);
+              int discarded$4 = -1199770620;
+              em.a();
               return;
             } else {
               ed.field_d = cm.a((byte) 87, jc.field_e, new String[1]);
               ed.field_d = db.a(new CharSequence[3], -62);
               cl.field_r.n(-127);
-              em.a(-1199770620);
+              int discarded$5 = -1199770620;
+              em.a();
               return;
             }
           }
@@ -607,9 +606,9 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_9_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
+        int stackOut_6_0 = 0;
         var4 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -623,33 +622,25 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                 break L1;
               }
             }
-            L2: {
-              if (param0 >= 37) {
-                break L2;
-              } else {
-                n.b(77);
-                break L2;
-              }
-            }
-            L3: while (true) {
+            L2: while (true) {
               if (param2 == 0) {
-                stackOut_8_0 = param1;
-                stackIn_9_0 = stackOut_8_0;
+                stackOut_6_0 = param1;
+                stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
                 var3_int = param1 % param2;
                 param1 = param2;
                 param2 = var3_int;
-                continue L3;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var3, "n.E(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw dh.a((Throwable) (Object) var3, "n.E(" + 43 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_9_0;
+        return stackIn_7_0;
     }
 
     static {

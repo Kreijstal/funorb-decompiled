@@ -55,7 +55,7 @@ final class bo extends ok {
                 }
               }
               var5 = jn.a(param1.field_f, new int[1], -65, (se) (Object) la.field_b);
-              var4_int = var4_int + (param0 + la.field_b.field_H);
+              var4_int = var4_int + (5 + la.field_b.field_H);
               var6 = var5;
               var7 = 0;
               L2: while (true) {
@@ -76,7 +76,7 @@ final class bo extends ok {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("bo.D(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("bo.D(").append(5).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -107,15 +107,24 @@ final class bo extends ok {
         super(0L, (ok) null);
     }
 
-    final static void h(int param0) {
+    final static void h() {
         int var1 = 0;
         if (ec.field_k == null) {
           id.field_i = mk.a(3, (byte) 34);
           mi.field_e = mk.a(4, (byte) 34);
-          hj.field_Z = bg.a(true, 9, false, false, true);
+          int discarded$19 = 1;
+          int discarded$20 = 0;
+          int discarded$21 = 0;
+          hj.field_Z = bg.a(true, 9);
           np.field_A = mk.a(10, (byte) 34);
-          kf.field_p = bg.a(true, 11, false, false, true);
-          sb.field_a = bg.a(true, 12, false, false, true);
+          int discarded$22 = 1;
+          int discarded$23 = 0;
+          int discarded$24 = 0;
+          kf.field_p = bg.a(true, 11);
+          int discarded$25 = 1;
+          int discarded$26 = 0;
+          int discarded$27 = 0;
+          sb.field_a = bg.a(true, 12);
           ia.field_W = mk.a(13, (byte) 34);
           ll.field_r = mk.a(14, (byte) 34);
           tl.field_k = mk.a(15, (byte) 34);
@@ -141,15 +150,25 @@ final class bo extends ok {
           be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
           return;
         } else {
-          ec.a(ec.field_k, false);
+          int discarded$28 = 0;
+          ec.a(ec.field_k);
           ec.field_k = null;
           nf.d(0);
           id.field_i = mk.a(3, (byte) 34);
           mi.field_e = mk.a(4, (byte) 34);
-          hj.field_Z = bg.a(true, 9, false, false, true);
+          int discarded$29 = 1;
+          int discarded$30 = 0;
+          int discarded$31 = 0;
+          hj.field_Z = bg.a(true, 9);
           np.field_A = mk.a(10, (byte) 34);
-          kf.field_p = bg.a(true, 11, false, false, true);
-          sb.field_a = bg.a(true, 12, false, false, true);
+          int discarded$32 = 1;
+          int discarded$33 = 0;
+          int discarded$34 = 0;
+          kf.field_p = bg.a(true, 11);
+          int discarded$35 = 1;
+          int discarded$36 = 0;
+          int discarded$37 = 0;
+          sb.field_a = bg.a(true, 12);
           ia.field_W = mk.a(13, (byte) 34);
           ll.field_r = mk.a(14, (byte) 34);
           tl.field_k = mk.a(15, (byte) 34);
@@ -177,7 +196,7 @@ final class bo extends ok {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_Lb = null;
         field_Mb = null;
         field_Kb = null;
@@ -185,9 +204,10 @@ final class bo extends ok {
         field_Jb = null;
     }
 
-    final static void g(int param0) {
+    final static void g() {
         mc.a((byte) 86, 8, gb.field_e);
-        if (!ve.a(false)) {
+        int discarded$6 = 0;
+        if (!ve.a()) {
             mc.a((byte) 37, 1, in.field_B);
             return;
         }

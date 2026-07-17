@@ -27,15 +27,11 @@ final class woa implements wib {
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
         try {
-          if (param3 == 74) {
-            if (li.field_i) {
-              nma.field_b[param5].a(param4, param1, -16777216 | param0, true, param2, param6);
-              return;
-            } else {
-              ita.a(param5, 7988).b(param6, param2, param1, param0, param4);
-              return;
-            }
+          if (li.field_i) {
+            nma.field_b[param5].a(-1, param1, -16777216 | param0, true, param2, param6);
+            return;
           } else {
+            ita.a(param5, 7988).b(param6, param2, param1, param0, -1);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -43,7 +39,7 @@ final class woa implements wib {
           L0: {
             var7 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var7;
-            stackOut_6_1 = new StringBuilder().append("woa.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_6_1 = new StringBuilder().append("woa.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(74).append(44).append(-1).append(44).append(param5).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -70,7 +66,7 @@ final class woa implements wib {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
     }
 

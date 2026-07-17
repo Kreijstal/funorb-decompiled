@@ -171,7 +171,7 @@ final class ifa extends ci {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_n = null;
         int var1 = 1;
         field_r = null;
@@ -352,7 +352,7 @@ final class ifa extends ci {
         return var13;
     }
 
-    final static void a(String[] args, int param1, String param2, byte param3) {
+    final static void a(String[] args, int param1, String param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         String[] var4_array = null;
@@ -418,7 +418,8 @@ final class ifa extends ci {
                     }
                   }
                 }
-                oo.field_t = doa.a(param2, param1, (byte) 114);
+                int discarded$7 = 114;
+                oo.field_t = doa.a(param2, param1);
                 break L1;
               } else {
                 L3: {
@@ -505,7 +506,7 @@ final class ifa extends ci {
         }
     }
 
-    final static void d(int param0, int param1) {
+    final static void d(int param0) {
         k.field_A = param0 >> 4 & 3;
         if (k.field_A > 2) {
             k.field_A = 2;

@@ -14,7 +14,7 @@ abstract class ob extends vg {
 
     abstract void a(byte param0, int param1);
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_n = null;
     }
@@ -28,7 +28,7 @@ abstract class ob extends vg {
 
     abstract void a(byte param0, float param1);
 
-    final static void a(ha param0, int param1) {
+    final static void a(ha param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int[] var3 = null;

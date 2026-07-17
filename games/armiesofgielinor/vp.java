@@ -8,7 +8,7 @@ final class vp extends oj {
     int field_z;
     static String[] field_y;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, byte param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;

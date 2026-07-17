@@ -136,7 +136,7 @@ final class gl extends ok {
         return stackIn_8_0 != 0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_Jb = null;
         field_Ib = null;
         field_Gb = null;

@@ -43,7 +43,7 @@ final class n {
                   if (mm.field_Sb <= var2_int) {
                     int dupTemp$4 = param1.a(true);
                     il.field_B[dupTemp$4] = il.field_B[dupTemp$4] + 1;
-                    var2_int = param0;
+                    var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
                       if (mm.field_Sb <= var3) {
@@ -102,7 +102,7 @@ final class n {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("n.C(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("n.C(").append(0).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -150,7 +150,7 @@ final class n {
         throw new IllegalStateException();
     }
 
-    final static jp a(byte param0) {
+    final static jp a() {
         int var4_int = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
         int var1 = jh.field_b[0] * gg.field_t[0];
@@ -160,7 +160,8 @@ final class n {
             var3[var4_int] = qp.field_c[ik.a(255, (int) var2[var4_int])];
         }
         jp var4 = new jp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var3);
-        ee.d((byte) 96);
+        int discarded$0 = 96;
+        ee.d();
         return var4;
     }
 
@@ -197,16 +198,13 @@ final class n {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
-        if (param0 != -2) {
-            return;
-        }
         field_b = null;
     }
 
-    final static void a(int param0, boolean param1, boolean param2, byte param3) {
+    final static void a(int param0, boolean param1, boolean param2) {
         RuntimeException var4 = null;
         mh var5 = null;
         mh var6 = null;

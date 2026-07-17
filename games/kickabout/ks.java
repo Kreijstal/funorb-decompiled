@@ -10,7 +10,7 @@ final class ks {
     static String field_g;
     private int[] field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_b = null;
         field_f = null;

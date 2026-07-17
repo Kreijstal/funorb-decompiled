@@ -7,7 +7,7 @@ final class ge {
     static String field_a;
     static db field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;
@@ -51,7 +51,8 @@ final class ge {
     }
 
     final static void a(byte param0) {
-        cb.a(1148, le.b((byte) -20));
+        int discarded$3 = -20;
+        cb.a(1148, le.b());
         if (param0 > -3) {
             ge.a((byte) -27);
         }

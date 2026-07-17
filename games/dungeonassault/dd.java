@@ -83,7 +83,7 @@ final class dd extends rj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_A = null;
         field_C = null;
         field_E = null;
@@ -119,8 +119,10 @@ final class dd extends rj {
         var7 = DungeonAssault.field_K;
         var4 = param0 + ((dd) this).field_t;
         var5 = ((dd) this).field_i + param2;
-        bp.a(var5, bl.field_o, var4, (byte) 99);
-        bp.a(((dd) this).field_D + var5 - -10, go.field_S, var4, (byte) 99);
+        int discarded$3 = 99;
+        bp.a(var5, bl.field_o, var4);
+        int discarded$4 = 99;
+        bp.a(((dd) this).field_D + var5 - -10, go.field_S, var4);
         var6 = 0;
         L0: while (true) {
           if (var6 >= 7) {
@@ -143,7 +145,8 @@ final class dd extends rj {
                     }
                     L4: {
                       var6 = stackIn_12_0;
-                      bp.a(4 + var5, im.field_m, var6 + (var4 + 10), (byte) 99);
+                      int discarded$5 = 99;
+                      bp.a(4 + var5, im.field_m, var6 + (var4 + 10));
                       tn.field_W.h(var4, var5);
                       if (param1 == 8187) {
                         break L4;
@@ -194,26 +197,24 @@ final class dd extends rj {
         int var4 = 0;
         int var5 = 0;
         cn var6 = null;
-        Object stackIn_6_0 = null;
-        cn stackIn_8_0 = null;
+        cn stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        cn stackOut_7_0 = null;
-        Object stackOut_5_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        cn stackOut_6_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
         String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
@@ -226,17 +227,11 @@ final class dd extends rj {
                 var6.h();
                 param2.e(param1 - param2.field_w, param1 - param2.field_A, 0);
                 jh.b();
-                if (param0 == -112) {
-                  var6.field_w = param2.field_w + -param1;
-                  var6.field_A = param2.field_A - param1;
-                  stackOut_7_0 = (cn) var6;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L0;
-                } else {
-                  stackOut_5_0 = null;
-                  stackIn_6_0 = stackOut_5_0;
-                  return (cn) (Object) stackIn_6_0;
-                }
+                var6.field_w = param2.field_w + -param1;
+                var6.field_A = param2.field_A - param1;
+                stackOut_6_0 = (cn) var6;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
               } else {
                 param2.e(param1 + -param2.field_w, param1 - param2.field_A, 0);
                 gf.d(1, 1, 0, 0, var6.field_y, var6.field_v);
@@ -249,33 +244,33 @@ final class dd extends rj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("dd.B(").append(param0).append(44).append(param1).append(44);
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("dd.B(").append(-112).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L2;
-            } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     final void a(int param0, byte param1, int param2) {

@@ -48,7 +48,8 @@ final class roa extends ka {
 
     final int HA() {
         if (!((roa) this).field_m) {
-            this.b(-27337);
+            int discarded$0 = -27337;
+            this.b();
         }
         return ((roa) this).field_z;
     }
@@ -272,7 +273,8 @@ final class roa extends ka {
                         break L3;
                       } else {
                         var69 = param1.field_g[var12];
-                        var70 = jm.a(var69.field_e, 0);
+                        int discarded$10 = 0;
+                        var70 = jm.a(var69.field_e);
                         var15_int = -1;
                         var16 = 0;
                         L5: while (true) {
@@ -352,7 +354,8 @@ final class roa extends ka {
                 L9: while (true) {
                   if (var14 >= param1.field_D) {
                     ((roa) this).field_l[param1.field_D] = var13;
-                    var75 = ao.a(param1, var89, ((roa) this).field_v, -3);
+                    int discarded$11 = -3;
+                    var75 = ao.a(param1, var8, ((roa) this).field_v);
                     var15 = new vib[param1.field_j];
                     var16 = 0;
                     L10: while (true) {
@@ -480,16 +483,19 @@ final class roa extends ka {
                               ((roa) this).field_F = rh.a(((roa) this).field_L, ((roa) this).field_F, (byte) 69);
                               ((roa) this).field_r = rh.a(((roa) this).field_L, ((roa) this).field_r, (byte) 50);
                               ((roa) this).field_x = rh.a(((roa) this).field_L, ((roa) this).field_x, (byte) 59);
-                              ((roa) this).field_b = aba.a(((roa) this).field_b, ((roa) this).field_L, -28321);
-                              ((roa) this).field_D = jp.a(((roa) this).field_D, ((roa) this).field_L, 7353);
-                              ((roa) this).field_y = jp.a(((roa) this).field_y, ((roa) this).field_L, 7353);
+                              int discarded$12 = -28321;
+                              ((roa) this).field_b = aba.a(((roa) this).field_b, ((roa) this).field_L);
+                              int discarded$13 = 7353;
+                              ((roa) this).field_D = jp.a(((roa) this).field_D, ((roa) this).field_L);
+                              int discarded$14 = 7353;
+                              ((roa) this).field_y = jp.a(((roa) this).field_y, ((roa) this).field_L);
                               if (null == param1.field_p) {
                                 break L23;
                               } else {
                                 if (!kg.a((byte) 11, ((roa) this).field_s, param2)) {
                                   break L23;
                                 } else {
-                                  int[][] discarded$4 = param1.a((byte) -37, false);
+                                  int[][] discarded$15 = param1.a((byte) -37, false);
                                   break L23;
                                 }
                               }
@@ -501,7 +507,7 @@ final class roa extends ka {
                                 if (!lnb.a(param2, ((roa) this).field_s, false)) {
                                   break L24;
                                 } else {
-                                  int[][] discarded$5 = param1.a(-126);
+                                  int[][] discarded$16 = param1.a(-126);
                                   break L24;
                                 }
                               }
@@ -1039,9 +1045,9 @@ final class roa extends ka {
                                             if (1 != var30) {
                                               break L50;
                                             } else {
-                                              vib dupTemp$6 = new vib();
-                                              var15[var16] = dupTemp$6;
-                                              var31_ref_vib = dupTemp$6;
+                                              vib dupTemp$17 = new vib();
+                                              var15[var16] = dupTemp$17;
+                                              var31_ref_vib = dupTemp$17;
                                               var31_ref_vib.field_d = var27_int;
                                               var31_ref_vib.field_a = var26_int;
                                               var31_ref_vib.field_c = var28;
@@ -1106,7 +1112,8 @@ final class roa extends ka {
                               break L54;
                             } else {
                               L55: {
-                                var21_ref_sr = jm.a(var20_ref_bqa.field_e, 0);
+                                int discarded$18 = 0;
+                                var21_ref_sr = jm.a(var20_ref_bqa.field_e);
                                 if (!var21_ref_sr.field_a) {
                                   break L55;
                                 } else {
@@ -1270,9 +1277,9 @@ final class roa extends ka {
                   }
                 }
               }
-              int fieldTemp$7 = ((roa) this).field_v;
+              int fieldTemp$19 = ((roa) this).field_v;
               ((roa) this).field_v = ((roa) this).field_v + 1;
-              var8[fieldTemp$7] = var9_int;
+              var8[fieldTemp$19] = var9_int;
               ((roa) this).field_l[param1.field_k[var9_int]] = ((roa) this).field_l[param1.field_k[var9_int]] + 1;
               ((roa) this).field_l[param1.field_o[var9_int]] = ((roa) this).field_l[param1.field_o[var9_int]] + 1;
               ((roa) this).field_l[param1.field_K[var9_int]] = ((roa) this).field_l[param1.field_K[var9_int]] + 1;
@@ -1286,7 +1293,8 @@ final class roa extends ka {
 
     final int V() {
         if (!(((roa) this).field_m)) {
-            this.b(-27337);
+            int discarded$0 = -27337;
+            this.b();
         }
         return ((roa) this).field_B;
     }
@@ -1444,7 +1452,7 @@ final class roa extends ka {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1553,7 +1561,8 @@ final class roa extends ka {
 
     final int G() {
         if (!((roa) this).field_m) {
-            this.b(-27337);
+            int discarded$0 = -27337;
+            this.b();
         }
         return ((roa) this).field_M;
     }
@@ -1581,7 +1590,8 @@ final class roa extends ka {
 
     final int RA() {
         if (!((roa) this).field_m) {
-            this.b(-27337);
+            int discarded$0 = -27337;
+            this.b();
         }
         return ((roa) this).field_G;
     }
@@ -1640,7 +1650,8 @@ final class roa extends ka {
                   }
                 }
               }
-              ((roa) this).field_q = new glb(cma.a(((roa) this).field_s, ((roa) this).field_I, -22785));
+              int discarded$2 = -22785;
+              ((roa) this).field_q = new glb(cma.a(((roa) this).field_s, ((roa) this).field_I));
               break L3;
             }
             L5: {
@@ -1685,7 +1696,8 @@ final class roa extends ka {
                   }
                 }
               }
-              ((roa) this).field_H = new rv(iea.a(((roa) this).field_I, ((roa) this).field_s, (byte) -106));
+              int discarded$3 = -106;
+              ((roa) this).field_H = new rv(iea.a(((roa) this).field_I, ((roa) this).field_s));
               break L9;
             }
             break L0;

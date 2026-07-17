@@ -97,7 +97,7 @@ final class ma extends lk implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         td.field_c.b(param0, 0);
         ql var2 = lq.field_a;
         if (var2 != null) {
@@ -106,7 +106,7 @@ final class ma extends lk implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_k = null;
         int var1 = 0;
     }

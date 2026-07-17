@@ -19,7 +19,7 @@ final class wh {
         field_e = null;
     }
 
-    final static void a(String[] args, boolean param1) {
+    final static void a(String[] args) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

@@ -36,7 +36,8 @@ final class nn extends wj implements vh {
         try {
           if (param3 > 64) {
             if (param1 == ((nn) this).field_J) {
-              nn.a(-25085);
+              int discarded$4 = -25085;
+              nn.a();
               return;
             } else {
               if (param1 == ((nn) this).field_E) {
@@ -44,7 +45,8 @@ final class nn extends wj implements vh {
                 return;
               } else {
                 if (((nn) this).field_H == param1) {
-                  bh.a(true);
+                  int discarded$5 = 1;
+                  bh.a();
                   return;
                 } else {
                   return;
@@ -86,30 +88,18 @@ final class nn extends wj implements vh {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var2 = null;
         ui.a("", (byte) 111, (String) null);
     }
 
-    public static void k(int param0) {
-        if (param0 != 2) {
-          field_C = null;
-          field_L = null;
-          field_B = null;
-          field_I = null;
-          field_G = null;
-          field_K = null;
-          field_C = null;
-          return;
-        } else {
-          field_L = null;
-          field_B = null;
-          field_I = null;
-          field_G = null;
-          field_K = null;
-          field_C = null;
-          return;
-        }
+    public static void k() {
+        field_L = null;
+        field_B = null;
+        field_I = null;
+        field_G = null;
+        field_K = null;
+        field_C = null;
     }
 
     public nn() {

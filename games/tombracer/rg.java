@@ -18,7 +18,7 @@ final class rg extends qr {
         }
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_A = null;
     }
 
@@ -249,14 +249,11 @@ final class rg extends qr {
         }
     }
 
-    final static boolean f(int param0) {
-        if (param0 != 7) {
-            return true;
-        }
+    final static boolean f() {
         return gpa.a((byte) 108, di.a(31));
     }
 
-    final static int g(byte param0) {
+    final static int g() {
         return cda.field_p;
     }
 

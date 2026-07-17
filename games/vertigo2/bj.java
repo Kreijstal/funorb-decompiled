@@ -16,9 +16,6 @@ final class bj {
     static String field_b;
 
     final static String a(int param0, char param1) {
-        if (param0 != 0) {
-            bj.a(true);
-        }
         return String.valueOf(param1);
     }
 

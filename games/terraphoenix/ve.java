@@ -6,11 +6,11 @@ final class ve {
     static ci field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static String a(int param0, CharSequence[] param1, int param2, int param3) {
+    final static String a(int param0, CharSequence[] param1, int param2) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -24,28 +24,26 @@ final class ve {
         CharSequence var10 = null;
         String stackIn_3_0 = null;
         String stackIn_9_0 = null;
-        Object stackIn_18_0 = null;
-        String stackIn_26_0 = null;
+        String stackIn_25_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
+        String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_8_0 = null;
-        String stackOut_25_0 = null;
-        Object stackOut_17_0 = null;
+        String stackOut_24_0 = null;
         String stackOut_2_0 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
         RuntimeException stackOut_28_0 = null;
         StringBuilder stackOut_28_1 = null;
         String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
         var9 = Terraphoenix.field_V;
         try {
           L0: {
@@ -67,32 +65,26 @@ final class ve {
                 L1: while (true) {
                   if (var4_int <= var6_int) {
                     var6 = new StringBuilder(var5);
-                    if (param0 == -10537) {
-                      var7 = 0;
-                      L2: while (true) {
-                        if (var7 >= var4_int) {
-                          stackOut_25_0 = var6.toString();
-                          stackIn_26_0 = stackOut_25_0;
-                          break L0;
-                        } else {
-                          L3: {
-                            var8 = param1[var7];
-                            if (var8 != null) {
-                              StringBuilder discarded$5 = var6.append(var8);
-                              break L3;
-                            } else {
-                              StringBuilder discarded$6 = var6.append("null");
-                              break L3;
-                            }
+                    var7 = 0;
+                    L2: while (true) {
+                      if (var7 >= var4_int) {
+                        stackOut_24_0 = var6.toString();
+                        stackIn_25_0 = stackOut_24_0;
+                        break L0;
+                      } else {
+                        L3: {
+                          var8 = param1[var7];
+                          if (var8 != null) {
+                            StringBuilder discarded$5 = var6.append(var8);
+                            break L3;
+                          } else {
+                            StringBuilder discarded$6 = var6.append("null");
+                            break L3;
                           }
-                          var7++;
-                          continue L2;
                         }
+                        var7++;
+                        continue L2;
                       }
-                    } else {
-                      stackOut_17_0 = null;
-                      stackIn_18_0 = stackOut_17_0;
-                      return (String) (Object) stackIn_18_0;
                     }
                   } else {
                     L4: {
@@ -120,33 +112,33 @@ final class ve {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var4_ref;
-            stackOut_27_1 = new StringBuilder().append("ve.D(").append(param0).append(44);
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackOut_26_0 = (RuntimeException) var4_ref;
+            stackOut_26_1 = new StringBuilder().append("ve.D(").append(-10537).append(44);
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
-              break L5;
-            } else {
               stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
               stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L5;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
               break L5;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param2 + 44 + 0 + 41);
+          throw qk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 44 + 0 + 41);
         }
-        return stackIn_26_0;
+        return stackIn_25_0;
     }
 
     final static void a(int param0, int param1) {
@@ -155,7 +147,7 @@ final class ve {
             wf.field_l = 2;
         }
         di.field_e = 3 & param1 >> 2;
-        if (!(param0 >= di.field_e)) {
+        if (!(2 >= di.field_e)) {
             di.field_e = 2;
         }
         lb.field_f = param1 & 3;

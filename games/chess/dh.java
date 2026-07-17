@@ -14,7 +14,7 @@ final class dh {
     static String field_h;
     static int field_c;
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean b(int param0, int param1) {
         if (17 != param1) {
           return false;
         } else {
@@ -23,7 +23,7 @@ final class dh {
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -48,7 +48,8 @@ final class dh {
               try {
                 L0: {
                   var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                  param0.getAppletContext().showDocument(rh.a(var2, param0, (byte) -87), "_top");
+                  int discarded$2 = -87;
+                  param0.getAppletContext().showDocument(rh.a(var2, param0), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -95,10 +96,7 @@ final class dh {
         }
     }
 
-    public static void d(byte param0) {
-        if (param0 != -75) {
-            return;
-        }
+    public static void d() {
         field_h = null;
         field_g = null;
     }
@@ -269,7 +267,7 @@ final class dh {
                     if (param0 != 14) {
                       if (param0 != 20) {
                         if (param0 == 19) {
-                          boolean discarded$1 = fl.a(((dh) this).field_e, ((dh) this).field_j, ((dh) this).field_a, ((dh) this).field_i, (byte) 113);
+                          boolean discarded$3 = fl.a(((dh) this).field_e, ((dh) this).field_j, ((dh) this).field_a, ((dh) this).field_i, (byte) 113);
                           return true;
                         } else {
                           return false;
@@ -279,7 +277,8 @@ final class dh {
                         return true;
                       }
                     } else {
-                      jg.n(-66);
+                      int discarded$4 = -66;
+                      jg.n();
                       return true;
                     }
                   } else {
@@ -295,7 +294,8 @@ final class dh {
                 return true;
               }
             } else {
-              lj.a(((dh) this).field_i, ((dh) this).field_j, 112);
+              int discarded$5 = 112;
+              lj.a(((dh) this).field_i, ((dh) this).field_j);
               return true;
             }
           } else {
@@ -416,7 +416,7 @@ final class dh {
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         hh var1 = null;
         nk var2 = null;
         var1 = (hh) (Object) eh.field_R.g(-18110);
@@ -486,7 +486,8 @@ final class dh {
                     var8 = this.a(param0 + 106);
                     var4_ref = var8;
                     var5 = mn.a(param0 + -18, ((dh) this).field_i);
-                    var6 = va.a(((dh) this).field_i, -19554) ? 1 : 0;
+                    int discarded$1 = -19554;
+                    var6 = va.a(((dh) this).field_i) ? 1 : 0;
                     if (var5 != null) {
                       break L3;
                     } else {
@@ -605,18 +606,20 @@ final class dh {
         if (var6 == -2) {
           return false;
         } else {
-          boolean discarded$7 = this.a(5069, var6, param0);
+          boolean discarded$9 = this.a(5069, var6, param0);
           if (param4 != -11) {
             var7 = null;
             dh.a(113, (j) null);
-            boolean discarded$8 = this.a(false, var6, param2);
-            boolean discarded$9 = this.d(var6, param4 + 120, param2);
-            boolean discarded$10 = this.b(param3, var6, 13563);
+            boolean discarded$10 = this.a(false, var6, param2);
+            boolean discarded$11 = this.d(var6, param4 + 120, param2);
+            int discarded$12 = 13563;
+            boolean discarded$13 = this.b(param3, var6);
             return true;
           } else {
-            boolean discarded$11 = this.a(false, var6, param2);
-            boolean discarded$12 = this.d(var6, param4 + 120, param2);
-            boolean discarded$13 = this.b(param3, var6, 13563);
+            boolean discarded$14 = this.a(false, var6, param2);
+            boolean discarded$15 = this.d(var6, param4 + 120, param2);
+            int discarded$16 = 13563;
+            boolean discarded$17 = this.b(param3, var6);
             return true;
           }
         }
@@ -703,7 +706,7 @@ final class dh {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -859,9 +862,6 @@ final class dh {
 
     private final boolean a(int param0, int param1, int param2) {
         int var5 = Chess.field_G;
-        if (param0 != 5069) {
-            return false;
-        }
         if (param1 == 0) {
             ue.a(((dh) this).field_j, 16581, param2);
         } else {
@@ -888,7 +888,8 @@ final class dh {
                 la.a(param2, (byte) 127, ((dh) this).field_d);
                 return true;
             }
-            db.a(param2, ((dh) this).field_d, param0 ^ 32284);
+            int discarded$0 = 28113;
+            db.a(param2, ((dh) this).field_d);
             return true;
         }
         return true;
@@ -912,69 +913,62 @@ final class dh {
 
     private final boolean a(boolean param0, int param1, int param2) {
         Object var4 = null;
-        Object var5 = null;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        if (!param0) {
-          var4 = null;
-          if (param1 != 4) {
-            if (5 != param1) {
-              if (param1 != 6) {
-                if (param1 != 7) {
-                  return false;
-                } else {
-                  L0: {
-                    var8 = of.a(((dh) this).field_f, param2, ((dh) this).field_i, -1);
-                    if (var8 != null) {
-                      var5 = null;
-                      lc.a(((dh) this).field_i, (String) null, 2, 0, var8, false);
-                      break L0;
-                    } else {
-                      break L0;
-                    }
-                  }
-                  return true;
-                }
+        String var4_ref = null;
+        var4 = null;
+        if (param1 != 4) {
+          if (5 != param1) {
+            if (param1 != 6) {
+              if (param1 != 7) {
+                return false;
               } else {
-                L1: {
-                  var7 = a.a(param2, ((dh) this).field_i, (byte) 64);
-                  if (var7 != null) {
-                    var5 = null;
-                    lc.a(((dh) this).field_i, (String) null, 2, 0, var7, false);
-                    break L1;
+                L0: {
+                  var4_ref = of.a(((dh) this).field_f, param2, ((dh) this).field_i, -1);
+                  if (var4_ref != null) {
+                    int discarded$5 = 0;
+                    lc.a(((dh) this).field_i, (String) null, 2, 0, var4_ref);
+                    break L0;
                   } else {
-                    break L1;
+                    break L0;
                   }
                 }
                 return true;
               }
             } else {
-              L2: {
-                var9 = ab.a(param2, 21250, ((dh) this).field_i);
-                if (var9 != null) {
-                  var5 = null;
-                  lc.a(((dh) this).field_i, (String) null, 2, 0, var9, false);
-                  break L2;
+              L1: {
+                int discarded$6 = 64;
+                var4_ref = a.a(param2, ((dh) this).field_i);
+                if (var4_ref != null) {
+                  int discarded$7 = 0;
+                  lc.a(((dh) this).field_i, (String) null, 2, 0, var4_ref);
+                  break L1;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
               return true;
             }
           } else {
-            var6 = hf.a(param2, 107, ((dh) this).field_i);
-            if (var6 == null) {
-              return true;
-            } else {
-              var5 = null;
-              lc.a(((dh) this).field_i, (String) null, 2, 0, var6, false);
-              return true;
+            L2: {
+              var4_ref = ab.a(param2, 21250, ((dh) this).field_i);
+              if (var4_ref != null) {
+                int discarded$8 = 0;
+                lc.a(((dh) this).field_i, (String) null, 2, 0, var4_ref);
+                break L2;
+              } else {
+                break L2;
+              }
             }
+            return true;
           }
         } else {
-          return true;
+          var4_ref = hf.a(param2, 107, ((dh) this).field_i);
+          if (var4_ref == null) {
+            return true;
+          } else {
+            int discarded$9 = 0;
+            lc.a(((dh) this).field_i, (String) null, 2, 0, var4_ref);
+            return true;
+          }
         }
     }
 
@@ -1012,13 +1006,15 @@ final class dh {
             gg.field_n = true;
             return;
           } else {
-            sh.a((byte) -59);
+            int discarded$4 = -59;
+            sh.a();
             rm.field_Q = 11;
             gg.field_n = true;
             return;
           }
         } else {
-          sh.a((byte) -59);
+          int discarded$5 = -59;
+          sh.a();
           rm.field_Q = 11;
           gg.field_n = true;
           return;

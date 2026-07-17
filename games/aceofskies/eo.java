@@ -6,7 +6,7 @@ final class eo {
     static int field_a;
     int field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -60,7 +60,7 @@ final class eo {
             var2++;
             param1 = param1 >> 1;
         }
-        int var3 = -26 / ((param0 - 61) / 35);
+        int var3 = -26;
         return var2;
     }
 
@@ -109,8 +109,9 @@ final class eo {
         try {
           L0: {
             if (tn.a(param0, (byte) -127, param1, param3)) {
-              var5_int = 53 / ((param2 - -57) / 33);
-              stackOut_3_0 = gl.a(param4.a(param3, -10470, param1), 544);
+              var5_int = -53;
+              int discarded$2 = 544;
+              stackOut_3_0 = gl.a(param4.a(param3, -10470, param1));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -149,7 +150,7 @@ final class eo {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(-112).append(44).append(param3).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

@@ -182,7 +182,7 @@ final class hj extends oa {
                             break L5;
                           } else {
                             var10 = null;
-                            ii[] discarded$2 = hj.a((ci) null, (byte) 75, -121, -92);
+                            ii[] discarded$4 = hj.a((ci) null, (byte) 75, -121, -92);
                             break L5;
                           }
                         }
@@ -194,12 +194,14 @@ final class hj extends oa {
                       } else {
                         L6: {
                           var7 = param1.charAt(var6);
-                          if (ci.a((char) var7, 0)) {
-                            var8 = jk.a((char) var7, false);
+                          int discarded$5 = 0;
+                          if (ci.a((char) var7)) {
+                            int discarded$6 = 0;
+                            var8 = jk.a((char) var7);
                             if (0 == var8) {
                               break L6;
                             } else {
-                              StringBuilder discarded$3 = var5.append(var8);
+                              StringBuilder discarded$7 = var5.append(var8);
                               break L6;
                             }
                           } else {
@@ -286,7 +288,8 @@ final class hj extends oa {
               }
             }
             if (rl.a(param2, 0, param3, param0)) {
-              stackOut_5_0 = pd.a((byte) 113);
+              int discarded$2 = 113;
+              stackOut_5_0 = pd.a();
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

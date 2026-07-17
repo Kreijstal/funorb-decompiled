@@ -20,21 +20,22 @@ final class ol {
         m var6_ref = null;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-            if (param1 > ((ol) this).field_b) {
+            if (1 > ((ol) this).field_b) {
                 throw new IllegalStateException();
             }
             this.a(false, param0);
-            ((ol) this).field_k = ((ol) this).field_k - param1;
+            ((ol) this).field_k = ((ol) this).field_k - 1;
             while (((ol) this).field_k < 0) {
                 var6 = (mc) (Object) ((ol) this).field_c.a((byte) -20);
-                this.a(var6, (byte) -88);
+                int discarded$0 = -88;
+                this.a(var6);
             }
-            var6_ref = new m(param3, param1);
+            var6_ref = new m(param3, 1);
             ((ol) this).field_h.a((oh) (Object) var6_ref, true, param0);
             ((ol) this).field_c.a((df) (Object) var6_ref, 6);
-            ((mc) (Object) var6_ref).field_l = (long)param2;
+            ((mc) (Object) var6_ref).field_l = 0L;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ol.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ol.A(" + param0 + 44 + 1 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -109,7 +110,8 @@ final class ol {
         int stackOut_6_0 = 0;
         if (param0 < -79) {
           if (null == hp.field_m) {
-            if (!ih.b(-124)) {
+            int discarded$10 = -124;
+            if (!ih.b()) {
               if (tc.field_G == null) {
                 if (ep.a(640)) {
                   return true;
@@ -130,7 +132,8 @@ final class ol {
         } else {
           ol.a(true);
           if (null == hp.field_m) {
-            if (!ih.b(-124)) {
+            int discarded$11 = -124;
+            if (!ih.b()) {
               if (tc.field_G == null) {
                 if (ep.a(640)) {
                   return true;
@@ -158,7 +161,7 @@ final class ol {
         }
     }
 
-    final static os a(byte param0) {
+    final static os a() {
         go.field_E = new os(5, 5, 500, 45);
         ad var1 = new ad();
         go.field_E.field_v = (jk) (Object) var1;
@@ -173,7 +176,7 @@ final class ol {
         return go.field_E;
     }
 
-    private final void a(mc param0, byte param1) {
+    private final void a(mc param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -236,11 +239,8 @@ final class ol {
 
     private final void a(boolean param0, long param1) {
         mc var4 = (mc) (Object) ((ol) this).field_h.a(-99, param1);
-        this.a(var4, (byte) -88);
-        if (param0) {
-            field_l = null;
-            return;
-        }
+        int discarded$0 = -88;
+        this.a(var4);
     }
 
     ol(int param0) {

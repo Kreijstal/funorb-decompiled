@@ -124,7 +124,8 @@ final class vo extends ip {
               var5 = var4;
               if (!sm.a(1, var5)) {
                 if (!dj.a(6623, var5)) {
-                  if (j.a(var5, (byte) -124)) {
+                  int discarded$18 = -124;
+                  if (j.a(var5)) {
                     stackOut_13_0 = di.field_k;
                     stackIn_14_0 = stackOut_13_0;
                     return stackIn_14_0;
@@ -135,7 +136,8 @@ final class vo extends ip {
                       return stackIn_18_0;
                     } else {
                       if (var6.length() > 0) {
-                        if (gk.a(var6, var5, 16777215)) {
+                        int discarded$19 = 16777215;
+                        if (gk.a(var6, var5)) {
                           stackOut_24_0 = qd.field_b;
                           stackIn_25_0 = stackOut_24_0;
                           return stackIn_25_0;

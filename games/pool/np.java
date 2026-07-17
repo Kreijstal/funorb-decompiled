@@ -15,15 +15,11 @@ final class np {
     private int field_b;
     static String field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_g = null;
         field_a = null;
-        if (!param0) {
-            Object var2 = null;
-            int discarded$0 = np.a(true, (String) null, true, true, -64, (String) null);
-        }
     }
 
     final byte[] a(byte param0, int param1) {
@@ -229,82 +225,74 @@ final class np {
         int var3 = 0;
         int var4 = 0;
         StringBuilder var5 = null;
-        Object stackIn_2_0 = null;
-        String stackIn_7_0 = null;
+        String stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_6_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        String stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
-            if (!param0) {
-              var5 = new StringBuilder(2 * param1.field_v);
-              var2 = var5;
-              var3 = 0;
-              L1: while (true) {
-                if (param1.field_v <= var3) {
-                  stackOut_6_0 = var2.toString();
-                  stackIn_7_0 = stackOut_6_0;
-                  break L0;
-                } else {
-                  var4 = 255 & param1.field_t[var3];
-                  StringBuilder discarded$4 = var5.append(ec.field_j[var4 >> 4 & 15]);
-                  StringBuilder discarded$5 = var5.append(ec.field_j[15 & var4]);
-                  var3++;
-                  continue L1;
-                }
+            var5 = new StringBuilder(2 * param1.field_v);
+            var2 = var5;
+            var3 = 0;
+            L1: while (true) {
+              if (param1.field_v <= var3) {
+                stackOut_5_0 = var2.toString();
+                stackIn_6_0 = stackOut_5_0;
+                break L0;
+              } else {
+                var4 = 255 & param1.field_t[var3];
+                StringBuilder discarded$4 = var5.append(ec.field_j[var4 >> 4 & 15]);
+                StringBuilder discarded$5 = var5.append(ec.field_j[15 & var4]);
+                var3++;
+                continue L1;
               }
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2_ref;
-            stackOut_8_1 = new StringBuilder().append("np.E(").append(param0).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_1 = new StringBuilder().append("np.E(").append(0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L2;
-            } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_6_0;
     }
 
     final boolean a(int param0, int param1, int param2, byte[] param3) {
@@ -348,9 +336,11 @@ final class np {
                 } else {
                   if (param2 <= ((np) this).field_b) {
                     L3: {
-                      var6 = this.a(param0, param2, true, param3, (byte) 93) ? 1 : 0;
+                      int discarded$6 = 93;
+                      var6 = this.a(param0, param2, true, param3) ? 1 : 0;
                       if (var6 == 0) {
-                        var6 = this.a(param0, param2, false, param3, (byte) 93) ? 1 : 0;
+                        int discarded$7 = 93;
+                        var6 = this.a(param0, param2, false, param3) ? 1 : 0;
                         break L3;
                       } else {
                         break L3;
@@ -400,7 +390,7 @@ final class np {
         }
     }
 
-    private final boolean a(int param0, int param1, boolean param2, byte[] param3, byte param4) {
+    private final boolean a(int param0, int param1, boolean param2, byte[] param3) {
         try {
             Object var6 = null;
             RuntimeException var6_ref = null;
@@ -950,7 +940,8 @@ final class np {
                 }
                 L9: {
                   if (ff.field_b == tl.field_J) {
-                    if (wf.a((byte) 39)) {
+                    int discarded$9 = 39;
+                    if (wf.a()) {
                       L10: {
                         hm.field_a = kn.field_e.h(-412303328);
                         ei.field_E = param5;
@@ -960,7 +951,8 @@ final class np {
                         var12 = kn.field_e.m(108);
                         var7 = kn.field_e.g(-76);
                         if (0 != (1 & var7)) {
-                          ke.a(100);
+                          int discarded$10 = 100;
+                          ke.a();
                           break L10;
                         } else {
                           break L10;
@@ -1030,9 +1022,9 @@ final class np {
                         if (!hk.field_s) {
                           break L16;
                         } else {
-                          int discarded$6 = kn.field_e.g(-114);
-                          int discarded$7 = kn.field_e.g(-99);
-                          int discarded$8 = kn.field_e.b(true);
+                          int discarded$11 = kn.field_e.g(-114);
+                          int discarded$12 = kn.field_e.g(-99);
+                          int discarded$13 = kn.field_e.b(true);
                           va.field_X = kn.field_e.d(-1034);
                           sn.field_n = new byte[va.field_X];
                           var8 = 0;
@@ -1109,7 +1101,7 @@ final class np {
                             } else {
                               try {
                                 L23: {
-                                  Object discarded$9 = mo.a((byte) 126, "unzap", hk.d(125));
+                                  Object discarded$14 = mo.a((byte) 126, "unzap", hk.d(125));
                                   break L23;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -1125,7 +1117,7 @@ final class np {
                         }
                         try {
                           L25: {
-                            Object discarded$10 = mo.a("zap", new Object[1], 105, hk.d(107));
+                            Object discarded$15 = mo.a("zap", new Object[1], 105, hk.d(107));
                             break L25;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -1171,7 +1163,7 @@ final class np {
                     break L29;
                   } else {
                     var10 = null;
-                    int discarded$11 = np.a(true, (String) null, false, false, 59, (String) null);
+                    int discarded$16 = np.a(true, (String) null, false, false, 59, (String) null);
                     break L29;
                   }
                 }
@@ -1179,7 +1171,8 @@ final class np {
                   if (tl.field_J != hm.field_k) {
                     break L30;
                   } else {
-                    if (wf.a((byte) 39)) {
+                    int discarded$17 = 39;
+                    if (wf.a()) {
                       L31: {
                         dn.c(-64);
                         if (uq.field_c != 7) {

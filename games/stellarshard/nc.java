@@ -20,7 +20,7 @@ final class nc extends rj {
     static int field_H;
     private pb field_E;
 
-    private final pb d(boolean param0) {
+    private final pb d() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -52,7 +52,8 @@ final class nc extends rj {
             return;
         }
         ((nc) this).field_L = param1;
-        this.a(15035);
+        int discarded$0 = 15035;
+        this.a();
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
@@ -77,26 +78,27 @@ final class nc extends rj {
             ((nc) this).field_K = -78;
         }
         super.b(param0, param1, param2, param3, param4);
-        this.a(15035);
+        int discarded$0 = 15035;
+        this.a();
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_y = null;
         field_F = null;
     }
 
-    private final void a(int param0) {
-        ((nc) this).field_C = new pb[]{this.b(((nc) this).field_L, ((nc) this).field_D, 0), this.b(((nc) this).field_N, ((nc) this).field_O, 0)};
-        ((nc) this).field_P = this.d(false);
+    private final void a() {
+        int discarded$0 = 0;
+        int discarded$1 = 0;
+        ((nc) this).field_C = new pb[]{this.b(((nc) this).field_L, ((nc) this).field_D), this.b(((nc) this).field_N, ((nc) this).field_O)};
+        int discarded$2 = 0;
+        ((nc) this).field_P = this.d();
         ((nc) this).field_E = ((nc) this).field_P.f();
         ((nc) this).field_I = new pb(((nc) this).field_t >> 1, ((nc) this).field_t);
     }
 
     final static void b(byte param0, int param1, int param2) {
         wg.field_c = param2;
-        if (param0 != 98) {
-            field_H = -55;
-        }
         vk.field_b = param1;
     }
 
@@ -198,7 +200,8 @@ final class nc extends rj {
             fk.a(-28092, (java.awt.Component) (Object) param0);
             if (param1 > 84) {
               L1: {
-                ge.a((java.awt.Component) (Object) param0, (byte) -41);
+                int discarded$12 = -41;
+                ge.a((java.awt.Component) (Object) param0);
                 if (null != og.field_c) {
                   og.field_c.a((byte) -93, (java.awt.Component) (Object) param0);
                   break L1;
@@ -249,69 +252,61 @@ final class nc extends rj {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var8 = stellarshard.field_B;
         try {
           L0: {
-            L1: {
-              if (param1 == 46) {
-                break L1;
-              } else {
-                ((nc) this).field_C = null;
-                break L1;
-              }
-            }
             var5_int = param0 + ((nc) this).field_p;
             gg.a(42, var5_int - ((nc) this).field_P.field_v, param2, ((nc) this).field_t + param2, ((nc) this).field_P.field_v + param0);
             var6 = -((nc) this).field_z + param0;
-            L2: while (true) {
+            L1: while (true) {
               if (var6 >= var5_int) {
-                L3: {
+                L2: {
                   id.b((byte) -58);
                   if (((nc) this).field_P.field_v + param0 >= ti.field_e) {
-                    hj.a(((nc) this).field_I, param1 ^ 47);
+                    hj.a(((nc) this).field_I, 1);
                     param3.e(-((nc) this).field_z, 0);
                     param3.e(-((nc) this).field_z + 2 * ((nc) this).field_M, 0);
                     ((nc) this).field_E.c(0, 0);
                     id.b((byte) -58);
                     ((nc) this).field_I.e(param0, param2);
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
-                L4: {
+                L3: {
                   if (ti.field_c < var5_int - ((nc) this).field_P.field_v) {
-                    break L4;
+                    break L3;
                   } else {
                     hj.a(((nc) this).field_I, 1);
                     var7 = ((nc) this).field_z + -((nc) this).field_P.field_v + ((nc) this).field_p;
-                    L5: while (true) {
+                    L4: while (true) {
                       if (2 * ((nc) this).field_M >= var7) {
                         param3.e(-var7, 0);
                         param3.e(2 * ((nc) this).field_M - var7, 0);
                         ((nc) this).field_P.c(0, 0);
                         id.b((byte) -58);
                         ((nc) this).field_I.e(var5_int - ((nc) this).field_P.field_v, param2);
-                        break L4;
+                        break L3;
                       } else {
                         var7 = var7 - 2 * ((nc) this).field_M;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   }
@@ -320,43 +315,43 @@ final class nc extends rj {
               } else {
                 param3.e(var6, param2);
                 var6 = var6 + param3.field_v;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var5;
-            stackOut_15_1 = new StringBuilder().append("nc.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_13_0 = (RuntimeException) var5;
+            stackOut_13_1 = new StringBuilder().append("nc.H(").append(param0).append(44).append(46).append(44).append(param2).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
-              break L6;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
-              break L6;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 
-    private final pb b(int param0, int param1, int param2) {
+    private final pb b(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -375,9 +370,9 @@ final class nc extends rj {
         int stackOut_6_0 = 0;
         var13 = stellarshard.field_B;
         var14 = new pb(((nc) this).field_M * 2, ((nc) this).field_t);
-        hj.a(var14, param2 + 1);
+        hj.a(var14, 1);
         var5 = ((nc) this).field_t >> 1;
-        var6 = param2;
+        var6 = 0;
         L0: while (true) {
           if (var6 >= ((nc) this).field_t) {
             id.b((byte) -58);

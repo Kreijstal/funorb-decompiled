@@ -1228,11 +1228,11 @@ final class ud {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1 = 14;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_b = null;
     }
@@ -1349,14 +1349,6 @@ final class ud {
                 break L0;
               }
             }
-          }
-        }
-        L1: {
-          if (param7 == 100000) {
-            break L1;
-          } else {
-            field_k = null;
-            break L1;
           }
         }
     }

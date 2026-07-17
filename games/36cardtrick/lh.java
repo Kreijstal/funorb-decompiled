@@ -297,51 +297,43 @@ final class lh {
                     var3 = 0;
                     L3: while (true) {
                       if (var3 >= jh.field_c) {
-                        L4: {
-                          jh.field_c = var2_int;
-                          int fieldTemp$5 = jh.field_c;
-                          jh.field_c = jh.field_c + 1;
-                          me.field_b[fieldTemp$5] = param1;
-                          if (param0 == 7743) {
-                            break L4;
-                          } else {
-                            field_a = null;
-                            break L4;
-                          }
-                        }
+                        jh.field_c = var2_int;
+                        int fieldTemp$5 = jh.field_c;
+                        jh.field_c = jh.field_c + 1;
+                        me.field_b[fieldTemp$5] = param1;
                         break L0;
                       } else {
-                        L5: {
-                          L6: {
+                        L4: {
+                          L5: {
                             if (me.field_b[var3].field_k != param1.field_k) {
-                              break L6;
+                              break L5;
                             } else {
                               var4 = me.field_b[var3].b(2);
                               if (mj.field_e >= ab.field_u[var4]) {
-                                break L6;
+                                break L5;
                               } else {
                                 ab.field_u[var4] = ab.field_u[var4] - 1;
-                                break L5;
+                                break L4;
                               }
                             }
                           }
                           int incrementValue$6 = var2_int;
                           var2_int++;
                           me.field_b[incrementValue$6] = me.field_b[var3];
-                          break L5;
+                          break L4;
                         }
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    L7: {
+                    L6: {
                       if (param1.field_k == me.field_b[var2_int].field_k) {
                         int dupTemp$7 = me.field_b[var2_int].b(2);
                         ab.field_u[dupTemp$7] = ab.field_u[dupTemp$7] + 1;
-                        break L7;
+                        break L6;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                     var2_int++;
@@ -357,10 +349,10 @@ final class lh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2;
-            stackOut_20_1 = new StringBuilder().append("lh.L(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("lh.L(").append(7743).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -372,7 +364,7 @@ final class lh {
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
-              break L8;
+              break L7;
             } else {
               stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
@@ -380,7 +372,7 @@ final class lh {
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
               stackIn_23_2 = stackOut_21_2;
-              break L8;
+              break L7;
             }
           }
           throw ma.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
@@ -548,7 +540,8 @@ final class lh {
             var4_int = param1.a(18659, param2);
             var5 = 1 % ((param3 - 43) / 62);
             var6 = param1.a(var4_int, param0, (byte) 7);
-            stackOut_0_0 = oj.a(var4_int, param1, var6, -8691);
+            int discarded$2 = -8691;
+            stackOut_0_0 = oj.a(var4_int, param1, var6);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

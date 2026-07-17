@@ -107,7 +107,7 @@ final class df {
         return stackIn_9_0 != 0;
     }
 
-    final static String a(byte param0) {
+    final static String a() {
         if (sf.field_y < 2) {
           return kg.field_q;
         } else {
@@ -127,22 +127,18 @@ final class df {
                 if (!vf.field_nb.d(-127)) {
                   return gh.field_Q;
                 } else {
-                  if (param0 == 84) {
-                    if (!vf.field_nb.a("commonui", 0)) {
-                      return kb.field_a + " - " + vf.field_nb.a(100, "commonui") + "%";
-                    } else {
-                      if (rg.field_r.d(66)) {
-                        if (!rg.field_r.c(-63)) {
-                          return cf.field_c + " - " + rg.field_r.b(0) + "%";
-                        } else {
-                          return cl.field_j;
-                        }
-                      } else {
-                        return de.field_e;
-                      }
-                    }
+                  if (!vf.field_nb.a("commonui", 0)) {
+                    return kb.field_a + " - " + vf.field_nb.a(100, "commonui") + "%";
                   } else {
-                    return null;
+                    if (rg.field_r.d(66)) {
+                      if (!rg.field_r.c(-63)) {
+                        return cf.field_c + " - " + rg.field_r.b(0) + "%";
+                      } else {
+                        return cl.field_j;
+                      }
+                    } else {
+                      return de.field_e;
+                    }
                   }
                 }
               }
@@ -290,7 +286,7 @@ final class df {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
         field_c = null;

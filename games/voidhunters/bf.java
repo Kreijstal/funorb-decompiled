@@ -12,7 +12,7 @@ final class bf implements dja {
         return (tv[]) (Object) new jpa[param1];
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
     }
 

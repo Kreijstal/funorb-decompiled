@@ -159,7 +159,8 @@ final class bg extends uf {
                   if (param0.length() != 0) {
                     if (!ne.a(param2, false, param0)) {
                       if (!gl.a(param2, 80, param0)) {
-                        if (l.a(param0, param2, 0)) {
+                        int discarded$12 = 0;
+                        if (l.a(param0, param2)) {
                           stackOut_22_0 = 0;
                           stackIn_23_0 = stackOut_22_0;
                           return stackIn_23_0 != 0;
@@ -170,7 +171,7 @@ final class bg extends uf {
                             break L0;
                           } else {
                             var4 = null;
-                            boolean discarded$2 = bg.a((String) null, 71, (String) null);
+                            boolean discarded$13 = bg.a((String) null, 71, (String) null);
                             return true;
                           }
                         }

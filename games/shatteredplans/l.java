@@ -18,7 +18,8 @@ final class l {
     static int field_f;
 
     final void b(byte param0) {
-        ((l) this).field_h = wb.a(((l) this).field_e, 0);
+        int discarded$0 = 0;
+        ((l) this).field_h = wb.a(((l) this).field_e);
         if (param0 != 80) {
             Object var3 = null;
             ((l) this).a((byte) 42, (fs[]) null, (ob) null);
@@ -39,7 +40,8 @@ final class l {
         if (param0 != 26253) {
             ((l) this).field_j = null;
         }
-        ((l) this).field_c = mb.a(((l) this).field_e, false);
+        int discarded$0 = 0;
+        ((l) this).field_c = mb.a(((l) this).field_e);
     }
 
     private final void a(fs param0, vr param1, int param2, ln param3) {
@@ -58,7 +60,8 @@ final class l {
             var6.a(-21771, param3);
             param0.field_i.a((byte) -113, (oh) (Object) var5);
             param0.field_m = var6;
-            kd.a(param1, false, param3, (byte) -2);
+            int discarded$0 = -2;
+            kd.a(param1, false, param3);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "l.F(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }

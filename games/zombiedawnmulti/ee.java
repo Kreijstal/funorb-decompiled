@@ -66,7 +66,7 @@ final class ee {
               } else {
                 var8_int = 0;
                 L2: while (true) {
-                  var8_int = param2.indexOf((int) param0, var8_int);
+                  var8_int = param2.indexOf('_', var8_int);
                   if (var8_int < 0) {
                     break L1;
                   } else {
@@ -80,7 +80,7 @@ final class ee {
             var8 = new StringBuilder(var6);
             var9 = 0;
             L3: while (true) {
-              var10 = param2.indexOf((int) param0, var9);
+              var10 = param2.indexOf('_', var9);
               if (var10 < 0) {
                 if (param3 <= -36) {
                   StringBuilder discarded$6 = var8.append(param2.substring(var9));
@@ -105,7 +105,7 @@ final class ee {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4;
-            stackOut_13_1 = new StringBuilder().append("ee.E(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("ee.E(").append(95).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -158,7 +158,7 @@ final class ee {
         return stackIn_12_0;
     }
 
-    final static fc a(byte[] param0, boolean param1) {
+    final static fc a(byte[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -241,7 +241,7 @@ final class ee {
         return stackIn_5_0;
     }
 
-    final static boolean a(boolean param0, boolean param1) {
+    final static boolean a(boolean param0) {
         L0: {
           if (wp.field_g == null) {
             wp.field_g = ok.field_m.a(tm.field_c, jo.field_b, (byte) -120);
@@ -269,7 +269,7 @@ final class ee {
         }
     }
 
-    final static lm a(int param0, int param1, int param2, boolean param3) {
+    final static lm a(int param0, int param1, int param2) {
         if (19 == param0) {
             return null;
         }
@@ -278,14 +278,13 @@ final class ee {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5, boolean param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, boolean param13) {
         ui.field_j = null;
-        no.c((byte) 75);
-        param8 = ih.a(param10, 4, param3, param2, param7, param8, param4);
-        el.a(param9, param13, param12, 2, param8, param0, param6, param2, param5, param11);
-        if (!param1) {
-            ee.a(-102, true, -123, -91, -93, false, false, -65, false, 82, -99, true, 54, true);
-        }
+        int discarded$0 = 75;
+        no.c();
+        param8 = ih.a(13, 4, 14, 11, 0, param8, param4);
+        el.a(16777215, param13, param12, 2, param8, 16777215, param6, 11, true, param11);
         bg.a(param12, (byte) 101, param6);
-        ig.a((byte) -114, param12, param8, param7);
+        int discarded$1 = 0;
+        ig.a((byte) -114, param12, param8);
     }
 
     static {

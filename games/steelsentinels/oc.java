@@ -467,11 +467,11 @@ final class oc {
         return stackIn_50_0;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return dl.field_J != null && null != dl.field_J.i(-1850);
     }
 
-    final static void a(int param0, int param1, String param2, boolean param3, boolean param4) {
+    final static void a(int param0, int param1, String param2, boolean param3) {
         RuntimeException var5 = null;
         String var6 = null;
         int var7 = 0;
@@ -517,7 +517,7 @@ final class oc {
         try {
           L0: {
             L1: {
-              gd.field_mb = param1;
+              gd.field_mb = 0;
               nc.field_q = true;
               var11 = param2;
               var6 = cf.field_v;
@@ -596,39 +596,35 @@ final class oc {
                 gh.field_hb = (id.field_ac - -tf.field_c << 1) * se.field_c.field_m;
                 hb.field_b = -(var7 >> 1) + (var7 + vg.field_f);
                 hl.field_q = vg.field_f + -(var7 >> 1);
-                if (param0 >= 46) {
-                  var8 = 0;
-                  L7: while (true) {
-                    if (var8 >= an.field_g.length) {
-                      lk.field_W = qg.field_a + -(gh.field_hb >> 1);
-                      se.field_c.a(param3, 0, 0, se.a((byte) 32, oh.field_f, pi.field_c));
-                      break L0;
-                    } else {
-                      L8: {
-                        stackOut_34_0 = gh.field_hb;
-                        stackIn_36_0 = stackOut_34_0;
-                        stackIn_35_0 = stackOut_34_0;
-                        if (0 <= kk.field_g[var8]) {
-                          stackOut_36_0 = stackIn_36_0;
-                          stackOut_36_1 = ig.field_e;
-                          stackIn_37_0 = stackOut_36_0;
-                          stackIn_37_1 = stackOut_36_1;
-                          break L8;
-                        } else {
-                          stackOut_35_0 = stackIn_35_0;
-                          stackOut_35_1 = ck.field_e;
-                          stackIn_37_0 = stackOut_35_0;
-                          stackIn_37_1 = stackOut_35_1;
-                          break L8;
-                        }
+                var8 = 0;
+                L7: while (true) {
+                  if (var8 >= an.field_g.length) {
+                    lk.field_W = qg.field_a + -(gh.field_hb >> 1);
+                    se.field_c.a(param3, 0, 0, se.a((byte) 32, oh.field_f, pi.field_c));
+                    break L0;
+                  } else {
+                    L8: {
+                      stackOut_34_0 = gh.field_hb;
+                      stackIn_36_0 = stackOut_34_0;
+                      stackIn_35_0 = stackOut_34_0;
+                      if (0 <= kk.field_g[var8]) {
+                        stackOut_36_0 = stackIn_36_0;
+                        stackOut_36_1 = ig.field_e;
+                        stackIn_37_0 = stackOut_36_0;
+                        stackIn_37_1 = stackOut_36_1;
+                        break L8;
+                      } else {
+                        stackOut_35_0 = stackIn_35_0;
+                        stackOut_35_1 = ck.field_e;
+                        stackIn_37_0 = stackOut_35_0;
+                        stackIn_37_1 = stackOut_35_1;
+                        break L8;
                       }
-                      gh.field_hb = stackIn_37_0 + stackIn_37_1;
-                      var8++;
-                      continue L7;
                     }
+                    gh.field_hb = stackIn_37_0 + stackIn_37_1;
+                    var8++;
+                    continue L7;
                   }
-                } else {
-                  return;
                 }
               } else {
                 L9: {
@@ -676,7 +672,7 @@ final class oc {
           L12: {
             var5 = decompiledCaughtException;
             stackOut_40_0 = (RuntimeException) var5;
-            stackOut_40_1 = new StringBuilder().append("oc.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_40_1 = new StringBuilder().append("oc.C(").append(99).append(44).append(0).append(44);
             stackIn_42_0 = stackOut_40_0;
             stackIn_42_1 = stackOut_40_1;
             stackIn_41_0 = stackOut_40_0;

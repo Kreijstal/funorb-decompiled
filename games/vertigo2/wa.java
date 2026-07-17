@@ -14,7 +14,7 @@ final class wa {
     static String[] field_h;
     private int field_d;
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         int var1 = 0;
         return bf.field_b == um.field_F ? true : false;
     }
@@ -173,7 +173,7 @@ final class wa {
         field_i = null;
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -336,7 +336,8 @@ final class wa {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((wa) this).field_a[var2_int] = param0[var2_int];
             }
-            this.d(-28);
+            int discarded$0 = -28;
+            this.d();
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "wa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

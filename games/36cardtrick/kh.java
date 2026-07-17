@@ -11,7 +11,7 @@ abstract class kh {
     java.awt.Image field_a;
     static int field_g;
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_f = null;
     }

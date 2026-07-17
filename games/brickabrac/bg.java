@@ -17,31 +17,18 @@ final class bg extends nm {
     int field_i;
 
     final static int a(int param0, int param1, int param2) {
-        if (param1 == 29) {
-          if (param2 == 1) {
-            if (!gq.b(param0, -1)) {
-              return rh.field_b[param2];
-            } else {
-              return 29;
-            }
-          } else {
+        if (param2 == 1) {
+          if (!gq.b(param0, -1)) {
             return rh.field_b[param2];
+          } else {
+            return 29;
           }
         } else {
-          bg.a(6);
-          if (param2 == 1) {
-            if (gq.b(param0, -1)) {
-              return 29;
-            } else {
-              return rh.field_b[param2];
-            }
-          } else {
-            return rh.field_b[param2];
-          }
+          return rh.field_b[param2];
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_n = null;
         field_o = null;
         field_u = null;

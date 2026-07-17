@@ -19,7 +19,7 @@ final class pc {
         return -var3 + (var3 + param2) / param1;
     }
 
-    final static void a(ci param0, int param1) {
+    final static void a(ci param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -72,7 +72,7 @@ final class pc {
         }
     }
 
-    final static String a(Throwable param0, int param1) throws IOException {
+    final static String a(Throwable param0) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

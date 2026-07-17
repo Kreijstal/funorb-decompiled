@@ -164,7 +164,8 @@ final class rcb extends dqa implements oo {
                         }
                       }
                     } else {
-                      ((rcb) this).field_w[var4_int] = joa.a((CharSequence) (Object) param0[var4_int], false).replace(' ', ' ');
+                      int discarded$1 = 0;
+                      ((rcb) this).field_w[var4_int] = joa.a((CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }

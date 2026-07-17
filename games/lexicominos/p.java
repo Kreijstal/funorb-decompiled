@@ -7,12 +7,12 @@ final class p {
     static long field_c;
     static String field_b;
 
-    final static void a(tg param0, int param1, byte param2) {
+    final static void a(tg param0) {
         th var5 = null;
         int var4 = 0;
         try {
             var5 = ed.field_q;
-            var5.h(param1, 0);
+            var5.h(6, 0);
             var5.field_h = var5.field_h + 1;
             var4 = var5.field_h;
             var5.c(1, -1);
@@ -27,11 +27,11 @@ final class p {
             param0.field_k = var5.d((byte) 19);
             var5.d(-var4 + var5.field_h, (byte) -125);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "p.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 24 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "p.A(" + (param0 != null ? "{...}" : "null") + 44 + 6 + 44 + 24 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_a = null;

@@ -16,23 +16,20 @@ final class fl {
         if (fk.field_q == hg.field_ub) {
             return ol.field_j;
         }
-        if (param0) {
-            return null;
-        }
-        return nd.field_K;
+        return null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return kc.field_k;
     }
 
-    final static boolean a(int param0, vj param1, int param2, byte param3) {
+    final static boolean a(int param0, vj param1, int param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -65,7 +62,8 @@ final class fl {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              lk.a(var5, 87);
+              int discarded$2 = 87;
+              lk.a(var5);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;

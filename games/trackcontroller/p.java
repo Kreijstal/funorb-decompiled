@@ -4,7 +4,7 @@
 final class p {
     static oh field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
         if (null == gl.field_E) {
           if (null != ib.field_e) {
             ib.field_e.e((byte) 50);
@@ -27,7 +27,7 @@ final class p {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = 22;
         field_a = null;
     }

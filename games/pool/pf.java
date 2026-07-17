@@ -116,9 +116,9 @@ final class pf {
                 break L2;
               }
             }
-            qh.b(var7, var8, var5_int - -6, var6 + 6, param1);
-            qh.f(1 + var7, var8 - -1, var5_int + param2, 4 + var6, param0);
-            param3.d(param4, var7 - -3, param3.field_L + (var8 - -3), param1, -1);
+            qh.b(var7, var8, var5_int - -6, var6 + 6, 15658734);
+            qh.f(1 + var7, var8 - -1, var5_int + param2, 4 + var6, 4144959);
+            param3.d(param4, var7 - -3, param3.field_L + (var8 - -3), 15658734, -1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -126,7 +126,7 @@ final class pf {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("pf.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_7_1 = new StringBuilder().append("pf.F(").append(4144959).append(44).append(15658734).append(44).append(param2).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -184,7 +184,7 @@ final class pf {
         var3 = Pool.field_O;
         if (param0) {
           nr.field_bb = false;
-          var2 = 110 % ((74 - param1) / 32);
+          var2 = 0;
           if (param0) {
             if (hb.field_a > 0) {
               hb.field_a = hb.field_a - 1;
@@ -284,7 +284,7 @@ final class pf {
         } else {
           if (em.field_L == null) {
             nr.field_bb = false;
-            var2 = 110 % ((74 - param1) / 32);
+            var2 = 0;
             if (param0) {
               if (hb.field_a > 0) {
                 hb.field_a = hb.field_a - 1;
@@ -385,7 +385,7 @@ final class pf {
               }
             }
           } else {
-            var2 = 110 % ((74 - param1) / 32);
+            var2 = 0;
             if (param0) {
               if (hb.field_a > 0) {
                 hb.field_a = hb.field_a - 1;
@@ -414,9 +414,7 @@ final class pf {
                       uf.field_z = uf.field_z - 1;
                       return;
                     } else {
-                      if (~ir.field_h >= ~nj.field_b) {
-                        break L5;
-                      } else {
+                      if (~ir.field_h < ~nj.field_b) {
                         L6: {
                           if (nj.field_b == 0) {
                             db.a(27194, false);
@@ -427,6 +425,8 @@ final class pf {
                         }
                         nj.field_b = nj.field_b + 1;
                         break L5;
+                      } else {
+                        return;
                       }
                     }
                   }
@@ -950,7 +950,7 @@ final class pf {
         hn.field_b = 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_a = null;

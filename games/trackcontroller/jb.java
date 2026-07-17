@@ -7,9 +7,10 @@ final class jb {
     static int field_d;
     static int[] field_b;
 
-    final static void a(String param0, boolean param1, boolean param2, int param3) {
+    final static void a(String param0, boolean param1, boolean param2) {
         try {
-            jf.e(640);
+            int discarded$0 = 640;
+            jf.e();
             gl.field_E.l(24910);
             ra.field_y = new rl(qg.field_c, (String) null, vg.field_o, param2, param1);
             re.field_g = new pj(gl.field_E, (al) (Object) ra.field_y);
@@ -19,22 +20,19 @@ final class jb {
         }
     }
 
-    final static void a(byte param0, boolean param1, nb param2, int param3, java.awt.Component param4, int param5, uf param6, int param7) {
+    final static void a(byte param0, boolean param1, nb param2, int param3, java.awt.Component param4, int param5, uf param6) {
         try {
-            oa.a(param7, param1, 10);
-            sb.field_b = oa.a(param6, param4, 0, param3);
-            g.field_x = oa.a(param6, param4, 1, param5);
+            oa.a(22050, true, 10);
+            sb.field_b = oa.a(param6, param4, 0, 22050);
+            g.field_x = oa.a(param6, param4, 1, 1024);
             qc.field_e = new k();
-            kk.field_h = param5 * 1000 / param7;
+            kk.field_h = 46;
             g.field_x.a((wh) (Object) qc.field_e);
             fj.field_P = param2;
-            if (param0 >= -99) {
-                field_d = -37;
-            }
             fj.field_P.d(16384, kc.field_b);
             sb.field_b.a((wh) (Object) fj.field_P);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "jb.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "jb.B(" + -109 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 22050 + 44 + (param4 != null ? "{...}" : "null") + 44 + 1024 + 44 + (param6 != null ? "{...}" : "null") + 44 + 22050 + 41);
         }
     }
 
@@ -43,7 +41,7 @@ final class jb {
         rj.field_d.field_b = 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }

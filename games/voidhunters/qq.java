@@ -212,64 +212,56 @@ abstract class qq implements nib {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_18_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_16_0 = 0;
         var5 = VoidHunters.field_G;
         try {
           L0: {
-            if (param0) {
-              L1: {
-                if (null == fwa.field_g) {
-                  break L1;
-                } else {
-                  var3_int = 0;
-                  var4 = param1;
-                  L2: while (true) {
-                    if (var4 >= 56) {
-                      break L1;
-                    } else {
-                      L3: {
-                        if (!fwa.field_g.c(var4, (byte) 34)) {
+            L1: {
+              if (null == fwa.field_g) {
+                break L1;
+              } else {
+                var3_int = 0;
+                var4 = param1;
+                L2: while (true) {
+                  if (var4 >= 56) {
+                    break L1;
+                  } else {
+                    L3: {
+                      if (!fwa.field_g.c(var4, (byte) 34)) {
+                        var4++;
+                        break L3;
+                      } else {
+                        if (param2 <= var3_int) {
+                          stackOut_9_0 = var4;
+                          stackIn_10_0 = stackOut_9_0;
+                          return stackIn_10_0;
+                        } else {
+                          var3_int++;
                           var4++;
                           break L3;
-                        } else {
-                          if (param2 <= var3_int) {
-                            stackOut_10_0 = var4;
-                            stackIn_11_0 = stackOut_10_0;
-                            return stackIn_11_0;
-                          } else {
-                            var3_int++;
-                            var4++;
-                            break L3;
-                          }
                         }
                       }
-                      var4++;
-                      continue L2;
                     }
+                    var4++;
+                    continue L2;
                   }
                 }
               }
-              stackOut_17_0 = param1 - -param2;
-              stackIn_18_0 = stackOut_17_0;
-              break L0;
-            } else {
-              stackOut_2_0 = 55;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
+            stackOut_16_0 = param1 - -param2;
+            stackIn_17_0 = stackOut_16_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "qq.M(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) var3, "qq.M(" + 1 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_18_0;
+        return stackIn_17_0;
     }
 
     void a(int param0) {
@@ -488,14 +480,14 @@ abstract class qq implements nib {
         jaclib.memory.heap.NativeHeapBuffer stackIn_9_0 = null;
         jaggl.MapBuffer stackIn_14_0 = null;
         jaclib.memory.heap.NativeHeapBuffer stackIn_16_0 = null;
-        Object stackIn_20_0 = null;
+        Object stackIn_18_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         jaclib.memory.heap.NativeHeapBuffer stackOut_15_0 = null;
         int stackOut_4_0 = 0;
@@ -514,15 +506,15 @@ abstract class qq implements nib {
         int stackOut_5_4 = 0;
         jaclib.memory.heap.NativeHeapBuffer stackOut_8_0 = null;
         jaggl.MapBuffer stackOut_13_0 = null;
-        Object stackOut_19_0 = null;
+        Object stackOut_17_0 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         try {
           L0: {
             L1: {
@@ -606,46 +598,42 @@ abstract class qq implements nib {
                 }
               }
             }
-            if (param0) {
-              boolean discarded$2 = qq.a(7, true);
-              stackOut_19_0 = null;
-              stackIn_20_0 = stackOut_19_0;
-              break L0;
-            } else {
-              return null;
-            }
+            boolean discarded$2 = qq.a(7, true);
+            stackOut_17_0 = null;
+            stackIn_18_0 = stackOut_17_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("qq.N(").append(param0).append(44).append(param1).append(44);
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_19_0 = (RuntimeException) var4;
+            stackOut_19_1 = new StringBuilder().append("qq.N(").append(0).append(44).append(param1).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
               break L4;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
         }
-        return (jaclib.memory.Buffer) (Object) stackIn_20_0;
+        return (jaclib.memory.Buffer) (Object) stackIn_18_0;
     }
 
     qq(jp param0, int param1, boolean param2) {

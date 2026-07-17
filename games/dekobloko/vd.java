@@ -16,7 +16,7 @@ final class vd extends bh {
         return ri.field_i + -ge.field_e;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 0;
         field_q = null;
         field_r = null;

@@ -8,28 +8,21 @@ final class jsa {
             RuntimeException var5_ref = null;
             Throwable var5_ref2 = null;
             java.lang.reflect.Method var6 = null;
-            Object stackIn_7_0 = null;
-            ha stackIn_9_0 = null;
+            ha stackIn_8_0 = null;
             Throwable decompiledCaughtException = null;
-            ha stackOut_8_0 = null;
-            Object stackOut_6_0 = null;
+            ha stackOut_7_0 = null;
             try {
               L0: {
                 if (sab.e((byte) -118)) {
-                  if (!gpb.a("jagdx", (byte) 114)) {
+                  int discarded$9 = 114;
+                  if (!gpb.a("jagdx")) {
                     throw new RuntimeException("");
                   } else {
                     var5 = Class.forName("nla");
-                    if (param2 == 27908) {
-                      var6 = var5.getDeclaredMethod("createToolkit", new Class[4]);
-                      stackOut_8_0 = (ha) var6.invoke((Object) null, new Object[4]);
-                      stackIn_9_0 = stackOut_8_0;
-                      break L0;
-                    } else {
-                      stackOut_6_0 = null;
-                      stackIn_7_0 = stackOut_6_0;
-                      return (ha) (Object) stackIn_7_0;
-                    }
+                    var6 = var5.getDeclaredMethod("createToolkit", new Class[4]);
+                    stackOut_7_0 = (ha) var6.invoke((Object) null, new Object[4]);
+                    stackIn_8_0 = stackOut_7_0;
+                    break L0;
                   }
                 } else {
                   throw new RuntimeException("");
@@ -40,7 +33,7 @@ final class jsa {
               var5_ref2 = decompiledCaughtException;
               throw new RuntimeException("");
             }
-            return stackIn_9_0;
+            return stackIn_8_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

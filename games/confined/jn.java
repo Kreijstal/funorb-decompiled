@@ -127,7 +127,7 @@ final class jn extends ga implements el {
         return stackIn_4_0;
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_O = null;
         field_U = null;
         field_R = null;
@@ -149,6 +149,7 @@ final class jn extends ga implements el {
     }
 
     private final void a(boolean param0, int param1) {
+        int var5 = 0;
         int var6 = Confined.field_J ? 1 : 0;
         if (!(param1 > ((jn) this).field_P)) {
             return;
@@ -156,14 +157,9 @@ final class jn extends ga implements el {
         rg[] var7 = new rg[param1];
         rg[] var3 = var7;
         int[] var4 = new int[param1];
-        int var5 = 0;
-        if (param0) {
-            return;
-        }
-        while (var5 < ((jn) this).field_P) {
+        for (var5 = 0; var5 < ((jn) this).field_P; var5++) {
             var7[var5] = ((jn) this).field_L[var5];
             var4[var5] = ((jn) this).field_H[var5];
-            var5++;
         }
         ((jn) this).field_L = var3;
         ((jn) this).field_H = var4;
@@ -306,13 +302,9 @@ final class jn extends ga implements el {
             try {
               try {
                 L0: {
-                  if (!param0) {
-                    var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-                    param1.getAppletContext().showDocument(pn.a(var2, (byte) -33, param1), "_top");
-                    break L0;
-                  } else {
-                    return;
-                  }
+                  var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
+                  param1.getAppletContext().showDocument(pn.a(var2, (byte) -33, param1), "_top");
+                  break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -327,7 +319,7 @@ final class jn extends ga implements el {
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("jn.A(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("jn.A(").append(0).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;

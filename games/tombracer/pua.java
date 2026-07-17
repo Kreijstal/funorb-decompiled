@@ -5,11 +5,8 @@ final class pua extends hq {
     static apa field_c;
     private static String[] field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
-        if (param0 >= -45) {
-            return;
-        }
         field_d = null;
     }
 
@@ -42,18 +39,10 @@ final class pua extends hq {
                 var15 = var12;
                 L2: while (true) {
                   if (var8 >= var15) {
-                    L3: {
-                      var9 = rp.a(ss.field_c, -16226, pka.field_b, param4 + param1);
-                      var10 = rp.a(ss.field_c, -16226, pka.field_b, -param4 + param6);
-                      if (param0 < -11) {
-                        break L3;
-                      } else {
-                        pua.a((byte) -34);
-                        break L3;
-                      }
-                    }
+                    var9 = rp.a(ss.field_c, -16226, pka.field_b, param4 + param1);
+                    var10 = rp.a(ss.field_c, -16226, pka.field_b, -param4 + param6);
                     var15 = var7_int;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var15 > var8) {
                         break L0;
                       } else {
@@ -61,7 +50,7 @@ final class pua extends hq {
                         nra.a((byte) -55, param5, var9, var21, var13);
                         nra.a((byte) -55, param5, var14, var21, var10);
                         var15++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
@@ -80,7 +69,7 @@ final class pua extends hq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var7, "pua.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw tba.a((Throwable) (Object) var7, "pua.B(" + -78 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

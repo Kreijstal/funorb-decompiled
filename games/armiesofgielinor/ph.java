@@ -46,7 +46,8 @@ final class ph {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              if (bi.a(param1, -31000)) {
+              int discarded$10 = -31000;
+              if (bi.a(param1)) {
                 stackOut_7_0 = 1;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0 != 0;
@@ -65,7 +66,7 @@ final class ph {
                         break L2;
                       } else {
                         var6 = null;
-                        boolean discarded$2 = ph.a((String) null, (byte) -108);
+                        boolean discarded$11 = ph.a((String) null, (byte) -108);
                         break L2;
                       }
                     }
@@ -117,7 +118,7 @@ final class ph {
         return stackIn_26_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_a = null;
@@ -209,7 +210,7 @@ final class ph {
         return stackIn_10_0 != 0;
     }
 
-    final static void a(String param0, java.applet.Applet param1, boolean param2) {
+    final static void a(String param0, java.applet.Applet param1) {
         try {
             String var6 = null;
             String var5 = null;

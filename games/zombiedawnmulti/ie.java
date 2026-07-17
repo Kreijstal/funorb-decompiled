@@ -16,7 +16,7 @@ abstract class ie extends al {
     static cj field_jb;
     private na field_hb;
 
-    public static void l(int param0) {
+    public static void l() {
         field_jb = null;
         field_ob = null;
         field_ib = null;
@@ -28,65 +28,35 @@ abstract class ie extends al {
         if (((ie) this).field_pb != null) {
           if (ld.field_Rb != ((ie) this).field_pb) {
             if (((ie) this).field_pb == lf.field_a) {
-              int fieldTemp$8 = ((ie) this).field_lb + 1;
+              int fieldTemp$2 = ((ie) this).field_lb + 1;
               ((ie) this).field_lb = ((ie) this).field_lb + 1;
-              if (fieldTemp$8 != ((ie) this).field_gb) {
-                ((ie) this).field_hb.field_E = (((ie) this).field_lb << 8) / ((ie) this).field_gb;
-                if (param0 != -27388) {
-                  boolean discarded$9 = ((ie) this).h(-5);
-                  return super.i(-27388);
-                } else {
-                  return super.i(-27388);
-                }
-              } else {
+              if (fieldTemp$2 == ((ie) this).field_gb) {
                 ((ie) this).field_hb.field_E = 256;
                 ((ie) this).field_pb = null;
-                if (param0 != -27388) {
-                  boolean discarded$10 = ((ie) this).h(-5);
-                  return super.i(-27388);
-                } else {
-                  return super.i(-27388);
-                }
-              }
-            } else {
-              if (param0 != -27388) {
-                boolean discarded$11 = ((ie) this).h(-5);
                 return super.i(-27388);
               } else {
+                ((ie) this).field_hb.field_E = (((ie) this).field_lb << 8) / ((ie) this).field_gb;
                 return super.i(-27388);
               }
+            } else {
+              return super.i(-27388);
             }
           } else {
-            int fieldTemp$12 = ((ie) this).field_lb + 1;
+            int fieldTemp$3 = ((ie) this).field_lb + 1;
             ((ie) this).field_lb = ((ie) this).field_lb + 1;
-            if (fieldTemp$12 == ((ie) this).field_qb) {
+            if (fieldTemp$3 != ((ie) this).field_qb) {
+              ((ie) this).field_hb.field_E = 256 + -((((ie) this).field_lb << 8) / ((ie) this).field_qb);
+              return super.i(-27388);
+            } else {
               ((ie) this).field_pb = ll.field_j;
               ((ie) this).a(((ie) this).field_mb, (byte) -112, ((ie) this).field_rb + (12 - -((ie) this).field_kb.field_w), 12 - -((ie) this).field_kb.field_n);
               ((ie) this).field_lb = 0;
               ((ie) this).field_hb.field_E = 0;
-              if (param0 == -27388) {
-                return super.i(-27388);
-              } else {
-                boolean discarded$13 = ((ie) this).h(-5);
-                return super.i(-27388);
-              }
-            } else {
-              ((ie) this).field_hb.field_E = 256 + -((((ie) this).field_lb << 8) / ((ie) this).field_qb);
-              if (param0 == -27388) {
-                return super.i(-27388);
-              } else {
-                boolean discarded$14 = ((ie) this).h(-5);
-                return super.i(-27388);
-              }
+              return super.i(-27388);
             }
           }
         } else {
-          if (param0 != -27388) {
-            boolean discarded$15 = ((ie) this).h(-5);
-            return super.i(-27388);
-          } else {
-            return super.i(-27388);
-          }
+          return super.i(-27388);
         }
     }
 
@@ -178,22 +148,14 @@ abstract class ie extends al {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (null == ki.field_e) {
-          if (param1) {
-            field_ob = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (null != ki.field_e) {
           oo.f(oo.field_f, oo.field_e, -oo.field_f + oo.field_g, oo.field_d - oo.field_e);
           ki.field_e.c(param0, -1);
-          if (!param1) {
-            return;
-          } else {
-            field_ob = null;
-            return;
-          }
+          field_ob = null;
+          return;
+        } else {
+          field_ob = null;
+          return;
         }
     }
 
@@ -204,7 +166,8 @@ abstract class ie extends al {
           } else {
             ((ie) this).field_pb = lf.field_a;
             ((ie) this).field_lb = 0;
-            this.a(((ie) this).field_kb, false);
+            int discarded$2 = 0;
+            this.a(((ie) this).field_kb);
             ((ie) this).field_hb.field_E = 0;
             ((ie) this).field_kb = null;
             return;
@@ -216,7 +179,8 @@ abstract class ie extends al {
           } else {
             ((ie) this).field_pb = lf.field_a;
             ((ie) this).field_lb = 0;
-            this.a(((ie) this).field_kb, false);
+            int discarded$3 = 0;
+            this.a(((ie) this).field_kb);
             ((ie) this).field_hb.field_E = 0;
             ((ie) this).field_kb = null;
             return;
@@ -239,7 +203,8 @@ abstract class ie extends al {
             ((ie) this).field_qb = param3;
             ((ie) this).field_mb = param4;
             ((ie) this).field_rb = param2;
-            this.a(param1, false);
+            int discarded$0 = 0;
+            this.a(param1);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "ie.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
@@ -254,17 +219,18 @@ abstract class ie extends al {
             if (param0 >= 29) {
               return;
             } else {
-              boolean discarded$6 = ((ie) this).h(-78);
+              boolean discarded$8 = ((ie) this).h(-78);
               return;
             }
           } else {
             ((ie) this).b(12 + ((ie) this).field_kb.field_n, ((ie) this).field_kb.field_w + (((ie) this).field_rb + 12), 78);
-            this.a(((ie) this).field_kb, false);
+            int discarded$9 = 0;
+            this.a(((ie) this).field_kb);
             ((ie) this).field_pb = null;
             ((ie) this).field_hb.field_E = 256;
             super.h((byte) 63);
             if (param0 < 29) {
-              boolean discarded$7 = ((ie) this).h(-78);
+              boolean discarded$10 = ((ie) this).h(-78);
               return;
             } else {
               return;
@@ -275,7 +241,7 @@ abstract class ie extends al {
           if (param0 >= 29) {
             return;
           } else {
-            boolean discarded$8 = ((ie) this).h(-78);
+            boolean discarded$11 = ((ie) this).h(-78);
             return;
           }
         }
@@ -303,7 +269,7 @@ abstract class ie extends al {
         try {
           L0: {
             ((ie) this).field_kb = param0;
-            var3_int = 0;
+            var3_int = -11 % ((param1 - 61) / 56);
             if (((ie) this).field_pb == ll.field_j) {
               ((ie) this).a(((ie) this).field_mb, (byte) -112, 12 - -((ie) this).field_rb - -((ie) this).field_kb.field_w, ((ie) this).field_kb.field_n + 12);
               ((ie) this).field_lb = 0;
@@ -346,11 +312,11 @@ abstract class ie extends al {
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -32 + 41);
+          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 
-    private final void a(cf param0, boolean param1) {
+    private final void a(cf param0) {
         try {
             if (null != ((ie) this).field_hb) {
                 ((ie) this).field_hb.a(true);

@@ -13,7 +13,7 @@ class ji extends ng {
         return pg.field_b;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_d = null;
         int var1 = -39;
     }

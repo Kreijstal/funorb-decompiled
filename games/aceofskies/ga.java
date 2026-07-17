@@ -14,36 +14,7 @@ final class ga extends wf {
     int field_n;
 
     final static boolean a(int param0, int param1, int param2) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 == 0) {
-            break L0;
-          } else {
-            ga.a(-70);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (0 == (param2 & 2048)) {
-              break L2;
-            } else {
-              if ((param1 & 55) == 0) {
-                break L2;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-          }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        return 0 != (param2 & 2048) && (param1 & 55) != 0;
     }
 
     final static void a(int param0) {

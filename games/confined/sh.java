@@ -152,7 +152,7 @@ final class sh extends am {
         }
     }
 
-    final static em a(int param0, String param1, String param2, boolean param3) {
+    final static em a(int param0, String param1, String param2) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -278,7 +278,6 @@ final class sh extends am {
         vb var2 = null;
         oe var3 = null;
         int var4 = 0;
-        Object var5 = null;
         L0: {
           var4 = Confined.field_J ? 1 : 0;
           var2 = new vb(((sh) this).field_J);
@@ -286,8 +285,8 @@ final class sh extends am {
           if (param0 == -110) {
             break L0;
           } else {
-            var5 = null;
-            em discarded$2 = sh.a(64, (String) null, (String) null, false);
+            int discarded$4 = 0;
+            em discarded$5 = sh.a(64, (String) null, (String) null);
             break L0;
           }
         }

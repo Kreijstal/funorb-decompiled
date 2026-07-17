@@ -13,7 +13,7 @@ final class sc {
     static int field_g;
     static eb field_f;
 
-    final static void b(int param0) {
+    final static void b() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -52,31 +52,23 @@ final class sc {
                   }
                 }
                 L6: {
-                  if (param0 == 0) {
-                    break L6;
-                  } else {
-                    sc.a(40);
-                    break L6;
-                  }
-                }
-                L7: {
                   if (null == bl.field_o) {
-                    break L7;
+                    break L6;
                   } else {
                     var1_int = 0;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (bl.field_o.length <= var1_int) {
-                        break L7;
+                        break L6;
                       } else {
-                        L9: {
+                        L8: {
                           if (bl.field_o[var1_int] == null) {
-                            break L9;
+                            break L8;
                           } else {
-                            break L9;
+                            break L8;
                           }
                         }
                         var1_int++;
-                        continue L8;
+                        continue L7;
                       }
                     }
                   }
@@ -86,7 +78,7 @@ final class sc {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw la.a((Throwable) (Object) var1, "sc.A(" + param0 + 41);
+              throw la.a((Throwable) (Object) var1, "sc.A(" + 0 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -182,7 +174,7 @@ final class sc {
 
     final static int[] a(int param0, int param1, int param2) {
         int var3 = sb.a((byte) 79, param2);
-        int var5 = 37 % ((-85 - param0) / 36);
+        int var5 = 0;
         int var4 = r.a((byte) 71, param2);
         int var6 = sb.a((byte) 79, param1);
         int var7 = r.a((byte) 71, param1);
@@ -193,16 +185,12 @@ final class sc {
         return new int[]{0, 0, 0, var7, 0, var6, var8, var4, -var9, -var10, var3, var11};
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
         field_h = null;
         field_a = null;
         field_d = null;
-        if (param0 != -21718) {
-            Object var2 = null;
-            String discarded$0 = sc.a((byte[]) null, -77, 2, 45);
-        }
     }
 
     final static String a(byte[] param0, int param1, int param2, int param3) {

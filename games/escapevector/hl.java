@@ -2226,12 +2226,12 @@ final class hl extends wg {
         }
     }
 
-    final static hl a(hh param0, int param1, int param2, int param3) {
+    final static hl a(hh param0) {
         if (param0.field_h != null) {
           if (param0.field_h.length == 0) {
             return null;
           } else {
-            return new hl(param0, param1, param2, 8192);
+            return new hl(param0, 256, 0, 8192);
           }
         } else {
           return null;

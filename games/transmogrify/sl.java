@@ -10,8 +10,13 @@ final class sl {
     private int field_e;
 
     private final static int a(int param0, int param1) {
-        int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; nh.a(var2, param1, 26186) > param0; var2--) {
+        int var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1;
+        while (true) {
+            int discarded$1 = 26186;
+            if (nh.a(var2, param1) <= param0) {
+                break;
+            }
+            var2--;
         }
         return var2;
     }

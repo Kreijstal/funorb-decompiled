@@ -10,17 +10,16 @@ final class oe {
     static le field_b;
     private int[] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
     }
 
-    final static String a(CharSequence param0, byte param1, boolean param2) {
+    final static String a(CharSequence param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
         String stackIn_5_0 = null;
         String stackIn_12_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -47,12 +46,12 @@ final class oe {
             if (param1 == -70) {
               break L0;
             } else {
-              var6 = null;
-              String discarded$2 = oe.a((CharSequence) null, (byte) 1, false);
+              int discarded$4 = 0;
+              String discarded$5 = oe.a((CharSequence) null, (byte) 1);
               break L0;
             }
           }
-          var3 = lb.a(param0, param2, 1236);
+          var3 = lb.a(param0, false, 1236);
           if (var3 == null) {
             var4 = 0;
             L1: while (true) {
@@ -102,7 +101,7 @@ final class oe {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + 0 + 41);
         }
     }
 
@@ -199,12 +198,15 @@ final class oe {
         }
     }
 
-    final static void a(boolean param0, kk param1, kk param2, kk param3, int param4) {
+    final static void a(boolean param0, kk param1, kk param2, kk param3) {
         try {
-            sa.field_Q = c.a("", 30692);
+            int discarded$0 = 30692;
+            sa.field_Q = c.a("");
             sa.field_Q.a(false, true);
-            ak.a(param3, param1, param2, 127);
-            jh.a(-128);
+            int discarded$1 = 127;
+            ak.a(param3, param1, param2);
+            int discarded$2 = -128;
+            jh.a();
             fd.field_h = hf.field_f;
             rk.field_X = hf.field_f;
         } catch (RuntimeException runtimeException) {

@@ -17,7 +17,7 @@ final class dk extends cj {
         }
     }
 
-    final static void e(boolean param0, int param1) {
+    final static void e(boolean param0) {
         cj stackIn_4_0 = null;
         cj stackIn_5_0 = null;
         cj stackIn_6_0 = null;
@@ -198,10 +198,12 @@ final class dk extends cj {
                 break L3;
               }
               ((cj) (Object) stackIn_65_0).c(stackIn_65_1 != 0, -1);
-              ql.a(true);
+              int discarded$5 = 1;
+              ql.a();
               return;
             } else {
-              ql.a(true);
+              int discarded$6 = 1;
+              ql.a();
               return;
             }
           } else {
@@ -271,7 +273,8 @@ final class dk extends cj {
               break L8;
             }
             ((cj) (Object) stackIn_51_0).c(stackIn_51_1 != 0, -1);
-            ql.a(true);
+            int discarded$7 = 1;
+            ql.a();
             return;
           }
         } else {
@@ -408,7 +411,8 @@ final class dk extends cj {
               break L18;
             }
             ((cj) (Object) stackIn_37_0).c(stackIn_37_1 != 0, -1);
-            ql.a(true);
+            int discarded$8 = 1;
+            ql.a();
             return;
           } else {
             L20: {
@@ -484,7 +488,8 @@ final class dk extends cj {
                 break L20;
               }
             }
-            ql.a(true);
+            int discarded$9 = 1;
+            ql.a();
             return;
           }
         }
@@ -496,7 +501,7 @@ final class dk extends cj {
           if (sj.field_p == 85) {
             L0: {
               if (0 < ((dk) this).field_Hb.length()) {
-                StringBuilder discarded$11 = lf.a(' ', ((dk) this).field_Hb.length() + -1, 0, ((dk) this).field_Hb);
+                StringBuilder discarded$15 = lf.a(' ', ((dk) this).field_Hb.length() + -1, 0, ((dk) this).field_Hb);
                 break L0;
               } else {
                 break L0;
@@ -520,15 +525,16 @@ final class dk extends cj {
                     break L2;
                   } else {
                     L3: {
-                      StringBuilder discarded$12 = ((dk) this).field_Hb.append(var2);
+                      StringBuilder discarded$16 = ((dk) this).field_Hb.append(var2);
                       if (hd.a(-24315, (char) var2)) {
-                        StringBuilder discarded$13 = ((dk) this).field_Hb.append(var2);
+                        StringBuilder discarded$17 = ((dk) this).field_Hb.append(var2);
                         break L3;
                       } else {
-                        if (!vh.a((char) var2, (byte) 85)) {
+                        int discarded$18 = 85;
+                        if (!vh.a((char) var2)) {
                           break L3;
                         } else {
-                          StringBuilder discarded$14 = ((dk) this).field_Hb.append(var2);
+                          StringBuilder discarded$19 = ((dk) this).field_Hb.append(var2);
                           break L3;
                         }
                       }
@@ -565,7 +571,7 @@ final class dk extends cj {
               }
               if (hd.a(-24315, (char) var2)) {
                 L6: {
-                  StringBuilder discarded$15 = ((dk) this).field_Hb.append(var2);
+                  StringBuilder discarded$20 = ((dk) this).field_Hb.append(var2);
                   if (sj.field_p != 84) {
                     break L6;
                   } else {
@@ -590,7 +596,8 @@ final class dk extends cj {
                   return true;
                 }
               } else {
-                if (!vh.a((char) var2, (byte) 85)) {
+                int discarded$21 = 85;
+                if (!vh.a((char) var2)) {
                   if (sj.field_p != 84) {
                     if (param0 >= 123) {
                       if (sj.field_p != 13) {
@@ -631,7 +638,7 @@ final class dk extends cj {
                     }
                   }
                 } else {
-                  StringBuilder discarded$16 = ((dk) this).field_Hb.append(var2);
+                  StringBuilder discarded$22 = ((dk) this).field_Hb.append(var2);
                   if (sj.field_p != 84) {
                     if (param0 >= 123) {
                       if (sj.field_p != 13) {
@@ -745,15 +752,16 @@ final class dk extends cj {
                       break L12;
                     } else {
                       L13: {
-                        StringBuilder discarded$17 = ((dk) this).field_Hb.append(var2);
+                        StringBuilder discarded$23 = ((dk) this).field_Hb.append(var2);
                         if (hd.a(-24315, (char) var2)) {
-                          StringBuilder discarded$18 = ((dk) this).field_Hb.append(var2);
+                          StringBuilder discarded$24 = ((dk) this).field_Hb.append(var2);
                           break L13;
                         } else {
-                          if (!vh.a((char) var2, (byte) 85)) {
+                          int discarded$25 = 85;
+                          if (!vh.a((char) var2)) {
                             break L13;
                           } else {
-                            StringBuilder discarded$19 = ((dk) this).field_Hb.append(var2);
+                            StringBuilder discarded$26 = ((dk) this).field_Hb.append(var2);
                             break L13;
                           }
                         }
@@ -787,7 +795,7 @@ final class dk extends cj {
                 }
                 if (hd.a(-24315, (char) var2)) {
                   L15: {
-                    StringBuilder discarded$20 = ((dk) this).field_Hb.append(var2);
+                    StringBuilder discarded$27 = ((dk) this).field_Hb.append(var2);
                     if (sj.field_p != 84) {
                       break L15;
                     } else {
@@ -815,11 +823,12 @@ final class dk extends cj {
                     return true;
                   }
                 } else {
-                  if (!vh.a((char) var2, (byte) 85)) {
+                  int discarded$28 = 85;
+                  if (!vh.a((char) var2)) {
                     break L10;
                   } else {
                     L17: {
-                      StringBuilder discarded$21 = ((dk) this).field_Hb.append(var2);
+                      StringBuilder discarded$29 = ((dk) this).field_Hb.append(var2);
                       if (sj.field_p != 84) {
                         break L17;
                       } else {
@@ -901,11 +910,8 @@ final class dk extends cj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_Ib = null;
-        if (param0 < 4) {
-            return;
-        }
         field_Jb = null;
         field_Kb = null;
     }

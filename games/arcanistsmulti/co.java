@@ -14,7 +14,7 @@ final class co {
     static java.util.zip.CRC32 field_g;
     static int[] field_e;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_i = null;
         field_h = null;
@@ -25,54 +25,46 @@ final class co {
         field_b = null;
     }
 
-    final static int a(int param0) {
+    final static int a() {
         vn var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         ml var3 = null;
         int var4 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var1 = rk.field_O.g((byte) 56);
-              var2 = 0;
-              var3 = (ml) (Object) var1.b(param0 + 33298);
-              if (param0 == -20675) {
-                break L1;
-              } else {
-                field_h = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var1 = rk.field_O.g((byte) 56);
+            var2 = 0;
+            var3 = (ml) (Object) var1.b(12623);
+            L1: while (true) {
               if (var3 == null) {
-                stackOut_7_0 = var2;
-                stackIn_8_0 = stackOut_7_0;
+                stackOut_6_0 = var2;
+                stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   if (40 != var3.field_jb) {
-                    break L3;
+                    break L2;
                   } else {
                     var2++;
-                    break L3;
+                    break L2;
                   }
                 }
                 var3 = (ml) (Object) var1.a(0);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1_ref, "co.C(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1_ref, "co.C(" + -20675 + 41);
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     public final String toString() {
@@ -170,7 +162,8 @@ final class co {
           rk.field_O.field_hb = rk.field_O.field_y >> 1;
           rk.field_O.b(649860712, true);
           if (jh.field_c[rk.field_O.a(-31497) + 1] != null) {
-            mi.a(jh.field_c[rk.field_O.a(-31497) - -1], 3);
+            int discarded$1 = 3;
+            mi.a(jh.field_c[rk.field_O.a(-31497) - -1]);
             break L8;
           } else {
             break L8;

@@ -19,7 +19,7 @@ final class oga extends bca {
         }
     }
 
-    final static void e(int param0) {
+    final static void e() {
         RuntimeException var1 = null;
         int var2 = 0;
         ema var3 = null;
@@ -27,67 +27,57 @@ final class oga extends bca {
         var2 = BachelorFridge.field_y;
         try {
           L0: {
-            L1: {
-              rv.field_n = null;
-              pw.field_w = null;
-              ce.field_y = false;
-              if (null != aa.field_l) {
-                aa.field_l.d(116);
-                aa.field_l = null;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              iga.field_c = null;
-              if (null == uma.field_M) {
-                break L2;
-              } else {
-                uma.field_M.d(112);
-                uma.field_M = null;
-                break L2;
-              }
-            }
-            L3: {
-              ola.field_g = null;
-              if (null != bia.field_g) {
-                bia.field_g.d(79);
-                bia.field_g = null;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              wi.field_i = null;
-              if (null != iga.field_c) {
-                var3 = (ema) (Object) iga.field_c.b((byte) -73);
-                L5: while (true) {
-                  if (var3 == null) {
-                    iga.field_c = null;
-                    break L4;
-                  } else {
-                    var3.b(0);
-                    var3 = (ema) (Object) iga.field_c.a(-25177);
-                    continue L5;
-                  }
-                }
-              } else {
-                break L4;
-              }
-            }
-            if (param0 >= 7) {
+            rv.field_n = null;
+            pw.field_w = null;
+            ce.field_y = false;
+            if (null != aa.field_l) {
+              aa.field_l.d(116);
+              aa.field_l = null;
               break L0;
             } else {
-              field_t = null;
-              return;
+              break L0;
             }
+          }
+          L1: {
+            iga.field_c = null;
+            if (null == uma.field_M) {
+              break L1;
+            } else {
+              uma.field_M.d(112);
+              uma.field_M = null;
+              break L1;
+            }
+          }
+          L2: {
+            ola.field_g = null;
+            if (null != bia.field_g) {
+              bia.field_g.d(79);
+              bia.field_g = null;
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          wi.field_i = null;
+          if (null != iga.field_c) {
+            var3 = (ema) (Object) iga.field_c.b((byte) -73);
+            L3: while (true) {
+              if (var3 == null) {
+                iga.field_c = null;
+                return;
+              } else {
+                var3.b(0);
+                var3 = (ema) (Object) iga.field_c.a(-25177);
+                continue L3;
+              }
+            }
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "oga.B(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "oga.B(" + 46 + 41);
         }
     }
 
@@ -109,7 +99,7 @@ final class oga extends bca {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_r = null;
         field_t = null;
     }

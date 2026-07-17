@@ -418,7 +418,7 @@ final class pi {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         return ql.field_f == wd.field_d;
     }
 
@@ -440,7 +440,7 @@ final class pi {
         return (pi) this;
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -464,7 +464,7 @@ final class pi {
             tg.field_b[param2] = param1;
             tg.field_j[param2] = param4;
             tg.field_h[param2] = param5;
-            tg.field_d[param2] = param3;
+            tg.field_d[param2] = 33;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -495,7 +495,7 @@ final class pi {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 0 + 41);
+          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + 33 + 44 + param4 + 44 + param5 + 44 + 0 + 41);
         }
     }
 
@@ -601,13 +601,10 @@ final class pi {
 
     final static void a(int param0, String param1, int[] param2, int param3, se param4, int param5) {
         tf var6 = new tf(param4, param1, param2);
-        if (param0 != 0) {
-            return;
-        }
         try {
-            var6.b(-param4.field_H + param5, param0 + 32, param3);
+            var6.b(-param4.field_H + param5, 32, param3);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "pi.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "pi.D(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
     }
 
@@ -859,7 +856,7 @@ final class pi {
               if (var15 != null) {
                 oi.field_J.field_o = 0;
                 oi.field_J.a(6, 255);
-                oi.field_J.a(param1 ^ 6, 216);
+                oi.field_J.a(6, 216);
                 oi.field_J.a(6, 255);
                 oi.field_J.a(6, 224);
                 oi.field_J.i(16, -121);
@@ -872,7 +869,7 @@ final class pi {
                 var9 = 0;
                 L1: while (true) {
                   if (var9 >= var32.length) {
-                    oi.field_J.i(258, param1 ^ -91);
+                    oi.field_J.i(258, -91);
                     oi.field_J.a(6, 0);
                     oi.field_J.i(1, -110);
                     oi.field_J.i(1, -109);
@@ -889,7 +886,7 @@ final class pi {
                     var10_int = 0;
                     L2: while (true) {
                       if (4 <= var10_int) {
-                        oi.field_J.i(var9, param1 + -108);
+                        oi.field_J.i(var9, -108);
                         var10_int = 0;
                         L3: while (true) {
                           if (var10_int >= 4) {
@@ -897,19 +894,19 @@ final class pi {
                             oi.field_J.a(6, 192);
                             oi.field_J.i(17, -88);
                             oi.field_J.a(6, 8);
-                            oi.field_J.i(param4, param1 ^ -113);
+                            oi.field_J.i(param4, -113);
                             oi.field_J.i(param5, -99);
                             oi.field_J.a(6, 3);
                             oi.field_J.a(6, 1);
                             oi.field_J.a(6, 34);
-                            oi.field_J.a(param1 ^ 6, 0);
+                            oi.field_J.a(6, 0);
                             oi.field_J.a(6, 2);
                             oi.field_J.a(6, 17);
                             oi.field_J.a(6, 1);
-                            oi.field_J.a(param1 ^ 6, 3);
+                            oi.field_J.a(6, 3);
                             oi.field_J.a(6, 17);
                             oi.field_J.a(6, 1);
-                            oi.field_J.a(param1 + 6, 255);
+                            oi.field_J.a(6, 255);
                             oi.field_J.a(6, 196);
                             var34 = new byte[32][];
                             var29 = var34;
@@ -935,9 +932,9 @@ final class pi {
                                     oi.field_J.a(6, 3);
                                     oi.field_J.a(6, 17);
                                     oi.field_J.a(6, 0);
-                                    oi.field_J.a(param1 ^ 6, 63);
-                                    oi.field_J.a(param1 + 6, 0);
-                                    var11_int = param1;
+                                    oi.field_J.a(6, 63);
+                                    oi.field_J.a(6, 0);
+                                    var11_int = 0;
                                     L6: while (true) {
                                       if (var11_int >= var35.length) {
                                         oi.field_J.a(6, 255);
@@ -969,7 +966,7 @@ final class pi {
                                   } else {
                                     L8: {
                                       if (var34[var11_int] != null) {
-                                        oi.field_J.a(var34[var11_int], param1 ^ 1, var34[var11_int].length, 0);
+                                        oi.field_J.a(var34[var11_int], 1, var34[var11_int].length, 0);
                                         break L8;
                                       } else {
                                         break L8;
@@ -1066,7 +1063,7 @@ final class pi {
           }
           L13: {
             stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-            stackOut_42_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(44).append(param1).append(44);
+            stackOut_42_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(44).append(0).append(44);
             stackIn_44_0 = stackOut_42_0;
             stackIn_44_1 = stackOut_42_1;
             stackIn_43_0 = stackOut_42_0;

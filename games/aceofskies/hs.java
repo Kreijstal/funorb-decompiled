@@ -9,12 +9,7 @@ final class hs implements Iterable {
     static int[] field_a;
 
     final static boolean a(boolean param0, int param1, int param2) {
-        if (!param0) {
-          boolean discarded$2 = hs.a(true, -18, 122);
-          return to.b(-7493, param1, param2) & la.a(param2, param1, (byte) 70);
-        } else {
-          return to.b(-7493, param1, param2) & la.a(param2, param1, (byte) 70);
-        }
+        return to.b(-7493, param1, param2) & la.a(param2, param1, (byte) 70);
     }
 
     final void a(wt param0, byte param1) {
@@ -32,7 +27,7 @@ final class hs implements Iterable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -56,7 +51,7 @@ final class hs implements Iterable {
         }
     }
 
-    private final wt a(wt param0, int param1) {
+    private final wt a(wt param0) {
         wt var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
@@ -137,7 +132,8 @@ final class hs implements Iterable {
 
     final wt a(int param0) {
         int var2 = -23 / ((param0 - -5) / 45);
-        return this.a((wt) null, 128);
+        int discarded$0 = 128;
+        return this.a((wt) null);
     }
 
     final wt b(boolean param0) {

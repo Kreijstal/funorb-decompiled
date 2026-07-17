@@ -26,20 +26,15 @@ final class wma extends nv {
 
     final static void a(int param0, int param1, int param2, int param3) {
         dba var4 = null;
-        if (ql.field_k != null) {
+        if (ql.field_k == null) {
+          return;
+        } else {
           var4 = new dba();
           var4.a(param2, (byte) -60);
           var4.b(param0, (byte) 123);
           var4.a(param3, 2097152);
-          ql.field_k.k(80, param1 ^ -2984);
+          ql.field_k.k(80, -2988);
           var4.a(200, ql.field_k);
-          if (param1 != 12) {
-            field_n = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
           return;
         }
     }
@@ -172,12 +167,7 @@ final class wma extends nv {
     }
 
     final static int a(byte param0, int param1, int param2) {
-        if (param0 != 8) {
-          field_n = null;
-          return param2 >> -param1 + 16;
-        } else {
-          return param2 >> -param1 + 16;
-        }
+        return param2 >> -param1 + 16;
     }
 
     final static void a(boolean param0, int param1) {
@@ -207,7 +197,7 @@ final class wma extends nv {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_n = null;
     }
 

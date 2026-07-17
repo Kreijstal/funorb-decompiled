@@ -14,79 +14,40 @@ final class cb extends jc {
     static int field_I;
 
     final static void a(boolean param0, int param1) {
+        wl stackIn_1_0 = null;
         wl stackIn_2_0 = null;
         wl stackIn_3_0 = null;
         wl stackIn_4_0 = null;
         wl stackIn_5_0 = null;
         wl stackIn_6_0 = null;
-        wl stackIn_7_0 = null;
-        wl stackIn_9_0 = null;
-        wl stackIn_10_0 = null;
-        wl stackIn_11_0 = null;
-        wl stackIn_12_0 = null;
-        wl stackIn_13_0 = null;
-        wl stackIn_14_0 = null;
-        wl stackOut_8_0 = null;
-        wl stackOut_10_0 = null;
-        wl stackOut_12_0 = null;
-        wl stackOut_1_0 = null;
-        wl stackOut_3_0 = null;
-        wl stackOut_5_0 = null;
-        if (!param0) {
-          stackOut_8_0 = uk.field_b;
-          stackIn_10_0 = stackOut_8_0;
-          stackIn_9_0 = stackOut_8_0;
-          if (param1 != 6) {
-            stackOut_10_0 = (wl) (Object) stackIn_10_0;
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_11_0 = stackOut_10_0;
-            if (param1 != 4) {
-              stackOut_12_0 = (wl) (Object) stackIn_12_0;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_13_0 = stackOut_12_0;
-              if (param1 != 5) {
-                ((wl) (Object) stackIn_14_0).a(true, (byte) 127, ca.field_a[param1]);
-                return;
-              } else {
-                ((wl) (Object) stackIn_13_0).a(false, (byte) 127, ca.field_a[param1]);
-                return;
-              }
+        wl stackOut_0_0 = null;
+        wl stackOut_2_0 = null;
+        wl stackOut_4_0 = null;
+        stackOut_0_0 = uk.field_b;
+        stackIn_2_0 = stackOut_0_0;
+        stackIn_1_0 = stackOut_0_0;
+        if (param1 != 6) {
+          stackOut_2_0 = (wl) (Object) stackIn_2_0;
+          stackIn_4_0 = stackOut_2_0;
+          stackIn_3_0 = stackOut_2_0;
+          if (param1 != 4) {
+            stackOut_4_0 = (wl) (Object) stackIn_4_0;
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_5_0 = stackOut_4_0;
+            if (param1 != 5) {
+              ((wl) (Object) stackIn_6_0).a(true, (byte) 127, ca.field_a[param1]);
+              return;
             } else {
-              ((wl) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
+              ((wl) (Object) stackIn_5_0).a(false, (byte) 127, ca.field_a[param1]);
               return;
             }
           } else {
-            ((wl) (Object) stackIn_9_0).a(false, (byte) 127, ca.field_a[param1]);
+            ((wl) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
             return;
           }
         } else {
-          field_I = -26;
-          stackOut_1_0 = uk.field_b;
-          stackIn_3_0 = stackOut_1_0;
-          stackIn_2_0 = stackOut_1_0;
-          if (param1 != 6) {
-            stackOut_3_0 = (wl) (Object) stackIn_3_0;
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_4_0 = stackOut_3_0;
-            if (param1 != 4) {
-              stackOut_5_0 = (wl) (Object) stackIn_5_0;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
-              if (param1 != 5) {
-                ((wl) (Object) stackIn_7_0).a(true, (byte) 127, ca.field_a[param1]);
-                return;
-              } else {
-                ((wl) (Object) stackIn_6_0).a(false, (byte) 127, ca.field_a[param1]);
-                return;
-              }
-            } else {
-              ((wl) (Object) stackIn_4_0).a(false, (byte) 127, ca.field_a[param1]);
-              return;
-            }
-          } else {
-            ((wl) (Object) stackIn_2_0).a(false, (byte) 127, ca.field_a[param1]);
-            return;
-          }
+          ((wl) (Object) stackIn_1_0).a(false, (byte) 127, ca.field_a[param1]);
+          return;
         }
     }
 
@@ -437,7 +398,7 @@ final class cb extends jc {
         return stackIn_10_0 != 0;
     }
 
-    final static boolean a(dh param0, int param1) {
+    final static boolean a(dh param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -514,7 +475,7 @@ final class cb extends jc {
         return stackIn_6_0 != 0;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_J = null;
     }
 

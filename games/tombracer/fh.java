@@ -66,7 +66,8 @@ final class fh implements fo {
             var4 = ((fh) this).c((byte) 115);
             var5 = ((fh) this).e((byte) -108);
             gqa.a(dfa.a(((fh) this).field_o, 2048, 87), -83584144, var4, var3_int, ((fh) this).field_g.a((fh) this, (byte) 76), var5);
-            if (!nk.c(-115)) {
+            int discarded$1 = -115;
+            if (!nk.c()) {
               return;
             } else {
               if (param0 >= 103) {
@@ -1461,12 +1462,17 @@ final class fh implements fo {
                     break L2;
                   }
                 }
-                et.a((byte) 108, tn.a(-10918), bta.field_i, dla.a(7), var3_int != 0);
+                int discarded$36 = 7;
+                et.a((byte) 108, tn.a(-10918), bta.field_i, dla.a(), var3_int != 0);
                 break L1;
               } else {
-                if (!qk.i(250)) {
+                int discarded$37 = 250;
+                if (!qk.i()) {
                   bea.a();
-                  gga.b(320, 240, (byte) 113);
+                  int discarded$38 = 113;
+                  int discarded$39 = 240;
+                  int discarded$40 = 320;
+                  gga.b();
                   fga.a(0, false, 0, param1);
                   break L1;
                 } else {

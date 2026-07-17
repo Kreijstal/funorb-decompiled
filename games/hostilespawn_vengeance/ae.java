@@ -12,14 +12,14 @@ abstract class ae extends dk {
 
     abstract byte[] c(byte param0);
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_r = null;
         field_q = null;
     }
 
     abstract int d(int param0);
 
-    final static String a(java.applet.Applet param0, String param1, int param2) {
+    final static String a(java.applet.Applet param0, String param1) {
         try {
             String var3 = null;
             Throwable var3_ref = null;
@@ -267,13 +267,10 @@ abstract class ae extends dk {
 
     final static void a(gb param0, int param1, gb param2) {
         cl.field_i = param2;
-        if (param1 < 27) {
-            return;
-        }
         try {
             jk.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ae.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "ae.D(" + (param0 != null ? "{...}" : "null") + 44 + 110 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

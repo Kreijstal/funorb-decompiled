@@ -198,7 +198,7 @@ final class ej {
         return stackIn_3_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;
@@ -254,14 +254,7 @@ final class ej {
     }
 
     final static void a(int param0, String param1) {
-        if (param0 != 0) {
-          field_d = null;
-          System.out.println("Error: " + pi.a("%0a", "\n", 22232, param1));
-          return;
-        } else {
-          System.out.println("Error: " + pi.a("%0a", "\n", 22232, param1));
-          return;
-        }
+        System.out.println("Error: " + pi.a("%0a", "\n", 22232, param1));
     }
 
     static {

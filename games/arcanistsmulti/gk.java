@@ -253,7 +253,7 @@ final class gk {
         return stackIn_14_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_c = null;
         field_g = null;
@@ -588,11 +588,12 @@ final class gk {
                           L7: {
                             var7 = param0.charAt(var6);
                             if (qo.a((char) var7, param1 ^ -13)) {
-                              var8 = af.a((char) var7, (byte) 22);
+                              int discarded$2 = 22;
+                              var8 = af.a((char) var7);
                               if (var8 == 0) {
                                 break L7;
                               } else {
-                                StringBuilder discarded$1 = var5.append(var8);
+                                StringBuilder discarded$3 = var5.append(var8);
                                 break L7;
                               }
                             } else {

@@ -8,7 +8,7 @@ final class ac {
     static String field_b;
     static boolean field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -48,13 +48,13 @@ final class ac {
               return;
             } else {
               L3: {
-                ib.b(param1 + -39);
+                ib.b(-40);
                 we.field_c.a(param3, (byte) 125);
                 if (null == fh.field_c) {
                   break L3;
                 } else {
                   if (wg.field_f) {
-                    boolean discarded$1 = fh.field_c.a(we.field_c.field_J, we.field_c.field_Bb, (byte) -128, param3);
+                    boolean discarded$3 = fh.field_c.a(we.field_c.field_J, we.field_c.field_Bb, (byte) -128, param3);
                     break L3;
                   } else {
                     fh.field_c = null;
@@ -66,15 +66,15 @@ final class ac {
               L4: while (true) {
                 if (5 <= var4_int) {
                   L5: {
-                    if (~af.field_d.field_nb == param1) {
+                    if (af.field_d.field_nb == 0) {
                       break L5;
                     } else {
-                      km.field_yb = new bg(af.field_d.field_Bb, af.field_d.field_J, af.field_d.field_K, af.field_d.field_ub, param2, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, ma.field_e, (String) null, 0L);
+                      km.field_yb = new bg(af.field_d.field_Bb, af.field_d.field_J, af.field_d.field_K, af.field_d.field_ub, 0, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, ma.field_e, (String) null, 0L);
                       break L5;
                     }
                   }
                   L6: {
-                    var9 = da.a(param1 ^ 1402, param0, qi.field_d, pg.field_e);
+                    var9 = da.a(-1403, param0, qi.field_d, pg.field_e);
                     if (var9 != null) {
                       jb.a(-44, var9);
                       break L6;
@@ -82,7 +82,8 @@ final class ac {
                       break L6;
                     }
                   }
-                  var8 = id.a(3063);
+                  int discarded$4 = 3063;
+                  var8 = id.a();
                   if (var8 != null) {
                     wc.field_g = var8;
                     break L0;
@@ -100,7 +101,8 @@ final class ac {
                         if (var5.field_nb == 0) {
                           break L8;
                         } else {
-                          kh.a(var5, var4_int, 20435);
+                          int discarded$5 = 20435;
+                          kh.a(var5, var4_int);
                           break L8;
                         }
                       }
@@ -120,7 +122,7 @@ final class ac {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var4, "ac.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw kg.a((Throwable) (Object) var4, "ac.A(" + param0 + 44 + -1 + 44 + 0 + 44 + param3 + 41);
         }
     }
 

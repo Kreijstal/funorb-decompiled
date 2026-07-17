@@ -23,19 +23,21 @@ final class ft extends bw {
           ng.field_e = new sna(0L, (sna) null);
           ng.field_e.a(-1, (sna) (Object) lia.field_j.field_a);
           ng.field_e.a(-1, mc.field_g);
-          kf.a((byte) -6);
+          int discarded$2 = -6;
+          kf.a();
           return;
         } else {
           lia.field_j = new lm(cja.field_r, kt.field_m);
           ng.field_e = new sna(0L, (sna) null);
           ng.field_e.a(-1, (sna) (Object) lia.field_j.field_a);
           ng.field_e.a(-1, mc.field_g);
-          kf.a((byte) -6);
+          int discarded$3 = -6;
+          kf.a();
           return;
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         if (!qo.field_c) {
             throw new IllegalStateException();
         }
@@ -45,7 +47,7 @@ final class ft extends bw {
         jv.field_j = 0;
     }
 
-    private final void a(lu param0, int param1) {
+    private final void a(lu param0) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
@@ -126,55 +128,52 @@ final class ft extends bw {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_h = null;
         int var1 = 81;
     }
 
     final static int a(int param0, byte param1) {
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (param1 <= -127) {
-          param0 = param0 & 8191;
-          if (4096 > param0) {
-            L0: {
-              if (2048 <= param0) {
-                stackOut_9_0 = -ed.field_b[-2048 + param0];
-                stackIn_10_0 = stackOut_9_0;
-                break L0;
-              } else {
-                stackOut_8_0 = ed.field_b[2048 - param0];
-                stackIn_10_0 = stackOut_8_0;
-                break L0;
-              }
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        param0 = param0 & 8191;
+        if (4096 > param0) {
+          L0: {
+            if (2048 <= param0) {
+              stackOut_7_0 = -ed.field_b[-2048 + param0];
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = ed.field_b[2048 - param0];
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
             }
-            return stackIn_10_0;
-          } else {
-            L1: {
-              if (param0 < 6144) {
-                stackOut_5_0 = -ed.field_b[6144 + -param0];
-                stackIn_6_0 = stackOut_5_0;
-                break L1;
-              } else {
-                stackOut_4_0 = ed.field_b[param0 - 6144];
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-            return stackIn_6_0;
           }
+          return stackIn_8_0;
         } else {
-          return -124;
+          L1: {
+            if (param0 < 6144) {
+              stackOut_3_0 = -ed.field_b[6144 + -param0];
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = ed.field_b[param0 - 6144];
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0;
         }
     }
 
     ft(lu param0) {
         try {
-            this.a(param0, -26011);
+            int discarded$0 = -26011;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "ft.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

@@ -133,7 +133,7 @@ final class pk extends v implements pi {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_N = null;
         field_H = null;
         field_O = null;
@@ -187,7 +187,7 @@ final class pk extends v implements pi {
               return stackIn_8_0;
             } else {
               var3 = 0;
-              var4 = 43 / ((param0 - -45) / 35);
+              var4 = -43;
               L0: while (true) {
                 if (var2_int > var3) {
                   L1: {
@@ -230,7 +230,7 @@ final class pk extends v implements pi {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("pk.D(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("pk.D(").append(-102).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;

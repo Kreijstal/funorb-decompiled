@@ -33,7 +33,7 @@ final class nta implements fo {
         return ((nta) this).field_g;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
     }

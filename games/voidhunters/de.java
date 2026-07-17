@@ -6,12 +6,7 @@ final class de extends rqa {
     static int field_p;
     static float field_o;
 
-    final static sw a(int param0, int param1) {
-        if (param1 != 300) {
-            Object var3 = null;
-            de.a(86, (phb) null);
-            return ok.field_b[param0];
-        }
+    final static sw a(int param0) {
         return ok.field_b[param0];
     }
 

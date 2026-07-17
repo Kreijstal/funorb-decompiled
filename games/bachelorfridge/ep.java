@@ -19,9 +19,6 @@ final class ep extends pu {
         sja.field_fb.d(param2 ? 1 : 0, 0);
         sja.field_fb.d(param3, 0);
         int[] var6 = param4;
-        if (param0 != 42) {
-            return;
-        }
         try {
             for (var7 = 0; var6.length > var7; var7++) {
                 var8 = var6[var7];
@@ -29,7 +26,7 @@ final class ep extends pu {
             }
             sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var5_int);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ep.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ep.D(" + 42 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -40,7 +37,7 @@ final class ep extends pu {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_l = null;
     }
 

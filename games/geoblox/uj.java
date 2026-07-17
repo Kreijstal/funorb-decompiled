@@ -9,28 +9,10 @@ final class uj {
     static String field_d;
 
     final static boolean a(boolean param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (!param0) {
-          return true;
-        } else {
-          L0: {
-            if ((param1 & -param1) != param1) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return ~(param1 & -param1) == ~param1;
     }
 
-    final static boolean a(ja param0, float param1, int param2) {
+    final static boolean a(ja param0, float param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -89,7 +71,7 @@ final class uj {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -126,7 +108,7 @@ final class uj {
         try {
           L0: {
             var9 = (CharSequence) (Object) param2;
-            var3_int = cg.a(var9, param1, param0);
+            var3_int = cg.a(var9, true, param0);
             var4 = new String[1 + var3_int];
             var5 = 0;
             var6 = 0;
@@ -160,7 +142,7 @@ final class uj {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("uj.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("uj.D(").append(param0).append(44).append(1).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

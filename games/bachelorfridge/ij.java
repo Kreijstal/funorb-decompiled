@@ -6,7 +6,7 @@ final class ij extends pu {
     static String field_m;
     private static String field_z;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_m = null;
         int var1 = 0;
         field_l = null;

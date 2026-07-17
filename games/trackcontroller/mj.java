@@ -9,14 +9,14 @@ final class mj {
     static String field_f;
     static int[] field_b;
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
         field_e = null;
         field_f = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         qj var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

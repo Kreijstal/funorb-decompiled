@@ -216,7 +216,7 @@ abstract class cf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_h = null;

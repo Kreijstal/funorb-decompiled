@@ -18,7 +18,7 @@ final class dl {
         return ic.field_U;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_a = null;
@@ -150,27 +150,15 @@ final class dl {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        var3 = rd.a(true, param2);
-        var4 = fb.a(1311979239, param2);
-        if (param0 != 0) {
-          return null;
-        } else {
-          var5 = rd.a(true, param1);
-          var6 = fb.a(1311979239, param1);
-          var7 = (int)((long)var5 * (long)var3 >> 16);
-          var8 = (int)((long)var3 * (long)var6 >> 16);
-          var9 = (int)((long)var4 * (long)var5 >> 16);
-          var10 = (int)((long)var4 * (long)var6 >> 16);
-          return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
-        }
+        int var3 = rd.a(true, param2);
+        int var4 = fb.a(1311979239, param2);
+        int var5 = rd.a(true, param1);
+        int var6 = fb.a(1311979239, param1);
+        int var7 = (int)((long)var5 * (long)var3 >> 16);
+        int var8 = (int)((long)var3 * (long)var6 >> 16);
+        int var9 = (int)((long)var4 * (long)var5 >> 16);
+        int var10 = (int)((long)var4 * (long)var6 >> 16);
+        return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
     final le a(long param0, int param1) {

@@ -9,7 +9,8 @@ final class bg extends af implements qh {
     private boolean field_ub;
 
     final void f(byte param0) {
-        this.a(nc.a(248, 0, pa.field_N), true, (byte) 117);
+        int discarded$0 = 117;
+        this.a(nc.a(248, 0, pa.field_N), true);
         if (param0 != -42) {
             Object var3 = null;
             bg.a((java.awt.Canvas) null, (byte) 92);
@@ -40,7 +41,8 @@ final class bg extends af implements qh {
         try {
           L0: {
             var2_int = -70 / ((-65 - param0) / 59);
-            stackOut_0_0 = rl.a(param1, 0, param1.length, true);
+            int discarded$2 = 1;
+            stackOut_0_0 = rl.a(param1, 0, param1.length);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -91,7 +93,7 @@ final class bg extends af implements qh {
         }
     }
 
-    private final void a(nk param0, boolean param1, byte param2) {
+    private final void a(nk param0, boolean param1) {
         RuntimeException var4 = null;
         String var4_ref = null;
         ui var5 = null;
@@ -231,7 +233,7 @@ final class bg extends af implements qh {
         }
     }
 
-    public static void u(int param0) {
+    public static void u() {
         field_tb = null;
     }
 
@@ -256,7 +258,8 @@ final class bg extends af implements qh {
         try {
           L0: {
             pk.a((byte) -107, (java.awt.Component) (Object) param0);
-            d.a((java.awt.Component) (Object) param0, 0);
+            int discarded$8 = 0;
+            d.a((java.awt.Component) (Object) param0);
             if (param1 < -52) {
               L1: {
                 if (Main.field_V == null) {
@@ -308,11 +311,13 @@ final class bg extends af implements qh {
         if (param0) {
           if (((bg) this).field_E) {
             if (!((bg) this).field_sb) {
-              var2 = qd.b(-86);
+              int discarded$8 = -86;
+              var2 = qd.b();
               if (var2 == null) {
                 return super.a(true);
               } else {
-                this.a(var2, false, (byte) 117);
+                int discarded$9 = 117;
+                this.a(var2, false);
                 return super.a(true);
               }
             } else {
@@ -325,11 +330,13 @@ final class bg extends af implements qh {
           ((bg) this).field_ub = true;
           if (((bg) this).field_E) {
             if (!((bg) this).field_sb) {
-              var2 = qd.b(-86);
+              int discarded$10 = -86;
+              var2 = qd.b();
               if (var2 == null) {
                 return super.a(true);
               } else {
-                this.a(var2, false, (byte) 117);
+                int discarded$11 = 117;
+                this.a(var2, false);
                 return super.a(true);
               }
             } else {
@@ -341,7 +348,7 @@ final class bg extends af implements qh {
         }
     }
 
-    final static de[] v(int param0) {
+    final static de[] v() {
         int var1 = 5;
         return new de[]{uh.field_n, eb.field_l, c.field_k, kg.field_b, qe.field_H, qe.field_J, nf.field_d, qi.field_A, rc.field_g, lh.field_a, ra.field_a, vk.field_e, dg.field_G, jl.field_g};
     }
@@ -380,7 +387,7 @@ final class bg extends af implements qh {
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               } else {
-                var3_int = -(int)(4294967296L % (long)param0) + param1;
+                var3_int = -(int)(4294967296L % (long)param0) + -2147483648;
                 L1: while (true) {
                   var4 = param2.b(-1427);
                   if (var4 < var3_int) {
@@ -399,7 +406,7 @@ final class bg extends af implements qh {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("bg.MB(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("bg.MB(").append(param0).append(44).append(-2147483648).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

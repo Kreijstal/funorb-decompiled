@@ -48,7 +48,7 @@ final class re {
         field_b = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1 = -105;
     }
 

@@ -19,9 +19,11 @@ final class bl implements qk {
     static String field_f;
     static int[] field_m;
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
-        int var12 = 58 / ((1 - param5) / 35);
-        oh.a(16777215, param7, param2, param0, param3, (byte) -125, param4, param1, true, param6, param10, param8, param9, 16777215);
+    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, boolean param10) {
+        int var12 = -29;
+        int discarded$0 = 16777215;
+        int discarded$1 = 14;
+        oh.a(16777215, 11, param2, 15, param3, (byte) -125, 0, param1, true, param6, param10, param8);
     }
 
     public final void a(int param0, lh param1, byte param2, boolean param3, int param4) {
@@ -206,87 +208,83 @@ final class bl implements qk {
         try {
           L0: {
             kk.a(param2, -1, param1, (int[]) null, (String) null, (String) null, 1073741824, 0L, (kg) null);
-            if (param0 == 12) {
-              L1: {
-                if (param1 != 0) {
-                  break L1;
-                } else {
-                  var9 = an.field_i;
-                  var10 = dh.field_y[0];
-                  var19 = var10;
-                  var19 = var10;
-                  var11 = ac.field_ab;
-                  var9.field_j.a(11, var10, var11, -47);
-                  var12 = an.field_i;
-                  var13 = dh.field_y[1];
-                  var19 = var13;
-                  var19 = var13;
-                  var14 = bi.field_a;
-                  var12.field_j.a(12, var13, var14, param0 + -117);
-                  var15 = an.field_i;
-                  var16 = dh.field_y[2];
-                  var19 = var16;
-                  var19 = var16;
-                  var17 = lk.field_V;
-                  var15.field_j.a(13, var16, var17, -45);
-                  break L1;
-                }
+            L1: {
+              if (param1 != 0) {
+                break L1;
+              } else {
+                var9 = an.field_i;
+                var10 = dh.field_y[0];
+                var19 = var10;
+                var19 = var10;
+                var11 = ac.field_ab;
+                var9.field_j.a(11, var10, var11, -47);
+                var12 = an.field_i;
+                var13 = dh.field_y[1];
+                var19 = var13;
+                var19 = var13;
+                var14 = bi.field_a;
+                var12.field_j.a(12, var13, var14, -105);
+                var15 = an.field_i;
+                var16 = dh.field_y[2];
+                var19 = var16;
+                var19 = var16;
+                var17 = lk.field_V;
+                var15.field_j.a(13, var16, var17, -45);
+                break L1;
               }
-              L2: {
-                if (1 == param1) {
-                  var18 = an.field_i;
-                  var19 = dh.field_y[0];
-                  var20 = kc.field_t;
-                  var18.field_j.a(11, var19, var20, param0 + -114);
-                  var21 = an.field_i;
-                  var22 = dh.field_y[1];
-                  var23 = cj.field_f;
-                  var21.field_j.a(12, var22, var23, -91);
-                  var24 = an.field_i;
-                  var25 = dh.field_y[2];
-                  var26 = og.field_a;
-                  var24.field_j.a(13, var25, var26, -64);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (param1 != 2) {
-                  break L3;
-                } else {
-                  var27 = an.field_i;
-                  var28 = dh.field_y[0];
-                  var29 = mg.field_gc;
-                  var27.field_j.a(11, var28, var29, -125);
-                  var30 = an.field_i;
-                  var31 = dh.field_y[1];
-                  var32 = qm.field_g;
-                  var30.field_j.a(12, var31, var32, -87);
-                  var33 = an.field_i;
-                  var34 = dh.field_y[2];
-                  var35 = he.field_f;
-                  var33.field_j.a(13, var34, var35, -62);
-                  break L3;
-                }
-              }
-              var36 = an.field_i;
-              var4 = param2.field_Rb;
-              var5 = param2.field_cb;
-              var6 = param2.field_zb;
-              var7 = param2.field_Lb;
-              var36.field_j.a(var7, var6, var5, (byte) -91, var4);
-              break L0;
-            } else {
-              return;
             }
+            L2: {
+              if (1 == param1) {
+                var18 = an.field_i;
+                var19 = dh.field_y[0];
+                var20 = kc.field_t;
+                var18.field_j.a(11, var19, var20, -102);
+                var21 = an.field_i;
+                var22 = dh.field_y[1];
+                var23 = cj.field_f;
+                var21.field_j.a(12, var22, var23, -91);
+                var24 = an.field_i;
+                var25 = dh.field_y[2];
+                var26 = og.field_a;
+                var24.field_j.a(13, var25, var26, -64);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (param1 != 2) {
+                break L3;
+              } else {
+                var27 = an.field_i;
+                var28 = dh.field_y[0];
+                var29 = mg.field_gc;
+                var27.field_j.a(11, var28, var29, -125);
+                var30 = an.field_i;
+                var31 = dh.field_y[1];
+                var32 = qm.field_g;
+                var30.field_j.a(12, var31, var32, -87);
+                var33 = an.field_i;
+                var34 = dh.field_y[2];
+                var35 = he.field_f;
+                var33.field_j.a(13, var34, var35, -62);
+                break L3;
+              }
+            }
+            var36 = an.field_i;
+            var4 = param2.field_Rb;
+            var5 = param2.field_cb;
+            var6 = param2.field_zb;
+            var7 = param2.field_Lb;
+            var36.field_j.a(var7, var6, var5, (byte) -91, var4);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("bl.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("bl.E(").append(12).append(44).append(param1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -313,7 +311,7 @@ final class bl implements qk {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_j = null;
         field_b = null;

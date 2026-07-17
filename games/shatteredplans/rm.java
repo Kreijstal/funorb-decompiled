@@ -15,7 +15,7 @@ final class rm implements Iterable {
     static String[] field_g;
     oh[] field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_h = null;
         field_g = null;
@@ -189,11 +189,7 @@ final class rm implements Iterable {
     }
 
     final static bc a(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
-        if (!param3) {
-            field_c = null;
-            return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, false);
-        }
-        return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, false);
+        return cc.a(0, false, 5, 12000, true, false);
     }
 
     static {

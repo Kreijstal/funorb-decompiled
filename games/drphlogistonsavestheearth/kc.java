@@ -14,70 +14,39 @@ final class kc extends gi {
     int field_h;
     static nh[] field_i;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var9 = 0;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param7 != 28183) {
-          field_l = null;
-          if (param5 >= param3) {
-            if (param5 >= param4) {
-              if (param4 <= param3) {
-                fa.a(param4, (byte) -124, param2, param5, param0, param3, param6, param1, wj.field_l);
-                return;
-              } else {
-                fa.a(param3, (byte) -124, param6, param5, param0, param4, param2, param1, wj.field_l);
-                return;
-              }
+        if (param5 >= param3) {
+          if (param5 >= param4) {
+            if (param4 <= param3) {
+              fa.a(param4, (byte) -124, param2, param5, param0, param3, param6, param1, wj.field_l);
+              return;
             } else {
-              fa.a(param3, (byte) -124, param1, param4, param0, param5, param2, param6, wj.field_l);
+              fa.a(param3, (byte) -124, param6, param5, param0, param4, param2, param1, wj.field_l);
               return;
             }
           } else {
-            if (param4 <= param3) {
-              if (param4 > param5) {
-                fa.a(param5, (byte) -124, param6, param3, param0, param4, param1, param2, wj.field_l);
-                return;
-              } else {
-                fa.a(param4, (byte) -124, param1, param3, param0, param5, param6, param2, wj.field_l);
-                return;
-              }
-            } else {
-              fa.a(param5, (byte) -124, param2, param4, param0, param3, param1, param6, wj.field_l);
-              return;
-            }
+            fa.a(param3, (byte) -124, param1, param4, param0, param5, param2, param6, wj.field_l);
+            return;
           }
         } else {
-          if (param5 >= param3) {
-            if (param5 >= param4) {
-              if (param4 <= param3) {
-                fa.a(param4, (byte) -124, param2, param5, param0, param3, param6, param1, wj.field_l);
-                return;
-              } else {
-                fa.a(param3, (byte) -124, param6, param5, param0, param4, param2, param1, wj.field_l);
-                return;
-              }
+          if (param4 <= param3) {
+            if (param4 > param5) {
+              fa.a(param5, (byte) -124, param6, param3, param0, param4, param1, param2, wj.field_l);
+              return;
             } else {
-              fa.a(param3, (byte) -124, param1, param4, param0, param5, param2, param6, wj.field_l);
+              fa.a(param4, (byte) -124, param1, param3, param0, param5, param6, param2, wj.field_l);
               return;
             }
           } else {
-            if (param4 <= param3) {
-              if (param4 > param5) {
-                fa.a(param5, (byte) -124, param6, param3, param0, param4, param1, param2, wj.field_l);
-                return;
-              } else {
-                fa.a(param4, (byte) -124, param1, param3, param0, param5, param6, param2, wj.field_l);
-                return;
-              }
-            } else {
-              fa.a(param5, (byte) -124, param2, param4, param0, param3, param1, param6, wj.field_l);
-              return;
-            }
+            fa.a(param5, (byte) -124, param2, param4, param0, param3, param1, param6, wj.field_l);
+            return;
           }
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_q = null;
         field_j = null;
         field_o = null;
@@ -160,7 +129,8 @@ final class kc extends gi {
             var5_int = param1.a(param2, (byte) -114);
             var6 = -24 % ((param3 - -39) / 54);
             var7 = param1.a((byte) -105, param4, var5_int);
-            stackOut_0_0 = oj.a(var5_int, var7, param1, param0, 15619);
+            int discarded$2 = 15619;
+            stackOut_0_0 = oj.a(var5_int, var7, param1, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

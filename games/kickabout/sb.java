@@ -11,7 +11,7 @@ final class sb {
     private String field_f;
     private int field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         int var1 = -18;
         field_b = null;
@@ -20,36 +20,25 @@ final class sb {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        gg var3 = null;
         uv var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        var3 = se.a(param0, 2, param2);
-        if (param1) {
-          return;
-        } else {
-          L0: {
-            if (var3 != null) {
-              wi.field_v.a(false, 0);
-              var4 = wi.field_v;
-              var5_ref_String = qt.field_k;
-              var4.field_j.a(0, 5, var5_ref_String);
-              var4 = wi.field_v;
-              var5 = sm.field_q;
-              var6 = vc.field_y;
-              var4.field_j.a(0, 0, var5, var6, 0);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          ug.a(param2, 2, param0);
-          return;
+        gg var3 = se.a(param0, 2, param2);
+        if (!(var3 == null)) {
+            wi.field_v.a(false, 0);
+            var4 = wi.field_v;
+            var5_ref_String = qt.field_k;
+            var4.field_j.a(0, 5, var5_ref_String);
+            var4 = wi.field_v;
+            var5 = sm.field_q;
+            var6 = vc.field_y;
+            var4.field_j.a(0, 0, var5, var6, 0);
         }
+        ug.a(param2, 2, param0);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void a(int param0, int param1, int param2, int param3) {
         nr.field_j = param1;
         jl.field_d = param2;
         lk.field_g = param0;

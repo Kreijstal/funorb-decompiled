@@ -183,7 +183,7 @@ final class wi extends w implements oh {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_o = null;
         field_i = null;
     }

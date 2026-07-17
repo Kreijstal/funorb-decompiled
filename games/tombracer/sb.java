@@ -7,7 +7,7 @@ final class sb {
     static upa field_a;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }
@@ -45,7 +45,7 @@ final class sb {
               var7 = new int[pd.a(param1, 2048)];
               var2 = var7;
               var3 = 0;
-              var4 = param0;
+              var4 = 0;
               if (param1.length <= var4) {
                 break L1;
               } else {
@@ -92,7 +92,7 @@ final class sb {
           L5: {
             var2_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2_ref;
-            stackOut_17_1 = new StringBuilder().append("sb.B(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("sb.B(").append(0).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -128,10 +128,10 @@ final class sb {
             nj.field_v = param3;
             ns.field_j = new nda(qoa.field_b, nj.field_v);
             bia.field_J = new u[237];
-            int var5_int = -51 % ((param0 - 32) / 59);
+            int var5_int = 0;
             fna.field_j = new qua[4];
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "sb.C(" + -70 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 

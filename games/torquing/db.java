@@ -947,7 +947,7 @@ final class db {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_d = null;
         field_a = null;
     }

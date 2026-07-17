@@ -5,7 +5,7 @@ final class jk {
     static int field_a;
     static String field_b;
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -70,15 +70,12 @@ final class jk {
 
     final static void a(String param0, byte param1, boolean param2) {
         try {
-            if (param1 != -79) {
-                jk.a(81);
-            }
             nk.field_t = param2;
             aq.field_c = true;
             gn.field_m = new mn(dc.field_a, pe.field_E, param0, ff.field_a, nk.field_t);
             dc.field_a.a((gm) (Object) gn.field_m, (byte) 112);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "jk.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "jk.A(" + (param0 != null ? "{...}" : "null") + 44 + -79 + 44 + param2 + 41);
         }
     }
 

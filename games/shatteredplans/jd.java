@@ -43,11 +43,12 @@ final class jd {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            if (gq.a(param2, param1, -4)) {
+            int discarded$6 = -4;
+            if (gq.a(param2, false)) {
               var3_int = 0;
               L1: while (true) {
                 if (param2.length() <= var3_int) {
-                  var4 = 36 % ((param0 - 44) / 46);
+                  var4 = 0;
                   stackOut_10_0 = 1;
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
@@ -73,7 +74,7 @@ final class jd {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("jd.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("jd.A(").append(116).append(44).append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -101,7 +102,7 @@ final class jd {
         return stackIn_11_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_j = null;
         field_a = null;

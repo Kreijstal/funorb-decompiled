@@ -95,7 +95,7 @@ final class hma implements Iterable {
         try {
           L0: {
             L1: {
-              var3_int = 77 / ((param0 - 2) / 56);
+              var3_int = 38;
               if (param1 != null) {
                 var4 = param1;
                 break L1;
@@ -121,7 +121,7 @@ final class hma implements Iterable {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("hma.C(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("hma.C(").append(121).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;

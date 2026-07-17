@@ -17,7 +17,7 @@ final class mf {
     static int[] field_m;
     static ac field_j;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_j = null;
         field_f = null;
         field_m = null;
@@ -27,21 +27,22 @@ final class mf {
     }
 
     final static void a(int param0, java.awt.Canvas param1) {
-        if (param0 != -752960408) {
-            return;
-        }
         try {
             if (!(11 != fh.field_b)) {
-                pk.b(114);
+                int discarded$0 = 114;
+                pk.b();
             }
             mn.a((byte) -63, oe.field_d, ul.field_a, bj.field_c);
-            cl.a(param1, 0, 0, 310);
+            int discarded$1 = 310;
+            int discarded$2 = 0;
+            int discarded$3 = 0;
+            cl.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "mf.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "mf.E(" + -752960408 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -88,7 +89,7 @@ final class mf {
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -117,7 +118,8 @@ final class mf {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    this.a((byte) -91);
+                    int discarded$1 = -91;
+                    this.a();
                     ((mf) this).field_d = 256;
                     return;
                   } else {
@@ -243,7 +245,8 @@ final class mf {
 
     final static pf a(int param0) {
         int var1 = -78;
-        return new pf(lm.n(81), wc.b((byte) 117));
+        int discarded$0 = 117;
+        return new pf(lm.n(81), wc.b());
     }
 
     final int b(int param0) {
@@ -251,12 +254,13 @@ final class mf {
             return 35;
         }
         if (((mf) this).field_d == 0) {
-            this.a((byte) -91);
+            int discarded$0 = -91;
+            this.a();
             ((mf) this).field_d = 256;
         }
-        int fieldTemp$0 = ((mf) this).field_d - 1;
+        int fieldTemp$1 = ((mf) this).field_d - 1;
         ((mf) this).field_d = ((mf) this).field_d - 1;
-        return ((mf) this).field_l[fieldTemp$0];
+        return ((mf) this).field_l[fieldTemp$1];
     }
 
     mf(int[] param0) {
@@ -267,7 +271,8 @@ final class mf {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((mf) this).field_l[var2_int] = param0[var2_int];
             }
-            this.b((byte) 90);
+            int discarded$0 = 90;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

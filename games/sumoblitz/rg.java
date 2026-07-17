@@ -142,7 +142,8 @@ abstract class rg extends sp {
         int stackOut_6_0 = 0;
         int stackOut_7_0 = 0;
         if (param0 == -28778) {
-          var2 = this.a((byte) -100);
+          int discarded$2 = -100;
+          var2 = this.a();
           var3 = var2 + -((rg) this).field_B;
           if (var3 <= 0) {
             if (var3 < 0) {
@@ -250,7 +251,8 @@ abstract class rg extends sp {
           }
         } else {
           ((rg) this).field_E = null;
-          var2 = this.a((byte) -100);
+          int discarded$3 = -100;
+          var2 = this.a();
           var3 = var2 + -((rg) this).field_B;
           if (var3 > 0) {
             ((rg) this).field_B = ((rg) this).field_B + (7 + var3) / 8;
@@ -358,7 +360,7 @@ abstract class rg extends sp {
 
     final static boolean a(int param0, char param1) {
         int var2 = 0;
-        var2 = -62 % ((-58 - param0) / 63);
+        var2 = 0;
         if (65 > param1) {
           if (param1 >= 97) {
             if (param1 <= 122) {
@@ -388,7 +390,8 @@ abstract class rg extends sp {
 
     boolean h(int param0) {
         if (param0 == 0) {
-          ((rg) this).field_B = this.a((byte) -100);
+          int discarded$2 = -100;
+          ((rg) this).field_B = this.a();
           if (0 == ((rg) this).field_B) {
             if (((rg) this).field_D) {
               return false;
@@ -426,13 +429,11 @@ abstract class rg extends sp {
     }
 
     final static void a(byte param0, int param1) {
-        int discarded$4 = se.a(19886);
-        if (param0 != 55) {
-            boolean discarded$5 = rg.a(124, 'r');
-        }
+        int discarded$0 = 19886;
+        int discarded$1 = se.a();
     }
 
-    private final int a(byte param0) {
+    private final int a() {
         return !((rg) this).field_D ? 0 : (Object) (Object) ((rg) this).field_E.e((byte) 54) != this ? 0 : 256;
     }
 

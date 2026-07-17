@@ -60,7 +60,7 @@ final class um {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;
@@ -73,7 +73,8 @@ final class um {
 
     private static void $cfr$clinit() {
         field_b = new byte[65536];
-        qg.a(field_b, 0, 65536, (byte) -128);
+        int discarded$0 = -128;
+        qg.a(field_b, 0, 65536);
         field_a = "Loading...";
         field_d = new fc();
         field_c = "LEFT ARROW";

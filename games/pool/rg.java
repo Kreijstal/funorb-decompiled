@@ -50,10 +50,16 @@ class rg extends ma {
     }
 
     final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 > -107) {
-            rg.a(-20, 53, 78, true, 78, 37, 85);
-        }
-        return il.a(1, 1, 0, 3, 4, 1, param0, param3, param1);
+        int discarded$0 = 0;
+        int discarded$1 = 65793;
+        int discarded$2 = 0;
+        int discarded$3 = 1;
+        int discarded$4 = 4;
+        int discarded$5 = 3;
+        int discarded$6 = 0;
+        int discarded$7 = 1;
+        int discarded$8 = 1;
+        return il.a();
     }
 
     final void a(boolean param0) {
@@ -82,7 +88,7 @@ class rg extends ma {
         la.a(-57, param1, param2, param5, var7, param3, param0, param6);
     }
 
-    final static int a(int param0, String[] param1, String param2, lr param3, int param4) {
+    final static int a(int param0, String[] param1, String param2, lr param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -166,7 +172,7 @@ class rg extends ma {
             var6 = 0;
             var7 = 0;
             var8 = param2.length();
-            var9 = param4;
+            var9 = 0;
             L2: while (true) {
               if (var9 >= var8) {
                 L3: {
@@ -298,7 +304,7 @@ class rg extends ma {
               break L9;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param4 + 41);
+          throw wm.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + 0 + 41);
         }
         return stackIn_19_0;
     }

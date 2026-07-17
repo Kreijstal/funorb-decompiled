@@ -12,19 +12,20 @@ abstract class ef {
     java.awt.Image field_e;
     int[] field_g;
 
-    final static void a(byte param0) {
+    final static void a() {
         qa var1 = null;
         ii var2 = null;
         var1 = (qa) (Object) md.field_t.a((byte) -71);
         if (var1 == null) {
-          kc.a((byte) 18);
+          int discarded$10 = 18;
+          kc.a();
           return;
         } else {
           var2 = jc.field_g;
-          int discarded$8 = var2.j(-3);
-          int discarded$9 = var2.j(-3);
-          int discarded$10 = var2.j(-3);
           int discarded$11 = var2.j(-3);
+          int discarded$12 = var2.j(-3);
+          int discarded$13 = var2.j(-3);
+          int discarded$14 = var2.j(-3);
           var1.c(2);
           return;
         }
@@ -35,13 +36,16 @@ abstract class ef {
         var1 = uf.a((byte) -115);
         if (var1 != null) {
           if (var1.indexOf('@') < 0) {
-            return new ve(uf.a((byte) -115), lh.a(255));
+            int discarded$6 = 255;
+            return new ve(uf.a((byte) -115), lh.a());
           } else {
             var1 = "";
-            return new ve(uf.a((byte) -115), lh.a(255));
+            int discarded$7 = 255;
+            return new ve(uf.a((byte) -115), lh.a());
           }
         } else {
-          return new ve(uf.a((byte) -115), lh.a(255));
+          int discarded$8 = 255;
+          return new ve(uf.a((byte) -115), lh.a());
         }
     }
 
@@ -55,17 +59,13 @@ abstract class ef {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param2 <= -42) {
-          if (param5 >= param1) {
-            if (param5 < param1 + param4) {
-              if (param6 >= param0) {
-                if (param0 + param3 <= param6) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param5 >= param1) {
+          if (param5 < param1 + param4) {
+            if (param6 >= param0) {
+              if (param0 + param3 <= param6) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;
@@ -74,7 +74,7 @@ abstract class ef {
             return false;
           }
         } else {
-          return true;
+          return false;
         }
     }
 

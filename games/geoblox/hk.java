@@ -410,7 +410,8 @@ class hk extends el {
     }
 
     final static void e(int param0) {
-        rd.c(520);
+        int discarded$3 = 520;
+        rd.c();
         pc.a(4, false);
         if (param0 != 83) {
             hk.f((byte) -65);

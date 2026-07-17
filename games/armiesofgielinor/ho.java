@@ -8,7 +8,7 @@ final class ho {
     int field_b;
 
     final static void a(int param0) {
-        int var1 = 20 % ((param0 - -6) / 45);
+        int var1 = 0;
         ud.field_X = null;
         kr.field_C.a(123);
     }
@@ -100,7 +100,7 @@ final class ho {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
     }

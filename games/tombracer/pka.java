@@ -90,7 +90,8 @@ final class pka {
               return var1 != 0;
             }
           } else {
-            if (ofa.d(true)) {
+            int discarded$1 = 1;
+            if (ofa.d()) {
               L4: {
                 bea.d(0, 0, bea.field_g, bea.field_a);
                 var1 = 1;

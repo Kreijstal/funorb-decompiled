@@ -497,7 +497,7 @@ final class ti {
         param3 = param14;
         param4 = param13;
         while (param8 < 0) {
-            param1 = (param6 - param3) * param10 / param6;
+            param1 = (param6 - param3) * 255 / param6;
             if (param1 >= param11.length) {
                 return true;
             }
@@ -534,7 +534,7 @@ final class ti {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -543,7 +543,7 @@ final class ti {
           }
         }
         L1: {
-          var10 = field_i - param4 - param5 - param3;
+          var10 = field_i - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -553,7 +553,7 @@ final class ti {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_i >= var12) {
             break L2;
           } else {
@@ -573,7 +573,7 @@ final class ti {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -730,7 +730,7 @@ final class ti {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_c) {
+                      if (param5 + var19 + param3 >= field_c) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -1847,78 +1847,41 @@ final class ti {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        L0: {
-          var6 = 0;
-          var7 = 65536 / param3;
-          if (param0 >= field_e) {
-            break L0;
-          } else {
+        int var6 = 0;
+        int var7 = 65536 / param3;
+        if (param0 < field_e) {
             param2 = param2 - (field_e - param0);
             param0 = field_e;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 >= field_f) {
-            break L1;
-          } else {
+        if (param1 < field_f) {
             var6 = var6 + (field_f - param1) * var7;
             param3 = param3 - (field_f - param1);
             param1 = field_f;
-            break L1;
-          }
         }
-        L2: {
-          if (param0 + param2 <= field_c) {
-            break L2;
-          } else {
+        if (param0 + param2 > field_c) {
             param2 = field_c - param0;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + param3 <= field_l) {
-            break L3;
-          } else {
+        if (param1 + param3 > field_l) {
             param3 = field_l - param1;
-            break L3;
-          }
         }
-        var8 = field_i - param2;
-        var9 = param0 + param1 * field_i;
-        var10 = -param3;
-        L4: while (true) {
-          if (var10 >= 0) {
-            return;
-          } else {
+        int var8 = field_i - param2;
+        int var9 = param0 + param1 * field_i;
+        for (var10 = -param3; var10 < 0; var10++) {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + 0 * var12 & -16711936) + ((param4 & 65280) * var11 + 0 * var12 & 16711680) >>> 8;
-            var14 = -param2;
-            L5: while (true) {
-              if (var14 >= 0) {
-                var9 = var9 + var8;
-                var6 = var6 + var7;
-                var10++;
-                continue L4;
-              } else {
-                int incrementValue$1 = var9;
+            var13 = (2097184 * var11 + 0 * var12 & -16711936) + (8192 * var11 + 0 * var12 & 16711680) >>> 8;
+            for (var14 = -param2; var14 < 0; var14++) {
+                int incrementValue$0 = var9;
                 var9++;
-                field_a[incrementValue$1] = var13;
-                var14++;
-                continue L5;
-              }
+                field_a[incrementValue$0] = var13;
             }
-          }
+            var9 = var9 + var8;
+            var6 = var6 + var7;
         }
     }
 
@@ -2103,7 +2066,7 @@ final class ti {
           ri.a(var34, 0, param8);
           ri.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -2112,8 +2075,8 @@ final class ti {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_i;
-          var15 = param4 + param3;
+          var14 = var13 * field_i;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_b) {
             break L3;
@@ -2133,7 +2096,7 @@ final class ti {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -2142,7 +2105,7 @@ final class ti {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_i;
+                  var19 = (0 - param3) * field_i;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -2153,7 +2116,7 @@ final class ti {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_b - param4 - param5 - param3;
+                      var18 = field_b - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -2395,7 +2358,7 @@ final class ti {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_l) {
+                      if (var13 + param5 + param3 >= field_l) {
                         var14 = var14 + field_i;
                         break L26;
                       } else {
@@ -2631,7 +2594,7 @@ final class ti {
         field_j = null;
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void b(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -3095,10 +3058,10 @@ final class ti {
                       var28 = (var18 - 2 << 4) - param0;
                       var28 = var28 * var28;
                       var29 = var28 - var27;
-                      if (!ti.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, field_a, param3, param4, 1, var24, var8 + var21)) {
+                      if (!ti.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, field_a, 255, param4, 1, var24, var8 + var21)) {
                         break L7;
                       } else {
-                        boolean discarded$1 = ti.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, field_a, param3, param4, -1, var29, var8 + var27);
+                        boolean discarded$1 = ti.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, field_a, 255, param4, -1, var29, var8 + var27);
                         break L7;
                       }
                     }
@@ -3163,8 +3126,8 @@ final class ti {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ti.a(field_a, 0, param2 + param3 * field_i, param0, param2, param4, field_i - param4, param5);
-        ti.a(field_a, 0, param2 + param3 * field_i, param1, param3, param5, field_i - param4, param2, param4);
+        ti.a(field_a, 0, 0 * field_i, param0, 0, param4, field_i - param4, param5);
+        ti.a(field_a, 0, 0 * field_i, param1, 0, param5, field_i - param4, 0, param4);
     }
 
     static {

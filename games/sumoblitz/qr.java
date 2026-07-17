@@ -8,7 +8,7 @@ final class qr {
     static int[] field_d;
     static ud field_b;
 
-    final static an a(String[] args, int param1) {
+    final static an a(String[] args) {
         an var2 = null;
         RuntimeException var2_ref = null;
         an stackIn_1_0 = null;
@@ -82,39 +82,31 @@ final class qr {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              vk.a(qu.field_k, kc.field_l, (byte) -107, se.field_d, param1, 0, true);
-              if (param0 == 13136) {
-                break L1;
-              } else {
-                field_d = null;
-                break L1;
-              }
-            }
+            vk.a(qu.field_k, kc.field_l, (byte) -107, se.field_d, param1, 0, true);
             var2_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var2_int >= se.field_d) {
-                L3: {
+                L2: {
                   vk.a(ab.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
                   if (se.field_d <= param1) {
-                    break L3;
+                    break L2;
                   } else {
                     se.field_d = param1;
-                    break L3;
+                    break L2;
                   }
                 }
                 break L0;
               } else {
                 pd.field_q[param1 + var2_int] = var2_int;
                 var2_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2, "qr.C(" + param0 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) var2, "qr.C(" + 13136 + 44 + param1 + 41);
         }
     }
 
@@ -151,7 +143,7 @@ final class qr {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_a = null;

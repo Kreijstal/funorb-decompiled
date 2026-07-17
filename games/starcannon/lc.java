@@ -19,7 +19,7 @@ final class lc extends qj {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_fb = null;
         field_ib = null;
         field_hb = null;
@@ -30,13 +30,11 @@ final class lc extends qj {
         int var3 = 0;
         int var4 = 0;
         try {
-            if (param0) {
-                field_ib = null;
-            }
             var2 = new hl(param1.a("final_frame.jpg", (byte) -76, ""), (java.awt.Component) (Object) kj.field_E);
             var3 = var2.field_u;
             var4 = var2.field_v;
-            wj.b(true);
+            int discarded$0 = 1;
+            wj.b();
             m.field_a = new hl(var3, var4 * 3 / 4);
             m.field_a.e();
             var2.d(0, 0);
@@ -46,7 +44,7 @@ final class lc extends qj {
             ai.field_g.field_y = m.field_a.field_v;
             wf.a(-61);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "lc.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "lc.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

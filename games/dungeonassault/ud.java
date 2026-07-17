@@ -11,7 +11,7 @@ final class ud extends qe {
     static cn field_y;
     static String field_u;
 
-    private final int[] a(int[] param0, boolean param1) {
+    private final int[] a(int[] param0) {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -108,7 +108,8 @@ final class ud extends qe {
 
     private final void a(boolean param0, int param1) {
         ia.field_K.field_w = 0;
-        lk.f(16);
+        int discarded$0 = 16;
+        lk.f();
         gd.a(0, 0, 0, param0);
         cm.a(1.600000023841858f, 0.9200000166893005f, -7788, 0.10000000149011612f, 25.0f);
     }
@@ -119,81 +120,73 @@ final class ud extends qe {
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
-        Object stackIn_3_0 = null;
-        int[] stackIn_8_0 = null;
+        int[] stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int[] stackOut_7_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        int[] stackOut_6_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
         String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
-            if (!param0) {
-              var6 = new int[param1.length];
-              var3 = var6;
-              var4 = 0;
-              L1: while (true) {
-                if (param1.length <= var4) {
-                  stackOut_7_0 = (int[]) var3;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L0;
-                } else {
-                  var6[var4] = 240 - param1[var4] / 4 << 4;
-                  var4++;
-                  continue L1;
-                }
+            var6 = new int[param1.length];
+            var3 = var6;
+            var4 = 0;
+            L1: while (true) {
+              if (param1.length <= var4) {
+                stackOut_6_0 = (int[]) var3;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var6[var4] = 240 - param1[var4] / 4 << 4;
+                var4++;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
-              return (int[]) (Object) stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
-            stackOut_9_1 = new StringBuilder().append("ud.G(").append(param0).append(44);
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_1 = new StringBuilder().append("ud.G(").append(0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L2;
-            } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     final void b(boolean param0) {
@@ -252,10 +245,12 @@ final class ud extends qe {
             return;
           } else {
             L0: while (true) {
-              if (!ha.b((byte) 47)) {
+              int discarded$4 = 47;
+              if (!ha.b()) {
                 L1: {
                   if (!ro.field_B) {
-                    rm.r(22362);
+                    int discarded$5 = 22362;
+                    rm.r();
                     if (ro.field_B) {
                       this.d(true);
                       break L1;
@@ -280,7 +275,7 @@ final class ud extends qe {
                           if (~var2 <= ~u.field_T.length) {
                             break L3;
                           } else {
-                            o discarded$2 = gd.a(64, u.field_T[var2]);
+                            o discarded$6 = gd.a(64, u.field_T[var2]);
                             break L3;
                           }
                         }
@@ -291,9 +286,9 @@ final class ud extends qe {
                   }
                 } else {
                   L4: {
-                    int fieldTemp$3 = ub.field_p + 1;
+                    int fieldTemp$7 = ub.field_p + 1;
                     ub.field_p = ub.field_p + 1;
-                    if (fieldTemp$3 >= 150) {
+                    if (fieldTemp$7 >= 150) {
                       sf.field_g = sf.field_g + 8;
                       if (sf.field_g >= 256) {
                         cm.a(0.0f, 0.0f, -7788, 0.10000000149011612f, 0.0f);
@@ -367,7 +362,8 @@ final class ud extends qe {
         }
         ia.field_K.field_y[8] = 2560;
         ia.field_K.field_m[8] = 3200;
-        ia.field_K.field_j = this.a(new int[9], false);
+        int discarded$0 = 0;
+        ia.field_K.field_j = this.a(new int[9]);
         ia.field_K.field_q = this.a(false, new int[9]);
         int var20 = 0;
         var3 = var20;
@@ -404,10 +400,11 @@ final class ud extends qe {
         ia.field_K.field_w = 0;
         var57[4] = 3840;
         cm.a(0.0f, 0.0f, -7788, 0.10000000149011612f, 0.0f);
-        t.a(1048576, jd.field_o, false, true);
+        int discarded$1 = 1;
+        t.a(1048576, jd.field_o, false);
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) in.field_C);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) in.field_C);

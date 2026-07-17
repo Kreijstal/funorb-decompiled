@@ -128,21 +128,11 @@ final class hk extends da {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        mi var3 = null;
-        var3 = uh.field_Wb;
-        var3.j(param0, param1 ^ 75);
-        if (param1 != 60) {
-          field_r = null;
-          var3.f(3, 91);
-          var3.f(8, param1 + 41);
-          var3.d(param2, param1 ^ -1739);
-          return;
-        } else {
-          var3.f(3, 91);
-          var3.f(8, param1 + 41);
-          var3.d(param2, param1 ^ -1739);
-          return;
-        }
+        mi var3 = uh.field_Wb;
+        var3.j(param0, 119);
+        var3.f(3, 91);
+        var3.f(8, 101);
+        var3.d(param2, -1783);
     }
 
     final String b(int param0, String param1) {
@@ -268,11 +258,11 @@ final class hk extends da {
         ((hk) this).field_p = false;
     }
 
-    final static int a(boolean param0) {
+    final static int a() {
         return jp.field_o;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_o = null;
         field_r = null;
         field_q = null;

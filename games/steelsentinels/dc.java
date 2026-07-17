@@ -18,7 +18,7 @@ final class dc {
         int var5 = 0;
         int[] var6 = null;
         var5 = SteelSentinels.field_G;
-        var6 = new int[]{16, 32, 64, 128, 256, 512};
+        var6 = new int[]{16, param1, 64, 128, 256, 512};
         var2 = var6;
         var3 = new StringBuilder();
         var4 = 0;
@@ -46,7 +46,7 @@ final class dc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_f = null;

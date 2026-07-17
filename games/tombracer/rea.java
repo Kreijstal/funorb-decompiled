@@ -708,7 +708,7 @@ final class rea extends nv {
         }
     }
 
-    final static hja[] a(cn param0, int param1, int param2, byte param3) {
+    final static hja[] a(cn param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -764,7 +764,7 @@ final class rea extends nv {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_r = null;
     }
 

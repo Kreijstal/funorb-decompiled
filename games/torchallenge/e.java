@@ -62,7 +62,7 @@ final class e extends da {
                 break L0;
               } else {
                 L3: {
-                  vj.field_d[var4] = new ka(we.field_m[1 + var4].field_q - -(param1 * 2), 2 * param1 + we.field_m[var4 + 1].field_v);
+                  vj.field_d[var4] = new ka(we.field_m[1 + var4].field_q - -16, 16 + we.field_m[var4 + 1].field_v);
                   if (we.field_m[1 + var4].field_q > var2_int) {
                     var2_int = we.field_m[var4 - -1].field_q;
                     break L3;
@@ -84,12 +84,12 @@ final class e extends da {
                     break L5;
                   } else {
                     qg.a(ui.field_f);
-                    qg.a(0, 0, -(2 * param1) + qg.field_g, qg.field_f);
+                    qg.a(0, 0, -16 + qg.field_g, qg.field_f);
                     break L5;
                   }
                 }
                 L6: {
-                  we.field_m[1 + var4].a(param1, param1, 16777215);
+                  we.field_m[1 + var4].a(8, 8, 16777215);
                   if (var4 != 0) {
                     break L6;
                   } else {
@@ -97,7 +97,7 @@ final class e extends da {
                     break L6;
                   }
                 }
-                qg.d(param1, param1, 0, 0, qg.field_g, qg.field_f);
+                qg.d(8, 8, 0, 0, qg.field_g, qg.field_f);
                 la.field_f.a(-32);
                 vj.field_d[var4].h();
                 var4++;
@@ -108,7 +108,7 @@ final class e extends da {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2, "e.C(" + param0 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) var2, "e.C(" + param0 + 44 + 8 + 41);
         }
     }
 
@@ -123,7 +123,7 @@ final class e extends da {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         ue var4 = null;

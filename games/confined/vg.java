@@ -31,7 +31,6 @@ final class vg extends pm {
         double var5 = 0.0;
         double var7 = 0.0;
         double var9 = 0.0;
-        Object var11 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -56,8 +55,8 @@ final class vg extends pm {
               if (param0 >= 69) {
                 break L1;
               } else {
-                var11 = null;
-                vg.a((String) null, true, -97, (java.awt.Color) null, false);
+                int discarded$1 = 0;
+                vg.a((String) null, true, -97, (java.awt.Color) null);
                 break L1;
               }
             }
@@ -122,28 +121,24 @@ final class vg extends pm {
     }
 
     final static void a(int param0, int param1, om param2) {
-        hb var6 = null;
+        hb var3 = null;
         int var4 = 0;
         try {
-            var6 = vh.field_a;
-            var6.b(true, param1);
-            var6.field_n = var6.field_n + 1;
-            var4 = var6.field_n;
-            var6.f(param0 + -7830, 1);
-            var6.f(113, param2.field_n);
-            var6.a(false, param2.field_v);
-            var6.d(-126, param2.field_r);
-            var6.d(-100, param2.field_t);
-            var6.d(param0 ^ -7846, param2.field_u);
-            if (param0 != 7932) {
-                Object var5 = null;
-                vg.a((String) null, true, 52, (java.awt.Color) null, true);
-            }
-            var6.d(-105, param2.field_m);
-            int discarded$0 = var6.e(26199, var4);
-            var6.a(25859, var6.field_n - var4);
+            var3 = vh.field_a;
+            var3.b(true, 5);
+            var3.field_n = var3.field_n + 1;
+            var4 = var3.field_n;
+            var3.f(102, 1);
+            var3.f(113, param2.field_n);
+            var3.a(false, param2.field_v);
+            var3.d(-126, param2.field_r);
+            var3.d(-100, param2.field_t);
+            var3.d(-90, param2.field_u);
+            var3.d(-105, param2.field_m);
+            int discarded$0 = var3.e(26199, var4);
+            var3.a(25859, var3.field_n - var4);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "vg.N(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "vg.N(" + 7932 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -490,7 +485,7 @@ final class vg extends pm {
         }
     }
 
-    final static void a(String param0, boolean param1, int param2, java.awt.Color param3, boolean param4) {
+    final static void a(String param0, boolean param1, int param2, java.awt.Color param3) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -560,30 +555,26 @@ final class vg extends pm {
               }
               try {
                 L4: {
-                  if (!param4) {
-                    L5: {
-                      if (null == qm.field_z) {
-                        qm.field_z = fb.field_b.createImage(304, 34);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
+                  L5: {
+                    if (null == qm.field_z) {
+                      qm.field_z = fb.field_b.createImage(304, 34);
+                      break L5;
+                    } else {
+                      break L5;
                     }
-                    var10 = qm.field_z.getGraphics();
-                    var10.setColor(param3);
-                    var10.drawRect(0, 0, 303, 33);
-                    var10.fillRect(2, 2, 3 * param2, 30);
-                    var10.setColor(java.awt.Color.black);
-                    var10.drawRect(1, 1, 301, 31);
-                    var10.fillRect(param2 * 3 + 2, 2, -(param2 * 3) + 300, 30);
-                    var10.setFont(gh.field_f);
-                    var10.setColor(java.awt.Color.white);
-                    var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
-                    boolean discarded$1 = var9.drawImage(qm.field_z, wm.field_ab / 2 + -152, -18 + im.field_b / 2, (java.awt.image.ImageObserver) null);
-                    break L4;
-                  } else {
-                    return;
                   }
+                  var10 = qm.field_z.getGraphics();
+                  var10.setColor(param3);
+                  var10.drawRect(0, 0, 303, 33);
+                  var10.fillRect(2, 2, 3 * param2, 30);
+                  var10.setColor(java.awt.Color.black);
+                  var10.drawRect(1, 1, 301, 31);
+                  var10.fillRect(param2 * 3 + 2, 2, -(param2 * 3) + 300, 30);
+                  var10.setFont(gh.field_f);
+                  var10.setColor(java.awt.Color.white);
+                  var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
+                  boolean discarded$1 = var9.drawImage(qm.field_z, wm.field_ab / 2 + -152, -18 + im.field_b / 2, (java.awt.image.ImageObserver) null);
+                  break L4;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -676,7 +667,7 @@ final class vg extends pm {
               break L10;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param4 + 41);
+          throw sd.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + 0 + 41);
         }
     }
 
@@ -1181,7 +1172,8 @@ final class vg extends pm {
                     break L5;
                   }
                 }
-                hh.a(param1, -101);
+                int discarded$2 = -101;
+                hh.a(param1);
                 break L0;
               }
             } else {
@@ -1428,7 +1420,7 @@ final class vg extends pm {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_G = null;
         field_Z = null;
         field_J = null;

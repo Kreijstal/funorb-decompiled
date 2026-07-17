@@ -25,7 +25,7 @@ final class sd {
         return var2;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ee.field_a = new rk();
     }
 

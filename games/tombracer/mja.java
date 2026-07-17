@@ -2,16 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mja {
-    final static boolean a(byte param0) {
-        if (!in.a("jaclib", param0 + 530)) {
-          return false;
-        } else {
-          if (param0 != -50) {
-            return true;
-          } else {
-            return in.a("hw3d", param0 + 530);
-          }
+    final static boolean a() {
+        int discarded$8 = 480;
+        if (!(in.a("jaclib"))) {
+            return false;
         }
+        int discarded$9 = 480;
+        return in.a("hw3d");
     }
 
     static {

@@ -276,10 +276,12 @@ final class th extends ah {
     final void g(int param0) {
         if (param0 != 26402) {
           field_fb = null;
-          fl.a(((th) this).a(param0 + -28786, bn.field_b, 1.5, 0.002, 0.5), 4);
+          int discarded$4 = 4;
+          fl.a(((th) this).a(param0 + -28786, bn.field_b, 1.5, 0.002, 0.5));
           return;
         } else {
-          fl.a(((th) this).a(param0 + -28786, bn.field_b, 1.5, 0.002, 0.5), 4);
+          int discarded$5 = 4;
+          fl.a(((th) this).a(param0 + -28786, bn.field_b, 1.5, 0.002, 0.5));
           return;
         }
     }

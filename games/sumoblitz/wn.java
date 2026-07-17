@@ -5,12 +5,12 @@ final class wn {
     static int field_a;
     static mp field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
-        int var3 = 106 / ((-16 - param2) / 45);
+    final static boolean a(int param0, int param1) {
+        int var3 = 53;
         return (param0 & 16) != 0 ? true : false;
     }
 
@@ -19,7 +19,8 @@ final class wn {
             throw new IllegalStateException();
         }
         pu.field_m = true;
-        jv.a(false, false);
+        int discarded$0 = 0;
+        jv.a(false);
         jv.field_a = 0;
     }
 

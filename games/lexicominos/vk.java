@@ -10,7 +10,7 @@ final class vk implements Iterator {
     private kd field_b;
     private int field_e;
 
-    private final void b(byte param0) {
+    private final void b() {
         ((vk) this).field_b = null;
         ((vk) this).field_e = 1;
         ((vk) this).field_c = ((vk) this).field_a.field_f[0].field_f;
@@ -28,11 +28,11 @@ final class vk implements Iterator {
         try {
             var11 = new ij();
             var4 = of.a(param0, 0, var11);
-            var5 = sa.a(param1, var4);
+            var5 = sa.a(0, var4);
             var11.field_q = 0;
             for (var6 = var5.length; var6 > 0; var6--) {
                 var7 = var5[0];
-                var7.b(param1 ^ -3, var5);
+                var7.b(-3, var5);
                 var8 = var7.field_k;
                 var9 = (mk) (Object) var8.a(true);
                 while (var9 != null) {
@@ -40,12 +40,13 @@ final class vk implements Iterator {
                         var9.field_k.field_q = var9.field_i + var7.field_q;
                         var9.field_k.a(120, var5);
                     }
-                    var9 = (mk) (Object) var8.f(param1 + 2);
+                    var9 = (mk) (Object) var8.f(2);
                 }
             }
-            fc.a(var4, param0, param2, 11882);
+            int discarded$0 = 11882;
+            fc.a(var4, param0, param2);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "vk.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "vk.C(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -75,8 +76,10 @@ final class vk implements Iterator {
             ed.a(param1 ^ param1, param0);
             de.a(0, param0);
             vf.a(false, param0);
-            cb.b(-110);
-            dg.a(19681);
+            int discarded$0 = -110;
+            cb.b();
+            int discarded$1 = 19681;
+            dg.a();
             mc.field_k = -tf.field_c;
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "vk.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
@@ -155,8 +158,8 @@ final class vk implements Iterator {
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            var4_int = param1.g(param2, 26527);
-            if (param0 != var4_int) {
+            var4_int = param1.g(16, 26527);
+            if (0 != var4_int) {
               L1: {
                 L2: {
                   if (param3 == null) {
@@ -181,7 +184,7 @@ final class vk implements Iterator {
                     if (var7 >= var4_int) {
                       break L3;
                     } else {
-                      param3[var7] = (byte)(param1.g(var5, dg.a(param0, 26527)) + var6);
+                      param3[var7] = (byte)(param1.g(var5, dg.a(0, 26527)) + var6);
                       var7++;
                       continue L4;
                     }
@@ -211,7 +214,7 @@ final class vk implements Iterator {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("vk.A(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("vk.A(").append(0).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -236,7 +239,7 @@ final class vk implements Iterator {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(16).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -282,7 +285,8 @@ final class vk implements Iterator {
         ((vk) this).field_b = null;
         try {
             ((vk) this).field_a = param0;
-            this.b((byte) 108);
+            int discarded$0 = 108;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "vk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

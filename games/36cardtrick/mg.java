@@ -65,12 +65,9 @@ final class mg {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 50) {
-            throw new IllegalArgumentException();
-        }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -80,8 +77,8 @@ final class mg {
         var8 = Main.field_T;
         if (0 <= h.field_F) {
           L0: {
-            var3 = -135 + param0;
-            var4 = param2 + -35;
+            var3 = 185;
+            var4 = 205;
             var5 = 256;
             if (75 <= h.field_F) {
               break L0;
@@ -122,53 +119,45 @@ final class mg {
           }
           L4: {
             var6 = h.field_F - 125;
-            if (param1 == 207) {
-              break L4;
-            } else {
-              field_j = null;
-              break L4;
-            }
-          }
-          L5: {
             if (0 >= var6) {
-              break L5;
+              break L4;
             } else {
               if (var6 >= 50) {
-                break L5;
+                break L4;
               } else {
                 if (var6 >= 20) {
                   if (var6 < 30) {
                     rc.field_i.b(var3, var4, 256);
-                    break L5;
+                    break L4;
                   } else {
                     var7 = (12800 + -(var6 * 256)) / 20;
                     rc.field_i.b(var3, var4, var7);
-                    break L5;
+                    break L4;
                   }
                 } else {
                   var7 = 256 * var6 / 20;
                   rc.field_i.b(var3, var4, var7);
-                  break L5;
+                  break L4;
                 }
               }
             }
           }
-          L6: {
+          L5: {
             var6 = h.field_F + -140;
             if (0 >= var6) {
-              break L6;
+              break L5;
             } else {
-              L7: {
+              L6: {
                 var7 = 256;
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
-                  break L7;
+                  break L6;
                 } else {
-                  break L7;
+                  break L6;
                 }
               }
               qg.field_z.e(15 + var3, 10 + var4, var7 * var5 >> 8);
-              break L6;
+              break L5;
             }
           }
           return;
@@ -177,7 +166,7 @@ final class mg {
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -209,16 +198,8 @@ final class mg {
             var1_int = 0;
             L2: while (true) {
               if (var1_int > 14) {
-                L3: {
-                  if (param0 == 96) {
-                    break L3;
-                  } else {
-                    mg.a(-44, 89, -75);
-                    break L3;
-                  }
-                }
                 var1_int = 15;
-                L4: while (true) {
+                L3: while (true) {
                   if (var1_int > 21) {
                     gf.field_e.a(200);
                     break L0;
@@ -231,14 +212,14 @@ final class mg {
                     var7 = bk.field_c[var1_int];
                     var3 = qa.field_b.a(var7);
                     var4 = 120 + -var3 >> 1;
-                    a.a(16777214, var7, param0 ^ -97, var4, 16777215, 23);
+                    a.a(16777214, var7, -1, var4, 16777215, 23);
                     var1_int++;
-                    continue L4;
+                    continue L3;
                   }
                 }
               } else {
-                L5: {
-                  L6: {
+                L4: {
+                  L5: {
                     ia.field_c[var1_int] = new kc(207, 34);
                     ia.field_c[var1_int].c();
                     vj.c(0, 0, 207, 34, 6962948);
@@ -248,17 +229,17 @@ final class mg {
                     var3 = qa.field_b.a(var6);
                     var4 = -var3 + 207 >> 1;
                     if (var1_int == 3) {
-                      break L6;
+                      break L5;
                     } else {
                       if (4 != var1_int) {
-                        break L5;
+                        break L4;
                       } else {
-                        break L6;
+                        break L5;
                       }
                     }
                   }
                   var4 = -var3 + t.field_i;
-                  break L5;
+                  break L4;
                 }
                 a.a(16777214, var6, -1, var4, 16777215, 23);
                 var1_int++;
@@ -269,11 +250,11 @@ final class mg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "mg.B(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "mg.B(" + 96 + 41);
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -312,7 +293,8 @@ final class mg {
               var2 = var27.f(-121);
               if (var2 != 0) {
                 if (1 != var2) {
-                  k.a((Throwable) null, (byte) -101, "HS1: " + aj.a((byte) 92));
+                  int discarded$7 = 92;
+                  k.a((Throwable) null, (byte) -101, "HS1: " + aj.a());
                   mc.a((byte) -126);
                   break L1;
                 } else {
@@ -375,16 +357,16 @@ final class mg {
                         var8_int = 1;
                         L7: while (true) {
                           if (var8_int >= var5) {
-                            String[][] dupTemp$6 = new String[3][var6_int];
-                            var4_ref_uh.field_m = dupTemp$6;
-                            var8 = dupTemp$6;
+                            String[][] dupTemp$8 = new String[3][var6_int];
+                            var4_ref_uh.field_m = dupTemp$8;
+                            var8 = dupTemp$8;
                             var9 = new String[3][var6_int];
-                            long[][] dupTemp$7 = new long[3][var6_int];
-                            var4_ref_uh.field_j = dupTemp$7;
-                            var10 = dupTemp$7;
-                            int[][] dupTemp$8 = new int[3][var6_int * var7];
-                            var4_ref_uh.field_q = dupTemp$8;
-                            var11 = dupTemp$8;
+                            long[][] dupTemp$9 = new long[3][var6_int];
+                            var4_ref_uh.field_j = dupTemp$9;
+                            var10 = dupTemp$9;
+                            int[][] dupTemp$10 = new int[3][var6_int * var7];
+                            var4_ref_uh.field_q = dupTemp$10;
+                            var11 = dupTemp$10;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -417,9 +399,9 @@ final class mg {
                                         if (var7 <= var25) {
                                           break L9;
                                         } else {
-                                          int incrementValue$9 = var15;
+                                          int incrementValue$11 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var27.e((byte) 126);
+                                          var11[0][incrementValue$11] = var27.e((byte) 126);
                                           var25++;
                                           continue L10;
                                         }
@@ -441,9 +423,9 @@ final class mg {
                                           if (var7 <= var25) {
                                             break L11;
                                           } else {
-                                            int incrementValue$10 = var16;
+                                            int incrementValue$12 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var27.e((byte) 125);
+                                            var11[1][incrementValue$12] = var27.e((byte) 125);
                                             var25++;
                                             continue L12;
                                           }
@@ -469,9 +451,9 @@ final class mg {
                                           if (var25 >= var7) {
                                             break L13;
                                           } else {
-                                            int incrementValue$11 = var17;
+                                            int incrementValue$13 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var27.e((byte) 124);
+                                            var11[2][incrementValue$13] = var27.e((byte) 124);
                                             var25++;
                                             continue L14;
                                           }

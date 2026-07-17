@@ -21,7 +21,7 @@ final class jm extends tc {
         }
     }
 
-    final static void a(String param0, String param1, int param2) {
+    final static void a(String param0, String param1) {
         if (kk.field_i != null) {
             kk.field_i.h((byte) -34);
         }

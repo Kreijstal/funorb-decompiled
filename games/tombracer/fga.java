@@ -10,26 +10,18 @@ final class fga implements sia {
     private int[] field_d;
     private int[] field_b;
 
-    private final void d(int param0) {
+    private final void d() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 32415) {
-                break L1;
-              } else {
-                ((fga) this).field_d = null;
-                break L1;
-              }
-            }
-            ql.field_k.k(76, param0 ^ -30005);
+            ql.field_k.k(76, -2988);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "fga.G(" + param0 + 41);
+          throw tba.a((Throwable) (Object) var2, "fga.G(" + 32415 + 41);
         }
     }
 
@@ -276,7 +268,8 @@ final class fga implements sia {
             }
             ((kh) (Object) stackIn_4_0).i(stackIn_4_1, 0);
             var4_int = -5 % ((param0 - -45) / 58);
-            this.d(32415);
+            int discarded$2 = 32415;
+            this.d();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,9 +280,9 @@ final class fga implements sia {
     }
 
     final static void a(int param0, boolean param1, int param2, java.awt.Canvas param3) {
-        java.awt.Graphics var4 = null;
-        Exception var4_ref = null;
-        RuntimeException var4_ref2 = null;
+        Exception var4 = null;
+        RuntimeException var4_ref = null;
+        java.awt.Graphics var4_ref2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -310,35 +303,27 @@ final class fga implements sia {
           L0: {
             try {
               L1: {
-                L2: {
-                  if (!param1) {
-                    break L2;
-                  } else {
-                    fga.a(-59, false, -121, (java.awt.Canvas) null);
-                    break L2;
-                  }
-                }
-                var4 = param3.getGraphics();
-                gn.field_C.a(param2, param0, var4, 2);
-                var4.dispose();
+                var4_ref2 = param3.getGraphics();
+                gn.field_C.a(0, 0, var4_ref2, 2);
+                var4_ref2.dispose();
                 break L1;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L3: {
-                var4_ref = (Exception) (Object) decompiledCaughtException;
+              L2: {
+                var4 = (Exception) (Object) decompiledCaughtException;
                 param3.repaint();
-                break L3;
+                break L2;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L4: {
-            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4_ref2;
-            stackOut_7_1 = new StringBuilder().append("fga.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+          L3: {
+            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var4_ref;
+            stackOut_7_1 = new StringBuilder().append("fga.E(").append(0).append(44).append(0).append(44).append(0).append(44);
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -350,7 +335,7 @@ final class fga implements sia {
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
-              break L4;
+              break L3;
             } else {
               stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
               stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
@@ -358,7 +343,7 @@ final class fga implements sia {
               stackIn_11_0 = stackOut_8_0;
               stackIn_11_1 = stackOut_8_1;
               stackIn_11_2 = stackOut_8_2;
-              break L4;
+              break L3;
             }
           }
           throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
@@ -597,7 +582,8 @@ final class fga implements sia {
                             }
                           }
                         }
-                        var5 = una.a(f.field_e, 20297);
+                        int discarded$1 = 20297;
+                        var5 = una.a(f.field_e);
                         stackOut_60_0 = 0;
                         stackIn_61_0 = stackOut_60_0;
                         break L8;
@@ -651,7 +637,8 @@ final class fga implements sia {
               }
               ((fga) this).field_c = true;
               ((fga) this).field_d = null;
-              this.d(32415);
+              int discarded$2 = 32415;
+              this.d();
               break L0;
             } else {
               return;
@@ -842,12 +829,12 @@ final class fga implements sia {
         return stackIn_47_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         try {
-            int var1_int = 78 / ((63 - param0) / 40);
+            int var1_int = 39;
             field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "fga.J(" + param0 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "fga.J(" + -29 + 41);
         }
     }
 

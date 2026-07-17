@@ -9,11 +9,7 @@ final class wk {
     static int field_c;
     static int[] field_b;
 
-    final static int a(byte param0) {
-        if (param0 != -124) {
-            field_a = null;
-            return ab.field_j;
-        }
+    final static int a() {
         return ab.field_j;
     }
 
@@ -83,7 +79,7 @@ final class wk {
         return stackIn_1_0;
     }
 
-    final static String a(java.applet.Applet param0, byte param1) {
+    final static String a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -319,7 +315,8 @@ final class wk {
 
     final static void b(byte param0) {
         Object var2 = null;
-        if (!ll.c(true)) {
+        int discarded$9 = 1;
+        if (!ll.c()) {
           return;
         } else {
           tf.a((byte) 77, false, 4);
@@ -327,7 +324,7 @@ final class wk {
             return;
           } else {
             var2 = null;
-            String discarded$2 = wk.a(96, (CharSequence[]) null);
+            String discarded$10 = wk.a(96, (CharSequence[]) null);
             return;
           }
         }

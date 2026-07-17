@@ -8,7 +8,7 @@ final class gi extends RuntimeException {
     String field_e;
     static sna field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         int var1 = 10;

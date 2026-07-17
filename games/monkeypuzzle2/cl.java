@@ -13,7 +13,7 @@ final class cl {
     static java.util.zip.CRC32 field_f;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         int var1 = 0;

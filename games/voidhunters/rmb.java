@@ -72,9 +72,6 @@ final class rmb extends rqa {
     }
 
     final static int a(int param0, int param1) {
-        if (param0 != -16777216) {
-            return 34;
-        }
         return (param1 >>> 1 & -2139127937) + (-16777216 & param1);
     }
 

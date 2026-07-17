@@ -99,7 +99,7 @@ class wk extends fm {
         }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         return -ad.field_a + fb.field_f;
     }
 
@@ -129,7 +129,7 @@ class wk extends fm {
         int var4 = 0;
         int var5 = 0;
         var5 = client.field_A ? 1 : 0;
-        var3 = -84 / ((param0 - 5) / 54);
+        var3 = -84;
         var4 = param1;
         if (0 != var4) {
           if (var4 != 1) {
@@ -149,7 +149,8 @@ class wk extends fm {
             return;
           }
         } else {
-          da.a(param2, true);
+          int discarded$1 = 1;
+          da.a(param2);
           return;
         }
     }

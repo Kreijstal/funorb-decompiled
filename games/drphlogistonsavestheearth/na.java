@@ -13,7 +13,7 @@ abstract class na {
     static he field_c;
     int field_g;
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return sg.field_a;
     }
 
@@ -166,72 +166,56 @@ abstract class na {
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
 
-    final static vj a(boolean param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
+    final static vj a(boolean param0, int param1) {
         try {
             Object var6 = null;
             Object var7 = null;
             de var8 = null;
-            vj stackIn_13_0 = null;
+            vj stackIn_9_0 = null;
             Throwable decompiledCaughtException = null;
-            vj stackOut_12_0 = null;
+            vj stackOut_8_0 = null;
             try {
               L0: {
                 L1: {
                   var6 = null;
-                  if (param4) {
-                    break L1;
-                  } else {
-                    vj discarded$2 = na.a(false, -5, true, true, true, -73);
-                    break L1;
-                  }
-                }
-                L2: {
                   var7 = null;
                   if (null == oi.field_e.field_d) {
-                    break L2;
+                    break L1;
                   } else {
                     uj.field_h = new ge(oi.field_e.field_d, 5200, 0);
                     oi.field_e.field_d = null;
                     var6 = (Object) (Object) new ik(255, uj.field_h, new ge(oi.field_e.field_b, 12000, 0), 2097152);
-                    break L2;
+                    break L1;
                   }
                 }
-                L3: {
+                L2: {
                   if (uj.field_h == null) {
-                    break L3;
+                    break L2;
                   } else {
-                    L4: {
+                    L3: {
                       if (rc.field_d != null) {
-                        break L4;
+                        break L3;
                       } else {
                         rc.field_d = new ge[oi.field_e.field_c.length];
-                        break L4;
+                        break L3;
                       }
                     }
-                    L5: {
+                    L4: {
                       if (null != rc.field_d[param1]) {
-                        break L5;
+                        break L4;
                       } else {
                         rc.field_d[param1] = new ge(oi.field_e.field_c[param1], 12000, 0);
                         oi.field_e.field_c[param1] = null;
-                        break L5;
+                        break L4;
                       }
                     }
                     var7 = (Object) (Object) new ik(param1, uj.field_h, rc.field_d[param1], 2097152);
-                    break L3;
+                    break L2;
                   }
                 }
-                L6: {
-                  var8 = fl.field_a.a(param1, param2, (ik) var6, (ik) var7, (byte) 75);
-                  if (!param3) {
-                    break L6;
-                  } else {
-                    var8.f(107);
-                    break L6;
-                  }
-                }
-                stackOut_12_0 = new vj((wd) (Object) var8, param0, param5);
-                stackIn_13_0 = stackOut_12_0;
+                var8 = fl.field_a.a(param1, false, (ik) var6, (ik) var7, (byte) 75);
+                stackOut_8_0 = new vj((wd) (Object) var8, true, 1);
+                stackIn_9_0 = stackOut_8_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -239,7 +223,7 @@ abstract class na {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_13_0;
+            return stackIn_9_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

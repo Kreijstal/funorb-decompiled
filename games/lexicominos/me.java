@@ -11,7 +11,7 @@ final class me extends ca {
     static String field_u;
     static boolean[] field_w;
 
-    private final void a(int param0, wf param1, int param2) {
+    private final void a(int param0, wf param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -84,7 +84,8 @@ final class me extends ca {
                   }
                 }
               } else {
-                ((me) this).field_p = dc.a(param1.c(false), '<', (byte) -125);
+                int discarded$1 = -125;
+                ((me) this).field_p = dc.a(param1.c(false), '<');
                 break L1;
               }
             }
@@ -122,7 +123,7 @@ final class me extends ca {
         }
     }
 
-    final static void e(boolean param0) {
+    final static void e() {
         RuntimeException var1 = null;
         th var1_ref = null;
         int var2 = 0;
@@ -230,7 +231,7 @@ final class me extends ca {
     me() {
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_t = null;
         field_u = null;
         field_w = null;
@@ -296,7 +297,8 @@ final class me extends ca {
             L1: while (true) {
               var3_int = param0.d(true);
               if (0 != var3_int) {
-                this.a(var3_int, param0, 10601);
+                int discarded$1 = 10601;
+                this.a(var3_int, param0);
                 continue L1;
               } else {
                 L2: {

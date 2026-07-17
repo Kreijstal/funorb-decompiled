@@ -38,7 +38,7 @@ abstract class wk extends se implements kh {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         try {
             oe.field_f = param0;
         } catch (RuntimeException runtimeException) {
@@ -46,10 +46,10 @@ abstract class wk extends se implements kh {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_L = null;
         field_I = null;
-        int var1 = 52 % ((-10 - param0) / 50);
+        int var1 = 0;
         field_J = null;
         field_K = null;
     }

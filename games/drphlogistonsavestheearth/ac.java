@@ -13,7 +13,7 @@ final class ac {
     private vj field_c;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_j = null;
@@ -80,10 +80,6 @@ final class ac {
     }
 
     final static int a(int param0) {
-        if (param0 != -1) {
-            field_h = null;
-            return ub.field_b;
-        }
         return ub.field_b;
     }
 

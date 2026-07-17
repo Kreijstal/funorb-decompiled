@@ -9,7 +9,8 @@ public final class qt {
     private jaclib.peer.PeerReference c;
 
     public final void a(byte param0) {
-        this.a(-25120);
+        int discarded$0 = -25120;
+        this.a();
         if (param0 != 23) {
             Object var3 = null;
             this.a((jaclib.peer.PeerReference) null, 2);
@@ -184,15 +185,18 @@ public final class qt {
     }
 
     public final void b(byte param0) {
-        this.a(-25120);
+        int discarded$6 = -25120;
+        this.a();
         L0: while (true) {
           if (((jaclib.peer.qt) this).c == null) {
             if (param0 < 46) {
               ((jaclib.peer.qt) this).a = null;
-              this.a(-25120);
+              int discarded$7 = -25120;
+              this.a();
               return;
             } else {
-              this.a(-25120);
+              int discarded$8 = -25120;
+              this.a();
               return;
             }
           } else {
@@ -202,7 +206,7 @@ public final class qt {
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         java.lang.ref.Reference var2 = null;
         jaclib.peer.PeerReference var3 = null;
         L0: while (true) {

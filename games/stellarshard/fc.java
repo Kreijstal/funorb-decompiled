@@ -8,7 +8,7 @@ final class fc {
     static pf field_a;
     static String[] field_b;
 
-    final static ek a(int param0, pf param1, int param2, boolean param3) {
+    final static ek a(int param0, pf param1, int param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ek stackIn_4_0 = null;
@@ -33,7 +33,8 @@ final class fc {
         try {
           L0: {
             if (tl.a(param1, (byte) -5, param0, param2)) {
-              stackOut_3_0 = el.i(96);
+              int discarded$2 = 96;
+              stackOut_3_0 = el.i();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -75,7 +76,7 @@ final class fc {
         return stackIn_4_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_b = null;

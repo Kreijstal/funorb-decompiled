@@ -12,7 +12,7 @@ final class ba extends ok {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_sb = null;
         field_vb = null;
         field_ub = null;

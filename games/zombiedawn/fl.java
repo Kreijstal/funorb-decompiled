@@ -9,15 +9,12 @@ final class fl {
     static int field_a;
 
     final static eo a(int param0, boolean param1) {
-        if (param0 != 5) {
-            return null;
-        }
         eo var2 = new eo(true);
-        var2.field_d = false;
+        var2.field_d = param1 ? true : false;
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;

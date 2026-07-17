@@ -4,7 +4,7 @@
 final class nh extends td {
     static String field_p;
 
-    final static hba a(lu param0, int param1, byte param2) {
+    final static hba a(lu param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         hba stackIn_1_0 = null;
@@ -27,7 +27,7 @@ final class nh extends td {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = 116 % ((param2 - 31) / 60);
+            var3_int = 0;
             stackOut_0_0 = new hba(param1, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -60,7 +60,7 @@ final class nh extends td {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + -116 + 41);
         }
         return stackIn_1_0;
     }
@@ -68,13 +68,9 @@ final class nh extends td {
     final static void a(int param0, jc param1) {
         try {
             param1.field_o = new char[]{'?'};
-            if (param0 != 0) {
-                Object var3 = null;
-                hba discarded$0 = nh.a((lu) null, 9, (byte) 2);
-            }
             param1.field_q = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nh.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "nh.D(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

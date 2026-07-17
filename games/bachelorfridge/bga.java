@@ -11,7 +11,7 @@ final class bga extends bw {
     byte[] field_g;
     static cc field_l;
 
-    final static void c(byte param0) {
+    final static void c() {
         if (!(null == oq.field_b)) {
             oq.field_b.p(-79);
         }
@@ -19,7 +19,7 @@ final class bga extends bw {
         kka.field_l.e((wj) (Object) vk.field_q, 33);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_l = null;
         field_j = null;
         field_f = null;

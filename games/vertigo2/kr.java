@@ -12,7 +12,7 @@ final class kr {
     static byte[] field_c;
     private java.math.BigInteger field_h;
 
-    public static void c(int param0) {
+    public static void c() {
         field_c = null;
         field_g = null;
     }
@@ -203,15 +203,12 @@ final class kr {
         return stackIn_14_0;
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         an.a(1, param0);
-        if (param1 > -3) {
-            return;
-        }
         try {
             fi.a(31820, false, gn.field_a);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "kr.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "kr.A(" + (param0 != null ? "{...}" : "null") + 44 + -70 + 41);
         }
     }
 

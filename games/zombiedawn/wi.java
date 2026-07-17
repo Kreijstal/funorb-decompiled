@@ -8,7 +8,7 @@ final class wi {
     static rc field_b;
     static String field_d;
 
-    final static void a(String param0, java.applet.Applet param1, boolean param2, int param3) {
+    final static void a(String param0, java.applet.Applet param1, boolean param2) {
         try {
             java.net.MalformedURLException var4 = null;
             RuntimeException var4_ref = null;
@@ -46,7 +46,8 @@ final class wi {
             try {
               L0: {
                 if (ec.field_n.startsWith("win")) {
-                  if (kj.a(param0, 27994)) {
+                  int discarded$8 = 27994;
+                  if (kj.a(param0)) {
                     return;
                   } else {
                     break L0;
@@ -124,7 +125,7 @@ final class wi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
     }
@@ -136,27 +137,21 @@ final class wi {
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawn.field_J;
         try {
-          L0: {
-            var4 = (mg) (Object) bg.field_i.b((byte) 26);
-            L1: while (true) {
-              if (var4 == null) {
-                if (param0 == 0) {
-                  break L0;
-                } else {
-                  field_e = -110;
-                  return;
-                }
-              } else {
-                oe.a(7, -19004, var4);
-                var4 = (mg) (Object) bg.field_i.a(false);
-                continue L1;
-              }
+          var4 = (mg) (Object) bg.field_i.b((byte) 26);
+          L0: while (true) {
+            if (var4 == null) {
+              field_e = -110;
+              return;
+            } else {
+              oe.a(7, -19004, var4);
+              var4 = (mg) (Object) bg.field_i.a(false);
+              continue L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "wi.C(" + param0 + 44 + 7 + 41);
+          throw sh.a((Throwable) (Object) var2, "wi.C(" + 0 + 44 + 7 + 41);
         }
     }
 

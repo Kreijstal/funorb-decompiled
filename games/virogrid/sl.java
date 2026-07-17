@@ -80,7 +80,7 @@ final class sl {
         }
     }
 
-    private final void a(long param0, int param1) {
+    private final void a(long param0) {
         int var5 = -83;
         dm var4 = (dm) (Object) ((sl) this).field_d.a(param0, -18348);
         this.a(106, var4);
@@ -161,27 +161,28 @@ final class sl {
         }
     }
 
-    private final void a(int param0, Object param1, long param2, int param3) {
+    private final void a(int param0, Object param1, long param2) {
         dm var6 = null;
         mj var6_ref = null;
         int var8 = Virogrid.field_F ? 1 : 0;
         try {
-            if (!(((sl) this).field_f >= param0)) {
+            if (!(((sl) this).field_f >= 1)) {
                 throw new IllegalStateException();
             }
-            this.a(param2, -48);
-            ((sl) this).field_e = ((sl) this).field_e - param0;
+            int discarded$0 = -48;
+            this.a(param2);
+            ((sl) this).field_e = ((sl) this).field_e - 1;
             while (((sl) this).field_e < 0) {
                 var6 = (dm) (Object) ((sl) this).field_b.a(-32314);
                 this.a(103, var6);
             }
-            var6_ref = new mj(param1, param0);
+            var6_ref = new mj(param1, 1);
             ((sl) this).field_d.a((l) (Object) var6_ref, -121, param2);
             int var7 = 0;
             ((sl) this).field_b.a(true, (wb) (Object) var6_ref);
             ((dm) (Object) var6_ref).field_j = 0L;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "sl.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -106 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "sl.F(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -106 + 41);
         }
     }
 
@@ -227,7 +228,8 @@ final class sl {
             if (param2 != -14696) {
                 ((sl) this).field_f = -85;
             }
-            this.a(1, param0, param1, -106);
+            int discarded$0 = -106;
+            this.a(1, param0, param1);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "sl.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }

@@ -27,7 +27,7 @@ final class co {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, float[] param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, float[] param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -72,7 +72,8 @@ final class co {
               if (param2 <= 0) {
                 break L1;
               } else {
-                if (!bd.a(param2, (byte) -95)) {
+                int discarded$2 = -95;
+                if (!bd.a(param2)) {
                   throw new IllegalArgumentException("");
                 } else {
                   break L1;
@@ -83,7 +84,8 @@ final class co {
               if (param4 <= 0) {
                 break L2;
               } else {
-                if (!bd.a(param4, (byte) -95)) {
+                int discarded$3 = -95;
+                if (!bd.a(param4)) {
                   throw new IllegalArgumentException("");
                 } else {
                   break L2;

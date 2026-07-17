@@ -45,7 +45,8 @@ abstract class of {
             if (param2 instanceof byte[]) {
               var3 = (byte[]) param2;
               if (param1) {
-                stackOut_8_0 = ek.a(var3, -43);
+                int discarded$2 = -43;
+                stackOut_8_0 = ek.a(var3);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
@@ -101,7 +102,7 @@ abstract class of {
         }
     }
 
-    final static dk b(int param0) {
+    final static dk b() {
         if (!(pf.field_f != null)) {
             pf.field_f = new dk();
             pf.field_f.a(oe.field_g, -22373);
@@ -114,11 +115,11 @@ abstract class of {
             pf.field_f.field_n = 14;
             pf.field_f.field_p = 2763306;
         }
-        int var1 = 24 % ((52 - param0) / 61);
+        int var1 = 0;
         return pf.field_f;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

@@ -11,29 +11,30 @@ final class ee {
         if (param1 > -25) {
             return;
         }
-        gg discarded$0 = e.a(on.field_b[param2][param0], false);
+        int discarded$0 = 0;
+        gg discarded$1 = e.a(on.field_b[param2][param0]);
     }
 
     final static void a(int param0, r param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -52,38 +53,7 @@ final class ee {
                             var2_int = 0;
                             L5: while (true) {
                               if (var2_int >= 9) {
-                                if (param0 == 11579) {
-                                  var2_int = 9;
-                                  L6: while (true) {
-                                    if (40 <= var2_int) {
-                                      var2_int = 0;
-                                      L7: while (true) {
-                                        if (var2_int >= 9) {
-                                          var2_int = 9;
-                                          L8: while (true) {
-                                            if (var2_int >= 50) {
-                                              break L0;
-                                            } else {
-                                              kn.field_h[3][var2_int] = kn.field_h[0][var2_int];
-                                              var2_int++;
-                                              continue L8;
-                                            }
-                                          }
-                                        } else {
-                                          kn.field_h[3][var2_int] = kn.field_h[0][var2_int];
-                                          var2_int++;
-                                          continue L7;
-                                        }
-                                      }
-                                    } else {
-                                      kn.field_h[2][var2_int] = new ed(param1.a("", "level" + (1 + var2_int) + ".cmp", tk.a(param0, 11579)));
-                                      var2_int++;
-                                      continue L6;
-                                    }
-                                  }
-                                } else {
-                                  return;
-                                }
+                                break L0;
                               } else {
                                 kn.field_h[2][var2_int] = new ed(param1.a("", "level0" + (var2_int + 1) + ".cmp", 0));
                                 var2_int++;
@@ -91,13 +61,13 @@ final class ee {
                               }
                             }
                           } else {
-                            kn.field_h[1][var2_int] = new ed(param1.a("", "level" + (1 + var2_int) + ".2pl", tk.a(param0, 11579)));
+                            kn.field_h[1][var2_int] = new ed(param1.a("", "level" + (1 + var2_int) + ".2pl", tk.a(11579, 11579)));
                             var2_int++;
                             continue L4;
                           }
                         }
                       } else {
-                        kn.field_h[1][var2_int] = new ed(param1.a("", "level0" + (1 + var2_int) + ".2pl", param0 + -11579));
+                        kn.field_h[1][var2_int] = new ed(param1.a("", "level0" + (1 + var2_int) + ".2pl", 0));
                         var2_int++;
                         continue L3;
                       }
@@ -117,43 +87,43 @@ final class ee {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L6: {
             var2 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) var2;
-            stackOut_28_1 = new StringBuilder().append("ee.F(").append(param0).append(44);
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackOut_18_0 = (RuntimeException) var2;
+            stackOut_18_1 = new StringBuilder().append("ee.F(").append(11579).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
-              break L9;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L6;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
-              break L9;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L6;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -161,37 +131,29 @@ final class ee {
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var1_int = 0;
-              if (param0 == -11747) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var1_int = 0;
+            L1: while (true) {
               if (var1_int >= rr.field_B.length) {
                 break L0;
               } else {
-                L3: {
+                L2: {
                   if (!rr.field_z[var1_int]) {
-                    break L3;
+                    break L2;
                   } else {
                     eg.a(88, rr.field_B[var1_int]);
                     rr.field_z[var1_int] = false;
-                    break L3;
+                    break L2;
                   }
                 }
                 var1_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "ee.G(" + param0 + 41);
+          throw wn.a((Throwable) (Object) var1, "ee.G(" + -11747 + 41);
         }
     }
 
@@ -240,7 +202,7 @@ final class ee {
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var4_int = param0.c((byte) -120, param2);
+            var4_int = param0.c((byte) -120, 16);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -327,7 +289,7 @@ final class ee {
           }
           L7: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44).append(16).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -409,19 +371,16 @@ final class ee {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 8) {
-            Object var3 = null;
-            ee.a(77, (r) null);
-        }
         if (!(!tf.a((byte) 112))) {
             param1 = false;
         }
         kf.a(-7393, param1);
         if (bg.field_c) {
             bi.d(el.field_e.field_b.field_wb, el.field_e.field_b.field_N, el.field_e.field_b.field_Fb, el.field_e.field_b.field_db);
-            el.field_e.field_b.b(param1, param0 ^ 8);
+            el.field_e.field_b.b(param1, 0);
         }
-        ma.a(param1, 78);
+        int discarded$0 = 78;
+        ma.a(param1);
     }
 
     public final String toString() {

@@ -7,8 +7,9 @@ final class sb {
     static wd[] field_a;
     float field_b;
 
-    final static void a(byte param0) {
-        rg.b(95);
+    final static void a() {
+        int discarded$0 = 95;
+        rg.b();
         int var1 = 0;
     }
 

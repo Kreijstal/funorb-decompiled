@@ -9,7 +9,7 @@ final class oj extends rf {
     static String field_k;
     static java.applet.Applet field_f;
 
-    final static int a(int param0) {
+    final static int a() {
         return pg.field_g;
     }
 
@@ -18,13 +18,13 @@ final class oj extends rf {
         int var5 = StarCannon.field_A;
         hl var6 = new hl(param2, param2);
         hl var3 = var6;
-        for (var4 = param0; var3.field_B.length > var4; var4++) {
+        for (var4 = 0; var3.field_B.length > var4; var4++) {
             var6.field_B[var4] = param1;
         }
         return var3;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_f = null;
         field_j = null;
         field_g = null;
@@ -36,17 +36,17 @@ final class oj extends rf {
         hl[] var6 = null;
         var6 = new hl[9];
         var5 = var6;
-        hl dupTemp$4 = oj.a(0, param1, param2);
+        hl dupTemp$4 = oj.a(0, param1, 1);
         var6[6] = dupTemp$4;
         var5[3] = dupTemp$4;
         var5[2] = dupTemp$4;
         var5[1] = dupTemp$4;
         var5[0] = dupTemp$4;
-        hl dupTemp$5 = oj.a(0, param3, param2);
+        hl dupTemp$5 = oj.a(0, param3, 1);
         var6[8] = dupTemp$5;
         var5[7] = dupTemp$5;
         var5[5] = dupTemp$5;
-        if (~param4 != param0) {
+        if (param4 != 0) {
           var6[4] = oj.a(0, param4, 64);
           return var5;
         } else {

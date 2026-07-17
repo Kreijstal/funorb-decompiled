@@ -255,14 +255,14 @@ final class bl {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_d = null;
         field_m = null;
         field_n = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         if (!(oe.field_p == null)) {
             return true;
         }

@@ -5,20 +5,15 @@ final class co {
     static String field_a;
     static int field_b;
 
-    final static int b(int param0) {
-        if (param0 != -13043) {
-            Object var2 = null;
-            tk discarded$0 = co.a((String) null, -49);
-            return p.field_d;
-        }
+    final static int b() {
         return p.field_d;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_a = null;
     }
 
-    final static id a(boolean param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final static id a(boolean param0, int param1, int param2, boolean param3, int param4) {
         Object var6 = null;
         int var7 = 0;
         Object stackIn_9_0 = null;
@@ -244,7 +239,7 @@ final class co {
         return stackIn_1_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         le var1 = null;
         RuntimeException var1_ref = null;
         le var2 = null;
@@ -262,7 +257,8 @@ final class co {
                     var1 = rm.field_e.b((byte) 26);
                     L3: while (true) {
                       if (!(var1 instanceof tm)) {
-                        mg.a(-120);
+                        int discarded$1 = -120;
+                        mg.a();
                         break L0;
                       } else {
                         L4: {
@@ -314,7 +310,7 @@ final class co {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         return df.field_l;
     }
 

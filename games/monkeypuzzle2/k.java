@@ -50,9 +50,9 @@ final class k extends ug {
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
-            if (param1 != param0) {
+            if (param1 != 0) {
               if (1 == param1) {
-                var10 = param3[param2];
+                var10 = param3[0];
                 var4 = var10;
                 if (var4 != null) {
                   stackOut_9_0 = ((Object) (Object) var10).toString();
@@ -64,14 +64,14 @@ final class k extends ug {
                   return stackIn_8_0;
                 }
               } else {
-                var4_int = param1 - -param2;
+                var4_int = param1;
                 var5 = 0;
-                var6_int = param2;
+                var6_int = 0;
                 L1: while (true) {
                   if (var4_int <= var6_int) {
                     L2: {
                       var6 = new StringBuilder(var5);
-                      var7 = param2;
+                      var7 = 0;
                       if (var4_int <= var7) {
                         break L2;
                       } else {
@@ -124,7 +124,7 @@ final class k extends ug {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var4_ref;
-            stackOut_29_1 = new StringBuilder().append("k.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_29_1 = new StringBuilder().append("k.C(").append(0).append(44).append(param1).append(44).append(0).append(44);
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -267,7 +267,7 @@ final class k extends ug {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_l = null;
         field_f = null;

@@ -185,7 +185,8 @@ final class rd extends fa {
                     break L4;
                   }
                 }
-                ib.a(param2, false);
+                int discarded$1 = 0;
+                ib.a(param2);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -285,7 +286,8 @@ final class rd extends fa {
             }
             {
                 if (var2_int >= 0) {
-                    if (no.d(8) <= 30000L) {
+                    int discarded$3 = 8;
+                    if (no.d() <= 30000L) {
                         return false;
                     }
                 }

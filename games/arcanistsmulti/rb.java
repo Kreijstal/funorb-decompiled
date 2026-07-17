@@ -15,17 +15,14 @@ final class rb extends pg {
 
     final static void a(String param0, boolean param1, float param2) {
         kl.field_C = param0;
-        if (param1) {
-            return;
-        }
         try {
             af.field_Hb = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "rb.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "rb.A(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + param2 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_m = null;
         field_l = null;
@@ -42,97 +39,57 @@ final class rb extends pg {
         Object var10 = null;
         Object var11 = null;
         int[] var12 = null;
+        qb var13 = null;
+        qb var14 = null;
         int[] var15 = null;
         int[] var16 = null;
-        qb var17 = null;
-        qb var18 = null;
-        int[] var19 = null;
-        qb var20 = null;
-        qb var21 = null;
-        int[] var22 = null;
-        var22 = de.field_l;
-        var19 = var22;
-        var16 = var19;
-        var15 = var16;
-        var12 = var15;
-        var6 = var12;
-        var7 = de.field_e;
-        var8 = de.field_j;
-        var9 = new qb(16, param5);
-        var9.a();
-        de.c(0, 0, 16, param5, param4, param3);
-        if (param2 != 652) {
-          L0: {
-            field_n = null;
-            var10 = null;
-            var11 = null;
-            if (!param0) {
-              break L0;
-            } else {
-              var17 = var9.g();
-              var10 = (Object) (Object) var17;
-              var17.a();
-              de.f(0, 0, 5, 0);
-              de.f(0, 1, 3, 0);
-              de.f(0, 2, 2, 0);
-              de.f(0, 3, 1, 0);
-              de.f(0, 4, 1, 0);
-              break L0;
-            }
+        int[] var17 = null;
+        int[] var18 = null;
+        L0: {
+          var18 = de.field_l;
+          var17 = var18;
+          var16 = var17;
+          var15 = var16;
+          var12 = var15;
+          var6 = var12;
+          var7 = de.field_e;
+          var8 = de.field_j;
+          var9 = new qb(16, param5);
+          var9.a();
+          de.c(0, 0, 16, param5, param4, param3);
+          var10 = null;
+          var11 = null;
+          if (!param0) {
+            break L0;
+          } else {
+            var13 = var9.g();
+            var10 = (Object) (Object) var13;
+            var13.a();
+            de.f(0, 0, 5, 0);
+            de.f(0, 1, 3, 0);
+            de.f(0, 2, 2, 0);
+            de.f(0, 3, 1, 0);
+            de.f(0, 4, 1, 0);
+            break L0;
           }
-          L1: {
-            if (param1) {
-              var18 = var9.g();
-              var11 = (Object) (Object) var18;
-              var18.a();
-              de.f(11, 0, 5, 0);
-              de.f(13, 1, 3, 0);
-              de.f(14, 2, 2, 0);
-              de.f(15, 3, 1, 0);
-              de.f(15, 4, 1, 0);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          de.a(var22, var7, var8);
-          return new qb[]{null, null, null, (qb) var10, var9, (qb) var11, null, null, null};
-        } else {
-          L2: {
-            var10 = null;
-            var11 = null;
-            if (!param0) {
-              break L2;
-            } else {
-              var20 = var9.g();
-              var10 = (Object) (Object) var20;
-              var20.a();
-              de.f(0, 0, 5, 0);
-              de.f(0, 1, 3, 0);
-              de.f(0, 2, 2, 0);
-              de.f(0, 3, 1, 0);
-              de.f(0, 4, 1, 0);
-              break L2;
-            }
-          }
-          L3: {
-            if (param1) {
-              var21 = var9.g();
-              var11 = (Object) (Object) var21;
-              var21.a();
-              de.f(11, 0, 5, 0);
-              de.f(13, 1, 3, 0);
-              de.f(14, 2, 2, 0);
-              de.f(15, 3, 1, 0);
-              de.f(15, 4, 1, 0);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          de.a(var22, var7, var8);
-          return new qb[]{null, null, null, (qb) var10, var9, (qb) var11, null, null, null};
         }
+        L1: {
+          if (param1) {
+            var14 = var9.g();
+            var11 = (Object) (Object) var14;
+            var14.a();
+            de.f(11, 0, 5, 0);
+            de.f(13, 1, 3, 0);
+            de.f(14, 2, 2, 0);
+            de.f(15, 3, 1, 0);
+            de.f(15, 4, 1, 0);
+            break L1;
+          } else {
+            break L1;
+          }
+        }
+        de.a(var18, var7, var8);
+        return new qb[]{null, null, null, (qb) var10, var9, (qb) var11, null, null, null};
     }
 
     final static void a(byte[] param0, eg param1, ll[] param2, qb[][] param3, boolean param4, String[][] param5, String[][] param6, int param7, eg param8, int[] param9, qb[][] param10, byte[] param11, byte param12, int[] param13, int param14, String[] param15, eg param16) {
@@ -338,8 +295,8 @@ final class rb extends pg {
         try {
           L0: {
             var18 = null;
-            gf.a(param2, param4, (byte) 74, param16, param0, param6, param11, param8, param7, param1, param9, 1, param14, param10, param3, param15, (String[]) null, param13, param5);
-            var17_int = 85 / ((param12 - -27) / 32);
+            gf.a(param2, true, (byte) 74, param16, param0, param6, param11, param8, 6, param1, param9, 1, 3, param10, param3, param15, (String[]) null, param13, param5);
+            var17_int = -85;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -447,7 +404,7 @@ final class rb extends pg {
           }
           L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param4).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(1).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -497,7 +454,7 @@ final class rb extends pg {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param7).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(6).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -597,7 +554,7 @@ final class rb extends pg {
           }
           L11: {
             stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(param12).append(44);
+            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(-67).append(44);
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -622,7 +579,7 @@ final class rb extends pg {
           }
           L12: {
             stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-            stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(44).append(param14).append(44);
+            stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(44).append(3).append(44);
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -674,7 +631,7 @@ final class rb extends pg {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -683,80 +640,75 @@ final class rb extends pg {
         Object var5 = null;
         byte[] var5_array = null;
         int var6 = 0;
-        Object var7 = null;
-        byte[] var8 = null;
-        pb var9 = null;
-        ab var10 = null;
+        byte[] var7 = null;
+        pb var8 = null;
+        ab var9 = null;
+        byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
-        byte[] var14 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var10 = df.field_z;
-              var2 = var10.e((byte) 81);
-              if (param0 <= -22) {
-                break L1;
-              } else {
-                var7 = null;
-                rb.a(-32, (String) null, 120, (String) null, -69);
-                break L1;
-              }
-            }
+            var9 = df.field_z;
+            var2 = var9.e((byte) 81);
             if (var2 == 0) {
-              var9 = (pb) (Object) hn.field_q.b(12623);
-              if (var9 != null) {
-                L2: {
-                  var4 = var10.e((byte) -100);
+              var8 = (pb) (Object) hn.field_q.b(12623);
+              if (var8 != null) {
+                L1: {
+                  var4 = var9.e((byte) -100);
                   if (0 == var4) {
                     var5_array = null;
-                    break L2;
+                    break L1;
                   } else {
-                    var14 = new byte[var4];
-                    var13 = var14;
+                    var13 = new byte[var4];
                     var12 = var13;
                     var11 = var12;
-                    var8 = var11;
-                    var5_array = var8;
-                    var10.a((byte) 100, 0, var14, var4);
-                    break L2;
+                    var10 = var11;
+                    var7 = var10;
+                    var5_array = var7;
+                    var9.a((byte) 100, 0, var13, var4);
+                    break L1;
                   }
                 }
-                var10.field_g = var10.field_g + 4;
-                if (var10.c(true)) {
-                  var9.field_k = true;
-                  var9.field_j = var5_array;
-                  var9.a(true);
+                var9.field_g = var9.field_g + 4;
+                if (var9.c(true)) {
+                  var8.field_k = true;
+                  var8.field_j = var5_array;
+                  var8.a(true);
                   break L0;
                 } else {
-                  ka.b(false);
+                  int discarded$6 = 0;
+                  ka.b();
                   return;
                 }
               } else {
-                ka.b(false);
+                int discarded$7 = 0;
+                ka.b();
                 return;
               }
             } else {
               if (var2 != 1) {
-                jh.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
-                ka.b(false);
+                int discarded$8 = -25;
+                int discarded$9 = 20;
+                jh.a((Throwable) null, "A1: " + nn.g());
+                int discarded$10 = 0;
+                ka.b();
                 return;
               } else {
-                var3 = var10.d(-10674);
+                var3 = var9.d(-10674);
                 var4_ref_f = (f) (Object) cm.field_l.b(12623);
-                L3: while (true) {
-                  L4: {
+                L2: while (true) {
+                  L3: {
                     if (var4_ref_f == null) {
-                      break L4;
+                      break L3;
                     } else {
                       if (var4_ref_f.field_j != var3) {
                         var4_ref_f = (f) (Object) cm.field_l.a(0);
-                        continue L3;
+                        continue L2;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
@@ -764,7 +716,8 @@ final class rb extends pg {
                     var4_ref_f.a(true);
                     return;
                   } else {
-                    ka.b(false);
+                    int discarded$11 = 0;
+                    ka.b();
                     return;
                   }
                 }
@@ -774,7 +727,7 @@ final class rb extends pg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "rb.F(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1, "rb.F(" + -54 + 41);
         }
     }
 

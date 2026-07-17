@@ -39,14 +39,15 @@ final class ak implements Iterable {
         var2 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
-            if (we.b(false)) {
-              boolean discarded$15 = TorChallenge.field_H.a(e.field_m, false, qa.field_b, true);
+            int discarded$19 = 0;
+            if (we.b()) {
+              boolean discarded$20 = TorChallenge.field_H.a(e.field_m, false, qa.field_b, true);
               TorChallenge.field_H.j(-86);
               L1: while (true) {
                 if (!kj.e((byte) -124)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = TorChallenge.field_H.a(di.field_m, b.field_J, -58);
+                  boolean discarded$21 = TorChallenge.field_H.a(di.field_m, b.field_J, -58);
                   continue L1;
                 }
               }
@@ -173,24 +174,15 @@ final class ak implements Iterable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_c = null;
         field_b = null;
         field_a = null;
         field_e = null;
-        if (param0 >= -19) {
-          field_h = 101;
-          field_j = null;
-          field_d = null;
-          field_g = null;
-          return;
-        } else {
-          field_j = null;
-          field_d = null;
-          field_g = null;
-          return;
-        }
+        field_j = null;
+        field_d = null;
+        field_g = null;
     }
 
     final w a(int param0) {
@@ -215,7 +207,7 @@ final class ak implements Iterable {
         }
     }
 
-    final static java.awt.Container b(int param0) {
+    final static java.awt.Container b() {
         if (!(gi.field_b == null)) {
             return (java.awt.Container) (Object) gi.field_b;
         }
@@ -223,51 +215,26 @@ final class ak implements Iterable {
     }
 
     final static boolean a(int param0, char param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param0 == 95) {
-          if (param1 != 160) {
-            if (32 != param1) {
-              if (95 != param1) {
-                if (param1 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
+        int stackIn_7_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param1 != 160) {
+          if (32 != param1) {
+            if (95 != param1) {
+              if (param1 == 45) {
+                return true;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
-                return stackIn_20_0 != 0;
+                return false;
               }
             } else {
-              return true;
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              return stackIn_7_0 != 0;
             }
           } else {
             return true;
           }
         } else {
-          ak.a((byte) -6);
-          if (param1 != 160) {
-            if (32 != param1) {
-              if (95 != param1) {
-                if (param1 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
+          return true;
         }
     }
 

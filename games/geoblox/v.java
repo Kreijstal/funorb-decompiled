@@ -25,7 +25,7 @@ final class v {
     static gk field_l;
     static long field_r;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_n = null;
         field_m = null;
         field_l = null;
@@ -43,7 +43,7 @@ final class v {
         ((v) this).field_p = param1;
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -101,7 +101,7 @@ final class v {
                     }
                   }
                 }
-                if (param1 != ~var3) {
+                if (var3 != 0) {
                   L3: {
                     var5 = var9.a((byte) -49);
                     if (var5 < 0) {
@@ -125,13 +125,14 @@ final class v {
                         var11 = var13;
                         var6 = var11;
                         if (var3 == 1) {
-                          int discarded$1 = tb.a(var17, var5, param0, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = tb.a(var6, var5, param0, var4);
                           break L5;
                         } else {
                           var7 = (Object) (Object) sc.field_b;
                           synchronized (var7) {
                             L6: {
-                              sc.field_b.a(param1, var9, var17);
+                              sc.field_b.a(-1, var9, var17);
                               break L6;
                             }
                           }
@@ -187,7 +188,7 @@ final class v {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + -1 + 41);
         }
         return stackIn_21_0;
     }
@@ -726,7 +727,7 @@ final class v {
         throw new Error();
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         return jg.a((byte) -62, param0) != null;
     }
 

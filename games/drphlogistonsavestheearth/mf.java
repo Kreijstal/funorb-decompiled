@@ -16,7 +16,7 @@ abstract class mf extends uh {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    public static void g(int param0) {
+    public static void g() {
         field_x = null;
         field_E = null;
         field_u = null;

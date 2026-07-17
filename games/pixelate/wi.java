@@ -18,7 +18,7 @@ final class wi {
     private int[] field_j;
     static int[] field_f;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_e = null;
         field_f = null;
         field_n = null;
@@ -85,7 +85,8 @@ final class wi {
                     L3: {
                       var7 = this.a((byte) 114);
                       var4_ref = var7;
-                      var5 = re.a(((wi) this).field_h, -1);
+                      int discarded$1 = -1;
+                      var5 = re.a(((wi) this).field_h);
                       var6 = i.a(-640, ((wi) this).field_h) ? 1 : 0;
                       if (var5 != null) {
                         break L3;
@@ -195,14 +196,12 @@ final class wi {
         }
     }
 
-    final static void b(byte param0) {
-        if (!hf.b((byte) 100)) {
+    final static void b() {
+        int discarded$2 = 100;
+        if (!hf.b()) {
             return;
         }
         bq.a(false, (byte) -110, 4);
-        if (param0 != -53) {
-            field_d = null;
-        }
     }
 
     private final boolean a(int param0, int param1, int param2) {
@@ -213,7 +212,7 @@ final class wi {
           if (param2 == 7490) {
             return true;
           } else {
-            boolean discarded$7 = this.a(67, true, 49);
+            boolean discarded$8 = this.a(67, true, 49);
             return true;
           }
         } else {
@@ -222,7 +221,7 @@ final class wi {
             if (param2 == 7490) {
               return true;
             } else {
-              boolean discarded$8 = this.a(67, true, 49);
+              boolean discarded$9 = this.a(67, true, 49);
               return true;
             }
           } else {
@@ -231,14 +230,15 @@ final class wi {
               if (param2 == 7490) {
                 return true;
               } else {
-                boolean discarded$9 = this.a(67, true, 49);
+                boolean discarded$10 = this.a(67, true, 49);
                 return true;
               }
             } else {
               if (param0 == 3) {
-                qg.a(((wi) this).field_m, param1, false);
+                int discarded$11 = 0;
+                qg.a(((wi) this).field_m, param1);
                 if (param2 != 7490) {
-                  boolean discarded$10 = this.a(67, true, 49);
+                  boolean discarded$12 = this.a(67, true, 49);
                   return true;
                 } else {
                   return true;
@@ -247,7 +247,7 @@ final class wi {
                 if (param0 == 10) {
                   qj.a(false, ((wi) this).field_m, param1);
                   if (param2 != 7490) {
-                    boolean discarded$11 = this.a(67, true, 49);
+                    boolean discarded$13 = this.a(67, true, 49);
                     return true;
                   } else {
                     return true;
@@ -258,7 +258,7 @@ final class wi {
                     if (param2 == 7490) {
                       return true;
                     } else {
-                      boolean discarded$12 = this.a(67, true, 49);
+                      boolean discarded$14 = this.a(67, true, 49);
                       return true;
                     }
                   } else {
@@ -267,7 +267,7 @@ final class wi {
                       if (param2 == 7490) {
                         return true;
                       } else {
-                        boolean discarded$13 = this.a(67, true, 49);
+                        boolean discarded$15 = this.a(67, true, 49);
                         return true;
                       }
                     } else {
@@ -462,73 +462,43 @@ final class wi {
           if (param2 != 5) {
             if (param2 != 6) {
               if (7 == param2) {
-                var8 = aq.a(((wi) this).field_h, param0, ((wi) this).field_i, -20867);
-                if (var8 == null) {
-                  if (param1 < -123) {
-                    return true;
-                  } else {
-                    return true;
-                  }
-                } else {
+                int discarded$2 = -20867;
+                var8 = aq.a(((wi) this).field_h, param0, ((wi) this).field_i);
+                if (var8 != null) {
                   ti.a(0, (String) null, ((wi) this).field_h, (byte) -50, 2, var8);
-                  if (param1 >= -123) {
-                    return true;
-                  } else {
-                    return true;
-                  }
+                  return true;
+                } else {
+                  return true;
                 }
               } else {
                 return false;
               }
             } else {
               var7 = mj.a(85, ((wi) this).field_h, param0);
-              if (var7 == null) {
-                if (param1 >= -123) {
-                  return true;
-                } else {
-                  return true;
-                }
-              } else {
+              if (var7 != null) {
                 ti.a(0, (String) null, ((wi) this).field_h, (byte) -50, 2, var7);
-                if (param1 >= -123) {
-                  return true;
-                } else {
-                  return true;
-                }
+                return true;
+              } else {
+                return true;
               }
             }
           } else {
-            var6 = ff.a(param0, ((wi) this).field_h, (byte) -106);
-            if (var6 != null) {
-              ti.a(0, (String) null, ((wi) this).field_h, (byte) -50, 2, var6);
-              if (param1 >= -123) {
-                return true;
-              } else {
-                return true;
-              }
+            int discarded$3 = -106;
+            var6 = ff.a(param0, ((wi) this).field_h);
+            if (var6 == null) {
+              return true;
             } else {
-              if (param1 >= -123) {
-                return true;
-              } else {
-                return true;
-              }
+              ti.a(0, (String) null, ((wi) this).field_h, (byte) -50, 2, var6);
+              return true;
             }
           }
         } else {
           var5 = jf.a(((wi) this).field_h, param0, (byte) 79);
-          if (var5 != null) {
-            ti.a(0, (String) null, ((wi) this).field_h, (byte) -50, 2, var5);
-            if (param1 >= -123) {
-              return true;
-            } else {
-              return true;
-            }
+          if (var5 == null) {
+            return true;
           } else {
-            if (param1 >= -123) {
-              return true;
-            } else {
-              return true;
-            }
+            ti.a(0, (String) null, ((wi) this).field_h, (byte) -50, 2, var5);
+            return true;
           }
         }
     }
@@ -597,89 +567,42 @@ final class wi {
     }
 
     private final boolean b(int param0, byte param1, int param2) {
-        int var5 = 0;
-        var5 = Pixelate.field_H ? 1 : 0;
-        if (param0 == 8) {
-          pm.a((byte) 85, ((wi) this).field_h, ((wi) this).field_l);
-          if (param1 != 10) {
-            wi.b((byte) -113);
-            return true;
-          } else {
-            return true;
-          }
-        } else {
-          if (param0 == 18) {
-            qj.a(((wi) this).field_h, ((wi) this).field_l, (byte) 8);
-            if (param1 != 10) {
-              wi.b((byte) -113);
-              return true;
-            } else {
-              return true;
-            }
-          } else {
-            if (param0 != 11) {
-              if (param0 == 12) {
-                am.a(1, -26931, ((wi) this).field_k, param2);
-                if (param1 != 10) {
-                  wi.b((byte) -113);
-                  return true;
-                } else {
-                  return true;
+        int var5 = Pixelate.field_H ? 1 : 0;
+        if (param0 != 8) {
+            if (param0 != 18) {
+                if (param0 == 11) {
+                    am.a(0, -26931, ((wi) this).field_k, param2);
+                    return true;
                 }
-              } else {
-                if (param0 == 13) {
-                  am.a(2, -26931, ((wi) this).field_k, param2);
-                  if (param1 == 10) {
-                    return true;
-                  } else {
-                    wi.b((byte) -113);
-                    return true;
-                  }
-                } else {
-                  if (param0 != 14) {
-                    if (20 != param0) {
-                      if (param0 == 19) {
-                        boolean discarded$1 = tg.a(((wi) this).field_h, ((wi) this).field_l, ((wi) this).field_k, -2, ((wi) this).field_j);
-                        if (param1 == 10) {
-                          return true;
-                        } else {
-                          wi.b((byte) -113);
-                          return true;
+                if (param0 != 12) {
+                    if (param0 != 13) {
+                        if (param0 == 14) {
+                            kl.a(7500);
+                            return true;
                         }
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      ak.c(true);
-                      if (param1 != 10) {
-                        wi.b((byte) -113);
+                        if (20 == param0) {
+                            int discarded$0 = 1;
+                            ak.c();
+                            return true;
+                        }
+                        if (param0 != 19) {
+                            return false;
+                        }
+                        boolean discarded$1 = tg.a(((wi) this).field_h, ((wi) this).field_l, ((wi) this).field_k, -2, ((wi) this).field_j);
                         return true;
-                      } else {
-                        return true;
-                      }
                     }
-                  } else {
-                    kl.a(7500);
-                    if (param1 != 10) {
-                      wi.b((byte) -113);
-                      return true;
-                    } else {
-                      return true;
-                    }
-                  }
+                    am.a(2, -26931, ((wi) this).field_k, param2);
+                    return true;
                 }
-              }
-            } else {
-              am.a(0, -26931, ((wi) this).field_k, param2);
-              if (param1 != 10) {
-                wi.b((byte) -113);
+                am.a(1, -26931, ((wi) this).field_k, param2);
                 return true;
-              } else {
-                return true;
-              }
             }
-          }
+            int discarded$2 = 8;
+            qj.a(((wi) this).field_h, ((wi) this).field_l);
+            return true;
         }
+        pm.a((byte) 85, ((wi) this).field_h, ((wi) this).field_l);
+        return true;
     }
 
     private final boolean a(int param0, boolean param1, int param2) {

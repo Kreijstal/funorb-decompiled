@@ -19,12 +19,6 @@ final class ue {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (param1 != -2694) {
-            field_d = -63;
-            s.field_c = param0;
-            dl.field_g = param2;
-            return;
-        }
         s.field_c = param0;
         dl.field_g = param2;
     }

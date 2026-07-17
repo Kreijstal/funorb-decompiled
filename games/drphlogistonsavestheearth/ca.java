@@ -47,7 +47,7 @@ abstract class ca extends bd {
         }
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String a(Throwable param0) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
@@ -150,11 +150,11 @@ abstract class ca extends bd {
         }
     }
 
-    final static String b(boolean param0) {
+    final static String b() {
         return dh.field_N.b((byte) -102);
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_V = null;
         field_bb = null;
         field_Y = null;
@@ -191,31 +191,7 @@ abstract class ca extends bd {
             var8 = 35 + param0;
             L1: while (true) {
               if (var7 >= var4) {
-                if (param1 >= 26) {
-                  ck.field_l.d(-90 + (param2 + ((ca) this).field_w), 10 + param0);
-                  pe.a(ob.field_f, 110, 5 + param2, ((ca) this).field_w - 10, param0 - -35);
-                  pe.a(kc.field_i, 90, param2, ((ca) this).field_w, -22 + (((ca) this).field_k + param0));
-                  var4 = -79 + ((ca) this).field_k;
-                  var6 = 127;
-                  var5 = 169;
-                  var7 = 0;
-                  var8 = param0 + 57;
-                  L2: while (true) {
-                    if (~var7 <= ~var4) {
-                      return;
-                    } else {
-                      var9 = var5 - -(var7 * (var6 - var5) / var4);
-                      var9 = var9 | (var9 << 8 | var9 << 16);
-                      wj.g(param2, var8, 6, var9);
-                      wj.g(-6 + ((ca) this).field_w + param2, var8, 6, var9);
-                      var8++;
-                      var7++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  return;
-                }
+                return;
               } else {
                 var9 = var7 * (-var5 + var6) / var4 + var5;
                 var9 = var9 | (var9 << 16 | var9 << 8);
@@ -227,86 +203,86 @@ abstract class ca extends bd {
               }
             }
           } else {
-            L3: {
+            L2: {
               if (~wj.field_e < ~var8) {
-                break L3;
+                break L2;
               } else {
                 if (~wj.field_j >= ~var8) {
-                  break L3;
+                  break L2;
                 } else {
-                  L4: {
+                  L3: {
                     var9 = var5 - -((var6 + -var5) * var7 / var4);
                     var10 = 0;
                     var11 = ((ca) this).field_w;
                     if (var7 > 20) {
-                      break L4;
+                      break L3;
                     } else {
-                      L5: while (true) {
+                      L4: while (true) {
                         if (var10 > 20) {
-                          break L4;
+                          break L3;
                         } else {
-                          L6: {
+                          L5: {
                             var12 = (20 + -var7) * (20 + -var7) + (20 + -var10) * (-var10 + 20);
                             if (462 >= var12) {
                               if (var12 >= 420) {
                                 var13 = var9 * (-var12 + 462) / 42;
                                 var13 = var13 | (var13 << 16 | var13 << 8);
                                 wj.field_l[param2 + wj.field_k * var8 - -var10] = var13;
-                                break L6;
+                                break L5;
                               } else {
-                                break L4;
+                                break L3;
                               }
                             } else {
-                              break L6;
+                              break L5;
                             }
                           }
                           var10++;
-                          continue L5;
+                          continue L4;
                         }
                       }
                     }
                   }
-                  L7: {
+                  L6: {
                     if (var7 > 20) {
-                      break L7;
+                      break L6;
                     } else {
                       var12 = var11;
                       var11 -= 21;
                       var13 = 0;
-                      L8: while (true) {
-                        L9: {
+                      L7: while (true) {
+                        L8: {
                           if (var13 > 20) {
-                            break L9;
+                            break L8;
                           } else {
                             var14 = (20 + -var7) * (20 - var7) - -(var13 * var13);
                             if (462 < var14) {
-                              break L9;
+                              break L8;
                             } else {
-                              L10: {
+                              L9: {
                                 if (var14 < 420) {
                                   var12 = 1 + var11;
-                                  break L10;
+                                  break L9;
                                 } else {
                                   var15 = var9 * (-var14 + 462) / 42;
                                   var15 = var15 | (var15 << 16 | var15 << 8);
                                   wj.field_l[var11 + (param2 + wj.field_k * var8)] = var15;
-                                  break L10;
+                                  break L9;
                                 }
                               }
                               var11++;
                               var13++;
-                              continue L8;
+                              continue L7;
                             }
                           }
                         }
                         var11 = var12;
-                        break L7;
+                        break L6;
                       }
                     }
                   }
                   var9 = var9 | (var9 << 16 | var9 << 8);
                   wj.g(param2 + var10, var8, var11 + -var10, var9);
-                  break L3;
+                  break L2;
                 }
               }
             }

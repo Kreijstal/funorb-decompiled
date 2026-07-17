@@ -20,7 +20,7 @@ final class po extends br {
     byte[] field_m;
 
     final static void a(byte param0, int param1) {
-        int var2 = 30 / ((param0 - 70) / 37);
+        int var2 = -15;
         w.field_m = w.field_m | 1 << -param1;
     }
 
@@ -31,7 +31,7 @@ final class po extends br {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_i = null;
         field_l = null;
         field_k = null;
@@ -39,7 +39,7 @@ final class po extends br {
         field_f = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         nk.field_n = new String[mo.field_Kb];
         nk.field_n[7] = kg.field_l;
         nk.field_n[5] = jk.field_e;
@@ -57,10 +57,7 @@ final class po extends br {
         nk.field_n[15] = eh.field_f;
     }
 
-    final static int d(int param0) {
-        if (param0 != 12949) {
-            return -35;
-        }
+    final static int d() {
         return hp.a((byte) -122, g.field_a, 16) + 4;
     }
 

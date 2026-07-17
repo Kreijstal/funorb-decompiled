@@ -12,7 +12,7 @@ final class qh {
     private int field_h;
     static boolean field_i;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -12;
         field_b = null;
         field_c = null;
@@ -182,43 +182,23 @@ final class qh {
 
     private final void a(int param0, boolean param1, int param2) {
         if (param0 <= ((qh) this).field_a) {
-          if (((qh) this).field_g.length > param0) {
-            ((qh) this).field_g[param0] = param2;
-            if (!param1) {
-              int discarded$8 = ((qh) this).b(-86);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            this.b((byte) 123, param0);
-            ((qh) this).field_g[param0] = param2;
-            if (!param1) {
-              int discarded$9 = ((qh) this).b(-86);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          ((qh) this).field_a = param0;
           if (((qh) this).field_g.length <= param0) {
             this.b((byte) 123, param0);
             ((qh) this).field_g[param0] = param2;
-            if (param1) {
-              return;
-            } else {
-              int discarded$10 = ((qh) this).b(-86);
-              return;
-            }
+            return;
           } else {
             ((qh) this).field_g[param0] = param2;
-            if (!param1) {
-              int discarded$11 = ((qh) this).b(-86);
-              return;
-            } else {
-              return;
-            }
+            return;
+          }
+        } else {
+          ((qh) this).field_a = param0;
+          if (((qh) this).field_g.length > param0) {
+            ((qh) this).field_g[param0] = param2;
+            return;
+          } else {
+            this.b((byte) 123, param0);
+            ((qh) this).field_g[param0] = param2;
+            return;
           }
         }
     }
@@ -227,7 +207,7 @@ final class qh {
         int[] var5 = new int[this.b(param1, 20029)];
         int[] var3 = var5;
         pd.a(((qh) this).field_g, 0, var5, 0, ((qh) this).field_g.length);
-        int var4 = 87 / ((param0 - 58) / 62);
+        int var4 = 87;
         ((qh) this).field_g = var5;
     }
 
@@ -289,7 +269,8 @@ final class qh {
               try {
                 L0: {
                   var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                  param1.getAppletContext().showDocument(of.a(param1, var2, param0), "_top");
+                  int discarded$2 = 0;
+                  param1.getAppletContext().showDocument(of.a(param1, var2), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -304,7 +285,7 @@ final class qh {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_4_0 = (RuntimeException) var2_ref2;
-                stackOut_4_1 = new StringBuilder().append("qh.D(").append(param0).append(44);
+                stackOut_4_1 = new StringBuilder().append("qh.D(").append(0).append(44);
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;

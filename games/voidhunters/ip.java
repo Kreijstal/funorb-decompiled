@@ -76,7 +76,7 @@ final class ip extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
         field_p = null;
     }

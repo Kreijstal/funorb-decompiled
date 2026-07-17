@@ -35,7 +35,8 @@ final class cd {
               if (var2 != 0) {
                 if (1 != var2) {
                   if (var2 != 2) {
-                    sj.a("A1: " + ci.a((byte) 94), -50, (Throwable) null);
+                    int discarded$1 = 94;
+                    sj.a("A1: " + ci.a(), -50, (Throwable) null);
                     pm.m(121);
                     break L1;
                   } else {
@@ -105,7 +106,7 @@ final class cd {
         }
     }
 
-    final static String a(gi param0, int param1, byte param2) {
+    final static String a(gi param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
@@ -133,13 +134,13 @@ final class cd {
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
         try {
-          var3_int = 66 / ((51 - param2) / 49);
+          var3_int = 22;
           try {
             L0: {
               L1: {
                 var4_int = param0.b(false);
-                if (var4_int > param1) {
-                  var4_int = param1;
+                if (var4_int > 80) {
+                  var4_int = 80;
                   break L1;
                 } else {
                   break L1;
@@ -188,11 +189,11 @@ final class cd {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 80 + 44 + -100 + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_e = null;

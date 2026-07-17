@@ -27,7 +27,7 @@ final class da extends hb {
         }
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         if (!pe.field_o.c(95)) {
             vg.a(o.field_e.e((byte) 31), false, 11);
             ed.field_d = true;
@@ -91,7 +91,8 @@ final class da extends hb {
                           break L2;
                         }
                       }
-                      ne.a(param2, "document.cookie=\"" + var5 + "\"", 5797);
+                      int discarded$2 = 5797;
+                      ne.a(param2, "document.cookie=\"" + var5 + "\"");
                       break L1;
                     } else {
                       return;
@@ -169,7 +170,7 @@ final class da extends hb {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_M = null;
         field_J = null;
         field_C = null;
@@ -179,7 +180,7 @@ final class da extends hb {
         field_L = null;
     }
 
-    final static String d(byte param0) {
+    final static String d() {
         if (!(2 <= qg.field_A)) {
             return kd.field_c;
         }

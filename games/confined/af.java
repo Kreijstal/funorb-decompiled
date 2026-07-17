@@ -31,14 +31,14 @@ final class af extends sa {
         }
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_bb = null;
         field_cb = null;
         field_ab = null;
         field_U = null;
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, df param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, int param3, df param4) {
         RuntimeException var6 = null;
         tl[] var6_array = null;
         int var7_int = 0;
@@ -79,7 +79,8 @@ final class af extends sa {
             if (param4.c(-121)) {
               L1: {
                 if (param0 == 0) {
-                  var10 = hh.a(param4, 94);
+                  int discarded$2 = 94;
+                  var10 = hh.a(param4);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -120,7 +121,8 @@ final class af extends sa {
                   var7 = (java.awt.Frame) var11.field_f;
                   if (var7 != null) {
                     if (var11.field_g == 2) {
-                      si.a(var7, param4, true);
+                      int discarded$3 = 1;
+                      si.a(var7, param4);
                       stackOut_28_0 = null;
                       stackIn_29_0 = stackOut_28_0;
                       break L0;

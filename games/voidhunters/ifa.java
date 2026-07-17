@@ -9,7 +9,7 @@ final class ifa extends ksa {
     private static char[] field_f;
     static String[] field_g;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_f = null;
         field_e = null;

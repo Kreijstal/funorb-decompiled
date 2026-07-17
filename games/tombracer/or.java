@@ -75,7 +75,8 @@ class or extends fi {
     final static void d(int param0) {
         int var1 = 0;
         int var2 = 0;
-        var1 = qd.a((byte) 82);
+        int discarded$2 = 82;
+        var1 = qd.a();
         var2 = mg.a(-62);
         qqa.field_t.a((byte) 57, var1 - -(ro.field_p << 1), -lsa.field_b + jua.field_d, am.field_o + -ro.field_p, (lsa.field_b << 1) + var2);
         if (param0 != -1226152383) {
@@ -88,7 +89,7 @@ class or extends fi {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_j = null;
         field_m = null;
     }

@@ -8,7 +8,7 @@ final class se extends hl {
     int field_j;
     int field_k;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_m = null;
     }
 

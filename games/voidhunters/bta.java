@@ -78,7 +78,7 @@ final class bta extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         ksa var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -90,22 +90,16 @@ final class bta extends rqa {
             var4 = (ea) (Object) oaa.field_k.d(0);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  if (param0 == 50) {
-                    break L2;
-                  } else {
-                    field_p = -54;
-                    break L2;
-                  }
-                }
                 var2 = klb.field_q.d(0);
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    uaa.b(-105, 4);
+                    int discarded$8 = 4;
+                    int discarded$9 = -105;
+                    uaa.b();
                     var2 = klb.field_q.a((byte) 9);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -118,11 +112,11 @@ final class bta extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2_ref, "bta.B(" + param0 + 44 + 4 + 41);
+          throw rta.a((Throwable) (Object) var2_ref, "bta.B(" + 50 + 44 + 4 + 41);
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_r = null;
         field_o = null;
     }

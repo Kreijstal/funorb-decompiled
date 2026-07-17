@@ -88,7 +88,7 @@ final class ja {
         }
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void a(int param0, int param1) {
         ql.field_v = param0;
         ch.field_b = param1;
     }
@@ -100,7 +100,7 @@ final class ja {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

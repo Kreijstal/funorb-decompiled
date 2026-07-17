@@ -79,7 +79,8 @@ final class itb extends rqa {
         int var4 = 0;
         ri[] var5 = null;
         var4 = VoidHunters.field_G;
-        var5 = prb.e((byte) -66);
+        int discarded$2 = -66;
+        var5 = prb.e();
         var2 = var5;
         var3 = param0;
         L0: while (true) {

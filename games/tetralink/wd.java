@@ -177,7 +177,8 @@ abstract class wd {
         int stackOut_14_10 = 0;
         int stackOut_14_11 = 0;
         L0: {
-          sk.b(-117);
+          int discarded$4 = -117;
+          sk.b();
           if (param1 < -26) {
             break L0;
           } else {
@@ -406,11 +407,11 @@ abstract class wd {
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         return qa.field_v;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_b = null;
@@ -463,7 +464,7 @@ abstract class wd {
         try {
           L0: {
             var6_int = 87 / ((param5 - 63) / 50);
-            var7 = -param2 + param1;
+            var7 = param1;
             var8 = 0;
             L1: while (true) {
               if (var8 >= var7) {
@@ -474,7 +475,7 @@ abstract class wd {
                 L2: {
                   L3: {
                     L4: {
-                      var9 = param0.charAt(param2 + var8);
+                      var9 = param0.charAt(var8);
                       if (0 >= var9) {
                         break L4;
                       } else {
@@ -672,7 +673,7 @@ abstract class wd {
           }
           L7: {
             stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(44).append(param1).append(44).append(0).append(44);
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;

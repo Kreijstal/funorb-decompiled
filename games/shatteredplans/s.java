@@ -87,7 +87,8 @@ final class s {
               L5: {
                 var6 = di.a(var4_ref_String, 124);
                 var7 = var1_ref.e(-1);
-                var8 = ji.a((CharSequence) (Object) var4_ref_String, true);
+                int discarded$5 = 1;
+                var8 = ji.a((CharSequence) (Object) var4_ref_String);
                 if (var8 != null) {
                   break L5;
                 } else {
@@ -113,10 +114,10 @@ final class s {
                   break L7;
                 } else {
                   var6 = new ve();
-                  sl.field_m.a((long)var8.hashCode(), (df) (Object) var6, param0);
-                  int fieldTemp$2 = oi.field_e;
+                  sl.field_m.a((long)var8.hashCode(), (df) (Object) var6, true);
+                  int fieldTemp$6 = oi.field_e;
                   oi.field_e = oi.field_e + 1;
-                  var6.field_zb = fieldTemp$2;
+                  var6.field_zb = fieldTemp$6;
                   fp.field_b.a((byte) -113, (oh) (Object) var6);
                   break L7;
                 }
@@ -156,7 +157,8 @@ final class s {
                     if (null == var6) {
                       break L10;
                     } else {
-                      eg.field_q.a((long)ji.a((CharSequence) (Object) var4_ref_String, param0).hashCode(), (df) (Object) var6, true);
+                      int discarded$7 = 1;
+                      eg.field_q.a((long)ji.a((CharSequence) (Object) var4_ref_String).hashCode(), (df) (Object) var6, true);
                       break L10;
                     }
                   }
@@ -166,10 +168,11 @@ final class s {
                     break L11;
                   } else {
                     var6 = new ve();
-                    eg.field_q.a((long)ji.a((CharSequence) (Object) var4_ref_String, true).hashCode(), (df) (Object) var6, true);
-                    int fieldTemp$3 = r.field_c;
+                    int discarded$8 = 1;
+                    eg.field_q.a((long)ji.a((CharSequence) (Object) var4_ref_String).hashCode(), (df) (Object) var6, true);
+                    int fieldTemp$9 = r.field_c;
                     r.field_c = r.field_c + 1;
-                    var6.field_zb = fieldTemp$3;
+                    var6.field_zb = fieldTemp$9;
                     vd.field_j.a((byte) -113, (oh) (Object) var6);
                     break L11;
                   }
@@ -235,21 +238,13 @@ final class s {
                   return;
                 }
               } else {
-                L18: {
-                  if (param0) {
-                    break L18;
-                  } else {
-                    field_i = 92;
-                    break L18;
-                  }
-                }
                 if (2 == var2) {
-                  L19: {
+                  L18: {
                     if (po.field_b != 1) {
-                      break L19;
+                      break L18;
                     } else {
                       po.field_b = 2;
-                      break L19;
+                      break L18;
                     }
                   }
                   return;
@@ -268,12 +263,12 @@ final class s {
                       break L0;
                     }
                   } else {
-                    L20: {
+                    L19: {
                       if (2 == po.field_b) {
                         po.field_b = 1;
-                        break L20;
+                        break L19;
                       } else {
-                        break L20;
+                        break L19;
                       }
                     }
                     return;
@@ -285,7 +280,7 @@ final class s {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "s.A(" + param0 + 41);
+          throw r.a((Throwable) (Object) var1, "s.A(" + 1 + 41);
         }
     }
 
@@ -307,17 +302,21 @@ final class s {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_a = null;
             field_h = null;
             field_b = null;
             field_f = null;
-            if (param0 != 114) {
-                field_e = 10;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "s.D(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw r.a((Throwable) (Object) var1, "s.D(" + 114 + 41);
         }
     }
 

@@ -4,7 +4,7 @@
 final class kwa extends rqa {
     static asb field_o;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_o = null;
     }
 

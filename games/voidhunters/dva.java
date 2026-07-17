@@ -107,7 +107,7 @@ final class dva extends rqa {
             var11 = var8_int / 8 + (3 * var9 / 4 + param4);
             hha.a(param1.a(var10, (byte) 116), (byte) 66, param1.a(param7, (byte) 116), param1.b(true, var11), param5, param1.b(true, param2), param6);
             var10 = param0 - (-(3 * var8_int / 4) + -(var9 / 8));
-            var11 = -(var8_int / 8) + param4 - -(param3 * var9 / 4);
+            var11 = -(var8_int / 8) + param4 - -(3 * var9 / 4);
             hha.a(param1.a(var10, (byte) 125), (byte) 66, param1.a(param7, (byte) 121), param1.b(true, var11), param5, param1.b(true, param2), param6);
             break L0;
           }
@@ -139,15 +139,18 @@ final class dva extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + 3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
     final static void e(byte param0) {
         fja.a(11);
-        ce.b(false);
-        wlb.f((byte) 64);
-        jk.h(118);
+        int discarded$12 = 0;
+        ce.b();
+        int discarded$19 = 64;
+        wlb.f();
+        int discarded$23 = 118;
+        jk.h();
         if (param0 <= 87) {
             field_o = true;
         }

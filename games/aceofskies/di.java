@@ -41,7 +41,7 @@ class di extends ou {
     private int field_E;
     private int field_V;
 
-    private final void a(di param0, int param1) {
+    private final void a(di param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_96_0 = null;
         StringBuilder stackIn_96_1 = null;
@@ -395,7 +395,7 @@ class di extends ou {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_M = null;
     }
 
@@ -453,7 +453,8 @@ class di extends ou {
           L0: {
             L1: {
               ((di) this).field_b = param0;
-              this.a(param1, -115);
+              int discarded$2 = -115;
+              this.a(param1);
               if (param6 == null) {
                 break L1;
               } else {

@@ -15,7 +15,7 @@ final class kn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_c = null;

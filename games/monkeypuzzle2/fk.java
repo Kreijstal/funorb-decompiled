@@ -7,7 +7,7 @@ final class fk {
     static md field_c;
     static boolean field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         int var1 = 0;
         field_d = null;

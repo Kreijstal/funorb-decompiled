@@ -7,186 +7,69 @@ final class bh {
     static pf field_a;
 
     final static boolean a(int param0, char param1) {
-        if (param0 == -1) {
-          if (param1 >= 48) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          if (param0 == -1) {
+            break L0;
           } else {
-            return false;
-          }
-        } else {
-          boolean discarded$6 = bh.a(98, '<');
-          if (param1 >= 48) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
+            boolean discarded$2 = bh.a(98, '<');
+            break L0;
           }
         }
+        L1: {
+          L2: {
+            if (param1 < 48) {
+              break L2;
+            } else {
+              if (param1 > 57) {
+                break L2;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              }
+            }
+          }
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L1;
+        }
+        return stackIn_6_0 != 0;
     }
 
     final static String b(byte param0) {
-        String var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        String stackIn_9_0 = null;
-        String stackIn_19_0 = null;
-        String stackIn_26_0 = null;
-        String stackIn_36_0 = null;
-        String stackOut_25_0 = null;
-        String stackOut_35_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_18_0 = null;
-        var5 = stellarshard.field_B;
-        var1 = "(" + ld.field_E + " " + t.field_e + " " + ig.field_y + ") " + ja.field_t;
-        if (param0 < -94) {
-          if (ue.field_b > 0) {
-            var1 = var1 + ":";
-            var2 = 0;
-            L0: while (true) {
-              if (var2 < ue.field_b) {
-                L1: {
-                  stackOut_25_0 = var1 + 32;
-                  stackIn_36_0 = stackOut_25_0;
-                  stackIn_26_0 = stackOut_25_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
-                    L2: {
-                      L3: {
-                        var1 = stackIn_26_0;
-                        var3 = ae.field_N.field_r[var2] & 255;
-                        var4 = var3 >> 4;
-                        var3 = var3 & 15;
-                        if (var4 >= 10) {
-                          break L3;
-                        } else {
-                          var4 += 48;
-                          if (var5 == 0) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                      var4 += 55;
-                      break L2;
-                    }
-                    L4: {
-                      L5: {
-                        if (var3 < 10) {
-                          break L5;
-                        } else {
-                          var3 += 55;
-                          if (var5 == 0) {
-                            break L4;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      var3 += 48;
-                      break L4;
-                    }
-                    var1 = var1 + (char)var4;
-                    var1 = var1 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                      continue L0;
-                    } else {
-                      stackOut_35_0 = (String) var1;
-                      stackIn_36_0 = stackOut_35_0;
-                      break L1;
-                    }
-                  }
-                }
-                return stackIn_36_0;
-              } else {
-                return var1;
-              }
-            }
-          } else {
-            return var1;
-          }
-        } else {
-          boolean discarded$1 = bh.a(68, '￑');
-          if (ue.field_b > 0) {
-            var1 = var1 + ":";
-            var2 = 0;
-            L6: while (true) {
-              if (var2 < ue.field_b) {
-                L7: {
-                  stackOut_8_0 = var1 + 32;
-                  stackIn_19_0 = stackOut_8_0;
-                  stackIn_9_0 = stackOut_8_0;
-                  if (var5 != 0) {
-                    break L7;
-                  } else {
-                    L8: {
-                      L9: {
-                        var1 = stackIn_9_0;
-                        var3 = ae.field_N.field_r[var2] & 255;
-                        var4 = var3 >> 4;
-                        var3 = var3 & 15;
-                        if (var4 >= 10) {
-                          break L9;
-                        } else {
-                          var4 += 48;
-                          if (var5 == 0) {
-                            break L8;
-                          } else {
-                            break L9;
-                          }
-                        }
-                      }
-                      var4 += 55;
-                      break L8;
-                    }
-                    L10: {
-                      L11: {
-                        if (var3 < 10) {
-                          break L11;
-                        } else {
-                          var3 += 55;
-                          if (var5 == 0) {
-                            break L10;
-                          } else {
-                            break L11;
-                          }
-                        }
-                      }
-                      var3 += 48;
-                      break L10;
-                    }
-                    var1 = var1 + (char)var4;
-                    var1 = var1 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                      continue L6;
-                    } else {
-                      stackOut_18_0 = (String) var1;
-                      stackIn_19_0 = stackOut_18_0;
-                      break L7;
-                    }
-                  }
-                }
-                return stackIn_19_0;
-              } else {
-                return var1;
-              }
-            }
-          } else {
-            return var1;
-          }
+        int var5 = stellarshard.field_B;
+        String var1 = "(" + ld.field_E + " " + t.field_e + " " + ig.field_y + ") " + ja.field_t;
+        if (param0 >= -94) {
+            boolean discarded$0 = bh.a(68, '￑');
         }
+        if (ue.field_b > 0) {
+            var1 = var1 + ":";
+            for (var2 = 0; var2 < ue.field_b; var2++) {
+                var1 = var1 + 32;
+                var3 = ae.field_N.field_r[var2] & 255;
+                var4 = var3 >> 4;
+                var3 = var3 & 15;
+                if (var4 < 10) {
+                    var4 += 48;
+                } else {
+                    var4 += 55;
+                }
+                if (var3 >= 10) {
+                    var3 += 55;
+                } else {
+                    var3 += 48;
+                }
+                var1 = var1 + (char)var4;
+                var1 = var1 + (char)var3;
+            }
+        }
+        return var1;
     }
 
     public final String toString() {
@@ -254,9 +137,9 @@ final class bh {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
-        int var1 = 103 / ((param0 - -26) / 44);
+        int var1 = -51;
     }
 
     final void a(java.applet.Applet param0, byte param1) {

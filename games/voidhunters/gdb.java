@@ -35,7 +35,7 @@ final class gdb {
         return ((gdb) this).field_b;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_d = null;
     }

@@ -8,7 +8,7 @@ final class wm extends wn {
     static String field_F;
     static String field_J;
 
-    public static void f(int param0) {
+    public static void f() {
         field_H = null;
         field_F = null;
         field_G = null;
@@ -72,7 +72,7 @@ final class wm extends wn {
         ((wm) this).field_B.e((byte) 87);
     }
 
-    final static boolean c(boolean param0) {
+    final static boolean c() {
         return kg.a(gg.field_e, true, ua.field_S);
     }
 
@@ -117,10 +117,11 @@ final class wm extends wn {
     }
 
     final static void g(int param0) {
-        ba.d(-123);
+        int discarded$0 = -123;
+        ba.d();
     }
 
-    final static void g(byte param0) {
+    final static void g() {
         if (-sn.field_G == gi.field_a) {
             return;
         }

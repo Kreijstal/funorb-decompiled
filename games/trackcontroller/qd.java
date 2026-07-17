@@ -18,23 +18,15 @@ final class qd {
             break L0;
           }
         }
-        if (da.field_n == null) {
-          if (param0) {
-            var3 = null;
-            byte[] discarded$4 = qd.a((byte[]) null, (byte) 113);
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (da.field_n != null) {
           da.field_n.a(param1, -65);
-          if (!param0) {
-            return;
-          } else {
-            var3 = null;
-            byte[] discarded$5 = qd.a((byte[]) null, (byte) 113);
-            return;
-          }
+          var3 = null;
+          byte[] discarded$4 = qd.a((byte[]) null, (byte) 113);
+          return;
+        } else {
+          var3 = null;
+          byte[] discarded$5 = qd.a((byte[]) null, (byte) 113);
+          return;
         }
     }
 
@@ -63,7 +55,7 @@ final class qd {
             try {
               L1: {
                 var4 = param0.getGraphics();
-                ia.field_b.a(-11, var4, param1, param2);
+                ia.field_b.a(-11, var4, 0, 0);
                 var4.dispose();
                 break L1;
               }
@@ -110,7 +102,7 @@ final class qd {
               break L3;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 44 + 0 + 44 + param3 + 41);
         }
     }
 
@@ -180,7 +172,7 @@ final class qd {
         return stackIn_1_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

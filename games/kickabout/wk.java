@@ -147,7 +147,7 @@ final class wk {
                       break L6;
                     }
                     var8 = stackIn_33_0;
-                    var10 = (int)(0.5f + var7 * (float)param1);
+                    var10 = (int)(0.5f + var7 * (float)63);
                     var11 = (int)(7.0f * var8 + 0.5f);
                     var12 = (int)(0.5f + var9 * 127.0f);
                     stackOut_33_0 = ks.a(var12, var10, -87, var11);
@@ -167,12 +167,12 @@ final class wk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "wk.D(" + param0 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) var2, "wk.D(" + param0 + 44 + 63 + 41);
         }
         return stackIn_34_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         int var1 = 14;
@@ -198,7 +198,7 @@ final class wk {
         }
     }
 
-    final static gr a(boolean param0, boolean param1) {
+    final static gr a(boolean param0) {
         Random var3 = null;
         int var4 = 0;
         up var5 = null;
@@ -288,11 +288,8 @@ final class wk {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void a(long param0) {
         oa.field_a.setTime(new Date(param0));
-        if (param1 != 0) {
-            field_d = null;
-        }
     }
 
     static {

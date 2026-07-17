@@ -42,7 +42,7 @@ class kta {
         cg var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_h) {
             break L0;
           } else {
@@ -52,7 +52,7 @@ class kta {
         }
         L1: {
           lua.a(param0, 0, var3);
-          ((kta) this).field_r = ((kta) this).field_r - 256;
+          ((kta) this).field_r = ((kta) this).field_r - param1;
           if (((kta) this).field_i == null) {
             break L1;
           } else {
@@ -219,7 +219,7 @@ class kta {
           if (((kta) this).field_i == null) {
             break L17;
           } else {
-            ((kta) this).field_i.b(param0, 0, 256);
+            ((kta) this).field_i.b(param0, 0, param1);
             break L17;
           }
         }
@@ -610,46 +610,20 @@ class kta {
     }
 
     private final void b(int param0) {
-        ((kta) this).field_r = ((kta) this).field_r - 256;
+        ((kta) this).field_r = ((kta) this).field_r - param0;
         if (((kta) this).field_r < 0) {
             ((kta) this).field_r = 0;
         }
         if (((kta) this).field_i != null) {
-            ((kta) this).field_i.a(256);
+            ((kta) this).field_i.a(param0);
             return;
         }
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_d = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_h = stackIn_7_0 != 0;
-              field_q = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_d = 22050;
+        field_h = true;
+        field_q = 10;
     }
 
     public static void b() {

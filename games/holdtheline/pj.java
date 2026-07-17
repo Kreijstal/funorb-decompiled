@@ -164,7 +164,7 @@ final class pj extends rd {
         n.field_s = null;
     }
 
-    final static int a(CharSequence param0, int param1, int param2, byte[] param3, int param4, byte param5) {
+    final static int a(CharSequence param0, int param1, int param2, byte[] param3) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -206,7 +206,7 @@ final class pj extends rd {
         var9 = HoldTheLine.field_D;
         try {
           L0: {
-            var6_int = param2 - param4;
+            var6_int = param2;
             var7 = 0;
             L1: while (true) {
               if (var6_int <= var7) {
@@ -217,7 +217,7 @@ final class pj extends rd {
                 L2: {
                   L3: {
                     L4: {
-                      var8 = param0.charAt(var7 + param4);
+                      var8 = param0.charAt(var7);
                       if (var8 <= 0) {
                         break L4;
                       } else {
@@ -438,7 +438,7 @@ final class pj extends rd {
               break L7;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param4 + 44 + 29 + 41);
+          throw kk.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + 0 + 44 + 29 + 41);
         }
         return stackIn_69_0;
     }

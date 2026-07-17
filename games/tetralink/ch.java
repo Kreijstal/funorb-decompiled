@@ -9,7 +9,7 @@ final class ch extends mc {
     byte[] field_p;
     static String field_n;
 
-    final static void a(boolean param0) {
+    final static void a() {
         lc.a((byte) 103);
         mn.a(-7, ha.field_e, fn.field_Q, qe.field_d, ec.field_n[0].field_t, wc.field_J);
     }

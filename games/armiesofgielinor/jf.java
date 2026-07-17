@@ -91,7 +91,7 @@ final class jf extends ks {
     jf() {
     }
 
-    final static String a(String[][] param0, int param1, String param2, int param3, byte param4) {
+    final static String a(String[][] param0, int param1, String param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String var6_ref_String = null;

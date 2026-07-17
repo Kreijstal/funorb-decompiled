@@ -10,7 +10,7 @@ final class hj extends oh {
     static int field_k;
     static tm[] field_l;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
         field_m = null;
         field_n = null;

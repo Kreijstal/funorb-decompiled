@@ -18,9 +18,6 @@ final class s {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (param0 != 72) {
-            return;
-        }
         ob.field_cc[param1] = param2;
     }
 

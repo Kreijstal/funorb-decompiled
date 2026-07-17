@@ -85,7 +85,7 @@ final class bl {
         L7: {
           var2 = il.a((byte) 95, "achievement_names,7");
           if (null != var2) {
-            b.field_g[7] = ll.a(sl.a((int) param0, 96), var2);
+            b.field_g[7] = ll.a(sl.a(96, 96), var2);
             break L7;
           } else {
             break L7;
@@ -94,7 +94,7 @@ final class bl {
         L8: {
           var2 = il.a((byte) 71, "achievement_names,8");
           if (null != var2) {
-            b.field_g[8] = ll.a(param0 + -96, var2);
+            b.field_g[8] = ll.a(0, var2);
             break L8;
           } else {
             break L8;
@@ -103,7 +103,7 @@ final class bl {
         L9: {
           var2 = il.a((byte) 127, "achievement_names,9");
           if (var2 != null) {
-            b.field_g[9] = ll.a(param0 + -96, var2);
+            b.field_g[9] = ll.a(0, var2);
             break L9;
           } else {
             break L9;
@@ -121,7 +121,7 @@ final class bl {
         L11: {
           var2 = il.a((byte) 100, "achievement_names,11");
           if (var2 != null) {
-            b.field_g[11] = ll.a(param0 + -96, var2);
+            b.field_g[11] = ll.a(0, var2);
             break L11;
           } else {
             break L11;
@@ -157,7 +157,7 @@ final class bl {
         L15: {
           var2 = il.a((byte) 119, "achievement_names,15");
           if (null != var2) {
-            b.field_g[15] = ll.a(param0 + -96, var2);
+            b.field_g[15] = ll.a(0, var2);
             break L15;
           } else {
             break L15;
@@ -195,7 +195,7 @@ final class bl {
           if (var2 == null) {
             break L19;
           } else {
-            hm.field_H = ll.a(param0 + -96, var2);
+            hm.field_H = ll.a(0, var2);
             break L19;
           }
         }
@@ -265,7 +265,7 @@ final class bl {
         L27: {
           var2 = il.a((byte) 127, "ndlev");
           if (var2 != null) {
-            gh.field_L = ll.a(param0 ^ 96, var2);
+            gh.field_L = ll.a(0, var2);
             break L27;
           } else {
             break L27;
@@ -292,7 +292,7 @@ final class bl {
         L30: {
           var2 = il.a((byte) 118, "terrainlevel");
           if (var2 != null) {
-            kj.field_a = ll.a(param0 + -96, var2);
+            kj.field_a = ll.a(0, var2);
             break L30;
           } else {
             break L30;
@@ -321,14 +321,14 @@ final class bl {
           if (null == var2) {
             break L33;
           } else {
-            eb.field_J[1] = ll.a(sl.a((int) param0, 96), var2);
+            eb.field_J[1] = ll.a(sl.a(96, 96), var2);
             break L33;
           }
         }
         L34: {
           var2 = il.a((byte) 122, "achievement_criteria,2");
           if (var2 != null) {
-            eb.field_J[2] = ll.a(param0 + -96, var2);
+            eb.field_J[2] = ll.a(0, var2);
             break L34;
           } else {
             break L34;
@@ -364,7 +364,7 @@ final class bl {
         L38: {
           var2 = il.a((byte) 87, "achievement_criteria,6");
           if (null != var2) {
-            eb.field_J[6] = ll.a(param0 + -96, var2);
+            eb.field_J[6] = ll.a(0, var2);
             break L38;
           } else {
             break L38;
@@ -384,7 +384,7 @@ final class bl {
           if (var2 == null) {
             break L40;
           } else {
-            eb.field_J[8] = ll.a(param0 + -96, var2);
+            eb.field_J[8] = ll.a(0, var2);
             break L40;
           }
         }
@@ -420,7 +420,7 @@ final class bl {
           if (null == var2) {
             break L44;
           } else {
-            eb.field_J[12] = ll.a(sl.a((int) param0, 96), var2);
+            eb.field_J[12] = ll.a(sl.a(96, 96), var2);
             break L44;
           }
         }
@@ -429,7 +429,7 @@ final class bl {
           if (var2 == null) {
             break L45;
           } else {
-            eb.field_J[13] = ll.a(sl.a((int) param0, 96), var2);
+            eb.field_J[13] = ll.a(sl.a(96, 96), var2);
             break L45;
           }
         }
@@ -465,7 +465,7 @@ final class bl {
           if (var2 == null) {
             break L49;
           } else {
-            ng.field_w = ll.a(param0 + -96, var2);
+            ng.field_w = ll.a(0, var2);
             break L49;
           }
         }
@@ -474,7 +474,7 @@ final class bl {
           if (var2 == null) {
             break L50;
           } else {
-            String discarded$12 = ll.a(param0 ^ 96, var2);
+            String discarded$12 = ll.a(0, var2);
             break L50;
           }
         }
@@ -508,7 +508,7 @@ final class bl {
         L54: {
           var2 = il.a((byte) 78, "makeanaccounttosave");
           if (null != var2) {
-            uc.field_q = ll.a(param0 + -96, var2);
+            uc.field_q = ll.a(0, var2);
             break L54;
           } else {
             break L54;
@@ -528,7 +528,7 @@ final class bl {
           if (var2 == null) {
             break L56;
           } else {
-            ba.field_c = ll.a(param0 ^ 96, var2);
+            ba.field_c = ll.a(0, var2);
             break L56;
           }
         }
@@ -544,7 +544,7 @@ final class bl {
         L58: {
           var2 = il.a((byte) 78, "savegame");
           if (null != var2) {
-            me.field_n = ll.a(param0 + -96, var2);
+            me.field_n = ll.a(0, var2);
             break L58;
           } else {
             break L58;
@@ -609,7 +609,7 @@ final class bl {
           if (null == var2) {
             break L65;
           } else {
-            qa.field_b = ll.a(param0 ^ 96, var2);
+            qa.field_b = ll.a(0, var2);
             break L65;
           }
         }
@@ -625,7 +625,7 @@ final class bl {
         L67: {
           var2 = il.a((byte) 108, "exitdebriefingwithoutsaving");
           if (null != var2) {
-            rj.field_c = ll.a(param0 + -96, var2);
+            rj.field_c = ll.a(0, var2);
             break L67;
           } else {
             break L67;
@@ -645,7 +645,7 @@ final class bl {
           if (var2 == null) {
             break L69;
           } else {
-            rf.field_s = ll.a(param0 ^ 96, var2);
+            rf.field_s = ll.a(0, var2);
             break L69;
           }
         }
@@ -679,7 +679,7 @@ final class bl {
         L73: {
           var2 = il.a((byte) 87, "evacmother");
           if (null != var2) {
-            va.field_j = ll.a(param0 + -96, var2);
+            va.field_j = ll.a(0, var2);
             break L73;
           } else {
             break L73;
@@ -715,7 +715,7 @@ final class bl {
         L77: {
           var2 = il.a((byte) 82, "hasdied");
           if (var2 != null) {
-            aa.field_r = ll.a(param0 + -96, var2);
+            aa.field_r = ll.a(0, var2);
             break L77;
           } else {
             break L77;
@@ -769,7 +769,7 @@ final class bl {
         L83: {
           var2 = il.a((byte) 75, "clicktocollectob");
           if (var2 != null) {
-            bm.field_b = ll.a(param0 ^ 96, var2);
+            bm.field_b = ll.a(0, var2);
             break L83;
           } else {
             break L83;
@@ -780,7 +780,7 @@ final class bl {
           if (null == var2) {
             break L84;
           } else {
-            va.field_b = ll.a(param0 + -96, var2);
+            va.field_b = ll.a(0, var2);
             break L84;
           }
         }
@@ -832,7 +832,7 @@ final class bl {
         L90: {
           var2 = il.a((byte) 92, "notenoughtus");
           if (var2 != null) {
-            m.field_h = ll.a(param0 + -96, var2);
+            m.field_h = ll.a(0, var2);
             break L90;
           } else {
             break L90;
@@ -841,7 +841,7 @@ final class bl {
         L91: {
           var2 = il.a((byte) 76, "outofammo");
           if (var2 != null) {
-            fl.field_d = ll.a(param0 ^ 96, var2);
+            fl.field_d = ll.a(0, var2);
             break L91;
           } else {
             break L91;
@@ -879,7 +879,7 @@ final class bl {
           if (null == var2) {
             break L95;
           } else {
-            pf.field_d = ll.a(param0 + -96, var2);
+            pf.field_d = ll.a(0, var2);
             break L95;
           }
         }
@@ -913,7 +913,7 @@ final class bl {
         L99: {
           var2 = il.a((byte) 120, "movetolevel");
           if (var2 != null) {
-            di.field_g = ll.a(param0 ^ 96, var2);
+            di.field_g = ll.a(0, var2);
             break L99;
           } else {
             break L99;
@@ -924,7 +924,7 @@ final class bl {
           if (null == var2) {
             break L100;
           } else {
-            ph.field_u = ll.a(param0 + -96, var2);
+            ph.field_u = ll.a(0, var2);
             break L100;
           }
         }
@@ -949,7 +949,7 @@ final class bl {
         L103: {
           var2 = il.a((byte) 99, "select");
           if (var2 != null) {
-            ne.field_b = ll.a(param0 + -96, var2);
+            ne.field_b = ll.a(0, var2);
             break L103;
           } else {
             break L103;
@@ -1041,7 +1041,7 @@ final class bl {
           if (null == var2) {
             break L113;
           } else {
-            kd.field_d = ll.a(param0 ^ 96, var2);
+            kd.field_d = ll.a(0, var2);
             break L113;
           }
         }
@@ -1068,7 +1068,7 @@ final class bl {
           if (null == var2) {
             break L116;
           } else {
-            rj.field_f = ll.a(param0 + -96, var2);
+            rj.field_f = ll.a(0, var2);
             break L116;
           }
         }
@@ -1111,7 +1111,7 @@ final class bl {
         L121: {
           var2 = il.a((byte) 121, "equipmentclasses,1");
           if (null != var2) {
-            lb.field_c[1] = ll.a(param0 + -96, var2);
+            lb.field_c[1] = ll.a(0, var2);
             break L121;
           } else {
             break L121;
@@ -1140,7 +1140,7 @@ final class bl {
           if (var2 == null) {
             break L124;
           } else {
-            lb.field_c[4] = ll.a(param0 + -96, var2);
+            lb.field_c[4] = ll.a(0, var2);
             break L124;
           }
         }
@@ -1201,7 +1201,7 @@ final class bl {
         L131: {
           var2 = il.a((byte) 117, "highexplosivelong");
           if (null != var2) {
-            rl.field_a = ll.a(param0 + -96, var2);
+            rl.field_a = ll.a(0, var2);
             break L131;
           } else {
             break L131;
@@ -1239,7 +1239,7 @@ final class bl {
           if (var2 == null) {
             break L135;
           } else {
-            ai.field_e = ll.a(param0 + -96, var2);
+            ai.field_e = ll.a(0, var2);
             break L135;
           }
         }
@@ -1257,7 +1257,7 @@ final class bl {
           if (null == var2) {
             break L137;
           } else {
-            kh.field_K = ll.a(param0 + -96, var2);
+            kh.field_K = ll.a(0, var2);
             break L137;
           }
         }
@@ -1291,7 +1291,7 @@ final class bl {
         L141: {
           var2 = il.a((byte) 112, "rateoffires,0");
           if (var2 != null) {
-            di.field_h[0] = ll.a(param0 + -96, var2);
+            di.field_h[0] = ll.a(0, var2);
             break L141;
           } else {
             break L141;
@@ -1320,7 +1320,7 @@ final class bl {
           if (null == var2) {
             break L144;
           } else {
-            di.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
+            di.field_h[3] = ll.a(sl.a(96, 96), var2);
             break L144;
           }
         }
@@ -1345,7 +1345,7 @@ final class bl {
         L147: {
           var2 = il.a((byte) 100, "shortrecruit");
           if (var2 != null) {
-            pd.field_e = ll.a(param0 + -96, var2);
+            pd.field_e = ll.a(0, var2);
             break L147;
           } else {
             break L147;
@@ -1354,7 +1354,7 @@ final class bl {
         L148: {
           var2 = il.a((byte) 90, "warningencum");
           if (null != var2) {
-            og.field_b = ll.a(param0 ^ 96, var2);
+            og.field_b = ll.a(0, var2);
             break L148;
           } else {
             break L148;
@@ -1363,7 +1363,7 @@ final class bl {
         L149: {
           var2 = il.a((byte) 88, "armournames,0");
           if (null != var2) {
-            kh.field_H[0] = ll.a(param0 + -96, var2);
+            kh.field_H[0] = ll.a(0, var2);
             break L149;
           } else {
             break L149;
@@ -1372,7 +1372,7 @@ final class bl {
         L150: {
           var2 = il.a((byte) 95, "armournames,1");
           if (null != var2) {
-            kh.field_H[1] = ll.a(sl.a((int) param0, 96), var2);
+            kh.field_H[1] = ll.a(sl.a(96, 96), var2);
             break L150;
           } else {
             break L150;
@@ -1410,7 +1410,7 @@ final class bl {
           if (null == var2) {
             break L154;
           } else {
-            pf.field_e[1] = ll.a(param0 + -96, var2);
+            pf.field_e[1] = ll.a(0, var2);
             break L154;
           }
         }
@@ -1455,14 +1455,14 @@ final class bl {
           if (var2 == null) {
             break L159;
           } else {
-            bd.field_f[2] = ll.a(param0 + -96, var2);
+            bd.field_f[2] = ll.a(0, var2);
             break L159;
           }
         }
         L160: {
           var2 = il.a((byte) 121, "armourdescriptions,3");
           if (null != var2) {
-            bd.field_f[3] = ll.a(sl.a((int) param0, 96), var2);
+            bd.field_f[3] = ll.a(sl.a(96, 96), var2);
             break L160;
           } else {
             break L160;
@@ -1498,7 +1498,7 @@ final class bl {
         L164: {
           var2 = il.a((byte) 71, "armourresearchdescriptions,3");
           if (var2 != null) {
-            jg.field_jb[3] = ll.a(param0 + -96, var2);
+            jg.field_jb[3] = ll.a(0, var2);
             break L164;
           } else {
             break L164;
@@ -1552,7 +1552,7 @@ final class bl {
         L170: {
           var2 = il.a((byte) 84, "weaponnames,5");
           if (var2 != null) {
-            uh.field_L[5] = ll.a(sl.a((int) param0, 96), var2);
+            uh.field_L[5] = ll.a(sl.a(96, 96), var2);
             break L170;
           } else {
             break L170;
@@ -1626,7 +1626,7 @@ final class bl {
           if (null == var2) {
             break L178;
           } else {
-            uh.field_L[13] = ll.a(sl.a((int) param0, 96), var2);
+            uh.field_L[13] = ll.a(sl.a(96, 96), var2);
             break L178;
           }
         }
@@ -1651,7 +1651,7 @@ final class bl {
         L181: {
           var2 = il.a((byte) 120, "weaponnames,16");
           if (null != var2) {
-            uh.field_L[16] = ll.a(param0 + -96, var2);
+            uh.field_L[16] = ll.a(0, var2);
             break L181;
           } else {
             break L181;
@@ -1696,7 +1696,7 @@ final class bl {
         L186: {
           var2 = il.a((byte) 104, "weaponresearchnames,0");
           if (var2 != null) {
-            of.field_h[0] = ll.a(sl.a((int) param0, 96), var2);
+            of.field_h[0] = ll.a(sl.a(96, 96), var2);
             break L186;
           } else {
             break L186;
@@ -1723,7 +1723,7 @@ final class bl {
         L189: {
           var2 = il.a((byte) 125, "weaponresearchnames,3");
           if (null != var2) {
-            of.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
+            of.field_h[3] = ll.a(sl.a(96, 96), var2);
             break L189;
           } else {
             break L189;
@@ -1732,7 +1732,7 @@ final class bl {
         L190: {
           var2 = il.a((byte) 92, "weaponresearchnames,4");
           if (var2 != null) {
-            of.field_h[4] = ll.a(param0 + -96, var2);
+            of.field_h[4] = ll.a(0, var2);
             break L190;
           } else {
             break L190;
@@ -1741,7 +1741,7 @@ final class bl {
         L191: {
           var2 = il.a((byte) 80, "weaponresearchnames,5");
           if (null != var2) {
-            of.field_h[5] = ll.a(sl.a((int) param0, 96), var2);
+            of.field_h[5] = ll.a(sl.a(96, 96), var2);
             break L191;
           } else {
             break L191;
@@ -1777,7 +1777,7 @@ final class bl {
         L195: {
           var2 = il.a((byte) 88, "weaponresearchnames,9");
           if (var2 != null) {
-            of.field_h[9] = ll.a(sl.a((int) param0, 96), var2);
+            of.field_h[9] = ll.a(sl.a(96, 96), var2);
             break L195;
           } else {
             break L195;
@@ -1786,7 +1786,7 @@ final class bl {
         L196: {
           var2 = il.a((byte) 122, "weaponresearchnames,10");
           if (var2 != null) {
-            of.field_h[10] = ll.a(param0 + -96, var2);
+            of.field_h[10] = ll.a(0, var2);
             break L196;
           } else {
             break L196;
@@ -1833,7 +1833,7 @@ final class bl {
           if (null == var2) {
             break L201;
           } else {
-            of.field_h[15] = ll.a(param0 + -96, var2);
+            of.field_h[15] = ll.a(0, var2);
             break L201;
           }
         }
@@ -1903,7 +1903,7 @@ final class bl {
         L209: {
           var2 = il.a((byte) 127, "weapondescriptions,2");
           if (var2 != null) {
-            i.field_b[2] = ll.a(param0 + -96, var2);
+            i.field_b[2] = ll.a(0, var2);
             break L209;
           } else {
             break L209;
@@ -1914,7 +1914,7 @@ final class bl {
           if (var2 == null) {
             break L210;
           } else {
-            i.field_b[3] = ll.a(param0 + -96, var2);
+            i.field_b[3] = ll.a(0, var2);
             break L210;
           }
         }
@@ -1941,14 +1941,14 @@ final class bl {
           if (null == var2) {
             break L213;
           } else {
-            i.field_b[6] = ll.a(param0 + -96, var2);
+            i.field_b[6] = ll.a(0, var2);
             break L213;
           }
         }
         L214: {
           var2 = il.a((byte) 78, "weapondescriptions,7");
           if (var2 != null) {
-            i.field_b[7] = ll.a(sl.a((int) param0, 96), var2);
+            i.field_b[7] = ll.a(sl.a(96, 96), var2);
             break L214;
           } else {
             break L214;
@@ -1957,7 +1957,7 @@ final class bl {
         L215: {
           var2 = il.a((byte) 97, "weapondescriptions,8");
           if (var2 != null) {
-            i.field_b[8] = ll.a(sl.a((int) param0, 96), var2);
+            i.field_b[8] = ll.a(sl.a(96, 96), var2);
             break L215;
           } else {
             break L215;
@@ -1977,14 +1977,14 @@ final class bl {
           if (var2 == null) {
             break L217;
           } else {
-            i.field_b[10] = ll.a(sl.a((int) param0, 96), var2);
+            i.field_b[10] = ll.a(sl.a(96, 96), var2);
             break L217;
           }
         }
         L218: {
           var2 = il.a((byte) 97, "weapondescriptions,11");
           if (null != var2) {
-            i.field_b[11] = ll.a(sl.a((int) param0, 96), var2);
+            i.field_b[11] = ll.a(sl.a(96, 96), var2);
             break L218;
           } else {
             break L218;
@@ -2004,7 +2004,7 @@ final class bl {
           if (var2 == null) {
             break L220;
           } else {
-            i.field_b[13] = ll.a(sl.a((int) param0, 96), var2);
+            i.field_b[13] = ll.a(sl.a(96, 96), var2);
             break L220;
           }
         }
@@ -2083,7 +2083,7 @@ final class bl {
         L229: {
           var2 = il.a((byte) 86, "weaponresearchdescriptions,1");
           if (null != var2) {
-            da.field_i[1] = ll.a(param0 + -96, var2);
+            da.field_i[1] = ll.a(0, var2);
             break L229;
           } else {
             break L229;
@@ -2112,7 +2112,7 @@ final class bl {
           if (null == var2) {
             break L232;
           } else {
-            da.field_i[4] = ll.a(sl.a((int) param0, 96), var2);
+            da.field_i[4] = ll.a(sl.a(96, 96), var2);
             break L232;
           }
         }
@@ -2157,14 +2157,14 @@ final class bl {
           if (null == var2) {
             break L237;
           } else {
-            da.field_i[9] = ll.a(sl.a((int) param0, 96), var2);
+            da.field_i[9] = ll.a(sl.a(96, 96), var2);
             break L237;
           }
         }
         L238: {
           var2 = il.a((byte) 76, "weaponresearchdescriptions,10");
           if (var2 != null) {
-            da.field_i[10] = ll.a(param0 + -96, var2);
+            da.field_i[10] = ll.a(0, var2);
             break L238;
           } else {
             break L238;
@@ -2175,7 +2175,7 @@ final class bl {
           if (var2 == null) {
             break L239;
           } else {
-            da.field_i[11] = ll.a(sl.a((int) param0, 96), var2);
+            da.field_i[11] = ll.a(sl.a(96, 96), var2);
             break L239;
           }
         }
@@ -2227,7 +2227,7 @@ final class bl {
         L245: {
           var2 = il.a((byte) 88, "weaponresearchdescriptions,17");
           if (null != var2) {
-            da.field_i[17] = ll.a(param0 + -96, var2);
+            da.field_i[17] = ll.a(0, var2);
             break L245;
           } else {
             break L245;
@@ -2274,7 +2274,7 @@ final class bl {
           if (null == var2) {
             break L250;
           } else {
-            qd.field_h[0] = ll.a(sl.a((int) param0, 96), var2);
+            qd.field_h[0] = ll.a(sl.a(96, 96), var2);
             break L250;
           }
         }
@@ -2292,14 +2292,14 @@ final class bl {
           if (null == var2) {
             break L252;
           } else {
-            qd.field_h[2] = ll.a(sl.a((int) param0, 96), var2);
+            qd.field_h[2] = ll.a(sl.a(96, 96), var2);
             break L252;
           }
         }
         L253: {
           var2 = il.a((byte) 84, "instructions0,3");
           if (var2 != null) {
-            qd.field_h[3] = ll.a(param0 + -96, var2);
+            qd.field_h[3] = ll.a(0, var2);
             break L253;
           } else {
             break L253;
@@ -2326,7 +2326,7 @@ final class bl {
         L256: {
           var2 = il.a((byte) 109, "instructions0,6");
           if (var2 != null) {
-            qd.field_h[6] = ll.a(param0 + -96, var2);
+            qd.field_h[6] = ll.a(0, var2);
             break L256;
           } else {
             break L256;
@@ -2517,7 +2517,7 @@ final class bl {
           if (var2 == null) {
             break L277;
           } else {
-            mb.field_p[4] = ll.a(param0 + -96, var2);
+            mb.field_p[4] = ll.a(0, var2);
             break L277;
           }
         }
@@ -2641,7 +2641,7 @@ final class bl {
         L291: {
           var2 = il.a((byte) 77, "instructions3,11");
           if (var2 != null) {
-            dd.field_O[11] = ll.a(sl.a((int) param0, 96), var2);
+            dd.field_O[11] = ll.a(sl.a(96, 96), var2);
             break L291;
           } else {
             break L291;
@@ -2695,7 +2695,7 @@ final class bl {
         L297: {
           var2 = il.a((byte) 119, "instructions4,0");
           if (null != var2) {
-            ij.field_a[0] = ll.a(sl.a((int) param0, 96), var2);
+            ij.field_a[0] = ll.a(sl.a(96, 96), var2);
             break L297;
           } else {
             break L297;
@@ -2713,7 +2713,7 @@ final class bl {
         L299: {
           var2 = il.a((byte) 118, "instructions4,2");
           if (var2 != null) {
-            ij.field_a[2] = ll.a(sl.a((int) param0, 96), var2);
+            ij.field_a[2] = ll.a(sl.a(96, 96), var2);
             break L299;
           } else {
             break L299;
@@ -2769,7 +2769,7 @@ final class bl {
           if (var2 == null) {
             break L305;
           } else {
-            oi.field_M[1] = ll.a(sl.a((int) param0, 96), var2);
+            oi.field_M[1] = ll.a(sl.a(96, 96), var2);
             break L305;
           }
         }
@@ -2812,7 +2812,7 @@ final class bl {
         L310: {
           var2 = il.a((byte) 76, "instructions6,2");
           if (null != var2) {
-            k.field_d[2] = ll.a(param0 + -96, var2);
+            k.field_d[2] = ll.a(0, var2);
             break L310;
           } else {
             break L310;
@@ -2841,7 +2841,7 @@ final class bl {
           if (var2 == null) {
             break L313;
           } else {
-            k.field_d[5] = ll.a(sl.a((int) param0, 96), var2);
+            k.field_d[5] = ll.a(sl.a(96, 96), var2);
             break L313;
           }
         }
@@ -2850,7 +2850,7 @@ final class bl {
           if (null == var2) {
             break L314;
           } else {
-            o.field_a[0] = ll.a(sl.a((int) param0, 96), var2);
+            o.field_a[0] = ll.a(sl.a(96, 96), var2);
             break L314;
           }
         }
@@ -2886,7 +2886,7 @@ final class bl {
           if (var2 == null) {
             break L318;
           } else {
-            o.field_a[4] = ll.a(param0 + -96, var2);
+            o.field_a[4] = ll.a(0, var2);
             break L318;
           }
         }
@@ -2940,7 +2940,7 @@ final class bl {
           if (var2 == null) {
             break L324;
           } else {
-            vb.field_f[4] = ll.a(sl.a((int) param0, 96), var2);
+            vb.field_f[4] = ll.a(sl.a(96, 96), var2);
             break L324;
           }
         }
@@ -3021,7 +3021,7 @@ final class bl {
           if (null == var2) {
             break L333;
           } else {
-            vb.field_f[13] = ll.a(sl.a((int) param0, 96), var2);
+            vb.field_f[13] = ll.a(sl.a(96, 96), var2);
             break L333;
           }
         }
@@ -3039,7 +3039,7 @@ final class bl {
           if (null == var2) {
             break L335;
           } else {
-            vb.field_f[15] = ll.a(param0 + -96, var2);
+            vb.field_f[15] = ll.a(0, var2);
             break L335;
           }
         }
@@ -3075,7 +3075,7 @@ final class bl {
           if (var2 == null) {
             break L339;
           } else {
-            r.field_kb = ll.a(param0 + -96, var2);
+            r.field_kb = ll.a(0, var2);
             break L339;
           }
         }
@@ -3100,7 +3100,7 @@ final class bl {
         L342: {
           var2 = il.a((byte) 114, "sergeant");
           if (null != var2) {
-            wj.field_d = ll.a(param0 ^ 96, var2);
+            wj.field_d = ll.a(0, var2);
             break L342;
           } else {
             break L342;
@@ -3109,7 +3109,7 @@ final class bl {
         L343: {
           var2 = il.a((byte) 86, "captain");
           if (null != var2) {
-            cf.field_c = ll.a(param0 ^ 96, var2);
+            cf.field_c = ll.a(0, var2);
             break L343;
           } else {
             break L343;
@@ -3118,7 +3118,7 @@ final class bl {
         L344: {
           var2 = il.a((byte) 82, "benefits_in,0");
           if (null != var2) {
-            dc.field_e[0] = ll.a(sl.a((int) param0, 96), var2);
+            dc.field_e[0] = ll.a(sl.a(96, 96), var2);
             break L344;
           } else {
             break L344;
@@ -3127,7 +3127,7 @@ final class bl {
         L345: {
           var2 = il.a((byte) 105, "benefits_in,1");
           if (var2 != null) {
-            dc.field_e[1] = ll.a(param0 + -96, var2);
+            dc.field_e[1] = ll.a(0, var2);
             break L345;
           } else {
             break L345;
@@ -3201,7 +3201,7 @@ final class bl {
           if (null == var2) {
             break L353;
           } else {
-            cc.field_l = ll.a(param0 ^ 96, var2);
+            cc.field_l = ll.a(0, var2);
             break L353;
           }
         }
@@ -3228,14 +3228,14 @@ final class bl {
           if (var2 == null) {
             break L356;
           } else {
-            ee.field_N = ll.a(param0 ^ 96, var2);
+            ee.field_N = ll.a(0, var2);
             break L356;
           }
         }
         L357: {
           var2 = il.a((byte) 118, "_5000pts");
           if (null != var2) {
-            fh.field_l = ll.a(param0 ^ 96, var2);
+            fh.field_l = ll.a(0, var2);
             break L357;
           } else {
             break L357;
@@ -3262,7 +3262,7 @@ final class bl {
         L360: {
           var2 = il.a((byte) 76, "_25000pts");
           if (var2 != null) {
-            bj.field_a = ll.a(param0 + -96, var2);
+            bj.field_a = ll.a(0, var2);
             break L360;
           } else {
             break L360;
@@ -3372,7 +3372,7 @@ final class bl {
           if (var2 == null) {
             break L372;
           } else {
-            qe.field_j = ll.a(param0 + -96, var2);
+            qe.field_j = ll.a(0, var2);
             break L372;
           }
         }
@@ -3487,7 +3487,7 @@ final class bl {
         L385: {
           var2 = il.a((byte) 92, "MODELNAME_PULGUN");
           if (null != var2) {
-            ij.field_c = ll.a(param0 + -96, var2);
+            ij.field_c = ll.a(0, var2);
             break L385;
           } else {
             break L385;
@@ -3496,7 +3496,7 @@ final class bl {
         L386: {
           var2 = il.a((byte) 95, "MODELNAME_PULGREN");
           if (null != var2) {
-            bb.field_h = ll.a(param0 ^ 96, var2);
+            bb.field_h = ll.a(0, var2);
             break L386;
           } else {
             break L386;
@@ -3532,7 +3532,7 @@ final class bl {
         L390: {
           var2 = il.a((byte) 81, "MODELNAME_FUSCAN");
           if (var2 != null) {
-            wl.field_y = ll.a(param0 ^ 96, var2);
+            wl.field_y = ll.a(0, var2);
             break L390;
           } else {
             break L390;
@@ -3559,7 +3559,7 @@ final class bl {
         L393: {
           var2 = il.a((byte) 74, "MODELNAME_SHIELD");
           if (null != var2) {
-            kd.field_a = ll.a(param0 + -96, var2);
+            kd.field_a = ll.a(0, var2);
             break L393;
           } else {
             break L393;
@@ -3586,7 +3586,7 @@ final class bl {
         L396: {
           var2 = il.a((byte) 89, "mission_no");
           if (null != var2) {
-            kh.field_L = ll.a(param0 ^ 96, var2);
+            kh.field_L = ll.a(0, var2);
             break L396;
           } else {
             break L396;
@@ -3703,7 +3703,7 @@ final class bl {
         L409: {
           var2 = il.a((byte) 113, "missionnames,12");
           if (var2 != null) {
-            p.field_f[12] = ll.a(sl.a((int) param0, 96), var2);
+            p.field_f[12] = ll.a(sl.a(96, 96), var2);
             break L409;
           } else {
             break L409;
@@ -3723,7 +3723,7 @@ final class bl {
           if (null == var2) {
             break L411;
           } else {
-            p.field_f[14] = ll.a(sl.a((int) param0, 96), var2);
+            p.field_f[14] = ll.a(sl.a(96, 96), var2);
             break L411;
           }
         }
@@ -3739,7 +3739,7 @@ final class bl {
         L413: {
           var2 = il.a((byte) 88, "boofailed");
           if (null != var2) {
-            sk.field_a = ll.a(param0 + -96, var2);
+            sk.field_a = ll.a(0, var2);
             break L413;
           } else {
             break L413;
@@ -3750,7 +3750,7 @@ final class bl {
           if (var2 == null) {
             break L414;
           } else {
-            pe.field_c[0] = ll.a(param0 + -96, var2);
+            pe.field_c[0] = ll.a(0, var2);
             break L414;
           }
         }
@@ -3795,7 +3795,7 @@ final class bl {
           if (var2 == null) {
             break L419;
           } else {
-            pe.field_c[5] = ll.a(sl.a((int) param0, 96), var2);
+            pe.field_c[5] = ll.a(sl.a(96, 96), var2);
             break L419;
           }
         }
@@ -3840,7 +3840,7 @@ final class bl {
           if (var2 == null) {
             break L424;
           } else {
-            pe.field_c[10] = ll.a(param0 + -96, var2);
+            pe.field_c[10] = ll.a(0, var2);
             break L424;
           }
         }
@@ -3867,7 +3867,7 @@ final class bl {
           if (var2 == null) {
             break L427;
           } else {
-            pe.field_c[13] = ll.a(param0 + -96, var2);
+            pe.field_c[13] = ll.a(0, var2);
             break L427;
           }
         }
@@ -3901,7 +3901,7 @@ final class bl {
         L431: {
           var2 = il.a((byte) 74, "debriefstrings,17");
           if (null != var2) {
-            pe.field_c[17] = ll.a(param0 + -96, var2);
+            pe.field_c[17] = ll.a(0, var2);
             break L431;
           } else {
             break L431;
@@ -3928,7 +3928,7 @@ final class bl {
         L434: {
           var2 = il.a((byte) 114, "debriefstrings,20");
           if (null != var2) {
-            pe.field_c[20] = ll.a(sl.a((int) param0, 96), var2);
+            pe.field_c[20] = ll.a(sl.a(96, 96), var2);
             break L434;
           } else {
             break L434;
@@ -3964,7 +3964,7 @@ final class bl {
         L438: {
           var2 = il.a((byte) 85, "debriefstrings,24");
           if (null != var2) {
-            pe.field_c[24] = ll.a(param0 + -96, var2);
+            pe.field_c[24] = ll.a(0, var2);
             break L438;
           } else {
             break L438;
@@ -3993,7 +3993,7 @@ final class bl {
           if (null == var2) {
             break L441;
           } else {
-            pe.field_c[27] = ll.a(param0 + -96, var2);
+            pe.field_c[27] = ll.a(0, var2);
             break L441;
           }
         }
@@ -4065,7 +4065,7 @@ final class bl {
           if (var2 == null) {
             break L449;
           } else {
-            ic.field_x[6] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[6] = ll.a(sl.a(96, 96), var2);
             break L449;
           }
         }
@@ -4117,7 +4117,7 @@ final class bl {
         L455: {
           var2 = il.a((byte) 92, "briefstrings,12");
           if (null != var2) {
-            ic.field_x[12] = ll.a(param0 + -96, var2);
+            ic.field_x[12] = ll.a(0, var2);
             break L455;
           } else {
             break L455;
@@ -4155,7 +4155,7 @@ final class bl {
           if (var2 == null) {
             break L459;
           } else {
-            ic.field_x[16] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[16] = ll.a(sl.a(96, 96), var2);
             break L459;
           }
         }
@@ -4164,7 +4164,7 @@ final class bl {
           if (var2 == null) {
             break L460;
           } else {
-            ic.field_x[17] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[17] = ll.a(sl.a(96, 96), var2);
             break L460;
           }
         }
@@ -4189,7 +4189,7 @@ final class bl {
         L463: {
           var2 = il.a((byte) 109, "briefstrings,20");
           if (var2 != null) {
-            ic.field_x[20] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[20] = ll.a(sl.a(96, 96), var2);
             break L463;
           } else {
             break L463;
@@ -4234,7 +4234,7 @@ final class bl {
         L468: {
           var2 = il.a((byte) 99, "briefstrings,25");
           if (null != var2) {
-            ic.field_x[25] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[25] = ll.a(sl.a(96, 96), var2);
             break L468;
           } else {
             break L468;
@@ -4245,7 +4245,7 @@ final class bl {
           if (var2 == null) {
             break L469;
           } else {
-            ic.field_x[26] = ll.a(param0 + -96, var2);
+            ic.field_x[26] = ll.a(0, var2);
             break L469;
           }
         }
@@ -4290,7 +4290,7 @@ final class bl {
           if (null == var2) {
             break L474;
           } else {
-            ic.field_x[31] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[31] = ll.a(sl.a(96, 96), var2);
             break L474;
           }
         }
@@ -4306,7 +4306,7 @@ final class bl {
         L476: {
           var2 = il.a((byte) 93, "briefstrings,33");
           if (null != var2) {
-            ic.field_x[33] = ll.a(param0 + -96, var2);
+            ic.field_x[33] = ll.a(0, var2);
             break L476;
           } else {
             break L476;
@@ -4342,7 +4342,7 @@ final class bl {
         L480: {
           var2 = il.a((byte) 82, "briefstrings,37");
           if (var2 != null) {
-            ic.field_x[37] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[37] = ll.a(sl.a(96, 96), var2);
             break L480;
           } else {
             break L480;
@@ -4353,7 +4353,7 @@ final class bl {
           if (null == var2) {
             break L481;
           } else {
-            ic.field_x[38] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[38] = ll.a(sl.a(96, 96), var2);
             break L481;
           }
         }
@@ -4371,7 +4371,7 @@ final class bl {
           if (var2 == null) {
             break L483;
           } else {
-            ic.field_x[40] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[40] = ll.a(sl.a(96, 96), var2);
             break L483;
           }
         }
@@ -4389,7 +4389,7 @@ final class bl {
           if (null == var2) {
             break L485;
           } else {
-            ic.field_x[42] = ll.a(param0 + -96, var2);
+            ic.field_x[42] = ll.a(0, var2);
             break L485;
           }
         }
@@ -4405,7 +4405,7 @@ final class bl {
         L487: {
           var2 = il.a((byte) 72, "briefstrings,44");
           if (var2 != null) {
-            ic.field_x[44] = ll.a(param0 + -96, var2);
+            ic.field_x[44] = ll.a(0, var2);
             break L487;
           } else {
             break L487;
@@ -4432,7 +4432,7 @@ final class bl {
         L490: {
           var2 = il.a((byte) 81, "briefstrings,47");
           if (null != var2) {
-            ic.field_x[47] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[47] = ll.a(sl.a(96, 96), var2);
             break L490;
           } else {
             break L490;
@@ -4441,7 +4441,7 @@ final class bl {
         L491: {
           var2 = il.a((byte) 85, "briefstrings,48");
           if (null != var2) {
-            ic.field_x[48] = ll.a(param0 + -96, var2);
+            ic.field_x[48] = ll.a(0, var2);
             break L491;
           } else {
             break L491;
@@ -4486,7 +4486,7 @@ final class bl {
         L496: {
           var2 = il.a((byte) 102, "briefstrings,53");
           if (null != var2) {
-            ic.field_x[53] = ll.a(param0 + -96, var2);
+            ic.field_x[53] = ll.a(0, var2);
             break L496;
           } else {
             break L496;
@@ -4495,7 +4495,7 @@ final class bl {
         L497: {
           var2 = il.a((byte) 81, "briefstrings,54");
           if (var2 != null) {
-            ic.field_x[54] = ll.a(param0 + -96, var2);
+            ic.field_x[54] = ll.a(0, var2);
             break L497;
           } else {
             break L497;
@@ -4524,7 +4524,7 @@ final class bl {
           if (var2 == null) {
             break L500;
           } else {
-            ic.field_x[57] = ll.a(param0 + -96, var2);
+            ic.field_x[57] = ll.a(0, var2);
             break L500;
           }
         }
@@ -4549,7 +4549,7 @@ final class bl {
         L503: {
           var2 = il.a((byte) 94, "briefstrings,60");
           if (null != var2) {
-            ic.field_x[60] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[60] = ll.a(sl.a(96, 96), var2);
             break L503;
           } else {
             break L503;
@@ -4621,7 +4621,7 @@ final class bl {
         L511: {
           var2 = il.a((byte) 105, "briefstrings,68");
           if (var2 != null) {
-            ic.field_x[68] = ll.a(param0 + -96, var2);
+            ic.field_x[68] = ll.a(0, var2);
             break L511;
           } else {
             break L511;
@@ -4650,7 +4650,7 @@ final class bl {
           if (null == var2) {
             break L514;
           } else {
-            ic.field_x[71] = ll.a(param0 + -96, var2);
+            ic.field_x[71] = ll.a(0, var2);
             break L514;
           }
         }
@@ -4675,7 +4675,7 @@ final class bl {
         L517: {
           var2 = il.a((byte) 106, "briefstrings,74");
           if (null != var2) {
-            ic.field_x[74] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[74] = ll.a(sl.a(96, 96), var2);
             break L517;
           } else {
             break L517;
@@ -4686,7 +4686,7 @@ final class bl {
           if (null == var2) {
             break L518;
           } else {
-            ic.field_x[75] = ll.a(sl.a((int) param0, 96), var2);
+            ic.field_x[75] = ll.a(sl.a(96, 96), var2);
             break L518;
           }
         }
@@ -4695,7 +4695,7 @@ final class bl {
           if (null == var2) {
             break L519;
           } else {
-            ic.field_x[76] = ll.a(param0 + -96, var2);
+            ic.field_x[76] = ll.a(0, var2);
             break L519;
           }
         }
@@ -4776,7 +4776,7 @@ final class bl {
           if (var2 == null) {
             break L528;
           } else {
-            sb.field_n = ll.a(param0 + -96, var2);
+            sb.field_n = ll.a(0, var2);
             break L528;
           }
         }
@@ -4846,7 +4846,7 @@ final class bl {
         L536: {
           var2 = il.a((byte) 123, "abortmission");
           if (var2 != null) {
-            je.field_b = ll.a(param0 ^ 96, var2);
+            je.field_b = ll.a(0, var2);
             break L536;
           } else {
             break L536;
@@ -4855,7 +4855,7 @@ final class bl {
         L537: {
           var2 = il.a((byte) 106, "nohighscores");
           if (var2 != null) {
-            ie.field_a = ll.a(param0 + -96, var2);
+            ie.field_a = ll.a(0, var2);
             break L537;
           } else {
             break L537;
@@ -4864,7 +4864,7 @@ final class bl {
         L538: {
           var2 = il.a((byte) 102, "finalscore");
           if (var2 != null) {
-            jb.field_c = ll.a(param0 ^ 96, var2);
+            jb.field_c = ll.a(0, var2);
             break L538;
           } else {
             break L538;
@@ -4938,7 +4938,7 @@ final class bl {
           if (var2 == null) {
             break L546;
           } else {
-            od.field_f = ll.a(param0 + -96, var2);
+            od.field_f = ll.a(0, var2);
             break L546;
           }
         }
@@ -4954,7 +4954,7 @@ final class bl {
         L548: {
           var2 = il.a((byte) 98, "act3");
           if (null != var2) {
-            jh.field_h = ll.a(param0 ^ 96, var2);
+            jh.field_h = ll.a(0, var2);
             break L548;
           } else {
             break L548;
@@ -4965,7 +4965,7 @@ final class bl {
           if (null == var2) {
             break L549;
           } else {
-            bh.field_b = ll.a(param0 ^ 96, var2);
+            bh.field_b = ll.a(0, var2);
             break L549;
           }
         }
@@ -5091,7 +5091,7 @@ final class bl {
           if (null == var2) {
             break L563;
           } else {
-            jh.field_l[10] = ll.a(param0 + -96, var2);
+            jh.field_l[10] = ll.a(0, var2);
             break L563;
           }
         }
@@ -5154,7 +5154,7 @@ final class bl {
           if (var2 == null) {
             break L570;
           } else {
-            jh.field_l[17] = ll.a(param0 + -96, var2);
+            jh.field_l[17] = ll.a(0, var2);
             break L570;
           }
         }
@@ -5199,7 +5199,7 @@ final class bl {
           if (null == var2) {
             break L575;
           } else {
-            kk.field_b[0] = ll.a(sl.a((int) param0, 96), var2);
+            kk.field_b[0] = ll.a(sl.a(96, 96), var2);
             break L575;
           }
         }
@@ -5233,7 +5233,7 @@ final class bl {
         L579: {
           var2 = il.a((byte) 79, "shortmissiontext,4");
           if (null != var2) {
-            kk.field_b[4] = ll.a(sl.a((int) param0, 96), var2);
+            kk.field_b[4] = ll.a(sl.a(96, 96), var2);
             break L579;
           } else {
             break L579;
@@ -5514,7 +5514,7 @@ final class bl {
           if (null == var2) {
             break L610;
           } else {
-            kl.field_d[1] = ll.a(param0 + -96, var2);
+            kl.field_d[1] = ll.a(0, var2);
             break L610;
           }
         }
@@ -5557,7 +5557,7 @@ final class bl {
         L615: {
           var2 = il.a((byte) 94, "tutorialtext,6");
           if (null != var2) {
-            kl.field_d[6] = ll.a(param0 + -96, var2);
+            kl.field_d[6] = ll.a(0, var2);
             break L615;
           } else {
             break L615;
@@ -5577,7 +5577,7 @@ final class bl {
           if (var2 == null) {
             break L617;
           } else {
-            kl.field_d[8] = ll.a(param0 + -96, var2);
+            kl.field_d[8] = ll.a(0, var2);
             break L617;
           }
         }
@@ -5620,7 +5620,7 @@ final class bl {
         L622: {
           var2 = il.a((byte) 72, "tutorialtext,13");
           if (null != var2) {
-            kl.field_d[13] = ll.a(param0 + -96, var2);
+            kl.field_d[13] = ll.a(0, var2);
             break L622;
           } else {
             break L622;
@@ -5647,7 +5647,7 @@ final class bl {
         L625: {
           var2 = il.a((byte) 100, "tutorialtext,16");
           if (var2 != null) {
-            kl.field_d[16] = ll.a(param0 + -96, var2);
+            kl.field_d[16] = ll.a(0, var2);
             break L625;
           } else {
             break L625;
@@ -5676,7 +5676,7 @@ final class bl {
           if (null == var2) {
             break L628;
           } else {
-            kl.field_d[19] = ll.a(sl.a((int) param0, 96), var2);
+            kl.field_d[19] = ll.a(sl.a(96, 96), var2);
             break L628;
           }
         }
@@ -5746,7 +5746,7 @@ final class bl {
         L636: {
           var2 = il.a((byte) 114, "tutorialtext,27");
           if (var2 != null) {
-            kl.field_d[27] = ll.a(sl.a((int) param0, 96), var2);
+            kl.field_d[27] = ll.a(sl.a(96, 96), var2);
             break L636;
           } else {
             break L636;
@@ -5791,7 +5791,7 @@ final class bl {
         L641: {
           var2 = il.a((byte) 111, "tutorialtext,32");
           if (null != var2) {
-            kl.field_d[32] = ll.a(param0 + -96, var2);
+            kl.field_d[32] = ll.a(0, var2);
             break L641;
           } else {
             break L641;
@@ -5838,14 +5838,14 @@ final class bl {
           if (null == var2) {
             break L646;
           } else {
-            kl.field_d[37] = ll.a(param0 + -96, var2);
+            kl.field_d[37] = ll.a(0, var2);
             break L646;
           }
         }
         L647: {
           var2 = il.a((byte) 105, "tutorialtext,38");
           if (null != var2) {
-            kl.field_d[38] = ll.a(sl.a((int) param0, 96), var2);
+            kl.field_d[38] = ll.a(sl.a(96, 96), var2);
             break L647;
           } else {
             break L647;
@@ -5856,7 +5856,7 @@ final class bl {
           if (var2 == null) {
             break L648;
           } else {
-            kl.field_d[39] = ll.a(sl.a((int) param0, 96), var2);
+            kl.field_d[39] = ll.a(sl.a(96, 96), var2);
             break L648;
           }
         }
@@ -5874,7 +5874,7 @@ final class bl {
           if (null == var2) {
             break L650;
           } else {
-            kl.field_d[41] = ll.a(param0 + -96, var2);
+            kl.field_d[41] = ll.a(0, var2);
             break L650;
           }
         }
@@ -5955,14 +5955,14 @@ final class bl {
           if (null == var2) {
             break L659;
           } else {
-            kl.field_d[50] = ll.a(param0 + -96, var2);
+            kl.field_d[50] = ll.a(0, var2);
             break L659;
           }
         }
         L660: {
           var2 = il.a((byte) 72, "tutorialtext,51");
           if (var2 != null) {
-            kl.field_d[51] = ll.a(param0 + -96, var2);
+            kl.field_d[51] = ll.a(0, var2);
             break L660;
           } else {
             break L660;
@@ -6000,7 +6000,7 @@ final class bl {
           if (var2 == null) {
             break L664;
           } else {
-            kl.field_d[55] = ll.a(sl.a((int) param0, 96), var2);
+            kl.field_d[55] = ll.a(sl.a(96, 96), var2);
             break L664;
           }
         }
@@ -6018,7 +6018,7 @@ final class bl {
           if (null == var2) {
             break L666;
           } else {
-            kl.field_d[57] = ll.a(param0 + -96, var2);
+            kl.field_d[57] = ll.a(0, var2);
             break L666;
           }
         }
@@ -6061,7 +6061,7 @@ final class bl {
         L671: {
           var2 = il.a((byte) 121, "tutorialtext,62");
           if (null != var2) {
-            kl.field_d[62] = ll.a(param0 + -96, var2);
+            kl.field_d[62] = ll.a(0, var2);
             break L671;
           } else {
             break L671;
@@ -6077,11 +6077,11 @@ final class bl {
           }
         }
         L673: {
-          var2 = il.a(param0, "tutorialtext,64");
+          var2 = il.a((byte) 96, "tutorialtext,64");
           if (var2 == null) {
             break L673;
           } else {
-            kl.field_d[64] = ll.a(param0 + -96, var2);
+            kl.field_d[64] = ll.a(0, var2);
             break L673;
           }
         }
@@ -6126,7 +6126,7 @@ final class bl {
           if (null == var2) {
             break L678;
           } else {
-            kl.field_d[69] = ll.a(param0 + -96, var2);
+            kl.field_d[69] = ll.a(0, var2);
             break L678;
           }
         }
@@ -6153,7 +6153,7 @@ final class bl {
           if (var2 == null) {
             break L681;
           } else {
-            kl.field_d[72] = ll.a(param0 + -96, var2);
+            kl.field_d[72] = ll.a(0, var2);
             break L681;
           }
         }
@@ -6169,7 +6169,7 @@ final class bl {
         L683: {
           var2 = il.a((byte) 118, "tutorialtext,74");
           if (null != var2) {
-            kl.field_d[74] = ll.a(sl.a((int) param0, 96), var2);
+            kl.field_d[74] = ll.a(sl.a(96, 96), var2);
             break L683;
           } else {
             break L683;
@@ -6243,7 +6243,7 @@ final class bl {
           if (null == var2) {
             break L691;
           } else {
-            kl.field_d[82] = ll.a(sl.a((int) param0, 96), var2);
+            kl.field_d[82] = ll.a(sl.a(96, 96), var2);
             break L691;
           }
         }
@@ -6270,7 +6270,7 @@ final class bl {
           if (null == var2) {
             break L694;
           } else {
-            kl.field_d[85] = ll.a(sl.a((int) param0, 96), var2);
+            kl.field_d[85] = ll.a(sl.a(96, 96), var2);
             break L694;
           }
         }
@@ -6306,7 +6306,7 @@ final class bl {
           if (null == var2) {
             break L698;
           } else {
-            re.field_h[2] = ll.a(sl.a((int) param0, 96), var2);
+            re.field_h[2] = ll.a(sl.a(96, 96), var2);
             break L698;
           }
         }
@@ -6422,18 +6422,22 @@ final class bl {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_g = null;
             field_c = null;
             field_d = null;
             field_b = null;
             field_a = null;
-            if (param0) {
-                field_a = null;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "bl.B(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var1, "bl.B(" + 0 + 41);
         }
     }
 

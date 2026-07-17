@@ -12,7 +12,7 @@ final class hd {
     static int[][] field_f;
     static ka field_b;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -231,7 +231,7 @@ final class hd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_a = null;
@@ -727,7 +727,7 @@ final class hd {
         this(-1, 1000000, 1000000);
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         int var1 = 0;
         return cj.field_d;
     }
@@ -742,14 +742,11 @@ final class hd {
         vf.field_d = param7;
         wb.field_d = param4;
         gb.field_d = (vb) (Object) new fl();
-        if (param0 != 7) {
-            return;
-        }
         try {
             gi.field_a = new rb(param8);
             wf.field_i = new oa(gb.field_d, gi.field_a);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hd.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "hd.E(" + 7 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -7,7 +7,7 @@ final class a {
     private static int field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }
@@ -50,7 +50,8 @@ final class a {
                     break L2;
                   }
                 }
-                jf.a(param1, (byte) 38);
+                int discarded$2 = 38;
+                jf.a(param1);
                 param1.a();
                 stackOut_6_0 = (eg) param1;
                 stackIn_7_0 = stackOut_6_0;

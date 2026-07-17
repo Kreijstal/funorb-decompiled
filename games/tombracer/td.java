@@ -11,7 +11,7 @@ final class td extends vpa {
     static String field_q;
     static String field_u;
 
-    final static void b(byte param0) {
+    final static void b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

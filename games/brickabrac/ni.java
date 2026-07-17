@@ -102,50 +102,42 @@ final class ni extends mh {
     }
 
     final static boolean b(boolean param0, char param1) {
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         L0: {
-          if (param0) {
-            break L0;
-          } else {
-            field_Pb = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            L3: {
+          L1: {
+            L2: {
               if (param1 < 65) {
-                break L3;
+                break L2;
               } else {
                 if (90 >= param1) {
-                  break L2;
+                  break L1;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             }
-            L4: {
+            L3: {
               if (param1 < 97) {
-                break L4;
+                break L3;
               } else {
                 if (122 < param1) {
-                  break L4;
+                  break L3;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
-            break L1;
+            stackOut_7_0 = 0;
+            stackIn_8_0 = stackOut_7_0;
+            break L0;
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
-          break L1;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L0;
         }
-        return stackIn_10_0 != 0;
+        return stackIn_8_0 != 0;
     }
 
     ni(long param0, jp param1, jp param2, int param3, mh param4, String param5) {
@@ -173,7 +165,7 @@ final class ni extends mh {
         }
     }
 
-    final static ra h(int param0) {
+    final static ra h() {
         return ob.field_J;
     }
 
@@ -203,9 +195,6 @@ final class ni extends mh {
     private final void b(int param0, int param1) {
         ((ni) this).field_Vb.a(((ni) this).field_cb, 0, 0, ((ni) this).field_Vb.g(118), (byte) 64);
         int var3 = ((ni) this).field_Vb.field_Ib - -param1;
-        if (param0 != -32434) {
-            field_Ub = null;
-        }
         ((ni) this).field_Qb.a(((ni) this).field_cb, 0, var3, ((ni) this).field_Ib + -var3, (byte) 64);
     }
 

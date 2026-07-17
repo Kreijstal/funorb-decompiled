@@ -7,7 +7,7 @@ final class p {
     static int[] field_d;
     static String field_c;
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -258,7 +258,6 @@ final class p {
         RuntimeException var4 = null;
         String[] var4_array = null;
         int var5 = 0;
-        Object var6 = null;
         int stackIn_10_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
@@ -302,55 +301,53 @@ final class p {
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
-            if (param1 >= 95) {
-              L1: {
-                ed.field_c = f.field_i;
-                if (255 == param2) {
-                  L2: {
-                    stackOut_9_0 = -89;
-                    stackIn_11_0 = stackOut_9_0;
-                    stackIn_10_0 = stackOut_9_0;
-                    if (dd.field_d >= 13) {
-                      stackOut_11_0 = stackIn_11_0;
-                      stackOut_11_1 = 0;
-                      stackIn_12_0 = stackOut_11_0;
-                      stackIn_12_1 = stackOut_11_1;
-                      break L2;
-                    } else {
-                      stackOut_10_0 = stackIn_10_0;
-                      stackOut_10_1 = 1;
-                      stackIn_12_0 = stackOut_10_0;
-                      stackIn_12_1 = stackOut_10_1;
-                      break L2;
-                    }
+            L1: {
+              ed.field_c = f.field_i;
+              if (255 == param2) {
+                L2: {
+                  stackOut_9_0 = -89;
+                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_10_0 = stackOut_9_0;
+                  if (dd.field_d >= 13) {
+                    stackOut_11_0 = stackIn_11_0;
+                    stackOut_11_1 = 0;
+                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_1 = stackOut_11_1;
+                    break L2;
+                  } else {
+                    stackOut_10_0 = stackIn_10_0;
+                    stackOut_10_1 = 1;
+                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_1 = stackOut_10_1;
+                    break L2;
                   }
-                  w.field_c = hj.a((byte) stackIn_12_0, stackIn_12_1 != 0);
-                  var6 = null;
-                  wh.a((String[]) null, true);
-                  break L1;
-                } else {
-                  L3: {
-                    if (param2 < 100) {
-                      break L3;
-                    } else {
-                      if (105 >= param2) {
-                        var4_array = param3;
-                        wh.a(var4_array, true);
-                        w.field_c = jj.a(param3, true);
-                        break L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  w.field_c = lh.a(true, param0, param2);
-                  break L1;
                 }
+                w.field_c = hj.a((byte) stackIn_12_0, stackIn_12_1 != 0);
+                int discarded$3 = 1;
+                wh.a((String[]) null);
+                break L1;
+              } else {
+                L3: {
+                  if (param2 < 100) {
+                    break L3;
+                  } else {
+                    if (105 >= param2) {
+                      var4_array = param3;
+                      int discarded$4 = 1;
+                      wh.a(var4_array);
+                      int discarded$5 = 1;
+                      w.field_c = jj.a(param3);
+                      break L1;
+                    } else {
+                      break L3;
+                    }
+                  }
+                }
+                w.field_c = lh.a(true, param0, param2);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -382,7 +379,7 @@ final class p {
           }
           L5: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(121).append(44).append(param2).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -409,7 +406,7 @@ final class p {
         }
     }
 
-    final static Object a(byte[] param0, byte param1, boolean param2) {
+    final static Object a(byte[] param0, byte param1) {
         ab var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;

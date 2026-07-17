@@ -38,7 +38,7 @@ final class l {
     int field_E;
     int[] field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_D = null;
     }
 

@@ -10,7 +10,7 @@ abstract class mo {
     static String field_a;
     int field_e;
 
-    private final void a(mo param0, int param1) {
+    private final void a(mo param0) {
         try {
             ((mo) this).field_e = param0.field_e;
             ((mo) this).field_b = param0.field_b;
@@ -146,13 +146,14 @@ abstract class mo {
             if (param1) {
                 ((mo) this).field_c = -29;
             }
-            this.a(param0, 0);
+            int discarded$0 = 0;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "mo.WA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
-    final static ut b(int param0) {
+    final static ut b() {
         int var4_int = 0;
         int var5 = Kickabout.field_G;
         int var1 = ku.field_c[0] * lo.field_j[0];
@@ -161,7 +162,7 @@ abstract class mo {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = lt.field_a[qj.b(255, (int) var2[var4_int])];
         }
-        ut var4 = new ut(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[param0], ku.field_c[0], lo.field_j[0], var3);
+        ut var4 = new ut(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var3);
         tk.h((byte) -81);
         return var4;
     }
@@ -179,7 +180,7 @@ abstract class mo {
         }
     }
 
-    final static void a(ml param0, int param1) {
+    final static void a(ml param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -552,14 +553,15 @@ abstract class mo {
                       } else {
                         L5: {
                           var7 = param1.charAt(var6);
-                          if (!ws.a((char) var7, (byte) 121)) {
+                          int discarded$2 = 121;
+                          if (!ws.a((char) var7)) {
                             break L5;
                           } else {
                             var8 = vf.a((byte) -67, (char) var7);
                             if (var8 == 0) {
                               break L5;
                             } else {
-                              StringBuilder discarded$1 = var5.append(var8);
+                              StringBuilder discarded$3 = var5.append(var8);
                               break L5;
                             }
                           }
@@ -659,7 +661,8 @@ abstract class mo {
             }
             L2: {
               ((mo) this).field_b = -hq.a(22531, 6, param0, 0) + 64;
-              if (!mu.a(param0, (byte) -39)) {
+              int discarded$6 = -39;
+              if (!mu.a(param0)) {
                 break L2;
               } else {
                 ((mo) this).field_e = param0.l(4, param1 + 55) - 1;

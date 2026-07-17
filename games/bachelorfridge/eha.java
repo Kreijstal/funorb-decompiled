@@ -9,7 +9,7 @@ final class eha extends td {
     static String field_p;
     static int[] field_q;
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -33,7 +33,7 @@ final class eha extends td {
             L1: {
               var11 = ig.field_m;
               var2 = var11.b(16711935);
-              var3 = -49 / ((param0 - -10) / 41);
+              var3 = 49;
               var4 = var11.b(16711935);
               if (var2 == 0) {
                 var5 = (rg) (Object) rp.field_C.b((byte) 90);
@@ -111,7 +111,7 @@ final class eha extends td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "eha.B(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "eha.B(" + -64 + 41);
         }
     }
 
@@ -145,7 +145,8 @@ final class eha extends td {
                     L2: {
                       var5 = param1.getCodeBase();
                       var3 = ow.a(var5, (byte) -105, param1).getFile();
-                      Object discarded$6 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
+                      int discarded$12 = 73;
+                      Object discarded$13 = ac.a(param1, "updatelinks", new Object[2]);
                       if (param0 <= -102) {
                         break L2;
                       } else {
@@ -154,11 +155,16 @@ final class eha extends td {
                         break L2;
                       }
                     }
-                    Object discarded$7 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
-                    Object discarded$8 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
-                    Object discarded$9 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
-                    Object discarded$10 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
-                    Object discarded$11 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
+                    int discarded$14 = 73;
+                    Object discarded$15 = ac.a(param1, "updatelinks", new Object[2]);
+                    int discarded$16 = 73;
+                    Object discarded$17 = ac.a(param1, "updatelinks", new Object[2]);
+                    int discarded$18 = 73;
+                    Object discarded$19 = ac.a(param1, "updatelinks", new Object[2]);
+                    int discarded$20 = 73;
+                    Object discarded$21 = ac.a(param1, "updatelinks", new Object[2]);
+                    int discarded$22 = 73;
+                    Object discarded$23 = ac.a(param1, "updatelinks", new Object[2]);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -219,27 +225,24 @@ final class eha extends td {
 
     final static boolean a(int param0, String param1) {
         RuntimeException var2 = null;
-        Object var3 = null;
         int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
         int stackOut_4_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -252,60 +255,49 @@ final class eha extends td {
                   if (param1.length() > ko.field_e) {
                     break L1;
                   } else {
-                    L2: {
-                      if (param0 == 15) {
-                        break L2;
-                      } else {
-                        var3 = null;
-                        eha.a(13, (java.applet.Applet) null);
-                        break L2;
-                      }
-                    }
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    break L0;
+                    return false;
                   }
                 }
               }
             }
             stackOut_4_0 = 1;
             stackIn_5_0 = stackOut_4_0;
-            return stackIn_5_0 != 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("eha.C(").append(param0).append(44);
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("eha.C(").append(15).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L3;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
-        return stackIn_9_0 != 0;
+        return stackIn_5_0 != 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_s = null;
         field_q = null;
         field_p = null;

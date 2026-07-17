@@ -8,11 +8,11 @@ final class ee extends gg {
     static boolean field_i;
     static gb field_h;
 
-    final static rj e(int param0) {
+    final static rj e() {
         return (rj) (Object) new dk();
     }
 
-    final static void f(int param0) {
+    final static void f() {
         int var1 = 0;
         int var2 = SolKnight.field_L ? 1 : 0;
         ce.field_b = false;
@@ -24,18 +24,21 @@ final class ee extends gg {
             if (var1 <= 0) {
             } else {
                 if (1 != var1) {
-                    v.field_a = bb.a(vc.field_b, new String[1], -63);
+                    int discarded$1 = -63;
+                    v.field_a = bb.a(vc.field_b, new String[1]);
                 } else {
                     v.field_a = bf.field_m;
                 }
-                v.field_a = ci.a(new CharSequence[3], (byte) -93);
+                int discarded$2 = -93;
+                v.field_a = ci.a(new CharSequence[3]);
             }
             ah.field_e.f(true);
-            ql.d(18962);
+            int discarded$3 = 18962;
+            ql.d();
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -218,7 +221,8 @@ final class ee extends gg {
                   }
                 }
                 L12: {
-                  var7 = fa.a(stackIn_41_0, stackIn_41_1 != 0, (byte) 99);
+                  int discarded$1 = 99;
+                  var7 = fa.a(stackIn_41_0, stackIn_41_1 != 0);
                   var8 = sb.field_d + -(var7 >> 1);
                   if (var4 >= 0) {
                     L13: {
@@ -429,7 +433,7 @@ final class ee extends gg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_j = null;
         int var1 = 0;

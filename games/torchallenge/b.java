@@ -29,7 +29,8 @@ abstract class b extends kj {
                   qg.b();
                   ((b) this).c(103, 0, 0);
                   super.a(-param0 + -((b) this).field_i, -((b) this).field_m + -param1, param2, param3);
-                  ie.b((byte) -9);
+                  int discarded$4 = -9;
+                  ie.b();
                   nb.field_a.d(param1 - -((b) this).field_m, ((b) this).field_i + param0, ((b) this).field_P);
                   return;
                 } else {
@@ -37,7 +38,8 @@ abstract class b extends kj {
                   qg.b();
                   ((b) this).c(103, 0, 0);
                   super.a(-param0 + -((b) this).field_i, -((b) this).field_m + -param1, param2, param3);
-                  ie.b((byte) -9);
+                  int discarded$5 = -9;
+                  ie.b();
                   nb.field_a.d(param1 - -((b) this).field_m, ((b) this).field_i + param0, ((b) this).field_P);
                   return;
                 }
@@ -47,7 +49,8 @@ abstract class b extends kj {
                 qg.b();
                 ((b) this).c(103, 0, 0);
                 super.a(-param0 + -((b) this).field_i, -((b) this).field_m + -param1, param2, param3);
-                ie.b((byte) -9);
+                int discarded$6 = -9;
+                ie.b();
                 nb.field_a.d(param1 - -((b) this).field_m, ((b) this).field_i + param0, ((b) this).field_P);
                 return;
               }
@@ -57,7 +60,8 @@ abstract class b extends kj {
               qg.b();
               ((b) this).c(103, 0, 0);
               super.a(-param0 + -((b) this).field_i, -((b) this).field_m + -param1, param2, param3);
-              ie.b((byte) -9);
+              int discarded$7 = -9;
+              ie.b();
               nb.field_a.d(param1 - -((b) this).field_m, ((b) this).field_i + param0, ((b) this).field_P);
               return;
             }
@@ -84,7 +88,7 @@ abstract class b extends kj {
         }
     }
 
-    private final int i(int param0) {
+    private final int i() {
         return !((b) this).field_K ? 0 : this == (Object) (Object) ((b) this).field_L.f((byte) 123) ? 256 : 0;
     }
 
@@ -94,23 +98,14 @@ abstract class b extends kj {
         qg.a(ae.field_y);
         qg.a(var7, param6, var8, param4);
         we.field_e[param1][param2].a(var7, param6);
-        if (param0 < 105) {
-            b.a(-8);
-        } else {
-            qg.b(ae.field_y);
-            return;
-        }
         qg.b(ae.field_y);
     }
 
     abstract void c(int param0, int param1, int param2);
 
-    public static void a(int param0) {
+    public static void a() {
         field_N = null;
         field_R = null;
-        if (param0 != 0) {
-            field_R = null;
-        }
     }
 
     final ee d(byte param0) {
@@ -123,7 +118,8 @@ abstract class b extends kj {
 
     boolean h(int param0) {
         if (param0 >= 83) {
-          ((b) this).field_P = this.i(0);
+          int discarded$6 = 0;
+          ((b) this).field_P = this.i();
           if (((b) this).field_P == 0) {
             if (((b) this).field_K) {
               return false;
@@ -134,8 +130,9 @@ abstract class b extends kj {
             return false;
           }
         } else {
-          boolean discarded$2 = ((b) this).j(-66);
-          ((b) this).field_P = this.i(0);
+          boolean discarded$7 = ((b) this).j(-66);
+          int discarded$8 = 0;
+          ((b) this).field_P = this.i();
           if (((b) this).field_P == 0) {
             if (((b) this).field_K) {
               return false;
@@ -163,7 +160,8 @@ abstract class b extends kj {
         int stackOut_18_0 = 0;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
-        var2 = this.i(0);
+        int discarded$1 = 0;
+        var2 = this.i();
         var3 = var2 - ((b) this).field_P;
         if (var3 <= 0) {
           if (var3 >= 0) {

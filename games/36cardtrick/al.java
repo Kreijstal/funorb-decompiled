@@ -20,18 +20,22 @@ final class al {
                 rk.field_ab = dh.field_g;
                 rk.field_ab = bg.a((byte) 92, new CharSequence[3]);
                 pc.field_a.s(-93);
-                e.a((byte) 112);
+                int discarded$8 = 112;
+                e.a();
                 return;
               } else {
-                rk.field_ab = re.a(nc.field_a, new String[1], (byte) -50);
+                int discarded$9 = -50;
+                rk.field_ab = re.a(nc.field_a, new String[1]);
                 rk.field_ab = bg.a((byte) 92, new CharSequence[3]);
                 pc.field_a.s(-93);
-                e.a((byte) 112);
+                int discarded$10 = 112;
+                e.a();
                 return;
               }
             } else {
               pc.field_a.s(-93);
-              e.a((byte) 112);
+              int discarded$11 = 112;
+              e.a();
               return;
             }
           } else {
@@ -48,18 +52,22 @@ final class al {
                 rk.field_ab = dh.field_g;
                 rk.field_ab = bg.a((byte) 92, new CharSequence[3]);
                 pc.field_a.s(-93);
-                e.a((byte) 112);
+                int discarded$12 = 112;
+                e.a();
                 return;
               } else {
-                rk.field_ab = re.a(nc.field_a, new String[1], (byte) -50);
+                int discarded$13 = -50;
+                rk.field_ab = re.a(nc.field_a, new String[1]);
                 rk.field_ab = bg.a((byte) 92, new CharSequence[3]);
                 pc.field_a.s(-93);
-                e.a((byte) 112);
+                int discarded$14 = 112;
+                e.a();
                 return;
               }
             } else {
               pc.field_a.s(-93);
-              e.a((byte) 112);
+              int discarded$15 = 112;
+              e.a();
               return;
             }
           } else {
@@ -69,7 +77,7 @@ final class al {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }

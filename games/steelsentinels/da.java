@@ -266,18 +266,17 @@ abstract class da {
 
     final static void a(cm param0, int param1, int param2, wg param3) {
         try {
-            if (param1 <= 67) {
-                da.a(true, -102);
-            }
             vc.field_c = param2 * sj.a((byte) -108) / 1000;
-            ea.a(param0, 1728986241);
+            int discarded$0 = 1728986241;
+            ea.a(param0);
             nl.a((byte) 90, param0);
             ah.a(77, param0);
-            lk.a(true);
+            int discarded$1 = 1;
+            lk.a();
             ee.a(true);
             vn.field_h = 0 - vc.field_c;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "da.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "da.I(" + (param0 != null ? "{...}" : "null") + 44 + 73 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -330,7 +329,7 @@ abstract class da {
         return var2;
     }
 
-    final static ah a(String param0, byte param1) {
+    final static ah a(String param0) {
         Object var2 = null;
         ah var3 = null;
         String var4 = null;
@@ -618,9 +617,6 @@ abstract class da {
     }
 
     final static void a(boolean param0, int param1) {
-        if (param1 != 25104) {
-            return;
-        }
         if (jc.a(2)) {
             param0 = false;
         }
@@ -629,10 +625,11 @@ abstract class da {
             pb.f(fg.field_Tb.field_d.field_Y, fg.field_Tb.field_d.field_eb, fg.field_Tb.field_d.field_zb, fg.field_Tb.field_d.field_Lb);
             fg.field_Tb.field_d.a(param0, (byte) 127);
         }
-        il.a(param0, (byte) -125);
+        int discarded$0 = -125;
+        il.a(param0);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_i = null;

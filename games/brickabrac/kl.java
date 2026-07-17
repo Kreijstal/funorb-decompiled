@@ -517,7 +517,7 @@ final class kl extends qd {
           if (param0.field_m.length == 0) {
             return null;
           } else {
-            return new kl(param0, (int)((long)param0.field_l * 256L * (long)param1 / (long)(100 * tj.field_q)), param2 << 6);
+            return new kl(param0, (int)((long)param0.field_l * 256L * 100L / (long)(100 * tj.field_q)), param2 << 6);
           }
         } else {
           return null;
@@ -941,12 +941,12 @@ final class kl extends qd {
         }
     }
 
-    final static kl a(oe param0, int param1, int param2) {
+    final static kl a(oe param0) {
         if (param0.field_m != null) {
           if (param0.field_m.length == 0) {
             return null;
           } else {
-            return new kl(param0, param1, 0);
+            return new kl(param0, 256, 0);
           }
         } else {
           return null;

@@ -12,7 +12,7 @@ final class cj {
     static he field_e;
     static he field_g;
 
-    final static void b(int param0) {
+    final static void b() {
         if (!gf.field_G) {
             throw new IllegalStateException();
         }
@@ -21,7 +21,7 @@ final class cj {
         af.field_b = 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_c = null;
         field_a = null;

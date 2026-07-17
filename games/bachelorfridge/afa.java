@@ -9,7 +9,7 @@ final class afa extends k {
     private int[] field_p;
     private int field_n;
 
-    private final void e(int param0) {
+    private final void e() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -209,7 +209,7 @@ final class afa extends k {
         return ((afa) this).field_o[param0];
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
     }
 
@@ -245,7 +245,7 @@ final class afa extends k {
         return var8;
     }
 
-    final static fe a(lu param0, int param1) {
+    final static fe a(lu param0) {
         RuntimeException var2 = null;
         fe stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -304,7 +304,7 @@ final class afa extends k {
         return stackIn_3_0;
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         int[] var14 = ((afa) this).field_o[0];
         int[] var12 = var14;
         int[] var10 = var12;
@@ -313,9 +313,6 @@ final class afa extends k {
         int[] var2 = var6;
         int[] var13 = ((afa) this).field_o[1];
         int[] var4 = ((afa) this).field_o[-2 + ((afa) this).field_o.length];
-        if (param0) {
-            int[] discarded$0 = ((afa) this).a(126, 19);
-        }
         int[] var5 = ((afa) this).field_o[((afa) this).field_o.length - 1];
         ((afa) this).field_m = new int[]{var4[0] - (var5[0] + -var4[0]), var4[1] - var5[1] + var4[1]};
         ((afa) this).field_p = new int[]{-var13[0] + (var14[0] + var14[0]), var14[1] - (var13[1] - var14[1])};
@@ -418,10 +415,12 @@ final class afa extends k {
             throw new RuntimeException("Curve operation requires at least two markers");
         }
         if (((afa) this).field_n == 2) {
-            this.b(false);
+            int discarded$0 = 0;
+            this.b();
         }
         gea.a(param0 ^ -4293);
-        this.e(0);
+        int discarded$1 = 0;
+        this.e();
     }
 
     static {

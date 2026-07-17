@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ur extends rqa {
-    final static wma a(faa param0, byte param1) {
+    final static wma a(faa param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

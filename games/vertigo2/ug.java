@@ -11,18 +11,9 @@ abstract class ug {
     abstract long a(int param0);
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        if (param0 >= -46) {
-          field_c = null;
-          vm.field_b = param2;
-          t.field_c = param1;
-          vg.field_d = param3;
-          return;
-        } else {
-          vm.field_b = param2;
-          t.field_c = param1;
-          vg.field_d = param3;
-          return;
-        }
+        vm.field_b = 16777215;
+        t.field_c = 16766751;
+        vg.field_d = 16777215;
     }
 
     abstract int a(boolean param0, long param1);
@@ -42,7 +33,7 @@ abstract class ug {
         }
     }
 
-    final static wp a(String param0, byte param1) {
+    final static wp a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -54,29 +45,29 @@ abstract class ug {
         wp stackIn_4_0 = null;
         wp stackIn_7_0 = null;
         wp stackIn_10_0 = null;
-        wp stackIn_17_0 = null;
-        wp stackIn_20_0 = null;
+        wp stackIn_15_0 = null;
+        wp stackIn_18_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         wp stackOut_3_0 = null;
-        wp stackOut_19_0 = null;
-        wp stackOut_16_0 = null;
+        wp stackOut_17_0 = null;
+        wp stackOut_14_0 = null;
         wp stackOut_9_0 = null;
         wp stackOut_6_0 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -89,31 +80,24 @@ abstract class ug {
               if (var2_int <= 255) {
                 var3 = jr.a((byte) -9, '.', param0);
                 if (var3.length >= 2) {
-                  L1: {
-                    var4 = var3;
-                    if (param1 < -45) {
-                      break L1;
-                    } else {
-                      field_a = 17L;
-                      break L1;
-                    }
-                  }
+                  var4 = var3;
                   var5 = 0;
-                  L2: while (true) {
+                  L1: while (true) {
                     if (~var4.length >= ~var5) {
-                      stackOut_19_0 = cr.b(var3[var3.length + -1], 0);
-                      stackIn_20_0 = stackOut_19_0;
+                      stackOut_17_0 = cr.b(var3[var3.length + -1], 0);
+                      stackIn_18_0 = stackOut_17_0;
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      var7 = pe.a(var6, true);
+                      int discarded$2 = 1;
+                      var7 = pe.a(var6);
                       if (var7 == null) {
                         var5++;
-                        continue L2;
+                        continue L1;
                       } else {
-                        stackOut_16_0 = (wp) var7;
-                        stackIn_17_0 = stackOut_16_0;
-                        return stackIn_17_0;
+                        stackOut_14_0 = (wp) var7;
+                        stackIn_15_0 = stackOut_14_0;
+                        return stackIn_15_0;
                       }
                     }
                   }
@@ -131,46 +115,41 @@ abstract class ug {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("ug.B(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_1 = new StringBuilder().append("ug.B(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L3;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L2;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
-              break L3;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -77 + 41);
         }
-        return stackIn_20_0;
+        return stackIn_18_0;
     }
 
     final static r a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
-        Object var6 = null;
-        if (param3) {
-          var6 = null;
-          ug.a(66, -15, -123, 95L, (String) null);
-          return vo.a(false, 124, 1, param0, param1, param2);
-        } else {
-          return vo.a(false, 124, 1, param0, param1, param2);
-        }
+        int discarded$0 = 1;
+        int discarded$1 = 0;
+        return vo.a(false, 124, 1, param0);
     }
 
     public static void c(int param0) {
@@ -180,7 +159,7 @@ abstract class ug {
         }
     }
 
-    final static gd a(ed param0, int param1) {
+    final static gd a(ed param0) {
         RuntimeException var2 = null;
         gd stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

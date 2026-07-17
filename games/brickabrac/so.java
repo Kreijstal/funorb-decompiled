@@ -106,7 +106,7 @@ final class so {
         return (pb) (Object) stackIn_11_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = 0;
         field_d = null;
         field_e = null;
@@ -176,8 +176,10 @@ final class so {
         var15 = var21;
         var13 = var15;
         var5 = var13;
-        var16 = wq.a("basic", param0, "gamefont", param3 + -946744493);
-        sn.a(param3 ^ 29068, var25, 1);
+        int discarded$33 = -946715356;
+        var16 = wq.a("basic", param0, "gamefont");
+        int discarded$34 = 1;
+        sn.a(93, var13);
         ma.field_O = fc.a(0, var25, 0, var16, 0, 1);
         ma.field_O.field_M = bg.field_n;
         nn.field_g = fc.a(2, var25, 0, var16, 0, 1);
@@ -188,12 +190,14 @@ final class so {
         var17 = var22;
         var14 = var17;
         var5 = var14;
-        var18 = wq.a("kartika13", param1, "", -946715356);
+        int discarded$35 = -946715356;
+        var18 = wq.a("kartika13", param1, "");
         ob.field_D = fc.a(0, var26, 0, var18, 0, 1);
         ob.field_D.field_M = bg.field_n;
         ce.field_e = fc.a(1, var26, 0, var18, 0, 1);
         ce.field_e.field_M = bg.field_n;
-        gj.field_c = bd.a("basic", "menu_overlays", param0, (byte) -8);
+        int discarded$36 = -8;
+        gj.field_c = bd.a("basic", "menu_overlays", param0);
         var7_int = 0;
         L0: while (true) {
           if (gj.field_c.length <= var7_int) {
@@ -202,14 +206,15 @@ final class so {
             t.field_d[4] = null;
             var7 = cd.field_h;
             var7[4] = null;
-            jp discarded$4 = pl.a("basic", "frame_bracket", (byte) 106, param0);
+            jp discarded$37 = pl.a("basic", "frame_bracket", (byte) 106, param0);
             af.field_A = kf.a("button_frame", "basic", param0, -91);
             vn.field_G = kf.a("button_raised", "basic", param0, 103);
             pe.field_k = kf.a("button_depressed", "basic", param0, -104);
-            si.field_c = wq.a("basic", param0, "achievements_large", -946715356);
+            int discarded$38 = -946715356;
+            si.field_c = wq.a("basic", param0, "achievements_large");
             vq.field_F = pl.a("basic", "unachieved", (byte) 97, param1);
             pg.field_p = pl.a("basic", "orbcoin", (byte) 122, param1);
-            jp discarded$5 = pl.a("basic", "locked", (byte) -45, param1);
+            jp discarded$39 = pl.a("basic", "locked", (byte) -45, param1);
             nj.field_z = new jp(32, 32);
             nj.field_z.g();
             pg.field_p.c(0, 0, 32, 32);
@@ -235,30 +240,49 @@ final class so {
                   if (lo.field_c.length <= var10_int) {
                     re.field_k = pl.a("basic", "ball", (byte) 121, param0);
                     vn.field_D = pl.a("basic", "steelball", (byte) 98, param0);
-                    h.field_C = wq.a("basic", param0, "brickset", -946715356);
-                    dg.field_b = cr.a("basic", param0, "paddlecaps", param3 + -29135);
-                    qg.field_D = cr.a("basic", param0, "paddleseg", 2);
+                    int discarded$40 = -946715356;
+                    h.field_C = wq.a("basic", param0, "brickset");
+                    int discarded$41 = 2;
+                    dg.field_b = cr.a("basic", param0, "paddlecaps");
+                    int discarded$42 = 2;
+                    qg.field_D = cr.a("basic", param0, "paddleseg");
                     dk.field_R = pl.a("basic", "paddlecentre", (byte) 100, param0);
-                    gg.field_p = cr.a("basic", param0, "powerup", 2);
+                    int discarded$43 = 2;
+                    gg.field_p = cr.a("basic", param0, "powerup");
                     ol.field_r = pl.a("basic", "powerupbar", (byte) 104, param0);
                     ch.field_l = pl.a("basic", "heart", (byte) -108, param0);
-                    kb.field_Ub = cr.a("basic", param0, "characters_fm", 2);
-                    im.field_a = cr.a("basic", param0, "lever_game", param3 + -29135);
-                    nm.field_f = cr.a("basic", param0, "eyes_game", 2);
-                    tf.field_g = cr.a("basic", param0, "track_heads", 2);
-                    ef.field_e = cr.a("basic", param0, "characters_small", 2);
-                    ul.field_k = cr.a("basic", param0, "character_heads", param3 ^ 29139);
-                    cn.field_e = cr.a("basic", param0, "lever_small", 2);
-                    ul.field_r = cr.a("basic", param0, "lever_small_choc", 2);
-                    lp.field_yb = cr.a("basic", param0, "lever_small_space", param3 ^ 29139);
+                    int discarded$44 = 2;
+                    kb.field_Ub = cr.a("basic", param0, "characters_fm");
+                    int discarded$45 = 2;
+                    im.field_a = cr.a("basic", param0, "lever_game");
+                    int discarded$46 = 2;
+                    nm.field_f = cr.a("basic", param0, "eyes_game");
+                    int discarded$47 = 2;
+                    tf.field_g = cr.a("basic", param0, "track_heads");
+                    int discarded$48 = 2;
+                    ef.field_e = cr.a("basic", param0, "characters_small");
+                    int discarded$49 = 2;
+                    ul.field_k = cr.a("basic", param0, "character_heads");
+                    int discarded$50 = 2;
+                    cn.field_e = cr.a("basic", param0, "lever_small");
+                    int discarded$51 = 2;
+                    ul.field_r = cr.a("basic", param0, "lever_small_choc");
+                    int discarded$52 = 2;
+                    lp.field_yb = cr.a("basic", param0, "lever_small_space");
                     qi.field_K = kf.a("frame_bubble", "basic", param0, -105);
                     ap.field_a = pl.a("basic", "frame_bubble_point", (byte) -120, param0);
-                    ln.field_j = bd.a("basic", "rosette_sml", param0, (byte) -8);
-                    hp.field_l = bd.a("basic", "rosette_lrg", param0, (byte) -8);
-                    me.field_a = wq.a("basic", param0, "podium2", -946715356);
-                    pl.field_f = wq.a("basic", param0, "podium3", param3 ^ -946719499);
-                    cl.field_r = cr.a("basic", param0, "podium_happy", 2);
-                    e.field_q = cr.a("basic", param0, "podium_sad", param3 ^ 29139);
+                    int discarded$53 = -8;
+                    ln.field_j = bd.a("basic", "rosette_sml", param0);
+                    int discarded$54 = -8;
+                    hp.field_l = bd.a("basic", "rosette_lrg", param0);
+                    int discarded$55 = -946715356;
+                    me.field_a = wq.a("basic", param0, "podium2");
+                    int discarded$56 = -946715356;
+                    pl.field_f = wq.a("basic", param0, "podium3");
+                    int discarded$57 = 2;
+                    cl.field_r = cr.a("basic", param0, "podium_happy");
+                    int discarded$58 = 2;
+                    e.field_q = cr.a("basic", param0, "podium_sad");
                     qh.field_e = um.a("basic", "congratulations", 1593955777, param0);
                     pa.field_m = new jp[h.field_C.length];
                     var10_int = 0;
@@ -278,43 +302,38 @@ final class so {
                                 var10_int = 0;
                                 L6: while (true) {
                                   if (qg.field_D.length <= var10_int) {
-                                    L7: {
-                                      ep.field_j = new jp(dk.field_R.field_x / 2, dk.field_R.field_z / 2);
-                                      ep.field_j.g();
-                                      dk.field_R.a(0, 0);
-                                      p.field_i = new jp(re.field_k.field_x / 2, re.field_k.field_z / 2);
-                                      p.field_i.g();
-                                      re.field_k.a(0, 0);
-                                      mh.field_ib = new jp(vn.field_D.field_x / 2, vn.field_D.field_z / 2);
-                                      mh.field_ib.g();
-                                      vn.field_D.a(0, 0);
-                                      ch.field_k = new jp[gg.field_p.length];
-                                      if (param3 == 29137) {
-                                        break L7;
-                                      } else {
-                                        int discarded$6 = so.a((byte) -25);
-                                        break L7;
-                                      }
-                                    }
+                                    ep.field_j = new jp(dk.field_R.field_x / 2, dk.field_R.field_z / 2);
+                                    ep.field_j.g();
+                                    dk.field_R.a(0, 0);
+                                    p.field_i = new jp(re.field_k.field_x / 2, re.field_k.field_z / 2);
+                                    p.field_i.g();
+                                    re.field_k.a(0, 0);
+                                    mh.field_ib = new jp(vn.field_D.field_x / 2, vn.field_D.field_z / 2);
+                                    mh.field_ib.g();
+                                    vn.field_D.a(0, 0);
+                                    ch.field_k = new jp[gg.field_p.length];
                                     var10_int = 0;
-                                    L8: while (true) {
+                                    L7: while (true) {
                                       if (ch.field_k.length <= var10_int) {
                                         kc.field_q.a((byte) 79);
                                         var10_int = 0;
-                                        L9: while (true) {
+                                        L8: while (true) {
                                           if (var10_int >= ln.field_j.length) {
                                             var10_int = 0;
-                                            L10: while (true) {
+                                            L9: while (true) {
                                               if (hp.field_l.length <= var10_int) {
                                                 um.field_p = pl.a("basic", "character_menu", (byte) -62, param0);
                                                 pa.field_j = pl.a("basic", "character_menu_eyes", (byte) -120, param0);
-                                                gr.field_d = cr.a("basic", param0, "lever_menu", 2);
+                                                int discarded$59 = 2;
+                                                gr.field_d = cr.a("basic", param0, "lever_menu");
                                                 nl.field_b = um.a("basic", "logo", 1593955777, param0);
-                                                g.field_l = cr.a("basic", param0, "sliders", 2);
-                                                mp.field_Vb = cr.a("basic", param0, "arrow_level", param3 ^ 29139);
+                                                int discarded$60 = 2;
+                                                g.field_l = cr.a("basic", param0, "sliders");
+                                                int discarded$61 = 2;
+                                                mp.field_Vb = cr.a("basic", param0, "arrow_level");
                                                 pa.field_l = new jp[mp.field_Vb.length];
                                                 var10_int = 0;
-                                                L11: while (true) {
+                                                L10: while (true) {
                                                   if (mp.field_Vb.length <= var10_int) {
                                                     un.field_e = new tp[7];
                                                     un.field_e[0] = uo.a((byte) 29, param0, "p1_key_right", "basic");
@@ -326,21 +345,21 @@ final class so {
                                                     un.field_e[6] = uo.a((byte) 29, param0, "key_enter", "basic");
                                                     nd.field_f = new int[58];
                                                     var10_int = 0;
-                                                    L12: while (true) {
+                                                    L11: while (true) {
                                                       if (nd.field_f.length <= var10_int) {
                                                         jk.field_u = lg.a(2, mo.field_N, -1);
                                                         v.field_b = lg.a(2, ci.field_s.toUpperCase(), -1);
                                                         ed.field_b = new jp[3];
                                                         var10_int = 0;
-                                                        L13: while (true) {
+                                                        L12: while (true) {
                                                           if (var10_int >= ed.field_b.length) {
                                                             rn.field_a = new jp[tf.field_g.length];
                                                             var10_int = 0;
-                                                            L14: while (true) {
+                                                            L13: while (true) {
                                                               if (rn.field_a.length <= var10_int) {
                                                                 lk.field_n = new jp[tf.field_g.length];
                                                                 var10_int = 0;
-                                                                L15: while (true) {
+                                                                L14: while (true) {
                                                                   if (var10_int >= lk.field_n.length) {
                                                                     rk.field_Sb = ap.field_a.e();
                                                                     rk.field_Sb.b();
@@ -353,33 +372,34 @@ final class so {
                                                                     hc.field_a = new jp[2][4];
                                                                     ip.field_v = new jp[2][4];
                                                                     var11 = 0;
-                                                                    L16: while (true) {
+                                                                    L15: while (true) {
                                                                       if (var11 >= 4) {
                                                                         kc.field_q.a((byte) 127);
-                                                                        hq.field_s = bd.a("basic", "expansion_icons", param0, (byte) -8);
+                                                                        int discarded$62 = -8;
+                                                                        hq.field_s = bd.a("basic", "expansion_icons", param0);
                                                                         da.field_E = new jp[hq.field_s.length];
                                                                         var11 = 0;
-                                                                        L17: while (true) {
+                                                                        L16: while (true) {
                                                                           if (var11 >= hq.field_s.length) {
                                                                             cm.field_r = new jp[hq.field_s.length];
                                                                             var11 = 0;
-                                                                            L18: while (true) {
+                                                                            L17: while (true) {
                                                                               if (hq.field_s.length <= var11) {
                                                                                 ik.field_f = new jp[hq.field_s.length];
                                                                                 var11 = 0;
-                                                                                L19: while (true) {
+                                                                                L18: while (true) {
                                                                                   if (var11 >= hq.field_s.length) {
                                                                                     return;
                                                                                   } else {
-                                                                                    ik.field_f[var11] = p.a(pn.a(param3, -29147), da.field_E[var11], 14, 16777215);
+                                                                                    ik.field_f[var11] = p.a(pn.a(29137, -29147), da.field_E[var11], 14, 16777215);
                                                                                     var11++;
-                                                                                    continue L19;
+                                                                                    continue L18;
                                                                                   }
                                                                                 }
                                                                               } else {
                                                                                 cm.field_r[var11] = pg.a(da.field_E[var11], 20, -17912);
                                                                                 var11++;
-                                                                                continue L18;
+                                                                                continue L17;
                                                                               }
                                                                             }
                                                                           } else {
@@ -388,7 +408,7 @@ final class so {
                                                                             hq.field_s[var11].a(0, 0);
                                                                             sc.b(-89);
                                                                             var11++;
-                                                                            continue L17;
+                                                                            continue L16;
                                                                           }
                                                                         }
                                                                       } else {
@@ -401,52 +421,52 @@ final class so {
                                                                         var10.a(0, 0, ip.field_v[0][var11].field_x / 2, ip.field_v[0][var11].field_z / 2);
                                                                         hc.field_a[1][var11] = hc.field_a[0][var11].c();
                                                                         var11++;
-                                                                        continue L16;
+                                                                        continue L15;
                                                                       }
                                                                     }
                                                                   } else {
-                                                                    lk.field_n[var10_int] = pg.a(tf.field_g[var10_int], 20, pn.a(param3, -13351));
+                                                                    lk.field_n[var10_int] = pg.a(tf.field_g[var10_int], 20, pn.a(29137, -13351));
                                                                     var10_int++;
-                                                                    continue L15;
+                                                                    continue L14;
                                                                   }
                                                                 }
                                                               } else {
-                                                                rn.field_a[var10_int] = p.a(pn.a(param3, -29147), tf.field_g[var10_int], 14, 16755200);
+                                                                rn.field_a[var10_int] = p.a(pn.a(29137, -29147), tf.field_g[var10_int], 14, 16755200);
                                                                 var10_int++;
-                                                                continue L14;
+                                                                continue L13;
                                                               }
                                                             }
                                                           } else {
                                                             ed.field_b[var10_int] = fp.a(2, 2, Integer.toString(-var10_int + 3), true);
                                                             var10_int++;
-                                                            continue L13;
+                                                            continue L12;
                                                           }
                                                         }
                                                       } else {
                                                         nd.field_f[var10_int] = 14;
                                                         var10_int++;
-                                                        continue L12;
+                                                        continue L11;
                                                       }
                                                     }
                                                   } else {
-                                                    jp dupTemp$7 = mp.field_Vb[var10_int].e();
-                                                    pa.field_l[var10_int] = dupTemp$7;
-                                                    var11_ref_jp = dupTemp$7;
+                                                    jp dupTemp$63 = mp.field_Vb[var10_int].e();
+                                                    pa.field_l[var10_int] = dupTemp$63;
+                                                    var11_ref_jp = dupTemp$63;
                                                     var11_ref_jp.b();
                                                     var10_int++;
-                                                    continue L11;
+                                                    continue L10;
                                                   }
                                                 }
                                               } else {
                                                 hp.field_l[var10_int].d();
                                                 var10_int++;
-                                                continue L10;
+                                                continue L9;
                                               }
                                             }
                                           } else {
                                             ln.field_j[var10_int].d();
                                             var10_int++;
-                                            continue L9;
+                                            continue L8;
                                           }
                                         }
                                       } else {
@@ -454,7 +474,7 @@ final class so {
                                         ch.field_k[var10_int].g();
                                         gg.field_p[var10_int].a(0, 0);
                                         var10_int++;
-                                        continue L8;
+                                        continue L7;
                                       }
                                     }
                                   } else {
@@ -488,7 +508,8 @@ final class so {
                       }
                     }
                   } else {
-                    no.field_t[var10_int] = cr.a("basic", param0, lo.field_c[var10_int], 2);
+                    int discarded$64 = 2;
+                    no.field_t[var10_int] = cr.a("basic", param0, lo.field_c[var10_int]);
                     var10_int++;
                     continue L2;
                   }
@@ -499,27 +520,28 @@ final class so {
                 si.field_c[var10_int].c(0, 0);
                 kc.field_q.a((byte) 101);
                 e.field_l[var10_int] = p.a(-12, var20, 8, 9838226);
-                pa.field_h[var10_int] = p.a(pn.a(param3, -29147), var20, 12, 9838226);
+                pa.field_h[var10_int] = p.a(pn.a(29137, -29147), var20, 12, 9838226);
                 var10_int++;
                 continue L1;
               }
             }
           } else {
-            L20: {
-              L21: {
-                gj.field_c[var7_int] = qg.a(gj.field_c[var7_int], 1);
+            L19: {
+              L20: {
+                int discarded$65 = 1;
+                gj.field_c[var7_int] = qg.a(gj.field_c[var7_int]);
                 if (gj.field_c[var7_int].field_D == 0) {
-                  break L21;
+                  break L20;
                 } else {
                   if (gj.field_c[var7_int].field_C == 0) {
-                    break L21;
-                  } else {
                     break L20;
+                  } else {
+                    break L19;
                   }
                 }
               }
               gj.field_c[var7_int] = null;
-              break L20;
+              break L19;
             }
             var7_int++;
             continue L0;

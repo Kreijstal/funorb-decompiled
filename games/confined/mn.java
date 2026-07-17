@@ -88,14 +88,11 @@ final class mn {
 
     final static void a(String param0, int param1, byte param2, int param3, int param4, int param5) {
         try {
-            nn.field_t[param4].d(param1, param3);
-            pn.field_a.c(param0, 2 + param1, 14 + param3, 16777215, -1);
-            if (param2 != -30) {
-                mn.b(-116);
-            }
-            pn.field_a.a(Integer.toString(param5), 39 + param1, 38 + param3, 16777215, -1);
+            nn.field_t[param4].d(param1, 384);
+            pn.field_a.c(param0, 2 + param1, 398, 16777215, -1);
+            pn.field_a.a(Integer.toString(param5), 39 + param1, 422, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "mn.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "mn.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -30 + 44 + 384 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

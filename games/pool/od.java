@@ -88,14 +88,14 @@ final class od extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
     od() {
     }
 
-    final static long a(long param0, long param1, boolean param2) {
+    final static long a(long param0, long param1) {
         long var5 = 0L;
         L0: {
           var5 = param1 * param0;

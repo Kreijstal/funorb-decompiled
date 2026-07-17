@@ -185,9 +185,9 @@ abstract class ii extends cj {
             param1.setFocusTraversalKeysEnabled(false);
             param1.addKeyListener((java.awt.event.KeyListener) (Object) vv.field_e);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) vv.field_e);
-            int var2_int = -78 / ((13 - param0) / 48);
+            int var2_int = -39;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ii.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ii.P(" + -104 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

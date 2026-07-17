@@ -26,7 +26,7 @@ abstract class bq {
 
     abstract void a(byte param0, boolean param1);
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;

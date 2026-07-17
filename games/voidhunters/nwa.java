@@ -60,7 +60,8 @@ final class nwa implements ntb {
             return;
         }
         try {
-            var3.field_b = (rha[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) var3.field_b, 1, bob.field_e, false);
+            int discarded$0 = 0;
+            var3.field_b = (rha[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) var3.field_b, 1, bob.field_e);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "nwa.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
@@ -160,7 +161,7 @@ final class nwa implements ntb {
             var9 = 49;
             try {
               L1: {
-                var10_int = param2;
+                var10_int = 0;
                 L2: while (true) {
                   if (var10_int >= var5_int) {
                     break L1;
@@ -241,7 +242,7 @@ final class nwa implements ntb {
           }
           L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(0).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;

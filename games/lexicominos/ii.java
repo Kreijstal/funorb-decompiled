@@ -50,7 +50,8 @@ final class ii extends ql implements jk {
                 if (qg.field_a == param1) {
                   ((ii) this).field_v = ((ii) this).field_v + 10;
                   var3 = (Object) (Object) pj.field_B;
-                  if (!n.c(-2147483648)) {
+                  int discarded$25 = -2147483648;
+                  if (!n.c()) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) ge.field_e;
@@ -145,7 +146,7 @@ final class ii extends ql implements jk {
         }
     }
 
-    final static int a(String param0, boolean param1, int param2) {
+    final static int a(String param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -324,7 +325,7 @@ final class ii extends ql implements jk {
             var4.field_i = (rd) (Object) new v();
             var5 = ((ii) this).field_v - 6;
             ((ii) this).field_v = ((ii) this).field_v + 38;
-            var4.a(30, -30 + ((ii) this).field_j, param1, var5, 15);
+            var4.a(30, -30 + ((ii) this).field_j, true, var5, 15);
             ((ii) this).b((byte) 56, (w) (Object) var4);
             ((ii) this).d(59);
             stackOut_0_0 = (kf) var4;
@@ -361,7 +362,7 @@ final class ii extends ql implements jk {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(1).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -402,10 +403,12 @@ final class ii extends ql implements jk {
           }
         }
         var5 = 82 % ((-19 - param2) / 41);
-        if (param1) {
+        if (param3) {
+          var4 += 2;
           var4++;
           return jf.field_C[var4];
         } else {
+          var4++;
           return jf.field_C[var4];
         }
     }

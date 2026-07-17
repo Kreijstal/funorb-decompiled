@@ -176,7 +176,8 @@ final class al extends mi implements bo, wi {
                     } else {
                       var4 = param2;
                       nl.a(-22063, var4);
-                      de.field_ob = md.a(param2, 7655);
+                      int discarded$2 = 7655;
+                      de.field_ob = md.a(param2);
                       break L2;
                     }
                   }
@@ -285,7 +286,8 @@ final class al extends mi implements bo, wi {
             var2_int = ((al) this).field_h.f(-2);
             var3 = ((al) this).field_h.g(param0 ^ 843083348);
             var4 = ((al) this).field_h.g(true);
-            var5 = hn.c(false);
+            int discarded$2 = 0;
+            var5 = hn.c();
             if (var4 >= 1890) {
               if (-3 + var5 >= var4) {
                 if (!th.a((byte) 127, var4, var2_int, var3)) {
@@ -322,7 +324,7 @@ final class al extends mi implements bo, wi {
         return bm.field_i;
     }
 
-    final static void a(byte[] param0, int[] param1, int param2, int param3, int param4) {
+    final static void a(byte[] param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -362,7 +364,7 @@ final class al extends mi implements bo, wi {
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var6 = 22 % ((54 - param4) / 42);
+            var6 = 0;
             var5_int = 0;
             L1: while (true) {
               if (var5_int >= da.field_g.length) {
@@ -441,7 +443,7 @@ final class al extends mi implements bo, wi {
               break L4;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw kg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + param3 + 44 + 125 + 41);
         }
     }
 
@@ -620,7 +622,8 @@ final class al extends mi implements bo, wi {
               var2_int = ((al) this).field_h.f(-2);
               var3 = ((al) this).field_h.g(-39);
               var4 = ((al) this).field_h.g(true);
-              var5 = hn.c(false);
+              int discarded$2 = 0;
+              var5 = hn.c();
               if (var4 < 1890) {
                 break L1;
               } else {

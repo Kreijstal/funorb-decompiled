@@ -5,7 +5,7 @@ final class to extends mn {
     private ik field_v;
     private int field_w;
 
-    final static short[] a(short[] param0, int param1, bv param2, int param3) {
+    final static short[] a(short[] param0, int param1, bv param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -48,7 +48,7 @@ final class to extends mn {
         var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            var4_int = param2.g(45, param1);
+            var4_int = param2.g(45, 16);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -129,7 +129,7 @@ final class to extends mn {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(16).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;

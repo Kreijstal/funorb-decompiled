@@ -16,7 +16,7 @@ final class to {
         return (double)param0 * var5 + param2 * (double)param1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_b = null;
@@ -174,7 +174,7 @@ final class to {
         }
     }
 
-    final static rj a(int param0, int param1, md param2, int param3) {
+    final static rj a(int param0, int param1, md param2) {
         RuntimeException var4 = null;
         rj var5 = null;
         int var6 = 0;

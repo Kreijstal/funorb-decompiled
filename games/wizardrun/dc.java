@@ -152,16 +152,11 @@ final class dc extends wl {
         }
     }
 
-    final static te a(byte param0, int param1) {
-        te var2 = null;
-        var2 = new te();
+    final static te a() {
+        te var2 = new te();
         bk.field_d.a((wl) (Object) var2, false);
         hg.a(4, (byte) 106);
-        if (param0 != 103) {
-          return null;
-        } else {
-          return var2;
-        }
+        return var2;
     }
 
     dc(int param0, int param1, int param2, int param3, int param4, int param5) {

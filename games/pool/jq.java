@@ -16,7 +16,7 @@ final class jq {
         jk.a(120, w.field_b);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_b = null;
         field_f = null;

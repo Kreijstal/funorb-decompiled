@@ -7,7 +7,7 @@ final class rja extends loa {
     static int field_e;
     private vna field_d;
 
-    private final void a(hj param0, int param1, int param2, int param3) {
+    private final void a(hj param0, int param1, int param2) {
         RuntimeException var5 = null;
         oda var5_ref = null;
         int var6 = 0;
@@ -219,9 +219,9 @@ final class rja extends loa {
             this.a(param2, param3 - 2, param1, (byte) 119);
             this.a(param2, param3 + 2, param1, (byte) 126);
             this.a(param2 + -2, param3, param1, (byte) 109);
-            this.a(param2 + param0, param3, param1, (byte) 95);
+            this.a(param2 + 2, param3, param1, (byte) 95);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rja.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "rja.C(" + 2 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -231,7 +231,8 @@ final class rja extends loa {
             return;
         }
         try {
-            this.a(param2, param0, param3, 2);
+            int discarded$0 = 2;
+            this.a(param2, param0, param3);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "rja.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }

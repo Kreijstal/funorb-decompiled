@@ -20,7 +20,7 @@ final class q extends pa {
         return var4;
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_H = null;
         field_G = null;
     }

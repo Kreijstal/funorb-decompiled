@@ -15,9 +15,9 @@ final class jg extends al {
             Object var6 = null;
             Object var7 = null;
             tb var8 = null;
-            fa stackIn_17_0 = null;
+            fa stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            fa stackOut_16_0 = null;
+            fa stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -65,17 +65,9 @@ final class jg extends al {
                     break L3;
                   }
                 }
-                L6: {
-                  var8 = i.field_a.a(param2, param4, (ua) var6, (ua) var7, 115);
-                  if (param3) {
-                    var8.c((byte) 2);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                stackOut_16_0 = new fa((uj) (Object) var8, param5, param1);
-                stackIn_17_0 = stackOut_16_0;
+                var8 = i.field_a.a(false, param4, (ua) var6, (ua) var7, 115);
+                stackOut_13_0 = new fa((uj) (Object) var8, param5, param1);
+                stackIn_14_0 = stackOut_13_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -83,7 +75,7 @@ final class jg extends al {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_17_0;
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -91,7 +83,7 @@ final class jg extends al {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_kb = null;
         field_jb = null;
         field_hb = null;

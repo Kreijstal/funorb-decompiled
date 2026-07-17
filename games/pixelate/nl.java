@@ -251,7 +251,7 @@ final class nl {
         }
     }
 
-    final static int a(boolean param0) {
+    final static int a() {
         if (hf.field_q >= 2) {
           L0: {
             if (wo.field_d == 0) {

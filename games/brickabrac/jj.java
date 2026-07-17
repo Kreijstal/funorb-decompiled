@@ -15,7 +15,7 @@ final class jj {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -48,12 +48,16 @@ final class jj {
         boolean stackOut_8_1 = false;
         var3 = BrickABrac.field_J ? 1 : 0;
         var1 = 0;
-        if (!m.a(2)) {
-          if (lg.a(9)) {
-            o.a(-24435);
+        int discarded$9 = 2;
+        if (!m.a()) {
+          int discarded$10 = 9;
+          if (lg.a()) {
+            int discarded$11 = -24435;
+            o.a();
             var1 = 1;
             if (dj.c((byte) 119)) {
-              if (lg.a(9)) {
+              int discarded$12 = 9;
+              if (lg.a()) {
                 L0: {
                   if (!me.b(-84)) {
                     break L0;
@@ -125,12 +129,14 @@ final class jj {
             }
           } else {
             L4: {
-              if (!uc.f(21651)) {
+              int discarded$13 = 21651;
+              if (!uc.f()) {
                 break L4;
               } else {
                 lb.b(0, 0, lb.field_c, lb.field_d);
                 var1 = 1;
-                gi.g(11184810);
+                int discarded$14 = 11184810;
+                gi.g();
                 break L4;
               }
             }
@@ -138,7 +144,8 @@ final class jj {
               if (!dj.c((byte) 119)) {
                 break L5;
               } else {
-                if (lg.a(9)) {
+                int discarded$15 = 9;
+                if (lg.a()) {
                   break L5;
                 } else {
                   L6: {
@@ -183,9 +190,11 @@ final class jj {
           }
         } else {
           var1 = 1;
-          pe.c(126);
+          int discarded$16 = 126;
+          pe.c();
           if (dj.c((byte) 119)) {
-            if (lg.a(9)) {
+            int discarded$17 = 9;
+            if (lg.a()) {
               L8: {
                 if (!me.b(-84)) {
                   break L8;

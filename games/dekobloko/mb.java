@@ -96,24 +96,24 @@ final class mb {
         String var3 = null;
         int var4 = 0;
         String var5 = null;
-        String stackIn_33_0 = null;
+        String stackIn_31_0 = null;
+        Object stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        Object stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
         Object stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
-        Object stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        Object stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_37_2 = null;
+        String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_32_0 = null;
+        String stackOut_30_0 = null;
+        Object stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
         Object stackOut_34_0 = null;
         StringBuilder stackOut_34_1 = null;
-        Object stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        Object stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
+        String stackOut_34_2 = null;
+        Object stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
         var4 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -144,118 +144,110 @@ final class mb {
               }
             }
             L3: {
-              if (param0 > 96) {
-                break L3;
-              } else {
-                field_c = -12;
-                break L3;
-              }
-            }
-            L4: {
               var3 = "";
               if (2 == param1.field_m) {
                 if (!param1.field_j) {
-                  L5: {
+                  L4: {
                     if (0 != param1.field_i) {
-                      break L5;
+                      break L4;
                     } else {
                       if (param1.field_n != 0) {
-                        break L5;
+                        break L4;
                       } else {
                         var3 = cm.a((byte) 90, oj.field_b, new String[1]);
-                        break L4;
+                        break L3;
                       }
                     }
                   }
                   var3 = cm.a((byte) 110, im.field_j, new String[1]);
-                  break L4;
+                  break L3;
                 } else {
-                  break L4;
+                  break L3;
                 }
               } else {
-                L6: {
+                L5: {
                   if (0 != param1.field_m) {
-                    break L6;
+                    break L5;
                   } else {
                     if (ii.field_q) {
                       var3 = "[" + uc.field_b + "] ";
-                      break L6;
+                      break L5;
                     } else {
-                      break L6;
+                      break L5;
                     }
+                  }
+                }
+                L6: {
+                  if (param1.field_m != 1) {
+                    break L6;
+                  } else {
+                    var3 = "[" + cm.a((byte) 125, hf.field_a, new String[1]) + "] ";
+                    break L6;
                   }
                 }
                 L7: {
-                  if (param1.field_m != 1) {
-                    break L7;
-                  } else {
-                    var3 = "[" + cm.a((byte) 125, hf.field_a, new String[1]) + "] ";
-                    break L7;
-                  }
-                }
-                L8: {
                   if (4 != param1.field_m) {
-                    break L8;
+                    break L7;
                   } else {
                     if (f.field_q != null) {
                       var3 = "[" + f.field_q + "] ";
-                      break L8;
+                      break L7;
                     } else {
-                      break L8;
+                      break L7;
                     }
                   }
                 }
-                L9: {
+                L8: {
                   if (param1.field_m != 3) {
-                    break L9;
+                    break L8;
                   } else {
                     var3 = "[#" + param1.field_g + "] ";
-                    break L9;
+                    break L8;
                   }
                 }
                 if (!param1.field_j) {
                   var3 = var3 + var2 + ": ";
-                  break L4;
+                  break L3;
                 } else {
-                  break L4;
+                  break L3;
                 }
               }
             }
-            stackOut_32_0 = (String) var3;
-            stackIn_33_0 = stackOut_32_0;
+            stackOut_30_0 = (String) var3;
+            stackIn_31_0 = stackOut_30_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_34_0 = var2;
-            stackOut_34_1 = new StringBuilder().append("mb.D(").append(param0).append(44);
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackOut_32_0 = var2;
+            stackOut_32_1 = new StringBuilder().append("mb.D(").append(106).append(44);
+            stackIn_34_0 = stackOut_32_0;
+            stackIn_34_1 = stackOut_32_1;
+            stackIn_33_0 = stackOut_32_0;
+            stackIn_33_1 = stackOut_32_1;
             if (param1 == null) {
-              stackOut_36_0 = stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
-              break L10;
+              stackOut_34_0 = stackIn_34_0;
+              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_2 = "null";
+              stackIn_35_0 = stackOut_34_0;
+              stackIn_35_1 = stackOut_34_1;
+              stackIn_35_2 = stackOut_34_2;
+              break L9;
             } else {
-              stackOut_35_0 = stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
-              break L10;
+              stackOut_33_0 = stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "{...}";
+              stackIn_35_0 = stackOut_33_0;
+              stackIn_35_1 = stackOut_33_1;
+              stackIn_35_2 = stackOut_33_2;
+              break L9;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 41);
         }
-        return stackIn_33_0;
+        return stackIn_31_0;
     }
 
     final int b(int param0, int param1) {
@@ -282,44 +274,21 @@ final class mb {
         int var3 = 0;
         int var4 = 0;
         var4 = client.field_A ? 1 : 0;
-        if (param0 != -63) {
-          ((mb) this).field_f = -94;
-          var3 = ((mb) this).field_b.length;
-          L0: while (true) {
-            if (param1 < var3) {
-              return var3;
+        var3 = ((mb) this).field_b.length;
+        L0: while (true) {
+          if (param1 < var3) {
+            return var3;
+          } else {
+            if (!((mb) this).field_a) {
+              var3 = var3 + ((mb) this).field_f;
+              continue L0;
             } else {
-              if (!((mb) this).field_a) {
-                var3 = var3 + ((mb) this).field_f;
+              if (var3 == 0) {
+                var3 = 1;
                 continue L0;
               } else {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L0;
-                } else {
-                  var3 = var3 * ((mb) this).field_f;
-                  continue L0;
-                }
-              }
-            }
-          }
-        } else {
-          var3 = ((mb) this).field_b.length;
-          L1: while (true) {
-            if (param1 < var3) {
-              return var3;
-            } else {
-              if (!((mb) this).field_a) {
-                var3 = var3 + ((mb) this).field_f;
-                continue L1;
-              } else {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L1;
-                } else {
-                  var3 = var3 * ((mb) this).field_f;
-                  continue L1;
-                }
+                var3 = var3 * ((mb) this).field_f;
+                continue L0;
               }
             }
           }
@@ -327,33 +296,9 @@ final class mb {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        if (((mb) this).field_g >= param1) {
-          if (param0 >= 38) {
-            if (param1 >= ((mb) this).field_b.length) {
-              this.a(param1, -23);
-              ((mb) this).field_b[param1] = param2;
-              return;
-            } else {
-              ((mb) this).field_b[param1] = param2;
-              return;
-            }
-          } else {
+        if (((mb) this).field_g < param1) {
+            ((mb) this).field_g = param1;
             return;
-          }
-        } else {
-          ((mb) this).field_g = param1;
-          if (param0 >= 38) {
-            if (param1 < ((mb) this).field_b.length) {
-              ((mb) this).field_b[param1] = param2;
-              return;
-            } else {
-              this.a(param1, -23);
-              ((mb) this).field_b[param1] = param2;
-              return;
-            }
-          } else {
-            return;
-          }
         }
     }
 
@@ -362,22 +307,11 @@ final class mb {
     }
 
     final static int a(boolean param0, int param1, byte param2, int param3, int param4) {
-        int var5 = 0;
-        L0: {
-          var5 = 256 + param1 * (-param4 + param3);
-          if (param0) {
+        int var5 = 256 + param1 * (-param4 + param3);
+        if (!(!param0)) {
             var5 += 64;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param2 != -122) {
-          field_e = null;
-          return var5;
-        } else {
-          return var5;
-        }
+        return var5;
     }
 
     final void a(int param0, boolean param1) {
@@ -391,7 +325,7 @@ final class mb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
     }

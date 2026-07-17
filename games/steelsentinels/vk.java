@@ -23,7 +23,7 @@ abstract class vk {
     volatile int field_t;
     qa field_d;
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 0;
         field_s = null;
         field_b = null;
@@ -88,7 +88,7 @@ abstract class vk {
         }
     }
 
-    final static boolean a(long param0, int[] param1, String param2, int param3, int param4) {
+    final static boolean a(long param0, int[] param1, String param2, int param3) {
         RuntimeException var6 = null;
         int stackIn_8_0 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -229,56 +229,64 @@ abstract class vk {
               fc.field_a.b();
               cm.field_j.b();
               la.field_b = la.field_b - 1;
-              if (la.field_b != 0) {
+              if (!param0) {
                 break L1;
+              } else {
+                field_s = null;
+                break L1;
+              }
+            }
+            L2: {
+              if (la.field_b != 0) {
+                break L2;
               } else {
                 la.field_b = 200;
                 var1 = (pc) (Object) mm.field_b.e(13058);
-                L2: while (true) {
+                L3: while (true) {
                   if (var1 == null) {
                     if (null == rl.field_c) {
-                      break L1;
+                      break L2;
                     } else {
                       var1 = (pc) (Object) rl.field_c.e(13058);
-                      L3: while (true) {
+                      L4: while (true) {
                         if (var1 == null) {
-                          break L1;
+                          break L2;
                         } else {
-                          L4: {
+                          L5: {
                             if (var1.field_u.b((byte) -12)) {
-                              break L4;
+                              break L5;
                             } else {
                               var1.b(4);
-                              break L4;
+                              break L5;
                             }
                           }
                           var1 = (pc) (Object) rl.field_c.a((byte) -6);
-                          continue L3;
+                          continue L4;
                         }
                       }
                     }
                   } else {
-                    L5: {
+                    L6: {
                       if (var1.field_u.b((byte) -12)) {
-                        break L5;
+                        break L6;
                       } else {
                         var1.b(4);
-                        break L5;
+                        break L6;
                       }
                     }
                     var1 = (pc) (Object) mm.field_b.a((byte) -101);
-                    continue L2;
+                    continue L3;
                   }
                 }
               }
             }
-            L6: {
+            L7: {
               if (null == q.field_f) {
-                break L6;
+                break L7;
               } else {
                 if (!q.field_f.d((byte) 90)) {
                   ml.field_g = null;
-                  break L6;
+                  break L7;
                 } else {
                   return;
                 }
@@ -289,7 +297,7 @@ abstract class vk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1_ref, "vk.N(" + 0 + 41);
+          throw ci.a((Throwable) (Object) var1_ref, "vk.N(" + param0 + 41);
         }
     }
 
@@ -300,7 +308,7 @@ abstract class vk {
         return 20 <= ((vk) this).a((byte) 16) ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ak param6, byte param7, mi param8, int param9, ak param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, mi param18, ak param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ak param6, byte param7, mi param8, int param9, ak param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, mi param18, ak param19) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -381,13 +389,17 @@ abstract class vk {
         String stackOut_15_2 = null;
         try {
           L0: {
-            var21_int = 87 % ((-55 - param7) / 51);
-            kg.a(2048, param8, param18, param11);
+            var21_int = 0;
+            int discarded$4 = 480;
+            kg.a(2048, param8, param18);
             he.a(false, param14, param0, param17, param9);
-            sf.a(52, param13, param1);
-            hf.a(param10, param2, param3, param6, -125, param16);
-            qe.a(param19, param12, param20, 3);
-            ph.a(param4, param5, param15, -97);
+            sf.a(52, 320, 240);
+            hf.a(param10, 8, 2, param6, -125, 8);
+            int discarded$5 = 3;
+            int discarded$6 = 8;
+            int discarded$7 = 8;
+            qe.a(param19);
+            ph.a(0, 16777215, 1146810, -97);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -395,7 +407,7 @@ abstract class vk {
           L1: {
             var21 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var21;
-            stackOut_2_1 = new StringBuilder().append("vk.O(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_2_1 = new StringBuilder().append("vk.O(").append(param0).append(44).append(240).append(44).append(8).append(44).append(2).append(44).append(0).append(44).append(16777215).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -420,7 +432,7 @@ abstract class vk {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param7).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(-115).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -470,7 +482,7 @@ abstract class vk {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param11).append(44).append(param12).append(44).append(param13).append(44).append(param14).append(44).append(param15).append(44).append(param16).append(44).append(param17).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(480).append(44).append(8).append(44).append(320).append(44).append(param14).append(44).append(1146810).append(44).append(8).append(44).append(param17).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -518,7 +530,7 @@ abstract class vk {
               break L5;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param20 + 41);
+          throw ci.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 8 + 41);
         }
     }
 

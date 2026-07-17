@@ -21,7 +21,7 @@ abstract class sh extends vd implements mca {
         }
     }
 
-    final static void l(int param0) {
+    final static void l() {
         RuntimeException var1 = null;
         int var1_int = 0;
         pf var2 = null;
@@ -122,7 +122,7 @@ abstract class sh extends vd implements mca {
         return (qu) (Object) ((sh) this).field_F;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_G = null;
         field_E = null;
         field_H = null;

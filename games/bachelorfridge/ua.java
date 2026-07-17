@@ -15,7 +15,7 @@ final class ua {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         int var1 = 0;
         field_a = null;
@@ -24,13 +24,10 @@ final class ua {
     final static void a(byte param0, int param1, int param2, lda param3) {
         try {
             it.field_s = param3;
-            if (param0 != -50) {
-                field_b = false;
-            }
             lda.field_a = param2;
             fh.field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ua.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ua.B(" + -50 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

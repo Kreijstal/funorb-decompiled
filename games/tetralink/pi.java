@@ -8,7 +8,7 @@ final class pi {
     static String field_d;
     static String field_b;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
@@ -86,7 +86,7 @@ final class pi {
         return stackIn_7_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_a = null;

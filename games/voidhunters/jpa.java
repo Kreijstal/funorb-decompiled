@@ -309,7 +309,7 @@ final class jpa extends rna implements ntb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
     }
 
@@ -338,7 +338,8 @@ final class jpa extends rna implements ntb {
             return var9 + " custom variable " + ((jpa) this).field_b;
           }
         } else {
-          jpa.a(true);
+          int discarded$1 = 1;
+          jpa.a();
           var5 = "Unknown mode";
           var3 = ((jpa) this).field_d;
           if (var3 != 0) {

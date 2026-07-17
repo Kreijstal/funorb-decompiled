@@ -26,7 +26,8 @@ final class vr extends ela {
         String stackOut_3_2 = null;
         try {
           L0: {
-            jk.a(param0[param1].c(-178), 0);
+            int discarded$2 = 0;
+            jk.a(param0[param1].c(-178));
             stackOut_0_0 = new bfa((Object) (Object) "void");
             stackIn_1_0 = stackOut_0_0;
             break L0;

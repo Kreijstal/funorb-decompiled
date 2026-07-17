@@ -114,7 +114,7 @@ final class rnb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return psb.field_b != null ? true : bsa.field_o;
     }
 

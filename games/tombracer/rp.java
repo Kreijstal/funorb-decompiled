@@ -84,7 +84,8 @@ final class rp extends vg {
         if (param0 != 8824) {
             return;
         }
-        pqa.i(0);
+        int discarded$0 = 0;
+        pqa.i();
     }
 
     final void b(int param0) {

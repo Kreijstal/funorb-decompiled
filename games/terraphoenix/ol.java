@@ -13,7 +13,7 @@ final class ol extends g {
     static String field_Hb;
     private g field_Eb;
 
-    public static void g(int param0) {
+    public static void g() {
         field_Hb = null;
         field_Lb = null;
         field_Kb = null;
@@ -224,21 +224,11 @@ final class ol extends g {
             break L1;
           }
         }
-        if (var5 < 0) {
-          var5 = 0;
-          if (param2 == -123) {
-            return var5;
-          } else {
-            ((ol) this).a((byte) -11, -26, -77, -82);
-            return var5;
-          }
+        if (var5 >= 0) {
+          return var5;
         } else {
-          if (param2 == -123) {
-            return var5;
-          } else {
-            ((ol) this).a((byte) -11, -26, -77, -82);
-            return var5;
-          }
+          var5 = 0;
+          return var5;
         }
     }
 

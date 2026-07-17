@@ -108,7 +108,7 @@ final class ji {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_h = null;
     }
@@ -118,11 +118,9 @@ final class ji {
             Object var6 = null;
             Object var7 = null;
             up var8 = null;
-            Object stackIn_5_0 = null;
-            di stackIn_16_0 = null;
+            di stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            di stackOut_15_0 = null;
-            Object stackOut_4_0 = null;
+            di stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -137,56 +135,50 @@ final class ji {
                     break L1;
                   }
                 }
-                if (param2 == -56) {
-                  L2: {
-                    if (ih.field_a != null) {
-                      L3: {
-                        if (null != ia.field_d) {
-                          break L3;
-                        } else {
-                          ia.field_d = new ir[fe.field_M.field_n.length];
-                          break L3;
-                        }
+                L2: {
+                  if (ih.field_a != null) {
+                    L3: {
+                      if (null != ia.field_d) {
+                        break L3;
+                      } else {
+                        ia.field_d = new ir[fe.field_M.field_n.length];
+                        break L3;
                       }
-                      L4: {
-                        if (null != ia.field_d[param3]) {
-                          break L4;
-                        } else {
-                          ia.field_d[param3] = new ir(fe.field_M.field_n[param3], 12000, 0);
-                          fe.field_M.field_n[param3] = null;
-                          break L4;
-                        }
+                    }
+                    L4: {
+                      if (null != ia.field_d[param3]) {
+                        break L4;
+                      } else {
+                        ia.field_d[param3] = new ir(fe.field_M.field_n[param3], 12000, 0);
+                        fe.field_M.field_n[param3] = null;
+                        break L4;
                       }
-                      var7 = (Object) (Object) new np(param3, ih.field_a, ia.field_d[param3], 2097152);
-                      break L2;
-                    } else {
-                      break L2;
                     }
+                    var7 = (Object) (Object) new np(param3, ih.field_a, ia.field_d[param3], 2097152);
+                    break L2;
+                  } else {
+                    break L2;
                   }
-                  L5: {
-                    var8 = nk.field_m.a(param4, (np) var7, param3, (byte) 0, (np) var6);
-                    if (!param5) {
-                      break L5;
-                    } else {
-                      var8.b(117);
-                      break L5;
-                    }
-                  }
-                  stackOut_15_0 = new di((lh) (Object) var8, param1, param0);
-                  stackIn_16_0 = stackOut_15_0;
-                  break L0;
-                } else {
-                  stackOut_4_0 = null;
-                  stackIn_5_0 = stackOut_4_0;
-                  return (di) (Object) stackIn_5_0;
                 }
+                L5: {
+                  var8 = nk.field_m.a(false, (np) var7, param3, (byte) 0, (np) var6);
+                  if (!param5) {
+                    break L5;
+                  } else {
+                    var8.b(117);
+                    break L5;
+                  }
+                }
+                stackOut_13_0 = new di((lh) (Object) var8, param1, param0);
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_16_0;
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

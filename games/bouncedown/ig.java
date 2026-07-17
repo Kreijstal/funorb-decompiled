@@ -7,7 +7,7 @@ final class ig {
     static eh field_b;
     static int field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_c = null;
         field_b = null;

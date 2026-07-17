@@ -89,30 +89,22 @@ abstract class rh extends ua {
         return (we) this;
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 == -117) {
-                break L1;
-              } else {
-                int discarded$2 = rh.a(-20);
-                break L1;
-              }
-            }
             cd.a(-1);
             hj.field_L = true;
             fk.field_a = true;
-            wg.field_j.k(param0 ^ -29);
+            wg.field_j.k(104);
             vi.a(eg.field_f, 12345, false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "rh.SA(" + param0 + 41);
+          throw la.a((Throwable) (Object) var1, "rh.SA(" + -117 + 41);
         }
     }
 
@@ -174,29 +166,21 @@ abstract class rh extends ua {
         }
     }
 
-    final static int a(int param0) {
+    final static int a() {
         RuntimeException var1 = null;
-        int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
-            if (param0 == 1) {
-              stackOut_3_0 = mg.field_s;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = -111;
-              stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
-            }
+            stackOut_3_0 = mg.field_s;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "rh.BB(" + param0 + 41);
+          throw la.a((Throwable) (Object) var1, "rh.BB(" + 1 + 41);
         }
         return stackIn_4_0;
     }
@@ -630,63 +614,59 @@ abstract class rh extends ua {
               }
             }
             var2 = o.a((byte) 76, "achievement_criteria,5");
-            if (param0 == -9585) {
-              L35: {
-                if (null != var2) {
-                  ki.field_r[5] = be.a(var2, (byte) 125);
-                  break L35;
-                } else {
-                  break L35;
-                }
+            L35: {
+              if (null != var2) {
+                ki.field_r[5] = be.a(var2, (byte) 125);
+                break L35;
+              } else {
+                break L35;
               }
-              L36: {
-                var2 = o.a((byte) 76, "achievement_criteria,6");
-                if (var2 == null) {
-                  break L36;
-                } else {
-                  ki.field_r[6] = be.a(var2, (byte) -33);
-                  break L36;
-                }
-              }
-              L37: {
-                var2 = o.a((byte) 76, "achievement_criteria,7");
-                if (var2 == null) {
-                  break L37;
-                } else {
-                  ki.field_r[7] = be.a(var2, (byte) -115);
-                  break L37;
-                }
-              }
-              L38: {
-                var2 = o.a((byte) 76, "achievement_criteria,8");
-                if (null != var2) {
-                  ki.field_r[8] = be.a(var2, (byte) -106);
-                  break L38;
-                } else {
-                  break L38;
-                }
-              }
-              L39: {
-                var2 = o.a((byte) 76, "achievement_criteria,9");
-                if (null != var2) {
-                  ki.field_r[9] = be.a(var2, (byte) 95);
-                  break L39;
-                } else {
-                  break L39;
-                }
-              }
-              gf.field_b = null;
-              break L0;
-            } else {
-              return;
             }
+            L36: {
+              var2 = o.a((byte) 76, "achievement_criteria,6");
+              if (var2 == null) {
+                break L36;
+              } else {
+                ki.field_r[6] = be.a(var2, (byte) -33);
+                break L36;
+              }
+            }
+            L37: {
+              var2 = o.a((byte) 76, "achievement_criteria,7");
+              if (var2 == null) {
+                break L37;
+              } else {
+                ki.field_r[7] = be.a(var2, (byte) -115);
+                break L37;
+              }
+            }
+            L38: {
+              var2 = o.a((byte) 76, "achievement_criteria,8");
+              if (null != var2) {
+                ki.field_r[8] = be.a(var2, (byte) -106);
+                break L38;
+              } else {
+                break L38;
+              }
+            }
+            L39: {
+              var2 = o.a((byte) 76, "achievement_criteria,9");
+              if (null != var2) {
+                ki.field_r[9] = be.a(var2, (byte) 95);
+                break L39;
+              } else {
+                break L39;
+              }
+            }
+            gf.field_b = null;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L40: {
             var2_ref = decompiledCaughtException;
             stackOut_141_0 = (RuntimeException) var2_ref;
-            stackOut_141_1 = new StringBuilder().append("rh.WA(").append(param0).append(44);
+            stackOut_141_1 = new StringBuilder().append("rh.WA(").append(-9585).append(44);
             stackIn_144_0 = stackOut_141_0;
             stackIn_144_1 = stackOut_141_1;
             stackIn_142_0 = stackOut_141_0;
@@ -790,7 +770,7 @@ abstract class rh extends ua {
         return stackIn_19_0 != 0;
     }
 
-    final static void l(int param0) {
+    final static void l() {
         RuntimeException var1 = null;
         hb var1_ref = null;
         int var2 = 0;
@@ -818,7 +798,7 @@ abstract class rh extends ua {
         try {
           L0: {
             var1_ref = MonkeyPuzzle2.field_D;
-            var2 = -22 % ((param0 - 37) / 33);
+            var2 = 0;
             var3 = var1_ref.a((byte) 114);
             if (var3 != 0) {
               if (var3 == 1) {
@@ -843,11 +823,13 @@ abstract class rh extends ua {
                 L3: {
                   var5_ref_String = var1_ref.f(-1);
                   var6_ref = var1_ref.f(-1);
-                  var7_ref = ch.a(var5_ref_String, -1);
+                  int discarded$5 = -1;
+                  var7_ref = ch.a(var5_ref_String);
                   if (var7_ref != null) {
                     break L3;
                   } else {
-                    var7_ref = ch.a(var6_ref, -1);
+                    int discarded$6 = -1;
+                    var7_ref = ch.a(var6_ref);
                     if (var7_ref == null) {
                       break L3;
                     } else {
@@ -860,9 +842,9 @@ abstract class rh extends ua {
                   if (null == var7_ref) {
                     var7_ref = new rb();
                     pj.field_a.a((bf) (Object) var7_ref, (long)pl.a((byte) 109, (CharSequence) (Object) var5_ref_String).hashCode(), -98);
-                    int fieldTemp$3 = nc.field_f;
+                    int fieldTemp$7 = nc.field_f;
                     nc.field_f = nc.field_f + 1;
-                    var7_ref.field_gb = fieldTemp$3;
+                    var7_ref.field_gb = fieldTemp$7;
                     kc.field_a.a(-8212, (ug) (Object) var7_ref);
                     break L4;
                   } else {
@@ -993,7 +975,7 @@ abstract class rh extends ua {
                 if (var4_int == 0) {
                   break L15;
                 } else {
-                  String discarded$4 = var1_ref.f(-1);
+                  String discarded$8 = var1_ref.f(-1);
                   break L15;
                 }
               }
@@ -1025,9 +1007,9 @@ abstract class rh extends ua {
                 if (var6 == null) {
                   var6 = new rb();
                   ah.field_b.a((bf) (Object) var6, (long)var8.hashCode(), -98);
-                  int fieldTemp$5 = jj.field_F;
+                  int fieldTemp$9 = jj.field_F;
                   jj.field_F = jj.field_F + 1;
-                  var6.field_gb = fieldTemp$5;
+                  var6.field_gb = fieldTemp$9;
                   wl.field_d.a(-8212, (ug) (Object) var6);
                   break L18;
                 } else {
@@ -1041,7 +1023,7 @@ abstract class rh extends ua {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "rh.DB(" + param0 + 41);
+          throw la.a((Throwable) (Object) var1, "rh.DB(" + 78 + 41);
         }
     }
 

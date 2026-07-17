@@ -17,129 +17,118 @@ final class pda extends eo {
         du var7 = null;
         int var8 = 0;
         int var9 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var9 = BachelorFridge.field_y;
         try {
           L0: {
             L1: {
-              if (param1 == 0) {
-                break L1;
-              } else {
-                ((pda) this).field_r = null;
-                break L1;
-              }
-            }
-            L2: {
               if (param2 != 1) {
-                L3: {
-                  if (param2 != 2) {
-                    if (param2 == 3) {
-                      var4_int = param0.b(16711935);
-                      ((pda) this).field_o = new int[var4_int];
-                      ((pda) this).field_n = new int[var4_int][];
-                      var5 = 0;
-                      L4: while (true) {
-                        if (~var4_int >= ~var5) {
-                          break L3;
-                        } else {
-                          L5: {
-                            var6 = param0.e((byte) 57);
-                            var7 = pga.a(false, var6);
-                            if (var7 != null) {
-                              ((pda) this).field_o[var5] = var6;
-                              ((pda) this).field_n[var5] = new int[var7.field_d];
-                              var8 = 0;
-                              L6: while (true) {
-                                if (~var8 <= ~var7.field_d) {
-                                  break L5;
-                                } else {
-                                  ((pda) this).field_n[var5][var8] = param0.e((byte) 85);
-                                  var8++;
-                                  continue L6;
-                                }
-                              }
-                            } else {
-                              break L5;
-                            }
-                          }
-                          var5++;
-                          continue L4;
-                        }
-                      }
-                    } else {
-                      if (4 != param2) {
-                        break L3;
+                if (param2 != 2) {
+                  if (param2 == 3) {
+                    var4_int = param0.b(16711935);
+                    ((pda) this).field_o = new int[var4_int];
+                    ((pda) this).field_n = new int[var4_int][];
+                    var5 = 0;
+                    L2: while (true) {
+                      if (var4_int <= var5) {
+                        break L1;
                       } else {
-                        break L2;
+                        L3: {
+                          var6 = param0.e((byte) 57);
+                          var7 = pga.a(false, var6);
+                          if (var7 != null) {
+                            ((pda) this).field_o[var5] = var6;
+                            ((pda) this).field_n[var5] = new int[var7.field_d];
+                            var8 = 0;
+                            L4: while (true) {
+                              if (var8 >= var7.field_d) {
+                                break L3;
+                              } else {
+                                ((pda) this).field_n[var5][var8] = param0.e((byte) 85);
+                                var8++;
+                                continue L4;
+                              }
+                            }
+                          } else {
+                            break L3;
+                          }
+                        }
+                        var5++;
+                        continue L2;
                       }
                     }
                   } else {
-                    var4_int = param0.b(16711935);
-                    ((pda) this).field_s = new int[var4_int];
-                    var5 = 0;
-                    L7: while (true) {
-                      if (var4_int <= var5) {
-                        break L3;
-                      } else {
-                        ((pda) this).field_s[var5] = param0.e((byte) 97);
-                        var5++;
-                        continue L7;
-                      }
+                    if (4 != param2) {
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  }
+                } else {
+                  var4_int = param0.b(16711935);
+                  ((pda) this).field_s = new int[var4_int];
+                  var5 = 0;
+                  L5: while (true) {
+                    if (var4_int <= var5) {
+                      break L1;
+                    } else {
+                      ((pda) this).field_s[var5] = param0.e((byte) 97);
+                      var5++;
+                      continue L5;
                     }
                   }
                 }
-                break L2;
               } else {
-                ((pda) this).field_r = fda.a(~param1, '<', param0.g(-125));
-                break L2;
+                ((pda) this).field_r = fda.a(-1, '<', param0.g(-125));
+                break L1;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L6: {
             var4 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("pda.L(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_19_0 = (RuntimeException) var4;
+            stackOut_19_1 = new StringBuilder().append("pda.L(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L8;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
-              break L8;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 0 + 44 + param2 + 41);
         }
     }
 
@@ -156,7 +145,7 @@ final class pda extends eo {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_q = null;
     }
 

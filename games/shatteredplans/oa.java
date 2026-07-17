@@ -87,7 +87,7 @@ final class oa {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -186,9 +186,6 @@ final class oa {
                 var2 = var3;
             }
         }
-        if (param0 != -12541) {
-            return 'ﾷ';
-        }
         return (char)var2;
     }
 
@@ -199,11 +196,8 @@ final class oa {
         return ao.a((byte) 97, param0, param2, 1, param3);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
-        if (param0 <= 7) {
-            return;
-        }
         field_a = null;
     }
 

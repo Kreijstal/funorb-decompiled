@@ -19,7 +19,8 @@ final class boa extends dg {
     final void a(int param0, la param1, kh param2) {
         try {
             if (param0 <= 119) {
-                boa.a(false);
+                int discarded$0 = 0;
+                boa.a();
             }
             super.a(122, param1, param2);
             ((boa) this).field_v = param2.b((byte) 44, 4);
@@ -335,7 +336,7 @@ final class boa extends dg {
         return stackIn_14_0 != 0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_y = null;
         field_s = null;
         field_n = null;

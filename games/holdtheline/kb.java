@@ -7,7 +7,7 @@ final class kb {
     int field_a;
     static String field_d;
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!ll.field_a) {
           L0: {
             if (null == go.field_k) {
@@ -157,40 +157,7 @@ final class kb {
     }
 
     final static boolean a(int param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != 16616) {
-          L0: {
-            kb.a(113);
-            if (0 == (ka.field_g & 1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (0 == (ka.field_g & 1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return 0 != (ka.field_g & 1);
     }
 
     final static boolean b(int param0) {
@@ -199,7 +166,7 @@ final class kb {
     }
 
     public static void a(int param0) {
-        int var1 = 76 % ((param0 - 71) / 40);
+        int var1 = 0;
         field_b = null;
         field_d = null;
     }

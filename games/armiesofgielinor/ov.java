@@ -16,7 +16,7 @@ final class ov {
     static String field_a;
     static String field_j;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_h = null;
         int var1 = 0;
@@ -39,7 +39,7 @@ final class ov {
         var3.b(true, param2);
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

@@ -27,7 +27,7 @@ final class fa {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         og var4 = null;
@@ -40,7 +40,7 @@ final class fa {
               if (var4 == null) {
                 break L0;
               } else {
-                jo.a(true, param0, var4);
+                jo.a(true, 7, var4);
                 var4 = (og) (Object) bh.field_c.f(-24059);
                 continue L1;
               }
@@ -49,7 +49,7 @@ final class fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2, "fa.A(" + param0 + 44 + -21386 + 41);
+          throw rb.a((Throwable) (Object) var2, "fa.A(" + 7 + 44 + -21386 + 41);
         }
     }
 

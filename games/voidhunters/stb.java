@@ -72,7 +72,7 @@ final class stb extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 
@@ -83,7 +83,7 @@ final class stb extends rqa {
     final static void a(int param0, int param1) {
         faa var2 = dpa.field_p;
         var2.h(24335, param1);
-        int var3 = -33 / ((-71 - param0) / 46);
+        int var3 = 16;
         var2.c(0, 1);
         var2.c(0, 3);
     }
@@ -132,7 +132,7 @@ final class stb extends rqa {
               }
             }
             L2: {
-              if (param1 != param0) {
+              if (param1 != 2) {
                 break L2;
               } else {
                 ((tva) (Object) param3).c(param2, 19537);
@@ -151,7 +151,7 @@ final class stb extends rqa {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("stb.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("stb.D(").append(2).append(44).append(param1).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

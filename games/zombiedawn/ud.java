@@ -9,72 +9,64 @@ final class ud implements io {
     final static qg a(String param0, byte param1, int param2) {
         se var3 = null;
         RuntimeException var3_ref = null;
-        se stackIn_3_0 = null;
+        se stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        se stackOut_2_0 = null;
+        se stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param1 == 68) {
-                break L1;
-              } else {
-                field_c = null;
-                break L1;
-              }
-            }
             var3 = new se();
             ((qg) (Object) var3).field_e = param0;
             ((qg) (Object) var3).field_b = param2;
-            stackOut_2_0 = (se) var3;
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = (se) var3;
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
-            stackOut_4_1 = new StringBuilder().append("ud.D(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var3_ref;
+            stackOut_2_1 = new StringBuilder().append("ud.D(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 68 + 44 + param2 + 41);
         }
-        return (qg) (Object) stackIn_3_0;
+        return (qg) (Object) stackIn_1_0;
     }
 
     public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
@@ -177,7 +169,7 @@ final class ud implements io {
         }
     }
 
-    final static v a(v param0, int[] param1, int param2) {
+    final static v a(v param0, int[] param1) {
         v var3 = null;
         RuntimeException var3_ref = null;
         v stackIn_1_0 = null;
@@ -286,11 +278,8 @@ final class ud implements io {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
-        if (param0 != -105) {
-            field_c = null;
-        }
         field_c = null;
     }
 
@@ -336,7 +325,7 @@ final class ud implements io {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var8 = param1.a(param0 + -1);
+              var8 = param1.a(-1);
               L1: while (true) {
                 if (var8.field_f != 0) {
                   if (var8.field_f == 2) {
@@ -350,7 +339,7 @@ final class ud implements io {
                     var9 = var10;
                     var3 = var9;
                     var4 = new re[var12.length >> 2];
-                    var5 = param0;
+                    var5 = 0;
                     L2: while (true) {
                       if (var5 >= var4.length) {
                         stackOut_15_0 = (re[]) var4;
@@ -380,7 +369,7 @@ final class ud implements io {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2;
-            stackOut_17_1 = new StringBuilder().append("ud.B(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ud.B(").append(0).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

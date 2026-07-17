@@ -163,55 +163,51 @@ final class eib extends rqa {
         int[] var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        var18 = dma.field_i;
-        var17 = var18;
-        var16 = var17;
-        var15 = var16;
-        var12 = var15;
-        var6 = var12;
-        var7 = dma.field_g;
-        var8 = dma.field_j;
-        var9 = new phb(16, param5);
-        var9.b();
-        dma.c(0, 0, 16, param5, param4, param2);
-        if (param3 != 24436) {
-          return null;
-        } else {
-          L0: {
-            var10 = null;
-            var11 = null;
-            if (!param0) {
-              break L0;
-            } else {
-              var13 = var9.d();
-              var10 = (Object) (Object) var13;
-              var13.b();
-              dma.h(0, 0, 5, 0);
-              dma.h(0, 1, 3, 0);
-              dma.h(0, 2, 2, 0);
-              dma.h(0, 3, 1, 0);
-              dma.h(0, 4, 1, 0);
-              break L0;
-            }
+        L0: {
+          var18 = dma.field_i;
+          var17 = var18;
+          var16 = var17;
+          var15 = var16;
+          var12 = var15;
+          var6 = var12;
+          var7 = dma.field_g;
+          var8 = dma.field_j;
+          var9 = new phb(16, param5);
+          var9.b();
+          dma.c(0, 0, 16, param5, param4, param2);
+          var10 = null;
+          var11 = null;
+          if (!param0) {
+            break L0;
+          } else {
+            var13 = var9.d();
+            var10 = (Object) (Object) var13;
+            var13.b();
+            dma.h(0, 0, 5, 0);
+            dma.h(0, 1, 3, 0);
+            dma.h(0, 2, 2, 0);
+            dma.h(0, 3, 1, 0);
+            dma.h(0, 4, 1, 0);
+            break L0;
           }
-          L1: {
-            if (!param1) {
-              break L1;
-            } else {
-              var14 = var9.d();
-              var11 = (Object) (Object) var14;
-              var14.b();
-              dma.h(11, 0, 5, 0);
-              dma.h(13, 1, 3, 0);
-              dma.h(14, 2, 2, 0);
-              dma.h(15, 3, 1, 0);
-              dma.h(15, 4, 1, 0);
-              break L1;
-            }
-          }
-          dma.a(var18, var7, var8);
-          return new phb[]{null, null, null, (phb) var10, var9, (phb) var11, null, null, null};
         }
+        L1: {
+          if (!param1) {
+            break L1;
+          } else {
+            var14 = var9.d();
+            var11 = (Object) (Object) var14;
+            var14.b();
+            dma.h(11, 0, 5, 0);
+            dma.h(13, 1, 3, 0);
+            dma.h(14, 2, 2, 0);
+            dma.h(15, 3, 1, 0);
+            dma.h(15, 4, 1, 0);
+            break L1;
+          }
+        }
+        dma.a(var18, var7, var8);
+        return new phb[]{null, null, null, (phb) var10, var9, (phb) var11, null, null, null};
     }
 
     eib(String param0, Class[] param1, String param2) {

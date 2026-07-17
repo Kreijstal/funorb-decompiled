@@ -10,14 +10,10 @@ final class ok {
     static int field_b;
 
     final static boolean a(boolean param0) {
-        if (param0) {
-            ok.a(-101);
-            return ha.field_db;
-        }
         return ha.field_db;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_f = null;
@@ -113,11 +109,6 @@ final class ok {
     }
 
     final static void a(int param0) {
-        if (param0 != 15376) {
-            boolean discarded$0 = ok.a(-54, '>');
-            qh.a(4, true);
-            return;
-        }
         qh.a(4, true);
     }
 

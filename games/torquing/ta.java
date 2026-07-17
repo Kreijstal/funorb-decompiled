@@ -45,9 +45,9 @@ class ta extends q {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_m = null;
-        int var1 = -7 % ((13 - param0) / 62);
+        int var1 = 0;
     }
 
     protected ta() {
@@ -61,29 +61,21 @@ class ta extends q {
         var7 = Torquing.field_u;
         try {
           L0: {
-            L1: {
-              var6_int = param2;
-              if (param0 == 0) {
-                break L1;
-              } else {
-                ta.g(-46);
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var6_int = param2;
+            L1: while (true) {
               if (param1 < var6_int) {
                 break L0;
               } else {
                 di.a(param4, (byte) -97, param3, qd.field_a[var6_int], param5);
                 var6_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var6, "ta.Q(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw rb.a((Throwable) (Object) var6, "ta.Q(" + 0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

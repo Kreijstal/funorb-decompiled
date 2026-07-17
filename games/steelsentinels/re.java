@@ -86,22 +86,14 @@ final class re extends ha {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_W = null;
         field_ab = null;
         field_hb = null;
         field_bb = null;
         field_cb = null;
-        if (param0 != 0) {
-          field_W = null;
-          field_X = null;
-          field_ib = null;
-          return;
-        } else {
-          field_X = null;
-          field_ib = null;
-          return;
-        }
+        field_X = null;
+        field_ib = null;
     }
 
     re(qk param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -184,7 +176,7 @@ final class re extends ha {
         return stackIn_3_0;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

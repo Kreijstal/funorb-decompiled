@@ -588,7 +588,7 @@ final class vn extends ue {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_i = null;
         field_m = null;
     }
@@ -696,7 +696,7 @@ final class vn extends ue {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -873,7 +873,8 @@ final class vn extends ue {
                           ((vn) this).field_k = false;
                           ((vn) this).field_s = false;
                           if (!rc.a(-46)) {
-                            this.b(false);
+                            int discarded$1 = 0;
+                            this.b();
                             if (((vn) this).field_t != null) {
                               ((vn) this).field_t.d(136);
                               break L5;
@@ -1130,13 +1131,14 @@ final class vn extends ue {
             ((vn) this).field_n = param2 ? true : false;
             ((vn) this).field_t = param0;
             ((vn) this).field_b.field_c = -1;
-            this.b(false);
+            int discarded$0 = 0;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) (Object) runtimeException, "vn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -1164,7 +1166,8 @@ final class vn extends ue {
                   L1: {
                     var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
                     var3 = 1;
-                    param0.getAppletContext().showDocument(gh.a(param0, var2, (byte) 67), "_top");
+                    int discarded$2 = 67;
+                    param0.getAppletContext().showDocument(gh.a(param0, var2), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {

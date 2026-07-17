@@ -20,14 +20,15 @@ final class fdb extends hbb {
 
     final synchronized void a(kka param0, boolean param1, int param2, boolean param3) {
         try {
-            this.f(-17);
+            int discarded$0 = -17;
+            this.f();
             super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "fdb.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         for (var2 = 0; var2 < 16; var2++) {
@@ -42,13 +43,14 @@ final class fdb extends hbb {
         ((fdb) this).field_J = new int[16];
         ((fdb) this).field_R = new int[16];
         try {
-            this.f(-17);
+            int discarded$0 = -17;
+            this.f();
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "fdb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, byte param3) {
+    final static void a(boolean param0, boolean param1, int param2) {
         llb stackIn_4_0 = null;
         llb stackIn_5_0 = null;
         llb stackIn_6_0 = null;
@@ -97,7 +99,8 @@ final class fdb extends hbb {
         llb stackOut_21_0 = null;
         int stackOut_21_1 = 0;
         L0: {
-          moa.a(true);
+          int discarded$1 = 1;
+          moa.a();
           if (0 > tg.field_q) {
             nna.field_v.field_R = null;
             break L0;
@@ -331,7 +334,8 @@ final class fdb extends hbb {
         ((fdb) this).field_Q = 256;
         ((fdb) this).field_J = new int[16];
         ((fdb) this).field_R = new int[16];
-        this.f(-17);
+        int discarded$0 = -17;
+        this.f();
     }
 
     private final synchronized void b(int param0, int param1, int param2, byte param3) {
@@ -526,19 +530,15 @@ final class fdb extends hbb {
         try {
           L0: {
             ((fdb) this).field_U = param1;
-            if (param0 <= 0) {
-              var4_int = 0;
-              L1: while (true) {
-                if (var4_int >= 16) {
-                  break L0;
-                } else {
-                  this.b(param2, var4_int, ((fdb) this).field_U.field_a[var4_int], (byte) -48);
-                  var4_int++;
-                  continue L1;
-                }
+            var4_int = 0;
+            L1: while (true) {
+              if (var4_int >= 16) {
+                break L0;
+              } else {
+                this.b(param2, var4_int, ((fdb) this).field_U.field_a[var4_int], (byte) -48);
+                var4_int++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -546,7 +546,7 @@ final class fdb extends hbb {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("fdb.F(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("fdb.F(").append(-91).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

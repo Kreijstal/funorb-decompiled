@@ -20,6 +20,7 @@ final class rj extends kb {
     static int[] field_Q;
 
     private final wk b(int param0, int param1, int param2) {
+        wk var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -29,7 +30,6 @@ final class rj extends kb {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        wk var14 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int stackOut_6_0 = 0;
@@ -37,15 +37,16 @@ final class rj extends kb {
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
         var13 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var14 = new wk(((rj) this).field_C * 2, ((rj) this).field_w);
-        vn.a(var14, 3);
+        var4 = new wk(((rj) this).field_C * 2, ((rj) this).field_w);
+        int discarded$1 = 3;
+        vn.a(var4);
         var5 = ((rj) this).field_w >> 1;
         if (param1 < -54) {
           var6 = 0;
           L0: while (true) {
             if (var6 >= ((rj) this).field_w) {
               rf.b(-18862);
-              return var14;
+              return var4;
             } else {
               L1: {
                 var7 = (((rj) this).field_C * 2 - 1) * (var6 >> 1) % (((rj) this).field_C * 2);
@@ -93,7 +94,8 @@ final class rj extends kb {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        this.i(3);
+        int discarded$0 = 3;
+        this.i();
     }
 
     final void c(int param0, int param1, int param2) {
@@ -101,7 +103,8 @@ final class rj extends kb {
         ((rj) this).field_H = param0;
         ((rj) this).field_P = param1 >> 1 & 8355711;
         ((rj) this).field_E = 8355711 & param0 >> 1;
-        this.i(3);
+        int discarded$0 = 3;
+        this.i();
         if (param2 != 27178) {
             field_F = null;
         }
@@ -142,7 +145,8 @@ final class rj extends kb {
                 L2: {
                   rf.b(-18862);
                   if (qn.field_j <= param3 + ((rj) this).field_J.field_y) {
-                    vn.a(((rj) this).field_K, 3);
+                    int discarded$2 = 3;
+                    vn.a(((rj) this).field_K);
                     param2.g(-((rj) this).field_N, 0);
                     param2.g(((rj) this).field_C * 2 - ((rj) this).field_N, 0);
                     ((rj) this).field_S.b(0, 0);
@@ -155,7 +159,8 @@ final class rj extends kb {
                 }
                 L3: {
                   if (-((rj) this).field_J.field_y + var5_int <= qn.field_e) {
-                    vn.a(((rj) this).field_K, 3);
+                    int discarded$3 = 3;
+                    vn.a(((rj) this).field_K);
                     var8 = -((rj) this).field_J.field_y + ((rj) this).field_l + ((rj) this).field_N;
                     L4: while (true) {
                       if (var8 <= ((rj) this).field_C * 2) {
@@ -221,80 +226,72 @@ final class rj extends kb {
             RuntimeException var4_ref2 = null;
             bi var5 = null;
             dh var5_ref = null;
-            Object stackIn_2_0 = null;
-            bi stackIn_4_0 = null;
-            dh stackIn_6_0 = null;
+            bi stackIn_3_0 = null;
+            dh stackIn_5_0 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
-            String stackIn_10_2 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            bi stackOut_3_0 = null;
-            Object stackOut_1_0 = null;
-            dh stackOut_5_0 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            String stackOut_9_2 = null;
+            bi stackOut_2_0 = null;
+            dh stackOut_4_0 = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
             RuntimeException stackOut_8_0 = null;
             StringBuilder stackOut_8_1 = null;
             String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
               try {
                 var4 = Class.forName("jo");
                 var5 = (bi) var4.newInstance();
-                if (param2 == 1423111778) {
-                  var5.a(param0, param2 ^ -1423111760, param3, param1);
-                  stackOut_3_0 = (bi) var5;
-                  stackIn_4_0 = stackOut_3_0;
-                  return stackIn_4_0;
-                } else {
-                  stackOut_1_0 = null;
-                  stackIn_2_0 = stackOut_1_0;
-                  return (bi) (Object) stackIn_2_0;
-                }
+                var5.a(param0, -46, param3, param1);
+                stackOut_2_0 = (bi) var5;
+                stackIn_3_0 = stackOut_2_0;
+                return stackIn_3_0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4_ref = decompiledCaughtException;
                 var5_ref = new dh();
                 ((bi) (Object) var5_ref).a(param0, -46, param3, param1);
-                stackOut_5_0 = (dh) var5_ref;
-                stackIn_6_0 = stackOut_5_0;
-                return (bi) (Object) stackIn_6_0;
+                stackOut_4_0 = (dh) var5_ref;
+                stackIn_5_0 = stackOut_4_0;
+                return (bi) (Object) stackIn_5_0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L0: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_7_0 = (RuntimeException) var4_ref2;
-                stackOut_7_1 = new StringBuilder().append("rj.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
+                stackOut_6_0 = (RuntimeException) var4_ref2;
+                stackOut_6_1 = new StringBuilder().append("rj.E(").append(param0).append(44).append(param1).append(44).append(1423111778).append(44);
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
                 if (param3 == null) {
-                  stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-                  stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-                  stackOut_9_2 = "null";
-                  stackIn_10_0 = stackOut_9_0;
-                  stackIn_10_1 = stackOut_9_1;
-                  stackIn_10_2 = stackOut_9_2;
-                  break L0;
-                } else {
                   stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
                   stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-                  stackOut_8_2 = "{...}";
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_10_1 = stackOut_8_1;
-                  stackIn_10_2 = stackOut_8_2;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L0;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
                   break L0;
                 }
               }
-              throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+              throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -307,7 +304,7 @@ final class rj extends kb {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, (param6 & 16711422) >> 1);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_G = null;
         field_M = null;
         field_F = null;
@@ -415,7 +412,7 @@ final class rj extends kb {
         }
         byte[] var2 = new byte[2];
         byte[] var1 = var2;
-        var2[param0] = (byte)(ek.field_d << 2);
+        var2[1] = (byte)(ek.field_d << 2);
         var2[0] = (byte) 1;
         if (uc.field_a) {
             var2[1] = (byte)oe.c((int) var2[1], 2);
@@ -427,7 +424,7 @@ final class rj extends kb {
         ps.field_v = false;
     }
 
-    private final wk j(int param0) {
+    private final wk j() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -435,7 +432,8 @@ final class rj extends kb {
         int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var2 = ((rj) this).field_w >> 1;
         wk var3 = new wk(var2, ((rj) this).field_w);
-        vn.a(var3, 3);
+        int discarded$0 = 3;
+        vn.a(var3);
         for (var4 = 0; var4 < ((rj) this).field_w; var4++) {
             for (var5 = 0; var2 > var5; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)((-var4 + ((rj) this).field_w) * var4);
@@ -451,9 +449,10 @@ final class rj extends kb {
         return var3;
     }
 
-    private final void i(int param0) {
+    private final void i() {
         ((rj) this).field_O = new wk[]{this.b(((rj) this).field_H, -61, ((rj) this).field_L), this.b(((rj) this).field_E, -120, ((rj) this).field_P)};
-        ((rj) this).field_J = this.j(750);
+        int discarded$0 = 750;
+        ((rj) this).field_J = this.j();
         ((rj) this).field_S = ((rj) this).field_J.e();
         ((rj) this).field_K = new wk(((rj) this).field_w >> 1, ((rj) this).field_w);
     }

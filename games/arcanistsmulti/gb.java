@@ -13,7 +13,7 @@ final class gb implements Iterable {
     static String field_e;
     static String field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
         hf.a(29, new int[9], 0, 0, 146, 577, 250);
         hf.a(31, new int[5], 0, 1, 320, 288, 32);
         hf.a(31, new int[7], 0, 2, 320, 288, 32);
@@ -348,7 +348,7 @@ final class gb implements Iterable {
         ((gb) this).field_g.field_i = ((gb) this).field_g;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_e = null;
         field_b = null;
@@ -358,37 +358,16 @@ final class gb implements Iterable {
     }
 
     final static void a(int param0) {
-        Object var2 = null;
-        L0: {
-          oj.field_i = false;
-          if (nn.field_q != null) {
+        oj.field_i = false;
+        if (!(nn.field_q == null)) {
             nn.field_q.e(-111);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0 == 14) {
-          if (nj.field_c != 0) {
+        if (nj.field_c != 0) {
             ue.b(10);
             ng.field_K = 0;
             return;
-          } else {
-            ng.field_K = 0;
-            return;
-          }
-        } else {
-          var2 = null;
-          String discarded$5 = gb.a((java.applet.Applet) null, 114);
-          if (nj.field_c == 0) {
-            ng.field_K = 0;
-            return;
-          } else {
-            ue.b(10);
-            ng.field_K = 0;
-            return;
-          }
         }
+        ng.field_K = 0;
     }
 
     static {

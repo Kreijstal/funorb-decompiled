@@ -777,7 +777,7 @@ final class fe extends pg {
         ((fe) this).field_l = false;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_h = null;
         field_o = null;
@@ -788,10 +788,7 @@ final class fe extends pg {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, boolean param9, int param10, boolean param11) {
-        f.a(param8, param3, param2, param11, (byte) -38, 16777215, param9, param4, param10, param7, param5, param6, 16777215, param1);
-        if (!param0) {
-            field_h = null;
-        }
+        f.a(param8, param3, param2, param11, (byte) -38, 16777215, true, param4, param10, param7, param5, param6, 16777215, param1);
     }
 
     static {

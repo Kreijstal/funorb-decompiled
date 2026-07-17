@@ -74,7 +74,7 @@ final class qhb extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_p = null;
     }
 

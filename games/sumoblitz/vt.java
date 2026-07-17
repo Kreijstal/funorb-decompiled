@@ -86,34 +86,22 @@ final class vt extends nt {
           return -1;
         } else {
           var6 = -(param0 * (2 * param3)) + param2 * param2;
-          if (param1 < -100) {
-            if (var6 < 0) {
-              return -1;
-            } else {
-              var7 = cb.b(-22415, var6);
-              var8 = (var7 - param2 << param4) / param3;
-              var9 = (-var7 - param2 << param4) / param3;
-              if (var8 >= 0) {
-                if (var8 <= 1 << param4) {
-                  if (0 <= var9) {
-                    if (var8 <= var9) {
-                      return var8;
-                    } else {
-                      return var9;
-                    }
-                  } else {
+          if (var6 < 0) {
+            return -1;
+          } else {
+            var7 = cb.b(-22415, var6);
+            var8 = (var7 - param2 << param4) / param3;
+            var9 = (-var7 - param2 << param4) / param3;
+            if (var8 >= 0) {
+              if (var8 <= 1 << param4) {
+                if (0 <= var9) {
+                  if (var8 <= var9) {
                     return var8;
+                  } else {
+                    return var9;
                   }
                 } else {
-                  if (var9 >= 0) {
-                    if (1 << param4 < var9) {
-                      return -1;
-                    } else {
-                      return var9;
-                    }
-                  } else {
-                    return -1;
-                  }
+                  return var8;
                 }
               } else {
                 if (var9 >= 0) {
@@ -126,9 +114,17 @@ final class vt extends nt {
                   return -1;
                 }
               }
+            } else {
+              if (var9 >= 0) {
+                if (1 << param4 < var9) {
+                  return -1;
+                } else {
+                  return var9;
+                }
+              } else {
+                return -1;
+              }
             }
-          } else {
-            return 115;
           }
         }
     }

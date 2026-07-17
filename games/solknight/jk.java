@@ -16,7 +16,7 @@ final class jk extends ci implements ka {
         }
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_ub = null;
     }
 
@@ -182,7 +182,8 @@ final class jk extends ci implements ka {
         if (param0 == 1784) {
           if (((jk) this).field_J) {
             if (!((jk) this).field_tb) {
-              var2 = r.b(83);
+              int discarded$4 = 83;
+              var2 = r.b();
               if (var2 == null) {
                 return super.h(1784);
               } else {
@@ -199,7 +200,8 @@ final class jk extends ci implements ka {
           ((jk) this).field_vb = null;
           if (((jk) this).field_J) {
             if (!((jk) this).field_tb) {
-              var2 = r.b(83);
+              int discarded$5 = 83;
+              var2 = r.b();
               if (var2 == null) {
                 return super.h(1784);
               } else {
@@ -215,7 +217,7 @@ final class jk extends ci implements ka {
         }
     }
 
-    final static int i(byte param0) {
+    final static int i() {
         return ak.field_a;
     }
 

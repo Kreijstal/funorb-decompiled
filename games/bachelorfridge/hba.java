@@ -119,157 +119,149 @@ final class hba extends vja {
         ee[] var10 = null;
         ee[] var11 = null;
         ee[] var12 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
+        String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
         RuntimeException stackOut_29_0 = null;
         StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
         var2_ref = null;
         var9 = BachelorFridge.field_y;
         try {
           L0: {
-            L1: {
-              System.gc();
-              ula.field_h = wfa.a("mini_stat_bg", param1, "basic", (byte) -35);
-              mp.field_s = hca.a("basic", param1, -93, "stats_tabs");
-              kv discarded$5 = wfa.a("splat_stat", param1, "basic", (byte) 105);
-              bt.field_r = pi.a(param1, -8845, "basic", "stars");
-              kv[] discarded$6 = kla.a(bt.field_r, 122);
-              lp.field_q = wfa.a("options_slime_b", param1, "basic", (byte) -15);
-              nna.field_w = wfa.a("chat_splat", param1, "basic", (byte) -75);
-              qn.field_g = wfa.a("clock_splat", param1, "basic", (byte) 121);
-              fb.field_r = wfa.a("top_bar", param1, "basic", (byte) 70);
-              eja.field_w = wfa.a("bottom_bar", param1, "basic", (byte) 86);
-              uga.field_C = wfa.a("bubble_number", param1, "basic", (byte) 100);
-              ica.field_t = wfa.a("end_button", param1, "basic", (byte) 87);
-              fla.field_s = wfa.a("end_button_held", param1, "basic", (byte) -122);
-              kv[] discarded$7 = hk.a("basic_frame", param1, -84, "basic");
-              wd.field_w = hk.a("button_frame", param1, 87, "basic");
-              bla.field_p = hk.a("button_frame_hover", param1, -115, "basic");
-              op.field_I = hk.a("button_frame_pressed", param1, 74, "basic");
-              hh.field_b = pi.a(param1, -8845, "basic", "move_icons");
-              nia.field_l = pi.a(param1, -8845, "basic", "icon_frames");
-              hl.field_D = hh.field_b;
-              fe.field_j = new kv(16, 16);
-              fe.field_j.b();
-              hh.field_b[2].f(0, 0);
-              hga.field_U.a((byte) -45);
-              ve.field_m = new kv[4][];
-              ve.field_m[0] = pi.a(param1, -8845, "basic", "powerup_hp");
-              ve.field_m[1] = pi.a(param1, -8845, "basic", "powerup_speed");
-              ve.field_m[2] = pi.a(param1, -8845, "basic", "powerup_attack");
-              ve.field_m[3] = pi.a(param1, -8845, "basic", "powerup_special");
-              am.field_M = pi.a(param1, -8845, "basic", "status_icons");
-              gha.field_h = bla.a(29611, "basic", "doughnut", param1)[0];
-              var10 = bla.a(29611, "basic", "special_tiles_ones", param1);
-              qq.field_i = new ee[3];
-              il.field_b = var10[6];
-              ge.field_K = var10[6];
-              nha.field_a = var10[4];
-              il.field_a = var10[15];
-              en.field_a = var10[3];
-              ho.field_j = new ee[]{var10[13], var10[14]};
-              fw.field_f = var10[5];
-              ff.field_u = var10[0];
-              uu.field_vb = var10[1];
-              qq.field_i[0] = var10[17];
-              qq.field_i[2] = var10[19];
-              qq.field_i[1] = var10[18];
-              cba.field_c = new ee[]{var10[23], var10[24], var10[25]};
-              iw.field_b = new ee[]{var10[26], var10[27], var10[28]};
-              sv.field_c = var10[29];
-              it.field_i = var10[32];
-              eka.field_g = new ee[][]{new ee[2], new ee[2], new ee[2]};
-              ena.field_l = var10[33];
-              rw.field_a = var10[31];
-              var2_ref = null;
-              var11 = bla.a(29611, "basic", "special_tiles_twos", param1);
-              kka.field_f = var11[0];
-              hna.field_h = var11[1];
-              de.field_F = var11[2];
-              de.field_F.d();
-              hr.field_c = var11[3];
-              nv.field_wb = var11[5];
-              od.field_C = var11[4];
-              aea.field_k = new kv(256, 256);
-              aea.field_k.b();
-              var11[6].a(0, 0);
-              var11[7].a(128, 0);
-              hga.field_U.a((byte) 119);
-              pfa.field_g = var11[8];
-              co.field_b = new ee[5];
-              co.field_b[4] = var11[13];
-              co.field_b[1] = var11[10];
-              co.field_b[2] = var11[11];
-              co.field_b[3] = var11[12];
-              co.field_b[0] = var11[9];
-              lf.field_b = new ee[3];
-              lf.field_b[2] = var11[16];
-              lf.field_b[1] = var11[15];
-              lf.field_b[0] = var11[14];
-              var3 = null;
-              mla.field_b = pi.a(param1, -8845, "basic", "snowflakes");
-              du.field_b = ch.a(param1, -1, "basic", "cat_head");
-              lu.field_f = ch.a(param1, -1, "basic", "cat_eyes");
-              ou.field_d = bla.a(29611, "basic", "cat_paw", param1);
-              vi.field_f = ch.a(param1, -1, "basic", "cat_leg");
-              var4 = bla.a(29611, "basic", "fish", param1);
-              aw.field_v = new ee[3][3];
-              if (param0) {
-                break L1;
-              } else {
-                field_u = null;
-                break L1;
-              }
-            }
+            System.gc();
+            ula.field_h = wfa.a("mini_stat_bg", param1, "basic", (byte) -35);
+            mp.field_s = hca.a("basic", param1, -93, "stats_tabs");
+            kv discarded$5 = wfa.a("splat_stat", param1, "basic", (byte) 105);
+            bt.field_r = pi.a(param1, -8845, "basic", "stars");
+            kv[] discarded$6 = kla.a(bt.field_r, 122);
+            lp.field_q = wfa.a("options_slime_b", param1, "basic", (byte) -15);
+            nna.field_w = wfa.a("chat_splat", param1, "basic", (byte) -75);
+            qn.field_g = wfa.a("clock_splat", param1, "basic", (byte) 121);
+            fb.field_r = wfa.a("top_bar", param1, "basic", (byte) 70);
+            eja.field_w = wfa.a("bottom_bar", param1, "basic", (byte) 86);
+            uga.field_C = wfa.a("bubble_number", param1, "basic", (byte) 100);
+            ica.field_t = wfa.a("end_button", param1, "basic", (byte) 87);
+            fla.field_s = wfa.a("end_button_held", param1, "basic", (byte) -122);
+            kv[] discarded$7 = hk.a("basic_frame", param1, -84, "basic");
+            wd.field_w = hk.a("button_frame", param1, 87, "basic");
+            bla.field_p = hk.a("button_frame_hover", param1, -115, "basic");
+            op.field_I = hk.a("button_frame_pressed", param1, 74, "basic");
+            hh.field_b = pi.a(param1, -8845, "basic", "move_icons");
+            nia.field_l = pi.a(param1, -8845, "basic", "icon_frames");
+            hl.field_D = hh.field_b;
+            fe.field_j = new kv(16, 16);
+            fe.field_j.b();
+            hh.field_b[2].f(0, 0);
+            hga.field_U.a((byte) -45);
+            ve.field_m = new kv[4][];
+            ve.field_m[0] = pi.a(param1, -8845, "basic", "powerup_hp");
+            ve.field_m[1] = pi.a(param1, -8845, "basic", "powerup_speed");
+            ve.field_m[2] = pi.a(param1, -8845, "basic", "powerup_attack");
+            ve.field_m[3] = pi.a(param1, -8845, "basic", "powerup_special");
+            am.field_M = pi.a(param1, -8845, "basic", "status_icons");
+            gha.field_h = bla.a(29611, "basic", "doughnut", param1)[0];
+            var10 = bla.a(29611, "basic", "special_tiles_ones", param1);
+            qq.field_i = new ee[3];
+            il.field_b = var10[6];
+            ge.field_K = var10[6];
+            nha.field_a = var10[4];
+            il.field_a = var10[15];
+            en.field_a = var10[3];
+            ho.field_j = new ee[]{var10[13], var10[14]};
+            fw.field_f = var10[5];
+            ff.field_u = var10[0];
+            uu.field_vb = var10[1];
+            qq.field_i[0] = var10[17];
+            qq.field_i[2] = var10[19];
+            qq.field_i[1] = var10[18];
+            cba.field_c = new ee[]{var10[23], var10[24], var10[25]};
+            iw.field_b = new ee[]{var10[26], var10[27], var10[28]};
+            sv.field_c = var10[29];
+            it.field_i = var10[32];
+            eka.field_g = new ee[][]{new ee[2], new ee[2], new ee[2]};
+            ena.field_l = var10[33];
+            rw.field_a = var10[31];
+            var2_ref = null;
+            var11 = bla.a(29611, "basic", "special_tiles_twos", param1);
+            kka.field_f = var11[0];
+            hna.field_h = var11[1];
+            de.field_F = var11[2];
+            de.field_F.d();
+            hr.field_c = var11[3];
+            nv.field_wb = var11[5];
+            od.field_C = var11[4];
+            aea.field_k = new kv(256, 256);
+            aea.field_k.b();
+            var11[6].a(0, 0);
+            var11[7].a(128, 0);
+            hga.field_U.a((byte) 119);
+            pfa.field_g = var11[8];
+            co.field_b = new ee[5];
+            co.field_b[4] = var11[13];
+            co.field_b[1] = var11[10];
+            co.field_b[2] = var11[11];
+            co.field_b[3] = var11[12];
+            co.field_b[0] = var11[9];
+            lf.field_b = new ee[3];
+            lf.field_b[2] = var11[16];
+            lf.field_b[1] = var11[15];
+            lf.field_b[0] = var11[14];
+            var3 = null;
+            mla.field_b = pi.a(param1, -8845, "basic", "snowflakes");
+            du.field_b = ch.a(param1, -1, "basic", "cat_head");
+            lu.field_f = ch.a(param1, -1, "basic", "cat_eyes");
+            ou.field_d = bla.a(29611, "basic", "cat_paw", param1);
+            vi.field_f = ch.a(param1, -1, "basic", "cat_leg");
+            var4 = bla.a(29611, "basic", "fish", param1);
+            aw.field_v = new ee[3][3];
             var5_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var5_int >= 3) {
                 ala.field_a = pi.a(param1, -8845, "basic", "spinners");
                 var12 = bla.a(29611, "basic", "milk_jam", param1);
                 var5 = var12;
                 ld.field_l = new ee[7];
                 var6_int = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var6_int >= 7) {
                     pk.field_b = new ee[7];
                     var6_int = 0;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var6_int >= 7) {
                         ls.field_a = gw.a("basic", "box_shadows", param1, -42);
                         var5 = null;
                         as.field_a = new kv[ls.field_a.length];
                         var6_int = 0;
-                        L5: while (true) {
+                        L4: while (true) {
                           if (var6_int >= ls.field_a.length) {
                             sj.field_k = bla.a(29611, "basic", "win_takenhold", param1);
                             ela.field_j = bla.a(29611, "basic", "win_ctf", param1);
                             pm.field_v = bla.a(29611, "basic", "fly_small", param1);
                             hb.field_k = new ee[2];
                             var6_int = 0;
-                            L6: while (true) {
+                            L5: while (true) {
                               if (var6_int >= pm.field_v.length) {
                                 hha.field_y = bla.a(29611, "basic", "maggot_small", param1);
                                 ik.field_h = new ee[hha.field_y.length];
                                 var6_int = 0;
-                                L7: while (true) {
+                                L6: while (true) {
                                   if (var6_int >= hha.field_y.length) {
                                     rla.field_k = wfa.a("target", param1, "basic", (byte) -124);
                                     bfa.field_b = pi.a(param1, -8845, "basic", "select_drop");
                                     vma.field_j = new kv[bfa.field_b.length];
                                     var6_int = 0;
-                                    L8: while (true) {
+                                    L7: while (true) {
                                       if (bfa.field_b.length <= var6_int) {
                                         sia.field_g = wfa.a("hp_meter", param1, "basic", (byte) -11);
                                         lga.field_k = wfa.a("status_frame", param1, "basic", (byte) 64);
@@ -315,49 +307,49 @@ final class hba extends vja {
                                         vma.field_j[var6_int].e();
                                         kv discarded$9 = lp.a((byte) -92, vma.field_j[var6_int]);
                                         var6_int++;
-                                        continue L8;
+                                        continue L7;
                                       }
                                     }
                                   } else {
                                     ik.field_h[var6_int] = hha.field_y[var6_int].b();
                                     var6_int++;
-                                    continue L7;
+                                    continue L6;
                                   }
                                 }
                               } else {
                                 hb.field_k[var6_int] = pm.field_v[var6_int].b();
                                 var6_int++;
-                                continue L6;
+                                continue L5;
                               }
                             }
                           } else {
                             as.field_a[var6_int] = ls.field_a[var6_int].h();
                             var6_int++;
-                            continue L5;
+                            continue L4;
                           }
                         }
                       } else {
                         pk.field_b[var6_int] = var5[7 + var6_int];
                         var6_int++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
                     ld.field_l[var6_int] = var12[var6_int];
                     var6_int++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 var6_int = 0;
-                L9: while (true) {
+                L8: while (true) {
                   if (var6_int >= 3) {
                     var5_int++;
-                    continue L2;
+                    continue L1;
                   } else {
                     aw.field_v[var5_int][var6_int] = var4[3 * var5_int - -var6_int];
                     var6_int++;
-                    continue L9;
+                    continue L8;
                   }
                 }
               }
@@ -365,33 +357,33 @@ final class hba extends vja {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var2 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var2;
-            stackOut_29_1 = new StringBuilder().append("hba.G(").append(param0).append(44);
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackOut_27_0 = (RuntimeException) var2;
+            stackOut_27_1 = new StringBuilder().append("hba.G(").append(1).append(44);
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
-              break L10;
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L9;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
-              break L10;
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
+              break L9;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
         }
     }
 
@@ -605,7 +597,7 @@ final class hba extends vja {
             var2 = qi.a(param1, (byte) 119);
             var3 = param1.b(16711935);
             var4 = param1.b(16711935);
-            var5 = 75 % ((63 - param0) / 58);
+            var5 = 0;
             stackOut_0_0 = new bj(var2, var3, var4);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -615,7 +607,7 @@ final class hba extends vja {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("hba.E(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("hba.E(").append(-30).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -643,7 +635,7 @@ final class hba extends vja {
         return (pp) (Object) stackIn_1_0;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -33,12 +33,14 @@ final class fp extends sn {
               param0 = param0.field_c;
               continue L0;
             } else {
-              jn.a((li) (Object) param1, param0, 18724);
+              int discarded$4 = 18724;
+              jn.a((li) (Object) param1, param0);
               ((fp) this).field_u = ((o) (Object) ((fp) this).field_r.field_h.field_c).field_n;
               return;
             }
           } else {
-            jn.a((li) (Object) param1, param0, 18724);
+            int discarded$5 = 18724;
+            jn.a((li) (Object) param1, param0);
             ((fp) this).field_u = ((o) (Object) ((fp) this).field_r.field_h.field_c).field_n;
             return;
           }

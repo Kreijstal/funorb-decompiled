@@ -12,7 +12,7 @@ class qm {
     static vn field_e;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_g = null;
@@ -21,7 +21,7 @@ class qm {
         field_i = null;
     }
 
-    final static void a(hj param0, int param1, int param2) {
+    final static void a(hj param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -242,14 +242,6 @@ class qm {
             var8 = 0;
             L1: while (true) {
               if (var8 >= param1.field_e) {
-                L2: {
-                  if (param2 == -20484) {
-                    break L2;
-                  } else {
-                    int discarded$1 = qm.a(-86, (byte) 69);
-                    break L2;
-                  }
-                }
                 mm.field_d = var5_float;
                 stackOut_11_0 = var6;
                 stackIn_12_0 = stackOut_11_0;
@@ -257,21 +249,21 @@ class qm {
               } else {
                 var9 = (ei) param1.field_b[var8];
                 var10 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var9.field_e <= var10) {
                     var8++;
                     continue L1;
                   } else {
-                    L4: {
+                    L3: {
                       var11 = (lb) var9.field_b[var10];
                       if (param0 + -1 > var11.field_k) {
-                        break L4;
+                        break L3;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                     var10++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -279,7 +271,7 @@ class qm {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var5 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var5;
             stackOut_13_1 = new StringBuilder().append("qm.B(").append(param0).append(44);
@@ -294,7 +286,7 @@ class qm {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L5;
+              break L4;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -302,12 +294,12 @@ class qm {
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L5;
+              break L4;
             }
           }
-          L6: {
+          L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(-20484).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -319,7 +311,7 @@ class qm {
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L6;
+              break L5;
             } else {
               stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
               stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
@@ -327,10 +319,10 @@ class qm {
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
               stackIn_19_2 = stackOut_17_2;
-              break L6;
+              break L5;
             }
           }
-          L7: {
+          L6: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44);
             stackIn_21_0 = stackOut_19_0;
@@ -344,7 +336,7 @@ class qm {
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
-              break L7;
+              break L6;
             } else {
               stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
@@ -352,7 +344,7 @@ class qm {
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
               stackIn_22_2 = stackOut_20_2;
-              break L7;
+              break L6;
             }
           }
           throw kk.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);

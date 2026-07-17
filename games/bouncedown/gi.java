@@ -11,7 +11,7 @@ final class gi {
     static int field_e;
     private int field_h;
 
-    public static void b(int param0) {
+    public static void b() {
         int var1 = 0;
         field_b = null;
     }
@@ -225,7 +225,7 @@ final class gi {
         }
     }
 
-    final static o a(byte[] param0, int param1) {
+    final static o a(byte[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         o var3 = null;
@@ -254,7 +254,8 @@ final class gi {
             if (param0 != null) {
               var2_int = 0;
               var3 = new o(param0, cl.field_n, ae.field_c, ih.field_V, qh.field_i, he.field_k, ph.field_c);
-              vb.a((byte) 122);
+              int discarded$2 = 122;
+              vb.a();
               stackOut_3_0 = (o) var3;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -301,7 +302,7 @@ final class gi {
         int var8 = 0;
         int var9 = 0;
         var9 = Bounce.field_N;
-        var8 = 115 % ((param0 - -65) / 38);
+        var8 = 1;
         if (param2 > param1) {
           if (param4 <= param2) {
             if (param4 <= param1) {

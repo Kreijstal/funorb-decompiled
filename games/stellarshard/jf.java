@@ -8,7 +8,7 @@ final class jf extends gg {
     int field_o;
     static pb[] field_n;
 
-    final static void e(int param0) {
+    final static void e() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -27,97 +27,94 @@ final class jf extends gg {
         var8 = stellarshard.field_B;
         try {
           L0: {
-            if (param0 > 79) {
-              L1: {
-                var14 = ae.field_N;
-                var2 = var14.f(4);
-                if (var2 != 0) {
-                  if (var2 != 1) {
-                    if (var2 != 2) {
-                      qe.a(115, "A1: " + bh.b((byte) -121), (Throwable) null);
-                      oj.c(-2290);
-                      break L1;
-                    } else {
-                      var15 = (he) (Object) pl.field_W.b(-98);
-                      if (var15 != null) {
-                        var15.field_m = ac.d((byte) 126);
-                        var15.field_n = true;
-                        var15.c(20);
-                        break L1;
-                      } else {
-                        oj.c(-2290);
-                        return;
-                      }
-                    }
+            L1: {
+              var14 = ae.field_N;
+              var2 = var14.f(4);
+              if (var2 != 0) {
+                if (var2 != 1) {
+                  if (var2 != 2) {
+                    qe.a(115, "A1: " + bh.b((byte) -121), (Throwable) null);
+                    int discarded$4 = -2290;
+                    oj.c();
+                    break L1;
                   } else {
-                    var12 = (kl) (Object) nl.field_e.b(-97);
-                    if (var12 == null) {
-                      oj.c(-2290);
-                      return;
-                    } else {
-                      var12.c(20);
+                    var15 = (he) (Object) pl.field_W.b(-98);
+                    if (var15 != null) {
+                      var15.field_m = ac.d((byte) 126);
+                      var15.field_n = true;
+                      var15.c(20);
                       break L1;
+                    } else {
+                      int discarded$5 = -2290;
+                      oj.c();
+                      return;
                     }
                   }
                 } else {
-                  var11 = ac.d((byte) 127);
-                  var3 = var11;
-                  var10 = var11;
-                  var4 = var10;
-                  var5 = var14;
-                  var6 = ((ka) (Object) var5).f(4);
-                  var7 = 0;
-                  L2: while (true) {
-                    if (var7 >= var6) {
-                      var13 = (he) (Object) pl.field_W.b(-78);
-                      if (var13 == null) {
-                        oj.c(-2290);
-                        return;
-                      } else {
-                        var13.field_m = var3;
-                        var13.field_n = true;
-                        var13.c(20);
-                        break L1;
-                      }
+                  var12 = (kl) (Object) nl.field_e.b(-97);
+                  if (var12 == null) {
+                    int discarded$6 = -2290;
+                    oj.c();
+                    return;
+                  } else {
+                    var12.c(20);
+                    break L1;
+                  }
+                }
+              } else {
+                var11 = ac.d((byte) 127);
+                var3 = var11;
+                var10 = var11;
+                var4 = var10;
+                var5 = var14;
+                var6 = ((ka) (Object) var5).f(4);
+                var7 = 0;
+                L2: while (true) {
+                  if (var7 >= var6) {
+                    var13 = (he) (Object) pl.field_W.b(-78);
+                    if (var13 == null) {
+                      int discarded$7 = -2290;
+                      oj.c();
+                      return;
                     } else {
-                      var10[var7] = ((ka) (Object) var5).b(false);
-                      var7++;
-                      continue L2;
+                      var13.field_m = var3;
+                      var13.field_n = true;
+                      var13.c(20);
+                      break L1;
                     }
+                  } else {
+                    var10[var7] = ((ka) (Object) var5).b(false);
+                    var7++;
+                    continue L2;
                   }
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "jf.D(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "jf.D(" + 116 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
-        if (param0 != -15917) {
-            jf.e(-107);
-        }
         field_n = null;
         field_k = null;
         field_l = null;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         ck.field_db = false;
         gk.field_a = false;
-        rh.a(param0, (byte) -72);
+        rh.a(-1, (byte) -72);
         el.field_E = ok.field_a;
         o.field_l = ok.field_a;
     }
 
-    final static String b(CharSequence param0, boolean param1) {
+    final static String b(CharSequence param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_4_0 = null;

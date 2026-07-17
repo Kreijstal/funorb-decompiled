@@ -5,7 +5,7 @@ final class ud {
     static String field_b;
     static String field_a;
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         hf var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -17,26 +17,19 @@ final class ud {
             var4 = (p) (Object) rh.field_a.g(0);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  var2 = k.field_e.g(0);
-                  if (param0 <= -123) {
-                    break L2;
-                  } else {
-                    field_a = null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
+                var2 = k.field_e.g(0);
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
                     re.b(-101, 4);
                     var2 = k.field_e.d(1);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                ol.a(4, var4, 30175);
+                int discarded$2 = 30175;
+                ol.a(4, var4);
                 var4 = (p) (Object) rh.field_a.d(1);
                 continue L1;
               }
@@ -45,7 +38,7 @@ final class ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "ud.A(" + param0 + 44 + 4 + 41);
+          throw t.a((Throwable) (Object) var2_ref, "ud.A(" + -125 + 44 + 4 + 41);
         }
     }
 
@@ -160,12 +153,9 @@ final class ud {
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != 0) {
-            field_a = null;
-        }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -215,7 +205,8 @@ final class ud {
                       break L1;
                     }
                   } else {
-                    gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+                    int discarded$1 = 125;
+                    gi.a((Throwable) null, "A1: " + og.e(55));
                     jl.a((byte) -116);
                     break L1;
                   }

@@ -8,7 +8,7 @@ final class cg extends me {
     private rg field_j;
     static volatile int field_k;
 
-    final static boolean g(int param0) {
+    final static boolean g() {
         ba var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -89,7 +89,7 @@ final class cg extends me {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 23;
         pg.a(0);
     }
@@ -195,12 +195,7 @@ final class cg extends me {
     }
 
     final static ci a(byte param0, int param1) {
-        if (param0 != -82) {
-          field_k = 79;
-          return mh.a(-26159, false, true, false, 1, param1);
-        } else {
-          return mh.a(-26159, false, true, false, 1, param1);
-        }
+        return mh.a(-26159, false, true, false, 1, param1);
     }
 
     final String b(int param0, String param1) {

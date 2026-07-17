@@ -199,7 +199,7 @@ abstract class ag {
         return -1;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!pg.field_a) {
             throw new IllegalStateException();
         }
@@ -207,7 +207,8 @@ abstract class ag {
         if (!(hc.field_c == null)) {
             hc.field_c.n(-7);
         }
-        String var1 = wh.a((byte) -72);
+        int discarded$0 = -72;
+        String var1 = wh.a();
         no.field_a = new cv(var1, (String) null, true, false, false);
         rf.field_a.a((byte) 114, (pk) (Object) vi.field_y);
         vi.field_y.b((byte) -118, (pk) (Object) no.field_a);
@@ -216,9 +217,6 @@ abstract class ag {
 
     final static void a(int param0, int param1) {
         wt.a(param1, (byte) 105);
-        if (param0 != 0) {
-            ag.c(-74);
-        }
     }
 
     final int a(byte param0, int param1) {

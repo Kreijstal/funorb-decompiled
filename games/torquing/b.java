@@ -16,7 +16,7 @@ final class b extends am {
         return ii.field_k;
     }
 
-    final static int e(int param0, int param1, int param2) {
+    final static int e(int param0, int param1) {
         int var3 = param0 - 1 & param1 >> 31;
         return var3 + ((param1 >>> 31) + param1) % param0;
     }
@@ -35,15 +35,12 @@ final class b extends am {
     }
 
     private final int d(int param0, int param1, int param2) {
-        if (param0 != -5951) {
-            field_u = null;
-        }
         int var4 = param2 - -(param1 * 57);
         var4 = var4 << 1 ^ var4;
         return -((1376312589 + (var4 * var4 * 15731 - -789221) * var4 & 2147483647) / 262144) + 4096;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (on.field_c <= 20) {
             bd.a(false, 0);
         } else {

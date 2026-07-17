@@ -219,12 +219,14 @@ final class vi extends c {
               param0 = param0.field_a;
               continue L0;
             } else {
-              fe.a(param0, (rf) (Object) param1, false);
+              int discarded$4 = 0;
+              fe.a(param0, (rf) (Object) param1);
               ((vi) this).field_l = ((oa) (Object) ((vi) this).field_j.field_c.field_a).field_f;
               return;
             }
           } else {
-            fe.a(param0, (rf) (Object) param1, false);
+            int discarded$5 = 0;
+            fe.a(param0, (rf) (Object) param1);
             ((vi) this).field_l = ((oa) (Object) ((vi) this).field_j.field_c.field_a).field_f;
             return;
           }

@@ -42,7 +42,7 @@ final class fe extends vo {
         fc.a(var8, var5, (byte) 92, var6, var4, ((fe) this).field_a);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         int var1 = 49;
     }

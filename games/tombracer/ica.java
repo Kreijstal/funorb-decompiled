@@ -38,7 +38,7 @@ final class ica {
         int var42 = 0;
         L0: {
           var42 = TombRacer.field_G ? 1 : 0;
-          if (param4 > param15) {
+          if (0 > param15) {
             break L0;
           } else {
             if (param16 < uoa.field_b) {
@@ -247,7 +247,7 @@ final class ica {
                                 qga.a(-(var37 * var41) + var29, var25 + -(var37 * var40), param6, var39, var36, -116, var38 + var37, var40, -(var39 * var37) + var21, var41);
                                 break L10;
                               } else {
-                                qga.a(var29, var25, param6, var39, var36 + var37, param4 + -113, var38, var40, var21, var41);
+                                qga.a(var29, var25, param6, var39, var36 + var37, -113, var38, var40, var21, var41);
                                 break L10;
                               }
                             } else {
@@ -257,7 +257,7 @@ final class ica {
                                 if (uoa.field_e <= var37) {
                                   break L10;
                                 } else {
-                                  qga.a(var29, var25, param6, 0, var37 - -var36, param4 ^ -108, var38, 0, var21, 0);
+                                  qga.a(var29, var25, param6, 0, var37 - -var36, -108, var38, 0, var21, 0);
                                   break L10;
                                 }
                               }
@@ -412,7 +412,7 @@ final class ica {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         iu var1 = null;
         iu var2 = null;
         int var3 = 0;
@@ -423,7 +423,8 @@ final class ica {
             uoa.b();
             bea.a();
             tl.field_r = 0;
-            uw.a(false);
+            int discarded$0 = 0;
+            uw.a();
             var2 = var1.a();
             for (var3 = 0; 15 > var3; var3++) {
                 var2.b(-2, -2, 16777215);

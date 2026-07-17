@@ -11,47 +11,27 @@ final class fl implements dja {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (-param3 + param0 < ob.field_j) {
-          bp.a(param0, param3, param1, -8, param5, param2, param6);
-          if (param4 != 1523) {
-            return;
+        if (-param3 + param0 >= ob.field_j) {
+          if (mt.field_o >= param0 + param3) {
+            if (lua.field_c <= -param3 + param1) {
+              if (hab.field_i < param1 - -param3) {
+                bp.a(param0, param3, param1, -8, param5, param2, param6);
+                return;
+              } else {
+                il.a(param2, param5, (byte) -103, param3, param0, param1, param6);
+                return;
+              }
+            } else {
+              bp.a(param0, param3, param1, -8, param5, param2, param6);
+              return;
+            }
           } else {
+            bp.a(param0, param3, param1, -8, param5, param2, param6);
             return;
           }
         } else {
-          if (mt.field_o < param0 + param3) {
-            bp.a(param0, param3, param1, -8, param5, param2, param6);
-            if (param4 != 1523) {
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (lua.field_c > -param3 + param1) {
-              bp.a(param0, param3, param1, -8, param5, param2, param6);
-              if (param4 != 1523) {
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (hab.field_i >= param1 - -param3) {
-                il.a(param2, param5, (byte) -103, param3, param0, param1, param6);
-                if (param4 != 1523) {
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                bp.a(param0, param3, param1, -8, param5, param2, param6);
-                if (param4 != 1523) {
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          }
+          bp.a(param0, param3, param1, -8, param5, param2, param6);
+          return;
         }
     }
 

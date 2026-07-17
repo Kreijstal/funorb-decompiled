@@ -136,7 +136,7 @@ final class bh {
             StringBuilder stackOut_6_1 = null;
             String stackOut_6_2 = null;
             try {
-              var4_int = 63 / ((param1 - 14) / 40);
+              var4_int = 31;
               try {
                 L0: {
                   var5 = Class.forName("fk");
@@ -184,7 +184,7 @@ final class bh {
                   break L1;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+              throw bd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 105 + 44 + param2 + 44 + param3 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -193,7 +193,7 @@ final class bh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -75;
         field_c = null;
         field_e = null;

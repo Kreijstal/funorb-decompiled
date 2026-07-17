@@ -53,7 +53,7 @@ final class vc {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         if (hm.field_F != -sq.field_e) {
             if (-sq.field_e + 250 == hm.field_F) {
             }
@@ -62,7 +62,7 @@ final class vc {
         hm.field_F = hm.field_F + 1;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
     }
@@ -155,7 +155,7 @@ final class vc {
         return stackIn_9_0 != 0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         bs var1_ref = null;
         uh var1_ref2 = null;
@@ -366,7 +366,7 @@ final class vc {
           L0: {
             L1: {
               L2: {
-                var10_int = -83 / ((param7 - -84) / 37);
+                var10_int = -20;
                 if (param8 != param1) {
                   break L2;
                 } else {
@@ -428,7 +428,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var10, "vc.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw wn.a((Throwable) (Object) var10, "vc.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + 96 + 44 + param8 + 44 + param9 + 41);
         }
     }
 

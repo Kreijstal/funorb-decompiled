@@ -25,16 +25,13 @@ final class fna {
     final static void a(int param0, int param1, ik param2) {
         kh var3 = null;
         try {
-            if (param1 != -23814) {
-                field_j = null;
-            }
             var3 = ql.field_k;
-            var3.k(param0, -2988);
+            var3.k(5, -2988);
             var3.i(2, 0);
             var3.i(0, 0);
             var3.i(param2.field_g, 0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "fna.K(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "fna.K(" + 5 + 44 + -23814 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -80,7 +77,7 @@ final class fna {
         return ng.field_k[5].c() / 2 + ((fna) this).field_d;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_j = null;
     }
@@ -307,7 +304,8 @@ final class fna {
                     }
                     L12: {
                       var22 = ((fna) this).field_e;
-                      if (ipa.a(var20_ref_kea, true, vja.b(30000))) {
+                      int discarded$2 = 30000;
+                      if (ipa.a(var20_ref_kea, true, vja.b())) {
                         break L12;
                       } else {
                         var15 = -1;
@@ -359,7 +357,8 @@ final class fna {
                       L16: {
                         var27 = stackIn_45_0;
                         var20_ref_kia = var27;
-                        if (vja.b(30000) == var27) {
+                        int discarded$3 = 30000;
+                        if (vja.b() == var27) {
                           var15 = 2236962;
                           var5 = 10827264;
                           oka.a("X", var5, var6, -1, -8 + (var9 + -1), ((fna) this).field_b, var15);
@@ -592,7 +591,8 @@ final class fna {
 
     final static void a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, int param13) {
         qda.field_b = null;
-        se.d((byte) 118);
+        int discarded$3 = 118;
+        se.d();
         if (param5 != -22919) {
             return;
         }

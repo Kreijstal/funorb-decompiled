@@ -38,9 +38,6 @@ final class aa {
             }
             return var2;
         }
-        if (param0 != 4) {
-            return 63;
-        }
         var2 = 2;
         if (param1 < -65536) {
             var2 += 16;
@@ -65,7 +62,7 @@ final class aa {
         return var2;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         if (!Character.isISOControl(param0)) {
           if (rf.a(true, param0)) {
             return true;
@@ -93,14 +90,14 @@ final class aa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_e = null;
         field_d = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             qj.a("", param0, (byte) 51);
             o.a((byte) -61, param0);

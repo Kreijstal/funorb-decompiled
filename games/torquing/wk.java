@@ -70,7 +70,7 @@ class wk implements si {
         try {
           L0: {
             L1: {
-              var8_int = param6;
+              var8_int = 0;
               var9 = param7;
               var10 = 0;
               var11 = param5 - param0;
@@ -110,7 +110,7 @@ class wk implements si {
                   var57 = qd.field_a[param3];
                   var40 = ln.a(qg.field_z, kn.field_e, param4 + -param5, 87);
                   var41 = ln.a(qg.field_z, kn.field_e, param4 + param5, 105);
-                  var42 = ln.a(qg.field_z, kn.field_e, param4 + -var11, param6 + 88);
+                  var42 = ln.a(qg.field_z, kn.field_e, param4 + -var11, 88);
                   var43 = ln.a(qg.field_z, kn.field_e, param4 + var11, 85);
                   di.a(var40, (byte) 92, param1, var57, var42);
                   di.a(var42, (byte) 30, param2, var57, var43);
@@ -268,20 +268,18 @@ class wk implements si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var8, "wk.L(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw rb.a((Throwable) (Object) var8, "wk.L(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 0 + 44 + param7 + 41);
         }
     }
 
     final static void a(int param0, t[] param1, t[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, uc param11, int param12, int param13, uc param14) {
-        Object var16 = null;
-        pl.a(param12, 0, param4, (t[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, param3, param11, param0, 0, param9, param6, param10, 480, uf.field_c, param5, 127);
-        if (param8 <= 109) {
-            return;
-        }
+        int discarded$0 = 127;
+        int discarded$1 = 320;
+        pl.a(param12, 0, param4, (t[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, 0, param11, 0, 0, 240, param6, 0, 480, uf.field_c);
         try {
             Torquing.a(-49, param7);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "wk.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + (param11 != null ? "{...}" : "null") + 44 + param12 + 44 + param13 + 44 + (param14 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "wk.G(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 0 + 44 + param4 + 44 + 320 + 44 + param6 + 44 + param7 + 44 + 112 + 44 + 240 + 44 + 0 + 44 + (param11 != null ? "{...}" : "null") + 44 + param12 + 44 + param13 + 44 + (param14 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -323,7 +321,7 @@ class wk implements si {
         return ((wk) this).a((byte) 52, param4).a(((wk) this).field_b[param4].field_e, ((wk) this).field_c, param1, (double)param3, param2, 0, (si) this, param5);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

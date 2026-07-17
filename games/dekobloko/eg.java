@@ -408,7 +408,7 @@ final class eg {
         return (ie) (Object) new dn();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_e = null;

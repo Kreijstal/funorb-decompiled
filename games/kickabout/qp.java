@@ -101,7 +101,7 @@ final class qp extends wj implements vh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_L = null;
         field_G = null;
         field_C = null;
@@ -118,7 +118,7 @@ final class qp extends wj implements vh {
         wi[] var7 = new wi[param1];
         wi[] var3 = var7;
         int[] var4 = new int[param1];
-        for (var5 = param0; ((qp) this).field_N > var5; var5++) {
+        for (var5 = 0; ((qp) this).field_N > var5; var5++) {
             var7[var5] = ((qp) this).field_J[var5];
             var4[var5] = ((qp) this).field_M[var5];
         }
@@ -283,15 +283,11 @@ final class qp extends wj implements vh {
           if (4 != param0) {
             if (param0 != 3) {
               if (1 != param0) {
-                if (param0 != 2) {
-                  if (param1) {
-                    field_F = null;
-                    throw new IllegalStateException();
-                  } else {
-                    throw new IllegalStateException();
-                  }
-                } else {
+                if (param0 == 2) {
                   return rp.field_C;
+                } else {
+                  field_F = null;
+                  throw new IllegalStateException();
                 }
               } else {
                 return vo.a((byte) -18, po.field_g, new String[2]);

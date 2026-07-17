@@ -18,7 +18,7 @@ final class gb extends ug {
         return param0 | param1;
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         return 1;
     }
 
@@ -155,7 +155,7 @@ final class gb extends ug {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_n = null;
     }

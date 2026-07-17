@@ -22,7 +22,7 @@ final class ww extends td {
           if (var6 >= rn.field_u) {
             var6 = var12.g(0);
             var7 = kla.a(var6, vj.field_o, -2147483648);
-            var8 = param0;
+            var8 = 0;
             var9 = (lr) (Object) var12.b((byte) 90);
             L1: while (true) {
               L2: {
@@ -33,7 +33,7 @@ final class ww extends td {
                     break L2;
                   } else {
                     var8++;
-                    var9 = (lr) (Object) var12.c(param0);
+                    var9 = (lr) (Object) var12.c(0);
                     continue L1;
                   }
                 }
@@ -41,8 +41,8 @@ final class ww extends td {
               return var9;
             }
           } else {
-            if (rs.field_g[var6].a(param4, param1, param2, param3, param0 ^ -2581)) {
-              if (rs.field_g[var6].a(param0, param2)) {
+            if (rs.field_g[var6].a(param4, param1, param2, param3, -2581)) {
+              if (rs.field_g[var6].a(0, param2)) {
                 var11.a((bw) (Object) rs.field_g[var6], true);
                 var6++;
                 continue L0;

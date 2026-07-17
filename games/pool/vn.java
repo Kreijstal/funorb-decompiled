@@ -86,7 +86,7 @@ final class vn {
                 ((ho) var19).field_p = new le[((ho) var19).field_t];
                 ((ho) var19).field_m = new int[((ho) var19).field_t];
                 ((ho) var19).field_n = new le[((ho) var19).field_t];
-                var5 = 57 % ((param0 - -62) / 55);
+                var5 = 0;
                 ((ho) var19).field_q = new int[((ho) var19).field_t];
                 var6 = 0;
                 L1: while (true) {
@@ -229,7 +229,7 @@ final class vn {
               L17: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_34_0 = (RuntimeException) var4;
-                stackOut_34_1 = new StringBuilder().append("vn.C(").append(param0).append(44).append(param1).append(44);
+                stackOut_34_1 = new StringBuilder().append("vn.C(").append(34).append(44).append(param1).append(44);
                 stackIn_36_0 = stackOut_34_0;
                 stackIn_36_1 = stackOut_34_1;
                 stackIn_35_0 = stackOut_34_0;
@@ -287,9 +287,6 @@ final class vn {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (param1 != 0) {
-            return -51;
-        }
         return aj.a(param3, false, aj.a(param2, false, param0));
     }
 
@@ -317,7 +314,7 @@ final class vn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_h = null;

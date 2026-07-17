@@ -6,15 +6,12 @@ final class cd {
     static String field_c;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
 
-    final static boolean b(int param0) {
-        if (param0 != -27440) {
-            return true;
-        }
+    final static boolean b() {
         if (null == lo.field_k) {
             return false;
         }

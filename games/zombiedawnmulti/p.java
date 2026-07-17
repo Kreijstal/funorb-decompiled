@@ -82,33 +82,24 @@ final class p {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         sb.field_c = param0;
-        if (param2) {
-            p.a(35);
-        }
         kk.field_x = param1;
         ua.field_N = param3;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_f = null;
         field_a = null;
         field_c = null;
-        if (param0 != 5) {
-            lk discarded$0 = p.a(6, 69, -42, false);
-        }
     }
 
-    final static lk a(int param0, int param1, int param2, boolean param3) {
-        if (!param3) {
-            return null;
-        }
+    final static lk a(int param0, int param1) {
         lk var4 = (lk) (Object) bo.field_a.g(83);
         if (var4 == null) {
             var4 = new lk();
         }
-        var4.a(param0, param2, param1, 7457);
+        var4.a(param0, 100, param1, 7457);
         return var4;
     }
 

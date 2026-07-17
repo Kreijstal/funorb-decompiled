@@ -128,7 +128,7 @@ final class fk implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_p = null;
         field_a = null;
         field_q = null;
@@ -149,7 +149,7 @@ final class fk implements Runnable {
         }
     }
 
-    final static gh b(byte param0) {
+    final static gh b() {
         return mj.field_Sb.field_Ub;
     }
 

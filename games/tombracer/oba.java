@@ -35,8 +35,10 @@ final class oba extends gda {
         return gt.field_c;
     }
 
-    final static boolean c(int param0, int param1, int param2) {
-        return vta.a(param1, param0, 2048) & ((0 != (8192 & param0) ? true : false) | kaa.a(param1, param0, false) | rg.e(param1, -56, param0));
+    final static boolean c(int param0, int param1) {
+        int discarded$10 = 2048;
+        int discarded$11 = 0;
+        return vta.a(param1, param0) & ((0 != (8192 & param0) ? true : false) | kaa.a(param1, param0) | rg.e(param1, -56, param0));
     }
 
     final void c(int param0) {

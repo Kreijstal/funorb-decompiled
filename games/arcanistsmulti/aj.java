@@ -12,7 +12,7 @@ final class aj {
     static int field_g;
     static i field_h;
 
-    final static mi a(nf param0, int param1) {
+    final static mi a(nf param0) {
         mi var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -89,19 +89,12 @@ final class aj {
     }
 
     final static boolean a(int param0, int param1) {
-        if (param0 != 28139) {
-            aj.a(120);
-            return param1 >= 2 ? true : false;
-        }
-        return param1 >= 2 ? true : false;
+        return param1 >= 2;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_f = null;
-        if (param0 != 20028) {
-            return;
-        }
         field_i = null;
         field_d = null;
         field_a = null;

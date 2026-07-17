@@ -18,7 +18,7 @@ final class kc extends ck {
     static fk field_s;
     static String field_t;
 
-    public static void d(int param0) {
+    public static void d() {
         field_x = null;
         field_w = null;
         field_o = null;
@@ -114,7 +114,7 @@ final class kc extends ck {
                     var10.fillRect(2, 2, param1 * 3, 30);
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
-                    var10.fillRect(3 * param1 + 2, 2, param3 - 3 * param1, 30);
+                    var10.fillRect(3 * param1 + 2, 2, 300 - 3 * param1, 30);
                     var10.setFont(wc.field_f);
                     var10.setColor(java.awt.Color.white);
                     var10.drawString(param0, (304 - 6 * param0.length()) / 2, 22);
@@ -191,7 +191,7 @@ final class kc extends ck {
           }
           L11: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param1).append(44).append(param2).append(44).append(300).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -218,7 +218,7 @@ final class kc extends ck {
         }
     }
 
-    final static String a(int[] param0, int[] param1, int param2) {
+    final static String a(int[] param0, int[] param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -304,7 +304,7 @@ final class kc extends ck {
                       }
                     }
                     L6: {
-                      if (param2 != var6) {
+                      if (2 != var6) {
                         break L6;
                       } else {
                         var3_int = var3_int ^ 5624312;
@@ -747,7 +747,7 @@ final class kc extends ck {
               break L45;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_140_0, stackIn_140_2 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_140_0, stackIn_140_2 + 44 + 2 + 41);
         }
         return stackIn_133_0;
     }

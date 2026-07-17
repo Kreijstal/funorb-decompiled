@@ -9,7 +9,7 @@ final class qi extends d {
     static jp[] field_K;
     int field_L;
 
-    final static me a(java.applet.Applet param0, int param1) {
+    final static me a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         me[] var3 = null;
@@ -18,7 +18,6 @@ final class qi extends d {
         int var6 = 0;
         me stackIn_4_0 = null;
         me stackIn_10_0 = null;
-        Object stackIn_14_0 = null;
         me stackIn_16_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -30,7 +29,6 @@ final class qi extends d {
         RuntimeException decompiledCaughtException = null;
         me stackOut_3_0 = null;
         me stackOut_15_0 = null;
-        Object stackOut_13_0 = null;
         me stackOut_9_0 = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
@@ -53,18 +51,12 @@ final class qi extends d {
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
-                  if (param1 == -28432) {
-                    stackOut_15_0 = bb.field_c;
-                    stackIn_16_0 = stackOut_15_0;
-                    break L0;
-                  } else {
-                    stackOut_13_0 = null;
-                    stackIn_14_0 = stackOut_13_0;
-                    return (me) (Object) stackIn_14_0;
-                  }
+                  stackOut_15_0 = bb.field_c;
+                  stackIn_16_0 = stackOut_15_0;
+                  break L0;
                 } else {
                   var5 = var3[var4];
-                  if (var5.b(var2, param1 + 28554)) {
+                  if (var5.b(var2, 122)) {
                     stackOut_9_0 = (me) var5;
                     stackIn_10_0 = stackOut_9_0;
                     return stackIn_10_0;
@@ -104,7 +96,7 @@ final class qi extends d {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + -28432 + 41);
         }
         return stackIn_16_0;
     }
@@ -117,12 +109,12 @@ final class qi extends d {
         return ((qi) this).field_O.b(true);
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_K = null;
         field_N = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -444,7 +436,7 @@ final class qi extends d {
         return stackIn_23_0 != 0;
     }
 
-    final static int i(int param0) {
+    final static int i() {
         return ul.field_p;
     }
 

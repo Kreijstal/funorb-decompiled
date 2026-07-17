@@ -186,7 +186,7 @@ final class kg implements Runnable {
               var7 = -5 + sh.field_d.field_cb;
               kc.field_n.a(param3, -param3 + var7, 5, param4 + 485 + param1 + 2, (byte) 64);
               g.field_n.a(param3, 0, param1, -ap.field_e.field_Ib + -param1 + kc.field_n.field_Ib, (byte) 64);
-              var8 = 3 / ((49 - param0) / 40);
+              var8 = -3;
               ap.field_e.a(param3, 0, param1 + g.field_n.field_Ib, ap.field_e.field_Ib, (byte) 64);
               var7 = var7 - (param3 - -2);
               i.field_q.a(2, (byte) -110, 2 + (485 + param1) - -param4, 5, 5, param4, var7 - 5);
@@ -243,7 +243,7 @@ final class kg implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var6, "kg.I(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw qb.a((Throwable) (Object) var6, "kg.I(" + 93 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -279,13 +279,14 @@ final class kg implements Runnable {
                 break L1;
               } else {
                 var5 = null;
-                kj discarded$2 = ((kg) this).a(26, true, (byte[]) null, (ve) null);
+                kj discarded$4 = ((kg) this).a(26, true, (byte[]) null, (ve) null);
                 break L1;
               }
             }
             var4.field_G = param1;
             var4.field_j = (long)param0;
-            this.a(var4, -3);
+            int discarded$5 = -3;
+            this.a(var4);
             stackOut_2_0 = (kj) var4;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -323,7 +324,7 @@ final class kg implements Runnable {
         return stackIn_3_0;
     }
 
-    private final void a(kj param0, int param1) {
+    private final void a(kj param0) {
         synchronized (((kg) this).field_f) {
             ((kg) this).field_f.a((tk) (Object) param0, false);
             ((kg) this).field_c = ((kg) this).field_c + 1;
@@ -481,7 +482,8 @@ final class kg implements Runnable {
               }
             }
             stackIn_3_0.field_B = stackIn_3_1 != 0;
-            this.a(var5, -3);
+            int discarded$2 = -3;
+            this.a(var5);
             stackOut_3_0 = (kj) var5;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -544,7 +546,7 @@ final class kg implements Runnable {
         return stackIn_4_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_i = null;
         field_a = null;

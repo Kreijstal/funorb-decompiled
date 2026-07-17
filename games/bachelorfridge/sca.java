@@ -9,7 +9,7 @@ abstract class sca {
     static String field_b;
     static kv field_a;
 
-    final static int a(int param0) {
+    final static int a() {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -39,7 +39,7 @@ abstract class sca {
               try {
                 L0: {
                   L1: {
-                    if (param0 != ds.field_m) {
+                    if (0 != ds.field_m) {
                       break L1;
                     } else {
                       ch.field_p = mh.field_l.a((byte) 120, pw.field_A, nj.field_f);
@@ -139,7 +139,7 @@ abstract class sca {
 
     abstract void a(java.awt.Component param0, byte param1);
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_b = null;

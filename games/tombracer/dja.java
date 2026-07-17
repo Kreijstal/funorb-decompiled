@@ -68,7 +68,8 @@ final class dja extends nv implements ut {
               return;
             }
           } else {
-            if (this.a(var4[var5], (byte) -103)) {
+            int discarded$7 = -103;
+            if (this.a(var4[var5])) {
               var2 = var2 + var4[var5].b(75);
               var5++;
               continue L1;
@@ -157,7 +158,7 @@ final class dja extends nv implements ut {
         }
     }
 
-    private final boolean a(ffa param0, byte param1) {
+    private final boolean a(ffa param0) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -308,10 +309,10 @@ final class dja extends nv implements ut {
         return stackIn_8_0 != 0;
     }
 
-    final static boolean a(int param0, int param1, byte param2, int param3) {
+    final static boolean a() {
         if (hka.field_b != null) {
             if (hka.field_b.a(13)) {
-                wp.a(param2 ^ 105);
+                wp.a(-1);
                 return true;
             }
         }
@@ -322,13 +323,10 @@ final class dja extends nv implements ut {
                 return true;
             }
         }
-        if (param2 != -106) {
-            field_s = null;
-        }
         if (!(!bc.a(true))) {
             return true;
         }
-        if (mda.b(13, (byte) -44, param1, param0)) {
+        if (mda.b(13, (byte) -44, 12, 15)) {
             return true;
         }
         return false;

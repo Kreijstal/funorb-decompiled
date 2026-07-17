@@ -27,7 +27,7 @@ final class oe {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;
@@ -67,7 +67,7 @@ final class oe {
         }
     }
 
-    final static kg a(String param0, boolean param1) {
+    final static kg a(String param0) {
         RuntimeException var2 = null;
         kg stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

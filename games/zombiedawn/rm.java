@@ -17,7 +17,7 @@ final class rm extends java.awt.Canvas {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_d = null;
@@ -112,7 +112,7 @@ final class rm extends java.awt.Canvas {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int a(int param0, int param1) {
         int var3 = param1 >>> 31;
         return (var3 + param1) / param0 - var3;
     }
@@ -141,8 +141,10 @@ final class rm extends java.awt.Canvas {
         L0: {
           var3 = ZombieDawn.field_J;
           var1 = 0;
-          if (we.o((byte) -80)) {
-            hi.a((byte) 120);
+          int discarded$25 = -80;
+          if (we.o()) {
+            int discarded$26 = 120;
+            hi.a();
             var1 = 1;
             break L0;
           } else {
@@ -156,14 +158,16 @@ final class rm extends java.awt.Canvas {
                 break L0;
               }
             } else {
-              ql.d(-160793343);
+              int discarded$27 = -160793343;
+              ql.d();
               var1 = 1;
               break L0;
             }
           }
         }
         L1: {
-          if (!nk.b(15000)) {
+          int discarded$28 = 15000;
+          if (!nk.b()) {
             break L1;
           } else {
             if (dl.a(false)) {
@@ -194,7 +198,8 @@ final class rm extends java.awt.Canvas {
           }
         }
         L3: {
-          if (!bg.a(2)) {
+          int discarded$29 = 2;
+          if (!bg.a()) {
             break L3;
           } else {
             var2 = (ln.field_b + -1 << 8) / 16;

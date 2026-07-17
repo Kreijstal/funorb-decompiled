@@ -7,7 +7,7 @@ final class b extends tc {
     int[] field_l;
     static int field_k;
 
-    final static void a(byte[] param0, int param1) {
+    final static void a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -309,7 +309,7 @@ final class b extends tc {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_n = null;
     }
 
@@ -321,43 +321,39 @@ final class b extends tc {
           return 1;
         } else {
           if (param1 != 0) {
-            if (param3 == 25) {
-              L0: {
-                var5 = (-param4 + param0 * 2) * 500 / param0;
-                var5 = Math.max(0, var5);
-                if (var5 > 500) {
-                  var6 = var5 - 500;
-                  var5 = var6 / 3 + 500;
-                  if (var5 > 1000) {
-                    var5 = 1000;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
+            L0: {
+              var5 = (-param4 + param0 * 2) * 500 / param0;
+              var5 = Math.max(0, var5);
+              if (var5 > 500) {
+                var6 = var5 - 500;
+                var5 = var6 / 3 + 500;
+                if (var5 > 1000) {
+                  var5 = 1000;
+                  break L0;
                 } else {
                   break L0;
                 }
+              } else {
+                break L0;
               }
-              L1: {
-                var6 = (2 * param1 - param2) * 500 / param1;
-                var6 = Math.max(0, var6);
-                if (var6 > 500) {
-                  var7 = var6 + -500;
-                  var6 = 500 + var7 / 2;
-                  if (var6 <= 1000) {
-                    break L1;
-                  } else {
-                    var6 = 1000;
-                    break L1;
-                  }
+            }
+            L1: {
+              var6 = (2 * param1 - param2) * 500 / param1;
+              var6 = Math.max(0, var6);
+              if (var6 > 500) {
+                var7 = var6 + -500;
+                var6 = 500 + var7 / 2;
+                if (var6 <= 1000) {
+                  break L1;
                 } else {
+                  var6 = 1000;
                   break L1;
                 }
+              } else {
+                break L1;
               }
-              return Math.max(100, Math.min(var5 - -var6, 2000));
-            } else {
-              return -81;
             }
+            return Math.max(100, Math.min(var5 - -var6, 2000));
           } else {
             return 1;
           }
@@ -373,42 +369,34 @@ final class b extends tc {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_7_0 = 0;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                field_n = null;
-                break L1;
-              }
-            }
             var2_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var2_int >= wp.field_H.length) {
-                stackOut_13_0 = 0;
-                stackIn_14_0 = stackOut_13_0;
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
                 var3 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (wp.field_H[var2_int].length <= var3) {
                     var2_int++;
-                    continue L2;
+                    continue L1;
                   } else {
                     if (wp.field_H[var2_int][var3] == param1) {
-                      stackOut_9_0 = var3;
-                      stackIn_10_0 = stackOut_9_0;
-                      return stackIn_10_0;
+                      stackOut_7_0 = var3;
+                      stackIn_8_0 = stackOut_7_0;
+                      return stackIn_8_0;
                     } else {
                       var3++;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 }
@@ -418,9 +406,9 @@ final class b extends tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "b.A(" + param0 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) var2, "b.A(" + 0 + 44 + param1 + 41);
         }
-        return stackIn_14_0;
+        return stackIn_12_0;
     }
 
     static {

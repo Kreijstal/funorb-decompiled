@@ -1061,7 +1061,7 @@ final class bd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_a = null;
@@ -1308,7 +1308,7 @@ final class bd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(String param0, Throwable param1, boolean param2) {
+    final static void a(String param0, Throwable param1) {
         try {
             Exception var3 = null;
             String var3_ref = null;

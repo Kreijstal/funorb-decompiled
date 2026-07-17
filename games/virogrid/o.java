@@ -26,13 +26,14 @@ final class o {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    ak.a(-26039, var5, param0);
+                    int discarded$4 = 3;
+                    ak.a(-26039, var5);
                     var5 = (oc) (Object) fn.field_a.a(16213);
                     continue L2;
                   }
                 }
               } else {
-                ra.a(param0, 1, var4);
+                ra.a(3, 1, var4);
                 var4 = (hn) (Object) qn.field_P.a(16213);
                 continue L1;
               }
@@ -41,11 +42,11 @@ final class o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var2, "o.B(" + param0 + 44 + 109 + 41);
+          throw kg.a((Throwable) (Object) var2, "o.B(" + 3 + 44 + 109 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_b = null;

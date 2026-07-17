@@ -73,23 +73,11 @@ final class gqa {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        var3 = param0 >> 16;
-        if (param1 != 24) {
-          field_k = null;
-          var4 = 65535 & param0;
-          var5 = param2 >> 16;
-          var6 = param2 & 65535;
-          return var3 * param2 - (-(var5 * var4) + -(var6 * var4 >> 16));
-        } else {
-          var4 = 65535 & param0;
-          var5 = param2 >> 16;
-          var6 = param2 & 65535;
-          return var3 * param2 - (-(var5 * var4) + -(var6 * var4 >> 16));
-        }
+        int var3 = param0 >> 16;
+        int var4 = 65535 & param0;
+        int var5 = param2 >> 16;
+        int var6 = param2 & 65535;
+        return var3 * param2 - (-(var5 * var4) + -(var6 * var4 >> 16));
     }
 
     final static void a(byte param0) {
@@ -120,7 +108,8 @@ final class gqa {
         try {
           L0: {
             L1: {
-              via.a(param4, param0, 0, param5, param3, param2, 51, 0);
+              int discarded$3 = 0;
+              via.a(param4, param0, 0, param5, param3, param2, 51);
               if (param1 == -83584144) {
                 break L1;
               } else {
@@ -162,7 +151,7 @@ final class gqa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_k = null;
     }

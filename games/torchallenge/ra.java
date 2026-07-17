@@ -24,7 +24,7 @@ final class ra {
     static int[][] field_p;
     private int[][] field_n;
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -464,7 +464,8 @@ final class ra {
                 case 12: {
                     qg.c(0, 0, 25, ((ra) this).field_a * 64, 14022908, 10533565);
                     qg.c(615, 0, 25, 64 * ((ra) this).field_a, 14022908, 10533565);
-                    og.a(param5, param6, -15516);
+                    int discarded$4 = -15516;
+                    og.a(param5, param6);
                     if (!ub.field_i) {
                         statePc = 14;
                     } else {
@@ -612,7 +613,8 @@ final class ra {
                     continue stateLoop;
                 }
                 case 29: {
-                    cf.a(32, ((ra) this).field_f, ((ra) this).field_h[vb.field_a[var19][var20]], var14, false);
+                    int discarded$5 = 0;
+                    cf.a(32, ((ra) this).field_f, ((ra) this).field_h[vb.field_a[var19][var20]], var14);
                     ((ra) this).field_t[var20][0] = gl.field_l[var19][var20][1][0];
                     ((ra) this).field_t[var20][1] = gl.field_l[var19][var20][1][1];
                     ((ra) this).field_s[var20][0] = gl.field_l[var19][var20][2][0];
@@ -770,7 +772,8 @@ final class ra {
                 }
                 case 52: {
                     var15 = vb.field_a[var19][var20] & 1;
-                    si.a(var18, ((ra) this).field_e[vb.field_a[var19][var20]], var20, ((ra) this).field_o, var15, 1);
+                    int discarded$6 = 1;
+                    si.a(var18, ((ra) this).field_e[vb.field_a[var19][var20]], var20, ((ra) this).field_o, var15);
                     if (param3 != null) {
                         statePc = 54;
                     } else {
@@ -1103,7 +1106,8 @@ final class ra {
                 case 102: {
                     qg.a(ae.field_y);
                     var22 = ((ra) this).field_r[vb.field_a[var19][var21]][var20];
-                    this.a(var19, var12, var21, var18, var12 - -64, var20, var22, -10440);
+                    int discarded$7 = -10440;
+                    this.a(var19, var12, var21, var18, var12 - -64, var20, var22);
                     qg.b(ae.field_y);
                     statePc = 103;
                     continue stateLoop;
@@ -1360,7 +1364,7 @@ final class ra {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_b = null;
         field_j = null;
@@ -1631,7 +1635,8 @@ final class ra {
                 break L16;
               }
             }
-            h.a(0, ((ra) this).field_h[var13][31], ((ra) this).field_h[var13], ((ra) this).field_h[var13][0], 32);
+            int discarded$1 = 32;
+            h.a(0, ((ra) this).field_h[var13][31], ((ra) this).field_h[var13], ((ra) this).field_h[var13][0]);
             var13++;
             continue L2;
           }
@@ -1676,7 +1681,8 @@ final class ra {
                           } else {
                             nj.field_e[var3][var4] = new ka(var4 - -1, ef.field_a[var3].field_v);
                             nj.field_e[var3][var4].d();
-                            od.c(ef.field_a[var3], 0, 0, 1 + var4, 0);
+                            int discarded$3 = 0;
+                            od.c(ef.field_a[var3], 0, 0, 1 + var4);
                             var4++;
                             continue L4;
                           }
@@ -1692,7 +1698,8 @@ final class ra {
                       } else {
                         fh.field_a[var3][var4] = new ka(var4 - -1, af.field_a[var3].field_v);
                         fh.field_a[var3][var4].d();
-                        od.c(af.field_a[param1 * 2 + var3], 0, 0, 1 + var4, 0);
+                        int discarded$4 = 0;
+                        od.c(af.field_a[param1 * 2 + var3], 0, 0, 1 + var4);
                         var4++;
                         continue L5;
                       }
@@ -1714,7 +1721,8 @@ final class ra {
                       } else {
                         cg.field_b[var3][var4][var5] = new ka(var5 - -1, ub.field_c[var3][var4].field_v);
                         cg.field_b[var3][var4][var5].d();
-                        od.c(ub.field_c[var3][var4], 0, 0, var5 - -1, 0);
+                        int discarded$5 = 0;
+                        od.c(ub.field_c[var3][var4], 0, 0, var5 - -1);
                         var5++;
                         continue L7;
                       }
@@ -1729,7 +1737,7 @@ final class ra {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1919,7 +1927,8 @@ final class ra {
                             be.field_b = false;
                             df.field_O = false;
                             bi.field_g = new int[64][((ra) this).field_a][3][];
-                            this.b(28026);
+                            int discarded$1 = 28026;
+                            this.b();
                             return;
                           } else {
                             var4 = 0;

@@ -42,7 +42,7 @@ final class of {
         var6 = HoldTheLine.field_D;
         try {
           L0: {
-            var3_int = param0;
+            var3_int = 0;
             var4 = param1.length();
             var5 = 0;
             L1: while (true) {
@@ -72,7 +72,7 @@ final class of {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("of.A(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("of.A(").append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

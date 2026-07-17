@@ -23,7 +23,7 @@ final class fp {
         throw new IllegalStateException();
     }
 
-    final static void a(String param0, int param1, cn param2, byte param3) {
+    final static void a(String param0, int param1, cn param2) {
         RuntimeException var4 = null;
         int var5_int = 0;
         jpa var5 = null;

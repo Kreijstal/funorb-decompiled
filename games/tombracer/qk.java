@@ -107,7 +107,7 @@ final class qk extends rt {
         return joa.field_c;
     }
 
-    final static boolean i(int param0) {
+    final static boolean i() {
         return tl.field_r > 250;
     }
 

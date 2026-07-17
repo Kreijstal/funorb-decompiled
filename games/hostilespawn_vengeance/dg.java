@@ -23,7 +23,8 @@ class dg extends me implements qk {
           ((dg) this).field_F = false;
           if (!((dg) this).field_kb) {
             if (((dg) this).field_pb) {
-              pe.b(true);
+              int discarded$2 = 1;
+              pe.b();
               return;
             } else {
               return;

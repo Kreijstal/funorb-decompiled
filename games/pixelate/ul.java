@@ -193,7 +193,7 @@ final class ul extends bg {
         return stackIn_11_0 != 0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_m = null;
         field_n = null;
         field_p = null;
@@ -776,9 +776,6 @@ final class ul extends bg {
     private final void a(boolean param0, int param1) {
         ((ul) this).field_s = param1 * 50;
         ((ul) this).field_r = ((ul) this).field_s;
-        if (!param0) {
-            field_n = null;
-        }
     }
 
     final boolean a(int param0, byte param1) {

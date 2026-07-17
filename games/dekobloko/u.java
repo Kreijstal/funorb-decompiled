@@ -12,7 +12,7 @@ final class u {
     static String field_c;
     static int field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_a = null;
         field_h = null;
@@ -25,14 +25,15 @@ final class u {
         CharSequence var5 = null;
         try {
             ed.field_c = param1;
-            int var4_int = -67 % ((73 - param0) / 38);
+            int var4_int = 0;
             pk.field_r = 2;
             var5 = (CharSequence) (Object) param1;
-            cf.field_c = kf.a(var5, (byte) 2);
+            int discarded$0 = 2;
+            cf.field_c = kf.a(var5);
             jg.field_i = true;
             fm.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "u.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "u.A(" + 115 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

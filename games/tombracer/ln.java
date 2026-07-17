@@ -6,7 +6,7 @@ final class ln extends kna {
     static ica field_F;
     static long field_H;
 
-    public static void B(int param0) {
+    public static void B() {
         field_F = null;
     }
 
@@ -41,9 +41,10 @@ final class ln extends kna {
         }
     }
 
-    final static void A(int param0) {
-        ij.j((byte) -116);
-        int var1 = -6 / ((-10 - param0) / 45);
+    final static void A() {
+        int discarded$0 = -116;
+        ij.j();
+        int var1 = 6;
     }
 
     final static mg b(int param0, int param1) {

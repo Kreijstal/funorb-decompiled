@@ -7,7 +7,7 @@ final class jl {
     static uw field_a;
     private pv field_c;
 
-    public static void c(int param0) {
+    public static void c() {
         field_a = null;
     }
 
@@ -50,12 +50,19 @@ final class jl {
 
     final static void a(int param0, int param1) {
         try {
+            Throwable var2 = null;
+            Throwable decompiledCaughtException = null;
             try {
-                Object discarded$0 = tw.a(-126, ra.c(param0 + -23), "resizing", new Object[1]);
-            } catch (Throwable throwable) {
-            }
-            if (param0 != 25) {
-                field_a = null;
+              L0: {
+                Object discarded$1 = tw.a(-126, ra.c(2), "resizing", new Object[1]);
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -80,14 +87,6 @@ final class jl {
                     break L0;
                   } else {
                     if (param1 != 95) {
-                      L1: {
-                        if (param0 == 110) {
-                          break L1;
-                        } else {
-                          field_a = null;
-                          break L1;
-                        }
-                      }
                       return false;
                     } else {
                       return true;
@@ -137,7 +136,7 @@ final class jl {
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

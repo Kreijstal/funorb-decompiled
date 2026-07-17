@@ -17,10 +17,13 @@ final class hh extends wj {
         ub.field_a = lc.field_f;
         lc.field_f = false;
         sl.b(true);
-        oa.j(-118);
-        oi.c(106);
+        int discarded$17 = -118;
+        oa.j();
+        int discarded$18 = 106;
+        oi.c();
         if (param0 != 8500) {
-          hh.c(true);
+          int discarded$19 = 1;
+          hh.c();
           eb.m(param0 + -8377);
           return;
         } else {
@@ -216,7 +219,7 @@ final class hh extends wj {
         return stackIn_4_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_u = null;
         field_n = null;
         field_p = null;
@@ -343,7 +346,7 @@ final class hh extends wj {
         return stackIn_17_0;
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;

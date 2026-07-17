@@ -50,7 +50,6 @@ abstract class sh extends w {
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_36_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_27_0 = null;
         StringBuilder stackOut_27_1 = null;
@@ -90,13 +89,7 @@ abstract class sh extends w {
                 L2: while (true) {
                   if (var12 > 1) {
                     la.field_f.a(-27);
-                    if (param1 <= -98) {
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
+                    break L0;
                   } else {
                     L3: {
                       L4: {
@@ -179,7 +172,7 @@ abstract class sh extends w {
           L9: {
             var7 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var7;
-            stackOut_27_1 = new StringBuilder().append("sh.K(").append(param0).append(44).append(param1).append(44);
+            stackOut_27_1 = new StringBuilder().append("sh.K(").append(param0).append(44).append(-100).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -254,11 +247,6 @@ abstract class sh extends w {
           }
           throw oj.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param6 + 41);
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     public static void b(boolean param0) {
@@ -271,11 +259,9 @@ abstract class sh extends w {
     abstract int f(int param0);
 
     final static ge d(int param0) {
-        if (param0 >= -121) {
-            field_r = 30;
-        }
         ge var1 = new ge(ij.field_B, le.field_g, ug.field_e[0], dd.field_t[0], pg.field_r[0], lg.field_e[0], h.field_a[0], td.field_m);
-        p.a(0);
+        int discarded$0 = 0;
+        p.a();
         return var1;
     }
 

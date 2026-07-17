@@ -15,7 +15,7 @@ final class ai extends wl {
     int field_o;
     static String field_r;
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_s = null;
         field_r = null;
@@ -26,11 +26,11 @@ final class ai extends wl {
             ki.h((byte) 98);
             u.field_A.d(false);
             r.field_b = new qc(rg.field_S, (String) null, wi.field_J, param0, param3);
-            int var4_int = -71 % ((param1 - 89) / 37);
+            int var4_int = 0;
             td.field_f = new kb(u.field_A, (ub) (Object) r.field_b);
             u.field_A.b((ub) (Object) td.field_f, (byte) 117);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ai.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ai.A(" + param0 + 44 + 126 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 

@@ -11,7 +11,7 @@ final class ceb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_r = null;
         field_o = null;
     }

@@ -33,7 +33,7 @@ final class qn {
         try {
           L0: {
             var2 = new as(param1);
-            var3 = -54 % ((-34 - param0) / 45);
+            var3 = 0;
             stackOut_0_0 = (as) var2;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -43,7 +43,7 @@ final class qn {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("qn.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("qn.B(").append(-121).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -71,20 +71,19 @@ final class qn {
         return stackIn_1_0;
     }
 
-    final static void a(ik[] param0, int param1, boolean param2) {
+    final static void a(ik[] param0, int param1) {
         try {
-            bj.k(26987);
-            bk.a(param0, 0);
-            if (!param2) {
-                field_c = -118;
-            }
+            int discarded$0 = 26987;
+            bj.k();
+            int discarded$1 = 0;
+            bk.a(param0);
             vp.c(-20677, param1);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "qn.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "qn.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 1 + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         hd var1_ref = null;
         int var2 = 0;

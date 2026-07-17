@@ -15,67 +15,63 @@ abstract class oi {
 
     final static int a(int param0, byte param1) {
         int var2 = 0;
-        if (param1 == 1) {
-          L0: {
-            L1: {
-              var2 = 0;
-              if (param0 < 0) {
+        L0: {
+          L1: {
+            var2 = 0;
+            if (param0 < 0) {
+              break L1;
+            } else {
+              if (param0 >= 65536) {
                 break L1;
               } else {
-                if (param0 >= 65536) {
-                  break L1;
-                } else {
-                  break L0;
-                }
+                break L0;
               }
             }
-            param0 = param0 >>> 16;
-            var2 += 16;
-            break L0;
           }
-          L2: {
-            if (param0 < 256) {
-              break L2;
-            } else {
-              var2 += 8;
-              param0 = param0 >>> 8;
-              break L2;
-            }
-          }
-          L3: {
-            if (16 > param0) {
-              break L3;
-            } else {
-              var2 += 4;
-              param0 = param0 >>> 4;
-              break L3;
-            }
-          }
-          L4: {
-            if (param0 < 4) {
-              break L4;
-            } else {
-              param0 = param0 >>> 2;
-              var2 += 2;
-              break L4;
-            }
-          }
-          L5: {
-            if (param0 >= 1) {
-              var2++;
-              param0 = param0 >>> 1;
-              break L5;
-            } else {
-              break L5;
-            }
-          }
-          return param0 + var2;
-        } else {
-          return 85;
+          param0 = param0 >>> 16;
+          var2 += 16;
+          break L0;
         }
+        L2: {
+          if (param0 < 256) {
+            break L2;
+          } else {
+            var2 += 8;
+            param0 = param0 >>> 8;
+            break L2;
+          }
+        }
+        L3: {
+          if (16 > param0) {
+            break L3;
+          } else {
+            var2 += 4;
+            param0 = param0 >>> 4;
+            break L3;
+          }
+        }
+        L4: {
+          if (param0 < 4) {
+            break L4;
+          } else {
+            param0 = param0 >>> 2;
+            var2 += 2;
+            break L4;
+          }
+        }
+        L5: {
+          if (param0 >= 1) {
+            var2++;
+            param0 = param0 >>> 1;
+            break L5;
+          } else {
+            break L5;
+          }
+        }
+        return param0 + var2;
     }
 
-    final static int a(a param0, a param1, byte param2) {
+    final static int a(a param0, a param1) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;
@@ -180,7 +176,7 @@ abstract class oi {
 
     abstract int a(int param0);
 
-    final static void b(byte param0) {
+    final static void b() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -256,11 +252,8 @@ abstract class oi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
-        if (param0 != 86) {
-            return;
-        }
         field_f = null;
         field_h = null;
         field_e = null;
@@ -302,21 +295,17 @@ abstract class oi {
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= param1.length()) {
-                if (param0 == 8975) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
-                  break L0;
-                } else {
-                  int discarded$2 = oi.a(-35, (byte) 4);
-                  return false;
-                }
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
               } else {
                 L2: {
                   var3 = param1.charAt(var2_int);
                   if (ug.a(-1, (char) var3)) {
                     break L2;
                   } else {
-                    if (!lb.a((char) var3, true)) {
+                    int discarded$9 = 1;
+                    if (!lb.a((char) var3)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
                       return stackIn_7_0 != 0;
@@ -335,7 +324,7 @@ abstract class oi {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("oi.B(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("oi.B(").append(8975).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

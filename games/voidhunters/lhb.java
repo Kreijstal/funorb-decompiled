@@ -164,7 +164,7 @@ final class lhb implements dja {
         try {
           L0: {
             param1.a(1, 7, new ml(35));
-            var2_int = -57 / ((param0 - 24) / 51);
+            var2_int = -28;
             param1.a(1, 15, new ml(35));
             param1.a(1, 3, new ml(13));
             param1.a(1, 11, new ml(13));
@@ -187,7 +187,7 @@ final class lhb implements dja {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("lhb.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("lhb.C(").append(127).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -227,7 +227,7 @@ final class lhb implements dja {
         return (tv) (Object) new mqb();
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
     }
 

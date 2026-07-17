@@ -93,28 +93,24 @@ final class dc extends rqa {
               bpa.field_c.field_ib = (8355711 & odb.field_b.field_ib >> 1) + (-((16711423 & kmb.field_a) >> 1) + kmb.field_a);
               bpa.field_c.field_qb = kmb.field_a - (((16711422 & kmb.field_a) >> 1) + -((odb.field_b.field_qb & 16711423) >> 1));
               bpa.field_c.field_U = -(kmb.field_a >> 1 & 8355711) + kmb.field_a - -((odb.field_b.field_U & 16711423) >> 1);
-              if (param1 == -20149) {
-                lsa.field_e = bpa.field_c;
-                qw.field_l = new llb(0L, param3);
-                hp.field_b = new llb(0L, param2);
-                me.field_s = new llb(0L, (llb) null);
-                gba.field_p = new llb(0L, param0);
-                bpa.field_c = new llb(0L, param4);
-                bpa.field_c.field_eb = ej.field_c;
-                gba.field_p.b(-561, bpa.field_c);
-                fgb.field_l = new llb(0L, umb.field_d);
-                gba.field_p.b(-561, fgb.field_l);
-                fhb.field_q = new llb(0L, odb.field_b, afa.field_o);
-                dp.field_a = new llb(0L, odb.field_b);
-                qw.field_l.b(-561, hp.field_b);
-                qw.field_l.b(-561, me.field_s);
-                me.field_s.b(-561, gba.field_p);
-                me.field_s.b(param1 + 19588, fhb.field_q);
-                me.field_s.b(-561, dp.field_a);
-                break L0;
-              } else {
-                return;
-              }
+              lsa.field_e = bpa.field_c;
+              qw.field_l = new llb(0L, param3);
+              hp.field_b = new llb(0L, param2);
+              me.field_s = new llb(0L, (llb) null);
+              gba.field_p = new llb(0L, param0);
+              bpa.field_c = new llb(0L, param4);
+              bpa.field_c.field_eb = ej.field_c;
+              gba.field_p.b(-561, bpa.field_c);
+              fgb.field_l = new llb(0L, umb.field_d);
+              gba.field_p.b(-561, fgb.field_l);
+              fhb.field_q = new llb(0L, odb.field_b, afa.field_o);
+              dp.field_a = new llb(0L, odb.field_b);
+              qw.field_l.b(-561, hp.field_b);
+              qw.field_l.b(-561, me.field_s);
+              me.field_s.b(-561, gba.field_p);
+              me.field_s.b(-561, fhb.field_q);
+              me.field_s.b(-561, dp.field_a);
+              break L0;
             } else {
               return;
             }
@@ -149,7 +145,7 @@ final class dc extends rqa {
           }
           L3: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(-20149).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

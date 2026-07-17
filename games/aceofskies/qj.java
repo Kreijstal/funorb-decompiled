@@ -7,7 +7,7 @@ final class qj extends he {
     static String field_s;
     private Object field_q;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_t = null;
         field_r = null;
         field_s = null;
@@ -50,7 +50,7 @@ final class qj extends he {
         return false;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         if (!ks.field_b) {
             throw new IllegalStateException();
         }
@@ -69,7 +69,7 @@ final class qj extends he {
         }
     }
 
-    final static void h(int param0) {
+    final static void h() {
     }
 
     final Object a(byte param0) {

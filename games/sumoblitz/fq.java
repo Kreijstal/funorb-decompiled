@@ -8,9 +8,6 @@ final class fq extends hq {
     static String field_e;
 
     final static void a(int param0, int param1) {
-        if (param0 != 16440) {
-            return;
-        }
         lf.a(param1, (byte) -58);
     }
 
@@ -22,7 +19,7 @@ final class fq extends hq {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_d = null;
         field_e = null;

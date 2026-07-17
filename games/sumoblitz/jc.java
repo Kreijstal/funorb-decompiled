@@ -103,7 +103,7 @@ final class jc extends na {
         super(param0);
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_e = null;
         int var1 = 0;
     }
@@ -138,7 +138,8 @@ final class jc extends na {
               return stackIn_3_0;
             } else {
               if (param0 != 0) {
-                int discarded$2 = jc.b(true);
+                int discarded$4 = 1;
+                int discarded$5 = jc.b();
                 stackOut_6_0 = null;
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
@@ -180,7 +181,7 @@ final class jc extends na {
         return (String) (Object) stackIn_7_0;
     }
 
-    final static int b(boolean param0) {
+    final static int b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

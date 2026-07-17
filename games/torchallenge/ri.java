@@ -22,59 +22,53 @@ final class ri extends na {
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        Object stackIn_10_0 = null;
-        qk stackIn_19_0 = null;
+        qk stackIn_18_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qk stackOut_18_0 = null;
-        Object stackOut_9_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        qk stackOut_17_0 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
         String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           if (gl.field_e != null) {
             if (param1 != null) {
               if (param1.length() != 0) {
                 var6 = (CharSequence) (Object) param1;
-                var2 = il.a(var6, (byte) 21);
-                if (param0 == 0) {
-                  if (var2 != null) {
-                    var3 = (qk) (Object) gl.field_e.a(true, (long)var2.hashCode());
-                    L0: while (true) {
-                      if (var3 != null) {
-                        var7 = (CharSequence) (Object) var3.field_F;
-                        var4 = il.a(var7, (byte) 21);
-                        if (!var4.equals((Object) (Object) var2)) {
-                          var3 = (qk) (Object) gl.field_e.a((byte) 125);
-                          continue L0;
-                        } else {
-                          stackOut_18_0 = (qk) var3;
-                          stackIn_19_0 = stackOut_18_0;
-                          return stackIn_19_0;
-                        }
+                int discarded$4 = 21;
+                var2 = il.a(var6);
+                if (var2 != null) {
+                  var3 = (qk) (Object) gl.field_e.a(true, (long)var2.hashCode());
+                  L0: while (true) {
+                    if (var3 != null) {
+                      var7 = (CharSequence) (Object) var3.field_F;
+                      int discarded$5 = 21;
+                      var4 = il.a(var7);
+                      if (!var4.equals((Object) (Object) var2)) {
+                        var3 = (qk) (Object) gl.field_e.a((byte) 125);
+                        continue L0;
                       } else {
-                        return null;
+                        stackOut_17_0 = (qk) var3;
+                        stackIn_18_0 = stackOut_17_0;
+                        return stackIn_18_0;
                       }
+                    } else {
+                      return null;
                     }
-                  } else {
-                    return null;
                   }
                 } else {
-                  stackOut_9_0 = null;
-                  stackIn_10_0 = stackOut_9_0;
-                  return (qk) (Object) stackIn_10_0;
+                  return null;
                 }
               } else {
                 return null;
@@ -89,31 +83,31 @@ final class ri extends na {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2_ref;
-            stackOut_22_1 = new StringBuilder().append("ri.E(").append(param0).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_21_0 = (RuntimeException) var2_ref;
+            stackOut_21_1 = new StringBuilder().append("ri.E(").append(0).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L1;
-            } else {
               stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
               stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L1;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
         }
     }
 
@@ -125,7 +119,7 @@ final class ri extends na {
         return dh.field_V;
     }
 
-    final static void f(int param0) {
+    final static void f() {
         if (!(pg.field_p == null)) {
             je.a((byte) 15, pg.field_p);
         }

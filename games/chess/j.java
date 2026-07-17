@@ -39,7 +39,7 @@ final class j extends l {
         field_v = null;
     }
 
-    private final void a(int param0, p param1, boolean param2) {
+    private final void a(int param0, p param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -263,7 +263,8 @@ final class j extends l {
               if (0 == var3_int) {
                 break L0;
               } else {
-                this.a(var3_int, param0, true);
+                int discarded$5 = 1;
+                this.a(var3_int, param0);
                 continue L2;
               }
             }

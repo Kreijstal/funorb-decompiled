@@ -25,7 +25,7 @@ final class ii extends vo {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_m = null;
         field_l = null;
         field_k = null;

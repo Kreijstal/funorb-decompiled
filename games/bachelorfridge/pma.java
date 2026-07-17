@@ -163,7 +163,8 @@ final class pma extends k {
         int stackOut_14_5 = 0;
         int stackOut_14_6 = 0;
         L0: {
-          mla.b((byte) 5);
+          int discarded$9 = 5;
+          mla.b();
           if (param0 == 122) {
             break L0;
           } else {
@@ -261,7 +262,11 @@ final class pma extends k {
           }
         }
         L5: {
-          gfa.a(stackIn_16_0 != 0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4 != 0, stackIn_16_5, stackIn_16_6 != 0, param1, 0, true, 109, 11);
+          int discarded$10 = 11;
+          int discarded$11 = 109;
+          int discarded$12 = 1;
+          int discarded$13 = 0;
+          gfa.a(stackIn_16_0 != 0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4 != 0, stackIn_16_5, stackIn_16_6 != 0, param1);
           if (aba.field_f) {
             sja.field_fb.c(57, (byte) 100);
             aba.field_f = false;
@@ -398,7 +403,8 @@ final class pma extends k {
           bf.field_h[wca.field_n].a(108);
           ua.field_b = true;
           af.field_a = true;
-          aga.d(false);
+          int discarded$1 = 0;
+          aga.d();
           return;
         }
     }

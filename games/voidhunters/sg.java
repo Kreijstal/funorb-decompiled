@@ -403,7 +403,7 @@ final class sg extends anb implements ntb, utb {
         }
     }
 
-    private final void B(int param0) {
+    private final void B() {
         ((sg) this).field_J = null;
     }
 
@@ -422,7 +422,8 @@ final class sg extends anb implements ntb, utb {
     final void c(int param0, int param1) {
         if (0 <= ((sg) this).field_Q) {
             if (!(fwa.a(param0, 1, ((sg) this).field_J))) {
-                ((sg) this).field_J = qi.a(param0, true, ((sg) this).field_J, (byte) -14);
+                int discarded$0 = -14;
+                ((sg) this).field_J = qi.a(param0, true, ((sg) this).field_J);
             }
         }
         if (param1 != 19581) {
@@ -490,7 +491,8 @@ final class sg extends anb implements ntb, utb {
             ((sg) this).a(false, (pe) null);
         }
         if (var3 > 0) {
-            this.B(-128);
+            int discarded$0 = -128;
+            this.B();
         }
         return var3;
     }
@@ -526,7 +528,8 @@ final class sg extends anb implements ntb, utb {
             var7 = (((sg) this).f((byte) -23)[0] + ((sg) this).f((byte) -46)[1]) / 2;
             var8 = param1.a(var7, (byte) 117) + -(var5 / 2);
             var9 = param1.b(true, ((sg) this).f((byte) -94)[2]) + -(4 * var6);
-            nhb.a(qpb.a(false, ((sg) this).field_N, param2 ^ 13894111), var4_int, var9, var6, param0, var5, var8, 2);
+            int discarded$0 = 2;
+            nhb.a(qpb.a(false, ((sg) this).field_N, param2 ^ 13894111), var4_int, var9, var6, param0, var5, var8);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "sg.NC(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
@@ -612,7 +615,7 @@ final class sg extends anb implements ntb, utb {
                       if (var5.field_u != var5.field_u) {
                         break L2;
                       } else {
-                        aoa discarded$2 = var5.field_z;
+                        aoa discarded$3 = var5.field_z;
                         L3: {
                           if (null == var5.field_z) {
                             break L3;
@@ -755,10 +758,11 @@ final class sg extends anb implements ntb, utb {
                                             if (var5.field_v != var5.field_v) {
                                               break L2;
                                             } else {
-                                              if (wpb.a(var5.field_J, var5.field_J, (byte) 28)) {
+                                              int discarded$4 = 28;
+                                              if (wpb.a(var5.field_J, var5.field_J)) {
                                                 break L2;
                                               } else {
-                                                boa discarded$3 = var5.field_S;
+                                                boa discarded$5 = var5.field_S;
                                                 L11: {
                                                   if (null == var5.field_S) {
                                                     break L11;
@@ -2510,7 +2514,7 @@ final class sg extends anb implements ntb, utb {
                 break L5;
               }
             }
-            aoa discarded$2 = var5.field_z;
+            aoa discarded$3 = var5.field_z;
             L6: {
               if (var5.field_z == null) {
                 break L6;
@@ -2735,7 +2739,8 @@ final class sg extends anb implements ntb, utb {
               }
             }
             L26: {
-              if (ikb.a(var5.field_J, var5.field_J, false)) {
+              int discarded$4 = 0;
+              if (ikb.a(var5.field_J, var5.field_J)) {
                 var4 = 1;
                 System.out.println("int[] last_attackers has changed. ");
                 break L26;
@@ -2743,7 +2748,7 @@ final class sg extends anb implements ntb, utb {
                 break L26;
               }
             }
-            boa discarded$3 = var5.field_S;
+            boa discarded$5 = var5.field_S;
             L27: {
               if (null == var5.field_S) {
                 break L27;

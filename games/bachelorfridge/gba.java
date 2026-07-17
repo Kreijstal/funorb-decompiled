@@ -94,7 +94,7 @@ final class gba extends sna {
         }
     }
 
-    private final void a(int param0, int param1, int param2, byte param3) {
+    private final void a(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -259,7 +259,8 @@ final class gba extends sna {
 
     final void b(int param0, int param1, int param2, byte param3) {
         if (!((gba) this).field_vb) {
-            this.a(param0, param2, param1, (byte) -32);
+            int discarded$1 = -32;
+            this.a(param0, param2, param1);
         } else {
             this.b(param0, param2, true, param1);
         }
@@ -370,27 +371,27 @@ final class gba extends sna {
         sna var18 = null;
         sna var19 = null;
         sna var20 = null;
+        sna stackIn_14_0 = null;
+        sna stackIn_14_1 = null;
+        sna stackIn_14_2 = null;
+        sna stackIn_15_0 = null;
+        sna stackIn_15_1 = null;
+        sna stackIn_15_2 = null;
         sna stackIn_16_0 = null;
         sna stackIn_16_1 = null;
         sna stackIn_16_2 = null;
-        sna stackIn_17_0 = null;
-        sna stackIn_17_1 = null;
-        sna stackIn_17_2 = null;
-        sna stackIn_18_0 = null;
-        sna stackIn_18_1 = null;
-        sna stackIn_18_2 = null;
-        int stackIn_18_3 = 0;
+        int stackIn_16_3 = 0;
+        sna stackOut_13_0 = null;
+        sna stackOut_13_1 = null;
+        sna stackOut_13_2 = null;
         sna stackOut_15_0 = null;
         sna stackOut_15_1 = null;
         sna stackOut_15_2 = null;
-        sna stackOut_17_0 = null;
-        sna stackOut_17_1 = null;
-        sna stackOut_17_2 = null;
-        int stackOut_17_3 = 0;
-        sna stackOut_16_0 = null;
-        sna stackOut_16_1 = null;
-        sna stackOut_16_2 = null;
-        int stackOut_16_3 = 0;
+        int stackOut_15_3 = 0;
+        sna stackOut_14_0 = null;
+        sna stackOut_14_1 = null;
+        sna stackOut_14_2 = null;
+        int stackOut_14_3 = 0;
         L0: {
           var14 = BachelorFridge.field_y;
           if (2 * ((gba) this).field_sb > ((gba) this).field_p) {
@@ -454,14 +455,6 @@ final class gba extends sna {
           var17.field_sb = ((gba) this).field_sb;
           var17.field_rb = var5;
           var17.field_kb = 0;
-          if (param2) {
-            break L4;
-          } else {
-            ((gba) this).field_vb = true;
-            break L4;
-          }
-        }
-        L5: {
           var17.field_p = var7;
           var18 = ((gba) this).field_Cb;
           var18.field_kb = 0;
@@ -477,40 +470,40 @@ final class gba extends sna {
           var20.field_p = var8;
           var20.field_rb = var11;
           var20.field_sb = ((gba) this).field_sb;
-          stackOut_15_0 = ((gba) this).field_Fb;
-          stackOut_15_1 = ((gba) this).field_Eb;
-          stackOut_15_2 = ((gba) this).field_zb;
-          stackIn_17_0 = stackOut_15_0;
-          stackIn_17_1 = stackOut_15_1;
-          stackIn_17_2 = stackOut_15_2;
-          stackIn_16_0 = stackOut_15_0;
-          stackIn_16_1 = stackOut_15_1;
-          stackIn_16_2 = stackOut_15_2;
+          stackOut_13_0 = ((gba) this).field_Fb;
+          stackOut_13_1 = ((gba) this).field_Eb;
+          stackOut_13_2 = ((gba) this).field_zb;
+          stackIn_15_0 = stackOut_13_0;
+          stackIn_15_1 = stackOut_13_1;
+          stackIn_15_2 = stackOut_13_2;
+          stackIn_14_0 = stackOut_13_0;
+          stackIn_14_1 = stackOut_13_1;
+          stackIn_14_2 = stackOut_13_2;
           if (param0 <= param1) {
-            stackOut_17_0 = (sna) (Object) stackIn_17_0;
-            stackOut_17_1 = (sna) (Object) stackIn_17_1;
-            stackOut_17_2 = (sna) (Object) stackIn_17_2;
-            stackOut_17_3 = 0;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
-            stackIn_18_2 = stackOut_17_2;
-            stackIn_18_3 = stackOut_17_3;
-            break L5;
+            stackOut_15_0 = (sna) (Object) stackIn_15_0;
+            stackOut_15_1 = (sna) (Object) stackIn_15_1;
+            stackOut_15_2 = (sna) (Object) stackIn_15_2;
+            stackOut_15_3 = 0;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            stackIn_16_2 = stackOut_15_2;
+            stackIn_16_3 = stackOut_15_3;
+            break L4;
           } else {
-            stackOut_16_0 = (sna) (Object) stackIn_16_0;
-            stackOut_16_1 = (sna) (Object) stackIn_16_1;
-            stackOut_16_2 = (sna) (Object) stackIn_16_2;
-            stackOut_16_3 = 1;
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_18_2 = stackOut_16_2;
-            stackIn_18_3 = stackOut_16_3;
-            break L5;
+            stackOut_14_0 = (sna) (Object) stackIn_14_0;
+            stackOut_14_1 = (sna) (Object) stackIn_14_1;
+            stackOut_14_2 = (sna) (Object) stackIn_14_2;
+            stackOut_14_3 = 1;
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_16_2 = stackOut_14_2;
+            stackIn_16_3 = stackOut_14_3;
+            break L4;
           }
         }
-        stackIn_18_2.field_u = stackIn_18_3 != 0;
-        stackIn_18_1.field_u = stackIn_18_3 != 0;
-        stackIn_18_0.field_u = stackIn_18_3 != 0;
+        stackIn_16_2.field_u = stackIn_16_3 != 0;
+        stackIn_16_1.field_u = stackIn_16_3 != 0;
+        stackIn_16_0.field_u = stackIn_16_3 != 0;
         var20.field_kb = 0;
     }
 

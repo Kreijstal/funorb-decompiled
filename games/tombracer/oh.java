@@ -32,9 +32,6 @@ final class oh extends nv {
         try {
             var7 = param1[0].field_c;
             dea var2 = var7;
-            if (param0 != -91) {
-                jea discarded$0 = oh.b(-52);
-            }
             var3 = param1;
             for (var4 = 0; var3.length > var4; var4++) {
                 var5 = var3[var4];
@@ -43,7 +40,7 @@ final class oh extends nv {
             }
             param1[0].field_a = false;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "oh.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "oh.L(" + -91 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -71,10 +68,7 @@ final class oh extends nv {
         return param0;
     }
 
-    final static jea b(int param0) {
-        if (param0 != 19845) {
-            return null;
-        }
+    final static jea b() {
         return bsa.field_j.field_tb;
     }
 

@@ -43,19 +43,13 @@ final class uh {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         ca.field_r = null;
         dl.field_L = null;
         rl.field_a = null;
         ba.field_d = null;
         oa.field_M = null;
         le.field_L = null;
-        if (param0 == 9324) {
-          return;
-        } else {
-          field_i = null;
-          return;
-        }
     }
 
     final ck a(byte param0) {
@@ -152,15 +146,8 @@ final class uh {
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        if (param0) {
-          field_k = null;
-          var3 = param1 >> 31 & -1 + param2;
-          return var3 + (param1 - -(param1 >>> 31)) % param2;
-        } else {
-          var3 = param1 >> 31 & -1 + param2;
-          return var3 + (param1 - -(param1 >>> 31)) % param2;
-        }
+        int var3 = param1 >> 31 & -1 + param2;
+        return var3 + (param1 - -(param1 >>> 31)) % param2;
     }
 
     final static void a(int param0, wk[] param1) {
@@ -183,30 +170,26 @@ final class uh {
         String stackOut_8_2 = null;
         try {
           L0: {
-            if (param0 == 1) {
-              L1: {
-                jb.field_S = param1;
-                if (null == jb.field_S) {
-                  break L1;
+            L1: {
+              jb.field_S = param1;
+              if (null == jb.field_S) {
+                break L1;
+              } else {
+                if (param1.length < 3) {
+                  throw new IllegalArgumentException("");
                 } else {
-                  if (param1.length < 3) {
-                    throw new IllegalArgumentException("");
-                  } else {
-                    break L1;
-                  }
+                  break L1;
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("uh.H(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("uh.H(").append(1).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -266,7 +249,7 @@ final class uh {
         }
     }
 
-    final static gk a(gk param0, int[] param1, boolean param2) {
+    final static gk a(gk param0, int[] param1) {
         gk var3 = null;
         RuntimeException var3_ref = null;
         gk stackIn_1_0 = null;

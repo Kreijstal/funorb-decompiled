@@ -74,7 +74,7 @@ final class ip extends gh {
         return stackIn_3_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_z = null;
         field_y = null;
         field_x = null;
@@ -108,12 +108,8 @@ final class ip extends gh {
             try {
               try {
                 var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                if (param0 == 93) {
-                  param1.getAppletContext().showDocument(lg.a(false, param1, var2), "_top");
-                  return;
-                } else {
-                  return;
-                }
+                param1.getAppletContext().showDocument(lg.a(false, param1, var2), "_top");
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -125,7 +121,7 @@ final class ip extends gh {
               L0: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("ip.L(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("ip.L(").append(93).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;

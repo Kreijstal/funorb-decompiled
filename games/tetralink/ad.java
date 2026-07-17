@@ -223,16 +223,13 @@ final class ad extends hl {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         hg.field_f[param2] = param6;
-        hg.field_g[param2] = param4;
-        hg.field_h[param2] = param5;
-        if (param1 != 0) {
-            return;
-        }
+        hg.field_g[param2] = 150;
+        hg.field_h[param2] = 490;
         try {
             hg.field_b[param2] = param0;
             hg.field_j[param2] = param3;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "ad.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "ad.D(" + param0 + 44 + 0 + 44 + param2 + 44 + param3 + 44 + 150 + 44 + 490 + 44 + (param6 != null ? "{...}" : "null") + 41);
         }
     }
 

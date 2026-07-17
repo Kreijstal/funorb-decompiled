@@ -12,7 +12,7 @@ final class cm extends pg {
     static String field_h;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_h = null;
     }

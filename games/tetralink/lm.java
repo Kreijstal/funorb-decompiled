@@ -15,7 +15,7 @@ final class lm {
     byte[] field_e;
     int field_h;
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void a(int param0, int param1) {
         L0: {
           L1: {
             if (null == go.field_b) {
@@ -869,7 +869,7 @@ final class lm {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_f = null;
     }

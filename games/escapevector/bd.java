@@ -10,7 +10,7 @@ final class bd extends hg {
     byte[] field_j;
     static String field_g;
 
-    public static void d(int param0) {
+    public static void d() {
         field_m = null;
         field_h = null;
         field_g = null;

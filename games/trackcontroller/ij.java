@@ -172,9 +172,11 @@ final class ij implements t {
             if (param2 > -120) {
                 boolean discarded$0 = ij.b(63);
             }
-            me.a(param0, 0, param1);
+            int discarded$1 = 5;
+            int discarded$2 = 0;
+            me.a(param0);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ij.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "ij.F(" + (param0 != null ? "{...}" : "null") + 44 + 5 + 44 + param2 + 41);
         }
     }
 
@@ -186,7 +188,7 @@ final class ij implements t {
         return true;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_j = null;
         field_d = null;
     }
@@ -309,7 +311,7 @@ final class ij implements t {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         if (224 > kc.field_b) {
             var1 = kc.field_b % 32;

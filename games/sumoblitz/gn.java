@@ -117,7 +117,7 @@ final class gn {
         return stackIn_9_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
     }
 

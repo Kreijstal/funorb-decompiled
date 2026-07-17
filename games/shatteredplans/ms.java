@@ -55,12 +55,13 @@ abstract class ms {
           L0: {
             L1: {
               param2 = fr.a(param2, 1, '_', "");
-              var3 = dn.a(param0, true);
+              int discarded$4 = 1;
+              var3 = dn.a(param0);
               if (param1 == -53) {
                 break L1;
               } else {
                 var4 = null;
-                boolean discarded$2 = ms.a((String) null, (byte) 116, (String) null);
+                boolean discarded$5 = ms.a((String) null, (byte) 116, (String) null);
                 break L1;
               }
             }
@@ -159,7 +160,7 @@ abstract class ms {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (!(!dp.field_t)) {
             gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
             ua.field_f.b(false, -104);

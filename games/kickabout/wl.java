@@ -119,7 +119,7 @@ final class wl extends mo {
         }
     }
 
-    private final boolean a(int param0, gr param1, int param2, int param3) {
+    private final boolean a(int param0, gr param1, int param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -289,7 +289,8 @@ final class wl extends mo {
               if (var6_int >= 9) {
                 break L0;
               } else {
-                if (this.a(var6_int, param0, param4, 4)) {
+                int discarded$7 = 4;
+                if (this.a(var6_int, param0, param4)) {
                   ((wl) this).a(var6_int - -1 << 2 | param3, 0, param0, param1, param4);
                   return;
                 } else {

@@ -91,7 +91,7 @@ final class wh implements Iterable {
                 break L1;
               } else {
                 var3 = null;
-                fc discarded$2 = wh.a((byte[]) null, -96);
+                fc discarded$4 = wh.a((byte[]) null, -96);
                 break L1;
               }
             }
@@ -117,7 +117,8 @@ final class wh implements Iterable {
                 }
               }
             } else {
-              stackOut_3_0 = ee.a(param0, true);
+              int discarded$5 = 1;
+              stackOut_3_0 = ee.a(param0);
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             }
@@ -159,7 +160,7 @@ final class wh implements Iterable {
         return (Iterator) (Object) new up((wh) this);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -169,46 +170,34 @@ final class wh implements Iterable {
         ec.field_b.field_M = param1;
         ec.field_b.field_zb = ec.field_b.field_zb + ua.field_E.field_zb;
         ua.field_E.field_x = ua.field_E.field_x + ua.field_E.field_zb;
-        if (param0 != 6) {
-            return;
-        }
         try {
-            ua.field_E.field_zb = param2;
+            ua.field_E.field_zb = 0;
             ec.field_b.field_zb = ec.field_b.field_zb - ua.field_E.field_zb;
             ua.field_E.field_x = ua.field_E.field_x - ua.field_E.field_zb;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "wh.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "wh.B(" + 6 + 44 + param1 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static ja a(int param0, double param1, int param2) {
-        ja var5 = null;
-        ja var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        ja var9 = null;
-        var9 = new ja(640, 75);
+        ja var9 = new ja(640, 75);
         var9.a();
         oo.a(0, 5, 640, 55, 16777215, 1);
-        var5 = new ja(640, 75);
+        ja var5 = new ja(640, 75);
         var5.a();
         ff.field_r.b(sm.field_g[param2], 320, 65, 53248, 1);
-        var6 = new ja(640, 75);
+        ja var6 = new ja(640, 75);
         var6.a();
-        var7 = (int)(param1 * 640.0);
-        if (param0 < 26) {
-          return null;
-        } else {
-          var8 = (int)(75.0 * param1);
-          var5.c((-var7 + 640) / 2, 0, var7, var8);
-          var9.e(0, 0);
-          var6.g(16777215);
-          var6.g(16777215);
-          var6.g(1);
-          var6.g(1);
-          dl.field_h.b((byte) 96);
-          return var6;
-        }
+        int var7 = (int)(param1 * 640.0);
+        int var8 = (int)(75.0 * param1);
+        var5.c((-var7 + 640) / 2, 0, var7, var8);
+        var9.e(0, 0);
+        var6.g(16777215);
+        var6.g(16777215);
+        var6.g(1);
+        var6.g(1);
+        dl.field_h.b((byte) 96);
+        return var6;
     }
 
     wh(int param0) {

@@ -6,7 +6,7 @@ abstract class bca extends ii {
     static al[][] field_n;
     eaa field_o;
 
-    public static void c(int param0) {
+    public static void c() {
         field_n = null;
     }
 

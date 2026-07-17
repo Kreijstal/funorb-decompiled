@@ -5,7 +5,7 @@ final class vl {
     static ab field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -15,7 +15,7 @@ final class vl {
         return rf.c(0) - ta.field_e;
     }
 
-    final static String a(int param0, CharSequence[] param1, int param2, int param3) {
+    final static String a(int param0, CharSequence[] param1) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -60,13 +60,13 @@ final class vl {
               return stackIn_4_0;
             } else {
               if (1 != param0) {
-                var4_int = param0 + param2;
+                var4_int = param0;
                 var5 = 0;
-                var6_int = param2;
+                var6_int = 0;
                 L1: while (true) {
                   if (var6_int >= var4_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = param2;
+                    var7 = 0;
                     L2: while (true) {
                       if (var7 >= var4_int) {
                         stackOut_23_0 = var6.toString();
@@ -103,7 +103,7 @@ final class vl {
                   }
                 }
               } else {
-                var10 = param1[param2];
+                var10 = param1[0];
                 var4 = var10;
                 if (var4 != null) {
                   stackOut_9_0 = ((Object) (Object) var10).toString();
@@ -145,7 +145,7 @@ final class vl {
               break L5;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param2 + 44 + -96 + 41);
+          throw ld.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + 0 + 44 + -96 + 41);
         }
         return stackIn_24_0;
     }

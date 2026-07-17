@@ -4,7 +4,7 @@
 final class jc extends rqa {
     static String field_o;
 
-    final static void a(int param0) {
+    final static void a() {
         int var2 = 0;
         java.awt.Dimension var8 = null;
         String var11 = null;
@@ -19,11 +19,14 @@ final class jc extends rqa {
         int[] var22 = null;
         L0: {
           og.field_r = vq.field_x.field_e.field_g;
-          cw.field_o = feb.a(og.field_r, true);
+          int discarded$3 = 1;
+          cw.field_o = feb.a(og.field_r);
           var8 = vq.field_x.field_e.field_a.getSize();
           og.field_r.KA(0, 0, var8.width, var8.height);
-          ocb.f(-10150);
-          ad.a(-126);
+          int discarded$4 = -10150;
+          ocb.f();
+          int discarded$5 = -126;
+          ad.a();
           var2 = eaa.field_q;
           eaa.field_q = vq.field_x.field_e.field_b.field_a;
           if (var2 == eaa.field_q) {
@@ -177,19 +180,19 @@ final class jc extends rqa {
     }
 
     final static void a(byte param0, asb param1, int param2, qkb param3) {
-        tha.field_p = param2 * wjb.e(204) / 1000;
-        ce.a(param1, false);
-        km.a(param1, (byte) 36);
-        hob.a(param0 ^ 107, param1);
+        int discarded$0 = 204;
+        tha.field_p = param2 * wjb.e() / 1000;
+        int discarded$1 = 0;
+        ce.a(param1);
+        int discarded$2 = 36;
+        km.a(param1);
+        hob.a(92, param1);
         pm.e((byte) -39);
-        if (param0 != 55) {
-            return;
-        }
         try {
             ls.a(121);
             nd.field_r = 0 - tha.field_p;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "jc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "jc.B(" + 55 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -197,7 +200,7 @@ final class jc extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_o = null;
     }
 

@@ -8,7 +8,7 @@ final class bc {
 
     final static void a(byte param0, int param1, int param2) {
         int var3 = 0;
-        var3 = -116 / ((-20 - param0) / 43);
+        var3 = -116;
         if (null != he.field_m) {
           if (he.field_m.length < param2) {
             L0: {

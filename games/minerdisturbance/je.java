@@ -169,7 +169,7 @@ final class je {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean a(int param0, int param1, int param2) {
         return field_O.a((param0 << 2) + param2, (param1 << 2) + 1, (byte) 61);
     }
 
@@ -1804,7 +1804,7 @@ final class je {
     }
 
     private final static boolean b(int param0, int param1, int param2, int param3) {
-        return field_O.d((param1 << 2) + 3, (param0 << 2) + param2, (byte) -122);
+        return field_O.d((param1 << 2) + 3, (param0 << 2) + 1, (byte) -122);
     }
 
     private final static void b(int param0, int param1, je param2) {
@@ -2089,7 +2089,8 @@ final class je {
         L0: {
           var3 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
           var4 = hf.field_t * 32 - db.field_d + mf.field_i / 10;
-          var5 = ca.c(-2302) ? 1 : 0;
+          int discarded$3 = -2302;
+          var5 = ca.c() ? 1 : 0;
           if (var5 == 0) {
             if (tb.field_c >= 0) {
               stackOut_4_0 = 1;
@@ -2109,7 +2110,8 @@ final class je {
         L1: {
           var6 = stackIn_6_0;
           var7 = null;
-          if (il.e(-31391)) {
+          int discarded$4 = -31391;
+          if (il.e()) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L1;
@@ -2143,7 +2145,8 @@ final class je {
             }
             L4: {
               var9 = stackIn_16_0;
-              var10 = rf.a(13) ? 1 : 0;
+              int discarded$5 = 13;
+              var10 = rf.a() ? 1 : 0;
               if (var6 == 0) {
                 if (var5 == 0) {
                   var7 = (Object) (Object) ag.field_a[-tb.field_c];
@@ -3101,7 +3104,8 @@ final class je {
         int stackOut_6_0 = 0;
         int stackOut_4_0 = 0;
         L0: {
-          if (il.e(-31391)) {
+          int discarded$2 = -31391;
+          if (il.e()) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -3113,7 +3117,8 @@ final class je {
         }
         L1: {
           var3 = stackIn_3_0;
-          var4 = ca.c(-2302) ? 1 : 0;
+          int discarded$3 = -2302;
+          var4 = ca.c() ? 1 : 0;
           if (var4 == 0) {
             if (tb.field_c >= 0) {
               stackOut_7_0 = 1;
@@ -4561,7 +4566,8 @@ final class je {
         int var4 = 0;
         int var5 = 0;
         if (wj.field_j >= 2) {
-          var0 = ne.a(false);
+          int discarded$2 = 0;
+          var0 = ne.a();
           var1 = 0;
           var2 = 31;
           L0: while (true) {
@@ -5193,7 +5199,7 @@ final class je {
     }
 
     final static boolean d(int param0, int param1, int param2, int param3) {
-        return field_O.i(98, (param0 << 2) + param2, (param1 << 2) + 1);
+        return field_O.i(98, (param0 << 2) + 1, (param1 << 2) + 1);
     }
 
     public static void c() {
@@ -5242,7 +5248,9 @@ final class je {
         L0: {
           field_m = field_m + 1;
           field_l = field_l + 0.1;
-          if (!gj.a(18740, 0)) {
+          int discarded$3 = 0;
+          int discarded$4 = 18740;
+          if (!gj.a()) {
             break L0;
           } else {
             if (cm.field_o != 0) {
@@ -5287,7 +5295,8 @@ final class je {
                 if (var0 <= 9) {
                   break L2;
                 } else {
-                  if (il.e(-31391)) {
+                  int discarded$5 = -31391;
+                  if (il.e()) {
                     break L2;
                   } else {
                     field_D = field_D - 1;

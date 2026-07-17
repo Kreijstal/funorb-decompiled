@@ -79,15 +79,17 @@ final class jf {
           L0: {
             vk.field_e = td.a("frame_top", param0, "commonui", (byte) 126);
             v.field_d = td.a("frame_bottom", param0, "commonui", (byte) 118);
-            fh.field_a = jn.a("jagex_logo_grey", param2 + -29571, "commonui", param0);
+            fh.field_a = jn.a("jagex_logo_grey", -29553, "commonui", param0);
             r.field_a = td.a("button", param0, "commonui", (byte) 109);
             ed.field_g = md.a("validation", param0, 10, "commonui");
             sl.field_q = (we) (Object) oc.a(param3, (byte) 125, "commonui", "arezzo12", param0);
             bn.field_d = (we) (Object) oc.a(param3, (byte) 125, "commonui", "arezzo14", param0);
             cn.field_g = (we) (Object) oc.a(param3, (byte) 125, "commonui", "arezzo14bold", param0);
-            var17 = new ea(param1.a("", param2 ^ 18, "button.gif"), (java.awt.Component) (Object) ef.field_c);
-            ln discarded$1 = pb.a("commonui", param0, "dropdown", (byte) -77);
-            var5 = tb.a("screen_options", "commonui", param0, 1);
+            var17 = new ea(param1.a("", 0, "button.gif"), (java.awt.Component) (Object) ef.field_c);
+            int discarded$3 = -77;
+            ln discarded$4 = pb.a("commonui", param0, "dropdown");
+            int discarded$5 = 1;
+            var5 = tb.a("screen_options", "commonui", param0);
             kn.field_F = new ln[4];
             kc.field_f = new ln[4];
             qe.field_c = new ln[4];
@@ -123,12 +125,8 @@ final class jf {
                     var12.g();
                     var17.g(-var9, 0);
                     tk.b(true);
-                    if (param2 == 18) {
-                      r.field_a = new ea[]{var15, var12, var11};
-                      break L0;
-                    } else {
-                      return;
-                    }
+                    r.field_a = new ea[]{var15, var12, var11};
+                    break L0;
                   } else {
                     var14 = var6[var9];
                     var10 = var14;
@@ -207,7 +205,7 @@ final class jf {
           }
           L6: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(18).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -234,7 +232,7 @@ final class jf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
     }
 

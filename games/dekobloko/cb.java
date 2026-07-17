@@ -32,18 +32,15 @@ final class cb {
             var10 = var8;
             pb var7_ref = var10;
             var10.field_j = param3;
-            if (param1 != 2) {
-                ((cb) this).field_a = null;
-            }
             var10.field_a = param2;
             var10.field_b = param0;
-            var10.field_h = param4;
+            var10.field_h = -1;
             var10.field_g = param5;
             int fieldTemp$0 = ((cb) this).field_g;
             ((cb) this).field_g = ((cb) this).field_g + 1;
             ((cb) this).field_f[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "cb.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "cb.C(" + (param0 != null ? "{...}" : "null") + 44 + 2 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + -1 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -188,7 +185,7 @@ final class cb {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         if (!cd.a(8192)) {
             return false;
         }
@@ -219,22 +216,18 @@ final class cb {
         String stackOut_7_2 = null;
         try {
           L0: {
-            if (param1 == 30993) {
-              L1: {
-                var4_float = (float)(((cb) this).field_j - -1) + (float)param2 / 100.0f;
-                ((cb) this).field_l = var4_float * (float)((cb) this).field_b / (float)(((cb) this).field_g + 1);
-                if (param2 != 0) {
-                  ((cb) this).field_a = param0.field_a + " - " + param2 + "%";
-                  break L1;
-                } else {
-                  ((cb) this).field_a = param0.field_j;
-                  break L1;
-                }
+            L1: {
+              var4_float = (float)(((cb) this).field_j - -1) + (float)param2 / 100.0f;
+              ((cb) this).field_l = var4_float * (float)((cb) this).field_b / (float)(((cb) this).field_g + 1);
+              if (param2 != 0) {
+                ((cb) this).field_a = param0.field_a + " - " + param2 + "%";
+                break L1;
+              } else {
+                ((cb) this).field_a = param0.field_j;
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -264,7 +257,7 @@ final class cb {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 30993 + 44 + param2 + 41);
         }
     }
 
@@ -277,7 +270,7 @@ final class cb {
         }
     }
 
-    final static void a(hl param0, boolean param1) {
+    final static void a(hl param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -543,9 +536,9 @@ final class cb {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1, int param2) {
-        int var3_int = 0;
+    final static boolean a(boolean param0, CharSequence param1) {
         RuntimeException var3 = null;
+        int var3_int = 0;
         String var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -592,7 +585,8 @@ final class cb {
                     break L1;
                   } else {
                     L2: {
-                      var4 = kf.a(param1, (byte) 2);
+                      int discarded$4 = 2;
+                      var4 = kf.a(param1);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -600,10 +594,12 @@ final class cb {
                           break L2;
                         } else {
                           L3: {
-                            if (ug.a(var4.charAt(0), 32)) {
+                            int discarded$5 = 32;
+                            if (ug.a(var4.charAt(0))) {
                               break L3;
                             } else {
-                              if (ug.a(var4.charAt(var4.length() + -1), 32)) {
+                              int discarded$6 = 32;
+                              if (ug.a(var4.charAt(var4.length() + -1))) {
                                 break L3;
                               } else {
                                 var5 = 0;
@@ -620,7 +616,8 @@ final class cb {
                                   } else {
                                     L5: {
                                       var7 = param1.charAt(var6);
-                                      if (!ug.a((char) var7, 32)) {
+                                      int discarded$7 = 32;
+                                      if (!ug.a((char) var7)) {
                                         var5 = 0;
                                         break L5;
                                       } else {
@@ -707,7 +704,7 @@ final class cb {
         ((cb) this).field_b = param0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var2 = 0;
         L0: {
           var2 = client.field_A ? 1 : 0;

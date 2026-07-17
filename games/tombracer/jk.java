@@ -33,7 +33,7 @@ final class jk extends vg {
         return var1;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_i = null;
         field_g = null;
@@ -47,26 +47,24 @@ final class jk extends vg {
         int var6 = 0;
         g var7 = null;
         int var8 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        int stackOut_11_0 = 0;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -74,77 +72,71 @@ final class jk extends vg {
             var4 = -1;
             var5 = qg.field_a;
             var6 = 0;
-            if (param0 == 22) {
-              L1: while (true) {
-                if (var6 >= var5.length) {
-                  stackOut_12_0 = var4;
-                  stackIn_13_0 = stackOut_12_0;
-                  break L0;
-                } else {
-                  var7 = var5[var6];
-                  if (param2) {
-                    L2: {
-                      if (param1.get(var7.field_a)) {
-                        break L2;
-                      } else {
-                        break L2;
-                      }
+            L1: while (true) {
+              if (var6 >= var5.length) {
+                stackOut_11_0 = var4;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
+              } else {
+                var7 = var5[var6];
+                if (param2) {
+                  L2: {
+                    if (param1.get(var7.field_a)) {
+                      break L2;
+                    } else {
+                      break L2;
                     }
-                    var6++;
-                    continue L1;
-                  } else {
-                    L3: {
-                      if (var7.field_d) {
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    var6++;
-                    continue L1;
                   }
+                  var6++;
+                  continue L1;
+                } else {
+                  L3: {
+                    if (var7.field_d) {
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  var6++;
+                  continue L1;
                 }
               }
-            } else {
-              stackOut_2_0 = -122;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("jk.D(").append(param0).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("jk.D(").append(22).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L4;
-            } else {
               stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
               stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_12_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         int var2 = param0;
         lu.a(var2, al.field_h, -1, var2, sua.field_J);
     }

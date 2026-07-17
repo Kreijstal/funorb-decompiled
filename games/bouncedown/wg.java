@@ -101,7 +101,7 @@ final class wg extends tc {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_u = null;
         field_v = null;
     }

@@ -10,29 +10,25 @@ final class rl {
     static oh[][] field_b;
     static fg field_f;
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (param0 == -9648) {
-          if (vi.field_a != null) {
-            var1 = (Object) (Object) vi.field_a;
-            synchronized (var1) {
-              L0: {
-                vi.field_a = null;
-                break L0;
-              }
+        if (vi.field_a != null) {
+          var1 = (Object) (Object) vi.field_a;
+          synchronized (var1) {
+            L0: {
+              vi.field_a = null;
+              break L0;
             }
-            return;
-          } else {
-            return;
           }
+          return;
         } else {
           return;
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_g = null;

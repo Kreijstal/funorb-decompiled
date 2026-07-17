@@ -13,36 +13,16 @@ final class f {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        L0: {
-          var2 = 0;
-          if (0 != param1) {
-            break L0;
-          } else {
+        if (0 == param1) {
             var2 = ec.field_i;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 == 1) {
+        if (!(param1 != 1)) {
             var2 = ol.field_e;
-            break L1;
-          } else {
-            break L1;
-          }
         }
-        L2: {
-          if (param1 == 2) {
+        if (!(param1 != 2)) {
             var2 = di.field_e;
-            break L2;
-          } else {
-            break L2;
-          }
         }
-        if (param0 != 5) {
-          return 112;
-        } else {
-          return var2;
-        }
+        return var2;
     }
 
     final static int[] a(byte param0, int[] param1) {
@@ -262,7 +242,7 @@ final class f {
         uc.field_b.b(oi.field_n.field_Db + -40, 2147483647, var3, oi.field_n.field_gb - var3, 40);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_b = null;
@@ -275,7 +255,8 @@ final class f {
     }
 
     private static void $cfr$clinit() {
-        hi.g(-128);
+        int discarded$0 = -128;
+        hi.g();
         field_d = "Location";
         field_f = 8;
         field_g = 12;

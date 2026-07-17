@@ -29,7 +29,7 @@ final class o extends pb {
         try {
             var5 = fj.field_q;
             pk var3 = var5;
-            var5.a(param0, (byte) -107);
+            var5.a(6, (byte) -107);
             var5.field_f = var5.field_f + 1;
             var4 = var5.field_f;
             var5.d((byte) 127, 1);
@@ -44,7 +44,7 @@ final class o extends pb {
             param1.field_h = var5.a((byte) -54);
             var5.f(param2 ^ 11696, var5.field_f - var4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "o.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "o.E(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

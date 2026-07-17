@@ -13,9 +13,6 @@ final class oa implements Runnable {
     static String field_f;
 
     final static String a(int param0, byte param1, int param2) {
-        if (param1 != -2) {
-            return null;
-        }
         return param2 + "/" + param0;
     }
 
@@ -51,9 +48,10 @@ final class oa implements Runnable {
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
-            var2 = li.a(param1, "jagex-last-login-method", param0);
+            var2 = li.a(param1, "jagex-last-login-method", true);
             if (var2 != null) {
-              var3 = nd.a(-1);
+              int discarded$2 = -1;
+              var3 = nd.a();
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -83,7 +81,7 @@ final class oa implements Runnable {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2_ref;
-            stackOut_13_1 = new StringBuilder().append("oa.C(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("oa.C(").append(1).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -136,7 +134,7 @@ final class oa implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_i = null;
         field_d = null;

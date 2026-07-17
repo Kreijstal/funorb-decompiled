@@ -12,7 +12,7 @@ abstract class im {
     private short[] field_c;
     private short[] field_e;
 
-    private final void a(int param0) {
+    private final void a() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -36,7 +36,7 @@ abstract class im {
 
     abstract void a(boolean param0);
 
-    private final void b(boolean param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         ((im) this).field_c = new short[((im) this).field_g];
@@ -46,9 +46,6 @@ abstract class im {
     }
 
     final static void a(le param0, int param1, le param2) {
-        if (param1 != -30395) {
-            return;
-        }
         try {
             if (!(param0.field_d == null)) {
                 param0.b(-27598);
@@ -58,7 +55,7 @@ abstract class im {
             param0.field_d.field_b = param0;
             param0.field_b.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "im.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "im.D(" + (param0 != null ? "{...}" : "null") + 44 + -30395 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -216,8 +213,10 @@ abstract class im {
         ((im) this).field_b = param0;
         ((im) this).field_f = param3;
         ((im) this).field_g = param1;
-        this.b(true);
-        this.a(255);
+        int discarded$0 = 1;
+        this.b();
+        int discarded$1 = 255;
+        this.a();
     }
 
     static {

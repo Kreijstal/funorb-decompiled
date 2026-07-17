@@ -49,7 +49,8 @@ final class cl extends a {
             } else {
               L1: {
                 var6 = (CharSequence) (Object) param0;
-                var3_int = il.a(var6, 6054);
+                int discarded$4 = 6054;
+                var3_int = il.a(var6);
                 if (0 >= var3_int) {
                   break L1;
                 } else {
@@ -61,7 +62,7 @@ final class cl extends a {
                         break L2;
                       } else {
                         var4 = null;
-                        qf discarded$2 = ((cl) this).a((String) null, (byte) 83);
+                        qf discarded$5 = ((cl) this).a((String) null, (byte) 83);
                         break L2;
                       }
                     }
@@ -201,13 +202,14 @@ final class cl extends a {
         return (String) (Object) stackIn_7_0;
     }
 
-    final static fg[] d(byte param0) {
+    final static fg[] d() {
         return new fg[]{sk.field_p, bb.field_I, SolKnight.field_D};
     }
 
     final static void a(int param0, o param1) {
         try {
-            fl.b((byte) 91);
+            int discarded$2 = 91;
+            fl.b();
             if (param0 > -91) {
                 cl.e((byte) 101);
             }

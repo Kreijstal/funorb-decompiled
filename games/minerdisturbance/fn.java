@@ -10,7 +10,7 @@ final class fn extends pi {
     static String field_q;
     static int field_p;
 
-    final static int b(boolean param0) {
+    final static int b() {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -170,13 +170,13 @@ final class fn extends pi {
             L1: {
               var27 = kj.field_a;
               var2 = var27.d((byte) -54);
-              if (var2 != param0) {
+              if (var2 != 0) {
                 if (var2 != 1) {
                   di.a((Throwable) null, 1, "HS1: " + hj.a((byte) 68));
                   si.a(-108);
                   break L1;
                 } else {
-                  var3 = var27.e(param0 + -89);
+                  var3 = var27.e(-89);
                   var4_ref = (wb) (Object) hj.field_k.b(71);
                   L2: while (true) {
                     L3: {
@@ -192,7 +192,7 @@ final class fn extends pi {
                       }
                     }
                     if (var4_ref == null) {
-                      si.a(param0 + -41);
+                      si.a(-41);
                       return;
                     } else {
                       var4_ref.b(34);
@@ -217,7 +217,7 @@ final class fn extends pi {
                     }
                   }
                   if (var4 == null) {
-                    si.a(param0 ^ -32);
+                    si.a(-32);
                     return;
                   } else {
                     L6: {
@@ -372,7 +372,7 @@ final class fn extends pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "fn.B(" + param0 + 41);
+          throw lj.a((Throwable) (Object) var1, "fn.B(" + 0 + 41);
         }
     }
 
@@ -383,53 +383,48 @@ final class fn extends pi {
         int var5 = 0;
         int[] var6 = null;
         int[] var7 = null;
-        int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
         if (!qm.field_f) {
           L0: {
             if (null == sj.field_d) {
-              sj.field_d = hk.b(param2 ^ 3);
-              di.field_x = hk.b(0);
+              int discarded$4 = 0;
+              sj.field_d = hk.b();
+              int discarded$5 = 0;
+              di.field_x = hk.b();
               break L0;
             } else {
               break L0;
             }
           }
-          if (!nm.a(param0, sj.field_d, -827843803)) {
+          int discarded$6 = -827843803;
+          if (!nm.a(param0, sj.field_d)) {
             L1: {
               var3_int = param0;
-              if (param2 == 3) {
+              if (0 == ((1633100126 ^ pe.field_sb) & 1 << var3_int % 32)) {
+                stackOut_9_0 = 0;
+                stackIn_10_0 = stackOut_9_0;
                 break L1;
               } else {
-                field_q = null;
+                stackOut_8_0 = 1;
+                stackIn_10_0 = stackOut_8_0;
                 break L1;
               }
             }
             L2: {
-              if (0 == ((1633100126 ^ pe.field_sb) & 1 << var3_int % 32)) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
-                break L2;
-              } else {
-                stackOut_10_0 = 1;
-                stackIn_12_0 = stackOut_10_0;
-                break L2;
-              }
-            }
-            L3: {
-              var4 = stackIn_12_0;
+              var4 = stackIn_10_0;
               if (var4 == 0) {
                 var5 = pe.field_sb ^ 1633100126;
                 pe.field_sb = (var5 | 1 << var3_int) ^ 1633100126;
                 pn.field_b = pn.field_b - (1 << var3_int);
-                break L3;
+                break L2;
               } else {
-                break L3;
+                break L2;
               }
             }
-            L4: {
-              L5: {
+            L3: {
+              L4: {
                 var6 = sj.field_d;
                 var3 = var6;
                 var4 = param0;
@@ -440,19 +435,19 @@ final class fn extends pi {
                 var3[var4 >> 5] = hi.a(var7[var4 >> 5], 1 << c.a(var4, 31));
                 ce.field_a.a((byte) 40, (pi) (Object) new cm(param0));
                 if (kj.a(false)) {
-                  break L5;
+                  break L4;
                 } else {
                   if (!wf.q(89)) {
-                    break L5;
-                  } else {
-                    sl discarded$1 = qa.a(pn.field_b, hl.field_b, param0, pe.field_sb, (byte) 56, 4, param1, aa.field_b);
-                    r.field_d = gk.b(4, 1);
                     break L4;
+                  } else {
+                    sl discarded$7 = qa.a(pn.field_b, hl.field_b, param0, pe.field_sb, (byte) 56, 4, param1, aa.field_b);
+                    r.field_d = gk.b(4, 1);
+                    break L3;
                   }
                 }
               }
               vb.field_c.a((byte) -116, (pi) (Object) new sl(param0, param1, pe.field_sb, pn.field_b, aa.field_b, hl.field_b));
-              break L4;
+              break L3;
             }
             return;
           } else {
@@ -477,19 +472,16 @@ final class fn extends pi {
         rb.field_l[sj.field_f] = param0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_q = null;
         field_r = null;
         int var1 = 0;
     }
 
-    final static void a(byte[] param0, boolean param1) {
+    final static void a(byte[] param0) {
         if (param0 == null) {
             aa.field_j = new th();
             return;
-        }
-        if (!param1) {
-            fn.a(100);
         }
         ld var2 = new ld(param0);
         if (!(var2.d((byte) -54) == 2)) {
@@ -499,17 +491,14 @@ final class fn extends pi {
         try {
             aa.field_j = new th(var2);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "fn.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "fn.F(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
     final static af a(int param0, int param1) {
         af var2 = new af();
         ag.field_b.a((byte) 47, (pi) (Object) var2);
-        if (param0 != 0) {
-            return null;
-        }
-        ca.a(param1, 1);
+        ca.a(6, 1);
         return var2;
     }
 

@@ -34,18 +34,19 @@ final class uo {
 
     final int a(int param0) {
         if (!(((uo) this).field_e != 0)) {
-            this.a(true);
+            int discarded$0 = 1;
+            this.a();
             ((uo) this).field_e = 256;
         }
         if (param0 < 13) {
-            int discarded$0 = ((uo) this).a(32);
+            int discarded$1 = ((uo) this).a(32);
         }
-        int fieldTemp$1 = ((uo) this).field_e - 1;
+        int fieldTemp$2 = ((uo) this).field_e - 1;
         ((uo) this).field_e = ((uo) this).field_e - 1;
-        return ((uo) this).field_i[fieldTemp$1];
+        return ((uo) this).field_i[fieldTemp$2];
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -100,13 +101,14 @@ final class uo {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((uo) this).field_i[var2_int] = param0[var2_int];
             }
-            this.b(20196);
+            int discarded$0 = 20196;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw sh.a((Throwable) (Object) runtimeException, "uo.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -135,7 +137,8 @@ final class uo {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    this.a(true);
+                    int discarded$1 = 1;
+                    this.a();
                     ((uo) this).field_e = 256;
                     return;
                   } else {

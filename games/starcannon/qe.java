@@ -70,7 +70,8 @@ abstract class qe extends uh {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = mh.a(0, ' ', field_w, 31917);
+          int discarded$7 = 31917;
+          StringBuilder discarded$8 = mh.a(0, ' ', field_w);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -106,9 +107,9 @@ abstract class qe extends uh {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_w.append(60);
-                        StringBuilder discarded$7 = field_w.append(var15);
-                        StringBuilder discarded$8 = field_w.append(62);
+                        StringBuilder discarded$9 = field_w.append(60);
+                        StringBuilder discarded$10 = field_w.append(var15);
+                        StringBuilder discarded$11 = field_w.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -124,7 +125,8 @@ abstract class qe extends uh {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                var16_int = pd.a(var18, 10);
+                                                int discarded$12 = 10;
+                                                var16_int = pd.a(var18);
                                                 var4 = var4 + ((qe) this).field_M[var16_int].field_k;
                                                 var10 = 0;
                                                 break L4;
@@ -295,7 +297,7 @@ abstract class qe extends uh {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_w.append(var14);
+                        StringBuilder discarded$13 = field_w.append(var14);
                         var14 = (char)(ma.a(-127, (char) var14) & 255);
                         var4 = var4 + ((qe) this).field_v[var14];
                         if (((qe) this).field_H == null) {
@@ -458,7 +460,8 @@ abstract class qe extends uh {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            var10 = pd.a(var13, 10);
+                                            int discarded$1 = 10;
+                                            var10 = pd.a(var13);
                                             var11_ref_ne = ((qe) this).field_M[var10];
                                             if (((qe) this).field_u == null) {
                                               stackOut_25_0 = var11_ref_ne.field_e;
@@ -1000,7 +1003,8 @@ abstract class qe extends uh {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_I = oh.a(16, var7, 18097);
+                                    int discarded$5 = 18097;
+                                    field_I = oh.a(16, var7);
                                     break L1;
                                   }
                                 } else {
@@ -1013,7 +1017,8 @@ abstract class qe extends uh {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_C = oh.a(16, var6, 18097);
+                              int discarded$6 = 18097;
+                              field_C = oh.a(16, var6);
                               break L1;
                             }
                           } else {
@@ -1026,7 +1031,8 @@ abstract class qe extends uh {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_B = oh.a(16, var5, 18097);
+                        int discarded$7 = 18097;
+                        field_B = oh.a(16, var5);
                         break L1;
                       }
                     } else {
@@ -1035,7 +1041,8 @@ abstract class qe extends uh {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    field_z = pd.a(var4, 10);
+                    int discarded$8 = 10;
+                    field_z = pd.a(var4);
                     break L1;
                   }
                 } else {
@@ -1044,7 +1051,8 @@ abstract class qe extends uh {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_G = oh.a(16, var3, 18097);
+                int discarded$9 = 18097;
+                field_G = oh.a(16, var3);
                 break L1;
               }
             }
@@ -1181,7 +1189,8 @@ abstract class qe extends uh {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            var9_int = pd.a(var10, 10);
+                                            int discarded$1 = 10;
+                                            var9_int = pd.a(var10);
                                             var4 = var4 + ((qe) this).field_M[var9_int].field_k;
                                             var3 = 0;
                                             var6++;

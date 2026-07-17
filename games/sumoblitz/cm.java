@@ -431,72 +431,41 @@ final class cm extends hr {
         var4 = Sumoblitz.field_L ? 1 : 0;
         ((cm) this).field_j.g(1, 115);
         ((cm) this).field_j.a(74, (ht) (Object) ((cm) this).field_g);
-        ((cm) this).field_j.a(param0 ^ 18437, 7681, ((cm) this).field_j.b(param1, (byte) -14));
+        ((cm) this).field_j.a(20685, 7681, ((cm) this).field_j.b(param1, (byte) -14));
         ((cm) this).field_j.b(34167, 768, 1, -120);
         ((cm) this).field_j.a(113, 0, 34168, 770);
         ((cm) this).field_j.g(0, 100);
-        if (param0 == 6344) {
-          ((cm) this).field_j.a(param0 ^ 6275, (ht) (Object) ((cm) this).field_d);
-          ((cm) this).field_j.a(20685, 7681, 34479);
-          ((cm) this).field_j.b(34166, 768, 1, param0 + -6465);
-          if (((cm) this).field_c != 0) {
-            if (((cm) this).field_c != 1) {
-              if (((cm) this).field_c != 2) {
-                if (((cm) this).field_c != 3) {
-                  return;
-                } else {
-                  ((cm) this).field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
-                  return;
-                }
+        ((cm) this).field_j.a(75, (ht) (Object) ((cm) this).field_d);
+        ((cm) this).field_j.a(20685, 7681, 34479);
+        ((cm) this).field_j.b(34166, 768, 1, -121);
+        if (((cm) this).field_c != 0) {
+          if (((cm) this).field_c != 1) {
+            if (((cm) this).field_c != 2) {
+              if (((cm) this).field_c != 3) {
+                return;
               } else {
-                ((cm) this).field_j.a(31322, 0.5f, 1.0f, 0.5f, 0.0f);
+                ((cm) this).field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
                 return;
               }
             } else {
-              ((cm) this).field_j.a(param0 + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
+              ((cm) this).field_j.a(31322, 0.5f, 1.0f, 0.5f, 0.0f);
               return;
             }
           } else {
-            ((cm) this).field_j.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
+            ((cm) this).field_j.a(31322, 1.0f, 0.5f, 0.5f, 0.0f);
             return;
           }
         } else {
-          ((cm) this).a(114, -109, -63, -80, 49);
-          ((cm) this).field_j.a(param0 ^ 6275, (ht) (Object) ((cm) this).field_d);
-          ((cm) this).field_j.a(20685, 7681, 34479);
-          ((cm) this).field_j.b(34166, 768, 1, param0 + -6465);
-          if (((cm) this).field_c != 0) {
-            if (((cm) this).field_c != 1) {
-              if (((cm) this).field_c != 2) {
-                if (((cm) this).field_c != 3) {
-                  return;
-                } else {
-                  ((cm) this).field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
-                  return;
-                }
-              } else {
-                ((cm) this).field_j.a(31322, 0.5f, 1.0f, 0.5f, 0.0f);
-                return;
-              }
-            } else {
-              ((cm) this).field_j.a(param0 + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
-              return;
-            }
-          } else {
-            ((cm) this).field_j.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
-            return;
-          }
+          ((cm) this).field_j.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
+          return;
         }
     }
 
     private final void a(int param0, int param1, byte param2, int param3, int[] param4, int param5, int param6, int param7) {
         try {
-            if (param2 >= -67) {
-                this.b(-99, 125);
-            }
-            ((cm) this).field_g.a(param0, param3, param5, param4, param6, param1, param7, true, true);
+            ((cm) this).field_g.a(param0, param3, param5, param4, 0, param1, param7, true, true);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "cm.I(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "cm.I(" + param0 + 44 + param1 + 44 + -76 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + 0 + 44 + param7 + 41);
         }
     }
 

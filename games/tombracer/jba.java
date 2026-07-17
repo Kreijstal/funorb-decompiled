@@ -9,20 +9,10 @@ final class jba extends kca {
     static int field_j;
 
     final static int a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        if (!param1) {
-          field_j = -65;
-          var3 = param2 + -param0 >> 16;
-          var4 = 128 + 128 * var3 / 256;
-          var4 = za.a(0, (byte) 40, 255, var4);
-          return var4;
-        } else {
-          var3 = param2 + -param0 >> 16;
-          var4 = 128 + 128 * var3 / 256;
-          var4 = za.a(0, (byte) 40, 255, var4);
-          return var4;
-        }
+        int var3 = param2 + -param0 >> 16;
+        int var4 = 128 + 128 * var3 / 256;
+        var4 = za.a(0, (byte) 40, 255, var4);
+        return var4;
     }
 
     final it a(byte param0, String param1) {
@@ -55,11 +45,13 @@ final class jba extends kca {
         try {
           L0: {
             var4 = (CharSequence) (Object) param1;
-            if (sqa.a(var4, -3)) {
+            int discarded$7 = -3;
+            if (sqa.a(var4)) {
               if (param0 == 14) {
                 L1: {
                   var5 = (CharSequence) (Object) param1;
-                  var3_int = jb.a(var5, (byte) 70);
+                  int discarded$8 = 70;
+                  var3_int = jb.a(var5);
                   if (var3_int <= 0) {
                     break L1;
                   } else {
@@ -193,7 +185,7 @@ final class jba extends kca {
         return (String) (Object) stackIn_6_0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_l = null;
         field_k = null;
     }

@@ -13,7 +13,7 @@ final class ud {
           var5 = (sj) (Object) il.field_b.a(true);
           L0: while (true) {
             if (var5 != null) {
-              if (var5.field_h == 9) {
+              if (param4 == var5.field_h) {
                 return var5;
               } else {
                 var5 = (sj) (Object) il.field_b.f(2);
@@ -21,7 +21,7 @@ final class ud {
               }
             } else {
               var5 = new sj();
-              var5.field_h = 9;
+              var5.field_h = param4;
               var5.field_m = param0;
               var5.field_o = param2;
               il.field_b.b(116, (kd) (Object) var5);

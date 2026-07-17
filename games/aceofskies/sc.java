@@ -33,14 +33,11 @@ final class sc {
         ((sc) this).field_e = 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
     }
 
-    final static eh a(boolean param0, int param1) {
-        if (param0) {
-            return null;
-        }
+    final static eh a() {
         eh var2 = new eh();
         wu.field_w.a(117, (wf) (Object) var2);
         lb.a(4, 0);

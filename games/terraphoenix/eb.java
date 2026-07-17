@@ -210,7 +210,7 @@ class eb extends gl {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_B = null;
         field_E = null;
         field_G = null;
@@ -448,17 +448,14 @@ class eb extends gl {
         return stackIn_12_0 != 0;
     }
 
-    final static void a(ja param0, int param1, int param2) {
+    final static void a(ja param0) {
         uc var3 = di.field_l;
-        if (param1 != 0) {
-            return;
-        }
         try {
-            var3.k(-17410, param2);
+            var3.k(-17410, 7);
             var3.i(param0.field_o, -90);
             var3.i(param0.field_k, 38);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "eb.NA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "eb.NA(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + 7 + 41);
         }
     }
 

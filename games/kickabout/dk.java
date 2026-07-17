@@ -29,7 +29,8 @@ final class dk extends gn {
         try {
           var4_int = 75 / ((72 - param2) / 47);
           if (cu.a(param1, param3, param0, 117)) {
-            return wp.a(-125);
+            int discarded$2 = -125;
+            return wp.a();
           } else {
             return null;
           }
@@ -253,7 +254,7 @@ final class dk extends gn {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_g = null;
     }

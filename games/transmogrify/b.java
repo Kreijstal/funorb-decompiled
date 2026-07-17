@@ -8,11 +8,11 @@ final class b extends wf {
     static int field_k;
     int field_j;
 
-    public static void d(int param0) {
+    public static void d() {
         field_i = null;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

@@ -78,9 +78,10 @@ public final class Vertigo2 extends kd {
         L0: {
           var16 = null;
           var14 = field_L ? 1 : 0;
-          int discarded$2 = jq.a((byte) 29);
+          int discarded$26 = jq.a((byte) 29);
           mk.field_M = hb.b((byte) 119);
-          um.h(0);
+          int discarded$27 = 0;
+          um.h();
           var2 = -90 % ((-13 - param0) / 47);
           if (dc.field_L == null) {
             break L0;
@@ -89,7 +90,8 @@ public final class Vertigo2 extends kd {
               break L0;
             } else {
               cp.a((byte) 126);
-              tg.a(96);
+              int discarded$28 = 96;
+              tg.a();
               break L0;
             }
           }
@@ -132,7 +134,7 @@ public final class Vertigo2 extends kd {
               if (!tk.c((byte) -94)) {
                 return;
               } else {
-                boolean discarded$3 = this.a(16777215, false);
+                boolean discarded$29 = this.a(16777215, false);
                 return;
               }
             } else {
@@ -151,12 +153,15 @@ public final class Vertigo2 extends kd {
             }
           } else {
             if (!fb.i(11)) {
-              t.a((byte) 44);
+              int discarded$30 = 44;
+              t.a();
               break L4;
             } else {
               if (!kg.h(114)) {
-                if (!pq.b(0)) {
-                  if (!rh.e((byte) 99)) {
+                int discarded$31 = 0;
+                if (!pq.b()) {
+                  int discarded$32 = 99;
+                  if (!rh.e()) {
                     this.d(false, -97);
                     break L4;
                   } else {
@@ -165,7 +170,8 @@ public final class Vertigo2 extends kd {
                       break L4;
                     } else {
                       L5: {
-                        var3 = Vertigo2.p((byte) -78);
+                        int discarded$33 = -78;
+                        var3 = Vertigo2.p();
                         if (var3 == 1) {
                           ad.field_h = true;
                           ip.a((byte) -71, oc.field_x, 0);
@@ -234,7 +240,8 @@ public final class Vertigo2 extends kd {
                   break L4;
                 } else {
                   L10: {
-                    var3 = lr.e((byte) -116);
+                    int discarded$34 = -116;
+                    var3 = lr.e();
                     if (var3 != 2) {
                       if (var3 == 3) {
                         ig.a(9790, true);
@@ -267,7 +274,8 @@ public final class Vertigo2 extends kd {
             L12: while (true) {
               var15 = (nf) (Object) fg.field_eb.b((byte) -43);
               if (var15 != null) {
-                de.a(4, var15, 4);
+                int discarded$35 = 4;
+                de.a(4, var15);
                 continue L12;
               } else {
                 L13: while (true) {
@@ -309,7 +317,8 @@ public final class Vertigo2 extends kd {
                       }
                     }
                   }
-                  en.a(true);
+                  int discarded$36 = 1;
+                  en.a();
                   if (1 == var3) {
                     kj.field_C = true;
                     rg.field_b = true;
@@ -332,7 +341,8 @@ public final class Vertigo2 extends kd {
                             break L20;
                           }
                         }
-                        g.b(7);
+                        int discarded$37 = 7;
+                        g.b();
                         fh.field_y[lc.field_b].a(-91, false, 0);
                         ed.field_q = false;
                         am.field_b = false;
@@ -398,7 +408,8 @@ public final class Vertigo2 extends kd {
           } else {
             if (lc.field_f != 69) {
               if (9 == lc.field_f) {
-                g.b(7);
+                int discarded$38 = 7;
+                g.b();
                 rg.field_b = false;
                 am.field_n = 11;
                 kj.field_C = false;
@@ -410,7 +421,8 @@ public final class Vertigo2 extends kd {
                   if (lc.field_f == 15) {
                     L25: {
                       if (oj.field_P) {
-                        g.b(7);
+                        int discarded$39 = 7;
+                        g.b();
                         ki.a((byte) -128);
                         ua.a(-5141);
                         am.field_b = false;
@@ -437,7 +449,8 @@ public final class Vertigo2 extends kd {
                         if (!oj.field_P) {
                           break L26;
                         } else {
-                          tq.a((byte) -66);
+                          int discarded$40 = -66;
+                          tq.a();
                           continue L14;
                         }
                       }
@@ -511,14 +524,16 @@ public final class Vertigo2 extends kd {
                                               if (null == ln.field_d) {
                                                 continue L14;
                                               } else {
-                                                mq.b(true);
+                                                int discarded$41 = 1;
+                                                mq.b();
                                                 continue L14;
                                               }
                                             }
                                           } else {
                                             ((tr) var3_ref).field_D.field_t = id.field_f.h(-11);
                                             if (ln.field_d != null) {
-                                              mq.b(true);
+                                              int discarded$42 = 1;
+                                              mq.b();
                                               continue L14;
                                             } else {
                                               continue L14;
@@ -533,7 +548,8 @@ public final class Vertigo2 extends kd {
                                         if (ln.field_d == null) {
                                           continue L14;
                                         } else {
-                                          jc.b(10);
+                                          int discarded$43 = 10;
+                                          jc.b();
                                           continue L14;
                                         }
                                       }
@@ -574,7 +590,8 @@ public final class Vertigo2 extends kd {
                                   }
                                 }
                                 L35: {
-                                  g.b(7);
+                                  int discarded$44 = 7;
+                                  g.b();
                                   if (!am.field_b) {
                                     break L35;
                                   } else {
@@ -601,7 +618,8 @@ public final class Vertigo2 extends kd {
                         }
                       }
                       L36: {
-                        g.b(7);
+                        int discarded$45 = 7;
+                        g.b();
                         var3 = id.field_f.h(-11);
                         var4 = id.field_f.h(-11);
                         var5 = id.field_f.h(-11);
@@ -654,8 +672,10 @@ public final class Vertigo2 extends kd {
                             if (lc.field_f == 57) {
                               am.field_b = true;
                               ln.field_d = var12;
-                              jc.b(10);
-                              mq.b(true);
+                              int discarded$46 = 10;
+                              jc.b();
+                              int discarded$47 = 1;
+                              mq.b();
                               mb.b((byte) -110);
                               break L40;
                             } else {
@@ -677,9 +697,13 @@ public final class Vertigo2 extends kd {
                     }
                   }
                 } else {
-                  g.b(7);
-                  so.a(un.b((byte) 114), 3, 150, 1024, re.c(-1087), rm.field_A, th.a(true), qp.a(2000, 70), 113, qp.a(8, 72));
-                  wn.a(-122, cf.a(true), pp.a(12));
+                  int discarded$48 = 7;
+                  g.b();
+                  int discarded$49 = 114;
+                  int discarded$50 = -1087;
+                  so.a(un.b(), 3, 150, 1024, re.c(), rm.field_A, th.a(true), qp.a(2000, 70), 113, qp.a(8, 72));
+                  int discarded$51 = 12;
+                  wn.a(-122, cf.a(true), pp.a());
                   rg.field_b = false;
                   oj.field_P = true;
                   am.field_n = -2;
@@ -760,7 +784,7 @@ public final class Vertigo2 extends kd {
         we.i(-1733144127);
     }
 
-    private final void q(int param0) {
+    private final void q() {
         int var2 = 0;
         int var3 = field_L ? 1 : 0;
         on.field_b[0][0] = hp.a(gp.field_s, "", "v_menu_select").a();
@@ -927,8 +951,10 @@ public final class Vertigo2 extends kd {
         wa.field_f = tn.a("orbcoin", ml.field_y, -83, "basic");
         uh.a(false, vp.field_b);
         uh.a(false, wa.field_f);
-        uq.field_a = (fe) (Object) rq.a(rn.field_u, "menu_base", "", (byte) 98);
-        ie.field_Hb = (fe) (Object) rq.a(rn.field_u, "game_complete", "", (byte) 98);
+        int discarded$35 = 98;
+        uq.field_a = (fe) (Object) rq.a(rn.field_u, "menu_base", "");
+        int discarded$36 = 98;
+        ie.field_Hb = (fe) (Object) rq.a(rn.field_u, "game_complete", "");
         la.field_a = (cc) (Object) rl.a(rn.field_u, 12, vi.field_n, "", "title_font");
         va.field_s = new wn((cc) (Object) w.a(vi.field_n, rn.field_u, "interface_font", "", 127));
         cd.field_b = tn.a("options_brush_01", rn.field_u, -94, "");
@@ -937,9 +963,12 @@ public final class Vertigo2 extends kd {
         qr.field_h = tn.a("levelselect_arrow_normal", rn.field_u, -126, "");
         li.field_m = tn.a("levelselect_arrow_pressed", rn.field_u, -121, "");
         pc.field_c = null;
-        qp.field_h = (fe) (Object) rq.a(rn.field_u, "interface_box_mid", "", (byte) 98);
-        qe.field_W = (fe) (Object) rq.a(rn.field_u, "interface_box_end", "", (byte) 98);
-        ln.field_f = (fe) (Object) rq.a(rn.field_u, "interface_box_rend", "", (byte) 98);
+        int discarded$37 = 98;
+        qp.field_h = (fe) (Object) rq.a(rn.field_u, "interface_box_mid", "");
+        int discarded$38 = 98;
+        qe.field_W = (fe) (Object) rq.a(rn.field_u, "interface_box_end", "");
+        int discarded$39 = 98;
+        ln.field_f = (fe) (Object) rq.a(rn.field_u, "interface_box_rend", "");
         var3 = tk.field_c.field_z + tk.field_c.field_M;
         k.field_c = new er(var3, var3);
         k.field_c.d();
@@ -952,11 +981,16 @@ public final class Vertigo2 extends kd {
             var4_int = 0;
             L1: while (true) {
               if (var4_int >= td.field_l.length) {
-                tn.field_i = (fe) (Object) rq.a(rn.field_u, "interface_lives", "", (byte) 98);
-                bj.field_j = (fe) (Object) rq.a(rn.field_u, "interface_jetpack", "", (byte) 98);
-                be.field_n = (fe) (Object) rq.a(rn.field_u, "interface_dynamite", "", (byte) 98);
-                uo.field_e = (fe) (Object) rq.a(rn.field_u, "interface_bucket_6", "", (byte) 98);
-                oj.field_L = (fe) (Object) rq.a(rn.field_u, "lobby_logo", "", (byte) 98);
+                int discarded$40 = 98;
+                tn.field_i = (fe) (Object) rq.a(rn.field_u, "interface_lives", "");
+                int discarded$41 = 98;
+                bj.field_j = (fe) (Object) rq.a(rn.field_u, "interface_jetpack", "");
+                int discarded$42 = 98;
+                be.field_n = (fe) (Object) rq.a(rn.field_u, "interface_dynamite", "");
+                int discarded$43 = 98;
+                uo.field_e = (fe) (Object) rq.a(rn.field_u, "interface_bucket_6", "");
+                int discarded$44 = 98;
+                oj.field_L = (fe) (Object) rq.a(rn.field_u, "lobby_logo", "");
                 im.field_c = new fe[5];
                 bh.field_y = new fe[5];
                 var4_int = 0;
@@ -965,12 +999,18 @@ public final class Vertigo2 extends kd {
                     var4_int = 0;
                     L3: while (true) {
                       if (var4_int >= 5) {
-                        sf.field_b = (fe) (Object) rq.a(rn.field_u, "star", "", (byte) 98);
-                        am.field_o = (fe) (Object) rq.a(rn.field_u, "cloud", "", (byte) 98);
-                        field_C = (fe) (Object) rq.a(rn.field_u, "planet1", "", (byte) 98);
-                        ji.field_p = (fe) (Object) rq.a(rn.field_u, "planet2", "", (byte) 98);
-                        jf.field_M = (fe) (Object) rq.a(rn.field_u, "nebula", "", (byte) 98);
-                        mp.field_a = (fe) (Object) rq.a(rn.field_u, "instructions_how_to_play", "", (byte) 98);
+                        int discarded$45 = 98;
+                        sf.field_b = (fe) (Object) rq.a(rn.field_u, "star", "");
+                        int discarded$46 = 98;
+                        am.field_o = (fe) (Object) rq.a(rn.field_u, "cloud", "");
+                        int discarded$47 = 98;
+                        field_C = (fe) (Object) rq.a(rn.field_u, "planet1", "");
+                        int discarded$48 = 98;
+                        ji.field_p = (fe) (Object) rq.a(rn.field_u, "planet2", "");
+                        int discarded$49 = 98;
+                        jf.field_M = (fe) (Object) rq.a(rn.field_u, "nebula", "");
+                        int discarded$50 = 98;
+                        mp.field_a = (fe) (Object) rq.a(rn.field_u, "instructions_how_to_play", "");
                         li.field_i = new fe[aa.field_Sb.length];
                         var4_int = 0;
                         L4: while (true) {
@@ -979,19 +1019,28 @@ public final class Vertigo2 extends kd {
                             var4_int = 0;
                             L5: while (true) {
                               if (bg.field_e.length <= var4_int) {
-                                eq.field_F = (fe) (Object) rq.a(rn.field_u, "maintitle", "", (byte) 98);
-                                er discarded$1 = rq.a(rn.field_u, "timeattack_complete", "", (byte) 98);
-                                hh.field_a = (fe) (Object) rq.a(rn.field_u, "timeattack_bronze", "", (byte) 98);
-                                kq.field_Kb = (fe) (Object) rq.a(rn.field_u, "timeattack_silver", "", (byte) 98);
-                                il.field_c = (fe) (Object) rq.a(rn.field_u, "timeattack_gold", "", (byte) 98);
-                                var4 = new er[][]{new er[2], gk.a(rn.field_u, "", "start_icon", true), gk.a(rn.field_u, "", "end_icon", true)};
+                                int discarded$51 = 98;
+                                eq.field_F = (fe) (Object) rq.a(rn.field_u, "maintitle", "");
+                                int discarded$52 = 98;
+                                er discarded$53 = rq.a(rn.field_u, "timeattack_complete", "");
+                                int discarded$54 = 98;
+                                hh.field_a = (fe) (Object) rq.a(rn.field_u, "timeattack_bronze", "");
+                                int discarded$55 = 98;
+                                kq.field_Kb = (fe) (Object) rq.a(rn.field_u, "timeattack_silver", "");
+                                int discarded$56 = 98;
+                                il.field_c = (fe) (Object) rq.a(rn.field_u, "timeattack_gold", "");
+                                int discarded$57 = 1;
+                                int discarded$58 = 1;
+                                var4 = new er[][]{new er[2], gk.a(rn.field_u, "", "start_icon"), gk.a(rn.field_u, "", "end_icon")};
                                 mh.a(true, var4, fd.field_q, 3, ac.field_G, m.field_z, true, ho.field_e, wo.field_V, wa.field_e, var4, 2, wa.field_e, rm.field_A, ml.field_y);
                                 jl.field_g = (er) (Object) oj.field_L;
                                 ll.a((byte) -111, 200);
                                 vb.field_g = true;
                                 gr.field_W = eg.field_s;
                                 dl.field_b = vg.field_c;
-                                be.a(-103, uk.field_r, 320, 20, 16766751, 10, 5, 16777215, (er[]) null, 8, fa.field_s, 8, va.field_s.field_f, 280, 16777215);
+                                int discarded$59 = 16777215;
+                                int discarded$60 = 280;
+                                be.a(-103, uk.field_r, 320, 20, 16766751, 10, 5, 16777215, (er[]) null, 8, fa.field_s, 8, va.field_s.field_f);
                                 var5 = tk.field_c.field_t - -tk.field_c.field_M;
                                 var6 = tk.field_c.field_t;
                                 var7 = va.field_s.field_f.field_t - -va.field_s.field_f.field_M;
@@ -1003,25 +1052,29 @@ public final class Vertigo2 extends kd {
                                 ((Vertigo2) this).d(-17);
                                 return;
                               } else {
-                                vj.field_g[var4_int] = (fe) (Object) rq.a(rn.field_u, "instructions_item_" + var4_int, "", (byte) 98);
+                                int discarded$61 = 98;
+                                vj.field_g[var4_int] = (fe) (Object) rq.a(rn.field_u, "instructions_item_" + var4_int, "");
                                 var4_int++;
                                 continue L5;
                               }
                             }
                           } else {
-                            li.field_i[var4_int] = (fe) (Object) rq.a(rn.field_u, "instructions_block_" + var4_int, "", (byte) 98);
+                            int discarded$62 = 98;
+                            li.field_i[var4_int] = (fe) (Object) rq.a(rn.field_u, "instructions_block_" + var4_int, "");
                             var4_int++;
                             continue L4;
                           }
                         }
                       } else {
-                        bh.field_y[var4_int] = (fe) (Object) rq.a(rn.field_u, "interface_bucket_blue_" + (-var4_int + 5), "", (byte) 98);
+                        int discarded$63 = 98;
+                        bh.field_y[var4_int] = (fe) (Object) rq.a(rn.field_u, "interface_bucket_blue_" + (-var4_int + 5), "");
                         var4_int++;
                         continue L3;
                       }
                     }
                   } else {
-                    im.field_c[var4_int] = (fe) (Object) rq.a(rn.field_u, "interface_bucket_" + (-var4_int + 5), "", (byte) 98);
+                    int discarded$64 = 98;
+                    im.field_c[var4_int] = (fe) (Object) rq.a(rn.field_u, "interface_bucket_" + (-var4_int + 5), "");
                     var4_int++;
                     continue L2;
                   }
@@ -1052,329 +1105,536 @@ public final class Vertigo2 extends kd {
     final void d(byte param0) {
         L0: {
           Vertigo2.m((byte) 25);
-          cg.a((byte) 92);
-          ir.a(false);
-          bc.a(7);
+          int discarded$243 = 92;
+          cg.a();
+          int discarded$244 = 0;
+          ir.a();
+          int discarded$245 = 7;
+          bc.a();
           rc.a(true);
           og.c((byte) 26);
           sa.a(-31417);
           oo.a();
-          nr.b((byte) 120);
-          fa.a((byte) -128);
-          nj.a(0);
+          int discarded$246 = 120;
+          nr.b();
+          int discarded$247 = -128;
+          fa.a();
+          int discarded$248 = 0;
+          nj.a();
           bi.d();
-          tl.a(true);
+          int discarded$249 = 1;
+          tl.a();
           r.a(-54);
           cc.a();
           lh.b((byte) 41);
           db.f(97);
-          mh.a(-1);
+          int discarded$250 = -1;
+          mh.a();
           vh.c();
-          id.a((byte) 76);
-          ke.a((byte) -125);
-          n.a(69);
-          ib.a((byte) -35);
-          fr.a(false);
+          int discarded$251 = 76;
+          id.a();
+          int discarded$252 = -125;
+          ke.a();
+          int discarded$253 = 69;
+          n.a();
+          int discarded$254 = -35;
+          ib.a();
+          int discarded$255 = 0;
+          fr.a();
           kh.a(false);
-          kc.a(false);
-          bf.a(104);
+          int discarded$256 = 0;
+          kc.a();
+          int discarded$257 = 104;
+          bf.a();
           ci.a(64);
           kd.a(true);
-          mr.c(true);
-          gn.a((byte) 37);
-          mf.a(9000);
-          vm.a(-586);
-          gh.a((byte) 121);
-          ea.a((byte) -28);
-          as.a(-92);
-          ag.a(-2883);
+          int discarded$258 = 1;
+          mr.c();
+          int discarded$259 = 37;
+          gn.a();
+          int discarded$260 = 9000;
+          mf.a();
+          int discarded$261 = -586;
+          vm.a();
+          int discarded$262 = 121;
+          gh.a();
+          int discarded$263 = -28;
+          ea.a();
+          int discarded$264 = -92;
+          as.a();
+          int discarded$265 = -2883;
+          ag.a();
           dj.a(16363);
-          ti.a(24260);
-          ni.b(false);
-          pp.e(87);
-          sc.a(4);
-          dg.a(0);
-          qb.a((byte) -3);
+          int discarded$266 = 24260;
+          ti.a();
+          int discarded$267 = 0;
+          ni.b();
+          int discarded$268 = 87;
+          pp.e();
+          int discarded$269 = 4;
+          sc.a();
+          int discarded$270 = 0;
+          dg.a();
+          int discarded$271 = -3;
+          qb.a();
           il.b(0);
-          sk.a((byte) 0);
-          ed.e(105);
-          gk.b(-1060);
-          le.a((byte) -87);
+          int discarded$272 = 0;
+          sk.a();
+          int discarded$273 = 105;
+          ed.e();
+          int discarded$274 = -1060;
+          gk.b();
+          int discarded$275 = -87;
+          le.a();
           ip.a(-1423419167);
-          mm.a((byte) 114);
-          ki.a(-7);
+          int discarded$276 = 114;
+          mm.a();
+          int discarded$277 = -7;
+          ki.a();
           eb.a((byte) 15);
-          ja.b(127);
-          tn.a(-101);
+          int discarded$278 = 127;
+          ja.b();
+          int discarded$279 = -101;
+          tn.a();
           ug.c(0);
-          lk.b(-18390);
-          th.a((byte) -123);
-          qi.a(8462);
-          ar.c(0);
-          wn.a(23744);
-          bl.a((byte) -50);
-          fo.f((byte) 123);
-          tr.a(false);
+          int discarded$280 = -18390;
+          lk.b();
+          int discarded$281 = -123;
+          th.a();
+          int discarded$282 = 8462;
+          qi.a();
+          int discarded$283 = 0;
+          ar.c();
+          int discarded$284 = 23744;
+          wn.a();
+          int discarded$285 = -50;
+          bl.a();
+          int discarded$286 = 123;
+          fo.f();
+          int discarded$287 = 0;
+          tr.a();
           rp.a(-78);
-          an.a(true);
+          int discarded$288 = 1;
+          an.a();
           li.d(55);
-          jl.a(6);
-          pe.a(true);
+          int discarded$289 = 6;
+          jl.a();
+          int discarded$290 = 1;
+          pe.a();
           qd.g();
-          rq.e(0);
+          int discarded$291 = 0;
+          rq.e();
           dd.a();
-          fk.e(-257);
-          uj.a(true);
-          fh.h(-90);
-          mp.a(-127);
+          int discarded$292 = -257;
+          fk.e();
+          int discarded$293 = 1;
+          uj.a();
+          int discarded$294 = -90;
+          fh.h();
+          int discarded$295 = -127;
+          mp.a();
           ca.a((byte) -90);
-          cr.a(false);
+          int discarded$296 = 0;
+          cr.a();
           uh.b((byte) -69);
-          fi.c(0);
+          int discarded$297 = 0;
+          fi.c();
           bs.b((byte) 100);
           mi.r(116);
-          jd.a(-109);
+          int discarded$298 = -109;
+          jd.a();
           tk.a((byte) 95);
           t.a(false);
-          kr.c(5);
+          int discarded$299 = 5;
+          kr.c();
           im.e(33);
-          ff.a((byte) 120);
-          k.b(-102);
-          ab.a(0);
-          pd.a(1000000);
+          int discarded$300 = 120;
+          ff.a();
+          int discarded$301 = -102;
+          k.b();
+          int discarded$302 = 0;
+          ab.a();
+          int discarded$303 = 1000000;
+          pd.a();
           sd.j(-25849);
           oe.p(12705);
-          fg.m(-15691);
-          ga.m(11840);
-          fj.n(-74);
-          mk.k(4);
-          qm.a(-120);
-          ob.a((byte) -103);
-          ne.a((byte) -125);
-          qj.a((byte) 56);
-          mc.a(-119);
-          ok.a(2);
+          int discarded$304 = -15691;
+          fg.m();
+          int discarded$305 = 11840;
+          ga.m();
+          int discarded$306 = -74;
+          fj.n();
+          int discarded$307 = 4;
+          mk.k();
+          int discarded$308 = -120;
+          qm.a();
+          int discarded$309 = -103;
+          ob.a();
+          int discarded$310 = -125;
+          ne.a();
+          int discarded$311 = 56;
+          qj.a();
+          int discarded$312 = -119;
+          mc.a();
+          int discarded$313 = 2;
+          ok.a();
           tb.a(30272);
-          la.a(false);
-          ui.a(64);
-          he.a((byte) -125);
-          wj.a(-112);
+          int discarded$314 = 0;
+          la.a();
+          int discarded$315 = 64;
+          ui.a();
+          int discarded$316 = -125;
+          he.a();
+          int discarded$317 = -112;
+          wj.a();
           wg.d(-900429434);
-          go.a(-128);
+          int discarded$318 = -128;
+          go.a();
           wo.n(511);
-          am.b(1);
-          bh.a(0);
-          lj.d(1);
+          int discarded$319 = 1;
+          am.b();
+          int discarded$320 = 0;
+          bh.a();
+          int discarded$321 = 1;
+          lj.d();
           me.a(6457);
-          or.a((byte) 87);
+          int discarded$322 = 87;
+          or.a();
           dn.a();
           rd.b();
-          gp.g(52);
-          fq.a(-126);
+          int discarded$323 = 52;
+          gp.g();
+          int discarded$324 = -126;
+          fq.a();
           fb.a((byte) 115);
-          ua.a((byte) 114);
+          int discarded$325 = 114;
+          ua.a();
           vd.a(-115);
           sm.a((byte) 76);
           ie.o(-115);
-          kq.k(112);
+          int discarded$326 = 112;
+          kq.k();
           dm.l(-1);
-          b.b(-90);
-          od.k(-23936);
-          cb.b(false);
-          gm.b(0);
+          int discarded$327 = -90;
+          b.b();
+          int discarded$328 = -23936;
+          od.k();
+          int discarded$329 = 0;
+          cb.b();
+          int discarded$330 = 0;
+          gm.b();
           nk.a((byte) -67);
-          lb.a((byte) -120);
-          mj.a(18641);
+          int discarded$331 = -120;
+          lb.a();
+          int discarded$332 = 18641;
+          mj.a();
           l.a(false);
           fc.d();
           lg.a();
-          op.a(0);
-          jg.b(false);
-          cd.a(123);
-          bg.a((byte) 9);
-          dl.a((byte) -119);
+          int discarded$333 = 0;
+          op.a();
+          int discarded$334 = 0;
+          jg.b();
+          int discarded$335 = 123;
+          cd.a();
+          int discarded$336 = 9;
+          bg.a();
+          int discarded$337 = -119;
+          dl.a();
           hb.c(2);
           ha.b((byte) -123);
           in.a(0);
-          lc.a(30015);
+          int discarded$338 = 30015;
+          lc.a();
           ap.a((byte) 25);
           en.a(4096);
           tq.a(13597);
-          v.a(-18);
+          int discarded$339 = -18;
+          v.a();
           wa.a(124);
           on.a(true);
-          bo.a(103);
-          hd.b(1);
-          ql.j(30560);
+          int discarded$340 = 103;
+          bo.a();
+          int discarded$341 = 1;
+          hd.b();
+          int discarded$342 = 30560;
+          ql.j();
           np.a((byte) 123);
-          rn.e(107);
+          int discarded$343 = 107;
+          rn.e();
           p.b(0);
-          tm.a(127);
+          int discarded$344 = 127;
+          tm.a();
           eg.h(3);
           ak.b(-56);
-          ia.j(-20657);
+          int discarded$345 = -20657;
+          ia.j();
           qh.c(115);
-          nq.j(-124);
+          int discarded$346 = -124;
+          nq.j();
           uk.b((byte) -101);
           bj.a(false);
-          ln.a(-47);
-          vj.a(-11590);
-          rk.a(false);
-          tg.b(4);
-          ce.a(true);
+          int discarded$347 = -47;
+          ln.a();
+          int discarded$348 = -11590;
+          vj.a();
+          int discarded$349 = 0;
+          rk.a();
+          int discarded$350 = 4;
+          tg.b();
+          int discarded$351 = 1;
+          ce.a();
           ji.a(true);
           pq.a(-1);
           dh.a(-1);
           rj.a();
-          vq.a((byte) 111);
+          int discarded$352 = 111;
+          vq.a();
           al.a(-1216);
           gl.a(true);
           jr.a((byte) -100);
-          oc.a(-27171);
+          int discarded$353 = -27171;
+          oc.a();
           ep.a();
           va.a(60);
           uc.a(91);
-          kn.a(true);
-          mq.a(true);
-          td.a((byte) 122);
+          int discarded$354 = 1;
+          kn.a();
+          int discarded$355 = 1;
+          mq.a();
+          int discarded$356 = 122;
+          td.a();
           jo.a(2);
           vp.a(-98);
-          iq.b((byte) -73);
-          oh.e((byte) -122);
-          ro.c((byte) 76);
-          mg.h(2);
-          br.n(-17131);
-          sp.l(-6);
+          int discarded$357 = -73;
+          iq.b();
+          int discarded$358 = -122;
+          oh.e();
+          int discarded$359 = 76;
+          ro.c();
+          int discarded$360 = 2;
+          mg.h();
+          int discarded$361 = -17131;
+          br.n();
+          int discarded$362 = -6;
+          sp.l();
           we.b(false);
-          oj.a((byte) -110);
+          int discarded$363 = -110;
+          oj.a();
           pn.a((byte) -53);
           lr.a((byte) -45);
           qe.h(111);
           ck.b(true);
           da.b((byte) -124);
-          ad.a(true);
-          ue.i(1);
-          jk.a(2);
+          int discarded$364 = 1;
+          ad.a();
+          int discarded$365 = 1;
+          ue.i();
+          int discarded$366 = 2;
+          jk.a();
           gr.g((byte) 123);
-          uq.a(-6872);
-          jp.a(true);
+          int discarded$367 = -6872;
+          uq.a();
+          int discarded$368 = 1;
+          jp.a();
           pb.a(16711935);
-          vg.a(0);
+          int discarded$369 = 0;
+          vg.a();
           to.a(84);
-          sf.a((byte) 4);
-          qf.a((byte) -126);
-          hh.a(-72);
+          int discarded$370 = 4;
+          sf.a();
+          int discarded$371 = -126;
+          qf.a();
+          int discarded$372 = -72;
+          hh.a();
           aa.m(-29238);
-          uo.a((byte) -122);
-          jn.b(54);
+          int discarded$373 = -122;
+          uo.a();
+          int discarded$374 = 54;
+          jn.b();
           ud.b((byte) -37);
           df.g(-3);
-          ko.f(false);
+          int discarded$375 = 0;
+          ko.f();
           um.a(46);
           kl.b(true);
-          un.k(-67);
-          po.a((byte) -43);
-          no.a((byte) -111);
-          cp.b((byte) -128);
-          vc.b(0);
-          kf.a(61);
-          eh.a((byte) -84);
-          q.i(0);
-          lo.a((byte) -102);
+          int discarded$376 = -67;
+          un.k();
+          int discarded$377 = -43;
+          po.a();
+          int discarded$378 = -111;
+          no.a();
+          int discarded$379 = -128;
+          cp.b();
+          int discarded$380 = 0;
+          vc.b();
+          int discarded$381 = 61;
+          kf.a();
+          int discarded$382 = -84;
+          eh.a();
+          int discarded$383 = 0;
+          q.i();
+          int discarded$384 = -102;
+          lo.a();
           ig.a(-1);
-          rg.a((byte) 127);
-          nl.e(116);
-          ma.c(-48);
-          gb.a(19199);
-          cl.a((byte) 124);
-          fm.a((byte) 72);
-          oi.a((byte) 88);
-          mb.e(-26523);
+          int discarded$385 = 127;
+          rg.a();
+          int discarded$386 = 116;
+          nl.e();
+          int discarded$387 = -48;
+          ma.c();
+          int discarded$388 = 19199;
+          gb.a();
+          int discarded$389 = 124;
+          cl.a();
+          int discarded$390 = 72;
+          fm.a();
+          int discarded$391 = 88;
+          oi.a();
+          int discarded$392 = -26523;
+          mb.e();
           g.a(false);
-          sg.a((byte) -49);
-          sj.a(110);
+          int discarded$393 = -49;
+          sg.a();
+          int discarded$394 = 110;
+          sj.a();
           ul.a();
-          bd.c(4);
-          ao.h(0);
+          int discarded$395 = 4;
+          bd.c();
+          int discarded$396 = 0;
+          ao.h();
           jf.b(false);
-          kk.a(true);
+          int discarded$397 = 1;
+          kk.a();
           aq.b(-121);
           wh.h(9724);
-          h.g(1);
+          int discarded$398 = 1;
+          h.g();
           pc.a(0);
-          ld.a(1151);
-          tc.b(118);
-          af.d(false);
+          int discarded$399 = 1151;
+          ld.a();
+          int discarded$400 = 118;
+          tc.b();
+          int discarded$401 = 0;
+          af.d();
           lp.g(86);
-          te.g(-30443);
+          int discarded$402 = -30443;
+          te.g();
           lf.b((byte) 107);
-          w.g(2);
-          ol.h(127);
+          int discarded$403 = 2;
+          w.g();
+          int discarded$404 = 127;
+          ol.h();
           di.g(0);
           eq.g(11902);
-          vf.b((byte) 36);
-          hr.j(93);
-          kj.b((byte) -96);
-          jm.b((byte) 43);
+          int discarded$405 = 36;
+          vf.b();
+          int discarded$406 = 93;
+          hr.j();
+          int discarded$407 = -96;
+          kj.b();
+          int discarded$408 = 43;
+          jm.b();
           ek.g(-88);
           ec.b((byte) 60);
           fn.g(4096);
-          nb.g(0);
-          dc.g(64);
-          up.g(-3144);
-          jb.b((byte) -118);
-          qk.b(true);
-          bp.g(7750);
+          int discarded$409 = 0;
+          nb.g();
+          int discarded$410 = 64;
+          dc.g();
+          int discarded$411 = -3144;
+          up.g();
+          int discarded$412 = -118;
+          jb.b();
+          int discarded$413 = 1;
+          qk.b();
+          int discarded$414 = 7750;
+          bp.g();
           rm.g(16145);
           gj.b((byte) -70);
-          so.g(-13533);
+          int discarded$415 = -13533;
+          so.g();
           rr.b((byte) 123);
-          m.g(2);
-          bb.b((byte) 76);
-          f.b((byte) -98);
+          int discarded$416 = 2;
+          m.g();
+          int discarded$417 = 76;
+          bb.b();
+          int discarded$418 = -98;
+          f.b();
           dp.h(-102);
-          lm.b((byte) 121);
-          qo.b((byte) -128);
-          bm.b(true);
+          int discarded$419 = 121;
+          lm.b();
+          int discarded$420 = -128;
+          qo.b();
+          int discarded$421 = 1;
+          bm.b();
           ii.g(125);
           hm.b(true);
           bq.g(13);
-          kg.b((byte) -118);
-          rb.a(true);
-          se.b(true);
-          wb.b((byte) -33);
+          int discarded$422 = -118;
+          kg.b();
+          int discarded$423 = 1;
+          rb.a();
+          int discarded$424 = 1;
+          se.b();
+          int discarded$425 = -33;
+          wb.b();
           md.g(-101);
-          vb.b((byte) -54);
-          sl.d((byte) 53);
-          re.a(-124);
-          ac.f((byte) 101);
-          ng.b(16952);
+          int discarded$426 = -54;
+          vb.b();
+          int discarded$427 = 53;
+          sl.d();
+          int discarded$428 = -124;
+          re.a();
+          int discarded$429 = 101;
+          ac.f();
+          int discarded$430 = 16952;
+          ng.b();
           el.a(false);
-          sr.a(true);
+          int discarded$431 = 1;
+          sr.a();
           qc.h(0);
           ve.a((byte) -126);
-          oq.b(false);
-          aj.a(false);
+          int discarded$432 = 0;
+          oq.b();
+          int discarded$433 = 0;
+          aj.a();
           mo.a(92);
           ah.a((byte) -128);
-          gi.b(false);
-          eo.b(0);
+          int discarded$434 = 0;
+          gi.b();
+          int discarded$435 = 0;
+          eo.b();
           tf.c(84);
           wm.b(86);
-          gf.b(-24);
-          cf.a(116);
-          hj.a((byte) -123);
-          qn.a((byte) 54);
-          hq.a(false);
-          nf.a((byte) -90);
-          bk.a(0);
-          tj.a(true);
-          hl.a((byte) -118);
-          be.a(-1);
-          ub.a(false);
-          ee.b(0);
-          ch.a(-81);
-          s.a((byte) -118);
+          int discarded$436 = -24;
+          gf.b();
+          int discarded$437 = 116;
+          cf.a();
+          int discarded$438 = -123;
+          hj.a();
+          int discarded$439 = 54;
+          qn.a();
+          int discarded$440 = 0;
+          hq.a();
+          int discarded$441 = -90;
+          nf.a();
+          int discarded$442 = 0;
+          bk.a();
+          int discarded$443 = 1;
+          tj.a();
+          int discarded$444 = -118;
+          hl.a();
+          int discarded$445 = -1;
+          be.a();
+          int discarded$446 = 0;
+          ub.a();
+          int discarded$447 = 0;
+          ee.b();
+          int discarded$448 = -81;
+          ch.a();
+          int discarded$449 = -118;
+          s.a();
           if (param0 > 103) {
             break L0;
           } else {
@@ -1382,50 +1642,86 @@ public final class Vertigo2 extends kd {
             break L0;
           }
         }
-        vi.a((byte) -92);
-        vl.a((byte) -11);
-        tp.k(-10045);
-        ri.a(7139);
-        gg.a((byte) -83);
-        vo.a(true);
-        jc.a(28373);
-        ml.c(-15);
+        int discarded$450 = -92;
+        vi.a();
+        int discarded$451 = -11;
+        vl.a();
+        int discarded$452 = -10045;
+        tp.k();
+        int discarded$453 = 7139;
+        ri.a();
+        int discarded$454 = -83;
+        gg.a();
+        int discarded$455 = 1;
+        vo.a();
+        int discarded$456 = 28373;
+        jc.a();
+        int discarded$457 = -15;
+        ml.c();
         om.c((byte) 122);
         kb.a(96);
-        wq.h(-12477);
-        qp.a(-19721);
-        rh.a((byte) -126);
-        hi.d((byte) -114);
-        ho.c(11579568);
-        nn.a(5);
+        int discarded$458 = -12477;
+        wq.h();
+        int discarded$459 = -19721;
+        qp.a();
+        int discarded$460 = -126;
+        rh.a();
+        int discarded$461 = -114;
+        hi.d();
+        int discarded$462 = 11579568;
+        ho.c();
+        int discarded$463 = 5;
+        nn.a();
         ej.a(113);
-        c.b(122);
+        int discarded$464 = 122;
+        c.b();
         nd.d(-44);
-        wi.b(93);
-        e.b(-120);
-        lq.a(false);
-        hk.c((byte) -114);
+        int discarded$465 = 93;
+        wi.b();
+        int discarded$466 = -120;
+        e.b();
+        int discarded$467 = 0;
+        lq.a();
+        int discarded$468 = -114;
+        hk.c();
         wc.g(3);
-        dk.c((byte) -73);
-        oa.g(-118);
+        int discarded$469 = -73;
+        dk.c();
+        int discarded$470 = -118;
+        oa.g();
         na.g(-27799);
-        rf.g(29492);
+        int discarded$471 = 29492;
+        rf.g();
         sq.a(26371);
-        pk.f(-8105);
-        ba.a(3);
-        de.e(21283);
-        ll.a(3);
-        j.a(0);
-        hn.a((byte) 72);
-        mn.a(6);
-        fd.a(-16836);
-        km.h(83);
+        int discarded$472 = -8105;
+        pk.f();
+        int discarded$473 = 3;
+        ba.a();
+        int discarded$474 = 21283;
+        de.e();
+        int discarded$475 = 3;
+        ll.a();
+        int discarded$476 = 0;
+        j.a();
+        int discarded$477 = 72;
+        hn.a();
+        int discarded$478 = 6;
+        mn.a();
+        int discarded$479 = -16836;
+        fd.a();
+        int discarded$480 = 83;
+        km.h();
         jq.a(-113);
-        nh.a(false);
-        gd.a(true);
-        qr.a(false);
-        pl.a(true);
-        wp.b(10);
+        int discarded$481 = 0;
+        nh.a();
+        int discarded$482 = 1;
+        gd.a();
+        int discarded$483 = 0;
+        qr.a();
+        int discarded$484 = 1;
+        pl.a();
+        int discarded$485 = 10;
+        wp.b();
         ((Vertigo2) this).field_u = null;
     }
 
@@ -1598,7 +1894,8 @@ public final class Vertigo2 extends kd {
                     }
                   }
                 }
-                ff.a(m.h(-124), 11182);
+                int discarded$7 = 11182;
+                ff.a(m.h(-124));
                 break L12;
               }
               L14: {
@@ -1629,12 +1926,15 @@ public final class Vertigo2 extends kd {
               L16: {
                 if (kg.h(param0 ^ -111)) {
                   var5 = oi.a(-110) + 30;
-                  var6 = 30 + hk.a(true);
+                  int discarded$8 = 1;
+                  var6 = 30 + hk.a();
                   rq.a(var6, var5, -(var6 / 2) + 240, -(var5 / 2) + 320, 82, 210);
-                  eb.b(-14732);
+                  int discarded$9 = -14732;
+                  eb.b();
                   break L16;
                 } else {
-                  if (pq.b(0)) {
+                  int discarded$10 = 0;
+                  if (pq.b()) {
                     L17: {
                       if (null == dc.field_L) {
                         stackOut_64_0 = uj.field_g;
@@ -1649,8 +1949,10 @@ public final class Vertigo2 extends kd {
                     hr.a(stackIn_65_0 != 0, true);
                     break L16;
                   } else {
-                    if (rh.e((byte) 99)) {
-                      var5 = 30 + el.a((byte) -72);
+                    int discarded$11 = 99;
+                    if (rh.e()) {
+                      int discarded$12 = -72;
+                      var5 = 30 + el.a();
                       var6 = f.b(false) - -30;
                       rq.a(var6, var5, -(var6 / 2) + 270, 320 - var5 / 2, -77, 210);
                       bk.b((byte) -101);
@@ -1674,7 +1976,8 @@ public final class Vertigo2 extends kd {
                   break L18;
                 }
               }
-              dh.a(0, (byte) -88, var8, 0);
+              int discarded$13 = 0;
+              dh.a(0, (byte) -88, var8);
               return;
             } else {
               aj.a(false, 100.0f, dk.field_n);
@@ -1704,7 +2007,7 @@ public final class Vertigo2 extends kd {
         field_H = null;
     }
 
-    private final static int p(byte param0) {
+    private final static int p() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -1717,7 +2020,8 @@ public final class Vertigo2 extends kd {
           L0: {
             var1_int = 0;
             L1: while (true) {
-              if (!gf.a(false)) {
+              int discarded$7 = 0;
+              if (!gf.a()) {
                 L2: {
                   kg.field_G.a((byte) -29, we.a(gb.field_d, true, ed.field_n), we.a(no.field_e, true, sd.field_N));
                   if (kg.field_G.a(84)) {
@@ -1791,7 +2095,7 @@ public final class Vertigo2 extends kd {
         hi.field_o = pm.a(18, 123);
     }
 
-    private final void k(byte param0) {
+    private final void k() {
         int var2 = 22;
         ei.a(pp.field_s, (byte) -81);
         pp.field_s = null;
@@ -1821,7 +2125,7 @@ public final class Vertigo2 extends kd {
         var6 = field_L ? 1 : 0;
         try {
           L0: {
-            on.field_b[param3] = new ae[param0 + param2];
+            on.field_b[param3] = new ae[1 + param2];
             on.field_b[param3][0] = hp.a(gp.field_s, "", param1).a();
             var5_int = 1;
             L1: while (true) {
@@ -1839,7 +2143,7 @@ public final class Vertigo2 extends kd {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("Vertigo2.C(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("Vertigo2.C(").append(1).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -1870,7 +2174,8 @@ public final class Vertigo2 extends kd {
         int var3 = 0;
         int var4 = 0;
         var4 = field_L ? 1 : 0;
-        ro.a((byte) -52);
+        int discarded$11 = -52;
+        ro.a();
         if (null == gp.field_s) {
           L0: {
             mn.a(false);
@@ -1890,8 +2195,9 @@ public final class Vertigo2 extends kd {
               break L1;
             } else {
               aj.a(false, 90.0f, cp.field_a);
-              ((Vertigo2) this).d(param0 ^ -16777200);
-              this.k((byte) 109);
+              ((Vertigo2) this).d(-17);
+              int discarded$12 = 109;
+              this.k();
               break L1;
             }
           }
@@ -1910,8 +2216,9 @@ public final class Vertigo2 extends kd {
               break L3;
             } else {
               aj.a(false, 95.0f, dh.field_f);
-              ((Vertigo2) this).d(param0 + -16777232);
-              w.a(ml.field_u, np.field_Kb, tl.field_c, (byte) 59);
+              ((Vertigo2) this).d(-17);
+              int discarded$13 = 59;
+              w.a(ml.field_u, np.field_Kb, tl.field_c);
               tl.field_c = null;
               ml.field_u = null;
               np.field_Kb = null;
@@ -1919,17 +2226,9 @@ public final class Vertigo2 extends kd {
             }
           }
           if (null == gi.field_p) {
-            L4: {
-              kr.a(-3645);
-              if (param0 == 16777215) {
-                break L4;
-              } else {
-                this.n((byte) 93);
-                break L4;
-              }
-            }
+            kr.a(-3645);
             var3 = 0;
-            L5: while (true) {
+            L4: while (true) {
               if (var3 >= 23) {
                 lc.field_b = 0;
                 vc.a(0);
@@ -1941,12 +2240,13 @@ public final class Vertigo2 extends kd {
                 rn.a(108, op.field_d);
                 hj.a(128, (byte) 126);
                 wn.field_b = new an();
-                ng.a(-10236);
+                int discarded$14 = -10236;
+                ng.a();
                 return true;
               } else {
                 fh.field_y[var3] = new fo(var3);
                 var3++;
-                continue L5;
+                continue L4;
               }
             }
           } else {
@@ -1958,152 +2258,153 @@ public final class Vertigo2 extends kd {
             return false;
           }
         } else {
-          L6: {
+          L5: {
             if (!ml.field_y.b(0)) {
-              break L6;
+              break L5;
             } else {
               if (!ml.field_y.c("basic", 0)) {
-                break L6;
+                break L5;
               } else {
-                if (ml.field_y.c("roman20", param0 ^ 16777215)) {
-                  L7: {
+                if (ml.field_y.c("roman20", 0)) {
+                  L6: {
                     if (!ac.field_G.b(0)) {
-                      break L7;
+                      break L6;
                     } else {
                       if (ac.field_G.c("roman20", 0)) {
                         if (!ml.field_y.c("kartika13", 0)) {
                           aj.a(false, 6.0f, gr.a(vc.field_a, (byte) 103, ml.field_y, vd.field_c, "kartika13"));
                           return false;
                         } else {
-                          L8: {
-                            if (!ac.field_G.b(param0 ^ 16777215)) {
-                              break L8;
+                          L7: {
+                            if (!ac.field_G.b(0)) {
+                              break L7;
                             } else {
                               if (ac.field_G.c("kartika13", 0)) {
-                                if (!ml.field_y.c("comic20", param0 ^ 16777215)) {
+                                if (!ml.field_y.c("comic20", 0)) {
                                   aj.a(false, 8.0f, gr.a(vc.field_a, (byte) 47, ml.field_y, vd.field_c, "comic20"));
                                   return false;
                                 } else {
-                                  L9: {
-                                    if (!ac.field_G.b(param0 ^ 16777215)) {
-                                      break L9;
+                                  L8: {
+                                    if (!ac.field_G.b(0)) {
+                                      break L8;
                                     } else {
-                                      if (ac.field_G.c("comic20", param0 ^ 16777215)) {
-                                        L10: {
+                                      if (ac.field_G.c("comic20", 0)) {
+                                        L9: {
                                           if (!ml.field_y.b(0)) {
-                                            break L10;
+                                            break L9;
                                           } else {
                                             if (ml.field_y.c("lobby", 0)) {
-                                              L11: {
+                                              L10: {
                                                 if (!ac.field_G.b(0)) {
-                                                  break L11;
+                                                  break L10;
                                                 } else {
                                                   if (!ac.field_G.c("lobby", 0)) {
-                                                    break L11;
+                                                    break L10;
                                                   } else {
-                                                    L12: {
+                                                    L11: {
                                                       if (!gp.field_s.b(0)) {
-                                                        break L12;
+                                                        break L11;
                                                       } else {
                                                         if (gp.field_s.c("", 0)) {
-                                                          L13: {
+                                                          L12: {
                                                             if (!mj.field_b.b(0)) {
-                                                              break L13;
+                                                              break L12;
                                                             } else {
                                                               if (!mj.field_b.c("", 0)) {
-                                                                break L13;
+                                                                break L12;
                                                               } else {
-                                                                L14: {
-                                                                  if (!re.field_d.b(param0 + -16777215)) {
-                                                                    break L14;
+                                                                L13: {
+                                                                  if (!re.field_d.b(0)) {
+                                                                    break L13;
                                                                   } else {
                                                                     if (re.field_d.a((byte) -112)) {
-                                                                      L15: {
-                                                                        if (!le.field_f.b(param0 + -16777215)) {
-                                                                          break L15;
+                                                                      L14: {
+                                                                        if (!le.field_f.b(0)) {
+                                                                          break L14;
                                                                         } else {
                                                                           if (!le.field_f.c("", 0)) {
-                                                                            break L15;
+                                                                            break L14;
                                                                           } else {
-                                                                            L16: {
-                                                                              if (!rn.field_u.b(param0 + -16777215)) {
-                                                                                break L16;
+                                                                            L15: {
+                                                                              if (!rn.field_u.b(0)) {
+                                                                                break L15;
                                                                               } else {
-                                                                                if (!rn.field_u.c("", param0 ^ 16777215)) {
-                                                                                  break L16;
+                                                                                if (!rn.field_u.c("", 0)) {
+                                                                                  break L15;
                                                                                 } else {
-                                                                                  L17: {
+                                                                                  L16: {
                                                                                     if (!vi.field_n.b(0)) {
-                                                                                      break L17;
+                                                                                      break L16;
                                                                                     } else {
                                                                                       if (vi.field_n.c("", 0)) {
-                                                                                        L18: {
-                                                                                          if (!gi.field_p.b(param0 ^ 16777215)) {
-                                                                                            break L18;
+                                                                                        L17: {
+                                                                                          if (!gi.field_p.b(0)) {
+                                                                                            break L17;
                                                                                           } else {
-                                                                                            if (!gi.field_p.c("", param0 ^ 16777215)) {
-                                                                                              break L18;
+                                                                                            if (!gi.field_p.c("", 0)) {
+                                                                                              break L17;
                                                                                             } else {
-                                                                                              L19: {
-                                                                                                if (!pp.field_s.b(param0 ^ 16777215)) {
-                                                                                                  break L19;
+                                                                                              L18: {
+                                                                                                if (!pp.field_s.b(0)) {
+                                                                                                  break L18;
                                                                                                 } else {
-                                                                                                  if (pp.field_s.c("", param0 ^ 16777215)) {
-                                                                                                    L20: {
+                                                                                                  if (pp.field_s.c("", 0)) {
+                                                                                                    L19: {
                                                                                                       if (!np.field_Kb.b(0)) {
-                                                                                                        break L20;
+                                                                                                        break L19;
                                                                                                       } else {
                                                                                                         if (!np.field_Kb.a((byte) -112)) {
-                                                                                                          break L20;
+                                                                                                          break L19;
                                                                                                         } else {
-                                                                                                          L21: {
-                                                                                                            if (!tl.field_c.b(param0 ^ 16777215)) {
-                                                                                                              break L21;
+                                                                                                          L20: {
+                                                                                                            if (!tl.field_c.b(0)) {
+                                                                                                              break L20;
                                                                                                             } else {
                                                                                                               if (!tl.field_c.a((byte) -112)) {
-                                                                                                                break L21;
+                                                                                                                break L20;
                                                                                                               } else {
-                                                                                                                L22: {
+                                                                                                                L21: {
                                                                                                                   if (!ml.field_u.b(0)) {
-                                                                                                                    break L22;
+                                                                                                                    break L21;
                                                                                                                   } else {
                                                                                                                     if (!ml.field_u.a((byte) -112)) {
-                                                                                                                      break L22;
+                                                                                                                      break L21;
                                                                                                                     } else {
-                                                                                                                      L23: {
+                                                                                                                      L22: {
                                                                                                                         if (!ii.field_C.b(0)) {
-                                                                                                                          break L23;
+                                                                                                                          break L22;
                                                                                                                         } else {
                                                                                                                           if (!ii.field_C.a((byte) -112)) {
-                                                                                                                            break L23;
+                                                                                                                            break L22;
                                                                                                                           } else {
-                                                                                                                            L24: {
-                                                                                                                              if (!hi.field_o.b(param0 + -16777215)) {
-                                                                                                                                break L24;
+                                                                                                                            L23: {
+                                                                                                                              if (!hi.field_o.b(0)) {
+                                                                                                                                break L23;
                                                                                                                               } else {
                                                                                                                                 if (!hi.field_o.a((byte) -112)) {
-                                                                                                                                  break L24;
+                                                                                                                                  break L23;
                                                                                                                                 } else {
-                                                                                                                                  L25: {
+                                                                                                                                  L24: {
                                                                                                                                     if (!nn.field_y.b(0)) {
-                                                                                                                                      break L25;
+                                                                                                                                      break L24;
                                                                                                                                     } else {
                                                                                                                                       if (!nn.field_y.c("", 0)) {
-                                                                                                                                        break L25;
+                                                                                                                                        break L24;
                                                                                                                                       } else {
-                                                                                                                                        L26: {
-                                                                                                                                          if (!m.field_z.b(param0 ^ 16777215)) {
-                                                                                                                                            break L26;
+                                                                                                                                        L25: {
+                                                                                                                                          if (!m.field_z.b(0)) {
+                                                                                                                                            break L25;
                                                                                                                                           } else {
                                                                                                                                             if (!m.field_z.a((byte) -112)) {
-                                                                                                                                              break L26;
+                                                                                                                                              break L25;
                                                                                                                                             } else {
                                                                                                                                               aj.a(false, 78.0f, oe.field_sb);
                                                                                                                                               if (param1) {
                                                                                                                                                 le.a(468713154);
                                                                                                                                                 ((Vertigo2) this).d(-17);
                                                                                                                                                 jk.field_b = new id(gp.field_s, mj.field_b);
-                                                                                                                                                this.q(19804);
+                                                                                                                                                int discarded$15 = 19804;
+                                                                                                                                                this.q();
                                                                                                                                                 gp.field_s = null;
                                                                                                                                                 di.b((byte) 109);
                                                                                                                                                 return false;
@@ -2113,7 +2414,8 @@ public final class Vertigo2 extends kd {
                                                                                                                                             }
                                                                                                                                           }
                                                                                                                                         }
-                                                                                                                                        aj.a(false, 73.0f, fg.a(m.field_z, dk.field_n, vj.field_a, 274));
+                                                                                                                                        int discarded$16 = 274;
+                                                                                                                                        aj.a(false, 73.0f, fg.a(m.field_z, dk.field_n, vj.field_a));
                                                                                                                                         return false;
                                                                                                                                       }
                                                                                                                                     }
@@ -2123,30 +2425,35 @@ public final class Vertigo2 extends kd {
                                                                                                                                 }
                                                                                                                               }
                                                                                                                             }
-                                                                                                                            aj.a(false, 68.0f, fg.a(ii.field_C, ua.field_g, ee.field_d, 274));
+                                                                                                                            int discarded$17 = 274;
+                                                                                                                            aj.a(false, 68.0f, fg.a(ii.field_C, ua.field_g, ee.field_d));
                                                                                                                             return false;
                                                                                                                           }
                                                                                                                         }
                                                                                                                       }
-                                                                                                                      aj.a(false, 67.0f, fg.a(ii.field_C, ua.field_g, ee.field_d, param0 ^ 16776941));
+                                                                                                                      int discarded$18 = 274;
+                                                                                                                      aj.a(false, 67.0f, fg.a(ii.field_C, ua.field_g, ee.field_d));
                                                                                                                       return false;
                                                                                                                     }
                                                                                                                   }
                                                                                                                 }
-                                                                                                                aj.a(false, 66.0f, fg.a(ml.field_u, kq.field_Vb, bb.field_G, 274));
+                                                                                                                int discarded$19 = 274;
+                                                                                                                aj.a(false, 66.0f, fg.a(ml.field_u, kq.field_Vb, bb.field_G));
                                                                                                                 return false;
                                                                                                               }
                                                                                                             }
                                                                                                           }
-                                                                                                          aj.a(false, 65.0f, fg.a(tl.field_c, kq.field_Vb, bb.field_G, param0 + -16776941));
+                                                                                                          int discarded$20 = 274;
+                                                                                                          aj.a(false, 65.0f, fg.a(tl.field_c, kq.field_Vb, bb.field_G));
                                                                                                           return false;
                                                                                                         }
                                                                                                       }
                                                                                                     }
-                                                                                                    aj.a(false, 60.0f, fg.a(np.field_Kb, kq.field_Vb, bb.field_G, 274));
+                                                                                                    int discarded$21 = 274;
+                                                                                                    aj.a(false, 60.0f, fg.a(np.field_Kb, kq.field_Vb, bb.field_G));
                                                                                                     return false;
                                                                                                   } else {
-                                                                                                    break L19;
+                                                                                                    break L18;
                                                                                                   }
                                                                                                 }
                                                                                               }
@@ -2158,7 +2465,7 @@ public final class Vertigo2 extends kd {
                                                                                         aj.a(false, 55.0f, gr.a(vj.field_a, (byte) 114, gi.field_p, dk.field_n, ""));
                                                                                         return false;
                                                                                       } else {
-                                                                                        break L17;
+                                                                                        break L16;
                                                                                       }
                                                                                     }
                                                                                   }
@@ -2175,7 +2482,7 @@ public final class Vertigo2 extends kd {
                                                                       aj.a(false, 40.0f, gr.a(tm.field_c, (byte) 109, le.field_f, lo.field_b, ""));
                                                                       return false;
                                                                     } else {
-                                                                      break L14;
+                                                                      break L13;
                                                                     }
                                                                   }
                                                                 }
@@ -2187,7 +2494,7 @@ public final class Vertigo2 extends kd {
                                                           aj.a(false, 30.0f, gr.a(lc.field_c, (byte) 35, mj.field_b, de.field_a, ""));
                                                           return false;
                                                         } else {
-                                                          break L12;
+                                                          break L11;
                                                         }
                                                       }
                                                     }
@@ -2199,14 +2506,14 @@ public final class Vertigo2 extends kd {
                                               aj.a(false, 11.0f, gr.a(vc.field_a, (byte) 119, ac.field_G, vd.field_c, "lobby"));
                                               return false;
                                             } else {
-                                              break L10;
+                                              break L9;
                                             }
                                           }
                                         }
                                         aj.a(false, 10.0f, gr.a(ib.field_b, (byte) 50, ml.field_y, me.field_b, "lobby"));
                                         return false;
                                       } else {
-                                        break L9;
+                                        break L8;
                                       }
                                     }
                                   }
@@ -2214,7 +2521,7 @@ public final class Vertigo2 extends kd {
                                   return false;
                                 }
                               } else {
-                                break L8;
+                                break L7;
                               }
                             }
                           }
@@ -2222,7 +2529,7 @@ public final class Vertigo2 extends kd {
                           return false;
                         }
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                   }
@@ -2251,18 +2558,18 @@ public final class Vertigo2 extends kd {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_75_0 = 0;
-        int stackIn_83_0 = 0;
-        int stackIn_100_0 = 0;
-        int stackIn_111_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_98_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_81_0 = 0;
-        int stackOut_110_0 = 0;
+        int stackIn_85_0 = 0;
+        int stackIn_93_0 = 0;
+        int stackIn_110_0 = 0;
+        int stackIn_121_0 = 0;
+        int stackOut_84_0 = 0;
+        int stackOut_83_0 = 0;
         int stackOut_109_0 = 0;
+        int stackOut_108_0 = 0;
+        int stackOut_92_0 = 0;
+        int stackOut_91_0 = 0;
+        int stackOut_120_0 = 0;
+        int stackOut_119_0 = 0;
         L0: {
           var10 = field_L ? 1 : 0;
           wn.field_b.b(8);
@@ -2279,15 +2586,46 @@ public final class Vertigo2 extends kd {
               }
             } else {
               if (go.field_h == t.field_f) {
-                L1: {
-                  if (ag.b(49)) {
-                    break L1;
-                  } else {
-                    break L1;
+                if (!ag.b(49)) {
+                  L1: {
+                    if (uh.field_Xb != null) {
+                      nr.a(3, -22754, uh.field_Xb);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
                   }
+                  L2: {
+                    if (j.field_n == null) {
+                      break L2;
+                    } else {
+                      nr.a(3, -22754, j.field_n);
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    lb.a(11141);
+                    am.field_n = lp.field_C;
+                    if (!ad.field_h) {
+                      break L3;
+                    } else {
+                      gj.a((byte) 61, false, am.field_n, -4);
+                      break L3;
+                    }
+                  }
+                  if (al.a(am.field_n, (byte) -94)) {
+                    int discarded$14 = 7;
+                    g.b();
+                    t.field_f = ak.field_e;
+                    break L0;
+                  } else {
+                    t.field_f = ak.field_e;
+                    break L0;
+                  }
+                } else {
+                  t.field_f = ak.field_e;
+                  break L0;
                 }
-                t.field_f = ak.field_e;
-                break L0;
               } else {
                 ok.field_c = ok.field_c - 1;
                 if (ok.field_c == 0) {
@@ -2299,7 +2637,7 @@ public final class Vertigo2 extends kd {
               }
             }
           } else {
-            L2: {
+            L4: {
               var4 = 0;
               var5 = 0;
               if (!param0) {
@@ -2308,149 +2646,157 @@ public final class Vertigo2 extends kd {
                     if (!oj.field_P) {
                       ln.field_d.a(true, true);
                       var3 = 1;
-                      L3: while (true) {
-                        if (!gf.a(false)) {
-                          break L2;
+                      L5: while (true) {
+                        int discarded$15 = 0;
+                        if (!gf.a()) {
+                          break L4;
                         } else {
                           ln.field_d.a((byte) 115);
-                          continue L3;
+                          continue L5;
                         }
                       }
                     } else {
                       var4 = 1;
                       var5 = 1;
-                      break L2;
+                      break L4;
                     }
                   } else {
                     if (lc.field_b != -2) {
                       if (al.a(lc.field_b, (byte) -94)) {
                         fh.field_y[lc.field_b].e((byte) -125);
-                        break L2;
+                        break L4;
                       } else {
-                        break L2;
+                        break L4;
                       }
                     } else {
                       var4 = 1;
-                      break L2;
+                      break L4;
                     }
                   }
                 } else {
                   vl.field_c = vl.field_c + 1;
                   if (32 != vl.field_c) {
-                    break L2;
+                    break L4;
                   } else {
-                    g.b(7);
-                    break L2;
+                    int discarded$16 = 7;
+                    g.b();
+                    break L4;
                   }
                 }
               } else {
-                break L2;
+                break L4;
               }
             }
-            L4: {
+            L6: {
               if (!oj.field_P) {
-                break L4;
+                break L6;
               } else {
                 if (rg.field_b) {
-                  break L4;
+                  break L6;
                 } else {
                   if (!kj.field_C) {
-                    L5: {
+                    L7: {
                       if (!am.field_b) {
-                        break L5;
+                        break L7;
                       } else {
                         if (!il.field_a) {
-                          break L5;
+                          break L7;
                         } else {
                           var4 = 0;
-                          break L5;
+                          break L7;
                         }
                       }
                     }
-                    L6: {
+                    L8: {
                       hj.a(1726, var4 != 0);
                       if (ed.field_q) {
                         oe.field_pb.a(var5 != 0, true);
                         var3 = 1;
-                        break L6;
+                        break L8;
                       } else {
-                        break L6;
+                        break L8;
                       }
                     }
-                    L7: {
+                    L9: {
                       if (am.field_b) {
                         la.a(180, var5 != 0, (byte) -120, 320);
                         ln.field_d.a(var5 != 0, true);
                         var3 = 1;
-                        break L7;
+                        break L9;
                       } else {
-                        break L7;
+                        break L9;
                       }
                     }
-                    L8: while (true) {
-                      if (!gf.a(false)) {
-                        break L4;
+                    L10: while (true) {
+                      int discarded$17 = 0;
+                      if (!gf.a()) {
+                        break L6;
                       } else {
-                        L9: {
+                        L11: {
                           if (eo.field_o) {
                             if (!am.field_b) {
-                              boolean discarded$3 = gh.a(12, 12, 13, 15);
-                              break L9;
+                              boolean discarded$18 = gh.a(12, 12, 13, 15);
+                              break L11;
                             } else {
-                              if (!jm.a(15, 13, 915, 12)) {
-                                break L9;
+                              int discarded$19 = 12;
+                              int discarded$20 = 915;
+                              int discarded$21 = 13;
+                              int discarded$22 = 15;
+                              if (!jm.a()) {
+                                break L11;
                               } else {
-                                continue L8;
+                                continue L10;
                               }
                             }
                           } else {
-                            break L9;
+                            break L11;
                           }
                         }
-                        L10: {
+                        L12: {
                           if (ed.field_q) {
                             oe.field_pb.a((byte) 115);
-                            break L10;
+                            break L12;
                           } else {
-                            break L10;
+                            break L12;
                           }
                         }
                         if (am.field_b) {
                           ln.field_d.a((byte) 115);
-                          continue L8;
+                          continue L10;
                         } else {
-                          continue L8;
+                          continue L10;
                         }
                       }
                     }
                   } else {
-                    break L4;
+                    break L6;
                   }
                 }
               }
             }
-            L11: {
+            L13: {
               if (!oj.field_P) {
-                wn.c(-2618);
-                break L11;
+                int discarded$23 = -2618;
+                wn.c();
+                break L13;
               } else {
-                break L11;
+                break L13;
               }
             }
-            L12: {
+            L14: {
               if (eo.field_o) {
                 if (ld.field_b <= sg.field_e) {
-                  break L12;
+                  break L14;
                 } else {
                   sg.field_e = sg.field_e + 1;
-                  break L12;
+                  break L14;
                 }
               } else {
                 if (0 >= sg.field_e) {
-                  break L12;
+                  break L14;
                 } else {
                   sg.field_e = sg.field_e - 1;
-                  break L12;
+                  break L14;
                 }
               }
             }
@@ -2461,220 +2807,222 @@ public final class Vertigo2 extends kd {
             if (bg.field_b.a((byte) 100) == null) {
               break L0;
             } else {
-              int fieldTemp$4 = oa.field_l + 1;
+              int fieldTemp$24 = oa.field_l + 1;
               oa.field_l = oa.field_l + 1;
-              if (335 != fieldTemp$4) {
+              if (335 != fieldTemp$24) {
                 break L0;
               } else {
                 oa.field_l = 0;
-                li discarded$5 = bg.field_b.b((byte) -43);
+                li discarded$25 = bg.field_b.b((byte) -43);
                 break L0;
               }
             }
           }
         }
-        L13: {
+        L15: {
           if (-3 != am.field_n) {
-            break L13;
+            break L15;
           } else {
-            L14: {
+            L16: {
               uh.field_Xb = null;
               j.field_n = null;
               var4 = qi.field_d.field_t;
               if (var4 >= 0) {
-                break L14;
+                break L16;
               } else {
                 var4 = 0;
-                break L14;
+                break L16;
               }
             }
-            L15: {
+            L17: {
               var5 = 0;
               if (qe.field_V == null) {
                 var6 = ed.field_o;
-                break L15;
+                break L17;
               } else {
                 var6 = qe.field_V;
-                break L15;
+                break L17;
               }
             }
-            L16: {
+            L18: {
               ln.field_d = new tr(false, new String[1], 0, false, var5, var4, var4, -1);
               if (!pm.field_d) {
-                stackOut_74_0 = 0;
-                stackIn_75_0 = stackOut_74_0;
-                break L16;
+                stackOut_84_0 = 0;
+                stackIn_85_0 = stackOut_84_0;
+                break L18;
               } else {
-                stackOut_73_0 = 1;
-                stackIn_75_0 = stackOut_73_0;
-                break L16;
+                stackOut_83_0 = 1;
+                stackIn_85_0 = stackOut_83_0;
+                break L18;
               }
             }
-            var7 = stackIn_75_0;
+            var7 = stackIn_85_0;
             gj.a((byte) 54, var7 != 0, am.field_n, -1);
             lc.field_d = false;
-            break L13;
+            break L15;
           }
         }
         if (param1 <= -92) {
-          L17: {
+          L19: {
             if (am.field_n != -7) {
-              break L17;
+              break L19;
             } else {
               if (!ln.field_d.field_D.field_r.field_f[0].h((byte) 117)) {
-                L18: {
+                L20: {
                   var4 = ln.field_d.field_D.field_l[0].field_p;
                   var5 = ln.field_d.field_D.field_l[0].field_W;
                   var6_int = -var5 + var4;
                   ln.field_d.field_D.field_l[0].field_W = var4;
                   if (var6_int == 0) {
-                    break L18;
+                    break L20;
                   } else {
                     var7 = var6_int;
                     if (null == ln.field_d) {
-                      break L18;
+                      break L20;
                     } else {
                       if (ln.field_d.field_B < 0) {
-                        break L18;
+                        break L20;
                       } else {
                         if (null == oe.field_pb) {
                           var8 = ln.field_d.field_s % 3;
                           if (0 == var8) {
                             gi.field_u = gi.field_u + var7;
-                            break L18;
+                            break L20;
                           } else {
                             if (var8 == 1) {
                               pn.field_R = pn.field_R - var7;
-                              break L18;
+                              break L20;
                             } else {
                               var9 = var7 / 3;
                               pn.field_R = pn.field_R - (-var9 + var7);
                               gi.field_u = gi.field_u + var9;
-                              break L18;
+                              break L20;
                             }
                           }
                         } else {
-                          break L18;
+                          break L20;
                         }
                       }
                     }
                   }
                 }
-                L19: {
+                L21: {
                   ln.field_d.field_D.a(30113, true);
                   ln.field_d.e(-111);
                   if (ln.field_d.field_D.field_j == 0) {
                     var7_ref_wo = ln.field_d.field_D.field_r.field_f[0];
                     var7_ref_wo.a(true, var7_ref_wo.l(-32768) + -1);
-                    break L19;
+                    break L21;
                   } else {
-                    break L19;
+                    break L21;
                   }
                 }
-                L20: {
+                L22: {
                   if (!pm.field_d) {
-                    stackOut_99_0 = 0;
-                    stackIn_100_0 = stackOut_99_0;
-                    break L20;
+                    stackOut_109_0 = 0;
+                    stackIn_110_0 = stackOut_109_0;
+                    break L22;
                   } else {
-                    stackOut_98_0 = 1;
-                    stackIn_100_0 = stackOut_98_0;
-                    break L20;
+                    stackOut_108_0 = 1;
+                    stackIn_110_0 = stackOut_108_0;
+                    break L22;
                   }
                 }
-                var7 = stackIn_100_0;
+                var7 = stackIn_110_0;
                 gj.a((byte) -70, var7 != 0, am.field_n, -1);
                 lc.field_d = false;
-                break L17;
+                break L19;
               } else {
-                L21: {
+                L23: {
                   if (!pm.field_d) {
-                    stackOut_82_0 = 0;
-                    stackIn_83_0 = stackOut_82_0;
-                    break L21;
+                    stackOut_92_0 = 0;
+                    stackIn_93_0 = stackOut_92_0;
+                    break L23;
                   } else {
-                    stackOut_81_0 = 1;
-                    stackIn_83_0 = stackOut_81_0;
-                    break L21;
+                    stackOut_91_0 = 1;
+                    stackIn_93_0 = stackOut_91_0;
+                    break L23;
                   }
                 }
-                var4 = stackIn_83_0;
+                var4 = stackIn_93_0;
                 gj.a((byte) -112, var4 != 0, am.field_n, -1);
                 lc.field_d = false;
-                break L17;
+                break L19;
               }
             }
           }
-          L22: {
+          L24: {
             if (-6 == am.field_n) {
-              L23: {
+              L25: {
                 uh.field_Xb = null;
                 j.field_n = null;
                 var4 = ap.field_d.field_t;
                 if (var4 >= 0) {
-                  break L23;
+                  break L25;
                 } else {
                   var4 = 0;
-                  break L23;
+                  break L25;
                 }
               }
-              L24: {
+              L26: {
                 var5 = 3;
                 if (null == qe.field_V) {
                   var6 = ed.field_o;
-                  break L24;
+                  break L26;
                 } else {
                   var6 = qe.field_V;
-                  break L24;
+                  break L26;
                 }
               }
-              L25: {
+              L27: {
                 ln.field_d = new tr(false, new String[1], 0, false, var5, var4, var4, 1);
                 if (!pm.field_d) {
-                  stackOut_110_0 = 0;
-                  stackIn_111_0 = stackOut_110_0;
-                  break L25;
+                  stackOut_120_0 = 0;
+                  stackIn_121_0 = stackOut_120_0;
+                  break L27;
                 } else {
-                  stackOut_109_0 = 1;
-                  stackIn_111_0 = stackOut_109_0;
-                  break L25;
+                  stackOut_119_0 = 1;
+                  stackIn_121_0 = stackOut_119_0;
+                  break L27;
                 }
               }
-              var7 = stackIn_111_0;
+              var7 = stackIn_121_0;
               gj.a((byte) 91, var7 != 0, am.field_n, -1);
               lc.field_d = false;
-              break L22;
+              break L24;
             } else {
-              break L22;
+              break L24;
             }
           }
-          L26: {
+          L28: {
             if (am.field_n != -4) {
-              break L26;
+              break L28;
             } else {
               uh.field_Wb.j(9, 127);
               sg.field_e = ld.field_b;
               rg.field_b = true;
               am.field_n = lc.field_b;
-              break L26;
+              break L28;
             }
           }
-          L27: {
+          L29: {
             if (am.field_n != -5) {
-              break L27;
+              break L29;
             } else {
-              qk.d(gd.field_j.a((byte) -38), 11, 18964);
+              int discarded$26 = 18964;
+              qk.d(gd.field_j.a((byte) -38), 11);
               kj.field_C = true;
               am.field_n = lc.field_b;
-              break L27;
+              break L29;
             }
           }
-          L28: {
+          L30: {
             if (var3 != 0) {
-              break L28;
+              break L30;
             } else {
-              ee.a(-11747);
-              break L28;
+              int discarded$27 = -11747;
+              ee.a();
+              break L30;
             }
           }
           return;

@@ -280,7 +280,7 @@ final class we implements j {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         o var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -389,10 +389,14 @@ final class we implements j {
                       var12 = new o(195, 221);
                       var6 = var12.field_p / 2;
                       var12.a();
-                      kg.field_a.a(bb.a(og.field_e, new String[1], -63), var6, 40, 16777215, -1);
-                      sk.field_n.a(bb.a(b.field_a, new String[1], -63), var6, 60, 16777215, -1);
-                      kg.field_a.a(bb.a(l.field_d, new String[1], -63), var6, 110, 16777215, -1);
-                      sk.field_n.a(bb.a(hb.field_l, new String[1], -63), var6, 130, 16777215, -1);
+                      int discarded$13 = -63;
+                      kg.field_a.a(bb.a(og.field_e, new String[1]), var6, 40, 16777215, -1);
+                      int discarded$14 = -63;
+                      sk.field_n.a(bb.a(b.field_a, new String[1]), var6, 60, 16777215, -1);
+                      int discarded$15 = -63;
+                      kg.field_a.a(bb.a(l.field_d, new String[1]), var6, 110, 16777215, -1);
+                      int discarded$16 = -63;
+                      sk.field_n.a(bb.a(hb.field_l, new String[1]), var6, 130, 16777215, -1);
                       kg.field_a.a(le.field_b, var6, 180, 16777215, -1);
                       sk.field_n.a(ki.field_A, var6, 200, 16777215, -1);
                       rc.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
@@ -404,7 +408,8 @@ final class we implements j {
                           ba.field_s = null;
                           ke.field_K = a.field_e.c();
                           ke.field_K.a();
-                          ii.a(mi.field_d * 2 / 3, 0, 0, 64, mi.field_a, true);
+                          int discarded$17 = 1;
+                          ii.a(mi.field_d * 2 / 3, 0, 0, 64, mi.field_a);
                           mi.a(var28, var2, var3);
                           mi.a(lj.field_D);
                           sa.field_m = 231 + (-dh.field_j.field_p + r.field_d.field_p) / 2;
@@ -415,7 +420,7 @@ final class we implements j {
                           break L0;
                         } else {
                           qd.field_e[var7].a();
-                          int discarded$3 = sk.field_n.a(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, ea.field_o, -1, 1, 1, sk.field_n.field_F - -sk.field_n.field_s);
+                          int discarded$18 = sk.field_n.a(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, ea.field_o, -1, 1, 1, sk.field_n.field_F - -sk.field_n.field_s);
                           rc.a(qd.field_e[var7].field_p, 0, qd.field_e[var7].field_t, 3, qd.field_e[var7], 0, 1, (byte) 21);
                           var7++;
                           continue L1;
@@ -443,7 +448,8 @@ final class we implements j {
                   var2 = mi.field_a;
                   var3 = mi.field_d;
                   mi.b(lj.field_D);
-                  var14 = bb.a(tk.field_q, new String[1], -63);
+                  int discarded$19 = -63;
+                  var14 = bb.a(tk.field_q, new String[1]);
                   var5 = kg.field_a.c(var14, jj.field_db);
                   var6 = kg.field_a.b(var14, jj.field_db, kg.field_a.field_F + kg.field_a.field_s);
                   var7 = ji.field_a + (-var5 + jj.field_db) / 2;
@@ -510,7 +516,7 @@ final class we implements j {
                 ja.field_a.d();
                 var9 = new o(ja.field_a.field_q, ja.field_a.field_r);
                 var9.a();
-                int discarded$4 = kg.field_a.a(var14, ji.field_a, cl.field_o, jj.field_db, ii.field_h, 16777215, -1, 1, 1, kg.field_a.field_F - -kg.field_a.field_s);
+                int discarded$20 = kg.field_a.a(var14, ji.field_a, cl.field_o, jj.field_db, ii.field_h, 16777215, -1, 1, 1, kg.field_a.field_F - -kg.field_a.field_s);
                 rc.a(var9.field_q, 0, var9.field_r, 3, var9, 0, 1, (byte) 21);
                 ja.field_a.a();
                 var9.d(0, 0);
@@ -535,10 +541,11 @@ final class we implements j {
                 var3 = mi.field_d;
                 mi.b(lj.field_D);
                 var16 = new o(412, 43);
-                var17 = bb.a(wb.field_d, new String[1], -63);
+                int discarded$21 = -63;
+                var17 = bb.a(wb.field_d, new String[1]);
                 qk.field_n = null;
                 var16.a();
-                int discarded$5 = sk.field_n.a(var17, 3, 3, var16.field_p + -6, -6 + var16.field_t, 16777215, -1, 0, 1, sk.field_n.field_F + sk.field_n.field_s);
+                int discarded$22 = sk.field_n.a(var17, 3, 3, var16.field_p + -6, -6 + var16.field_t, 16777215, -1, 0, 1, sk.field_n.field_F + sk.field_n.field_s);
                 rc.a(var16.field_p, 0, var16.field_t, 3, var16, 0, 1, (byte) 21);
                 va.field_g.a();
                 var16.d(199 - va.field_g.field_s, -va.field_g.field_n + 83);
@@ -705,7 +712,8 @@ final class we implements j {
                   if (qh.field_b.field_f != 1) {
                     break L18;
                   } else {
-                    ii.a(7 * r.field_d.field_t / 12, 436, 392, 64, r.field_d.field_p - 4, true);
+                    int discarded$23 = 1;
+                    ii.a(7 * r.field_d.field_t / 12, 436, 392, 64, r.field_d.field_p - 4);
                     break L18;
                   }
                 }
@@ -784,7 +792,8 @@ final class we implements j {
                         }
                       }
                     } else {
-                      ac.a((byte) -125);
+                      int discarded$24 = -125;
+                      ac.a();
                       qd.field_e[field_h].d(269, 340);
                       break L20;
                     }
@@ -794,7 +803,8 @@ final class we implements j {
                 break L21;
               }
             }
-            ac.a((byte) -125);
+            int discarded$25 = -125;
+            ac.a();
             qd.field_e[field_h].d(269, 340);
             break L20;
           }
@@ -864,11 +874,9 @@ final class we implements j {
         }
     }
 
-    final static void a(String param0, int param1) {
-        if (param1 != -1) {
-            we.a(-78);
-        }
-        System.out.println("Error: " + hl.a(param0, "\n", "%0a", true));
+    final static void a(String param0) {
+        int discarded$0 = 1;
+        System.out.println("Error: " + hl.a(param0, "\n", "%0a"));
     }
 
     public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {

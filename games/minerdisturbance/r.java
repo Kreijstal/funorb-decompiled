@@ -11,9 +11,9 @@ final class r {
         throw new IllegalStateException();
     }
 
-    final static void a(byte param0) {
-        Object var2 = null;
-        ed.a((String) null, km.field_b, -1);
+    final static void a() {
+        int discarded$0 = -1;
+        ed.a((String) null, km.field_b);
     }
 
     public static void b(byte param0) {
@@ -25,7 +25,7 @@ final class r {
         }
     }
 
-    final static int a(CharSequence param0, byte[] param1, int param2, int param3, int param4, int param5) {
+    final static int a(CharSequence param0, byte[] param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -67,7 +67,7 @@ final class r {
         var9 = MinerDisturbance.field_ab;
         try {
           L0: {
-            var6_int = -param3 + param4;
+            var6_int = param4;
             var7 = 0;
             L1: while (true) {
               if (var7 >= var6_int) {
@@ -78,7 +78,7 @@ final class r {
                 L2: {
                   L3: {
                     L4: {
-                      var8 = param0.charAt(param3 + var7);
+                      var8 = param0.charAt(var7);
                       if (var8 <= 0) {
                         break L4;
                       } else {
@@ -299,14 +299,19 @@ final class r {
               break L7;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 8211 + 41);
+          throw lj.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 44 + param2 + 44 + 0 + 44 + param4 + 44 + 8211 + 41);
         }
         return stackIn_67_0;
     }
 
-    final static ea[] a(byte param0, int param1, int param2, int param3, int param4) {
-        int var5 = -91 / ((param0 - -27) / 36);
-        return sc.a(3, param1, 1, param3, 0, 1, (byte) -81, param2, 1);
+    final static ea[] a(byte param0, int param1, int param2, int param3) {
+        int var5 = -30;
+        int discarded$0 = 1;
+        int discarded$1 = 0;
+        int discarded$2 = -81;
+        int discarded$3 = 1;
+        int discarded$4 = 0;
+        return sc.a(3, 0, 1, param3);
     }
 
     final static void a(int param0) {

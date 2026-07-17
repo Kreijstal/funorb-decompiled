@@ -94,13 +94,8 @@ final class cf {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
-        if (param0 != -12251) {
-            boolean discarded$0 = cf.a((byte) -13);
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

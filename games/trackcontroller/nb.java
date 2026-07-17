@@ -39,9 +39,6 @@ final class nb extends wh {
     private int field_u;
 
     private final void a(int param0, int param1, int param2) {
-        if (param0 != -1) {
-            return;
-        }
         ((nb) this).field_Q[param1] = param2;
     }
 
@@ -92,7 +89,7 @@ final class nb extends wh {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -102,52 +99,45 @@ final class nb extends wh {
           var7 = TrackController.field_F ? 1 : 0;
           var2 = ((nb) this).field_D;
           var3 = ((nb) this).field_p;
-          if (param0 == -17313) {
-            break L0;
-          } else {
-            ((nb) this).b(false);
-            break L0;
-          }
-        }
-        L1: {
           var4 = ((nb) this).field_H;
           if (((nb) this).field_o == null) {
-            break L1;
+            break L0;
           } else {
             if (var3 != ((nb) this).field_u) {
-              break L1;
+              break L0;
             } else {
-              this.a(((nb) this).field_o, param0 + 17313, ((nb) this).field_B, ((nb) this).field_z);
-              this.e(-17313);
+              this.a(((nb) this).field_o, 0, ((nb) this).field_B, ((nb) this).field_z);
+              int discarded$2 = -17313;
+              this.e();
               return;
             }
           }
         }
-        L2: while (true) {
+        L1: while (true) {
           if (var3 != ((nb) this).field_p) {
-            L3: {
+            L2: {
               ((nb) this).field_H = var4;
               ((nb) this).field_p = var3;
               ((nb) this).field_D = var2;
               if (null == ((nb) this).field_o) {
-                break L3;
+                break L2;
               } else {
                 if (var3 <= ((nb) this).field_u) {
-                  break L3;
+                  break L2;
                 } else {
                   ((nb) this).field_D = -1;
                   ((nb) this).field_p = ((nb) this).field_u;
                   ((nb) this).field_H = ((nb) this).field_P.f(((nb) this).field_p);
-                  break L3;
+                  break L2;
                 }
               }
             }
             return;
           } else {
-            L4: while (true) {
-              L5: {
+            L3: while (true) {
+              L4: {
                 if (var3 != ((nb) this).field_P.field_b[var2]) {
-                  break L5;
+                  break L4;
                 } else {
                   ((nb) this).field_P.d(var2);
                   var6 = ((nb) this).field_P.a(var2);
@@ -155,18 +145,18 @@ final class nb extends wh {
                     ((nb) this).field_P.f();
                     ((nb) this).field_P.e(var2);
                     if (!((nb) this).field_P.e()) {
-                      break L5;
+                      break L4;
                     } else {
                       if (((nb) this).field_o == null) {
-                        L6: {
+                        L5: {
                           if (!((nb) this).field_z) {
-                            break L6;
+                            break L5;
                           } else {
                             if (var3 == 0) {
-                              break L6;
+                              break L5;
                             } else {
                               ((nb) this).field_P.a(var4);
-                              break L5;
+                              break L4;
                             }
                           }
                         }
@@ -175,29 +165,30 @@ final class nb extends wh {
                         return;
                       } else {
                         ((nb) this).a(((nb) this).field_o, 14526, ((nb) this).field_z);
-                        this.e(-17313);
+                        int discarded$3 = -17313;
+                        this.e();
                         return;
                       }
                     }
                   } else {
-                    L7: {
+                    L6: {
                       if ((var6 & 128) == 0) {
-                        break L7;
+                        break L6;
                       } else {
                         this.e(var6, 88);
-                        break L7;
+                        break L6;
                       }
                     }
                     ((nb) this).field_P.c(var2);
                     ((nb) this).field_P.e(var2);
-                    continue L4;
+                    continue L3;
                   }
                 }
               }
               var2 = ((nb) this).field_P.g();
               var3 = ((nb) this).field_P.field_b[var2];
               var4 = ((nb) this).field_P.f(var3);
-              continue L2;
+              continue L1;
             }
           }
         }
@@ -227,7 +218,7 @@ final class nb extends wh {
             ((nb) this).field_C = 0L;
             ((nb) this).field_z = param3 ? true : false;
             var5_int = ((nb) this).field_P.d();
-            for (var6 = param1; var5_int > var6; var6++) {
+            for (var6 = 0; var5_int > var6; var6++) {
                 ((nb) this).field_P.d(var6);
                 ((nb) this).field_P.c(var6);
                 ((nb) this).field_P.e(var6);
@@ -236,7 +227,7 @@ final class nb extends wh {
             ((nb) this).field_p = ((nb) this).field_P.field_b[((nb) this).field_D];
             ((nb) this).field_H = ((nb) this).field_P.f(((nb) this).field_p);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "nb.QA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "nb.QA(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -337,9 +328,6 @@ final class nb extends wh {
     }
 
     private final void c(int param0, int param1, int param2) {
-        if (param1 >= -85) {
-            ((nb) this).field_z = true;
-        }
     }
 
     private final void c(int param0, int param1) {
@@ -353,9 +341,6 @@ final class nb extends wh {
                 }
                 var3 = (ha) (Object) ((nb) this).field_G.field_q.a(10);
             }
-        }
-        if (param1 != 0) {
-            qj[] discarded$0 = nb.a((byte) 68);
         }
     }
 
@@ -490,7 +475,7 @@ final class nb extends wh {
     }
 
     private final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = 49 % ((param2 - -68) / 47);
+        int var5 = 0;
     }
 
     final synchronized void d(int param0, int param1) {
@@ -521,9 +506,6 @@ final class nb extends wh {
             return;
         }
         ((nb) this).field_L[param3][param0] = null;
-        if (param1 != -27205) {
-            this.e(79);
-        }
         if ((((nb) this).field_I[param3] & 2) == 0) {
             var8.field_v = 0;
         } else {
@@ -543,8 +525,8 @@ final class nb extends wh {
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
-        int var4_int = 0;
         RuntimeException var4 = null;
+        int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
         int var8 = 0;
@@ -580,7 +562,8 @@ final class nb extends wh {
                       var7 = (int)((-1L + ((long)var4_int + (-((nb) this).field_C + ((nb) this).field_H))) / (long)var4_int);
                       ((nb) this).field_C = ((nb) this).field_C + (long)var4_int * (long)var7;
                       ((nb) this).field_G.a(param0, param1, var7);
-                      this.e(-17313);
+                      int discarded$1 = -17313;
+                      this.e();
                       param2 = param2 - var7;
                       param1 = param1 + var7;
                       if (((nb) this).field_P.a()) {
@@ -650,7 +633,8 @@ final class nb extends wh {
                 ((nb) this).field_C = ((nb) this).field_C + (long)var5 * (long)var2;
                 param0 = param0 - var5;
                 ((nb) this).field_G.d(var5);
-                this.e(-17313);
+                int discarded$41 = -17313;
+                this.e();
                 if (!((nb) this).field_P.a()) {
                   break L0;
                 } else {
@@ -1114,7 +1098,7 @@ final class nb extends wh {
             }
           }
         }
-        var5 = -7 % ((57 - param0) / 55);
+        var5 = 0;
         var6 = (mh) (Object) ((nb) this).field_r.a(8434, (long)((nb) this).field_N[param3]);
         if (var6 == null) {
           return;
@@ -1139,7 +1123,8 @@ final class nb extends wh {
               var8.field_q = 0;
               if (0 != ((nb) this).field_R[param3]) {
                 L4: {
-                  var8.field_l = bh.a(var7, this.a(var8, (byte) 117), 0, this.b(var8, (byte) 105));
+                  int discarded$2 = 105;
+                  var8.field_l = bh.a(var7, this.a(var8, (byte) 117), 0, this.b(var8));
                   stackOut_14_0 = this;
                   stackOut_14_1 = 0;
                   stackIn_16_0 = stackOut_14_0;
@@ -1167,7 +1152,8 @@ final class nb extends wh {
                 ((nb) this).a(stackIn_17_1 != 0, stackIn_17_2 != 0, var8);
                 break L3;
               } else {
-                var8.field_l = bh.a(var7, this.a(var8, (byte) 119), this.a(var8, 3), this.b(var8, (byte) 105));
+                int discarded$3 = 105;
+                var8.field_l = bh.a(var7, this.a(var8, (byte) 119), this.a(var8, 3), this.b(var8));
                 break L3;
               }
             }
@@ -1432,7 +1418,8 @@ final class nb extends wh {
             }
             if (var8 == 0) {
               L17: {
-                param4.field_l.a(param4.field_w, this.a(param4, param3 ^ 2), this.b(param4, (byte) 105));
+                int discarded$1 = 105;
+                param4.field_l.a(param4.field_w, this.a(param4, param3 ^ 2), this.b(param4));
                 if (param3 == 1) {
                   break L17;
                 } else {
@@ -1744,10 +1731,6 @@ final class nb extends wh {
         int var6 = 0;
         int var7 = TrackController.field_F ? 1 : 0;
         qj[] var1 = new qj[gi.field_o];
-        if (param0 >= -40) {
-            Object var8 = null;
-            nb.a((String) null, false, 38);
-        }
         for (var2 = 0; var2 < gi.field_o; var2++) {
             var3 = j.field_f[var2] * cf.field_p[var2];
             var4 = qk.field_M[var2];
@@ -1762,39 +1745,23 @@ final class nb extends wh {
     }
 
     private final void a(byte param0, boolean param1) {
-        int var3 = 0;
         int var4 = TrackController.field_F ? 1 : 0;
         if (!param1) {
             this.f(-1, 110);
         } else {
             this.a(-1, true);
-        }
-        if (param0 != 70) {
             return;
-        }
-        this.a(-1, (byte) 122);
-        for (var3 = 0; var3 < 16; var3++) {
-            ((nb) this).field_N[var3] = ((nb) this).field_y[var3];
-        }
-        int var5 = 0;
-        var3 = var5;
-        while (16 > var5) {
-            ((nb) this).field_O[var5] = tc.a(((nb) this).field_y[var5], -128);
-            var5++;
         }
     }
 
-    final static void a(String param0, boolean param1, int param2) {
+    final static void a(String param0, boolean param1) {
         try {
             gh.field_k = true;
             pc.field_h = param1 ? true : false;
             kb.field_a = new jj(gl.field_E, p.field_a, param0, vg.field_o, pc.field_h);
-            if (param2 != -16257) {
-                field_s = null;
-            }
             gl.field_E.d((byte) -94, (al) (Object) kb.field_a);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "nb.V(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "nb.V(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -16257 + 41);
         }
     }
 
@@ -1832,14 +1799,6 @@ final class nb extends wh {
             }
           } else {
             break L0;
-          }
-        }
-        L3: {
-          if (param0 == -22803) {
-            break L3;
-          } else {
-            this.c(112, 114);
-            break L3;
           }
         }
     }
@@ -1998,7 +1957,7 @@ final class nb extends wh {
         }
     }
 
-    private final int b(ha param0, byte param1) {
+    private final int b(ha param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;

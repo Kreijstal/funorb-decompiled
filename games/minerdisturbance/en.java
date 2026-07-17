@@ -5,20 +5,11 @@ final class en {
     static String[] field_a;
     static int[] field_b;
 
-    final static byte[] a(byte param0) {
-        ld var1 = null;
-        if (param0 != -92) {
-          field_a = null;
-          var1 = new ld(10);
-          var1.c(2, 25564);
-          aa.field_j.b(param0 + 27529, var1);
-          return var1.field_u;
-        } else {
-          var1 = new ld(10);
-          var1.c(2, 25564);
-          aa.field_j.b(param0 + 27529, var1);
-          return var1.field_u;
-        }
+    final static byte[] a() {
+        ld var1 = new ld(10);
+        var1.c(2, 25564);
+        aa.field_j.b(27437, var1);
+        return var1.field_u;
     }
 
     final static void a(String[] args, int param1) {

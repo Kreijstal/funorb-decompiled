@@ -16,51 +16,18 @@ final class fd extends qb {
     int[] field_k;
 
     final static boolean a(boolean param0, char param1) {
-        Object var3 = null;
-        char stackIn_4_0 = 0;
-        char stackIn_5_0 = 0;
-        char stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
-        char stackOut_3_0 = 0;
-        char stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        char stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
         if (Character.isISOControl(param1)) {
           return false;
         } else {
-          L0: {
-            stackOut_3_0 = param1;
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_4_0 = stackOut_3_0;
-            if (param0) {
-              stackOut_5_0 = stackIn_5_0;
-              stackOut_5_1 = 0;
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              break L0;
-            } else {
-              stackOut_4_0 = stackIn_4_0;
-              stackOut_4_1 = 1;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              break L0;
-            }
-          }
-          if (ph.a(stackIn_6_0, stackIn_6_1 == 0)) {
+          int discarded$6 = 0;
+          if (!ph.a(param1)) {
             if (param1 != 45) {
               if (160 != param1) {
                 if (32 != param1) {
-                  if (param1 != 95) {
-                    if (!param0) {
-                      var3 = null;
-                      fd.a(-68, (ib) null, false);
-                      return false;
-                    } else {
-                      return false;
-                    }
-                  } else {
+                  if (param1 == 95) {
                     return true;
+                  } else {
+                    return false;
                   }
                 } else {
                   return true;
@@ -77,16 +44,16 @@ final class fd extends qb {
         }
     }
 
-    final static int a(int param0) {
+    final static int a() {
         return kl.field_E;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_q = null;
         field_g = null;
     }
 
-    final static void a(int param0, ib param1, boolean param2) {
+    final static void a(int param0, ib param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

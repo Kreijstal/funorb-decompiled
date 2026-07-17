@@ -8,7 +8,7 @@ final class cn {
     static int field_d;
     static String field_b;
 
-    final static i a(int param0, int param1, int param2, af param3, int param4, int param5, int param6, int param7, int param8) {
+    final static i a(int param0, int param1, int param2, af param3, int param4, int param5, int param6, int param7) {
         i var9 = null;
         RuntimeException var9_ref = null;
         i stackIn_3_0 = null;
@@ -41,13 +41,13 @@ final class cn {
               }
             }
             var9.field_n = param1;
-            var9.field_u = param2;
-            var9.field_w = param4;
+            var9.field_u = 32;
+            var9.field_w = 32;
             var9.field_t = param3;
             var9.field_r = param7;
             var9.field_i = param6;
             var9.field_p = param0;
-            var9.field_x = ~(param8 << param5);
+            var9.field_x = ~(1 << param5);
             stackOut_2_0 = (i) var9;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -57,7 +57,7 @@ final class cn {
           L2: {
             var9_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var9_ref;
-            stackOut_4_1 = new StringBuilder().append("cn.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_4_1 = new StringBuilder().append("cn.A(").append(param0).append(44).append(param1).append(44).append(32).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -80,7 +80,7 @@ final class cn {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 32 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 1 + 41);
         }
         return stackIn_3_0;
     }
@@ -190,7 +190,7 @@ final class cn {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_b = null;

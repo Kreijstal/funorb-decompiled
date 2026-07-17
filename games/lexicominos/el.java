@@ -7,7 +7,7 @@ final class el {
     static String field_d;
     static fc field_c;
 
-    final static char a(byte param0, byte param1) {
+    final static char a(byte param0) {
         int var3 = 0;
         int var2 = 255 & param0;
         if (0 == var2) {
@@ -56,7 +56,7 @@ final class el {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return null != jc.field_b && uf.field_m.b(-2);
     }
 
@@ -92,7 +92,7 @@ final class el {
           L0: {
             var9 = new db[32];
             var2 = var9;
-            var9[param0] = param1;
+            var9[0] = param1;
             var3 = 1;
             L1: while (true) {
               if (var3 >= 32) {
@@ -117,7 +117,7 @@ final class el {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2_ref;
-            stackOut_6_1 = new StringBuilder().append("el.F(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("el.F(").append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

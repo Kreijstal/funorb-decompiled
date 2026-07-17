@@ -20,7 +20,7 @@ final class jo {
         return var2;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         if (hn.field_M == null) {
             return false;
         }
@@ -30,7 +30,7 @@ final class jo {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
     }
@@ -82,7 +82,7 @@ final class jo {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void a(int[] param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

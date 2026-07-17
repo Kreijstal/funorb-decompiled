@@ -9,161 +9,36 @@ final class hm extends rqa {
     }
 
     final static String e(int param0) {
-        String var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        String stackIn_9_0 = null;
-        String stackIn_19_0 = null;
-        String stackIn_26_0 = null;
-        String stackIn_36_0 = null;
-        String stackOut_25_0 = null;
-        String stackOut_35_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_18_0 = null;
-        var5 = VoidHunters.field_G;
-        var1 = "(" + iq.field_a + " " + foa.field_o + " " + fd.field_r + ") " + ow.field_a;
-        if (param0 == -13514) {
-          if (0 < vja.field_a) {
-            var1 = var1 + ":";
-            var2 = 0;
-            L0: while (true) {
-              if (var2 < vja.field_a) {
-                L1: {
-                  stackOut_25_0 = var1 + 32;
-                  stackIn_36_0 = stackOut_25_0;
-                  stackIn_26_0 = stackOut_25_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
-                    L2: {
-                      L3: {
-                        var1 = stackIn_26_0;
-                        var3 = qga.field_b.field_h[var2] & 255;
-                        var4 = var3 >> 4;
-                        var3 = var3 & 15;
-                        if (var4 >= 10) {
-                          break L3;
-                        } else {
-                          var4 += 48;
-                          if (var5 == 0) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                      var4 += 55;
-                      break L2;
-                    }
-                    L4: {
-                      L5: {
-                        if (var3 >= 10) {
-                          break L5;
-                        } else {
-                          var3 += 48;
-                          if (var5 == 0) {
-                            break L4;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      var3 += 55;
-                      break L4;
-                    }
-                    var1 = var1 + (char)var4;
-                    var1 = var1 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                      continue L0;
-                    } else {
-                      stackOut_35_0 = (String) var1;
-                      stackIn_36_0 = stackOut_35_0;
-                      break L1;
-                    }
-                  }
-                }
-                return stackIn_36_0;
-              } else {
-                return var1;
-              }
-            }
-          } else {
-            return var1;
-          }
-        } else {
-          String discarded$1 = hm.e(-111);
-          if (0 < vja.field_a) {
-            var1 = var1 + ":";
-            var2 = 0;
-            L6: while (true) {
-              if (var2 < vja.field_a) {
-                L7: {
-                  stackOut_8_0 = var1 + 32;
-                  stackIn_19_0 = stackOut_8_0;
-                  stackIn_9_0 = stackOut_8_0;
-                  if (var5 != 0) {
-                    break L7;
-                  } else {
-                    L8: {
-                      L9: {
-                        var1 = stackIn_9_0;
-                        var3 = qga.field_b.field_h[var2] & 255;
-                        var4 = var3 >> 4;
-                        var3 = var3 & 15;
-                        if (var4 >= 10) {
-                          break L9;
-                        } else {
-                          var4 += 48;
-                          if (var5 == 0) {
-                            break L8;
-                          } else {
-                            break L9;
-                          }
-                        }
-                      }
-                      var4 += 55;
-                      break L8;
-                    }
-                    L10: {
-                      L11: {
-                        if (var3 >= 10) {
-                          break L11;
-                        } else {
-                          var3 += 48;
-                          if (var5 == 0) {
-                            break L10;
-                          } else {
-                            break L11;
-                          }
-                        }
-                      }
-                      var3 += 55;
-                      break L10;
-                    }
-                    var1 = var1 + (char)var4;
-                    var1 = var1 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                      continue L6;
-                    } else {
-                      stackOut_18_0 = (String) var1;
-                      stackIn_19_0 = stackOut_18_0;
-                      break L7;
-                    }
-                  }
-                }
-                return stackIn_19_0;
-              } else {
-                return var1;
-              }
-            }
-          } else {
-            return var1;
-          }
+        int var5 = VoidHunters.field_G;
+        String var1 = "(" + iq.field_a + " " + foa.field_o + " " + fd.field_r + ") " + ow.field_a;
+        if (param0 != -13514) {
+            String discarded$0 = hm.e(-111);
         }
+        if (0 < vja.field_a) {
+            var1 = var1 + ":";
+            for (var2 = 0; var2 < vja.field_a; var2++) {
+                var1 = var1 + 32;
+                var3 = qga.field_b.field_h[var2] & 255;
+                var4 = var3 >> 4;
+                var3 = var3 & 15;
+                if (var4 < 10) {
+                    var4 += 48;
+                } else {
+                    var4 += 55;
+                }
+                if (var3 < 10) {
+                    var3 += 48;
+                } else {
+                    var3 += 55;
+                }
+                var1 = var1 + (char)var4;
+                var1 = var1 + (char)var3;
+            }
+        }
+        return var1;
     }
 
     final nc a(nc[] param0, int param1) {

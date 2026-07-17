@@ -159,7 +159,7 @@ final class sd {
         return stackIn_4_0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ng.field_c.j(300);
         if (null == af.field_g) {
           af.field_g = new tf(ng.field_c, mf.field_u);

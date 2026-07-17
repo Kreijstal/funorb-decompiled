@@ -201,35 +201,9 @@ class b {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_r = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_j = stackIn_7_0 != 0;
-              field_l = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_r = 22050;
+        field_j = true;
+        field_l = 10;
     }
 
     void a(int param0) throws Exception {
@@ -371,12 +345,12 @@ class b {
     }
 
     private final void b(int param0) {
-        ((b) this).field_h = ((b) this).field_h - 256;
+        ((b) this).field_h = ((b) this).field_h - param0;
         if (((b) this).field_h < 0) {
             ((b) this).field_h = 0;
         }
         if (((b) this).field_q != null) {
-            ((b) this).field_q.a(256);
+            ((b) this).field_q.a(param0);
             return;
         }
     }
@@ -402,7 +376,7 @@ class b {
         lk var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_j) {
             break L0;
           } else {
@@ -412,7 +386,7 @@ class b {
         }
         L1: {
           o.a(param0, 0, var3);
-          ((b) this).field_h = ((b) this).field_h - 256;
+          ((b) this).field_h = ((b) this).field_h - param1;
           if (((b) this).field_q == null) {
             break L1;
           } else {
@@ -579,7 +553,7 @@ class b {
           if (((b) this).field_q == null) {
             break L17;
           } else {
-            ((b) this).field_q.b(param0, 0, 256);
+            ((b) this).field_q.b(param0, 0, param1);
             break L17;
           }
         }

@@ -470,7 +470,7 @@ class rj extends ae {
                 break L1;
               } else {
                 var7 = null;
-                iu[] discarded$1 = rj.a((cn) null, 5, -25, (byte) 14);
+                iu[] discarded$5 = rj.a((cn) null, 5, -25, (byte) 14);
                 break L1;
               }
             }
@@ -479,7 +479,8 @@ class rj extends ae {
             if (var2 == 0) {
               var10 = (mm) (Object) wma.field_n.f(-80);
               if (var10 == null) {
-                dea.a(60);
+                int discarded$6 = 60;
+                dea.a();
                 return;
               } else {
                 L2: {
@@ -498,14 +499,16 @@ class rj extends ae {
                   var10.p(95);
                   break L0;
                 } else {
-                  dea.a(60);
+                  int discarded$7 = 60;
+                  dea.a();
                   return;
                 }
               }
             } else {
               if (var2 != 1) {
                 ssa.a("A1: " + kk.a(32), (byte) 117, (Throwable) null);
-                dea.a(60);
+                int discarded$8 = 60;
+                dea.a();
                 return;
               } else {
                 var3 = var11.e(-34);
@@ -527,7 +530,8 @@ class rj extends ae {
                     var4_ref_sda.p(24);
                     return;
                   } else {
-                    dea.a(60);
+                    int discarded$9 = 60;
+                    dea.a();
                     return;
                   }
                 }

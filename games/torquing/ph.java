@@ -485,8 +485,9 @@ final class ph {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ph.a(field_e, 0, param2 + param3 * field_j, param0, param2, param4, field_j - param4, 140);
-        ph.a(field_e, 0, param2 + param3 * field_j, param1, param3, 140, field_j - param4, param2, param4);
+        int discarded$0 = 140;
+        ph.a(field_e, 0, 0 * field_j, 4, 0, 540, field_j - 540);
+        ph.a(field_e, 0, 0 * field_j, 4, 0, 140, field_j - 540, 0, 540);
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -839,9 +840,9 @@ final class ph {
                 param2 = field_h - param1;
             }
             var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
+            var6 = 85 * param4;
+            var7 = 85 * param4;
+            var8 = 85 * param4;
             var12 = param0 + param1 * field_j;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_e[var12] >> 16 & 255) * var5;
@@ -941,16 +942,16 @@ final class ph {
             if (field_f == null) {
               break L1;
             } else {
-              if (field_f.length >= param8) {
+              if (field_f.length >= 540) {
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          field_f = new int[param8];
-          field_g = new int[param8];
-          field_i = new int[param8];
+          field_f = new int[540];
+          field_g = new int[540];
+          field_i = new int[540];
           break L0;
         }
         L2: {
@@ -969,11 +970,11 @@ final class ph {
           var29 = var32;
           var26 = var29;
           var11 = var26;
-          dk.a(var33, 0, param8);
-          dk.a(var34, 0, param8);
-          dk.a(var35, 0, param8);
-          var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          dk.a(var33, 0, 540);
+          dk.a(var34, 0, 540);
+          dk.a(var35, 0, 540);
+          var12 = 1820;
+          var13 = -4;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -982,8 +983,8 @@ final class ph {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_j;
-          var15 = param4 + param3;
+          var14 = var13 * field_j;
+          var15 = 4;
           var16 = 0;
           if (var15 < field_d) {
             break L3;
@@ -999,11 +1000,11 @@ final class ph {
             var14 = var14 + var16 * field_j;
             var18 = 0;
             L5: while (true) {
-              if (var18 >= param8) {
+              if (var18 >= 540) {
                 L6: {
                   param2 = param2 + param6;
-                  var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var13 = -139;
+                  var18 = -135;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1012,7 +1013,7 @@ final class ph {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_j;
+                  var19 = -4 * field_j;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1023,7 +1024,7 @@ final class ph {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_d - param4 - param5 - param3;
+                      var18 = field_d - 144;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1039,12 +1040,12 @@ final class ph {
                           } else {
                             var20 = 0;
                             L12: while (true) {
-                              if (var20 >= param8) {
+                              if (var20 >= 540) {
                                 var19 = var19 + param6;
                                 var17--;
                                 var20 = 0;
                                 L13: while (true) {
-                                  if (var20 >= param8) {
+                                  if (var20 >= 540) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L11;
@@ -1114,15 +1115,15 @@ final class ph {
                       } else {
                         var20 = 0;
                         L17: while (true) {
-                          if (var20 >= param8) {
+                          if (var20 >= 540) {
                             var19 = var19 + param6;
                             var20 = 0;
                             L18: while (true) {
-                              if (var20 >= param8) {
+                              if (var20 >= 540) {
                                 var14 = var14 + param6;
                                 var20 = 0;
                                 L19: while (true) {
-                                  if (var20 >= param8) {
+                                  if (var20 >= 540) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L10;
@@ -1265,13 +1266,13 @@ final class ph {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_h) {
+                      if (var13 + 144 >= field_h) {
                         var14 = var14 + field_j;
                         break L26;
                       } else {
                         var20 = 0;
                         L27: while (true) {
-                          if (var20 >= param8) {
+                          if (var20 >= 540) {
                             var14 = var14 + param6;
                             var17++;
                             break L26;
@@ -1290,7 +1291,7 @@ final class ph {
                     }
                     var20 = 0;
                     L28: while (true) {
-                      if (var20 >= param8) {
+                      if (var20 >= 540) {
                         param2 = param2 + param6;
                         var13++;
                         continue L8;
@@ -1318,7 +1319,7 @@ final class ph {
           } else {
             var18 = 0;
             L29: while (true) {
-              if (var18 >= param8) {
+              if (var18 >= 540) {
                 var14 = var14 + param6;
                 var13++;
                 continue L4;
@@ -1366,7 +1367,7 @@ final class ph {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -1384,8 +1385,8 @@ final class ph {
         int var22 = 0;
         int var23 = 0;
         L0: {
-          var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var8 = 1820;
+          var9 = -535;
           if (0 >= var9) {
             break L0;
           } else {
@@ -1394,7 +1395,7 @@ final class ph {
           }
         }
         L1: {
-          var10 = field_j - param4 - param5 - param3;
+          var10 = field_j - 544;
           if (0 >= var10) {
             break L1;
           } else {
@@ -1404,7 +1405,7 @@ final class ph {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = 5;
           if (field_j >= var12) {
             break L2;
           } else {
@@ -1413,7 +1414,7 @@ final class ph {
             break L2;
           }
         }
-        var13 = -param7;
+        var13 = -140;
         L3: while (true) {
           if (var13 >= 0) {
             return;
@@ -1422,9 +1423,9 @@ final class ph {
               var14 = 0;
               var15 = 0;
               var16 = 0;
-              var17 = param2 - param3;
-              var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var17 = param2 - 4;
+              var18 = var17 - 9;
+              var19 = -4;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -1441,7 +1442,7 @@ final class ph {
                 int incrementValue$6 = param2;
                 param2++;
                 param0[incrementValue$6] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
-                var19 = 1 - param5;
+                var19 = -539;
                 L6: while (true) {
                   if (var19 >= var9) {
                     L7: while (true) {
@@ -1581,7 +1582,7 @@ final class ph {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_a) {
+                      if (540 + var19 + 4 >= field_a) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -1888,9 +1889,9 @@ final class ph {
                 param2 = field_a - param0;
             }
             var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
+            var6 = 85 * param4;
+            var7 = 85 * param4;
+            var8 = 85 * param4;
             var12 = param0 + param1 * field_j;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_e[var12] >> 16 & 255) * var5;

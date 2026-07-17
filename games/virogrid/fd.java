@@ -35,7 +35,7 @@ class fd extends fi implements ja {
         return var2;
     }
 
-    private final void a(Hashtable param0, StringBuilder param1, int param2, int param3) {
+    private final void a(Hashtable param0, StringBuilder param1, int param2) {
         ma var5 = null;
         RuntimeException var5_ref = null;
         fi var6 = null;
@@ -202,7 +202,8 @@ class fd extends fi implements ja {
             L2: {
               if (((fd) this).a(param0, param2, 34, param3)) {
                 ((fd) this).a(param2, param0, (byte) 127, param3);
-                this.a(param0, param3, param2, 54);
+                int discarded$2 = 54;
+                this.a(param0, param3, param2);
                 break L2;
               } else {
                 break L2;
@@ -270,7 +271,7 @@ class fd extends fi implements ja {
         return stackIn_6_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_x = null;
         field_B = null;
         field_y = null;
@@ -278,9 +279,6 @@ class fd extends fi implements ja {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
-        if (param1 != 6752) {
-            return;
-        }
         int var7 = 3;
         df.c(param3, param5, param2, param6, (param6 >> 1) - 2, !param4 ? 1063506 : 1264494);
         int var8 = 2 * var7;
@@ -466,7 +464,7 @@ class fd extends fi implements ja {
         tg.field_A[ka.field_m] = param0;
         kf.field_j[ka.field_m] = param5;
         int var6 = param5 + (param0 + param3);
-        int var7 = param2 == var6 ? 0 : 1000 * param3 / var6;
+        int var7 = 0 == var6 ? 0 : 1000 * param3 / var6;
         vl.field_i[ka.field_m] = var7;
         if (!(dj.field_c >= var7)) {
             dj.field_c = var7;

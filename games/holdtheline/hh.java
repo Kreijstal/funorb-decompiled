@@ -8,7 +8,7 @@ final class hh {
     static gh field_c;
     static String field_b;
 
-    final static int a(int param0) {
+    final static int a() {
         if (!va.field_k) {
           if (HoldTheLine.field_A <= ol.field_f) {
             if (ol.field_f >= HoldTheLine.field_A - -lc.field_h) {
@@ -26,7 +26,7 @@ final class hh {
 
     final static void a(int param0, byte param1) {
         da var2 = da.field_p;
-        var2.c((byte) 33, param0);
+        var2.c((byte) 33, 4);
         var2.f(111, 1);
         var2.f(111, 2);
     }

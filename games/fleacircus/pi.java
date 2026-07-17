@@ -10,13 +10,13 @@ final class pi {
     static String field_e;
     static t[] field_b;
 
-    final static fi a(int param0, int param1, int param2, int param3) {
+    final static fi a(int param0) {
         fi var4 = new fi();
         var4.field_i = param0;
-        var4.field_m = new int[param1];
+        var4.field_m = new int[1];
         lk.field_O.a(false, (lh) (Object) var4);
         int var5 = -109;
-        rd.a(param2, var4, (byte) -99);
+        rd.a(5, var4, (byte) -99);
         return var4;
     }
 
@@ -53,20 +53,17 @@ final class pi {
         return stackIn_6_0;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         b.field_e = ae.field_a.h(0);
         CharSequence var2 = (CharSequence) (Object) b.field_e;
         ma.field_a = uk.a(-112, var2);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
         field_g = null;
         field_e = null;
-        if (param0 < 1) {
-            field_e = null;
-        }
     }
 
     final int a(int param0, int param1) {

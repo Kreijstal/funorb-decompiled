@@ -123,21 +123,23 @@ final class nb {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         String var1 = null;
         if (!el.field_b) {
           throw new IllegalStateException();
         } else {
           if (null != ji.field_G) {
             ji.field_G.i((byte) -104);
-            var1 = w.l(0);
+            int discarded$2 = 0;
+            var1 = w.l();
             no.field_e = new ri(var1, (String) null, true, false, false);
             le.field_e.a(true, (vg) (Object) ae.field_f);
             ae.field_f.b((vg) (Object) no.field_e, 108);
             ae.field_f.n(7489);
             return;
           } else {
-            var1 = w.l(0);
+            int discarded$3 = 0;
+            var1 = w.l();
             no.field_e = new ri(var1, (String) null, true, false, false);
             le.field_e.a(true, (vg) (Object) ae.field_f);
             ae.field_f.b((vg) (Object) no.field_e, 108);

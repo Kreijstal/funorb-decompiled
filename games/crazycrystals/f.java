@@ -343,7 +343,6 @@ abstract class f {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        Object var6 = null;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -395,9 +394,10 @@ abstract class f {
                     break L2;
                   }
                 }
-                nn.field_a = oe.a(stackIn_9_0 != 0, (byte) 119);
-                var6 = null;
-                rk.a((String[]) null, 3928);
+                int discarded$166 = 119;
+                nn.field_a = oe.a(stackIn_9_0 != 0);
+                int discarded$167 = 3928;
+                rk.a((String[]) null);
                 break L1;
               } else {
                 L3: {
@@ -408,8 +408,10 @@ abstract class f {
                       break L3;
                     } else {
                       var4 = param1;
-                      rk.a(var4, 3928);
-                      nn.field_a = en.a(param1, 169);
+                      int discarded$168 = 3928;
+                      rk.a(var4);
+                      int discarded$169 = 169;
+                      nn.field_a = en.a(param1);
                       break L1;
                     }
                   }

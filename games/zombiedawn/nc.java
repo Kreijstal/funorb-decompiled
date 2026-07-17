@@ -31,7 +31,7 @@ final class nc extends le {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         sl.field_b = new be(so.field_a.nextInt(), 3, 256, 256, 256, 2.0f, true);
         na.field_c = sl.field_b.c(256, 256, -27);
     }
@@ -276,19 +276,22 @@ final class nc extends le {
     final static void d(byte param0) {
         int var1 = 0;
         if (fl.field_a != 10) {
-          if (nm.c(-23022)) {
+          int discarded$8 = -23022;
+          if (nm.c()) {
             ma.field_p = true;
             var1 = 39 / ((46 - param0) / 34);
             return;
           } else {
-            gf.a((byte) 41);
+            int discarded$9 = 41;
+            gf.a();
             fl.field_a = 11;
             ma.field_p = true;
             var1 = 39 / ((46 - param0) / 34);
             return;
           }
         } else {
-          gf.a((byte) 41);
+          int discarded$10 = 41;
+          gf.a();
           fl.field_a = 11;
           ma.field_p = true;
           var1 = 39 / ((46 - param0) / 34);

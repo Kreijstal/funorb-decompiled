@@ -11,7 +11,7 @@ final class vj extends qs {
     private static int[] field_H;
     static String field_B;
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -197,7 +197,7 @@ final class vj extends qs {
         }
     }
 
-    final static String g(byte param0) {
+    final static String g() {
         if (!(ma.field_p >= 2)) {
             return de.field_h;
         }
@@ -229,7 +229,7 @@ final class vj extends qs {
         return ea.field_d;
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_F = null;
         field_I = null;
         field_G = null;

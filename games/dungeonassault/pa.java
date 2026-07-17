@@ -30,12 +30,8 @@ final class pa {
             try {
               try {
                 var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                if (param0 > 64) {
-                  param1.getAppletContext().showDocument(j.a((byte) 115, var2, param1), "_top");
-                  return;
-                } else {
-                  return;
-                }
+                param1.getAppletContext().showDocument(j.a((byte) 115, var2, param1), "_top");
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -47,7 +43,7 @@ final class pa {
               L0: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("pa.A(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("pa.A(").append(123).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -79,7 +75,7 @@ final class pa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;

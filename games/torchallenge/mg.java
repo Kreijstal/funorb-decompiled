@@ -8,7 +8,7 @@ final class mg {
     static int field_b;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
     }
@@ -112,19 +112,9 @@ final class mg {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        fe var3 = null;
-        int var4 = 0;
-        var3 = bf.field_c[param2][param1];
-        if (!param0) {
-          mg.a(true, -93, -2);
-          var4 = bf.field_d[param1][param2];
-          e discarded$4 = ol.a(-123, var3, var4);
-          return;
-        } else {
-          var4 = bf.field_d[param1][param2];
-          e discarded$5 = ol.a(-123, var3, var4);
-          return;
-        }
+        fe var3 = bf.field_c[param2][param1];
+        int var4 = bf.field_d[param1][param2];
+        e discarded$0 = ol.a(-123, var3, var4);
     }
 
     static {

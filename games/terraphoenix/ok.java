@@ -10,20 +10,11 @@ final class ok extends uf {
     static boolean field_i;
     private static String field_z;
 
-    final static jh a(boolean param0, int param1) {
-        jh var2 = null;
-        if (param0) {
-          jh discarded$2 = ok.a(false, -126);
-          var2 = new jh();
-          qc.field_a.a((uf) (Object) var2, -16611);
-          da.a(0, param1);
-          return var2;
-        } else {
-          var2 = new jh();
-          qc.field_a.a((uf) (Object) var2, -16611);
-          da.a(0, param1);
-          return var2;
-        }
+    final static jh a() {
+        jh var2 = new jh();
+        qc.field_a.a((uf) (Object) var2, -16611);
+        da.a(0, 6);
+        return var2;
     }
 
     ok() {

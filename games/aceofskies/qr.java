@@ -10,10 +10,7 @@ final class qr {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param1 != -7250) {
-            return false;
-        }
-        return (param0 & 540800) != 0 ? true : false;
+        return (param0 & 540800) != 0;
     }
 
     static {

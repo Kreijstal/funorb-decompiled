@@ -191,7 +191,7 @@ final class pf extends q implements lm {
         int var7 = 0;
         var7 = Torquing.field_u;
         var5 = 0;
-        var6 = param0;
+        var6 = 0;
         L0: while (true) {
           if (var6 >= ((pf) this).field_n) {
             return var5;
@@ -211,9 +211,6 @@ final class pf extends q implements lm {
     public static void a(int param0) {
         field_q = null;
         field_j = null;
-        if (param0 <= 0) {
-            return;
-        }
         field_u = null;
     }
 

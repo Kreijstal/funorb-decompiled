@@ -128,7 +128,7 @@ final class ra {
         }
     }
 
-    final static String a(byte param0) {
+    final static String a() {
         if (lk.field_c) {
             return null;
         }
@@ -148,11 +148,13 @@ final class ra {
         int var4 = Transmogrify.field_A ? 1 : 0;
         try {
             var1 = new ti(540, 140);
-            oj.a(var1, 256);
+            int discarded$0 = 256;
+            oj.a(var1);
             ka.c();
             sb.c();
             si.field_l = 0;
-            f.a((byte) 16);
+            int discarded$1 = 16;
+            f.a();
             var2 = var1.a();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.d(-2, -2, 16777215);

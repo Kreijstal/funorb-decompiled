@@ -50,7 +50,7 @@ final class cu {
                     case 1: {
                         try {
                             var4_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var4_ref.setAccessible(param0);
+                            var4_ref.setAccessible(true);
                             if (((Boolean) var4_ref.get((Object) (Object) ((cu) this).field_b)).booleanValue()) {
                                 statePc = 3;
                             } else {

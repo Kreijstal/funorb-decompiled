@@ -18,7 +18,8 @@ final class jq extends oo implements dn {
 
     final void n(int param0) {
         int var2 = -27 / ((71 - param0) / 52);
-        this.a(true, dq.a(248, 32, rl.field_i), 11);
+        int discarded$0 = 11;
+        this.a(true, dq.a(248, 32, rl.field_i));
     }
 
     jq(lt param0, wd param1) {
@@ -44,7 +45,7 @@ final class jq extends oo implements dn {
         }
     }
 
-    private final void a(boolean param0, fr param1, int param2) {
+    private final void a(boolean param0, fr param1) {
         RuntimeException var4 = null;
         String var4_ref = null;
         jn var5 = null;
@@ -182,9 +183,11 @@ final class jq extends oo implements dn {
         if (param0 == 11) {
           if (((jq) this).field_z) {
             if (!((jq) this).field_gb) {
-              var2 = oe.d(86);
+              int discarded$8 = 86;
+              var2 = oe.d();
               if (var2 != null) {
-                this.a(false, var2, 11);
+                int discarded$9 = 11;
+                this.a(false, var2);
                 return super.h(11);
               } else {
                 return super.h(11);
@@ -200,9 +203,11 @@ final class jq extends oo implements dn {
           ((jq) this).a(95, (mi) null, -21, 40, (byte) -17);
           if (((jq) this).field_z) {
             if (!((jq) this).field_gb) {
-              var2 = oe.d(86);
+              int discarded$10 = 86;
+              var2 = oe.d();
               if (var2 != null) {
-                this.a(false, var2, 11);
+                int discarded$11 = 11;
+                this.a(false, var2);
                 return super.h(11);
               } else {
                 return super.h(11);

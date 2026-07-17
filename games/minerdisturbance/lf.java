@@ -275,19 +275,16 @@ final class lf implements Runnable {
         return null;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
         field_b = null;
     }
 
     final static void a(int param0, we param1) {
         try {
-            if (param0 != -673) {
-                field_b = null;
-            }
             wi.field_A = param1;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "lf.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "lf.D(" + -673 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

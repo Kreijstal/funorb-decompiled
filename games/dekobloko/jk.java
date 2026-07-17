@@ -66,7 +66,7 @@ final class jk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_g = null;
         field_a = null;

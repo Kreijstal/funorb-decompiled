@@ -10,56 +10,23 @@ final class eg {
         int var3 = 0;
         jl var4 = null;
         oi var5 = null;
-        qj stackIn_8_0 = null;
-        qj stackIn_9_0 = null;
-        qj stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        qj stackOut_7_0 = null;
-        qj stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        qj stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
             var4 = (jl) (Object) ll.field_T.a((byte) -95);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  var5 = (oi) (Object) qd.field_d.a((byte) -95);
-                  if (!param0) {
-                    break L2;
-                  } else {
-                    eg.a((byte) 21);
-                    break L2;
-                  }
-                }
-                L3: while (true) {
+                var5 = (oi) (Object) qd.field_d.a((byte) -95);
+                L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    L4: {
-                      de.a(var5, 5, 2);
-                      stackOut_7_0 = qd.field_d;
-                      stackIn_9_0 = stackOut_7_0;
-                      stackIn_8_0 = stackOut_7_0;
-                      if (param0) {
-                        stackOut_9_0 = (qj) (Object) stackIn_9_0;
-                        stackOut_9_1 = 0;
-                        stackIn_10_0 = stackOut_9_0;
-                        stackIn_10_1 = stackOut_9_1;
-                        break L4;
-                      } else {
-                        stackOut_8_0 = (qj) (Object) stackIn_8_0;
-                        stackOut_8_1 = 1;
-                        stackIn_10_0 = stackOut_8_0;
-                        stackIn_10_1 = stackOut_8_1;
-                        break L4;
-                      }
-                    }
-                    var5 = (oi) (Object) ((qj) (Object) stackIn_10_0).a(stackIn_10_1 != 0);
-                    continue L3;
+                    int discarded$8 = 2;
+                    int discarded$9 = 5;
+                    de.a(var5);
+                    var5 = (oi) (Object) qd.field_d.a(true);
+                    continue L2;
                   }
                 }
               } else {
@@ -72,7 +39,7 @@ final class eg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var2, "eg.D(" + param0 + 44 + 5 + 41);
+          throw ch.a((Throwable) (Object) var2, "eg.D(" + 0 + 44 + 5 + 41);
         }
     }
 
@@ -86,13 +53,15 @@ final class eg {
         field_a = null;
     }
 
-    final static void a(int param0) {
-        vi.field_e = wh.a((byte) -122);
+    final static void a() {
+        int discarded$0 = -122;
+        vi.field_e = wh.a();
         ci.field_f = new da();
-        wl.a(true, true, 170);
+        int discarded$1 = 170;
+        wl.a(true, true);
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

@@ -8,15 +8,12 @@ abstract class bj extends nb {
 
     abstract Object d(byte param0);
 
-    public static void e(int param0) {
+    public static void e() {
         field_q = null;
         field_p = null;
-        if (param0 <= 37) {
-            boolean discarded$0 = bj.a('ￔ', 125);
-        }
     }
 
-    final static gd a(am param0, byte param1) {
+    final static gd a(am param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -51,8 +48,10 @@ abstract class bj extends nb {
               throw new IllegalStateException("" + var2_int);
             } else {
               L1: {
-                var3 = dg.a(param0, false) ? 1 : 0;
-                var4 = dg.a(param0, false) ? 1 : 0;
+                int discarded$5 = 0;
+                var3 = dg.a(param0) ? 1 : 0;
+                int discarded$6 = 0;
+                var4 = dg.a(param0) ? 1 : 0;
                 var5 = new gd();
                 var5.field_k = (short)param0.k(61, 16);
                 var5.field_G = ad.a(var5.field_G, true, 16, param0);
@@ -77,7 +76,7 @@ abstract class bj extends nb {
               }
               L2: {
                 if (var4 != 0) {
-                  int discarded$1 = param0.k(13, 16);
+                  int discarded$7 = param0.k(13, 16);
                   var5.field_K = ad.a(var5.field_K, true, 16, param0);
                   var5.field_d = ad.a(var5.field_d, true, 16, param0);
                   var5.field_h = ad.a(var5.field_h, true, 16, param0);
@@ -89,7 +88,8 @@ abstract class bj extends nb {
                 }
               }
               L3: {
-                if (dg.a(param0, false)) {
+                int discarded$8 = 0;
+                if (dg.a(param0)) {
                   var5.field_x = ad.a(var5.field_x, true, 16, param0);
                   break L3;
                 } else {
@@ -97,7 +97,8 @@ abstract class bj extends nb {
                 }
               }
               L4: {
-                if (!dg.a(param0, false)) {
+                int discarded$9 = 0;
+                if (!dg.a(param0)) {
                   break L4;
                 } else {
                   var5.field_F = hc.a(16, param0, (byte) -44, var5.field_F);
@@ -164,37 +165,12 @@ abstract class bj extends nb {
         return stackIn_23_0;
     }
 
-    final static int a(boolean param0) {
+    final static int a() {
         return qk.field_Mb;
     }
 
-    final static boolean d(int param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0 == 18840) {
-          L0: {
-            L1: {
-              if (10 > fl.field_a) {
-                break L1;
-              } else {
-                if (ld.field_j < 13) {
-                  break L1;
-                } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L0;
-                }
-              }
-            }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
-          return false;
-        }
+    final static boolean d() {
+        return 10 <= fl.field_a && ld.field_j >= 13;
     }
 
     final static boolean a(char param0, int param1) {

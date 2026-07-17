@@ -17,7 +17,7 @@ final class eoa implements dja {
         return (tv[]) (Object) new ih[param1];
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

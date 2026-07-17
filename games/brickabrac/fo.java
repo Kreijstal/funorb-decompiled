@@ -68,9 +68,11 @@ final class fo {
         }
     }
 
-    final static void a(vm param0, int param1) {
+    final static void a(vm param0) {
         try {
-            vl.a(param0, -27300, true);
+            int discarded$0 = 1;
+            int discarded$1 = -27300;
+            vl.a(param0);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "fo.A(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
@@ -260,10 +262,7 @@ final class fo {
         return ((fo) this).field_k[fieldTemp$0];
     }
 
-    public static void a(int param0) {
-        if (param0 != 2) {
-            return;
-        }
+    public static void a() {
         field_b = null;
         field_g = null;
         field_a = null;

@@ -39,7 +39,8 @@ final class mda extends c implements fo, ffa, gma {
               if (var4 == null) {
                 break L0;
               } else {
-                ip.a(var4, param0, 2147);
+                int discarded$4 = 2147;
+                ip.a(var4, param0);
                 var4 = (upa) (Object) ina.field_d.e(121);
                 continue L2;
               }
@@ -59,7 +60,7 @@ final class mda extends c implements fo, ffa, gma {
         return ((mda) this).field_o;
     }
 
-    private final void a(int param0, int param1, int param2, la param3, int param4, int param5) {
+    private final void a(int param0, int param1, int param2, la param3, int param4) {
         try {
             ((mda) this).field_o = false;
             ((mda) this).field_q = param3;
@@ -67,12 +68,13 @@ final class mda extends c implements fo, ffa, gma {
             ((mda) this).field_m = 0;
             ((mda) this).field_n = param2;
             ((mda) this).field_s = param0;
-            ((mda) this).field_i = iia.d(param1 * 2, 786432, 2);
+            ((mda) this).field_i = iia.d(2, 786432, 2);
             ((mda) this).field_t = 0;
             ((mda) this).field_k = ((mda) this).field_l;
-            this.s(0);
+            int discarded$0 = 0;
+            this.s();
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "mda.R(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + 2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "mda.R(" + param0 + 44 + 1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + 2 + 41);
         }
     }
 
@@ -142,7 +144,8 @@ final class mda extends c implements fo, ffa, gma {
                   break L1;
                 }
               }
-              var5_int = eha.a(((mda) this).field_k, 12, ((mda) this).field_j, ((mda) this).field_k, param3, ((mda) this).field_p, 2);
+              int discarded$2 = 2;
+              var5_int = eha.a(((mda) this).field_k, 12, ((mda) this).field_j, ((mda) this).field_k, param3, ((mda) this).field_p);
               if (var5_int == -1) {
                 stackOut_8_0 = 0;
                 stackIn_9_0 = stackOut_8_0;
@@ -344,12 +347,14 @@ final class mda extends c implements fo, ffa, gma {
         String stackOut_10_2 = null;
         try {
           L0: {
-            if (eha.a(((mda) this).field_k, param1, ((mda) this).field_j, ((mda) this).field_k, param2, ((mda) this).field_p, 2) < 0) {
+            int discarded$28 = 2;
+            if (eha.a(((mda) this).field_k, param1, ((mda) this).field_j, ((mda) this).field_k, param2, ((mda) this).field_p) < 0) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              stackOut_4_0 = this.a(param0, -6);
+              int discarded$29 = -6;
+              stackOut_4_0 = this.a(param0);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             }
@@ -560,7 +565,7 @@ final class mda extends c implements fo, ffa, gma {
         return stackIn_8_0 != 0;
     }
 
-    private final boolean a(gma param0, byte param1) {
+    private final boolean a(gma param0) {
         return ((mda) this).field_s == 1;
     }
 
@@ -760,7 +765,7 @@ final class mda extends c implements fo, ffa, gma {
         return 0;
     }
 
-    private final int a(up param0, int param1) {
+    private final int a(up param0) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -905,7 +910,8 @@ final class mda extends c implements fo, ffa, gma {
                 break L1;
               } else {
                 if (param4 != 0) {
-                  this.s(0);
+                  int discarded$4 = 0;
+                  this.s();
                   this.a(param3, (byte) -36, param2, param4, param5);
                   if (~(((mda) this).field_u - -param4) != ~((mda) this).field_p) {
                     break L1;
@@ -924,7 +930,8 @@ final class mda extends c implements fo, ffa, gma {
                   } else {
                     L2: {
                       L3: {
-                        this.s(0);
+                        int discarded$5 = 0;
+                        this.s();
                         this.a(param3, (byte) -36, param2, param4, param5);
                         if (~(((mda) this).field_u - -param4) != ~((mda) this).field_p) {
                           break L3;
@@ -959,7 +966,8 @@ final class mda extends c implements fo, ffa, gma {
               if (param3 == 0) {
                 return true;
               } else {
-                this.s(0);
+                int discarded$6 = 0;
+                this.s();
                 this.a(param3, (byte) -36, param2, param4, param5);
                 if (~(((mda) this).field_u - -param4) == ~((mda) this).field_p) {
                   L4: {
@@ -979,7 +987,8 @@ final class mda extends c implements fo, ffa, gma {
                 }
               }
             } else {
-              this.s(0);
+              int discarded$7 = 0;
+              this.s();
               this.a(param3, (byte) -36, param2, param4, param5);
               if (~(((mda) this).field_u - -param4) == ~((mda) this).field_p) {
                 if (~((mda) this).field_j == ~(((mda) this).field_r - -param3)) {
@@ -1035,135 +1044,86 @@ final class mda extends c implements fo, ffa, gma {
     private final void a(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = 0;
         if (1 == ((mda) this).field_s) {
-          this.s(0);
-          var6 = 0;
-          if (param1 <= -11) {
-            L0: {
-              if (param3 != 0) {
-                var6 = 1;
-                ((mda) this).field_p = ((mda) this).field_p + param3;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (var6 != 0) {
-              if (2 == this.a(((mda) this).field_p + -((mda) this).field_u, -104, param4, 0, param2)) {
-                L1: {
-                  ((mda) this).field_p = ((mda) this).field_u;
-                  var6 = 0;
-                  if (0 != param0) {
-                    ((mda) this).field_j = ((mda) this).field_j + param0;
-                    var6 = 1;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (var6 == 0) {
-                    break L2;
-                  } else {
-                    if (this.a(0, -103, param4, ((mda) this).e(9648) - ((mda) this).field_r, param2) == 2) {
-                      ((mda) this).field_j = ((mda) this).field_r;
-                      break L2;
-                    } else {
-                      if (((mda) this).field_j == ((mda) this).field_r) {
-                        if (((mda) this).field_p != ((mda) this).field_u) {
-                          ((mda) this).field_q.field_u.a((ffa) this, -123);
-                          ((mda) this).field_q.field_u.b((ffa) this, 7073);
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        ((mda) this).field_q.field_u.a((ffa) this, -123);
-                        ((mda) this).field_q.field_u.b((ffa) this, 7073);
-                        return;
-                      }
-                    }
-                  }
-                }
-                if (((mda) this).field_j == ((mda) this).field_r) {
-                  if (((mda) this).field_p != ((mda) this).field_u) {
-                    ((mda) this).field_q.field_u.a((ffa) this, -123);
-                    ((mda) this).field_q.field_u.b((ffa) this, 7073);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  ((mda) this).field_q.field_u.a((ffa) this, -123);
-                  ((mda) this).field_q.field_u.b((ffa) this, 7073);
-                  return;
-                }
-              } else {
-                L3: {
-                  var6 = 0;
-                  if (0 != param0) {
-                    ((mda) this).field_j = ((mda) this).field_j + param0;
-                    var6 = 1;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (var6 == 0) {
-                    break L4;
-                  } else {
-                    if (this.a(0, -103, param4, ((mda) this).e(9648) - ((mda) this).field_r, param2) == 2) {
-                      ((mda) this).field_j = ((mda) this).field_r;
-                      break L4;
-                    } else {
-                      if (((mda) this).field_j == ((mda) this).field_r) {
-                        if (((mda) this).field_p == ((mda) this).field_u) {
-                          return;
-                        } else {
-                          ((mda) this).field_q.field_u.a((ffa) this, -123);
-                          ((mda) this).field_q.field_u.b((ffa) this, 7073);
-                          return;
-                        }
-                      } else {
-                        ((mda) this).field_q.field_u.a((ffa) this, -123);
-                        ((mda) this).field_q.field_u.b((ffa) this, 7073);
-                        return;
-                      }
-                    }
-                  }
-                }
-                if (((mda) this).field_j == ((mda) this).field_r) {
-                  if (((mda) this).field_p == ((mda) this).field_u) {
-                    return;
-                  } else {
-                    ((mda) this).field_q.field_u.a((ffa) this, -123);
-                    ((mda) this).field_q.field_u.b((ffa) this, 7073);
-                    return;
-                  }
-                } else {
-                  ((mda) this).field_q.field_u.a((ffa) this, -123);
-                  ((mda) this).field_q.field_u.b((ffa) this, 7073);
-                  return;
-                }
-              }
+          L0: {
+            int discarded$1 = 0;
+            this.s();
+            var6 = 0;
+            if (param3 != 0) {
+              var6 = 1;
+              ((mda) this).field_p = ((mda) this).field_p + param3;
+              break L0;
             } else {
-              L5: {
+              break L0;
+            }
+          }
+          if (var6 != 0) {
+            if (2 == this.a(((mda) this).field_p + -((mda) this).field_u, -104, param4, 0, param2)) {
+              L1: {
+                ((mda) this).field_p = ((mda) this).field_u;
                 var6 = 0;
                 if (0 != param0) {
                   ((mda) this).field_j = ((mda) this).field_j + param0;
                   var6 = 1;
-                  break L5;
+                  break L1;
                 } else {
-                  break L5;
+                  break L1;
                 }
               }
-              L6: {
+              L2: {
                 if (var6 == 0) {
-                  break L6;
+                  break L2;
                 } else {
                   if (this.a(0, -103, param4, ((mda) this).e(9648) - ((mda) this).field_r, param2) == 2) {
                     ((mda) this).field_j = ((mda) this).field_r;
-                    break L6;
+                    break L2;
+                  } else {
+                    if (((mda) this).field_j == ((mda) this).field_r) {
+                      if (((mda) this).field_p != ((mda) this).field_u) {
+                        ((mda) this).field_q.field_u.a((ffa) this, -123);
+                        ((mda) this).field_q.field_u.b((ffa) this, 7073);
+                        return;
+                      } else {
+                        return;
+                      }
+                    } else {
+                      ((mda) this).field_q.field_u.a((ffa) this, -123);
+                      ((mda) this).field_q.field_u.b((ffa) this, 7073);
+                      return;
+                    }
+                  }
+                }
+              }
+              if (((mda) this).field_j == ((mda) this).field_r) {
+                if (((mda) this).field_p != ((mda) this).field_u) {
+                  ((mda) this).field_q.field_u.a((ffa) this, -123);
+                  ((mda) this).field_q.field_u.b((ffa) this, 7073);
+                  return;
+                } else {
+                  return;
+                }
+              } else {
+                ((mda) this).field_q.field_u.a((ffa) this, -123);
+                ((mda) this).field_q.field_u.b((ffa) this, 7073);
+                return;
+              }
+            } else {
+              L3: {
+                var6 = 0;
+                if (0 != param0) {
+                  ((mda) this).field_j = ((mda) this).field_j + param0;
+                  var6 = 1;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              L4: {
+                if (var6 == 0) {
+                  break L4;
+                } else {
+                  if (this.a(0, -103, param4, ((mda) this).e(9648) - ((mda) this).field_r, param2) == 2) {
+                    ((mda) this).field_j = ((mda) this).field_r;
+                    break L4;
                   } else {
                     if (((mda) this).field_j == ((mda) this).field_r) {
                       if (((mda) this).field_p == ((mda) this).field_u) {
@@ -1196,7 +1156,53 @@ final class mda extends c implements fo, ffa, gma {
               }
             }
           } else {
-            return;
+            L5: {
+              var6 = 0;
+              if (0 != param0) {
+                ((mda) this).field_j = ((mda) this).field_j + param0;
+                var6 = 1;
+                break L5;
+              } else {
+                break L5;
+              }
+            }
+            L6: {
+              if (var6 == 0) {
+                break L6;
+              } else {
+                if (this.a(0, -103, param4, ((mda) this).e(9648) - ((mda) this).field_r, param2) == 2) {
+                  ((mda) this).field_j = ((mda) this).field_r;
+                  break L6;
+                } else {
+                  if (((mda) this).field_j == ((mda) this).field_r) {
+                    if (((mda) this).field_p == ((mda) this).field_u) {
+                      return;
+                    } else {
+                      ((mda) this).field_q.field_u.a((ffa) this, -123);
+                      ((mda) this).field_q.field_u.b((ffa) this, 7073);
+                      return;
+                    }
+                  } else {
+                    ((mda) this).field_q.field_u.a((ffa) this, -123);
+                    ((mda) this).field_q.field_u.b((ffa) this, 7073);
+                    return;
+                  }
+                }
+              }
+            }
+            if (((mda) this).field_j == ((mda) this).field_r) {
+              if (((mda) this).field_p == ((mda) this).field_u) {
+                return;
+              } else {
+                ((mda) this).field_q.field_u.a((ffa) this, -123);
+                ((mda) this).field_q.field_u.b((ffa) this, 7073);
+                return;
+              }
+            } else {
+              ((mda) this).field_q.field_u.a((ffa) this, -123);
+              ((mda) this).field_q.field_u.b((ffa) this, 7073);
+              return;
+            }
           }
         } else {
           return;
@@ -1215,7 +1221,7 @@ final class mda extends c implements fo, ffa, gma {
         return ((mda) this).field_k;
     }
 
-    private final void s(int param0) {
+    private final void s() {
         ((mda) this).field_u = ((mda) this).field_p;
         ((mda) this).field_r = ((mda) this).field_j;
     }
@@ -1238,7 +1244,8 @@ final class mda extends c implements fo, ffa, gma {
             if (param2 <= 36) {
                 ((mda) this).field_t = -51;
             }
-            this.a(param4, 1, var8, param0, param5, 2);
+            int discarded$0 = 2;
+            this.a(param4, 1, var8, param0, param5);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "mda.CA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
@@ -1436,7 +1443,8 @@ final class mda extends c implements fo, ffa, gma {
                 break L1;
               }
             }
-            stackOut_2_0 = this.a(param0, (byte) 61);
+            int discarded$2 = 61;
+            stackOut_2_0 = this.a(param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1497,7 +1505,8 @@ final class mda extends c implements fo, ffa, gma {
         String stackOut_9_2 = null;
         try {
           L0: {
-            if (!this.a(param1, (byte) 61)) {
+            int discarded$2 = 61;
+            if (!this.a(param1)) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -1596,7 +1605,8 @@ final class mda extends c implements fo, ffa, gma {
                   break L1;
                 }
               }
-              stackOut_5_0 = this.a(param0, -6);
+              int discarded$2 = -6;
+              stackOut_5_0 = this.a(param0);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

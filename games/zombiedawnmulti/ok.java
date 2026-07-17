@@ -81,9 +81,9 @@ final class ok {
             }
             return;
           } else {
-            int fieldTemp$2 = ((ok) this).field_v - 1;
+            int fieldTemp$4 = ((ok) this).field_v - 1;
             ((ok) this).field_v = ((ok) this).field_v - 1;
-            if (fieldTemp$2 > 0) {
+            if (fieldTemp$4 > 0) {
               return;
             } else {
               ((ok) this).field_v = ((ok) this).field_g;
@@ -94,7 +94,8 @@ final class ok {
                 if (param0 != -12371) {
                   return;
                 } else {
-                  this.c(0);
+                  int discarded$5 = 0;
+                  this.c();
                   return;
                 }
               }
@@ -103,7 +104,7 @@ final class ok {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         ja var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -248,7 +249,7 @@ final class ok {
                           break L0;
                         } else {
                           ao.field_h[var7].a();
-                          int discarded$3 = gf.field_e.a(nj.field_a[var7], 3, 3, ao.field_h[var7].field_x - 6, -6 + ao.field_h[var7].field_w, hk.field_e, -1, 1, 1, gf.field_e.field_C - -gf.field_e.field_r);
+                          int discarded$4 = gf.field_e.a(nj.field_a[var7], 3, 3, ao.field_h[var7].field_x - 6, -6 + ao.field_h[var7].field_w, hk.field_e, -1, 1, 1, gf.field_e.field_C - -gf.field_e.field_r);
                           sq.a(5, ao.field_h[var7].field_x, 3, ao.field_h[var7].field_w, ao.field_h[var7], 1, 0, 0);
                           var7++;
                           continue L1;
@@ -345,7 +346,7 @@ final class ok {
                 q.field_c.j();
                 var9 = new ja(q.field_c.field_z, q.field_c.field_u);
                 var9.a();
-                int discarded$4 = dc.field_Lb.a(var14, pg.field_c, em.field_bb, ol.field_p, ai.field_a, 16777215, -1, 1, 1, dc.field_Lb.field_r + dc.field_Lb.field_C);
+                int discarded$5 = dc.field_Lb.a(var14, pg.field_c, em.field_bb, ol.field_p, ai.field_a, 16777215, -1, 1, 1, dc.field_Lb.field_r + dc.field_Lb.field_C);
                 sq.a(5, var9.field_z, 3, var9.field_u, var9, 1, 0, 0);
                 q.field_c.a();
                 var9.g(0, 0);
@@ -373,7 +374,7 @@ final class ok {
                 var5_ref_String = vl.a(vk.field_F, new String[1], 2);
                 ie.field_ib = null;
                 var16.a();
-                int discarded$5 = gf.field_e.a(var5_ref_String, 3, 3, var16.field_x + -6, -6 + var16.field_w, 16777215, -1, 0, 1, gf.field_e.field_C - -gf.field_e.field_r);
+                int discarded$6 = gf.field_e.a(var5_ref_String, 3, 3, var16.field_x + -6, -6 + var16.field_w, 16777215, -1, 0, 1, gf.field_e.field_C - -gf.field_e.field_r);
                 sq.a(5, var16.field_x, 3, var16.field_w, var16, 1, 0, 0);
                 rq.field_v.a();
                 var16.g(-rq.field_v.field_r + 199, -rq.field_v.field_y + 83);
@@ -640,7 +641,8 @@ final class ok {
               break L20;
             }
           }
-          cd.c((byte) -57);
+          int discarded$7 = -57;
+          cd.c();
           ao.field_h[gf.field_g].g(269, 340);
           return;
         }
@@ -664,7 +666,7 @@ final class ok {
         ((ok) this).field_d = param2;
     }
 
-    private final void c(int param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

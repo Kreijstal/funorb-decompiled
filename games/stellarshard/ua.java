@@ -12,7 +12,7 @@ final class ua {
     static li field_a;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_a = null;
         field_c = null;
@@ -75,7 +75,7 @@ final class ua {
               var10 = param2.field_y;
               var11 = param2.field_v;
               var12 = ti.field_i + -var11;
-              var13 = param3;
+              var13 = 0;
               if (param5 >= ti.field_f) {
                 break L1;
               } else {
@@ -212,7 +212,7 @@ final class ua {
               break L10;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ma.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + 0 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

@@ -14,11 +14,11 @@ final class tl extends wm {
     private String field_t;
     private re field_v;
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean b() {
         if (13 != wh.field_c) {
-          if (wh.field_c != param1) {
+          if (wh.field_c != 102) {
             if (null != mg.field_bc) {
-              if (!mg.field_bc.b(param2, 15028, param0)) {
+              if (!mg.field_bc.b(13, 15028, 15)) {
                 return false;
               } else {
                 return true;
@@ -31,7 +31,7 @@ final class tl extends wm {
             return true;
           }
         } else {
-          qn.l(param1 + -89);
+          qn.l(13);
           return true;
         }
     }
@@ -132,7 +132,7 @@ final class tl extends wm {
         return stackIn_12_0;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_w = null;
         field_r = null;
         field_s = null;

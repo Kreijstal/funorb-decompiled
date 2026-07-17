@@ -47,7 +47,7 @@ final class jf extends ela {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_t = null;
         field_p = null;
         field_o = null;
@@ -84,7 +84,8 @@ final class jf extends ela {
                 break L1;
               }
             }
-            stackOut_2_0 = new bfa((Object) (Object) sra.a((String) param0[0].field_d, 85));
+            int discarded$2 = 85;
+            stackOut_2_0 = new bfa((Object) (Object) sra.a((String) param0[0].field_d));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

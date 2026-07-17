@@ -43,13 +43,14 @@ final class nc extends di {
                   break L1;
                 } else {
                   var4 = null;
-                  ud discarded$2 = ((nc) this).a(-109, (String) null);
+                  ud discarded$4 = ((nc) this).a(-109, (String) null);
                   break L1;
                 }
               }
               L2: {
                 var6 = (CharSequence) (Object) param1;
-                var3_int = uk.a(var6, 10);
+                int discarded$5 = 10;
+                var3_int = uk.a(var6);
                 if (var3_int <= 0) {
                   break L2;
                 } else {

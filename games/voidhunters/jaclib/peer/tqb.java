@@ -8,7 +8,7 @@ public final class tqb {
     private jaclib.peer.PeerReference c;
     private jaclib.peer.PeerReference a;
 
-    private final void a(int param0) {
+    private final void a() {
         java.lang.ref.Reference var2 = null;
         jaclib.peer.PeerReference var3 = null;
         L0: while (true) {
@@ -28,15 +28,18 @@ public final class tqb {
     }
 
     public final void a(byte param0) {
-        this.a(-18289);
+        int discarded$6 = -18289;
+        this.a();
         L0: while (true) {
           if (null == ((jaclib.peer.tqb) this).c) {
             if (param0 <= 56) {
               ((jaclib.peer.tqb) this).b = null;
-              this.a(-18289);
+              int discarded$7 = -18289;
+              this.a();
               return;
             } else {
-              this.a(-18289);
+              int discarded$8 = -18289;
+              this.a();
               return;
             }
           } else {
@@ -47,42 +50,17 @@ public final class tqb {
     }
 
     private final void a(int param0, jaclib.peer.PeerReference param1) {
-        L0: {
-          if (param1 == ((jaclib.peer.tqb) this).c) {
+        if (!(param1 != ((jaclib.peer.tqb) this).c)) {
             ((jaclib.peer.tqb) this).c = param1.b;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          if (param1 == ((jaclib.peer.tqb) this).a) {
+        if (!(param1 != ((jaclib.peer.tqb) this).a)) {
             ((jaclib.peer.tqb) this).a = param1.a;
-            break L1;
-          } else {
-            break L1;
-          }
         }
-        L2: {
-          if (param1.a != null) {
+        if (!(param1.a == null)) {
             param1.a.b = param1.b;
-            break L2;
-          } else {
-            break L2;
-          }
         }
-        if (param0 != -22216) {
-          return;
-        } else {
-          L3: {
-            if (param1.b != null) {
-              param1.b.a = param1.a;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          return;
+        if (!(param1.b == null)) {
+            param1.b.a = param1.a;
         }
     }
 
@@ -119,7 +97,8 @@ public final class tqb {
     }
 
     public final void a(boolean param0) {
-        this.a(-18289);
+        int discarded$0 = -18289;
+        this.a();
         if (!param0) {
             return;
         }

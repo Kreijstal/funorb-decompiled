@@ -23,12 +23,6 @@ final class ll implements Runnable {
 
     final static void a(byte param0, int param1, int param2, int param3) {
         ce.field_b = param1;
-        if (param0 > -112) {
-            field_f = null;
-            sl.field_l = param2;
-            qo.field_s = param3;
-            return;
-        }
         sl.field_l = param2;
         qo.field_s = param3;
     }
@@ -69,7 +63,7 @@ final class ll implements Runnable {
         ((ll) this).field_j = null;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
         field_k = null;
@@ -167,7 +161,8 @@ final class ll implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((ll) this).field_b.getFile() + "\n\n");
-                      var3.write(gk.b(var5, 353));
+                      int discarded$1 = 353;
+                      var3.write(gk.b(var5));
                       ((ll) this).field_o = new DataInputStream(var4.getInputStream());
                       break L7;
                     } else {

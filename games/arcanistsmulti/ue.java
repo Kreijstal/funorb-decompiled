@@ -10,15 +10,10 @@ final class ue {
 
     final static void b(int param0) {
         hi.field_e.setLength(0);
-        if (param0 != 10) {
-            field_c = null;
-            nj.field_c = 0;
-            return;
-        }
         nj.field_c = 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_d = null;
@@ -28,9 +23,6 @@ final class ue {
     final static void a(byte param0, le param1) {
         try {
             kl.field_A = 320;
-            if (param0 > -26) {
-                ue.b(-27);
-            }
             mf.field_g = -1;
             hc.field_f = true;
             ti.field_N = -1;
@@ -39,14 +31,11 @@ final class ue {
             mo.field_f = null;
             i.b(-120);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ue.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ue.C(" + -117 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static int b(byte param0) {
-        if (param0 > -20) {
-            return 25;
-        }
+    final static int b() {
         return uc.field_b;
     }
 

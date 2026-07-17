@@ -97,7 +97,8 @@ final class ak extends gn {
                                               if (!ja.field_O) {
                                                 break L3;
                                               } else {
-                                                stackOut_21_0 = dt.b((byte) -75);
+                                                int discarded$2 = -75;
+                                                stackOut_21_0 = dt.b();
                                                 stackIn_22_0 = stackOut_21_0;
                                                 return stackIn_22_0;
                                               }
@@ -270,7 +271,8 @@ final class ak extends gn {
                   }
                 }
               } else {
-                ru.a(((ak) this).field_n, (byte) -114);
+                int discarded$1 = -114;
+                ru.a(((ak) this).field_n);
                 if (param0 != 192) {
                   ((ak) this).b(86);
                   return;
@@ -330,7 +332,7 @@ final class ak extends gn {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_f = null;
         field_l = null;

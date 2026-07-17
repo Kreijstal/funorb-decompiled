@@ -9,37 +9,22 @@ final class uo extends ae {
     static ri field_n;
     private int field_i;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_n = null;
         field_j = null;
     }
 
     final static void b(boolean param0, int param1) {
-        ga var2 = null;
-        int var3 = 0;
-        var2 = ma.field_a;
-        var2.b((byte) -35, param1);
+        ga var2 = ma.field_a;
+        var2.b((byte) -35, 11);
         var2.field_j = var2.field_j + 1;
-        if (!param0) {
-          uo.b(true, -17);
-          var3 = var2.field_j;
-          var2.a(-116, 2);
-          var2.a(fg.field_k, fg.field_k.length, 0, 123);
-          var2.a(123, pb.field_h);
-          var2.a(125, sc.field_f);
-          var2.a(tg.field_a, tg.field_a.length, 0, 119);
-          var2.e(113, var2.field_j - var3);
-          return;
-        } else {
-          var3 = var2.field_j;
-          var2.a(-116, 2);
-          var2.a(fg.field_k, fg.field_k.length, 0, 123);
-          var2.a(123, pb.field_h);
-          var2.a(125, sc.field_f);
-          var2.a(tg.field_a, tg.field_a.length, 0, 119);
-          var2.e(113, var2.field_j - var3);
-          return;
-        }
+        int var3 = var2.field_j;
+        var2.a(-116, 2);
+        var2.a(fg.field_k, fg.field_k.length, 0, 123);
+        var2.a(123, pb.field_h);
+        var2.a(125, sc.field_f);
+        var2.a(tg.field_a, tg.field_a.length, 0, 119);
+        var2.e(113, var2.field_j - var3);
     }
 
     final void a(byte param0) {

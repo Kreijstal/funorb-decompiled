@@ -7,10 +7,6 @@ abstract class em extends pt {
     abstract ef b(int param0);
 
     final static boolean a(boolean param0, int param1, int param2) {
-        if (param0) {
-            field_d = null;
-            return false;
-        }
         return false;
     }
 
@@ -18,7 +14,7 @@ abstract class em extends pt {
         throw new Error();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
     }
 

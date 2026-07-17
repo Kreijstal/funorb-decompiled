@@ -6,7 +6,7 @@ final class sb extends pu {
     static sna field_n;
     static String[] field_m;
 
-    public static void b(int param0) {
+    public static void b() {
         field_l = null;
         field_n = null;
         field_m = null;
@@ -166,7 +166,7 @@ final class sb extends pu {
                                     }
                                   }
                                 }
-                                dg.b(var17, var16, param1, param6);
+                                dg.b(var17, var16, param1, 1);
                                 break L8;
                               } else {
                                 break L8;
@@ -217,7 +217,7 @@ final class sb extends pu {
               break L13;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw pe.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 1 + 44 + param7 + 41);
         }
     }
 

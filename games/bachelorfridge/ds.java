@@ -6,7 +6,7 @@ final class ds extends pu {
     static fea field_l;
     private static String field_z;
 
-    public static void b(int param0) {
+    public static void b() {
         field_l = null;
     }
 

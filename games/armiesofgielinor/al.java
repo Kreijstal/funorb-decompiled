@@ -311,7 +311,7 @@ final class al extends ik {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_e = null;
         field_l = null;

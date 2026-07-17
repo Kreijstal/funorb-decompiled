@@ -66,7 +66,7 @@ final class mb extends mh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_N = null;
         field_cb = null;
         field_L = null;
@@ -88,9 +88,6 @@ final class mb extends mh {
         }
         if (!(param0 != 2)) {
             return 54;
-        }
-        if (param1 != 813231272) {
-            return -38;
         }
         if (!(param0 != 3)) {
             return 54;
@@ -153,7 +150,7 @@ final class mb extends mh {
         }
     }
 
-    final static int j(byte param0) {
+    final static int j() {
         return -bk.field_I + bj.field_tb;
     }
 
@@ -260,26 +257,22 @@ final class mb extends mh {
           L0: {
             ((mb) this).field_Q = -1;
             ((mb) this).field_W = param0;
-            if (param1 == 10) {
-              ((mb) this).field_Y = param2;
-              if (param0 == null) {
-                break L0;
-              } else {
-                L1: {
-                  if (((mb) this).field_Y < -1) {
+            ((mb) this).field_Y = param2;
+            if (param0 == null) {
+              break L0;
+            } else {
+              L1: {
+                if (((mb) this).field_Y < -1) {
+                  break L1;
+                } else {
+                  if (((mb) this).field_W.length <= ((mb) this).field_Y) {
                     break L1;
                   } else {
-                    if (((mb) this).field_W.length <= ((mb) this).field_Y) {
-                      break L1;
-                    } else {
-                      return;
-                    }
+                    return;
                   }
                 }
-                throw new IllegalStateException();
               }
-            } else {
-              return;
+              throw new IllegalStateException();
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -310,7 +303,7 @@ final class mb extends mh {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 10 + 44 + param2 + 41);
         }
     }
 
@@ -364,7 +357,8 @@ final class mb extends mh {
                     if (null == param2.field_a.peekEvent()) {
                       break L2;
                     } else {
-                      ao.a(1L, 1);
+                      int discarded$1 = 1;
+                      ao.a(1L);
                       var3_int++;
                       continue L1;
                     }

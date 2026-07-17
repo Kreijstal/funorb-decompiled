@@ -42,7 +42,7 @@ class uh {
         lq var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_o) {
             break L0;
           } else {
@@ -52,7 +52,7 @@ class uh {
         }
         L1: {
           dv.a(param0, 0, var3);
-          ((uh) this).field_u = ((uh) this).field_u - 256;
+          ((uh) this).field_u = ((uh) this).field_u - param1;
           if (((uh) this).field_c == null) {
             break L1;
           } else {
@@ -219,7 +219,7 @@ class uh {
           if (((uh) this).field_c == null) {
             break L17;
           } else {
-            ((uh) this).field_c.a(param0, 0, 256);
+            ((uh) this).field_c.a(param0, 0, param1);
             break L17;
           }
         }
@@ -227,35 +227,9 @@ class uh {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_i = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_o = stackIn_7_0 != 0;
-              field_h = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_i = 22050;
+        field_o = true;
+        field_h = 10;
     }
 
     final synchronized void a(lq param0) {
@@ -587,12 +561,12 @@ class uh {
     }
 
     private final void a(int param0) {
-        ((uh) this).field_u = ((uh) this).field_u - 256;
+        ((uh) this).field_u = ((uh) this).field_u - param0;
         if (((uh) this).field_u < 0) {
             ((uh) this).field_u = 0;
         }
         if (((uh) this).field_c != null) {
-            ((uh) this).field_c.a(256);
+            ((uh) this).field_c.a(param0);
             return;
         }
     }

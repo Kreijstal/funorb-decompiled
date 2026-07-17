@@ -19,7 +19,7 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -36,12 +36,12 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         String var7 = null;
-        if (~gk.field_d != param4) {
+        if (gk.field_d != 2) {
             var7 = ama.field_k;
         } else {
             var7 = oka.field_t;
         }
-        jna.a(param1, param2, -1, param3, var7, param5, param6, param0);
+        jna.a(param1, param2, -1, param3, var7, 180, param6, 320);
     }
 
     final void a(int param0, ht param1) {
@@ -56,7 +56,7 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
     kg() {
     }
 
-    final static void a(vr param0, int param1) {
+    final static void a(vr param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -92,35 +92,31 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
             ld.field_o = ni.a((byte) 41, var10);
             bd.field_l = new int[var3][];
             gaa.field_i = new ma[var3];
-            if (param1 >= 110) {
-              var4 = 0;
-              L1: while (true) {
-                if (var4 >= var3) {
-                  var10.i((byte) -86);
-                  var9 = 0;
-                  var4 = var9;
-                  L2: while (true) {
-                    if (var3 <= var9) {
-                      break L0;
-                    } else {
-                      var5 = gaa.field_i[var9];
-                      var5.a(0, 6, 6, 6, 1);
-                      var5.b(117);
-                      var6 = new int[]{var5.field_u + var5.field_A >> 1, var5.field_G - -var5.field_B >> 1, var5.field_q + var5.field_I >> 1};
-                      bd.field_l[var9] = var6;
-                      var5.a(-var6[2], 0, -var6[1], -var6[0]);
-                      var9++;
-                      continue L2;
-                    }
+            var4 = 0;
+            L1: while (true) {
+              if (var4 >= var3) {
+                var10.i((byte) -86);
+                var9 = 0;
+                var4 = var9;
+                L2: while (true) {
+                  if (var3 <= var9) {
+                    break L0;
+                  } else {
+                    var5 = gaa.field_i[var9];
+                    var5.a(0, 6, 6, 6, 1);
+                    var5.b(117);
+                    var6 = new int[]{var5.field_u + var5.field_A >> 1, var5.field_G - -var5.field_B >> 1, var5.field_q + var5.field_I >> 1};
+                    bd.field_l[var9] = var6;
+                    var5.a(-var6[2], 0, -var6[1], -var6[0]);
+                    var9++;
+                    continue L2;
                   }
-                } else {
-                  gaa.field_i[var4] = sa.a(false, var8);
-                  var4++;
-                  continue L1;
                 }
+              } else {
+                gaa.field_i[var4] = sa.a(false, var8);
+                var4++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -151,7 +147,7 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 112 + 41);
         }
     }
 

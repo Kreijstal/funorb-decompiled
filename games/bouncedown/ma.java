@@ -29,9 +29,6 @@ abstract class ma extends ug {
 
     private final void a(int param0, boolean param1, int param2, int param3, int param4) {
         int var6 = ((ma) this).field_t << 3;
-        if (!param1) {
-            ((ma) this).a(-84, -19, 80, 103, -64, 69);
-        }
         param2 = (param2 << 4) + (var6 & 15);
         int var7 = ((ma) this).field_o << 3;
         param3 = (param3 << 4) - -(15 & var7);

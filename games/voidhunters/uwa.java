@@ -12,7 +12,7 @@ final class uwa {
     int field_a;
     anb field_e;
 
-    final static phb[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static phb[] a(int param0, int param1, int param2, int param3, int param4) {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -90,7 +90,7 @@ final class uwa {
         }
     }
 
-    final static int a(int param0, faa param1, byte param2) {
+    final static int a(int param0, faa param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;

@@ -82,11 +82,8 @@ final class ma {
         return stackIn_16_0 != 0;
     }
 
-    final static void a(boolean param0, int param1) {
-        ba.a(false, param0, param1 ^ 2);
-        if (param1 != 0) {
-            boolean discarded$0 = ma.a(-10);
-        }
+    final static void a(boolean param0) {
+        ba.a(false, param0, 2);
     }
 
     final boolean c(int param0) {
@@ -274,7 +271,7 @@ final class ma {
         return (byte) var2;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         int var1 = 110;
         field_c = null;

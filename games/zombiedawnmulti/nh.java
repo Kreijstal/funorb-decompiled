@@ -45,7 +45,7 @@ final class nh extends br {
               }
             }
             L2: {
-              if (var2_int == param0) {
+              if (var2_int == 2) {
                 param1 = "<img=1>" + param1;
                 break L2;
               } else {
@@ -61,7 +61,7 @@ final class nh extends br {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("nh.A(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("nh.A(").append(2).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -89,11 +89,11 @@ final class nh extends br {
         return stackIn_6_0;
     }
 
-    final static boolean c(byte param0) {
+    final static boolean c() {
         return ab.field_k;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_i = null;
         field_g = null;

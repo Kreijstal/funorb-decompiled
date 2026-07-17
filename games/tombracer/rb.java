@@ -10,7 +10,7 @@ final class rb extends nv {
     static jea[] field_p;
     static long field_r;
 
-    final static tn a(cn param0, int param1, int param2) {
+    final static tn a(cn param0, int param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -78,7 +78,8 @@ final class rb extends nv {
     }
 
     final void k(int param0) {
-        this.j((byte) 79);
+        int discarded$0 = 79;
+        this.j();
         ((rb) this).field_n.a((byte) -14, ((rb) this).field_s);
         if (param0 != 5418) {
             ((rb) this).c(false);
@@ -123,7 +124,7 @@ final class rb extends nv {
         }
     }
 
-    private final void j(byte param0) {
+    private final void j() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -219,6 +220,7 @@ final class rb extends nv {
 
     private static void $cfr$clinit() {
         field_q = "Played";
-        field_o = fqa.e(true);
+        int discarded$0 = 1;
+        field_o = fqa.e();
     }
 }

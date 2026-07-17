@@ -37,24 +37,21 @@ final class vc {
         i.field_a.field_p = 0;
     }
 
-    final static void a(br param0, br param1, boolean param2) {
+    final static void a(br param0, br param1) {
         try {
             if (param1.field_b != null) {
                 param1.a(true);
-            }
-            if (!param2) {
-                vc.a((byte) -38);
             }
             param1.field_b = param0.field_b;
             param1.field_d = param0;
             param1.field_b.field_d = param1;
             param1.field_d.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "vc.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "vc.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ud.field_V[92] = 74;
         ud.field_V[44] = 71;
         ud.field_V[46] = 72;
@@ -63,26 +60,13 @@ final class vc {
         ud.field_V[61] = 27;
         ud.field_V[91] = 42;
         ud.field_V[192] = 28;
-        if (param0 < 41) {
-          field_h = null;
-          ud.field_V[222] = 58;
-          ud.field_V[520] = 59;
-          ud.field_V[59] = 57;
-          ud.field_V[47] = 73;
-          return;
-        } else {
-          ud.field_V[222] = 58;
-          ud.field_V[520] = 59;
-          ud.field_V[59] = 57;
-          ud.field_V[47] = 73;
-          return;
-        }
+        ud.field_V[222] = 58;
+        ud.field_V[520] = 59;
+        ud.field_V[59] = 57;
+        ud.field_V[47] = 73;
     }
 
     final static boolean a(int param0) {
-        if (param0 != 4996418) {
-            return true;
-        }
         if (gi.field_i == null) {
             return false;
         }

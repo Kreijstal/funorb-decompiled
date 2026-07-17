@@ -44,7 +44,8 @@ final class ec extends mg {
         try {
           L0: {
             var5 = (CharSequence) (Object) param1;
-            var3 = sn.a(var5, 0);
+            int discarded$4 = 0;
+            var3 = sn.a(var5);
             if (var3 != null) {
               stackOut_2_0 = (String) var3;
               stackIn_3_0 = stackOut_2_0;
@@ -54,7 +55,7 @@ final class ec extends mg {
                 if (param0 <= -76) {
                   break L1;
                 } else {
-                  int discarded$2 = ec.a(true, 49, -104);
+                  int discarded$5 = ec.a(true, 49, -104);
                   break L1;
                 }
               }
@@ -202,7 +203,7 @@ final class ec extends mg {
             var2 = new tf(param1.a((byte) 24, "", "final_frame.jpg"), (java.awt.Component) (Object) field_u);
             var3 = var2.field_F;
             var4 = var2.field_E;
-            ti.a(param0);
+            ti.a(false);
             th.field_b = new tf(var3, 3 * var4 / 4);
             th.field_b.c();
             var2.f(0, 0);
@@ -210,13 +211,14 @@ final class ec extends mg {
             in.field_s.c();
             var2.f(0, -th.field_b.field_E);
             in.field_s.field_y = th.field_b.field_E;
-            ia.a((byte) 92);
+            int discarded$0 = 92;
+            ia.a();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ec.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ec.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_q = null;
         field_n = null;
         field_u = null;

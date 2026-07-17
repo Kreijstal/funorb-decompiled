@@ -146,7 +146,7 @@ final class cg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         int var1 = 117;
         field_g = null;

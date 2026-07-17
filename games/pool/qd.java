@@ -16,40 +16,36 @@ final class qd {
     static of field_b;
 
     final static boolean a(int param0, char param1) {
-        int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        if (param0 == 0) {
-          L0: {
-            L1: {
-              if (param1 == 160) {
+        int stackIn_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          L1: {
+            if (param1 == 160) {
+              break L1;
+            } else {
+              if (param1 == 32) {
                 break L1;
               } else {
-                if (param1 == 32) {
+                if (param1 == 95) {
                   break L1;
                 } else {
-                  if (param1 == 95) {
-                    break L1;
+                  if (param1 != 45) {
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    break L0;
                   } else {
-                    if (param1 != 45) {
-                      stackOut_8_0 = 0;
-                      stackIn_9_0 = stackOut_8_0;
-                      break L0;
-                    } else {
-                      break L1;
-                    }
+                    break L1;
                   }
                 }
               }
             }
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            break L0;
           }
-          return stackIn_9_0 != 0;
-        } else {
-          return false;
+          stackOut_5_0 = 1;
+          stackIn_7_0 = stackOut_5_0;
+          break L0;
         }
+        return stackIn_7_0 != 0;
     }
 
     final up a(boolean param0, np param1, int param2, byte param3, np param4) {
@@ -238,7 +234,7 @@ final class qd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_h = null;
         int var1 = 0;

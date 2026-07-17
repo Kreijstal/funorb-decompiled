@@ -78,7 +78,7 @@ final class pma extends rqa {
         return stackIn_4_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         int var1 = 0;
         field_p = null;
         field_q = null;

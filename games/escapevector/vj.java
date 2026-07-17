@@ -7,7 +7,7 @@ abstract class vj {
     static volatile int field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
     }

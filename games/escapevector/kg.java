@@ -56,7 +56,7 @@ final class kg {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_a = null;
         int var1 = 1;
         field_b = null;

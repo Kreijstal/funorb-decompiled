@@ -10,21 +10,18 @@ final class di implements Iterator {
     private ug field_d;
     private wh field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
 
     final static void a(int param0, int param1, int param2, oh param3) {
         cf.field_g = param3;
-        gh.field_H = param0;
-        if (param1 != 0) {
-            return;
-        }
+        gh.field_H = 0;
         try {
-            td.field_a = param2;
+            td.field_a = 0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "di.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "di.B(" + 0 + 44 + 0 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

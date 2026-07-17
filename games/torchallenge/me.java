@@ -11,7 +11,7 @@ final class me implements j {
     private eg field_c;
     private int field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_d = null;
@@ -23,30 +23,37 @@ final class me implements j {
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
-              me.a(false);
-              if (cf.field_d == null) {
+              if (param0) {
                 break L0;
               } else {
+                me.a(false);
+                break L0;
+              }
+            }
+            L1: {
+              if (cf.field_d == null) {
+                break L1;
+              } else {
                 try {
-                  L1: {
+                  L2: {
                     cf.field_d.a(0L, 0);
                     cf.field_d.a(-4573, id.field_b.field_q, id.field_b.field_m, 24);
                     decompiledRegionSelector0 = 0;
-                    break L1;
+                    break L2;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
+                  L3: {
                     var1 = (Exception) (Object) decompiledCaughtException;
                     decompiledRegionSelector0 = 1;
-                    break L2;
+                    break L3;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   id.field_b.field_q = id.field_b.field_q + 24;
                   return;
                 } else {
-                  break L0;
+                  break L1;
                 }
               }
             }

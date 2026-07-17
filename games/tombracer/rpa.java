@@ -42,7 +42,7 @@ final class rpa extends qe {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_c = null;
         field_f = null;
@@ -271,7 +271,7 @@ final class rpa extends qe {
         }
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2) {
+    final static void a(boolean param0, boolean param1) {
         if (!param1) {
             return;
         }
@@ -313,14 +313,7 @@ final class rpa extends qe {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
-        if (!param1) {
-          field_g = null;
-          tga.field_a.a(param2, (byte) -104, param0, jg.a(param3, (byte) -79, param4), param5);
-          return;
-        } else {
-          tga.field_a.a(param2, (byte) -104, param0, jg.a(param3, (byte) -79, param4), param5);
-          return;
-        }
+        tga.field_a.a(param2, (byte) -104, 3, jg.a(192, (byte) -79, param4), param5);
     }
 
     final void a(boolean param0) {

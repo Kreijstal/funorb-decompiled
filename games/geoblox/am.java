@@ -47,7 +47,7 @@ final class am {
         }
     }
 
-    final static rh a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
+    final static rh a(int param0, int param1, boolean param2) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -106,7 +106,7 @@ final class am {
                       break L5;
                     }
                   }
-                  stackOut_14_0 = new rh((nh) (Object) var8, param4, param3);
+                  stackOut_14_0 = new rh((nh) (Object) var8, true, 1);
                   stackIn_15_0 = stackOut_14_0;
                   break L0;
                 } else {

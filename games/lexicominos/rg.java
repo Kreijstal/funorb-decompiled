@@ -21,7 +21,7 @@ final class rg {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -41,13 +41,13 @@ final class rg {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_a = null;
         field_c = null;
         field_d = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -79,7 +79,7 @@ final class rg {
         var19 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            ae.field_M = new int[]{param0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+            ae.field_M = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
             var1_int = ae.field_J.length;
             var23 = new int[var1_int];
             var22 = var23;
@@ -136,7 +136,8 @@ final class rg {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            da.a(oj.field_l, true, ae.field_M, false, false, var17, (byte) -58);
+                            int discarded$1 = -58;
+                            da.a(oj.field_l, true, ae.field_M, false, false, var17);
                             ff.a(var13, var7, var8, var12, var14, var9, (byte) -116, var17);
                             var15++;
                             continue L3;
@@ -182,7 +183,7 @@ final class rg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var1, "rg.A(" + param0 + 41);
+          throw ld.a((Throwable) (Object) var1, "rg.A(" + 0 + 41);
         }
     }
 

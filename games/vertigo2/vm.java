@@ -6,7 +6,7 @@ final class vm {
     static int field_c;
     static int[] field_a;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) kb.field_a);
@@ -19,19 +19,15 @@ final class vm {
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (!pe.field_r) {
           if (pm.field_a) {
-            return cf.a(31077, param0, param3);
+            return cf.a(31077, 13, 15);
           } else {
-            if (mp.a(param3, param0, param2 ^ 1899)) {
+            if (mp.a(15, 13, 19297)) {
               return true;
             } else {
-              if (param2 == 19466) {
-                if (hj.field_b) {
-                  return false;
-                } else {
-                  return gf.a(param0, param1, 69);
-                }
+              if (hj.field_b) {
+                return false;
               } else {
-                return true;
+                return gf.a(13, 12, 69);
               }
             }
           }
@@ -40,12 +36,7 @@ final class vm {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -586) {
-            field_b = 106;
-            field_a = null;
-            return;
-        }
+    public static void a() {
         field_a = null;
     }
 

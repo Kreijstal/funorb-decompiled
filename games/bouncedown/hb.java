@@ -15,7 +15,7 @@ final class hb extends ak {
     static volatile int field_B;
     private int field_G;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_C = null;
         field_F = null;
     }
@@ -513,7 +513,7 @@ final class hb extends ak {
         }
     }
 
-    final static void j(int param0) {
+    final static void j() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -554,7 +554,8 @@ final class hb extends ak {
                 if (var6 <= var7) {
                   var15 = (ld) (Object) ne.field_r.a((byte) -86);
                   if (var15 == null) {
-                    kc.a((byte) 18);
+                    int discarded$4 = 18;
+                    kc.a();
                     return;
                   } else {
                     var15.field_g = true;
@@ -576,18 +577,21 @@ final class hb extends ak {
                   var11.c(2);
                   return;
                 } else {
-                  kc.a((byte) 18);
+                  int discarded$5 = 18;
+                  kc.a();
                   return;
                 }
               } else {
                 if (var2 != 2) {
                   ti.a((Throwable) null, (byte) 100, "A1: " + la.a(-106));
-                  kc.a((byte) 18);
+                  int discarded$6 = 18;
+                  kc.a();
                   return;
                 } else {
                   var13 = (ld) (Object) ne.field_r.a((byte) -118);
                   if (var13 == null) {
-                    kc.a((byte) 18);
+                    int discarded$7 = 18;
+                    kc.a();
                     return;
                   } else {
                     var13.field_i = eh.a(-117);
@@ -633,8 +637,9 @@ final class hb extends ak {
               try {
                 L0: {
                   var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                  param1.getAppletContext().showDocument(ag.a(param1, var2, false), "_top");
-                  var3 = -43 % ((param0 - -73) / 44);
+                  int discarded$2 = 0;
+                  param1.getAppletContext().showDocument(ag.a(param1, var2), "_top");
+                  var3 = 0;
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -649,7 +654,7 @@ final class hb extends ak {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_4_0 = (RuntimeException) var2_ref2;
-                stackOut_4_1 = new StringBuilder().append("hb.C(").append(param0).append(44);
+                stackOut_4_1 = new StringBuilder().append("hb.C(").append(-117).append(44);
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;

@@ -41,7 +41,8 @@ final class mp extends vo {
         try {
           L0: {
             var5 = (CharSequence) (Object) param0;
-            if (!qf.a(var5, 0)) {
+            int discarded$11 = 0;
+            if (!qf.a(var5)) {
               stackOut_2_0 = bt.field_a;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -51,7 +52,7 @@ final class mp extends vo {
                   break L1;
                 } else {
                   var4 = null;
-                  String discarded$2 = ((mp) this).a((String) null, (byte) -114);
+                  String discarded$12 = ((mp) this).a((String) null, (byte) -114);
                   break L1;
                 }
               }

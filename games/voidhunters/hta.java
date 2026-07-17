@@ -115,7 +115,8 @@ final class hta extends rqa {
         var7 = VoidHunters.field_G;
         try {
           L0: {
-            var16 = ps.a(param0, 1);
+            int discarded$2 = 1;
+            var16 = ps.a(param0);
             var14 = var16;
             var12 = var14;
             var10 = var12;
@@ -127,7 +128,7 @@ final class hta extends rqa {
                   break L1;
                 } else {
                   var8 = null;
-                  int[] discarded$1 = hta.a((String) null, false, false);
+                  int[] discarded$3 = hta.a((String) null, false, false);
                   break L1;
                 }
               }

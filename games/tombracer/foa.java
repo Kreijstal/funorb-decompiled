@@ -24,11 +24,11 @@ final class foa implements bo {
         field_a = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return jf.field_r;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean a(int param0, int param1) {
         return 0 != (2048 & param0);
     }
 
@@ -115,14 +115,10 @@ final class foa implements bo {
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9) {
-        if (param5 == 75) {
-          if (!io.a(param4, param3, (byte) -122, param7, param1, param2, param0, param6, param9)) {
-            return 0;
-          } else {
-            return jqa.a(-(param7 / 2) + param2, 1, -(param0 / 2) + param3, param3 + (1 + param0) / 2, param2 + (param7 + 1) / 2, param8, param1 - param6 / 2, (param4 - -1) / 2 + param9, (1 + param6) / 2 + param1, param9 + -(param4 / 2));
-          }
+        if (!io.a(param4, param3, (byte) -122, param7, param1, param2, param0, param6, param9)) {
+          return 0;
         } else {
-          return 73;
+          return jqa.a(-(param7 / 2) + param2, 1, -(param0 / 2) + param3, param3 + (1 + param0) / 2, param2 + (param7 + 1) / 2, 16, param1 - param6 / 2, (param4 - -1) / 2 + param9, (1 + param6) / 2 + param1, param9 + -(param4 / 2));
         }
     }
 

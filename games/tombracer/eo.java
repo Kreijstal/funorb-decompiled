@@ -258,9 +258,11 @@ abstract class eo extends ha {
             var2 = ((eo) this).field_r;
             ((eo) this).field_r = nr.field_d;
             if (var2.a(-101)) {
-                this.v((byte) 94);
+                int discarded$0 = 94;
+                this.v();
             }
-            this.P(0);
+            int discarded$1 = 0;
+            this.P();
             ((eo) this).field_T = ((eo) this).field_Lb;
             this.l((byte) 26);
             ((eo) this).field_rb = ((eo) this).field_rb & -25;
@@ -447,7 +449,8 @@ abstract class eo extends ha {
                 var2 = (java.awt.Canvas) var1_ref.nextElement();
                 ((eo) this).a(((eo) this).field_oc.get((Object) (Object) var2), false, var2);
             }
-            rpa.a(true, false, true);
+            int discarded$0 = 1;
+            rpa.a(true, false);
             ((eo) this).field_P.release();
             ((eo) this).field_Fc = true;
         }
@@ -526,7 +529,7 @@ abstract class eo extends ha {
     }
 
     final static boolean d(int param0, int param1) {
-        int var2 = 74 / ((-6 - param0) / 32);
+        int var2 = -37;
         return param1 >= 2 ? true : false;
     }
 
@@ -536,9 +539,11 @@ abstract class eo extends ha {
             var2_ref_mla = ((eo) this).field_r;
             ((eo) this).field_r = cha.field_d;
             if (!(var2_ref_mla.a(-114))) {
-                this.v((byte) 94);
+                int discarded$0 = 94;
+                this.v();
             }
-            this.t((byte) 83);
+            int discarded$1 = 83;
+            this.t();
             ((eo) this).field_T = ((eo) this).field_Ib;
             this.l((byte) 26);
             ((eo) this).field_rb = ((eo) this).field_rb & -8;
@@ -597,7 +602,8 @@ abstract class eo extends ha {
         if (param0 != -1662) {
             ((eo) this).field_Wb = true;
         }
-        this.o(16);
+        int discarded$0 = 16;
+        this.o();
     }
 
     final nh a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
@@ -668,7 +674,8 @@ abstract class eo extends ha {
             var2 = ((eo) this).field_r;
             ((eo) this).field_r = tb.field_p;
             if (!(!var2.a(-65))) {
-                this.v((byte) 94);
+                int discarded$0 = 94;
+                this.v();
             }
             ((eo) this).field_rb = ((eo) this).field_rb & -32;
             ((eo) this).field_T = ((eo) this).field_vc;
@@ -679,7 +686,7 @@ abstract class eo extends ha {
         ((eo) this).a(param0, param1, param0 + param2, param1, param3, param4);
     }
 
-    private final void o(int param0) {
+    private final void o() {
         float var2 = 0.0f;
         if (nr.field_d == ((eo) this).field_r) {
             var2 = ((eo) this).c((byte) -61);
@@ -707,7 +714,7 @@ abstract class eo extends ha {
         return ((eo) this).field_vb;
     }
 
-    public static void x(byte param0) {
+    public static void x() {
         field_w = null;
     }
 
@@ -715,7 +722,7 @@ abstract class eo extends ha {
 
     abstract void v(int param0);
 
-    private final void t(byte param0) {
+    private final void t() {
         float[] var2 = null;
         float var3 = 0.0f;
         float var4 = 0.0f;
@@ -755,7 +762,8 @@ abstract class eo extends ha {
                   var2[2] = 0.0f;
                   var2[8] = 0.0f;
                   var2[13] = (var8 + var5) / (var8 - var5);
-                  this.L(10);
+                  int discarded$2 = 10;
+                  this.L();
                   ((eo) this).field_ab = true;
                   break L0;
                 } else {
@@ -779,7 +787,8 @@ abstract class eo extends ha {
             var9[8] = 0.0f;
             var9[13] = 0.0f;
             var9[7] = 0.0f;
-            this.L(10);
+            int discarded$3 = 10;
+            this.L();
             ((eo) this).field_ab = true;
             break L0;
           } else {
@@ -788,12 +797,8 @@ abstract class eo extends ha {
         }
     }
 
-    private final void L(int param0) {
+    private final void L() {
         ((eo) this).field_Cb = (float)((eo) this).field_k;
-        if (param0 != 10) {
-            Object var3 = null;
-            ((eo) this).da(-108, 67, -5, (int[]) null);
-        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -892,7 +897,8 @@ abstract class eo extends ha {
 
     final void s(int param0) {
         if (((eo) this).field_rb != 8) {
-            this.A((byte) -74);
+            int discarded$0 = -74;
+            this.A();
             ((eo) this).b(true, -91);
             ((eo) this).f(0, true);
             ((eo) this).b(true, (byte) 81);
@@ -910,7 +916,7 @@ abstract class eo extends ha {
 
     abstract void a(Object param0, boolean param1, java.awt.Canvas param2);
 
-    private final void P(int param0) {
+    private final void P() {
         float[] var2 = null;
         float[] var3 = null;
         L0: {
@@ -968,14 +974,15 @@ abstract class eo extends ha {
         }
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, boolean param4, int param5) {
+    private final void a(int param0, int param1, int param2, boolean param3, boolean param4) {
         int var8 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         L0: {
           var8 = TombRacer.field_G ? 1 : 0;
-          param4 = param4 & this.p(-112);
+          int discarded$1 = -112;
+          param4 = param4 & this.p();
           if (param4) {
             break L0;
           } else {
@@ -1216,13 +1223,14 @@ abstract class eo extends ha {
         return ((eo) this).field_t.a(param1, param2);
     }
 
-    private final void A(byte param0) {
+    private final void A() {
         mla var2 = null;
         if (coa.field_s != ((eo) this).field_r) {
             var2 = ((eo) this).field_r;
             ((eo) this).field_r = coa.field_s;
             if (!var2.a(-109)) {
-                this.v((byte) 94);
+                int discarded$0 = 94;
+                this.v();
             }
             this.x(7);
             ((eo) this).field_T = ((eo) this).field_R;
@@ -1241,7 +1249,7 @@ abstract class eo extends ha {
         }
     }
 
-    final static roa D(byte param0) {
+    final static roa D() {
         roa var1 = new roa();
         var1.field_f = new up(0, 5);
         var1.field_f.b(1, 11);
@@ -1362,13 +1370,14 @@ abstract class eo extends ha {
     final void i(byte param0) {
         ((eo) this).field_q.a();
         ((eo) this).field_gb = true;
-        this.o(16);
+        int discarded$0 = 16;
+        this.o();
         if (param0 < 97) {
-            eja discarded$0 = ((eo) this).a(36, false);
+            eja discarded$1 = ((eo) this).a(36, false);
         }
     }
 
-    private final void B(int param0) {
+    private final void B() {
         if (!(((eo) this).field_pb == null)) {
             ((eo) this).field_pb.a(true);
         }
@@ -1386,7 +1395,8 @@ abstract class eo extends ha {
             return;
         }
         ((eo) this).field_ab = false;
-        this.t((byte) 83);
+        int discarded$0 = 83;
+        this.t();
         if (!(((eo) this).field_r != cha.field_d)) {
             this.l((byte) 26);
         }
@@ -1492,7 +1502,8 @@ abstract class eo extends ha {
               if (!((eo) this).field_r.a(-38)) {
                 break L1;
               } else {
-                this.v((byte) 94);
+                int discarded$2 = 94;
+                this.v();
                 break L1;
               }
             }
@@ -1806,7 +1817,8 @@ abstract class eo extends ha {
             }
           }
           L8: {
-            this.a(var9, var7, var8, param1, param2, -25);
+            int discarded$1 = -25;
+            this.a(var9, var7, var8, param1, param2);
             if (null == ((eo) this).field_pb) {
               ((eo) this).a(true, (iva) var5);
               ((eo) this).a((byte) -37, var6);
@@ -1918,7 +1930,8 @@ abstract class eo extends ha {
             ((eo) this).field_q.a((gda) (Object) param0, 1);
             ((eo) this).field_gb = false;
             int var3_int = 127 % ((param1 - 23) / 33);
-            this.o(16);
+            int discarded$0 = 16;
+            this.o();
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "eo.IG(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -1973,7 +1986,8 @@ abstract class eo extends ha {
           ((eo) this).c(param5, 1);
           ((eo) this).i((byte) 106);
           ((eo) this).b(1, false);
-          this.C((byte) -70);
+          int discarded$1 = -70;
+          this.C();
           ((eo) this).b(1, true);
           ((eo) this).a(0, false, ej.field_c);
           ((eo) this).a(ej.field_c, 0, -77);
@@ -2147,7 +2161,7 @@ abstract class eo extends ha {
 
     abstract void b(byte param0);
 
-    private final void C(byte param0) {
+    private final void C() {
         ((eo) this).a(-126, 0, ((eo) this).field_cb);
         ((eo) this).a(((eo) this).field_mb, -32);
         ((eo) this).a(1, io.field_c, 0, 0);
@@ -2236,7 +2250,8 @@ abstract class eo extends ha {
         if (od.field_h != ((eo) this).field_v[((eo) this).field_Cc]) {
             ((eo) this).field_v[((eo) this).field_Cc] = od.field_h;
             ((eo) this).field_hc[((eo) this).field_Cc].a();
-            this.u(0);
+            int discarded$0 = 0;
+            this.u();
         }
         int var2 = -62 % ((param0 - 28) / 46);
     }
@@ -2261,7 +2276,8 @@ abstract class eo extends ha {
         ((eo) this).field_oc = var2;
         this.l(param0 ^ 138);
         this.f(true);
-        this.E((byte) 15);
+        int discarded$1 = 15;
+        this.E();
         ((eo) this).field_kb.a(-120, (eo) this);
     }
 
@@ -2397,7 +2413,8 @@ abstract class eo extends ha {
           ((eo) this).field_J = param1;
           ((eo) this).field_Ac = param2;
           ((eo) this).field_g = param0;
-          this.B(-7840);
+          int discarded$2 = -7840;
+          this.B();
           ((eo) this).D(2);
           break L0;
         }
@@ -2405,7 +2422,7 @@ abstract class eo extends ha {
 
     abstract void a(eja param0, int param1, int param2, int param3, iw param4, int param5, int param6);
 
-    private final boolean p(int param0) {
+    private final boolean p() {
         return ((eo) this).field_sb[3].c(1185);
     }
 
@@ -2413,7 +2430,8 @@ abstract class eo extends ha {
         if (param0 != -29040) {
             ((eo) this).U(-18, -45, 101, 121, 112);
         }
-        this.m((byte) 97);
+        int discarded$0 = 97;
+        this.m();
     }
 
     abstract void d(int param0);
@@ -2438,67 +2456,59 @@ abstract class eo extends ha {
     }
 
     private final void a(iw param0, byte param1, int param2) {
-        RuntimeException runtimeException = null;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              ((eo) this).a(-128, 0, ((eo) this).field_xb);
-              ((eo) this).a(((eo) this).field_ub, -32);
-              ((eo) this).a(param2, param0, 0, 0);
-              if (param1 == -32) {
-                break L1;
-              } else {
-                this.u(-14);
-                break L1;
-              }
-            }
+            ((eo) this).a(-128, 0, ((eo) this).field_xb);
+            ((eo) this).a(((eo) this).field_ub, -32);
+            ((eo) this).a(param2, param0, 0, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("eo.MA(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("eo.MA(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -32 + 44 + param2 + 41);
         }
     }
 
@@ -2580,7 +2590,8 @@ abstract class eo extends ha {
           ((eo) this).field_k = param1;
           this.k(-19320);
           this.R(0);
-          this.B(-7840);
+          int discarded$2 = -7840;
+          this.B();
           break L0;
         }
     }
@@ -2690,7 +2701,7 @@ abstract class eo extends ha {
 
     abstract void a(fp param0, int param1, int param2, boolean param3, boolean param4);
 
-    private final void E(byte param0) {
+    private final void E() {
         int var2 = 0;
         jaclib.memory.Buffer var3 = null;
         jaclib.memory.Stream var4 = null;
@@ -3108,7 +3119,8 @@ abstract class eo extends ha {
                 ((eo) this).field_Zb = false;
             }
             ((eo) this).field_v[((eo) this).field_Cc] = param0;
-            this.u(0);
+            int discarded$0 = 0;
+            this.u();
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "eo.SG(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -3133,7 +3145,8 @@ abstract class eo extends ha {
         ((eo) this).a(0, false, pea.field_c);
         ((eo) this).i((byte) 104);
         ((eo) this).b(1, false);
-        this.C((byte) -70);
+        int discarded$0 = -70;
+        this.C();
         ((eo) this).b(1, true);
         ((eo) this).a(0, false, ej.field_c);
         ((eo) this).a(ej.field_c, 0, -14);
@@ -3265,7 +3278,7 @@ abstract class eo extends ha {
         this.r((byte) 80);
     }
 
-    private final void m(byte param0) {
+    private final void m() {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         ((eo) this).r(0);
@@ -3295,7 +3308,7 @@ abstract class eo extends ha {
         ((eo) this).h(false);
     }
 
-    final static void q(int param0) {
+    final static void q() {
         jsa.a(false, 17);
         int var1 = 0;
     }
@@ -3589,7 +3602,8 @@ abstract class eo extends ha {
         if (!(this.a((float)param1, (float)param2, (float)param3, (float)param4, (float)param5, (float)param0, (byte) -40))) {
             return;
         }
-        this.A((byte) -74);
+        int discarded$0 = -74;
+        this.A();
         ((eo) this).b(false, -68);
         ((eo) this).d(0, false);
         ((eo) this).f(0, false);
@@ -3603,7 +3617,8 @@ abstract class eo extends ha {
         ((eo) this).a(0, false, pea.field_c);
         ((eo) this).i((byte) 119);
         ((eo) this).b(1, false);
-        this.C((byte) -70);
+        int discarded$1 = -70;
+        this.C();
         ((eo) this).b(1, true);
         ((eo) this).a(0, false, ej.field_c);
         ((eo) this).a(ej.field_c, 0, -85);
@@ -3739,7 +3754,7 @@ abstract class eo extends ha {
 
     abstract void h(byte param0);
 
-    private final void v(byte param0) {
+    private final void v() {
         ((eo) this).field_p = false;
         if (!(null == ((eo) this).field_pb)) {
             ((eo) this).field_pb.b(true);
@@ -3758,8 +3773,8 @@ abstract class eo extends ha {
 
     abstract gf a(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7);
 
-    private final void u(int param0) {
-        ((eo) this).z(param0);
+    private final void u() {
+        ((eo) this).z(0);
         if (!(null == ((eo) this).field_pb)) {
             ((eo) this).field_pb.c(true);
         }

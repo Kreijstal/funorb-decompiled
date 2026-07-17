@@ -114,7 +114,7 @@ final class na implements Runnable {
             var2_int = param1.length;
             var3 = new byte[var2_int];
             fk.a(param1, 0, var3, 0, var2_int);
-            var4 = -87 / ((66 - param0) / 49);
+            var4 = -87;
             stackOut_0_0 = (byte[]) var3;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -124,7 +124,7 @@ final class na implements Runnable {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("na.D(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("na.D(").append(-12).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -247,7 +247,8 @@ final class na implements Runnable {
                 try {
                   L2: {
                     var3 = (String) fd.a(param1, "getcookies", (byte) 100);
-                    var4 = b.a(var3, ';', true);
+                    int discarded$2 = 1;
+                    var4 = b.a(var3, ';');
                     var5 = 0;
                     L3: while (true) {
                       if (var4.length <= var5) {

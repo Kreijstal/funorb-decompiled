@@ -13,7 +13,7 @@ final class nd {
     private long field_f;
     static String field_a;
 
-    final static void b(byte param0) {
+    final static void b() {
         Object var2 = null;
         wk.a((String) null, -54, "");
     }
@@ -184,13 +184,11 @@ final class nd {
 
     final static void a(boolean param0, String param1) {
         try {
-            wl.a(param1, 10);
-            if (!param0) {
-                field_a = null;
-            }
+            int discarded$0 = 10;
+            wl.a(param1);
             gh.a((byte) -116, nk.field_c, false);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "nd.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "nd.C(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -212,8 +210,8 @@ final class nd {
     }
 
     final static void a(int param0, int param1, int param2) {
-        RuntimeException var3 = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -246,31 +244,27 @@ final class nd {
             var5 = 0;
             var5 = 28 - -((32 - hc.field_S) / 8);
             qg.a(32 + var3_int << 4, 32 + var4 << 4, var5 << 4, 255, qe.field_A);
-            if (param0 == -996593372) {
-              var8 = 0;
-              L3: while (true) {
-                if (var8 >= 10) {
-                  break L0;
-                } else {
-                  var6 = e.b((byte) 57, 2 * var5);
-                  var7 = e.b((byte) 57, 2 * var5);
-                  qg.a(var6 + (-var5 + var3_int + 32) << 4, var7 + -var5 + (32 + var4) << 4, 64, 128, qe.field_A);
-                  var8++;
-                  continue L3;
-                }
+            var8 = 0;
+            L3: while (true) {
+              if (var8 >= 10) {
+                break L0;
+              } else {
+                var6 = e.b((byte) 57, 2 * var5);
+                var7 = e.b((byte) 57, 2 * var5);
+                qg.a(var6 + (-var5 + var3_int + 32) << 4, var7 + -var5 + (32 + var4) << 4, 64, 128, qe.field_A);
+                var8++;
+                continue L3;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var3, "nd.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw oj.a((Throwable) (Object) var3, "nd.B(" + -996593372 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
-    final static vg a(pa param0, byte param1) {
+    final static vg a(pa param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -307,23 +301,35 @@ final class nd {
                 var4 = fl.a(param0, (byte) 116) ? 1 : 0;
                 var5 = new vg();
                 var5.field_d = (short)param0.e(16, 119);
-                var5.field_g = ui.a(param0, -119, var5.field_g, 16);
-                var5.field_t = ui.a(param0, -103, var5.field_t, 16);
-                var5.field_q = ui.a(param0, -101, var5.field_q, 16);
+                int discarded$19 = 16;
+                var5.field_g = ui.a(param0, -119, var5.field_g);
+                int discarded$20 = 16;
+                var5.field_t = ui.a(param0, -103, var5.field_t);
+                int discarded$21 = 16;
+                var5.field_q = ui.a(param0, -101, var5.field_q);
                 var5.field_x = (short)param0.e(16, -39);
-                var5.field_i = ui.a(param0, -95, var5.field_i, 16);
-                var5.field_w = ui.a(param0, -104, var5.field_w, 16);
-                var5.field_F = ui.a(param0, -126, var5.field_F, 16);
+                int discarded$22 = 16;
+                var5.field_i = ui.a(param0, -95, var5.field_i);
+                int discarded$23 = 16;
+                var5.field_w = ui.a(param0, -104, var5.field_w);
+                int discarded$24 = 16;
+                var5.field_F = ui.a(param0, -126, var5.field_F);
                 if (var3 == 0) {
                   break L1;
                 } else {
                   var5.field_c = (short)param0.e(16, 117);
-                  var5.field_L = ui.a(param0, -118, var5.field_L, 16);
-                  var5.field_r = ui.a(param0, -122, var5.field_r, 16);
-                  var5.field_D = ui.a(param0, -121, var5.field_D, 16);
-                  var5.field_f = ui.a(param0, -97, var5.field_f, 16);
-                  var5.field_k = ui.a(param0, -100, var5.field_k, 16);
-                  var5.field_G = ui.a(param0, -104, var5.field_G, 16);
+                  int discarded$25 = 16;
+                  var5.field_L = ui.a(param0, -118, var5.field_L);
+                  int discarded$26 = 16;
+                  var5.field_r = ui.a(param0, -122, var5.field_r);
+                  int discarded$27 = 16;
+                  var5.field_D = ui.a(param0, -121, var5.field_D);
+                  int discarded$28 = 16;
+                  var5.field_f = ui.a(param0, -97, var5.field_f);
+                  int discarded$29 = 16;
+                  var5.field_k = ui.a(param0, -100, var5.field_k);
+                  int discarded$30 = 16;
+                  var5.field_G = ui.a(param0, -104, var5.field_G);
                   break L1;
                 }
               }
@@ -331,12 +337,17 @@ final class nd {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$1 = param0.e(16, -26);
-                  var5.field_I = ui.a(param0, -102, var5.field_I, 16);
-                  var5.field_H = ui.a(param0, -114, var5.field_H, 16);
-                  var5.field_m = ui.a(param0, -111, var5.field_m, 16);
-                  var5.field_n = ui.a(param0, -123, var5.field_n, 16);
-                  var5.field_j = ui.a(param0, -95, var5.field_j, 16);
+                  int discarded$31 = param0.e(16, -26);
+                  int discarded$32 = 16;
+                  var5.field_I = ui.a(param0, -102, var5.field_I);
+                  int discarded$33 = 16;
+                  var5.field_H = ui.a(param0, -114, var5.field_H);
+                  int discarded$34 = 16;
+                  var5.field_m = ui.a(param0, -111, var5.field_m);
+                  int discarded$35 = 16;
+                  var5.field_n = ui.a(param0, -123, var5.field_n);
+                  int discarded$36 = 16;
+                  var5.field_j = ui.a(param0, -95, var5.field_j);
                   break L2;
                 }
               }
@@ -344,7 +355,8 @@ final class nd {
                 if (!fl.a(param0, (byte) 121)) {
                   break L3;
                 } else {
-                  var5.field_M = ui.a(param0, -92, var5.field_M, 16);
+                  int discarded$37 = 16;
+                  var5.field_M = ui.a(param0, -92, var5.field_M);
                   break L3;
                 }
               }

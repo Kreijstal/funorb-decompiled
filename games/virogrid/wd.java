@@ -7,7 +7,7 @@ final class wd {
     static boolean field_a;
     static String field_b;
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var2 = 0;
@@ -191,7 +191,7 @@ final class wd {
                         try {
                             var3 = (String) q.b("getcookies", 6168, param1);
                             var4 = ql.a(var3, (byte) -123, ';');
-                            var5 = param0;
+                            var5 = 0;
                             statePc = 2;
                             continue stateLoop;
                         } catch (Throwable stateCaught_1) {
@@ -308,7 +308,7 @@ final class wd {
                     case 13: {
                         var3_ref2 = (RuntimeException) (Object) caughtException;
                         stackOut_13_0 = (RuntimeException) var3_ref2;
-                        stackOut_13_1 = new StringBuilder().append("wd.C(").append(param0).append(44);
+                        stackOut_13_1 = new StringBuilder().append("wd.C(").append(0).append(44);
                         stackIn_15_0 = stackOut_13_0;
                         stackIn_15_1 = stackOut_13_1;
                         stackIn_14_0 = stackOut_13_0;
@@ -387,7 +387,7 @@ final class wd {
         }
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         int var1 = 0;
         return nf.field_e;
     }

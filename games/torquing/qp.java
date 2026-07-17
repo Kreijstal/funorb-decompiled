@@ -12,7 +12,7 @@ final class qp extends q {
     static String field_o;
     int field_n;
 
-    public static void a(int param0) {
+    public static void a() {
         field_r = null;
         field_o = null;
         int var1 = 26;

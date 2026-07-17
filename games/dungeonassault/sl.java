@@ -7,7 +7,7 @@ final class sl {
     static String field_a;
     static rh field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -18,12 +18,14 @@ final class sl {
             ne.field_c = ah.a(gh.field_c, 200, "", "roman20", uc.field_I);
             la.field_b = ah.a(gh.field_c, 200, "", "roman12", uc.field_I);
             f.field_a = oh.a(uc.field_I, "basic", 11091, "unachieved");
-            int var2_int = -24 % ((param0 - -15) / 54);
+            int var2_int = 0;
             lb.field_o = oh.a(uc.field_I, "basic", 11091, "orbcoin");
-            nj.a(gh.field_c, uc.field_I, -6332);
-            cp.a(0, param1, (byte) -36, 0, qk.field_b, 16777215);
+            int discarded$0 = -6332;
+            nj.a(gh.field_c, uc.field_I);
+            int discarded$1 = 16777215;
+            cp.a(0, param1, (byte) -36, 0, qk.field_b);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "sl.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "sl.C(" + -97 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

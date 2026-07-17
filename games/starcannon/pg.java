@@ -21,163 +21,156 @@ final class pg extends rf {
                 break L0;
               }
             }
-            if (param0) {
-              L1: {
-                if (50000 <= na.field_a) {
-                  ph.a(243, false, 12);
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L1: {
+              if (50000 <= na.field_a) {
+                ph.a(243, false, 12);
+                break L1;
+              } else {
+                break L1;
               }
-              if (100000 > na.field_a) {
+            }
+            if (100000 <= na.field_a) {
+              L2: {
+                ph.a(242, false, 13);
                 if (na.field_a >= 200000) {
                   ph.a(241, false, 14);
-                  return;
+                  break L2;
                 } else {
-                  return;
+                  break L2;
                 }
-              } else {
-                L2: {
-                  ph.a(242, false, 13);
-                  if (na.field_a >= 200000) {
-                    ph.a(241, false, 14);
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                return;
               }
+              return;
             } else {
+              L3: {
+                if (na.field_a >= 200000) {
+                  ph.a(241, false, 14);
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
               return;
             }
           } else {
-            L3: {
+            L4: {
               pg.a(true, (byte) -105);
               if (2 == nf.field_l) {
                 na.field_a = na.field_a << 1;
-                break L3;
+                break L4;
               } else {
-                break L3;
+                break L4;
               }
             }
-            if (param0) {
-              L4: {
-                if (50000 <= na.field_a) {
-                  ph.a(243, false, 12);
-                  break L4;
-                } else {
-                  break L4;
-                }
+            L5: {
+              if (50000 <= na.field_a) {
+                ph.a(243, false, 12);
+                break L5;
+              } else {
+                break L5;
               }
-              if (100000 > na.field_a) {
+            }
+            if (100000 <= na.field_a) {
+              L6: {
+                ph.a(242, false, 13);
                 if (na.field_a >= 200000) {
                   ph.a(241, false, 14);
-                  return;
+                  break L6;
                 } else {
-                  return;
+                  break L6;
                 }
-              } else {
-                L5: {
-                  ph.a(242, false, 13);
-                  if (na.field_a >= 200000) {
-                    ph.a(241, false, 14);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                return;
               }
+              return;
             } else {
+              L7: {
+                if (na.field_a >= 200000) {
+                  ph.a(241, false, 14);
+                  break L7;
+                } else {
+                  break L7;
+                }
+              }
               return;
             }
           }
         } else {
           na.field_a = na.field_a >> 2;
           if (param1 > -39) {
-            L6: {
+            L8: {
               pg.a(true, (byte) -105);
               if (2 == nf.field_l) {
                 na.field_a = na.field_a << 1;
-                break L6;
+                break L8;
               } else {
-                break L6;
+                break L8;
               }
             }
-            L7: {
-              if (param0) {
-                L8: {
-                  if (50000 <= na.field_a) {
-                    ph.a(243, false, 12);
-                    break L8;
-                  } else {
-                    break L8;
-                  }
-                }
-                if (100000 <= na.field_a) {
-                  ph.a(242, false, 13);
-                  if (na.field_a >= 200000) {
-                    ph.a(241, false, 14);
-                    break L7;
-                  } else {
-                    return;
-                  }
+            L9: {
+              if (50000 <= na.field_a) {
+                ph.a(243, false, 12);
+                break L9;
+              } else {
+                break L9;
+              }
+            }
+            if (100000 > na.field_a) {
+              L10: {
+                if (na.field_a >= 200000) {
+                  ph.a(241, false, 14);
+                  break L10;
                 } else {
-                  L9: {
-                    if (na.field_a >= 200000) {
-                      ph.a(241, false, 14);
-                      break L9;
-                    } else {
-                      break L9;
-                    }
-                  }
-                  return;
+                  break L10;
                 }
-              } else {
-                break L7;
               }
+              return;
+            } else {
+              L11: {
+                ph.a(242, false, 13);
+                if (na.field_a >= 200000) {
+                  ph.a(241, false, 14);
+                  break L11;
+                } else {
+                  break L11;
+                }
+              }
+              return;
             }
-            return;
           } else {
-            L10: {
+            L12: {
               if (2 == nf.field_l) {
                 na.field_a = na.field_a << 1;
-                break L10;
+                break L12;
               } else {
-                break L10;
+                break L12;
               }
             }
-            if (param0) {
-              L11: {
-                if (50000 <= na.field_a) {
-                  ph.a(243, false, 12);
-                  break L11;
-                } else {
-                  break L11;
-                }
-              }
-              if (100000 > na.field_a) {
-                if (na.field_a < 200000) {
-                  return;
-                } else {
-                  ph.a(241, false, 14);
-                  return;
-                }
+            L13: {
+              if (50000 <= na.field_a) {
+                ph.a(243, false, 12);
+                break L13;
               } else {
-                L12: {
-                  ph.a(242, false, 13);
-                  if (na.field_a >= 200000) {
-                    ph.a(241, false, 14);
-                    break L12;
-                  } else {
-                    break L12;
-                  }
-                }
-                return;
+                break L13;
               }
+            }
+            if (100000 <= na.field_a) {
+              L14: {
+                ph.a(242, false, 13);
+                if (na.field_a >= 200000) {
+                  ph.a(241, false, 14);
+                  break L14;
+                } else {
+                  break L14;
+                }
+              }
+              return;
             } else {
+              L15: {
+                if (na.field_a >= 200000) {
+                  ph.a(241, false, 14);
+                  break L15;
+                } else {
+                  break L15;
+                }
+              }
               return;
             }
           }

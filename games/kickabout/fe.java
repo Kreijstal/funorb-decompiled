@@ -5,7 +5,7 @@ final class fe {
     private java.awt.DisplayMode field_b;
     private java.awt.GraphicsDevice field_a;
 
-    private final void a(java.awt.Frame param0, int param1) {
+    private final void a(java.awt.Frame param0) {
         ((fe) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
@@ -17,7 +17,8 @@ final class fe {
             }
             ((fe) this).field_b = null;
         }
-        this.a((java.awt.Frame) null, 0);
+        int discarded$0 = 0;
+        this.a((java.awt.Frame) null);
     }
 
     public final int[] listmodes() {
@@ -47,7 +48,8 @@ final class fe {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
-            this.a(param0, 0);
+            int discarded$2 = 0;
+            this.a(param0);
             if (0 != param4) {
               break L0;
             } else {

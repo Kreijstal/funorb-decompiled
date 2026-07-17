@@ -208,7 +208,9 @@ final class e {
             }
             if (param1) {
               L11: {
-                ((e) this).field_u.a((byte) -127, this.a(j.field_c, rb.field_m, -1300), this.a(ec.field_a, rc.field_b, -1300));
+                int discarded$4 = -1300;
+                int discarded$5 = -1300;
+                ((e) this).field_u.a((byte) -127, this.a(j.field_c, rb.field_m), this.a(ec.field_a, rc.field_b));
                 var4 = 0;
                 if (!((e) this).field_u.b(0)) {
                   break L11;
@@ -236,7 +238,8 @@ final class e {
                     if (!jn.e((byte) -100)) {
                       break L13;
                     } else {
-                      var5 = this.a(true);
+                      int discarded$6 = 1;
+                      var5 = this.a();
                       if (var5 != 0) {
                         return var5;
                       } else {
@@ -246,11 +249,12 @@ final class e {
                   }
                 }
               }
-              if (var4 == 0) {
-                return 0;
-              } else {
-                this.b((byte) -36);
+              if (var4 != 0) {
+                int discarded$7 = -36;
+                this.b();
                 return 3;
+              } else {
+                return 0;
               }
             } else {
               return 0;
@@ -263,11 +267,12 @@ final class e {
         }
     }
 
-    private final int a(boolean param0) {
+    private final int a() {
         ((e) this).field_u.c(0);
         if (((e) this).field_u.b(0)) {
             if (0 == ((e) this).field_u.field_f) {
-                this.b((byte) -36);
+                int discarded$0 = -36;
+                this.b();
                 return 3;
             }
             if (((e) this).field_u.field_f == 1) {
@@ -276,9 +281,6 @@ final class e {
         }
         if (pj.field_e == 13) {
             return 1;
-        }
-        if (!param0) {
-            return -53;
         }
         return 0;
     }
@@ -306,18 +308,16 @@ final class e {
         int var12 = HostileSpawn.field_I ? 1 : 0;
         try {
             pf.b(511);
-            if (param4 != 1) {
-                int discarded$0 = this.a(false);
-            }
-            for (var9_int = param2; var9_int < param5; var9_int++) {
+            for (var9_int = 0; var9_int < param5; var9_int++) {
                 si.d(param0, var9_int, param7, var9_int + 1);
                 var10 = var9_int * param1.length / param5;
                 var11 = param1[-1 + (param1.length - var10)];
-                int discarded$1 = param6.a(param3, param0, param2, param7, param5, var11, -1, 1, 1, 0);
+                int discarded$0 = param6.a(param3, param0, 0, param7, param5, var11, -1, 1, 1, 0);
             }
-            eh.b(false);
+            int discarded$1 = 0;
+            eh.b();
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "e.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "e.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 44 + 1 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
         }
     }
 
@@ -411,7 +411,7 @@ final class e {
         }
     }
 
-    private final void c(int param0) {
+    private final void c() {
         pg var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -470,7 +470,7 @@ final class e {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int a(int param0, int param1) {
         if (null == im.field_g) {
             return -1;
         }
@@ -569,10 +569,12 @@ final class e {
             sb.a(var13, param4 + -120);
             param8.a((int)((float)(-param7) / param6), (int)((float)(-param0) / param6), (int)((float)param8.field_z / param6), (int)((float)param8.field_A / param6));
             this.a(param4, param2, 0, param5, 1, var12, param3, var11_int);
-            eh.b(false);
+            int discarded$2 = 0;
+            eh.b();
             sb.a(param8, -128);
             var13.c(param7, param0, param9, param1);
-            eh.b(false);
+            int discarded$3 = 0;
+            eh.b();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -682,7 +684,7 @@ final class e {
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         try {
             HostileSpawn.a(bn.c(-1), -53);
         } catch (Exception exception) {
@@ -690,7 +692,7 @@ final class e {
         }
     }
 
-    private final void a(pg[] param0, String param1, String[] param2, java.applet.Applet param3, int param4, boolean param5) {
+    private final void a(pg[] param0, String param1, String[] param2, java.applet.Applet param3) {
         String var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
@@ -778,7 +780,7 @@ final class e {
               ((e) this).field_n = param1;
               ((e) this).field_u = new be(2);
               ((e) this).field_p = param0;
-              var8 = 22 % ((28 - param4) / 47);
+              var8 = 0;
               ((e) this).field_a = param2;
               if (((e) this).field_p == null) {
                 break L3;
@@ -896,7 +898,7 @@ final class e {
               break L7;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param4 + 44 + 1 + 41);
+          throw wg.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + -82 + 44 + 1 + 41);
         }
     }
 
@@ -909,7 +911,8 @@ final class e {
             Object var4 = null;
             e.a(103, (java.applet.Applet) null);
         }
-        ((e) this).field_u.a(param1, 0, this.a(j.field_c, rb.field_m, -1300), -1);
+        int discarded$0 = -1300;
+        ((e) this).field_u.a(param1, 0, this.a(j.field_c, rb.field_m), -1);
     }
 
     private final void a(int param0) {
@@ -942,7 +945,8 @@ final class e {
               var10 = var11;
               var9 = var10;
               this.a(0, var13, 0, ((e) this).field_n, 1, 47, (vm) (Object) ra.field_e, 622);
-              eh.b(false);
+              int discarded$3 = 0;
+              eh.b();
               ((e) this).field_e = new bd(475, 24);
               this.a(-4, 24, var9, (vm) (Object) ra.field_e, 0, eb.field_f, 0.75f, 0, ((e) this).field_e, 475);
               var8 = wg.a(true, 526344, 526344);
@@ -955,11 +959,13 @@ final class e {
               this.a(-16, var5.field_A, var8, (vm) (Object) ra.field_e, 0, var6, 0.5f, param0, var5, var5.field_z);
               this.a(20, var5.field_A, var8, (vm) (Object) ra.field_e, param0, var7, 0.5f, 0, var5, var5.field_z);
               this.a(var5.field_A / 2 + -ra.field_e.field_y - -12, var5.field_A / 3, var8, (vm) (Object) ra.field_e, 0, lk.field_E[((e) this).field_t], 0.699999988079071f, 0, var5, var5.field_z);
-              eh.b(false);
+              int discarded$4 = 0;
+              eh.b();
               ((e) this).field_h = new bd(121, 122);
               sb.a(((e) this).field_h, -126);
               var5.b(((e) this).field_h.field_z / 2, ((e) this).field_h.field_A / 2, -2048, 4096);
-              eh.b(false);
+              int discarded$5 = 0;
+              eh.b();
               return;
             }
           }
@@ -991,7 +997,8 @@ final class e {
             L2: while (true) {
               if (var2 >= 2) {
                 L3: {
-                  this.c(9);
+                  int discarded$7 = 9;
+                  this.c();
                   if (null == jk.field_c) {
                     break L3;
                   } else {
@@ -1021,8 +1028,10 @@ final class e {
                                     jm.field_b = ci.a("members_expansion_screen", param0 + 181, "arrow", jk.field_c);
                                     mn.field_e = wc.a("arialish12", cl.field_i, 84, jk.field_c, "");
                                     ra.field_e = th.a(jk.field_c, 126, "", cl.field_i, "pump32");
-                                    ue.field_j = fg.a("members_expansion_screen", "benefit_orbs", jk.field_c, false);
-                                    od.field_D = fg.a("members_expansion_screen", "button_text", jk.field_c, false);
+                                    int discarded$8 = 0;
+                                    ue.field_j = fg.a("members_expansion_screen", "benefit_orbs", jk.field_c);
+                                    int discarded$9 = 0;
+                                    od.field_D = fg.a("members_expansion_screen", "button_text", jk.field_c);
                                     vj.field_h = ei.a(jk.field_c, param0 ^ -49, "members_expansion_screen", "button_highlights");
                                     cl.field_i = null;
                                     jk.field_c = null;
@@ -1097,11 +1106,11 @@ final class e {
                   }
                   L6: {
                     ((e) this).field_e.e(16, 302);
-                    int discarded$4 = mn.field_e.a(((e) this).field_a[((e) this).field_b], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+                    int discarded$10 = mn.field_e.a(((e) this).field_a[((e) this).field_b], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
                     ue.field_j.e(30, 330);
-                    int discarded$5 = mn.field_e.a(mm.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$6 = mn.field_e.a(mm.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$7 = mn.field_e.a(mm.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$11 = mn.field_e.a(mm.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$12 = mn.field_e.a(mm.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$13 = mn.field_e.a(mm.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
                     od.field_D.e((127 - od.field_D.field_u) / 2 + 508, 315);
                     if (((e) this).field_u.field_f != 0) {
                       if (((e) this).field_u.field_f == 1) {
@@ -1141,7 +1150,9 @@ final class e {
         ((e) this).field_s = 0;
         ((e) this).field_v = 0;
         try {
-            this.a(param2, param1, param3, param0, -82, true);
+            int discarded$0 = 1;
+            int discarded$1 = -82;
+            this.a(param2, param1, param3, param0);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "e.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }

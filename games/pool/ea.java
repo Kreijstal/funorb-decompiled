@@ -20,14 +20,14 @@ final class ea extends ma {
     int field_y;
     static String field_m;
 
-    final static void c(byte param0) {
+    final static void c() {
         int var1 = -27;
         di.field_j = kn.field_e.j(-100);
         CharSequence var2 = (CharSequence) (Object) di.field_j;
         oj.field_y = hq.a(110, var2);
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_u = null;
         field_m = null;
         field_r = null;

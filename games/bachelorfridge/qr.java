@@ -6,7 +6,7 @@ final class qr extends ana {
     private taa field_w;
     private tba field_x;
 
-    private final void e(int param0) {
+    private final void e() {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((qr) this).field_x.field_l.a(8, ((qr) this).field_q.field_h);
@@ -39,12 +39,13 @@ final class qr extends ana {
               }
             }
             var2 = 93 / ((71 - param0) / 47);
-            int fieldTemp$2 = ((qr) this).field_l - 1;
+            int fieldTemp$4 = ((qr) this).field_l - 1;
             ((qr) this).field_l = ((qr) this).field_l - 1;
-            if (fieldTemp$2 >= 0) {
+            if (fieldTemp$4 >= 0) {
               return false;
             } else {
-              this.f(-1);
+              int discarded$5 = -1;
+              this.f();
               return true;
             }
           } else {
@@ -67,131 +68,55 @@ final class qr extends ana {
     }
 
     private final void d(int param0) {
+        op var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         gf var6 = null;
         int var7 = 0;
-        op var8 = null;
         var7 = BachelorFridge.field_y;
-        var8 = ((qr) this).field_q.field_h;
-        if (param0 == -1) {
-          L0: {
-            int[][] discarded$2 = ((qr) this).field_x.e(param0 ^ -7);
-            var3 = 0;
-            if (((qr) this).field_x.field_t.length <= var3) {
-              break L0;
-            } else {
-              L1: {
-                L2: {
-                  L3: {
-                    L4: {
-                      var4 = ((qr) this).field_x.field_t[var3][0];
-                      var5 = ((qr) this).field_x.field_t[var3][1];
-                      if (var4 < 0) {
-                        var3++;
-                        break L4;
-                      } else {
-                        if (var4 >= var8.field_z) {
-                          break L4;
-                        } else {
-                          if (var5 < 0) {
-                            break L3;
-                          } else {
-                            if (var8.field_B <= var5) {
-                              break L2;
-                            } else {
-                              var6 = new gf(((qr) this).field_q, var4, var5);
-                              ((kj) (Object) var6).a(0);
-                              break L1;
-                            }
-                          }
-                        }
-                      }
-                    }
+        var2 = ((qr) this).field_q.field_h;
+        int[][] discarded$2 = ((qr) this).field_x.e(6);
+        var3 = 0;
+        L0: while (true) {
+          if (((qr) this).field_x.field_t.length <= var3) {
+            return;
+          } else {
+            var4 = ((qr) this).field_x.field_t[var3][0];
+            var5 = ((qr) this).field_x.field_t[var3][1];
+            if (var4 >= 0) {
+              if (var4 < var2.field_z) {
+                if (var5 >= 0) {
+                  if (var2.field_B > var5) {
+                    var6 = new gf(((qr) this).field_q, var4, var5);
+                    ((kj) (Object) var6).a(0);
                     var3++;
-                    break L3;
+                    continue L0;
+                  } else {
+                    var3++;
+                    continue L0;
                   }
+                } else {
                   var3++;
-                  break L2;
+                  continue L0;
                 }
+              } else {
                 var3++;
-                break L1;
+                var3++;
+                continue L0;
               }
+            } else {
               var3++;
               var3++;
-              var3++;
-              var3++;
-              var3++;
-              var3++;
-              break L0;
+              continue L0;
             }
           }
-          return;
-        } else {
-          ((qr) this).field_v = false;
-          L5: {
-            int[][] discarded$3 = ((qr) this).field_x.e(param0 ^ -7);
-            var3 = 0;
-            if (((qr) this).field_x.field_t.length <= var3) {
-              break L5;
-            } else {
-              L6: {
-                L7: {
-                  L8: {
-                    L9: {
-                      var4 = ((qr) this).field_x.field_t[var3][0];
-                      var5 = ((qr) this).field_x.field_t[var3][1];
-                      if (var4 < 0) {
-                        var3++;
-                        break L9;
-                      } else {
-                        if (var4 >= var8.field_z) {
-                          break L9;
-                        } else {
-                          if (var5 < 0) {
-                            break L8;
-                          } else {
-                            if (var8.field_B <= var5) {
-                              break L7;
-                            } else {
-                              var6 = new gf(((qr) this).field_q, var4, var5);
-                              ((kj) (Object) var6).a(0);
-                              break L6;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    var3++;
-                    break L8;
-                  }
-                  var3++;
-                  break L7;
-                }
-                var3++;
-                break L6;
-              }
-              var3++;
-              var3++;
-              var3++;
-              var3++;
-              var3++;
-              var3++;
-              break L5;
-            }
-          }
-          return;
         }
     }
 
-    private final void f(int param0) {
-        if (param0 != -1) {
-            this.d(-112);
-            this.e(75);
-            return;
-        }
-        this.e(75);
+    private final void f() {
+        int discarded$0 = 75;
+        this.e();
     }
 
     static {

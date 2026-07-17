@@ -108,19 +108,23 @@ final class af implements Runnable {
             if (param2) {
               L1: {
                 if (ib.field_k >= 10) {
-                  if (wh.b(27415)) {
+                  int discarded$19 = 27415;
+                  if (wh.b()) {
                     if (bh.field_t != 0) {
                       bg.a((byte) -66, param0);
                       break L1;
                     } else {
-                      pd.a(param1, false, 0);
-                      be.a(0, param0, (byte) -61, 0);
+                      int discarded$20 = 0;
+                      pd.a(param1, false);
+                      int discarded$21 = 0;
+                      be.a(0, param0, (byte) -61);
                       break L1;
                     }
                   } else {
                     gb.c();
                     hd.a(320, 240, -27794);
-                    be.a(0, param0, (byte) -29, 0);
+                    int discarded$22 = 0;
+                    be.a(0, param0, (byte) -29);
                     break L1;
                   }
                 } else {
@@ -134,7 +138,10 @@ final class af implements Runnable {
                       break L2;
                     }
                   }
-                  se.a(hl.d((byte) -85), ga.field_p, gk.a(-1917), var3_int != 0, (byte) -81);
+                  int discarded$23 = -85;
+                  int discarded$24 = -1917;
+                  int discarded$25 = -81;
+                  se.a(hl.d(), ga.field_p, gk.a(), var3_int != 0);
                   break L1;
                 }
               }
@@ -387,36 +394,28 @@ final class af implements Runnable {
         Object var3 = null;
         RuntimeException var3_ref = null;
         Throwable var4 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
             var3 = (Object) (Object) ((af) this).field_e;
             synchronized (var3) {
               L1: {
-                L2: {
-                  ((af) this).field_e.a((pa) (Object) param1, param0 ^ -1089421913);
-                  if (param0 == 101) {
-                    break L2;
-                  } else {
-                    field_g = -128;
-                    break L2;
-                  }
-                }
+                ((af) this).field_e.a((pa) (Object) param1, -1089421886);
                 ((af) this).field_d = ((af) this).field_d + 1;
                 ((Object) (Object) ((af) this).field_e).notifyAll();
                 break L1;
@@ -426,37 +425,37 @@ final class af implements Runnable {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
-            stackOut_8_1 = new StringBuilder().append("af.C(").append(param0).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_1 = new StringBuilder().append("af.C(").append(101).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
     }
@@ -503,7 +502,7 @@ final class af implements Runnable {
         var9 = fleas.field_A ? 1 : 0;
         try {
           L0: {
-            var6_int = -param0 + param2;
+            var6_int = param2;
             var7 = 0;
             L1: while (true) {
               if (var7 >= var6_int) {
@@ -522,7 +521,7 @@ final class af implements Runnable {
                 L3: {
                   L4: {
                     L5: {
-                      var8 = param3.charAt(param0 + var7);
+                      var8 = param3.charAt(var7);
                       if (var8 <= 0) {
                         break L5;
                       } else {
@@ -695,7 +694,7 @@ final class af implements Runnable {
           L7: {
             var6 = decompiledCaughtException;
             stackOut_70_0 = (RuntimeException) var6;
-            stackOut_70_1 = new StringBuilder().append("af.A(").append(param0).append(44);
+            stackOut_70_1 = new StringBuilder().append("af.A(").append(0).append(44);
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;

@@ -58,7 +58,7 @@ final class de extends RuntimeException {
             L1: while (true) {
               if (var4 >= var3) {
                 var10.f(8);
-                var9 = param0;
+                var9 = 0;
                 var4 = var9;
                 L2: while (true) {
                   if (var3 <= var9) {
@@ -75,7 +75,7 @@ final class de extends RuntimeException {
                   }
                 }
               } else {
-                ae.field_J[var4] = tb.a(var8, dg.a(param0, -114));
+                ae.field_J[var4] = tb.a(var8, dg.a(0, -114));
                 var4++;
                 continue L1;
               }
@@ -86,7 +86,7 @@ final class de extends RuntimeException {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("de.B(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("de.B(").append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -113,7 +113,7 @@ final class de extends RuntimeException {
         }
     }
 
-    final static void a(boolean param0, float param1, String param2, boolean param3) {
+    final static void a(boolean param0, float param1, String param2) {
         try {
             if (null == qj.field_fb) {
                 qj.field_fb = new uk(ug.field_A, jj.field_d);

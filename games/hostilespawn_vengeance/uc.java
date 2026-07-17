@@ -7,7 +7,7 @@ final class uc {
     static volatile long field_c;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
     }

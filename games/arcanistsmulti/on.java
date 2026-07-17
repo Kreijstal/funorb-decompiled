@@ -15,7 +15,6 @@ final class on {
 
     final static void a(int param0, int param1, boolean param2, boolean param3, ha param4) {
         RuntimeException var5 = null;
-        io stackIn_1_0 = null;
         io stackIn_3_0 = null;
         io stackIn_4_0 = null;
         int stackIn_4_1 = 0;
@@ -30,8 +29,6 @@ final class on {
         io stackOut_0_0 = null;
         io stackOut_3_0 = null;
         int stackOut_3_1 = 0;
-        io stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_11_0 = null;
@@ -42,41 +39,21 @@ final class on {
         String stackOut_9_2 = null;
         try {
           L0: {
-            L1: {
-              stackOut_0_0 = gg.field_h;
-              stackIn_3_0 = stackOut_0_0;
-              stackIn_1_0 = stackOut_0_0;
-              if (param2) {
-                stackOut_3_0 = (io) (Object) stackIn_3_0;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                break L1;
-              } else {
-                stackOut_1_0 = (io) (Object) stackIn_1_0;
-                stackOut_1_1 = 1;
-                stackIn_4_0 = stackOut_1_0;
-                stackIn_4_1 = stackOut_1_1;
-                break L1;
-              }
-            }
-            L2: {
-              ((io) (Object) stackIn_4_0).a(stackIn_4_1 != 0, 1000000, (byte) -85, param1, param0, param4);
-              if (param3) {
-                break L2;
-              } else {
-                field_b = null;
-                break L2;
-              }
-            }
+            stackOut_0_0 = gg.field_h;
+            stackIn_3_0 = stackOut_0_0;
+            stackOut_3_0 = (io) (Object) stackIn_3_0;
+            stackOut_3_1 = 0;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            ((io) (Object) stackIn_4_0).a(stackIn_4_1 != 0, 1000000, (byte) -85, 256, 1048576, param4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L1: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("on.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_8_1 = new StringBuilder().append("on.E(").append(1048576).append(44).append(256).append(44).append(1).append(44).append(1).append(44);
             stackIn_11_0 = stackOut_8_0;
             stackIn_11_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -88,7 +65,7 @@ final class on {
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
-              break L3;
+              break L1;
             } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
@@ -96,7 +73,7 @@ final class on {
               stackIn_12_0 = stackOut_9_0;
               stackIn_12_1 = stackOut_9_1;
               stackIn_12_2 = stackOut_9_2;
-              break L3;
+              break L1;
             }
           }
           throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
@@ -237,9 +214,9 @@ final class on {
     final static void a(byte param0, eg param1) {
         byte[] var2 = null;
         int var3 = 0;
-        int stackIn_1880_0 = 0;
-        int stackOut_1879_0 = 0;
+        int stackIn_1879_0 = 0;
         int stackOut_1878_0 = 0;
+        int stackOut_1877_0 = 0;
         L0: {
           var3 = ArcanistsMulti.field_G ? 1 : 0;
           ld.field_q = param1;
@@ -6506,462 +6483,457 @@ final class on {
             break L695;
           }
         }
-        if (param0 == -84) {
-          L696: {
-            var2 = fg.a("achievementsoffline", (byte) -45);
-            if (null == var2) {
-              break L696;
-            } else {
-              String discarded$451 = sc.a((byte) 96, var2);
-              break L696;
-            }
+        L696: {
+          var2 = fg.a("achievementsoffline", (byte) -45);
+          if (null == var2) {
+            break L696;
+          } else {
+            String discarded$451 = sc.a((byte) 96, var2);
+            break L696;
           }
-          L697: {
-            var2 = fg.a("warning", (byte) -45);
-            if (null != var2) {
-              String discarded$452 = sc.a((byte) 103, var2);
-              break L697;
-            } else {
-              break L697;
-            }
+        }
+        L697: {
+          var2 = fg.a("warning", (byte) -45);
+          if (null != var2) {
+            String discarded$452 = sc.a((byte) 103, var2);
+            break L697;
+          } else {
+            break L697;
           }
-          L698: {
-            var2 = fg.a("DEFAULT_PLAYER_NAME", (byte) -45);
-            if (var2 == null) {
-              break L698;
-            } else {
-              ob.field_ib = sc.a((byte) 92, var2);
-              break L698;
-            }
+        }
+        L698: {
+          var2 = fg.a("DEFAULT_PLAYER_NAME", (byte) -45);
+          if (var2 == null) {
+            break L698;
+          } else {
+            ob.field_ib = sc.a((byte) 92, var2);
+            break L698;
           }
-          L699: {
-            var2 = fg.a("mustlogin1", (byte) -45);
-            if (var2 != null) {
-              String discarded$453 = sc.a((byte) 86, var2);
-              break L699;
-            } else {
-              break L699;
-            }
+        }
+        L699: {
+          var2 = fg.a("mustlogin1", (byte) -45);
+          if (var2 != null) {
+            String discarded$453 = sc.a((byte) 86, var2);
+            break L699;
+          } else {
+            break L699;
           }
-          L700: {
-            var2 = fg.a("mustlogin2,1", (byte) -45);
-            if (null == var2) {
-              break L700;
-            } else {
-              ff.field_f[1] = sc.a((byte) 121, var2);
-              break L700;
-            }
+        }
+        L700: {
+          var2 = fg.a("mustlogin2,1", (byte) -45);
+          if (null == var2) {
+            break L700;
+          } else {
+            ff.field_f[1] = sc.a((byte) 121, var2);
+            break L700;
           }
-          L701: {
-            var2 = fg.a("mustlogin2,2", (byte) -45);
-            if (var2 == null) {
-              break L701;
-            } else {
-              ff.field_f[2] = sc.a((byte) 120, var2);
-              break L701;
-            }
+        }
+        L701: {
+          var2 = fg.a("mustlogin2,2", (byte) -45);
+          if (var2 == null) {
+            break L701;
+          } else {
+            ff.field_f[2] = sc.a((byte) 120, var2);
+            break L701;
           }
-          L702: {
-            var2 = fg.a("mustlogin2,3", (byte) -45);
-            if (null == var2) {
-              break L702;
-            } else {
-              ff.field_f[3] = sc.a((byte) 94, var2);
-              break L702;
-            }
+        }
+        L702: {
+          var2 = fg.a("mustlogin2,3", (byte) -45);
+          if (null == var2) {
+            break L702;
+          } else {
+            ff.field_f[3] = sc.a((byte) 94, var2);
+            break L702;
           }
-          L703: {
-            var2 = fg.a("mustlogin2,4", (byte) -45);
-            if (var2 != null) {
-              ff.field_f[4] = sc.a((byte) 87, var2);
-              break L703;
-            } else {
-              break L703;
-            }
+        }
+        L703: {
+          var2 = fg.a("mustlogin2,4", (byte) -45);
+          if (var2 != null) {
+            ff.field_f[4] = sc.a((byte) 87, var2);
+            break L703;
+          } else {
+            break L703;
           }
-          L704: {
-            var2 = fg.a("mustlogin2,5", (byte) -45);
-            if (null != var2) {
-              ff.field_f[5] = sc.a((byte) 101, var2);
-              break L704;
-            } else {
-              break L704;
-            }
+        }
+        L704: {
+          var2 = fg.a("mustlogin2,5", (byte) -45);
+          if (null != var2) {
+            ff.field_f[5] = sc.a((byte) 101, var2);
+            break L704;
+          } else {
+            break L704;
           }
-          L705: {
-            var2 = fg.a("mustlogin2,6", (byte) -45);
-            if (var2 == null) {
-              break L705;
-            } else {
-              ff.field_f[6] = sc.a((byte) 113, var2);
-              break L705;
-            }
+        }
+        L705: {
+          var2 = fg.a("mustlogin2,6", (byte) -45);
+          if (var2 == null) {
+            break L705;
+          } else {
+            ff.field_f[6] = sc.a((byte) 113, var2);
+            break L705;
           }
-          L706: {
-            var2 = fg.a("mustlogin2,7", (byte) -45);
-            if (null == var2) {
-              break L706;
-            } else {
-              ff.field_f[7] = sc.a((byte) 116, var2);
-              break L706;
-            }
+        }
+        L706: {
+          var2 = fg.a("mustlogin2,7", (byte) -45);
+          if (null == var2) {
+            break L706;
+          } else {
+            ff.field_f[7] = sc.a((byte) 116, var2);
+            break L706;
           }
-          L707: {
-            var2 = fg.a("mustlogin3,1", (byte) -45);
-            if (null == var2) {
-              break L707;
-            } else {
-              kb.field_c[1] = sc.a((byte) 97, var2);
-              break L707;
-            }
+        }
+        L707: {
+          var2 = fg.a("mustlogin3,1", (byte) -45);
+          if (null == var2) {
+            break L707;
+          } else {
+            kb.field_c[1] = sc.a((byte) 97, var2);
+            break L707;
           }
-          L708: {
-            var2 = fg.a("mustlogin3,2", (byte) -45);
-            if (null == var2) {
-              break L708;
-            } else {
-              kb.field_c[2] = sc.a((byte) 100, var2);
-              break L708;
-            }
+        }
+        L708: {
+          var2 = fg.a("mustlogin3,2", (byte) -45);
+          if (null == var2) {
+            break L708;
+          } else {
+            kb.field_c[2] = sc.a((byte) 100, var2);
+            break L708;
           }
-          L709: {
-            var2 = fg.a("mustlogin3,3", (byte) -45);
-            if (null != var2) {
-              kb.field_c[3] = sc.a((byte) 109, var2);
-              break L709;
-            } else {
-              break L709;
-            }
+        }
+        L709: {
+          var2 = fg.a("mustlogin3,3", (byte) -45);
+          if (null != var2) {
+            kb.field_c[3] = sc.a((byte) 109, var2);
+            break L709;
+          } else {
+            break L709;
           }
-          L710: {
-            var2 = fg.a("mustlogin3,4", (byte) -45);
-            if (null != var2) {
-              kb.field_c[4] = sc.a((byte) 113, var2);
-              break L710;
-            } else {
-              break L710;
-            }
+        }
+        L710: {
+          var2 = fg.a("mustlogin3,4", (byte) -45);
+          if (null != var2) {
+            kb.field_c[4] = sc.a((byte) 113, var2);
+            break L710;
+          } else {
+            break L710;
           }
-          L711: {
-            var2 = fg.a("mustlogin3,5", (byte) -45);
-            if (null == var2) {
-              break L711;
-            } else {
-              kb.field_c[5] = sc.a((byte) 89, var2);
-              break L711;
-            }
+        }
+        L711: {
+          var2 = fg.a("mustlogin3,5", (byte) -45);
+          if (null == var2) {
+            break L711;
+          } else {
+            kb.field_c[5] = sc.a((byte) 89, var2);
+            break L711;
           }
-          L712: {
-            var2 = fg.a("mustlogin3,6", (byte) -45);
-            if (null != var2) {
-              kb.field_c[6] = sc.a((byte) 116, var2);
-              break L712;
-            } else {
-              break L712;
-            }
+        }
+        L712: {
+          var2 = fg.a("mustlogin3,6", (byte) -45);
+          if (null != var2) {
+            kb.field_c[6] = sc.a((byte) 116, var2);
+            break L712;
+          } else {
+            break L712;
           }
-          L713: {
-            var2 = fg.a("mustlogin3,7", (byte) -45);
-            if (var2 == null) {
-              break L713;
-            } else {
-              kb.field_c[7] = sc.a((byte) 106, var2);
-              break L713;
-            }
+        }
+        L713: {
+          var2 = fg.a("mustlogin3,7", (byte) -45);
+          if (var2 == null) {
+            break L713;
+          } else {
+            kb.field_c[7] = sc.a((byte) 106, var2);
+            break L713;
           }
-          L714: {
-            var2 = fg.a("discard", (byte) -45);
-            if (var2 == null) {
-              break L714;
-            } else {
-              lh.field_a = sc.a((byte) 121, var2);
-              break L714;
-            }
+        }
+        L714: {
+          var2 = fg.a("discard", (byte) -45);
+          if (var2 == null) {
+            break L714;
+          } else {
+            lh.field_a = sc.a((byte) 121, var2);
+            break L714;
           }
-          L715: {
-            var2 = fg.a("mustlogin4,1", (byte) -45);
-            if (null == var2) {
-              break L715;
-            } else {
-              md.field_a[1] = sc.a((byte) 127, var2);
-              break L715;
-            }
+        }
+        L715: {
+          var2 = fg.a("mustlogin4,1", (byte) -45);
+          if (null == var2) {
+            break L715;
+          } else {
+            md.field_a[1] = sc.a((byte) 127, var2);
+            break L715;
           }
-          L716: {
-            var2 = fg.a("mustlogin4,2", (byte) -45);
-            if (null == var2) {
-              break L716;
-            } else {
-              md.field_a[2] = sc.a((byte) 87, var2);
-              break L716;
-            }
+        }
+        L716: {
+          var2 = fg.a("mustlogin4,2", (byte) -45);
+          if (null == var2) {
+            break L716;
+          } else {
+            md.field_a[2] = sc.a((byte) 87, var2);
+            break L716;
           }
-          L717: {
-            var2 = fg.a("mustlogin4,3", (byte) -45);
-            if (null != var2) {
-              md.field_a[3] = sc.a((byte) 122, var2);
-              break L717;
-            } else {
-              break L717;
-            }
+        }
+        L717: {
+          var2 = fg.a("mustlogin4,3", (byte) -45);
+          if (null != var2) {
+            md.field_a[3] = sc.a((byte) 122, var2);
+            break L717;
+          } else {
+            break L717;
           }
-          L718: {
-            var2 = fg.a("mustlogin4,4", (byte) -45);
-            if (null != var2) {
-              md.field_a[4] = sc.a((byte) 103, var2);
-              break L718;
-            } else {
-              break L718;
-            }
+        }
+        L718: {
+          var2 = fg.a("mustlogin4,4", (byte) -45);
+          if (null != var2) {
+            md.field_a[4] = sc.a((byte) 103, var2);
+            break L718;
+          } else {
+            break L718;
           }
-          L719: {
-            var2 = fg.a("mustlogin4,5", (byte) -45);
-            if (null != var2) {
-              md.field_a[5] = sc.a((byte) 106, var2);
-              break L719;
-            } else {
-              break L719;
-            }
+        }
+        L719: {
+          var2 = fg.a("mustlogin4,5", (byte) -45);
+          if (null != var2) {
+            md.field_a[5] = sc.a((byte) 106, var2);
+            break L719;
+          } else {
+            break L719;
           }
-          L720: {
-            var2 = fg.a("mustlogin4,6", (byte) -45);
-            if (null != var2) {
-              md.field_a[6] = sc.a((byte) 112, var2);
-              break L720;
-            } else {
-              break L720;
-            }
+        }
+        L720: {
+          var2 = fg.a("mustlogin4,6", (byte) -45);
+          if (null != var2) {
+            md.field_a[6] = sc.a((byte) 112, var2);
+            break L720;
+          } else {
+            break L720;
           }
-          L721: {
-            var2 = fg.a("mustlogin4,7", (byte) -45);
-            if (var2 == null) {
-              break L721;
-            } else {
-              md.field_a[7] = sc.a((byte) 120, var2);
-              break L721;
-            }
+        }
+        L721: {
+          var2 = fg.a("mustlogin4,7", (byte) -45);
+          if (var2 == null) {
+            break L721;
+          } else {
+            md.field_a[7] = sc.a((byte) 120, var2);
+            break L721;
           }
-          L722: {
-            var2 = fg.a("mustlogin_notloggedin", (byte) -45);
-            if (var2 == null) {
-              break L722;
-            } else {
-              String discarded$454 = sc.a((byte) 88, var2);
-              break L722;
-            }
+        }
+        L722: {
+          var2 = fg.a("mustlogin_notloggedin", (byte) -45);
+          if (var2 == null) {
+            break L722;
+          } else {
+            String discarded$454 = sc.a((byte) 88, var2);
+            break L722;
           }
-          L723: {
-            var2 = fg.a("mustlogin_alternate,1", (byte) -45);
-            if (null != var2) {
-              jl.field_g[1] = sc.a((byte) 86, var2);
-              break L723;
-            } else {
-              break L723;
-            }
+        }
+        L723: {
+          var2 = fg.a("mustlogin_alternate,1", (byte) -45);
+          if (null != var2) {
+            jl.field_g[1] = sc.a((byte) 86, var2);
+            break L723;
+          } else {
+            break L723;
           }
-          L724: {
-            var2 = fg.a("mustlogin_alternate,2", (byte) -45);
-            if (var2 == null) {
-              break L724;
-            } else {
-              jl.field_g[2] = sc.a((byte) 99, var2);
-              break L724;
-            }
+        }
+        L724: {
+          var2 = fg.a("mustlogin_alternate,2", (byte) -45);
+          if (var2 == null) {
+            break L724;
+          } else {
+            jl.field_g[2] = sc.a((byte) 99, var2);
+            break L724;
           }
-          L725: {
-            var2 = fg.a("mustlogin_alternate,3", (byte) -45);
-            if (null != var2) {
-              jl.field_g[3] = sc.a((byte) 91, var2);
-              break L725;
-            } else {
-              break L725;
-            }
+        }
+        L725: {
+          var2 = fg.a("mustlogin_alternate,3", (byte) -45);
+          if (null != var2) {
+            jl.field_g[3] = sc.a((byte) 91, var2);
+            break L725;
+          } else {
+            break L725;
           }
-          L726: {
-            var2 = fg.a("mustlogin_alternate,4", (byte) -45);
-            if (null == var2) {
-              break L726;
-            } else {
-              jl.field_g[4] = sc.a((byte) 89, var2);
-              break L726;
-            }
+        }
+        L726: {
+          var2 = fg.a("mustlogin_alternate,4", (byte) -45);
+          if (null == var2) {
+            break L726;
+          } else {
+            jl.field_g[4] = sc.a((byte) 89, var2);
+            break L726;
           }
-          L727: {
-            var2 = fg.a("mustlogin_alternate,5", (byte) -45);
-            if (null == var2) {
-              break L727;
-            } else {
-              jl.field_g[5] = sc.a((byte) 112, var2);
-              break L727;
-            }
+        }
+        L727: {
+          var2 = fg.a("mustlogin_alternate,5", (byte) -45);
+          if (null == var2) {
+            break L727;
+          } else {
+            jl.field_g[5] = sc.a((byte) 112, var2);
+            break L727;
           }
-          L728: {
-            var2 = fg.a("mustlogin_alternate,6", (byte) -45);
-            if (null == var2) {
-              break L728;
-            } else {
-              jl.field_g[6] = sc.a((byte) 98, var2);
-              break L728;
-            }
+        }
+        L728: {
+          var2 = fg.a("mustlogin_alternate,6", (byte) -45);
+          if (null == var2) {
+            break L728;
+          } else {
+            jl.field_g[6] = sc.a((byte) 98, var2);
+            break L728;
           }
-          L729: {
-            var2 = fg.a("mustlogin_alternate,7", (byte) -45);
-            if (null != var2) {
-              jl.field_g[7] = sc.a((byte) 101, var2);
-              break L729;
-            } else {
-              break L729;
-            }
+        }
+        L729: {
+          var2 = fg.a("mustlogin_alternate,7", (byte) -45);
+          if (null != var2) {
+            jl.field_g[7] = sc.a((byte) 101, var2);
+            break L729;
+          } else {
+            break L729;
           }
-          L730: {
-            var2 = fg.a("subscription_cost_monthly,0", (byte) -45);
-            if (var2 == null) {
-              break L730;
-            } else {
-              gk.field_f[0] = sc.a((byte) 88, var2);
-              break L730;
-            }
+        }
+        L730: {
+          var2 = fg.a("subscription_cost_monthly,0", (byte) -45);
+          if (var2 == null) {
+            break L730;
+          } else {
+            gk.field_f[0] = sc.a((byte) 88, var2);
+            break L730;
           }
-          L731: {
-            var2 = fg.a("subscription_cost_monthly,1", (byte) -45);
-            if (var2 == null) {
-              break L731;
-            } else {
-              gk.field_f[1] = sc.a((byte) 90, var2);
-              break L731;
-            }
+        }
+        L731: {
+          var2 = fg.a("subscription_cost_monthly,1", (byte) -45);
+          if (var2 == null) {
+            break L731;
+          } else {
+            gk.field_f[1] = sc.a((byte) 90, var2);
+            break L731;
           }
-          L732: {
-            var2 = fg.a("subscription_cost_monthly,2", (byte) -45);
-            if (null != var2) {
-              gk.field_f[2] = sc.a((byte) 88, var2);
-              break L732;
-            } else {
-              break L732;
-            }
+        }
+        L732: {
+          var2 = fg.a("subscription_cost_monthly,2", (byte) -45);
+          if (null != var2) {
+            gk.field_f[2] = sc.a((byte) 88, var2);
+            break L732;
+          } else {
+            break L732;
           }
-          L733: {
-            var2 = fg.a("subscription_cost_monthly,3", (byte) -45);
-            if (null != var2) {
-              gk.field_f[3] = sc.a((byte) 122, var2);
-              break L733;
-            } else {
-              break L733;
-            }
+        }
+        L733: {
+          var2 = fg.a("subscription_cost_monthly,3", (byte) -45);
+          if (null != var2) {
+            gk.field_f[3] = sc.a((byte) 122, var2);
+            break L733;
+          } else {
+            break L733;
           }
-          L734: {
-            var2 = fg.a("subscription_cost_monthly,4", (byte) -45);
-            if (var2 != null) {
-              gk.field_f[4] = sc.a((byte) 86, var2);
-              break L734;
-            } else {
-              break L734;
-            }
+        }
+        L734: {
+          var2 = fg.a("subscription_cost_monthly,4", (byte) -45);
+          if (var2 != null) {
+            gk.field_f[4] = sc.a((byte) 86, var2);
+            break L734;
+          } else {
+            break L734;
           }
-          L735: {
-            var2 = fg.a("subscription_cost_monthly,5", (byte) -45);
-            if (var2 == null) {
-              break L735;
-            } else {
-              gk.field_f[5] = sc.a((byte) 113, var2);
-              break L735;
-            }
+        }
+        L735: {
+          var2 = fg.a("subscription_cost_monthly,5", (byte) -45);
+          if (var2 == null) {
+            break L735;
+          } else {
+            gk.field_f[5] = sc.a((byte) 113, var2);
+            break L735;
           }
-          L736: {
-            var2 = fg.a("subscription_cost_monthly,6", (byte) -45);
-            if (var2 == null) {
-              break L736;
-            } else {
-              gk.field_f[6] = sc.a((byte) 92, var2);
-              break L736;
-            }
+        }
+        L736: {
+          var2 = fg.a("subscription_cost_monthly,6", (byte) -45);
+          if (var2 == null) {
+            break L736;
+          } else {
+            gk.field_f[6] = sc.a((byte) 92, var2);
+            break L736;
           }
-          L737: {
-            var2 = fg.a("subscription_cost_monthly,7", (byte) -45);
-            if (var2 != null) {
-              gk.field_f[7] = sc.a((byte) 102, var2);
-              break L737;
-            } else {
-              break L737;
-            }
+        }
+        L737: {
+          var2 = fg.a("subscription_cost_monthly,7", (byte) -45);
+          if (var2 != null) {
+            gk.field_f[7] = sc.a((byte) 102, var2);
+            break L737;
+          } else {
+            break L737;
           }
-          L738: {
-            var2 = fg.a("subscription_cost_monthly,8", (byte) -45);
-            if (null != var2) {
-              gk.field_f[8] = sc.a((byte) 102, var2);
-              break L738;
-            } else {
-              break L738;
-            }
+        }
+        L738: {
+          var2 = fg.a("subscription_cost_monthly,8", (byte) -45);
+          if (null != var2) {
+            gk.field_f[8] = sc.a((byte) 102, var2);
+            break L738;
+          } else {
+            break L738;
           }
-          L739: {
-            var2 = fg.a("subscription_cost_monthly,9", (byte) -45);
-            if (var2 != null) {
-              gk.field_f[9] = sc.a((byte) 107, var2);
-              break L739;
-            } else {
-              break L739;
-            }
+        }
+        L739: {
+          var2 = fg.a("subscription_cost_monthly,9", (byte) -45);
+          if (var2 != null) {
+            gk.field_f[9] = sc.a((byte) 107, var2);
+            break L739;
+          } else {
+            break L739;
           }
-          L740: {
-            var2 = fg.a("subscription_cost_monthly,10", (byte) -45);
-            if (var2 == null) {
-              break L740;
-            } else {
-              gk.field_f[10] = sc.a((byte) 127, var2);
-              break L740;
-            }
+        }
+        L740: {
+          var2 = fg.a("subscription_cost_monthly,10", (byte) -45);
+          if (var2 == null) {
+            break L740;
+          } else {
+            gk.field_f[10] = sc.a((byte) 127, var2);
+            break L740;
           }
-          L741: {
-            var2 = fg.a("subscription_cost_monthly,11", (byte) -45);
-            if (var2 != null) {
-              gk.field_f[11] = sc.a((byte) 115, var2);
-              break L741;
-            } else {
-              break L741;
-            }
+        }
+        L741: {
+          var2 = fg.a("subscription_cost_monthly,11", (byte) -45);
+          if (var2 != null) {
+            gk.field_f[11] = sc.a((byte) 115, var2);
+            break L741;
+          } else {
+            break L741;
           }
-          L742: {
-            var2 = fg.a("subscription_cost_monthly,12", (byte) -45);
-            if (var2 != null) {
-              gk.field_f[12] = sc.a((byte) 101, var2);
-              break L742;
-            } else {
-              break L742;
-            }
+        }
+        L742: {
+          var2 = fg.a("subscription_cost_monthly,12", (byte) -45);
+          if (var2 != null) {
+            gk.field_f[12] = sc.a((byte) 101, var2);
+            break L742;
+          } else {
+            break L742;
           }
-          L743: {
-            var2 = fg.a("sentence_separator", (byte) -45);
-            if (var2 != null) {
-              String discarded$455 = sc.a((byte) 114, var2);
-              break L743;
-            } else {
-              break L743;
-            }
+        }
+        L743: {
+          var2 = fg.a("sentence_separator", (byte) -45);
+          if (var2 != null) {
+            String discarded$455 = sc.a((byte) 114, var2);
+            break L743;
+          } else {
+            break L743;
           }
-          ld.field_q = null;
-          L744: {
-            if (dc.field_b == 0) {
-              break L744;
-            } else {
-              L745: {
-                if (var3 == 0) {
-                  stackOut_1879_0 = 1;
-                  stackIn_1880_0 = stackOut_1879_0;
-                  break L745;
-                } else {
-                  stackOut_1878_0 = 0;
-                  stackIn_1880_0 = stackOut_1878_0;
-                  break L745;
-                }
+        }
+        ld.field_q = null;
+        L744: {
+          if (dc.field_b == 0) {
+            break L744;
+          } else {
+            L745: {
+              if (var3 == 0) {
+                stackOut_1878_0 = 1;
+                stackIn_1879_0 = stackOut_1878_0;
+                break L745;
+              } else {
+                stackOut_1877_0 = 0;
+                stackIn_1879_0 = stackOut_1877_0;
+                break L745;
               }
-              ArcanistsMulti.field_G = stackIn_1880_0 != 0;
-              break L744;
             }
+            ArcanistsMulti.field_G = stackIn_1879_0 != 0;
+            break L744;
           }
-          return;
-        } else {
-          return;
         }
     }
 

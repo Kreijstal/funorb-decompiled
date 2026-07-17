@@ -90,23 +90,17 @@ abstract class nb extends ld {
             var8 = param0 + 35;
             L1: while (true) {
               if (var7 >= var4) {
-                L2: {
-                  if (param1 > 66) {
-                    break L2;
-                  } else {
-                    field_W = null;
-                    break L2;
-                  }
-                }
                 ac.field_c.c(((nb) this).field_F + (param2 + -90), 10 + param0);
-                gh.a(-10 + ((nb) this).field_F, param2 + 5, param0 + 35, hn.field_O, -125);
-                gh.a(((nb) this).field_F, param2, ((nb) this).field_u + (param0 + -22), mc.field_i, -125);
+                int discarded$2 = -125;
+                gh.a(-10 + ((nb) this).field_F, param2 + 5, param0 + 35, hn.field_O);
+                int discarded$3 = -125;
+                gh.a(((nb) this).field_F, param2, ((nb) this).field_u + (param0 + -22), mc.field_i);
                 var4 = -79 + ((nb) this).field_u;
                 var5 = 169;
                 var6 = 127;
                 var7 = 0;
                 var8 = param0 - -57;
-                L3: while (true) {
+                L2: while (true) {
                   if (var7 >= var4) {
                     return;
                   } else {
@@ -116,7 +110,7 @@ abstract class nb extends ld {
                     ra.g(-6 + (((nb) this).field_F + param2), var8, 6, var9);
                     var7++;
                     var8++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -132,16 +126,16 @@ abstract class nb extends ld {
           } else {
             if (ra.field_i <= var8) {
               if (var8 < ra.field_g) {
-                L4: {
+                L3: {
                   var9 = var7 * (-var5 + var6) / var4 + var5;
                   var10 = 0;
                   var11 = ((nb) this).field_F;
                   if (var7 > 20) {
-                    break L4;
+                    break L3;
                   } else {
-                    L5: while (true) {
+                    L4: while (true) {
                       if (var10 > 20) {
-                        break L4;
+                        break L3;
                       } else {
                         var12 = (20 + -var7) * (-var7 + 20) - -((-var10 + 20) * (20 - var10));
                         if (462 >= var12) {
@@ -150,53 +144,53 @@ abstract class nb extends ld {
                             var13 = var13 | (var13 << 8 | var13 << 16);
                             ra.field_b[ra.field_f * var8 - (-param2 - var10)] = var13;
                             var10++;
-                            continue L5;
+                            continue L4;
                           } else {
-                            break L4;
+                            break L3;
                           }
                         } else {
                           var10++;
-                          continue L5;
+                          continue L4;
                         }
                       }
                     }
                   }
                 }
-                L6: {
+                L5: {
                   if (20 >= var7) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
-                    L7: while (true) {
-                      L8: {
+                    L6: while (true) {
+                      L7: {
                         if (var13 > 20) {
-                          break L8;
+                          break L7;
                         } else {
                           var14 = (20 + -var7) * (-var7 + 20) + var13 * var13;
                           if (var14 > 462) {
-                            break L8;
+                            break L7;
                           } else {
                             if (420 > var14) {
                               var12 = var11 + 1;
                               var11++;
                               var13++;
-                              continue L7;
+                              continue L6;
                             } else {
                               var15 = (462 - var14) * var9 / 42;
                               var15 = var15 | (var15 << 16 | var15 << 8);
                               ra.field_b[var11 + var8 * ra.field_f + param2] = var15;
                               var11++;
                               var13++;
-                              continue L7;
+                              continue L6;
                             }
                           }
                         }
                       }
                       var11 = var12;
-                      break L6;
+                      break L5;
                     }
                   } else {
-                    break L6;
+                    break L5;
                   }
                 }
                 var9 = var9 | (var9 << 16 | var9 << 8);
@@ -218,7 +212,7 @@ abstract class nb extends ld {
         }
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_V = null;
         field_W = null;
         field_T = null;

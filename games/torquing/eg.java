@@ -87,7 +87,7 @@ final class eg extends am {
         ((eg) this).field_s = 585;
     }
 
-    final static void a(int param0, int param1, fn param2, int param3, fn param4, boolean param5) {
+    final static void a(int param0, int param1, fn param2, int param3, fn param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

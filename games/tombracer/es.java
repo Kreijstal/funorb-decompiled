@@ -63,9 +63,10 @@ final class es extends ip {
     }
 
     final long a(byte param0) {
-        ((es) this).field_d = ((es) this).field_d + this.d(-97);
+        int discarded$0 = -97;
+        ((es) this).field_d = ((es) this).field_d + this.d();
         if (param0 < 27) {
-            boolean discarded$0 = es.a(false);
+            boolean discarded$1 = es.a(false);
         }
         if (~((es) this).field_f < ~((es) this).field_d) {
             return (-((es) this).field_d + ((es) this).field_f) / 1000000L;
@@ -109,7 +110,7 @@ final class es extends ip {
         return stackIn_8_0 != 0;
     }
 
-    private final long d(int param0) {
+    private final long d() {
         int var8 = 0;
         int var9 = TombRacer.field_G ? 1 : 0;
         long var2 = System.nanoTime();
@@ -139,7 +140,7 @@ final class es extends ip {
     final static jua a(byte param0, boolean param1) {
         int var3 = -49 / ((-41 - param0) / 63);
         jua var2 = new jua(true);
-        var2.field_a = false;
+        var2.field_a = param1 ? true : false;
         return var2;
     }
 

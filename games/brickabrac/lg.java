@@ -202,45 +202,37 @@ class lg extends d {
         gg var4 = null;
         gg var5 = null;
         int var6 = 0;
-        L0: {
-          var6 = BrickABrac.field_J ? 1 : 0;
-          if (param1 == 0) {
-            break L0;
-          } else {
-            ((lg) this).a(3, -6, -76, (byte) 116, -98);
-            break L0;
-          }
-        }
-        var4 = (gg) (Object) ((lg) this).field_O.d(param1 + -75);
-        L1: while (true) {
+        var6 = BrickABrac.field_J ? 1 : 0;
+        var4 = (gg) (Object) ((lg) this).field_O.d(-75);
+        L0: while (true) {
           if (var4 != null) {
             var5 = var4;
-            L2: while (true) {
+            L1: while (true) {
               if (var5 == null) {
                 var4 = (gg) (Object) ((lg) this).field_O.a((byte) 116);
-                continue L1;
+                continue L0;
               } else {
-                L3: {
+                L2: {
                   if (var5.field_j > param2) {
-                    break L3;
+                    break L2;
                   } else {
                     if (var5.field_s > param0) {
-                      break L3;
+                      break L2;
                     } else {
                       if (var5.field_j + var5.field_r <= param2) {
-                        break L3;
+                        break L2;
                       } else {
                         if (param0 <= var5.field_s + var5.field_n) {
                           return var4;
                         } else {
-                          break L3;
+                          break L2;
                         }
                       }
                     }
                   }
                 }
                 var5 = var5.field_k;
-                continue L2;
+                continue L1;
               }
             }
           } else {
@@ -322,11 +314,11 @@ class lg extends d {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_M = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return ik.field_j;
     }
 
@@ -413,7 +405,7 @@ class lg extends d {
         }
     }
 
-    final static void h(int param0) {
+    final static void h() {
         ob.field_E.c((byte) -114);
         dl.field_f = 0;
     }

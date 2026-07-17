@@ -85,7 +85,8 @@ final class kb {
             if (var5.length != 65) {
               throw new RuntimeException();
             } else {
-              var17 = ln.a(-5 + (var10.field_g + -var16.length), var10.field_h, 5, 8);
+              int discarded$1 = 8;
+              var17 = ln.a(-5 + (var10.field_g + -var16.length), var10.field_h, 5);
               var7 = 0;
               L3: while (true) {
                 if (var7 >= 64) {

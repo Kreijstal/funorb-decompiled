@@ -477,7 +477,7 @@ final class bc implements Runnable {
             break L0;
           } else {
             var5 = null;
-            ck discarded$1 = bc.a(-6, (byte[]) null);
+            ck discarded$2 = bc.a(-6, (byte[]) null);
             break L0;
           }
         }
@@ -515,7 +515,8 @@ final class bc implements Runnable {
                   return;
                 }
               } else {
-                wl.a(1L, false);
+                int discarded$3 = 0;
+                wl.a(1L);
                 continue L2;
               }
             }
@@ -539,7 +540,7 @@ final class bc implements Runnable {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        int stackIn_15_0 = 0;
+        int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
@@ -547,8 +548,8 @@ final class bc implements Runnable {
         int stackOut_5_0 = 0;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
         var13 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -591,108 +592,100 @@ final class bc implements Runnable {
             }
             L4: {
               var9 = stackIn_10_0;
-              if (param1 == -28846) {
+              if (ll.field_g <= var6) {
+                stackOut_12_0 = ll.field_g;
+                stackIn_13_0 = stackOut_12_0;
                 break L4;
               } else {
-                field_a = null;
+                stackOut_11_0 = var6;
+                stackIn_13_0 = stackOut_11_0;
                 break L4;
               }
             }
             L5: {
-              if (ll.field_g <= var6) {
-                stackOut_14_0 = ll.field_g;
-                stackIn_15_0 = stackOut_14_0;
-                break L5;
-              } else {
-                stackOut_13_0 = var6;
-                stackIn_15_0 = stackOut_13_0;
-                break L5;
-              }
-            }
-            L6: {
-              var10 = stackIn_15_0;
+              var10 = stackIn_13_0;
               if (param4 < ll.field_a) {
-                break L6;
+                break L5;
               } else {
                 if (param4 >= ll.field_e) {
-                  break L6;
+                  break L5;
                 } else {
                   var11 = param4 + var8 * ll.field_d;
                   var12 = -var8 + var10 + 1 >> 1;
-                  L7: while (true) {
+                  L6: while (true) {
                     var12--;
                     if (var12 < 0) {
-                      break L6;
+                      break L5;
                     } else {
                       ll.field_i[var11] = 16777215;
                       var11 = var11 + ll.field_d * 2;
-                      continue L7;
+                      continue L6;
                     }
                   }
                 }
               }
             }
-            L8: {
+            L7: {
               if (ll.field_b > param3) {
-                break L8;
+                break L7;
               } else {
                 if (ll.field_g > var6) {
                   var11 = var7 + param3 * ll.field_d;
                   var12 = var9 + (1 - var7) >> 1;
-                  L9: while (true) {
+                  L8: while (true) {
                     var12--;
                     if (var12 < 0) {
-                      break L8;
+                      break L7;
                     } else {
                       ll.field_i[var11] = 16777215;
                       var11 += 2;
-                      continue L9;
+                      continue L8;
                     }
                   }
                 } else {
-                  break L8;
+                  break L7;
                 }
               }
             }
-            L10: {
+            L9: {
               if (ll.field_a > var5_int) {
-                break L10;
+                break L9;
               } else {
                 if (ll.field_e > var5_int) {
                   var11 = ((1 & -param4 + var5_int) + var8) * ll.field_d - -var5_int;
                   var12 = 1 + var10 + -var8 >> 1;
-                  L11: while (true) {
+                  L10: while (true) {
                     var12--;
                     if (var12 < 0) {
-                      break L10;
+                      break L9;
                     } else {
                       ll.field_i[var11] = 16777215;
                       var11 = var11 + ll.field_d * 2;
-                      continue L11;
+                      continue L10;
                     }
                   }
                 } else {
-                  break L10;
+                  break L9;
                 }
               }
             }
-            L12: {
+            L11: {
               if (param3 < ll.field_b) {
-                break L12;
+                break L11;
               } else {
                 if (var6 >= ll.field_g) {
-                  break L12;
+                  break L11;
                 } else {
                   var11 = ll.field_d * var6 + var7 - -(1 & -param3 + var6);
                   var12 = var9 + (1 + -var7) >> 1;
-                  L13: while (true) {
+                  L12: while (true) {
                     var12--;
                     if (var12 < 0) {
-                      break L12;
+                      break L11;
                     } else {
                       ll.field_i[var11] = 16777215;
                       var11 += 2;
-                      continue L13;
+                      continue L12;
                     }
                   }
                 }
@@ -703,7 +696,7 @@ final class bc implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var5, "bc.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw sl.a((Throwable) (Object) var5, "bc.B(" + param0 + 44 + -28846 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -992,7 +985,7 @@ final class bc implements Runnable {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_a = null;
         field_c = null;
     }

@@ -9,7 +9,7 @@ final class g extends ok {
     static String field_Jb;
     static String field_Kb;
 
-    final static cn a(cn param0, byte param1) {
+    final static cn a(cn param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -214,7 +214,7 @@ final class g extends ok {
         return stackIn_33_0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_Jb = null;
         field_Kb = null;
         field_Gb = null;
@@ -231,7 +231,8 @@ final class g extends ok {
                 field_Hb = -115;
             }
             kj.a(lj.field_e, u.field_O, -2958, lc.field_e);
-            ob.a(0, -102, param0, 0);
+            int discarded$0 = 0;
+            ob.a(0, -102, param0);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "g.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -247,24 +248,15 @@ final class g extends ok {
         if (!(!param3)) {
             var4 += 4;
         }
-        if (param1) {
-            var4 += 2;
-        }
-        if (param2 > -104) {
-            return null;
-        }
-        if (!(!param0)) {
-            var4++;
-        }
         return oa.field_c[var4];
     }
 
-    final static void a(int param0, ak param1, byte param2) {
+    final static void a(int param0, ak param1) {
         wj var3 = null;
         int var4 = 0;
         try {
             var3 = ac.field_B;
-            var3.d((byte) -118, param0);
+            var3.d((byte) -118, 4);
             var3.field_o = var3.field_o + 1;
             var4 = var3.field_o;
             var3.a(6, 1);
@@ -277,7 +269,7 @@ final class g extends ok {
             int discarded$0 = var3.c((byte) -106, var4);
             var3.c(var3.field_o - var4, -1);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "g.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 50 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "g.B(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + 50 + 41);
         }
     }
 

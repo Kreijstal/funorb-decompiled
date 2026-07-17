@@ -151,7 +151,6 @@ final class oe {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        Object var20 = null;
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
         RuntimeException stackIn_78_0 = null;
@@ -210,8 +209,8 @@ final class oe {
                     if (param0 >= 58) {
                       break L4;
                     } else {
-                      var20 = null;
-                      oe.a((String) null, true);
+                      int discarded$1 = 1;
+                      oe.a((String) null);
                       break L4;
                     }
                   }
@@ -467,7 +466,7 @@ final class oe {
         }
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void a(String param0) {
         System.out.println("Error: " + tb.a("%0a", param0, true, "\n"));
     }
 

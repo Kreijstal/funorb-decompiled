@@ -16,7 +16,7 @@ final class tl {
     static int field_f;
     static double[][] field_a;
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, boolean param5, df param6, int param7, boolean param8, long param9, int param10, int param11, int param12, int param13) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, boolean param5, df param6, int param7, boolean param8, long param9, int param10, int param11, int param12) {
         try {
             IOException var15 = null;
             RuntimeException var15_ref = null;
@@ -61,7 +61,7 @@ final class tl {
               L0: {
                 if (param4 == 9737) {
                   L1: {
-                    e.field_c = new hb(param2);
+                    e.field_c = new hb(5000);
                     vh.field_a = new hb(5000);
                     kk.field_b = param7;
                     if (!param8) {
@@ -143,7 +143,7 @@ final class tl {
               }
               L6: {
                 stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(5000).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
@@ -191,7 +191,7 @@ final class tl {
         return ci.field_b;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;

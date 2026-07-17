@@ -48,33 +48,29 @@ abstract class el {
         var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            if (param0 == -105) {
-              var5_int = 0;
-              L1: while (true) {
-                if (var5_int >= am.field_K.length) {
-                  break L0;
-                } else {
-                  param4 = am.field_K[var5_int];
-                  var6 = var5_int << 4;
-                  L2: while (true) {
-                    int incrementValue$12 = param4;
-                    param4--;
-                    if (incrementValue$12 == 0) {
-                      var5_int++;
-                      continue L1;
-                    } else {
-                      int incrementValue$13 = var6;
-                      var6++;
-                      param3 = ab.field_c[incrementValue$13];
-                      param2[param1[param3]] = param2[param1[param3]] + 1;
-                      ab.field_c[param2[param1[param3]]] = param3;
-                      continue L2;
-                    }
+            var5_int = 0;
+            L1: while (true) {
+              if (var5_int >= am.field_K.length) {
+                break L0;
+              } else {
+                param4 = am.field_K[var5_int];
+                var6 = var5_int << 4;
+                L2: while (true) {
+                  int incrementValue$12 = param4;
+                  param4--;
+                  if (incrementValue$12 == 0) {
+                    var5_int++;
+                    continue L1;
+                  } else {
+                    int incrementValue$13 = var6;
+                    var6++;
+                    param3 = ab.field_c[incrementValue$13];
+                    param2[param1[param3]] = param2[param1[param3]] + 1;
+                    ab.field_c[param2[param1[param3]]] = param3;
+                    continue L2;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +78,7 @@ abstract class el {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("el.F(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("el.F(").append(-105).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -247,7 +243,8 @@ abstract class el {
                           }
                           break L6;
                         } else {
-                          int discarded$1 = pb.a(var16, var5_int, param1, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = pb.a(var6, var5_int, param1, var4);
                           break L6;
                         }
                       }
@@ -297,7 +294,7 @@ abstract class el {
 
     abstract void a(int param0, java.awt.Component param1);
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_b = null;
         field_a = null;

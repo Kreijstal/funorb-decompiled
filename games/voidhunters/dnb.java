@@ -5,7 +5,7 @@ final class dnb extends ksa {
     int field_d;
     byte[] field_e;
 
-    final static tja c(byte param0) {
+    final static tja c() {
         tja var1 = null;
         bk.field_w.field_e = 0;
         bk.field_w.p(-23497);

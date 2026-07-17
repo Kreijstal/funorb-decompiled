@@ -13,7 +13,7 @@ final class vk extends ve {
     static String field_v;
     static String field_z;
 
-    final static void c(boolean param0) {
+    final static void c() {
         sb.field_a = false;
     }
 
@@ -50,7 +50,7 @@ final class vk extends ve {
         throw new RuntimeException();
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_v = null;
         field_z = null;
         field_B = null;
@@ -60,7 +60,7 @@ final class vk extends ve {
     vk() {
     }
 
-    final static String a(boolean param0, CharSequence param1, int param2) {
+    final static String a(boolean param0, CharSequence param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -88,13 +88,15 @@ final class vk extends ve {
         String stackOut_13_2 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var3 = ba.a(param0, param1, true);
+          int discarded$10 = 1;
+          var3 = ba.a(false, param1);
           if (var3 == null) {
             var4 = 0;
             var5 = 0;
             L0: while (true) {
               if (var5 < param1.length()) {
-                if (pm.a(param1.charAt(var5), 45)) {
+                int discarded$11 = 45;
+                if (pm.a(param1.charAt(var5))) {
                   var5++;
                   continue L0;
                 } else {
@@ -116,7 +118,7 @@ final class vk extends ve {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("vk.G(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("vk.G(").append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

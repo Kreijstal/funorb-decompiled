@@ -78,7 +78,7 @@ final class qi {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -115,7 +115,7 @@ final class qi {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

@@ -7,7 +7,7 @@ final class rr {
     static String field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -93,7 +93,7 @@ final class rr {
         }
     }
 
-    final static char a(char param0, byte param1) {
+    final static char a(char param0) {
         int var2 = 0;
         var2 = param0;
         if (32 != var2) {

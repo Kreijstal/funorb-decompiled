@@ -6,11 +6,11 @@ final class hcb extends rqa {
     static int field_o;
     static String field_q;
 
-    public static void a(int param0) {
+    public static void a() {
         field_q = null;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         rb.field_c = new ij();
     }
 
@@ -18,7 +18,7 @@ final class hcb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
@@ -377,42 +377,21 @@ final class hcb extends rqa {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var11 = 0;
-        if (param0 == 8) {
-          if (!li.field_i) {
-            var11 = param8 >>> 24;
-            if (var11 <= 1) {
-              return;
-            } else {
-              bfb.field_b = 255 - var11;
-              bfb.a(param7, param6, param1, param4, param9, param5, param8);
-              return;
-            }
+        if (!li.field_i) {
+          var11 = param8 >>> 24;
+          if (var11 <= 1) {
+            return;
           } else {
-            if (!ew.field_o) {
-              return;
-            } else {
-              og.field_r.a(param4, param7, param9, param6, param5, param1, param8, param3, param10, param2);
-              return;
-            }
+            bfb.field_b = 255 - var11;
+            bfb.a(param7, param6, param1, param4, param9, param5, param8);
+            return;
           }
         } else {
-          field_p = 5;
-          if (!li.field_i) {
-            var11 = param8 >>> 24;
-            if (var11 <= 1) {
-              return;
-            } else {
-              bfb.field_b = 255 - var11;
-              bfb.a(param7, param6, param1, param4, param9, param5, param8);
-              return;
-            }
+          if (!ew.field_o) {
+            return;
           } else {
-            if (!ew.field_o) {
-              return;
-            } else {
-              og.field_r.a(param4, param7, param9, param6, param5, param1, param8, param3, param10, param2);
-              return;
-            }
+            og.field_r.a(param4, param7, param9, param6, param5, param1, param8, param3, param10, 1);
+            return;
           }
         }
     }

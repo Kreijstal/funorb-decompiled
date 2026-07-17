@@ -5,7 +5,7 @@ final class tn {
     static String field_b;
     int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 

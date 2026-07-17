@@ -20,7 +20,7 @@ final class ib extends fj {
     static bi field_J;
     static int[] field_M;
 
-    public static void h(byte param0) {
+    public static void h() {
         field_M = null;
         field_V = null;
         field_T = null;
@@ -39,7 +39,7 @@ final class ib extends fj {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, 8355711 & param6 >> 1);
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         if (we.field_c >= 2) {
           L0: {
             if (hc.field_m == 0) {
@@ -121,7 +121,7 @@ final class ib extends fj {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         ud var1 = (ud) (Object) ve.field_b.b((byte) 98);
         if (!(var1 != null)) {
             throw new IllegalStateException();
@@ -219,6 +219,7 @@ final class ib extends fj {
     }
 
     private final nf b(int param0, byte param1, int param2) {
+        nf var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -228,7 +229,6 @@ final class ib extends fj {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        nf var14 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int stackOut_6_0 = 0;
@@ -240,18 +240,20 @@ final class ib extends fj {
           if (param1 <= -75) {
             break L0;
           } else {
-            nf discarded$1 = this.f(-60);
+            nf discarded$3 = this.f(-60);
             break L0;
           }
         }
-        var14 = new nf(2 * ((ib) this).field_P, ((ib) this).field_z);
-        vm.a(var14, -8409);
+        var4 = new nf(2 * ((ib) this).field_P, ((ib) this).field_z);
+        int discarded$4 = -8409;
+        vm.a(var4);
         var5 = ((ib) this).field_z >> 1;
         var6 = 0;
         L1: while (true) {
           if (((ib) this).field_z <= var6) {
-            ib.b(false);
-            return var14;
+            int discarded$5 = 0;
+            ib.b();
+            return var4;
           } else {
             L2: {
               var7 = (2 * ((ib) this).field_P - 1) * (var6 >> 1) % (2 * ((ib) this).field_P);
@@ -320,19 +322,23 @@ final class ib extends fj {
         try {
           L0: {
             var5_int = ((ib) this).field_F + param2;
-            lc.a(param2 + ((ib) this).field_K.field_u, -((ib) this).field_K.field_u + var5_int, param3 + ((ib) this).field_z, param3, 14907);
+            int discarded$6 = 14907;
+            lc.a(param2 + ((ib) this).field_K.field_u, -((ib) this).field_K.field_u + var5_int, param3 + ((ib) this).field_z, param3);
             var6 = -((ib) this).field_H + param2;
             L1: while (true) {
               if (var6 >= var5_int) {
                 L2: {
                   var7 = -39 % ((param0 - 61) / 63);
-                  ib.b(false);
+                  int discarded$7 = 0;
+                  ib.b();
                   if (fn.field_c <= ((ib) this).field_K.field_u + param2) {
-                    vm.a(((ib) this).field_L, -8409);
+                    int discarded$8 = -8409;
+                    vm.a(((ib) this).field_L);
                     param1.d(-((ib) this).field_H, 0);
                     param1.d(-((ib) this).field_H + ((ib) this).field_P * 2, 0);
                     ((ib) this).field_U.a(0, 0);
-                    ib.b(false);
+                    int discarded$9 = 0;
+                    ib.b();
                     ((ib) this).field_L.d(param2, param3);
                     break L2;
                   } else {
@@ -341,14 +347,16 @@ final class ib extends fj {
                 }
                 L3: {
                   if (fn.field_i >= var5_int + -((ib) this).field_K.field_u) {
-                    vm.a(((ib) this).field_L, -8409);
+                    int discarded$10 = -8409;
+                    vm.a(((ib) this).field_L);
                     var7 = -((ib) this).field_K.field_u + ((ib) this).field_F + ((ib) this).field_H;
                     L4: while (true) {
                       if (2 * ((ib) this).field_P >= var7) {
                         param1.d(-var7, 0);
                         param1.d(-var7 + 2 * ((ib) this).field_P, 0);
                         ((ib) this).field_K.a(0, 0);
-                        ib.b(false);
+                        int discarded$11 = 0;
+                        ib.b();
                         ((ib) this).field_L.d(var5_int + -((ib) this).field_K.field_u, param3);
                         break L3;
                       } else {
@@ -407,7 +415,8 @@ final class ib extends fj {
         int var10 = Confined.field_J ? 1 : 0;
         int var2 = ((ib) this).field_z >> 1;
         nf var3 = new nf(var2, ((ib) this).field_z);
-        vm.a(var3, -8409);
+        int discarded$0 = -8409;
+        vm.a(var3);
         int var4 = 0;
         int var5 = 1 % ((47 - param0) / 59);
         while (((ib) this).field_z > var4) {
@@ -422,11 +431,12 @@ final class ib extends fj {
             }
             var4++;
         }
-        ib.b(false);
+        int discarded$1 = 0;
+        ib.b();
         return var3;
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         if (ki.field_c != null) {
             ki.field_c.n(10);
         }
@@ -440,9 +450,11 @@ final class ib extends fj {
         int var6 = ((ib) this).field_m + param0;
         this.a((byte) -80, ((ib) this).field_X[0], var5, var6);
         if (65536 > ((ib) this).field_R) {
-            lc.a((((ib) this).field_F * ((ib) this).field_R >> 16) + var5, ((ib) this).field_F + var5, var6 + ((ib) this).field_z, var6, 14907);
+            int discarded$0 = 14907;
+            lc.a((((ib) this).field_F * ((ib) this).field_R >> 16) + var5, ((ib) this).field_F + var5, var6 + ((ib) this).field_z, var6);
             this.a((byte) 124, ((ib) this).field_X[1], var5, var6);
-            ib.b(false);
+            int discarded$1 = 0;
+            ib.b();
         }
         if (param2 <= 36) {
             ((ib) this).field_I = -41;

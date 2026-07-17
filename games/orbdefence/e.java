@@ -5,7 +5,7 @@ final class e {
     static im field_b;
     static java.awt.Font field_a;
 
-    final static byte[] a(Object param0, boolean param1, int param2) {
+    final static byte[] a(Object param0, boolean param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ll var4 = null;
@@ -38,7 +38,8 @@ final class e {
             if (param0 instanceof byte[]) {
               var3 = (byte[]) param0;
               if (param1) {
-                stackOut_8_0 = n.a(var3, (byte) 117);
+                int discarded$2 = 117;
+                stackOut_8_0 = n.a(var3);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
@@ -93,7 +94,7 @@ final class e {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -104,18 +105,15 @@ final class e {
 
     final static void a(boolean param0, int param1, int param2, pf param3) {
         ui.field_b = param3;
-        if (param0) {
-            return;
-        }
         try {
-            ak.field_z = param1;
-            df.field_d = param2;
+            ak.field_z = 0;
+            df.field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "e.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "e.A(" + 0 + 44 + 0 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static qg a(int param0, int param1, ki param2, int param3) {
+    final static qg a(int param0, int param1, ki param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -135,7 +133,8 @@ final class e {
         String stackOut_5_2 = null;
         try {
           if (pk.a(-56, param0, param2, param1)) {
-            return bd.b(true);
+            int discarded$2 = 1;
+            return bd.b();
           } else {
             return null;
           }

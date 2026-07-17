@@ -9,7 +9,7 @@ final class bf implements Runnable {
     static long[] field_b;
     volatile boolean field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
@@ -33,7 +33,8 @@ final class bf implements Runnable {
               var1_int = 0;
               L1: while (true) {
                 if (var1_int >= 2) {
-                  qe.a(10L, (byte) 45);
+                  int discarded$1 = 45;
+                  qe.a(10L);
                   vn.a(0, (Object) null, ((bf) this).field_c);
                   continue L0;
                 } else {

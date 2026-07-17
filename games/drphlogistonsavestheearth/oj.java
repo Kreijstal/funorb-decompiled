@@ -11,7 +11,7 @@ final class oj {
     static he field_d;
     static he[] field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_h = null;
         field_d = null;
@@ -782,7 +782,7 @@ final class oj {
         }
     }
 
-    final static jb a(int param0, int param1, vj param2, vj param3, int param4) {
+    final static jb a(int param0, int param1, vj param2, vj param3) {
         RuntimeException var5 = null;
         jb stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -819,7 +819,8 @@ final class oj {
         String stackOut_9_2 = null;
         try {
           L0: {
-            if (fl.a(param1, param2, param0, (byte) -98)) {
+            int discarded$7 = -98;
+            if (fl.a(param1, param2, param0)) {
               stackOut_3_0 = sl.a((byte) -83, param3.a(param0, param1, (byte) 35));
               stackIn_4_0 = stackOut_3_0;
               break L0;

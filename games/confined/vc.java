@@ -1470,12 +1470,12 @@ final class vc extends gf {
         return ((vc) this).field_B < 0;
     }
 
-    final static vc a(bi param0, int param1, int param2) {
+    final static vc a(bi param0) {
         if (param0.field_o != null) {
           if (param0.field_o.length == 0) {
             return null;
           } else {
-            return new vc(param0, param1, 0);
+            return new vc(param0, 0, 0);
           }
         } else {
           return null;

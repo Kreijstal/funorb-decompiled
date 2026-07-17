@@ -10,21 +10,12 @@ final class d {
     static int field_e;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
-        if (param0 < 84) {
-          field_e = -83;
-          field_d = null;
-          field_f = null;
-          field_b = null;
-          return;
-        } else {
-          field_d = null;
-          field_f = null;
-          field_b = null;
-          return;
-        }
+        field_d = null;
+        field_f = null;
+        field_b = null;
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -76,63 +67,55 @@ final class d {
             var4 = 0;
             L2: while (true) {
               if (var2_int <= var4) {
-                L3: {
-                  if (param0 == 90) {
-                    break L3;
-                  } else {
-                    d.a(-128);
-                    break L3;
-                  }
-                }
                 stackOut_24_0 = new String(var10);
                 stackIn_25_0 = stackOut_24_0;
                 break L0;
               } else {
-                L4: {
-                  L5: {
+                L3: {
+                  L4: {
                     var5 = param1.charAt(var4);
                     if (var5 < 65) {
-                      break L5;
+                      break L4;
                     } else {
                       if (var5 <= 90) {
                         var3[var4] = (char)(32 + var5);
                         var4++;
-                        break L4;
+                        break L3;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                   }
-                  L6: {
-                    L7: {
+                  L5: {
+                    L6: {
                       if (var5 < 97) {
-                        break L7;
+                        break L6;
                       } else {
                         if (var5 <= 122) {
-                          break L6;
+                          break L5;
                         } else {
-                          break L7;
+                          break L6;
                         }
                       }
                     }
-                    L8: {
+                    L7: {
                       if (var5 < 48) {
-                        break L8;
+                        break L7;
                       } else {
                         if (57 < var5) {
-                          break L8;
+                          break L7;
                         } else {
-                          break L6;
+                          break L5;
                         }
                       }
                     }
                     var3[var4] = '_';
                     var4++;
-                    break L4;
+                    break L3;
                   }
                   var3[var4] = (char)var5;
                   var4++;
-                  break L4;
+                  break L3;
                 }
                 var4++;
                 continue L2;
@@ -141,10 +124,10 @@ final class d {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var2 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var2;
-            stackOut_26_1 = new StringBuilder().append("d.B(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("d.B(").append(90).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -156,7 +139,7 @@ final class d {
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
-              break L9;
+              break L8;
             } else {
               stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
               stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
@@ -164,7 +147,7 @@ final class d {
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
               stackIn_29_2 = stackOut_27_2;
-              break L9;
+              break L8;
             }
           }
           throw kk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
@@ -173,10 +156,13 @@ final class d {
     }
 
     final static void a(boolean param0) {
-        int var1 = hg.a((byte) 95);
-        int var2 = ml.b(20719);
+        int discarded$0 = 95;
+        int var1 = hg.a();
+        int discarded$1 = 20719;
+        int var2 = ml.b();
         nc.field_c.a(ie.field_j - bi.field_g, (bi.field_g << 1) + var2, -51, var1 - -(em.field_j << 1), -em.field_j + mk.field_d);
-        mk.c(117);
+        int discarded$2 = 117;
+        mk.c();
     }
 
     static {

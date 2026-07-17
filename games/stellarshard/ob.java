@@ -7,7 +7,7 @@ final class ob {
     static long field_a;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -88,7 +88,7 @@ final class ob {
                         } else {
                           L9: {
                             var8 = ti.field_a[var6_int];
-                            if (param2 >= (255 & var8 >> 8)) {
+                            if ((255 & var8 >> 8) <= 64) {
                               break L9;
                             } else {
                               break L9;
@@ -109,7 +109,7 @@ final class ob {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var6, "ob.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ma.a((Throwable) (Object) var6, "ob.A(" + param0 + 44 + param1 + 44 + 64 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

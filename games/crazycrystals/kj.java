@@ -30,7 +30,7 @@ final class kj {
         vm.field_j = null;
     }
 
-    final static void a(uf param0, byte param1) {
+    final static void a(uf param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

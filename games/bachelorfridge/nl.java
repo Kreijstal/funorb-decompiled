@@ -76,11 +76,11 @@ final class nl {
     nl(ola param0) {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static void a(float param0, String param1, boolean param2, int param3) {
+    final static void a(float param0, String param1, boolean param2) {
         try {
             if (!(null != hp.field_d)) {
                 hp.field_d = new hga(gja.field_m, at.field_i);

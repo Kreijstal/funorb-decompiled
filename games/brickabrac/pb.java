@@ -37,7 +37,7 @@ final class pb extends nm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_o = null;
         field_n = null;
         field_l = null;

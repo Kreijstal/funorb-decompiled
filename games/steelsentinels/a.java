@@ -11,22 +11,13 @@ abstract class a {
     static String[] field_g;
     static String field_b;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        wk[] var5 = null;
-        if (param3 < 6) {
-          boolean discarded$2 = a.a(false);
-          var5 = eb.field_s;
-          jm.a(param0, param2, var5, 1, param1, 80);
-          return;
-        } else {
-          var5 = eb.field_s;
-          jm.a(param0, param2, var5, 1, param1, 80);
-          return;
-        }
+    final static void a(int param0, int param1) {
+        wk[] var5 = eb.field_s;
+        jm.a(param0, 30, var5, 1, param1, 80);
     }
 
     public static void c(int param0) {
@@ -117,7 +108,7 @@ abstract class a {
         var6 = SteelSentinels.field_G;
         try {
           L0: {
-            var4_int = -56 % ((param1 - 65) / 35);
+            var4_int = 0;
             jn.field_b = sn.field_p;
             if (255 == param2) {
               L1: {
@@ -131,7 +122,8 @@ abstract class a {
                   break L1;
                 }
               }
-              vl.field_x = fn.a(stackIn_10_0 != 0, (byte) 69);
+              int discarded$2 = 69;
+              vl.field_x = fn.a(stackIn_10_0 != 0);
               var7 = null;
               ki.a((byte) -54, (String[]) null);
               break L0;
@@ -182,7 +174,7 @@ abstract class a {
           }
           L3: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(118).append(44).append(param2).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

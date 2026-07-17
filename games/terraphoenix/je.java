@@ -5,7 +5,7 @@ final class je {
     static String field_b;
     static int[] field_a;
 
-    final static String a(int param0, String param1, String param2, char param3) {
+    final static String a(int param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -287,14 +287,7 @@ final class je {
     }
 
     final static fh a(int param0) {
-        if (df.field_K != null) {
-          if (param0 != 5) {
-            field_a = null;
-            return df.field_K;
-          } else {
-            return df.field_K;
-          }
-        } else {
+        if (df.field_K == null) {
           df.field_K = new fh();
           df.field_K.a(qk.field_e, (byte) -106);
           df.field_K.field_b = ra.field_l;
@@ -305,16 +298,13 @@ final class je {
           df.field_K.field_p = 14;
           df.field_K.field_o = 5;
           df.field_K.field_m = 0;
-          if (param0 == 5) {
-            return df.field_K;
-          } else {
-            field_a = null;
-            return df.field_K;
-          }
+          return df.field_K;
+        } else {
+          return df.field_K;
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

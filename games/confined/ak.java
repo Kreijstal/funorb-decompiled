@@ -289,7 +289,7 @@ final class ak extends ga implements el {
         return stackIn_11_0 != 0;
     }
 
-    public static void j(int param0) {
+    public static void j() {
         int var1 = 100;
         field_L = null;
         field_P = null;
@@ -371,9 +371,9 @@ final class ak extends ga implements el {
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) tf.field_a);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tf.field_a);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) tf.field_a);
-            pe.field_n = param0;
+            pe.field_n = 0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ak.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ak.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

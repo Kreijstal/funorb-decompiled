@@ -140,15 +140,8 @@ final class fl implements wo {
         }
     }
 
-    final static void a(boolean param0, int param1) {
-        if (param1 != 1) {
-          field_f = null;
-          vk.a(param1 ^ -39, false, param0);
-          return;
-        } else {
-          vk.a(param1 ^ -39, false, param0);
-          return;
-        }
+    final static void a(boolean param0) {
+        vk.a(-40, false, param0);
     }
 
     final static String a(int param0, String param1, db param2, String param3) {
@@ -308,7 +301,7 @@ final class fl implements wo {
         return stackIn_7_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
         field_f = null;
         field_i = null;

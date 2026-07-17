@@ -8,7 +8,7 @@ final class wk {
     static String field_b;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_d = null;

@@ -7,7 +7,7 @@ final class pc {
     static jn field_d;
     static ri[] field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_d = null;

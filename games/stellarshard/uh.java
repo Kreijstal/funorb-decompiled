@@ -10,10 +10,6 @@ final class uh {
 
     final static void a(int param0, int param1, int param2, int param3) {
         lg.field_b = param3;
-        if (param0 != 11130) {
-            Object var5 = null;
-            boolean discarded$0 = uh.a((fd) null, -29, (fd) null);
-        }
         ul.field_G = param1;
         kl.field_k = param2;
     }
@@ -224,7 +220,7 @@ final class uh {
         }
     }
 
-    final static wh[] a(ha param0, int param1) {
+    final static wh[] a(ha param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -415,62 +415,37 @@ final class dd extends kj {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, boolean param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = 0;
         var17 = OrbDefence.field_D ? 1 : 0;
-        if (param10) {
-          field_D = null;
-          if (param14 <= param6) {
-            if (param6 >= param5) {
-              if (param14 >= param5) {
-                ke.a(param9, param15, param14, param0, param3, param11, param7, param13, param8, ul.field_b, param12, param1, param6, param4, param5, param2, 1551567504);
-                return;
-              } else {
-                ke.a(param7, param15, param5, param0, param3, param8, param9, param4, param11, ul.field_b, param2, param1, param6, param13, param14, param12, 1551567504);
-                return;
-              }
+        if (param14 <= param6) {
+          if (param6 >= param5) {
+            if (param14 >= param5) {
+              int discarded$6 = 1551567504;
+              ke.a(param9, param15, param14, param0, param3, param11, param7, param13, param8, ul.field_b, param12, param1, param6, param4, param5, param2);
+              return;
             } else {
-              ke.a(param15, param7, param6, param13, param11, param8, param9, param4, param3, ul.field_b, param2, param12, param5, param0, param14, param1, 1551567504);
+              int discarded$7 = 1551567504;
+              ke.a(param7, param15, param5, param0, param3, param8, param9, param4, param11, ul.field_b, param2, param1, param6, param13, param14, param12);
               return;
             }
           } else {
-            if (param5 <= param14) {
-              if (param5 > param6) {
-                ke.a(param7, param9, param5, param4, param8, param3, param15, param0, param11, ul.field_b, param1, param2, param14, param13, param6, param12, 1551567504);
-                return;
-              } else {
-                ke.a(param15, param9, param6, param4, param8, param11, param7, param13, param3, ul.field_b, param12, param2, param14, param0, param5, param1, 1551567504);
-                return;
-              }
-            } else {
-              ke.a(param9, param7, param14, param13, param11, param3, param15, param0, param8, ul.field_b, param1, param12, param5, param4, param6, param2, 1551567504);
-              return;
-            }
+            int discarded$8 = 1551567504;
+            ke.a(param15, param7, param6, param13, param11, param8, param9, param4, param3, ul.field_b, param2, param12, param5, param0, param14, param1);
+            return;
           }
         } else {
-          if (param14 <= param6) {
-            if (param6 >= param5) {
-              if (param14 >= param5) {
-                ke.a(param9, param15, param14, param0, param3, param11, param7, param13, param8, ul.field_b, param12, param1, param6, param4, param5, param2, 1551567504);
-                return;
-              } else {
-                ke.a(param7, param15, param5, param0, param3, param8, param9, param4, param11, ul.field_b, param2, param1, param6, param13, param14, param12, 1551567504);
-                return;
-              }
+          if (param5 <= param14) {
+            if (param5 > param6) {
+              int discarded$9 = 1551567504;
+              ke.a(param7, param9, param5, param4, param8, param3, param15, param0, param11, ul.field_b, param1, param2, param14, param13, param6, param12);
+              return;
             } else {
-              ke.a(param15, param7, param6, param13, param11, param8, param9, param4, param3, ul.field_b, param2, param12, param5, param0, param14, param1, 1551567504);
+              int discarded$10 = 1551567504;
+              ke.a(param15, param9, param6, param4, param8, param11, param7, param13, param3, ul.field_b, param12, param2, param14, param0, param5, param1);
               return;
             }
           } else {
-            if (param5 <= param14) {
-              if (param5 > param6) {
-                ke.a(param7, param9, param5, param4, param8, param3, param15, param0, param11, ul.field_b, param1, param2, param14, param13, param6, param12, 1551567504);
-                return;
-              } else {
-                ke.a(param15, param9, param6, param4, param8, param11, param7, param13, param3, ul.field_b, param12, param2, param14, param0, param5, param1, 1551567504);
-                return;
-              }
-            } else {
-              ke.a(param9, param7, param14, param13, param11, param3, param15, param0, param8, ul.field_b, param1, param12, param5, param4, param6, param2, 1551567504);
-              return;
-            }
+            int discarded$11 = 1551567504;
+            ke.a(param9, param7, param14, param13, param11, param3, param15, param0, param8, ul.field_b, param1, param12, param5, param4, param6, param2);
+            return;
           }
         }
     }
@@ -599,13 +574,8 @@ final class dd extends kj {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        var3 = param1 >>> 31;
-        if (param0 != -1) {
-          return -63;
-        } else {
-          return (param1 - -var3) / param2 + -var3;
-        }
+        int var3 = param1 >>> 31;
+        return (param1 - -var3) / param2 + -var3;
     }
 
     public static void c(byte param0) {

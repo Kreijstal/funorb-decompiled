@@ -98,7 +98,7 @@ final class ve extends ci {
         super(0L, (ci) null);
     }
 
-    final static int f(byte param0) {
+    final static int f() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -116,10 +116,11 @@ final class ve extends ci {
         var2 = Chess.field_G;
         try {
           L0: {
-            boolean discarded$12 = jh.field_e.a(-120, hd.field_d, vj.field_h, true);
+            boolean discarded$28 = jh.field_e.a(-120, hd.field_d, vj.field_h, true);
             jh.field_e.f((byte) 70);
             L1: while (true) {
-              if (!kf.d(18954)) {
+              int discarded$29 = 18954;
+              if (!kf.d()) {
                 if (rn.field_a != -1) {
                   var1_int = rn.field_a;
                   uk.a(false, -1);
@@ -154,7 +155,7 @@ final class ve extends ci {
                   }
                 }
               } else {
-                boolean discarded$13 = jh.field_e.a(d.field_Ib, 57, vg.field_a);
+                boolean discarded$30 = jh.field_e.a(d.field_Ib, 57, vg.field_a);
                 continue L1;
               }
             }
@@ -167,7 +168,7 @@ final class ve extends ci {
         return stackIn_21_0;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_Qb = null;
         field_Gb = null;
         int var1 = 0;

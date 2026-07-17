@@ -19,7 +19,7 @@ final class cw extends sna {
         return ((cw) this).field_Bb.field_ib != 0 ? true : false;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_yb = null;
         field_zb = null;
         int var1 = 59;

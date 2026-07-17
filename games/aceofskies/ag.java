@@ -16,14 +16,14 @@ abstract class ag extends wt {
         dl var3 = null;
         try {
             var3 = q.field_p;
-            var3.g(64, param0);
-            var3.b(-1336879960, param1);
+            var3.g(64, 3);
+            var3.b(-1336879960, 5);
             var3.b(-1336879960, 0);
-            var3.a(param2.field_n, param1 ^ 23388);
+            var3.a(param2.field_n, 23385);
             var3.b(-1336879960, param2.field_j);
             var3.b(-1336879960, param2.field_m);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ag.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "ag.E(" + 3 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -33,7 +33,7 @@ abstract class ag extends wt {
         ((ag) this).field_p = true;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_n = null;
         field_o = null;
     }

@@ -90,7 +90,7 @@ final class vg {
         this.a(param2);
     }
 
-    final static void a(int param0, int param1, ka param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, ka param2, int param3, int param4) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -113,26 +113,26 @@ final class vg {
         String stackOut_5_2 = null;
         try {
           L0: {
-            var9_int = param2.field_s + (param3 + (param1 - param7));
-            var10 = param6 + param3 + (param2.field_s - -param1);
+            var9_int = param2.field_s + (param3 + param1);
+            var10 = 30 + param3 + (param2.field_s - -param1);
             var11 = (param2.field_x >> 1) + param2.field_p - -param4;
-            qg.a(var9_int, 0, var10, param5 + var11);
-            param2.b(param3 + -1, -1 + param4, param0);
-            param2.b(param3 + -1, 1 + param4, param0);
+            qg.a(var9_int, 0, var10, var11);
+            param2.b(param3 + -1, -1 + param4, 80);
+            param2.b(param3 + -1, 1 + param4, 80);
             qg.b(ck.field_c);
-            qg.a(var9_int - -1, 0, 1 + var10, var11 - -param5);
-            param2.b(param3 - -1, -1 + param4, param0);
-            param2.b(param3 + 1, param4 + 1, param0);
+            qg.a(var9_int - -1, 0, 1 + var10, var11);
+            param2.b(param3 - -1, -1 + param4, 80);
+            param2.b(param3 + 1, param4 + 1, 80);
             qg.b(ck.field_c);
-            var9_int = -param6 + (param3 + param2.field_u) + (param2.field_s + -param1);
-            var10 = -param1 + (param3 + param2.field_s) - (-param2.field_u - -param7);
-            qg.a(var9_int, var11 - param5, var10, 480);
-            param2.b(-1 + param3, param4 + -1, param0);
-            param2.b(param3 - 1, 1 + param4, param0);
+            var9_int = -30 + (param3 + param2.field_u) + (param2.field_s + -param1);
+            var10 = -param1 + (param3 + param2.field_s) - -param2.field_u;
+            qg.a(var9_int, var11, var10, 480);
+            param2.b(-1 + param3, param4 + -1, 80);
+            param2.b(param3 - 1, 1 + param4, 80);
             qg.b(ck.field_c);
-            qg.a(1 + var9_int, var11 - param5, var10 - -1, 480);
-            param2.b(1 + param3, param4 + -1, param0);
-            param2.b(param3 + 1, param4 + 1, param0);
+            qg.a(1 + var9_int, var11, var10 - -1, 480);
+            param2.b(1 + param3, param4 + -1, 80);
+            param2.b(param3 + 1, param4 + 1, 80);
             qg.b(ck.field_c);
             break L0;
           }
@@ -141,7 +141,7 @@ final class vg {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var9;
-            stackOut_4_1 = new StringBuilder().append("vg.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("vg.B(").append(80).append(44).append(param1).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -164,7 +164,7 @@ final class vg {
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 65 + 41);
+          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param3 + 44 + param4 + 44 + 0 + 44 + 30 + 44 + 0 + 44 + 65 + 41);
         }
     }
 
@@ -317,7 +317,7 @@ final class vg {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_b = null;
     }
 

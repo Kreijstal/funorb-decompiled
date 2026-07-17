@@ -378,7 +378,7 @@ final class joa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
     }
@@ -421,7 +421,7 @@ final class joa {
         try {
           L0: {
             var3_int = 0;
-            var4 = 58 % ((3 - param1) / 60);
+            var4 = 0;
             L1: while (true) {
               if (16 <= var3_int) {
                 stackOut_14_0 = "Learn to spell";
@@ -471,7 +471,7 @@ final class joa {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3;
-            stackOut_16_1 = new StringBuilder().append("joa.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_16_1 = new StringBuilder().append("joa.E(").append(param0).append(44).append(77).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;

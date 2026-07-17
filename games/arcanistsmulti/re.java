@@ -85,7 +85,7 @@ final class re extends kh {
                   break L2;
                 } else {
                   var8 = null;
-                  vd discarded$1 = this.a((dj) null, 47, 36, (String) null);
+                  vd discarded$2 = this.a((dj) null, 47, 36, (String) null);
                   break L2;
                 }
               }
@@ -94,7 +94,8 @@ final class re extends kh {
               var7 = param4.b(param0);
               var9.field_f[0] = -(var7 >> 1) + param1;
               var9.field_f[param0.length()] = param1 - -(var7 >> 1);
-              be.a(0, var9, param0, param4, (byte) 35);
+              int discarded$3 = 35;
+              be.a(0, var9, param0, param4);
               break L0;
             } else {
               ((re) this).field_f = null;
@@ -159,8 +160,8 @@ final class re extends kh {
     }
 
     final void a(int param0, byte param1, dj param2, int param3, String param4) {
+        vd var8 = null;
         vd var9 = null;
-        vd var10 = null;
         if (param4 == null) {
             ((re) this).field_f = null;
             return;
@@ -181,11 +182,12 @@ final class re extends kh {
             ((re) this).field_i = param2;
             ((re) this).field_h = 2;
             ((re) this).field_q = param4;
-            var9 = this.a(param2, 0, param3, param4);
-            var10 = var9;
-            var10.field_f[0] = -param2.b(param4) + param0;
-            var10.field_f[param4.length()] = param0;
-            be.a(0, var10, param4, param2, (byte) 35);
+            var8 = this.a(param2, 0, param3, param4);
+            var9 = var8;
+            var9.field_f[0] = -param2.b(param4) + param0;
+            var8.field_f[param4.length()] = param0;
+            int discarded$0 = 35;
+            be.a(0, var9, param4, param2);
             int var7 = -84 / ((-47 - param1) / 49);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "re.N(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
@@ -821,7 +823,8 @@ final class re extends kh {
                             break L9;
                           }
                         }
-                        be.a(stackIn_43_0, var14, var13, param1, (byte) 35);
+                        int discarded$1 = 35;
+                        be.a(stackIn_43_0, var14, var13, param1);
                         break L8;
                       } else {
                         break L8;
@@ -980,7 +983,8 @@ final class re extends kh {
               var9 = var8;
               var8.field_f[0] = param4;
               var9.field_f[param0.length()] = param2.b(param0) + param4;
-              be.a(0, var9, param0, param2, (byte) 35);
+              int discarded$1 = 35;
+              be.a(0, var9, param0, param2);
               break L0;
             }
           }
@@ -1041,7 +1045,7 @@ final class re extends kh {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_t = null;
         field_k = null;
         field_j = null;

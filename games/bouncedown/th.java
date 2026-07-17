@@ -14,7 +14,7 @@ final class th extends java.awt.Canvas {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_c = null;
     }
@@ -56,7 +56,7 @@ final class th extends java.awt.Canvas {
         try {
           L0: {
             L1: {
-              var6_int = 120 / ((33 - param1) / 59);
+              var6_int = -120;
               if (param3 == null) {
                 break L1;
               } else {
@@ -93,7 +93,7 @@ final class th extends java.awt.Canvas {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("th.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("th.A(").append(param0).append(44).append(99).append(44).append(param2).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;

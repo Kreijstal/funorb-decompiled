@@ -19,23 +19,21 @@ final class mb extends li {
         int var5 = Vertigo2.field_L ? 1 : 0;
         ri var4 = (ri) (Object) ob.field_M.a((byte) 100);
         while (var4 != null) {
-            if (var4.field_w == param0) {
+            if (var4.field_w == 0) {
                 return var4;
             }
             var4 = (ri) (Object) ob.field_M.b(96);
         }
         var4 = new ri();
-        var4.field_n = param1;
-        var4.field_w = param0;
+        var4.field_n = 10;
+        var4.field_w = 0;
         ob.field_M.a((li) (Object) var4, false);
-        if (param2 > -70) {
-            mb.b((byte) 6);
-        }
-        tg.a(7, var4, 0);
+        int discarded$0 = 0;
+        tg.a(7, var4);
         return var4;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_w = null;
         field_q = null;
         field_t = null;
@@ -43,7 +41,7 @@ final class mb extends li {
         field_v = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return null != rc.field_d;
     }
 
@@ -51,22 +49,21 @@ final class mb extends li {
         if (param0 != -110) {
             mb.b((byte) 10);
         }
-        lj.a((byte) -116);
+        int discarded$0 = -116;
+        lj.a();
     }
 
     final static String a(int param0) {
         String var1 = "";
         if (!(eb.field_d == null)) {
-            var1 = eb.field_d.j(param0 ^ 5607);
+            var1 = eb.field_d.j(5607);
         }
         if (var1.length() == 0) {
-            var1 = vb.c(-15381);
+            int discarded$0 = -15381;
+            var1 = vb.c();
         }
         if (var1.length() == 0) {
             var1 = dh.field_a;
-        }
-        if (param0 != 0) {
-            field_s = -111;
         }
         return var1;
     }

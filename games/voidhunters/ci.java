@@ -6,26 +6,18 @@ final class ci implements dja {
     static int field_b;
     static String field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (!li.field_i) {
           dma.d(param4, param0, param3, param1, param2);
-          if (param6 == 0) {
-            return;
-          } else {
-            field_a = null;
-            return;
-          }
+          field_a = null;
+          return;
         } else {
           param5 = param5 | -16777216;
           param2 = param2 | -16777216;
           hcb.a(8, param0 + param1, 1, param2, param4, param3 + param4, param1 + param0, param0, param2, param4, param5);
           hcb.a(8, param0, 1, param5, param4, param3 + param4, param1 + param0, param0, param2, param3 + param4, param5);
-          if (param6 == 0) {
-            return;
-          } else {
-            field_a = null;
-            return;
-          }
+          field_a = null;
+          return;
         }
     }
 
@@ -41,7 +33,7 @@ final class ci implements dja {
         return (tv) (Object) new gqa();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

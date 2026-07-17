@@ -8,9 +8,6 @@ final class kj {
 
     final static void a(int param0, int param1) {
         np.field_Jb.a((gn) (Object) new pv(param1), 3);
-        if (param0 != 63) {
-            field_c = null;
-        }
     }
 
     final static ot a(int param0, int param1, up param2, int param3, int param4, boolean param5) {
@@ -51,14 +48,14 @@ final class kj {
         var8 = Kickabout.field_G;
         try {
           L0: {
-            var6_int = param1;
+            var6_int = 0;
             L1: while (true) {
               if (var6_int >= 64) {
                 var6_long = nj.a(-53);
                 if (-bk.field_b + var6_long >= 80L) {
                   if (ra.field_G == null) {
                     bk.field_b = var6_long;
-                    ue.field_f[63].a(param1 + 184, param3, param0, param2, param5, param4);
+                    ue.field_f[63].a(184, param3, param0, param2, param5, param4);
                     dc.a(63, (byte) 88);
                     stackOut_20_0 = ue.field_f[0].field_h;
                     stackIn_21_0 = stackOut_20_0;
@@ -125,7 +122,7 @@ final class kj {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var6;
-            stackOut_22_1 = new StringBuilder().append("kj.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_22_1 = new StringBuilder().append("kj.B(").append(param0).append(44).append(0).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -166,7 +163,7 @@ final class kj {
         ((kj) this).field_a = param0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
     }
@@ -185,7 +182,7 @@ final class kj {
           L0: {
             L1: {
               on.f(param2, param1, 1 + param4, 10000536);
-              on.f(param2, param3 + param1, param4 + 1, param0);
+              on.f(param2, param3 + param1, param4 + 1, 12105912);
               var5_int = 1;
               if (param1 - -var5_int < on.field_e) {
                 var5_int = -param1 + on.field_e;
@@ -220,7 +217,7 @@ final class kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var5, "kj.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw nb.a((Throwable) (Object) var5, "kj.D(" + 12105912 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

@@ -72,7 +72,7 @@ final class kh implements io {
         return var2.field_j;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 0;
     }

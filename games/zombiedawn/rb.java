@@ -1063,7 +1063,8 @@ abstract class rb extends nb {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_F = sa.a(var7, (byte) 124, 16);
+                                    int discarded$4 = 16;
+                                    field_F = sa.a(var7, (byte) 124);
                                     break L1;
                                   }
                                 } else {
@@ -1076,7 +1077,8 @@ abstract class rb extends nb {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_u = sa.a(var6, (byte) -73, 16);
+                              int discarded$5 = 16;
+                              field_u = sa.a(var6, (byte) -73);
                               break L1;
                             }
                           } else {
@@ -1089,7 +1091,8 @@ abstract class rb extends nb {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_q = sa.a(var5, (byte) 122, 16);
+                        int discarded$6 = 16;
+                        field_q = sa.a(var5, (byte) 122);
                         break L1;
                       }
                     } else {
@@ -1107,7 +1110,8 @@ abstract class rb extends nb {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_p = sa.a(var3, (byte) 127, 16);
+                int discarded$7 = 16;
+                field_p = sa.a(var3, (byte) 127);
                 break L1;
               }
             }

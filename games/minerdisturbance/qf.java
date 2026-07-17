@@ -51,7 +51,7 @@ final class qf extends pi {
               param5 = param5 + param2.field_b;
               param3 = param3 + param2.field_e;
               var8 = param3 * eh.field_g + param5;
-              var9 = param4;
+              var9 = 0;
               var10 = param2.field_f;
               var11 = param2.field_a;
               var12 = eh.field_g - var11;
@@ -194,7 +194,7 @@ final class qf extends pi {
               break L10;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw lj.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
         }
     }
 

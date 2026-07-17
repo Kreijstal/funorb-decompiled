@@ -16,12 +16,12 @@ final class vb extends gi {
     int[][] field_t;
     static int field_o;
 
-    public static void d(int param0) {
+    public static void d() {
         field_q = null;
         field_s = null;
     }
 
-    final static oi a(byte param0) {
+    final static oi a() {
         try {
             Throwable var1 = null;
             oi stackIn_3_0 = null;

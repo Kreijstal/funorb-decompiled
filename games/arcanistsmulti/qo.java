@@ -35,7 +35,7 @@ final class qo {
         if (on.field_h > 2) {
             on.field_h = 2;
             ra.field_m = (param1 & 13) >> 2;
-            if (ra.field_m <= param0) {
+            if (ra.field_m <= 2) {
                 hd.field_b = param1 & 3;
                 if (!(hd.field_b <= 2)) {
                     hd.field_b = 2;
@@ -50,7 +50,7 @@ final class qo {
             return;
         }
         ra.field_m = (param1 & 13) >> 2;
-        if (ra.field_m > param0) {
+        if (ra.field_m > 2) {
             ra.field_m = 2;
             hd.field_b = param1 & 3;
             if (!(hd.field_b <= 2)) {
@@ -122,12 +122,14 @@ final class qo {
         try {
           L0: {
             L1: {
-              var2 = rl.a(be.a(param1, false), 29424);
+              int discarded$6 = 0;
+              int discarded$7 = 29424;
+              var2 = rl.a(be.a(param1));
               if (param0 >= 67) {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$2 = qo.a((byte) -47, (CharSequence) null);
+                String discarded$8 = qo.a((byte) -47, (CharSequence) null);
                 break L1;
               }
             }
@@ -176,7 +178,7 @@ final class qo {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_c = null;

@@ -119,19 +119,22 @@ final class s extends wi {
         return stackIn_16_0 != 0;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_M = null;
         field_F = null;
     }
 
-    final static ec j(int param0) {
-        String var1 = ls.g(-26370);
+    final static ec j() {
+        int discarded$0 = -26370;
+        String var1 = ls.g();
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        return new ec(ls.g(-26370), gu.b(-20010));
+        int discarded$1 = -26370;
+        int discarded$2 = -20010;
+        return new ec(ls.g(), gu.b());
     }
 
     final static int a(int param0, int param1, byte[] param2, int param3) {
@@ -210,9 +213,6 @@ final class s extends wi {
     }
 
     final static void c(int param0, int param1, int param2, int param3) {
-        if (param0 != -1) {
-            return;
-        }
         np.field_Jb.a((gn) (Object) new ek(param3, param1, param2), 3);
     }
 

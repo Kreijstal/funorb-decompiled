@@ -86,7 +86,7 @@ final class ag extends q {
         return stackIn_6_0;
     }
 
-    final static Class a(String param0, boolean param1) throws ClassNotFoundException {
+    final static Class a(String param0) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_2_0 = null;
         Class stackIn_6_0 = null;
@@ -307,7 +307,8 @@ final class ag extends q {
         try {
           L0: {
             L1: {
-              if (null != ca.a(param1, 1)) {
+              int discarded$12 = 1;
+              if (null != ca.a(param1)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -324,7 +325,7 @@ final class ag extends q {
                   break L2;
                 } else {
                   var4 = null;
-                  String discarded$2 = ((ag) this).b(97, (String) null);
+                  String discarded$13 = ((ag) this).b(97, (String) null);
                   break L2;
                 }
               }
@@ -423,12 +424,9 @@ final class ag extends q {
     final static void c(int param0, String param1) {
         try {
             rd.a(-119, param1);
-            if (param0 != 12607) {
-                field_l = 32;
-            }
             fa.a(rj.field_g, 480, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ag.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ag.G(" + 12607 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

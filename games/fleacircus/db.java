@@ -113,7 +113,8 @@ abstract class db extends gj {
               ok.field_y = new dd(((db) this).field_u, ((db) this).field_j);
               break L0;
             }
-            r.a(ok.field_y, 45);
+            int discarded$2 = 45;
+            r.a(ok.field_y);
             gb.c();
             ((db) this).b(0, 0, 17344);
             super.b(-param0 + -((db) this).field_z, -param1 - ((db) this).field_y, param2, param3);
@@ -247,7 +248,8 @@ abstract class db extends gj {
                         continue L1;
                       } else {
                         var5++;
-                        var8 = pl.a((CharSequence) (Object) var7_ref_String, -9816);
+                        int discarded$5 = -9816;
+                        var8 = pl.a((CharSequence) (Object) var7_ref_String);
                         var4 = var4 + (param1[var8].length() + (var6_int + -var5));
                         continue L1;
                       }
@@ -269,7 +271,7 @@ abstract class db extends gj {
                         break L5;
                       }
                     }
-                    StringBuilder discarded$3 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$6 = var6.append(param0.substring(var7));
                     stackOut_26_0 = var6.toString();
                     stackIn_27_0 = stackOut_26_0;
                     break L0;
@@ -295,10 +297,11 @@ abstract class db extends gj {
                         } else {
                           if (62 == param0.charAt(var5)) {
                             var5++;
-                            var10 = pl.a((CharSequence) (Object) var9, -9816);
-                            StringBuilder discarded$4 = var6.append(param0.substring(var7, var8));
+                            int discarded$7 = -9816;
+                            var10 = pl.a((CharSequence) (Object) var9);
+                            StringBuilder discarded$8 = var6.append(param0.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$5 = var6.append(param1[var10]);
+                            StringBuilder discarded$9 = var6.append(param1[var10]);
                             continue L4;
                           } else {
                             continue L4;
@@ -389,50 +392,43 @@ abstract class db extends gj {
         int var4 = 0;
         int var5 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        int stackOut_9_0 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var5 = fleas.field_A ? 1 : 0;
         try {
           L0: {
             if (param2 > 0) {
-              if (mc.a(param2, (byte) -124)) {
+              int discarded$8 = -124;
+              if (mc.a(param2)) {
                 stackOut_5_0 = (int)(((long)param1.nextInt() & 4294967295L) * (long)param2 >> 32);
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               } else {
-                L1: {
-                  var3_int = -2147483648 + -(int)(4294967296L % (long)param2);
-                  if (param0 == -115) {
-                    break L1;
-                  } else {
-                    field_F = null;
-                    break L1;
-                  }
-                }
-                L2: while (true) {
+                var3_int = -2147483648 + -(int)(4294967296L % (long)param2);
+                L1: while (true) {
                   var4 = param1.nextInt();
                   if (var4 >= var3_int) {
-                    continue L2;
+                    continue L1;
                   } else {
-                    stackOut_10_0 = gk.a(param2, true, var4);
-                    stackIn_11_0 = stackOut_10_0;
+                    stackOut_9_0 = gk.a(param2, true, var4);
+                    stackIn_10_0 = stackOut_9_0;
                     break L0;
                   }
                 }
@@ -443,38 +439,38 @@ abstract class db extends gj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("db.RA(").append(param0).append(44);
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("db.RA(").append(-115).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L3;
-            } else {
               stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
               stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L3;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L2;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
         }
-        return stackIn_11_0;
+        return stackIn_10_0;
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_F = null;
         field_J = null;
         field_I = null;

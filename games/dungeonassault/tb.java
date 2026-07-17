@@ -31,8 +31,8 @@ final class tb {
         return null;
     }
 
-    final static void a(byte param0) {
-        int var1 = -104 / ((-17 - param0) / 53);
+    final static void a() {
+        int var1 = -104;
         vj.field_c = null;
         no.field_a = 0;
         ti.field_f = false;
@@ -81,7 +81,7 @@ final class tb {
         return null;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
         field_h = null;
         int var1 = 0;
@@ -90,7 +90,7 @@ final class tb {
 
     final static void a(boolean param0, int param1) {
         if (!(null == ik.field_e)) {
-            ik.field_e.a(param0);
+            ik.field_e.a(true);
         }
     }
 

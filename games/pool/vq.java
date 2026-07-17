@@ -22,7 +22,7 @@ final class vq extends vh {
     private int[] field_dc;
     private int field_Vb;
 
-    public static void f(int param0) {
+    public static void f() {
         field_bc = null;
         field_Zb = null;
         field_Ub = null;
@@ -41,51 +41,43 @@ final class vq extends vh {
         return true;
     }
 
-    final static boolean a(char param0, int param1) {
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+    final static boolean a(char param0) {
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         L0: {
-          if (param1 == 22987) {
-            break L0;
-          } else {
-            field_Xb = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            L3: {
+          L1: {
+            L2: {
               if (param0 < 65) {
-                break L3;
+                break L2;
               } else {
                 if (param0 <= 90) {
-                  break L2;
+                  break L1;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             }
-            L4: {
+            L3: {
               if (param0 < 97) {
-                break L4;
+                break L3;
               } else {
                 if (param0 > 122) {
-                  break L4;
+                  break L3;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
-            break L1;
+            stackOut_7_0 = 0;
+            stackIn_8_0 = stackOut_7_0;
+            break L0;
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
-          break L1;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L0;
         }
-        return stackIn_10_0 != 0;
+        return stackIn_8_0 != 0;
     }
 
     final void a(String param0, int param1, int param2) {

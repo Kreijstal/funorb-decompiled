@@ -25,7 +25,7 @@ final class lk extends fu implements fq {
         return ((lk) this).field_f;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_g = null;
     }
 

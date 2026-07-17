@@ -19,7 +19,7 @@ final class la {
         return 0 != (param1 & 2048) ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_g = null;
         field_f = null;
@@ -34,13 +34,9 @@ final class la {
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
             rr.a("", (byte) -112, param1);
-            if (!param0) {
-                Object var3 = null;
-                la.a(true, (java.applet.Applet) null);
-            }
             jn.a((byte) 120, param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "la.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "la.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -54,13 +50,6 @@ final class la {
         }
         if (nb.field_c == jq.field_fb) {
             return ua.field_j;
-        }
-        if (param0 != 4) {
-            field_h = null;
-            if (!(gm.field_x.a(false))) {
-                return ua.field_j;
-            }
-            return se.field_a;
         }
         if (!(gm.field_x.a(false))) {
             return ua.field_j;

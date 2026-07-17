@@ -180,15 +180,15 @@ final class rj extends id {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        Object var28 = null;
-        ga var29 = null;
-        Object var30 = null;
-        kj var30_ref = null;
-        long[][] var37 = null;
-        int[][] var38 = null;
+        Object var27 = null;
+        ga var28 = null;
+        Object var29 = null;
+        kj var29_ref = null;
+        long[][] var36 = null;
+        int[][] var37 = null;
         RuntimeException decompiledCaughtException = null;
-        var30 = null;
-        var28 = null;
+        var29 = null;
+        var27 = null;
         var26 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -201,10 +201,10 @@ final class rj extends id {
               }
             }
             L2: {
-              var29 = s.field_e;
-              var2 = var29.g(param0 + 31362);
+              var28 = s.field_e;
+              var2 = var28.g(param0 + 31362);
               if (var2 == 0) {
-                var3 = var29.d((byte) 69);
+                var3 = var28.d((byte) 69);
                 var4 = (nh) (Object) pn.field_f.c(71);
                 L3: while (true) {
                   L4: {
@@ -223,7 +223,7 @@ final class rj extends id {
                     ak.a((byte) -119);
                     return;
                   } else {
-                    var5 = var29.g(param0 ^ 31366);
+                    var5 = var28.g(param0 ^ 31366);
                     if (var5 != 0) {
                       var6 = var4.field_k;
                       ha.field_j[0].field_g = false;
@@ -235,37 +235,37 @@ final class rj extends id {
                         if (var5 <= var8_int) {
                           var8 = new String[3][var6];
                           var9 = new String[3][var6];
-                          var37 = new long[3][var6];
-                          var38 = new int[3][var7 * var6];
+                          var36 = new long[3][var6];
+                          var37 = new int[3][var7 * var6];
                           var12 = 0;
                           var13 = 0;
                           var14 = 0;
                           var15 = 0;
                           var16 = 0;
                           var17 = 0;
-                          var18 = var29.g(31365);
+                          var18 = var28.g(31365);
                           if (var18 > 0) {
                             var19 = 0;
                             L6: while (true) {
                               if (var18 > var19) {
                                 L7: {
-                                  var20 = var29.g(31365);
+                                  var20 = var28.g(31365);
                                   var21 = ha.field_j[var20].field_d;
-                                  var22 = var29.a((byte) -30);
-                                  var24 = var29.field_j;
+                                  var22 = var28.a((byte) -30);
+                                  var24 = var28.field_j;
                                   if (var6 > var19) {
                                     var8[0][var12] = var21;
                                     var9[0][var12] = ha.field_j[var20].field_c;
-                                    var37[0][var12] = var22;
+                                    var36[0][var12] = var22;
                                     var12++;
                                     var25 = 0;
                                     L8: while (true) {
                                       if (var7 <= var25) {
                                         break L7;
                                       } else {
-                                        int incrementValue$3 = var15;
+                                        int incrementValue$4 = var15;
                                         var15++;
-                                        var38[0][incrementValue$3] = var29.i(-1478490344);
+                                        var37[0][incrementValue$4] = var28.i(-1478490344);
                                         var25++;
                                         continue L8;
                                       }
@@ -281,17 +281,17 @@ final class rj extends id {
                                     if (sf.a(1, var21)) {
                                       var8[1][var13] = ta.field_lb;
                                       var9[1][var13] = null;
-                                      var37[1][var13] = var22;
+                                      var36[1][var13] = var22;
                                       var13++;
-                                      var29.field_j = var24;
+                                      var28.field_j = var24;
                                       var25 = 0;
                                       L10: while (true) {
                                         if (var7 <= var25) {
                                           break L9;
                                         } else {
-                                          int incrementValue$4 = var16;
+                                          int incrementValue$5 = var16;
                                           var16++;
-                                          var38[1][incrementValue$4] = var29.i(-1478490344);
+                                          var37[1][incrementValue$5] = var28.i(-1478490344);
                                           var25++;
                                           continue L10;
                                         }
@@ -309,17 +309,17 @@ final class rj extends id {
                                       ha.field_j[var20].field_g = true;
                                       var8[2][var14] = var21;
                                       var9[2][var14] = ha.field_j[var20].field_c;
-                                      var37[2][var14] = var22;
+                                      var36[2][var14] = var22;
                                       var14++;
-                                      var29.field_j = var24;
+                                      var28.field_j = var24;
                                       var25 = 0;
                                       L12: while (true) {
                                         if (var25 >= var7) {
                                           break L11;
                                         } else {
-                                          int incrementValue$5 = var17;
+                                          int incrementValue$6 = var17;
                                           var17++;
-                                          var38[2][incrementValue$5] = var29.i(-1478490344);
+                                          var37[2][incrementValue$6] = var28.i(-1478490344);
                                           var25++;
                                           continue L12;
                                         }
@@ -342,13 +342,13 @@ final class rj extends id {
                           }
                         } else {
                           L13: {
-                            ha.field_j[var8_int].field_d = var29.f((byte) -121);
+                            ha.field_j[var8_int].field_d = var28.f((byte) -121);
                             ha.field_j[var8_int].field_g = false;
-                            if (1 != var29.g(31365)) {
+                            if (1 != var28.g(31365)) {
                               ha.field_j[var8_int].field_c = null;
                               break L13;
                             } else {
-                              ha.field_j[var8_int].field_c = var29.f((byte) -81);
+                              ha.field_j[var8_int].field_c = var28.f((byte) -81);
                               break L13;
                             }
                           }
@@ -364,30 +364,31 @@ final class rj extends id {
                 }
               } else {
                 if (var2 != 1) {
-                  bd.a("HS1: " + ci.a(param0 ^ 3), (Throwable) null, false);
+                  int discarded$7 = 0;
+                  bd.a("HS1: " + ci.a(param0 ^ 3), (Throwable) null);
                   ak.a((byte) -123);
                   break L2;
                 } else {
-                  var3 = var29.d((byte) 69);
-                  var30_ref = (kj) (Object) md.field_u.c(102);
+                  var3 = var28.d((byte) 69);
+                  var29_ref = (kj) (Object) md.field_u.c(102);
                   L14: while (true) {
                     L15: {
-                      if (var30_ref == null) {
+                      if (var29_ref == null) {
                         break L15;
                       } else {
-                        if (var30_ref.field_i != var3) {
-                          var28 = (Object) (Object) (kj) (Object) md.field_u.b(6);
+                        if (var29_ref.field_i != var3) {
+                          var27 = (Object) (Object) (kj) (Object) md.field_u.b(6);
                           continue L14;
                         } else {
                           break L15;
                         }
                       }
                     }
-                    if (var28 == null) {
+                    if (var27 == null) {
                       ak.a((byte) -115);
                       return;
                     } else {
-                      ((kj) var28).a(true);
+                      ((kj) var27).a(true);
                       break L2;
                     }
                   }

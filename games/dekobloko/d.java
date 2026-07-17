@@ -11,7 +11,7 @@ final class d {
     static pi field_e;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_g = null;
         field_a = null;
@@ -29,9 +29,6 @@ final class d {
             ed.field_g = 0;
             qi.field_S.c(111);
             uf.field_z.c(117);
-            if (!param0) {
-                d.a(true);
-            }
             var1 = mc.field_a.c(-9443);
             while (var1 != null) {
                 var1.e((byte) 105);
@@ -44,7 +41,7 @@ final class d {
             }
             jj.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "d.A(" + param0 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "d.A(" + 1 + 41);
         }
     }
 

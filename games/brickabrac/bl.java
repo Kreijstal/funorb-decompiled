@@ -45,13 +45,14 @@ final class bl extends af {
         String stackOut_15_2 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = kf.a(param1, param2, 3);
+          int discarded$2 = 3;
+          var3 = kf.a(false, param2);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
           } else {
-            var4 = param0;
+            var4 = 0;
             L0: while (true) {
               if (var4 < param2.length()) {
                 if (!mh.a(true, param2.charAt(var4))) {
@@ -72,7 +73,7 @@ final class bl extends af {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("bl.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("bl.D(").append(0).append(44).append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -103,7 +104,8 @@ final class bl extends af {
         int stackIn_13_0 = 0;
         int stackOut_12_0 = 0;
         int stackOut_11_0 = 0;
-        if (eo.a(((bl) this).field_t, param0, (byte) -75)) {
+        int discarded$13 = -75;
+        if (eo.a(((bl) this).field_t, param0)) {
           return false;
         } else {
           if (param1 == 38) {
@@ -162,7 +164,7 @@ final class bl extends af {
         ((bl) this).field_t = mk.field_b;
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_G = null;
         field_J = null;
         field_H = null;

@@ -25,14 +25,13 @@ final class he extends ai {
         if (param2) {
             var4 += 4;
         }
-        var4 += 2;
-        if (!(!param1)) {
-            var4++;
+        if (param3) {
+            var4 += 2;
         }
         return hc.field_e[var4];
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         qg var3 = null;
@@ -70,7 +69,8 @@ final class he extends ai {
                 }
               }
               if (var3 == null) {
-                kc.a((byte) 18);
+                int discarded$1 = 18;
+                kc.a();
                 return;
               } else {
                 L3: {
@@ -176,7 +176,7 @@ final class he extends ai {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
         field_n = null;
         field_p = null;

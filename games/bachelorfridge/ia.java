@@ -19,10 +19,12 @@ final class ia extends pv {
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$2 = ((ia) this).field_g + 1;
+        int fieldTemp$6 = ((ia) this).field_g + 1;
         ((ia) this).field_g = ((ia) this).field_g + 1;
-        if (fieldTemp$2 > this.d(300)) {
-          this.b(-1);
+        int discarded$7 = 300;
+        if (fieldTemp$6 > this.d()) {
+          int discarded$8 = -1;
+          this.b();
           return true;
         } else {
           if (1 != ((ia) this).field_g) {
@@ -54,11 +56,11 @@ final class ia extends pv {
         }
     }
 
-    private final int d(int param0) {
+    private final int d() {
         return 300;
     }
 
-    private final void b(int param0) {
+    private final void b() {
         ((ia) this).field_f.field_y = -1;
     }
 

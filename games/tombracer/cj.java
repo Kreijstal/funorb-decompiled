@@ -11,11 +11,11 @@ final class cj implements isa {
     private int field_c;
     private int field_g;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean a(int[] param0) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         rha var4_ref_rha = null;
@@ -115,7 +115,8 @@ final class cj implements isa {
                     }
                   }
                 }
-                if (cla.g(0)) {
+                int discarded$1 = 0;
+                if (cla.g()) {
                   if (0 == ga.field_H) {
                     vua.field_B = hla.field_xb;
                     hla.field_xb = ufa.field_c;

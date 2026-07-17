@@ -65,22 +65,18 @@ final class cd {
                   param0[2].d(param1 + param3 + -var6, param4);
                   vj.a(sg.field_c);
                   vj.f(var5_int + param3, param4, -var6 + param1 + param3, param4 - -param0[1].field_k);
-                  if (param2 == -94) {
-                    var8 = var5_int + param3;
-                    var9 = -var6 + param3 - -param1;
-                    param3 = var8;
-                    L2: while (true) {
-                      if (var9 <= param3) {
-                        vj.b(sg.field_c);
-                        break L0;
-                      } else {
-                        param0[1].d(param3, param4);
-                        param3 = param3 + var7;
-                        continue L2;
-                      }
+                  var8 = var5_int + param3;
+                  var9 = -var6 + param3 - -param1;
+                  param3 = var8;
+                  L2: while (true) {
+                    if (var9 <= param3) {
+                      vj.b(sg.field_c);
+                      break L0;
+                    } else {
+                      param0[1].d(param3, param4);
+                      param3 = param3 + var7;
+                      continue L2;
                     }
-                  } else {
-                    return;
                   }
                 }
               }
@@ -115,7 +111,7 @@ final class cd {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ma.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + -94 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -154,60 +150,30 @@ final class cd {
         int var9 = 0;
         var9 = Main.field_T;
         if (param0 >= param2) {
-          if (param1 > param0) {
-            w.a(vj.field_j, param6, param0, param5, true, param4, param7, param2, param1);
-            if (param3 == -1) {
+          if (param1 <= param0) {
+            if (param1 <= param2) {
+              w.a(vj.field_j, param6, param2, param7, true, param5, param4, param1, param0);
               return;
             } else {
-              field_f = null;
+              w.a(vj.field_j, param6, param1, param5, true, param7, param4, param2, param0);
               return;
             }
           } else {
-            if (param1 > param2) {
-              w.a(vj.field_j, param6, param1, param5, true, param7, param4, param2, param0);
-              if (param3 == -1) {
-                return;
-              } else {
-                field_f = null;
-                return;
-              }
-            } else {
-              w.a(vj.field_j, param6, param2, param7, true, param5, param4, param1, param0);
-              if (param3 == -1) {
-                return;
-              } else {
-                field_f = null;
-                return;
-              }
-            }
+            w.a(vj.field_j, param6, param0, param5, true, param4, param7, param2, param1);
+            return;
           }
         } else {
-          if (param2 < param1) {
-            w.a(vj.field_j, param6, param2, param4, true, param5, param7, param0, param1);
-            if (param3 == -1) {
+          if (param2 >= param1) {
+            if (param0 >= param1) {
+              w.a(vj.field_j, param6, param0, param7, true, param4, param5, param1, param2);
               return;
             } else {
-              field_f = null;
+              w.a(vj.field_j, param6, param1, param4, true, param7, param5, param0, param2);
               return;
             }
           } else {
-            if (param0 >= param1) {
-              w.a(vj.field_j, param6, param0, param7, true, param4, param5, param1, param2);
-              if (param3 == -1) {
-                return;
-              } else {
-                field_f = null;
-                return;
-              }
-            } else {
-              w.a(vj.field_j, param6, param1, param4, true, param7, param5, param0, param2);
-              if (param3 == -1) {
-                return;
-              } else {
-                field_f = null;
-                return;
-              }
-            }
+            w.a(vj.field_j, param6, param2, param4, true, param5, param7, param0, param1);
+            return;
           }
         }
     }
@@ -264,7 +230,7 @@ final class cd {
         ((cd) this).field_d.field_h = ((cd) this).field_d;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         int var1 = 0;
         field_g = null;

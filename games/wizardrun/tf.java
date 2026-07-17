@@ -295,7 +295,7 @@ final class tf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static int a(int param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -368,7 +368,7 @@ final class tf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         return stackIn_23_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_a = null;
         field_b = null;

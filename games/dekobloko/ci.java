@@ -11,7 +11,7 @@ final class ci {
     static vj field_h;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_f = null;
         field_g = null;
@@ -21,7 +21,7 @@ final class ci {
         field_a = null;
     }
 
-    final static pi[] b(int param0) {
+    final static pi[] b() {
         int var2 = 0;
         int var3 = client.field_A ? 1 : 0;
         pi[] var1 = new pi[ec.field_g];
@@ -90,16 +90,13 @@ final class ci {
 
     final static void a(cc param0, int param1, int param2, byte param3, int param4, cc param5) {
         try {
-            if (param3 >= -62) {
-                field_d = null;
-            }
             nf.field_g = param0;
             da.field_c = param5;
-            mb.field_c = param1;
-            qk.field_m = param4;
-            pa.field_Y = param2;
+            mb.field_c = 32;
+            qk.field_m = 4;
+            pa.field_Y = 5;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ci.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ci.E(" + (param0 != null ? "{...}" : "null") + 44 + 32 + 44 + 5 + 44 + -63 + 44 + 4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 

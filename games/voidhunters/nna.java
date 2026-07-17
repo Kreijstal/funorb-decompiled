@@ -229,7 +229,7 @@ final class nna extends dqa implements oo {
         return stackIn_3_0;
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_F = null;
         field_v = null;
         field_z = null;
@@ -269,9 +269,6 @@ final class nna extends dqa implements oo {
         }
         htb[] var7 = new htb[param1];
         htb[] var3 = var7;
-        if (param0 != -4349) {
-            return;
-        }
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < ((nna) this).field_A; var5++) {
             var7[var5] = ((nna) this).field_y[var5];

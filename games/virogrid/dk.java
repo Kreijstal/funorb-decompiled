@@ -80,7 +80,8 @@ abstract class dk {
                       } else {
                         ng.field_N = new el((java.net.Socket) vm.field_b.field_f, ii.field_a);
                         var2 = new jc(13);
-                        hj.a(fd.field_C, var2, rj.field_l, ed.field_b, 12);
+                        int discarded$1 = 12;
+                        hj.a(fd.field_C, var2, rj.field_l, ed.field_b);
                         var2.a(15, param0 ^ -26);
                         var2.a(dl.field_c, (byte) -42);
                         ng.field_N.a(var2.field_g, param0 ^ 108, 0, 13);
@@ -262,7 +263,7 @@ abstract class dk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_r = null;
         field_q = null;
         field_m = null;

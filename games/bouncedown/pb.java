@@ -29,7 +29,7 @@ final class pb {
         int var2 = 67 / ((param0 - -37) / 44);
     }
 
-    final static boolean a(wi param0, byte param1) {
+    final static boolean a(wi param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -138,9 +138,9 @@ final class pb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
-        int var1 = 28 % ((param0 - 45) / 63);
+        int var1 = 0;
         field_g = null;
     }
 
@@ -301,10 +301,7 @@ final class pb {
         }
     }
 
-    final static void b(int param0) {
-        if (param0 != 16) {
-            field_k = null;
-        }
+    final static void b() {
     }
 
     private final void d(int param0) {
@@ -554,7 +551,7 @@ final class pb {
         }
     }
 
-    final static he a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
+    final static he a(int[] param0, int param1, int param2, int param3, int param4) {
         he var9 = null;
         RuntimeException var9_ref = null;
         he stackIn_3_0 = null;
@@ -577,9 +574,9 @@ final class pb {
         String stackOut_5_2 = null;
         try {
           L0: {
-            var9 = new he(param6, param7, param1, param4, param2, param3, param0);
+            var9 = new he(13, 65522, param1, param4, param2, param3, param0);
             of.field_b.a(1, (ai) (Object) var9);
-            mi.a(param5, -99, var9);
+            mi.a(3, -99, var9);
             stackOut_2_0 = (he) var9;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -612,12 +609,12 @@ final class pb {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 98 + 41);
+          throw ii.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 3 + 44 + 13 + 44 + 65522 + 44 + 98 + 41);
         }
         return stackIn_3_0;
     }
 
-    final static int c(int param0) {
+    final static int c() {
         return ih.field_D;
     }
 

@@ -79,7 +79,7 @@ final class lg {
         }
     }
 
-    final static char a(byte param0, int param1) {
+    final static char a(byte param0) {
         int var3 = 0;
         int var2 = param0 & 255;
         if (!(var2 != 0)) {
@@ -93,9 +93,6 @@ final class lg {
                 }
                 var2 = var3;
             }
-        }
-        if (param1 <= 92) {
-            lg.a(-80);
         }
         return (char)var2;
     }
@@ -180,7 +177,7 @@ final class lg {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         jd var1 = (jd) (Object) ta.field_f.e(-24172);
         if (!(var1 != null)) {
             tl.a(-63);
@@ -191,7 +188,7 @@ final class lg {
         int discarded$1 = var2.h(-122);
         int discarded$2 = var2.h(-38);
         int discarded$3 = var2.h(-39);
-        int var3 = 71 / ((33 - param0) / 33);
+        int var3 = -71;
         var1.a(false);
     }
 
@@ -213,19 +210,16 @@ final class lg {
     }
 
     final static void a(int param0, int param1, String param2, int param3) {
-        if (param0 != 63) {
-            char discarded$0 = lg.a((byte) 23, 52);
-        }
         ac var4 = gh.field_i[param3];
         if (var4 == null) {
             return;
         }
         try {
-            cf dupTemp$1 = hd.a(false, param1, "da_trap_" + param2);
-            var4.field_a = dupTemp$1;
-            var4.field_x = dupTemp$1;
+            cf dupTemp$0 = hd.a(false, param1, "da_trap_" + param2);
+            var4.field_a = dupTemp$0;
+            var4.field_x = dupTemp$0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "lg.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "lg.F(" + 63 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 

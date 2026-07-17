@@ -74,7 +74,7 @@ final class afa extends rqa {
         return stackIn_3_0;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_o = null;
         field_p = null;
     }

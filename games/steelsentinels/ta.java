@@ -290,14 +290,11 @@ final class ta {
         return stackIn_14_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_d = null;
         field_e = null;
         field_c = null;
-        if (param0 != -35) {
-            return;
-        }
         field_f = null;
     }
 

@@ -4,7 +4,7 @@
 final class dc {
     static vn[] field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!df.field_h) {
             df.field_h = true;
             return;
@@ -20,19 +20,12 @@ final class dc {
 
     final static fn a(byte param0, int param1) {
         tm var2 = null;
-        if (se.field_m.d(-117) < 4) {
-          if (param0 != 18) {
-            field_a = null;
-            var2 = new tm(param1);
-            se.field_m.a(param0 ^ 18, (le) (Object) var2);
-            return var2.field_j;
-          } else {
-            var2 = new tm(param1);
-            se.field_m.a(param0 ^ 18, (le) (Object) var2);
-            return var2.field_j;
-          }
-        } else {
+        if (se.field_m.d(-117) >= 4) {
           return null;
+        } else {
+          var2 = new tm(param1);
+          se.field_m.a(0, (le) (Object) var2);
+          return var2.field_j;
         }
     }
 

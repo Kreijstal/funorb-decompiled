@@ -38,7 +38,7 @@ final class jd {
         field_e = null;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -247,12 +247,9 @@ final class jd {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
-        co.field_f.a(param3, param0, param5, param1, (byte) -120);
+        co.field_f.a(640, 5, 0, param1, (byte) -120);
         if (!(null == nn.field_q)) {
             nn.field_q.a(param6, -ng.field_K + param6, param1, true, param1, param4);
-        }
-        if (param2 != 19) {
-            field_e = null;
         }
     }
 
@@ -306,7 +303,8 @@ final class jd {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((jd) this).field_a[var2_int] = param0[var2_int];
             }
-            this.a(1046142536);
+            int discarded$0 = 1046142536;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "jd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

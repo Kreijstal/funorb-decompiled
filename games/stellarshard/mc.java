@@ -44,7 +44,8 @@ final class mc {
                 break L1;
               }
             }
-            stackOut_2_0 = uj.a(param2, (byte) 124, param1, true);
+            int discarded$2 = 1;
+            stackOut_2_0 = uj.a(param2, (byte) 124, 16);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -53,7 +54,7 @@ final class mc {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("mc.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("mc.A(").append(param0).append(44).append(16).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;

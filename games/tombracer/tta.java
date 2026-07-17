@@ -4,12 +4,13 @@
 final class tta extends lea {
     static int field_G;
 
-    final static void e(boolean param0) {
+    final static void e() {
         if (!(qga.field_m)) {
             throw new IllegalStateException();
         }
         sra.field_t = true;
-        jda.a(false, 262144);
+        int discarded$0 = 262144;
+        jda.a(false);
         gda.field_c = 0;
     }
 

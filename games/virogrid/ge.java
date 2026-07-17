@@ -8,11 +8,12 @@ final class ge {
     static String field_a;
     static String field_e;
 
-    final static void b(int param0) {
-        mi.d(-116);
+    final static void b() {
+        int discarded$0 = -116;
+        mi.d();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 0;
         field_e = null;

@@ -31,7 +31,8 @@ final class uk {
               var2 = var8.a(-16384);
               if (0 != var2) {
                 if (var2 != 1) {
-                  bd.a((Throwable) null, "A1: " + r.i(-15465), 117);
+                  int discarded$1 = -15465;
+                  bd.a((Throwable) null, "A1: " + r.i(), 117);
                   gb.g(-17464);
                   break L1;
                 } else {
@@ -103,13 +104,8 @@ final class uk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
-        if (param0 > -28) {
-            field_c = true;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

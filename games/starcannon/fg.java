@@ -6,7 +6,7 @@ final class fg {
     static jl[] field_a;
     static int[] field_b;
 
-    final static id[] a(ue param0, String param1, String param2, boolean param3) {
+    final static id[] a(ue param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -149,7 +149,7 @@ final class fg {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -162,10 +162,11 @@ final class fg {
             }
             u.field_c = new gi(param1);
             qf.field_g = param2;
-            qc.field_g = 12;
-            nc.a((byte) 83);
+            qc.field_g = param3;
+            int discarded$0 = 83;
+            nc.a();
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "fg.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 12 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "fg.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 

@@ -30,7 +30,7 @@ final class sb extends rb implements fb, rp {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_f = null;
         field_e = null;
         field_h = null;

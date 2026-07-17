@@ -11,15 +11,16 @@ class lk extends u {
     static String field_l;
     private String field_h;
 
-    final static int[] c(byte param0) {
-        if (param0 != 8) {
-            field_j = false;
-        }
+    final static int[] c() {
         return new int[8];
     }
 
-    final static vj a(boolean param0, boolean param1, int param2, int param3, int param4) {
-        return na.a(param1, param2, false, param0, true, param3);
+    final static vj a(boolean param0, boolean param1, int param2) {
+        int discarded$0 = 1;
+        int discarded$1 = 1;
+        int discarded$2 = 0;
+        int discarded$3 = 0;
+        return na.a(true, param2);
     }
 
     db b(byte param0) {
@@ -29,12 +30,12 @@ class lk extends u {
         return si.field_A;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         qg.a(true, bg.field_q, ol.field_j, (byte) -11);
         hl.field_b = true;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_n = null;
         field_i = null;
@@ -42,7 +43,7 @@ class lk extends u {
         field_m = null;
     }
 
-    final static void a(byte[] param0, int param1) {
+    final static void a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -125,7 +126,7 @@ class lk extends u {
                 var4 = 0;
                 L2: while (true) {
                   if (var4 >= bd.field_M) {
-                    var5 = 35 % ((param1 - -12) / 63);
+                    var5 = 0;
                     var4 = 0;
                     L3: while (true) {
                       if (bd.field_M <= var4) {
@@ -341,7 +342,7 @@ class lk extends u {
               break L17;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 44 + 87 + 41);
         }
     }
 

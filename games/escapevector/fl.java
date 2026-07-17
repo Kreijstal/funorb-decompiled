@@ -31,7 +31,7 @@ class fl extends hg {
         if (!(dg.field_o != ui.field_b)) {
             return tc.field_j;
         }
-        if (!di.field_g.b(param0)) {
+        if (!di.field_g.b(0)) {
             return tc.field_j;
         }
         return vk.field_v;
@@ -93,9 +93,6 @@ class fl extends hg {
             return;
         }
         ed[] var4 = jm.field_K;
-        if (param0 != -1) {
-            field_h = null;
-        }
         if (!(var4 != null)) {
             return;
         }
@@ -111,7 +108,7 @@ class fl extends hg {
             }
             ka.a(105);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fl.CA(" + param0 + 44 + param1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fl.CA(" + -1 + 44 + param1 + 41);
         }
     }
 

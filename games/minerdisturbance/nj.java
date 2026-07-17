@@ -421,7 +421,7 @@ final class nj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         int var1 = -25;
         field_c = null;

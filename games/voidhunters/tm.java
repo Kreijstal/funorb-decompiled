@@ -11,7 +11,8 @@ final class tm extends rqa {
             bia.a((byte) 124);
             return;
           } else {
-            feb.a(og.field_r, true).a(true);
+            int discarded$4 = 1;
+            feb.a(og.field_r).a(true);
             return;
           }
         } else {
@@ -20,7 +21,8 @@ final class tm extends rqa {
             bia.a((byte) 124);
             return;
           } else {
-            feb.a(og.field_r, true).a(true);
+            int discarded$5 = 1;
+            feb.a(og.field_r).a(true);
             return;
           }
         }
@@ -100,7 +102,9 @@ final class tm extends rqa {
     public static void b(boolean param0) {
         field_o = null;
         field_p = null;
-        field_p = null;
+        if (!param0) {
+            field_p = null;
+        }
     }
 
     static {

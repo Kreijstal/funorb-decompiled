@@ -9,15 +9,12 @@ final class bc {
     static int field_a;
     private int[] field_d;
 
-    public static void a(boolean param0) {
-        if (param0) {
-            return;
-        }
+    public static void a() {
         field_b = null;
         field_c = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         try {
             Throwable decompiledCaughtException = null;
             L0: {
@@ -47,25 +44,17 @@ final class bc {
                     }
                   }
                 }
-                L3: {
-                  if (di.field_l.field_k <= 0) {
-                    break L3;
-                  } else {
-                    {
-                      L4: {
-                        ig.field_e.a(di.field_l.field_k, 0, (byte) -97, di.field_l.field_i);
-                        bl.field_h = ll.a(param1 ^ 1000);
-                        break L4;
-                      }
-                    }
-                    di.field_l.field_k = 0;
-                    break L3;
-                  }
-                }
-                if (param1 != 0) {
-                  bc.a(true);
+                if (di.field_l.field_k <= 0) {
                   return;
                 } else {
+                  {
+                    L3: {
+                      ig.field_e.a(di.field_l.field_k, 0, (byte) -97, di.field_l.field_i);
+                      bl.field_h = ll.a(1000);
+                      break L3;
+                    }
+                  }
+                  di.field_l.field_k = 0;
                   return;
                 }
               }
@@ -78,7 +67,7 @@ final class bc {
         }
     }
 
-    final static byte[] a(String param0, boolean param1) {
+    final static byte[] a(String param0) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

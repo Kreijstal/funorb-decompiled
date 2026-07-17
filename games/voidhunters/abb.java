@@ -66,7 +66,7 @@ abstract class abb {
                     break L1;
                   } else {
                     L2: {
-                      if (param4[param0] == null) {
+                      if (param4[3] == null) {
                         stackOut_10_0 = 0;
                         stackIn_11_0 = stackOut_10_0;
                         break L2;
@@ -316,7 +316,7 @@ abstract class abb {
           L23: {
             var6 = decompiledCaughtException;
             stackOut_72_0 = (RuntimeException) var6;
-            stackOut_72_1 = new StringBuilder().append("abb.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_72_1 = new StringBuilder().append("abb.C(").append(3).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
@@ -343,7 +343,7 @@ abstract class abb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

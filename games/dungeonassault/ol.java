@@ -267,12 +267,9 @@ final class ol {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_i = null;
-        if (param0 >= -38) {
-            return;
-        }
         field_k = null;
         field_b = null;
     }
@@ -441,27 +438,19 @@ final class ol {
             var4 = (ue) (Object) qm.field_q.e(-24172);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  if (param0 == 8) {
-                    break L2;
-                  } else {
-                    ol.a((byte) -74);
-                    break L2;
-                  }
-                }
-                var2 = bg.field_s.e(param0 + -24180);
-                L3: while (true) {
+                var2 = bg.field_s.e(-24172);
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
                     hp.a(6, (byte) 110);
-                    var2 = bg.field_s.a(param0 ^ 12);
-                    continue L3;
+                    var2 = bg.field_s.a(4);
+                    continue L2;
                   }
                 }
               } else {
                 wd.a((byte) -69, 6, var4);
-                var4 = (ue) (Object) qm.field_q.a(param0 ^ 12);
+                var4 = (ue) (Object) qm.field_q.a(4);
                 continue L1;
               }
             }
@@ -469,7 +458,7 @@ final class ol {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2_ref, "ol.E(" + param0 + 44 + 6 + 41);
+          throw vk.a((Throwable) (Object) var2_ref, "ol.E(" + 8 + 44 + 6 + 41);
         }
     }
 

@@ -46,79 +46,68 @@ final class ui {
 
     final static ta a(int param0, String param1) {
         RuntimeException var2 = null;
-        ta stackIn_3_0 = null;
+        ta stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ta stackOut_2_0 = null;
+        ta stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_E = null;
-                break L1;
-              }
-            }
-            stackOut_2_0 = new ta(param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = new ta(param1);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("ui.C(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("ui.C(").append(0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     final static String a(int param0) {
-        if (param0 != -12040) {
-            return null;
-        }
         return de.field_V.c((byte) -38);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_o = null;
         field_t = null;
         field_L = null;
@@ -126,7 +115,7 @@ final class ui {
         field_E = null;
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         ud var4 = null;
@@ -227,7 +216,7 @@ final class ui {
           L0: {
             ((ui) this).field_h = param1;
             ((ui) this).field_i = 1 + param0.d((byte) -58);
-            int discarded$7 = param0.d((byte) -61);
+            int discarded$8 = param0.d((byte) -61);
             ((ui) this).field_H = 1 + param0.d((byte) -112);
             ((ui) this).field_u = 1 + param0.d((byte) -84);
             ((ui) this).field_A = param0.d((byte) -122) + 1;
@@ -279,7 +268,8 @@ final class ui {
                         var6 = 0;
                         L4: while (true) {
                           if (((ui) this).field_A <= var6) {
-                            this.a((byte) 103);
+                            int discarded$9 = 103;
+                            this.a();
                             break L0;
                           } else {
                             L5: {
@@ -345,43 +335,43 @@ final class ui {
                                                       }
                                                     }
                                                   } else {
-                                                    int dupTemp$8 = var4 + param0.d((byte) -110);
-                                                    var4 = dupTemp$8;
-                                                    ((ui) this).field_a[var6][var11] = lb.a(255, dupTemp$8);
+                                                    int dupTemp$10 = var4 + param0.d((byte) -110);
+                                                    var4 = dupTemp$10;
+                                                    ((ui) this).field_a[var6][var11] = lb.a(255, dupTemp$10);
                                                     var11++;
                                                     continue L10;
                                                   }
                                                 }
                                               } else {
-                                                int dupTemp$9 = var10 + param0.e((byte) -2);
-                                                var10 = dupTemp$9;
-                                                var4 = var4 + dupTemp$9;
-                                                ((ui) this).field_c[var6][var11] = var4 + dupTemp$9;
+                                                int dupTemp$11 = var10 + param0.e((byte) -2);
+                                                var10 = dupTemp$11;
+                                                var4 = var4 + dupTemp$11;
+                                                ((ui) this).field_c[var6][var11] = var4 + dupTemp$11;
                                                 var11++;
                                                 continue L9;
                                               }
                                             }
                                           } else {
-                                            int dupTemp$10 = var4 + param0.d((byte) -27);
-                                            var4 = dupTemp$10;
-                                            ((ui) this).field_F[var6][var11] = lb.a(255, dupTemp$10);
+                                            int dupTemp$12 = var4 + param0.d((byte) -27);
+                                            var4 = dupTemp$12;
+                                            ((ui) this).field_F[var6][var11] = lb.a(255, dupTemp$12);
                                             var11++;
                                             continue L8;
                                           }
                                         }
                                       } else {
-                                        int dupTemp$11 = var10 + param0.e((byte) 126);
-                                        var10 = dupTemp$11;
-                                        var4 = var4 + dupTemp$11;
-                                        ((ui) this).field_q[var6][var11] = var4 + dupTemp$11;
+                                        int dupTemp$13 = var10 + param0.e((byte) 126);
+                                        var10 = dupTemp$13;
+                                        var4 = var4 + dupTemp$13;
+                                        ((ui) this).field_q[var6][var11] = var4 + dupTemp$13;
                                         var11++;
                                         continue L7;
                                       }
                                     }
                                   } else {
-                                    int dupTemp$12 = var4 + param0.d((byte) -79);
-                                    var4 = dupTemp$12;
-                                    ((ui) this).field_p[var6][var8] = var5 - -lb.a(dupTemp$12, 255);
+                                    int dupTemp$14 = var4 + param0.d((byte) -79);
+                                    var4 = dupTemp$14;
+                                    ((ui) this).field_p[var6][var8] = var5 - -lb.a(dupTemp$14, 255);
                                     var8++;
                                     continue L6;
                                   }
@@ -416,9 +406,9 @@ final class ui {
                   }
                 }
               } else {
-                int dupTemp$13 = var4 + param0.d((byte) -126);
-                var4 = dupTemp$13;
-                ((ui) this).field_s[var5] = lb.a(255, dupTemp$13);
+                int dupTemp$15 = var4 + param0.d((byte) -126);
+                var4 = dupTemp$15;
+                ((ui) this).field_s[var5] = lb.a(255, dupTemp$15);
                 var5++;
                 continue L1;
               }

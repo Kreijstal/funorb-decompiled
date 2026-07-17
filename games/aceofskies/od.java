@@ -78,9 +78,6 @@ final class od extends lg {
         dl var5 = q.field_p;
         var5.g(71, param0);
         var5.field_g = var5.field_g + 1;
-        if (param1 >= -43) {
-            return;
-        }
         try {
             var4 = var5.field_g;
             var5.b(-1336879960, 1);
@@ -93,7 +90,7 @@ final class od extends lg {
             int discarded$0 = var5.e(var4, 89);
             var5.b(-var4 + var5.field_g, (byte) 117);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "od.N(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "od.N(" + param0 + 44 + -76 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -132,7 +129,7 @@ final class od extends lg {
         super(8, 5, 8, 8, 2, 0.10000000149011612f, 0.550000011920929f, 3.0f);
     }
 
-    final static String a(CharSequence[] param0, int param1) {
+    final static String a(CharSequence[] param0) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -154,7 +151,9 @@ final class od extends lg {
         String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_2_0 = gq.a(param0.length, param0, 21530, 0);
+            int discarded$4 = 0;
+            int discarded$5 = 21530;
+            stackOut_2_0 = gq.a(param0.length, param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

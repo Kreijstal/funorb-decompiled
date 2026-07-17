@@ -750,7 +750,7 @@ final class ak extends ju {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_j = null;
         field_e = null;
     }
@@ -900,7 +900,7 @@ final class ak extends ju {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -952,7 +952,8 @@ final class ak extends ju {
         L0: {
           tq.field_c = qn.field_l;
           bm.field_p = qn.field_g;
-          bh.d(false);
+          int discarded$1 = 0;
+          bh.d();
           pj.field_E.a(-2 + no.field_T.field_ob + -40, (byte) -124, 0, no.field_T.field_gb, 0);
           t.field_g.a(jn.field_d, -20500, al.field_f.field_gb, 0, 0);
           var1 = 2 + jn.field_d;
@@ -1073,7 +1074,7 @@ final class ak extends ju {
         vl.field_n.e(-var4 + vl.field_n.field_q, 5930);
     }
 
-    final static wk[] b(int param0, int param1) {
+    final static wk[] b(int param0) {
         wk[] var3 = new wk[9];
         wk[] var2 = var3;
         var3[4] = hl.a(false, param0, 64);

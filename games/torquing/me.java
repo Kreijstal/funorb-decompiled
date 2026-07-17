@@ -9,96 +9,36 @@ abstract class me {
     abstract int a(int param0, int param1);
 
     final static String a(int param0) {
-        String var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
-        String stackIn_6_0 = null;
-        String stackIn_16_0 = null;
-        String stackOut_5_0 = null;
-        String stackOut_15_0 = null;
-        var5 = Torquing.field_u;
-        var6 = "(" + mm.field_d + " " + eb.field_f + " " + wk.field_h + ") " + fa.field_e;
-        if (oo.field_a > 63) {
-          var1 = var6 + ":";
-          var2 = 0;
-          L0: while (true) {
-            if (var2 < oo.field_a) {
-              L1: {
-                stackOut_5_0 = var1 + 32;
-                stackIn_16_0 = stackOut_5_0;
-                stackIn_6_0 = stackOut_5_0;
-                if (var5 != 0) {
-                  break L1;
+        int var5 = Torquing.field_u;
+        String var1 = "(" + mm.field_d + " " + eb.field_f + " " + wk.field_h + ") " + fa.field_e;
+        if (oo.field_a > 0) {
+            var1 = var1 + ":";
+            for (var2 = 0; var2 < oo.field_a; var2++) {
+                var1 = var1 + 32;
+                var3 = kj.field_d.field_j[var2] & 255;
+                var4 = var3 >> 4;
+                var3 = var3 & 15;
+                if (var4 < 10) {
+                    var4 += 48;
                 } else {
-                  L2: {
-                    L3: {
-                      var7 = stackIn_6_0;
-                      var3 = kj.field_d.field_j[var2] & 255;
-                      var4 = var3 >> 4;
-                      var3 = var3 & 15;
-                      if (var4 >= 10) {
-                        break L3;
-                      } else {
-                        var4 += 48;
-                        if (var5 == 0) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
                     var4 += 55;
-                    break L2;
-                  }
-                  L4: {
-                    L5: {
-                      if (var3 < 10) {
-                        break L5;
-                      } else {
-                        var3 += 55;
-                        if (var5 == 0) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    var3 += 48;
-                    break L4;
-                  }
-                  var8 = var7 + (char)var4;
-                  var1 = var8 + (char)var3;
-                  var2++;
-                  if (var5 == 0) {
-                    continue L0;
-                  } else {
-                    stackOut_15_0 = (String) var1;
-                    stackIn_16_0 = stackOut_15_0;
-                    break L1;
-                  }
                 }
-              }
-              return stackIn_16_0;
-            } else {
-              return var1;
+                if (var3 >= 10) {
+                    var3 += 55;
+                } else {
+                    var3 += 48;
+                }
+                var1 = var1 + (char)var4;
+                var1 = var1 + (char)var3;
             }
-          }
-        } else {
-          return var6;
         }
+        return var1;
     }
 
-    public static void a(byte param0) {
-        if (param0 < 1) {
-            String discarded$0 = me.a(-64);
-            field_a = null;
-            return;
-        }
+    public static void a() {
         field_a = null;
     }
 

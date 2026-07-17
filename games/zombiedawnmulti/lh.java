@@ -85,7 +85,7 @@ final class lh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         field_b = null;
         field_a = null;
@@ -136,7 +136,7 @@ final class lh {
                 var11.l(-3093);
                 var10 = 0;
                 var4 = var10;
-                var5 = 60 / ((62 - param0) / 39);
+                var5 = 30;
                 L2: while (true) {
                   if (var10 >= var3) {
                     break L0;
@@ -152,7 +152,8 @@ final class lh {
                   }
                 }
               } else {
-                vn.field_c[var4] = s.a(var9, (byte) -111);
+                int discarded$1 = -111;
+                vn.field_c[var4] = s.a(var9);
                 var4++;
                 continue L1;
               }
@@ -163,7 +164,7 @@ final class lh {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("lh.E(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("lh.E(").append(-30).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -196,9 +197,6 @@ final class lh {
     }
 
     final static String a(byte param0, int param1) {
-        if (param0 != -12) {
-            return null;
-        }
         return gh.field_f[param1];
     }
 
@@ -211,12 +209,9 @@ final class lh {
             } else {
                 ((lh) this).field_j = param2.field_h;
             }
-            if (param1 != 30) {
-                field_m = null;
-            }
             ((lh) this).field_d = (float)((lh) this).field_h * var4_float / (float)(1 + ((lh) this).field_c);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "lh.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "lh.C(" + param0 + 44 + 30 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

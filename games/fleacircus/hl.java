@@ -45,7 +45,7 @@ class hl extends lc {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static void g(int param0) {
+    final static void g() {
         if (!(db.field_J == null)) {
             db.field_J.d();
         }
@@ -54,7 +54,7 @@ class hl extends lc {
         }
     }
 
-    final static int d(byte param0) {
+    final static int d() {
         if (!(ib.field_k >= 2)) {
             return 0;
         }
@@ -111,7 +111,7 @@ class hl extends lc {
         return 100;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_C = null;
     }
 

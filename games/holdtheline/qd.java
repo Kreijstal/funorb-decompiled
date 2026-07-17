@@ -184,7 +184,7 @@ final class qd extends vd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_g = null;
         field_l = null;
@@ -203,7 +203,9 @@ final class qd extends vd {
                 break L1;
               } else {
                 lc.field_d = null;
-                gn.a(true, i.field_k[param1], (byte) 69, 30);
+                int discarded$4 = 30;
+                int discarded$5 = 69;
+                gn.a(true, i.field_k[param1]);
                 break L0;
               }
             }
@@ -211,14 +213,6 @@ final class qd extends vd {
           bi.field_e = 0;
           ab.field_jb = param1;
           break L0;
-        }
-        L2: {
-          if (param0 == 20830) {
-            break L2;
-          } else {
-            field_l = null;
-            break L2;
-          }
         }
     }
 

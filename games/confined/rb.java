@@ -16,7 +16,7 @@ abstract class rb {
 
     abstract void a(java.awt.Component param0, int param1, int param2, int param3);
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
         field_d = null;
         field_g = null;

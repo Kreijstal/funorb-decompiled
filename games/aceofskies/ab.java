@@ -641,7 +641,7 @@ class ab extends ea implements vm {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_r = null;
     }
 
@@ -651,7 +651,8 @@ class ab extends ea implements vm {
             Object var7 = null;
             ((ab) this).a((byte) -120, (ea) null, 59, 121);
         }
-        this.b(false);
+        int discarded$0 = 0;
+        this.b();
     }
 
     void a(byte param0, ea param1, int param2, int param3) {
@@ -1156,7 +1157,7 @@ class ab extends ea implements vm {
         return stackIn_9_0 != 0;
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         an var2 = new an(((ab) this).field_s);
         ea var3 = (ea) (Object) var2.c(-1372);
         while (var3 != null) {
@@ -1225,7 +1226,7 @@ class ab extends ea implements vm {
                     }
                   }
                   if (param0.field_u) {
-                    stackOut_12_0 = new el(param0, 34037, param6, param7, param2, param3, param5, param4);
+                    stackOut_12_0 = new el(param0, 34037, param6, param7, false, param3, param5, param4);
                     stackIn_13_0 = stackOut_12_0;
                     break L0;
                   } else {
@@ -1235,7 +1236,7 @@ class ab extends ea implements vm {
                   }
                 }
               }
-              stackOut_7_0 = new el(param0, 3553, param6, param7, param2, param3, param5, param4);
+              stackOut_7_0 = new el(param0, 3553, param6, param7, false, param3, param5, param4);
               stackIn_8_0 = stackOut_7_0;
               return stackIn_8_0;
             } else {
@@ -1274,7 +1275,7 @@ class ab extends ea implements vm {
           }
           L4: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44).append(0).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

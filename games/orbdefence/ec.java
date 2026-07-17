@@ -243,7 +243,7 @@ final class ec extends ta implements ai {
         }
     }
 
-    final static void a(String param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, long param9, int param10, be param11, int param12, int param13) {
+    final static void a(String param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, long param9, int param10, be param11, int param12) {
         try {
             IOException var15 = null;
             RuntimeException var15_ref = null;
@@ -285,8 +285,8 @@ final class ec extends ta implements ai {
             StringBuilder stackOut_18_1 = null;
             String stackOut_18_2 = null;
             try {
-              cd.field_t = new se(param1);
-              uk.field_b = new se(param7);
+              cd.field_t = new se(5000);
+              uk.field_b = new se(5000);
               gi.field_a = param12;
               j.field_e = param3;
               eg.field_v = param6;
@@ -361,7 +361,7 @@ final class ec extends ta implements ai {
               }
               L4: {
                 stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44);
+                stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(5000).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(5000).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44);
                 stackIn_19_0 = stackOut_17_0;
                 stackIn_19_1 = stackOut_17_1;
                 stackIn_18_0 = stackOut_17_0;
@@ -393,7 +393,7 @@ final class ec extends ta implements ai {
         }
     }
 
-    final static void l(int param0) {
+    final static void l() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -408,7 +408,7 @@ final class ec extends ta implements ai {
             var6 = ji.field_a;
             var1 = var6;
             var2 = 0;
-            var3 = -114 / ((4 - param0) / 42);
+            var3 = 57;
             var4 = var6.length;
             L1: while (true) {
               if (var2 >= var4) {
@@ -445,11 +445,11 @@ final class ec extends ta implements ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1_ref, "ec.H(" + param0 + 41);
+          throw dd.a((Throwable) (Object) var1_ref, "ec.H(" + 102 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_E = null;
         field_F = null;
         field_H = null;

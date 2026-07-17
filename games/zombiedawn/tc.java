@@ -193,7 +193,8 @@ class tc extends vf {
                 ed.field_c = gf.a(0, new CharSequence[3]);
             }
             kk.field_i.h((byte) 75);
-            rl.c(9);
+            int discarded$0 = 9;
+            rl.c();
         }
     }
 

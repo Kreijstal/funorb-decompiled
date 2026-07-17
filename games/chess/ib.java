@@ -11,16 +11,13 @@ final class ib {
         return qf.field_a;
     }
 
-    public static void a(int param0) {
-        if (param0 != -12374) {
-            return;
-        }
+    public static void a() {
         field_b = null;
         field_d = null;
         field_c = null;
     }
 
-    final static sa a(String param0, boolean param1) {
+    final static sa a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

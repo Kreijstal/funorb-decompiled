@@ -127,10 +127,7 @@ final class nd extends ag {
     }
 
     final static boolean a(byte param0, int param1) {
-        if (param0 != -106) {
-            return true;
-        }
-        return param1 == (-param1 & param1) ? true : false;
+        return param1 == (-param1 & param1);
     }
 
     final ag a() {

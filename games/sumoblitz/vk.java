@@ -143,7 +143,7 @@ final class vk {
         qr.field_c = new jn();
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_d = null;
     }

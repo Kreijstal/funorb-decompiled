@@ -155,7 +155,7 @@ final class ed extends rh {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!(ag.b(15))) {
             return;
         }

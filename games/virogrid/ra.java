@@ -8,7 +8,7 @@ final class ra {
     static ce field_b;
     static int[] field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -64,10 +64,10 @@ final class ra {
           L0: {
             var7 = gk.field_g;
             var8 = var7;
-            var8.g(param0, param1 + 7);
+            var8.g(3, 8);
             var8.field_l = var8.field_l + 1;
             var4 = var8.field_l;
-            var8.a(param1, -113);
+            var8.a(1, -113);
             var8.a((byte) -111, param2.field_j);
             var8.a((byte) 122, param2.field_g);
             var8.a((byte) -119, param2.field_l);
@@ -94,7 +94,7 @@ final class ra {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("ra.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("ra.D(").append(3).append(44).append(1).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -122,9 +122,6 @@ final class ra {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (param0 != 3) {
-            return;
-        }
         if (he.field_Xb != null) {
             he.field_Xb.a(param1, 24960);
         }

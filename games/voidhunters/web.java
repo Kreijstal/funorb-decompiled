@@ -5,11 +5,12 @@ final class web extends rqa {
     static String field_p;
     static no field_o;
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(unb.field_o)) {
             return;
         }
-        vpa var1 = pba.b(false);
+        int discarded$0 = 0;
+        vpa var1 = pba.b();
         faa var2 = new faa(1048576);
         var2.q(-122);
         var1.b(var2, -110);

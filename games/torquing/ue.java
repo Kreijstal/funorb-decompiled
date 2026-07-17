@@ -428,7 +428,8 @@ final class ue {
         if (param0 != -16513) {
             ue.a(28, -38, 8, -108, 43, -40, 73);
         }
-        int discarded$0 = sh.b(0);
+        int discarded$0 = 0;
+        int discarded$1 = sh.b();
     }
 
     final void a(int param0, long param1) throws IOException {

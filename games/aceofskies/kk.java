@@ -245,7 +245,7 @@ final class kk extends bm implements mc {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_J = null;
         field_N = null;
     }

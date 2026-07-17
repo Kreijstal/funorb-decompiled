@@ -306,7 +306,7 @@ final class vh {
         }
     }
 
-    final static int a(boolean param0, String param1, boolean param2) {
+    final static int a(boolean param0, String param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -446,7 +446,7 @@ final class vh {
                         } else {
                           L2: {
                             ((vh) this).field_f.a((byte) 57, (long)(6 * param4));
-                            ((vh) this).field_f.b(0, fk.field_c, 6, param0 + 11842);
+                            ((vh) this).field_f.b(0, fk.field_c, 6, 11842);
                             var7_int = (16711680 & fk.field_c[3] << 16) + ((65280 & fk.field_c[4] << 8) - -(255 & fk.field_c[5]));
                             if (var7_int <= 0) {
                               break L2;
@@ -483,7 +483,7 @@ final class vh {
                     ((vh) this).field_f.a((byte) 57, (long)(param4 * 6));
                     ((vh) this).field_f.a(0, fk.field_c, 6, 0);
                     var8 = 0;
-                    var9 = param0;
+                    var9 = 0;
                     L3: while (true) {
                       L4: {
                         if (var8 >= param2) {
@@ -627,7 +627,7 @@ final class vh {
                                 fk.field_c[6] = (byte)(var10 >> 16);
                                 fk.field_c[5] = (byte)var9;
                                 ((vh) this).field_b.a((byte) 57, (long)(520 * var7_int));
-                                ((vh) this).field_b.a(param0, fk.field_c, 10, 0);
+                                ((vh) this).field_b.a(0, fk.field_c, 10, 0);
                                 var11 = param2 + -var8;
                                 if (var11 > 510) {
                                   var11 = 510;
@@ -650,7 +650,7 @@ final class vh {
                                 fk.field_c[5] = (byte)(var10 >> 8);
                                 fk.field_c[6] = (byte)var10;
                                 ((vh) this).field_b.a((byte) 57, (long)(var7_int * 520));
-                                ((vh) this).field_b.a(param0, fk.field_c, 8, 0);
+                                ((vh) this).field_b.a(0, fk.field_c, 8, 0);
                                 var11 = param2 + -var8;
                                 if (var11 > 512) {
                                   var11 = 512;
@@ -690,7 +690,7 @@ final class vh {
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_69_0 = (RuntimeException) var6_ref;
-                stackOut_69_1 = new StringBuilder().append("vh.B(").append(param0).append(44);
+                stackOut_69_1 = new StringBuilder().append("vh.B(").append(0).append(44);
                 stackIn_71_0 = stackOut_69_0;
                 stackIn_71_1 = stackOut_69_1;
                 stackIn_70_0 = stackOut_69_0;
@@ -722,7 +722,7 @@ final class vh {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_g = null;
     }
@@ -785,7 +785,8 @@ final class vh {
             var6 = 122 % ((param2 - 59) / 46);
             var4_int = param0.a(param1, false);
             var5 = param0.a(var4_int, param3, 95);
-            stackOut_0_0 = kf.a(var4_int, var5, param0, false);
+            int discarded$2 = 0;
+            stackOut_0_0 = kf.a(var4_int, var5, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -872,7 +873,7 @@ final class vh {
         return stackIn_1_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
     }
 
     final static boolean a(int param0, byte param1) {

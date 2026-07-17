@@ -4,23 +4,17 @@
 final class re extends dr {
     static String field_E;
 
-    final static boolean a(int param0, byte param1) {
-        if (param0 == -1) {
-            return true;
-        }
-        return (hf.field_a & 1 << param0) != 0 ? true : false;
+    final static boolean a() {
+        return (hf.field_a & 1) != 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, wk[] param4) {
         try {
-            if (param2 >= -112) {
-                field_E = null;
-            }
             param4[0].f(param1, param0, 128);
             param4[1].d(param4[1].field_y + param1, param0, -(param4[2].field_y << 1) + param3, param4[2].field_v, 128);
             param4[2].f(param3 + (param1 + -param4[2].field_y), param0, 128);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "re.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + 128 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "re.B(" + param0 + 44 + param1 + 44 + -122 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + 128 + 41);
         }
     }
 
@@ -49,7 +43,8 @@ final class re extends dr {
         try {
           L0: {
             if (param0 == -24872) {
-              stackOut_3_0 = new nd((Object) (Object) vv.a((byte) -62));
+              int discarded$2 = -62;
+              stackOut_3_0 = new nd((Object) (Object) vv.a());
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -91,7 +86,7 @@ final class re extends dr {
         return stackIn_4_0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_E = null;
     }
 

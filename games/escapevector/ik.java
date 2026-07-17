@@ -14,40 +14,36 @@ final class ik extends hg {
     int field_k;
     int field_i;
 
-    public static void d(int param0) {
+    public static void d() {
         field_h = null;
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
         int var4 = 0;
-        if (param2 == -112) {
-          L0: {
-            var4 = 0;
-            if (param0) {
-              var4 += 4;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (!param1) {
-            if (param3) {
-              var4++;
-              return wf.field_c[var4];
-            } else {
-              return wf.field_c[var4];
-            }
+        L0: {
+          var4 = 0;
+          if (param0) {
+            var4 += 4;
+            break L0;
           } else {
-            var4 += 2;
-            if (!param3) {
-              return wf.field_c[var4];
-            } else {
-              var4++;
-              return wf.field_c[var4];
-            }
+            break L0;
+          }
+        }
+        if (!param1) {
+          if (param3) {
+            var4++;
+            return wf.field_c[var4];
+          } else {
+            return wf.field_c[var4];
           }
         } else {
-          return null;
+          var4 += 2;
+          if (!param3) {
+            return wf.field_c[var4];
+          } else {
+            var4++;
+            return wf.field_c[var4];
+          }
         }
     }
 

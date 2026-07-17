@@ -18,7 +18,8 @@ final class aka extends cda {
         }
         try {
             int var6_int = 0 % ((-38 - param4) / 47);
-            var7 = this.i(-6874);
+            int discarded$0 = -6874;
+            var7 = this.i();
             var8 = ((aka) this).field_C.a(false, -1, false, (byte) 1);
             gqa.a(var7, -83584144, param1, param2, var8, param3);
         } catch (RuntimeException runtimeException) {
@@ -67,7 +68,8 @@ final class aka extends cda {
             if (var3 == 0) {
               break L1;
             } else {
-              var5_int = this.i(-6874);
+              int discarded$3 = -6874;
+              var5_int = this.i();
               var6 = new nta(((aka) this).b((byte) 40), ((aka) this).c((byte) 123), ((aka) this).e((byte) -96), ((aka) this).field_C, var5_int, var3);
               var6.a((byte) -113, ((aka) this).field_h.f((byte) -109).j((byte) -118), ((aka) this).k((byte) -99));
               break L1;
@@ -79,13 +81,13 @@ final class aka extends cda {
           } else {
             if (param1 != 3) {
               if (param1 == 2) {
-                fla discarded$2 = var5.a(new fm(80, ((aka) this).b((byte) 90), ((aka) this).c((byte) 94), ((aka) this).e((byte) -108)), -58);
+                fla discarded$4 = var5.a(new fm(80, ((aka) this).b((byte) 90), ((aka) this).c((byte) 94), ((aka) this).e((byte) -108)), -58);
                 return;
               } else {
                 return;
               }
             } else {
-              fla discarded$3 = var5.a(new fm(78, ((aka) this).b((byte) 71), ((aka) this).c((byte) 106), ((aka) this).e((byte) -91)), -58);
+              fla discarded$5 = var5.a(new fm(78, ((aka) this).b((byte) 71), ((aka) this).c((byte) 106), ((aka) this).e((byte) -91)), -58);
               return;
             }
           }
@@ -94,7 +96,7 @@ final class aka extends cda {
         }
     }
 
-    public static void o(byte param0) {
+    public static void o() {
         field_A = null;
     }
 
@@ -177,7 +179,7 @@ final class aka extends cda {
         }
     }
 
-    final static void j(int param0) {
+    final static void j() {
         jo.a(oba.field_f, 0, kua.field_i, rfa.field_C, lma.field_r);
     }
 
@@ -475,7 +477,7 @@ final class aka extends cda {
         }
     }
 
-    private final int i(int param0) {
+    private final int i() {
         return dfa.a(-((aka) this).field_h.g(-25787) >> 2, 2048, 85);
     }
 

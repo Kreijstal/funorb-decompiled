@@ -10,19 +10,21 @@ final class nj {
     int field_b;
 
     final static void a(int param0) {
-        jf.e(640);
+        int discarded$0 = 640;
+        jf.e();
         vg.field_o = true;
         u.field_i = true;
         gl.field_E.l(24910);
-        nb.a(oj.field_c, false, -16257);
+        int discarded$1 = -16257;
+        nb.a(oj.field_c, false);
     }
 
     public static void b(int param0) {
         field_d = null;
     }
 
-    final static void b(byte param0) {
-        int var1 = 82 % ((param0 - 2) / 59);
+    final static void b() {
+        int var1 = 0;
         hb.field_i = null;
         dc.field_s = null;
     }
@@ -58,7 +60,8 @@ final class nj {
           if (ug.field_cb != null) {
             L0: {
               var6 = (CharSequence) (Object) param1;
-              var2 = r.a(var6, -11133);
+              int discarded$4 = -11133;
+              var2 = r.a(var6);
               if (param0 >= 122) {
                 break L0;
               } else {
@@ -79,7 +82,8 @@ final class nj {
               if (var3 != null) {
                 L3: {
                   var7 = (CharSequence) (Object) var3.field_jb;
-                  var4 = r.a(var7, -11133);
+                  int discarded$5 = -11133;
+                  var4 = r.a(var7);
                   if (var4 == null) {
                     var4 = var3.field_jb;
                     break L3;
@@ -134,7 +138,7 @@ final class nj {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -151,14 +155,6 @@ final class nj {
             var3 = var5.length;
             L1: while (true) {
               if (var3 <= var2) {
-                L2: {
-                  if (param0 == 125) {
-                    break L2;
-                  } else {
-                    field_d = null;
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
                 int incrementValue$16 = var2;
@@ -192,11 +188,11 @@ final class nj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1_ref, "nj.C(" + param0 + 41);
+          throw sl.a((Throwable) (Object) var1_ref, "nj.C(" + 125 + 41);
         }
     }
 
-    final static void a(q param0, byte param1) {
+    final static void a(q param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

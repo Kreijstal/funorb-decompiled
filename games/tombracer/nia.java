@@ -297,16 +297,22 @@ final class nia extends ci {
         tga.field_a = baa.field_d.field_i.field_d;
         tga.field_a.b(8192);
         iga.field_o = uja.a((byte) 65, tga.field_a);
-        sw.k((byte) 94);
-        hm.h((byte) 45);
+        int discarded$6 = 94;
+        sw.k();
+        int discarded$12 = 45;
+        hm.h();
         if (param0 != -25405) {
             Object var2 = null;
-            iu discarded$0 = nia.a((cn) null, (String) null, (String) null, 78);
+            iu discarded$13 = nia.a((cn) null, (String) null, (String) null, 78);
         }
-        rka.a(false);
-        ina.a(tga.field_a, 0);
-        ob.a(tga.field_a, 17186);
-        wpa.a(tga.field_a, -90);
+        int discarded$14 = 0;
+        rka.a();
+        int discarded$15 = 0;
+        ina.a(tga.field_a);
+        int discarded$16 = 17186;
+        ob.a(tga.field_a);
+        int discarded$17 = -90;
+        wpa.a(tga.field_a);
     }
 
     final static String a(byte[] param0, int param1, int param2, int param3) {
@@ -532,7 +538,7 @@ final class nia extends ci {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_m = null;
     }
 

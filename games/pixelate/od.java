@@ -21,22 +21,14 @@ final class od extends ak {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var7 = Pixelate.field_H ? 1 : 0;
-          if (param0 >= 103) {
-            break L0;
-          } else {
-            ((od) this).b((byte) 55);
-            break L0;
-          }
-        }
+        var7 = Pixelate.field_H ? 1 : 0;
         var4 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (((od) this).field_Lb.length <= var4) {
             ((od) this).field_Kb.a(param1, ((od) this).field_nb + -param1, 0, 256, ((od) this).field_K);
             var8 = 0;
             var4 = var8;
-            L2: while (true) {
+            L1: while (true) {
               if (var8 >= ((od) this).field_Mb.length) {
                 return;
               } else {
@@ -44,10 +36,10 @@ final class od extends ak {
                 if (((od) this).field_Jb != var8) {
                   ((od) this).field_Mb[var8].field_D = ((od) this).field_Mb[var8].field_D + 10000;
                   var8++;
-                  continue L2;
+                  continue L1;
                 } else {
                   var8++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -59,7 +51,7 @@ final class od extends ak {
             ((od) this).field_Lb[var4].field_K = var6 - var5;
             ((od) this).field_Lb[var4].field_nb = param1;
             var4++;
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -128,7 +120,7 @@ final class od extends ak {
               L0: {
                 var17 = (Object) (Object) new aj();
                 ((aj) var17).field_s = param1.f(255);
-                ((aj) var17).field_p = param1.k(param0 ^ param0);
+                ((aj) var17).field_p = param1.k(0);
                 ((aj) var17).field_r = new int[((aj) var17).field_s];
                 ((aj) var17).field_q = new int[((aj) var17).field_s];
                 ((aj) var17).field_l = new ei[((aj) var17).field_s];
@@ -164,7 +156,7 @@ final class od extends ak {
                                       }
                                     }
                                   }
-                                  var19 = param1.h(param0 + 10);
+                                  var19 = param1.h(5);
                                   var8 = param1.h(5);
                                   var9 = param1.f(255);
                                   var10 = new String[var9];
@@ -183,7 +175,7 @@ final class od extends ak {
                                             if (var9 <= var12_int) {
                                               break L7;
                                             } else {
-                                              var13 = param1.k(param0 + 5);
+                                              var13 = param1.k(0);
                                               var11[var12_int] = new byte[var13];
                                               param1.a(var22[var12_int], 0, -76, var13);
                                               var12_int++;
@@ -222,20 +214,20 @@ final class od extends ak {
                             }
                           }
                           L10: {
-                            var15 = param1.h(param0 ^ -2);
+                            var15 = param1.h(5);
                             var7 = var15;
-                            var8 = param1.h(param0 + 10);
+                            var8 = param1.h(5);
                             var9 = 0;
                             if (var6_int != 1) {
                               break L10;
                             } else {
-                              var9 = param1.k(param0 + 5);
+                              var9 = param1.k(0);
                               break L10;
                             }
                           }
                           ((aj) var17).field_r[var5] = var6_int;
                           ((aj) var17).field_q[var5] = var9;
-                          ((aj) var17).field_l[var5] = param3.a(var8, i.a(var15, bn.a(param0, 121)), (byte) -94);
+                          ((aj) var17).field_l[var5] = param3.a(var8, i.a(var15, bn.a(-5, 121)), (byte) -94);
                           break L3;
                         }
                         break L2;
@@ -272,7 +264,7 @@ final class od extends ak {
               L16: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_34_0 = (RuntimeException) var4;
-                stackOut_34_1 = new StringBuilder().append("od.D(").append(param0).append(44);
+                stackOut_34_1 = new StringBuilder().append("od.D(").append(-5).append(44);
                 stackIn_36_0 = stackOut_34_0;
                 stackIn_36_1 = stackOut_34_1;
                 stackIn_35_0 = stackOut_34_0;
@@ -547,9 +539,6 @@ final class od extends ak {
     }
 
     final static int a(byte param0, int param1, int param2) {
-        if (param0 != 41) {
-            return 42;
-        }
         return param2 - -ok.a(tp.field_v, -120, -param2 + 1 - -param1);
     }
 
@@ -591,7 +580,7 @@ final class od extends ak {
         }
     }
 
-    final static sn a(fm param0, int param1, int param2) {
+    final static sn a(fm param0, int param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -658,7 +647,7 @@ final class od extends ak {
         return stackIn_4_0;
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_Nb = null;
         field_Fb = null;
         field_Ib = null;

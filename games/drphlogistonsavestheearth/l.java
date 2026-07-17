@@ -93,9 +93,9 @@ class l implements cg, va {
 
     private final void a(int param0, int param1, int param2, vg param3) {
         try {
-            this.a(((l) this).field_o, param0, 0, param2, (byte) -128, ((l) this).field_i, param1, param3);
+            this.a(((l) this).field_o, param0, 0, param2, (byte) -128, ((l) this).field_i, 0, param3);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "l.H(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "l.H(" + param0 + 44 + 0 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -482,16 +482,13 @@ class l implements cg, va {
     }
 
     public void a(boolean param0, int param1, vg param2, int param3, int param4) {
-        if (param1 < 94) {
-            return;
-        }
         if (!(((l) this).field_g != null)) {
             return;
         }
         try {
             this.a(param3, 0, param4, param2);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "l.J(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "l.J(" + param0 + 44 + 127 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -658,7 +655,8 @@ class l implements cg, va {
             }
             L2: {
               if (!((l) this).field_r) {
-                this.b(param0, -2);
+                int discarded$4 = -2;
+                this.b(param0);
                 break L2;
               } else {
                 ((o) (Object) param0.field_s).a(((l) this).field_g, ((l) this).a(param0, -83), ((l) this).field_p, -3, ((l) this).field_a, ((l) this).b(-121, param0), ((l) this).field_c, this.b((byte) -127, param0));
@@ -669,7 +667,7 @@ class l implements cg, va {
               if (param1) {
                 break L3;
               } else {
-                boolean discarded$2 = l.b(13);
+                boolean discarded$5 = l.b(13);
                 break L3;
               }
             }
@@ -710,7 +708,7 @@ class l implements cg, va {
         return stackIn_9_0;
     }
 
-    private final void b(vg param0, int param1) {
+    private final void b(vg param0) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

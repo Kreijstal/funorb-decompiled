@@ -112,16 +112,16 @@ final class ld {
         return stackIn_6_0;
     }
 
-    final static void a(int param0, sc param1, int param2) {
+    final static void a(int param0, sc param1) {
         mg var3 = null;
         try {
             var3 = n.field_b;
             var3.c((byte) 87, param0);
             var3.b((byte) 11, 2);
-            var3.b((byte) 11, param2);
+            var3.b((byte) 11, 0);
             var3.b((byte) 11, param1.field_k);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ld.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ld.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 

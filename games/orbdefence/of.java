@@ -27,7 +27,7 @@ final class of extends s {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_I = null;
         field_H = null;
         field_N = null;

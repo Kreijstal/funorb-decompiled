@@ -14,7 +14,7 @@ final class ni extends fa {
     static int field_q;
     int field_u;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
         field_s = null;
@@ -24,7 +24,7 @@ final class ni extends fa {
     final static um a(int param0, int param1) {
         um var2 = new um();
         bq.field_a.a(22125, (fa) (Object) var2);
-        sd.a(true, param0);
+        sd.a(true, 6);
         int var3 = 31;
         return var2;
     }
@@ -76,12 +76,8 @@ final class ni extends fa {
         param1 = (param1 >>> 2 & -214748365) + (858993459 & param1);
         param1 = (param1 >>> 4) + param1 & 252645135;
         param1 = param1 + (param1 >>> 8);
-        if (param0 > -37) {
-          return 116;
-        } else {
-          param1 = param1 + (param1 >>> 16);
-          return param1 & 255;
-        }
+        param1 = param1 + (param1 >>> 16);
+        return param1 & 255;
     }
 
     ni(int param0, int param1, int param2, int param3, int param4) {

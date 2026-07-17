@@ -293,9 +293,9 @@ final class vb implements Runnable {
     }
 
     final static boolean a(boolean param0, String param1, byte param2, nf param3, int param4, String param5, String param6) {
-        RuntimeException var7 = null;
+        fq var7 = null;
+        RuntimeException var7_ref = null;
         int var8 = 0;
-        fq var9 = null;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -364,9 +364,9 @@ final class vb implements Runnable {
         try {
           L0: {
             if (wd.field_Lb == aa.field_c) {
-              var9 = new fq(wd.field_Ub, param3);
-              var8 = 91 / ((48 - param2) / 53);
-              wd.field_Ub.b((ei) (Object) var9, 30000);
+              var7 = new fq(wd.field_Ub, param3);
+              var8 = -91;
+              wd.field_Ub.b((ei) (Object) var7, 30000);
               if (!sq.k(0)) {
                 qi.field_c = param0;
                 j.field_b = param4;
@@ -377,7 +377,7 @@ final class vb implements Runnable {
                 eo.field_Rb = param1;
                 return true;
               } else {
-                var9.p((byte) -52);
+                var7.p((byte) -52);
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
@@ -391,8 +391,8 @@ final class vb implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            var7 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var7;
+            var7_ref = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var7_ref;
             stackOut_8_1 = new StringBuilder().append("vb.J(").append(param0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
@@ -418,7 +418,7 @@ final class vb implements Runnable {
           }
           L2: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(114).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -509,7 +509,7 @@ final class vb implements Runnable {
         }
     }
 
-    final static ai b(int param0) {
+    final static ai b() {
         int var1 = 52;
         return qf.field_d;
     }
@@ -577,73 +577,63 @@ final class vb implements Runnable {
 
     final static or a(int param0, pq param1) {
         RuntimeException var2 = null;
-        Object var3 = null;
-        or stackIn_3_0 = null;
+        or stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        or stackOut_2_0 = null;
+        or stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == -6584) {
-                break L1;
-              } else {
-                var3 = null;
-                boolean discarded$4 = vb.a(false, (String) null, (byte) 126, (nf) null, -39, (String) null, (String) null);
-                break L1;
-              }
-            }
-            or dupTemp$5 = new or(0, (or) null);
-            param1.field_q = dupTemp$5;
-            stackOut_2_0 = (or) dupTemp$5;
-            stackIn_3_0 = stackOut_2_0;
+            or dupTemp$2 = new or(0, (or) null);
+            param1.field_q = dupTemp$2;
+            stackOut_0_0 = (or) dupTemp$2;
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("vb.D(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("vb.D(").append(-6584).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     final void a(byte[] param0, byte param1, int param2, int param3) throws IOException {

@@ -296,10 +296,12 @@ final class w extends pb {
                                     }
                                   }
                                   if (var17 >= 0) {
-                                    a.a(var16 + var17, param1, var18, param0, -1483723263);
+                                    int discarded$6 = -1483723263;
+                                    a.a(var16 + var17, param1, var18, param0);
                                     break L9;
                                   } else {
-                                    a.a(var16, param1, var17 + var18, param0, -1483723263);
+                                    int discarded$7 = -1483723263;
+                                    a.a(var16, param1, var17 + var18, param0);
                                     break L9;
                                   }
                                 } else {
@@ -307,7 +309,8 @@ final class w extends pb {
                                     break L9;
                                   } else {
                                     if (~var17 > ~jb.field_i) {
-                                      a.a(var16 + var17, param1, var18, param0, -1483723263);
+                                      int discarded$8 = -1483723263;
+                                      a.a(var16 + var17, param1, var18, param0);
                                       break L9;
                                     } else {
                                       break L9;
@@ -402,60 +405,59 @@ final class w extends pb {
                     }
                   }
                   var15 = jb.field_e[param7];
-                  if (param4) {
-                    L15: while (true) {
-                      if (param7 >= param8) {
-                        break L0;
-                      } else {
-                        L16: {
-                          var16 = var9_int >> 16;
-                          if (~jb.field_i >= ~var16) {
-                            break L16;
-                          } else {
-                            var17 = (var10 >> 16) + -(var9_int >> 16);
-                            if (var17 != 0) {
-                              L17: {
-                                if (~jb.field_i < ~(var17 + var16)) {
-                                  break L17;
-                                } else {
-                                  var17 = -1 + (jb.field_i + -var16);
-                                  break L17;
-                                }
-                              }
-                              if (0 <= var16) {
-                                a.a(var15 + var16, param1, var17, param0, -1483723263);
-                                break L16;
+                  L15: while (true) {
+                    if (param7 >= param8) {
+                      break L0;
+                    } else {
+                      L16: {
+                        var16 = var9_int >> 16;
+                        if (~jb.field_i >= ~var16) {
+                          break L16;
+                        } else {
+                          var17 = (var10 >> 16) + -(var9_int >> 16);
+                          if (var17 != 0) {
+                            L17: {
+                              if (~jb.field_i < ~(var17 + var16)) {
+                                break L17;
                               } else {
-                                a.a(var15, param1, var17 + var16, param0, -1483723263);
-                                break L16;
+                                var17 = -1 + (jb.field_i + -var16);
+                                break L17;
                               }
+                            }
+                            if (0 <= var16) {
+                              int discarded$9 = -1483723263;
+                              a.a(var15 + var16, param1, var17, param0);
+                              break L16;
                             } else {
-                              if (var16 < 0) {
+                              int discarded$10 = -1483723263;
+                              a.a(var15, param1, var17 + var16, param0);
+                              break L16;
+                            }
+                          } else {
+                            if (var16 < 0) {
+                              break L16;
+                            } else {
+                              if (var16 < jb.field_i) {
+                                int discarded$11 = -1483723263;
+                                a.a(var16 - -var15, param1, var17, param0);
                                 break L16;
                               } else {
-                                if (var16 < jb.field_i) {
-                                  a.a(var16 - -var15, param1, var17, param0, -1483723263);
-                                  break L16;
-                                } else {
-                                  break L16;
-                                }
+                                break L16;
                               }
                             }
                           }
                         }
-                        param7++;
-                        if (~param7 <= ~jb.field_c) {
-                          return;
-                        } else {
-                          var9_int = var9_int + var11;
-                          var15 = var15 + vj.field_l;
-                          var10 = var10 + var12;
-                          continue L15;
-                        }
+                      }
+                      param7++;
+                      if (~param7 <= ~jb.field_c) {
+                        return;
+                      } else {
+                        var9_int = var9_int + var11;
+                        var15 = var15 + vj.field_l;
+                        var10 = var10 + var12;
+                        continue L15;
                       }
                     }
-                  } else {
-                    return;
                   }
                 } else {
                   break L1;
@@ -492,7 +494,7 @@ final class w extends pb {
               break L18;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw ma.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 1 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
@@ -505,7 +507,7 @@ final class w extends pb {
         ((w) this).field_g[fieldTemp$0] = (byte)(param0 + ((w) this).field_l.b(-1427));
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_m = null;
     }
 

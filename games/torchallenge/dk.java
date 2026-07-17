@@ -190,7 +190,7 @@ final class dk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_s = null;
         field_c = null;
@@ -235,7 +235,8 @@ final class dk {
             this.a(param1, param2, param0, 1);
             return;
           } else {
-            this.b(param2, param1, param0, -103);
+            int discarded$2 = -103;
+            this.b(param2, param1, param0);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -454,7 +455,7 @@ final class dk {
             String stackOut_5_2 = null;
             try {
               try {
-                var6 = -74 % ((param2 - -69) / 51);
+                var6 = 0;
                 var4 = Class.forName("ke");
                 var5 = (oe) var4.newInstance();
                 var5.a(param3, param1, param0, -23435);
@@ -498,7 +499,7 @@ final class dk {
                   break L0;
                 }
               }
-              throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 44 + param3 + 41);
+              throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -124 + 44 + param3 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -507,7 +508,7 @@ final class dk {
         }
     }
 
-    private final void b(int param0, String param1, int param2, int param3) {
+    private final void b(int param0, String param1, int param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

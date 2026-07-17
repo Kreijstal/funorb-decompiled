@@ -11,10 +11,10 @@ final class ee {
     private fg field_d;
 
     final static void a(int param0, int param1) {
-        oh.field_e = 1000000000L / (long)param0;
+        oh.field_e = 20000000L;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -48,45 +48,37 @@ final class ee {
             break L0;
           }
         }
-        L1: {
-          var14 = new StringWriter();
-          var4 = new PrintWriter((Writer) (Object) var14);
-          param1.printStackTrace(var4);
-          var4.close();
-          var5 = var14.toString();
-          var2 = var5;
-          var11 = var5;
-          if (param0 == 5) {
-            break L1;
-          } else {
-            field_b = null;
-            break L1;
-          }
-        }
+        var14 = new StringWriter();
+        var4 = new PrintWriter((Writer) (Object) var14);
+        param1.printStackTrace(var4);
+        var4.close();
+        var5 = var14.toString();
+        var2 = var5;
+        var11 = var5;
         var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
         var7 = var6.readLine();
         var2 = var7;
         var11 = var7;
-        L2: while (true) {
+        L1: while (true) {
           var8 = var6.readLine();
           var2 = var8;
           var11 = var8;
           var2 = var11;
           if (var8 != null) {
-            L3: {
+            L2: {
               var9 = var8.indexOf('(');
               var10 = var8.indexOf(')', 1 + var9);
               if (var9 == -1) {
                 var11 = var8;
                 var2 = var11;
                 var2 = var11;
-                break L3;
+                break L2;
               } else {
                 var11 = var8.substring(0, var9);
-                break L3;
+                break L2;
               }
             }
-            L4: {
+            L3: {
               var15 = var11.trim();
               var2 = var15;
               var2 = var15;
@@ -100,23 +92,23 @@ final class ee {
               var2 = var18;
               var2 = var18;
               if (var9 == -1) {
-                break L4;
+                break L3;
               } else {
                 if (-1 == var10) {
-                  break L4;
+                  break L3;
                 } else {
                   var12 = var8.indexOf(".java:", var9);
                   if (var12 < 0) {
-                    break L4;
+                    break L3;
                   } else {
                     var2 = var18 + var8.substring(var12 + 5, var10);
-                    break L4;
+                    break L3;
                   }
                 }
               }
             }
             var2 = var2 + 32;
-            continue L2;
+            continue L1;
           } else {
             var2 = var11;
             var11 = var2;
@@ -127,14 +119,11 @@ final class ee {
         }
     }
 
-    final static int b(byte param0) {
-        if (param0 >= -51) {
-            field_b = null;
-        }
+    final static int b() {
         return -fk.field_Z + ah.field_i;
     }
 
-    final static void a(pn param0, int param1) {
+    final static void a(pn param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         pn var3 = null;
@@ -250,14 +239,21 @@ final class ee {
         oq var2 = null;
         int var3 = 0;
         int var4 = 0;
+        int var5 = 0;
+        Exception var6 = null;
         int var7 = 0;
         oq var8 = null;
+        ap var9 = null;
         int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_23_0 = null;
+        Throwable decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        Object stackOut_22_0 = null;
+        int[] stackOut_21_0 = null;
         L0: {
           var7 = Pool.field_O;
           var8 = kn.field_e;
@@ -289,61 +285,85 @@ final class ee {
           }
         }
         L2: {
-          if (var8.g(param0 ^ 94) != 1) {
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
+          if (var8.g(-65) != 1) {
+            stackOut_8_0 = 0;
+            stackIn_9_0 = stackOut_8_0;
             break L2;
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackOut_7_0 = 1;
+            stackIn_9_0 = stackOut_7_0;
             break L2;
           }
         }
         L3: {
-          var4 = stackIn_11_0;
+          var4 = stackIn_9_0;
           n.field_S = var8.j(-105);
-          if (param0 == -31) {
+          if (var4 == 0) {
+            lh.field_f = n.field_S;
             break L3;
           } else {
-            int discarded$1 = ee.b((byte) -81);
+            lh.field_f = var8.j(-77);
             break L3;
           }
         }
         L4: {
-          if (var4 == 0) {
-            lh.field_f = n.field_S;
-            break L4;
-          } else {
-            lh.field_f = var8.j(param0 ^ 82);
-            break L4;
-          }
-        }
-        L5: {
           if (um.field_d == 1) {
             pp.field_b = var8.d(-1034);
             tp.field_g = var8.j(-49);
-            pp.field_b = var2.d(-1034);
-            tp.field_g = var2.j(-49);
-            np.field_a = s.a((ge) (Object) var8, 80, true);
-            ci.field_p = null;
-            break L5;
+            break L4;
           } else {
             if (4 == um.field_d) {
               pp.field_b = var8.d(-1034);
               tp.field_g = var8.j(-49);
-              np.field_a = s.a((ge) (Object) var8, 80, true);
-              ci.field_p = null;
-              break L5;
+              break L4;
             } else {
               pp.field_b = 0;
               tp.field_g = null;
-              np.field_a = s.a((ge) (Object) var8, 80, true);
-              ci.field_p = null;
-              break L5;
+              break L4;
             }
           }
         }
-        return new pn(false);
+        L5: {
+          if (param1) {
+            var5 = var8.d(-1034);
+            try {
+              L6: {
+                L7: {
+                  var9 = o.field_x.a(127, var5);
+                  np.field_a = var9.e(0);
+                  if (lh.field_f.equals((Object) (Object) di.field_j)) {
+                    stackOut_22_0 = null;
+                    stackIn_23_0 = (int[]) (Object) stackOut_22_0;
+                    break L7;
+                  } else {
+                    stackOut_21_0 = var9.field_C;
+                    stackIn_23_0 = stackOut_21_0;
+                    break L7;
+                  }
+                }
+                ci.field_p = stackIn_23_0;
+                break L6;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L8: {
+                var6 = (Exception) (Object) decompiledCaughtException;
+                tc.a((Throwable) (Object) var6, "CC1", -8555);
+                np.field_a = null;
+                ci.field_p = null;
+                break L8;
+              }
+            }
+            break L5;
+          } else {
+            int discarded$2 = 1;
+            int discarded$3 = 80;
+            np.field_a = s.a((ge) (Object) var8);
+            ci.field_p = null;
+            break L5;
+          }
+        }
+        return new pn(param1);
     }
 
     final sf a(byte param0, int param1) {

@@ -438,8 +438,8 @@ final class eh {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        eh.a(field_f, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
-        eh.a(field_f, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
+        eh.a(field_f, 0, 0 * field_g, 4, 0, param4, field_g - param4, param5);
+        eh.a(field_f, 0, 0 * field_g, 4, 0, param5, field_g - param4, 0, param4);
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -460,8 +460,8 @@ final class eh {
         int var22 = 0;
         int var23 = 0;
         L0: {
-          var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var8 = 1820;
+          var9 = 5 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -470,7 +470,7 @@ final class eh {
           }
         }
         L1: {
-          var10 = field_g - param4 - param5 - param3;
+          var10 = field_g - param5 - 4;
           if (0 >= var10) {
             break L1;
           } else {
@@ -480,7 +480,7 @@ final class eh {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = 5;
           if (field_g >= var12) {
             break L2;
           } else {
@@ -498,9 +498,9 @@ final class eh {
               var14 = 0;
               var15 = 0;
               var16 = 0;
-              var17 = param2 - param3;
-              var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var17 = param2 - 4;
+              var18 = var17 - 9;
+              var19 = -4;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -657,7 +657,7 @@ final class eh {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_k) {
+                      if (param5 + var19 + 4 >= field_k) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -803,8 +803,8 @@ final class eh {
           ai.a(var33, 0, param8);
           ai.a(var34, 0, param8);
           ai.a(var35, 0, param8);
-          var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var12 = 1820;
+          var13 = -4;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -813,8 +813,8 @@ final class eh {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_g;
-          var15 = param4 + param3;
+          var14 = var13 * field_g;
+          var15 = 4;
           var16 = 0;
           if (var15 < field_c) {
             break L3;
@@ -834,7 +834,7 @@ final class eh {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 5 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -843,7 +843,7 @@ final class eh {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_g;
+                  var19 = -4 * field_g;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -854,7 +854,7 @@ final class eh {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_c - param4 - param5 - param3;
+                      var18 = field_c - param5 - 4;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1096,7 +1096,7 @@ final class eh {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_e) {
+                      if (var13 + param5 + 4 >= field_e) {
                         var14 = var14 + field_g;
                         break L26;
                       } else {
@@ -1335,9 +1335,9 @@ final class eh {
                 param2 = field_e - param1;
             }
             var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
+            var6 = 85 * param4;
+            var7 = 85 * param4;
+            var8 = 85 * param4;
             var12 = param0 + param1 * field_g;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_f[var12] >> 16 & 255) * var5;

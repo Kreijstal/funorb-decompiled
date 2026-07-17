@@ -21,7 +21,7 @@ class nh extends sk {
             break L0;
           }
         }
-        if (param0 != am.field_c.field_f) {
+        if (-1 != am.field_c.field_f) {
           L1: {
             long dupTemp$2 = ih.a((byte) -98);
             t.field_d = dupTemp$2;
@@ -59,19 +59,16 @@ class nh extends sk {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_d = null;
         field_g = null;
     }
 
-    final static void a(le param0, byte param1, int param2) {
+    final static void a(le param0) {
         int var4 = 0;
         ha var5 = pg.field_fb;
-        var5.f(param2, 950);
-        if (param1 != -30) {
-            return;
-        }
+        var5.f(6, 950);
         try {
             var5.field_k = var5.field_k + 1;
             var4 = var5.field_k;
@@ -87,11 +84,11 @@ class nh extends sk {
             param0.field_o = var5.b(false);
             var5.a(-var4 + var5.field_k, (byte) 70);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "nh.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "nh.L(" + (param0 != null ? "{...}" : "null") + 44 + -30 + 44 + 6 + 41);
         }
     }
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -203,7 +203,7 @@ final class uc extends k {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_r = null;
         field_l = null;
         field_m = null;
@@ -310,7 +310,7 @@ final class uc extends k {
         return stackIn_7_0;
     }
 
-    final static boolean f(int param0) {
+    final static boolean f() {
         return va.field_a;
     }
 

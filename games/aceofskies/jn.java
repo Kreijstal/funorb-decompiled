@@ -26,7 +26,7 @@ final class jn extends ab implements dn {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_u = null;
     }
 
@@ -169,11 +169,14 @@ final class jn extends ab implements dn {
         }
     }
 
-    final static void g(int param0) {
-        if (!(cn.b(true))) {
+    final static void g() {
+        int discarded$5 = 1;
+        if (!(cn.b())) {
             if (!ml.field_p) {
                 if (fa.field_b == null) {
-                    fa.field_b = sc.a(false, 4);
+                    int discarded$6 = 4;
+                    int discarded$7 = 0;
+                    fa.field_b = sc.a();
                 }
                 if (fa.field_b.field_g) {
                     r.field_n = r.field_n & ~fa.field_b.field_e;
@@ -192,16 +195,14 @@ final class jn extends ab implements dn {
             return;
         }
         mi[] var7 = new mi[param1];
-        mi[] var3 = var7;
+        mi[] var8 = var7;
+        mi[] var3 = var8;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < ((jn) this).field_v; var5++) {
             var7[var5] = ((jn) this).field_y[var5];
             var4[var5] = ((jn) this).field_A[var5];
         }
-        ((jn) this).field_y = var3;
-        if (param0 != 1) {
-            return;
-        }
+        ((jn) this).field_y = var8;
         ((jn) this).field_A = var4;
         ((jn) this).field_v = param1;
     }

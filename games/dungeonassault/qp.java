@@ -31,7 +31,8 @@ final class qp {
             }
             ((qp) this).field_g.write(param2, param0, param3);
             if (param1 < 36) {
-                cn discarded$0 = qp.a(true);
+                int discarded$0 = 1;
+                cn discarded$1 = qp.a();
             }
             ((qp) this).field_b = ((qp) this).field_b + (long)param3;
         } catch (RuntimeException runtimeException) {
@@ -39,7 +40,7 @@ final class qp {
         }
     }
 
-    final static cn a(boolean param0) {
+    final static cn a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -50,45 +51,41 @@ final class qp {
         jh.a(var6);
         gf.b(0, 0, 20, 20, 16711680);
         gf.f(10, 10, 6, 0);
-        if (param0) {
-          var2 = 0;
-          L0: while (true) {
-            if (var2 >= 20) {
-              var2 = 0;
-              var3 = 0;
-              L1: while (true) {
-                if (20 <= var3) {
-                  jh.b();
-                  return var6;
-                } else {
-                  var4 = 0;
-                  L2: while (true) {
-                    if (var4 >= 20) {
-                      var3++;
-                      continue L1;
+        var2 = 0;
+        L0: while (true) {
+          if (var2 >= 20) {
+            var2 = 0;
+            var3 = 0;
+            L1: while (true) {
+              if (20 <= var3) {
+                jh.b();
+                return var6;
+              } else {
+                var4 = 0;
+                L2: while (true) {
+                  if (var4 >= 20) {
+                    var3++;
+                    continue L1;
+                  } else {
+                    if ((-10 + var3) * (var3 - 10) + (var4 - 10) * (var4 + -10) > 100) {
+                      var6.field_B[var2] = 0;
+                      var2++;
+                      var4++;
+                      continue L2;
                     } else {
-                      if ((-10 + var3) * (var3 - 10) + (var4 - 10) * (var4 + -10) > 100) {
-                        var6.field_B[var2] = 0;
-                        var2++;
-                        var4++;
-                        continue L2;
-                      } else {
-                        var2++;
-                        var4++;
-                        continue L2;
-                      }
+                      var2++;
+                      var4++;
+                      continue L2;
                     }
                   }
                 }
               }
-            } else {
-              gf.b(-var2 + 18, var2, 4, 16711680);
-              var2++;
-              continue L0;
             }
+          } else {
+            gf.b(-var2 + 18, var2, 4, 16711680);
+            var2++;
+            continue L0;
           }
-        } else {
-          return null;
         }
     }
 
@@ -184,7 +181,7 @@ final class qp {
         return stackIn_6_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -198,10 +195,7 @@ final class qp {
         }
     }
 
-    final static void a(byte param0, int param1, boolean param2) {
-        if (param0 != -24) {
-            field_c = null;
-        }
+    final static void a(byte param0, int param1) {
         if (param1 != -1) {
             bf.field_f[param1].a(true);
         } else {

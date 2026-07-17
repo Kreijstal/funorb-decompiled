@@ -17,15 +17,17 @@ final class dr extends td {
         var1 = new ee(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], baa.field_P[0], hk.field_f);
         if (param0 != -32124) {
           field_p = null;
-          al.b(-18073);
+          int discarded$4 = -18073;
+          al.b();
           return var1;
         } else {
-          al.b(-18073);
+          int discarded$5 = -18073;
+          al.b();
           return var1;
         }
     }
 
-    final static int[] c(int param0) {
+    final static int[] c() {
         if (o.d((byte) 80)) {
             return null;
         }

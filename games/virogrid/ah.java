@@ -147,80 +147,72 @@ abstract class ah {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
+        int[] stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        int[] stackIn_5_0 = null;
+        int stackIn_5_1 = 0;
         int[] stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        int[] stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        int[] stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        int stackIn_8_2 = 0;
+        int stackIn_6_2 = 0;
         RuntimeException decompiledCaughtException = null;
+        int[] stackOut_3_0 = null;
+        int stackOut_3_1 = 0;
         int[] stackOut_5_0 = null;
         int stackOut_5_1 = 0;
-        int[] stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int[] stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
+        int stackOut_5_2 = 0;
+        int[] stackOut_4_0 = null;
+        int stackOut_4_1 = 0;
+        int stackOut_4_2 = 0;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var5_int = 120 - -(df.field_e * param2);
-              var6 = var5_int + param0;
-              var7 = (16711422 & param3) >> 1;
-              if (param1 == 100) {
-                break L1;
-              } else {
-                field_h = null;
-                break L1;
-              }
-            }
+            var5_int = 120 - -(df.field_e * param2);
+            var6 = var5_int + 400;
+            var7 = 537927;
             var8 = var5_int;
-            L2: while (true) {
+            L1: while (true) {
               if (var8 >= var6) {
                 break L0;
               } else {
-                L3: {
-                  stackOut_5_0 = df.field_d;
-                  stackOut_5_1 = var8;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
+                L2: {
+                  stackOut_3_0 = df.field_d;
+                  stackOut_3_1 = var8;
+                  stackIn_5_0 = stackOut_3_0;
+                  stackIn_5_1 = stackOut_3_1;
+                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_1 = stackOut_3_1;
                   if (0 == var8 % 2) {
-                    stackOut_7_0 = (int[]) (Object) stackIn_7_0;
-                    stackOut_7_1 = stackIn_7_1;
-                    stackOut_7_2 = var7;
-                    stackIn_8_0 = stackOut_7_0;
-                    stackIn_8_1 = stackOut_7_1;
-                    stackIn_8_2 = stackOut_7_2;
-                    break L3;
+                    stackOut_5_0 = (int[]) (Object) stackIn_5_0;
+                    stackOut_5_1 = stackIn_5_1;
+                    stackOut_5_2 = var7;
+                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_6_1 = stackOut_5_1;
+                    stackIn_6_2 = stackOut_5_2;
+                    break L2;
                   } else {
-                    stackOut_6_0 = (int[]) (Object) stackIn_6_0;
-                    stackOut_6_1 = stackIn_6_1;
-                    stackOut_6_2 = param3;
-                    stackIn_8_0 = stackOut_6_0;
-                    stackIn_8_1 = stackOut_6_1;
-                    stackIn_8_2 = stackOut_6_2;
-                    break L3;
+                    stackOut_4_0 = (int[]) (Object) stackIn_4_0;
+                    stackOut_4_1 = stackIn_4_1;
+                    stackOut_4_2 = 1141646;
+                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_1 = stackOut_4_1;
+                    stackIn_6_2 = stackOut_4_2;
+                    break L2;
                   }
                 }
-                stackIn_8_0[stackIn_8_1] = stackIn_8_2;
+                stackIn_6_0[stackIn_6_1] = stackIn_6_2;
                 var8++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var5, "ah.J(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 120 + 41);
+          throw kg.a((Throwable) (Object) var5, "ah.J(" + 400 + 44 + 100 + 44 + param2 + 44 + 1141646 + 44 + 120 + 41);
         }
     }
 
-    final static byte[] a(int param0, byte[] param1, hg param2, int param3) {
+    final static byte[] a(int param0, byte[] param1, hg param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -265,7 +257,7 @@ abstract class ah {
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var4_int = param2.c((byte) -78, param0);
+            var4_int = param2.c((byte) -78, 16);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -323,7 +315,7 @@ abstract class ah {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("ah.I(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ah.I(").append(16).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

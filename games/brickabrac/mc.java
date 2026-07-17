@@ -9,7 +9,7 @@ final class mc {
     static int field_c;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_e = null;
@@ -17,7 +17,8 @@ final class mc {
     }
 
     final static void a(byte param0) {
-        ce.a(224);
+        int discarded$0 = 224;
+        ce.a();
         int var1 = -38 % ((46 - param0) / 52);
     }
 

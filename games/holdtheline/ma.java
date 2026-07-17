@@ -8,10 +8,7 @@ final class ma extends hl {
     static int field_k;
     int field_m;
 
-    public static void a(byte param0) {
-        if (param0 > -48) {
-            field_l = null;
-        }
+    public static void a() {
         field_l = null;
     }
 
@@ -193,48 +190,42 @@ final class ma extends hl {
     }
 
     final static boolean a(int param0) {
-        return ao.a(en.a(97), false);
+        int discarded$0 = 0;
+        return ao.a(en.a(97));
     }
 
     final static void a(int param0, boolean param1) {
         int var3 = 0;
-        L0: {
-          var3 = HoldTheLine.field_D;
-          if (param0 == -21383) {
-            break L0;
-          } else {
-            ma.a((byte) 26);
-            break L0;
-          }
-        }
+        var3 = HoldTheLine.field_D;
         if (pf.a((byte) 20, kn.b((byte) -49).field_p) != 0) {
           return;
         } else {
-          L1: {
+          L0: {
             eb.field_o = null;
             ii.field_c = 0;
             qd.a(20830, 3 - -cf.field_w);
             ek.field_x = 3;
             pe.field_g = new int[4];
             if (7 != mi.field_d) {
-              L2: {
+              L1: {
                 if (1 == mi.field_d) {
-                  break L2;
+                  break L1;
                 } else {
                   if (wb.field_c) {
-                    break L2;
+                    break L1;
                   } else {
                     em.field_o = false;
-                    break L2;
+                    break L1;
                   }
                 }
               }
-              L3: {
-                bn.a(1, param0 ^ 21498);
+              L2: {
+                bn.a(1, -125);
                 nm.field_b = kn.b((byte) -49);
-                if (pd.a(nm.field_b, true)) {
+                int discarded$1 = 1;
+                if (pd.a(nm.field_b)) {
                   bl.field_r = new sg(nm.field_b, mi.field_d, wb.field_c, em.field_o, t.field_l, ah.field_b);
-                  break L3;
+                  break L2;
                 } else {
                   sk.field_i = ah.field_b;
                   ca.field_r = mi.field_d;
@@ -242,12 +233,12 @@ final class ma extends hl {
                   on.field_r = t.field_l;
                   qn.field_k = em.field_o;
                   fl.field_j = wb.field_c;
-                  break L3;
+                  break L2;
                 }
               }
               kk.field_j = true;
-              wm.a(false, false, -1);
-              break L1;
+              wm.a(param1, false, -1);
+              break L0;
             } else {
               wb.field_c = false;
               kk.field_l = 4;
@@ -263,9 +254,9 @@ final class ma extends hl {
               tn.field_c = -1134004831;
               cm.field_a = -1329759026;
               t.field_l = go.field_g[kn.b((byte) -49).field_p][0];
-              ij.a(false, -79);
+              ij.a(param1, -79);
               ((ti) (Object) l.field_a[10]).field_t = 480.0f;
-              break L1;
+              break L0;
             }
           }
           return;

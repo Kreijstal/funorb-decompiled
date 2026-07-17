@@ -318,7 +318,9 @@ final class ag extends oj {
           L0: {
             L1: {
               param0.a(((ag) this).field_G, ((ag) this).field_F, ((ag) this).field_N, ((ag) this).field_Q, ((ag) this).field_B, 111, ((ag) this).field_M, ((ag) this).field_K, ((ag) this).field_R, ((ag) this).field_z);
-              hf.a(param0, (byte) 9, true);
+              int discarded$8 = 1;
+              int discarded$9 = 9;
+              hf.a(param0);
               if (param1 == -26661) {
                 break L1;
               } else {

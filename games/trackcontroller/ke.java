@@ -8,15 +8,10 @@ final class ke {
 
     public static void a(boolean param0) {
         field_b = null;
-        if (param0) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
-    final synchronized static byte[] b(int param0, int param1) {
+    final synchronized static byte[] b(int param0) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
@@ -243,7 +238,7 @@ final class ke {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         vk var4 = null;
@@ -251,29 +246,23 @@ final class ke {
         var3 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == -101) {
-                break L1;
-              } else {
-                ke.a(true);
-                break L1;
-              }
-            }
             var4 = (vk) (Object) ea.field_t.b(2);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
-                ef.a(var4, 2, param0 + 111);
-                var4 = (vk) (Object) ea.field_t.a(param0 + 111);
-                continue L2;
+                int discarded$8 = 10;
+                int discarded$9 = 2;
+                ef.a(var4);
+                var4 = (vk) (Object) ea.field_t.a(10);
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var2, "ke.A(" + param0 + 44 + 2 + 41);
+          throw sl.a((Throwable) (Object) var2, "ke.A(" + -101 + 44 + 2 + 41);
         }
     }
 

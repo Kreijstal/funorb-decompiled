@@ -10,7 +10,7 @@ final class ih {
     static tf[] field_a;
     static int field_f;
 
-    final static uc a(byte param0) {
+    final static uc a() {
         int var1 = 0;
         if (!(rf.field_d != null)) {
             rf.field_d = new uc(ep.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, ep.field_b.field_w, -1, 2147483647, true);

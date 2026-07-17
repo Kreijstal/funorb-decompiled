@@ -37,6 +37,8 @@ final class cl extends gb implements jf, n {
             ((cl) this).field_H = param0;
             ((cl) this).field_G = new eb(rj.field_e, (sc) null);
             ((cl) this).field_G.field_l = (cj) (Object) new ic();
+            int discarded$2 = -69;
+            int discarded$3 = 0;
             var7 = ij.a(new String[2], -1, rf.field_y);
             var3 = 20;
             var4 = new fd(qk.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
@@ -89,18 +91,14 @@ final class cl extends gb implements jf, n {
         }
     }
 
-    private final String f(byte param0) {
+    private final String f() {
         int var2 = 32;
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_I = null;
         field_J = null;
-        if (param0 <= 110) {
-            Object var2 = null;
-            cl.a(-65, 31, (byte) -36, (ci) null, -121, -18);
-        }
     }
 
     public final void a(byte param0, vj param1, int param2, int param3) {
@@ -179,14 +177,14 @@ final class cl extends gb implements jf, n {
         }
     }
 
-    final static eg a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+    final static eg a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         eg var8 = new eg(param3, param6, param1, param4, param2, param5);
         ic.field_s.a((uf) (Object) var8, -16611);
-        qc.a(param0, var8, (byte) -7);
+        qc.a(4, var8, (byte) -7);
         return var8;
     }
 
-    private final String d(boolean param0) {
+    private final String d() {
         return "</col></u>";
     }
 

@@ -9,7 +9,7 @@ final class um {
     static String field_f;
     static go field_e;
 
-    final static k a(int param0, gn param1, gn param2, int param3, int param4) {
+    final static k a(int param0, gn param1, gn param2, int param3) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         Object stackIn_4_0 = null;
@@ -135,7 +135,7 @@ final class um {
           L0: {
             L1: {
               L2: {
-                if (param1 <= param0) {
+                if (param1 <= 0) {
                   break L2;
                 } else {
                   if (param1 < 128) {
@@ -188,12 +188,12 @@ final class um {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2_ref, "um.B(" + param0 + 44 + param1 + 41);
+          throw kk.a((Throwable) (Object) var2_ref, "um.B(" + 0 + 44 + param1 + 41);
         }
         return stackIn_18_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;

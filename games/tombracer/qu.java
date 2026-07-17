@@ -10,10 +10,10 @@ abstract class qu {
 
     abstract byte[] a(byte param0, int param1, int param2);
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
-        int var1 = -73 / ((param0 - 5) / 62);
+        int var1 = -73;
         field_d = null;
         field_c = null;
         field_b = null;

@@ -58,7 +58,7 @@ final class lo {
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            var4_int = param2.h(param0, 14862);
+            var4_int = param2.h(16, 14862);
             if (0 != var4_int) {
               L1: {
                 L2: {
@@ -120,7 +120,7 @@ final class lo {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var4;
-            stackOut_20_1 = new StringBuilder().append("lo.A(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("lo.A(").append(16).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;

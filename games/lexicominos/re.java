@@ -22,62 +22,38 @@ abstract class re extends ql {
           if (((re) this).field_R == ok.field_k) {
             int fieldTemp$2 = ((re) this).field_V + 1;
             ((re) this).field_V = ((re) this).field_V + 1;
-            if (fieldTemp$2 != ((re) this).field_S) {
-              ((re) this).field_U.field_E = -((((re) this).field_V << 8) / ((re) this).field_S) + 256;
-              if (param0 >= -21) {
-                return false;
-              } else {
-                return super.f((byte) -102);
-              }
-            } else {
+            if (fieldTemp$2 == ((re) this).field_S) {
               ((re) this).field_R = fb.field_f;
               ((re) this).a(12 + ((re) this).field_W.field_j, (byte) -91, ((re) this).field_Y, ((re) this).field_ab + 12 + ((re) this).field_W.field_v);
               ((re) this).field_U.field_E = 0;
               ((re) this).field_V = 0;
-              if (param0 >= -21) {
-                return false;
-              } else {
-                return super.f((byte) -102);
-              }
+              return super.f((byte) -102);
+            } else {
+              ((re) this).field_U.field_E = -((((re) this).field_V << 8) / ((re) this).field_S) + 256;
+              return super.f((byte) -102);
             }
           } else {
             if (((re) this).field_R == rl.field_H) {
               int fieldTemp$3 = ((re) this).field_V + 1;
               ((re) this).field_V = ((re) this).field_V + 1;
-              if (fieldTemp$3 == ((re) this).field_bb) {
+              if (fieldTemp$3 != ((re) this).field_bb) {
+                ((re) this).field_U.field_E = (((re) this).field_V << 8) / ((re) this).field_bb;
+                return super.f((byte) -102);
+              } else {
                 ((re) this).field_U.field_E = 256;
                 ((re) this).field_R = null;
-                if (param0 >= -21) {
-                  return false;
-                } else {
-                  return super.f((byte) -102);
-                }
-              } else {
-                ((re) this).field_U.field_E = (((re) this).field_V << 8) / ((re) this).field_bb;
-                if (param0 >= -21) {
-                  return false;
-                } else {
-                  return super.f((byte) -102);
-                }
-              }
-            } else {
-              if (param0 >= -21) {
-                return false;
-              } else {
                 return super.f((byte) -102);
               }
+            } else {
+              return super.f((byte) -102);
             }
           }
         } else {
-          if (param0 >= -21) {
-            return false;
-          } else {
-            return super.f((byte) -102);
-          }
+          return super.f((byte) -102);
         }
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_X = null;
         field_T = null;
         field_cb = null;

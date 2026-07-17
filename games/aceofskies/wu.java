@@ -158,16 +158,20 @@ final class wu {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_l = null;
             field_w = null;
             field_c = null;
-            if (!param0) {
-                field_w = null;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "wu.D(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pn.a((Throwable) (Object) var1, "wu.D(" + 1 + 41);
         }
     }
 
@@ -1172,56 +1176,48 @@ final class wu {
           }
         }
         L82: {
-          if (param0 < -35) {
+          var2 = im.a(80, "purchasemessages,3");
+          if (null == var2) {
             break L82;
           } else {
-            wu.a(true);
+            ae.field_h[3] = ea.a(0, var2);
             break L82;
           }
         }
         L83: {
-          var2 = im.a(80, "purchasemessages,3");
-          if (null == var2) {
+          var2 = im.a(48, "purchasemessages,4");
+          if (var2 != null) {
+            ae.field_h[4] = ea.a(0, var2);
             break L83;
           } else {
-            ae.field_h[3] = ea.a(0, var2);
             break L83;
           }
         }
         L84: {
-          var2 = im.a(48, "purchasemessages,4");
-          if (var2 != null) {
-            ae.field_h[4] = ea.a(0, var2);
+          var2 = im.a(122, "purchasemessages,5");
+          if (null == var2) {
             break L84;
           } else {
+            ae.field_h[5] = ea.a(0, var2);
             break L84;
           }
         }
         L85: {
-          var2 = im.a(122, "purchasemessages,5");
-          if (null == var2) {
+          var2 = im.a(109, "purchasemessages,6");
+          if (var2 == null) {
             break L85;
           } else {
-            ae.field_h[5] = ea.a(0, var2);
+            ae.field_h[6] = ea.a(0, var2);
             break L85;
           }
         }
         L86: {
-          var2 = im.a(109, "purchasemessages,6");
-          if (var2 == null) {
-            break L86;
-          } else {
-            ae.field_h[6] = ea.a(0, var2);
-            break L86;
-          }
-        }
-        L87: {
           var2 = im.a(85, "arcadeunlocked");
           if (null == var2) {
-            break L87;
+            break L86;
           } else {
             ab.field_r = ea.a(0, var2);
-            break L87;
+            break L86;
           }
         }
         q.field_q = null;

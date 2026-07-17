@@ -16,7 +16,7 @@ final class pm {
             var5.g(param0, 8);
             var5.field_p = var5.field_p + 1;
             var4 = var5.field_p;
-            var5.b((byte) 39, param1);
+            var5.b((byte) 39, 1);
             var5.b((byte) 99, param2.field_u);
             var5.b((byte) 63, param2.field_q);
             var5.e(48, param2.field_r);
@@ -26,7 +26,7 @@ final class pm {
             int discarded$0 = var5.a(var4, false);
             var5.c(var5.field_p + -var4, -13745);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "pm.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "pm.C(" + param0 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -135,38 +135,15 @@ final class pm {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        Object var11 = null;
-        if (param0 < 45) {
-          var11 = null;
-          pm.a(-57, 125, (hg) null);
-          var3 = ic.b(param2, -431);
-          var4 = cn.c(0, param2);
-          var5 = ic.b(param1, -431);
-          var6 = cn.c(0, param1);
-          var7 = (int)((long)var5 * (long)var3 >> 16);
-          var8 = (int)((long)var6 * (long)var3 >> 16);
-          var9 = (int)((long)var5 * (long)var4 >> 16);
-          var10 = (int)((long)var4 * (long)var6 >> 16);
-          return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
-        } else {
-          var3 = ic.b(param2, -431);
-          var4 = cn.c(0, param2);
-          var5 = ic.b(param1, -431);
-          var6 = cn.c(0, param1);
-          var7 = (int)((long)var5 * (long)var3 >> 16);
-          var8 = (int)((long)var6 * (long)var3 >> 16);
-          var9 = (int)((long)var5 * (long)var4 >> 16);
-          var10 = (int)((long)var4 * (long)var6 >> 16);
-          return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
-        }
+        int var3 = ic.b(param2, -431);
+        int var4 = cn.c(0, param2);
+        int var5 = ic.b(param1, -431);
+        int var6 = cn.c(0, param1);
+        int var7 = (int)((long)var5 * (long)var3 >> 16);
+        int var8 = (int)((long)var6 * (long)var3 >> 16);
+        int var9 = (int)((long)var5 * (long)var4 >> 16);
+        int var10 = (int)((long)var4 * (long)var6 >> 16);
+        return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
     pm(ha param0) {

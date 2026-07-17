@@ -533,35 +533,27 @@ final class go implements Runnable {
         Object var7 = null;
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          var6 = new di();
-          if (param2) {
-            break L0;
-          } else {
-            field_r = null;
-            break L0;
-          }
-        }
+        var6 = new di();
         var6.field_c = param3;
         var6.field_b = param4;
         var6.field_a = param1;
         var6.field_g = param0;
         var7 = this;
         synchronized (var7) {
-          L1: {
-            L2: {
+          L0: {
+            L1: {
               if (((go) this).field_u != null) {
                 ((go) this).field_u.field_e = var6;
                 ((go) this).field_u = var6;
-                break L2;
+                break L1;
               } else {
                 ((go) this).field_f = var6;
                 ((go) this).field_u = var6;
-                break L2;
+                break L1;
               }
             }
             this.notify();
-            break L1;
+            break L0;
           }
         }
         return var6;
@@ -576,10 +568,10 @@ final class go implements Runnable {
             String var7 = null;
             Exception var8 = null;
             mc var8_ref = null;
-            mc stackIn_11_0 = null;
+            mc stackIn_12_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            mc stackOut_10_0 = null;
+            mc stackOut_11_0 = null;
             L0: {
               if (param3 != 33) {
                 if (param3 == 34) {
@@ -597,14 +589,7 @@ final class go implements Runnable {
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_o, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             var6 = 0;
             L1: while (true) {
-              if (var6 >= var5_array.length) {
-                if (!param2) {
-                  field_g = -28L;
-                  return null;
-                } else {
-                  return null;
-                }
-              } else {
+              if (var6 < var5_array.length) {
                 L2: {
                   var7 = var5_array[var6];
                   if (var7.length() <= 0) {
@@ -621,8 +606,8 @@ final class go implements Runnable {
                 try {
                   L3: {
                     var8_ref = new mc(new File(var7, var4), "rw", 10000L);
-                    stackOut_10_0 = (mc) var8_ref;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackOut_11_0 = (mc) var8_ref;
+                    stackIn_12_0 = stackOut_11_0;
                     decompiledRegionSelector0 = 0;
                     break L3;
                   }
@@ -636,10 +621,12 @@ final class go implements Runnable {
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
-                  return stackIn_11_0;
+                  return stackIn_12_0;
                 } else {
                   continue L1;
                 }
+              } else {
+                return null;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -658,7 +645,8 @@ final class go implements Runnable {
         if (param2 != -120) {
             ((go) this).field_p = null;
         }
-        return this.a((byte) -121, param0, param1, false);
+        int discarded$0 = 0;
+        return this.a((byte) -121, param0, param1);
     }
 
     final boolean a(int param0) {
@@ -689,8 +677,8 @@ final class go implements Runnable {
         return this.a(7, (Object) (Object) param0, true, 0, 0);
     }
 
-    private final di a(byte param0, String param1, int param2, boolean param3) {
-        int var5 = -62 / ((param0 - -53) / 58);
+    private final di a(byte param0, String param1, int param2) {
+        int var5 = 62;
         return this.a(1, (Object) (Object) param1, true, param2, 0);
     }
 

@@ -44,7 +44,8 @@ final class tc {
               ij.field_f = new vg(param1);
               eg.field_d = param3;
               dh.field_k = param2;
-              rl.a(false);
+              int discarded$3 = 0;
+              rl.a();
               if (param0 == -17185) {
                 break L1;
               } else {

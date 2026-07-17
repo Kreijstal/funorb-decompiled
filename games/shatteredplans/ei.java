@@ -34,7 +34,7 @@ final class ei {
         try {
           L0: {
             param1.b((byte) -86);
-            var2 = (fb) (Object) kj.field_a.d(param0);
+            var2 = (fb) (Object) kj.field_a.d(0);
             L1: while (true) {
               L2: {
                 if (var2 == null) {
@@ -65,7 +65,7 @@ final class ei {
           L4: {
             var2_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2_ref;
-            stackOut_9_1 = new StringBuilder().append("ei.C(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("ei.C(").append(0).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -215,7 +215,7 @@ final class ei {
         }
     }
 
-    final static void a(int param0, int param1, byte[] param2, boolean param3, boolean param4, int param5) {
+    final static void a(int param0, int param1, byte[] param2) {
         sl var10 = null;
         int var7 = 0;
         int var8 = 0;
@@ -225,20 +225,14 @@ final class ei {
             var10.field_j = var10.field_j + 1;
             var7 = var10.field_j;
             var10.c(4, (byte) -106);
-            if (param4) {
-                Object var9 = null;
-                ei.a(-47, (fb) null);
-            }
             var10.c(param1, (byte) -122);
             var8 = 0;
-            if (!(!param3)) {
-                var8 += 128;
-            }
+            var8 += 128;
             var10.c(var8, (byte) -56);
             var10.a(0, param2.length, param2, 22186);
             var10.b(-var7 + var10.field_j, (byte) 127);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ei.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + 0 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ei.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 44 + 0 + 44 + 0 + 41);
         }
     }
 
@@ -338,7 +332,7 @@ final class ei {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
         field_g = null;

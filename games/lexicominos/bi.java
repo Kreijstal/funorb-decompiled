@@ -55,7 +55,8 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 break L1;
               }
             }
-            var3 = ci.a(param1, (byte) -79);
+            int discarded$2 = -79;
+            var3 = ci.a(param1);
             if (-1 != param2.indexOf(param1)) {
               stackOut_5_0 = 1;
               stackIn_6_0 = stackOut_5_0;
@@ -152,7 +153,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         return stackIn_14_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

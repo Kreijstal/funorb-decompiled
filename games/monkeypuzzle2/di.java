@@ -9,7 +9,7 @@ final class di {
     static String field_d;
     static lk field_a;
 
-    final static boolean a(ad param0, ad param1, ad param2, byte param3) {
+    final static boolean a(ad param0, ad param1, ad param2) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -186,7 +186,7 @@ final class di {
         return stackIn_15_0 != 0;
     }
 
-    final static d a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, byte param8) {
+    final static d a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         d var9 = null;
         RuntimeException var9_ref = null;
         int var10 = 0;
@@ -211,9 +211,10 @@ final class di {
         try {
           L0: {
             var10 = 0;
-            var9 = new d(param5, param1, param6, param3, param0, param2, param4);
+            var9 = new d(41, 65494, param6, param3, param0, param2, param4);
             wk.field_b.a(-8212, (ug) (Object) var9);
-            pj.a(param7, var9, true);
+            int discarded$2 = 1;
+            pj.a(3, var9);
             stackOut_0_0 = (d) var9;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -223,7 +224,7 @@ final class di {
           L1: {
             var9_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var9_ref;
-            stackOut_2_1 = new StringBuilder().append("di.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_2_1 = new StringBuilder().append("di.C(").append(param0).append(44).append(65494).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -246,12 +247,12 @@ final class di {
               break L1;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 100 + 41);
+          throw la.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 41 + 44 + param6 + 44 + 3 + 44 + 100 + 41);
         }
         return stackIn_1_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_b = null;
@@ -419,7 +420,7 @@ final class di {
           L0: {
             L1: {
               L2: {
-                param1 = am.a((char)param0, param1, "", -23026);
+                param1 = am.a('_', param1, "", -23026);
                 var3 = ki.a((byte) 55, param1);
                 if (param2.indexOf(param1) != -1) {
                   break L2;
@@ -444,7 +445,7 @@ final class di {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3_ref;
-            stackOut_6_1 = new StringBuilder().append("di.A(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("di.A(").append(95).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

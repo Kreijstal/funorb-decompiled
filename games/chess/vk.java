@@ -13,23 +13,13 @@ final class vk {
     static String field_f;
 
     final static void a(boolean param0, boolean param1) {
-        if (param0) {
-          return;
-        } else {
-          L0: {
-            if (null != cd.field_x) {
-              wb.g(wb.field_i, wb.field_a, wb.field_j - wb.field_i, -wb.field_a + wb.field_b);
-              cd.field_x.a(param0, param1);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
+        if (!(null == cd.field_x)) {
+            wb.g(wb.field_i, wb.field_a, wb.field_j - wb.field_i, -wb.field_a + wb.field_b);
+            cd.field_x.a(false, param1);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_h = null;
         field_c = null;

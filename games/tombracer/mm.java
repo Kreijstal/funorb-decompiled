@@ -10,7 +10,7 @@ final class mm extends vg {
         return (2048 & param1) != 0 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
     }
 

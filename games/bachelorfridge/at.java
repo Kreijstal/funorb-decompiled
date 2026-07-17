@@ -225,7 +225,7 @@ abstract class at extends bw {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
     }

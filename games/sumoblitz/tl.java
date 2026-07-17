@@ -276,7 +276,8 @@ final class tl extends ms {
           var3 = Sumoblitz.field_L ? 1 : 0;
           ((tl) this).field_o = ((tl) this).field_o + ((tl) this).field_p;
           ((tl) this).field_x = ((tl) this).field_x + ((tl) this).field_w;
-          if (this.e(-114)) {
+          int discarded$5 = -114;
+          if (this.e()) {
             L1: {
               if (((tl) this).field_w != 0) {
                 break L1;
@@ -393,10 +394,14 @@ final class tl extends ms {
               }
             }
             if (0 == ((tl) this).field_u % 2) {
-              ((tl) this).field_r.a((ms) (Object) new eq(50, -1024 + (((tl) this).field_x - -fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (((tl) this).field_o + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.d((byte) 105), 1 + ((tl) this).field_n, true), (byte) 39);
+              int discarded$6 = -96;
+              int discarded$7 = -96;
+              ((tl) this).field_r.a((ms) (Object) new eq(50, -1024 + (((tl) this).field_x - -fi.a(2048, he.field_o)) >> 8, -1024 + (((tl) this).field_o + fi.a(2048, he.field_o)) >> 8, this.d((byte) 105), 1 + ((tl) this).field_n, true), (byte) 39);
               break L10;
             } else {
-              ((tl) this).field_r.a((ms) (Object) new eq(50, -1024 + (((tl) this).field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, ((tl) this).field_o - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, this.d((byte) 65), 1 + ((tl) this).field_n, false), (byte) 39);
+              int discarded$8 = -96;
+              int discarded$9 = -96;
+              ((tl) this).field_r.a((ms) (Object) new eq(50, -1024 + (((tl) this).field_x + fi.a(2048, he.field_o)) >> 8, ((tl) this).field_o - (-fi.a(2048, he.field_o) + 1024) >> 8, this.d((byte) 65), 1 + ((tl) this).field_n, false), (byte) 39);
               break L10;
             }
           }
@@ -426,7 +431,7 @@ final class tl extends ms {
         }
     }
 
-    private final boolean e(int param0) {
+    private final boolean e() {
         cb var2 = null;
         nm var3 = null;
         int var4 = 0;
@@ -463,7 +468,7 @@ final class tl extends ms {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_k = null;
         field_s = null;
     }

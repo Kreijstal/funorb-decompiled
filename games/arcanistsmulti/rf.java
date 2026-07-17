@@ -14,7 +14,7 @@ final class rf extends pg {
     int field_h;
     static String field_g;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_k = null;
         field_j = null;

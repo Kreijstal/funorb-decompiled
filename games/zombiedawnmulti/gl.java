@@ -9,7 +9,7 @@ final class gl extends se implements in {
     static cd field_L;
     private jn field_J;
 
-    final static void b(boolean param0, int param1) {
+    final static void b() {
         RuntimeException var2 = null;
         int var3 = 0;
         hp var4 = null;
@@ -21,26 +21,20 @@ final class gl extends se implements in {
             var4 = (hp) (Object) mh.field_l.c(108);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  if (param0) {
-                    break L2;
-                  } else {
-                    gl.c(false);
-                    break L2;
-                  }
-                }
                 var5 = (u) (Object) cp.field_T.c(59);
-                L3: while (true) {
+                L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    o.a(var5, param1, -85);
+                    int discarded$8 = -85;
+                    int discarded$9 = 5;
+                    o.a(var5);
                     var5 = (u) (Object) cp.field_T.b(6);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                tk.a(var4, 58, param1);
+                tk.a(var4, 58, 5);
                 var4 = (hp) (Object) mh.field_l.b(6);
                 continue L1;
               }
@@ -49,7 +43,7 @@ final class gl extends se implements in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "gl.D(" + param0 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) var2, "gl.D(" + 1 + 44 + 5 + 41);
         }
     }
 
@@ -187,7 +181,7 @@ final class gl extends se implements in {
         }
     }
 
-    final static ja a(int param0) {
+    final static ja a() {
         int var4_int = 0;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         int var1 = oq.field_w[0] * vj.field_p[0];
@@ -201,10 +195,7 @@ final class gl extends se implements in {
         return var4;
     }
 
-    public static void c(boolean param0) {
-        if (!param0) {
-            gl.b(true, -119);
-        }
+    public static void c() {
         field_H = null;
         field_L = null;
         field_K = null;

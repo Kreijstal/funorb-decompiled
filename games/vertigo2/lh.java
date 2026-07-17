@@ -8,11 +8,11 @@ final class lh {
     static String field_a;
     static String[] field_c;
 
-    final static void a(int param0, hn param1, byte param2) {
+    final static void a(int param0, hn param1) {
         int var4 = 0;
         mi var5 = uh.field_Wb;
         mi var3 = var5;
-        var5.j(param0, 120);
+        var5.j(6, 120);
         var5.field_u = var5.field_u + 1;
         try {
             var4 = var5.field_u;
@@ -28,11 +28,11 @@ final class lh {
             param1.field_q = var5.b(true);
             var5.b((byte) 20, var5.field_u - var4);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "lh.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 81 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "lh.B(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 44 + 81 + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         gp var1 = null;
         int var2 = Vertigo2.field_L ? 1 : 0;
         try {

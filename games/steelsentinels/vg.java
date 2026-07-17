@@ -28,8 +28,8 @@ final class vg extends IOException {
         }
     }
 
-    final static void a(int param0, byte param1) {
-        ud.field_v = 1000000000L / (long)param0;
+    final static void a() {
+        ud.field_v = 20000000L;
         int var2 = -15;
     }
 

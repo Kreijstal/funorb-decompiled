@@ -12,47 +12,92 @@ final class tia {
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) wna.field_n);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wna.field_n);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) wna.field_n);
-            tka.field_n = param0;
+            tka.field_n = 0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "tia.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "tia.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_b = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param1 != 0) {
-            if (param1 < 0) {
-                if (!(param0 != 0)) {
-                    return 4096;
-                }
-                if (param0 >= 0) {
-                    return -ska.a(-29, param0, -param1) + 4096;
-                }
-                return ska.a(120, -param0, -param1) - 4096;
-            }
-            if (param0 == 0) {
-                return 0;
-            }
-            if (param0 < 0) {
-                return -ska.a(-50, -param0, param1);
-            }
-            return ska.a(123, param0, param1);
-        }
-        if (0 != param0) {
-            if (param0 >= 0) {
+        if (param2 == -29543) {
+          if (param1 == 0) {
+            if (0 == param0) {
+              return 0;
+            } else {
+              if (param0 < 0) {
+                return -2048;
+              } else {
                 return 2048;
+              }
             }
-            return -2048;
+          } else {
+            if (param1 >= 0) {
+              if (param0 != 0) {
+                if (param0 >= 0) {
+                  return ska.a(123, param0, param1);
+                } else {
+                  return -ska.a(-50, -param0, param1);
+                }
+              } else {
+                return 0;
+              }
+            } else {
+              if (param0 == 0) {
+                return 4096;
+              } else {
+                if (param0 < 0) {
+                  return ska.a(120, -param0, -param1) - 4096;
+                } else {
+                  return -ska.a(-29, param0, -param1) + 4096;
+                }
+              }
+            }
+          }
+        } else {
+          field_b = null;
+          if (param1 == 0) {
+            if (0 == param0) {
+              return 0;
+            } else {
+              if (param0 < 0) {
+                return -2048;
+              } else {
+                return 2048;
+              }
+            }
+          } else {
+            if (param1 >= 0) {
+              if (param0 != 0) {
+                if (param0 >= 0) {
+                  return ska.a(123, param0, param1);
+                } else {
+                  return -ska.a(-50, -param0, param1);
+                }
+              } else {
+                return 0;
+              }
+            } else {
+              if (param0 == 0) {
+                return 4096;
+              } else {
+                if (param0 < 0) {
+                  return ska.a(120, -param0, -param1) - 4096;
+                } else {
+                  return -ska.a(-29, param0, -param1) + 4096;
+                }
+              }
+            }
+          }
         }
-        return 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int[] var7 = null;
@@ -88,9 +133,6 @@ final class tia {
     }
 
     final static boolean b(int param0, int param1, int param2) {
-        if (param1 != -23403) {
-            return false;
-        }
         return qp.a(param2, (byte) 121, param0) & mm.a(-112, param2, param0);
     }
 

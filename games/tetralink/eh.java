@@ -15,7 +15,7 @@ final class eh extends mc {
     static int field_s;
     static u field_p;
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
         if (th.field_g > 0) {
             th.field_g = th.field_g - 1;

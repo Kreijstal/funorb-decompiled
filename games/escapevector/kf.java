@@ -147,9 +147,6 @@ final class kf extends ah {
         if (!(param1 != 2)) {
             return 100 * param2;
         }
-        if (param0 <= 5) {
-            return 107;
-        }
         if (param1 == 3) {
             return param2 * 100;
         }
@@ -163,9 +160,10 @@ final class kf extends ah {
         int var5 = 0;
         om[] var6 = null;
         var5 = EscapeVector.field_A;
-        var6 = vh.e(-91);
+        int discarded$2 = -91;
+        var6 = vh.e();
         var2 = var6;
-        var3 = 2 % ((3 - param0) / 49);
+        var3 = 0;
         var4 = 0;
         L0: while (true) {
           if (var6.length > var4) {
@@ -285,7 +283,7 @@ final class kf extends ah {
         return stackIn_15_0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_q = null;
         field_r = null;
         field_p = null;

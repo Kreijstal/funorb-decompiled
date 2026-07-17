@@ -9,7 +9,7 @@ final class pc extends tj {
     static String field_m;
     static String field_l;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_n = null;
         field_m = null;
         field_l = null;
@@ -17,11 +17,7 @@ final class pc extends tj {
 
     final static bd a(int param0, int param1, byte param2, int param3, int param4) {
         param3 = -param3 + 11;
-        if (param2 != 14) {
-          return null;
-        } else {
-          return new bd(-18 + 18 * ((param0 * 12 + param3) * 12 - -param1) - -param4 + -1);
-        }
+        return new bd(-18 + 18 * ((param0 * 12 + param3) * 12 - -param1) - -param4 + -1);
     }
 
     pc(rl param0) {
@@ -194,7 +190,7 @@ final class pc extends tj {
         return stackIn_7_0;
     }
 
-    final static int e(int param0) {
+    final static int e() {
         try {
             IOException var1 = null;
             int var1_int = 0;

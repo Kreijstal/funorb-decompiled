@@ -96,7 +96,7 @@ final class tj {
         return ((tj) this).field_c[param1];
     }
 
-    final static String a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(int param0, boolean param1, boolean param2) {
         int var4 = 0;
         if (param2) {
             var4 += 4;
@@ -104,13 +104,10 @@ final class tj {
         if (param1) {
             var4 += 2;
         }
-        if (param0 != -14189) {
-            return null;
-        }
         return ee.field_d[var4];
     }
 
-    final static void a(be param0, java.awt.Frame param1, int param2) {
+    final static void a(be param0, java.awt.Frame param1) {
         eb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -231,7 +228,7 @@ final class tj {
         ((tj) this).field_c = var4;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
     }
@@ -244,6 +241,10 @@ final class tj {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
+        char[] var10 = null;
+        char[] var11 = null;
+        char[] var12 = null;
+        char[] var13 = null;
         String stackIn_14_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -265,12 +266,16 @@ final class tj {
         var9 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
-            var4 = new char[param0];
+            var13 = new char[param0];
+            var12 = var13;
+            var11 = var12;
+            var10 = var11;
+            var4 = var10;
             var5 = 0;
             var6 = param2;
             L1: while (true) {
               if (var6 >= param0) {
-                stackOut_13_0 = new String(var4, 0, var5);
+                stackOut_13_0 = new String(var13, 0, var5);
                 stackIn_14_0 = stackOut_13_0;
                 break L0;
               } else {
@@ -373,15 +378,16 @@ final class tj {
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
-            if (vl.a(param0, param2, -125)) {
-              var3_int = param1;
+            if (vl.a(false, param2, -125)) {
+              var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param2.length()) {
                   stackOut_11_0 = 1;
                   stackIn_12_0 = stackOut_11_0;
                   break L0;
                 } else {
-                  if (!vg.a(param2.charAt(var3_int), -22118)) {
+                  int discarded$15 = -22118;
+                  if (!vg.a(param2.charAt(var3_int))) {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
                     return stackIn_9_0 != 0;
@@ -402,7 +408,7 @@ final class tj {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("tj.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("tj.A(").append(0).append(44).append(0).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -434,7 +440,7 @@ final class tj {
         this.a(((tj) this).field_b + param0, param1, param0 ^ -11783);
     }
 
-    final static hj c(int param0) {
+    final static hj c() {
         int var4_int = 0;
         int var5 = OrbDefence.field_D ? 1 : 0;
         int var1 = wh.field_b[0] * m.field_a[0];

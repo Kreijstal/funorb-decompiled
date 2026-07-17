@@ -77,9 +77,9 @@ final class qh {
               ((qh) this).field_k = 3;
               ((qh) this).field_n = -1;
               ((qh) this).field_p = 3;
-              tc discarded$10 = var4.a(0, (byte) 78).b(15658734, -25251).a(ida.a(7829367, -95, 10066329, 8947848), (byte) -40);
-              tc discarded$11 = var4.a(1, (byte) 78).a(ida.a(13421772, -34, 10066329, 11184810), (byte) -40);
-              tc discarded$12 = var4.a(3, (byte) 78).a(ida.a(10066329, -32, 7829367, 8947848), (byte) -40).b((byte) -88, 1).a((byte) 0, 1);
+              tc discarded$15 = var4.a(0, (byte) 78).b(15658734, -25251).a(ida.a(7829367, -95, 10066329, 8947848), (byte) -40);
+              tc discarded$16 = var4.a(1, (byte) 78).a(ida.a(13421772, -34, 10066329, 11184810), (byte) -40);
+              tc discarded$17 = var4.a(3, (byte) 78).a(ida.a(10066329, -32, 7829367, 8947848), (byte) -40).b((byte) -88, 1).a((byte) 0, 1);
               if (param1) {
                 break L1;
               } else {
@@ -94,22 +94,27 @@ final class qh {
             L2: while (true) {
               if (var7_int >= var18.field_v.length) {
                 var5[4] = (kv) (Object) var18;
-                tc discarded$13 = var4.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
-                tc discarded$14 = var4.a(5, (byte) 78).a(rma.a(0, 65793, 3, 0, 0), (byte) -40).a(true, -2147483648).b(-1, -25251);
+                tc discarded$18 = var4.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
+                int discarded$19 = 0;
+                int discarded$20 = 0;
+                int discarded$21 = 3;
+                int discarded$22 = 65793;
+                int discarded$23 = 0;
+                tc discarded$24 = var4.a(5, (byte) 78).a(rma.a(), (byte) -40).a(true, -2147483648).b(-1, -25251);
                 ((qh) this).field_r = (qda) (Object) var4;
                 var6 = new wd(var4, true);
                 var6.field_m = 0;
                 var7 = new wd(var4, true);
                 var7.field_m = 0;
                 var7.a((byte) 95, qaa.a(8947848, -16));
-                tc discarded$15 = var7.a(1, (byte) 78).a(qaa.a(11184810, -25), (byte) -40).b(2236962, -25251);
+                tc discarded$25 = var7.a(1, (byte) 78).a(qaa.a(11184810, -25), (byte) -40).b(2236962, -25251);
                 ((qh) this).field_h = (qda) (Object) new sea(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                via discarded$16 = new via(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                bka discarded$17 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                via discarded$26 = new via(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                bka discarded$27 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new wd();
                 var17.a(-24, (gha) (Object) var8);
-                tc discarded$18 = var8.a(0, (byte) 78).a(ida.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
-                tc discarded$19 = var8.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
+                tc discarded$28 = var8.a(0, (byte) 78).a(ida.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
+                tc discarded$29 = var8.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
                 ((qh) this).field_s = (qda) (Object) var8;
                 var9 = new kv[9];
                 var9[4] = new kv(2, 1);
@@ -174,7 +179,7 @@ final class qh {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -326,7 +331,7 @@ final class qh {
                 break L9;
               }
             }
-            var14 = 102 % ((param0 - 64) / 56);
+            var14 = 0;
             dg.a(var12, var13, var9 + var5_int, var6 + var10, ((qh) this).field_e);
             dg.c(1 + var12, 1 + var13, var9 - (-var5_int - -2), -2 + (var10 + var6), ((qh) this).field_f);
             int discarded$1 = ((qh) this).field_m.a(param1, var12 + ((qh) this).field_p, var13 + ((qh) this).field_k, var9, var10, ((qh) this).field_o, -1, 0, 0, var7);
@@ -337,7 +342,7 @@ final class qh {
           L10: {
             var5 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var5;
-            stackOut_25_1 = new StringBuilder().append("qh.A(").append(param0).append(44);
+            stackOut_25_1 = new StringBuilder().append("qh.A(").append(-24).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -410,7 +415,7 @@ final class qh {
               }
             }
             dg.a(var7, var8, 6 + var5_int, var6 - -6, ((qh) this).field_o);
-            var9 = 34 / ((33 - param1) / 53);
+            var9 = 17;
             dg.c(var7 + 1, 1 + var8, var5_int + 4, var6 - -4, ((qh) this).field_f);
             ((qh) this).field_m.c(param0, 3 + var7, ((qh) this).field_m.field_v + (3 + var8), ((qh) this).field_o, -1);
             break L0;
@@ -443,7 +448,7 @@ final class qh {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + -96 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -458,34 +463,31 @@ final class qh {
         int var10 = BachelorFridge.field_y;
         int var8 = param6 + param0;
         if (param1 > param3) {
-            dg.e(param3, var8, 1 + (-param3 + param1), param7);
+            dg.e(param3, var8, 1 + (-param3 + param1), 3518976);
         } else {
-            dg.e(param1, var8, param3 - (param1 - 1), param7);
-        }
-        if (param2 != -1271) {
-            field_g = null;
+            dg.e(param1, var8, param3 - (param1 - 1), 3518976);
         }
         int var9 = param3 + param1 >> 1;
         if (param5 > var9) {
-            dg.e(var9, param4, param5 - var9, param7);
+            dg.e(var9, param4, param5 - var9, 3518976);
         } else {
-            dg.e(param5, param4, -param5 + var9, param7);
+            dg.e(param5, param4, -param5 + var9, 3518976);
         }
         if (0 >= param6) {
-            dg.f(param3, var8, -param6, param7);
-            dg.f(param1, var8, -param6, param7);
+            dg.f(param3, var8, -param6, 3518976);
+            dg.f(param1, var8, -param6, 3518976);
         } else {
-            dg.f(param3, param0, param6, param7);
-            dg.f(param1, param0, param6, param7);
+            dg.f(param3, param0, param6, 3518976);
+            dg.f(param1, param0, param6, 3518976);
         }
         if (var8 < param4) {
-            dg.f(var9, var8, -var8 + param4, param7);
+            dg.f(var9, var8, -var8 + param4, 3518976);
         } else {
-            dg.f(var9, param4, var8 - param4, param7);
+            dg.f(var9, param4, var8 - param4, 3518976);
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -617,7 +619,7 @@ final class qh {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

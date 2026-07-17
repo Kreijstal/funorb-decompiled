@@ -75,7 +75,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static at a(int param0) {
+    final static at a() {
         at var1 = new at();
         var1.a((byte) -119, (tc) (Object) new re("hello", new Class[0], "Be friendly."));
         var1.a((byte) -119, (tc) (Object) new ba("printCoat", new Class[0], "Print out your current coat of arms in a line ready for the config file."));
@@ -200,7 +200,8 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var2_int = param0.getKeyChar();
                 if (var2_int != 0) {
                     if (var2_int != 65535) {
-                        if (!(!jb.a((char) var2_int, 16150))) {
+                        int discarded$6 = 16150;
+                        if (!(!jb.a((char) var2_int))) {
                             var3 = 127 & cr.field_Z + 1;
                             if (var3 != be.field_E) {
                                 gt.field_d[cr.field_Z] = -1;

@@ -17,7 +17,7 @@ final class hi extends java.awt.Canvas {
         }
     }
 
-    final static void a(byte[] param0, int param1) {
+    final static void a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -319,7 +319,7 @@ final class hi extends java.awt.Canvas {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_e = null;
@@ -353,15 +353,16 @@ final class hi extends java.awt.Canvas {
                     var3 = param2.getParameter("cookieprefix");
                     var4 = param2.getParameter("cookiehost");
                     var5 = var3 + "session=" + param1 + "; version=1; path=/; domain=" + var4;
-                    if (!(param0 != param1.length())) {
+                    if (!(0 != param1.length())) {
                         var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
-                    mb.a("document.cookie=\"" + var5 + "\"", param2, 790);
+                    int discarded$0 = 790;
+                    mb.a("document.cookie=\"" + var5 + "\"", param2);
                 } catch (Throwable throwable) {
                 }
                 lj.a(816415832, param2);
             } catch (RuntimeException runtimeException) {
-                throw sd.a((Throwable) (Object) runtimeException, "hi.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw sd.a((Throwable) (Object) runtimeException, "hi.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

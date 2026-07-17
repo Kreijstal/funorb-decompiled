@@ -13,7 +13,7 @@ final class bi extends wt {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_o = null;
     }
 

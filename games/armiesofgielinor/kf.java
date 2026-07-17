@@ -13,7 +13,7 @@ final class kf extends oj {
     int field_F;
     static String field_I;
 
-    public static void g(int param0) {
+    public static void g() {
         field_E = null;
         field_I = null;
         field_B = null;

@@ -84,24 +84,20 @@ final class tla extends bca {
             return;
           } else {
             if (param3 >= dg.field_j) {
-              if (dg.field_k > param3) {
-                var5 = 65280 & param2;
-                if (param1 != -1898743704) {
-                  return;
-                } else {
-                  var5 = var5 * param4;
-                  param2 = param2 & 16711935;
-                  param2 = param2 * param4;
-                  var5 = var5 & 16711680;
-                  param2 = param2 & -16711936;
-                  var6 = dg.field_i * param3 + param0;
-                  var7 = dg.field_e[var6];
-                  var5 = var5 + (16711680 & (var7 & 65280) * (256 - param4));
-                  param2 = param2 + ((16711935 & var7) * (256 + -param4) & -16711936);
-                  dg.field_e[var6] = mp.a(param2, var5) >>> 8;
-                  return;
-                }
+              if (dg.field_k <= param3) {
+                return;
               } else {
+                var5 = 65280 & param2;
+                var5 = var5 * param4;
+                param2 = param2 & 16711935;
+                param2 = param2 * param4;
+                var5 = var5 & 16711680;
+                param2 = param2 & -16711936;
+                var6 = dg.field_i * param3 + param0;
+                var7 = dg.field_e[var6];
+                var5 = var5 + (16711680 & (var7 & 65280) * (256 - param4));
+                param2 = param2 + ((16711935 & var7) * (256 + -param4) & -16711936);
+                dg.field_e[var6] = mp.a(param2, var5) >>> 8;
                 return;
               }
             } else {

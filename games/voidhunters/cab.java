@@ -78,7 +78,7 @@ final class cab extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 53;
         field_q = null;
         field_o = null;

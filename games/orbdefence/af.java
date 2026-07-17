@@ -6,7 +6,7 @@ import java.io.*;
 final class af {
     private int[] field_a;
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             int var1_int = 0;
             int var3 = OrbDefence.field_D ? 1 : 0;
@@ -149,7 +149,7 @@ final class af {
         return var3;
     }
 
-    final static boolean a(mg param0, boolean param1) {
+    final static boolean a(mg param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -237,24 +237,24 @@ final class af {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int stackIn_40_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
+        int stackIn_37_0 = 0;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_39_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
+        int stackOut_36_0 = 0;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
         var12 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -276,8 +276,8 @@ final class af {
                       if (var6 == 0) {
                         throw new NumberFormatException();
                       } else {
-                        stackOut_39_0 = var7;
-                        stackIn_40_0 = stackOut_39_0;
+                        stackOut_36_0 = var7;
+                        stackIn_37_0 = stackOut_36_0;
                         break L0;
                       }
                     } else {
@@ -289,15 +289,7 @@ final class af {
                               if (var10 != 43) {
                                 break L4;
                               } else {
-                                L5: {
-                                  if (param0) {
-                                    break L5;
-                                  } else {
-                                    break L5;
-                                  }
-                                }
-                                var9++;
-                                continue L2;
+                                break L4;
                               }
                             } else {
                               var5 = 1;
@@ -307,40 +299,40 @@ final class af {
                             break L4;
                           }
                         }
-                        L6: {
-                          L7: {
+                        L5: {
+                          L6: {
                             if (48 > var10) {
-                              break L7;
+                              break L6;
                             } else {
                               if (var10 > 57) {
-                                break L7;
+                                break L6;
                               } else {
                                 var10 -= 48;
-                                break L6;
+                                break L5;
+                              }
+                            }
+                          }
+                          L7: {
+                            if (var10 < 65) {
+                              break L7;
+                            } else {
+                              if (90 >= var10) {
+                                var10 -= 55;
+                                break L5;
+                              } else {
+                                break L7;
                               }
                             }
                           }
                           L8: {
-                            if (var10 < 65) {
+                            if (97 > var10) {
                               break L8;
                             } else {
-                              if (90 >= var10) {
-                                var10 -= 55;
-                                break L6;
-                              } else {
-                                break L8;
-                              }
-                            }
-                          }
-                          L9: {
-                            if (97 > var10) {
-                              break L9;
-                            } else {
                               if (var10 > 122) {
-                                break L9;
+                                break L8;
                               } else {
                                 var10 -= 87;
-                                break L6;
+                                break L5;
                               }
                             }
                           }
@@ -349,12 +341,12 @@ final class af {
                         if (param3 <= var10) {
                           throw new NumberFormatException();
                         } else {
-                          L10: {
+                          L9: {
                             if (var5 != 0) {
                               var10 = -var10;
-                              break L10;
+                              break L9;
                             } else {
-                              break L10;
+                              break L9;
                             }
                           }
                           var11 = var7 * param3 - -var10;
@@ -378,35 +370,35 @@ final class af {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var4 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) var4;
-            stackOut_41_1 = new StringBuilder().append("af.D(").append(param0).append(44);
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackOut_38_0 = (RuntimeException) var4;
+            stackOut_38_1 = new StringBuilder().append("af.D(").append(1).append(44);
+            stackIn_40_0 = stackOut_38_0;
+            stackIn_40_1 = stackOut_38_1;
+            stackIn_39_0 = stackOut_38_0;
+            stackIn_39_1 = stackOut_38_1;
             if (param1 == null) {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
-              break L11;
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "null";
+              stackIn_41_0 = stackOut_40_0;
+              stackIn_41_1 = stackOut_40_1;
+              stackIn_41_2 = stackOut_40_2;
+              break L10;
             } else {
-              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
-              break L11;
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "{...}";
+              stackIn_41_0 = stackOut_39_0;
+              stackIn_41_1 = stackOut_39_1;
+              stackIn_41_2 = stackOut_39_2;
+              break L10;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + param2 + 44 + param3 + 41);
+          throw dd.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + param2 + 44 + param3 + 41);
         }
-        return stackIn_40_0;
+        return stackIn_37_0;
     }
 
     final int a(int param0, int param1) {

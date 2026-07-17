@@ -66,9 +66,9 @@ class wb extends l {
 
     final static void a(int param0, int param1) {
         hg var2 = gk.field_g;
-        var2.g(param0, 8);
-        var2.a(1, param1 + 62);
-        var2.a(param1, 80);
+        var2.g(6, 8);
+        var2.a(1, 62);
+        var2.a(0, 80);
     }
 
     final static void a(boolean param0, byte param1, boolean param2) {

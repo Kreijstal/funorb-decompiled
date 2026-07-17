@@ -7,36 +7,21 @@ final class b {
     static int field_a;
 
     final static void a(int param0, int param1, byte param2) {
-        nh.field_Nb = param1;
-        fk.field_S = param0;
+        nh.field_Nb = 320;
+        fk.field_S = 240;
     }
 
     final static boolean a(int param0) {
-        if (param0 == 0) {
-          if (lf.field_b != null) {
-            if (!lf.field_b.h(param0)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (lf.field_b == null) {
             return false;
-          }
-        } else {
-          field_b = null;
-          if (lf.field_b != null) {
-            if (!lf.field_b.h(param0)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (!lf.field_b.h(0)) {
+            return false;
+        }
+        return true;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 

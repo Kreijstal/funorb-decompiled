@@ -20,16 +20,11 @@ final class cl {
             var6_int = ksa.a(31123, lua.field_c, hab.field_i, param3);
             var7 = ksa.a(31123, lua.field_c, hab.field_i, param2);
             var8 = ksa.a(31123, ob.field_j, mt.field_o, param5);
-            var9 = ksa.a(param0 ^ -29743, ob.field_j, mt.field_o, param4);
+            var9 = ksa.a(31123, ob.field_j, mt.field_o, param4);
             var10 = var6_int;
             L1: while (true) {
               if (var7 < var10) {
-                if (param0 == -3518) {
-                  break L0;
-                } else {
-                  cl.a((byte) 67);
-                  return;
-                }
+                break L0;
               } else {
                 ww.a(param1, var9, rba.field_b[var10], (byte) 75, var8);
                 var10++;
@@ -40,13 +35,13 @@ final class cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var6, "cl.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw rta.a((Throwable) (Object) var6, "cl.A(" + -3518 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
-        int var1 = 51 % ((-31 - param0) / 36);
+        int var1 = 0;
     }
 
     public cl() {

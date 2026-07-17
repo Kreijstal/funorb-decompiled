@@ -25,7 +25,7 @@ final class te extends id {
     private int field_H;
     static int[] field_T;
 
-    public static void f(byte param0) {
+    public static void f() {
         field_Q = null;
         field_kb = null;
         field_T = null;
@@ -432,7 +432,7 @@ final class te extends id {
     }
 
     private final void c(int param0, int param1) {
-        ((te) this).field_U = param0;
+        ((te) this).field_U = 0;
         ((te) this).field_H = 0;
         ((te) this).field_ab = param1;
     }

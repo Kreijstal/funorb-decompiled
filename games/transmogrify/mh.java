@@ -22,7 +22,7 @@ final class mh {
         }
     }
 
-    final static q a(String param0, int param1) {
+    final static q a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -165,19 +165,11 @@ final class mh {
                 var2_int = 0;
                 L2: while (true) {
                   if (q.field_b <= var2_int) {
-                    L3: {
-                      if (param0 == -27968) {
-                        break L3;
-                      } else {
-                        field_b = null;
-                        break L3;
-                      }
-                    }
                     int dupTemp$4 = param1.a(true);
                     ol.field_d[dupTemp$4] = ol.field_d[dupTemp$4] + 1;
                     var2_int = 0;
                     var3 = 0;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (q.field_b <= var3) {
                         q.field_b = var2_int;
                         int fieldTemp$5 = q.field_b;
@@ -185,37 +177,37 @@ final class mh {
                         eg.field_a[fieldTemp$5] = param1;
                         break L0;
                       } else {
-                        L5: {
-                          L6: {
+                        L4: {
+                          L5: {
                             if (eg.field_a[var3].field_i != param1.field_i) {
-                              break L6;
+                              break L5;
                             } else {
                               var4 = eg.field_a[var3].a(true);
                               if (ol.field_d[var4] > kh.field_d) {
                                 ol.field_d[var4] = ol.field_d[var4] - 1;
-                                break L5;
+                                break L4;
                               } else {
-                                break L6;
+                                break L5;
                               }
                             }
                           }
                           int incrementValue$6 = var2_int;
                           var2_int++;
                           eg.field_a[incrementValue$6] = eg.field_a[var3];
-                          break L5;
+                          break L4;
                         }
                         var3++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
-                    L7: {
+                    L6: {
                       if (eg.field_a[var2_int].field_i == param1.field_i) {
                         int dupTemp$7 = eg.field_a[var2_int].a(true);
                         ol.field_d[dupTemp$7] = ol.field_d[dupTemp$7] + 1;
-                        break L7;
+                        break L6;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                     var2_int++;
@@ -231,10 +223,10 @@ final class mh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("mh.C(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("mh.C(").append(-27968).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -246,7 +238,7 @@ final class mh {
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
-              break L8;
+              break L7;
             } else {
               stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
               stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
@@ -254,14 +246,14 @@ final class mh {
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
               stackIn_25_2 = stackOut_23_2;
-              break L8;
+              break L7;
             }
           }
           throw ch.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
     }
 
-    final static String b(int param0) {
+    final static String b() {
         if (!(bi.field_L >= 2)) {
             return vj.field_a;
         }
@@ -297,71 +289,67 @@ final class mh {
             Object var6 = null;
             Object var7 = null;
             be var8 = null;
-            ci stackIn_15_0 = null;
+            ci stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            ci stackOut_14_0 = null;
-            if (param0 == -26159) {
-              try {
-                L0: {
-                  L1: {
-                    var6 = null;
-                    if (null != qi.field_a.field_b) {
-                      kk.field_b = new we(qi.field_a.field_b, 5200, 0);
-                      qi.field_a.field_b = null;
-                      var6 = (Object) (Object) new ak(255, kk.field_b, new we(qi.field_a.field_h, 12000, 0), 2097152);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
+            ci stackOut_13_0 = null;
+            try {
+              L0: {
+                L1: {
+                  var6 = null;
+                  if (null != qi.field_a.field_b) {
+                    kk.field_b = new we(qi.field_a.field_b, 5200, 0);
+                    qi.field_a.field_b = null;
+                    var6 = (Object) (Object) new ak(255, kk.field_b, new we(qi.field_a.field_h, 12000, 0), 2097152);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  L2: {
-                    var7 = null;
-                    if (kk.field_b == null) {
-                      break L2;
-                    } else {
-                      L3: {
-                        if (null != oa.field_m) {
-                          break L3;
-                        } else {
-                          oa.field_m = new we[qi.field_a.field_s.length];
-                          break L3;
-                        }
-                      }
-                      L4: {
-                        if (oa.field_m[param5] != null) {
-                          break L4;
-                        } else {
-                          oa.field_m[param5] = new we(qi.field_a.field_s[param5], 12000, 0);
-                          qi.field_a.field_s[param5] = null;
-                          break L4;
-                        }
-                      }
-                      var7 = (Object) (Object) new ak(param5, kk.field_b, oa.field_m[param5], 2097152);
-                      break L2;
-                    }
-                  }
-                  L5: {
-                    var8 = we.field_j.a(param5, param3, 24108, (ak) var6, (ak) var7);
-                    if (param1) {
-                      var8.a(true);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  stackOut_14_0 = new ci((ih) (Object) var8, param2, param4);
-                  stackIn_15_0 = stackOut_14_0;
-                  break L0;
                 }
-              } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var6 = (Object) (Object) decompiledCaughtException;
-                throw new RuntimeException(((IOException) var6).toString());
+                L2: {
+                  var7 = null;
+                  if (kk.field_b == null) {
+                    break L2;
+                  } else {
+                    L3: {
+                      if (null != oa.field_m) {
+                        break L3;
+                      } else {
+                        oa.field_m = new we[qi.field_a.field_s.length];
+                        break L3;
+                      }
+                    }
+                    L4: {
+                      if (oa.field_m[param5] != null) {
+                        break L4;
+                      } else {
+                        oa.field_m[param5] = new we(qi.field_a.field_s[param5], 12000, 0);
+                        qi.field_a.field_s[param5] = null;
+                        break L4;
+                      }
+                    }
+                    var7 = (Object) (Object) new ak(param5, kk.field_b, oa.field_m[param5], 2097152);
+                    break L2;
+                  }
+                }
+                L5: {
+                  var8 = we.field_j.a(param5, false, 24108, (ak) var6, (ak) var7);
+                  if (param1) {
+                    var8.a(true);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                stackOut_13_0 = new ci((ih) (Object) var8, true, param4);
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
               }
-              return stackIn_15_0;
-            } else {
-              return null;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
             }
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

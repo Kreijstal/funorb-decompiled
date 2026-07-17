@@ -131,46 +131,25 @@ abstract class fqa extends kna {
         }
     }
 
-    public static void A(int param0) {
+    public static void A() {
         field_F = null;
     }
 
     abstract int B(int param0);
 
-    final static int[] e(boolean param0) {
+    final static int[] e() {
         return new int[8];
     }
 
     final static boolean a(boolean param0, char param1) {
-        if (!Character.isISOControl(param1)) {
-          if (!q.a(param1, 11955)) {
-            if (!param0) {
-              if (param1 != 45) {
-                if (param1 != 160) {
-                  if (32 != param1) {
-                    if (param1 == 95) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return true;
-          }
-        } else {
-          return false;
+        if (Character.isISOControl(param1)) {
+            return false;
         }
+        int discarded$4 = 11955;
+        if (q.a(param1)) {
+            return true;
+        }
+        return false;
     }
 
     fqa(la param0, int param1) {

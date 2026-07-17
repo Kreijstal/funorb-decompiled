@@ -12,12 +12,9 @@ final class rg extends pa {
 
     final static void a(String param0, int param1, String param2) {
         try {
-            if (param1 >= -10) {
-                field_F = 94;
-            }
             r.a(param2, 126, false, param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "rg.DA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "rg.DA(" + (param0 != null ? "{...}" : "null") + 44 + -27 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -210,7 +207,7 @@ final class rg extends pa {
         ((rg) this).field_z.a(param0);
     }
 
-    final static void a(oi param0, boolean param1) {
+    final static void a(oi param0) {
         int var2_int = 0;
         vn var3 = null;
         if (hm.field_E == null) {

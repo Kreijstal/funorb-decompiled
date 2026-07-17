@@ -15,28 +15,25 @@ final class lc {
     static int field_j;
 
     private final void a(long param0, int param1, int param2, Object param3) {
-        bj var8 = null;
-        jl var6 = null;
+        bj var6 = null;
+        jl var6_ref = null;
         int var7 = ZombieDawn.field_J;
         try {
-            if (param1 > ((lc) this).field_f) {
+            if (((lc) this).field_f < 1) {
                 throw new IllegalStateException();
             }
-            if (param2 != 32500) {
-                this.a((byte) 73, -37L);
-            }
             this.a((byte) -20, param0);
-            ((lc) this).field_b = ((lc) this).field_b - param1;
+            ((lc) this).field_b = ((lc) this).field_b - 1;
             while (0 > ((lc) this).field_b) {
-                var8 = (bj) (Object) ((lc) this).field_g.a(78);
-                this.a(var8, 108);
+                var6 = (bj) (Object) ((lc) this).field_g.a(78);
+                this.a(var6, 108);
             }
-            var6 = new jl(param3, param1);
-            ((lc) this).field_e.a(param0, true, (le) (Object) var6);
-            ((lc) this).field_g.a(0, (nb) (Object) var6);
-            ((bj) (Object) var6).field_n = 0L;
+            var6_ref = new jl(param3, 1);
+            ((lc) this).field_e.a(param0, true, (le) (Object) var6_ref);
+            ((lc) this).field_g.a(0, (nb) (Object) var6_ref);
+            ((bj) (Object) var6_ref).field_n = 0L;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "lc.G(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "lc.G(" + param0 + 44 + 1 + 44 + 32500 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -109,36 +106,58 @@ final class lc {
     }
 
     final static void a(boolean param0, boolean param1) {
-        RuntimeException var2 = null;
+        RuntimeException runtimeException = null;
+        int var2_int = 0;
         int var3 = 0;
+        int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
         var3 = ZombieDawn.field_J;
         try {
           L0: {
             L1: {
-              if (param0) {
+              if (param1) {
+                stackOut_3_0 = 0;
+                stackIn_4_0 = stackOut_3_0;
                 break L1;
               } else {
-                field_c = 'D';
+                stackOut_2_0 = 1;
+                stackIn_4_0 = stackOut_2_0;
                 break L1;
               }
             }
-            uh.field_g = true;
+            L2: {
+              uh.field_g = stackIn_4_0 != 0;
+              if (!param1) {
+                break L2;
+              } else {
+                b.field_p = new int[100];
+                var2_int = 0;
+                L3: while (true) {
+                  if (var2_int >= b.field_p.length) {
+                    oe.field_c = jp.a((byte) 125, 48);
+                    break L2;
+                  } else {
+                    b.field_p[var2_int] = 256 / b.field_p.length * (var2_int * 65793);
+                    var2_int++;
+                    continue L3;
+                  }
+                }
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "lc.I(" + param0 + 44 + 0 + 41);
+          runtimeException = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) runtimeException, "lc.I(" + 1 + 44 + param1 + 41);
         }
     }
 
     private final void a(byte param0, long param1) {
         bj var4 = (bj) (Object) ((lc) this).field_e.a(false, param1);
-        this.a(var4, param0 + 143);
-        if (param0 != -20) {
-            field_k = null;
-        }
+        this.a(var4, 123);
     }
 
     final void a(long param0, Object param1, int param2) {
@@ -238,7 +257,7 @@ final class lc {
         }
     }
 
-    final static void a(dj param0, dj param1, byte param2) {
+    final static void a(dj param0, dj param1) {
         try {
             ge.field_b = param1;
             int var3_int = 58;
@@ -248,7 +267,7 @@ final class lc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_k = null;
     }

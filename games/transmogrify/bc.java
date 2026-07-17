@@ -10,7 +10,7 @@ final class bc {
         int var1 = 0;
     }
 
-    final static void a(long param0, int param1) {
+    final static void a(long param0) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -27,14 +27,12 @@ final class bc {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         if (Character.isISOControl(param0)) {
             return false;
         }
-        if (param1 != -161) {
-            return true;
-        }
-        if (!(!qk.a(param0, (byte) -110))) {
+        int discarded$6 = -110;
+        if (!(!qk.a(param0))) {
             return true;
         }
         if (45 != param0) {
@@ -49,7 +47,7 @@ final class bc {
         return true;
     }
 
-    final static ti[] a(byte param0) {
+    final static ti[] a() {
         ti[] var1 = null;
         int var2 = 0;
         int var3 = 0;

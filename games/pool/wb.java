@@ -12,48 +12,30 @@ final class wb {
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
             aj.a(param1, -18788, "");
-            if (param0) {
-                wb.a((byte) 31);
-            }
             gg.a(param1, (byte) -85);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "wb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "wb.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(ea param0, int param1, byte param2) {
+    final static void a(ea param0, int param1) {
         oq var3 = null;
-        if (param2 != -96) {
-            return;
-        }
         try {
             var3 = ej.field_j;
             var3.b(false, param1);
             var3.a(param0.field_s, false);
             var3.a(param0.field_o, false);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "wb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "wb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -96 + 41);
         }
     }
 
-    public static void a(byte param0) {
-        Object var2 = null;
+    public static void a() {
         field_e = null;
-        if (param0 != 118) {
-          var2 = null;
-          wb.a((ea) null, 39, (byte) 43);
-          field_c = null;
-          field_b = null;
-          field_f = null;
-          field_d = null;
-          return;
-        } else {
-          field_c = null;
-          field_b = null;
-          field_f = null;
-          field_d = null;
-          return;
-        }
+        field_c = null;
+        field_b = null;
+        field_f = null;
+        field_d = null;
     }
 
     static {

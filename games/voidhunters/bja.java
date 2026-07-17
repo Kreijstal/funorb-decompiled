@@ -5,7 +5,7 @@ final class bja extends rqa {
     static int[] field_p;
     static String field_o;
 
-    public static void f(byte param0) {
+    public static void f() {
         field_o = null;
         field_p = null;
     }
@@ -82,7 +82,7 @@ final class bja extends rqa {
         return stackIn_4_0;
     }
 
-    final static int e(byte param0) {
+    final static int e() {
         int var1 = 1;
         return tqa.e((byte) 96) - se.a(false) / 2;
     }

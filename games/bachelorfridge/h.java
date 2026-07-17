@@ -4,11 +4,11 @@
 final class h extends td {
     static du field_p;
 
-    final static void c(byte param0) {
+    final static void c() {
         sja.field_fb.c(95, (byte) 104);
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_p = null;
     }
 
@@ -84,7 +84,7 @@ final class h extends td {
         return (ii) (Object) stackIn_4_0;
     }
 
-    final static void a(uha param0, int param1) {
+    final static void a(uha param0) {
         uha var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -108,31 +108,27 @@ final class h extends td {
         try {
           L0: {
             param0.a(false);
-            if (param1 == 0) {
-              var2 = (uha) (Object) uma.field_M.b((byte) 90);
-              L1: while (true) {
-                L2: {
-                  if (var2 == null) {
+            var2 = (uha) (Object) uma.field_M.b((byte) 90);
+            L1: while (true) {
+              L2: {
+                if (var2 == null) {
+                  break L2;
+                } else {
+                  if (!var2.a(-7, param0)) {
                     break L2;
                   } else {
-                    if (!var2.a(param1 ^ -7, param0)) {
-                      break L2;
-                    } else {
-                      var2 = (uha) (Object) uma.field_M.c(0);
-                      continue L1;
-                    }
+                    var2 = (uha) (Object) uma.field_M.c(0);
+                    continue L1;
                   }
                 }
-                if (var2 != null) {
-                  nr.a((byte) 106, (bw) (Object) var2, (bw) (Object) param0);
-                  break L0;
-                } else {
-                  uma.field_M.a((bw) (Object) param0, true);
-                  return;
-                }
               }
-            } else {
-              return;
+              if (var2 != null) {
+                nr.a((byte) 106, (bw) (Object) var2, (bw) (Object) param0);
+                break L0;
+              } else {
+                uma.field_M.a((bw) (Object) param0, true);
+                return;
+              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -163,7 +159,7 @@ final class h extends td {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 0 + 41);
         }
     }
 
@@ -247,9 +243,10 @@ final class h extends td {
           L0: {
             if (tn.field_a == ola.field_p) {
               var9 = new tea(gja.field_m, param2);
-              var8 = -49 / ((-8 - param3) / 56);
+              var8 = 24;
               gja.field_m.a((wj) (Object) var9, (byte) 86);
-              if (!kk.d((byte) 77)) {
+              int discarded$16 = 77;
+              if (!kk.d()) {
                 L1: {
                   ola.field_p = kq.field_j;
                   if (!param1) {
@@ -311,7 +308,7 @@ final class h extends td {
           }
           L3: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param3).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(114).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

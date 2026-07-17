@@ -20,7 +20,7 @@ class vg extends id {
         this(si.field_V, param0);
     }
 
-    final static pb c(byte param0) {
+    final static pb c() {
         int var4_int = 0;
         int var5 = stellarshard.field_B;
         int var1 = vc.field_b[0] * ih.field_d[0];

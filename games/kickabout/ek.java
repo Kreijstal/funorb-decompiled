@@ -84,9 +84,6 @@ final class ek extends i {
     final static ak b(boolean param0, int param1, int param2) {
         ak var3 = new ak(0);
         var3.field_k = param1;
-        if (!param0) {
-            return null;
-        }
         var3.field_e = (4 & (param2 ^ param1)) != 0 ? re.field_o : nn.field_K;
         var3.field_g = param2 - 4;
         return var3;
@@ -184,7 +181,7 @@ final class ek extends i {
         }
     }
 
-    final static void g(int param0) {
+    final static void g() {
         np.field_Jb.a((gn) (Object) new kn(), 3);
     }
 
@@ -315,7 +312,7 @@ final class ek extends i {
         ((ek) this).field_i[0].field_lb = false;
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_M = null;
     }
 

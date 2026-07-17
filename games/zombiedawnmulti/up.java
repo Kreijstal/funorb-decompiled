@@ -21,7 +21,7 @@ final class up implements Iterator {
         ((up) this).field_b = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -203,13 +203,13 @@ final class up implements Iterator {
         return null;
     }
 
-    private final void c(int param0) {
+    private final void c() {
         ((up) this).field_e = ((up) this).field_h.field_a[0].field_d;
         ((up) this).field_a = 1;
         ((up) this).field_b = null;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_f = null;
         field_c = null;
@@ -219,7 +219,8 @@ final class up implements Iterator {
         ((up) this).field_b = null;
         try {
             ((up) this).field_h = param0;
-            this.c(1);
+            int discarded$0 = 1;
+            this.c();
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "up.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

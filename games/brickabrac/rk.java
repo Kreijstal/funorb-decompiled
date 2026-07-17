@@ -208,7 +208,7 @@ final class rk extends mh {
                   if (param2 > 27) {
                     break L1;
                   } else {
-                    boolean discarded$2 = rk.a((byte) -93, 'K');
+                    boolean discarded$3 = rk.a((byte) -93, 'K');
                     break L1;
                   }
                 }
@@ -237,7 +237,8 @@ final class rk extends mh {
                     break L3;
                   }
                 }
-                me.a(var3_ref, -107);
+                int discarded$4 = -107;
+                me.a(var3_ref);
                 var7 = oh.a((byte) 13, "%3a", var3_ref, ":");
                 var8 = oh.a((byte) 13, "%40", var7, "@");
                 var9 = oh.a((byte) 13, "%26", var8, "&");
@@ -304,7 +305,7 @@ final class rk extends mh {
                       L7: {
                         if (var4.field_f == 1) {
                           var5 = (DataInputStream) var4.field_e;
-                          int discarded$3 = var5.read();
+                          int discarded$5 = var5.read();
                           var5.close();
                           break L7;
                         } else {
@@ -593,7 +594,7 @@ final class rk extends mh {
         }
     }
 
-    final static dc[] a(pi param0, int param1) {
+    final static dc[] a(pi param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

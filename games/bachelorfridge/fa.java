@@ -404,7 +404,7 @@ final class fa extends kj {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         int var1 = 10;
         field_k = null;
         field_g = null;

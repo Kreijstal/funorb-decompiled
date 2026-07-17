@@ -8,7 +8,7 @@ final class ad extends za {
     static int[] field_q;
     static mm field_p;
 
-    final static void c(byte param0) {
+    final static void c() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -139,7 +139,7 @@ final class ad extends za {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2, byte param3) {
+    final static byte[] a(byte[] param0, int param1, int param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -163,9 +163,9 @@ final class ad extends za {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var5 = new byte[param1];
+            var5 = new byte[32768];
             var4 = var5;
-            la.a(param0, param2, var5, 0, param1);
+            la.a(param0, param2, var5, 0, 32768);
             stackOut_0_0 = (byte[]) var5;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -198,26 +198,21 @@ final class ad extends za {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + 53 + 41);
+          throw qo.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 32768 + 44 + param2 + 44 + 53 + 41);
         }
         return stackIn_1_0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_q = null;
         field_p = null;
         field_n = null;
     }
 
-    final static ne e(int param0) {
-        ne var1 = null;
-        if (param0 != 12768) {
-          return null;
-        } else {
-          var1 = new ne(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], ag.field_d[0], iv.field_l);
-          tl.a((byte) -20);
-          return var1;
-        }
+    final static ne e() {
+        ne var1 = new ne(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], ag.field_d[0], iv.field_l);
+        tl.a((byte) -20);
+        return var1;
     }
 
     final static void a(byte param0, java.awt.Canvas param1, boolean param2) {
@@ -271,7 +266,8 @@ final class ad extends za {
                 break L0;
               }
             }
-            hh.a(true, bp.g(14296), bf.field_a, var4 != 0, dn.b(102));
+            int discarded$2 = 14296;
+            hh.a(true, bp.g(), bf.field_a, var4 != 0, dn.b(102));
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

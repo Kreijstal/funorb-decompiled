@@ -6,15 +6,7 @@ final class gl {
     private java.awt.GraphicsDevice field_b;
 
     private final void a(boolean param0, java.awt.Frame param1) {
-        L0: {
-          ((gl) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param1);
-          if (!param0) {
-            break L0;
-          } else {
-            ((gl) this).field_a = null;
-            break L0;
-          }
-        }
+        ((gl) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param1);
     }
 
     public final int[] listmodes() {

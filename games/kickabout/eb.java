@@ -12,7 +12,7 @@ final class eb implements Runnable {
     static int field_d;
     static String[] field_g;
 
-    private final void a(hi param0, boolean param1) {
+    private final void a(hi param0) {
         Object var3 = null;
         RuntimeException var3_ref = null;
         Throwable var4 = null;
@@ -186,7 +186,8 @@ final class eb implements Runnable {
               var4.field_v = param2;
               var4.field_t = 3;
               var4.field_l = (long)param1;
-              this.a(var4, false);
+              int discarded$2 = 0;
+              this.a(var4);
               stackOut_3_0 = (hi) var4;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -378,7 +379,7 @@ final class eb implements Runnable {
         ((eb) this).field_a = null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_c = null;
         field_g = null;
@@ -431,7 +432,8 @@ final class eb implements Runnable {
               var5.field_u = param2;
               var5.field_v = param1;
               var5.field_t = 2;
-              this.a(var5, false);
+              int discarded$2 = 0;
+              this.a(var5);
               stackOut_3_0 = (hi) var5;
               stackIn_4_0 = stackOut_3_0;
               break L0;

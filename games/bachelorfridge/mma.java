@@ -6,13 +6,13 @@ final class mma {
         try {
             RuntimeException var6 = null;
             int var6_int = 0;
+            String var6_ref = null;
             int var7 = 0;
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
             Object var10 = null;
-            String var11 = null;
-            CharSequence var12 = null;
+            CharSequence var11 = null;
             int stackIn_5_0 = 0;
             int stackIn_31_0 = 0;
             int stackIn_44_0 = 0;
@@ -194,10 +194,11 @@ final class mma {
                         hea.field_r = ig.field_m.b(16711935);
                         hka.field_i = ig.field_m.b(16711935);
                         dm.field_f = ig.field_m.e((byte) 115);
-                        var11 = ig.field_m.g((byte) 65);
+                        var6_ref = ig.field_m.g((byte) 65);
                         var7 = ig.field_m.b(16711935);
                         if ((1 & var7) != 0) {
-                          gma.b(99);
+                          int discarded$9 = 99;
+                          gma.b();
                           break L10;
                         } else {
                           break L10;
@@ -267,9 +268,9 @@ final class mma {
                         if (!cr.field_b) {
                           break L16;
                         } else {
-                          int discarded$5 = ig.field_m.b(16711935);
-                          int discarded$6 = ig.field_m.b(16711935);
-                          int discarded$7 = ig.field_m.f(-64);
+                          int discarded$10 = ig.field_m.b(16711935);
+                          int discarded$11 = ig.field_m.b(16711935);
+                          int discarded$12 = ig.field_m.f(-64);
                           an.field_t = ig.field_m.e((byte) 77);
                           kea.field_q = new byte[an.field_t];
                           var8 = 0;
@@ -286,8 +287,8 @@ final class mma {
                       }
                       L18: {
                         cha.field_l = ig.field_m.g(-107);
-                        var12 = (CharSequence) (Object) cha.field_l;
-                        tca.field_a = fq.a(0, var12);
+                        var11 = (CharSequence) (Object) cha.field_l;
+                        tca.field_a = fq.a(0, var11);
                         rja.field_o = ig.field_m.b(16711935);
                         eia.field_a = uca.field_a;
                         if (uaa.field_f.a((byte) -106) == bs.field_g) {
@@ -304,10 +305,11 @@ final class mma {
                       }
                       L19: {
                         se.field_x = false;
-                        if (var11 == null) {
+                        if (var6_ref == null) {
                           break L19;
                         } else {
-                          hp.a(nia.d(-31768), var11, 3);
+                          int discarded$13 = 3;
+                          hp.a(nia.d(-31768), var6_ref);
                           break L19;
                         }
                       }
@@ -319,7 +321,8 @@ final class mma {
                             if (!er.field_y) {
                               try {
                                 L22: {
-                                  Object discarded$8 = ac.a(nia.d(-31768), "unzap", (byte) 64);
+                                  int discarded$14 = 64;
+                                  Object discarded$15 = ac.a(nia.d(-31768), "unzap");
                                   break L22;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -337,7 +340,8 @@ final class mma {
                         }
                         try {
                           L24: {
-                            Object discarded$9 = ac.a(nia.d(-31768), "zap", new Object[1], (byte) 73);
+                            int discarded$16 = 73;
+                            Object discarded$17 = ac.a(nia.d(-31768), "zap", new Object[1]);
                             break L24;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {

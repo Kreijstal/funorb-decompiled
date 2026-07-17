@@ -34,7 +34,7 @@ final class ov extends uo {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_e = null;
         field_f = null;
         field_g = null;

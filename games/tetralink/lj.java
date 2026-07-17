@@ -51,21 +51,45 @@ final class lj implements Iterator {
                 var4 = bc.a(77, param1) ? 1 : 0;
                 var5 = new id();
                 var5.field_q = (short)param1.e(16, (byte) -112);
-                var5.field_D = cc.a(var5.field_D, param1, 16, 0);
-                var5.field_i = cc.a(var5.field_i, param1, 16, param0 ^ param0);
-                var5.field_R = cc.a(var5.field_R, param1, 16, param0 ^ -16483);
+                int discarded$38 = 0;
+                int discarded$39 = 16;
+                var5.field_D = cc.a(var5.field_D, param1);
+                int discarded$40 = 0;
+                int discarded$41 = 16;
+                var5.field_i = cc.a(var5.field_i, param1);
+                int discarded$42 = 0;
+                int discarded$43 = 16;
+                var5.field_R = cc.a(var5.field_R, param1);
                 var5.field_s = (short)param1.e(16, (byte) -112);
-                var5.field_K = cc.a(var5.field_K, param1, 16, 0);
-                var5.field_I = cc.a(var5.field_I, param1, 16, param0 ^ -16483);
-                var5.field_e = cc.a(var5.field_e, param1, 16, 0);
+                int discarded$44 = 0;
+                int discarded$45 = 16;
+                var5.field_K = cc.a(var5.field_K, param1);
+                int discarded$46 = 0;
+                int discarded$47 = 16;
+                var5.field_I = cc.a(var5.field_I, param1);
+                int discarded$48 = 0;
+                int discarded$49 = 16;
+                var5.field_e = cc.a(var5.field_e, param1);
                 if (var3 != 0) {
                   var5.field_O = (short)param1.e(16, (byte) -112);
-                  var5.field_l = cc.a(var5.field_l, param1, 16, 0);
-                  var5.field_d = cc.a(var5.field_d, param1, 16, 0);
-                  var5.field_y = cc.a(var5.field_y, param1, 16, 0);
-                  var5.field_t = cc.a(var5.field_t, param1, 16, param0 + 16483);
-                  var5.field_b = cc.a(var5.field_b, param1, 16, 0);
-                  var5.field_N = cc.a(var5.field_N, param1, 16, param0 + 16483);
+                  int discarded$50 = 0;
+                  int discarded$51 = 16;
+                  var5.field_l = cc.a(var5.field_l, param1);
+                  int discarded$52 = 0;
+                  int discarded$53 = 16;
+                  var5.field_d = cc.a(var5.field_d, param1);
+                  int discarded$54 = 0;
+                  int discarded$55 = 16;
+                  var5.field_y = cc.a(var5.field_y, param1);
+                  int discarded$56 = 0;
+                  int discarded$57 = 16;
+                  var5.field_t = cc.a(var5.field_t, param1);
+                  int discarded$58 = 0;
+                  int discarded$59 = 16;
+                  var5.field_b = cc.a(var5.field_b, param1);
+                  int discarded$60 = 0;
+                  int discarded$61 = 16;
+                  var5.field_N = cc.a(var5.field_N, param1);
                   break L1;
                 } else {
                   break L1;
@@ -75,18 +99,30 @@ final class lj implements Iterator {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$1 = param1.e(16, (byte) -112);
-                  var5.field_k = cc.a(var5.field_k, param1, 16, param0 ^ -16483);
-                  var5.field_p = cc.a(var5.field_p, param1, 16, 0);
-                  var5.field_A = cc.a(var5.field_A, param1, 16, 0);
-                  var5.field_o = cc.a(var5.field_o, param1, 16, 0);
-                  var5.field_g = cc.a(var5.field_g, param1, 16, 0);
+                  int discarded$62 = param1.e(16, (byte) -112);
+                  int discarded$63 = 0;
+                  int discarded$64 = 16;
+                  var5.field_k = cc.a(var5.field_k, param1);
+                  int discarded$65 = 0;
+                  int discarded$66 = 16;
+                  var5.field_p = cc.a(var5.field_p, param1);
+                  int discarded$67 = 0;
+                  int discarded$68 = 16;
+                  var5.field_A = cc.a(var5.field_A, param1);
+                  int discarded$69 = 0;
+                  int discarded$70 = 16;
+                  var5.field_o = cc.a(var5.field_o, param1);
+                  int discarded$71 = 0;
+                  int discarded$72 = 16;
+                  var5.field_g = cc.a(var5.field_g, param1);
                   break L2;
                 }
               }
               L3: {
                 if (bc.a(126, param1)) {
-                  var5.field_v = cc.a(var5.field_v, param1, 16, 0);
+                  int discarded$73 = 0;
+                  int discarded$74 = 16;
+                  var5.field_v = cc.a(var5.field_v, param1);
                   break L3;
                 } else {
                   break L3;
@@ -94,7 +130,8 @@ final class lj implements Iterator {
               }
               L4: {
                 if (bc.a(64, param1)) {
-                  var5.field_u = fi.a(16, var5.field_u, param1, (byte) 119);
+                  int discarded$75 = 119;
+                  var5.field_u = fi.a(16, var5.field_u, param1);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {
@@ -132,7 +169,7 @@ final class lj implements Iterator {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("lj.A(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("lj.A(").append(-16483).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -213,13 +250,13 @@ final class lj implements Iterator {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
         field_a = null;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((lj) this).field_f = ((lj) this).field_e.field_d[0].field_j;
         ((lj) this).field_g = 1;
         ((lj) this).field_d = null;
@@ -353,7 +390,8 @@ final class lj implements Iterator {
         ((lj) this).field_d = null;
         try {
             ((lj) this).field_e = param0;
-            this.a(-1);
+            int discarded$0 = -1;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "lj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

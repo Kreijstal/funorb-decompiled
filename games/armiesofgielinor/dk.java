@@ -10,15 +10,15 @@ final class dk extends bd {
     static String field_x;
 
     final static void a(int param0, boolean param1) {
+        int stackIn_16_0 = 0;
+        int stackIn_17_0 = 0;
         int stackIn_18_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_20_1 = 0;
+        int stackIn_18_1 = 0;
+        int stackOut_15_0 = 0;
         int stackOut_17_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
+        int stackOut_17_1 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_16_1 = 0;
         if (kd.field_X < 0) {
           kb.field_n = 0;
           dd.field_e = 0;
@@ -35,61 +35,53 @@ final class dk extends bd {
             }
           }
           L1: {
-            if (param0 == -28309) {
-              break L1;
-            } else {
-              field_u = null;
-              break L1;
-            }
-          }
-          L2: {
-            L3: {
+            L2: {
               if (uk.field_q >= dd.field_e) {
-                break L3;
+                break L2;
               } else {
                 if (-1 < uk.field_q) {
                   dd.field_e = uk.field_q;
                   kb.field_n = 0;
-                  break L2;
+                  break L1;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             }
             if (uk.field_q == -1) {
               dd.field_e = 0;
-              break L2;
+              break L1;
             } else {
-              break L2;
+              break L1;
             }
           }
-          L4: {
+          L3: {
             if (!param1) {
-              break L4;
+              break L3;
             } else {
               if (kb.field_n == 0) {
-                break L4;
+                break L3;
               } else {
-                L5: {
-                  stackOut_17_0 = kb.field_n;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_18_0 = stackOut_17_0;
+                L4: {
+                  stackOut_15_0 = kb.field_n;
+                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_16_0 = stackOut_15_0;
                   if (kb.field_n > 0) {
-                    stackOut_19_0 = stackIn_19_0;
-                    stackOut_19_1 = -1;
-                    stackIn_20_0 = stackOut_19_0;
-                    stackIn_20_1 = stackOut_19_1;
-                    break L5;
+                    stackOut_17_0 = stackIn_17_0;
+                    stackOut_17_1 = -1;
+                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_18_1 = stackOut_17_1;
+                    break L4;
                   } else {
-                    stackOut_18_0 = stackIn_18_0;
-                    stackOut_18_1 = 1;
-                    stackIn_20_0 = stackOut_18_0;
-                    stackIn_20_1 = stackOut_18_1;
-                    break L5;
+                    stackOut_16_0 = stackIn_16_0;
+                    stackOut_16_1 = 1;
+                    stackIn_18_0 = stackOut_16_0;
+                    stackIn_18_1 = stackOut_16_1;
+                    break L4;
                   }
                 }
-                kb.field_n = stackIn_20_0 + stackIn_20_1;
-                break L4;
+                kb.field_n = stackIn_18_0 + stackIn_18_1;
+                break L3;
               }
             }
           }

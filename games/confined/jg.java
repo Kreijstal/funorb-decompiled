@@ -19,41 +19,33 @@ abstract class jg {
         ce var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        Object stackIn_5_0 = null;
-        ce stackIn_7_0 = null;
+        ce stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ce stackOut_6_0 = null;
-        Object stackOut_4_0 = null;
+        ce stackOut_4_0 = null;
         Object stackOut_1_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
             if (param1 != null) {
-              if (param0 == 2563) {
-                var2 = new ce(param1, jl.field_p, ij.field_r, rg.field_I, sd.field_f, rj.field_f);
-                ql.a(false);
-                stackOut_6_0 = (ce) var2;
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                stackOut_4_0 = null;
-                stackIn_5_0 = stackOut_4_0;
-                return (ce) (Object) stackIn_5_0;
-              }
+              var2 = new ce(param1, jl.field_p, ij.field_r, rg.field_I, sd.field_f, rj.field_f);
+              ql.a(false);
+              stackOut_4_0 = (ce) var2;
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
@@ -64,36 +56,36 @@ abstract class jg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2_ref;
-            stackOut_8_1 = new StringBuilder().append("jg.J(").append(param0).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var2_ref;
+            stackOut_6_1 = new StringBuilder().append("jg.J(").append(2563).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
-    final static void a(kg param0, int param1) {
+    final static void a(kg param0) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -102,10 +94,6 @@ abstract class jg {
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            byte[] var7 = null;
-            byte[] var8 = null;
-            byte[] var9 = null;
-            byte[] var10 = null;
             RuntimeException stackIn_17_0 = null;
             StringBuilder stackIn_17_1 = null;
             RuntimeException stackIn_18_0 = null;
@@ -128,26 +116,22 @@ abstract class jg {
               L0: {
                 L1: {
                   L2: {
-                    var9 = new byte[param1];
-                    var7 = var9;
-                    var6 = var7;
-                    var10 = var6;
-                    var8 = var10;
-                    var2 = var8;
+                    var6 = new byte[24];
+                    var2 = var6;
                     if (bg.field_b == null) {
                       break L2;
                     } else {
                       try {
                         L3: {
                           bg.field_b.a((byte) 123, 0L);
-                          bg.field_b.a(var9, (byte) -4);
+                          bg.field_b.a(var6, (byte) -4);
                           var3_int = 0;
                           L4: while (true) {
                             L5: {
                               if (var3_int >= 24) {
                                 break L5;
                               } else {
-                                if (var10[var3_int] == 0) {
+                                if (var2[var3_int] == 0) {
                                   var3_int++;
                                   continue L4;
                                 } else {
@@ -158,7 +142,7 @@ abstract class jg {
                             if (var3_int >= 24) {
                               throw new IOException();
                             } else {
-                              param0.a(24, 0, var10, param1 ^ 119);
+                              param0.a(24, 0, var2, 111);
                               decompiledRegionSelector0 = 0;
                               break L3;
                             }
@@ -188,7 +172,7 @@ abstract class jg {
                       }
                     }
                   }
-                  param0.a(24, 0, var10, param1 ^ 119);
+                  param0.a(24, 0, var2, 111);
                   break L1;
                 }
                 break L0;
@@ -221,7 +205,7 @@ abstract class jg {
                   break L8;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+              throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 24 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -232,7 +216,7 @@ abstract class jg {
 
     abstract long a(int param0);
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_e = null;
         field_b = null;

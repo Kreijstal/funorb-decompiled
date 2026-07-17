@@ -9,7 +9,7 @@ final class ld extends pu {
     static ee[] field_l;
     static int field_q;
 
-    final static void a(kv param0, kv param1, kv param2, ee param3, int param4, kv param5, byte param6) {
+    final static void a(kv param0, kv param1, kv param2, ee param3, int param4, kv param5) {
         RuntimeException var7 = null;
         int[] var7_array = null;
         int var8 = 0;
@@ -639,7 +639,7 @@ final class ld extends pu {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_o = null;
         field_l = null;
         field_m = null;
@@ -647,9 +647,6 @@ final class ld extends pu {
 
     final static void a(int param0, int param1, int param2, int param3) {
         gma.field_e[param1] = new si(param1, param0, param0);
-        if (param2 != 45) {
-            ld.b(true);
-        }
     }
 
     static {

@@ -15,39 +15,35 @@ final class si extends qm {
     final static void a(int param0, java.awt.Canvas param1) {
         try {
             if (!(11 != el.field_b)) {
-                am.b(98);
-            }
-            if (param0 != -1913) {
-                si.a((byte) -51);
+                int discarded$0 = 98;
+                am.b();
             }
             mi.a(go.field_f, bf.field_o, -1, ad.field_r);
             fj.a(0, 0, (byte) 113, param1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "si.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "si.D(" + -1913 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static double a(double param0, boolean param1) {
+    final static double a(double param0) {
         return rl.field_f[(int)(param0 * 32768.0 / 3.141592653589793) & 65535];
     }
 
-    final static void a(int param0, byte[] param1, int param2, int param3, boolean param4, byte param5) {
+    final static void a(int param0, byte[] param1, int param2) {
         pc var6 = aa.field_f;
         var6.g(param0, 15514);
         var6.field_m = var6.field_m + 1;
         int var7 = var6.field_m;
         var6.e(160, 4);
         var6.e(160, param2);
-        int var8 = param3;
-        if (!(!param4)) {
-            var8 += 128;
-        }
+        int var8 = 0;
+        var8 += 128;
         try {
             var6.e(160, var8);
             var6.a(param1.length, 0, -3493, param1);
             var6.f(var6.field_m + -var7, -1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "si.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + -76 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "si.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 0 + 44 + 1 + 44 + -76 + 41);
         }
     }
 

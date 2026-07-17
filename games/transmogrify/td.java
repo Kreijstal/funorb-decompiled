@@ -25,7 +25,7 @@ abstract class td {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
     }
 
@@ -47,13 +47,13 @@ abstract class td {
             if (param2.field_f != null) {
                 param2.c(5);
             }
-            int var3_int = 8 % ((param1 - 51) / 40);
+            int var3_int = 0;
             param2.field_b = param0;
             param2.field_f = param0.field_f;
             param2.field_f.field_b = param2;
             param2.field_b.field_f = param2;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "td.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "td.L(" + (param0 != null ? "{...}" : "null") + 44 + 125 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

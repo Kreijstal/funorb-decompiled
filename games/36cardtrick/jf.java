@@ -27,34 +27,24 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var4 = Main.field_T;
         try {
-          L0: {
-            if (!param1) {
-              break L0;
-            } else {
-              var5 = null;
-              jf.a((java.awt.Canvas) null, false, false);
-              break L0;
-            }
-          }
           if (g.field_A >= 10) {
             if (lc.a((byte) -82)) {
               if (cd.field_e != 0) {
@@ -67,53 +57,57 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
               }
             } else {
               vj.d();
-              mg.a(320, 207, 240);
+              int discarded$8 = 240;
+              int discarded$9 = 207;
+              int discarded$10 = 320;
+              mg.a();
               ll.a(0, (byte) 115, param0, 0);
               return;
             }
           } else {
-            L1: {
+            L0: {
               var3_int = 0;
               if (!ii.field_a) {
-                break L1;
+                break L0;
               } else {
                 var3_int = 1;
                 ii.field_a = false;
-                break L1;
+                break L0;
               }
             }
-            uk.a(ej.r(-6545), var3_int != 0, (byte) -96, aj.field_p, mj.a(-1));
+            int discarded$11 = -6545;
+            uk.a(ej.r(), var3_int != 0, (byte) -96, aj.field_p, mj.a(-1));
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("jf.C(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("jf.C(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L2;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L1;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L2;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 0 + 44 + param2 + 41);
         }
     }
 
@@ -301,28 +295,26 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
         CharSequence var7 = null;
         Object stackIn_7_0 = null;
         Object stackIn_10_0 = null;
-        Object stackIn_13_0 = null;
-        aa stackIn_19_0 = null;
+        aa stackIn_18_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        aa stackOut_18_0 = null;
-        Object stackOut_12_0 = null;
+        aa stackOut_17_0 = null;
         Object stackOut_9_0 = null;
         Object stackOut_6_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
         String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var5 = Main.field_T;
         try {
           if (null != rf.field_d) {
@@ -332,27 +324,21 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
                 var2 = ff.a((byte) 116, var6);
                 if (var2 != null) {
                   var3 = (aa) (Object) rf.field_d.a(-78, (long)var2.hashCode());
-                  if (param0 == 0) {
-                    L0: while (true) {
-                      if (var3 != null) {
-                        var7 = (CharSequence) (Object) var3.field_gb;
-                        var4 = ff.a((byte) 116, var7);
-                        if (var4.equals((Object) (Object) var2)) {
-                          stackOut_18_0 = (aa) var3;
-                          stackIn_19_0 = stackOut_18_0;
-                          return stackIn_19_0;
-                        } else {
-                          var3 = (aa) (Object) rf.field_d.a(26847);
-                          continue L0;
-                        }
+                  L0: while (true) {
+                    if (var3 != null) {
+                      var7 = (CharSequence) (Object) var3.field_gb;
+                      var4 = ff.a((byte) 116, var7);
+                      if (var4.equals((Object) (Object) var2)) {
+                        stackOut_17_0 = (aa) var3;
+                        stackIn_18_0 = stackOut_17_0;
+                        return stackIn_18_0;
                       } else {
-                        return null;
+                        var3 = (aa) (Object) rf.field_d.a(26847);
+                        continue L0;
                       }
+                    } else {
+                      return null;
                     }
-                  } else {
-                    stackOut_12_0 = null;
-                    stackIn_13_0 = stackOut_12_0;
-                    return (aa) (Object) stackIn_13_0;
                   }
                 } else {
                   stackOut_9_0 = null;
@@ -374,31 +360,31 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2_ref;
-            stackOut_22_1 = new StringBuilder().append("jf.A(").append(param0).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_21_0 = (RuntimeException) var2_ref;
+            stackOut_21_1 = new StringBuilder().append("jf.A(").append(0).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L1;
-            } else {
               stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
               stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L1;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
         }
     }
 

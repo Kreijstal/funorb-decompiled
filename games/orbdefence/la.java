@@ -262,35 +262,9 @@ class la {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_c = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_g = stackIn_7_0 != 0;
-              field_l = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_c = 22050;
+        field_g = true;
+        field_l = 10;
     }
 
     private final void a(int[] param0, int param1) {
@@ -311,7 +285,7 @@ class la {
         di var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_g) {
             break L0;
           } else {
@@ -321,7 +295,7 @@ class la {
         }
         L1: {
           mk.a(param0, 0, var3);
-          ((la) this).field_m = ((la) this).field_m - 256;
+          ((la) this).field_m = ((la) this).field_m - param1;
           if (((la) this).field_n == null) {
             break L1;
           } else {
@@ -488,7 +462,7 @@ class la {
           if (((la) this).field_n == null) {
             break L17;
           } else {
-            ((la) this).field_n.b(param0, 0, 256);
+            ((la) this).field_n.b(param0, 0, param1);
             break L17;
           }
         }
@@ -512,12 +486,12 @@ class la {
     }
 
     private final void b(int param0) {
-        ((la) this).field_m = ((la) this).field_m - 256;
+        ((la) this).field_m = ((la) this).field_m - param0;
         if (((la) this).field_m < 0) {
             ((la) this).field_m = 0;
         }
         if (((la) this).field_n != null) {
-            ((la) this).field_n.c(256);
+            ((la) this).field_n.c(param0);
             return;
         }
     }

@@ -6,10 +6,6 @@ final class ct {
     static String field_b;
 
     final static int a(int param0, int param1) {
-        if (param0 != 19143) {
-            Object var3 = null;
-            ct.a((ml) null, 95, (ij) null);
-        }
         if (li.field_i) {
             return mmb.field_d[param1].a();
         }
@@ -164,7 +160,7 @@ final class ct {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_b = null;
         field_a = null;

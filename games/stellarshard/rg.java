@@ -142,7 +142,7 @@ class rg extends ig {
         return stackIn_4_0;
     }
 
-    final static void g(int param0) {
+    final static void g() {
         int var1_int = 0;
         int var2 = stellarshard.field_B;
         rb.field_u.a((byte) -115);

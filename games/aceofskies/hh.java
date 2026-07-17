@@ -34,7 +34,8 @@ abstract class hh {
         int var5 = 0;
         int var6 = 0;
         try {
-            var2 = fa.a(param1, true);
+            int discarded$0 = 1;
+            var2 = fa.a(param1);
             if (param0 != 255) {
                 field_b = null;
             }
@@ -73,15 +74,11 @@ abstract class hh {
 
     final static int a(int param0, int param1) {
         param1 = (param1 & 1431655765) + ((param1 & -1431655765) >>> 1);
-        if (param0 != 0) {
-          return -114;
-        } else {
-          param1 = (param1 >>> 2 & -214748365) + (param1 & 858993459);
-          param1 = param1 + (param1 >>> 4) & 252645135;
-          param1 = param1 + (param1 >>> 8);
-          param1 = param1 + (param1 >>> 16);
-          return 255 & param1;
-        }
+        param1 = (param1 >>> 2 & -214748365) + (param1 & 858993459);
+        param1 = param1 + (param1 >>> 4) & 252645135;
+        param1 = param1 + (param1 >>> 8);
+        param1 = param1 + (param1 >>> 16);
+        return 255 & param1;
     }
 
     final static void a(int param0, String param1, int param2, int param3, byte param4, rk param5, int param6, int param7, int param8) {
@@ -89,9 +86,6 @@ abstract class hh {
         nm.field_b = param3;
         ob.field_e = param8;
         si.field_c = param7;
-        if (param4 != -36) {
-            return;
-        }
         try {
             cs.field_d = param5;
             uk.field_g = param6;
@@ -101,64 +95,31 @@ abstract class hh {
             ii.field_m = new dk(param5);
             om.field_c = new wq(ul.field_r, ii.field_m);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hh.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "hh.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + -36 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != 0) {
-          L0: {
-            field_b = null;
-            if ((param1 & 256) == 0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((param1 & 256) == 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return (param1 & 256) != 0;
     }
 
-    final static int[][] a(byte param0, int param1, int param2, boolean param3, int param4, float param5, int param6, int param7, int param8) {
+    final static int[][] a(byte param0, int param1, int param2, boolean param3, int param4, float param5, int param6, int param7) {
         int var12 = 0;
         int var13 = AceOfSkies.field_G ? 1 : 0;
-        int[][] var16 = new int[param4][param2];
+        int[][] var16 = new int[256][64];
         int[][] var15 = var16;
         int[][] var14 = var15;
         int[][] var9 = var14;
         ql var10 = new ql();
         var10.field_j = (int)(param5 * 4096.0f);
-        var10.field_h = param6;
+        var10.field_h = 4;
         var10.field_q = 4;
         int var11 = 119 % ((2 - param0) / 58);
-        var10.field_s = param1;
-        var10.field_n = param3 ? true : false;
+        var10.field_s = 3;
+        var10.field_n = false;
         var10.d(1);
-        ji.a(param4, param2, (byte) 37);
-        for (var12 = 0; param4 > var12; var12++) {
+        ji.a(256, 64, (byte) 37);
+        for (var12 = 0; 256 > var12; var12++) {
             var10.a(true, var16[var12], var12);
         }
         return var9;

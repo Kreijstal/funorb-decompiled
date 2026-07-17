@@ -6,7 +6,7 @@ final class sp extends gr {
     ge field_K;
     int field_J;
 
-    final static boolean h(int param0) {
+    final static boolean h() {
         return pa.field_I == ra.field_e;
     }
 
@@ -18,7 +18,7 @@ final class sp extends gr {
         var3 = Pool.field_O;
         try {
           L0: {
-            bb.a(gr.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, param0);
+            bb.a(gr.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, true);
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= jh.field_c) {
@@ -42,7 +42,7 @@ final class sp extends gr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "sp.F(" + param0 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) var2, "sp.F(" + 1 + 44 + param1 + 41);
         }
     }
 

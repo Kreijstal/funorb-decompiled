@@ -356,7 +356,8 @@ final class wk extends hh {
                     ((wk) this).field_d[0] = new q(((wk) this).field_a, 6406, 64, false, var27, 6406);
                     ((wk) this).field_d[1] = new q(((wk) this).field_a, 6406, 64, false, var28, 6406);
                     ((wk) this).field_d[2] = new q(((wk) this).field_a, 6406, 64, false, var29, 6406);
-                    this.d((byte) -57);
+                    int discarded$1 = -57;
+                    this.d();
                     break L1;
                   } else {
                     var15 = 0;
@@ -519,7 +520,7 @@ final class wk extends hh {
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         int var3 = 0;
         var3 = AceOfSkies.field_G ? 1 : 0;
         ((wk) this).field_i = new si(((wk) this).field_a, 2);

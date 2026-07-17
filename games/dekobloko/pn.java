@@ -18,12 +18,13 @@ final class pn extends vb {
             ed.field_c = param2;
             pk.field_r = 2;
             var5 = (CharSequence) (Object) param2;
-            cf.field_c = kf.a(var5, (byte) 2);
-            int var4_int = -54 / ((-27 - param0) / 54);
+            int discarded$0 = 2;
+            cf.field_c = kf.a(var5);
+            int var4_int = 54;
             fm.field_d = param1;
             v.b(0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "pn.M(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "pn.M(" + 38 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -37,9 +38,12 @@ final class pn extends vb {
         }
         param0 = param0 + ((pn) this).field_u;
         param3 = param3 + ((pn) this).field_D;
-        this.a(param0, n.field_d, param3, (ce) (Object) ((pn) this).field_gb, 0);
-        this.a(param0, ql.field_a, param3, (ce) (Object) ((pn) this).field_hb, 0);
-        this.a(param0, pf.field_c, param3, (ce) (Object) ((pn) this).field_ib, 0);
+        int discarded$0 = 0;
+        this.a(param0, n.field_d, param3, (ce) (Object) ((pn) this).field_gb);
+        int discarded$1 = 0;
+        this.a(param0, ql.field_a, param3, (ce) (Object) ((pn) this).field_hb);
+        int discarded$2 = 0;
+        this.a(param0, pf.field_c, param3, (ce) (Object) ((pn) this).field_ib);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, String param4, int param5, int param6, int param7) {
@@ -76,7 +80,8 @@ final class pn extends vb {
                   break L2;
                 } else {
                   if (wl.field_p) {
-                    aj.a(-1045);
+                    int discarded$4 = -1045;
+                    aj.a();
                     break L2;
                   } else {
                     jg.field_i = true;
@@ -105,7 +110,8 @@ final class pn extends vb {
                   if (bf.field_v.field_ob == 0) {
                     break L3;
                   } else {
-                    qk.a((byte) 94);
+                    int discarded$5 = 94;
+                    qk.a();
                     jg.field_i = false;
                     break L3;
                   }
@@ -207,15 +213,15 @@ final class pn extends vb {
             dj.field_Y = dj.field_Y + (var2_int >> 3);
             tj.field_Pb = tj.field_Pb + (param1.e(3) << 2);
             var2_int = param1.d((byte) -59);
-            oc.field_c = (var2_int & param0) << 15;
+            oc.field_c = (var2_int & 63) << 15;
             tj.field_Pb = tj.field_Pb + (var2_int >> 6);
             oc.field_c = oc.field_c + (param1.d((byte) -105) << 7);
             var2_int = param1.d((byte) -81);
             vm.field_s = (1 & var2_int) << 16;
             oc.field_c = oc.field_c + (var2_int >> 1);
-            vm.field_s = vm.field_s + param1.e(param0 + -60);
+            vm.field_s = vm.field_s + param1.e(3);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "pn.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "pn.P(" + 63 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -430,16 +436,13 @@ final class pn extends vb {
         return stackIn_14_0 != 0;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_bb = null;
         field_eb = null;
         field_fb = null;
-        if (param0 != 33) {
-            field_ab = 39;
-        }
     }
 
-    private final void a(int param0, String param1, int param2, ce param3, int param4) {
+    private final void a(int param0, String param1, int param2, ce param3) {
         try {
             bj.field_f.b(param1, (param3.field_t >> 1) + param3.field_u + param0, param2 + (param3.field_D - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
@@ -535,7 +538,7 @@ final class pn extends vb {
         }
     }
 
-    final static we a(String param0, int param1, int param2) {
+    final static we a(String param0, int param1) {
         sc var3 = null;
         RuntimeException var3_ref = null;
         sc stackIn_1_0 = null;

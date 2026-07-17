@@ -94,7 +94,7 @@ final class qe extends rqa {
         return (char)var2;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
     }
 
@@ -102,7 +102,7 @@ final class qe extends rqa {
         super(param0, param1, param2);
     }
 
-    final static vcb a(int param0) {
+    final static vcb a() {
         return new vcb(0, 0, msa.field_s.field_s, 0, (wwa) null, msa.field_s.field_e, msa.field_s.field_l, msa.field_s.field_s, msa.field_s.field_s, msa.field_s.field_r, msa.field_s.field_i, false, true, 32768, 0);
     }
 

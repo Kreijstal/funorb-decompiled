@@ -8,7 +8,7 @@ final class oj {
     static int field_c;
     static String field_b;
 
-    final static wb a(int param0, qk param1, int param2, int param3) {
+    final static wb a(int param0, qk param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -68,7 +68,7 @@ final class oj {
         return !wh.field_a.a(640);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_b = null;

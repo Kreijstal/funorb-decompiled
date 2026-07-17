@@ -35,7 +35,7 @@ final class i {
           L0: {
             var2_int = param1.length();
             var3 = new char[var2_int];
-            var4 = param0;
+            var4 = 0;
             L1: while (true) {
               if (var4 >= var2_int) {
                 stackOut_4_0 = new String(var3);
@@ -53,7 +53,7 @@ final class i {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("i.C(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("i.C(").append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -81,7 +81,7 @@ final class i {
         return stackIn_5_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

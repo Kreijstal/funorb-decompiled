@@ -20,7 +20,7 @@ final class ch {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_f = null;
@@ -28,9 +28,6 @@ final class ch {
     }
 
     final static void a(int param0, String param1, boolean param2, float param3) {
-        if (param0 < 57) {
-            return;
-        }
         try {
             if (!(gh.field_m != null)) {
                 gh.field_m = new sd(ci.field_f, tg.field_c);
@@ -40,7 +37,7 @@ final class ch {
             sb.c();
             kh.a(-111, true);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "ch.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "ch.C(" + 58 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 

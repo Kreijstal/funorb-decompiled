@@ -39,8 +39,8 @@ final class jb {
         double var21 = 0.0;
         double var23 = 0.0;
         double var25 = 0.0;
-        var2 = param0 * 128;
-        var3 = param0;
+        var2 = 0;
+        var3 = 0;
         L0: while (true) {
           if (var3 >= 512) {
             return;
@@ -2568,7 +2568,7 @@ final class jb {
         int var2 = field_a[0];
         int var3 = var2 / dg.field_i;
         int var4 = var2 - var3 * dg.field_i;
-        field_h = param0 - var4;
+        field_h = 320 - var4;
         field_j = 240 - var3;
     }
 

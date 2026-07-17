@@ -8,7 +8,7 @@ class qo extends qa {
     static int field_u;
     static String field_t;
 
-    final static byte[] a(CharSequence param0, byte param1) {
+    final static byte[] a(CharSequence param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;
@@ -251,23 +251,16 @@ class qo extends qa {
     }
 
     final static void b(boolean param0, int param1) {
-        ga var2 = null;
-        var2 = ma.field_a;
-        var2.b((byte) -35, param1);
+        ga var2 = ma.field_a;
+        var2.b((byte) -35, 4);
         var2.a(-50, 1);
         var2.a(123, 2);
-        if (!param0) {
-          qo.b(true, -60);
-          return;
-        } else {
-          return;
-        }
     }
 
     qo() {
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_q = null;
         field_r = null;
         field_t = null;

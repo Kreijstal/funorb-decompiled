@@ -107,13 +107,14 @@ final class ho extends ma {
         }
     }
 
-    final static void c(byte param0) {
-        wa.l(23323);
+    final static void c() {
+        int discarded$0 = 23323;
+        wa.l();
         int var1 = -95;
         af.a(sg.field_M[0].field_w, kj.field_j, ad.field_x, nk.field_n, (byte) 36, tk.field_i);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_s = null;
         field_u = null;
         field_l = null;

@@ -14,7 +14,7 @@ final class qj implements gl {
     static ck field_d;
     private int field_b;
 
-    final static void a(byte param0) {
+    final static void a() {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;
@@ -217,13 +217,13 @@ final class qj implements gl {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_g = null;
         field_e = null;
     }
 
-    final static String a(byte[] param0, int param1) {
+    final static String a(byte[] param0) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

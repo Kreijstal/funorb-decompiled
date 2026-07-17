@@ -23,7 +23,7 @@ final class vc {
         field_g = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return gi.field_c;
     }
 

@@ -22,7 +22,7 @@ abstract class ou {
         return ((ou) this).field_c.a(2, 0) == 0 ? true : false;
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         ((ou) this).field_c = new qea(new int[1]);
@@ -38,7 +38,8 @@ abstract class ou {
     ou(int param0, int param1) {
         ((ou) this).field_a = param0;
         ((ou) this).field_b = param1;
-        this.b(-125);
+        int discarded$0 = -125;
+        this.b();
     }
 
     static {

@@ -15,19 +15,16 @@ final class aa extends ii {
     private long[] field_g;
     private long field_i;
 
-    final static ra b(int param0, int param1) {
+    final static ra b() {
         ra var2 = new ra();
-        if (param0 != -19300) {
-            Object var3 = null;
-            aa.a(true, (uj) null);
-        }
         so.field_j.a((br) (Object) var2, false);
         qo.b(true, 4);
         return var2;
     }
 
     final long a(byte param0) {
-        ((aa) this).field_k = ((aa) this).field_k + this.d(1);
+        int discarded$0 = 1;
+        ((aa) this).field_k = ((aa) this).field_k + this.d();
         if (!(~((aa) this).field_k <= ~((aa) this).field_i)) {
             return (((aa) this).field_i + -((aa) this).field_k) / 1000000L;
         }
@@ -41,16 +38,13 @@ final class aa extends ii {
                 ki.field_e = null;
             }
         }
-        if (param0 <= 113) {
-            field_l = null;
-        }
     }
 
-    final static boolean e(int param0) {
+    final static boolean e() {
         return ch.field_e;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_n = null;
         field_p = null;
         field_l = null;
@@ -58,7 +52,7 @@ final class aa extends ii {
         field_j = null;
     }
 
-    private final long d(int param0) {
+    private final long d() {
         int var8 = 0;
         int var9 = ZombieDawnMulti.field_E ? 1 : 0;
         long var2 = System.nanoTime();
@@ -123,13 +117,10 @@ final class aa extends ii {
     }
 
     final static void a(boolean param0, uj param1) {
-        if (!param0) {
-            return;
-        }
         try {
             bh.field_a.a((gq) (Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "aa.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "aa.C(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -122,7 +122,7 @@ final class sra implements eb {
             L1: while (true) {
               if (param1.field_h >= param1.field_g.length) {
                 var3 = new String[var2.a((byte) -16)][];
-                var4 = -92 / ((param0 - -9) / 51);
+                var4 = -92;
                 var5 = 0;
                 L2: while (true) {
                   if (var3.length <= var5) {
@@ -136,7 +136,8 @@ final class sra implements eb {
                   }
                 }
               } else {
-                var2.b((byte) -72, (vg) (Object) new gba(pe.a(param1, (byte) 73)));
+                int discarded$2 = 73;
+                var2.b((byte) -72, (vg) (Object) new gba(pe.a(param1)));
                 continue L1;
               }
             }
@@ -146,7 +147,7 @@ final class sra implements eb {
           L3: {
             var2_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2_ref;
-            stackOut_9_1 = new StringBuilder().append("sra.H(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("sra.H(").append(43).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -199,14 +200,16 @@ final class sra implements eb {
                 break L0;
               } else {
                 if (null != ((sra) this).field_p) {
-                  fp.a(uba.field_g[1], 40, ((sra) this).field_h, (byte) 17);
+                  int discarded$5 = 17;
+                  fp.a(uba.field_g[1], 40, ((sra) this).field_h);
                   bja.a((byte) -105, ((sra) this).field_p, 50, uba.field_g[2]);
                   ((sra) this).field_p = null;
                   mj.a((byte) -86, uba.field_g[3], ((sra) this).field_q, ((sra) this).field_h, 60);
                   ((sra) this).a(65, (byte) 47, uba.field_g[4]);
                   dqa.a(((sra) this).field_r, ((sra) this).field_m, (byte) 55, ((sra) this).field_h);
                   ((sra) this).a(70, (byte) 47, uba.field_g[5]);
-                  this.d(-10242);
+                  int discarded$6 = -10242;
+                  this.d();
                   ((sra) this).a(75, (byte) 47, uba.field_g[6]);
                   ((sra) this).field_r = null;
                   ((sra) this).field_m = null;
@@ -273,7 +276,8 @@ final class sra implements eb {
                     break L4;
                   }
                 }
-                ih.D(17229);
+                int discarded$7 = 17229;
+                ih.D();
                 if (null == baa.field_d.field_i) {
                   return;
                 } else {
@@ -297,8 +301,10 @@ final class sra implements eb {
           } else {
             wca.a(-18035);
             ((sra) this).a(30, (byte) 47, uba.field_g[0]);
-            gda.a(((sra) this).field_d, 17572);
-            uo.b((byte) -125);
+            int discarded$8 = 17572;
+            gda.a(((sra) this).field_d);
+            int discarded$9 = -125;
+            uo.b();
             ((sra) this).field_d = null;
             ea.a(-33);
             return;
@@ -313,7 +319,8 @@ final class sra implements eb {
 
     public final boolean a(int param0) {
         if (!((sra) this).field_n) {
-            if (lga.b(false)) {
+            int discarded$3 = 0;
+            if (lga.b()) {
                 ((sra) this).field_n = true;
             }
         }
@@ -323,7 +330,7 @@ final class sra implements eb {
         return ((sra) this).field_n;
     }
 
-    final static String a(String param0, int param1) {
+    final static String a(String param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -401,7 +408,9 @@ final class sra implements eb {
                 var4 = null;
                 try {
                   L4: {
-                    var15 = ssa.a((uia) (Object) var9, -26, true);
+                    int discarded$3 = 1;
+                    int discarded$4 = -26;
+                    var15 = ssa.a((uia) (Object) var9);
                     break L4;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -416,7 +425,8 @@ final class sra implements eb {
                 var12 = new esa();
                 var7 = -1;
                 var6 = var11.h(255);
-                dga.a((uia) (Object) var11, 0);
+                int discarded$5 = 0;
+                dga.a((uia) (Object) var11);
                 var12.a(var11, var6, (byte) 39);
                 mq.field_e = var12.a(79);
                 f.field_e = var12.b((byte) -78);
@@ -465,7 +475,8 @@ final class sra implements eb {
 
     public final boolean b(int param0) {
         rg.e(-2339);
-        ln.A(67);
+        int discarded$11 = 67;
+        ln.A();
         if (!(((sra) this).field_c)) {
             this.c(124);
             return false;
@@ -477,7 +488,7 @@ final class sra implements eb {
         return true;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_u = null;
         field_v = null;
         field_i = null;
@@ -487,21 +498,23 @@ final class sra implements eb {
         bla.a(cq.field_d, (byte) 52);
         hd.a(50, param0 ^ -78);
         wm.field_a = null;
-        hb.field_t = (dfa) (Object) nl.a(0, (byte) 50);
+        int discarded$0 = 50;
+        hb.field_t = (dfa) (Object) nl.a(0);
         ima.a(100.0f, uba.field_g[10], param0 ^ 115);
         ad.field_j.c(param0 ^ -49);
         gn.field_C.a(-19216);
         if (param0 != -49) {
             this.c(-107);
         }
-        cla.f(0);
+        int discarded$4 = 0;
+        cla.f();
         ea.a(param0 + 16);
         if (null != mq.field_e) {
             eda.a(mq.field_e.field_g, true);
         }
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var4 = 0;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -519,7 +532,9 @@ final class sra implements eb {
             dea.field_c = false;
             op.a(((sra) this).field_s, 10, ws.field_o, fr.field_b, oma.field_G, qaa.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
             cq.field_d = qw.field_f;
-            tda.a(200, (byte) -71);
+            int discarded$1 = -71;
+            int discarded$2 = 200;
+            tda.a();
             fta.field_b = ff.field_p;
         }
     }

@@ -15,7 +15,7 @@ final class cq {
         return a.field_b == 11 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_d = null;
@@ -24,7 +24,7 @@ final class cq {
         int var1 = 0;
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -140,7 +140,8 @@ final class cq {
                     break L2;
                   } else {
                     var3 = (CharSequence) (Object) param0;
-                    if (ql.field_a.equals((Object) (Object) tg.a(var3, false))) {
+                    int discarded$2 = 0;
+                    if (ql.field_a.equals((Object) (Object) tg.a(var3))) {
                       stackOut_11_0 = 1;
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
@@ -220,7 +221,7 @@ final class cq {
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            var2_long = (long)param0;
+            var2_long = 0L;
             var4 = param1.length();
             var5 = 0;
             L1: while (true) {
@@ -298,7 +299,7 @@ final class cq {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("cq.D(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("cq.D(").append(0).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;

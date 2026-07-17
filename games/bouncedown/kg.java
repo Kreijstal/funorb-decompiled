@@ -72,33 +72,22 @@ final class kg {
     }
 
     final static tg[] a(int param0, int param1, int param2, int param3, int param4) {
-        tg[] var5 = null;
-        tg[] var6 = null;
-        if (param3 != -2147483648) {
-          return null;
-        } else {
-          L0: {
-            var6 = new tg[9];
-            var5 = var6;
-            tg dupTemp$2 = hc.a(param1, param2, (byte) -126);
-            var6[6] = dupTemp$2;
-            var5[3] = dupTemp$2;
-            var5[2] = dupTemp$2;
-            var5[1] = dupTemp$2;
-            var5[0] = dupTemp$2;
-            tg dupTemp$3 = hc.a(param1, param0, (byte) -123);
-            var6[8] = dupTemp$3;
-            var5[7] = dupTemp$3;
-            var5[5] = dupTemp$3;
-            if (param4 == 0) {
-              break L0;
-            } else {
-              var6[4] = hc.a(64, param4, (byte) -127);
-              break L0;
-            }
-          }
-          return var5;
+        tg[] var6 = new tg[9];
+        tg[] var5 = var6;
+        tg dupTemp$0 = hc.a(1, param2, (byte) -126);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        tg dupTemp$1 = hc.a(1, param0, (byte) -123);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
+        if (param4 != 0) {
+            var6[4] = hc.a(64, param4, (byte) -127);
         }
+        return var5;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8) {
@@ -956,7 +945,7 @@ final class kg {
         return (kg) this;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_j = null;
         field_g = null;

@@ -81,30 +81,12 @@ final class md {
 
     final static void a(int param0, int param1) {
         mo.field_e = param1;
-        if (nk.field_Jb.field_b >= 0) {
-          if (!nl.a(nk.field_Jb.field_b, (byte) -124)) {
+        if (nk.field_Jb.field_b < 0) {
+            return;
+        }
+        if (!nl.a(nk.field_Jb.field_b, (byte) -124)) {
             nk.field_Jb.field_b = 1;
-            if (param0 == 20631) {
-              return;
-            } else {
-              field_b = 78;
-              return;
-            }
-          } else {
-            if (param0 == 20631) {
-              return;
-            } else {
-              field_b = 78;
-              return;
-            }
-          }
-        } else {
-          if (param0 == 20631) {
             return;
-          } else {
-            field_b = 78;
-            return;
-          }
         }
     }
 
@@ -146,14 +128,9 @@ final class md {
     }
 
     final static void a(float param0, float param1, float param2, float param3, float param4, int param5, float param6) {
-        L0: {
-          if (null == bf.field_h) {
+        if (!(null != bf.field_h)) {
             bf.field_h = new ge((qb) (Object) wa.field_j);
             hm.field_n.a((qb) (Object) bf.field_h);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         bf.field_h.f(param4);
         bf.field_h.e(param1);
@@ -161,15 +138,9 @@ final class md {
         bf.field_h.a(param3);
         bf.field_h.b(param0);
         bf.field_h.c(param2);
-        if (param5 == 0) {
-          return;
-        } else {
-          field_b = 91;
-          return;
-        }
     }
 
-    final static boolean f(int param0) {
+    final static boolean f() {
         return null == cm.field_R ? rj.field_o : true;
     }
 

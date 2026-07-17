@@ -14,7 +14,7 @@ final class vd {
         } else {
           rl.field_r = param1;
           dg.field_c = nv.field_I[dq.a((byte) 115, nv.field_I.length, ru.field_l)];
-          jm.a(1, param0 + 9863, param0);
+          jm.a(1, 9863, 0);
           return;
         }
     }
@@ -40,7 +40,7 @@ final class vd {
         throw new IllegalStateException();
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         int var1 = 0;
         int stackIn_17_0 = 0;
         int stackOut_16_0 = 0;

@@ -11,15 +11,15 @@ final class pe extends f implements op, bp {
     static int field_K;
     static String field_F;
 
-    public static void a(byte param0) {
+    public static void a() {
         try {
             field_F = null;
             field_E = null;
-            int var1_int = 124 % ((-2 - param0) / 45);
+            int var1_int = 0;
             field_D = null;
             field_J = null;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "pe.E(" + param0 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "pe.E(" + -75 + 41);
         }
     }
 
@@ -79,6 +79,7 @@ final class pe extends f implements op, bp {
             ((pe) this).field_I = param0;
             ((pe) this).field_H = new kg(gq.field_b, (ko) null);
             ((pe) this).field_H.field_p = (iq) (Object) new qp();
+            int discarded$1 = 98;
             var2_ref = re.a(rn.field_e, 4371, new String[2]);
             var3 = 20;
             var4 = new o(gn.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
@@ -227,29 +228,21 @@ final class pe extends f implements op, bp {
         }
     }
 
-    private final String l(int param0) {
+    private final String l() {
         RuntimeException var2 = null;
-        Object stackIn_2_0 = null;
         String stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
         try {
           L0: {
-            if (param0 >= 71) {
-              stackOut_3_0 = "<u=2164A2><col=2164A2>";
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
-            }
+            stackOut_3_0 = "<u=2164A2><col=2164A2>";
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var2, "pe.I(" + param0 + 41);
+          throw r.a((Throwable) (Object) var2, "pe.I(" + 98 + 41);
         }
         return stackIn_4_0;
     }
@@ -262,7 +255,7 @@ final class pe extends f implements op, bp {
         String stackOut_0_0 = null;
         try {
           L0: {
-            var2_int = 93 % ((param0 - -30) / 43);
+            var2_int = 1;
             stackOut_0_0 = "</col></u>";
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -270,12 +263,12 @@ final class pe extends f implements op, bp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var2, "pe.A(" + param0 + 41);
+          throw r.a((Throwable) (Object) var2, "pe.A(" + 56 + 41);
         }
         return stackIn_1_0;
     }
 
-    final static String a(ob param0, int param1, int param2) {
+    final static String a(ob param0, int param1) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -305,10 +298,10 @@ final class pe extends f implements op, bp {
           try {
             L0: {
               var3_int = param0.h(-1282738780);
-              if (var3_int <= param2) {
+              if (var3_int <= 80) {
                 break L0;
               } else {
-                var3_int = param2;
+                var3_int = 80;
                 break L0;
               }
             }
@@ -353,7 +346,7 @@ final class pe extends f implements op, bp {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 41);
+          throw r.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + 80 + 41);
         }
     }
 
@@ -440,7 +433,7 @@ final class pe extends f implements op, bp {
         return stackIn_12_0 != 0;
     }
 
-    final static void k(int param0) {
+    final static void k() {
         RuntimeException var1 = null;
         ln[] var1_array = null;
         eg var1_ref = null;
@@ -456,107 +449,103 @@ final class pe extends f implements op, bp {
         try {
           L0: {
             L1: {
-              if (param0 > 95) {
-                break L1;
-              } else {
-                field_K = 59;
-                break L1;
-              }
-            }
-            L2: {
               fl.a(0, "endturn");
               if (2 != oq.field_a.field_P.field_g.field_e.length) {
-                break L2;
+                break L1;
               } else {
-                L3: {
-                  L4: {
+                L2: {
+                  L3: {
                     if (ho.field_d != oq.field_a.field_P.field_g.field_e[1].field_y) {
-                      break L4;
+                      break L3;
                     } else {
                       if (qc.a("combatSuccess", -116)) {
-                        ac.a(1, n.a("combatSuccess", -21502));
+                        int discarded$4 = -21502;
+                        ac.a(1, n.a("combatSuccess"));
                         if (var5 == 0) {
-                          break L3;
+                          break L2;
                         } else {
-                          break L4;
+                          break L3;
                         }
                       } else {
-                        break L3;
+                        break L2;
                       }
                     }
                   }
                   var1_ref = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
                   if (null != var1_ref) {
                     if (!qc.a("combatFailed", -116)) {
-                      break L3;
+                      break L2;
                     } else {
-                      ac.a(1, n.a("combatFailed", -21502));
-                      break L3;
+                      int discarded$5 = -21502;
+                      ac.a(1, n.a("combatFailed"));
+                      break L2;
                     }
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
-                L5: {
+                L4: {
                   var1_ref = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
                   if (null != var1_ref) {
-                    uq.field_m.a(nf.a(var1_ref, 23248), 27275, "combatreport1");
-                    break L5;
+                    int discarded$6 = 23248;
+                    uq.field_m.a(nf.a(var1_ref), 27275, "combatreport1");
+                    break L4;
                   } else {
-                    break L5;
+                    break L4;
                   }
                 }
                 uq.field_m.a(Integer.toString(oq.field_a.field_P.field_g.field_e[1].field_x), 27275, "garrison1");
-                break L2;
+                break L1;
               }
             }
-            L6: {
+            L5: {
               if (!oq.field_a.field_P.field_z) {
-                break L6;
+                break L5;
               } else {
                 if (oq.field_a.field_P.field_k == ho.field_d.field_x) {
-                  break L6;
+                  break L5;
                 } else {
-                  ac.a(1, n.a("lose", -21502));
-                  break L6;
+                  int discarded$7 = -21502;
+                  ac.a(1, n.a("lose"));
+                  break L5;
                 }
               }
             }
             var1_array = oq.field_a.field_P.field_g.field_e;
             var2 = 0;
-            L7: while (true) {
-              L8: {
-                L9: {
+            L6: while (true) {
+              L7: {
+                L8: {
                   if (var1_array.length <= var2) {
-                    break L9;
+                    break L8;
                   } else {
                     var3 = var1_array[var2];
                     if (var5 != 0) {
-                      break L8;
+                      break L7;
                     } else {
-                      L10: {
+                      L9: {
                         if (null == var3.field_y) {
                           stackOut_39_0 = 8421504;
                           stackIn_40_0 = stackOut_39_0;
-                          break L10;
+                          break L9;
                         } else {
                           stackOut_37_0 = var3.field_y.field_s;
                           stackIn_40_0 = stackOut_37_0;
-                          break L10;
+                          break L9;
                         }
                       }
                       var4 = stackIn_40_0;
                       uq.field_m.a(re.a("<col=<%0>>" + var3.field_I + "</col>", 4371, new String[1]), 27275, "star" + var3.field_p);
                       var2++;
                       if (var5 == 0) {
-                        continue L7;
+                        continue L6;
                       } else {
-                        break L9;
+                        break L8;
                       }
                     }
                   }
                 }
-                break L8;
+                break L7;
               }
               break L0;
             }
@@ -564,7 +553,7 @@ final class pe extends f implements op, bp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "pe.J(" + param0 + 41);
+          throw r.a((Throwable) (Object) var1, "pe.J(" + 112 + 41);
         }
     }
 
@@ -741,16 +730,6 @@ final class pe extends f implements op, bp {
                             no.field_c[var23] = var29;
                             break L5;
                           }
-                          L9: {
-                            if (!param2) {
-                              break L9;
-                            } else {
-                              lg.field_a[var23] = var27 >> we.field_e;
-                              dg.field_yb[var23] = var28 >> we.field_e;
-                              tg.field_d[var23] = var29;
-                              break L9;
-                            }
-                          }
                           var23++;
                           if (var30 == 0) {
                             continue L1;
@@ -760,36 +739,36 @@ final class pe extends f implements op, bp {
                         }
                       }
                     }
-                    L10: {
+                    L9: {
                       if (null == param6.field_K) {
-                        break L10;
+                        break L9;
                       } else {
                         if (null == param6.field_D) {
-                          break L10;
+                          break L9;
                         } else {
                           if (param6.field_H == null) {
-                            break L10;
+                            break L9;
                           } else {
                             if (param6.field_a == null) {
-                              break L10;
+                              break L9;
                             } else {
                               if (null == param6.field_c) {
-                                break L10;
+                                break L9;
                               } else {
                                 if (param6.field_l == null) {
-                                  break L10;
+                                  break L9;
                                 } else {
                                   if (null == param6.field_A) {
-                                    break L10;
+                                    break L9;
                                   } else {
                                     if (null == param6.field_m) {
-                                      break L10;
+                                      break L9;
                                     } else {
                                       if (param6.field_Q != null) {
                                         var23 = 0;
-                                        L11: while (true) {
+                                        L10: while (true) {
                                           if (~var23 <= ~param6.field_u) {
-                                            break L10;
+                                            break L9;
                                           } else {
                                             var24 = param6.field_K[var23];
                                             var25 = param6.field_D[var23];
@@ -814,15 +793,15 @@ final class pe extends f implements op, bp {
                                               break L2;
                                             } else {
                                               if (var30 == 0) {
-                                                continue L11;
+                                                continue L10;
                                               } else {
-                                                break L10;
+                                                break L9;
                                               }
                                             }
                                           }
                                         }
                                       } else {
-                                        break L10;
+                                        break L9;
                                       }
                                     }
                                   }
@@ -833,9 +812,9 @@ final class pe extends f implements op, bp {
                         }
                       }
                     }
-                    L12: {
+                    L11: {
                       if (!param0) {
-                        break L12;
+                        break L11;
                       } else {
                         var9 = param4[3];
                         var10 = param4[4];
@@ -847,9 +826,9 @@ final class pe extends f implements op, bp {
                         var16 = param4[10];
                         var17 = param4[11];
                         var18 = 0;
-                        L13: while (true) {
+                        L12: while (true) {
                           if (~param6.field_e >= ~var18) {
-                            break L12;
+                            break L11;
                           } else {
                             stackOut_59_0 = fm.field_c.length;
                             stackOut_59_1 = var18;
@@ -861,7 +840,7 @@ final class pe extends f implements op, bp {
                               break L3;
                             } else {
                               if (stackIn_60_0 <= stackIn_60_1) {
-                                break L12;
+                                break L11;
                               } else {
                                 var19 = param6.field_I[var18];
                                 var20 = param6.field_y[var18];
@@ -871,9 +850,9 @@ final class pe extends f implements op, bp {
                                 hk.field_ob[var18] = var11 * var19 - (-(var14 * var20) + -(var21 * var17)) >> 16;
                                 var18++;
                                 if (var30 == 0) {
-                                  continue L13;
+                                  continue L12;
                                 } else {
-                                  break L12;
+                                  break L11;
                                 }
                               }
                             }
@@ -898,7 +877,7 @@ final class pe extends f implements op, bp {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L14: {
+          L13: {
             var7 = decompiledCaughtException;
             stackOut_67_0 = (RuntimeException) var7;
             stackOut_67_1 = new StringBuilder().append("pe.C(").append(param0).append(44);
@@ -913,7 +892,7 @@ final class pe extends f implements op, bp {
               stackIn_71_0 = stackOut_70_0;
               stackIn_71_1 = stackOut_70_1;
               stackIn_71_2 = stackOut_70_2;
-              break L14;
+              break L13;
             } else {
               stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
               stackOut_68_1 = (StringBuilder) (Object) stackIn_68_1;
@@ -921,12 +900,12 @@ final class pe extends f implements op, bp {
               stackIn_71_0 = stackOut_68_0;
               stackIn_71_1 = stackOut_68_1;
               stackIn_71_2 = stackOut_68_2;
-              break L14;
+              break L13;
             }
           }
-          L15: {
+          L14: {
             stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(44).append(0).append(44).append(param3).append(44);
             stackIn_74_0 = stackOut_71_0;
             stackIn_74_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
@@ -938,7 +917,7 @@ final class pe extends f implements op, bp {
               stackIn_75_0 = stackOut_74_0;
               stackIn_75_1 = stackOut_74_1;
               stackIn_75_2 = stackOut_74_2;
-              break L15;
+              break L14;
             } else {
               stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
               stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
@@ -946,10 +925,10 @@ final class pe extends f implements op, bp {
               stackIn_75_0 = stackOut_72_0;
               stackIn_75_1 = stackOut_72_1;
               stackIn_75_2 = stackOut_72_2;
-              break L15;
+              break L14;
             }
           }
-          L16: {
+          L15: {
             stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
             stackOut_75_1 = ((StringBuilder) (Object) stackIn_75_1).append(stackIn_75_2).append(44).append(param5).append(44);
             stackIn_78_0 = stackOut_75_0;
@@ -963,7 +942,7 @@ final class pe extends f implements op, bp {
               stackIn_79_0 = stackOut_78_0;
               stackIn_79_1 = stackOut_78_1;
               stackIn_79_2 = stackOut_78_2;
-              break L16;
+              break L15;
             } else {
               stackOut_76_0 = (RuntimeException) (Object) stackIn_76_0;
               stackOut_76_1 = (StringBuilder) (Object) stackIn_76_1;
@@ -971,28 +950,20 @@ final class pe extends f implements op, bp {
               stackIn_79_0 = stackOut_76_0;
               stackIn_79_1 = stackOut_76_1;
               stackIn_79_2 = stackOut_76_2;
-              break L16;
+              break L15;
             }
           }
           throw r.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + 41);
         }
     }
 
-    final static qr m(int param0) {
+    final static qr m() {
         RuntimeException var1 = null;
         qr stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         qr stackOut_3_0 = null;
         try {
           L0: {
-            L1: {
-              if (param0 >= 20) {
-                break L1;
-              } else {
-                field_K = -33;
-                break L1;
-              }
-            }
             stackOut_3_0 = ro.field_a.field_xb;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -1000,7 +971,7 @@ final class pe extends f implements op, bp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "pe.H(" + param0 + 41);
+          throw r.a((Throwable) (Object) var1, "pe.H(" + 42 + 41);
         }
         return stackIn_4_0;
     }

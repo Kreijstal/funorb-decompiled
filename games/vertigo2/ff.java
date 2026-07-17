@@ -25,15 +25,12 @@ final class ff {
     private int[][] field_i;
     int field_o;
 
-    final static void b(byte param0) {
+    final static void b() {
         vd.field_b = new mk();
         n.field_b.a(false, (iq) (Object) vd.field_b);
-        if (param0 != -104) {
-            field_b = 45;
-        }
     }
 
-    private final void a(byte[] param0, boolean param1) {
+    private final void a(byte[] param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -447,12 +444,12 @@ final class ff {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         kq.b(-69, param0);
         rg.a((byte) 53, param0);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_u = null;
         field_v = null;
         field_n = null;
@@ -476,7 +473,8 @@ final class ff {
                     }
                 }
             }
-            this.a(param0, true);
+            int discarded$0 = 1;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "ff.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

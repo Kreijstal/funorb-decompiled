@@ -813,9 +813,9 @@ final class gf {
           }
         }
         L12: {
-          int fieldTemp$1 = ((gf) this).field_o;
+          int fieldTemp$2 = ((gf) this).field_o;
           ((gf) this).field_o = ((gf) this).field_o + 1;
-          if (600 < fieldTemp$1) {
+          if (600 < fieldTemp$2) {
             if (q.field_b[((gf) this).field_n][((gf) this).field_p].field_i < 120) {
               var3 = 0;
               var4 = 0;
@@ -937,7 +937,8 @@ final class gf {
               if (((gf) this).field_p != hf.field_t) {
                 break L16;
               } else {
-                if (il.e(param0 ^ -10296)) {
+                int discarded$3 = -31391;
+                if (il.e()) {
                   break L16;
                 } else {
                   rj.a((byte) -38, 7);
@@ -979,46 +980,9 @@ final class gf {
             }
           }
         }
-        if (param0 == 21161) {
-          L21: {
-            L22: {
-              if (q.field_b[((gf) this).field_n][((gf) this).field_p].field_a) {
-                break L22;
-              } else {
-                if (!je.field_O.b(((gf) this).field_n, ((gf) this).field_p, (byte) 50)) {
-                  if (-1 <= je.e(((gf) this).field_n, ((gf) this).field_p, 1, 1)) {
-                    break L21;
-                  } else {
-                    ((gf) this).field_b = 0;
-                    ((gf) this).field_h = 8;
-                    ((gf) this).field_g = 0;
-                    break L21;
-                  }
-                } else {
-                  break L22;
-                }
-              }
-            }
-            ((gf) this).field_b = 250;
-            ((gf) this).field_h = 16;
-            ((gf) this).field_g = 0;
-            break L21;
-          }
-          L23: {
-            if (39 > ((gf) this).field_m) {
-              ((gf) this).field_m = -40;
-              break L23;
-            } else {
-              break L23;
-            }
-          }
-          return;
-        } else {
-          return;
-        }
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1315,9 +1279,9 @@ final class gf {
           }
         }
         L13: {
-          int fieldTemp$1 = ((gf) this).field_o;
+          int fieldTemp$2 = ((gf) this).field_o;
           ((gf) this).field_o = ((gf) this).field_o + 1;
-          if (fieldTemp$1 > 600) {
+          if (fieldTemp$2 > 600) {
             if (q.field_b[((gf) this).field_n][((gf) this).field_p].field_i < 120) {
               var4 = 0;
               var5 = 0;
@@ -1721,7 +1685,8 @@ final class gf {
                 if (hf.field_t != ((gf) this).field_p) {
                   break L45;
                 } else {
-                  if (il.e(-31391)) {
+                  int discarded$3 = -31391;
+                  if (il.e()) {
                     break L45;
                   } else {
                     rj.a((byte) -38, 10);
@@ -2030,7 +1995,8 @@ final class gf {
                 }
                 L15: {
                   L16: {
-                    var3 = ne.a(false);
+                    int discarded$7 = 0;
+                    var3 = ne.a();
                     if (this.a((byte) 122)) {
                       break L16;
                     } else {
@@ -2473,7 +2439,7 @@ final class gf {
                   if (param0) {
                     break L47;
                   } else {
-                    boolean discarded$1 = this.a((byte) -116);
+                    boolean discarded$8 = this.a((byte) -116);
                     break L47;
                   }
                 }
@@ -2503,7 +2469,8 @@ final class gf {
                     break L50;
                   } else {
                     if (((gf) this).field_h == 19) {
-                      this.c(true);
+                      int discarded$9 = 1;
+                      this.c();
                       break L50;
                     } else {
                       if (((gf) this).field_h != 21) {
@@ -3130,12 +3097,15 @@ final class gf {
                                         if (~hf.field_t != ~var6) {
                                           break L103;
                                         } else {
-                                          if (!il.e(-31391)) {
+                                          int discarded$10 = -31391;
+                                          if (!il.e()) {
                                             L104: {
-                                              if (!rf.a(13)) {
+                                              int discarded$11 = 13;
+                                              if (!rf.a()) {
                                                 break L104;
                                               } else {
-                                                if (!ca.c(-2302)) {
+                                                int discarded$12 = -2302;
+                                                if (!ca.c()) {
                                                   break L104;
                                                 } else {
                                                   rj.a((byte) -38, 13);
@@ -3688,7 +3658,8 @@ final class gf {
                               if (1 < var5 * var5) {
                                 break L133;
                               } else {
-                                if (il.e(-31391)) {
+                                int discarded$13 = -31391;
+                                if (il.e()) {
                                   break L133;
                                 } else {
                                   rj.a((byte) -38, 9);
@@ -4290,18 +4261,18 @@ final class gf {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void a(long param0) {
         if (!(param0 > 0L)) {
             return;
         }
         if (param0 % 10L != 0L) {
-            ng.a(param0, 1855635080);
+            int discarded$1 = 1855635080;
+            ng.a(param0);
         } else {
-            ng.a(-1L + param0, 1855635080);
-            ng.a(1L, param1 + 1855645389);
-        }
-        if (param1 != -10309) {
-            field_a = null;
+            int discarded$2 = 1855635080;
+            ng.a(-1L + param0);
+            int discarded$3 = 1855635080;
+            ng.a(1L);
         }
     }
 

@@ -14,7 +14,7 @@ final class jl implements Iterator {
     private ec field_a;
     private ik field_i;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_h = null;
@@ -50,49 +50,17 @@ final class jl implements Iterator {
         if (param1 <= -69) {
           if (!param3) {
             if (param0) {
-              L0: {
-                var4 += 2;
-                if (param2) {
-                  var4++;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
+              var4 += 2;
               return dd.field_d[var4];
             } else {
-              L1: {
-                if (param2) {
-                  var4++;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
               return dd.field_d[var4];
             }
           } else {
             var4 += 4;
             if (!param0) {
-              L2: {
-                if (param2) {
-                  var4++;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
               return dd.field_d[var4];
             } else {
-              L3: {
-                var4 += 2;
-                if (param2) {
-                  var4++;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
+              var4 += 2;
               return dd.field_d[var4];
             }
           }

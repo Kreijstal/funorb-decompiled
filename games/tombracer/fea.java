@@ -772,1139 +772,1131 @@ final class fea {
           }
         }
         L96: {
-          if (!param0) {
+          if (96 != param1) {
             break L96;
           } else {
-            fea.a(false, -49);
+            bia.field_J[96] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_02");
             break L96;
           }
         }
         L97: {
-          if (96 != param1) {
+          if (param1 != 97) {
             break L97;
           } else {
-            bia.field_J[96] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_02");
+            bia.field_J[97] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_03");
             break L97;
           }
         }
         L98: {
-          if (param1 != 97) {
+          if (98 != param1) {
             break L98;
           } else {
-            bia.field_J[97] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_03");
+            bia.field_J[98] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_04");
             break L98;
           }
         }
         L99: {
-          if (98 != param1) {
+          if (99 == param1) {
+            bia.field_J[99] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_05");
             break L99;
           } else {
-            bia.field_J[98] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_04");
             break L99;
           }
         }
         L100: {
-          if (99 == param1) {
-            bia.field_J[99] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_05");
+          if (param1 == 100) {
+            bia.field_J[100] = ns.field_j.a("", (byte) 52, "tr_lazer_change_01");
             break L100;
           } else {
             break L100;
           }
         }
         L101: {
-          if (param1 == 100) {
-            bia.field_J[100] = ns.field_j.a("", (byte) 52, "tr_lazer_change_01");
+          if (param1 != 101) {
             break L101;
           } else {
+            bia.field_J[101] = ns.field_j.a("", (byte) 52, "tr_lazer_change_02");
             break L101;
           }
         }
         L102: {
-          if (param1 != 101) {
+          if (102 != param1) {
             break L102;
           } else {
-            bia.field_J[101] = ns.field_j.a("", (byte) 52, "tr_lazer_change_02");
+            bia.field_J[102] = ns.field_j.a("", (byte) 52, "tr_lazer_change_03");
             break L102;
           }
         }
         L103: {
-          if (102 != param1) {
+          if (param1 == 103) {
+            bia.field_J[103] = ns.field_j.a("", (byte) 52, "tr_lazer_change_04");
             break L103;
           } else {
-            bia.field_J[102] = ns.field_j.a("", (byte) 52, "tr_lazer_change_03");
             break L103;
           }
         }
         L104: {
-          if (param1 == 103) {
-            bia.field_J[103] = ns.field_j.a("", (byte) 52, "tr_lazer_change_04");
+          if (104 == param1) {
+            bia.field_J[104] = ns.field_j.a("", (byte) 52, "tr_lazer_change_05");
             break L104;
           } else {
             break L104;
           }
         }
         L105: {
-          if (104 == param1) {
-            bia.field_J[104] = ns.field_j.a("", (byte) 52, "tr_lazer_change_05");
+          if (105 == param1) {
+            bia.field_J[105] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_01");
             break L105;
           } else {
             break L105;
           }
         }
         L106: {
-          if (105 == param1) {
-            bia.field_J[105] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_01");
+          if (param1 == 106) {
+            bia.field_J[106] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_02");
             break L106;
           } else {
             break L106;
           }
         }
         L107: {
-          if (param1 == 106) {
-            bia.field_J[106] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_02");
+          if (param1 != 107) {
             break L107;
           } else {
+            bia.field_J[107] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_03");
             break L107;
           }
         }
         L108: {
-          if (param1 != 107) {
+          if (108 == param1) {
+            bia.field_J[108] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_04");
             break L108;
           } else {
-            bia.field_J[107] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_03");
             break L108;
           }
         }
         L109: {
-          if (108 == param1) {
-            bia.field_J[108] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_04");
+          if (param1 != 109) {
             break L109;
           } else {
+            bia.field_J[109] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_05");
             break L109;
           }
         }
         L110: {
-          if (param1 != 109) {
+          if (110 != param1) {
             break L110;
           } else {
-            bia.field_J[109] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_05");
+            bia.field_J[110] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_01");
             break L110;
           }
         }
         L111: {
-          if (110 != param1) {
+          if (param1 == 111) {
+            bia.field_J[111] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_02");
             break L111;
           } else {
-            bia.field_J[110] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_01");
             break L111;
           }
         }
         L112: {
-          if (param1 == 111) {
-            bia.field_J[111] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_02");
+          if (112 != param1) {
             break L112;
           } else {
+            bia.field_J[112] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_03");
             break L112;
           }
         }
         L113: {
-          if (112 != param1) {
+          if (param1 != 113) {
             break L113;
           } else {
-            bia.field_J[112] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_03");
+            bia.field_J[113] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_04");
             break L113;
           }
         }
         L114: {
-          if (param1 != 113) {
+          if (param1 != 114) {
             break L114;
           } else {
-            bia.field_J[113] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_04");
+            bia.field_J[114] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_05");
             break L114;
           }
         }
         L115: {
-          if (param1 != 114) {
+          if (param1 == 115) {
+            bia.field_J[115] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_complete");
             break L115;
           } else {
-            bia.field_J[114] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_05");
             break L115;
           }
         }
         L116: {
-          if (param1 == 115) {
-            bia.field_J[115] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_complete");
+          if (116 != param1) {
             break L116;
           } else {
+            bia.field_J[116] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_on_01");
             break L116;
           }
         }
         L117: {
-          if (116 != param1) {
+          if (param1 == 117) {
+            bia.field_J[117] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_on_02");
             break L117;
           } else {
-            bia.field_J[116] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_on_01");
             break L117;
           }
         }
         L118: {
-          if (param1 == 117) {
-            bia.field_J[117] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_on_02");
+          if (param1 == 118) {
+            bia.field_J[118] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_on_03");
             break L118;
           } else {
             break L118;
           }
         }
         L119: {
-          if (param1 == 118) {
-            bia.field_J[118] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_on_03");
+          if (param1 != 119) {
             break L119;
           } else {
+            bia.field_J[119] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_off_01");
             break L119;
           }
         }
         L120: {
-          if (param1 != 119) {
+          if (param1 == 120) {
+            bia.field_J[120] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_off_02");
             break L120;
           } else {
-            bia.field_J[119] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_off_01");
             break L120;
           }
         }
         L121: {
-          if (param1 == 120) {
-            bia.field_J[120] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_off_02");
+          if (param1 == 121) {
+            bia.field_J[121] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_off_03");
             break L121;
           } else {
             break L121;
           }
         }
         L122: {
-          if (param1 == 121) {
-            bia.field_J[121] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_off_03");
+          if (param1 == 122) {
+            bia.field_J[122] = ns.field_j.a("", (byte) 52, "tr_cauldron_hit_by_beam");
             break L122;
           } else {
             break L122;
           }
         }
         L123: {
-          if (param1 == 122) {
-            bia.field_J[122] = ns.field_j.a("", (byte) 52, "tr_cauldron_hit_by_beam");
+          if (123 != param1) {
             break L123;
           } else {
+            bia.field_J[123] = ns.field_j.a("", (byte) 52, "tr_cauldron_bubble_loop");
             break L123;
           }
         }
         L124: {
-          if (123 != param1) {
+          if (param1 == 124) {
+            bia.field_J[124] = ns.field_j.a("", (byte) 52, "tr_cauldron_bubble_off");
             break L124;
           } else {
-            bia.field_J[123] = ns.field_j.a("", (byte) 52, "tr_cauldron_bubble_loop");
             break L124;
           }
         }
         L125: {
-          if (param1 == 124) {
-            bia.field_J[124] = ns.field_j.a("", (byte) 52, "tr_cauldron_bubble_off");
+          if (125 != param1) {
             break L125;
           } else {
+            bia.field_J[125] = ns.field_j.a("", (byte) 52, "tr_door_move_loop");
             break L125;
           }
         }
         L126: {
-          if (125 != param1) {
+          if (param1 != 126) {
             break L126;
           } else {
-            bia.field_J[125] = ns.field_j.a("", (byte) 52, "tr_door_move_loop");
+            bia.field_J[126] = ns.field_j.a("tr_crane_move_start", 38, "");
             break L126;
           }
         }
         L127: {
-          if (param1 != 126) {
+          if (param1 == 127) {
+            bia.field_J[127] = ns.field_j.a("tr_crane_move_loop", 64, "");
             break L127;
           } else {
-            bia.field_J[126] = ns.field_j.a("tr_crane_move_start", 38, "");
             break L127;
           }
         }
         L128: {
-          if (param1 == 127) {
-            bia.field_J[127] = ns.field_j.a("tr_crane_move_loop", 64, "");
+          if (param1 == 128) {
+            bia.field_J[128] = ns.field_j.a("tr_crane_move_stop", 50, "");
             break L128;
           } else {
             break L128;
           }
         }
         L129: {
-          if (param1 == 128) {
-            bia.field_J[128] = ns.field_j.a("tr_crane_move_stop", 50, "");
+          if (param1 == 129) {
+            bia.field_J[129] = ns.field_j.a("tr_crane_shudder", 46, "");
             break L129;
           } else {
             break L129;
           }
         }
         L130: {
-          if (param1 == 129) {
-            bia.field_J[129] = ns.field_j.a("tr_crane_shudder", 46, "");
+          if (param1 != 130) {
             break L130;
           } else {
+            bia.field_J[130] = ns.field_j.a("tr_crane_drop", 104, "");
             break L130;
           }
         }
         L131: {
-          if (param1 != 130) {
+          if (131 != param1) {
             break L131;
           } else {
-            bia.field_J[130] = ns.field_j.a("tr_crane_drop", 104, "");
+            bia.field_J[131] = ns.field_j.a("", (byte) 52, "tr_time_out_ticker");
             break L131;
           }
         }
         L132: {
-          if (131 != param1) {
+          if (132 != param1) {
             break L132;
           } else {
-            bia.field_J[131] = ns.field_j.a("", (byte) 52, "tr_time_out_ticker");
+            bia.field_J[132] = ns.field_j.a("tr_male_wobble_01", 47, "");
             break L132;
           }
         }
         L133: {
-          if (132 != param1) {
+          if (param1 != 133) {
             break L133;
           } else {
-            bia.field_J[132] = ns.field_j.a("tr_male_wobble_01", 47, "");
+            bia.field_J[133] = ns.field_j.a("tr_male_wobble_02", 12, "");
             break L133;
           }
         }
         L134: {
-          if (param1 != 133) {
+          if (134 == param1) {
+            bia.field_J[134] = ns.field_j.a("tr_male_wobble_03", 12, "");
             break L134;
           } else {
-            bia.field_J[133] = ns.field_j.a("tr_male_wobble_02", 12, "");
             break L134;
           }
         }
         L135: {
-          if (134 == param1) {
-            bia.field_J[134] = ns.field_j.a("tr_male_wobble_03", 12, "");
+          if (param1 != 135) {
             break L135;
           } else {
+            bia.field_J[135] = ns.field_j.a("tr_female_wobble_01", 42, "");
             break L135;
           }
         }
         L136: {
-          if (param1 != 135) {
+          if (param1 == 136) {
+            bia.field_J[136] = ns.field_j.a("tr_female_wobble_02", 30, "");
             break L136;
           } else {
-            bia.field_J[135] = ns.field_j.a("tr_female_wobble_01", 42, "");
             break L136;
           }
         }
         L137: {
-          if (param1 == 136) {
-            bia.field_J[136] = ns.field_j.a("tr_female_wobble_02", 30, "");
+          if (param1 == 137) {
+            bia.field_J[137] = ns.field_j.a("tr_female_wobble_03", 52, "");
             break L137;
           } else {
             break L137;
           }
         }
         L138: {
-          if (param1 == 137) {
-            bia.field_J[137] = ns.field_j.a("tr_female_wobble_03", 52, "");
+          if (param1 == 138) {
+            bia.field_J[138] = ns.field_j.a("tr_sand_footstep_01", 46, "");
             break L138;
           } else {
             break L138;
           }
         }
         L139: {
-          if (param1 == 138) {
-            bia.field_J[138] = ns.field_j.a("tr_sand_footstep_01", 46, "");
+          if (param1 != 139) {
             break L139;
           } else {
+            bia.field_J[139] = ns.field_j.a("tr_sand_footstep_02", 110, "");
             break L139;
           }
         }
         L140: {
-          if (param1 != 139) {
+          if (param1 != 140) {
             break L140;
           } else {
-            bia.field_J[139] = ns.field_j.a("tr_sand_footstep_02", 110, "");
+            bia.field_J[140] = ns.field_j.a("tr_sand_footstep_03", 74, "");
             break L140;
           }
         }
         L141: {
-          if (param1 != 140) {
+          if (param1 != 141) {
             break L141;
           } else {
-            bia.field_J[140] = ns.field_j.a("tr_sand_footstep_03", 74, "");
+            bia.field_J[141] = ns.field_j.a("", (byte) 52, "tr_wood_step_01");
             break L141;
           }
         }
         L142: {
-          if (param1 != 141) {
+          if (param1 == 142) {
+            bia.field_J[142] = ns.field_j.a("", (byte) 52, "tr_wood_step_02");
             break L142;
           } else {
-            bia.field_J[141] = ns.field_j.a("", (byte) 52, "tr_wood_step_01");
             break L142;
           }
         }
         L143: {
-          if (param1 == 142) {
-            bia.field_J[142] = ns.field_j.a("", (byte) 52, "tr_wood_step_02");
+          if (param1 == 143) {
+            bia.field_J[143] = ns.field_j.a("tr_invisible_path_footstep_01", 23, "");
             break L143;
           } else {
             break L143;
           }
         }
         L144: {
-          if (param1 == 143) {
-            bia.field_J[143] = ns.field_j.a("tr_invisible_path_footstep_01", 23, "");
+          if (param1 == 144) {
+            bia.field_J[144] = ns.field_j.a("tr_invisible_path_footstep_02", 101, "");
             break L144;
           } else {
             break L144;
           }
         }
         L145: {
-          if (param1 == 144) {
-            bia.field_J[144] = ns.field_j.a("tr_invisible_path_footstep_02", 101, "");
+          if (param1 == 145) {
+            bia.field_J[145] = ns.field_j.a("tr_invisible_path_footstep_03", 98, "");
             break L145;
           } else {
             break L145;
           }
         }
         L146: {
-          if (param1 == 145) {
-            bia.field_J[145] = ns.field_j.a("tr_invisible_path_footstep_03", 98, "");
+          if (param1 == 146) {
+            bia.field_J[146] = ns.field_j.a("tr_male_push_01", 76, "");
             break L146;
           } else {
             break L146;
           }
         }
         L147: {
-          if (param1 == 146) {
-            bia.field_J[146] = ns.field_j.a("tr_male_push_01", 76, "");
+          if (param1 != 147) {
             break L147;
           } else {
+            bia.field_J[147] = ns.field_j.a("tr_male_push_02", 12, "");
             break L147;
           }
         }
         L148: {
-          if (param1 != 147) {
+          if (148 != param1) {
             break L148;
           } else {
-            bia.field_J[147] = ns.field_j.a("tr_male_push_02", 12, "");
+            bia.field_J[148] = ns.field_j.a("tr_male_push_03", 76, "");
             break L148;
           }
         }
         L149: {
-          if (148 != param1) {
+          if (param1 != 149) {
             break L149;
           } else {
-            bia.field_J[148] = ns.field_j.a("tr_male_push_03", 76, "");
+            bia.field_J[149] = ns.field_j.a("tr_male_push_04", 20, "");
             break L149;
           }
         }
         L150: {
-          if (param1 != 149) {
+          if (param1 == 150) {
+            bia.field_J[150] = ns.field_j.a("tr_female_push_01", 116, "");
             break L150;
           } else {
-            bia.field_J[149] = ns.field_j.a("tr_male_push_04", 20, "");
             break L150;
           }
         }
         L151: {
-          if (param1 == 150) {
-            bia.field_J[150] = ns.field_j.a("tr_female_push_01", 116, "");
+          if (param1 == 151) {
+            bia.field_J[151] = ns.field_j.a("tr_female_push_02", 29, "");
             break L151;
           } else {
             break L151;
           }
         }
         L152: {
-          if (param1 == 151) {
-            bia.field_J[151] = ns.field_j.a("tr_female_push_02", 29, "");
+          if (param1 == 152) {
+            bia.field_J[152] = ns.field_j.a("tr_female_push_03", 48, "");
             break L152;
           } else {
             break L152;
           }
         }
         L153: {
-          if (param1 == 152) {
-            bia.field_J[152] = ns.field_j.a("tr_female_push_03", 48, "");
+          if (param1 != 153) {
             break L153;
           } else {
+            bia.field_J[153] = ns.field_j.a("tr_female_push_04", 117, "");
             break L153;
           }
         }
         L154: {
-          if (param1 != 153) {
+          if (param1 != 154) {
             break L154;
           } else {
-            bia.field_J[153] = ns.field_j.a("tr_female_push_04", 117, "");
+            bia.field_J[154] = ns.field_j.a("tr_male_fall_01", 121, "");
             break L154;
           }
         }
         L155: {
-          if (param1 != 154) {
+          if (155 != param1) {
             break L155;
           } else {
-            bia.field_J[154] = ns.field_j.a("tr_male_fall_01", 121, "");
+            bia.field_J[155] = ns.field_j.a("tr_male_fall_02", 103, "");
             break L155;
           }
         }
         L156: {
-          if (155 != param1) {
+          if (param1 != 156) {
             break L156;
           } else {
-            bia.field_J[155] = ns.field_j.a("tr_male_fall_02", 103, "");
+            bia.field_J[156] = ns.field_j.a("tr_male_fall_03", 56, "");
             break L156;
           }
         }
         L157: {
-          if (param1 != 156) {
+          if (157 == param1) {
+            bia.field_J[157] = ns.field_j.a("tr_male_fall_04", 50, "");
             break L157;
           } else {
-            bia.field_J[156] = ns.field_j.a("tr_male_fall_03", 56, "");
             break L157;
           }
         }
         L158: {
-          if (157 == param1) {
-            bia.field_J[157] = ns.field_j.a("tr_male_fall_04", 50, "");
+          if (param1 != 158) {
             break L158;
           } else {
+            bia.field_J[158] = ns.field_j.a("tr_male_fall_05", 49, "");
             break L158;
           }
         }
         L159: {
-          if (param1 != 158) {
+          if (param1 != 159) {
             break L159;
           } else {
-            bia.field_J[158] = ns.field_j.a("tr_male_fall_05", 49, "");
+            bia.field_J[159] = ns.field_j.a("tr_female_fall_01", 80, "");
             break L159;
           }
         }
         L160: {
-          if (param1 != 159) {
+          if (param1 != 160) {
             break L160;
           } else {
-            bia.field_J[159] = ns.field_j.a("tr_female_fall_01", 80, "");
+            bia.field_J[160] = ns.field_j.a("tr_female_fall_02", 48, "");
             break L160;
           }
         }
         L161: {
-          if (param1 != 160) {
+          if (161 == param1) {
+            bia.field_J[161] = ns.field_j.a("tr_female_fall_03", 44, "");
             break L161;
           } else {
-            bia.field_J[160] = ns.field_j.a("tr_female_fall_02", 48, "");
             break L161;
           }
         }
         L162: {
-          if (161 == param1) {
-            bia.field_J[161] = ns.field_j.a("tr_female_fall_03", 44, "");
+          if (param1 != 162) {
             break L162;
           } else {
+            bia.field_J[162] = ns.field_j.a("tr_female_fall_04", 79, "");
             break L162;
           }
         }
         L163: {
-          if (param1 != 162) {
+          if (param1 == 163) {
+            bia.field_J[163] = ns.field_j.a("tr_female_fall_05", 107, "");
             break L163;
           } else {
-            bia.field_J[162] = ns.field_j.a("tr_female_fall_04", 79, "");
             break L163;
           }
         }
         L164: {
-          if (param1 == 163) {
-            bia.field_J[163] = ns.field_j.a("tr_female_fall_05", 107, "");
+          if (param1 == 164) {
+            bia.field_J[164] = ns.field_j.a("tr_male_pain_01", 51, "");
             break L164;
           } else {
             break L164;
           }
         }
         L165: {
-          if (param1 == 164) {
-            bia.field_J[164] = ns.field_j.a("tr_male_pain_01", 51, "");
+          if (param1 == 165) {
+            bia.field_J[165] = ns.field_j.a("tr_male_pain_02", 101, "");
             break L165;
           } else {
             break L165;
           }
         }
         L166: {
-          if (param1 == 165) {
-            bia.field_J[165] = ns.field_j.a("tr_male_pain_02", 101, "");
+          if (166 == param1) {
+            bia.field_J[166] = ns.field_j.a("tr_male_pain_03", 17, "");
             break L166;
           } else {
             break L166;
           }
         }
         L167: {
-          if (166 == param1) {
-            bia.field_J[166] = ns.field_j.a("tr_male_pain_03", 17, "");
+          if (167 == param1) {
+            bia.field_J[167] = ns.field_j.a("tr_male_pain_04", 107, "");
             break L167;
           } else {
             break L167;
           }
         }
         L168: {
-          if (167 == param1) {
-            bia.field_J[167] = ns.field_j.a("tr_male_pain_04", 107, "");
+          if (168 != param1) {
             break L168;
           } else {
+            bia.field_J[168] = ns.field_j.a("tr_male_pain_05", 35, "");
             break L168;
           }
         }
         L169: {
-          if (168 != param1) {
+          if (param1 != 169) {
             break L169;
           } else {
-            bia.field_J[168] = ns.field_j.a("tr_male_pain_05", 35, "");
+            bia.field_J[169] = ns.field_j.a("tr_female_pain_01", 27, "");
             break L169;
           }
         }
         L170: {
-          if (param1 != 169) {
+          if (param1 != 170) {
             break L170;
           } else {
-            bia.field_J[169] = ns.field_j.a("tr_female_pain_01", 27, "");
+            bia.field_J[170] = ns.field_j.a("tr_female_pain_02", 62, "");
             break L170;
           }
         }
         L171: {
-          if (param1 != 170) {
+          if (param1 != 171) {
             break L171;
           } else {
-            bia.field_J[170] = ns.field_j.a("tr_female_pain_02", 62, "");
+            bia.field_J[171] = ns.field_j.a("tr_female_pain_03", 113, "");
             break L171;
           }
         }
         L172: {
-          if (param1 != 171) {
+          if (param1 == 172) {
+            bia.field_J[172] = ns.field_j.a("tr_female_pain_04", 105, "");
             break L172;
           } else {
-            bia.field_J[171] = ns.field_j.a("tr_female_pain_03", 113, "");
             break L172;
           }
         }
         L173: {
-          if (param1 == 172) {
-            bia.field_J[172] = ns.field_j.a("tr_female_pain_04", 105, "");
+          if (param1 == 173) {
+            bia.field_J[173] = ns.field_j.a("tr_female_pain_05", 116, "");
             break L173;
           } else {
             break L173;
           }
         }
         L174: {
-          if (param1 == 173) {
-            bia.field_J[173] = ns.field_j.a("tr_female_pain_05", 116, "");
+          if (174 == param1) {
+            bia.field_J[174] = ns.field_j.a("", (byte) 52, "tr_playerfall_01");
             break L174;
           } else {
             break L174;
           }
         }
         L175: {
-          if (174 == param1) {
-            bia.field_J[174] = ns.field_j.a("", (byte) 52, "tr_playerfall_01");
+          if (param1 == 175) {
+            bia.field_J[175] = ns.field_j.a("", (byte) 52, "tr_playerfall_02");
             break L175;
           } else {
             break L175;
           }
         }
         L176: {
-          if (param1 == 175) {
-            bia.field_J[175] = ns.field_j.a("", (byte) 52, "tr_playerfall_02");
+          if (param1 != 176) {
             break L176;
           } else {
+            bia.field_J[176] = ns.field_j.a("", (byte) 52, "tr_playerfall_03");
             break L176;
           }
         }
         L177: {
-          if (param1 != 176) {
+          if (param1 != 177) {
             break L177;
           } else {
-            bia.field_J[176] = ns.field_j.a("", (byte) 52, "tr_playerfall_03");
+            bia.field_J[177] = ns.field_j.a("", (byte) 52, "tr_playerfall_04");
             break L177;
           }
         }
         L178: {
-          if (param1 != 177) {
+          if (param1 != 178) {
             break L178;
           } else {
-            bia.field_J[177] = ns.field_j.a("", (byte) 52, "tr_playerfall_04");
+            bia.field_J[178] = ns.field_j.a("tr_player_squash_01", 63, "");
             break L178;
           }
         }
         L179: {
-          if (param1 != 178) {
+          if (179 != param1) {
             break L179;
           } else {
-            bia.field_J[178] = ns.field_j.a("tr_player_squash_01", 63, "");
+            bia.field_J[179] = ns.field_j.a("tr_player_squash_02", 46, "");
             break L179;
           }
         }
         L180: {
-          if (179 != param1) {
+          if (param1 == 180) {
+            bia.field_J[180] = ns.field_j.a("tr_player_squash_03", 61, "");
             break L180;
           } else {
-            bia.field_J[179] = ns.field_j.a("tr_player_squash_02", 46, "");
             break L180;
           }
         }
         L181: {
-          if (param1 == 180) {
-            bia.field_J[180] = ns.field_j.a("tr_player_squash_03", 61, "");
+          if (param1 != 181) {
             break L181;
           } else {
+            bia.field_J[181] = ns.field_j.a("tr_laser_burn_player_01", 34, "");
             break L181;
           }
         }
         L182: {
-          if (param1 != 181) {
+          if (param1 == 182) {
+            bia.field_J[182] = ns.field_j.a("tr_snake_bite_01", 20, "");
             break L182;
           } else {
-            bia.field_J[181] = ns.field_j.a("tr_laser_burn_player_01", 34, "");
             break L182;
           }
         }
         L183: {
-          if (param1 == 182) {
-            bia.field_J[182] = ns.field_j.a("tr_snake_bite_01", 20, "");
+          if (param1 == 183) {
+            bia.field_J[183] = ns.field_j.a("tr_snake_bite_02", 73, "");
             break L183;
           } else {
             break L183;
           }
         }
         L184: {
-          if (param1 == 183) {
-            bia.field_J[183] = ns.field_j.a("tr_snake_bite_02", 73, "");
+          if (param1 != 184) {
             break L184;
           } else {
+            bia.field_J[184] = ns.field_j.a("tr_arrow_hit_player_01", 72, "");
             break L184;
           }
         }
         L185: {
-          if (param1 != 184) {
+          if (param1 == 185) {
+            bia.field_J[185] = ns.field_j.a("tr_arrow_hit_player_02", 53, "");
             break L185;
           } else {
-            bia.field_J[184] = ns.field_j.a("tr_arrow_hit_player_01", 72, "");
             break L185;
           }
         }
         L186: {
-          if (param1 == 185) {
-            bia.field_J[185] = ns.field_j.a("tr_arrow_hit_player_02", 53, "");
+          if (186 != param1) {
             break L186;
           } else {
+            bia.field_J[186] = ns.field_j.a("tr_arrow_hit_player_03", 91, "");
             break L186;
           }
         }
         L187: {
-          if (186 != param1) {
+          if (param1 == 187) {
+            bia.field_J[187] = ns.field_j.a("tr_arrow_hit_player_04", 116, "");
             break L187;
           } else {
-            bia.field_J[186] = ns.field_j.a("tr_arrow_hit_player_03", 91, "");
             break L187;
           }
         }
         L188: {
-          if (param1 == 187) {
-            bia.field_J[187] = ns.field_j.a("tr_arrow_hit_player_04", 116, "");
+          if (param1 != 188) {
             break L188;
           } else {
+            bia.field_J[188] = ns.field_j.a("tr_player_splat_gory_01", 123, "");
             break L188;
           }
         }
         L189: {
-          if (param1 != 188) {
+          if (param1 == 189) {
+            bia.field_J[189] = ns.field_j.a("tr_player_splat_gory_02", 66, "");
             break L189;
           } else {
-            bia.field_J[188] = ns.field_j.a("tr_player_splat_gory_01", 123, "");
             break L189;
           }
         }
         L190: {
-          if (param1 == 189) {
-            bia.field_J[189] = ns.field_j.a("tr_player_splat_gory_02", 66, "");
+          if (param1 != 190) {
             break L190;
           } else {
+            bia.field_J[190] = ns.field_j.a("", (byte) 52, "tr_lava_haze_01_loop");
             break L190;
           }
         }
         L191: {
-          if (param1 != 190) {
+          if (param1 != 191) {
             break L191;
           } else {
-            bia.field_J[190] = ns.field_j.a("", (byte) 52, "tr_lava_haze_01_loop");
+            bia.field_J[191] = ns.field_j.a("", (byte) 52, "tr_temple_eerie_01_loop");
             break L191;
           }
         }
         L192: {
-          if (param1 != 191) {
+          if (param1 == 192) {
+            bia.field_J[192] = ns.field_j.a("", (byte) 52, "tr_temple_eerie_effect_01");
             break L192;
           } else {
-            bia.field_J[191] = ns.field_j.a("", (byte) 52, "tr_temple_eerie_01_loop");
             break L192;
           }
         }
         L193: {
-          if (param1 == 192) {
-            bia.field_J[192] = ns.field_j.a("", (byte) 52, "tr_temple_eerie_effect_01");
+          if (param1 != 193) {
             break L193;
           } else {
+            bia.field_J[193] = ns.field_j.a("", (byte) 52, "tr_temple_eerie_effect_02");
             break L193;
           }
         }
         L194: {
-          if (param1 != 193) {
+          if (194 != param1) {
             break L194;
           } else {
-            bia.field_J[193] = ns.field_j.a("", (byte) 52, "tr_temple_eerie_effect_02");
+            bia.field_J[194] = ns.field_j.a("", (byte) 52, "tr_temple_eerie_effect_03");
             break L194;
           }
         }
         L195: {
-          if (194 != param1) {
+          if (195 == param1) {
+            bia.field_J[195] = ns.field_j.a("", (byte) 52, "tr_key_pickup");
             break L195;
           } else {
-            bia.field_J[194] = ns.field_j.a("", (byte) 52, "tr_temple_eerie_effect_03");
             break L195;
           }
         }
         L196: {
-          if (195 == param1) {
-            bia.field_J[195] = ns.field_j.a("", (byte) 52, "tr_key_pickup");
+          if (196 != param1) {
             break L196;
           } else {
+            bia.field_J[196] = ns.field_j.a("tr_door_unlock_02", 16, "");
             break L196;
           }
         }
         L197: {
-          if (196 != param1) {
+          if (param1 == 197) {
+            bia.field_J[197] = ns.field_j.a("", (byte) 52, "tr_key_putdown");
             break L197;
           } else {
-            bia.field_J[196] = ns.field_j.a("tr_door_unlock_02", 16, "");
             break L197;
           }
         }
         L198: {
-          if (param1 == 197) {
-            bia.field_J[197] = ns.field_j.a("", (byte) 52, "tr_key_putdown");
+          if (param1 != 198) {
             break L198;
           } else {
+            bia.field_J[198] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_01");
             break L198;
           }
         }
         L199: {
-          if (param1 != 198) {
+          if (199 == param1) {
+            bia.field_J[199] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_02");
             break L199;
           } else {
-            bia.field_J[198] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_01");
             break L199;
           }
         }
         L200: {
-          if (199 == param1) {
-            bia.field_J[199] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_02");
+          if (param1 != 200) {
             break L200;
           } else {
+            bia.field_J[200] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_03");
             break L200;
           }
         }
         L201: {
-          if (param1 != 200) {
+          if (201 == param1) {
+            bia.field_J[201] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_04");
             break L201;
           } else {
-            bia.field_J[200] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_03");
             break L201;
           }
         }
         L202: {
-          if (201 == param1) {
-            bia.field_J[201] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_04");
+          if (param1 == 202) {
+            bia.field_J[202] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_05");
             break L202;
           } else {
             break L202;
           }
         }
         L203: {
-          if (param1 == 202) {
-            bia.field_J[202] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_05");
+          if (param1 == 203) {
+            bia.field_J[203] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_06");
             break L203;
           } else {
             break L203;
           }
         }
         L204: {
-          if (param1 == 203) {
-            bia.field_J[203] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_06");
+          if (param1 != 204) {
             break L204;
           } else {
+            bia.field_J[204] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_07");
             break L204;
           }
         }
         L205: {
-          if (param1 != 204) {
+          if (param1 == 205) {
+            bia.field_J[205] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_08");
             break L205;
           } else {
-            bia.field_J[204] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_07");
             break L205;
           }
         }
         L206: {
-          if (param1 == 205) {
-            bia.field_J[205] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_08");
+          if (206 != param1) {
             break L206;
           } else {
+            bia.field_J[206] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_09");
             break L206;
           }
         }
         L207: {
-          if (206 != param1) {
+          if (param1 != 207) {
             break L207;
           } else {
-            bia.field_J[206] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_09");
+            bia.field_J[207] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_10");
             break L207;
           }
         }
         L208: {
-          if (param1 != 207) {
+          if (208 != param1) {
             break L208;
           } else {
-            bia.field_J[207] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_10");
+            bia.field_J[208] = ns.field_j.a("", (byte) 52, "tr_loot_pickup_01");
             break L208;
           }
         }
         L209: {
-          if (208 != param1) {
+          if (param1 == 209) {
+            bia.field_J[209] = ns.field_j.a("", (byte) 52, "tr_loot_pickup_02");
             break L209;
           } else {
-            bia.field_J[208] = ns.field_j.a("", (byte) 52, "tr_loot_pickup_01");
             break L209;
           }
         }
         L210: {
-          if (param1 == 209) {
-            bia.field_J[209] = ns.field_j.a("", (byte) 52, "tr_loot_pickup_02");
+          if (210 != param1) {
             break L210;
           } else {
+            bia.field_J[210] = ns.field_j.a("tr_idol_pickup_01", 50, "");
             break L210;
           }
         }
         L211: {
-          if (210 != param1) {
+          if (param1 == 211) {
+            bia.field_J[211] = ns.field_j.a("tr_speed_boost_01", 54, "");
             break L211;
           } else {
-            bia.field_J[210] = ns.field_j.a("tr_idol_pickup_01", 50, "");
             break L211;
           }
         }
         L212: {
-          if (param1 == 211) {
-            bia.field_J[211] = ns.field_j.a("tr_speed_boost_01", 54, "");
+          if (param1 == 212) {
+            bia.field_J[212] = ns.field_j.a("tr_sk_foot_01", 78, "");
             break L212;
           } else {
             break L212;
           }
         }
         L213: {
-          if (param1 == 212) {
-            bia.field_J[212] = ns.field_j.a("tr_sk_foot_01", 78, "");
+          if (param1 != 213) {
             break L213;
           } else {
+            bia.field_J[213] = ns.field_j.a("tr_sk_foot_02", 92, "");
             break L213;
           }
         }
         L214: {
-          if (param1 != 213) {
+          if (param1 == 214) {
+            bia.field_J[214] = ns.field_j.a("tr_sk_foot_03", 49, "");
             break L214;
           } else {
-            bia.field_J[213] = ns.field_j.a("tr_sk_foot_02", 92, "");
             break L214;
           }
         }
         L215: {
-          if (param1 == 214) {
-            bia.field_J[214] = ns.field_j.a("tr_sk_foot_03", 49, "");
+          if (param1 != 215) {
             break L215;
           } else {
+            bia.field_J[215] = ns.field_j.a("tr_sk_foot_04", 89, "");
             break L215;
           }
         }
         L216: {
-          if (param1 != 215) {
+          if (216 != param1) {
             break L216;
           } else {
-            bia.field_J[215] = ns.field_j.a("tr_sk_foot_04", 89, "");
+            bia.field_J[216] = ns.field_j.a("tr_sk_foot_05", 86, "");
             break L216;
           }
         }
         L217: {
-          if (216 != param1) {
+          if (param1 != 217) {
             break L217;
           } else {
-            bia.field_J[216] = ns.field_j.a("tr_sk_foot_05", 86, "");
+            bia.field_J[217] = ns.field_j.a("tr_sk_foot_06", 55, "");
             break L217;
           }
         }
         L218: {
-          if (param1 != 217) {
+          if (param1 != 218) {
             break L218;
           } else {
-            bia.field_J[217] = ns.field_j.a("tr_sk_foot_06", 55, "");
+            bia.field_J[218] = ns.field_j.a("tr_sk_foot_07", 127, "");
             break L218;
           }
         }
         L219: {
-          if (param1 != 218) {
+          if (param1 != 219) {
             break L219;
           } else {
-            bia.field_J[218] = ns.field_j.a("tr_sk_foot_07", 127, "");
+            bia.field_J[219] = ns.field_j.a("tr_sk_foot_08", 34, "");
             break L219;
           }
         }
         L220: {
-          if (param1 != 219) {
+          if (220 != param1) {
             break L220;
           } else {
-            bia.field_J[219] = ns.field_j.a("tr_sk_foot_08", 34, "");
+            bia.field_J[220] = ns.field_j.a("tr_skeleton_eat_player_01", 64, "");
             break L220;
           }
         }
         L221: {
-          if (220 != param1) {
+          if (param1 != 221) {
             break L221;
           } else {
-            bia.field_J[220] = ns.field_j.a("tr_skeleton_eat_player_01", 64, "");
+            bia.field_J[221] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_01");
             break L221;
           }
         }
         L222: {
-          if (param1 != 221) {
+          if (param1 == 222) {
+            bia.field_J[222] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_01_short");
             break L222;
           } else {
-            bia.field_J[221] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_01");
             break L222;
           }
         }
         L223: {
-          if (param1 == 222) {
-            bia.field_J[222] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_01_short");
+          if (param1 == 223) {
+            bia.field_J[223] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_02");
             break L223;
           } else {
             break L223;
           }
         }
         L224: {
-          if (param1 == 223) {
-            bia.field_J[223] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_02");
+          if (224 != param1) {
             break L224;
           } else {
+            bia.field_J[224] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_03");
             break L224;
           }
         }
         L225: {
-          if (224 != param1) {
+          if (param1 == 225) {
+            bia.field_J[225] = ns.field_j.a("", (byte) 52, "tr_spooky_unlock_04");
             break L225;
           } else {
-            bia.field_J[224] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_03");
             break L225;
           }
         }
         L226: {
-          if (param1 == 225) {
-            bia.field_J[225] = ns.field_j.a("", (byte) 52, "tr_spooky_unlock_04");
+          if (param1 != 226) {
             break L226;
           } else {
+            bia.field_J[226] = ns.field_j.a("", (byte) 52, "tr_spooky_unlock_05");
             break L226;
           }
         }
         L227: {
-          if (param1 != 226) {
+          if (param1 == 227) {
+            bia.field_J[227] = ns.field_j.a("tr_death_jingle_01", 46, "");
             break L227;
           } else {
-            bia.field_J[226] = ns.field_j.a("", (byte) 52, "tr_spooky_unlock_05");
             break L227;
           }
         }
         L228: {
-          if (param1 == 227) {
-            bia.field_J[227] = ns.field_j.a("tr_death_jingle_01", 46, "");
+          if (228 != param1) {
             break L228;
           } else {
+            bia.field_J[228] = ns.field_j.a("tr_death_jingle_02", 22, "");
             break L228;
           }
         }
         L229: {
-          if (228 != param1) {
+          if (param1 != 229) {
             break L229;
           } else {
-            bia.field_J[228] = ns.field_j.a("tr_death_jingle_02", 22, "");
+            bia.field_J[229] = ns.field_j.a("tr_death_jingle_03", 93, "");
             break L229;
           }
         }
         L230: {
-          if (param1 != 229) {
+          if (230 != param1) {
             break L230;
           } else {
-            bia.field_J[229] = ns.field_j.a("tr_death_jingle_03", 93, "");
+            bia.field_J[230] = ns.field_j.a("tr_death_jingle_04", 19, "");
             break L230;
           }
         }
         L231: {
-          if (230 != param1) {
+          if (param1 == 231) {
+            bia.field_J[231] = ns.field_j.a("TR_count_loop_01_LQ", 29, "");
             break L231;
           } else {
-            bia.field_J[230] = ns.field_j.a("tr_death_jingle_04", 19, "");
             break L231;
           }
         }
         L232: {
-          if (param1 == 231) {
-            bia.field_J[231] = ns.field_j.a("TR_count_loop_01_LQ", 29, "");
+          if (param1 == 232) {
+            bia.field_J[232] = ns.field_j.a("TR_count_loop_02_LQ", 119, "");
             break L232;
           } else {
             break L232;
           }
         }
         L233: {
-          if (param1 == 232) {
-            bia.field_J[232] = ns.field_j.a("TR_count_loop_02_LQ", 119, "");
+          if (param1 != 233) {
             break L233;
           } else {
+            bia.field_J[233] = ns.field_j.a("TR_count_loop_03_LQ", 72, "");
             break L233;
           }
         }
         L234: {
-          if (param1 != 233) {
+          if (param1 != 234) {
             break L234;
           } else {
-            bia.field_J[233] = ns.field_j.a("TR_count_loop_03_LQ", 72, "");
+            bia.field_J[234] = ns.field_j.a("TR_count_loop_04_LQ", 39, "");
             break L234;
           }
         }
         L235: {
-          if (param1 != 234) {
+          if (param1 != 235) {
             break L235;
           } else {
-            bia.field_J[234] = ns.field_j.a("TR_count_loop_04_LQ", 39, "");
+            bia.field_J[235] = ns.field_j.a("TR_achievement_jingle_01_mono", 33, "");
             break L235;
           }
         }
         L236: {
-          if (param1 != 235) {
-            break L236;
-          } else {
-            bia.field_J[235] = ns.field_j.a("TR_achievement_jingle_01_mono", 33, "");
-            break L236;
-          }
-        }
-        L237: {
           if (param1 == 236) {
             bia.field_J[236] = ns.field_j.a("TR_achievement_jingle_02_mono", 43, "");
-            break L237;
+            break L236;
           } else {
-            break L237;
+            break L236;
           }
         }
     }
@@ -2051,32 +2043,28 @@ final class fea {
             }
             hn.field_F = param1;
             tqa.field_g = -1;
-            if (param0 <= -32) {
-              L10: {
-                eq.field_r = -1;
-                if (!kda.field_pd) {
+            L10: {
+              eq.field_r = -1;
+              if (!kda.field_pd) {
+                break L10;
+              } else {
+                if (qha.field_f == fr.field_c) {
+                  kda.field_pd = false;
+                  fr.field_c = 0;
                   break L10;
                 } else {
-                  if (qha.field_f == fr.field_c) {
-                    kda.field_pd = false;
-                    fr.field_c = 0;
-                    break L10;
-                  } else {
-                    break L10;
-                  }
+                  break L10;
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var2 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) var2;
-            stackOut_41_1 = new StringBuilder().append("fea.B(").append(param0).append(44);
+            stackOut_41_1 = new StringBuilder().append("fea.B(").append(-33).append(44);
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;

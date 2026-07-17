@@ -95,7 +95,7 @@ class hh implements ca, th {
         return stackIn_4_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_r = null;
         field_n = null;
         field_h = null;
@@ -164,14 +164,15 @@ class hh implements ca, th {
         return var2;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!(ib.a((byte) 45))) {
             return;
         }
-        ae.a(false, 4, -1);
+        int discarded$0 = -1;
+        ae.a(false, 4);
     }
 
-    private final int a(int param0, lm param1, int param2, int param3) {
+    private final int a(int param0, lm param1, int param2) {
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -193,7 +194,7 @@ class hh implements ca, th {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = param1.field_A + (param1.field_v + param2) + (((hh) this).field_e - -param0);
+            stackOut_0_0 = param1.field_A + (param1.field_v + param2) + ((hh) this).field_e;
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -202,7 +203,7 @@ class hh implements ca, th {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var5;
-            stackOut_2_1 = new StringBuilder().append("hh.M(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("hh.M(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -272,7 +273,8 @@ class hh implements ca, th {
           L0: {
             if (kk.a(param1, 1, param2, param4)) {
               var5_int = 12 / ((43 - param3) / 54);
-              stackOut_3_0 = wh.a(param0.b(5, param2, param4), (byte) -122);
+              int discarded$2 = -122;
+              stackOut_3_0 = wh.a(param0.b(5, param2, param4));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -762,12 +764,14 @@ class hh implements ca, th {
         try {
           L0: {
             L1: {
-              d.a(param5.field_q + param3, param7 + (param5.field_v - -param5.field_s), param5.field_q + param3 + param5.field_x, param5.field_v + param7, false);
+              int discarded$7 = 0;
+              d.a(param5.field_q + param3, param7 + (param5.field_v - -param5.field_s), param5.field_q + param3 + param5.field_x, param5.field_v + param7);
               var9_int = ((hh) this).c(4, param5);
-              var11 = 62 / ((param0 - 50) / 41);
+              var11 = -31;
               var10 = this.d(-106, param5);
               if (((hh) this).field_m) {
-                int discarded$1 = ((hh) this).field_u.a(((hh) this).b(param5, -444136767), this.a(param3, param6, param5, -64), this.a(param4, param5, param7, -16736), var9_int, var10, param2, param1, ((hh) this).field_f, ((hh) this).field_d, ((hh) this).field_a);
+                int discarded$8 = -16736;
+                int discarded$9 = ((hh) this).field_u.a(((hh) this).b(param5, -444136767), this.a(param3, 0, param5, -64), this.a(0, param5, param7), var9_int, var10, param2, param1, ((hh) this).field_f, ((hh) this).field_d, ((hh) this).field_a);
                 break L1;
               } else {
                 L2: {
@@ -803,13 +807,15 @@ class hh implements ca, th {
                   } else {
                     if (var13 != 3) {
                       if (var13 == 1) {
-                        ((hh) this).field_u.c(((hh) this).b(param5, -444136767), (var9_int >> 1) + this.a(param3, param6, param5, -102), this.a(param4, param5, param7, -16736) - -var12, param2, param1);
+                        int discarded$10 = -16736;
+                        ((hh) this).field_u.c(((hh) this).b(param5, -444136767), (var9_int >> 1) + this.a(param3, 0, param5, -102), this.a(0, param5, param7) - -var12, param2, param1);
                         break L1;
                       } else {
                         if (var13 != 2) {
                           break L1;
                         } else {
-                          ((hh) this).field_u.a(((hh) this).b(param5, -444136767), this.a(param3, param6, param5, -104) + var9_int, this.a(param4, param5, param7, -16736) + var12, param2, param1);
+                          int discarded$11 = -16736;
+                          ((hh) this).field_u.a(((hh) this).b(param5, -444136767), this.a(param3, 0, param5, -104) + var9_int, this.a(0, param5, param7) + var12, param2, param1);
                           break L1;
                         }
                       }
@@ -818,11 +824,13 @@ class hh implements ca, th {
                     }
                   }
                 }
-                ((hh) this).field_u.b(((hh) this).b(param5, -444136767), this.a(param3, param6, param5, -109), this.a(param4, param5, param7, -16736) + var12, param2, param1);
+                int discarded$12 = -16736;
+                ((hh) this).field_u.b(((hh) this).b(param5, -444136767), this.a(param3, 0, param5, -109), this.a(0, param5, param7) + var12, param2, param1);
                 break L1;
               }
             }
-            ti.c(true);
+            int discarded$13 = 1;
+            ti.c();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -830,7 +838,7 @@ class hh implements ca, th {
           L5: {
             var9 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var9;
-            stackOut_22_1 = new StringBuilder().append("hh.CA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_22_1 = new StringBuilder().append("hh.CA(").append(-64).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(0).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -853,7 +861,7 @@ class hh implements ca, th {
               break L5;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param6 + 44 + param7 + 41);
+          throw vk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 0 + 44 + param7 + 41);
         }
     }
 
@@ -955,9 +963,11 @@ class hh implements ca, th {
                   }
                 }
                 var12 = stackIn_5_0 + Math.min(stackIn_5_1, Math.min(stackIn_5_2, stackIn_5_3));
-                d.a(param0.field_q + param4, param0.field_v + param2 + param0.field_s, param0.field_q + param4 + param0.field_x, param2 + param0.field_v, false);
+                int discarded$2 = 0;
+                d.a(param0.field_q + param4, param0.field_v + param2 + param0.field_s, param0.field_q + param4 + param0.field_x, param2 + param0.field_v);
                 hl.field_a.a(var10, var12, var11, var10, ((hh) this).field_j, true);
-                ti.c(true);
+                int discarded$3 = 1;
+                ti.c();
                 break L1;
               } else {
                 break L1;
@@ -1203,7 +1213,8 @@ class hh implements ca, th {
                 ((fe) (Object) param1.field_t).a(((hh) this).b(param1, -444136767), 0, ((hh) this).field_d, this.d(param0 + -118, param1), ((hh) this).field_f, ((hh) this).c(param0 + 6, param1), ((hh) this).field_a, ((hh) this).field_u);
                 break L3;
               } else {
-                this.a(param1, (byte) -113);
+                int discarded$3 = -113;
+                this.a(param1);
                 break L3;
               }
             }
@@ -1244,7 +1255,7 @@ class hh implements ca, th {
         return stackIn_8_0;
     }
 
-    private final void a(lm param0, byte param1) {
+    private final void a(lm param0) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -1407,7 +1418,8 @@ class hh implements ca, th {
         try {
           L0: {
             var4_int = 57 / ((param0 - 11) / 40);
-            stackOut_0_0 = this.a(0, param2, param1, -16736);
+            int discarded$2 = -16736;
+            stackOut_0_0 = this.a(0, param2, param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1506,11 +1518,13 @@ class hh implements ca, th {
                   }
                   var11 = var8.a(0, var9);
                   var12 = var8.a(0, var10);
-                  d.a(param1 + param3.field_q, param2 + param3.field_v + param3.field_s, param1 + param3.field_q - -param3.field_x, param2 - -param3.field_v, false);
+                  int discarded$2 = 0;
+                  d.a(param1 + param3.field_q, param2 + param3.field_v + param3.field_s, param1 + param3.field_q - -param3.field_x, param2 - -param3.field_v);
                   var13 = var11;
                   L3: while (true) {
                     if (var13 > var12) {
-                      ti.c(true);
+                      int discarded$3 = 1;
+                      ti.c();
                       break L1;
                     } else {
                       L4: {

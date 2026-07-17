@@ -87,15 +87,12 @@ final class vga {
         int var7_int = dpa.field_p.field_e;
         dpa.field_p.a(param3, 108);
         dpa.field_p.a(true, param2);
-        if (param1 >= -94) {
-            return;
-        }
         try {
             dpa.field_p.c(0, param0);
             dpa.field_p.c(0, !param5 ? 0 : 1);
             dpa.field_p.e(-var7_int + dpa.field_p.field_e, -129);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vga.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vga.B(" + param0 + 44 + -119 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -150,7 +147,7 @@ final class vga {
         }
     }
 
-    final static int a(boolean param0) {
+    final static int a() {
         return 1900 + new Date().getYear();
     }
 

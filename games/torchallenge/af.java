@@ -25,7 +25,7 @@ final class af {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_f = null;
@@ -43,9 +43,6 @@ final class af {
         }
         if (param1 == 5) {
             return true;
-        }
-        if (param0 != -4275) {
-            return false;
         }
         if (param1 != 8) {
             return false;

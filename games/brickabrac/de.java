@@ -53,55 +53,47 @@ final class de extends km {
         }
     }
 
-    final static long f(int param0) {
-        if (param0 != -6792) {
-            field_s = null;
-            return ue.a(false) - oj.field_t;
-        }
+    final static long f() {
         return ue.a(false) - oj.field_t;
     }
 
     private final boolean c(int param0, int param1) {
         int var3 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        if (param0 == 460) {
-          if (param1 != 0) {
-            if (3 == param1) {
-              return false;
-            } else {
-              L0: {
-                if (param1 != 2) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L0;
-                } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
-                  break L0;
-                }
-              }
-              L1: {
-                var3 = stackIn_8_0;
-                ng.a(var3 != 0, param0 + -386, ((de) this).a(true));
-                if (var3 != 0) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  break L1;
-                } else {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
-                  break L1;
-                }
-              }
-              return stackIn_11_0 != 0;
-            }
-          } else {
+        if (param1 != 0) {
+          if (3 == param1) {
             return false;
+          } else {
+            L0: {
+              if (param1 != 2) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L0;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L0;
+              }
+            }
+            L1: {
+              var3 = stackIn_6_0;
+              ng.a(var3 != 0, 74, ((de) this).a(true));
+              if (var3 != 0) {
+                stackOut_8_0 = 0;
+                stackIn_9_0 = stackOut_8_0;
+                break L1;
+              } else {
+                stackOut_7_0 = 1;
+                stackIn_9_0 = stackOut_7_0;
+                break L1;
+              }
+            }
+            return stackIn_9_0 != 0;
           }
         } else {
           return false;
@@ -126,11 +118,12 @@ final class de extends km {
               ff.field_c = new w((java.applet.Applet) (Object) sl.field_C, oc.field_u, ((de) this).field_r, false, hq.field_u);
               return;
             } else {
-              boolean discarded$2 = this.c(460, ff.field_c.a(false, param1));
+              boolean discarded$4 = this.c(460, ff.field_c.a(false, param1));
               return;
             }
           } else {
-            ((de) this).field_r = wq.a("benefits", ((de) this).field_u, "members_benefits_screenshots", -946715356);
+            int discarded$5 = -946715356;
+            ((de) this).field_r = wq.a("benefits", ((de) this).field_u, "members_benefits_screenshots");
             return;
           }
         } else {

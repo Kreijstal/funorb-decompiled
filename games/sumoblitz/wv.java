@@ -182,7 +182,7 @@ final class wv {
         return stackIn_7_0 != 0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         lf.a(0, 0);
     }
 

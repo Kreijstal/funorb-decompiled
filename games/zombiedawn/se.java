@@ -28,7 +28,6 @@ final class se extends qg {
         java.net.Socket var13 = null;
         String var14 = null;
         String var15 = null;
-        Object stackIn_6_0 = null;
         java.net.Socket stackIn_12_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_29_0 = null;
@@ -48,7 +47,6 @@ final class se extends qg {
         RuntimeException decompiledCaughtException = null;
         java.net.Socket stackOut_11_0 = null;
         Object stackOut_26_0 = null;
-        Object stackOut_5_0 = null;
         RuntimeException stackOut_28_0 = null;
         StringBuilder stackOut_28_1 = null;
         RuntimeException stackOut_30_0 = null;
@@ -74,94 +72,89 @@ final class se extends qg {
               var6 = var13.getOutputStream();
               if (param0 == null) {
                 var6.write(("CONNECT " + ((se) this).field_e + ":" + ((se) this).field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                var6.flush();
                 break L1;
               } else {
                 var6.write(("CONNECT " + ((se) this).field_e + ":" + ((se) this).field_b + " HTTP/1.0\n" + param0 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                var6.flush();
                 break L1;
               }
             }
-            var6.flush();
-            if (param2 >= 43) {
-              L2: {
-                var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
-                var14 = var7.readLine();
-                var8 = var14;
-                if (var14 == null) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (var14.startsWith("HTTP/1.0 200")) {
-                      break L3;
-                    } else {
-                      if (!var14.startsWith("HTTP/1.1 200")) {
-                        L4: {
-                          if (var14.startsWith("HTTP/1.0 407")) {
+            L2: {
+              var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
+              var14 = var7.readLine();
+              var8 = var14;
+              if (var14 == null) {
+                break L2;
+              } else {
+                L3: {
+                  if (var14.startsWith("HTTP/1.0 200")) {
+                    break L3;
+                  } else {
+                    if (!var14.startsWith("HTTP/1.1 200")) {
+                      L4: {
+                        if (var14.startsWith("HTTP/1.0 407")) {
+                          break L4;
+                        } else {
+                          if (var14.startsWith("HTTP/1.1 407")) {
                             break L4;
                           } else {
-                            if (var14.startsWith("HTTP/1.1 407")) {
-                              break L4;
-                            } else {
-                              break L2;
-                            }
+                            break L2;
                           }
                         }
-                        var9 = 0;
-                        var8 = var7.readLine();
-                        var10 = "proxy-authenticate: ";
-                        var8 = var10;
-                        L5: while (true) {
-                          L6: {
-                            if (var8 == null) {
+                      }
+                      var9 = 0;
+                      var8 = var7.readLine();
+                      var10 = "proxy-authenticate: ";
+                      var8 = var10;
+                      L5: while (true) {
+                        L6: {
+                          if (var8 == null) {
+                            break L6;
+                          } else {
+                            if (var9 >= 50) {
                               break L6;
                             } else {
-                              if (var9 >= 50) {
-                                break L6;
+                              if (!var8.toLowerCase().startsWith(var10)) {
+                                var8 = var7.readLine();
+                                var9++;
+                                continue L5;
                               } else {
-                                if (!var8.toLowerCase().startsWith(var10)) {
-                                  var8 = var7.readLine();
-                                  var9++;
-                                  continue L5;
-                                } else {
-                                  L7: {
-                                    var15 = var8.substring(var10.length()).trim();
+                                L7: {
+                                  var15 = var8.substring(var10.length()).trim();
+                                  var8 = var15;
+                                  var11 = var15.indexOf(' ');
+                                  if (var11 != -1) {
+                                    var8 = var15.substring(0, var11);
+                                    break L7;
+                                  } else {
                                     var8 = var15;
-                                    var11 = var15.indexOf(' ');
-                                    if (var11 != -1) {
-                                      var8 = var15.substring(0, var11);
-                                      break L7;
-                                    } else {
-                                      var8 = var15;
-                                      break L7;
-                                    }
+                                    break L7;
                                   }
-                                  throw new dg(var8);
                                 }
+                                throw new dg(var8);
                               }
                             }
                           }
-                          throw new dg("");
                         }
-                      } else {
-                        break L3;
+                        throw new dg("");
                       }
+                    } else {
+                      break L3;
                     }
                   }
-                  stackOut_11_0 = (java.net.Socket) var13;
-                  stackIn_12_0 = stackOut_11_0;
-                  return stackIn_12_0;
                 }
+                stackOut_11_0 = (java.net.Socket) var13;
+                stackIn_12_0 = stackOut_11_0;
+                return stackIn_12_0;
               }
-              var6.close();
-              var7.close();
-              var13.close();
-              stackOut_26_0 = null;
-              stackIn_27_0 = stackOut_26_0;
-              break L0;
-            } else {
-              stackOut_5_0 = null;
-              stackIn_6_0 = stackOut_5_0;
-              return (java.net.Socket) (Object) stackIn_6_0;
             }
+            var6.close();
+            var7.close();
+            var13.close();
+            stackOut_26_0 = null;
+            stackIn_27_0 = stackOut_26_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,7 +209,7 @@ final class se extends qg {
               break L9;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param2 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + 69 + 44 + param3 + 41);
         }
         return (java.net.Socket) (Object) stackIn_27_0;
     }
@@ -243,7 +236,8 @@ final class se extends qg {
           L0: {
             L1: {
               rk.a((byte) -65, (java.awt.Component) (Object) param1);
-              pg.a((java.awt.Component) (Object) param1, (byte) 66);
+              int discarded$10 = 66;
+              pg.a((java.awt.Component) (Object) param1);
               if (param0 == 20922) {
                 break L1;
               } else {
@@ -453,7 +447,7 @@ final class se extends qg {
         L0: {
           var13 = ZombieDawn.field_J;
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -560,7 +554,7 @@ final class se extends qg {
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((se) this).b(16076);
         }
-        boolean discarded$3 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$4 = var3.addAll((Collection) (Object) var4);
         var6_array = var3.toArray();
         var7 = null;
         if (!param0) {
@@ -578,7 +572,8 @@ final class se extends qg {
               var11 = (java.net.Proxy) var10;
               try {
                 L6: {
-                  var12_ref2 = this.a(var11, (byte) -27);
+                  int discarded$5 = -27;
+                  var12_ref2 = this.a(var11);
                   if (var12_ref2 != null) {
                     stackOut_23_0 = (java.net.Socket) var12_ref2;
                     stackIn_24_0 = stackOut_23_0;
@@ -622,7 +617,7 @@ final class se extends qg {
         }
     }
 
-    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;

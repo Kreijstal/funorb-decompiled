@@ -24,62 +24,41 @@ final class ke {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            L1: {
-              ah.field_e.field_P[param1] = new int[ah.field_e.field_P[0].length];
-              ah.field_e.field_P[param1][ia.field_s] = param0;
-              ah.field_e.field_P[param1][rj.field_F] = param3;
-              ah.field_e.field_P[param1][wm.field_Q[0]] = param4;
-              if (param2 == -17895) {
-                break L1;
-              } else {
-                String discarded$2 = ke.a(92, -5L);
-                break L1;
-              }
-            }
+            ah.field_e.field_P[param1] = new int[ah.field_e.field_P[0].length];
+            ah.field_e.field_P[param1][ia.field_s] = param0;
+            ah.field_e.field_P[param1][rj.field_F] = param3;
+            ah.field_e.field_P[param1][wm.field_Q[0]] = param4;
             var5_int = 1;
-            L2: while (true) {
+            L1: while (true) {
               if (wm.field_Q.length <= var5_int) {
                 break L0;
               } else {
                 ah.field_e.field_P[param1][wm.field_Q[var5_int]] = ui.a(ah.field_e.field_P[param1][wm.field_Q[var5_int + -1]], false);
                 var5_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var5, "ke.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw fa.a((Throwable) (Object) var5, "ke.A(" + param0 + 44 + param1 + 44 + -17895 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     final static String a(int param0, long param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         cp.field_U.setTime(new Date(param1));
-        var3 = cp.field_U.get(7);
-        var4 = cp.field_U.get(5);
-        var5 = cp.field_U.get(2);
-        var6 = cp.field_U.get(1);
-        var7 = cp.field_U.get(11);
-        var8 = cp.field_U.get(12);
-        if (param0 != -29971) {
-          field_b = -87;
-          var9 = cp.field_U.get(13);
-          return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + hm.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        } else {
-          var9 = cp.field_U.get(13);
-          return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + hm.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        }
+        int var3 = cp.field_U.get(7);
+        int var4 = cp.field_U.get(5);
+        int var5 = cp.field_U.get(2);
+        int var6 = cp.field_U.get(1);
+        int var7 = cp.field_U.get(11);
+        int var8 = cp.field_U.get(12);
+        int var9 = cp.field_U.get(13);
+        return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + hm.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
         field_c = null;
         field_h = null;

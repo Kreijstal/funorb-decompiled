@@ -291,7 +291,8 @@ final class la extends g implements ec, oi {
             }
             L13: {
               var8 = k.field_c;
-              var9 = ml.a(hf.a((byte) -15), (byte) -122);
+              int discarded$3 = -122;
+              var9 = ml.a(hf.a((byte) -15));
               if (kk.field_k == var9) {
                 var8 = dd.field_h;
                 break L13;
@@ -305,13 +306,13 @@ final class la extends g implements ec, oi {
               }
             }
             L14: {
-              kg dupTemp$2 = new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_Q, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((la) this).b(4, (rj) (Object) dupTemp$2);
+              kg dupTemp$4 = new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_Q, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((la) this).b(4, (rj) (Object) dupTemp$4);
               ((la) this).field_k = ((la) this).field_k + (5 + ((rj) (Object) var12).field_t);
-              kg dupTemp$3 = new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_K, false, 80, 3, var7, 16777215, th.field_b);
-              var13 = dupTemp$3;
-              ((la) this).b(4, (rj) (Object) dupTemp$3);
+              kg dupTemp$5 = new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_K, false, 80, 3, var7, 16777215, th.field_b);
+              var13 = dupTemp$5;
+              ((la) this).b(4, (rj) (Object) dupTemp$5);
               ((la) this).field_D.field_v = (lf) this;
               ((la) this).field_k = ((la) this).field_k + (((rj) (Object) var13).field_t - -5);
               if (((la) this).field_E == null) {
@@ -826,20 +827,23 @@ final class la extends g implements ec, oi {
               L1: {
                 if (((la) this).field_D != param2) {
                   if (((la) this).field_E == param2) {
-                    ta.a((byte) 91);
+                    int discarded$259 = 91;
+                    ta.a();
                     break L1;
                   } else {
                     if (param2 == ((la) this).field_J) {
                       if (!((la) this).field_P) {
                         if (!((la) this).field_N) {
-                          rk.a(3);
+                          int discarded$260 = 3;
+                          rk.a();
                           break L1;
                         } else {
                           cg.a((byte) 57);
                           break L1;
                         }
                       } else {
-                        dg.g(16608);
+                        int discarded$261 = 16608;
+                        dg.g();
                         break L1;
                       }
                     } else {
@@ -892,7 +896,8 @@ final class la extends g implements ec, oi {
         if (param0 > 50) {
           L0: {
             L1: {
-              if (sg.a((byte) 102)) {
+              int discarded$6 = 102;
+              if (sg.a()) {
                 break L1;
               } else {
                 if (((la) this).field_Q.field_m.length() <= 0) {
@@ -906,7 +911,8 @@ final class la extends g implements ec, oi {
                 }
               }
             }
-            rc.a(((la) this).field_K.field_m, ((la) this).field_Q.field_m, true);
+            int discarded$7 = 1;
+            rc.a(((la) this).field_K.field_m, ((la) this).field_Q.field_m);
             break L0;
           }
           return;

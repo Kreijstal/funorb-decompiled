@@ -20,7 +20,7 @@ final class lh extends tk {
         return ((lh) this).field_z;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_C = null;
         field_D = null;
         field_x = null;

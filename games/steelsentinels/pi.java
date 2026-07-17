@@ -9,7 +9,7 @@ final class pi extends java.awt.Canvas {
     static int field_c;
     static String[] field_f;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
         field_f = null;
@@ -140,7 +140,7 @@ final class pi extends java.awt.Canvas {
         }
     }
 
-    final static a a(byte param0) {
+    final static a a() {
         try {
             Throwable var1 = null;
             a stackIn_1_0 = null;

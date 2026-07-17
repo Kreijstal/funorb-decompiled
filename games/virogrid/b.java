@@ -158,7 +158,7 @@ final class b extends sh implements ta {
             var5[3].field_z = var5[3].field_p;
             var5[1].field_u = var5[1].field_w;
             var5[5].field_z = var5[5].field_p;
-            var5[param2].field_u = var5[7].field_w;
+            var5[7].field_u = var5[7].field_w;
             stackOut_0_0 = (mg[]) var4;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -218,7 +218,7 @@ final class b extends sh implements ta {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(7).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -246,7 +246,7 @@ final class b extends sh implements ta {
         return stackIn_1_0;
     }
 
-    public static void j(byte param0) {
+    public static void j() {
         field_Cb = null;
         field_Eb = null;
     }
@@ -294,7 +294,8 @@ final class b extends sh implements ta {
                   if (param0.field_g == 248) {
                     L3: {
                       if (!param1) {
-                        mj.f(0);
+                        int discarded$3 = 0;
+                        mj.f();
                         break L3;
                       } else {
                         break L3;
@@ -322,7 +323,7 @@ final class b extends sh implements ta {
               if (!param0.field_a) {
                 L5: {
                   if (((b) this).field_Bb) {
-                    tg discarded$2 = var5.a((cd) this, 260, md.field_c);
+                    tg discarded$4 = var5.a((cd) this, 260, md.field_c);
                     break L5;
                   } else {
                     if (param0.field_g != 5) {
@@ -348,7 +349,7 @@ final class b extends sh implements ta {
                 }
               } else {
                 if (!param0.field_d) {
-                  tg discarded$3 = var5.a((cd) this, 260, md.field_c);
+                  tg discarded$5 = var5.a((cd) this, 260, md.field_c);
                   break L4;
                 } else {
                   ((b) this).b((fi) (Object) new ok((b) this), (byte) -53);
@@ -396,7 +397,8 @@ final class b extends sh implements ta {
         if (param0 == 3) {
           if (((b) this).field_G) {
             if (!((b) this).field_Fb) {
-              var2 = cf.a((byte) -113);
+              int discarded$4 = -113;
+              var2 = cf.a();
               if (var2 == null) {
                 return super.f(3);
               } else {
@@ -413,7 +415,8 @@ final class b extends sh implements ta {
           field_Gb = 49L;
           if (((b) this).field_G) {
             if (!((b) this).field_Fb) {
-              var2 = cf.a((byte) -113);
+              int discarded$5 = -113;
+              var2 = cf.a();
               if (var2 == null) {
                 return super.f(3);
               } else {

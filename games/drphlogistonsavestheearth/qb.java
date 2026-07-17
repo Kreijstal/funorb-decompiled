@@ -19,9 +19,6 @@ final class qb {
 
     final static String a(String param0, byte param1, String param2, String param3) {
         int var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param1 != 127) {
-            field_e = null;
-        }
         int var4 = param3.indexOf(param0);
         while (-1 != var4) {
             param3 = param3.substring(0, var4) + param2 + param3.substring(param0.length() + var4);
@@ -30,7 +27,7 @@ final class qb {
         return param3;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -12,7 +12,8 @@ final class id extends ou {
     id(int param0, int param1) {
         super(rga.b(26499, param0), param1);
         ((id) this).field_f = param0;
-        ((id) this).field_j = ((id) this).field_f == pl.a((byte) 64) ? true : false;
+        int discarded$10 = 64;
+        ((id) this).field_j = ((id) this).field_f == pl.a() ? true : false;
     }
 
     final wea a(byte param0) {

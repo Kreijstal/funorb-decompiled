@@ -133,7 +133,7 @@ final class vc {
             L1: while (true) {
               if (var3 <= var4) {
                 var10.m(8);
-                var4 = 17 % ((param0 - 75) / 44);
+                var4 = 0;
                 var5 = 0;
                 L2: while (true) {
                   if (var3 <= var5) {
@@ -161,7 +161,7 @@ final class vc {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("vc.H(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("vc.H(").append(125).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -230,49 +230,34 @@ final class vc {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_9_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_6_0 = 0;
         var4 = fleas.field_A ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param2 >= param0) {
-                break L1;
-              } else {
-                var3_int = param2;
-                param2 = param0;
-                param0 = var3_int;
-                break L1;
-              }
+            if (param2 >= param0) {
+              break L0;
+            } else {
+              var3_int = param2;
+              param2 = param0;
+              param0 = var3_int;
+              break L0;
             }
-            L2: while (true) {
-              if (param0 == 0) {
-                if (param1 == -1) {
-                  stackOut_8_0 = param2;
-                  stackIn_9_0 = stackOut_8_0;
-                  break L0;
-                } else {
-                  stackOut_6_0 = -66;
-                  stackIn_7_0 = stackOut_6_0;
-                  return stackIn_7_0;
-                }
-              } else {
-                var3_int = param2 % param0;
-                param2 = param0;
-                param0 = var3_int;
-                continue L2;
-              }
+          }
+          L1: while (true) {
+            if (param0 == 0) {
+              return param2;
+            } else {
+              var3_int = param2 % param0;
+              param2 = param0;
+              param0 = var3_int;
+              continue L1;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var3, "vc.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw pf.a((Throwable) (Object) var3, "vc.B(" + param0 + 44 + -1 + 44 + param2 + 41);
         }
-        return stackIn_9_0;
     }
 
     final lh e(int param0) {
@@ -355,7 +340,7 @@ final class vc {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_g = null;
     }
 

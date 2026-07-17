@@ -5,15 +5,12 @@ final class jf {
     static volatile int field_a;
     static dl[] field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
     final static wm a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = kh.field_c;
-        if (param2 != 0) {
-            return null;
-        }
         int var6 = kh.field_b;
         int var7 = kh.field_g;
         if (!(param3 <= var7)) {

@@ -1016,7 +1016,10 @@ abstract class vd extends rk {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = th.a(field_p, ' ', 0, 1);
+          int discarded$8 = 1;
+          int discarded$9 = 0;
+          int discarded$10 = 32;
+          StringBuilder discarded$11 = th.a(field_p);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -1052,9 +1055,9 @@ abstract class vd extends rk {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_p.append(60);
-                        StringBuilder discarded$7 = field_p.append(var15);
-                        StringBuilder discarded$8 = field_p.append(62);
+                        StringBuilder discarded$12 = field_p.append(60);
+                        StringBuilder discarded$13 = field_p.append(var15);
+                        StringBuilder discarded$14 = field_p.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1241,7 +1244,7 @@ abstract class vd extends rk {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_p.append(var14);
+                        StringBuilder discarded$15 = field_p.append(var14);
                         var14 = (char)(nf.a(26614, (char) var14) & 255);
                         var4 = var4 + ((vd) this).field_G[var14];
                         if (((vd) this).field_u == null) {

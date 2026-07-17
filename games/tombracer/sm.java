@@ -173,7 +173,7 @@ final class sm extends nv implements ut {
         return ((sm) this).field_n;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_o = null;
         field_r = null;
     }
@@ -201,7 +201,8 @@ final class sm extends nv implements ut {
         int stackOut_3_0 = 0;
         if (param0 == 2) {
           if (!o.a(-1, param2, param1)) {
-            if (vua.e(param1, param2, 13650)) {
+            int discarded$24 = 13650;
+            if (vua.e(param1, param2)) {
               return true;
             } else {
               return false;
@@ -212,12 +213,13 @@ final class sm extends nv implements ut {
             return stackIn_11_0 != 0;
           }
         } else {
-          boolean discarded$7 = sm.a(52, -115, -20);
+          boolean discarded$25 = sm.a(52, -115, -20);
           if (o.a(-1, param2, param1)) {
             return true;
           } else {
             L0: {
-              if (!vua.e(param1, param2, 13650)) {
+              int discarded$26 = 13650;
+              if (!vua.e(param1, param2)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;

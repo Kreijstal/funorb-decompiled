@@ -155,7 +155,7 @@ final class rc extends bp implements ef {
         }
     }
 
-    final static byte[] a(String param0, byte param1) {
+    final static byte[] a(String param0) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

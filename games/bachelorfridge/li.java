@@ -5,7 +5,7 @@ final class li extends lw {
     static cf field_l;
     static boolean field_m;
 
-    final static void e(int param0) {
+    final static void e() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -15,7 +15,7 @@ final class li extends lw {
         try {
           L0: {
             cma.field_x = new js(256);
-            var1_int = -102 / ((-53 - param0) / 51);
+            var1_int = -102;
             var2 = 0;
             L1: while (true) {
               if (dq.field_a.length <= var2) {
@@ -23,18 +23,14 @@ final class li extends lw {
               } else {
                 cma.field_x.a((long)dq.field_a[var2].toLowerCase().hashCode(), (byte) 76, (bw) (Object) new ji(var2));
                 var2++;
-                if (var3 == 0) {
-                  continue L1;
-                } else {
-                  return;
-                }
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "li.B(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "li.B(" + -117 + 41);
         }
     }
 
@@ -91,27 +87,21 @@ final class li extends lw {
                 break L1;
               } else {
                 var7 = null;
-                iga discarded$2 = li.a(51, true, (String) null, (String) null);
+                iga discarded$4 = li.a(51, true, (String) null, (String) null);
                 break L1;
               }
             }
             L2: {
-              L3: {
-                var6 = null;
-                if (param2.indexOf('@') != -1) {
-                  break L3;
-                } else {
-                  var8 = (CharSequence) (Object) param2;
-                  var4_long = mp.a(var8, true);
-                  if (BachelorFridge.field_y == 0) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
+              var6 = null;
+              if (param2.indexOf('@') != -1) {
+                var6 = (Object) (Object) param2;
+                break L2;
+              } else {
+                var8 = (CharSequence) (Object) param2;
+                int discarded$5 = 1;
+                var4_long = mp.a(var8);
+                break L2;
               }
-              var6 = (Object) (Object) param2;
-              break L2;
             }
             stackOut_5_0 = ov.a(var4_long, param1, (String) var6, param3, (byte) 58);
             stackIn_6_0 = stackOut_5_0;
@@ -119,7 +109,7 @@ final class li extends lw {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
             stackOut_7_1 = new StringBuilder().append("li.F(").append(param0).append(44).append(param1).append(44);
@@ -134,7 +124,7 @@ final class li extends lw {
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
-              break L4;
+              break L3;
             } else {
               stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
               stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
@@ -142,10 +132,10 @@ final class li extends lw {
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
               stackIn_10_2 = stackOut_8_2;
-              break L4;
+              break L3;
             }
           }
-          L5: {
+          L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
             stackIn_12_0 = stackOut_10_0;
@@ -159,7 +149,7 @@ final class li extends lw {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L5;
+              break L4;
             } else {
               stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
               stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
@@ -167,7 +157,7 @@ final class li extends lw {
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_13_2 = stackOut_11_2;
-              break L5;
+              break L4;
             }
           }
           throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
@@ -193,12 +183,7 @@ final class li extends lw {
         }
     }
 
-    public static void d(int param0) {
-        if (param0 != -46) {
-            field_l = null;
-            field_l = null;
-            return;
-        }
+    public static void d() {
         field_l = null;
     }
 
@@ -208,52 +193,52 @@ final class li extends lw {
     }
 
     final void a(int param0, byte param1) {
-        if (param0 != 9) {
-            if (param0 != 34) {
-                if (param1 != 73) {
-                    field_l = null;
-                    return;
-                }
-                return;
-            }
-            if (0 == ((li) this).field_e) {
-                if (param1 != 73) {
-                    field_l = null;
-                    return;
-                }
-                return;
-            }
-            ((li) this).b(1);
-            if (!((li) this).c((byte) 95)) {
-                if (param1 != 73) {
-                    field_l = null;
-                    return;
-                }
-                return;
-            }
-            fla.b(23621);
-            if (BachelorFridge.field_y == 0) {
-                if (param1 != 73) {
-                    field_l = null;
-                    return;
-                }
-                return;
-            }
-            ((li) this).field_a = 2;
-            ((li) this).b(1);
-            ((li) this).c(param1 ^ 1);
-            if (param1 != 73) {
-                field_l = null;
-                return;
-            }
+        if (param0 == 9) {
+          ((li) this).field_a = 2;
+          ((li) this).b(1);
+          ((li) this).c(param1 ^ 1);
+          if (param1 == 73) {
             return;
-        }
-        ((li) this).field_a = 2;
-        ((li) this).b(1);
-        ((li) this).c(param1 ^ 1);
-        if (param1 != 73) {
+          } else {
             field_l = null;
             return;
+          }
+        } else {
+          if (param0 == 34) {
+            if (0 != ((li) this).field_e) {
+              ((li) this).b(1);
+              if (!((li) this).c((byte) 95)) {
+                if (param1 == 73) {
+                  return;
+                } else {
+                  field_l = null;
+                  return;
+                }
+              } else {
+                fla.b(23621);
+                if (param1 == 73) {
+                  return;
+                } else {
+                  field_l = null;
+                  return;
+                }
+              }
+            } else {
+              if (param1 == 73) {
+                return;
+              } else {
+                field_l = null;
+                return;
+              }
+            }
+          } else {
+            if (param1 == 73) {
+              return;
+            } else {
+              field_l = null;
+              return;
+            }
+          }
         }
     }
 

@@ -11,7 +11,11 @@ final class gla extends ci {
     public static void d(byte param0) {
         field_p = null;
         field_o = null;
-        field_p = null;
+        if (param0 >= -91) {
+            field_p = null;
+            field_q = null;
+            return;
+        }
         field_q = null;
     }
 
@@ -29,38 +33,30 @@ final class gla extends ci {
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        int[] stackIn_9_0 = null;
-        int stackIn_17_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_37_0 = 0;
-        int[] stackIn_41_0 = null;
-        int[] stackIn_48_0 = null;
-        int stackIn_56_0 = 0;
-        int stackIn_62_0 = 0;
-        int stackIn_69_0 = 0;
-        int stackIn_76_0 = 0;
-        int[] stackIn_80_0 = null;
-        int[] stackOut_47_0 = null;
-        int stackOut_55_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_74_0 = 0;
-        int[] stackOut_79_0 = null;
-        int[] stackOut_8_0 = null;
-        int stackOut_16_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_53_0 = 0;
+        int stackIn_59_0 = 0;
+        int stackIn_66_0 = 0;
+        int stackIn_73_0 = 0;
+        int stackOut_52_0 = 0;
+        int stackOut_51_0 = 0;
+        int stackOut_58_0 = 0;
+        int stackOut_57_0 = 0;
+        int stackOut_72_0 = 0;
+        int stackOut_71_0 = 0;
+        int stackOut_65_0 = 0;
+        int stackOut_64_0 = 0;
         int stackOut_15_0 = 0;
-        int stackOut_22_0 = 0;
+        int stackOut_14_0 = 0;
         int stackOut_21_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_36_0 = 0;
+        int stackOut_20_0 = 0;
         int stackOut_35_0 = 0;
-        int[] stackOut_40_0 = null;
+        int stackOut_34_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_27_0 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         if (param0 == 1) {
           var15 = ((gla) this).field_i.a((byte) 17, param1);
@@ -75,166 +71,130 @@ final class gla extends ci {
             L0: while (true) {
               if (ns.field_g > var5) {
                 L1: {
-                  stackOut_47_0 = ht.field_Fb;
-                  stackIn_80_0 = stackOut_47_0;
-                  stackIn_48_0 = stackOut_47_0;
-                  if (var8 != 0) {
+                  var6 = ht.field_Fb[var5];
+                  if (var6 <= ((gla) this).field_n) {
                     break L1;
                   } else {
-                    L2: {
-                      L3: {
-                        var6 = stackIn_48_0[var5];
-                        if (var6 <= ((gla) this).field_n) {
-                          break L3;
-                        } else {
-                          if (var6 >= -((gla) this).field_n + 4096) {
-                            break L3;
-                          } else {
-                            if (var4 <= -((gla) this).field_n + 2048) {
-                              break L3;
-                            } else {
-                              if (var4 < ((gla) this).field_n + 2048) {
-                                L4: {
-                                  var7 = 2048 + -var6;
-                                  if (var7 < 0) {
-                                    stackOut_55_0 = -var7;
-                                    stackIn_56_0 = stackOut_55_0;
-                                    break L4;
-                                  } else {
-                                    stackOut_54_0 = var7;
-                                    stackIn_56_0 = stackOut_54_0;
-                                    break L4;
-                                  }
-                                }
-                                var7 = stackIn_56_0;
-                                var7 = var7 << 12;
-                                var7 = var7 / (-((gla) this).field_n + 2048);
-                                var9[var5] = -var7 + 4096;
-                                if (var8 == 0) {
-                                  break L2;
-                                } else {
-                                  break L3;
-                                }
-                              } else {
-                                break L3;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      L5: {
-                        if (var6 <= 2048 + -((gla) this).field_n) {
-                          break L5;
-                        } else {
-                          if (var6 >= 2048 - -((gla) this).field_n) {
-                            break L5;
-                          } else {
-                            L6: {
-                              var7 = var4 + -2048;
-                              if (0 > var7) {
-                                stackOut_61_0 = -var7;
-                                stackIn_62_0 = stackOut_61_0;
-                                break L6;
-                              } else {
-                                stackOut_60_0 = var7;
-                                stackIn_62_0 = stackOut_60_0;
-                                break L6;
-                              }
-                            }
-                            var7 = stackIn_62_0;
-                            var7 = var7 - ((gla) this).field_n;
-                            var7 = var7 << 12;
-                            var9[var5] = var7 / (-((gla) this).field_n + 2048);
-                            if (var8 == 0) {
+                    if (var6 >= -((gla) this).field_n + 4096) {
+                      break L1;
+                    } else {
+                      if (var4 <= -((gla) this).field_n + 2048) {
+                        break L1;
+                      } else {
+                        if (var4 < ((gla) this).field_n + 2048) {
+                          L2: {
+                            var7 = 2048 + -var6;
+                            if (var7 < 0) {
+                              stackOut_52_0 = -var7;
+                              stackIn_53_0 = stackOut_52_0;
                               break L2;
                             } else {
-                              break L5;
+                              stackOut_51_0 = var7;
+                              stackIn_53_0 = stackOut_51_0;
+                              break L2;
                             }
+                          }
+                          var7 = stackIn_53_0;
+                          var7 = var7 << 12;
+                          var7 = var7 / (-((gla) this).field_n + 2048);
+                          var9[var5] = -var7 + 4096;
+                          var5++;
+                          var5++;
+                          continue L0;
+                        } else {
+                          break L1;
+                        }
+                      }
+                    }
+                  }
+                }
+                L3: {
+                  if (var6 <= 2048 + -((gla) this).field_n) {
+                    break L3;
+                  } else {
+                    if (var6 >= 2048 - -((gla) this).field_n) {
+                      break L3;
+                    } else {
+                      L4: {
+                        var7 = var4 + -2048;
+                        if (0 > var7) {
+                          stackOut_58_0 = -var7;
+                          stackIn_59_0 = stackOut_58_0;
+                          break L4;
+                        } else {
+                          stackOut_57_0 = var7;
+                          stackIn_59_0 = stackOut_57_0;
+                          break L4;
+                        }
+                      }
+                      var7 = stackIn_59_0;
+                      var7 = var7 - ((gla) this).field_n;
+                      var7 = var7 << 12;
+                      var9[var5] = var7 / (-((gla) this).field_n + 2048);
+                      var5++;
+                      continue L0;
+                    }
+                  }
+                }
+                L5: {
+                  if (((gla) this).field_n > var4) {
+                    break L5;
+                  } else {
+                    if (4096 - ((gla) this).field_n >= var4) {
+                      L6: {
+                        if (var6 < ((gla) this).field_n) {
+                          break L6;
+                        } else {
+                          if (var6 <= -((gla) this).field_n + 4096) {
+                            var15[var5] = 0;
+                            var5++;
+                            continue L0;
+                          } else {
+                            break L6;
                           }
                         }
                       }
                       L7: {
-                        L8: {
-                          if (((gla) this).field_n > var4) {
-                            break L8;
-                          } else {
-                            if (4096 - ((gla) this).field_n >= var4) {
-                              break L7;
-                            } else {
-                              break L8;
-                            }
-                          }
-                        }
-                        L9: {
-                          var7 = var6 - 2048;
-                          if (var7 >= 0) {
-                            stackOut_68_0 = var7;
-                            stackIn_69_0 = stackOut_68_0;
-                            break L9;
-                          } else {
-                            stackOut_67_0 = -var7;
-                            stackIn_69_0 = stackOut_67_0;
-                            break L9;
-                          }
-                        }
-                        var7 = stackIn_69_0;
-                        var7 = var7 - ((gla) this).field_n;
-                        var7 = var7 << 12;
-                        var9[var5] = var7 / (-((gla) this).field_n + 2048);
-                        if (var8 == 0) {
-                          break L2;
+                        var7 = 2048 - var4;
+                        if (var7 < 0) {
+                          stackOut_72_0 = -var7;
+                          stackIn_73_0 = stackOut_72_0;
+                          break L7;
                         } else {
+                          stackOut_71_0 = var7;
+                          stackIn_73_0 = stackOut_71_0;
                           break L7;
                         }
                       }
-                      L10: {
-                        L11: {
-                          if (var6 < ((gla) this).field_n) {
-                            break L11;
-                          } else {
-                            if (var6 <= -((gla) this).field_n + 4096) {
-                              break L10;
-                            } else {
-                              break L11;
-                            }
-                          }
-                        }
-                        L12: {
-                          var7 = 2048 - var4;
-                          if (var7 < 0) {
-                            stackOut_75_0 = -var7;
-                            stackIn_76_0 = stackOut_75_0;
-                            break L12;
-                          } else {
-                            stackOut_74_0 = var7;
-                            stackIn_76_0 = stackOut_74_0;
-                            break L12;
-                          }
-                        }
-                        var7 = stackIn_76_0;
-                        var7 = var7 << 12;
-                        var7 = var7 / (2048 - ((gla) this).field_n);
-                        var9[var5] = -var7 + 4096;
-                        if (var8 == 0) {
-                          break L2;
-                        } else {
-                          break L10;
-                        }
-                      }
-                      var15[var5] = 0;
-                      break L2;
-                    }
-                    var5++;
-                    if (var8 == 0) {
+                      var7 = stackIn_73_0;
+                      var7 = var7 << 12;
+                      var7 = var7 / (2048 - ((gla) this).field_n);
+                      var9[var5] = -var7 + 4096;
+                      var5++;
                       continue L0;
                     } else {
-                      stackOut_79_0 = (int[]) var9;
-                      stackIn_80_0 = stackOut_79_0;
-                      break L1;
+                      break L5;
                     }
                   }
                 }
-                return stackIn_80_0;
+                L8: {
+                  var7 = var6 - 2048;
+                  if (var7 >= 0) {
+                    stackOut_65_0 = var7;
+                    stackIn_66_0 = stackOut_65_0;
+                    break L8;
+                  } else {
+                    stackOut_64_0 = -var7;
+                    stackIn_66_0 = stackOut_64_0;
+                    break L8;
+                  }
+                }
+                var7 = stackIn_66_0;
+                var7 = var7 - ((gla) this).field_n;
+                var7 = var7 << 12;
+                var9[var5] = var7 / (-((gla) this).field_n + 2048);
+                var5++;
+                continue L0;
               } else {
                 return var9;
               }
@@ -251,173 +211,135 @@ final class gla extends ci {
           var9 = var10;
           var3 = var9;
           if (((gla) this).field_i.field_d) {
-            var9 = var3;
-            var11 = var10;
             var4 = sj.field_b[param1];
             var5 = 0;
-            L13: while (true) {
+            L9: while (true) {
               if (ns.field_g > var5) {
+                L10: {
+                  var6 = ht.field_Fb[var5];
+                  if (var6 <= ((gla) this).field_n) {
+                    break L10;
+                  } else {
+                    if (var6 >= -((gla) this).field_n + 4096) {
+                      break L10;
+                    } else {
+                      if (var4 <= -((gla) this).field_n + 2048) {
+                        break L10;
+                      } else {
+                        if (var4 < ((gla) this).field_n + 2048) {
+                          L11: {
+                            var7 = 2048 + -var6;
+                            if (var7 < 0) {
+                              stackOut_15_0 = -var7;
+                              stackIn_16_0 = stackOut_15_0;
+                              break L11;
+                            } else {
+                              stackOut_14_0 = var7;
+                              stackIn_16_0 = stackOut_14_0;
+                              break L11;
+                            }
+                          }
+                          var7 = stackIn_16_0;
+                          var7 = var7 << 12;
+                          var7 = var7 / (-((gla) this).field_n + 2048);
+                          var9[var5] = -var7 + 4096;
+                          var5++;
+                          var5++;
+                          continue L9;
+                        } else {
+                          break L10;
+                        }
+                      }
+                    }
+                  }
+                }
+                L12: {
+                  if (var6 <= 2048 + -((gla) this).field_n) {
+                    break L12;
+                  } else {
+                    if (var6 >= 2048 - -((gla) this).field_n) {
+                      break L12;
+                    } else {
+                      L13: {
+                        var7 = var4 + -2048;
+                        if (0 > var7) {
+                          stackOut_21_0 = -var7;
+                          stackIn_22_0 = stackOut_21_0;
+                          break L13;
+                        } else {
+                          stackOut_20_0 = var7;
+                          stackIn_22_0 = stackOut_20_0;
+                          break L13;
+                        }
+                      }
+                      var7 = stackIn_22_0;
+                      var7 = var7 - ((gla) this).field_n;
+                      var7 = var7 << 12;
+                      var9[var5] = var7 / (-((gla) this).field_n + 2048);
+                      var5++;
+                      continue L9;
+                    }
+                  }
+                }
                 L14: {
-                  stackOut_8_0 = ht.field_Fb;
-                  stackIn_41_0 = stackOut_8_0;
-                  stackIn_9_0 = stackOut_8_0;
-                  if (var8 != 0) {
+                  if (((gla) this).field_n > var4) {
                     break L14;
                   } else {
-                    L15: {
+                    if (4096 - ((gla) this).field_n >= var4) {
+                      L15: {
+                        if (var6 < ((gla) this).field_n) {
+                          break L15;
+                        } else {
+                          if (var6 <= -((gla) this).field_n + 4096) {
+                            var14[var5] = 0;
+                            var5++;
+                            continue L9;
+                          } else {
+                            break L15;
+                          }
+                        }
+                      }
                       L16: {
-                        var6 = stackIn_9_0[var5];
-                        if (var6 <= ((gla) this).field_n) {
+                        var7 = 2048 - var4;
+                        if (var7 < 0) {
+                          stackOut_35_0 = -var7;
+                          stackIn_36_0 = stackOut_35_0;
                           break L16;
                         } else {
-                          if (var6 >= -((gla) this).field_n + 4096) {
-                            break L16;
-                          } else {
-                            if (var4 <= -((gla) this).field_n + 2048) {
-                              break L16;
-                            } else {
-                              if (var4 < ((gla) this).field_n + 2048) {
-                                L17: {
-                                  var7 = 2048 + -var6;
-                                  if (var7 < 0) {
-                                    stackOut_16_0 = -var7;
-                                    stackIn_17_0 = stackOut_16_0;
-                                    break L17;
-                                  } else {
-                                    stackOut_15_0 = var7;
-                                    stackIn_17_0 = stackOut_15_0;
-                                    break L17;
-                                  }
-                                }
-                                var7 = stackIn_17_0;
-                                var7 = var7 << 12;
-                                var7 = var7 / (-((gla) this).field_n + 2048);
-                                var9[var5] = -var7 + 4096;
-                                if (var8 == 0) {
-                                  break L15;
-                                } else {
-                                  break L16;
-                                }
-                              } else {
-                                break L16;
-                              }
-                            }
-                          }
+                          stackOut_34_0 = var7;
+                          stackIn_36_0 = stackOut_34_0;
+                          break L16;
                         }
                       }
-                      L18: {
-                        if (var6 <= 2048 + -((gla) this).field_n) {
-                          break L18;
-                        } else {
-                          if (var6 >= 2048 - -((gla) this).field_n) {
-                            break L18;
-                          } else {
-                            L19: {
-                              var7 = var4 + -2048;
-                              if (0 > var7) {
-                                stackOut_22_0 = -var7;
-                                stackIn_23_0 = stackOut_22_0;
-                                break L19;
-                              } else {
-                                stackOut_21_0 = var7;
-                                stackIn_23_0 = stackOut_21_0;
-                                break L19;
-                              }
-                            }
-                            var7 = stackIn_23_0;
-                            var7 = var7 - ((gla) this).field_n;
-                            var7 = var7 << 12;
-                            var9[var5] = var7 / (-((gla) this).field_n + 2048);
-                            if (var8 == 0) {
-                              break L15;
-                            } else {
-                              break L18;
-                            }
-                          }
-                        }
-                      }
-                      L20: {
-                        L21: {
-                          if (((gla) this).field_n > var4) {
-                            break L21;
-                          } else {
-                            if (4096 - ((gla) this).field_n >= var4) {
-                              break L20;
-                            } else {
-                              break L21;
-                            }
-                          }
-                        }
-                        L22: {
-                          var7 = var6 - 2048;
-                          if (var7 >= 0) {
-                            stackOut_29_0 = var7;
-                            stackIn_30_0 = stackOut_29_0;
-                            break L22;
-                          } else {
-                            stackOut_28_0 = -var7;
-                            stackIn_30_0 = stackOut_28_0;
-                            break L22;
-                          }
-                        }
-                        var7 = stackIn_30_0;
-                        var7 = var7 - ((gla) this).field_n;
-                        var7 = var7 << 12;
-                        var9[var5] = var7 / (-((gla) this).field_n + 2048);
-                        if (var8 == 0) {
-                          break L15;
-                        } else {
-                          break L20;
-                        }
-                      }
-                      L23: {
-                        L24: {
-                          if (var6 < ((gla) this).field_n) {
-                            break L24;
-                          } else {
-                            if (var6 <= -((gla) this).field_n + 4096) {
-                              break L23;
-                            } else {
-                              break L24;
-                            }
-                          }
-                        }
-                        L25: {
-                          var7 = 2048 - var4;
-                          if (var7 < 0) {
-                            stackOut_36_0 = -var7;
-                            stackIn_37_0 = stackOut_36_0;
-                            break L25;
-                          } else {
-                            stackOut_35_0 = var7;
-                            stackIn_37_0 = stackOut_35_0;
-                            break L25;
-                          }
-                        }
-                        var7 = stackIn_37_0;
-                        var7 = var7 << 12;
-                        var7 = var7 / (2048 - ((gla) this).field_n);
-                        var9[var5] = -var7 + 4096;
-                        if (var8 == 0) {
-                          break L15;
-                        } else {
-                          break L23;
-                        }
-                      }
-                      var14[var5] = 0;
-                      break L15;
-                    }
-                    var5++;
-                    if (var8 == 0) {
-                      continue L13;
+                      var7 = stackIn_36_0;
+                      var7 = var7 << 12;
+                      var7 = var7 / (2048 - ((gla) this).field_n);
+                      var9[var5] = -var7 + 4096;
+                      var5++;
+                      continue L9;
                     } else {
-                      stackOut_40_0 = (int[]) var9;
-                      stackIn_41_0 = stackOut_40_0;
                       break L14;
                     }
                   }
                 }
-                return stackIn_41_0;
+                L17: {
+                  var7 = var6 - 2048;
+                  if (var7 >= 0) {
+                    stackOut_28_0 = var7;
+                    stackIn_29_0 = stackOut_28_0;
+                    break L17;
+                  } else {
+                    stackOut_27_0 = -var7;
+                    stackIn_29_0 = stackOut_27_0;
+                    break L17;
+                  }
+                }
+                var7 = stackIn_29_0;
+                var7 = var7 - ((gla) this).field_n;
+                var7 = var7 << 12;
+                var9[var5] = var7 / (-((gla) this).field_n + 2048);
+                var5++;
+                continue L9;
               } else {
                 return var9;
               }

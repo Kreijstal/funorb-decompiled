@@ -34,18 +34,14 @@ public final class nla extends pf {
     private int field_Gc;
 
     private final static int a(int param0, tu param1) {
-        if (param0 == 31365) {
-          if (param1 == cs.field_a) {
-            return 2;
-          } else {
-            if (jd.field_o == param1) {
-              return 1;
-            } else {
-              throw new IllegalArgumentException();
-            }
-          }
+        if (param1 == cs.field_a) {
+          return 2;
         } else {
-          return -23;
+          if (jd.field_o == param1) {
+            return 1;
+          } else {
+            throw new IllegalArgumentException();
+          }
         }
     }
 
@@ -206,141 +202,131 @@ public final class nla extends pf {
         Throwable var9 = null;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
+        jagdx.D3DDISPLAYMODE var12 = null;
         jagdx.D3DDISPLAYMODE var13 = null;
-        jagdx.D3DDISPLAYMODE var14 = null;
-        int stackIn_5_0 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_31_0 = 0;
         int stackIn_33_0 = 0;
-        int stackIn_35_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_34_0 = 0;
         int stackOut_32_0 = 0;
-        int stackOut_4_0 = 0;
-        L0: {
-          if (param2 == -111) {
-            break L0;
-          } else {
-            var12 = null;
-            int discarded$1 = nla.a((jra) null, 37);
-            break L0;
-          }
-        }
+        int stackOut_30_0 = 0;
+        int stackOut_2_0 = 0;
         var6 = 0;
         var7 = 0;
         var8 = 0;
         try {
-          L1: {
-            var13 = new jagdx.D3DDISPLAYMODE();
-            var14 = var13;
-            if (!jagdx.hea.a(param4.a(param3, var14), (byte) 118)) {
-              L2: while (true) {
-                L3: {
+          L0: {
+            var12 = new jagdx.D3DDISPLAYMODE();
+            var13 = var12;
+            if (!jagdx.hea.a(param4.a(param3, var13), (byte) 118)) {
+              L1: while (true) {
+                L2: {
                   if (param1 < 0) {
-                    break L3;
+                    break L2;
                   } else {
-                    L4: {
+                    L3: {
                       if (param1 == 1) {
-                        break L4;
+                        break L3;
                       } else {
                         var8 = 0 - -param1;
                         var10 = 0;
-                        L5: while (true) {
+                        L4: while (true) {
                           if (~field_Xc.length >= ~var10) {
-                            break L4;
+                            break L3;
                           } else {
-                            L6: {
-                              if (param4.CheckDeviceType(param3, param5, var13.Format, field_Xc[var10], true) == 0) {
-                                if (param4.CheckDeviceFormat(param3, param5, var13.Format, 1, 1, field_Xc[var10]) != 0) {
-                                  break L6;
+                            L5: {
+                              if (param4.CheckDeviceType(param3, param5, var12.Format, field_Xc[var10], true) == 0) {
+                                if (param4.CheckDeviceFormat(param3, param5, var12.Format, 1, 1, field_Xc[var10]) != 0) {
+                                  break L5;
                                 } else {
-                                  L7: {
+                                  L6: {
                                     if (0 == param1) {
-                                      break L7;
+                                      break L6;
                                     } else {
                                       if (0 == param4.CheckDeviceMultiSampleType(param3, param5, field_Xc[var10], true, var8)) {
-                                        break L7;
-                                      } else {
                                         break L6;
+                                      } else {
+                                        break L5;
                                       }
                                     }
                                   }
                                   var11 = 0;
-                                  L8: while (true) {
+                                  L7: while (true) {
                                     if (field_Pc.length <= var11) {
-                                      break L6;
+                                      break L5;
                                     } else {
-                                      L9: {
-                                        if (param4.CheckDeviceFormat(param3, param5, var13.Format, 2, 1, field_Pc[var11]) != 0) {
-                                          break L9;
+                                      L8: {
+                                        if (param4.CheckDeviceFormat(param3, param5, var12.Format, 2, 1, field_Pc[var11]) != 0) {
+                                          break L8;
                                         } else {
-                                          if (param4.CheckDepthStencilMatch(param3, param5, var13.Format, field_Xc[var10], field_Pc[var11]) == 0) {
-                                            L10: {
+                                          if (param4.CheckDepthStencilMatch(param3, param5, var12.Format, field_Xc[var10], field_Pc[var11]) == 0) {
+                                            L9: {
                                               if (param1 == 0) {
-                                                break L10;
+                                                break L9;
                                               } else {
                                                 if (param4.CheckDeviceMultiSampleType(param3, param5, field_Pc[var10], true, var8) != 0) {
-                                                  break L9;
+                                                  break L8;
                                                 } else {
-                                                  break L10;
+                                                  break L9;
                                                 }
                                               }
                                             }
                                             var6 = field_Pc[var11];
                                             var7 = field_Xc[var10];
-                                            break L3;
+                                            break L2;
                                           } else {
-                                            break L9;
+                                            break L8;
                                           }
                                         }
                                       }
                                       var11++;
-                                      continue L8;
+                                      continue L7;
                                     }
                                   }
                                 }
                               } else {
-                                break L6;
+                                break L5;
                               }
                             }
                             var10++;
-                            continue L5;
+                            continue L4;
                           }
                         }
                       }
                     }
                     param1--;
-                    continue L2;
+                    continue L1;
                   }
                 }
-                L11: {
+                L10: {
                   if (param1 < 0) {
-                    break L11;
+                    break L10;
                   } else {
                     if (var7 == 0) {
-                      break L11;
+                      break L10;
                     } else {
                       if (0 == var6) {
-                        break L11;
+                        break L10;
                       } else {
                         param0.MultiSampleQuality = 0;
                         param0.BackBufferFormat = var7;
                         param0.MultiSampleType = var8;
                         param0.AutoDepthStencilFormat = var6;
-                        stackOut_34_0 = 1;
-                        stackIn_35_0 = stackOut_34_0;
-                        break L1;
+                        stackOut_32_0 = 1;
+                        stackIn_33_0 = stackOut_32_0;
+                        break L0;
                       }
                     }
                   }
                 }
-                stackOut_32_0 = 0;
-                stackIn_33_0 = stackOut_32_0;
-                return stackIn_33_0 != 0;
+                stackOut_30_0 = 0;
+                stackIn_31_0 = stackOut_30_0;
+                return stackIn_31_0 != 0;
               }
             } else {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0 != 0;
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
           }
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -348,12 +334,13 @@ public final class nla extends pf {
           var9 = decompiledCaughtException;
           return false;
         }
-        return stackIn_35_0 != 0;
+        return stackIn_33_0 != 0;
     }
 
     final void a(jra param0, int param1, int param2, int param3) {
         int var5 = 31 % ((param3 - -4) / 32);
-        int discarded$0 = ((nla) this).field_Mc.DrawPrimitive(nla.a(param0, 1), param1, param2);
+        int discarded$0 = 1;
+        int discarded$1 = ((nla) this).field_Mc.DrawPrimitive(nla.a(param0), param1, param2);
     }
 
     final void a(int param0, jagdx.IDirect3DVertexShader param1) {
@@ -400,15 +387,8 @@ public final class nla extends pf {
             if (param1 != df.field_o) {
               if (param1 != je.field_c) {
                 if (param1 != feb.field_a) {
-                  L0: {
-                    if (!param0) {
-                      break L0;
-                    } else {
-                      var3 = null;
-                      ha discarded$2 = nla.createToolkit((java.awt.Canvas) null, (d) null, (asb) null, (Integer) null);
-                      break L0;
-                    }
-                  }
+                  var3 = null;
+                  ha discarded$2 = nla.createToolkit((java.awt.Canvas) null, (d) null, (asb) null, (Integer) null);
                   throw new IllegalArgumentException();
                 } else {
                   return 10;
@@ -937,15 +917,7 @@ public final class nla extends pf {
         ((nla) this).field_Qc = false;
     }
 
-    private final static int a(jra param0, int param1) {
-        L0: {
-          if (param1 == 1) {
-            break L0;
-          } else {
-            field_Pc = null;
-            break L0;
-          }
-        }
+    private final static int a(jra param0) {
         if (param0 == tu.field_b) {
           return 2;
         } else {
@@ -973,7 +945,7 @@ public final class nla extends pf {
         }
     }
 
-    private final boolean K(int param0) {
+    private final boolean K() {
         int var4 = 0;
         int var2 = ((nla) this).field_Mc.TestCooperativeLevel();
         if (var2 != 0) {
@@ -1011,14 +983,15 @@ public final class nla extends pf {
 
     final void a(int param0, int param1) throws jkb {
         L0: {
-          int discarded$19 = ((nla) this).field_Mc.EndScene();
+          int discarded$23 = ((nla) this).field_Mc.EndScene();
           if (!((nla) this).field_Uc.a((byte) -72)) {
-            int fieldTemp$20 = ((nla) this).field_Gc + 1;
+            int fieldTemp$24 = ((nla) this).field_Gc + 1;
             ((nla) this).field_Gc = ((nla) this).field_Gc + 1;
-            if (fieldTemp$20 > 50) {
+            if (fieldTemp$24 > 50) {
               throw new jkb();
             } else {
-              boolean discarded$21 = this.K(60);
+              int discarded$25 = 60;
+              boolean discarded$26 = this.K();
               break L0;
             }
           } else {
@@ -1026,12 +999,13 @@ public final class nla extends pf {
             if (!jagdx.hea.a(((nla) this).field_Uc.a(false, 0), (byte) 54)) {
               break L0;
             } else {
-              boolean discarded$22 = this.K(60);
+              int discarded$27 = 60;
+              boolean discarded$28 = this.K();
               break L0;
             }
           }
         }
-        int discarded$23 = ((nla) this).field_Mc.BeginScene();
+        int discarded$29 = ((nla) this).field_Mc.BeginScene();
     }
 
     final hdb a(boolean param0, int param1, int[][] param2, int param3) {

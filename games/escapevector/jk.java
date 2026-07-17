@@ -148,7 +148,7 @@ final class jk {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void a(int param0, int param1) {
     }
 
     final void a(byte param0, int param1, int param2) {
@@ -164,11 +164,12 @@ final class jk {
         if (!(var5 != null)) {
             return;
         }
-        this.a(param1, param2, 14714);
+        int discarded$0 = 14714;
+        this.a(param1, param2);
         var5.a(param2, false, ((jk) this).field_c, ((jk) this).field_c ^ 255);
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

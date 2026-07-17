@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dba extends rqa {
-    final static void a(int param0, ea param1, int param2) {
+    final static void a(int param0, ea param1) {
         try {
             oaa.field_k.b(-10258, (ksa) (Object) param1);
-            hs.a(param1, 1, param0);
+            hs.a(param1, 1, 4);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "dba.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "dba.C(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 

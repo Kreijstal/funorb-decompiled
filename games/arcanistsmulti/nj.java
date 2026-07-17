@@ -78,7 +78,7 @@ final class nj {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_e = null;
         field_a = null;

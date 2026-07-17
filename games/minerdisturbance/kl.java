@@ -4,7 +4,7 @@
 final class kl {
     static ec field_a;
 
-    final static String a(CharSequence[] param0, int param1, int param2, boolean param3) {
+    final static String a(CharSequence[] param0, int param1) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -42,15 +42,16 @@ final class kl {
         try {
           L0: {
             if (param1 != 0) {
-              kl.a(false);
+              int discarded$9 = 0;
+              kl.a();
               if (1 != param1) {
-                var4_int = param1 - -param2;
+                var4_int = param1;
                 var5 = 0;
-                var6_int = param2;
+                var6_int = 0;
                 L1: while (true) {
                   if (var6_int >= var4_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = param2;
+                    var7 = 0;
                     L2: while (true) {
                       if (var7 >= var4_int) {
                         stackOut_21_0 = var6.toString();
@@ -60,10 +61,10 @@ final class kl {
                         L3: {
                           var8 = param0[var7];
                           if (var8 != null) {
-                            StringBuilder discarded$5 = var6.append(var8);
+                            StringBuilder discarded$10 = var6.append(var8);
                             break L3;
                           } else {
-                            StringBuilder discarded$6 = var6.append("null");
+                            StringBuilder discarded$11 = var6.append("null");
                             break L3;
                           }
                         }
@@ -87,7 +88,7 @@ final class kl {
                   }
                 }
               } else {
-                var10 = param0[param2];
+                var10 = param0[0];
                 var4 = var10;
                 if (var4 == null) {
                   stackOut_7_0 = "null";
@@ -131,17 +132,13 @@ final class kl {
               break L5;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 44 + param2 + 44 + 0 + 41);
+          throw lj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 44 + 0 + 44 + 0 + 41);
         }
         return stackIn_22_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
-        if (!param0) {
-            Object var2 = null;
-            String discarded$0 = kl.a((CharSequence[]) null, 11, -126, false);
-        }
     }
 
     static {

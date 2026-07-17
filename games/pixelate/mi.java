@@ -132,9 +132,6 @@ final class mi extends de {
     }
 
     final static int d(int param0, int param1) {
-        if (param0 != -4096) {
-            int discarded$0 = mi.a(126, 19, (byte) -117);
-        }
         param1 = param1 & 8191;
         if (param1 >= 4096) {
             return param1 >= 6144 ? -k.field_i[-param1 + 8192] : -k.field_i[param1 + -4096];
@@ -328,7 +325,8 @@ final class mi extends de {
                 }
                 L8: {
                   if (e.field_d == uk.field_s) {
-                    if (!in.e(-18481)) {
+                    int discarded$9 = -18481;
+                    if (!in.e()) {
                       break L8;
                     } else {
                       L9: {
@@ -408,9 +406,9 @@ final class mi extends de {
                       }
                       L15: {
                         if (vm.field_d) {
-                          int discarded$5 = vi.field_o.f(255);
-                          int discarded$6 = vi.field_o.f(255);
-                          int discarded$7 = vi.field_o.k(0);
+                          int discarded$10 = vi.field_o.f(255);
+                          int discarded$11 = vi.field_o.f(255);
+                          int discarded$12 = vi.field_o.k(0);
                           mo.field_k = vi.field_o.a((byte) -115);
                           dc.field_b = new byte[mo.field_k];
                           var8 = 0;
@@ -462,7 +460,7 @@ final class mi extends de {
                             if (!wg.field_a) {
                               try {
                                 L21: {
-                                  Object discarded$8 = cq.a("unzap", (byte) -56, ao.a(13867));
+                                  Object discarded$13 = cq.a("unzap", (byte) -56, ao.a(13867));
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -480,7 +478,8 @@ final class mi extends de {
                         }
                         try {
                           L23: {
-                            Object discarded$9 = cq.a(ao.a(13867), (byte) -37, new Object[1], "zap");
+                            int discarded$14 = -7067;
+                            Object discarded$15 = cq.a(ao.a(13867), (byte) -37, new Object[1], "zap");
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -523,7 +522,8 @@ final class mi extends de {
                   if (sl.field_b != uk.field_s) {
                     break L27;
                   } else {
-                    if (in.e(-18481)) {
+                    int discarded$16 = -18481;
+                    if (in.e()) {
                       L28: {
                         na.a(true);
                         if (mn.field_e != 7) {
@@ -568,7 +568,8 @@ final class mi extends de {
                       break L30;
                     } else {
                       L31: {
-                        if (no.d(8) <= 30000L) {
+                        int discarded$17 = 8;
+                        if (no.d() <= 30000L) {
                           gi.field_b = ho.field_b;
                           break L31;
                         } else {
@@ -658,14 +659,11 @@ final class mi extends de {
                 cn.field_b = new ko(wa.field_c, wp.field_a);
                 wa.field_c.b(-6183, (ng) (Object) cn.field_b);
             }
-            if (param2 != -1) {
-                field_o = false;
-            }
             cn.field_b.a(param3, param1, 7595, param0);
             t.d();
             rj.a(94, true);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mi.I(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "mi.I(" + param0 + 44 + param1 + 44 + -1 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

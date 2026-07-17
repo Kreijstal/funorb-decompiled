@@ -46,8 +46,8 @@ final class kg extends h {
                       break L1;
                     }
                   }
-                  ((dh) (Object) stackIn_6_0).i(stackIn_6_1, param0 + -99);
-                  ((kg) this).field_e.b((long)param0, -2108648176);
+                  ((dh) (Object) stackIn_6_0).i(stackIn_6_1, -99);
+                  ((kg) this).field_e.b(0L, -2108648176);
                   ((kg) this).field_p.a(((kg) this).field_e.field_i.length, 0, (byte) -97, ((kg) this).field_e.field_i);
                   break L0;
                 }

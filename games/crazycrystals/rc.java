@@ -20,16 +20,18 @@ final class rc {
         }
         ca var7 = new ca(param5, param3, param1, param2, param4, param6);
         if (!rc.a(-126)) {
-            mb.a(var7, 4, 0);
+            int discarded$1 = 0;
+            int discarded$2 = 4;
+            mb.a(var7);
         } else {
             so.field_h.b(0, (jb) (Object) var7);
         }
-        fk.field_s = fk.field_s + (param0 << param5);
+        fk.field_s = fk.field_s + (1 << param5);
         pc.field_y = pc.field_y + (1 << param5);
         ge.field_c = ge.field_c + (1 << param5);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -164,9 +166,6 @@ final class rc {
 
     final static void a(int param0, int param1) {
         pl.field_g = param1;
-        if (param0 != -25537) {
-            field_a = null;
-        }
     }
 
     static {

@@ -62,27 +62,23 @@ final class fa {
             String stackOut_16_2 = null;
             try {
               try {
-                if (!param2) {
-                  L0: {
-                    var8 = param4.getParameter("cookiehost");
-                    var7 = var8;
-                    var7 = var8;
-                    var9 = param1 + "=" + param3 + "; version=1; path=/; domain=" + var8;
-                    var7 = var9;
-                    var7 = var9;
-                    if (param0 < 0L) {
-                      var7 = var9 + "; Discard;";
-                      break L0;
-                    } else {
-                      var7 = var9 + "; Expires=" + fc.a((byte) -23, d.a((byte) 90) + 1000L * param0) + "; Max-Age=" + param0;
-                      break L0;
-                    }
+                L0: {
+                  var8 = param4.getParameter("cookiehost");
+                  var7 = var8;
+                  var7 = var8;
+                  var9 = param1 + "=" + param3 + "; version=1; path=/; domain=" + var8;
+                  var7 = var9;
+                  var7 = var9;
+                  if (param0 < 0L) {
+                    var7 = var9 + "; Discard;";
+                    break L0;
+                  } else {
+                    var7 = var9 + "; Expires=" + fc.a((byte) -23, d.a((byte) 90) + 1000L * param0) + "; Max-Age=" + param0;
+                    break L0;
                   }
-                  cl.a(param4, "document.cookie=\"" + var7 + "\"", (byte) -121);
-                  return;
-                } else {
-                  return;
                 }
+                cl.a(param4, "document.cookie=\"" + var7 + "\"", (byte) -121);
+                return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var6 = decompiledCaughtException;
@@ -118,7 +114,7 @@ final class fa {
               }
               L2: {
                 stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(param2).append(44);
+                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(0).append(44);
                 stackIn_14_0 = stackOut_12_0;
                 stackIn_14_1 = stackOut_12_1;
                 stackIn_13_0 = stackOut_12_0;
@@ -175,7 +171,7 @@ final class fa {
         }
     }
 
-    final static String a(byte param0, String param1, String param2, char param3) {
+    final static String a(byte param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -238,7 +234,7 @@ final class fa {
               if (var7 != 0) {
                 var8_int = 0;
                 L3: while (true) {
-                  var8_int = param2.indexOf((int) param3, var8_int);
+                  var8_int = param2.indexOf('_', var8_int);
                   if (var8_int >= 0) {
                     var6 = var6 + var7;
                     var8_int++;
@@ -254,7 +250,7 @@ final class fa {
             var8 = new StringBuilder(var6);
             var9 = 0;
             L4: while (true) {
-              var10 = param2.indexOf((int) param3, var9);
+              var10 = param2.indexOf('_', var9);
               if (var10 < 0) {
                 StringBuilder discarded$3 = var8.append(param2.substring(var9));
                 stackOut_12_0 = var8.toString();
@@ -321,19 +317,19 @@ final class fa {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 95 + 41);
         }
         return stackIn_13_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;
         field_b = null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         try {
             dh.field_c = param0;
             jc.a((byte) 42, 12);

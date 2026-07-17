@@ -10,7 +10,7 @@ final class ia extends af {
     private int field_g;
     static int field_i;
 
-    final static void d(int param0) {
+    final static void d() {
         if (of.field_m < 140) {
             ea.b(-36, of.field_m - -20);
         } else {
@@ -26,33 +26,10 @@ final class ia extends af {
     }
 
     final static boolean a(int param0, int param1) {
-        int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         if (param1 == -1) {
-          return true;
-        } else {
-          L0: {
-            if (param0 == -22426) {
-              break L0;
-            } else {
-              ia.c(-53);
-              break L0;
-            }
-          }
-          L1: {
-            if (0 == (1 << param1 & oh.field_c)) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
-              break L1;
-            } else {
-              stackOut_4_0 = 1;
-              stackIn_6_0 = stackOut_4_0;
-              break L1;
-            }
-          }
-          return stackIn_6_0 != 0;
+            return true;
         }
+        return 0 != (1 << param1 & oh.field_c) ? true : false;
     }
 
     final void b(int param0) {

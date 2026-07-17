@@ -8,7 +8,7 @@ final class pj {
     static eh field_c;
     static String field_e;
 
-    final static void a(int param0) {
+    final static void a() {
         Object var2 = null;
         nd.a((byte) 119, "", (String) null);
     }
@@ -46,13 +46,14 @@ final class pj {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    fn.a(param0, true);
+                    fn.a(4, true);
                     var2 = tf.field_a.a(16213);
                     continue L3;
                   }
                 }
               } else {
-                te.a(param1 ^ -11514, var4, param0);
+                int discarded$2 = 4;
+                te.a(param1 ^ -11514, var4);
                 var4 = (sa) (Object) fj.field_b.a(param1 ^ -5038);
                 continue L1;
               }
@@ -61,7 +62,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var2_ref, "pj.C(" + param0 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) var2_ref, "pj.C(" + 4 + 44 + param1 + 41);
         }
     }
 

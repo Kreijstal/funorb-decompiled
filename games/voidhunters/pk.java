@@ -81,9 +81,9 @@ final class pk extends rqa {
             return;
         }
         mt.field_o = param4;
-        ob.field_j = param3;
+        ob.field_j = 0;
         hab.field_i = param0;
-        lua.field_c = param1;
+        lua.field_c = 0;
     }
 
     static {

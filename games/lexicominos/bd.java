@@ -9,7 +9,7 @@ final class bd extends kd {
     static int[] field_m;
     static be[] field_i;
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_i = null;
         field_m = null;
@@ -18,7 +18,7 @@ final class bd extends kd {
         field_k = null;
     }
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean a(CharSequence param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -82,8 +82,7 @@ final class bd extends kd {
     }
 
     final static void a(int param0, int param1) {
-        kd var2 = null;
-        RuntimeException var2_ref = null;
+        RuntimeException var2 = null;
         int var3 = 0;
         tg var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -93,22 +92,11 @@ final class bd extends kd {
             var4 = (tg) (Object) bg.field_c.a(true);
             L1: while (true) {
               if (var4 == null) {
-                if (param1 == -4584) {
-                  var2 = tl.field_h.a(true);
-                  L2: while (true) {
-                    if (var2 == null) {
-                      break L0;
-                    } else {
-                      dd.a(53, param0);
-                      var2 = tl.field_h.f(2);
-                      continue L2;
-                    }
-                  }
-                } else {
-                  return;
-                }
+                break L0;
               } else {
-                p.a(var4, param0, (byte) 24);
+                int discarded$4 = 24;
+                int discarded$5 = 6;
+                p.a(var4);
                 var4 = (tg) (Object) bg.field_c.f(2);
                 continue L1;
               }
@@ -116,12 +104,12 @@ final class bd extends kd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2_ref, "bd.A(" + param0 + 44 + param1 + 41);
+          var2 = decompiledCaughtException;
+          throw ld.a((Throwable) (Object) var2, "bd.A(" + 6 + 44 + -4584 + 41);
         }
     }
 
-    final static boolean c(boolean param0) {
+    final static boolean c() {
         if (jc.field_b == null) {
             return false;
         }

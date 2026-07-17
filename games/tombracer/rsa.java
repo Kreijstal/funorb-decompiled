@@ -22,7 +22,7 @@ final class rsa extends osa {
         int var2 = -27 / ((param0 - -69) / 42);
     }
 
-    private final void k(byte param0) {
+    private final void k() {
         if (((rsa) this).field_v % 2 != 1) {
             ((rsa) this).field_v = ((rsa) this).field_v + 1;
         }
@@ -118,7 +118,8 @@ final class rsa extends osa {
             ((rsa) this).field_y = param1.b((byte) 44, 10) << 16;
             ((rsa) this).field_v = param1.b((byte) 44, 7);
             ((rsa) this).field_w = param1.b((byte) 44, 7);
-            this.k((byte) -56);
+            int discarded$0 = -56;
+            this.k();
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "rsa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
@@ -587,7 +588,7 @@ final class rsa extends osa {
         }
     }
 
-    public static void j(byte param0) {
+    public static void j() {
         field_x = null;
         field_z = null;
         field_u = null;

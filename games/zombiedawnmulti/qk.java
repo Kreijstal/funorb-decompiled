@@ -8,7 +8,7 @@ final class qk extends br {
     static String field_i;
     int field_g;
 
-    final static ae a(ga param0, byte param1) {
+    final static ae a(ga param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -85,10 +85,7 @@ final class qk extends br {
         return (ae) (Object) stackIn_5_0;
     }
 
-    public static void b(boolean param0) {
-        if (param0) {
-            return;
-        }
+    public static void b() {
         field_f = null;
         field_i = null;
     }

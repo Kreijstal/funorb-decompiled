@@ -99,7 +99,8 @@ final class pg implements Iterable {
         try {
           L0: {
             L1: {
-              var7_int = un.a(param3, 108);
+              int discarded$1 = 108;
+              var7_int = un.a(param3);
               if (qo.field_y == null) {
                 qo.field_y = new java.security.SecureRandom();
                 break L1;
@@ -280,7 +281,7 @@ final class pg implements Iterable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_c = null;
         field_d = null;

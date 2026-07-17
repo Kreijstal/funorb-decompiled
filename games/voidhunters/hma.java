@@ -8,7 +8,7 @@ final class hma {
     private int[] field_c;
     static int[] field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
     }
 
@@ -75,7 +75,7 @@ final class hma {
         try {
           L0: {
             var4_int = param2.b(param0, -112);
-            var6 = -104 / ((-47 - param1) / 40);
+            var6 = -104;
             var5 = param2.a(true, var4_int, param3);
             stackOut_0_0 = dmb.a(var5, (byte) 75, param2, var4_int);
             stackIn_1_0 = stackOut_0_0;
@@ -111,7 +111,7 @@ final class hma {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(-90).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -171,12 +171,7 @@ final class hma {
         var3 = ((hma) this).field_c.length;
         L0: while (true) {
           if (param1 < var3) {
-            if (param0 != 0) {
-              ((hma) this).field_a = 102;
-              return var3;
-            } else {
-              return var3;
-            }
+            return var3;
           } else {
             if (((hma) this).field_e) {
               if (var3 == 0) {
@@ -195,22 +190,10 @@ final class hma {
     }
 
     private final void b(byte param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        if (param0 <= 110) {
-          field_d = null;
-          var4 = new int[this.a(0, param1)];
-          var3 = var4;
-          cua.a(((hma) this).field_c, 0, var4, 0, ((hma) this).field_c.length);
-          ((hma) this).field_c = var4;
-          return;
-        } else {
-          var4 = new int[this.a(0, param1)];
-          var3 = var4;
-          cua.a(((hma) this).field_c, 0, var4, 0, ((hma) this).field_c.length);
-          ((hma) this).field_c = var4;
-          return;
-        }
+        int[] var4 = new int[this.a(0, param1)];
+        int[] var3 = var4;
+        cua.a(((hma) this).field_c, 0, var4, 0, ((hma) this).field_c.length);
+        ((hma) this).field_c = var4;
     }
 
     final int b(int param0, byte param1) {
@@ -264,16 +247,12 @@ final class hma {
             break L0;
           }
         }
-        if (param1 == -15220) {
-          if (param0 >= ((hma) this).field_c.length) {
-            this.b((byte) 116, param0);
-            ((hma) this).field_c[param0] = param2;
-            return;
-          } else {
-            ((hma) this).field_c[param0] = param2;
-            return;
-          }
+        if (param0 >= ((hma) this).field_c.length) {
+          this.b((byte) 116, param0);
+          ((hma) this).field_c[param0] = param2;
+          return;
         } else {
+          ((hma) this).field_c[param0] = param2;
           return;
         }
     }

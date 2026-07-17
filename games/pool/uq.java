@@ -40,7 +40,7 @@ final class uq {
     byte[] field_r;
     int field_z;
 
-    final static void a(long param0, byte param1) {
+    final static void a(long param0) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -66,58 +66,66 @@ final class uq {
             L1: {
               ib.field_s.d();
               kk.field_D.d();
+              if (param0 < -79) {
+                break L1;
+              } else {
+                field_K = null;
+                break L1;
+              }
+            }
+            L2: {
               kh.field_Pb = kh.field_Pb - 1;
               if (kh.field_Pb == 0) {
                 kh.field_Pb = 200;
                 var1 = (kf) (Object) oj.field_o.c((byte) 116);
-                L2: while (true) {
+                L3: while (true) {
                   if (var1 == null) {
                     if (mp.field_R != null) {
                       var1 = (kf) (Object) mp.field_R.c((byte) -84);
-                      L3: while (true) {
+                      L4: while (true) {
                         if (var1 == null) {
-                          break L1;
+                          break L2;
                         } else {
-                          L4: {
+                          L5: {
                             if (!var1.field_m.b(-117)) {
                               var1.a((byte) -117);
-                              break L4;
+                              break L5;
                             } else {
-                              break L4;
+                              break L5;
                             }
                           }
                           var1 = (kf) (Object) mp.field_R.f((byte) -5);
-                          continue L3;
+                          continue L4;
                         }
                       }
                     } else {
-                      break L1;
+                      break L2;
                     }
                   } else {
-                    L5: {
+                    L6: {
                       if (!var1.field_m.b(-126)) {
                         var1.a((byte) -117);
-                        break L5;
+                        break L6;
                       } else {
-                        break L5;
+                        break L6;
                       }
                     }
                     var1 = (kf) (Object) oj.field_o.f((byte) -5);
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
-                break L1;
+                break L2;
               }
             }
-            L6: {
+            L7: {
               if (null == tl.field_N) {
-                break L6;
+                break L7;
               } else {
                 if (!tl.field_N.d(-11414)) {
-                  break L6;
+                  break L7;
                 } else {
-                  break L6;
+                  break L7;
                 }
               }
             }
@@ -126,32 +134,26 @@ final class uq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) runtimeException, "uq.B(" + -92 + 41);
+          throw wm.a((Throwable) (Object) runtimeException, "uq.B(" + param0 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_i = null;
-        if (param0 != -8090) {
-            return;
-        }
         field_K = null;
         field_D = null;
     }
 
     final static void a(int param0, String param1, int param2, byte param3, long param4) {
         try {
-            if (param3 > -52) {
-                field_i = null;
-            }
             hj.field_c = param4;
             nr.field_T = true;
             ie.field_e = param1;
             uh.field_x = param0;
             tq.field_t = param2;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "uq.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "uq.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -76 + 44 + param4 + 41);
         }
     }
 

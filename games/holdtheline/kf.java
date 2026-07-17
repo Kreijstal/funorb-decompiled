@@ -671,80 +671,70 @@ final class kf extends tj {
     private final int b(boolean param0, ck param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        Object var4 = null;
+        int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                var4 = null;
-                int discarded$2 = this.a((ck) null, 88);
-                break L1;
-              }
-            }
             var3_int = ((kf) this).field_L[param1.field_p];
             if (8192 <= var3_int) {
-              stackOut_5_0 = 16384 + -(32 + (-param1.field_y + 128) * (16384 - var3_int) >> 6);
-              stackIn_6_0 = stackOut_5_0;
+              stackOut_3_0 = 16384 + -(32 + (-param1.field_y + 128) * (16384 - var3_int) >> 6);
+              stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
-              stackOut_3_0 = var3_int * param1.field_y - -32 >> 6;
-              stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              stackOut_1_0 = var3_int * param1.field_y - -32 >> 6;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("kf.D(").append(param0).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("kf.D(").append(0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return stackIn_6_0;
+        return stackIn_4_0;
     }
 
     private final void b(int param0, int param1, int param2) {
@@ -1170,14 +1160,11 @@ final class kf extends tj {
         if (param1) {
             this.b(-1, (byte) -112);
         } else {
-            this.a(-1, param0 + -91);
+            this.a(-1, -75);
         }
         this.a(-1, (byte) -33);
         for (var3 = 0; var3 < 16; var3++) {
             ((kf) this).field_u[var3] = ((kf) this).field_z[var3];
-        }
-        if (param0 != 16) {
-            this.b(31, 118, -86);
         }
         int var5 = 0;
         var3 = var5;
@@ -1479,9 +1466,6 @@ final class kf extends tj {
     private final synchronized void a(boolean param0, boolean param1) {
         ((kf) this).field_w.b();
         ((kf) this).field_y = null;
-        if (param0) {
-            ((kf) this).field_R = null;
-        }
         this.b(16, param1);
     }
 
@@ -1943,8 +1927,8 @@ final class kf extends tj {
     }
 
     final static String a(CharSequence param0, byte param1) {
-        int var2_int = 0;
         RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2018,14 +2002,15 @@ final class kf extends tj {
                       } else {
                         L5: {
                           var8 = param0.charAt(var7);
-                          if (!sd.a((char) var8, (byte) -116)) {
+                          int discarded$2 = -116;
+                          if (!sd.a((char) var8)) {
                             break L5;
                           } else {
                             var9 = ba.a(true, (char) var8);
                             if (0 == var9) {
                               break L5;
                             } else {
-                              StringBuilder discarded$2 = var6.append(var9);
+                              StringBuilder discarded$3 = var6.append(var9);
                               break L5;
                             }
                           }

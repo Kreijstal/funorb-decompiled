@@ -25,12 +25,13 @@ final class bk {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         he.b((byte) 115);
         lb.field_d = true;
         wl.field_I = true;
         ci.field_f.k(31410);
-        jj.a(false, oc.field_E, 1702);
+        int discarded$0 = 1702;
+        jj.a(false, oc.field_E);
     }
 
     final ri b(byte param0) {

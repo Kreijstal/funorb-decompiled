@@ -10,7 +10,7 @@ final class pja {
     static kv[] field_d;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         int var1 = 126;
         field_e = null;
@@ -22,9 +22,6 @@ final class pja {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != -11204) {
-            return;
-        }
         bi.field_h.a(param1, 7802);
     }
 
@@ -38,9 +35,6 @@ final class pja {
     final static void a(boolean param0, int param1) {
         ph.field_E = 33;
         ph.field_G = 133;
-        if (param0) {
-            return;
-        }
         ph.field_D = 21845;
     }
 

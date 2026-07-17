@@ -15,9 +15,6 @@ final class wg {
         if (param0 == 0) {
             return 0;
         }
-        if (param1 != 15598) {
-            return 95;
-        }
         if (!(0 >= param0)) {
             var2 = 1;
             if (!(param0 <= 65535)) {
@@ -66,7 +63,7 @@ final class wg {
         return var2;
     }
 
-    final static boolean a(String param0, String param1, byte param2) {
+    final static boolean a(String param0, String param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -137,7 +134,8 @@ final class wg {
                       return stackIn_18_0 != 0;
                     } else {
                       if (!pc.a(param0, (byte) -47, param1)) {
-                        if (gb.a(param0, param1, 95)) {
+                        int discarded$6 = 95;
+                        if (gb.a(param0, param1)) {
                           stackOut_24_0 = 0;
                           stackIn_25_0 = stackOut_24_0;
                           break L0;
@@ -357,7 +355,7 @@ final class wg {
         return stackIn_4_0;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return !an.field_e.d(125);
     }
 

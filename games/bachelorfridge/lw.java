@@ -38,7 +38,7 @@ abstract class lw {
 
     abstract void a(int param0, byte param1);
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_f = null;
         field_b = null;
@@ -63,7 +63,8 @@ abstract class lw {
         } else {
             ((lw) this).field_e = ((lw) this).field_e | 1 << ((lw) this).field_a;
         }
-        aga.d(false);
+        int discarded$0 = 0;
+        aga.d();
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

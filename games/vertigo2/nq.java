@@ -297,9 +297,9 @@ final class nq extends rk {
                     var49 = param17[var42];
                     var50 = param1[var42];
                     var51 = param6[var42];
-                    var52 = param15 * (-param13 + var45) + ((-param21 + var43) * param16 + param2 * (var44 + -param22));
-                    var53 = (var47 - param22) * param2 + ((var46 - param21) * param16 - -(param15 * (var48 - param13)));
-                    var54 = (var51 + -param13) * param15 + (param2 * (var50 + -param22) + param16 * (var49 - param21));
+                    var52 = param15 * (-param13 + var45) + ((-param21 + var43) * param16 + param2 * var44);
+                    var53 = var47 * param2 + ((var46 - param21) * param16 - -(param15 * (var48 - param13)));
+                    var54 = (var51 + -param13) * param15 + (param2 * var50 + param16 * (var49 - param21));
                     stackOut_55_0 = var54 | (var52 | var53);
                     stackIn_195_0 = stackOut_55_0;
                     stackIn_56_0 = stackOut_55_0;
@@ -1537,21 +1537,13 @@ final class nq extends rk {
         return stackIn_4_0;
     }
 
-    public static void j(int param0) {
+    public static void j() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_I = null;
-              field_J = null;
-              if (param0 <= -120) {
-                break L1;
-              } else {
-                cr discarded$2 = nq.a(57, -73, 44, 92, 52, -107, 58, (cc) null, -88, 65, 75, 44, 36);
-                break L1;
-              }
-            }
+            field_I = null;
+            field_J = null;
             field_G = null;
             field_K = null;
             field_D = null;
@@ -1560,7 +1552,7 @@ final class nq extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "nq.B(" + param0 + 41);
+          throw wn.a((Throwable) (Object) var1, "nq.B(" + -124 + 41);
         }
     }
 

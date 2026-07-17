@@ -10,7 +10,7 @@ abstract class qm {
     static wl field_d;
     static po field_a;
 
-    final static fea a(ee[] param0, byte[] param1, int param2) {
+    final static fea a(ee[] param0, byte[] param1) {
         RuntimeException var3 = null;
         int[] var3_array = null;
         int[] var4 = null;
@@ -181,7 +181,7 @@ abstract class qm {
         return stackIn_8_0;
     }
 
-    final static String a(String param0, String param1, String param2, int param3) {
+    final static String a(String param0, String param1, String param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -372,21 +372,19 @@ abstract class qm {
 
     abstract void a(int param0, java.awt.Component param1, int param2, int param3);
 
-    final static void a(boolean param0, boolean param1, int param2, int param3) {
-        kg.a(param3, he.field_l, gba.field_Bb, param1, -3, param2, rg.field_h);
-        if (param0) {
-            field_d = null;
-        }
+    final static void a(boolean param0, boolean param1) {
+        kg.a(320, he.field_l, gba.field_Bb, param1, -3, 180, rg.field_h);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_g = null;
     }
 
     final static void a(int param0, int param1) {
-        cq discarded$7 = ol.a(ib.field_d[param0], true);
+        int discarded$12 = 1;
+        cq discarded$15 = ol.a(ib.field_d[param0]);
         if (param1 != 7758) {
             field_a = null;
         }

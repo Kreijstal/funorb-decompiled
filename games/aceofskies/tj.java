@@ -39,7 +39,7 @@ final class tj extends ao {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_n = null;
     }
 
@@ -152,7 +152,7 @@ final class tj extends ao {
         }
     }
 
-    private final void c(byte param0) {
+    private final void c() {
         ((tj) this).field_p = 0.0f;
         ((tj) this).field_h = 0.0f;
         ((tj) this).field_j = 1.0f;
@@ -399,7 +399,7 @@ final class tj extends ao {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var4_int = param3.b(param1, param2 ^ param2);
+            var4_int = param3.b(param1, 0);
             var5 = param3.a(-39, var4_int, param0);
             stackOut_0_0 = vc.a(param3, var4_int, (byte) -70, var5);
             stackIn_1_0 = stackOut_0_0;
@@ -460,7 +460,7 @@ final class tj extends ao {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(1).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -489,7 +489,8 @@ final class tj extends ao {
     }
 
     tj() {
-        this.c((byte) 75);
+        int discarded$0 = 75;
+        this.c();
     }
 
     static {

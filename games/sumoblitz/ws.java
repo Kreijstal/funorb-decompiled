@@ -131,11 +131,11 @@ final class ws {
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         return is.field_b;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -192,11 +192,7 @@ final class ws {
           var11 = var8;
           if (var8 == null) {
             var2 = var2 + "| " + var7;
-            if (param0 != 71) {
-              return null;
-            } else {
-              return var2;
-            }
+            return var2;
           } else {
             L2: {
               var9 = var8.indexOf('(');

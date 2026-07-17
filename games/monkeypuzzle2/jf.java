@@ -15,7 +15,7 @@ final class jf extends ug {
     int[] field_l;
     int field_n;
 
-    final static int a(int param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         ki var2 = null;
@@ -26,7 +26,7 @@ final class jf extends ug {
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
-            var1_int = param0;
+            var1_int = -2147483648;
             var2 = (ki) (Object) ok.field_a.a((byte) -117);
             L1: while (true) {
               if (var2 == null) {
@@ -50,7 +50,7 @@ final class jf extends ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "jf.B(" + param0 + 41);
+          throw la.a((Throwable) (Object) var1, "jf.B(" + -2147483648 + 41);
         }
         return stackIn_7_0;
     }
@@ -129,7 +129,7 @@ final class jf extends ug {
     jf() {
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_p = null;
         field_f = null;
         field_k = null;

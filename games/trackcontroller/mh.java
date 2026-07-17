@@ -205,7 +205,7 @@ final class mh extends fc {
         return stackIn_14_0 != 0;
     }
 
-    final static boolean e(int param0) {
+    final static boolean e() {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
@@ -220,7 +220,7 @@ final class mh extends fc {
             if (lj.field_d != fc.field_d) {
               kg.field_d = mc.field_K[lj.field_d];
               md.field_d = tk.field_o[lj.field_d];
-              lj.field_d = 1 + lj.field_d & param0;
+              lj.field_d = 1 + lj.field_d & 127;
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -234,7 +234,7 @@ final class mh extends fc {
         return stackIn_5_0 != 0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
     }
 

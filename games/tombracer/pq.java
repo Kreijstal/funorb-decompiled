@@ -25,26 +25,24 @@ final class pq implements os {
     }
 
     final static void a(byte[] param0, boolean param1, int param2, int param3, int param4, int param5) {
-        kh var10 = null;
+        kh var6 = null;
         int var7 = 0;
         int var8 = 0;
         try {
-            var10 = ql.field_k;
-            var10.k(param5, -2988);
-            var10.field_h = var10.field_h + 1;
-            var7 = var10.field_h;
-            var10.i(4, 0);
-            var10.i(param4, 0);
-            var8 = param2;
-            if (!(!param1)) {
-                var8 += 128;
-            }
-            int var9 = -69 / ((-65 - param3) / 34);
-            var10.i(var8, 0);
-            var10.a(0, param0, param0.length, 91);
-            var10.d(-var7 + var10.field_h, (byte) -1);
+            var6 = ql.field_k;
+            var6.k(param5, -2988);
+            var6.field_h = var6.field_h + 1;
+            var7 = var6.field_h;
+            var6.i(4, 0);
+            var6.i(param4, 0);
+            var8 = 0;
+            var8 += 128;
+            int var9 = 34;
+            var6.i(var8, 0);
+            var6.a(0, param0, param0.length, 91);
+            var6.d(-var7 + var6.field_h, (byte) -1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "pq.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "pq.D(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + 0 + 44 + 17 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -60,7 +58,7 @@ final class pq implements os {
         }
     }
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void a(java.awt.Canvas param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -121,7 +119,7 @@ final class pq implements os {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         afa.field_c = qk.h(-57);
         ej.field_a = new jta();
         gl.a(true, true, (byte) 97);
@@ -133,7 +131,8 @@ final class pq implements os {
 
     private static void $cfr$clinit() {
         field_f = 0;
-        field_e = fqa.e(true);
+        int discarded$0 = 1;
+        field_e = fqa.e();
         field_d = "Solicitation";
     }
 }

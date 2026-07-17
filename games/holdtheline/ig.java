@@ -214,7 +214,8 @@ final class ig extends dk {
                 break L8;
               }
             }
-            dm.b((byte) -10);
+            int discarded$1 = -10;
+            dm.b();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -259,7 +260,8 @@ final class ig extends dk {
     ig(ig param0, boolean param1) {
         this();
         try {
-            param0.a((ig) this, param1, 119);
+            int discarded$0 = 119;
+            param0.a((ig) this, param1);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "ig.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -359,7 +361,7 @@ final class ig extends dk {
         }
     }
 
-    private final void a(ig param0, boolean param1, int param2) {
+    private final void a(ig param0, boolean param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         nj var5 = null;

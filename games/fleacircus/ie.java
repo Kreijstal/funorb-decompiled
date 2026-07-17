@@ -2168,7 +2168,7 @@ final class ie extends sh {
           if (param0.field_l.length == 0) {
             return null;
           } else {
-            return new ie(param0, (int)((long)param0.field_k * 256L * (long)param1 / (long)(100 * la.field_a)), param2 << 6);
+            return new ie(param0, (int)((long)param0.field_k * 256L * 100L / (long)(100 * la.field_a)), param2 << 6);
           }
         } else {
           return null;

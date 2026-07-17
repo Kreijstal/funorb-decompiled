@@ -81,7 +81,7 @@ final class pn extends rq {
         }
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         int var2 = ((pn) this).field_b.M(-125);
         ut var3 = ((pn) this).field_b.g((byte) -28);
         if (((pn) this).field_e) {
@@ -175,10 +175,14 @@ final class pn extends rq {
             } else {
               if (param0.field_Ac) {
                 L1: {
-                  ((pn) this).field_m = ve.a((byte) 83, param0, param1.a("uw_ground_unlit", "gl", -1), 34336);
-                  ((pn) this).field_j = ve.a((byte) 83, param0, param1.a("uw_ground_lit", "gl", -1), 34336);
-                  ((pn) this).field_f = ve.a((byte) 73, param0, param1.a("uw_model_unlit", "gl", -1), 34336);
-                  ((pn) this).field_g = ve.a((byte) -120, param0, param1.a("uw_model_lit", "gl", -1), 34336);
+                  int discarded$4 = 34336;
+                  ((pn) this).field_m = ve.a((byte) 83, param0, param1.a("uw_ground_unlit", "gl", -1));
+                  int discarded$5 = 34336;
+                  ((pn) this).field_j = ve.a((byte) 83, param0, param1.a("uw_ground_lit", "gl", -1));
+                  int discarded$6 = 34336;
+                  ((pn) this).field_f = ve.a((byte) 73, param0, param1.a("uw_model_unlit", "gl", -1));
+                  int discarded$7 = 34336;
+                  ((pn) this).field_g = ve.a((byte) -120, param0, param1.a("uw_model_lit", "gl", -1));
                   if (((pn) this).field_f == null) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
@@ -374,11 +378,13 @@ final class pn extends rq {
         return ((pn) this).field_u;
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         int var1 = uv.b(-25843);
-        int var2 = fu.e((byte) 78);
+        int discarded$0 = 78;
+        int var2 = fu.e();
         gk.field_v.a(var1 + (kf.field_B << 1), -kf.field_B + hu.field_b, (pd.field_l << 1) + var2, 19, hh.field_f - pd.field_l);
-        sj.a((byte) 124);
+        int discarded$1 = 124;
+        sj.a();
     }
 
     final void a(int param0, int param1, ed param2) {
@@ -513,7 +519,8 @@ final class pn extends rq {
           ((pn) this).field_b.a((byte) 85, 2, true, false, jq.field_a);
           ((pn) this).field_b.a(ta.field_a, 0, true);
           ((pn) this).field_b.g(0, -108);
-          this.e((byte) 14);
+          int discarded$1 = 14;
+          this.e();
           return;
         }
     }

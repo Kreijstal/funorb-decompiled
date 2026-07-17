@@ -26,7 +26,7 @@ final class k {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         nd.field_a[61] = 27;
         nd.field_a[92] = 74;
         nd.field_a[91] = 42;
@@ -41,8 +41,8 @@ final class k {
         nd.field_a[46] = 72;
     }
 
-    final static Boolean b(byte param0) {
-        int var1 = 112 / ((50 - param0) / 52);
+    final static Boolean b() {
+        int var1 = -112;
         Boolean var2 = ci.field_h;
         ci.field_h = null;
         return var2;

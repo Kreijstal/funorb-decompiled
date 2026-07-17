@@ -58,7 +58,7 @@ final class uw extends uj {
         return false;
     }
 
-    final static im a(qfa param0, int param1, int param2, int param3, int[] param4, int param5, boolean param6, byte param7) {
+    final static im a(qfa param0, int param1, int param2, int param3, int[] param4, int param5) {
         RuntimeException var8 = null;
         im stackIn_8_0 = null;
         im stackIn_10_0 = null;
@@ -104,10 +104,12 @@ final class uw extends uj {
                 break L1;
               } else {
                 L2: {
-                  if (!bd.a(param5, (byte) -95)) {
+                  int discarded$8 = -95;
+                  if (!bd.a(param5)) {
                     break L2;
                   } else {
-                    if (bd.a(param3, (byte) -95)) {
+                    int discarded$9 = -95;
+                    if (bd.a(param3)) {
                       break L1;
                     } else {
                       break L2;
@@ -119,13 +121,13 @@ final class uw extends uj {
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  stackOut_7_0 = new im(param0, 34037, param5, param3, param6, param4, param2, param1);
+                  stackOut_7_0 = new im(param0, 34037, param5, param3, false, param4, param2, param1);
                   stackIn_8_0 = stackOut_7_0;
                   return stackIn_8_0;
                 }
               }
             }
-            stackOut_11_0 = new im(param0, 3553, param5, param3, param6, param4, param2, param1);
+            stackOut_11_0 = new im(param0, 3553, param5, param3, false, param4, param2, param1);
             stackIn_12_0 = stackOut_11_0;
             break L0;
           }
@@ -182,7 +184,7 @@ final class uw extends uj {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param5 + 44 + param6 + 44 + 60 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param5 + 44 + 0 + 44 + 60 + 41);
         }
         return stackIn_12_0;
     }

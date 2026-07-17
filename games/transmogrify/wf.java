@@ -129,7 +129,7 @@ class wf {
             }
             L5: {
               var10 = stackIn_13_0;
-              var11 = param3 + param5;
+              var11 = param3 + 361;
               var12 = param1 + param6;
               var13 = param3 - -var7_int;
               var14 = var11 - var8;
@@ -140,8 +140,8 @@ class wf {
               if (var18 >= var17) {
                 break L5;
               } else {
-                var18 = param5 * var7_int / (var7_int - -var8) + param3;
-                var17 = param5 * var7_int / (var7_int - -var8) + param3;
+                var18 = 361 * var7_int / (var7_int - -var8) + param3;
+                var17 = 361 * var7_int / (var7_int - -var8) + param3;
                 break L5;
               }
             }
@@ -349,7 +349,7 @@ class wf {
               break L22;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw ch.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 361 + 44 + param6 + 41);
         }
     }
 

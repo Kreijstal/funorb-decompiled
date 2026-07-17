@@ -9,7 +9,7 @@ final class vg extends ec {
     static String[] field_F;
     static ic field_I;
 
-    public static void f(int param0) {
+    public static void f() {
         field_E = null;
         field_H = null;
         field_B = null;

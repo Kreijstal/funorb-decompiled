@@ -91,7 +91,7 @@ class dh extends hl implements ai {
         return stackIn_8_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_bb = null;
         field_X = null;
     }
@@ -105,9 +105,6 @@ class dh extends hl implements ai {
         int var7 = qc.field_c.get(11);
         int var8 = qc.field_c.get(12);
         int var9 = qc.field_c.get(13);
-        if (param0 != -15591) {
-            field_bb = null;
-        }
         return te.field_N[var3 + -1] + ", " + var4 / 10 + var4 % 10 + "-" + md.field_e[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
@@ -137,7 +134,7 @@ class dh extends hl implements ai {
         }
     }
 
-    final static e a(String param0, byte param1) {
+    final static e a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -243,7 +243,7 @@ final class hj {
         }
     }
 
-    final static ci b(int param0) {
+    final static ci b() {
         return da.b((byte) -114);
     }
 
@@ -298,13 +298,13 @@ final class hj {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void a(int param0, int param1) {
         ge.field_bb = param1;
         n.field_e = ka.field_h;
         cc.field_z = param0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_b = null;
         field_j = null;
         field_n = null;

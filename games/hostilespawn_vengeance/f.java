@@ -9,15 +9,15 @@ final class f implements nn {
     static String field_c;
     static bd field_b;
 
-    final static void a(int param0, int param1, p param2, int param3) {
+    final static void a(int param0, int param1, p param2) {
         try {
-            dn.a(param2.field_e / param3, uf.field_e, uf.field_d, param0, -1, param1);
+            dn.a(param2.field_e / 2, uf.field_e, uf.field_d, param0, -1, param1);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "f.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "f.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 2 + 41);
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -25,8 +25,8 @@ final class f implements nn {
     }
 
     public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
-        int var6_int = 0;
         RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         bd var8 = null;
         RuntimeException stackIn_10_0 = null;
@@ -51,7 +51,8 @@ final class f implements nn {
               L1: {
                 var6_int = param3.field_v + param1;
                 var7 = param0 + param3.field_m;
-                ij.a(param3.field_x, param3.field_s, var7, var6_int, false);
+                int discarded$1 = 0;
+                ij.a(param3.field_x, param3.field_s, var7, var6_int);
                 var8 = cf.field_u[1];
                 if (!(param3 instanceof ph)) {
                   break L1;
@@ -109,7 +110,7 @@ final class f implements nn {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         if (rc.field_c == null) {
             return false;
         }
@@ -147,7 +148,7 @@ final class f implements nn {
             try {
               L0: {
                 L1: {
-                  var6 = new byte[param0];
+                  var6 = new byte[24];
                   var2 = var6;
                   if (q.field_b == null) {
                     break L1;
@@ -204,7 +205,7 @@ final class f implements nn {
               L7: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_15_0 = (RuntimeException) runtimeException;
-                stackOut_15_1 = new StringBuilder().append("f.D(").append(param0).append(44);
+                stackOut_15_1 = new StringBuilder().append("f.D(").append(24).append(44);
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;

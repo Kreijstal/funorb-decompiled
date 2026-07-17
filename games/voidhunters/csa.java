@@ -5,11 +5,11 @@ final class csa {
     static String field_a;
     static String field_b;
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         int var1 = 0;

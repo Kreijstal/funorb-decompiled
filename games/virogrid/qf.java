@@ -336,7 +336,7 @@ final class qf {
         }
     }
 
-    private final static void a(boolean param0, boolean param1, int param2) {
+    private final static void a(boolean param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -471,9 +471,9 @@ final class qf {
         int var14 = 0;
         int var15 = 0;
         Throwable decompiledCaughtException = null;
-        field_p = param0;
-        field_q = param1;
-        field_b = param2;
+        field_p = 240;
+        field_q = 0;
+        field_b = 0;
         field_m = param6;
         field_t = param7;
         field_d = param8;
@@ -485,7 +485,9 @@ final class qf {
           if (var12_int >= 3) {
             try {
               L1: {
-                qf.a(var11 != 0, false, 0);
+                int discarded$2 = 0;
+                int discarded$3 = 0;
+                qf.a(var11 != 0);
                 break L1;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {

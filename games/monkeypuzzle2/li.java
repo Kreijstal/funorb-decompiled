@@ -575,12 +575,12 @@ final class li extends fh {
         }
     }
 
-    final static li a(td param0, int param1, int param2) {
+    final static li a(td param0) {
         if (param0.field_j != null) {
           if (param0.field_j.length == 0) {
             return null;
           } else {
-            return new li(param0, (int)((long)param0.field_f * 256L * (long)param1 / (long)(100 * va.field_i)), 6144);
+            return new li(param0, (int)((long)param0.field_f * 256L * 100L / (long)(100 * va.field_i)), 6144);
           }
         } else {
           return null;

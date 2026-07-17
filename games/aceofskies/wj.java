@@ -17,7 +17,8 @@ final class wj implements up {
             ((wj) this).field_e = null;
         }
         ((wj) this).field_a = ((wj) this).field_a & -5;
-        ((wj) this).field_c = this.d(-15395);
+        int discarded$0 = -15395;
+        ((wj) this).field_c = this.d();
     }
 
     private final void a(int param0, int param1, int param2, nr param3) {
@@ -44,7 +45,7 @@ final class wj implements up {
             if (-1 != ((wj) this).field_c) {
               L1: {
                 var5_int = 1 << param2;
-                if (param0 == (~var5_int & ((wj) this).field_b)) {
+                if (0 == (~var5_int & ((wj) this).field_b)) {
                   ((wj) this).field_f = param3.field_k;
                   ((wj) this).field_h = param3.field_m;
                   break L1;
@@ -63,7 +64,7 @@ final class wj implements up {
                   throw new RuntimeException();
                 }
               }
-              param3.a(fo.field_f[param2], param0, param1, ((wj) this).field_c);
+              param3.a(fo.field_f[param2], 0, 0, ((wj) this).field_c);
               ((wj) this).field_g[param2] = (ws) (Object) param3;
               ((wj) this).field_b = ((wj) this).field_b | var5_int;
               break L0;
@@ -76,7 +77,7 @@ final class wj implements up {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) runtimeException;
-            stackOut_10_1 = new StringBuilder().append("wj.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("wj.G(").append(0).append(44).append(0).append(44).append(param2).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -202,7 +203,8 @@ final class wj implements up {
                         var18 = 0;
                         L6: while (true) {
                           if (3 <= var18) {
-                            eg.a(var17, qg.field_e, 45, true, false, rb.field_k, false);
+                            int discarded$1 = 0;
+                            eg.a(var17, qg.field_e, 45, true, false, rb.field_k);
                             hg.a(var14, var8, var13, var12, var9, 255, var7, var17);
                             var15++;
                             continue L4;
@@ -264,7 +266,7 @@ final class wj implements up {
         ((wj) this).field_g[param0] = null;
     }
 
-    private final int d(int param0) {
+    private final int d() {
         if (0 != (((wj) this).field_a & 4)) {
             return 36160;
         }
@@ -283,7 +285,8 @@ final class wj implements up {
         if (param0 != -19065) {
             return;
         }
-        ((wj) this).field_c = this.d(-15395);
+        int discarded$0 = -15395;
+        ((wj) this).field_c = this.d();
     }
 
     public final void c(byte param0) {
@@ -292,7 +295,8 @@ final class wj implements up {
         if (param0 <= 79) {
             return;
         }
-        ((wj) this).field_c = this.d(-15395);
+        int discarded$0 = -15395;
+        ((wj) this).field_c = this.d();
     }
 
     final void a(int param0, nr param1, int param2) {
@@ -403,7 +407,8 @@ final class wj implements up {
             ((wj) this).field_a = 59;
         }
         ((wj) this).field_a = ((wj) this).field_a | 2;
-        ((wj) this).field_c = this.d(-15395);
+        int discarded$0 = -15395;
+        ((wj) this).field_c = this.d();
     }
 
     protected final void finalize() throws Throwable {
@@ -413,7 +418,8 @@ final class wj implements up {
 
     final static void a(int param0, rk param1, java.awt.Component param2, int param3, boolean param4, jt param5, int param6, int param7) {
         try {
-            tk.a(param3, param4, 10);
+            int discarded$0 = 10;
+            tk.a(param3, param4);
             um.field_m = tk.a(param1, param2, 0, param6);
             da.field_a = tk.a(param1, param2, 1, param7);
             qn.field_b = new tp();
@@ -443,7 +449,8 @@ final class wj implements up {
         jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
         ((wj) this).field_a = ((wj) this).field_a & -3;
         int var2 = -33 / ((-88 - param0) / 38);
-        ((wj) this).field_c = this.d(-15395);
+        int discarded$0 = -15395;
+        ((wj) this).field_c = this.d();
     }
 
     final static void e(int param0) {
@@ -460,7 +467,8 @@ final class wj implements up {
         }
         jaggl.OpenGL.glBindFramebufferEXT(36008, 0);
         ((wj) this).field_a = ((wj) this).field_a & -2;
-        ((wj) this).field_c = this.d(-15395);
+        int discarded$0 = -15395;
+        ((wj) this).field_c = this.d();
     }
 
     wj(wl param0) {

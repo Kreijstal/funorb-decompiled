@@ -9,11 +9,11 @@ final class om {
     static String field_e;
 
     final static cd a(boolean param0) {
-        boolean discarded$0 = om.b(-113);
-        return new cd(co.e((byte) 92), f.a((byte) -75));
+        int discarded$0 = -75;
+        return new cd(co.e((byte) 92), f.a());
     }
 
-    final static boolean a(java.applet.Applet param0, int param1) {
+    final static boolean a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -276,7 +276,7 @@ final class om {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_b = null;
@@ -284,7 +284,7 @@ final class om {
         field_d = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -311,18 +311,23 @@ final class om {
               } else {
                 bl.field_j = oh.a(hj.field_Z, "benefits", 11091, "members_benefits_borders");
                 rj.field_s = oh.a(hj.field_Z, "benefits", 11091, "members_benefits_price");
-                var1_int = -103 / ((param0 - 15) / 37);
+                var1_int = -51;
                 sh.field_a = oh.a(hj.field_Z, "benefits", 11091, "members_benefits_logo");
                 g.field_Gb = new cn[4];
-                g.field_Gb[0] = rc.a("", sb.field_a, "mb_da_thumbs_01.jpg", (byte) 71);
-                g.field_Gb[1] = rc.a("", sb.field_a, "mb_da_thumbs_02.jpg", (byte) 71);
-                g.field_Gb[2] = rc.a("", sb.field_a, "mb_da_thumbs_06.jpg", (byte) 71);
-                g.field_Gb[3] = rc.a("", sb.field_a, "mb_da_thumbs_05.jpg", (byte) 71);
+                int discarded$5 = 71;
+                g.field_Gb[0] = rc.a("", sb.field_a, "mb_da_thumbs_01.jpg");
+                int discarded$6 = 71;
+                g.field_Gb[1] = rc.a("", sb.field_a, "mb_da_thumbs_02.jpg");
+                int discarded$7 = 71;
+                g.field_Gb[2] = rc.a("", sb.field_a, "mb_da_thumbs_06.jpg");
+                int discarded$8 = 71;
+                g.field_Gb[3] = rc.a("", sb.field_a, "mb_da_thumbs_05.jpg");
                 var2 = g.field_Gb.length + -1;
                 L1: while (true) {
                   if (var2 < 0) {
                     bp.a(bl.field_j, (byte) 51, ba.field_h);
-                    eg.a(80, 15, 16744576, 40, 5, rj.field_s, 2, 40, -2400, (se) (Object) ne.field_c, 80);
+                    int discarded$9 = 80;
+                    eg.a(80, 15, 16744576, 40, 5, rj.field_s, 2, 40, -2400, (se) (Object) ne.field_c);
                     ib.a(-4, g.field_Gb);
                     wa.a(123, sh.field_a);
                     stackOut_12_0 = 1;
@@ -340,7 +345,7 @@ final class om {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "om.C(" + param0 + 41);
+          throw vk.a((Throwable) (Object) var1, "om.C(" + 124 + 41);
         }
         return stackIn_13_0 != 0;
     }

@@ -9,7 +9,7 @@ final class i {
     static qb field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;

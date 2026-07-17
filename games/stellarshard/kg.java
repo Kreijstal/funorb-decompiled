@@ -12,7 +12,7 @@ final class kg extends dg {
     private bd field_F;
     static int field_D;
 
-    final static void d(boolean param0) {
+    final static void d() {
         ma var1 = (ma) (Object) mb.field_b.c((byte) -111);
         if (!(var1 != null)) {
             var1 = new ma();
@@ -32,16 +32,16 @@ final class kg extends dg {
         int discarded$0 = ((kg) this).field_F.a(((kg) this).field_G, var5 - -var7 - -((kg) this).field_C, ((kg) this).field_C + var6, -((kg) this).field_C + ((kg) this).field_I, ((kg) this).field_t - ((kg) this).field_C * 2, ((kg) this).field_B, -1, !((kg) this).field_A ? 2 : 0, 1, ((kg) this).field_F.field_N);
     }
 
-    final static void a(int param0, af param1, boolean param2) {
+    final static void a(int param0, af param1) {
         ha var3 = null;
         try {
             var3 = pg.field_fb;
-            var3.f(param0, 950);
+            var3.f(5, 950);
             var3.a(false, 2);
             var3.a(false, 0);
             var3.a(false, param1.field_p);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "kg.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "kg.I(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 
@@ -53,7 +53,7 @@ final class kg extends dg {
         return var3;
     }
 
-    final static boolean e(boolean param0) {
+    final static boolean e() {
         return qe.field_o;
     }
 

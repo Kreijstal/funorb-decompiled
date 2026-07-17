@@ -18,6 +18,10 @@ final class wc {
     }
 
     final static int d(int param0) {
+        if (param0 != 20) {
+            boolean discarded$0 = wc.a(-3, 'E');
+            return ef.field_b;
+        }
         return ef.field_b;
     }
 
@@ -46,7 +50,7 @@ final class wc {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_g = null;
         field_c = null;
         field_b = null;
@@ -55,7 +59,7 @@ final class wc {
         field_e = null;
     }
 
-    final static gj b(int param0) {
+    final static gj b() {
         try {
             Throwable var1 = null;
             gj stackIn_1_0 = null;

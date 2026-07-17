@@ -10,10 +10,10 @@ final class wn extends at {
     static du field_j;
     private int field_m;
 
-    private final void f(int param0) {
+    private final void f() {
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_l = null;
         field_j = null;
     }
@@ -29,17 +29,19 @@ final class wn extends at {
           }
         }
         var2 = 122 % ((param0 - 71) / 47);
-        int fieldTemp$2 = ((wn) this).field_n + 1;
+        int fieldTemp$6 = ((wn) this).field_n + 1;
         ((wn) this).field_n = ((wn) this).field_n + 1;
-        if (fieldTemp$2 >= this.e(-12304)) {
-          this.f(7);
+        int discarded$7 = -12304;
+        if (fieldTemp$6 >= this.e()) {
+          int discarded$8 = 7;
+          this.f();
           return true;
         } else {
           return false;
         }
     }
 
-    private final int e(int param0) {
+    private final int e() {
         return 10;
     }
 

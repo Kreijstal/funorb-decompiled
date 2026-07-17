@@ -7,7 +7,7 @@ final class nj {
     static hd field_d;
     static String field_a;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         if (!(k.field_m == null)) {
             k.field_m.a(73, param0);
         }
@@ -67,9 +67,9 @@ final class nj {
                     }
                     case 1: {
                         try {
-                            var3 = (String) mm.a(param0 ^ 30858, "getcookies", param2);
-                            var4 = wr.a(var3, param0 ^ 2, ';');
-                            var5 = param0;
+                            var3 = (String) mm.a(30858, "getcookies", param2);
+                            var4 = wr.a(var3, 2, ';');
+                            var5 = 0;
                             statePc = 2;
                             continue stateLoop;
                         } catch (Throwable stateCaught_1) {
@@ -176,7 +176,7 @@ final class nj {
                     case 12: {
                         var3_ref2 = (RuntimeException) (Object) caughtException;
                         stackOut_12_0 = (RuntimeException) var3_ref2;
-                        stackOut_12_1 = new StringBuilder().append("nj.B(").append(param0).append(44);
+                        stackOut_12_1 = new StringBuilder().append("nj.B(").append(0).append(44);
                         stackIn_14_0 = stackOut_12_0;
                         stackIn_14_1 = stackOut_12_1;
                         stackIn_13_0 = stackOut_12_0;
@@ -265,14 +265,14 @@ final class nj {
         return var1 - -in.field_b;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
         field_d = null;
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int a(int param0, int param1, int param2) {
         if (param2 + (param1 + param0) > on.field_f) {
           if (-param2 + param0 >= 0) {
             return param0 - param2;

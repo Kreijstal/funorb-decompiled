@@ -565,26 +565,40 @@ abstract class oj extends tc {
             var2_int = param1.g(-113, 8);
             if (var2_int <= 0) {
               L1: {
-                var3 = vq.a(param1, -2) ? 1 : 0;
+                int discarded$23 = -2;
+                var3 = vq.a(param1) ? 1 : 0;
                 var5 = 1 / ((param0 - 61) / 50);
-                var4 = vq.a(param1, -2) ? 1 : 0;
+                int discarded$24 = -2;
+                var4 = vq.a(param1) ? 1 : 0;
                 var6 = new pu();
                 var6.field_O = (short)param1.g(61, 16);
-                var6.field_z = to.a(var6.field_z, 16, param1, 10064);
-                var6.field_y = to.a(var6.field_y, 16, param1, 10064);
-                var6.field_o = to.a(var6.field_o, 16, param1, 10064);
+                int discarded$25 = 10064;
+                var6.field_z = to.a(var6.field_z, 16, param1);
+                int discarded$26 = 10064;
+                var6.field_y = to.a(var6.field_y, 16, param1);
+                int discarded$27 = 10064;
+                var6.field_o = to.a(var6.field_o, 16, param1);
                 var6.field_q = (short)param1.g(107, 16);
-                var6.field_c = to.a(var6.field_c, 16, param1, 10064);
-                var6.field_j = to.a(var6.field_j, 16, param1, 10064);
-                var6.field_e = to.a(var6.field_e, 16, param1, 10064);
+                int discarded$28 = 10064;
+                var6.field_c = to.a(var6.field_c, 16, param1);
+                int discarded$29 = 10064;
+                var6.field_j = to.a(var6.field_j, 16, param1);
+                int discarded$30 = 10064;
+                var6.field_e = to.a(var6.field_e, 16, param1);
                 if (var3 != 0) {
                   var6.field_t = (short)param1.g(-100, 16);
-                  var6.field_l = to.a(var6.field_l, 16, param1, 10064);
-                  var6.field_f = to.a(var6.field_f, 16, param1, 10064);
-                  var6.field_x = to.a(var6.field_x, 16, param1, 10064);
-                  var6.field_w = to.a(var6.field_w, 16, param1, 10064);
-                  var6.field_Q = to.a(var6.field_Q, 16, param1, 10064);
-                  var6.field_d = to.a(var6.field_d, 16, param1, 10064);
+                  int discarded$31 = 10064;
+                  var6.field_l = to.a(var6.field_l, 16, param1);
+                  int discarded$32 = 10064;
+                  var6.field_f = to.a(var6.field_f, 16, param1);
+                  int discarded$33 = 10064;
+                  var6.field_x = to.a(var6.field_x, 16, param1);
+                  int discarded$34 = 10064;
+                  var6.field_w = to.a(var6.field_w, 16, param1);
+                  int discarded$35 = 10064;
+                  var6.field_Q = to.a(var6.field_Q, 16, param1);
+                  int discarded$36 = 10064;
+                  var6.field_d = to.a(var6.field_d, 16, param1);
                   break L1;
                 } else {
                   break L1;
@@ -592,27 +606,35 @@ abstract class oj extends tc {
               }
               L2: {
                 if (var4 != 0) {
-                  int discarded$1 = param1.g(-102, 16);
-                  var6.field_r = to.a(var6.field_r, 16, param1, 10064);
-                  var6.field_s = to.a(var6.field_s, 16, param1, 10064);
-                  var6.field_A = to.a(var6.field_A, 16, param1, 10064);
-                  var6.field_i = to.a(var6.field_i, 16, param1, 10064);
-                  var6.field_b = to.a(var6.field_b, 16, param1, 10064);
+                  int discarded$37 = param1.g(-102, 16);
+                  int discarded$38 = 10064;
+                  var6.field_r = to.a(var6.field_r, 16, param1);
+                  int discarded$39 = 10064;
+                  var6.field_s = to.a(var6.field_s, 16, param1);
+                  int discarded$40 = 10064;
+                  var6.field_A = to.a(var6.field_A, 16, param1);
+                  int discarded$41 = 10064;
+                  var6.field_i = to.a(var6.field_i, 16, param1);
+                  int discarded$42 = 10064;
+                  var6.field_b = to.a(var6.field_b, 16, param1);
                   break L2;
                 } else {
                   break L2;
                 }
               }
               L3: {
-                if (vq.a(param1, -2)) {
-                  var6.field_u = to.a(var6.field_u, 16, param1, 10064);
+                int discarded$43 = -2;
+                if (vq.a(param1)) {
+                  int discarded$44 = 10064;
+                  var6.field_u = to.a(var6.field_u, 16, param1);
                   break L3;
                 } else {
                   break L3;
                 }
               }
               L4: {
-                if (vq.a(param1, -2)) {
+                int discarded$45 = -2;
+                if (vq.a(param1)) {
                   var6.field_K = kd.a(16, param1, var6.field_K, (byte) -122);
                   var7 = 0;
                   var8 = 0;
@@ -707,63 +729,55 @@ abstract class oj extends tc {
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        int[] stackIn_14_0 = null;
+        int[] stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
-        int[] stackOut_13_0 = null;
-        int[] stackOut_12_0 = null;
+        int[] stackOut_11_0 = null;
+        int[] stackOut_10_0 = null;
         var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
             if (param3 < 0) {
               return;
             } else {
-              L1: {
-                if (param1) {
-                  break L1;
-                } else {
-                  field_r = null;
-                  break L1;
-                }
-              }
               param4 += 23;
               var5_int = -72;
-              L2: while (true) {
+              L1: while (true) {
                 if (var5_int >= 0) {
                   break L0;
                 } else {
-                  L3: {
+                  L2: {
                     var6 = var5_int;
                     var7 = var5_int;
                     if (var6 < 0) {
                       var6 = (var6 << 1) + 256;
-                      break L3;
+                      break L2;
                     } else {
                       var6 = -(var6 << 4) + 256;
-                      break L3;
+                      break L2;
                     }
                   }
-                  L4: {
+                  L3: {
                     var7 = var7 >> 5;
                     var8 = (122 ^ var6) >> 3;
                     var9 = 15 & var6 >> 4;
                     if (param3 == -1) {
-                      stackOut_13_0 = dr.field_z;
-                      stackIn_14_0 = stackOut_13_0;
-                      break L4;
+                      stackOut_11_0 = dr.field_z;
+                      stackIn_12_0 = stackOut_11_0;
+                      break L3;
                     } else {
-                      stackOut_12_0 = dr.field_v[param3];
-                      stackIn_14_0 = stackOut_12_0;
-                      break L4;
+                      stackOut_10_0 = dr.field_v[param3];
+                      stackIn_12_0 = stackOut_10_0;
+                      break L3;
                     }
                   }
-                  var15 = stackIn_14_0;
+                  var15 = stackIn_12_0;
                   var14 = var15;
                   var13 = var14;
                   var12 = var13;
                   var10 = var12;
                   qn.a((-6 + param4 << 4) - -(var7 * ae.b(param2 + var5_int << 4, 100) >> 12), -4 + (param0 + var5_int) << 4, var8 << 4, var9, var15);
                   var5_int++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -771,7 +785,7 @@ abstract class oj extends tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var5, "oj.L(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ig.a((Throwable) (Object) var5, "oj.L(" + param0 + 44 + 1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

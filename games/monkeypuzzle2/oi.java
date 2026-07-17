@@ -68,13 +68,10 @@ final class oi {
         if (param2 >= ((oi) this).field_h.length) {
             this.c(param2, 537);
         }
-        if (param0 > -73) {
-            field_g = null;
-        }
         ((oi) this).field_h[param2] = param1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
         field_d = null;
@@ -108,7 +105,8 @@ final class oi {
     }
 
     final static void a(int param0) {
-        hi.field_b = gg.b(-11451);
+        int discarded$0 = -11451;
+        hi.field_b = gg.b();
         wg.field_j = new kj();
         if (param0 != -2) {
             oi.a(-67);
@@ -143,7 +141,7 @@ final class oi {
         throw new Error();
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -645,30 +643,22 @@ final class oi {
     private final int a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-          if (param0 > 34) {
-            break L0;
-          } else {
-            oi.a(118);
-            break L0;
-          }
-        }
+        var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         var3 = ((oi) this).field_h.length;
-        L1: while (true) {
+        L0: while (true) {
           if (var3 > param1) {
             return var3;
           } else {
             if (!((oi) this).field_a) {
               var3 = var3 + ((oi) this).field_b;
-              continue L1;
+              continue L0;
             } else {
               if (var3 != 0) {
                 var3 = var3 * ((oi) this).field_b;
-                continue L1;
+                continue L0;
               } else {
                 var3 = 1;
-                continue L1;
+                continue L0;
               }
             }
           }

@@ -28,7 +28,7 @@ final class ds {
 
     private final void f(int param0, int param1) {
         ((ds) this).field_j[param1] = ((ds) this).field_j[param1] + 1;
-        int var3 = 125 % ((param0 - -38) / 60);
+        int var3 = 0;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -40,41 +40,49 @@ final class ds {
           if (var4 != 7) {
             if (5 == var4) {
               this.e(-127, param1);
-              this.d(param1, -98);
+              int discarded$10 = -98;
+              this.d(param1);
               return;
             } else {
               if (var4 == 12) {
                 this.f(-112, param1);
-                this.d(param1, -98);
+                int discarded$11 = -98;
+                this.d(param1);
                 return;
               } else {
                 if (var4 == 10) {
                   this.c(param1, -11);
-                  this.d(param1, -98);
+                  int discarded$12 = -98;
+                  this.d(param1);
                   return;
                 } else {
                   if (15 == var4) {
                     this.c(param1, -11);
-                    this.d(param1, -98);
+                    int discarded$13 = -98;
+                    this.d(param1);
                     return;
                   } else {
                     if (var4 == 14) {
                       this.b(-5, param1);
-                      this.d(param1, -98);
+                      int discarded$14 = -98;
+                      this.d(param1);
                       return;
                     } else {
                       if (var4 != 3) {
                         if (var4 == 4) {
                           this.b(-5, param1);
-                          this.d(param1, -98);
+                          int discarded$15 = -98;
+                          this.d(param1);
                           return;
                         } else {
-                          this.d(param1, -98);
+                          int discarded$16 = -98;
+                          this.d(param1);
                           return;
                         }
                       } else {
                         this.b(-5, param1);
-                        this.d(param1, -98);
+                        int discarded$17 = -98;
+                        this.d(param1);
                         return;
                       }
                     }
@@ -83,8 +91,10 @@ final class ds {
               }
             }
           } else {
-            this.a(param1, 9266);
-            this.d(param1, -98);
+            int discarded$18 = 9266;
+            this.a(param1);
+            int discarded$19 = -98;
+            this.d(param1);
             return;
           }
         } else {
@@ -99,9 +109,9 @@ final class ds {
         ((ds) this).field_b[param0] = fh.a(((ds) this).field_b[param0], 1 << param1);
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void a() {
         int var2 = 0;
-        var2 = 105 % ((param0 - -9) / 56);
+        var2 = 0;
         if (!lca.a(false)) {
           return;
         } else {
@@ -146,12 +156,9 @@ final class ds {
 
     private final void b(int param0, int param1) {
         ((ds) this).field_m[param1] = ((ds) this).field_m[param1] + 1;
-        if (param0 != -5) {
-            ((ds) this).a(52, 52, false);
-        }
     }
 
-    private final void a(int param0, int param1) {
+    private final void a(int param0) {
         ((ds) this).field_p[param0] = ((ds) this).field_p[param0] + 1;
     }
 
@@ -162,38 +169,23 @@ final class ds {
         }
     }
 
-    private final void d(int param0, int param1) {
+    private final void d(int param0) {
         int var3 = 0;
         ((ds) this).field_i[param0] = true;
     }
 
     final static int c(int param0, int param1, int param2) {
         param2 = (127 & param1) * param2 >> 7;
-        if (param0 == -127) {
-          if (2 <= param2) {
-            if (param2 <= 126) {
-              return (param1 & 65408) + param2;
-            } else {
-              param2 = 126;
-              return (param1 & 65408) + param2;
-            }
+        if (2 <= param2) {
+          if (param2 <= 126) {
+            return (param1 & 65408) + param2;
           } else {
-            param2 = 2;
+            param2 = 126;
             return (param1 & 65408) + param2;
           }
         } else {
-          field_n = null;
-          if (2 <= param2) {
-            if (param2 <= 126) {
-              return (param1 & 65408) + param2;
-            } else {
-              param2 = 126;
-              return (param1 & 65408) + param2;
-            }
-          } else {
-            param2 = 2;
-            return (param1 & 65408) + param2;
-          }
+          param2 = 2;
+          return (param1 & 65408) + param2;
         }
     }
 

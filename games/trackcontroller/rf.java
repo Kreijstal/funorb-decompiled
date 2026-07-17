@@ -8,7 +8,7 @@ final class rf {
     static String field_d;
     static fj field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -32,13 +32,13 @@ final class rf {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    mc.a(false, param0, var5);
+                    mc.a(false, 3, var5);
                     var5 = (ti) (Object) ea.field_s.a(10);
                     continue L2;
                   }
                 }
               } else {
-                we.a(param0, var4, (byte) -47);
+                we.a(3, var4, (byte) -47);
                 var4 = (aj) (Object) ub.field_e.a(10);
                 continue L1;
               }
@@ -47,11 +47,11 @@ final class rf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var2, "rf.E(" + param0 + 44 + 0 + 41);
+          throw sl.a((Throwable) (Object) var2, "rf.E(" + 3 + 44 + 0 + 41);
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         int var1 = 70;
         if (null == tk.field_u) {
             return false;
@@ -70,7 +70,7 @@ final class rf {
         vl.field_H = 0;
     }
 
-    final static ji[] a(uf param0, boolean param1) {
+    final static ji[] a(uf param0) {
         RuntimeException var2 = null;
         int[] var3 = null;
         ji[] var4 = null;
@@ -145,7 +145,8 @@ final class rf {
                     return stackIn_10_0;
                   }
                 } else {
-                  wl.a(10L, false);
+                  int discarded$1 = 0;
+                  wl.a(10L);
                   continue L1;
                 }
               }

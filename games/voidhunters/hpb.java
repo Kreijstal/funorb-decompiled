@@ -33,7 +33,7 @@ final class hpb extends le {
         return var10;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_j = null;
     }
 

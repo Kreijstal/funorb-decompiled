@@ -28,7 +28,7 @@ final class cp {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = 65;
         field_a = null;
         field_b = null;
@@ -43,63 +43,55 @@ final class cp {
         char[] var6 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_23_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_11_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_2_0 = 0;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
-              if (!d.a(param1, param0 + -62)) {
-                if (param0 == 64) {
-                  var6 = nr.field_o;
-                  var2 = var6;
-                  var3 = 0;
-                  L1: while (true) {
-                    if (var6.length <= var3) {
-                      var2 = uc.field_b;
-                      var3 = 0;
-                      L2: while (true) {
-                        if (var2.length <= var3) {
-                          stackOut_22_0 = 0;
-                          stackIn_23_0 = stackOut_22_0;
-                          break L0;
+              if (!d.a(param1, 2)) {
+                var6 = nr.field_o;
+                var2 = var6;
+                var3 = 0;
+                L1: while (true) {
+                  if (var6.length <= var3) {
+                    var2 = uc.field_b;
+                    var3 = 0;
+                    L2: while (true) {
+                      if (var2.length <= var3) {
+                        stackOut_20_0 = 0;
+                        stackIn_21_0 = stackOut_20_0;
+                        break L0;
+                      } else {
+                        var4 = var2[var3];
+                        if (param1 != var4) {
+                          var3++;
+                          continue L2;
                         } else {
-                          var4 = var2[var3];
-                          if (param1 != var4) {
-                            var3++;
-                            continue L2;
-                          } else {
-                            stackOut_19_0 = 1;
-                            stackIn_20_0 = stackOut_19_0;
-                            return stackIn_20_0 != 0;
-                          }
+                          stackOut_17_0 = 1;
+                          stackIn_18_0 = stackOut_17_0;
+                          return stackIn_18_0 != 0;
                         }
                       }
+                    }
+                  } else {
+                    var4 = var6[var3];
+                    if (var4 != param1) {
+                      var3++;
+                      continue L1;
                     } else {
-                      var4 = var6[var3];
-                      if (var4 != param1) {
-                        var3++;
-                        continue L1;
-                      } else {
-                        stackOut_13_0 = 1;
-                        stackIn_14_0 = stackOut_13_0;
-                        return stackIn_14_0 != 0;
-                      }
+                      stackOut_11_0 = 1;
+                      stackIn_12_0 = stackOut_11_0;
+                      return stackIn_12_0 != 0;
                     }
                   }
-                } else {
-                  stackOut_8_0 = 0;
-                  stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0 != 0;
                 }
               } else {
                 stackOut_5_0 = 1;
@@ -115,9 +107,9 @@ final class cp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var2_ref, "cp.B(" + param0 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) var2_ref, "cp.B(" + 64 + 44 + param1 + 41);
         }
-        return stackIn_23_0 != 0;
+        return stackIn_21_0 != 0;
     }
 
     final static void a(byte param0) {

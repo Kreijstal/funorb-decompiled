@@ -8,7 +8,7 @@ final class gg extends rk {
     static nf[] field_q;
     static od[] field_n;
 
-    public static void b(int param0) {
+    public static void b() {
         field_p = null;
         field_q = null;
         field_m = null;

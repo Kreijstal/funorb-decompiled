@@ -4,7 +4,7 @@
 final class p {
     static String field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -99,24 +99,49 @@ final class p {
     }
 
     final static boolean a(int param0, char param1) {
-        if (param0 == 376) {
-          if (param1 < 32) {
-            if (param1 < 160) {
-              L0: {
-                if (param1 == 8364) {
+        if (param1 < 32) {
+          if (param1 < 160) {
+            L0: {
+              if (param1 == 8364) {
+                break L0;
+              } else {
+                if (param1 == 338) {
                   break L0;
                 } else {
-                  if (param1 == 338) {
+                  if (param1 == 8212) {
                     break L0;
                   } else {
-                    if (param1 == 8212) {
+                    if (param1 == 339) {
                       break L0;
                     } else {
-                      if (param1 == 339) {
+                      if (376 == param1) {
                         break L0;
                       } else {
+                        return false;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            return true;
+          } else {
+            if (param1 > 255) {
+              L1: {
+                if (param1 == 8364) {
+                  break L1;
+                } else {
+                  if (param1 == 338) {
+                    break L1;
+                  } else {
+                    if (param1 == 8212) {
+                      break L1;
+                    } else {
+                      if (param1 == 339) {
+                        break L1;
+                      } else {
                         if (376 == param1) {
-                          break L0;
+                          break L1;
                         } else {
                           return false;
                         }
@@ -127,42 +152,17 @@ final class p {
               }
               return true;
             } else {
-              if (param1 > 255) {
-                L1: {
-                  if (param1 == 8364) {
-                    break L1;
-                  } else {
-                    if (param1 == 338) {
-                      break L1;
-                    } else {
-                      if (param1 == 8212) {
-                        break L1;
-                      } else {
-                        if (param1 == 339) {
-                          break L1;
-                        } else {
-                          if (376 == param1) {
-                            break L1;
-                          } else {
-                            return false;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+              return true;
+            }
+          }
+        } else {
+          if (126 < param1) {
+            if (param1 >= 160) {
+              if (param1 <= 255) {
                 return true;
               } else {
-                return true;
-              }
-            }
-          } else {
-            if (126 < param1) {
-              if (param1 < 160) {
-                L2: {
-                  if (param1 == 8364) {
-                    break L2;
-                  } else {
+                if (param1 != 8364) {
+                  L2: {
                     if (param1 == 338) {
                       break L2;
                     } else {
@@ -181,163 +181,45 @@ final class p {
                       }
                     }
                   }
-                }
-                return true;
-              } else {
-                if (param1 > 255) {
-                  L3: {
-                    if (param1 == 8364) {
-                      break L3;
-                    } else {
-                      if (param1 == 338) {
-                        break L3;
-                      } else {
-                        if (param1 == 8212) {
-                          break L3;
-                        } else {
-                          if (param1 == 339) {
-                            break L3;
-                          } else {
-                            if (376 == param1) {
-                              break L3;
-                            } else {
-                              return false;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                   return true;
                 } else {
                   return true;
                 }
               }
             } else {
-              return true;
-            }
-          }
-        } else {
-          field_a = null;
-          if (param1 >= 32) {
-            if (126 >= param1) {
-              return true;
-            } else {
-              if (param1 >= 160) {
-                if (param1 <= 255) {
-                  return true;
-                } else {
-                  L4: {
-                    if (param1 == 8364) {
-                      break L4;
+              if (param1 != 8364) {
+                if (param1 != 338) {
+                  L3: {
+                    if (param1 == 8212) {
+                      break L3;
                     } else {
-                      if (param1 == 338) {
-                        break L4;
+                      if (param1 == 339) {
+                        break L3;
                       } else {
-                        if (param1 == 8212) {
-                          break L4;
+                        if (376 == param1) {
+                          break L3;
                         } else {
-                          if (param1 == 339) {
-                            break L4;
-                          } else {
-                            if (376 == param1) {
-                              break L4;
-                            } else {
-                              return false;
-                            }
-                          }
+                          return false;
                         }
                       }
                     }
                   }
+                  return true;
+                } else {
                   return true;
                 }
               } else {
-                L5: {
-                  if (param1 == 8364) {
-                    break L5;
-                  } else {
-                    if (param1 == 338) {
-                      break L5;
-                    } else {
-                      if (param1 == 8212) {
-                        break L5;
-                      } else {
-                        if (param1 == 339) {
-                          break L5;
-                        } else {
-                          if (376 == param1) {
-                            break L5;
-                          } else {
-                            return false;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
                 return true;
               }
             }
           } else {
-            if (param1 < 160) {
-              L6: {
-                if (param1 == 8364) {
-                  break L6;
-                } else {
-                  if (param1 == 338) {
-                    break L6;
-                  } else {
-                    if (param1 == 8212) {
-                      break L6;
-                    } else {
-                      if (param1 == 339) {
-                        break L6;
-                      } else {
-                        if (376 == param1) {
-                          break L6;
-                        } else {
-                          return false;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              return true;
-            } else {
-              if (param1 > 255) {
-                if (param1 != 8364) {
-                  if (param1 != 338) {
-                    if (param1 != 8212) {
-                      if (param1 != 339) {
-                        if (376 != param1) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            }
+            return true;
           }
         }
     }
 
     final static void a(int param0) {
-        ch.field_e.i(param0 ^ param0);
+        ch.field_e.i(0);
         if (!(null != bb.field_F)) {
             bb.field_F = new fg(ch.field_e, eg.field_t);
         }

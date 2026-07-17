@@ -220,33 +220,25 @@ final class ni extends di {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_m = null;
         field_n = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                L1: {
-                  if (param0 <= -115) {
-                    break L1;
-                  } else {
-                    field_m = null;
-                    break L1;
-                  }
-                }
                 Object discarded$1 = sj.a(gd.b((byte) 77), new Object[1], 7648, "resizing");
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
+              L1: {
                 var2 = decompiledCaughtException;
-                break L2;
+                break L1;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

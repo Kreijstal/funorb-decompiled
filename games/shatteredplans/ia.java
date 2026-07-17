@@ -1071,85 +1071,77 @@ abstract class ia {
         int var6 = 0;
         jd var7 = null;
         int var8 = 0;
-        bh stackIn_18_0 = null;
+        bh stackIn_17_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        bh stackOut_17_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        bh stackOut_16_0 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
         RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var3 = param1.j(18229);
-              var4 = new bh(2147483647, 2147483647, -2147483648, -2147483648);
-              if (param0 == 22770) {
-                break L1;
-              } else {
-                ((ia) this).field_J = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var3 = param1.j(18229);
+            var4 = new bh(2147483647, 2147483647, -2147483648, -2147483648);
+            L1: while (true) {
               if (var3 == null) {
-                stackOut_17_0 = (bh) var4;
-                stackIn_18_0 = stackOut_17_0;
+                stackOut_16_0 = (bh) var4;
+                stackIn_17_0 = stackOut_16_0;
                 break L0;
               } else {
                 var5 = var3.field_r;
                 var6 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var5.length <= var6) {
                     var3 = param1.h(-23410);
-                    continue L2;
+                    continue L1;
                   } else {
-                    L4: {
+                    L3: {
                       var7 = var5[var6];
                       if (var4.field_q <= var7.field_f) {
-                        break L4;
+                        break L3;
                       } else {
                         var4.field_q = var7.field_f;
+                        break L3;
+                      }
+                    }
+                    L4: {
+                      if (var4.field_l <= var7.field_c) {
+                        break L4;
+                      } else {
+                        var4.field_l = var7.field_c;
                         break L4;
                       }
                     }
                     L5: {
-                      if (var4.field_l <= var7.field_c) {
+                      if (var7.field_f > var4.field_i) {
+                        var4.field_i = var7.field_f;
                         break L5;
                       } else {
-                        var4.field_l = var7.field_c;
                         break L5;
                       }
                     }
                     L6: {
-                      if (var7.field_f > var4.field_i) {
-                        var4.field_i = var7.field_f;
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    L7: {
                       if (var4.field_o >= var7.field_c) {
-                        break L7;
+                        break L6;
                       } else {
                         var4.field_o = var7.field_c;
-                        break L7;
+                        break L6;
                       }
                     }
                     var6++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -1157,35 +1149,35 @@ abstract class ia {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var3_ref = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3_ref;
-            stackOut_19_1 = new StringBuilder().append("ia.S(").append(param0).append(44);
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_18_0 = (RuntimeException) var3_ref;
+            stackOut_18_1 = new StringBuilder().append("ia.S(").append(22770).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L8;
-            } else {
               stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L8;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L7;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L7;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
-        return stackIn_18_0;
+        return stackIn_17_0;
     }
 
     final void a(int param0, ln param1) {
@@ -1912,9 +1904,6 @@ abstract class ia {
     private final boolean a(int param0, int param1) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         es var3 = (es) (Object) ((ia) this).field_ab.d(0);
-        if (param0 != -4) {
-            ((ia) this).c(false);
-        }
         while (var3 != null) {
             if (var3.field_o == 3) {
                 if (var3.field_k == param1) {

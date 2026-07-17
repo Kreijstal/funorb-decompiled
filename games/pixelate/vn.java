@@ -18,7 +18,8 @@ final class vn {
           L0: {
             field_d = null;
             if (((vn) this).field_a < -20.0f) {
-              this.b(false);
+              int discarded$4 = 0;
+              this.b();
               break L0;
             } else {
               break L0;
@@ -28,7 +29,8 @@ final class vn {
         } else {
           L1: {
             if (((vn) this).field_a < -20.0f) {
-              this.b(false);
+              int discarded$5 = 0;
+              this.b();
               break L1;
             } else {
               break L1;
@@ -53,13 +55,13 @@ final class vn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_c = null;
     }
 
-    final static ob a(fm param0, String param1, String param2, fm param3, int param4) {
+    final static ob a(fm param0, String param1, String param2, fm param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -130,7 +132,8 @@ final class vn {
           L0: {
             var5_int = param0.a(122, param1);
             var6 = param0.a((byte) -95, param2, var5_int);
-            stackOut_0_0 = jf.a(param3, var5_int, param0, var6, (byte) 126);
+            int discarded$2 = 126;
+            stackOut_0_0 = jf.a(param3, var5_int, param0, var6);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -242,7 +245,7 @@ final class vn {
         return stackIn_1_0;
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         ((vn) this).field_f = 90 + ok.a(ea.field_b, -112, 340);
         ((vn) this).field_a = 480.0f;
     }
@@ -255,7 +258,8 @@ final class vn {
     }
 
     vn(int param0) {
-        this.b(false);
+        int discarded$0 = 0;
+        this.b();
         ((vn) this).field_a = (float)param0;
     }
 

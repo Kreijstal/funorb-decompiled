@@ -20,9 +20,6 @@ final class sl extends pp {
     }
 
     final static void a(byte param0, String param1) {
-        if (param0 >= -67) {
-            return;
-        }
         System.out.println("Error: " + ig.a(-19384, param1, "%0a", "\n"));
     }
 
@@ -333,7 +330,7 @@ final class sl extends pp {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_k = null;
         int var1 = 0;
         field_j = null;

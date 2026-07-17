@@ -24,7 +24,8 @@ class mh extends ag {
               }
             }
           } else {
-            if (co.a(-20675) != 0) {
+            int discarded$2 = -20675;
+            if (co.a() != 0) {
               break L0;
             } else {
               L1: {
@@ -128,7 +129,7 @@ class mh extends ag {
         }
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         int var1 = 0;
         field_I = null;
     }

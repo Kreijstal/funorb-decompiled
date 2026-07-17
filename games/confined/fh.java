@@ -8,7 +8,7 @@ final class fh {
     static String field_c;
     static bi field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_e = null;
@@ -374,95 +374,92 @@ final class fh {
         try {
           L0: {
             s.field_K = false;
-            if (param1 == -1) {
-              L1: {
-                jd.field_c = false;
-                if (ki.field_c == null) {
+            L1: {
+              jd.field_c = false;
+              if (ki.field_c == null) {
+                break L1;
+              } else {
+                if (!ki.field_c.field_H) {
                   break L1;
                 } else {
-                  if (!ki.field_c.field_H) {
+                  L2: {
+                    var3_int = 1;
+                    if (param0 == 8) {
+                      L3: {
+                        if (!rk.field_f) {
+                          param2 = ml.field_b;
+                          break L3;
+                        } else {
+                          param2 = bg.field_e;
+                          break L3;
+                        }
+                      }
+                      param0 = 2;
+                      om.field_p.a(0, kj.field_c);
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                  L4: {
+                    if (param0 != 10) {
+                      break L4;
+                    } else {
+                      int discarded$2 = 0;
+                      ib.c();
+                      var3_int = 0;
+                      break L4;
+                    }
+                  }
+                  L5: {
+                    if (var3_int == 0) {
+                      break L5;
+                    } else {
+                      L6: {
+                        if (!jd.field_c) {
+                          break L6;
+                        } else {
+                          param2 = b.a(new String[1], cg.field_c, 1177);
+                          break L6;
+                        }
+                      }
+                      L7: {
+                        if (!pc.field_f) {
+                          break L7;
+                        } else {
+                          param2 = gj.field_c;
+                          break L7;
+                        }
+                      }
+                      ki.field_c.a(param2, param0, false);
+                      break L5;
+                    }
+                  }
+                  if (param0 == 256) {
                     break L1;
                   } else {
-                    L2: {
-                      var3_int = 1;
-                      if (param0 == 8) {
-                        L3: {
-                          if (!rk.field_f) {
-                            param2 = ml.field_b;
-                            break L3;
-                          } else {
-                            param2 = bg.field_e;
-                            break L3;
-                          }
-                        }
-                        param0 = 2;
-                        om.field_p.a(0, kj.field_c);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    L4: {
-                      if (param0 != 10) {
-                        break L4;
-                      } else {
-                        ib.c(false);
-                        var3_int = 0;
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      if (var3_int == 0) {
-                        break L5;
-                      } else {
-                        L6: {
-                          if (!jd.field_c) {
-                            break L6;
-                          } else {
-                            param2 = b.a(new String[1], cg.field_c, param1 + 1178);
-                            break L6;
-                          }
-                        }
-                        L7: {
-                          if (!pc.field_f) {
-                            break L7;
-                          } else {
-                            param2 = gj.field_c;
-                            break L7;
-                          }
-                        }
-                        ki.field_c.a(param2, param0, false);
-                        break L5;
-                      }
-                    }
-                    if (param0 == 256) {
-                      break L1;
-                    } else {
-                      if (10 != param0) {
-                        if (!rk.field_f) {
-                          om.field_p.g((byte) -104);
-                          break L1;
-                        } else {
-                          return;
-                        }
+                    if (10 != param0) {
+                      if (!rk.field_f) {
+                        om.field_p.g((byte) -104);
+                        break L1;
                       } else {
                         return;
                       }
+                    } else {
+                      return;
                     }
                   }
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             runtimeException = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) runtimeException;
-            stackOut_25_1 = new StringBuilder().append("fh.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_25_1 = new StringBuilder().append("fh.B(").append(param0).append(44).append(-1).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;

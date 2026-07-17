@@ -71,9 +71,9 @@ final class oi extends gb implements n {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_H = null;
-        int var1 = 38 / ((84 - param0) / 35);
+        int var1 = -38;
         field_J = null;
         field_M = null;
     }
@@ -232,11 +232,6 @@ final class oi extends gb implements n {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != -22417) {
-            oi.f((byte) 108);
-            jl.field_I.a((byte) -43, 0, 0);
-            return;
-        }
         jl.field_I.a((byte) -43, 0, 0);
     }
 

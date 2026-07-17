@@ -221,14 +221,14 @@ final class hn {
         }
     }
 
-    private final void h(int param0) {
+    private final void h() {
         dc var2 = null;
         dc var3 = null;
         int var4 = 0;
         kh var5 = null;
         hm var6 = null;
         var4 = Confined.field_J ? 1 : 0;
-        var5 = (kh) (Object) ((hn) this).field_b.a(param0 ^ 22168);
+        var5 = (kh) (Object) ((hn) this).field_b.a(53);
         L0: while (true) {
           if (var5 == null) {
             var6 = (hm) (Object) ((hn) this).field_F.a(50);
@@ -236,7 +236,7 @@ final class hn {
               if (var6 == null) {
                 e.a(((hn) this).field_b, (byte) -121);
                 e.a(((hn) this).field_F, (byte) 123);
-                var2 = (dc) (Object) ((hn) this).field_b.a(param0 + -22095);
+                var2 = (dc) (Object) ((hn) this).field_b.a(94);
                 var3 = (dc) (Object) ((hn) this).field_F.a(116);
                 L2: while (true) {
                   L3: {
@@ -260,20 +260,7 @@ final class hn {
                   }
                   L4: while (true) {
                     if (var2 == null) {
-                      if (param0 == 22189) {
-                        L5: while (true) {
-                          if (var3 == null) {
-                            ((hn) this).field_q = 1.7976931348623157e+308;
-                            return;
-                          } else {
-                            ((hn) this).field_k.a((jl) (Object) var3, (byte) 114);
-                            var3 = (dc) (Object) ((hn) this).field_F.d(param0 ^ 24294);
-                            continue L5;
-                          }
-                        }
-                      } else {
-                        return;
-                      }
+                      return;
                     } else {
                       ((hn) this).field_k.a((jl) (Object) var2, (byte) 116);
                       var2 = (dc) (Object) ((hn) this).field_b.d(2123);
@@ -282,12 +269,12 @@ final class hn {
                   }
                 }
               } else {
-                L6: {
+                L5: {
                   if (var6.a(((hn) this).field_m, -1073453180)) {
-                    break L6;
+                    break L5;
                   } else {
                     var6.a(true);
-                    break L6;
+                    break L5;
                   }
                 }
                 var6 = (hm) (Object) ((hn) this).field_F.d(2123);
@@ -295,12 +282,12 @@ final class hn {
               }
             }
           } else {
-            L7: {
+            L6: {
               if (!var5.a(((hn) this).field_m, -1073453180)) {
                 var5.a(true);
-                break L7;
+                break L6;
               } else {
-                break L7;
+                break L6;
               }
             }
             var5 = (kh) (Object) ((hn) this).field_b.d(2123);
@@ -346,7 +333,8 @@ final class hn {
           ke.field_Z = var19[10] * -4.0;
           var3 = -91 / ((param0 - 45) / 32);
           if (((hn) this).field_x.field_a <= 1) {
-            this.n(938);
+            int discarded$2 = 938;
+            this.n();
             break L0;
           } else {
             this.k(-125);
@@ -369,7 +357,8 @@ final class hn {
         var6 = -((hn) this).field_A + ((hn) this).field_E;
         ((hn) this).field_x.a(false, 64.0, var4, ((hn) this).field_m);
         var8 = (pm) (Object) ((hn) this).field_g.a(false);
-        this.h(22189);
+        int discarded$3 = 22189;
+        this.h();
         var9 = (oi) (Object) var4.a(85);
         var10 = -2 + ((hn) this).field_x.field_a;
         L2: while (true) {
@@ -619,7 +608,7 @@ final class hn {
         if (!(param0 >= var39.field_D)) {
             param0 = var39.field_D;
         }
-        ((hn) this).field_x.b(param2 + -74, param1, param0);
+        ((hn) this).field_x.b(3, param1, param0);
         double var6 = ((hn) this).field_s;
         double var8 = ((hn) this).field_r;
         double var10 = ((hn) this).field_A;
@@ -675,9 +664,6 @@ final class hn {
                 var28[incrementValue$1] = 188 + (int)(640.0 * (var20 / var22));
             }
         }
-        if (param2 != 77) {
-            ((hn) this).field_G = 109;
-        }
         var34 = ((hn) this).field_x.field_f * 2;
         for (var35 = 0; var35 < 8; var35++) {
             k.b();
@@ -719,8 +705,10 @@ final class hn {
         int var11 = 0;
         wd var12 = null;
         var11 = Confined.field_J ? 1 : 0;
-        var12 = this.a((byte) -26);
-        this.b((byte) 120);
+        int discarded$2 = -26;
+        var12 = this.a();
+        int discarded$3 = 120;
+        this.b();
         var3 = (pm) (Object) ((hn) this).field_g.a(8);
         var4 = null;
         var5 = null;
@@ -973,7 +961,8 @@ final class hn {
         }
         dh.field_vb.b((byte) 28);
         if (!om.field_s.a((byte) 14)) {
-            return cl.h((byte) -116);
+            int discarded$0 = -116;
+            return cl.h();
         }
         return 0;
     }
@@ -1019,7 +1008,7 @@ final class hn {
             } else {
               L1: {
                 if (var2.g((byte) 103)) {
-                  rk discarded$2 = ((hn) this).field_N.b((rk) (Object) var2, param0 + 5);
+                  rk discarded$4 = ((hn) this).field_N.b((rk) (Object) var2, param0 + 5);
                   var3 = (pm) (Object) ((hn) this).field_N.b(param0 + 110);
                   L2: while (true) {
                     if (var3 == null) {
@@ -1032,7 +1021,8 @@ final class hn {
                           if (!var3.g((byte) 127)) {
                             break L3;
                           } else {
-                            gb.a(var2, var3, (byte) 84);
+                            int discarded$5 = 84;
+                            gb.a(var2, var3);
                             break L3;
                           }
                         }
@@ -1231,7 +1221,7 @@ final class hn {
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         pm var2 = null;
         pm var3 = null;
         int var4 = 0;
@@ -1270,7 +1260,7 @@ final class hn {
         } while (var4 == 0);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_C = null;
         field_p = null;
         field_f = null;
@@ -1289,26 +1279,19 @@ final class hn {
         } else {
           L0: {
             var6 = 256;
-            if (param0) {
-              break L0;
-            } else {
-              ((hn) this).field_m = null;
-              break L0;
-            }
-          }
-          L1: {
             if (param1) {
-              var6 = (int)(this.a(256.0, 109) + 0.5);
-              break L1;
+              int discarded$1 = 109;
+              var6 = (int)(this.a(256.0) + 0.5);
+              break L0;
             } else {
-              break L1;
+              break L0;
             }
           }
           var7 = (dc) (Object) ((hn) this).field_k.c(-106);
-          L2: while (true) {
-            L3: {
+          L1: while (true) {
+            L2: {
               if (var7 == null) {
-                break L3;
+                break L2;
               } else {
                 if (var7.field_I > param2) {
                   var7.c(-1704);
@@ -1316,51 +1299,51 @@ final class hn {
                   var7.field_N = 0;
                   ((hn) this).field_O.a((jl) (Object) var7, (byte) 126);
                   var7 = (dc) (Object) ((hn) this).field_k.a(0);
-                  continue L2;
+                  continue L1;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             }
             var7 = (dc) (Object) ((hn) this).field_O.d(-100);
-            L4: while (true) {
+            L3: while (true) {
               if (var7 == null) {
                 ((hn) this).field_q = param2;
                 return;
               } else {
-                L5: {
+                L4: {
                   var8 = var7.field_N;
                   if (param2 < var7.field_F) {
                     var9 = 65536;
                     var7.b(true);
-                    break L5;
+                    break L4;
                   } else {
                     var9 = var7.a((int)((param2 - var7.field_I) / (-var7.field_I + var7.field_F) * 65536.0), (byte) -63);
                     if (var7.field_N > var9) {
                       var9 = var7.field_N;
-                      break L5;
+                      break L4;
                     } else {
                       var7.field_N = var9;
-                      break L5;
+                      break L4;
                     }
                   }
                 }
-                L6: {
+                L5: {
                   var7.a(var6, var8, -14936, var9);
                   if (param2 >= var7.field_F) {
                     if (!param3) {
-                      break L6;
+                      break L5;
                     } else {
                       var7.a(true, var9, 256 + -var6);
-                      break L6;
+                      break L5;
                     }
                   } else {
                     var7.b(var6, (byte) 27);
-                    break L6;
+                    break L5;
                   }
                 }
                 var7 = (dc) (Object) ((hn) this).field_O.a((byte) -115);
-                continue L4;
+                continue L3;
               }
             }
           }
@@ -1374,7 +1357,7 @@ final class hn {
         return ((hn) this).a(param1, 0, ((hn) this).field_E + ((hn) this).field_A);
     }
 
-    private final wd a(byte param0) {
+    private final wd a() {
         pm var3 = null;
         pm var4 = null;
         int var5 = 0;
@@ -1451,7 +1434,7 @@ final class hn {
         }
     }
 
-    private final void n(int param0) {
+    private final void n() {
         double var2 = 0.0;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -1563,10 +1546,11 @@ final class hn {
             var3_ref = (pm) (Object) ((hn) this).field_g.a(false);
             var4 = (oi) (Object) param1.a(19);
             var5 = null;
-            var6 = 107 % ((53 - param0) / 48);
+            var6 = 0;
             L1: while (true) {
               if (var3_ref == null) {
-                fc.a(param1, (byte) 87);
+                int discarded$1 = 87;
+                fc.a(param1);
                 var3_ref = (pm) (Object) ((hn) this).field_g.a(13);
                 L2: while (true) {
                   if (var3_ref == null) {
@@ -1636,7 +1620,7 @@ final class hn {
           L9: {
             var3 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var3;
-            stackOut_21_1 = new StringBuilder().append("hn.E(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("hn.E(").append(115).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -1663,7 +1647,7 @@ final class hn {
         }
     }
 
-    private final double a(double param0, int param1) {
+    private final double a(double param0) {
         double var4 = 0.0;
         double var6 = 0.0;
         double var8 = 0.0;

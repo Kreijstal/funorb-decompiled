@@ -1017,7 +1017,7 @@ final class bh extends wh {
           if (param0.field_j.length == 0) {
             return null;
           } else {
-            return new bh(param0, (int)((long)param0.field_l * 256L * (long)param1 / (long)(100 * oa.field_h)), param2 << 6);
+            return new bh(param0, (int)((long)param0.field_l * 256L * 100L / (long)(100 * oa.field_h)), param2 << 6);
           }
         } else {
           return null;

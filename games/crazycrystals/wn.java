@@ -83,17 +83,13 @@ final class wn implements wo {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
-        if (param4 == -30) {
-          if (param1 >= param3) {
-            if (param1 < param0 + param3) {
-              if (param6 <= param2) {
-                if (param5 + param6 <= param2) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param1 >= param3) {
+          if (param1 < param0 + param3) {
+            if (param6 <= param2) {
+              if (param5 + param6 <= param2) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;
@@ -102,28 +98,11 @@ final class wn implements wo {
             return false;
           }
         } else {
-          field_a = null;
-          if (param1 >= param3) {
-            if (param1 < param0 + param3) {
-              if (param6 <= param2) {
-                if (param5 + param6 <= param2) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
+          return false;
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

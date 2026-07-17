@@ -116,7 +116,7 @@ final class po extends ah {
               if (param0 == 52) {
                 break L1;
               } else {
-                kd discarded$5 = this.m((byte) 55);
+                kd discarded$7 = this.m((byte) 55);
                 break L1;
               }
             }
@@ -131,7 +131,7 @@ final class po extends ah {
                     if (1 == ((po) this).field_F) {
                       break L2;
                     } else {
-                      boolean discarded$6 = ((po) this).p(-123);
+                      boolean discarded$8 = ((po) this).p(-123);
                       if (ZombieDawn.field_J == 0) {
                         break L2;
                       } else {
@@ -141,7 +141,8 @@ final class po extends ah {
                   }
                 }
               }
-              this.b(true);
+              int discarded$9 = 1;
+              this.b();
               break L2;
             }
             break L0;
@@ -217,32 +218,24 @@ final class po extends ah {
         }
     }
 
-    public static void v(int param0) {
+    public static void v() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_zb = null;
-              field_Ab = null;
-              if (param0 == -31113) {
-                break L1;
-              } else {
-                po.a(69, -111, false, 104, (gd) null);
-                break L1;
-              }
-            }
+            field_zb = null;
+            field_Ab = null;
             field_wb = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "po.D(" + param0 + 41);
+          throw sh.a((Throwable) (Object) var1, "po.D(" + -31113 + 41);
         }
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -277,7 +270,7 @@ final class po extends ah {
             } else {
               L1: {
                 L2: {
-                  var2_int = ((po) this).field_yb.a(param0) + -((po) this).a(true);
+                  var2_int = ((po) this).field_yb.a(true) + -((po) this).a(true);
                   var3 = ((po) this).field_yb.f(237239984) + -((po) this).f(237239984);
                   if (Math.abs(var3) <= Math.abs(var2_int)) {
                     break L2;
@@ -340,7 +333,7 @@ final class po extends ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) runtimeException, "po.C(" + param0 + 41);
+          throw sh.a((Throwable) (Object) runtimeException, "po.C(" + 1 + 41);
         }
     }
 
@@ -371,7 +364,7 @@ final class po extends ah {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        boolean stackIn_11_0 = false;
+        int stackIn_11_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_39_0 = 0;
@@ -384,7 +377,7 @@ final class po extends ah {
         StringBuilder stackIn_66_1 = null;
         String stackIn_66_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_10_0 = false;
+        int stackOut_10_0 = 0;
         int stackOut_28_0 = 0;
         int stackOut_26_0 = 0;
         int stackOut_31_0 = 0;
@@ -404,7 +397,7 @@ final class po extends ah {
             L1: {
               var5_int = wm.a((param3 - param1) * 3, (byte) -95);
               var6 = 3 * param1;
-              nl.c(param0 ^ -30006);
+              nl.c(-30006);
               var7 = var5_int - 10;
               if (param4.field_p <= 0) {
                 break L1;
@@ -418,7 +411,7 @@ final class po extends ah {
               }
             }
             eh.field_A = 0;
-            var8 = param0;
+            var8 = 0;
             L2: while (true) {
               L3: {
                 L4: {
@@ -428,15 +421,15 @@ final class po extends ah {
                     var9 = param4.field_g[var8];
                     var10 = param4.field_H[var8];
                     var11 = param4.field_r[var8];
-                    stackOut_10_0 = param2;
-                    stackIn_49_0 = stackOut_10_0 ? 1 : 0;
+                    stackOut_10_0 = 0;
+                    stackIn_49_0 = stackOut_10_0;
                     stackIn_11_0 = stackOut_10_0;
                     if (var19 != 0) {
                       break L3;
                     } else {
                       L5: {
                         L6: {
-                          if (stackIn_11_0) {
+                          if (stackIn_11_0 != 0) {
                             var12 = to.field_a[var9];
                             var13 = wc.field_Nb[var9];
                             var14 = -var12 + to.field_a[var10];
@@ -604,7 +597,7 @@ final class po extends ah {
           L17: {
             var5 = decompiledCaughtException;
             stackOut_62_0 = (RuntimeException) var5;
-            stackOut_62_1 = new StringBuilder().append("po.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_62_1 = new StringBuilder().append("po.H(").append(0).append(44).append(param1).append(44).append(0).append(44).append(param3).append(44);
             stackIn_65_0 = stackOut_62_0;
             stackIn_65_1 = stackOut_62_1;
             stackIn_63_0 = stackOut_62_0;

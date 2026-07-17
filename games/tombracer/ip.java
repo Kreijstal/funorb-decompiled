@@ -26,7 +26,7 @@ abstract class ip {
 
     abstract void a(int param0);
 
-    final static void a(upa param0, int param1, int param2) {
+    final static void a(upa param0, int param1) {
         kh var3 = null;
         try {
             var3 = ql.field_k;
@@ -42,7 +42,7 @@ abstract class ip {
 
     abstract long a(byte param0);
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         int var1 = 63;
     }

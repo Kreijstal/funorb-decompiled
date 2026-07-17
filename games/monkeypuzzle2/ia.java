@@ -260,19 +260,14 @@ final class ia extends al {
     }
 
     final static float a(boolean param0, float param1) {
-        if (!param0) {
-          field_d = null;
-          return vh.field_C[65535 & (int)((double)(32768.0f * param1) / 3.141592653589793)];
-        } else {
-          return vh.field_C[65535 & (int)((double)(32768.0f * param1) / 3.141592653589793)];
-        }
+        return vh.field_C[65535 & (int)((double)(32768.0f * param1) / 3.141592653589793)];
     }
 
     ia() {
         ((ia) this).field_e = java.net.ProxySelector.getDefault();
     }
 
-    private final java.net.Socket a(String param0, String param1, int param2, int param3) throws IOException {
+    private final java.net.Socket a(String param0, String param1, int param2) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -470,7 +465,7 @@ final class ia extends al {
         return (java.net.Socket) (Object) stackIn_29_0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_d = null;
         field_g = null;
         int var1 = 83;
@@ -523,7 +518,7 @@ final class ia extends al {
             if (param1.type() != java.net.Proxy.Type.DIRECT) {
               var3_ref = param1.address();
               if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
-                var5 = -21 / ((param0 - 60) / 62);
+                var5 = -21;
                 var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
                 if (param1.type() == java.net.Proxy.Type.HTTP) {
                   var6 = null;
@@ -563,7 +558,8 @@ final class ia extends al {
                       break L3;
                     }
                   }
-                  stackOut_18_0 = this.a((String) var6, var4_ref.getHostName(), var4_ref.getPort(), 56);
+                  int discarded$1 = 56;
+                  stackOut_18_0 = this.a((String) var6, var4_ref.getHostName(), var4_ref.getPort());
                   stackIn_19_0 = stackOut_18_0;
                   break L0;
                 } else {
@@ -593,7 +589,7 @@ final class ia extends al {
           L4: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var3;
-            stackOut_21_1 = new StringBuilder().append("ia.M(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("ia.M(").append(126).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;

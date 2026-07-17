@@ -21,10 +21,10 @@ final class faa {
         var17 = BachelorFridge.field_y;
         try {
           L0: {
-            var11 = cr.a(an.field_q, param5, ha.field_n, param3 + -14040);
+            var11 = cr.a(an.field_q, param5, ha.field_n, 0);
             var12 = cr.a(an.field_q, param4, ha.field_n, 0);
             var13 = cr.a(eo.field_l, param2, pw.field_x, 0);
-            var14 = cr.a(eo.field_l, param1, pw.field_x, param3 ^ param3);
+            var14 = cr.a(eo.field_l, param1, pw.field_x, 0);
             var7_int = cr.a(an.field_q, param5 + param6, ha.field_n, 0);
             var8 = cr.a(an.field_q, param4 + -param6, ha.field_n, 0);
             var15 = var11;
@@ -48,7 +48,7 @@ final class faa {
                       }
                     }
                   } else {
-                    hba.a(param0, var13, tj.field_b[var15], param3 ^ 14047, var14);
+                    hba.a(param0, var13, tj.field_b[var15], 7, var14);
                     var15--;
                     continue L2;
                   }
@@ -63,11 +63,11 @@ final class faa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var7, "faa.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw pe.a((Throwable) (Object) var7, "faa.B(" + param0 + 44 + param1 + 44 + param2 + 44 + 14040 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         int var1 = -5;
     }

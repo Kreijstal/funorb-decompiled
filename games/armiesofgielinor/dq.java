@@ -20,7 +20,7 @@ final class dq {
         int var5 = 0;
         L0: {
           var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-          var2 = 76 % ((param0 - 52) / 39);
+          var2 = 0;
           var3 = param1;
           var4 = param1;
           if (1 == var4) {
@@ -49,7 +49,7 @@ final class dq {
         return var3;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_e = null;
         field_f = null;
@@ -82,7 +82,9 @@ final class dq {
             L1: {
               if (!param3) {
                 gq.b(bc.field_j[3][0], param0, param5, param1);
-                fe.c(jc.a(param2, (byte) 42), (uh.field_e[3][0] >> 1) - -param0, 20 + (uh.field_e[3][1] >> 1) + param5, 2, true);
+                int discarded$4 = 42;
+                int discarded$5 = 1;
+                fe.c(jc.a(param2), (uh.field_e[3][0] >> 1) - -param0, 20 + (uh.field_e[3][1] >> 1) + param5, 2);
                 break L1;
               } else {
                 no.field_P.field_y = qn.field_l;
@@ -91,7 +93,9 @@ final class dq {
                 ku.field_J.b();
                 qn.b();
                 gq.b(bc.field_j[3][0], 0, 0, param1);
-                fe.c(jc.a(param2, (byte) 42), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2, true);
+                int discarded$6 = 42;
+                int discarded$7 = 1;
+                fe.c(jc.a(param2), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2);
                 no.field_P.b();
                 ku.field_J.h(param0, param5);
                 break L1;
@@ -157,7 +161,8 @@ final class dq {
         try {
           L0: {
             if (param0 > 7) {
-              stackOut_3_0 = ob.a(10, true, param1, 0);
+              int discarded$2 = 0;
+              stackOut_3_0 = ob.a(10, true, param1);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

@@ -81,7 +81,7 @@ final class wd {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -449,7 +449,8 @@ final class wd {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                Object discarded$1 = hn.a("resizing", (byte) -41, wl.d((byte) -21), new Object[1]);
+                int discarded$2 = -21;
+                Object discarded$3 = hn.a("resizing", (byte) -41, wl.d(), new Object[1]);
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

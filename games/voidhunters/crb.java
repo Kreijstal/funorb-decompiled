@@ -252,7 +252,8 @@ final class crb extends anb implements ntb, utb, ofa {
     final static void a(int param0, boolean param1) {
         if (param0 == 3) {
           L0: {
-            if (wq.e((byte) 105)) {
+            int discarded$6 = 105;
+            if (wq.e()) {
               param1 = false;
               break L0;
             } else {
@@ -346,7 +347,8 @@ final class crb extends anb implements ntb, utb, ofa {
         int fieldTemp$0 = ogb.field_o;
         ogb.field_o = ogb.field_o + 1;
         ((crb) this).field_u = fieldTemp$0;
-        ikb.e((byte) -125);
+        int discarded$1 = -125;
+        ikb.e();
         int var2 = -58 / ((param0 - -4) / 38);
     }
 

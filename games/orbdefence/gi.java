@@ -205,62 +205,31 @@ final class gi {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
         var9 = OrbDefence.field_D ? 1 : 0;
-        if (param4 >= -7) {
-          field_e = 95;
-          if (param3 < param6) {
-            if (param6 >= param1) {
-              if (param1 > param3) {
-                al.a(ul.field_b, param1, param5, param2, 30979, param7, param3, param0, param6);
-                return;
-              } else {
-                al.a(ul.field_b, param3, param5, param7, 30979, param2, param1, param0, param6);
-                return;
-              }
+        if (param3 < param6) {
+          if (param6 >= param1) {
+            if (param1 > param3) {
+              al.a(ul.field_b, param1, param5, param2, 30979, param7, param3, param0, param6);
+              return;
             } else {
-              al.a(ul.field_b, param6, param2, param5, 30979, param7, param3, param0, param1);
+              al.a(ul.field_b, param3, param5, param7, 30979, param2, param1, param0, param6);
               return;
             }
           } else {
-            if (param3 >= param1) {
-              if (param1 <= param6) {
-                al.a(ul.field_b, param6, param7, param5, 30979, param2, param1, param0, param3);
-                return;
-              } else {
-                al.a(ul.field_b, param1, param7, param2, 30979, param5, param6, param0, param3);
-                return;
-              }
-            } else {
-              al.a(ul.field_b, param3, param2, param7, 30979, param5, param6, param0, param1);
-              return;
-            }
+            al.a(ul.field_b, param6, param2, param5, 30979, param7, param3, param0, param1);
+            return;
           }
         } else {
-          if (param3 < param6) {
-            if (param6 >= param1) {
-              if (param1 > param3) {
-                al.a(ul.field_b, param1, param5, param2, 30979, param7, param3, param0, param6);
-                return;
-              } else {
-                al.a(ul.field_b, param3, param5, param7, 30979, param2, param1, param0, param6);
-                return;
-              }
+          if (param3 >= param1) {
+            if (param1 <= param6) {
+              al.a(ul.field_b, param6, param7, param5, 30979, param2, param1, param0, param3);
+              return;
             } else {
-              al.a(ul.field_b, param6, param2, param5, 30979, param7, param3, param0, param1);
+              al.a(ul.field_b, param1, param7, param2, 30979, param5, param6, param0, param3);
               return;
             }
           } else {
-            if (param3 >= param1) {
-              if (param1 <= param6) {
-                al.a(ul.field_b, param6, param7, param5, 30979, param2, param1, param0, param3);
-                return;
-              } else {
-                al.a(ul.field_b, param1, param7, param2, 30979, param5, param6, param0, param3);
-                return;
-              }
-            } else {
-              al.a(ul.field_b, param3, param2, param7, 30979, param5, param6, param0, param1);
-              return;
-            }
+            al.a(ul.field_b, param3, param2, param7, 30979, param5, param6, param0, param1);
+            return;
           }
         }
     }

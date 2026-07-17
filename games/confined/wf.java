@@ -26,7 +26,7 @@ final class wf {
         var5 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            var3_int = 117 % ((param0 - -35) / 33);
+            var3_int = 0;
             if (10 > we.field_c) {
               L1: {
                 var4 = 0;
@@ -38,12 +38,18 @@ final class wf {
                   break L1;
                 }
               }
-              vg.a(ul.k(0), var4 != 0, ib.a((byte) 109), m.field_k, false);
+              int discarded$17 = 109;
+              int discarded$18 = 0;
+              vg.a(ul.k(0), var4 != 0, ib.a(), m.field_k);
               break L0;
             } else {
-              if (!hl.a((byte) 27)) {
+              int discarded$19 = 27;
+              if (!hl.a()) {
                 fn.d();
-                jf.a(256, 320, 240);
+                int discarded$20 = 240;
+                int discarded$21 = 320;
+                int discarded$22 = 256;
+                jf.a();
                 ll.a(0, 0, param1, -96);
                 return;
               } else {
@@ -52,7 +58,8 @@ final class wf {
                   ll.a(0, 0, param1, -115);
                   return;
                 } else {
-                  wb.a(param1, 0);
+                  int discarded$23 = 0;
+                  wb.a(param1);
                   return;
                 }
               }
@@ -63,7 +70,7 @@ final class wf {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("wf.B(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("wf.B(").append(-78).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -94,40 +101,32 @@ final class wf {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_6_0 = 0;
         var4 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            if (param0 == 1) {
-              var3_int = 0;
-              L1: while (true) {
-                if (param1 <= 0) {
-                  stackOut_7_0 = var3_int;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L0;
-                } else {
-                  var3_int = var3_int << 1 | 1 & param2;
-                  param2 = param2 >>> 1;
-                  param1--;
-                  continue L1;
-                }
+            var3_int = 0;
+            L1: while (true) {
+              if (param1 <= 0) {
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3_int = var3_int << 1 | 1 & param2;
+                param2 = param2 >>> 1;
+                param1--;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 36;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var3, "wf.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) var3, "wf.A(" + 1 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     static {

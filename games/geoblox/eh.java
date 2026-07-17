@@ -17,8 +17,8 @@ final class eh {
         var8 = Geoblox.field_C;
         if (gb.field_f >= 0) {
           L0: {
-            var3 = -135 + param1;
-            var4 = param0 - 35;
+            var3 = 185;
+            var4 = 205;
             var5 = 256;
             if (75 <= gb.field_f) {
               break L0;
@@ -40,7 +40,8 @@ final class eh {
           vb.c();
           ck.a((byte) 123);
           if (var5 >= 256) {
-            id.a(true);
+            int discarded$2 = 1;
+            id.a();
             if (gb.field_f >= 150) {
               bk.field_b.d(15 + var3, var4 + 10, var5);
               var6 = -125 + gb.field_f;
@@ -275,7 +276,8 @@ final class eh {
           } else {
             L22: {
               vb.b(0, 0, vb.field_f, vb.field_b, 0, -var5 + 256);
-              id.a(true);
+              int discarded$3 = 1;
+              id.a();
               if (gb.field_f >= 150) {
                 bk.field_b.d(15 + var3, var4 + 10, var5);
                 break L22;
@@ -409,7 +411,7 @@ final class eh {
         field_b = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         vl.field_q = false;
         tc.field_a = null;
         int var1 = 46;

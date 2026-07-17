@@ -98,47 +98,37 @@ final class rg {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        Object var10 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var9 = SteelSentinels.field_G;
         try {
           L0: {
             if ((3 & (param1.field_D | (param1.field_F | param1.field_A) | param1.field_H)) == 0) {
               return;
             } else {
-              L1: {
-                var2_int = param1.field_A - -(param1.field_D & 3);
-                var2_int = var2_int - -4 + -(3 & var2_int);
-                var3 = (param1.field_H & 3) + param1.field_F;
-                var3 = 4 - ((var3 & 3) - var3);
-                if (!param0) {
-                  break L1;
-                } else {
-                  var10 = null;
-                  int discarded$3 = rg.a((String) null, false, (byte) -11);
-                  break L1;
-                }
-              }
+              var2_int = param1.field_A - -(param1.field_D & 3);
+              var2_int = var2_int - -4 + -(3 & var2_int);
+              var3 = (param1.field_H & 3) + param1.field_F;
+              var3 = 4 - ((var3 & 3) - var3);
               var4 = new int[var3 * var2_int];
               var5 = 0;
               var6 = (3 & param1.field_H) * var2_int + (param1.field_D & 3);
               var7 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (param1.field_F <= var7) {
                   param1.field_E = var4;
                   param1.field_A = var2_int;
@@ -148,19 +138,19 @@ final class rg {
                   break L0;
                 } else {
                   var8 = 0;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (var8 >= param1.field_A) {
                       var6 = var6 + (var2_int - param1.field_A);
                       var7++;
-                      continue L2;
+                      continue L1;
                     } else {
-                      int incrementValue$4 = var6;
+                      int incrementValue$2 = var6;
                       var6++;
-                      int incrementValue$5 = var5;
+                      int incrementValue$3 = var5;
                       var5++;
-                      var4[incrementValue$4] = param1.field_E[incrementValue$5];
+                      var4[incrementValue$2] = param1.field_E[incrementValue$3];
                       var8++;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 }
@@ -169,37 +159,37 @@ final class rg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("rg.A(").append(param0).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_1 = new StringBuilder().append("rg.A(").append(0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L4;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L4;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -214,7 +204,7 @@ final class rg {
         return new Date().getYear() - -1900;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -342,7 +332,7 @@ final class rg {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2_int = 0;
         Object var2 = null;
@@ -361,7 +351,7 @@ final class rg {
             if (jb.field_S == null) {
               L1: {
                 if (null != wn.field_a) {
-                  int discarded$3 = wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  int discarded$5 = wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L1;
                 } else {
                   break L1;
@@ -371,13 +361,11 @@ final class rg {
             } else {
               L2: {
                 var6 = jb.field_S[lh.field_r];
-                var7 = var6;
-                var7 = var6;
                 if (var6 == null) {
                   if (wn.field_a == null) {
                     break L2;
                   } else {
-                    int discarded$4 = wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    int discarded$6 = wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L2;
                   }
                 } else {
@@ -394,10 +382,12 @@ final class rg {
                     var2_int = (var7.field_z - -60) * ul.field_g / hh.field_i;
                     var3 = var2_int + -30;
                     if (rf.field_b) {
-                      nn.a(245, -256 * var3 / 30, (var7.field_z - var3) * 256 / 30, 199, var7, -1);
+                      int discarded$7 = -1;
+                      nn.a(245, -256 * var3 / 30, (var7.field_z - var3) * 256 / 30, 199, var7);
                       break L3;
                     } else {
-                      nn.a(245, (var7.field_z + -var3) * 256 / 30, var3 * -256 / 30, 199, var7, -1);
+                      int discarded$8 = -1;
+                      nn.a(245, (var7.field_z + -var3) * 256 / 30, var3 * -256 / 30, 199, var7);
                       break L3;
                     }
                   }
@@ -415,7 +405,7 @@ final class rg {
                       if (var2 == null) {
                         break L4;
                       } else {
-                        int discarded$5 = wn.field_a.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$9 = wn.field_a.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L4;
                       }
                     } else {

@@ -95,6 +95,10 @@ final class vn extends le {
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            return;
+        }
+        field_i = null;
     }
 
     final int[] a(int param0, boolean param1) {

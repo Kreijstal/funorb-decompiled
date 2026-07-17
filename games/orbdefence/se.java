@@ -113,7 +113,7 @@ final class se extends mg {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_n = null;
     }
 
@@ -131,14 +131,14 @@ final class se extends mg {
                 field_n = null;
             }
             var3 = uk.field_b;
-            var3.i(param1, -116);
+            var3.i(3, -116);
             var3.a(5, -9);
             var3.a(0, -30);
             var3.b((byte) -60, param0.field_o);
             var3.a(param0.field_m, -4);
             var3.a(param0.field_n, -79);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "se.CB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "se.CB(" + (param0 != null ? "{...}" : "null") + 44 + 3 + 44 + param2 + 41);
         }
     }
 
@@ -201,7 +201,8 @@ final class se extends mg {
                       break L4;
                     } else {
                       var3_int = 0;
-                      dc.a((byte) -108);
+                      int discarded$2 = -108;
+                      dc.a();
                       break L4;
                     }
                   }

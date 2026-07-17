@@ -23,38 +23,30 @@ final class ld {
         var5 = Kickabout.field_G;
         try {
           L0: {
-            L1: {
-              var3_int = -1;
-              if (param0 == -25) {
-                break L1;
-              } else {
-                ld.a((int[][][]) null, (int[][][]) null, (double[][][]) null, (int[][][]) null, (int[][][]) null, false);
-                break L1;
-              }
-            }
+            var3_int = -1;
             var4_int = 0;
-            L2: while (true) {
-              L3: {
+            L1: while (true) {
+              L2: {
                 if (var4_int >= 9) {
-                  break L3;
+                  break L2;
                 } else {
                   if (ic.field_h.field_i[ic.field_h.field_q[var4_int]].c(-2)) {
                     var3_int = var4_int;
-                    break L3;
+                    break L2;
                   } else {
                     var4_int++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
-              L4: {
+              L3: {
                 var4 = new hn(0, new int[2]);
                 ii.a(var4, 81);
                 if (23 != cq.field_h.field_c) {
-                  break L4;
+                  break L3;
                 } else {
-                  ((qs) (Object) cq.field_h).a(param2, var3_int, param0 ^ -66, param1);
-                  break L4;
+                  ((qs) (Object) cq.field_h).a(param2, var3_int, 89, param1);
+                  break L3;
                 }
               }
               break L0;
@@ -63,7 +55,7 @@ final class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var3, "ld.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) var3, "ld.A(" + -25 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -71,7 +63,7 @@ final class ld {
         throw new IllegalStateException();
     }
 
-    final static void a(int[][][] param0, int[][][] param1, double[][][] param2, int[][][] param3, int[][][] param4, boolean param5) {
+    final static void a(int[][][] param0, int[][][] param1, double[][][] param2, int[][][] param3, int[][][] param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -418,7 +410,7 @@ final class ld {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_b = null;
         field_e = null;

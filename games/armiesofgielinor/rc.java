@@ -32,12 +32,12 @@ class rc {
     }
 
     private final void a(int param0) {
-        ((rc) this).field_n = ((rc) this).field_n - 256;
+        ((rc) this).field_n = ((rc) this).field_n - param0;
         if (((rc) this).field_n < 0) {
             ((rc) this).field_n = 0;
         }
         if (((rc) this).field_r != null) {
-            ((rc) this).field_r.a(256);
+            ((rc) this).field_r.a(param0);
             return;
         }
     }
@@ -145,7 +145,7 @@ class rc {
         hn var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_q) {
             break L0;
           } else {
@@ -155,7 +155,7 @@ class rc {
         }
         L1: {
           vm.a(param0, 0, var3);
-          ((rc) this).field_n = ((rc) this).field_n - 256;
+          ((rc) this).field_n = ((rc) this).field_n - param1;
           if (((rc) this).field_r == null) {
             break L1;
           } else {
@@ -322,7 +322,7 @@ class rc {
           if (((rc) this).field_r == null) {
             break L17;
           } else {
-            ((rc) this).field_r.b(param0, 0, 256);
+            ((rc) this).field_r.b(param0, 0, param1);
             break L17;
           }
         }
@@ -487,35 +487,9 @@ class rc {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_d = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_q = stackIn_7_0 != 0;
-              field_h = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_d = 22050;
+        field_q = true;
+        field_h = 10;
     }
 
     final synchronized void d() {

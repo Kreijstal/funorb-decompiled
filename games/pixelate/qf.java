@@ -14,38 +14,22 @@ final class qf {
     }
 
     final static void a(int param0, int param1) {
-        if (param0 != 21983) {
-            return;
-        }
         km.a(param1, (byte) 112);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         tn.field_j[59] = 57;
         tn.field_j[92] = 74;
         tn.field_j[61] = 27;
         tn.field_j[520] = 59;
         tn.field_j[192] = 28;
-        if (param0 != 31171) {
-          field_c = null;
-          tn.field_j[222] = 58;
-          tn.field_j[93] = 43;
-          tn.field_j[47] = 73;
-          tn.field_j[46] = 72;
-          tn.field_j[45] = 26;
-          tn.field_j[44] = 71;
-          tn.field_j[91] = 42;
-          return;
-        } else {
-          tn.field_j[222] = 58;
-          tn.field_j[93] = 43;
-          tn.field_j[47] = 73;
-          tn.field_j[46] = 72;
-          tn.field_j[45] = 26;
-          tn.field_j[44] = 71;
-          tn.field_j[91] = 42;
-          return;
-        }
+        tn.field_j[222] = 58;
+        tn.field_j[93] = 43;
+        tn.field_j[47] = 73;
+        tn.field_j[46] = 72;
+        tn.field_j[45] = 26;
+        tn.field_j[44] = 71;
+        tn.field_j[91] = 42;
     }
 
     static {

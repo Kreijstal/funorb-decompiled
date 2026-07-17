@@ -19,7 +19,7 @@ abstract class jj extends db {
     static vc field_S;
     static td field_M;
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_R = null;
         field_Y = null;
         field_V = null;
@@ -30,7 +30,7 @@ abstract class jj extends db {
         field_X = null;
     }
 
-    final static void a(float param0, String param1, boolean param2) {
+    final static void a(float param0, String param1) {
         try {
             qj.field_I = param1;
             wa.field_l = param0;

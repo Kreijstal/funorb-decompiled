@@ -7,7 +7,7 @@ final class p extends pu {
     static String field_m;
     static sna field_o;
 
-    final static void c(int param0) {
+    final static void c() {
         int var2 = 3;
         gb var1 = (gb) (Object) ja.field_s.b((byte) 90);
         if (var1 == null) {
@@ -22,7 +22,7 @@ final class p extends pu {
         var1.a(false);
     }
 
-    final static void a(int param0, byte[] param1, int param2) {
+    final static void a(int param0, byte[] param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int[] var4 = null;
@@ -60,7 +60,7 @@ final class p extends pu {
                   if (var7 >= 256) {
                     break L0;
                   } else {
-                    param1[var3_int] = (byte)(param1[var3_int] + -param0);
+                    param1[var3_int] = (byte)(param1[var3_int] + -2);
                     var3_int = var3_int + var4[var7];
                     var7++;
                     continue L2;
@@ -80,7 +80,7 @@ final class p extends pu {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("p.B(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("p.B(").append(2).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

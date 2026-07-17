@@ -95,6 +95,9 @@ final class fu extends wp {
 
     public static void d(boolean param0) {
         field_E = null;
+        if (param0) {
+            fu.a(78);
+        }
         field_F = null;
     }
 
@@ -271,7 +274,7 @@ final class fu extends wp {
         return stackIn_24_0 != 0;
     }
 
-    final static int e(byte param0) {
+    final static int e() {
         int var1 = 0;
         return rf.field_d;
     }

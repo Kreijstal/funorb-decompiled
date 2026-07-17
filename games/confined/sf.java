@@ -13,7 +13,7 @@ final class sf extends rk {
     static bi field_p;
     int field_n;
 
-    final static void c(int param0) {
+    final static void c() {
         da.field_i = false;
         int discarded$0 = e.field_c.c(32);
     }
@@ -21,105 +21,106 @@ final class sf extends rk {
     final static void a(boolean param0, int param1) {
         int var2 = 0;
         int stackIn_12_0 = 0;
-        boolean stackIn_12_1 = false;
+        int stackIn_12_1 = 0;
         int stackIn_13_0 = 0;
-        boolean stackIn_13_1 = false;
+        int stackIn_13_1 = 0;
         int stackIn_14_0 = 0;
-        boolean stackIn_14_1 = false;
+        int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
         int stackIn_15_0 = 0;
-        boolean stackIn_15_1 = false;
+        int stackIn_15_1 = 0;
         int stackIn_15_2 = 0;
         int stackIn_16_0 = 0;
-        boolean stackIn_16_1 = false;
+        int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
         int stackIn_17_0 = 0;
-        boolean stackIn_17_1 = false;
+        int stackIn_17_1 = 0;
         int stackIn_17_2 = 0;
         int stackIn_17_3 = 0;
         int stackIn_20_0 = 0;
-        boolean stackIn_20_1 = false;
+        int stackIn_20_1 = 0;
         int stackIn_21_0 = 0;
-        boolean stackIn_21_1 = false;
+        int stackIn_21_1 = 0;
         int stackIn_22_0 = 0;
-        boolean stackIn_22_1 = false;
+        int stackIn_22_1 = 0;
         int stackIn_22_2 = 0;
         int stackIn_23_0 = 0;
-        boolean stackIn_23_1 = false;
+        int stackIn_23_1 = 0;
         int stackIn_23_2 = 0;
         int stackIn_24_0 = 0;
-        boolean stackIn_24_1 = false;
+        int stackIn_24_1 = 0;
         int stackIn_24_2 = 0;
         int stackIn_25_0 = 0;
-        boolean stackIn_25_1 = false;
+        int stackIn_25_1 = 0;
         int stackIn_25_2 = 0;
         int stackIn_25_3 = 0;
         int stackOut_19_0 = 0;
-        boolean stackOut_19_1 = false;
+        int stackOut_19_1 = 0;
         int stackOut_21_0 = 0;
-        boolean stackOut_21_1 = false;
+        int stackOut_21_1 = 0;
         int stackOut_21_2 = 0;
         int stackOut_20_0 = 0;
-        boolean stackOut_20_1 = false;
+        int stackOut_20_1 = 0;
         int stackOut_20_2 = 0;
         int stackOut_22_0 = 0;
-        boolean stackOut_22_1 = false;
+        int stackOut_22_1 = 0;
         int stackOut_22_2 = 0;
         int stackOut_24_0 = 0;
-        boolean stackOut_24_1 = false;
+        int stackOut_24_1 = 0;
         int stackOut_24_2 = 0;
         int stackOut_24_3 = 0;
         int stackOut_23_0 = 0;
-        boolean stackOut_23_1 = false;
+        int stackOut_23_1 = 0;
         int stackOut_23_2 = 0;
         int stackOut_23_3 = 0;
         int stackOut_11_0 = 0;
-        boolean stackOut_11_1 = false;
+        int stackOut_11_1 = 0;
         int stackOut_13_0 = 0;
-        boolean stackOut_13_1 = false;
+        int stackOut_13_1 = 0;
         int stackOut_13_2 = 0;
         int stackOut_12_0 = 0;
-        boolean stackOut_12_1 = false;
+        int stackOut_12_1 = 0;
         int stackOut_12_2 = 0;
         int stackOut_14_0 = 0;
-        boolean stackOut_14_1 = false;
+        int stackOut_14_1 = 0;
         int stackOut_14_2 = 0;
         int stackOut_16_0 = 0;
-        boolean stackOut_16_1 = false;
+        int stackOut_16_1 = 0;
         int stackOut_16_2 = 0;
         int stackOut_16_3 = 0;
         int stackOut_15_0 = 0;
-        boolean stackOut_15_1 = false;
+        int stackOut_15_1 = 0;
         int stackOut_15_2 = 0;
         int stackOut_15_3 = 0;
         var2 = 96 % ((param1 - -16) / 47);
         ej.field_b = false;
-        if (tj.a(true)) {
+        int discarded$3 = 1;
+        if (tj.a()) {
           if (oj.field_B == 0) {
             if (lc.field_J == null) {
               if (oj.field_B == 0) {
                 if (!rg.field_K) {
                   qf.field_e = false;
-                  ei.a(-87, param0);
+                  ei.a(-87, false);
                   return;
                 } else {
                   rg.field_K = false;
                   bj.field_m = true;
                   qf.field_e = false;
-                  ei.a(-87, param0);
+                  ei.a(-87, false);
                   return;
                 }
               } else {
                 kc.field_o = true;
                 if (!rg.field_K) {
                   qf.field_e = false;
-                  ei.a(-87, param0);
+                  ei.a(-87, false);
                   return;
                 } else {
                   rg.field_K = false;
                   bj.field_m = true;
                   qf.field_e = false;
-                  ei.a(-87, param0);
+                  ei.a(-87, false);
                   return;
                 }
               }
@@ -127,7 +128,7 @@ final class sf extends rk {
               L0: {
                 qf.field_e = true;
                 stackOut_19_0 = 0;
-                stackOut_19_1 = param0;
+                stackOut_19_1 = 0;
                 stackIn_21_0 = stackOut_19_0;
                 stackIn_21_1 = stackOut_19_1;
                 stackIn_20_0 = stackOut_19_0;
@@ -182,14 +183,15 @@ final class sf extends rk {
                   break L1;
                 }
               }
-              hh.field_d = ih.a(stackIn_25_0 != 0, stackIn_25_1, stackIn_25_2 != 0, stackIn_25_3 != 0, (byte) 120);
+              int discarded$4 = 120;
+              hh.field_d = ih.a(stackIn_25_0 != 0, stackIn_25_1 != 0, stackIn_25_2 != 0, stackIn_25_3 != 0);
               return;
             }
           } else {
             L2: {
               qf.field_e = true;
               stackOut_11_0 = 0;
-              stackOut_11_1 = param0;
+              stackOut_11_1 = 0;
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_12_0 = stackOut_11_0;
@@ -244,7 +246,8 @@ final class sf extends rk {
                 break L3;
               }
             }
-            hh.field_d = ih.a(stackIn_17_0 != 0, stackIn_17_1, stackIn_17_2 != 0, stackIn_17_3 != 0, (byte) 120);
+            int discarded$5 = 120;
+            hh.field_d = ih.a(stackIn_17_0 != 0, stackIn_17_1 != 0, stackIn_17_2 != 0, stackIn_17_3 != 0);
             return;
           }
         } else {
@@ -252,25 +255,25 @@ final class sf extends rk {
             kc.field_o = true;
             if (!rg.field_K) {
               qf.field_e = false;
-              ei.a(-87, param0);
+              ei.a(-87, false);
               return;
             } else {
               rg.field_K = false;
               bj.field_m = true;
               qf.field_e = false;
-              ei.a(-87, param0);
+              ei.a(-87, false);
               return;
             }
           } else {
             if (!rg.field_K) {
               qf.field_e = false;
-              ei.a(-87, param0);
+              ei.a(-87, false);
               return;
             } else {
               rg.field_K = false;
               bj.field_m = true;
               qf.field_e = false;
-              ei.a(-87, param0);
+              ei.a(-87, false);
               return;
             }
           }

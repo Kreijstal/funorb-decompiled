@@ -12,7 +12,7 @@ final class uga extends qg {
     static fdb field_g;
     private bt field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_h = null;
     }
@@ -110,7 +110,8 @@ final class uga extends qg {
                     var6 = 0;
                     L2: while (true) {
                       if (256 <= var6) {
-                        this.b((byte) 105);
+                        int discarded$3 = 105;
+                        this.b();
                         break L1;
                       } else {
                         var26 = var24[var6];
@@ -121,12 +122,12 @@ final class uga extends qg {
                             var6++;
                             continue L2;
                           } else {
-                            int incrementValue$2 = var5;
+                            int incrementValue$4 = var5;
                             var5++;
-                            ((uga) this).field_f[incrementValue$2] = (float)var26[var9] / 4096.0f;
-                            int incrementValue$3 = var5;
+                            ((uga) this).field_f[incrementValue$4] = (float)var26[var9] / 4096.0f;
+                            int incrementValue$5 = var5;
                             var5++;
-                            ((uga) this).field_f[incrementValue$3] = (float)var27[var9] / 4096.0f;
+                            ((uga) this).field_f[incrementValue$5] = (float)var27[var9] / 4096.0f;
                             var9++;
                             continue L3;
                           }
@@ -495,7 +496,7 @@ final class uga extends qg {
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         ((uga) this).field_e = new bt(((uga) this).field_b, 2);
         ((uga) this).field_e.a(-85, 0);
         ((uga) this).field_b.h(33984, 1);

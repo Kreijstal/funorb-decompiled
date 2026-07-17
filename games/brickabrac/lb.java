@@ -724,39 +724,39 @@ final class lb {
                                                           }
                                                         }
                                                         if (var18 >= var19) {
-                                                          field_l[var10 - var19] = param5;
-                                                          field_l[var11 + var19] = param5;
-                                                          field_l[var12 - var18] = param5;
-                                                          field_l[var13 + var18] = param5;
-                                                          field_l[var14 - var18] = param5;
-                                                          field_l[var15 + var18] = param5;
-                                                          field_l[var16 - var19] = param5;
-                                                          field_l[var17 + var19] = param5;
+                                                          field_l[var10 - var19] = 16777215;
+                                                          field_l[var11 + var19] = 16777215;
+                                                          field_l[var12 - var18] = 16777215;
+                                                          field_l[var13 + var18] = 16777215;
+                                                          field_l[var14 - var18] = 16777215;
+                                                          field_l[var15 + var18] = 16777215;
+                                                          field_l[var16 - var19] = 16777215;
+                                                          field_l[var17 + var19] = 16777215;
                                                           continue L9;
                                                         } else {
                                                           break L3;
                                                         }
                                                       }
                                                     } else {
-                                                      field_l[var22] = param5;
+                                                      field_l[var22] = 16777215;
                                                       var22++;
                                                       continue L8;
                                                     }
                                                   }
                                                 } else {
-                                                  field_l[var22] = param5;
+                                                  field_l[var22] = 16777215;
                                                   var22++;
                                                   continue L7;
                                                 }
                                               }
                                             } else {
-                                              field_l[var22 + var18] = param5;
+                                              field_l[var22 + var18] = 16777215;
                                               var22 = var22 + field_c;
                                               continue L6;
                                             }
                                           }
                                         } else {
-                                          field_l[var22 - var18] = param5;
+                                          field_l[var22 - var18] = 16777215;
                                           var22 = var22 + field_c;
                                           continue L5;
                                         }
@@ -768,10 +768,10 @@ final class lb {
                                 }
                               }
                             }
-                            lb.g(param0, param1 + var18, param3 - var18 - var18, param5);
-                            lb.g(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-                            lb.c(param0 + var18, param1, param2 - var18 - var18, param5);
-                            lb.c(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+                            lb.g(param0, param1 + var18, param3 - var18 - var18, 16777215);
+                            lb.g(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, 16777215);
+                            lb.c(param0 + var18, param1, param2 - var18 - var18, 16777215);
+                            lb.c(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, 16777215);
                             L11: while (true) {
                               L12: {
                                 int incrementValue$3 = var19;
@@ -808,7 +808,7 @@ final class lb {
                                           if (var6 - var19 >= field_f) {
                                             break L14;
                                           } else {
-                                            field_l[var10 - var19] = param5;
+                                            field_l[var10 - var19] = 16777215;
                                             break L14;
                                           }
                                         }
@@ -819,7 +819,7 @@ final class lb {
                                         if (var8 + var19 >= field_f) {
                                           break L13;
                                         } else {
-                                          field_l[var11 + var19] = param5;
+                                          field_l[var11 + var19] = 16777215;
                                           break L13;
                                         }
                                       }
@@ -840,7 +840,7 @@ final class lb {
                                           if (var6 - var18 >= field_f) {
                                             break L16;
                                           } else {
-                                            field_l[var12 - var18] = param5;
+                                            field_l[var12 - var18] = 16777215;
                                             break L16;
                                           }
                                         }
@@ -851,7 +851,7 @@ final class lb {
                                         if (var8 + var18 >= field_f) {
                                           break L15;
                                         } else {
-                                          field_l[var13 + var18] = param5;
+                                          field_l[var13 + var18] = 16777215;
                                           break L15;
                                         }
                                       }
@@ -872,7 +872,7 @@ final class lb {
                                           if (var6 - var18 >= field_f) {
                                             break L18;
                                           } else {
-                                            field_l[var14 - var18] = param5;
+                                            field_l[var14 - var18] = 16777215;
                                             break L18;
                                           }
                                         }
@@ -883,7 +883,7 @@ final class lb {
                                         if (var8 + var18 >= field_f) {
                                           break L17;
                                         } else {
-                                          field_l[var15 + var18] = param5;
+                                          field_l[var15 + var18] = 16777215;
                                           break L17;
                                         }
                                       }
@@ -903,7 +903,7 @@ final class lb {
                                         if (var6 - var19 >= field_f) {
                                           break L19;
                                         } else {
-                                          field_l[var16 - var19] = param5;
+                                          field_l[var16 - var19] = 16777215;
                                           break L19;
                                         }
                                       }
@@ -914,7 +914,7 @@ final class lb {
                                       if (var8 + var19 >= field_f) {
                                         continue L11;
                                       } else {
-                                        field_l[var17 + var19] = param5;
+                                        field_l[var17 + var19] = 16777215;
                                         continue L11;
                                       }
                                     }
@@ -941,7 +941,7 @@ final class lb {
           }
           return;
         } else {
-          lb.e(param0, param1, param2, param3, param5);
+          lb.e(param0, param1, param2, param3, 16777215);
           return;
         }
     }
@@ -1056,7 +1056,7 @@ final class lb {
           pm.a(var34, 0, param8);
           pm.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -1065,8 +1065,8 @@ final class lb {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_c;
-          var15 = param4 + param3;
+          var14 = var13 * field_c;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_d) {
             break L3;
@@ -1086,7 +1086,7 @@ final class lb {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1095,7 +1095,7 @@ final class lb {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_c;
+                  var19 = (0 - param3) * field_c;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1106,7 +1106,7 @@ final class lb {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_d - param4 - param5 - param3;
+                      var18 = field_d - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1348,7 +1348,7 @@ final class lb {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_j) {
+                      if (var13 + param5 + param3 >= field_j) {
                         var14 = var14 + field_c;
                         break L26;
                       } else {
@@ -1657,7 +1657,7 @@ final class lb {
         param3 = param14;
         param4 = param13;
         while (param8 < 0) {
-            param1 = (param6 - param3) * param10 / param6;
+            param1 = (param6 - param3) * 255 / param6;
             if (param1 >= param11.length) {
                 return true;
             }
@@ -2077,10 +2077,10 @@ final class lb {
                       var28 = (var18 - 2 << 4) - param0;
                       var28 = var28 * var28;
                       var29 = var28 - var27;
-                      if (!lb.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, field_l, param3, param4, 1, var24, var8 + var21)) {
+                      if (!lb.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, field_l, 255, param4, 1, var24, var8 + var21)) {
                         break L7;
                       } else {
-                        boolean discarded$1 = lb.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, field_l, param3, param4, -1, var29, var8 + var27);
+                        boolean discarded$1 = lb.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, field_l, 255, param4, -1, var29, var8 + var27);
                         break L7;
                       }
                     }
@@ -2301,8 +2301,8 @@ final class lb {
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        lb.a(field_l, 0, param2 + param3 * field_c, param0, param2, param4, field_c - param4, param5);
-        lb.a(field_l, 0, param2 + param3 * field_c, param1, param3, param5, field_c - param4, param2, param4);
+        lb.a(field_l, 0, 0 * field_c, param0, 0, param4, field_c - param4, param5);
+        lb.a(field_l, 0, 0 * field_c, param1, 0, param5, field_c - param4, 0, param4);
     }
 
     private final static void f(int param0, int param1, int param2, int param3, int param4) {
@@ -2613,11 +2613,11 @@ final class lb {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        lb.b(param0, param1, param2, param4, param5);
-        lb.b(param0, param1 + param3 - 1, param2, param4, param5);
+        lb.b(param0, param1, param2, 0, param5);
+        lb.b(param0, param1 + param3 - 1, param2, 0, param5);
         if (param3 >= 3) {
-            lb.f(param0, param1 + 1, param3 - 2, param4, param5);
-            lb.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+            lb.f(param0, param1 + 1, param3 - 2, 0, param5);
+            lb.f(param0 + param2 - 1, param1 + 1, param3 - 2, 0, param5);
             return;
         }
     }
@@ -2648,7 +2648,7 @@ final class lb {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -2657,7 +2657,7 @@ final class lb {
           }
         }
         L1: {
-          var10 = field_c - param4 - param5 - param3;
+          var10 = field_c - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -2667,7 +2667,7 @@ final class lb {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_c >= var12) {
             break L2;
           } else {
@@ -2687,7 +2687,7 @@ final class lb {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -2844,7 +2844,7 @@ final class lb {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_f) {
+                      if (param5 + var19 + param3 >= field_f) {
                         break L18;
                       } else {
                         param1 = param0[var17];

@@ -29,7 +29,7 @@ final class tm {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         L0: {
           if (!cr.a((byte) -114)) {
             break L0;
@@ -38,7 +38,8 @@ final class tm {
             break L0;
           }
         }
-        dk.e(param0, -7579);
+        int discarded$5 = -7579;
+        dk.e(param0);
         if (sa.field_f) {
           oo.f(em.field_U.field_c.field_x, em.field_U.field_c.field_Q, em.field_U.field_c.field_zb, em.field_U.field_c.field_z);
           em.field_U.field_c.c(param0, -1);

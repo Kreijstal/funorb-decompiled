@@ -124,12 +124,12 @@ final class dh implements Runnable {
         return stackIn_17_0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ei.field_t = false;
         int discarded$0 = sc.field_g.l(32270);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
     }
 
@@ -446,7 +446,7 @@ final class dh implements Runnable {
         return stackIn_3_0;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -516,70 +516,10 @@ final class dh implements Runnable {
     }
 
     private final void a(boolean param0, rh param1) {
-        Object var3 = null;
-        Object var3_ref = null;
-        RuntimeException var3_ref2 = null;
-        Throwable var4 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        try {
-          var3_ref = (Object) (Object) ((dh) this).field_d;
-          synchronized (var3_ref) {
-            L0: {
-              if (!param0) {
-                ((dh) this).field_d.a((dk) (Object) param1, 79);
-                ((dh) this).field_e = ((dh) this).field_e + 1;
-                ((Object) (Object) ((dh) this).field_d).notifyAll();
-                break L0;
-              } else {
-                return;
-              }
-            }
-          }
-          return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref2;
-            stackOut_9_1 = new StringBuilder().append("dh.H(").append(param0).append(44);
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
-            if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L1;
-            } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L1;
-            }
-          }
-          throw wg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+        synchronized (((dh) this).field_d) {
+            ((dh) this).field_d.a((dk) (Object) param1, 79);
+            ((dh) this).field_e = ((dh) this).field_e + 1;
+            ((Object) (Object) ((dh) this).field_d).notifyAll();
         }
     }
 

@@ -29,7 +29,7 @@ final class lt extends ev {
                   L1: while (true) {
                     if (param1 == 0L) {
                       StringBuilder discarded$2 = var6.reverse();
-                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(param0)));
+                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                       return var6.toString();
                     } else {
                       L2: {
@@ -74,7 +74,7 @@ final class lt extends ev {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_g = null;
         field_i = null;

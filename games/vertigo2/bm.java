@@ -50,14 +50,6 @@ final class bm extends ji {
             mq.a(false, param0, param2, param4, param1, param5);
             break L0;
           }
-          L2: {
-            if (param3 > 85) {
-              break L2;
-            } else {
-              field_y = null;
-              break L2;
-            }
-          }
           return;
         }
     }
@@ -240,12 +232,13 @@ final class bm extends ji {
             ji.field_n.a((byte) 34);
         }
         if (!(ui.field_g == param0)) {
-            fb.h(0);
+            int discarded$0 = 0;
+            fb.h();
         }
         gr.field_Y = 0;
     }
 
-    final static void a(si param0, boolean param1, int param2) {
+    final static void a(si param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -265,7 +258,8 @@ final class bm extends ji {
         String stackOut_3_2 = null;
         try {
           L0: {
-            gh.a(param0, (byte) -123, param1, 256);
+            int discarded$2 = 256;
+            gh.a(param0, (byte) -123, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -300,7 +294,7 @@ final class bm extends ji {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_G = null;
         field_A = null;
         field_D = null;

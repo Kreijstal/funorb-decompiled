@@ -13,7 +13,8 @@ abstract class hg {
     final int a(long param0, int param1) {
         long var4 = ((hg) this).a((byte) 52);
         if (var4 > 0L) {
-            ao.a(var4, 1);
+            int discarded$0 = 1;
+            ao.a(var4);
         }
         if (param1 != -1) {
             field_e = null;
@@ -22,13 +23,10 @@ abstract class hg {
     }
 
     final static String a(int param0, char param1) {
-        if (param0 != 3) {
-            field_a = null;
-        }
         return String.valueOf(param1);
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void a(int param0, boolean param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         vn var4 = null;
@@ -281,12 +279,9 @@ abstract class hg {
         try {
             param1.setFocusTraversalKeysEnabled(false);
             param1.addKeyListener((java.awt.event.KeyListener) (Object) ch.field_a);
-            if (param0 != 1) {
-                int discarded$0 = hg.a(36, -123);
-            }
             param1.addFocusListener((java.awt.event.FocusListener) (Object) ch.field_a);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "hg.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "hg.H(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -321,16 +316,10 @@ abstract class hg {
         if (!(jl.field_c.field_i < 4)) {
             return 1;
         }
-        if (param0 != 110) {
-            field_e = null;
-        }
         return -1;
     }
 
     final static int a(int param0, int param1) {
-        if (param1 != -52) {
-            String discarded$0 = hg.a(87, '|');
-        }
         return id.field_c[param0 & 2047];
     }
 
@@ -338,38 +327,42 @@ abstract class hg {
         return mk.field_O.b((byte) -52);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_e = null;
         field_c = null;
         field_a = null;
     }
 
-    final static void a(boolean param0) {
-        u.b(6);
+    final static void a() {
+        int discarded$4 = 6;
+        u.b();
         if (!(on.field_c == null)) {
             qm.a(on.field_c, (byte) 91);
         }
         mh.g((byte) 45);
         ng.a((byte) -23);
-        ba.b(11670);
+        int discarded$17 = 11670;
+        ba.b();
         if (!(!tm.a(true))) {
             he.field_e.b((byte) -107, 1);
             we.a(0, (byte) 94);
         }
-        ka.b(false);
+        int discarded$18 = 0;
+        ka.b();
     }
 
-    final static void a(eg param0, boolean param1, eg param2, byte param3) {
+    final static void a(eg param0, boolean param1, eg param2) {
         try {
-            ul.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, hh.field_c, param1, j.field_f, (dj) (Object) th.field_k, 27874, hh.field_d, pg.field_c, vn.field_i);
+            ul.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, hh.field_c, true, j.field_f, (dj) (Object) th.field_k, 27874, hh.field_d, pg.field_c, vn.field_i);
             tl.field_a = qe.a(param2, "chatfilter", "lobby", 119);
             cf.field_b[2] = ag.field_A;
             cf.field_b[1] = u.field_d;
             cf.field_b[0] = nb.field_e;
-            hj.a((dj) (Object) ea.field_w, param0, 3896);
+            int discarded$0 = 3896;
+            hj.a((dj) (Object) ea.field_w, param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "hg.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -103 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "hg.F(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -103 + 41);
         }
     }
 

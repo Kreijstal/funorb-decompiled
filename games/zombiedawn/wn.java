@@ -5,35 +5,27 @@ final class wn {
     static sn field_a;
     static boolean field_b;
 
-    final static dj a(boolean param0, int param1, byte param2, int param3, boolean param4) {
-        if (param2 != -85) {
-          field_b = true;
-          return hd.a(false, true, param1, param3, param0, false);
-        } else {
-          return hd.a(false, true, param1, param3, param0, false);
-        }
+    final static dj a(boolean param0, int param1) {
+        return hd.a(false, true, param1, 1, true, false);
     }
 
-    final static void a(int param0, rj param1, int param2, java.awt.Component param3, ec param4, int param5, boolean param6, int param7) {
+    final static void a(int param0, rj param1, int param2, java.awt.Component param3, ec param4) {
         try {
-            qf.a(param5, param6, 10);
-            sh.field_d = qf.a(param4, param3, 0, param0);
-            cf.field_fb = qf.a(param4, param3, 1, param2);
+            qf.a(22050, true, 10);
+            sh.field_d = qf.a(param4, param3, 0, 22050);
+            cf.field_fb = qf.a(param4, param3, 1, 1024);
             t.field_i = new fi();
-            kg.field_f = 1000 * param2 / param5;
+            kg.field_f = 46;
             cf.field_fb.b((sp) (Object) t.field_i);
-            if (param7 >= -104) {
-                field_b = true;
-            }
             uh.field_o = param1;
             uh.field_o.a(ce.field_u, (byte) -68);
             sh.field_d.b((sp) (Object) uh.field_o);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "wn.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "wn.C(" + 22050 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1024 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 22050 + 44 + 1 + 44 + -112 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

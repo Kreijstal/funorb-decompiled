@@ -529,9 +529,6 @@ final class mjb extends aja {
         var2.h(24335, param1);
         var2.field_e = var2.field_e + 1;
         int var3 = var2.field_e;
-        if (param0 <= 93) {
-            field_c = null;
-        }
         var2.c(0, 2);
         var2.a(0, ce.field_o, -1, ce.field_o.length);
         var2.c(0, imb.field_a);

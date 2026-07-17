@@ -760,7 +760,8 @@ final class qjb implements ntb {
                           }
                         }
                       }
-                      var25 = gqb.a(false);
+                      int discarded$1 = 0;
+                      var25 = gqb.a();
                       var25.a(var20, var21, (byte) 118);
                       var25.a(param8, -122);
                       var25.h(17704, var22);
@@ -1311,7 +1312,9 @@ final class qjb implements ntb {
 
     public static void c(boolean param0) {
         field_a = null;
-        qjb.c(false);
+        if (!param0) {
+            qjb.c(false);
+        }
     }
 
     qjb() {

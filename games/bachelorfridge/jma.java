@@ -89,7 +89,7 @@ final class jma extends at {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_m = null;
     }
 

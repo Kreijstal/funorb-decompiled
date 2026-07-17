@@ -40,7 +40,8 @@ final class pg {
                   }
                 }
               } else {
-                s.a(var4, param1, false);
+                int discarded$2 = 0;
+                s.a(var4, param1);
                 var4 = (oa) (Object) cf.field_d.b((byte) -105);
                 continue L2;
               }
@@ -53,7 +54,7 @@ final class pg {
         }
     }
 
-    final static String a(int param0, int param1, byte[] param2, int param3) {
+    final static String a(int param0, int param1, byte[] param2) {
         char[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -91,7 +92,7 @@ final class pg {
             var11 = var12;
             var10 = var11;
             var4 = var10;
-            var5 = param3;
+            var5 = 0;
             var6 = 0;
             L1: while (true) {
               if (~param0 >= ~var6) {
@@ -164,23 +165,24 @@ final class pg {
               break L4;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param3 + 41);
+          throw pf.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 0 + 41);
         }
         return stackIn_18_0;
     }
 
-    final static bi[] b(int param0) {
+    final static bi[] b() {
         int var2 = 0;
         int var3 = fleas.field_A ? 1 : 0;
         bi[] var1 = new bi[ef.field_l];
         for (var2 = 0; ef.field_l > var2; var2++) {
             var1[var2] = new bi(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], of.field_d[var2], rd.field_d);
         }
-        c.o(-28210);
+        int discarded$0 = -28210;
+        c.o();
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_b = null;
     }

@@ -106,11 +106,11 @@ final class nga extends ci {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         if (!ni.field_c) {
             return false;
         }
-        if (bta.field_q != param0) {
+        if (bta.field_q != 0) {
             return false;
         }
         return true;
@@ -120,7 +120,7 @@ final class nga extends ci {
         this(4096);
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_q = null;
         int var1 = -51;
         field_o = null;

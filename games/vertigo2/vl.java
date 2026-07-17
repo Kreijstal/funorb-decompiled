@@ -16,7 +16,7 @@ final class vl {
     static String field_f;
     static String field_d;
 
-    final static void b(int param0) {
+    final static void b() {
     }
 
     final static u a(int param0, String param1, r param2, String param3) {
@@ -170,7 +170,7 @@ final class vl {
         return stackIn_3_0;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1) {
         L0: {
           L1: {
             if (aj.field_f == null) {
@@ -1276,7 +1276,7 @@ final class vl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_b = null;
         field_a = null;
@@ -1284,21 +1284,18 @@ final class vl {
         field_e = null;
         field_d = null;
         field_h = null;
-        if (param0 > -10) {
-          return;
-        } else {
-          field_g = null;
-          return;
-        }
+        field_g = null;
     }
 
     final static void a(int param0) {
         if (param0 > -101) {
             field_b = null;
-            ti.c(-95);
+            int discarded$0 = -95;
+            ti.c();
             return;
         }
-        ti.c(-95);
+        int discarded$1 = -95;
+        ti.c();
     }
 
     final static er[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1326,21 +1323,21 @@ final class vl {
           var6 = var15;
           var7 = bi.field_e;
           var8 = bi.field_j;
-          var9 = new er(param1, param0 + -(param1 * 2));
+          var9 = new er(3, param0 + -6);
           var9.d();
-          bi.e(0, param2, param1, -(param1 * 2) + param0, param4, param5);
-          var10 = new er(param1, param1);
+          bi.e(0, 0, 3, -6 + param0, param4, param5);
+          var10 = new er(3, 3);
           var10.d();
-          bi.b(0, 0, param1, param1, param4);
-          var11 = new er(16, param1);
+          bi.b(0, 0, 3, 3, param4);
+          var11 = new er(16, 3);
           var11.d();
-          bi.b(0, 0, 16, param1, param4);
-          var12 = new er(param1, param1);
+          bi.b(0, 0, 16, 3, param4);
+          var12 = new er(3, 3);
           var12.d();
-          bi.b(0, 0, param1, param1, param5);
-          var13 = new er(16, param1);
+          bi.b(0, 0, 3, 3, param5);
+          var13 = new er(16, 3);
           var13.d();
-          bi.b(0, 0, 16, param1, param5);
+          bi.b(0, 0, 16, 3, param5);
           var14 = null;
           if (param3 > 0) {
             var16 = new er(16, 16);

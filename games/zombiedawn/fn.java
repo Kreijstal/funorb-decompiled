@@ -1636,7 +1636,7 @@ final class fn extends sp {
           if (param0.field_l.length == 0) {
             return null;
           } else {
-            return new fn(param0, (int)((long)param0.field_m * 256L * (long)param1 / (long)(100 * qf.field_p)), param2 << 6);
+            return new fn(param0, (int)((long)param0.field_m * 256L * 100L / (long)(100 * qf.field_p)), param2 << 6);
           }
         } else {
           return null;

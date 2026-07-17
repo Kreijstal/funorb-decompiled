@@ -253,7 +253,7 @@ final class tm extends qm {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_Q = null;
         field_O = null;
         field_X = null;
@@ -270,40 +270,32 @@ final class tm extends qm {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_6_0 = 0;
+        int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var3_int = 0;
-              if (param1 == -23439) {
-                break L1;
-              } else {
-                field_O = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var3_int = 0;
+            L1: while (true) {
               if (param2 <= 0) {
-                stackOut_5_0 = var3_int;
-                stackIn_6_0 = stackOut_5_0;
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
                 var3_int = param0 & 1 | var3_int << 1;
                 param2--;
                 param0 = param0 >>> 1;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "tm.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) var3, "tm.C(" + param0 + 44 + -23439 + 44 + param2 + 41);
         }
-        return stackIn_6_0;
+        return stackIn_5_0;
     }
 
     static {

@@ -5,11 +5,11 @@ abstract class oo {
     static int field_a;
     static int field_b;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         re.a(true, true, param0);
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         if (null == vk.field_E) {
             return false;
         }

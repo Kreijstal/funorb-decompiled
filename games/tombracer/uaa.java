@@ -7,7 +7,7 @@ final class uaa {
     static String field_a;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -77,7 +77,7 @@ final class uaa {
                 }
               }
             }
-            var3 = 42 / ((param0 - -71) / 44);
+            var3 = -42;
             stackOut_13_0 = var2_int;
             stackIn_14_0 = stackOut_13_0;
             break L0;
@@ -87,7 +87,7 @@ final class uaa {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("uaa.B(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("uaa.B(").append(-116).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

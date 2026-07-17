@@ -19,36 +19,27 @@ final class ed extends c {
     }
 
     final static String a(int param0, String param1, String param2, String param3) {
-        int var4 = 0;
-        if (param0 != -1) {
-          return null;
-        } else {
-          var4 = param1.indexOf(param3);
-          L0: while (true) {
-            if (-1 == var4) {
-              return param1;
-            } else {
-              param1 = param1.substring(0, var4) + param2 + param1.substring(param3.length() + var4);
-              var4 = param1.indexOf(param3, param2.length() + var4);
-              continue L0;
-            }
-          }
+        int var4 = param1.indexOf(param3);
+        while (-1 != var4) {
+            param1 = param1.substring(0, var4) + param2 + param1.substring(param3.length() + var4);
+            var4 = param1.indexOf(param3, param2.length() + var4);
         }
+        return param1;
     }
 
     final static void a(int param0, int param1, int param2, qe param3, int param4, int param5, int param6, int param7, int param8, int param9, hl param10) {
         try {
-            int var11_int = -45 / ((param5 - 9) / 47);
-            ue.field_e = param0;
-            nd.field_k = param2;
-            w.field_v = param6;
-            cb.field_f = param9;
-            gi.field_e = param7;
-            td.field_p = param1;
-            eh.field_h = param4;
+            int var11_int = 45;
+            ue.field_e = 0;
+            nd.field_k = 123;
+            w.field_v = 9;
+            cb.field_f = 0;
+            gi.field_e = 9;
+            td.field_p = 125;
+            eh.field_h = 1500;
             re.field_l = param10;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ed.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + (param10 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ed.F(" + 0 + 44 + 125 + 44 + 123 + 44 + (param3 != null ? "{...}" : "null") + 44 + 1500 + 44 + -52 + 44 + 9 + 44 + 9 + 44 + 16777215 + 44 + 0 + 44 + (param10 != null ? "{...}" : "null") + 41);
         }
     }
 

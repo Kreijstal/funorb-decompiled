@@ -8,22 +8,20 @@ final class ri {
     static ue field_c;
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
     }
 
-    final static ue a(boolean param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
+    final static ue a(boolean param0, boolean param1, int param2, int param3) {
         try {
             Object var6 = null;
             Object var7 = null;
             t var8 = null;
-            Object stackIn_11_0 = null;
-            ue stackIn_15_0 = null;
+            ue stackIn_11_0 = null;
             Throwable decompiledCaughtException = null;
-            ue stackOut_14_0 = null;
-            Object stackOut_10_0 = null;
+            ue stackOut_10_0 = null;
             try {
               L0: {
                 L1: {
@@ -63,31 +61,17 @@ final class ri {
                     break L2;
                   }
                 }
-                if (param0) {
-                  L5: {
-                    var8 = bl.field_b.a(param4, -72, (uf) var7, param3, (uf) var6);
-                    if (!param1) {
-                      break L5;
-                    } else {
-                      var8.a(-126);
-                      break L5;
-                    }
-                  }
-                  stackOut_14_0 = new ue((ti) (Object) var8, param5, param2);
-                  stackIn_15_0 = stackOut_14_0;
-                  break L0;
-                } else {
-                  stackOut_10_0 = null;
-                  stackIn_11_0 = stackOut_10_0;
-                  return (ue) (Object) stackIn_11_0;
-                }
+                var8 = bl.field_b.a(false, -72, (uf) var7, param3, (uf) var6);
+                stackOut_10_0 = new ue((ti) (Object) var8, true, 1);
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_15_0;
+            return stackIn_11_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -95,7 +79,7 @@ final class ri {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         we.field_i = se.field_p.a(-104);
         CharSequence var2 = (CharSequence) (Object) we.field_i;
         ba.field_e = ni.a(123, var2);

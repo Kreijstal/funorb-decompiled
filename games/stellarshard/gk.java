@@ -13,13 +13,14 @@ final class gk {
 
     final ud a(byte param0, int param1, int param2) {
         int var4 = -50 % ((param0 - -10) / 50);
-        return this.a(param1, param2, (int[]) null, 1);
+        int discarded$0 = 1;
+        return this.a(param1, param2, (int[]) null);
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
     }
 
-    final static int a(int param0, boolean param1, am param2, String param3, int param4, am param5, boolean param6) {
+    final static int a(int param0, boolean param1, am param2, String param3, int param4, am param5) {
         RuntimeException var7 = null;
         String var8 = null;
         int var9 = 0;
@@ -125,7 +126,6 @@ final class gk {
             L1: {
               var14 = param2.a((byte) 125);
               var11_ref_String = var14;
-              var11_ref_String = var14;
               var8 = param5.a((byte) -22);
               var11_ref_String = var8;
               var11_ref_String = var8;
@@ -163,7 +163,8 @@ final class gk {
                       uc.field_c.a(-104, var14);
                       uc.field_c.a(-106, var8);
                       var15 = (CharSequence) (Object) param3;
-                      uc.field_c.a(-117, gg.a(var15, false));
+                      int discarded$7 = 0;
+                      uc.field_c.a(-117, gg.a(var15));
                       uc.field_c.c(param0, -127);
                       uc.field_c.a(false, param4);
                       uc.field_c.a(false, var9);
@@ -277,8 +278,10 @@ final class gk {
                   }
                   if (var9 != 248) {
                     if (var9 == 99) {
-                      boolean discarded$1 = qe.b(64, ug.b(1));
-                      nb.field_M = new Boolean(h.a((ka) (Object) ae.field_N, 31184));
+                      int discarded$8 = 1;
+                      boolean discarded$9 = qe.b(64, ug.b());
+                      int discarded$10 = 31184;
+                      nb.field_M = new Boolean(h.a((ka) (Object) ae.field_N));
                       ae.field_N.field_k = 0;
                       break L8;
                     } else {
@@ -290,7 +293,8 @@ final class gk {
                   } else {
                     aa.a(hf.a((byte) -64), false);
                     ga.field_a = pg.field_eb;
-                    oj.c(-2290);
+                    int discarded$11 = -2290;
+                    oj.c();
                     ta.field_u = false;
                     stackOut_31_0 = var9;
                     stackIn_32_0 = stackOut_31_0;
@@ -316,7 +320,8 @@ final class gk {
                     var12 = 0;
                     L11: while (true) {
                       if (~var12 <= ~var11) {
-                        oj.c(-2290);
+                        int discarded$12 = -2290;
+                        oj.c();
                         ta.field_u = false;
                         stackOut_43_0 = var11 + 100;
                         stackIn_44_0 = stackOut_43_0;
@@ -348,7 +353,8 @@ final class gk {
                       break L13;
                     }
                   }
-                  oj.c(-2290);
+                  int discarded$13 = -2290;
+                  oj.c();
                   ta.field_u = false;
                   stackOut_53_0 = ja.field_t;
                   stackIn_54_0 = stackOut_53_0;
@@ -603,7 +609,7 @@ final class gk {
         field_c = null;
     }
 
-    private final ud a(int param0, int param1, int[] param2, int param3) {
+    private final ud a(int param0, int param1, int[] param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;

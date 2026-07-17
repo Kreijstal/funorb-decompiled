@@ -24,7 +24,7 @@ class uh extends ca {
         return ln.field_l;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_l = null;
         field_m = null;
         field_f = null;

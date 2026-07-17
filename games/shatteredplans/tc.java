@@ -66,10 +66,12 @@ final class tc extends qs {
         }
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         if (!hg.field_r) {
             if (!(ur.field_zb != null)) {
-                ur.field_zb = vs.a((byte) 88, 4);
+                int discarded$0 = 4;
+                int discarded$1 = 88;
+                ur.field_zb = vs.a();
             }
         }
         if (!h.field_q) {
@@ -78,9 +80,11 @@ final class tc extends qs {
             }
             if (!(!js.field_c.field_l)) {
                 if (!(js.field_c.field_o == null)) {
-                    gg.a(js.field_c.field_o, (byte) 30);
+                    int discarded$2 = 30;
+                    gg.a(js.field_c.field_o);
                 }
-                ta.b((byte) -69);
+                int discarded$8 = -69;
+                ta.b();
                 if (!(de.field_j != -1)) {
                     de.field_j = uc.field_A;
                 }
@@ -542,9 +546,6 @@ final class tc extends qs {
         am.field_xb.a(4, (qr) (Object) n.field_h.field_d);
         am.field_xb.a(4, i.field_g);
         ed.field_d = new qr(0L, ho.field_j);
-        if (!param0) {
-            boolean discarded$0 = tc.a('x', 117);
-        }
         jo.field_a = new qr(0L, (qr) null);
         ed.field_d.a(4, hl.field_K);
         ed.field_d.a(4, jo.field_a);
@@ -554,65 +555,58 @@ final class tc extends qs {
     }
 
     final static void a(byte param0, byte[] param1) {
-        RuntimeException runtimeException = null;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              ql.a((byte) 50, qk.a(param1, 13));
-              if (param0 > 21) {
-                break L1;
-              } else {
-                tc.e(false);
-                break L1;
-              }
-            }
+            int discarded$2 = 13;
+            ql.a((byte) 50, qk.a(param1));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("tc.S(").append(param0).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("tc.S(").append(23).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
     }
 
@@ -626,41 +620,37 @@ final class tc extends qs {
         }
     }
 
-    final static boolean a(char param0, int param1) {
-        int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        if (param1 == 2) {
-          L0: {
-            L1: {
-              if (160 == param0) {
+    final static boolean a(char param0) {
+        int stackIn_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          L1: {
+            if (160 == param0) {
+              break L1;
+            } else {
+              if (param0 == 32) {
                 break L1;
               } else {
-                if (param0 == 32) {
+                if (95 == param0) {
                   break L1;
                 } else {
-                  if (95 == param0) {
-                    break L1;
+                  if (param0 != 45) {
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    break L0;
                   } else {
-                    if (param0 != 45) {
-                      stackOut_8_0 = 0;
-                      stackIn_9_0 = stackOut_8_0;
-                      break L0;
-                    } else {
-                      break L1;
-                    }
+                    break L1;
                   }
                 }
               }
             }
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            break L0;
           }
-          return stackIn_9_0 != 0;
-        } else {
-          return false;
+          stackOut_5_0 = 1;
+          stackIn_7_0 = stackOut_5_0;
+          break L0;
         }
+        return stackIn_7_0 != 0;
     }
 
     final static void j(int param0) {
@@ -721,7 +711,8 @@ final class tc extends qs {
         L0: {
           el.field_c = gf.field_k;
           kh.field_Mb = gf.field_b;
-          nj.a(438);
+          int discarded$2 = 438;
+          nj.a();
           bc.field_g.a(0, ia.field_j.field_mb + -42, (byte) 95, ia.field_j.field_K, 0);
           nm.field_c.a(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
           var1 = cr.field_c - -2;
@@ -797,7 +788,8 @@ final class tc extends qs {
         }
         L2: {
           ((qr) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, (byte) stackIn_6_3, stackIn_6_4, 0);
-          p.d(18);
+          int discarded$3 = 18;
+          p.d();
           vm.field_Ab.a(ia.field_j.field_K, 40, (byte) 41, -40 + ia.field_j.field_mb, 0);
           sg.field_zb.a(se.field_i.field_K, 30, (byte) 72, 0, 0);
           qf.field_e.a(se.field_i.field_K, -40 + se.field_i.field_mb + -32, (byte) 48, 30, 0);

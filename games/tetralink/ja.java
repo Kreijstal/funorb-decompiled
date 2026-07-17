@@ -63,39 +63,28 @@ final class ja implements m {
           }
         }
         L4: {
-          if (param0 == -7422) {
+          if (4 <= param1) {
+            param1 = param1 >>> 2;
+            var2 += 2;
             break L4;
           } else {
-            boolean discarded$2 = ja.b(false, 94);
             break L4;
           }
         }
         L5: {
-          if (4 <= param1) {
-            param1 = param1 >>> 2;
-            var2 += 2;
-            break L5;
-          } else {
-            break L5;
-          }
-        }
-        L6: {
           if (param1 < 1) {
-            break L6;
+            break L5;
           } else {
             param1 = param1 >>> 1;
             var2++;
-            break L6;
+            break L5;
           }
         }
         return var2 + param1;
     }
 
     final static boolean b(boolean param0, int param1) {
-        if (param0) {
-            return true;
-        }
-        return 2 == param1 ? true : false;
+        return 2 == param1;
     }
 
     private final void a(byte param0, jn param1, float param2) {
@@ -110,7 +99,7 @@ final class ja implements m {
         int var9 = 0;
         int var8 = TetraLink.field_J;
         try {
-            var10 = hd.a(param0 + -5, param1.field_e, ((ja) this).field_c);
+            var10 = hd.a(1, param1.field_e, ((ja) this).field_c);
             var10.a();
             var18 = var10.field_o;
             var17 = var10.field_p;
@@ -119,7 +108,8 @@ final class ja implements m {
             var11 = var13;
             var6 = var11;
             for (var7 = 0; var7 < var17.length; var7++) {
-                var6[var7] = oa.a(var17[var7], (double)param2, (byte) 45);
+                int discarded$0 = 45;
+                var6[var7] = oa.a(var17[var7], (double)param2);
             }
             param1.field_c = new int[16384];
             if (128 != var10.field_b) {
@@ -131,12 +121,9 @@ final class ja implements m {
                 param1.field_c[var9] = var6[pl.a(255, (int) var18[var9])];
                 var9++;
             }
-            if (param0 != 6) {
-                ja.a((byte) 125);
-            }
             param1.field_f = param2;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "ja.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "ja.F(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -159,7 +146,7 @@ final class ja implements m {
         return true;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (ch.field_q != null) {
             ch.field_q.b();
         }

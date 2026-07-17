@@ -20,16 +20,13 @@ final class hh extends ai {
 
     final static void a(int param0, String param1) {
         try {
-            if (param0 != 0) {
-                hh.a(true);
-            }
             mc.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "hh.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "hh.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -113,7 +110,7 @@ final class hh extends ai {
         }
     }
 
-    final static int a(ve param0, ve param1, byte param2) {
+    final static int a(ve param0, ve param1) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;
@@ -214,30 +211,21 @@ final class hh extends ai {
         return stackIn_1_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_r = null;
-        if (param0) {
-          field_k = false;
-          field_p = null;
-          field_q = null;
-          field_h = null;
-          return;
-        } else {
-          field_p = null;
-          field_q = null;
-          field_h = null;
-          return;
-        }
+        field_p = null;
+        field_q = null;
+        field_h = null;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void b(int param0, int param1, int param2, int param3) {
         pb.field_j = param0;
         ed.field_d = param2;
         k.field_D = param3;
         qd.field_b = param1;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         oh.a(94, 17);
     }
 

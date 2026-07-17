@@ -17,9 +17,7 @@ final class wh implements Iterator {
 
     final static void a(boolean param0) {
         int var1 = 0;
-        if (null == g.field_c) {
-          return;
-        } else {
+        if (null != g.field_c) {
           L0: {
             if (!g.field_c.g()) {
               break L0;
@@ -38,6 +36,13 @@ final class wh implements Iterator {
               break L0;
             }
           }
+          if (param0) {
+            field_i = null;
+            return;
+          } else {
+            return;
+          }
+        } else {
           return;
         }
     }
@@ -57,7 +62,12 @@ final class wh implements Iterator {
             var4 = (jm) (Object) ri.field_c.e(13058);
             L1: while (true) {
               if (var4 == null) {
-                break L0;
+                if (param1 == -26077) {
+                  break L0;
+                } else {
+                  field_h = null;
+                  return;
+                }
               } else {
                 rh.a(param0, 0, var4);
                 var4 = (jm) (Object) ri.field_c.a((byte) -45);
@@ -68,7 +78,7 @@ final class wh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2, "wh.A(" + param0 + 44 + -26077 + 41);
+          throw ci.a((Throwable) (Object) var2, "wh.A(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -92,7 +102,7 @@ final class wh implements Iterator {
         ((wh) this).field_f = null;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_i = null;
         field_h = null;
@@ -104,62 +114,31 @@ final class wh implements Iterator {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = 0;
         var17 = SteelSentinels.field_G;
-        if (param12 <= 14) {
-          field_a = null;
-          if (param15 > param13) {
-            if (param9 <= param15) {
-              if (param13 >= param9) {
-                qd.a(param2, param9, param14, param11, param4, param1, param3, param6, param13, param8, param5, param0, -88, param15, param7, pb.field_g, param10);
-                return;
-              } else {
-                qd.a(param0, param13, param14, param11, param5, param1, param6, param3, param9, param10, param4, param2, 114, param15, param7, pb.field_g, param8);
-                return;
-              }
+        if (param15 > param13) {
+          if (param9 <= param15) {
+            if (param13 >= param9) {
+              qd.a(param2, param9, param14, param11, param4, param1, param3, param6, param13, param8, param5, param0, -88, param15, param7, pb.field_g, param10);
+              return;
             } else {
-              qd.a(param0, param13, param2, param4, param5, param3, param6, param1, param15, param7, param11, param14, -11, param9, param10, pb.field_g, param8);
+              qd.a(param0, param13, param14, param11, param5, param1, param6, param3, param9, param10, param4, param2, 114, param15, param7, pb.field_g, param8);
               return;
             }
           } else {
-            if (param9 <= param13) {
-              if (param15 >= param9) {
-                qd.a(param2, param9, param0, param5, param4, param6, param3, param1, param15, param7, param11, param14, 120, param13, param8, pb.field_g, param10);
-                return;
-              } else {
-                qd.a(param14, param15, param0, param5, param11, param6, param1, param3, param9, param10, param4, param2, 113, param13, param8, pb.field_g, param7);
-                return;
-              }
-            } else {
-              qd.a(param14, param15, param2, param4, param11, param3, param1, param6, param13, param8, param5, param0, 115, param9, param10, pb.field_g, param7);
-              return;
-            }
+            qd.a(param0, param13, param2, param4, param5, param3, param6, param1, param15, param7, param11, param14, -11, param9, param10, pb.field_g, param8);
+            return;
           }
         } else {
-          if (param15 > param13) {
-            if (param9 <= param15) {
-              if (param13 >= param9) {
-                qd.a(param2, param9, param14, param11, param4, param1, param3, param6, param13, param8, param5, param0, -88, param15, param7, pb.field_g, param10);
-                return;
-              } else {
-                qd.a(param0, param13, param14, param11, param5, param1, param6, param3, param9, param10, param4, param2, 114, param15, param7, pb.field_g, param8);
-                return;
-              }
+          if (param9 <= param13) {
+            if (param15 >= param9) {
+              qd.a(param2, param9, param0, param5, param4, param6, param3, param1, param15, param7, param11, param14, 120, param13, param8, pb.field_g, param10);
+              return;
             } else {
-              qd.a(param0, param13, param2, param4, param5, param3, param6, param1, param15, param7, param11, param14, -11, param9, param10, pb.field_g, param8);
+              qd.a(param14, param15, param0, param5, param11, param6, param1, param3, param9, param10, param4, param2, 113, param13, param8, pb.field_g, param7);
               return;
             }
           } else {
-            if (param9 <= param13) {
-              if (param15 >= param9) {
-                qd.a(param2, param9, param0, param5, param4, param6, param3, param1, param15, param7, param11, param14, 120, param13, param8, pb.field_g, param10);
-                return;
-              } else {
-                qd.a(param14, param15, param0, param5, param11, param6, param1, param3, param9, param10, param4, param2, 113, param13, param8, pb.field_g, param7);
-                return;
-              }
-            } else {
-              qd.a(param14, param15, param2, param4, param11, param3, param1, param6, param13, param8, param5, param0, 115, param9, param10, pb.field_g, param7);
-              return;
-            }
+            qd.a(param14, param15, param2, param4, param11, param3, param1, param6, param13, param8, param5, param0, 115, param9, param10, pb.field_g, param7);
+            return;
           }
         }
     }
@@ -203,7 +182,7 @@ final class wh implements Iterator {
             var2_int = param1.field_G;
             var3 = param1.field_E;
             param1.field_E = param1.field_E - 64;
-            var4 = new nk(na.field_a, 1, var2_int, var3, 0, param0, new qd[1]);
+            var4 = new nk(na.field_a, 1, var2_int, var3, 0, 0, new qd[1]);
             var4.field_N = param1.field_N;
             param1.field_N = -1;
             stackOut_0_0 = (nk) var4;
@@ -215,7 +194,7 @@ final class wh implements Iterator {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("wh.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("wh.C(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

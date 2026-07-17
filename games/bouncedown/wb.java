@@ -40,29 +40,25 @@ final class wb {
                   break L2;
                 }
               }
-              if (param0 == 100) {
-                L3: {
-                  if (param1 >= 4) {
-                    var2 += 2;
-                    param1 = param1 >>> 2;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
+              L3: {
+                if (param1 >= 4) {
+                  var2 += 2;
+                  param1 = param1 >>> 2;
+                  break L3;
+                } else {
+                  break L3;
                 }
-                L4: {
-                  if (param1 < 1) {
-                    break L4;
-                  } else {
-                    var2++;
-                    param1 = param1 >>> 1;
-                    break L4;
-                  }
-                }
-                return var2 - -param1;
-              } else {
-                return -116;
               }
+              L4: {
+                if (param1 < 1) {
+                  break L4;
+                } else {
+                  var2++;
+                  param1 = param1 >>> 1;
+                  break L4;
+                }
+              }
+              return var2 - -param1;
             }
           }
         }
@@ -84,29 +80,25 @@ final class wb {
             break L6;
           }
         }
-        if (param0 == 100) {
-          L7: {
-            if (param1 >= 4) {
-              var2 += 2;
-              param1 = param1 >>> 2;
-              break L7;
-            } else {
-              break L7;
-            }
+        L7: {
+          if (param1 >= 4) {
+            var2 += 2;
+            param1 = param1 >>> 2;
+            break L7;
+          } else {
+            break L7;
           }
-          L8: {
-            if (param1 < 1) {
-              break L8;
-            } else {
-              var2++;
-              param1 = param1 >>> 1;
-              break L8;
-            }
-          }
-          return var2 - -param1;
-        } else {
-          return -116;
         }
+        L8: {
+          if (param1 < 1) {
+            break L8;
+          } else {
+            var2++;
+            param1 = param1 >>> 1;
+            break L8;
+          }
+        }
+        return var2 - -param1;
     }
 
     final static rg a(int param0, int param1, String param2) {
@@ -180,7 +172,7 @@ final class wb {
         return stackIn_4_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         int var1 = -2;

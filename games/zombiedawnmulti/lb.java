@@ -8,7 +8,7 @@ final class lb {
     static int field_a;
     static String field_b;
 
-    final static boolean a(String param0, String param1, byte param2) {
+    final static boolean a(String param0, String param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -57,7 +57,8 @@ final class lb {
         String stackOut_31_2 = null;
         try {
           L0: {
-            if (ol.a(param1, false)) {
+            int discarded$9 = 0;
+            if (ol.a(param1)) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -160,62 +161,49 @@ final class lb {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (!(df.field_H)) {
-            return;
-        }
-        if (-1 == param0) {
-            fk.a(hl.field_d[12], true);
+        int var4 = 0;
+        var4 = ZombieDawnMulti.field_E ? 1 : 0;
+        if (!df.field_H) {
+          return;
         } else {
-            if (0 != param2) {
-                if (param2 != 1) {
-                    if (param2 != 2) {
-                        if (param2 == 3) {
-                            fk.a(hl.field_d[4], true);
-                            if (!param1) {
-                                return;
-                            }
-                            field_c = null;
-                            return;
-                        }
-                        if (4 != param2) {
-                            if (param1) {
-                                field_c = null;
-                                return;
-                            }
-                            return;
-                        }
-                        fk.a(hl.field_d[1], true);
-                        if (param1) {
-                            field_c = null;
-                            return;
-                        }
-                        return;
-                    }
-                    fk.a(hl.field_d[3], true);
-                    if (param1) {
-                        field_c = null;
-                        return;
-                    }
-                    return;
-                }
+          if (-1 != param0) {
+            if (0 == param2) {
+              fk.a(hl.field_d[1], true);
+              field_c = null;
+              return;
+            } else {
+              if (param2 == 1) {
                 fk.a(hl.field_d[2], true);
-                if (param1) {
-                    field_c = null;
-                    return;
-                }
-                return;
-            }
-            fk.a(hl.field_d[1], true);
-            if (param1) {
                 field_c = null;
                 return;
+              } else {
+                if (param2 == 2) {
+                  fk.a(hl.field_d[3], true);
+                  field_c = null;
+                  return;
+                } else {
+                  if (param2 != 3) {
+                    if (4 != param2) {
+                      field_c = null;
+                      return;
+                    } else {
+                      fk.a(hl.field_d[1], true);
+                      field_c = null;
+                      return;
+                    }
+                  } else {
+                    fk.a(hl.field_d[4], true);
+                    field_c = null;
+                    return;
+                  }
+                }
+              }
             }
-            return;
-        }
-        if (param1) {
+          } else {
+            fk.a(hl.field_d[12], true);
             field_c = null;
             return;
+          }
         }
     }
 
@@ -241,28 +229,15 @@ final class lb {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 != 43) {
-          field_b = null;
-          field_c = null;
-          field_d = null;
-          field_b = null;
-          field_e = null;
-          return;
-        } else {
-          field_c = null;
-          field_d = null;
-          field_b = null;
-          field_e = null;
-          return;
-        }
+    public static void a() {
+        field_c = null;
+        field_d = null;
+        field_b = null;
+        field_e = null;
     }
 
     final static boolean a(byte param0, int param1) {
-        if (param0 != 53) {
-            return false;
-        }
-        return 0 <= param1 ? true : false;
+        return 0 <= param1;
     }
 
     static {

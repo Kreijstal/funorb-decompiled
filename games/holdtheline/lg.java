@@ -343,7 +343,8 @@ final class lg extends lm {
     public static void a(boolean param0) {
         field_p = null;
         if (param0) {
-          lg.b(true);
+          int discarded$2 = 1;
+          lg.b();
           field_n = null;
           field_r = null;
           field_q = null;
@@ -758,7 +759,7 @@ final class lg extends lm {
         return stackIn_3_0;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

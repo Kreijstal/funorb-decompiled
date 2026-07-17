@@ -536,7 +536,7 @@ final class ee extends am {
         return new long[64];
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_t = null;
     }
 

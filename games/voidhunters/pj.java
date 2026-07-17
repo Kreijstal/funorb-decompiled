@@ -4,7 +4,7 @@
 final class pj extends rqa {
     final static asb a(byte param0, int param1) {
         int var2 = 0;
-        var2 = 59 / ((7 - param0) / 45);
+        var2 = -59;
         if (lwa.field_xb == null) {
           if (-1 == param1) {
             return lwa.field_xb;

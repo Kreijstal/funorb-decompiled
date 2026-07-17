@@ -153,7 +153,7 @@ final class fm {
         }
     }
 
-    final static void a(int[][] param0, int param1, int param2, byte param3) {
+    final static void a(int[][] param0, int param1, int param2) {
         RuntimeException var4 = null;
         int[] var4_array = null;
         int var4_int = 0;
@@ -226,8 +226,10 @@ final class fm {
             qe.b(var4_int, var5, param1, param2, 8421504, 128, 128);
             var6 = be.field_o.field_d / 2;
             var7 = bk.field_e.field_b / 2;
-            un.a(var4_int, (byte) 41, param1, var5 - var7, true);
-            un.a(var4_int, (byte) 81, param1, -var7 + var5 + param2, true);
+            int discarded$3 = 1;
+            un.a(var4_int, (byte) 41, param1, var5 - var7);
+            int discarded$4 = 1;
+            un.a(var4_int, (byte) 81, param1, -var7 + var5 + param2);
             vf.a(param2, true, var4_int + -var6, 118, var5);
             vf.a(param2, true, var4_int - (var6 + -param1), 101, var5);
             var8 = 37;
@@ -272,7 +274,7 @@ final class fm {
                 break L4;
               }
             }
-            qe discarded$1 = bf.field_f[mn.field_b];
+            qe discarded$5 = bf.field_f[mn.field_b];
             qe.e();
             break L0;
           }
@@ -308,7 +310,7 @@ final class fm {
         }
     }
 
-    final static boolean a(ec param0, int param1) {
+    final static boolean a(ec param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -385,7 +387,7 @@ final class fm {
         return stackIn_4_0 != 0;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return null != na.field_D && na.field_D.i(32) != null;
     }
 

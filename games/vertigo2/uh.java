@@ -51,9 +51,6 @@ final class uh extends cr {
     final static String a(byte param0, long param1) {
         wq.field_K.setTime(new Date(param1));
         int var3 = wq.field_K.get(7);
-        if (param0 != -66) {
-            uh.b((byte) 22);
-        }
         int var4 = wq.field_K.get(5);
         int var5 = wq.field_K.get(2);
         int var6 = wq.field_K.get(1);
@@ -117,14 +114,6 @@ final class uh extends cr {
               var7 = 0;
               L1: while (true) {
                 if (var7 >= param1.field_t) {
-                  L2: {
-                    if (!param0) {
-                      break L2;
-                    } else {
-                      String discarded$3 = uh.a((byte) 113, 97L);
-                      break L2;
-                    }
-                  }
                   param1.field_z = param1.field_z & -4;
                   param1.field_t = var3;
                   param1.field_F = var4;
@@ -133,19 +122,19 @@ final class uh extends cr {
                   break L0;
                 } else {
                   var8 = 0;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (var8 >= param1.field_y) {
                       var6 = var6 + (-param1.field_y + var2_int);
                       var7++;
                       continue L1;
                     } else {
-                      int incrementValue$4 = var6;
+                      int incrementValue$2 = var6;
                       var6++;
-                      int incrementValue$5 = var5;
+                      int incrementValue$3 = var5;
                       var5++;
-                      var4[incrementValue$4] = param1.field_F[incrementValue$5];
+                      var4[incrementValue$2] = param1.field_F[incrementValue$3];
                       var8++;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 }
@@ -154,10 +143,10 @@ final class uh extends cr {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("uh.F(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("uh.F(").append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -169,7 +158,7 @@ final class uh extends cr {
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L4;
+              break L3;
             } else {
               stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
               stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
@@ -177,7 +166,7 @@ final class uh extends cr {
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L4;
+              break L3;
             }
           }
           throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);

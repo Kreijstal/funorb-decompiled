@@ -14,13 +14,13 @@ final class uf extends fg {
     private long field_h;
     private long field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_k = null;
     }
 
-    private final long b(int param0) {
+    private final long b() {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;
@@ -90,7 +90,8 @@ final class uf extends fg {
     }
 
     final long a(int param0) {
-        ((uf) this).field_d = ((uf) this).field_d + this.b(0);
+        int discarded$0 = 0;
+        ((uf) this).field_d = ((uf) this).field_d + this.b();
         if (!(((uf) this).field_d >= ((uf) this).field_f)) {
             return (((uf) this).field_f - ((uf) this).field_d) / 1000000L;
         }
@@ -99,7 +100,7 @@ final class uf extends fg {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 76 % ((param0 - -1) / 36);
+        int var3 = 1;
         int var4 = param2 >> 31 & -1 + param1;
         return var4 + (param2 - -(param2 >>> 31)) % param1;
     }

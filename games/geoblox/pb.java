@@ -96,17 +96,13 @@ abstract class pb extends rc {
                   var10.drawRect(0, 0, 303, 33);
                   var10.fillRect(2, 2, 3 * param0, 30);
                   var10.setColor(java.awt.Color.black);
-                  if (!param3) {
-                    var10.drawRect(1, 1, 301, 31);
-                    var10.fillRect(3 * param0 + 2, 2, 300 + -(3 * param0), 30);
-                    var10.setFont(hh.field_a);
-                    var10.setColor(java.awt.Color.white);
-                    var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-                    boolean discarded$1 = var9.drawImage(ff.field_a, kh.field_d / 2 - 152, ok.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
-                    break L4;
-                  } else {
-                    return;
-                  }
+                  var10.drawRect(1, 1, 301, 31);
+                  var10.fillRect(3 * param0 + 2, 2, 300 + -(3 * param0), 30);
+                  var10.setFont(hh.field_a);
+                  var10.setColor(java.awt.Color.white);
+                  var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
+                  boolean discarded$1 = var9.drawImage(ff.field_a, kh.field_d / 2 - 152, ok.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
+                  break L4;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,7 +167,7 @@ abstract class pb extends rc {
           }
           L8: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param2).append(44).append(0).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -200,7 +196,7 @@ abstract class pb extends rc {
 
     abstract byte[] e(int param0);
 
-    public static void f(int param0) {
+    public static void f() {
         field_o = null;
         field_t = null;
         field_p = null;

@@ -50,7 +50,7 @@ final class ad extends vg {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         int var1 = -85;
         field_i = null;
         field_h = null;
@@ -148,53 +148,45 @@ final class ad extends vg {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int stackIn_3_0 = 0;
-        int[] stackIn_6_0 = null;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
+        int[] stackIn_5_0 = null;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int[] stackOut_3_0 = null;
+        int stackOut_11_0 = 0;
+        int stackOut_8_0 = 0;
         int[] stackOut_4_0 = null;
-        int stackOut_12_0 = 0;
-        int stackOut_9_0 = 0;
-        int[] stackOut_5_0 = null;
-        int stackOut_2_0 = 0;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             var2_int = 0;
-            if (param0 == -13545) {
-              stackOut_4_0 = bca.field_a;
-              stackIn_6_0 = stackOut_4_0;
-              L1: while (true) {
-                if (stackIn_6_0.length <= var2_int) {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
-                  break L0;
+            stackOut_3_0 = bca.field_a;
+            stackIn_5_0 = stackOut_3_0;
+            L1: while (true) {
+              if (stackIn_5_0.length <= var2_int) {
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
+              } else {
+                if (param1 == bca.field_a[var2_int]) {
+                  stackOut_8_0 = 1;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0 != 0;
                 } else {
-                  if (param1 == bca.field_a[var2_int]) {
-                    stackOut_9_0 = 1;
-                    stackIn_10_0 = stackOut_9_0;
-                    return stackIn_10_0 != 0;
-                  } else {
-                    var2_int++;
-                    stackOut_5_0 = bca.field_a;
-                    stackIn_6_0 = stackOut_5_0;
-                    continue L1;
-                  }
+                  var2_int++;
+                  stackOut_4_0 = bca.field_a;
+                  stackIn_5_0 = stackOut_4_0;
+                  continue L1;
                 }
               }
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "ad.B(" + param0 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) var2, "ad.B(" + -13545 + 44 + param1 + 41);
         }
-        return stackIn_13_0 != 0;
+        return stackIn_12_0 != 0;
     }
 
     final void a(byte param0, boolean param1) {

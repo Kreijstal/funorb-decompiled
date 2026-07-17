@@ -18,7 +18,7 @@ final class q implements Iterable {
     static String field_k;
     ck[] field_j;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_f = null;
         field_m = null;
@@ -46,7 +46,7 @@ final class q implements Iterable {
                 if (eb.field_u[param1] <= eb.field_u[param2]) {
                   var4 = mb.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
                   var5 = jm.field_r[param2] + ne.field_G[param2] - -mb.field_T[param2];
-                  var6 = -10 % ((-27 - param0) / 47);
+                  var6 = 0;
                   if (var4 < var5) {
                     return true;
                   } else {
@@ -77,7 +77,7 @@ final class q implements Iterable {
                 if (ok.field_d[param1] <= ok.field_d[param2]) {
                   var4 = mb.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
                   var5 = jm.field_r[param2] + ne.field_G[param2] - -mb.field_T[param2];
-                  var6 = -10 % ((-27 - param0) / 47);
+                  var6 = 0;
                   if (var4 < var5) {
                     return true;
                   } else {

@@ -9,6 +9,9 @@ final class lu extends aa {
     public static void b(boolean param0) {
         field_g = null;
         field_e = null;
+        if (param0) {
+            field_e = null;
+        }
     }
 
     private lu() throws Throwable {

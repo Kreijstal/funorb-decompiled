@@ -12,7 +12,7 @@ final class fi extends ml {
     static ga field_y;
     byte field_D;
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -59,7 +59,7 @@ final class fi extends ml {
             var9 = var10;
             var8 = var9;
             var3 = var8;
-            var4 = 103 % ((param1 - -14) / 61);
+            var4 = 0;
             var5 = 0;
             L2: while (true) {
               if (var5 >= var2_int) {
@@ -143,12 +143,12 @@ final class fi extends ml {
               break L8;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 83 + 41);
         }
         return stackIn_20_0;
     }
 
-    final static void f(int param0) {
+    final static void f() {
         try {
             if (ub.field_t != null) {
                 try {
@@ -165,7 +165,7 @@ final class fi extends ml {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_y = null;
         int var1 = 0;
         field_v = null;

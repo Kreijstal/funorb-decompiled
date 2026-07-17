@@ -57,7 +57,8 @@ final class ue {
               if (0 >= param5) {
                 break L1;
               } else {
-                if (!bd.a(param5, (byte) -95)) {
+                int discarded$2 = -95;
+                if (!bd.a(param5)) {
                   throw new IllegalArgumentException("");
                 } else {
                   break L1;
@@ -68,7 +69,8 @@ final class ue {
               if (0 >= param6) {
                 break L2;
               } else {
-                if (bd.a(param6, (byte) -95)) {
+                int discarded$3 = -95;
+                if (bd.a(param6)) {
                   break L2;
                 } else {
                   throw new IllegalArgumentException("");
@@ -77,7 +79,7 @@ final class ue {
             }
             L3: {
               var7_int = pu.a((byte) -120, param2);
-              var8 = param1;
+              var8 = 0;
               if (param6 > param5) {
                 stackOut_10_0 = param5;
                 stackIn_11_0 = stackOut_10_0;
@@ -179,25 +181,21 @@ final class ue {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + 0 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
     final static void a(int param0, byte param1, bc param2, int param3) {
         try {
-            if (param1 != 111) {
-                Object var5 = null;
-                ue.a((byte[]) null, -33, -97, 6, -100, 46, -12);
-            }
             eh.field_p = param0;
             skb.field_o = param2;
             ag.field_p = param3;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ue.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ue.C(" + param0 + 44 + 111 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
     }
 

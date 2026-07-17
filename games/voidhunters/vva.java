@@ -141,7 +141,7 @@ final class vva extends bob {
         this(2188450, 2591221, 9543);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_r = null;
         field_u = null;
     }

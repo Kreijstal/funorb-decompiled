@@ -34,8 +34,6 @@ final class hg extends gm {
           if (!(param1 instanceof fn)) {
             var2 = "";
             var11 = var2;
-            var2 = var11;
-            var11 = var2;
             break L0;
           } else {
             var14 = (fn) (Object) param1;
@@ -49,19 +47,17 @@ final class hg extends gm {
         param1.printStackTrace(var4);
         var4.close();
         var5 = var15.toString();
-        var11 = var5;
-        var2 = var11;
+        var2 = var5;
         var11 = var5;
         var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
         var7 = var6.readLine();
-        var11 = var7;
-        var2 = var11;
+        var2 = var7;
         var11 = var7;
         L1: while (true) {
           var8 = var6.readLine();
+          var2 = var8;
           var11 = var8;
           var2 = var11;
-          var11 = var8;
           if (var8 != null) {
             L2: {
               var9 = var8.indexOf('(');
@@ -108,12 +104,11 @@ final class hg extends gm {
             var2 = var2 + 32;
             continue L1;
           } else {
-            if (param0 <= -58) {
-              var2 = var2 + "| " + var7;
-              return var2;
-            } else {
-              return null;
-            }
+            var2 = var11;
+            var11 = var2;
+            var2 = var11;
+            var2 = var2 + "| " + var7;
+            return var2;
           }
         }
     }
@@ -244,7 +239,7 @@ final class hg extends gm {
         }
     }
 
-    final static void h(byte param0) {
+    final static void h() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

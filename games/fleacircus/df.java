@@ -34,7 +34,7 @@ final class df {
           L0: {
             L1: {
               c.field_S = c.field_S + 1;
-              if (~kb.field_r != param0) {
+              if (kb.field_r != -1) {
                 break L1;
               } else {
                 if (rf.field_a == -1) {
@@ -159,7 +159,7 @@ final class df {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_37_0 = (RuntimeException) var2;
-            stackOut_37_1 = new StringBuilder().append("df.D(").append(param0).append(44);
+            stackOut_37_1 = new StringBuilder().append("df.D(").append(0).append(44);
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
@@ -199,8 +199,8 @@ final class df {
         }
     }
 
-    public static void a(byte param0) {
-        int var1 = -58 % ((param0 - -7) / 47);
+    public static void a() {
+        int var1 = 0;
         field_b = null;
         field_c = null;
     }
@@ -209,7 +209,7 @@ final class df {
         return param0 ^ param1;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;

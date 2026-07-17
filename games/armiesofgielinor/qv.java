@@ -35,7 +35,7 @@ final class qv implements pa {
         return false;
     }
 
-    private final void h(int param0) {
+    private final void h() {
         if (((qv) this).field_q.field_r.field_m != 7) {
             ((qv) this).field_f = nu.field_z[ek.field_d];
         } else {
@@ -43,26 +43,24 @@ final class qv implements pa {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, byte[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, boolean param3, byte[] param4) {
         bv var6 = null;
         int var7 = 0;
         int var8 = 0;
         try {
             var6 = vl.field_n;
-            var6.h(32161, param0);
+            var6.h(32161, 11);
             var6.field_q = var6.field_q + 1;
             var7 = var6.field_q;
             var6.b(1, 4);
             var6.b(1, param1);
-            var8 = param2;
-            if (param3) {
-                var8 += 128;
-            }
+            var8 = 0;
+            var8 += 128;
             var6.b(1, var8);
             var6.a(param4, 0, param4.length, 102);
             var6.e(var6.field_q + -var7, 5930);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "qv.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + 5623 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "qv.B(" + 11 + 44 + param1 + 44 + 0 + 44 + 1 + 44 + (param4 != null ? "{...}" : "null") + 44 + 5623 + 41);
         }
     }
 
@@ -247,7 +245,8 @@ final class qv implements pa {
         try {
           L0: {
             L1: {
-              var8 = wh.a(117);
+              int discarded$4 = 117;
+              var8 = wh.a();
               var1 = var8;
               var2 = var8.length;
               if (sf.field_P.length >= var2) {
@@ -267,7 +266,8 @@ final class qv implements pa {
                 } else {
                   var5 = sf.field_P[var4];
                   var6 = jq.field_I[var5];
-                  bd.a(var8[var4], var6, var4, 2378077);
+                  int discarded$5 = 2378077;
+                  bd.a(var8[var4], var6, var4);
                   var4++;
                   continue L2;
                 }
@@ -283,7 +283,7 @@ final class qv implements pa {
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         ((qv) this).field_e[0] = ((qv) this).field_d[0];
         ((qv) this).field_e[1] = ((qv) this).field_d[1];
         if (0 >= ((qv) this).field_p) {
@@ -303,7 +303,7 @@ final class qv implements pa {
         }
     }
 
-    private final boolean a(boolean param0) {
+    private final boolean a() {
         int var2 = 0;
         var2 = ((qv) this).field_u / ((qv) this).field_f;
         ((qv) this).field_a = (-(((qv) this).field_f * ((qv) this).field_w) + ((qv) this).field_u << 8) / ((qv) this).field_f;
@@ -311,7 +311,8 @@ final class qv implements pa {
           return false;
         } else {
           if (((qv) this).field_w + 1 != var2) {
-            this.i(-14628);
+            int discarded$1 = -14628;
+            this.i();
             ((qv) this).field_w = var2;
             ((qv) this).field_a = (-(((qv) this).field_f * ((qv) this).field_w) + ((qv) this).field_u << 8) / ((qv) this).field_f;
             return true;
@@ -385,16 +386,8 @@ final class qv implements pa {
             break L0;
           }
         }
-        L1: {
-          var15 = new StringWriter();
-          var4 = new PrintWriter((Writer) (Object) var15);
-          if (param0 == 0) {
-            break L1;
-          } else {
-            field_i = null;
-            break L1;
-          }
-        }
+        var15 = new StringWriter();
+        var4 = new PrintWriter((Writer) (Object) var15);
         param1.printStackTrace(var4);
         var4.close();
         var5 = var15.toString();
@@ -406,7 +399,7 @@ final class qv implements pa {
         var11 = var7;
         var2 = var11;
         var11 = var7;
-        L2: while (true) {
+        L1: while (true) {
           var8 = var6.readLine();
           var11 = var8;
           var2 = var11;
@@ -415,20 +408,20 @@ final class qv implements pa {
             var2 = var2 + "| " + var7;
             return var2;
           } else {
-            L3: {
+            L2: {
               var9 = var8.indexOf('(');
               var10 = var8.indexOf(')', var9 - -1);
               if (var9 != -1) {
                 var11 = var8.substring(0, var9);
                 var2 = var11;
                 var2 = var11;
-                break L3;
+                break L2;
               } else {
                 var11 = var8;
-                break L3;
+                break L2;
               }
             }
-            L4: {
+            L3: {
               var16 = var11.trim();
               var2 = var16;
               var2 = var16;
@@ -442,28 +435,28 @@ final class qv implements pa {
               var2 = var19;
               var2 = var19;
               if (-1 == var9) {
-                break L4;
+                break L3;
               } else {
                 if (var10 == -1) {
-                  break L4;
+                  break L3;
                 } else {
                   var12 = var8.indexOf(".java:", var9);
                   if (0 > var12) {
-                    break L4;
+                    break L3;
                   } else {
                     var2 = var19 + var8.substring(var12 - -5, var10);
-                    break L4;
+                    break L3;
                   }
                 }
               }
             }
             var2 = var2 + 32;
-            continue L2;
+            continue L1;
           }
         }
     }
 
-    private final int e(byte param0) {
+    private final int e() {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -517,7 +510,7 @@ final class qv implements pa {
     private final void e(int param0) {
         int var2 = ((qv) this).field_m[0] - ((qv) this).field_c[0];
         var2 = ((qv) this).field_a * var2 >> 8;
-        int var3 = ((qv) this).field_m[1] - ((qv) this).field_c[param0];
+        int var3 = ((qv) this).field_m[1] - ((qv) this).field_c[1];
         ((qv) this).field_b[0] = var2 + ((qv) this).field_c[0];
         var3 = ((qv) this).field_a * var3 >> 8;
         ((qv) this).field_b[1] = var3 + ((qv) this).field_c[1];
@@ -529,7 +522,7 @@ final class qv implements pa {
         }
     }
 
-    private final void i(int param0) {
+    private final void i() {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         ((qv) this).field_n[0] = ((qv) this).field_d[0];
@@ -545,14 +538,15 @@ final class qv implements pa {
         ((qv) this).field_e[1] = -((qv) this).field_k[1] + ((qv) this).field_n[1];
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         ((qv) this).field_w = ((qv) this).field_p - 1;
-        this.i(-14628);
+        int discarded$0 = -14628;
+        this.i();
         ((qv) this).field_g[0] = ((qv) this).field_n[0];
         ((qv) this).field_g[1] = ((qv) this).field_n[1];
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_r = null;
         field_l = null;
         field_j = null;
@@ -570,48 +564,40 @@ final class qv implements pa {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
               ((qv) this).field_q.field_x = this.f(-4923);
-              if (param0) {
-                break L1;
-              } else {
-                boolean discarded$2 = qv.j(101);
-                break L1;
-              }
-            }
-            L2: {
               var3_int = 0;
               var4 = 0;
               if (0 != ((qv) this).field_q.field_x) {
                 if (1 != ((qv) this).field_q.field_x) {
-                  break L2;
+                  break L1;
                 } else {
                   var3_int = ((qv) this).field_n[0];
                   var4 = ((qv) this).field_n[1];
-                  break L2;
+                  break L1;
                 }
               } else {
                 var3_int = ((qv) this).field_e[0];
                 var4 = ((qv) this).field_e[1];
-                break L2;
+                break L1;
               }
             }
             ((qv) this).field_q.field_x = var4 * ((qv) this).field_t + var3_int;
@@ -619,67 +605,63 @@ final class qv implements pa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("qv.M(").append(param0).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("qv.M(").append(1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
-    final static boolean j(int param0) {
-        int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param0 == -11) {
-          L0: {
-            L1: {
-              if (p.field_b < 10) {
+    final static boolean j() {
+        int stackIn_5_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_4_0 = 0;
+        L0: {
+          L1: {
+            if (p.field_b < 10) {
+              break L1;
+            } else {
+              if (bl.field_b) {
                 break L1;
               } else {
-                if (bl.field_b) {
+                if (go.a(-103)) {
                   break L1;
                 } else {
-                  if (go.a(-103)) {
-                    break L1;
-                  } else {
-                    stackOut_5_0 = 1;
-                    stackIn_7_0 = stackOut_5_0;
-                    break L0;
-                  }
+                  stackOut_3_0 = 1;
+                  stackIn_5_0 = stackOut_3_0;
+                  break L0;
                 }
               }
             }
-            stackOut_6_0 = 0;
-            stackIn_7_0 = stackOut_6_0;
-            break L0;
           }
-          return stackIn_7_0 != 0;
-        } else {
-          return false;
+          stackOut_4_0 = 0;
+          stackIn_5_0 = stackOut_4_0;
+          break L0;
         }
+        return stackIn_5_0 != 0;
     }
 
     qv(ha param0, v param1, vb param2) {
@@ -852,15 +834,14 @@ final class qv implements pa {
             ((qv) this).field_p = ((qv) this).field_h.length;
             ((qv) this).field_d[1] = param2 / ((qv) this).field_t;
             ((qv) this).field_d[0] = -(((qv) this).field_d[1] * ((qv) this).field_t) + param2;
-            this.f((byte) -116);
-            this.h(-7432);
+            int discarded$6 = -116;
+            this.f();
+            int discarded$7 = -7432;
+            this.h();
             ((qv) this).field_w = 0;
-            if (param1) {
-              this.d((byte) 56);
-              break L0;
-            } else {
-              return;
-            }
+            int discarded$8 = 56;
+            this.d();
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -890,7 +871,7 @@ final class qv implements pa {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 1 + 44 + param2 + 41);
         }
     }
 
@@ -918,7 +899,8 @@ final class qv implements pa {
         try {
           L0: {
             L1: {
-              if (!this.a(false)) {
+              int discarded$6 = 0;
+              if (!this.a()) {
                 break L1;
               } else {
                 dh.a(param0.field_w.field_N, 0, 32);
@@ -932,7 +914,8 @@ final class qv implements pa {
                 this.e(1);
                 ((qv) this).field_q.field_m = ((qv) this).field_b[0];
                 ((qv) this).field_q.field_v = ((qv) this).field_b[1];
-                var3_int = this.e((byte) -69);
+                int discarded$7 = -69;
+                var3_int = this.e();
                 var4 = param0.field_w;
                 if (param0.field_m != 7) {
                   var4.field_z = 1;
@@ -942,7 +925,7 @@ final class qv implements pa {
                   break L2;
                 }
               }
-              boolean discarded$2 = ((qv) this).field_q.field_u.a(1 + ((qv) this).field_q.field_m, -35, ((qv) this).field_q.field_v - 6, var3_int, var4);
+              boolean discarded$8 = ((qv) this).field_q.field_u.a(1 + ((qv) this).field_q.field_m, -35, ((qv) this).field_q.field_v - 6, var3_int, var4);
               var5 = 115 / ((param1 - -26) / 48);
               ((qv) this).field_u = ((qv) this).field_u + 1;
               break L0;

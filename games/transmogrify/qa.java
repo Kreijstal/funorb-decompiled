@@ -29,7 +29,7 @@ final class qa extends h {
         ba.a(114, param0);
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

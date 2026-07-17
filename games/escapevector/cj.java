@@ -15,21 +15,21 @@ final class cj {
             var2 = new ed(param1.a(-4, "", "final_frame.jpg"), (java.awt.Component) (Object) of.field_d);
             var3 = var2.field_s;
             var4 = var2.field_x;
-            hf.a(param0 ^ 58);
+            hf.a(58);
             cb.field_a = new ed(var3, 3 * var4 / 4);
             cb.field_a.g();
-            var2.d(0, param0);
+            var2.d(0, 0);
             s.field_G = new ed(var3, -cb.field_a.field_x + var4);
             s.field_G.g();
             var2.d(0, -cb.field_a.field_x);
             s.field_G.field_v = cb.field_a.field_x;
             dl.a((byte) 120);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "cj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "cj.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -41,7 +41,7 @@ final class cj {
         var5 = EscapeVector.field_A;
         try {
           L0: {
-            var2 = -55 % ((param0 - -59) / 39);
+            var2 = 0;
             var6 = ul.field_I;
             var1 = var6;
             var3 = 0;
@@ -81,7 +81,7 @@ final class cj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "cj.C(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1_ref, "cj.C(" + -99 + 41);
         }
     }
 

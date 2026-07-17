@@ -5,7 +5,7 @@ abstract class af {
     static String field_a;
     static String field_b;
 
-    final static void a(boolean param0) {
+    final static void a() {
         t var1 = null;
         t var2 = null;
         int var3 = 0;

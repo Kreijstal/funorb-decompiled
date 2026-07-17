@@ -183,14 +183,15 @@ final class cb {
               jg.field_d.e((640 + -jg.field_d.field_z) / 2, -4 + (-jg.field_d.field_A + 480));
               var2_int = (640 + -gj.field_d.field_z) / 2;
               var3 = -gj.field_d.field_A + 478;
-              var4 = (gj.field_d.field_z - 4) * ij.k(param0 ^ -547) >> 9;
+              int discarded$1 = -86;
+              var4 = (gj.field_d.field_z - 4) * ij.k() >> 9;
               si.c(var2_int - -2, var3 - -3, var4, 2, 16772608);
               gj.field_d.e(var2_int, var3);
               al.field_Z.c(hk.field_k.toUpperCase(), 8, 472, 16776960, -1);
               al.field_Z.b(bi.field_c[n.field_s].toUpperCase(), 320, 471, 16776960, -1);
               var5 = el.field_i.toUpperCase();
               var6 = al.field_Z.a(var5);
-              al.field_Z.a(var5, param0, 472, 16776960, -1);
+              al.field_Z.a(var5, 631, 472, 16776960, -1);
               ec.a(7, 472, false, (vm) (Object) al.field_Z, 631 + -var6 + -5, 16776960, Integer.toString(cf.field_s));
               stackOut_0_0 = -11003;
               stackOut_0_1 = Math.max(eh.field_g, 0);
@@ -232,7 +233,7 @@ final class cb {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("cb.D(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("cb.D(").append(631).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -379,7 +380,7 @@ final class cb {
         return null;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_g = null;
         field_b = null;

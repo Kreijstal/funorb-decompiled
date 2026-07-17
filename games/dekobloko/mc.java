@@ -18,7 +18,7 @@ final class mc {
             var5.field_n = var5.field_n + 1;
             var4 = var5.field_n;
             var5.a(true, 1);
-            var5.a(param0, param1.field_q);
+            var5.a(true, param1.field_q);
             var5.b(17, param1.field_r);
             var5.a(param1.field_p, false);
             var5.a(param1.field_n, false);
@@ -27,11 +27,11 @@ final class mc {
             int discarded$0 = var5.a((byte) -15, var4);
             var5.b(var5.field_n + -var4, true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "mc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "mc.B(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
         field_d = null;
@@ -292,7 +292,8 @@ final class mc {
           } else {
             L2: {
               L3: {
-                if (!ig.b(true)) {
+                int discarded$4 = 1;
+                if (!ig.b()) {
                   break L3;
                 } else {
                   if (param0.field_lc) {
@@ -322,7 +323,8 @@ final class mc {
                   if (var6 >= 5) {
                     L8: {
                       if (qa.field_v[0][2].field_Kb) {
-                        if (!ig.b(true)) {
+                        int discarded$5 = 1;
+                        if (!ig.b()) {
                           sl.field_g = cm.a((byte) 82, bh.field_h, new String[1]);
                           break L8;
                         } else {
@@ -1085,7 +1087,8 @@ final class mc {
                             L63: while (true) {
                               if (var7 <= var17_int) {
                                 L64: {
-                                  uc.a(-1, param1, -1, 0, var9, var7, param0, false);
+                                  int discarded$6 = 0;
+                                  uc.a(-1, param1, -1, 0, var9, var7, param0);
                                   if (2 > te.field_p) {
                                     break L64;
                                   } else {
@@ -1365,7 +1368,8 @@ final class mc {
                               break L80;
                             } else {
                               var21 = (Object) (Object) ("<col=A00000>" + var21);
-                              var33 = j.a("<br>", (String) var21, "<br><col=A00000>", 0);
+                              int discarded$7 = 0;
+                              var33 = j.a("<br>", (String) var21, "<br><col=A00000>");
                               if (var20 != null) {
                                 var20 = (Object) (Object) (var20 + "<br>" + var33);
                                 break L80;

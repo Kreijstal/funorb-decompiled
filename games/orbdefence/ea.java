@@ -23,7 +23,8 @@ final class ea extends java.awt.Canvas implements java.awt.event.FocusListener {
                 Object var4 = null;
                 hf discarded$0 = ea.a(7, (dl) null, 115);
             }
-            tj.a(param0, ((ea) this).field_c, -23144);
+            int discarded$1 = -23144;
+            tj.a(param0, ((ea) this).field_c);
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "ea.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -57,7 +58,8 @@ final class ea extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           L0: {
             if (param0 > 8) {
-              stackOut_3_0 = ik.a(bb.a(param1, 100, param2), -129);
+              int discarded$2 = -129;
+              stackOut_3_0 = ik.a(bb.a(param1, 100, param2));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -99,7 +101,7 @@ final class ea extends java.awt.Canvas implements java.awt.event.FocusListener {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
         field_g = null;

@@ -14,7 +14,7 @@ final class q {
           if (var2 == null) {
             break L0;
           } else {
-            vn.field_ub[0] = ad.a(dm.a(param0, -29413), var2);
+            vn.field_ub[0] = ad.a(dm.a(5, -29413), var2);
             break L0;
           }
         }
@@ -30,7 +30,7 @@ final class q {
         L2: {
           var2 = vh.a((byte) 50, "HELP_HEAD_MAIN");
           if (null != var2) {
-            sg.field_a = ad.a(param0 + -29415, var2);
+            sg.field_a = ad.a(-29410, var2);
             break L2;
           } else {
             break L2;
@@ -59,7 +59,7 @@ final class q {
           if (null == var2) {
             break L5;
           } else {
-            o.field_i[2] = ad.a(dm.a(param0, -29413), var2);
+            o.field_i[2] = ad.a(dm.a(5, -29413), var2);
             break L5;
           }
         }
@@ -86,7 +86,7 @@ final class q {
           if (null == var2) {
             break L8;
           } else {
-            o.field_i[5] = ad.a(param0 + -29415, var2);
+            o.field_i[5] = ad.a(-29410, var2);
             break L8;
           }
         }
@@ -120,7 +120,7 @@ final class q {
         L12: {
           var2 = vh.a((byte) 70, "HELP,2");
           if (var2 != null) {
-            pa.field_j[2] = ad.a(param0 + -29415, var2);
+            pa.field_j[2] = ad.a(-29410, var2);
             break L12;
           } else {
             break L12;
@@ -221,7 +221,7 @@ final class q {
           if (null == var2) {
             break L23;
           } else {
-            da.field_m[7] = ad.a(param0 + -29415, var2);
+            da.field_m[7] = ad.a(-29410, var2);
             break L23;
           }
         }
@@ -255,7 +255,7 @@ final class q {
         L27: {
           var2 = vh.a((byte) 61, "achievement_criteria,0");
           if (null != var2) {
-            ai.field_a[0] = ad.a(dm.a(param0, -29413), var2);
+            ai.field_a[0] = ad.a(dm.a(5, -29413), var2);
             break L27;
           } else {
             break L27;
@@ -282,7 +282,7 @@ final class q {
         L30: {
           var2 = vh.a((byte) 97, "achievement_criteria,3");
           if (null != var2) {
-            ai.field_a[3] = ad.a(dm.a(param0, -29413), var2);
+            ai.field_a[3] = ad.a(dm.a(5, -29413), var2);
             break L30;
           } else {
             break L30;
@@ -372,7 +372,7 @@ final class q {
         L40: {
           var2 = vh.a((byte) 86, "gameoptnames,0,1");
           if (var2 != null) {
-            wh.field_g[0][1] = ad.a(dm.a(param0, -29413), var2);
+            wh.field_g[0][1] = ad.a(dm.a(5, -29413), var2);
             break L40;
           } else {
             break L40;
@@ -419,7 +419,7 @@ final class q {
           if (var2 == null) {
             break L45;
           } else {
-            wh.field_g[0][6] = ad.a(param0 + -29415, var2);
+            wh.field_g[0][6] = ad.a(-29410, var2);
             break L45;
           }
         }
@@ -455,7 +455,7 @@ final class q {
           if (var2 == null) {
             break L49;
           } else {
-            ok.field_Nb = ad.a(param0 + -29415, var2);
+            ok.field_Nb = ad.a(-29410, var2);
             break L49;
           }
         }
@@ -534,7 +534,7 @@ final class q {
         L58: {
           var2 = vh.a((byte) 119, "MENU_TEXT_QUEEN");
           if (var2 != null) {
-            ma.field_H = ad.a(param0 ^ -29413, var2);
+            ma.field_H = ad.a(-29410, var2);
             break L58;
           } else {
             break L58;
@@ -543,264 +543,259 @@ final class q {
         L59: {
           var2 = vh.a((byte) 52, "MENU_TEXT_KING");
           if (null != var2) {
-            ac.field_p = ad.a(param0 ^ -29413, var2);
+            ac.field_p = ad.a(-29410, var2);
             break L59;
           } else {
             break L59;
           }
         }
-        if (param0 == 5) {
-          L60: {
-            var2 = vh.a((byte) 96, "MENU_TEXT_MOVES_COLON");
-            if (var2 != null) {
-              hj.field_k = ad.a(-29410, var2);
-              break L60;
-            } else {
-              break L60;
-            }
+        L60: {
+          var2 = vh.a((byte) 96, "MENU_TEXT_MOVES_COLON");
+          if (var2 != null) {
+            hj.field_k = ad.a(-29410, var2);
+            break L60;
+          } else {
+            break L60;
           }
-          L61: {
-            var2 = vh.a((byte) 77, "MENU_TEXT_GRAPHICS_FASTEST");
-            if (var2 == null) {
-              break L61;
-            } else {
-              dm.field_a = ad.a(-29410, var2);
-              break L61;
-            }
-          }
-          L62: {
-            var2 = vh.a((byte) 50, "MENU_TEXT_GRAPHICS_MEDIUM");
-            if (null == var2) {
-              break L62;
-            } else {
-              sj.field_t = ad.a(-29410, var2);
-              break L62;
-            }
-          }
-          L63: {
-            var2 = vh.a((byte) 81, "MENU_TEXT_GRAPHICS_BEST");
-            if (null != var2) {
-              pk.field_h = ad.a(-29410, var2);
-              break L63;
-            } else {
-              break L63;
-            }
-          }
-          L64: {
-            var2 = vh.a((byte) 77, "YOUR_MOVE");
-            if (null != var2) {
-              String discarded$5 = ad.a(-29410, var2);
-              break L64;
-            } else {
-              break L64;
-            }
-          }
-          L65: {
-            var2 = vh.a((byte) 42, "WHITE_TO_MOVE");
-            if (var2 != null) {
-              mh.field_e = ad.a(-29410, var2);
-              break L65;
-            } else {
-              break L65;
-            }
-          }
-          L66: {
-            var2 = vh.a((byte) 99, "BLACK_TO_MOVE");
-            if (var2 == null) {
-              break L66;
-            } else {
-              ij.field_f = ad.a(-29410, var2);
-              break L66;
-            }
-          }
-          L67: {
-            var2 = vh.a((byte) 52, "PLAYER_TO_MOVE");
-            if (var2 != null) {
-              rc.field_f = ad.a(-29410, var2);
-              break L67;
-            } else {
-              break L67;
-            }
-          }
-          L68: {
-            var2 = vh.a((byte) 85, "SEL_PIECE_CANNOT_MOVE");
-            if (var2 == null) {
-              break L68;
-            } else {
-              ba.field_N = ad.a(-29410, var2);
-              break L68;
-            }
-          }
-          L69: {
-            var2 = vh.a((byte) 49, "YOU_ARE_PLAYING_AS");
-            if (var2 != null) {
-              ke.field_e = ad.a(-29410, var2);
-              break L69;
-            } else {
-              break L69;
-            }
-          }
-          L70: {
-            var2 = vh.a((byte) 57, "PLAYER");
-            if (null != var2) {
-              ao.field_j = ad.a(param0 ^ -29413, var2);
-              break L70;
-            } else {
-              break L70;
-            }
-          }
-          L71: {
-            var2 = vh.a((byte) 73, "RATING");
-            if (var2 != null) {
-              tk.field_f = ad.a(param0 ^ -29413, var2);
-              break L71;
-            } else {
-              break L71;
-            }
-          }
-          L72: {
-            var2 = vh.a((byte) 126, "PLAYED");
-            if (var2 != null) {
-              qe.field_y = ad.a(-29410, var2);
-              break L72;
-            } else {
-              break L72;
-            }
-          }
-          L73: {
-            var2 = vh.a((byte) 79, "RATING_PER_WON");
-            if (null == var2) {
-              break L73;
-            } else {
-              fm.field_O = ad.a(-29410, var2);
-              break L73;
-            }
-          }
-          L74: {
-            var2 = vh.a((byte) 75, "RATING_PER_LOST");
-            if (var2 != null) {
-              mh.field_g = ad.a(param0 + -29415, var2);
-              break L74;
-            } else {
-              break L74;
-            }
-          }
-          L75: {
-            var2 = vh.a((byte) 48, "RATING_PER_DRAWN");
-            if (var2 == null) {
-              break L75;
-            } else {
-              kl.field_a = ad.a(-29410, var2);
-              break L75;
-            }
-          }
-          L76: {
-            var2 = vh.a((byte) 84, "PERCENT");
-            if (null == var2) {
-              break L76;
-            } else {
-              wf.field_S = ad.a(-29410, var2);
-              break L76;
-            }
-          }
-          L77: {
-            var2 = vh.a((byte) 83, "NA");
-            if (null != var2) {
-              Chess.field_C = ad.a(-29410, var2);
-              break L77;
-            } else {
-              break L77;
-            }
-          }
-          L78: {
-            var2 = vh.a((byte) 102, "COLSTR_WHITE");
-            if (var2 != null) {
-              lg.field_e = ad.a(-29410, var2);
-              break L78;
-            } else {
-              break L78;
-            }
-          }
-          L79: {
-            var2 = vh.a((byte) 95, "COLSTR_BLACK");
-            if (null == var2) {
-              break L79;
-            } else {
-              wj.field_e = ad.a(param0 ^ -29413, var2);
-              break L79;
-            }
-          }
-          L80: {
-            var2 = vh.a((byte) 64, "OTHER_PLAYER_RESIGNED_BEFORE_FIRST_MOVE");
-            if (var2 != null) {
-              String discarded$6 = ad.a(-29410, var2);
-              break L80;
-            } else {
-              break L80;
-            }
-          }
-          L81: {
-            var2 = vh.a((byte) 56, "BOTH_PLAYERS_RESIGNED_BEFORE_FIRST_MOVE");
-            if (null != var2) {
-              String discarded$7 = ad.a(-29410, var2);
-              break L81;
-            } else {
-              break L81;
-            }
-          }
-          L82: {
-            var2 = vh.a((byte) 63, "GAME_FINISHED_BEFORE_FIRST_MOVE");
-            if (null != var2) {
-              wc.field_F = ad.a(-29410, var2);
-              break L82;
-            } else {
-              break L82;
-            }
-          }
-          L83: {
-            var2 = vh.a((byte) 60, "PLAYERNAME_YOU");
-            if (var2 != null) {
-              vg.field_b = ad.a(-29410, var2);
-              break L83;
-            } else {
-              break L83;
-            }
-          }
-          L84: {
-            var2 = vh.a((byte) 66, "PLAYERNAME_YOUR_FRIEND");
-            if (null == var2) {
-              break L84;
-            } else {
-              mm.field_c = ad.a(-29410, var2);
-              break L84;
-            }
-          }
-          L85: {
-            var2 = vh.a((byte) 119, "_2D_MODE");
-            if (var2 == null) {
-              break L85;
-            } else {
-              vh.field_f = ad.a(-29410, var2);
-              break L85;
-            }
-          }
-          L86: {
-            var2 = vh.a((byte) 121, "_3D_MODE");
-            if (var2 != null) {
-              ik.field_f = ad.a(param0 + -29415, var2);
-              break L86;
-            } else {
-              break L86;
-            }
-          }
-          jj.field_e = null;
-          return;
-        } else {
-          return;
         }
+        L61: {
+          var2 = vh.a((byte) 77, "MENU_TEXT_GRAPHICS_FASTEST");
+          if (var2 == null) {
+            break L61;
+          } else {
+            dm.field_a = ad.a(-29410, var2);
+            break L61;
+          }
+        }
+        L62: {
+          var2 = vh.a((byte) 50, "MENU_TEXT_GRAPHICS_MEDIUM");
+          if (null == var2) {
+            break L62;
+          } else {
+            sj.field_t = ad.a(-29410, var2);
+            break L62;
+          }
+        }
+        L63: {
+          var2 = vh.a((byte) 81, "MENU_TEXT_GRAPHICS_BEST");
+          if (null != var2) {
+            pk.field_h = ad.a(-29410, var2);
+            break L63;
+          } else {
+            break L63;
+          }
+        }
+        L64: {
+          var2 = vh.a((byte) 77, "YOUR_MOVE");
+          if (null != var2) {
+            String discarded$5 = ad.a(-29410, var2);
+            break L64;
+          } else {
+            break L64;
+          }
+        }
+        L65: {
+          var2 = vh.a((byte) 42, "WHITE_TO_MOVE");
+          if (var2 != null) {
+            mh.field_e = ad.a(-29410, var2);
+            break L65;
+          } else {
+            break L65;
+          }
+        }
+        L66: {
+          var2 = vh.a((byte) 99, "BLACK_TO_MOVE");
+          if (var2 == null) {
+            break L66;
+          } else {
+            ij.field_f = ad.a(-29410, var2);
+            break L66;
+          }
+        }
+        L67: {
+          var2 = vh.a((byte) 52, "PLAYER_TO_MOVE");
+          if (var2 != null) {
+            rc.field_f = ad.a(-29410, var2);
+            break L67;
+          } else {
+            break L67;
+          }
+        }
+        L68: {
+          var2 = vh.a((byte) 85, "SEL_PIECE_CANNOT_MOVE");
+          if (var2 == null) {
+            break L68;
+          } else {
+            ba.field_N = ad.a(-29410, var2);
+            break L68;
+          }
+        }
+        L69: {
+          var2 = vh.a((byte) 49, "YOU_ARE_PLAYING_AS");
+          if (var2 != null) {
+            ke.field_e = ad.a(-29410, var2);
+            break L69;
+          } else {
+            break L69;
+          }
+        }
+        L70: {
+          var2 = vh.a((byte) 57, "PLAYER");
+          if (null != var2) {
+            ao.field_j = ad.a(-29410, var2);
+            break L70;
+          } else {
+            break L70;
+          }
+        }
+        L71: {
+          var2 = vh.a((byte) 73, "RATING");
+          if (var2 != null) {
+            tk.field_f = ad.a(-29410, var2);
+            break L71;
+          } else {
+            break L71;
+          }
+        }
+        L72: {
+          var2 = vh.a((byte) 126, "PLAYED");
+          if (var2 != null) {
+            qe.field_y = ad.a(-29410, var2);
+            break L72;
+          } else {
+            break L72;
+          }
+        }
+        L73: {
+          var2 = vh.a((byte) 79, "RATING_PER_WON");
+          if (null == var2) {
+            break L73;
+          } else {
+            fm.field_O = ad.a(-29410, var2);
+            break L73;
+          }
+        }
+        L74: {
+          var2 = vh.a((byte) 75, "RATING_PER_LOST");
+          if (var2 != null) {
+            mh.field_g = ad.a(-29410, var2);
+            break L74;
+          } else {
+            break L74;
+          }
+        }
+        L75: {
+          var2 = vh.a((byte) 48, "RATING_PER_DRAWN");
+          if (var2 == null) {
+            break L75;
+          } else {
+            kl.field_a = ad.a(-29410, var2);
+            break L75;
+          }
+        }
+        L76: {
+          var2 = vh.a((byte) 84, "PERCENT");
+          if (null == var2) {
+            break L76;
+          } else {
+            wf.field_S = ad.a(-29410, var2);
+            break L76;
+          }
+        }
+        L77: {
+          var2 = vh.a((byte) 83, "NA");
+          if (null != var2) {
+            Chess.field_C = ad.a(-29410, var2);
+            break L77;
+          } else {
+            break L77;
+          }
+        }
+        L78: {
+          var2 = vh.a((byte) 102, "COLSTR_WHITE");
+          if (var2 != null) {
+            lg.field_e = ad.a(-29410, var2);
+            break L78;
+          } else {
+            break L78;
+          }
+        }
+        L79: {
+          var2 = vh.a((byte) 95, "COLSTR_BLACK");
+          if (null == var2) {
+            break L79;
+          } else {
+            wj.field_e = ad.a(-29410, var2);
+            break L79;
+          }
+        }
+        L80: {
+          var2 = vh.a((byte) 64, "OTHER_PLAYER_RESIGNED_BEFORE_FIRST_MOVE");
+          if (var2 != null) {
+            String discarded$6 = ad.a(-29410, var2);
+            break L80;
+          } else {
+            break L80;
+          }
+        }
+        L81: {
+          var2 = vh.a((byte) 56, "BOTH_PLAYERS_RESIGNED_BEFORE_FIRST_MOVE");
+          if (null != var2) {
+            String discarded$7 = ad.a(-29410, var2);
+            break L81;
+          } else {
+            break L81;
+          }
+        }
+        L82: {
+          var2 = vh.a((byte) 63, "GAME_FINISHED_BEFORE_FIRST_MOVE");
+          if (null != var2) {
+            wc.field_F = ad.a(-29410, var2);
+            break L82;
+          } else {
+            break L82;
+          }
+        }
+        L83: {
+          var2 = vh.a((byte) 60, "PLAYERNAME_YOU");
+          if (var2 != null) {
+            vg.field_b = ad.a(-29410, var2);
+            break L83;
+          } else {
+            break L83;
+          }
+        }
+        L84: {
+          var2 = vh.a((byte) 66, "PLAYERNAME_YOUR_FRIEND");
+          if (null == var2) {
+            break L84;
+          } else {
+            mm.field_c = ad.a(-29410, var2);
+            break L84;
+          }
+        }
+        L85: {
+          var2 = vh.a((byte) 119, "_2D_MODE");
+          if (var2 == null) {
+            break L85;
+          } else {
+            vh.field_f = ad.a(-29410, var2);
+            break L85;
+          }
+        }
+        L86: {
+          var2 = vh.a((byte) 121, "_3D_MODE");
+          if (var2 != null) {
+            ik.field_f = ad.a(-29410, var2);
+            break L86;
+          } else {
+            break L86;
+          }
+        }
+        jj.field_e = null;
     }
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -831,7 +826,7 @@ final class q {
           L0: {
             L1: {
               var2_int = param0.length();
-              var3 = -67 / ((param1 - 58) / 59);
+              var3 = 67;
               if (var2_int > 20) {
                 var2_int = 20;
                 break L1;
@@ -938,13 +933,13 @@ final class q {
               break L9;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + param1 + 41);
+          throw fk.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + -57 + 41);
         }
         return stackIn_33_0;
     }
 
-    final static void a(di param0, int param1) {
-        RuntimeException runtimeException = null;
+    final static void a(di param0) {
+        RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -963,18 +958,14 @@ final class q {
         String stackOut_5_2 = null;
         try {
           L0: {
-            if (param1 == 0) {
-              rh.field_c.a((byte) 127, (ci) (Object) param0);
-              break L0;
-            } else {
-              return;
-            }
+            rh.field_c.a((byte) 127, (ci) (Object) param0);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            runtimeException = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) runtimeException;
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
             stackOut_4_1 = new StringBuilder().append("q.F(");
             stackIn_7_0 = stackOut_4_0;
             stackIn_7_1 = stackOut_4_1;
@@ -998,20 +989,24 @@ final class q {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_b = null;
             field_a = null;
             field_c = null;
-            if (param0 != 5) {
-                String discarded$0 = q.a((CharSequence) null, (byte) 34);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "q.C(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw fk.a((Throwable) (Object) var1, "q.C(" + 5 + 41);
         }
     }
 
@@ -1029,7 +1024,7 @@ final class q {
                   if (null == var2) {
                     break L3;
                   } else {
-                    fa.a((ac) var2, 15079, param0);
+                    fa.a((ac) var2, 15079, 4);
                     var2 = (Object) (Object) (ac) (Object) vn.field_vb.a((byte) -106);
                     if (var3 != 0) {
                       break L2;
@@ -1045,34 +1040,26 @@ final class q {
                 var2 = (Object) (Object) bh.field_D.g(-18110);
                 break L2;
               }
-              L4: {
-                if (param1 >= 30) {
-                  break L4;
-                } else {
-                  field_c = null;
-                  break L4;
-                }
-              }
-              L5: while (true) {
-                L6: {
-                  L7: {
+              L4: while (true) {
+                L5: {
+                  L6: {
                     if (null == var2) {
-                      break L7;
+                      break L6;
                     } else {
-                      el.a(4, param0);
+                      el.a(4, 4);
                       var2 = (Object) (Object) bh.field_D.a((byte) -117);
                       if (var3 != 0) {
-                        break L6;
+                        break L5;
                       } else {
                         if (var3 == 0) {
-                          continue L5;
+                          continue L4;
                         } else {
-                          break L7;
+                          break L6;
                         }
                       }
                     }
                   }
-                  break L6;
+                  break L5;
                 }
                 break L0;
               }
@@ -1081,11 +1068,11 @@ final class q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (Object) (Object) decompiledCaughtException;
-          throw fk.a((Throwable) var2, "q.E(" + param0 + 44 + param1 + 41);
+          throw fk.a((Throwable) var2, "q.E(" + 4 + 44 + 97 + 41);
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void a(int param0, int param1, boolean param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         ld var4_ref = null;
@@ -1120,7 +1107,8 @@ final class q {
             }
             if (da.field_F > 0) {
               L3: {
-                jb.a((byte) -89);
+                int discarded$4 = -89;
+                jb.a();
                 uh.field_m.a(param2, (byte) 88);
                 if (ol.field_O != null) {
                   L4: {
@@ -1135,89 +1123,83 @@ final class q {
                       }
                     }
                   }
-                  boolean discarded$2 = ol.field_O.a(param0 + 6725, uh.field_m.field_wb, uh.field_m.field_U, param2);
+                  boolean discarded$5 = ol.field_O.a(-119, uh.field_m.field_wb, uh.field_m.field_U, param2);
                   break L3;
                 } else {
                   break L3;
-                }
-              }
-              L5: {
-                if (param0 == -6844) {
-                  break L5;
-                } else {
-                  String discarded$3 = q.a((CharSequence) null, (byte) 55);
-                  break L5;
                 }
               }
               var4_int = 0;
-              L6: while (true) {
-                L7: {
-                  L8: {
+              L5: while (true) {
+                L6: {
+                  L7: {
                     if (var4_int >= 5) {
-                      break L8;
+                      break L7;
                     } else {
                       var5 = g.field_d[var4_int];
                       stackOut_24_0 = (ci) var5;
                       stackIn_36_0 = stackOut_24_0;
                       stackIn_25_0 = stackOut_24_0;
                       if (var7 != 0) {
-                        break L7;
+                        break L6;
                       } else {
-                        L9: {
+                        L8: {
                           if (stackIn_25_0 == null) {
-                            break L9;
+                            break L8;
                           } else {
-                            L10: {
+                            L9: {
                               if (var5.field_L == 0) {
-                                break L10;
+                                break L9;
                               } else {
                                 qf.a(var4_int, var5, (byte) 62);
-                                break L10;
+                                break L9;
                               }
                             }
                             var6 = lg.a(99, var4_int);
                             ig.field_i[var4_int].field_jb = el.field_z[var6];
                             mf.field_l[var4_int].field_db = nk.field_x[var6];
-                            break L9;
+                            break L8;
                           }
                         }
                         var4_int++;
                         if (var7 == 0) {
-                          continue L6;
+                          continue L5;
                         } else {
-                          break L8;
+                          break L7;
                         }
                       }
                     }
                   }
                   stackOut_35_0 = bj.field_jb;
                   stackIn_36_0 = stackOut_35_0;
-                  break L7;
+                  break L6;
+                }
+                L10: {
+                  if (stackIn_36_0.field_L == 0) {
+                    break L10;
+                  } else {
+                    pj.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, 0, ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k, (String) null, 0L);
+                    break L10;
+                  }
                 }
                 L11: {
-                  if (stackIn_36_0.field_L == 0) {
+                  var4_ref = fj.a(ri.field_g, param1, fe.field_g, 8);
+                  if (var4_ref == null) {
                     break L11;
                   } else {
-                    pj.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k, (String) null, 0L);
+                    int discarded$6 = -90;
+                    ce.a(var4_ref);
                     break L11;
                   }
                 }
                 L12: {
-                  var4_ref = fj.a(ri.field_g, param1, fe.field_g, param0 ^ -6836);
-                  if (var4_ref == null) {
-                    break L12;
-                  } else {
-                    ce.a(var4_ref, -90);
-                    break L12;
-                  }
-                }
-                L13: {
-                  var5_ref = le.b((byte) 93);
+                  int discarded$7 = 93;
+                  var5_ref = le.b();
                   if (var5_ref != null) {
                     pc.field_Mb = var5_ref;
-                    break L13;
+                    break L12;
                   } else {
-                    break L13;
+                    break L12;
                   }
                 }
                 break L0;
@@ -1229,7 +1211,7 @@ final class q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var4, "q.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw fk.a((Throwable) (Object) var4, "q.D(" + -6844 + 44 + param1 + 44 + param2 + 44 + 0 + 41);
         }
     }
 

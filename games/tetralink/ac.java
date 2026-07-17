@@ -106,7 +106,7 @@ final class ac {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -191,7 +191,7 @@ final class ac {
           L0: {
             L1: {
               var7_int = k.a(false, param2);
-              var9 = -127 / ((param0 - 47) / 35);
+              var9 = -127;
               if (null == re.field_R) {
                 re.field_R = new java.security.SecureRandom();
                 break L1;
@@ -225,7 +225,7 @@ final class ac {
                 L5: {
                   L6: {
                     ug.field_hb.field_t = 0;
-                    ug.field_hb.a(param4, 128, param1, param2);
+                    ug.field_hb.a(0, 128, param1, param2);
                     ug.field_hb.b((byte) -71, var7_int);
                     ug.field_hb.a(10830, var16);
                     if (null == ce.field_f) {
@@ -270,7 +270,7 @@ final class ac {
           L8: {
             var7 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var7;
-            stackOut_20_1 = new StringBuilder().append("ac.B(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("ac.B(").append(92).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -320,7 +320,7 @@ final class ac {
           }
           L10: {
             stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(param4).append(44);
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(0).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;

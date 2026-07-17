@@ -333,7 +333,7 @@ abstract class sh extends el implements ql {
         var8 = Geoblox.field_C;
         try {
           L0: {
-            var2_int = -108 / ((-71 - param0) / 45);
+            var2_int = -108;
             if (eh.field_b != pk.field_l) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
@@ -454,7 +454,7 @@ abstract class sh extends el implements ql {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var2;
-            stackOut_34_1 = new StringBuilder().append("sh.HA(").append(param0).append(44);
+            stackOut_34_1 = new StringBuilder().append("sh.HA(").append(-118).append(44);
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -619,7 +619,7 @@ abstract class sh extends el implements ql {
                 ((sh) this).field_q.a(param0, -50, param1, true, (el) this);
             }
         }
-        int var5 = 85 % ((param2 - 1) / 43);
+        int var5 = 1;
         if (((sh) this).field_A != null) {
             ((sh) this).field_A.a(((sh) this).field_v + param0, param1 - -((sh) this).field_m, (byte) -74, param3);
         }
@@ -827,7 +827,7 @@ abstract class sh extends el implements ql {
         return var2;
     }
 
-    private final boolean a(el param0, byte param1) {
+    private final boolean a(el param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
@@ -1244,7 +1244,8 @@ abstract class sh extends el implements ql {
                   stackIn_11_0 = stackOut_10_0;
                   break L3;
                 } else {
-                  stackOut_9_0 = this.a(param3, (byte) -119);
+                  int discarded$3 = -119;
+                  stackOut_9_0 = this.a(param3);
                   stackIn_11_0 = stackOut_9_0;
                   break L3;
                 }

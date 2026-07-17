@@ -138,9 +138,9 @@ abstract class jc extends df {
             fd.b(param1.a(true, "", "headers.packvorbis"));
             var2 = fd.a(param1, "jagex logo2.packvorbis", "");
             kk discarded$0 = var2.b();
-            int var3 = 38 / ((param0 - 28) / 50);
+            int var3 = -19;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "jc.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "jc.A(" + -102 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

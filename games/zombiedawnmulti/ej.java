@@ -60,7 +60,6 @@ final class ej implements Runnable {
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
-            Object var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -187,8 +186,8 @@ final class ej implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                var7 = null;
-                bd.a((String) null, (Throwable) (Object) var1_ref, false);
+                int discarded$1 = 0;
+                bd.a((String) null, (Throwable) (Object) var1_ref);
                 break L17;
               }
             }
@@ -199,10 +198,7 @@ final class ej implements Runnable {
         }
     }
 
-    final static cr a(byte param0, int param1) {
-        if (param0 >= -32) {
-            ej.b((byte) 24);
-        }
+    final static cr a() {
         cr var2 = new cr();
         dc.field_Gb.a((br) (Object) var2, false);
         mi.b(1, 6);
@@ -269,12 +265,14 @@ final class ej implements Runnable {
               g.c();
               jj.field_F[0].a();
               rb.field_e[0].f(5, 5, 16777215);
-              jm.d((byte) -18);
+              int discarded$2 = -18;
+              jm.d();
               rb.field_e[0].f(5, 5, 0);
               jj.field_F[1].a();
               rb.field_e[1].f(-35, 5, 16777215);
               g.a(16777215);
-              jm.d((byte) -18);
+              int discarded$3 = -18;
+              jm.d();
               rb.field_e[1].f(-35, 5, 0);
               g.b();
               break L0;

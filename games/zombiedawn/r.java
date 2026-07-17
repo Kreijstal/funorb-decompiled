@@ -15,24 +15,59 @@ final class r extends eh {
     private int field_H;
 
     private final void c(int param0, int param1, int param2) {
+        int var4 = 0;
+        ga[] var5 = null;
         int var6 = 0;
-        int var7 = ZombieDawn.field_J;
-        int var4 = null != ((r) this).field_E ? ((r) this).field_E.length : 0;
-        ga[] var5 = new ga[param2 * var4];
-        if (((r) this).field_B != null) {
-            if (((r) this).field_B.length > 0) {
-                if (var5.length > 0) {
-                    if (0 < param1) {
-                        for (var6 = 0; var4 > var6; var6++) {
-                            gp.a((Object[]) (Object) ((r) this).field_B, param1 * var6, (Object[]) (Object) var5, var6 * param2, Math.min(param1, param2));
-                        }
-                    }
-                }
-            }
+        int var7 = 0;
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        L0: {
+          var7 = ZombieDawn.field_J;
+          if (null == ((r) this).field_E) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = ((r) this).field_E.length;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
         }
-        ((r) this).field_B = var5;
-        if (param0 != 0) {
-            this.e(-38, -87, 127);
+        L1: {
+          var4 = stackIn_3_0;
+          var5 = new ga[param2 * var4];
+          if (((r) this).field_B == null) {
+            ((r) this).field_B = var5;
+            break L1;
+          } else {
+            if (((r) this).field_B.length <= 0) {
+              ((r) this).field_B = var5;
+              break L1;
+            } else {
+              if (var5.length <= 0) {
+                ((r) this).field_B = var5;
+                break L1;
+              } else {
+                if (0 >= param1) {
+                  ((r) this).field_B = var5;
+                  break L1;
+                } else {
+                  var6 = 0;
+                  L2: while (true) {
+                    if (var4 <= var6) {
+                      ((r) this).field_B = var5;
+                      break L1;
+                    } else {
+                      gp.a((Object[]) (Object) ((r) this).field_B, param1 * var6, (Object[]) (Object) var5, var6 * param2, Math.min(param1, param2));
+                      var6++;
+                      continue L2;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
     }
 
@@ -104,16 +139,10 @@ final class r extends eh {
         int var6 = 0;
         int var7 = ZombieDawn.field_J;
         int var4 = null == ((r) this).field_E ? 0 : ((r) this).field_E.length;
-        if (param0 != -1) {
-            Object var8 = null;
-            this.a(115, (int[]) null);
-        }
-        int[] var10 = new int[var4 * param1];
-        int[] var9 = var10;
-        int[] var5 = var9;
+        int[] var5 = new int[var4 * param1];
         if (null != ((r) this).field_L) {
             if (((r) this).field_L.length < -1) {
-                if (-1 < var10.length) {
+                if (-1 < var5.length) {
                     if (!(param2 <= 0)) {
                         for (var6 = 0; var6 < var4; var6++) {
                             gp.a(((r) this).field_L, param2 * var6, var5, var6 * param1, Math.min(param2, param1));
@@ -318,7 +347,8 @@ final class r extends eh {
             gp.a(var10, 0, param5, 1);
             var9 = new int[param6];
             gp.a(var9, 0, param6, 1);
-            this.a(var10, 0);
+            int discarded$0 = 0;
+            this.a(var10);
             this.a(84, var9);
         } catch (RuntimeException runtimeException) {
             throw sh.a((Throwable) (Object) runtimeException, "r.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
@@ -326,9 +356,6 @@ final class r extends eh {
     }
 
     private final void e(int param0, int param1, int param2) {
-        if (param0 != 0) {
-            ((r) this).field_C = null;
-        }
         int var4 = ((r) this).field_C == null ? 0 : ((r) this).field_C.length;
         ga[] var5 = new ga[var4 * param1];
         if (((r) this).field_B != null) {
@@ -354,7 +381,7 @@ final class r extends eh {
         }
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void a(int[] param0) {
         int var3_int = 0;
         int var4 = 0;
         int[] var5 = null;
@@ -700,13 +727,10 @@ final class r extends eh {
                 var5[var6] = var7 + var5[var6];
                 var6++;
             }
-            if (param0 < 74) {
-                this.c(-22, -86, 61);
-            }
             this.e(0, var4, var3_int);
             this.b((byte) 9, var4, var3_int);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "r.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "r.E(" + 84 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -716,16 +740,13 @@ final class r extends eh {
         ((r) this).field_D = param2;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_J = null;
         field_I = null;
         field_G = null;
     }
 
     private final void b(byte param0, int param1, int param2) {
-        if (param0 < 1) {
-            int discarded$0 = r.b(-49, -85, 107);
-        }
         int var4 = null == ((r) this).field_C ? 0 : ((r) this).field_C.length;
         int[] var5 = new int[param1 * var4];
         if (null != ((r) this).field_L) {

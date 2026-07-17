@@ -119,7 +119,7 @@ abstract class ca extends ln {
         return stackIn_14_0;
     }
 
-    final static void h(int param0) {
+    final static void h() {
         L0: {
           if (null != ec.field_D) {
             L1: {
@@ -133,7 +133,9 @@ abstract class ca extends ln {
                 }
               }
             }
-            gn.a(true, ec.field_D, (byte) 69, 30);
+            int discarded$6 = 30;
+            int discarded$7 = 69;
+            gn.a(true, ec.field_D);
             ec.field_D = null;
             lc.field_d = null;
             break L0;
@@ -141,10 +143,11 @@ abstract class ca extends ln {
             break L0;
           }
         }
-        sf.a(-1379);
+        int discarded$8 = -1379;
+        sf.a();
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_o = null;
         field_p = null;
     }

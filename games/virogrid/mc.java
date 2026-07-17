@@ -57,7 +57,7 @@ final class mc {
                 break L1;
               } else {
                 var9 = null;
-                byte[] discarded$2 = mc.a((byte[]) null, 98);
+                byte[] discarded$3 = mc.a((byte[]) null, 98);
                 break L1;
               }
             }
@@ -111,7 +111,8 @@ final class mc {
                           }
                           break L6;
                         } else {
-                          int discarded$3 = bb.a(var18, var5, param0, var4, 9);
+                          int discarded$4 = 9;
+                          int discarded$5 = bb.a(var6, var5, param0, var4);
                           break L6;
                         }
                       }
@@ -169,64 +170,26 @@ final class mc {
         return stackIn_23_0;
     }
 
-    final static boolean a(int param0, boolean param1, boolean param2, int param3, int param4, int param5, int param6) {
-        if (param2) {
-          L0: {
-            field_c = null;
-            if (ag.c(-117)) {
-              L1: {
-                hd.a(param0, (byte) -116, param6, param1);
-                if (md.field_e == null) {
-                  break L1;
-                } else {
-                  if (!md.field_e.a(param3, param5, param0, param1, (byte) 95)) {
-                    break L1;
-                  } else {
+    final static boolean a(int param0, boolean param1) {
+        if (!(!ag.c(-117))) {
+            hd.a(13, (byte) -116, 15, param1);
+            if (md.field_e != null) {
+                if (md.field_e.a(0, 11, 13, param1, (byte) 95)) {
                     ch.a(true);
                     param1 = false;
-                    break L1;
-                  }
                 }
-              }
-              qg.a(7377, param1, param0);
-              te.a(param1, -121, param4);
-              param1 = false;
-              break L0;
-            } else {
-              break L0;
             }
-          }
-          return param1;
-        } else {
-          L2: {
-            if (ag.c(-117)) {
-              L3: {
-                hd.a(param0, (byte) -116, param6, param1);
-                if (md.field_e == null) {
-                  break L3;
-                } else {
-                  if (!md.field_e.a(param3, param5, param0, param1, (byte) 95)) {
-                    break L3;
-                  } else {
-                    ch.a(true);
-                    param1 = false;
-                    break L3;
-                  }
-                }
-              }
-              qg.a(7377, param1, param0);
-              te.a(param1, -121, param4);
-              param1 = false;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return param1;
+            int discarded$0 = 13;
+            qg.a(7377, param1);
+            int discarded$1 = 14;
+            int discarded$2 = -121;
+            te.a(param1);
+            param1 = false;
         }
+        return param1;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_e = null;

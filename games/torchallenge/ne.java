@@ -9,12 +9,12 @@ final class ne {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ka[] param8, int param9, int param10, int param11, int param12, int param13) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ka[] param8, int param9, int param10, int param11, int param12) {
         int var14_int = 0;
         RuntimeException var14 = null;
         int var15 = 0;
@@ -66,7 +66,9 @@ final class ne {
             qg.b();
             qg.b(param3 + var16, param2 + var17, param9, param10, param11, 16777215);
             de.field_a.d();
-            od.b(gf.field_n, 0, 0, 0, 128);
+            int discarded$2 = 128;
+            int discarded$3 = 0;
+            od.b(gf.field_n, 0, 0);
             la.field_f.a(-97);
             break L0;
           }

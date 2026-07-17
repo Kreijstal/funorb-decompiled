@@ -10,7 +10,8 @@ final class gn extends en implements vd {
     public final void a(byte param0, int param1, int param2, int param3, pc param4) {
         try {
             if (!(param4 != ((gn) this).field_V)) {
-                this.l(15);
+                int discarded$0 = 15;
+                this.l();
             }
             int var6_int = 52 / ((param0 - 83) / 36);
         } catch (RuntimeException runtimeException) {
@@ -26,13 +27,13 @@ final class gn extends en implements vd {
         lo.field_c = null;
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_U = null;
         field_Q = null;
         field_S = null;
     }
 
-    private final pc a(bi param0, String param1, byte param2) {
+    private final pc a(bi param0, String param1) {
         pc var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -140,7 +141,7 @@ final class gn extends en implements vd {
         return stackIn_1_0;
     }
 
-    private final void l(int param0) {
+    private final void l() {
         if (!((gn) this).field_C) {
             return;
         }
@@ -218,7 +219,8 @@ final class gn extends en implements vd {
             var4.field_j = 50;
             var4.field_i = (wo) (Object) new lb(ba.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((gn) this).b(var4, 125);
-            ((gn) this).field_V = this.a((bi) this, qo.field_o, (byte) 118);
+            int discarded$1 = 118;
+            ((gn) this).field_V = this.a((bi) this, qo.field_o);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -278,7 +280,7 @@ final class gn extends en implements vd {
         }
     }
 
-    final static boolean d(boolean param0) {
+    final static boolean d() {
         return j.c((byte) -23);
     }
 

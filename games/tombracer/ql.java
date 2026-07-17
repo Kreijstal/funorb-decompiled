@@ -29,7 +29,7 @@ class ql extends od {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var5_int = 28 % ((param2 - -76) / 32);
+            var5_int = 3;
             stackOut_0_0 = pea.a(qia.b(param1, param0, param3, param4), 1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -62,7 +62,7 @@ class ql extends od {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 108 + 44 + param3 + 44 + param4 + 41);
         }
         return stackIn_1_0;
     }
@@ -80,7 +80,7 @@ class ql extends od {
               if (var4 == null) {
                 break L0;
               } else {
-                jea.a(param0, 1325, var4);
+                jea.a(2, 1325, var4);
                 var4 = (aca) (Object) io.field_d.e(113);
                 continue L1;
               }
@@ -89,7 +89,7 @@ class ql extends od {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "ql.A(" + param0 + 44 + -28521 + 41);
+          throw tba.a((Throwable) (Object) var2, "ql.A(" + 2 + 44 + -28521 + 41);
         }
     }
 

@@ -57,13 +57,13 @@ final class uk {
             L1: while (true) {
               if (~var2_int <= ~ib.field_l) {
                 ue.field_j = new int[ib.field_k];
-                var2_int = param0;
+                var2_int = 0;
                 L2: while (true) {
                   if (ib.field_k <= var2_int) {
                     L3: while (true) {
                       if (h.field_j <= 0) {
                         L4: {
-                          var2_int = uj.a(param1, param0 ^ 37, 4);
+                          var2_int = uj.a(param1, 37, 4);
                           var3 = uj.a(param1, 37, 3);
                           if (~var3 == ~var2_int) {
                             var3 = 3;
@@ -212,7 +212,7 @@ final class uk {
                               }
                             }
                             var6 = stackIn_52_0;
-                            var16 = ec.h(var6, param0 ^ 5);
+                            var16 = ec.h(var6, 5);
                             var8 = 0;
                             var9 = -1;
                             var10 = 1;
@@ -242,7 +242,7 @@ final class uk {
                                         if (var10 != 66) {
                                           if (10 <= qc.a(var10, 122, var16)) {
                                             L21: {
-                                              var11 = sh.a(param0 + 123, var10, var16);
+                                              var11 = sh.a(123, var10, var16);
                                               if (-1 == var9) {
                                                 break L21;
                                               } else {
@@ -273,7 +273,8 @@ final class uk {
                           }
                         }
                       } else {
-                        fo.a(-126, gd.a(param1, true));
+                        int discarded$2 = 1;
+                        fo.a(-126, gd.a(param1));
                         continue L3;
                       }
                     }
@@ -317,9 +318,9 @@ final class uk {
                                         break L22;
                                       } else {
                                         if (var2_int != 66) {
-                                          int fieldTemp$1 = h.field_j;
+                                          int fieldTemp$3 = h.field_j;
                                           h.field_j = h.field_j + 1;
-                                          wl.field_e[fieldTemp$1] = var2_int;
+                                          wl.field_e[fieldTemp$3] = var2_int;
                                           break L22;
                                         } else {
                                           break L22;
@@ -348,7 +349,7 @@ final class uk {
           L23: {
             var2 = decompiledCaughtException;
             stackOut_86_0 = (RuntimeException) var2;
-            stackOut_86_1 = new StringBuilder().append("uk.C(").append(param0).append(44);
+            stackOut_86_1 = new StringBuilder().append("uk.C(").append(0).append(44);
             stackIn_88_0 = stackOut_86_0;
             stackIn_88_1 = stackOut_86_1;
             stackIn_87_0 = stackOut_86_0;
@@ -401,7 +402,8 @@ final class uk {
         try {
           L0: {
             L1: {
-              lj.a((java.awt.Component) (Object) param0, (byte) 70);
+              int discarded$10 = 70;
+              lj.a((java.awt.Component) (Object) param0);
               if (param1 < -119) {
                 break L1;
               } else {
@@ -410,7 +412,8 @@ final class uk {
               }
             }
             L2: {
-              im.a((java.awt.Component) (Object) param0, (byte) 94);
+              int discarded$11 = 94;
+              im.a((java.awt.Component) (Object) param0);
               if (bn.field_j == null) {
                 break L2;
               } else {
@@ -452,7 +455,7 @@ final class uk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
     }

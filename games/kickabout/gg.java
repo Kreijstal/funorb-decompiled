@@ -129,7 +129,7 @@ final class gg extends hd {
               stackIn_4_2[stackIn_4_3] = stackIn_4_4;
               stackIn_4_0[stackIn_4_1] = stackIn_4_4;
               var3_int = param2.a(true);
-              var4 = param2.c(param1 ^ 879306160);
+              var4 = param2.c(879306160);
               if (var3_int <= 448) {
                 break L2;
               } else {
@@ -151,7 +151,7 @@ final class gg extends hd {
                 L4: while (true) {
                   if (var9 >= 2) {
                     L5: {
-                      pu.field_zb[0] = kk.field_B[param1] + kk.field_B[1] >> 1;
+                      pu.field_zb[0] = kk.field_B[0] + kk.field_B[1] >> 1;
                       stackOut_15_0 = pu.field_zb;
                       stackOut_15_1 = 1;
                       stackIn_17_0 = stackOut_15_0;
@@ -206,7 +206,7 @@ final class gg extends hd {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var3;
-            stackOut_20_1 = new StringBuilder().append("gg.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_20_1 = new StringBuilder().append("gg.C(").append(param0).append(44).append(0).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -248,11 +248,13 @@ final class gg extends hd {
         tf.field_a = 0.0;
     }
 
-    final static void a(int param0) {
-        ba.a(112, true);
+    final static void a() {
+        int discarded$0 = 1;
+        int discarded$1 = 112;
+        ba.a();
     }
 
-    final static void a(String[] args, byte param1) {
+    final static void a(String[] args) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

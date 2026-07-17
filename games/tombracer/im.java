@@ -328,7 +328,7 @@ final class im extends nv {
         return param0;
     }
 
-    public static void j(byte param0) {
+    public static void j() {
         field_o = null;
     }
 
@@ -350,34 +350,6 @@ final class im extends nv {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param2 != 1) {
-            field_o = null;
-            if (param1 < 0) {
-                if (param0 >= 0) {
-                    if (param0 > 0) {
-                        return -1024;
-                    }
-                    return -2048;
-                }
-                return -3072;
-            }
-            if (param1 <= 0) {
-                if (0 <= param0) {
-                    if (param0 > 0) {
-                        return 0;
-                    }
-                    return 0;
-                }
-                return 4096;
-            }
-            if (0 <= param0) {
-                if (param0 <= 0) {
-                    return 2048;
-                }
-                return 1024;
-            }
-            return 3072;
-        }
         if (param1 < 0) {
             if (param0 >= 0) {
                 if (param0 > 0) {

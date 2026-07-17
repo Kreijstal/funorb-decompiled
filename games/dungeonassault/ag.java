@@ -8,10 +8,10 @@ final class ag {
 
     final static void a(int param0, int param1) {
         int var2 = 0;
-        hk.field_e = 1000000000L / (long)param0;
+        hk.field_e = 20000000L;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
@@ -22,6 +22,7 @@ final class ag {
 
     private static void $cfr$clinit() {
         field_b = "Orbs of Mastery";
-        field_c = rb.b(16760896, 12615712, 64);
+        int discarded$0 = 64;
+        field_c = rb.b(16760896, 12615712);
     }
 }

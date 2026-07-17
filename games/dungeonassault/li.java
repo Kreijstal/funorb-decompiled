@@ -22,14 +22,11 @@ final class li {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         np.a((byte) -123, m.c(true));
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            field_j = 33;
-        }
         field_e = null;
         field_b = null;
         field_d = null;
@@ -40,7 +37,7 @@ final class li {
         field_l = null;
     }
 
-    final static cn[] a(int param0, int param1, nh param2, int param3) {
+    final static cn[] a(int param0, int param1, nh param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         cn[] stackIn_5_0 = null;
@@ -107,7 +104,7 @@ final class li {
         return stackIn_5_0;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;

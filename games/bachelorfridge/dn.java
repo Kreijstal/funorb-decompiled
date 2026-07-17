@@ -5,7 +5,7 @@ final class dn {
     static lo field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -15,21 +15,19 @@ final class dn {
         int var9 = 0;
         try {
             var6 = sja.field_fb;
-            var6.c(param3, (byte) 112);
-            int var8 = 112 % ((64 - param0) / 59);
+            var6.c(11, (byte) 112);
+            int var8 = 0;
             var6.field_g = var6.field_g + 1;
             var7 = var6.field_g;
             var6.d(4, 0);
             var6.d(param1, 0);
-            var9 = param2;
-            if (!(!param4)) {
-                var9 += 128;
-            }
+            var9 = 0;
+            var9 += 128;
             var6.d(var9, 0);
             var6.a(0, -105, param5.length, param5);
             var6.b((byte) 77, var6.field_g - var7);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "dn.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "dn.B(" + -25 + 44 + param1 + 44 + 0 + 44 + 11 + 44 + 1 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 

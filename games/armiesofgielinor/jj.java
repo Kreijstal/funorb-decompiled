@@ -12,7 +12,7 @@ final class jj {
     static je[] field_i;
     static hi field_g;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_i = null;
         field_d = null;
@@ -132,7 +132,7 @@ final class jj {
           L0: {
             L1: {
               var4 = param2[param3][param1];
-              var6 = -73 / ((12 - param0) / 61);
+              var6 = 73;
               if (le.a((byte) -125, var4)) {
                 var5 = var4;
                 break L1;
@@ -160,7 +160,7 @@ final class jj {
           L2: {
             var4_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4_ref;
-            stackOut_10_1 = new StringBuilder().append("jj.G(").append(param0).append(44).append(param1).append(44);
+            stackOut_10_1 = new StringBuilder().append("jj.G(").append(103).append(44).append(param1).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -371,38 +371,34 @@ final class jj {
             var10 = var8;
             var3 = var10.k(0);
             var10.o(90);
-            if (param0 <= -74) {
-              pg.field_a = fk.a(12, var10);
-              iq.field_a = new pu[var3];
-              sd.field_s = new int[var3][];
-              var4 = 0;
-              L1: while (true) {
-                if (var3 <= var4) {
-                  var10.n(-2);
-                  var9 = 0;
-                  var4 = var9;
-                  L2: while (true) {
-                    if (var9 >= var3) {
-                      break L0;
-                    } else {
-                      var5 = iq.field_a[var9];
-                      var5.a(1, 6, 6, 6, 115);
-                      var5.a(-3831);
-                      var6 = new int[]{var5.field_p - -var5.field_L >> 1, var5.field_H + var5.field_P >> 1, var5.field_J + var5.field_D >> 1};
-                      sd.field_s[var9] = var6;
-                      var5.a(-var6[2], 0, -var6[1], -var6[0]);
-                      var9++;
-                      continue L2;
-                    }
+            pg.field_a = fk.a(12, var10);
+            iq.field_a = new pu[var3];
+            sd.field_s = new int[var3][];
+            var4 = 0;
+            L1: while (true) {
+              if (var3 <= var4) {
+                var10.n(-2);
+                var9 = 0;
+                var4 = var9;
+                L2: while (true) {
+                  if (var9 >= var3) {
+                    break L0;
+                  } else {
+                    var5 = iq.field_a[var9];
+                    var5.a(1, 6, 6, 6, 115);
+                    var5.a(-3831);
+                    var6 = new int[]{var5.field_p - -var5.field_L >> 1, var5.field_H + var5.field_P >> 1, var5.field_J + var5.field_D >> 1};
+                    sd.field_s[var9] = var6;
+                    var5.a(-var6[2], 0, -var6[1], -var6[0]);
+                    var9++;
+                    continue L2;
                   }
-                } else {
-                  iq.field_a[var4] = oj.a(-86, var8);
-                  var4++;
-                  continue L1;
                 }
+              } else {
+                iq.field_a[var4] = oj.a(-86, var8);
+                var4++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -410,7 +406,7 @@ final class jj {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("jj.D(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("jj.D(").append(-93).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;

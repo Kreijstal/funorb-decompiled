@@ -13,7 +13,7 @@ final class bp {
         throw new IllegalStateException();
     }
 
-    final static void a(wc param0, int param1, int param2) {
+    final static void a(wc param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -41,12 +41,12 @@ final class bp {
           L0: {
             var7 = wa.field_d;
             var8 = var7;
-            var8.f(91, param2);
+            var8.f(91, 3);
             var8.field_n = var8.field_n + 1;
             var4 = var8.field_n;
-            var8.b(90, param1);
+            var8.b(90, 1);
             var8.a(param0.field_q, 118);
-            var8.a(param0.field_n, param1 ^ 58);
+            var8.a(param0.field_n, 59);
             var8.a(param0.field_m, 88);
             var8.b((byte) 60, param0.field_p);
             var8.b((byte) 60, param0.field_r);
@@ -94,11 +94,11 @@ final class bp {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 1 + 44 + 3 + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -107,7 +107,8 @@ final class bp {
     final static void a(byte param0) {
         bg var1 = (bg) (Object) rf.field_t.b((byte) -77);
         if (param0 >= -42) {
-            bp.a(false);
+            int discarded$0 = 0;
+            bp.a();
         }
         if (var1 == null) {
             var1 = new bg();

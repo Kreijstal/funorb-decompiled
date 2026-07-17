@@ -107,7 +107,7 @@ final class ek extends rqa {
                                 break L0;
                               } else {
                                 if (~param4 >= ~param8) {
-                                  return 1 + (1 << param5);
+                                  return 65537;
                                 } else {
                                   L1: {
                                     param1 = param1 - param3;
@@ -116,8 +116,8 @@ final class ek extends rqa {
                                     param4 = param4 - param3;
                                     param6 = param6 - param7;
                                     param9 = param9 - param7;
-                                    var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
-                                    if (var10 > param0) {
+                                    var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(123, param9)), vma.a(115, param6));
+                                    if (var10 > 0) {
                                       param2 = param2 >> var10;
                                       param6 = param6 >> var10;
                                       param9 = param9 >> var10;
@@ -144,7 +144,7 @@ final class ek extends rqa {
                                     if (var11 == 0) {
                                       break L3;
                                     } else {
-                                      var12 = dbb.a(var10, var11, var12, param1, param4, param8, param5, 0, 0, param2);
+                                      var12 = dbb.a(var10, var11, var12, param1, param4, param8, 16, 0, 0, param2);
                                       break L3;
                                     }
                                   }
@@ -152,7 +152,7 @@ final class ek extends rqa {
                                     if (var10 == 0) {
                                       break L4;
                                     } else {
-                                      var12 = dbb.a(var11, var10, var12, param2, param9, param6, param5, 0, 0, param1);
+                                      var12 = dbb.a(var11, var10, var12, param2, param9, param6, 16, 0, 0, param1);
                                       break L4;
                                     }
                                   }
@@ -162,7 +162,7 @@ final class ek extends rqa {
                                     param1 = param1 - param8;
                                     param4 = param4 - param8;
                                     if (var11 != 0) {
-                                      var12 = dbb.a(var10, var11, var12, param1, param4, 0, param5, 0, -param8, param2);
+                                      var12 = dbb.a(var10, var11, var12, param1, param4, 0, 16, 0, -param8, param2);
                                       break L5;
                                     } else {
                                       break L5;
@@ -170,7 +170,7 @@ final class ek extends rqa {
                                   }
                                   L6: {
                                     if (var10 != 0) {
-                                      var12 = dbb.a(var11, var10, var12, param2, param9, 0, param5, 0, -param6, param1);
+                                      var12 = dbb.a(var11, var10, var12, param2, param9, 0, 16, 0, -param6, param1);
                                       break L6;
                                     } else {
                                       break L6;
@@ -193,8 +193,8 @@ final class ek extends rqa {
                   param4 = param4 - param3;
                   param6 = param6 - param7;
                   param9 = param9 - param7;
-                  var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
-                  if (var10 > param0) {
+                  var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(123, param9)), vma.a(115, param6));
+                  if (var10 > 0) {
                     param2 = param2 >> var10;
                     param6 = param6 >> var10;
                     param9 = param9 >> var10;
@@ -221,7 +221,7 @@ final class ek extends rqa {
                   if (var11 == 0) {
                     break L9;
                   } else {
-                    var12 = dbb.a(var10, var11, var12, param1, param4, param8, param5, 0, 0, param2);
+                    var12 = dbb.a(var10, var11, var12, param1, param4, param8, 16, 0, 0, param2);
                     break L9;
                   }
                 }
@@ -229,7 +229,7 @@ final class ek extends rqa {
                   if (var10 == 0) {
                     break L10;
                   } else {
-                    var12 = dbb.a(var11, var10, var12, param2, param9, param6, param5, 0, 0, param1);
+                    var12 = dbb.a(var11, var10, var12, param2, param9, param6, 16, 0, 0, param1);
                     break L10;
                   }
                 }
@@ -239,7 +239,7 @@ final class ek extends rqa {
                   param1 = param1 - param8;
                   param4 = param4 - param8;
                   if (var11 != 0) {
-                    var12 = dbb.a(var10, var11, var12, param1, param4, 0, param5, 0, -param8, param2);
+                    var12 = dbb.a(var10, var11, var12, param1, param4, 0, 16, 0, -param8, param2);
                     break L11;
                   } else {
                     break L11;
@@ -247,7 +247,7 @@ final class ek extends rqa {
                 }
                 L12: {
                   if (var10 != 0) {
-                    var12 = dbb.a(var11, var10, var12, param2, param9, 0, param5, 0, -param6, param1);
+                    var12 = dbb.a(var11, var10, var12, param2, param9, 0, 16, 0, -param6, param1);
                     break L12;
                   } else {
                     break L12;
@@ -279,7 +279,7 @@ final class ek extends rqa {
                                   break L13;
                                 } else {
                                   if (~param4 >= ~param8) {
-                                    return 1 + (1 << param5);
+                                    return 65537;
                                   } else {
                                     break L13;
                                   }
@@ -298,8 +298,8 @@ final class ek extends rqa {
                     param4 = param4 - param3;
                     param6 = param6 - param7;
                     param9 = param9 - param7;
-                    var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
-                    if (var10 > param0) {
+                    var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(123, param9)), vma.a(115, param6));
+                    if (var10 > 0) {
                       param2 = param2 >> var10;
                       param6 = param6 >> var10;
                       param9 = param9 >> var10;
@@ -326,7 +326,7 @@ final class ek extends rqa {
                     if (var11 == 0) {
                       break L16;
                     } else {
-                      var12 = dbb.a(var10, var11, var12, param1, param4, param8, param5, 0, 0, param2);
+                      var12 = dbb.a(var10, var11, var12, param1, param4, param8, 16, 0, 0, param2);
                       break L16;
                     }
                   }
@@ -334,7 +334,7 @@ final class ek extends rqa {
                     if (var10 == 0) {
                       break L17;
                     } else {
-                      var12 = dbb.a(var11, var10, var12, param2, param9, param6, param5, 0, 0, param1);
+                      var12 = dbb.a(var11, var10, var12, param2, param9, param6, 16, 0, 0, param1);
                       break L17;
                     }
                   }
@@ -344,7 +344,7 @@ final class ek extends rqa {
                     param1 = param1 - param8;
                     param4 = param4 - param8;
                     if (var11 != 0) {
-                      var12 = dbb.a(var10, var11, var12, param1, param4, 0, param5, 0, -param8, param2);
+                      var12 = dbb.a(var10, var11, var12, param1, param4, 0, 16, 0, -param8, param2);
                       break L18;
                     } else {
                       break L18;
@@ -352,7 +352,7 @@ final class ek extends rqa {
                   }
                   L19: {
                     if (var10 != 0) {
-                      var12 = dbb.a(var11, var10, var12, param2, param9, 0, param5, 0, -param6, param1);
+                      var12 = dbb.a(var11, var10, var12, param2, param9, 0, 16, 0, -param6, param1);
                       break L19;
                     } else {
                       break L19;
@@ -399,7 +399,7 @@ final class ek extends rqa {
                                 break L21;
                               } else {
                                 if (~param4 >= ~param8) {
-                                  return 1 + (1 << param5);
+                                  return 65537;
                                 } else {
                                   break L21;
                                 }
@@ -418,8 +418,8 @@ final class ek extends rqa {
                   param4 = param4 - param3;
                   param6 = param6 - param7;
                   param9 = param9 - param7;
-                  var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
-                  if (var10 > param0) {
+                  var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(123, param9)), vma.a(115, param6));
+                  if (var10 > 0) {
                     param2 = param2 >> var10;
                     param6 = param6 >> var10;
                     param9 = param9 >> var10;
@@ -446,7 +446,7 @@ final class ek extends rqa {
                   if (var11 == 0) {
                     break L24;
                   } else {
-                    var12 = dbb.a(var10, var11, var12, param1, param4, param8, param5, 0, 0, param2);
+                    var12 = dbb.a(var10, var11, var12, param1, param4, param8, 16, 0, 0, param2);
                     break L24;
                   }
                 }
@@ -454,7 +454,7 @@ final class ek extends rqa {
                   if (var10 == 0) {
                     break L25;
                   } else {
-                    var12 = dbb.a(var11, var10, var12, param2, param9, param6, param5, 0, 0, param1);
+                    var12 = dbb.a(var11, var10, var12, param2, param9, param6, 16, 0, 0, param1);
                     break L25;
                   }
                 }
@@ -464,7 +464,7 @@ final class ek extends rqa {
                   param1 = param1 - param8;
                   param4 = param4 - param8;
                   if (var11 != 0) {
-                    var12 = dbb.a(var10, var11, var12, param1, param4, 0, param5, 0, -param8, param2);
+                    var12 = dbb.a(var10, var11, var12, param1, param4, 0, 16, 0, -param8, param2);
                     break L26;
                   } else {
                     break L26;
@@ -472,7 +472,7 @@ final class ek extends rqa {
                 }
                 L27: {
                   if (var10 != 0) {
-                    var12 = dbb.a(var11, var10, var12, param2, param9, 0, param5, 0, -param6, param1);
+                    var12 = dbb.a(var11, var10, var12, param2, param9, 0, 16, 0, -param6, param1);
                     break L27;
                   } else {
                     break L27;
@@ -531,7 +531,7 @@ final class ek extends rqa {
                                 break L31;
                               } else {
                                 if (~param4 >= ~param8) {
-                                  return 1 + (1 << param5);
+                                  return 65537;
                                 } else {
                                   break L31;
                                 }
@@ -550,8 +550,8 @@ final class ek extends rqa {
                   param4 = param4 - param3;
                   param6 = param6 - param7;
                   param9 = param9 - param7;
-                  var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
-                  if (var10 > param0) {
+                  var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(123, param9)), vma.a(115, param6));
+                  if (var10 > 0) {
                     param2 = param2 >> var10;
                     param6 = param6 >> var10;
                     param9 = param9 >> var10;
@@ -578,7 +578,7 @@ final class ek extends rqa {
                   if (var11 == 0) {
                     break L34;
                   } else {
-                    var12 = dbb.a(var10, var11, var12, param1, param4, param8, param5, 0, 0, param2);
+                    var12 = dbb.a(var10, var11, var12, param1, param4, param8, 16, 0, 0, param2);
                     break L34;
                   }
                 }
@@ -586,7 +586,7 @@ final class ek extends rqa {
                   if (var10 == 0) {
                     break L35;
                   } else {
-                    var12 = dbb.a(var11, var10, var12, param2, param9, param6, param5, 0, 0, param1);
+                    var12 = dbb.a(var11, var10, var12, param2, param9, param6, 16, 0, 0, param1);
                     break L35;
                   }
                 }
@@ -596,7 +596,7 @@ final class ek extends rqa {
                   param1 = param1 - param8;
                   param4 = param4 - param8;
                   if (var11 != 0) {
-                    var12 = dbb.a(var10, var11, var12, param1, param4, 0, param5, 0, -param8, param2);
+                    var12 = dbb.a(var10, var11, var12, param1, param4, 0, 16, 0, -param8, param2);
                     break L36;
                   } else {
                     break L36;
@@ -604,7 +604,7 @@ final class ek extends rqa {
                 }
                 L37: {
                   if (var10 != 0) {
-                    var12 = dbb.a(var11, var10, var12, param2, param9, 0, param5, 0, -param6, param1);
+                    var12 = dbb.a(var11, var10, var12, param2, param9, 0, 16, 0, -param6, param1);
                     break L37;
                   } else {
                     break L37;
@@ -676,7 +676,7 @@ final class ek extends rqa {
                               break L42;
                             } else {
                               if (~param4 >= ~param8) {
-                                return 1 + (1 << param5);
+                                return 65537;
                               } else {
                                 break L42;
                               }
@@ -695,8 +695,8 @@ final class ek extends rqa {
                 param4 = param4 - param3;
                 param6 = param6 - param7;
                 param9 = param9 - param7;
-                var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
-                if (var10 > param0) {
+                var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(123, param9)), vma.a(115, param6));
+                if (var10 > 0) {
                   param2 = param2 >> var10;
                   param6 = param6 >> var10;
                   param9 = param9 >> var10;
@@ -723,7 +723,7 @@ final class ek extends rqa {
                 if (var11 == 0) {
                   break L45;
                 } else {
-                  var12 = dbb.a(var10, var11, var12, param1, param4, param8, param5, 0, 0, param2);
+                  var12 = dbb.a(var10, var11, var12, param1, param4, param8, 16, 0, 0, param2);
                   break L45;
                 }
               }
@@ -731,7 +731,7 @@ final class ek extends rqa {
                 if (var10 == 0) {
                   break L46;
                 } else {
-                  var12 = dbb.a(var11, var10, var12, param2, param9, param6, param5, 0, 0, param1);
+                  var12 = dbb.a(var11, var10, var12, param2, param9, param6, 16, 0, 0, param1);
                   break L46;
                 }
               }
@@ -741,7 +741,7 @@ final class ek extends rqa {
                 param1 = param1 - param8;
                 param4 = param4 - param8;
                 if (var11 != 0) {
-                  var12 = dbb.a(var10, var11, var12, param1, param4, 0, param5, 0, -param8, param2);
+                  var12 = dbb.a(var10, var11, var12, param1, param4, 0, 16, 0, -param8, param2);
                   break L47;
                 } else {
                   break L47;
@@ -749,7 +749,7 @@ final class ek extends rqa {
               }
               L48: {
                 if (var10 != 0) {
-                  var12 = dbb.a(var11, var10, var12, param2, param9, 0, param5, 0, -param6, param1);
+                  var12 = dbb.a(var11, var10, var12, param2, param9, 0, 16, 0, -param6, param1);
                   break L48;
                 } else {
                   break L48;
@@ -764,7 +764,7 @@ final class ek extends rqa {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         wia.field_a = false;
     }
 

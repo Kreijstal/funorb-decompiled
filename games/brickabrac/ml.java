@@ -10,7 +10,7 @@ final class ml {
     int[] field_g;
     static int field_b;
 
-    final static jp a(mf param0, int param1, int param2, int param3) {
+    final static jp a(mf param0, int param1, int param2) {
         RuntimeException var4 = null;
         jp stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -33,7 +33,8 @@ final class ml {
         try {
           L0: {
             if (ln.a(-100, param2, param0, param1)) {
-              stackOut_3_0 = ta.b(13874);
+              int discarded$2 = 13874;
+              stackOut_3_0 = ta.b();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -73,7 +74,7 @@ final class ml {
         return stackIn_4_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         pi var2 = k.field_h;
         var2.e(-13413, param0);
         var2.a(-21, 1);
@@ -342,7 +343,7 @@ final class ml {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
     }

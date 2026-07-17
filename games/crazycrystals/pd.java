@@ -13,7 +13,7 @@ abstract class pd extends oh {
         return 16;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_g = null;
     }

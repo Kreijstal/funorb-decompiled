@@ -304,19 +304,11 @@ final class mh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        if (!param0) {
-          return -9;
-        } else {
-          var3 = param1 >> 16;
-          var4 = 65535 & param1;
-          var5 = param2 >> 16;
-          var6 = 65535 & param2;
-          return (var6 * var4 >> 16) + var4 * var5 + var3 * param2;
-        }
+        int var3 = param1 >> 16;
+        int var4 = 65535 & param1;
+        int var5 = param2 >> 16;
+        int var6 = 65535 & param2;
+        return (var6 * var4 >> 16) + var4 * var5 + var3 * param2;
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
@@ -384,7 +376,7 @@ final class mh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         of.field_k = false;
         nf.field_y = -1;
         eh.field_o.field_N = true;
@@ -517,7 +509,7 @@ final class mh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
         field_d = null;

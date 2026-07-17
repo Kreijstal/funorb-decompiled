@@ -43,7 +43,7 @@ final class e {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_g = null;
         field_a = null;

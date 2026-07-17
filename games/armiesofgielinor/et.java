@@ -24,7 +24,7 @@ final class et {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        boolean stackIn_11_0 = false;
+        int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_22_1 = 0;
         int stackIn_24_0 = 0;
@@ -43,7 +43,7 @@ final class et {
         StringBuilder stackIn_61_1 = null;
         String stackIn_61_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_10_0 = false;
+        int stackOut_10_0 = 0;
         int stackOut_21_0 = 0;
         int stackOut_21_1 = 0;
         int stackOut_24_0 = 0;
@@ -67,15 +67,16 @@ final class et {
         try {
           L0: {
             L1: {
-              var5_int = wl.b((-param3 + param4) * 3, param1 ^ 13329);
+              var5_int = wl.b((-param3 + param4) * 3, -13337);
               var6 = 3 * param3;
               dp.n(0);
-              var7 = param1 + var5_int;
+              var7 = -10 + var5_int;
               if (0 >= param0.field_E) {
                 break L1;
               } else {
                 if (param0.field_K != null) {
-                  la.d((byte) 111);
+                  int discarded$1 = 111;
+                  la.d();
                   break L1;
                 } else {
                   break L1;
@@ -93,15 +94,15 @@ final class et {
                     var9 = param0.field_c[var8];
                     var10 = param0.field_j[var8];
                     var11 = param0.field_e[var8];
-                    stackOut_10_0 = param2;
-                    stackIn_44_0 = stackOut_10_0 ? 1 : 0;
+                    stackOut_10_0 = 0;
+                    stackIn_44_0 = stackOut_10_0;
                     stackIn_11_0 = stackOut_10_0;
                     if (var19 != 0) {
                       break L3;
                     } else {
                       L5: {
                         L6: {
-                          if (!stackIn_11_0) {
+                          if (stackIn_11_0 == 0) {
                             break L6;
                           } else {
                             var12 = ca.field_f[var9];
@@ -302,7 +303,7 @@ final class et {
               break L17;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ig.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + 44 + -10 + 44 + 0 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -424,29 +425,21 @@ final class et {
         }
     }
 
-    final static je b(int param0) {
+    final static je b() {
         RuntimeException var1 = null;
-        Object stackIn_2_0 = null;
         je stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         je stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
         try {
           L0: {
-            if (param0 == -1) {
-              stackOut_3_0 = bu.field_a.field_Jb;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (je) (Object) stackIn_2_0;
-            }
+            stackOut_3_0 = bu.field_a.field_Jb;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "et.A(" + param0 + 41);
+          throw ig.a((Throwable) (Object) var1, "et.A(" + -1 + 41);
         }
         return stackIn_4_0;
     }

@@ -60,7 +60,8 @@ final class db {
         if (param1 <= 126) {
             field_f = null;
         }
-        this.c(param0, 24634);
+        int discarded$0 = 24634;
+        this.c(param0);
         if (((db) this).field_h[param0] != null) {
             return true;
         }
@@ -68,38 +69,10 @@ final class db {
     }
 
     private final synchronized boolean a(int param0, int param1, int param2) {
-        if (((db) this).a((byte) 102)) {
-          if (param1 == 0) {
-            L0: {
-              if (param2 < 0) {
-                break L0;
-              } else {
-                if (param0 < 0) {
-                  break L0;
-                } else {
-                  if (((db) this).field_b.field_l.length <= param2) {
-                    break L0;
-                  } else {
-                    if (param0 < ((db) this).field_b.field_l[param2]) {
-                      return true;
-                    } else {
-                      break L0;
-                    }
-                  }
-                }
-              }
-            }
-            if (!aq.field_r) {
-              return false;
-            } else {
-              throw new IllegalArgumentException(param2 + " " + param0);
-            }
-          } else {
-            return ((boolean[]) ((db) this).field_h[2])[0];
-          }
-        } else {
-          return false;
+        if (!((db) this).a((byte) 102)) {
+            return false;
         }
+        return ((boolean[]) ((db) this).field_h[2])[0];
     }
 
     final boolean c(String param0, int param1) {
@@ -525,72 +498,64 @@ final class db {
 
     final static String a(byte param0, byte[] param1) {
         RuntimeException var2 = null;
-        String stackIn_3_0 = null;
+        String stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
+        String stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 >= 87) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
-            stackOut_2_0 = uh.a(param1, 192, 0, param1.length);
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = uh.a(param1, 192, 0, param1.length);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("db.H(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("db.H(").append(109).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
-    private final synchronized boolean a(int param0, int[] param1, int param2, int param3) {
+    private final synchronized boolean a(int param0, int[] param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -774,7 +739,8 @@ final class db {
                     }
                     try {
                       L8: {
-                        var50 = b.a(var9_array, -1);
+                        int discarded$1 = -1;
+                        var50 = b.a(var9_array);
                         var43 = var50;
                         var36 = var43;
                         var27 = var36;
@@ -1075,7 +1041,7 @@ final class db {
         return stackIn_99_0 != 0;
     }
 
-    private final synchronized void c(int param0, int param1) {
+    private final synchronized void c(int param0) {
         if (((db) this).field_c) {
             ((db) this).field_h[param0] = (Object) (Object) ((db) this).field_g.a(param0, false);
         } else {
@@ -1411,7 +1377,8 @@ final class db {
             } else {
               var4 = ((db) this).field_b.field_e[var3];
               if (null == ((db) this).field_h[var4]) {
-                this.c(var4, 24634);
+                int discarded$1 = 24634;
+                this.c(var4);
                 if (((db) this).field_h[var4] == null) {
                   var2 = 0;
                   var3++;
@@ -1494,7 +1461,8 @@ final class db {
         if (((db) this).field_h[param0] != null) {
             return true;
         }
-        this.c(param0, 24634);
+        int discarded$1 = 24634;
+        this.c(param0);
         if (((db) this).field_h[param0] == null) {
             return false;
         }
@@ -1641,11 +1609,14 @@ final class db {
                     }
                   }
                 }
-                if (this.a(param0, param2, param3, 30511)) {
+                int discarded$3 = 30511;
+                if (this.a(param0, param2, param3)) {
                   break L1;
                 } else {
-                  this.c(param0, 24634);
-                  if (this.a(param0, param2, param3, 30511)) {
+                  int discarded$4 = 24634;
+                  this.c(param0);
+                  int discarded$5 = 30511;
+                  if (this.a(param0, param2, param3)) {
                     break L1;
                   } else {
                     stackOut_8_0 = null;

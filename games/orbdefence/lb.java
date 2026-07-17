@@ -37,11 +37,11 @@ final class lb {
         ((lb) this).field_b = ((lb) this).field_b - param1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -85,7 +85,8 @@ final class lb {
                   } else {
                     var15 = (dc) (Object) mj.field_m.b((byte) 118);
                     if (var15 != null) {
-                      var15.field_f = qh.b(8);
+                      int discarded$2 = 8;
+                      var15.field_f = qh.b();
                       var15.field_g = true;
                       var15.field_i = var15.field_f[0];
                       var15.b(57);
@@ -97,7 +98,8 @@ final class lb {
                   }
                 }
               } else {
-                var10 = qh.b(8);
+                int discarded$3 = 8;
+                var10 = qh.b();
                 var18 = var10;
                 var17 = var18;
                 var16 = var17;
@@ -167,9 +169,6 @@ final class lb {
     }
 
     final static void a(boolean param0, int param1) {
-        if (!param0) {
-            field_a = null;
-        }
         hg.field_Z = param1 >> 4 & 3;
         bd.field_p = (14 & param1) >> 2;
         if (hg.field_Z > 2) {

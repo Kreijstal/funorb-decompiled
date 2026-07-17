@@ -15,7 +15,7 @@ final class mm {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
         field_h = null;

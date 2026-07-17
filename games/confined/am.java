@@ -7,7 +7,7 @@ abstract class am extends fj implements hi {
     fj field_H;
     static int[] field_I;
 
-    private final boolean a(fj param0, byte param1) {
+    private final boolean a(fj param0) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -777,7 +777,8 @@ abstract class am extends fj implements hi {
             } else {
               L2: {
                 if (!mc.field_e[81]) {
-                  stackOut_9_0 = this.a(param0, (byte) -42);
+                  int discarded$3 = -42;
+                  stackOut_9_0 = this.a(param0);
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
@@ -822,15 +823,11 @@ abstract class am extends fj implements hi {
         return stackIn_12_0 != 0;
     }
 
-    final static void g(int param0) {
+    final static void g() {
         int var1_int = 0;
         int var2 = Confined.field_J ? 1 : 0;
         try {
             kh.field_gb.a((byte) 31);
-            if (param0 != -4258) {
-                Object var3 = null;
-                String discarded$0 = am.a(-36, (CharSequence) null);
-            }
             for (var1_int = 0; var1_int < 32; var1_int++) {
                 wg.field_d[var1_int] = 0L;
             }
@@ -839,11 +836,11 @@ abstract class am extends fj implements hi {
             }
             Confined.field_D = 0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "am.HA(" + param0 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "am.HA(" + -4258 + 41);
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_I = null;
     }
 
@@ -1025,16 +1022,17 @@ abstract class am extends fj implements hi {
 
     final int c(int param0) {
         if (param0 <= 65) {
-            am.b(true);
+            int discarded$0 = 1;
+            am.b();
         }
         return ((am) this).field_H != null ? ((am) this).field_H.c(94) : 0;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3) {
-        sd.field_b = param3;
-        cg.field_a = param0;
-        ln.field_c = param2;
-        int var4 = 25 % ((77 - param1) / 33);
+    final static void a() {
+        sd.field_b = 4243584;
+        cg.field_a = 16777215;
+        ln.field_c = 9805732;
+        int var4 = 1;
     }
 
     private final boolean b(fj param0, int param1) {

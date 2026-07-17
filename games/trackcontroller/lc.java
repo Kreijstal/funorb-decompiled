@@ -29,7 +29,7 @@ final class lc extends td implements m {
         ((lc) this).field_I = param0;
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_E = null;
     }
 

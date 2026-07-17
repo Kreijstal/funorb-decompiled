@@ -7,14 +7,14 @@ final class cc {
     static sj field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a(int param0, java.applet.Applet param1, byte param2, int param3, String[] param4, int param5) {
+    final static void a(int param0, java.applet.Applet param1, byte param2, int param3, String[] param4) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -88,14 +88,14 @@ final class cc {
               v.field_d = 2;
               break L3;
             }
-            pb.field_a = param3;
-            qm.field_n = param0;
+            pb.field_a = 2121856;
+            qm.field_n = 8438015;
             mg.field_e = 192;
             ld.field_v = new dl[param4.length];
             var7 = 0;
             L5: while (true) {
               if (var7 >= param4.length) {
-                var7 = 16 % ((param2 - 5) / 62);
+                var7 = 0;
                 hf.field_c = param4;
                 break L0;
               } else {
@@ -110,7 +110,7 @@ final class cc {
           L6: {
             var6_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var6_ref;
-            stackOut_16_1 = new StringBuilder().append("cc.B(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("cc.B(").append(8438015).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -135,7 +135,7 @@ final class cc {
           }
           L7: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(-121).append(44).append(2121856).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

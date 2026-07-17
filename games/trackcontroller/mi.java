@@ -10,9 +10,6 @@ final class mi extends el {
     private String field_R;
 
     final static int a(int param0, int param1) {
-        if (param0 != 2048) {
-            return -107;
-        }
         param1 = param1 & 8191;
         if (4096 > param1) {
             return param1 >= 2048 ? -ta.field_b[param1 - 2048] : ta.field_b[2048 + -param1];
@@ -20,7 +17,7 @@ final class mi extends el {
         return param1 >= 6144 ? ta.field_b[-6144 + param1] : -ta.field_b[6144 - param1];
     }
 
-    final static void k(int param0) {
+    final static void k() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -304,7 +301,8 @@ final class mi extends el {
     }
 
     mi(eh param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (t) (Object) jc.a((byte) 97));
+        super(param1, (t) (Object) jc.a());
+        int discarded$0 = 97;
         try {
             ((mi) this).field_S = param0;
             ((mi) this).field_R = param1;

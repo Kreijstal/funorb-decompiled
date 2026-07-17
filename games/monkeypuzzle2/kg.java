@@ -46,13 +46,13 @@ final class kg {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a(String param0, boolean param1, float param2, int param3) {
+    final static void a(String param0, boolean param1, float param2) {
         try {
             if (null == vl.field_f) {
                 vl.field_f = new ul(wg.field_j, rc.field_i);

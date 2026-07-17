@@ -10,12 +10,12 @@ final class jea extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_q = null;
         field_o = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         java.awt.Canvas var1 = null;
         if (!(upa.field_a)) {
             upa.field_a = true;

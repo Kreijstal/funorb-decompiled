@@ -106,9 +106,6 @@ class ql {
     }
 
     private final int a(byte param0, int param1) {
-        if (param0 != 27) {
-            return 62;
-        }
         if (param1 >= 480) {
             if (!(param1 >= 528)) {
                 return 1;

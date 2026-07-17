@@ -249,16 +249,16 @@ abstract class il extends jl {
               ((il) this).field_Z = ((il) this).field_Z + 1;
               if (fieldTemp$2 != ((il) this).field_jb) {
                 ((il) this).field_eb.field_J = (((il) this).field_Z << 8) / ((il) this).field_jb;
-                var2 = -108 % ((param0 - -23) / 52);
+                var2 = 0;
                 return super.a((byte) 81);
               } else {
                 ((il) this).field_eb.field_J = 256;
                 ((il) this).field_ab = null;
-                var2 = -108 % ((param0 - -23) / 52);
+                var2 = 0;
                 return super.a((byte) 81);
               }
             } else {
-              var2 = -108 % ((param0 - -23) / 52);
+              var2 = 0;
               return super.a((byte) 81);
             }
           } else {
@@ -269,16 +269,16 @@ abstract class il extends jl {
               ((il) this).b(-127, ((il) this).field_mb, 12 - -((il) this).field_ib.field_x, ((il) this).field_ib.field_n + ((il) this).field_db + 12);
               ((il) this).field_Z = 0;
               ((il) this).field_eb.field_J = 0;
-              var2 = -108 % ((param0 - -23) / 52);
+              var2 = 0;
               return super.a((byte) 81);
             } else {
               ((il) this).field_eb.field_J = -((((il) this).field_Z << 8) / ((il) this).field_X) + 256;
-              var2 = -108 % ((param0 - -23) / 52);
+              var2 = 0;
               return super.a((byte) 81);
             }
           }
         } else {
-          var2 = -108 % ((param0 - -23) / 52);
+          var2 = 0;
           return super.a((byte) 81);
         }
     }
@@ -304,7 +304,7 @@ abstract class il extends jl {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = -87;
+            var3_int = 87 / ((51 - param1) / 57);
             ((il) this).field_ib = param0;
             if (hd.field_s != ((il) this).field_ab) {
               if (gs.field_j == ((il) this).field_ab) {
@@ -348,7 +348,7 @@ abstract class il extends jl {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 125 + 41);
+          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 
@@ -419,7 +419,7 @@ abstract class il extends jl {
             param2 = param2 >> 4;
             var5 = param0 & 15;
             param0 = param0 >> 4;
-            var12 = param1;
+            var12 = 0;
             var13 = param3.field_z * param2 + param0;
             var14 = -gf.field_b + param3.field_z;
             var15 = -gf.field_k;
@@ -464,7 +464,7 @@ abstract class il extends jl {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("il.VB(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("il.VB(").append(param0).append(44).append(0).append(44).append(param2).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

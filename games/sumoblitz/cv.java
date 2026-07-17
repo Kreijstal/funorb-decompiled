@@ -42,7 +42,7 @@ final class cv extends sp implements pw, ai {
               if (((cv) this).field_H != param0) {
                 break L1;
               } else {
-                boolean discarded$2 = ((cv) this).field_I.a((pk) this, (byte) 61);
+                boolean discarded$4 = ((cv) this).field_I.a((pk) this, (byte) 61);
                 break L1;
               }
             }
@@ -50,7 +50,8 @@ final class cv extends sp implements pw, ai {
               if (param0 != ((cv) this).field_I) {
                 break L2;
               } else {
-                this.e((byte) -23);
+                int discarded$5 = -23;
+                this.e();
                 break L2;
               }
             }
@@ -128,7 +129,8 @@ final class cv extends sp implements pw, ai {
             }
             L2: {
               if (param2 == ((cv) this).field_A) {
-                this.e((byte) -23);
+                int discarded$78 = -23;
+                this.e();
                 break L2;
               } else {
                 if (((cv) this).field_D == param2) {
@@ -144,7 +146,8 @@ final class cv extends sp implements pw, ai {
                         nb.a(true);
                         break L2;
                       } else {
-                        pi.a((byte) -110);
+                        int discarded$79 = -110;
+                        pi.a();
                         break L2;
                       }
                     }
@@ -474,7 +477,8 @@ final class cv extends sp implements pw, ai {
             }
             L13: {
               var8 = ej.field_g;
-              var9 = lv.a(ra.c(2), 1);
+              int discarded$3 = 1;
+              var9 = lv.a(ra.c(2));
               if (go.field_m != var9) {
                 if (tr.field_j != var9) {
                   break L13;
@@ -488,13 +492,13 @@ final class cv extends sp implements pw, ai {
               }
             }
             L14: {
-              rt dupTemp$2 = new rt(10, ((cv) this).field_v, ((cv) this).field_q - 20, 25, (pk) (Object) ((cv) this).field_H, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((cv) this).a((pk) (Object) dupTemp$2, 80);
+              rt dupTemp$4 = new rt(10, ((cv) this).field_v, ((cv) this).field_q - 20, 25, (pk) (Object) ((cv) this).field_H, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((cv) this).a((pk) (Object) dupTemp$4, 80);
               ((cv) this).field_v = ((cv) this).field_v + (((pk) (Object) var12).field_p - -5);
-              rt dupTemp$3 = new rt(10, ((cv) this).field_v, -20 + ((cv) this).field_q, 25, (pk) (Object) ((cv) this).field_I, false, 80, 3, var7, 16777215, pi.field_g);
-              var13 = dupTemp$3;
-              ((cv) this).a((pk) (Object) dupTemp$3, 107);
+              rt dupTemp$5 = new rt(10, ((cv) this).field_v, -20 + ((cv) this).field_q, 25, (pk) (Object) ((cv) this).field_I, false, 80, 3, var7, 16777215, pi.field_g);
+              var13 = dupTemp$5;
+              ((cv) this).a((pk) (Object) dupTemp$5, 107);
               ((cv) this).field_v = ((cv) this).field_v + (((pk) (Object) var13).field_p + 5);
               ((cv) this).field_A.field_o = (qm) this;
               if (((cv) this).field_D == null) {
@@ -631,7 +635,7 @@ final class cv extends sp implements pw, ai {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_G = null;
         field_F = null;
     }
@@ -739,10 +743,11 @@ final class cv extends sp implements pw, ai {
         return stackIn_14_0 != 0;
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         L0: {
           L1: {
-            if (oi.a((byte) -64)) {
+            int discarded$6 = -64;
+            if (oi.a()) {
               break L1;
             } else {
               if (((cv) this).field_H.field_m.length() <= 0) {
@@ -756,7 +761,8 @@ final class cv extends sp implements pw, ai {
               }
             }
           }
-          m.a(((cv) this).field_I.field_m, ((cv) this).field_H.field_m, -1807);
+          int discarded$7 = -1807;
+          m.a(((cv) this).field_I.field_m, ((cv) this).field_H.field_m);
           break L0;
         }
     }

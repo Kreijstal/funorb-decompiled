@@ -749,7 +749,9 @@ abstract class fm extends qa {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_M = ho.a(var7, 16, 3);
+                                    int discarded$8 = 3;
+                                    int discarded$9 = 16;
+                                    field_M = ho.a(var7);
                                     break L1;
                                   }
                                 } else {
@@ -762,7 +764,9 @@ abstract class fm extends qa {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_v = ho.a(var6, 16, 3);
+                              int discarded$10 = 3;
+                              int discarded$11 = 16;
+                              field_v = ho.a(var6);
                               break L1;
                             }
                           } else {
@@ -775,7 +779,9 @@ abstract class fm extends qa {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_u = ho.a(var5, 16, 3);
+                        int discarded$12 = 3;
+                        int discarded$13 = 16;
+                        field_u = ho.a(var5);
                         break L1;
                       }
                     } else {
@@ -793,7 +799,9 @@ abstract class fm extends qa {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_z = ho.a(var3, 16, 3);
+                int discarded$14 = 3;
+                int discarded$15 = 16;
+                field_z = ho.a(var3);
                 break L1;
               }
             }

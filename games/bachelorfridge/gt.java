@@ -18,7 +18,7 @@ final class gt extends k {
     private int field_k;
     private int field_v;
 
-    public static void d(int param0) {
+    public static void d() {
         field_l = null;
         int var1 = -120;
         field_s = null;
@@ -486,7 +486,7 @@ final class gt extends k {
         try {
           L0: {
             L1: {
-              if (~((gt) this).field_u < param2) {
+              if (((gt) this).field_u > 0) {
                 stackOut_3_0 = 4096 - kla.a(((gt) this).field_u, param3, -2147483648);
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
@@ -824,7 +824,7 @@ final class gt extends k {
           }
           L22: {
             stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-            stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(44).append(param1).append(44).append(-1).append(44);
             stackIn_71_0 = stackOut_69_0;
             stackIn_71_1 = stackOut_69_1;
             stackIn_70_0 = stackOut_69_0;

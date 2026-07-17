@@ -12,21 +12,22 @@ final class ce {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = StarCannon.field_A;
         try {
           L0: {
-            if (fl.d(897584976)) {
-              boolean discarded$15 = ed.field_q.a((byte) -127, true, bg.field_e, ie.field_z);
+            int discarded$19 = 897584976;
+            if (fl.d()) {
+              boolean discarded$20 = ed.field_q.a((byte) -127, true, bg.field_e, ie.field_z);
               ed.field_q.h(-10597);
               L1: while (true) {
                 if (!ad.e((byte) -123)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = ed.field_q.a(lb.field_B, -125, StarCannon.field_E);
+                  boolean discarded$21 = ed.field_q.a(lb.field_B, -125, StarCannon.field_E);
                   continue L1;
                 }
               }
@@ -79,13 +80,15 @@ final class ce {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    ea.a((byte) 66, var5, param0);
+                    int discarded$6 = 3;
+                    ea.a((byte) 66, var5);
                     var5 = (vc) (Object) ne.field_c.a(-16913);
                     continue L3;
                   }
                 }
               } else {
-                vh.a(param0, var4, 0);
+                int discarded$7 = 0;
+                vh.a(3, var4);
                 var4 = (re) (Object) s.field_e.a(-16913);
                 continue L2;
               }
@@ -94,7 +97,7 @@ final class ce {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2, "ce.B(" + param0 + 44 + param1 + 41);
+          throw sd.a((Throwable) (Object) var2, "ce.B(" + 3 + 44 + param1 + 41);
         }
     }
 

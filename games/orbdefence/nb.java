@@ -8,7 +8,7 @@ final class nb extends hi {
     static String field_p;
     static String field_n;
 
-    public static void j(int param0) {
+    public static void j() {
         field_n = null;
         field_p = null;
         field_o = null;

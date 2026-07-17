@@ -410,7 +410,7 @@ final class a extends ge {
         ((a) this).field_h = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    final static rg a(int param0, String param1, int param2) {
+    final static rg a(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         md var4 = null;
@@ -475,7 +475,7 @@ final class a extends ge {
         return (rg) (Object) stackIn_1_0;
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -501,7 +501,7 @@ final class a extends ge {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_v = null;
         field_s = null;
         field_u = null;
@@ -513,70 +513,66 @@ final class a extends ge {
         try {
             IOException iOException = null;
             Exception var4 = null;
+            mg stackIn_3_0 = null;
+            mg stackIn_4_0 = null;
             mg stackIn_5_0 = null;
-            mg stackIn_6_0 = null;
-            mg stackIn_7_0 = null;
-            int stackIn_7_1 = 0;
+            int stackIn_5_1 = 0;
             Throwable decompiledCaughtException = null;
+            mg stackOut_2_0 = null;
             mg stackOut_4_0 = null;
-            mg stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
-            mg stackOut_5_0 = null;
-            int stackOut_5_1 = 0;
-            if (param0 <= -49) {
-              if (null != ((a) this).field_q) {
-                try {
-                  L0: {
-                    L1: {
-                      ((a) this).field_l.field_i = 0;
-                      stackOut_4_0 = ((a) this).field_l;
-                      stackIn_6_0 = stackOut_4_0;
+            int stackOut_4_1 = 0;
+            mg stackOut_3_0 = null;
+            int stackOut_3_1 = 0;
+            if (null != ((a) this).field_q) {
+              try {
+                L0: {
+                  L1: {
+                    ((a) this).field_l.field_i = 0;
+                    stackOut_2_0 = ((a) this).field_l;
+                    stackIn_4_0 = stackOut_2_0;
+                    stackIn_3_0 = stackOut_2_0;
+                    if (param1) {
+                      stackOut_4_0 = (mg) (Object) stackIn_4_0;
+                      stackOut_4_1 = 2;
                       stackIn_5_0 = stackOut_4_0;
-                      if (param1) {
-                        stackOut_6_0 = (mg) (Object) stackIn_6_0;
-                        stackOut_6_1 = 2;
-                        stackIn_7_0 = stackOut_6_0;
-                        stackIn_7_1 = stackOut_6_1;
-                        break L1;
-                      } else {
-                        stackOut_5_0 = (mg) (Object) stackIn_5_0;
-                        stackOut_5_1 = 3;
-                        stackIn_7_0 = stackOut_5_0;
-                        stackIn_7_1 = stackOut_5_1;
-                        break L1;
-                      }
+                      stackIn_5_1 = stackOut_4_1;
+                      break L1;
+                    } else {
+                      stackOut_3_0 = (mg) (Object) stackIn_3_0;
+                      stackOut_3_1 = 3;
+                      stackIn_5_0 = stackOut_3_0;
+                      stackIn_5_1 = stackOut_3_1;
+                      break L1;
                     }
-                    ((mg) (Object) stackIn_7_0).a(stackIn_7_1, -105);
-                    ((a) this).field_l.b(106, 0L);
-                    ((a) this).field_q.a((byte) 30, ((a) this).field_l.field_j, 0, ((a) this).field_l.field_j.length);
-                    break L0;
                   }
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    try {
-                      L3: {
-                        ((a) this).field_q.a(1);
-                        break L3;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter1) {
-                      decompiledCaughtException = decompiledCaughtParameter1;
-                      L4: {
-                        var4 = (Exception) (Object) decompiledCaughtException;
-                        break L4;
-                      }
-                    }
-                    ((a) this).field_n = -2;
-                    ((a) this).field_q = null;
-                    ((a) this).field_b = ((a) this).field_b + 1;
-                    break L2;
-                  }
+                  ((mg) (Object) stackIn_5_0).a(stackIn_5_1, -105);
+                  ((a) this).field_l.b(106, 0L);
+                  ((a) this).field_q.a((byte) 30, ((a) this).field_l.field_j, 0, ((a) this).field_l.field_j.length);
+                  break L0;
                 }
-                return;
-              } else {
-                return;
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  iOException = (IOException) (Object) decompiledCaughtException;
+                  try {
+                    L3: {
+                      ((a) this).field_q.a(1);
+                      break L3;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    L4: {
+                      var4 = (Exception) (Object) decompiledCaughtException;
+                      break L4;
+                    }
+                  }
+                  ((a) this).field_n = -2;
+                  ((a) this).field_q = null;
+                  ((a) this).field_b = ((a) this).field_b + 1;
+                  break L2;
+                }
               }
+              return;
             } else {
               return;
             }
@@ -587,7 +583,7 @@ final class a extends ge {
         }
     }
 
-    final static db[] a(be param0, int param1) {
+    final static db[] a(be param0) {
         RuntimeException var2 = null;
         int[] var3 = null;
         db[] var4 = null;
@@ -760,7 +756,8 @@ final class a extends ge {
                   }
                 }
                 ((a) this).field_q = (cb) param0;
-                this.b((byte) -103);
+                int discarded$1 = -103;
+                this.b();
                 this.a(-54, param2);
                 ((a) this).field_a = null;
                 ((a) this).field_m.field_i = 0;
@@ -865,9 +862,6 @@ final class a extends ge {
         int var6 = param4 + (param5 - -param1);
         int var7 = var6 == 0 ? 0 : 1000 * param5 / var6;
         rh.field_c[rc.field_d] = var7;
-        if (param2 != 9664) {
-            field_t = null;
-        }
         if (!(var7 <= jl.field_d)) {
             jl.field_d = var7;
         }

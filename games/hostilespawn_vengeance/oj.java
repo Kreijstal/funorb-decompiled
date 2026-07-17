@@ -2256,7 +2256,8 @@ class oj extends p {
                 var9_int = 0;
                 L5: while (true) {
                   if (3 <= var9_int) {
-                    ue.a(25, false);
+                    int discarded$1 = 0;
+                    ue.a(25);
                     if (ha.field_t == 2) {
                       ha.field_t = -1;
                       kd.a(2, 1);

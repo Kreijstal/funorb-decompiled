@@ -118,7 +118,8 @@ final class bc extends am {
             L1: while (true) {
               if (~el.field_j >= ~var14_int) {
                 L2: {
-                  pc.a(2);
+                  int discarded$3 = 2;
+                  pc.a();
                   var14_int = (int)(((double)param3 + param9) * 24.0 - 320.0);
                   if (param4 == 15) {
                     break L2;
@@ -190,10 +191,12 @@ final class bc extends am {
                 L9: while (true) {
                   if (var21 >= var17) {
                     L10: {
-                      sg.a(true);
+                      int discarded$4 = 1;
+                      sg.a();
                       ac.a(param3, param8, param6, param4 + -5176, param9, param5);
                       hd.a((byte) 61, ii.field_d);
-                      hd.a(param3, param6, param0, param5, 0);
+                      int discarded$5 = 0;
+                      hd.a(param3, param6, param0, param5);
                       if (null == q.field_g) {
                         break L10;
                       } else {

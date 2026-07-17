@@ -121,24 +121,24 @@ final class ii extends ig {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_F = null;
         field_G = null;
     }
 
-    final static void a(u param0, int param1, byte param2) {
+    final static void a(u param0) {
         ha var3 = null;
         try {
             var3 = pg.field_fb;
-            var3.f(param1, 950);
+            var3.f(2, 950);
             var3.a(false, param0.field_q);
             var3.c(param0.field_n, -115);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ii.K(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 107 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ii.K(" + (param0 != null ? "{...}" : "null") + 44 + 2 + 44 + 107 + 41);
         }
     }
 
-    final static void g(int param0) {
+    final static void g() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

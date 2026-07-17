@@ -7,7 +7,7 @@ final class de extends hg {
     int field_g;
     static boolean field_j;
 
-    final static void a(String param0, String param1, int param2) {
+    final static void a(String param0, String param1) {
         try {
             if (be.field_b != null) {
                 be.field_b.o(-18861);
@@ -46,23 +46,19 @@ final class de extends hg {
             try {
               try {
                 var2 = param1.getDocumentBase().getFile();
-                if (!param0) {
-                  L0: {
-                    var3 = var2.indexOf('?');
-                    var4 = "reload.ws";
-                    if (var3 >= 0) {
-                      var4 = var4 + var2.substring(var3);
-                      break L0;
-                    } else {
-                      break L0;
-                    }
+                L0: {
+                  var3 = var2.indexOf('?');
+                  var4 = "reload.ws";
+                  if (var3 >= 0) {
+                    var4 = var4 + var2.substring(var3);
+                    break L0;
+                  } else {
+                    break L0;
                   }
-                  var5 = new java.net.URL(param1.getCodeBase(), var4);
-                  param1.getAppletContext().showDocument(sh.a((byte) 12, param1, var5), "_self");
-                  return;
-                } else {
-                  return;
                 }
+                var5 = new java.net.URL(param1.getCodeBase(), var4);
+                param1.getAppletContext().showDocument(sh.a((byte) 12, param1, var5), "_self");
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -74,7 +70,7 @@ final class de extends hg {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_9_0 = (RuntimeException) var2_ref2;
-                stackOut_9_1 = new StringBuilder().append("de.C(").append(param0).append(44);
+                stackOut_9_1 = new StringBuilder().append("de.C(").append(0).append(44);
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
@@ -106,7 +102,7 @@ final class de extends hg {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_i = null;
     }

@@ -95,20 +95,17 @@ final class wq extends k {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, String param8, int param9, int param10) {
         try {
-            if (!param7) {
-                wq.d(51);
-            }
-            int discarded$0 = hfa.field_z.a(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
-            int discarded$1 = jha.field_g.a(param8, param10, 20 + param4, param5, param2, param3, -1, param0, param9, param1);
+            int discarded$0 = hfa.field_z.a(param8, param10, param4, 300, 300, 65793, -1, 1, 0, 14);
+            int discarded$1 = jha.field_g.a(param8, param10, 20 + param4, 300, 300, 16777215, -1, 1, 0, 14);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "wq.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + param10 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "wq.C(" + 1 + 44 + 14 + 44 + 300 + 44 + 16777215 + 44 + param4 + 44 + 300 + 44 + 65793 + 44 + 1 + 44 + (param8 != null ? "{...}" : "null") + 44 + 0 + 44 + param10 + 41);
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
         field_m = null;
-        int var1 = 79 / ((45 - param0) / 59);
+        int var1 = -79;
     }
 
     public wq() {

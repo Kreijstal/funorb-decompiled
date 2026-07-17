@@ -5,7 +5,7 @@ final class seb extends rqa {
     static int field_o;
     static String field_p;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean a(String param0, String param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
@@ -60,7 +60,8 @@ final class seb extends rqa {
               return stackIn_4_0 != 0;
             } else {
               if (!mea.a(121, param1)) {
-                if (hcb.a(param1, 15)) {
+                int discarded$2 = 15;
+                if (hcb.a(param1)) {
                   stackOut_11_0 = 0;
                   stackIn_12_0 = stackOut_11_0;
                   return stackIn_12_0 != 0;
@@ -72,7 +73,8 @@ final class seb extends rqa {
                   } else {
                     if (!qnb.a(param1, -1, param0)) {
                       if (!njb.a(param0, 95, param1)) {
-                        if (wg.a(param1, param0, true)) {
+                        int discarded$3 = 1;
+                        if (wg.a(param1, param0)) {
                           stackOut_29_0 = 0;
                           stackIn_30_0 = stackOut_29_0;
                           break L0;
@@ -163,10 +165,7 @@ final class seb extends rqa {
         field_p = null;
     }
 
-    final static int a(int param0) {
-        if (param0 != 27546) {
-            field_o = 127;
-        }
+    final static int a() {
         return 62;
     }
 
@@ -175,11 +174,11 @@ final class seb extends rqa {
         ss.field_p.c(0, 12);
         ss.field_p.d(jeb.field_b.nextInt(), 332614536);
         ss.field_p.d(jeb.field_b.nextInt(), 332614536);
-        ss.field_p.c(param0, param1);
+        ss.field_p.c(0, param1);
         ss.field_p.c(0, param2);
         ss.field_p.a(param3, true);
-        ss.field_p.a(jnb.field_p, bib.field_g, param0 + 16711680);
-        dpa.field_p.h(param0 ^ 24335, 18);
+        ss.field_p.a(jnb.field_p, bib.field_g, 16711680);
+        dpa.field_p.h(24335, 18);
         int fieldTemp$0 = dpa.field_p.field_e + 1;
         dpa.field_p.field_e = dpa.field_p.field_e + 1;
         int var4 = fieldTemp$0;

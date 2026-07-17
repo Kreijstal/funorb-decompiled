@@ -11,59 +11,34 @@ final class kd {
     static int[] field_g;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = 0;
-        var9 = DungeonAssault.field_K;
-        if (param3 >= param7) {
-          if (param3 < param6) {
-            ue.a(param7, gf.field_b, param5, param6, param1, param3, param0, param2, 16);
-            if (param4 == 29108) {
-              return;
-            } else {
-              return;
+        int var9 = DungeonAssault.field_K;
+        if (param3 < param7) {
+            if (param7 < param6) {
+                int discarded$0 = 16;
+                ue.a(param3, gf.field_b, param5, param6, param0, param7, param1, param2);
+                return;
             }
-          } else {
-            if (param6 > param7) {
-              ue.a(param7, gf.field_b, param5, param3, param2, param6, param0, param1, 16);
-              if (param4 == 29108) {
+            if (param3 < param6) {
+                int discarded$1 = 16;
+                ue.a(param3, gf.field_b, param5, param7, param2, param6, param1, param0);
                 return;
-              } else {
-                return;
-              }
-            } else {
-              ue.a(param6, gf.field_b, param5, param3, param0, param7, param2, param1, 16);
-              if (param4 == 29108) {
-                return;
-              } else {
-                return;
-              }
             }
-          }
-        } else {
-          if (param7 >= param6) {
-            if (param3 >= param6) {
-              ue.a(param6, gf.field_b, param5, param7, param1, param3, param2, param0, 16);
-              if (param4 != 29108) {
-                return;
-              } else {
-                return;
-              }
-            } else {
-              ue.a(param3, gf.field_b, param5, param7, param2, param6, param1, param0, 16);
-              if (param4 != 29108) {
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
-            ue.a(param3, gf.field_b, param5, param6, param0, param7, param1, param2, 16);
-            if (param4 == 29108) {
-              return;
-            } else {
-              return;
-            }
-          }
+            int discarded$2 = 16;
+            ue.a(param6, gf.field_b, param5, param7, param1, param3, param2, param0);
+            return;
         }
+        if (param3 >= param6) {
+            if (param6 <= param7) {
+                int discarded$3 = 16;
+                ue.a(param6, gf.field_b, param5, param3, param0, param7, param2, param1);
+                return;
+            }
+            int discarded$4 = 16;
+            ue.a(param7, gf.field_b, param5, param3, param2, param6, param0, param1);
+            return;
+        }
+        int discarded$5 = 16;
+        ue.a(param7, gf.field_b, param5, param6, param1, param3, param0, param2);
     }
 
     final static void a(int param0) {
@@ -81,33 +56,25 @@ final class kd {
         wj var8 = null;
         int var9 = 0;
         wj var10 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var7 = DungeonAssault.field_K;
         try {
           L0: {
-            L1: {
-              if (param0 == 31913) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
             var8 = new wj(param1.a("logo.fo3d", "", (byte) -113));
             var10 = var8;
             var3 = var10.c(true);
@@ -116,12 +83,12 @@ final class kd {
             ih.field_w = new qh[var3];
             lk.field_R = new int[var3][];
             var4 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var3 <= var4) {
                 var10.f((byte) 32);
                 var9 = 0;
                 var4 = var9;
-                L3: while (true) {
+                L2: while (true) {
                   if (var9 >= var3) {
                     break L0;
                   } else {
@@ -132,45 +99,45 @@ final class kd {
                     lk.field_R[var9] = var6;
                     var5.a(0, -var6[0], -var6[2], -var6[1]);
                     var9++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 ih.field_w[var4] = df.a(false, var8);
                 var4++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("kd.E(").append(param0).append(44);
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("kd.E(").append(31913).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -215,7 +182,7 @@ final class kd {
         l.a(true, 10, 6, 34, 10, 2, 3, 3000, param0, new int[1][], 70000, true, 5);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_e = null;

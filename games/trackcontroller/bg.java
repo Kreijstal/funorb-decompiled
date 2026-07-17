@@ -6,11 +6,11 @@ import java.lang.String;
 final class bg {
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static boolean a(be param0, int param1) {
+    final static boolean a(be param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -87,7 +87,7 @@ final class bg {
         return stackIn_4_0 != 0;
     }
 
-    final static String a(java.applet.Applet param0, int param1) {
+    final static String a(java.applet.Applet param0) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;

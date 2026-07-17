@@ -126,7 +126,7 @@ final class sg extends td {
         super(param0, param1);
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 1;
         field_q = null;
         field_p = null;

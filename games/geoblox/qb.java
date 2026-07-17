@@ -16,23 +16,23 @@ final class qb extends hk {
 
     final static mg b(int param0, int param1, int param2, int param3, int param4) {
         int var6 = Geoblox.field_C;
-        mg var5 = (mg) (Object) rh.field_d.g(param2 ^ param2);
+        mg var5 = (mg) (Object) rh.field_d.g(0);
         while (var5 != null) {
-            if (var5.field_i == param0) {
+            if (var5.field_i == 22) {
                 return var5;
             }
             var5 = (mg) (Object) rh.field_d.d(1);
         }
         var5 = new mg();
-        var5.field_f = param3;
-        var5.field_l = param1;
-        var5.field_i = param0;
+        var5.field_f = 10;
+        var5.field_l = 1;
+        var5.field_i = 22;
         rh.field_d.a(-71, (hf) (Object) var5);
-        ib.a(3, param2 + 5, var5);
+        ib.a(3, 5, var5);
         return var5;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_F = null;
         field_M = null;
         field_N = null;

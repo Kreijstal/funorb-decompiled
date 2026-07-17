@@ -11,72 +11,64 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
 
     final static h a(byte param0, String param1) {
         RuntimeException var2 = null;
-        h stackIn_3_0 = null;
+        h stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        h stackOut_2_0 = null;
+        h stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 86) {
-                break L1;
-              } else {
-                field_i = null;
-                break L1;
-              }
-            }
-            stackOut_2_0 = new h(param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = new h(param1);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("bf.A(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("bf.A(").append(86).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
-    private final synchronized void a(boolean param0) {
+    private final synchronized void a() {
         if (null == ((bf) this).field_h) {
           return;
         } else {
@@ -95,8 +87,9 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
                 Object var6 = null;
                 boolean discarded$0 = ((bf) this).imageUpdate((java.awt.Image) null, 94, -33, 114, 59, 88);
             }
-            this.a(true);
-            boolean discarded$1 = param1.drawImage(((bf) this).field_e, param2, param0, (java.awt.image.ImageObserver) this);
+            int discarded$1 = 1;
+            this.a();
+            boolean discarded$2 = param1.drawImage(((bf) this).field_e, param2, param0, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "bf.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
@@ -211,12 +204,15 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               ((bf) this).field_d = new int[param0 * param2 - -1];
               ((bf) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
               ((bf) this).field_e = param1.createImage((java.awt.image.ImageProducer) this);
-              this.a(true);
-              boolean discarded$6 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
-              this.a(true);
-              boolean discarded$7 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
-              this.a(true);
-              boolean discarded$8 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
+              int discarded$12 = 1;
+              this.a();
+              boolean discarded$13 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
+              int discarded$14 = 1;
+              this.a();
+              boolean discarded$15 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
+              int discarded$16 = 1;
+              this.a();
+              boolean discarded$17 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
               ((bf) this).a(255);
               if (param3 > 116) {
                 break L1;
@@ -336,104 +332,100 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               }
             }
             var10 = stackIn_13_0;
-            if (param2 == 14164) {
-              L5: {
-                if (param4 < vb.field_e) {
+            L5: {
+              if (param4 < vb.field_e) {
+                break L5;
+              } else {
+                if (param4 < vb.field_k) {
+                  var11 = param4 + var8 * vb.field_f;
+                  var12 = var10 + 1 + -var8 >> 1;
+                  L6: while (true) {
+                    var12--;
+                    if (0 > var12) {
+                      break L5;
+                    } else {
+                      vb.field_c[var11] = 16777215;
+                      var11 = var11 + vb.field_f * 2;
+                      continue L6;
+                    }
+                  }
+                } else {
                   break L5;
-                } else {
-                  if (param4 < vb.field_k) {
-                    var11 = param4 + var8 * vb.field_f;
-                    var12 = var10 + 1 + -var8 >> 1;
-                    L6: while (true) {
-                      var12--;
-                      if (0 > var12) {
-                        break L5;
-                      } else {
-                        vb.field_c[var11] = 16777215;
-                        var11 = var11 + vb.field_f * 2;
-                        continue L6;
-                      }
-                    }
-                  } else {
-                    break L5;
-                  }
                 }
               }
-              L7: {
-                if (param0 < vb.field_i) {
+            }
+            L7: {
+              if (param0 < vb.field_i) {
+                break L7;
+              } else {
+                if (vb.field_d > var6) {
+                  var11 = var7 + vb.field_f * param0;
+                  var12 = -var7 + 1 + var9 >> 1;
+                  L8: while (true) {
+                    var12--;
+                    if (var12 < 0) {
+                      break L7;
+                    } else {
+                      vb.field_c[var11] = 16777215;
+                      var11 += 2;
+                      continue L8;
+                    }
+                  }
+                } else {
                   break L7;
-                } else {
-                  if (vb.field_d > var6) {
-                    var11 = var7 + vb.field_f * param0;
-                    var12 = -var7 + 1 + var9 >> 1;
-                    L8: while (true) {
-                      var12--;
-                      if (var12 < 0) {
-                        break L7;
-                      } else {
-                        vb.field_c[var11] = 16777215;
-                        var11 += 2;
-                        continue L8;
-                      }
-                    }
-                  } else {
-                    break L7;
-                  }
                 }
               }
-              L9: {
-                if (var5_int < vb.field_e) {
+            }
+            L9: {
+              if (var5_int < vb.field_e) {
+                break L9;
+              } else {
+                if (vb.field_k <= var5_int) {
                   break L9;
                 } else {
-                  if (vb.field_k <= var5_int) {
-                    break L9;
-                  } else {
-                    var11 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
-                    var12 = -var8 + 1 + var10 >> 1;
-                    L10: while (true) {
-                      var12--;
-                      if (0 > var12) {
-                        break L9;
-                      } else {
-                        vb.field_c[var11] = 16777215;
-                        var11 = var11 + 2 * vb.field_f;
-                        continue L10;
-                      }
+                  var11 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
+                  var12 = -var8 + 1 + var10 >> 1;
+                  L10: while (true) {
+                    var12--;
+                    if (0 > var12) {
+                      break L9;
+                    } else {
+                      vb.field_c[var11] = 16777215;
+                      var11 = var11 + 2 * vb.field_f;
+                      continue L10;
                     }
                   }
                 }
               }
-              L11: {
-                if (vb.field_i > param0) {
+            }
+            L11: {
+              if (vb.field_i > param0) {
+                break L11;
+              } else {
+                if (vb.field_d <= var6) {
                   break L11;
                 } else {
-                  if (vb.field_d <= var6) {
-                    break L11;
-                  } else {
-                    var11 = vb.field_f * var6 + (var7 - -(1 & -param0 + var6));
-                    var12 = 1 - (-var9 + var7) >> 1;
-                    L12: while (true) {
-                      var12--;
-                      if (var12 < 0) {
-                        break L11;
-                      } else {
-                        vb.field_c[var11] = 16777215;
-                        var11 += 2;
-                        continue L12;
-                      }
+                  var11 = vb.field_f * var6 + (var7 - -(1 & -param0 + var6));
+                  var12 = 1 - (-var9 + var7) >> 1;
+                  L12: while (true) {
+                    var12--;
+                    if (var12 < 0) {
+                      break L11;
+                    } else {
+                      vb.field_c[var11] = 16777215;
+                      var11 += 2;
+                      continue L12;
                     }
                   }
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var5, "bf.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw t.a((Throwable) (Object) var5, "bf.B(" + param0 + 44 + param1 + 44 + 14164 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -502,7 +494,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
     bf() {
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_i = null;
         field_g = null;
     }

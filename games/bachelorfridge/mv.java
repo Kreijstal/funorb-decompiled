@@ -136,7 +136,7 @@ class mv extends at {
                       L6: {
                         var16 = var4.field_h.a(54, ((mv) this).field_l.field_h);
                         if (var16.a(13, (byte) 104)) {
-                          boolean discarded$3 = var3.a(5, var16, (byte) 2);
+                          boolean discarded$4 = var3.a(5, var16, (byte) 2);
                           ((mv) this).a(27799, (at) (Object) new ek(((mv) this).field_l, ((mv) this).field_k.field_l.a(-27449, ((mv) this).field_l), 5));
                           break L6;
                         } else {
@@ -146,7 +146,8 @@ class mv extends at {
                       L7: {
                         var8_int = ((mv) this).field_k.field_q;
                         if (this instanceof ba) {
-                          var8_int = nn.a(var16, var3, (byte) 104);
+                          int discarded$5 = 104;
+                          var8_int = nn.a(var16, var3);
                           break L7;
                         } else {
                           break L7;
@@ -298,7 +299,7 @@ class mv extends at {
                               if (var11_int == 0) {
                                 break L1;
                               } else {
-                                boolean discarded$4 = var3.a(var11_int, var3, (byte) 2);
+                                boolean discarded$6 = var3.a(var11_int, var3, (byte) 2);
                                 if (((mv) this).field_k.field_l.a(-27449, ((mv) this).field_l) != null) {
                                   ((mv) this).field_k.field_l.a(-27449, ((mv) this).field_l).a(65280, 121, Integer.toString(-var11_int));
                                   break L1;
@@ -311,7 +312,7 @@ class mv extends at {
                           }
                         }
                       }
-                      boolean discarded$5 = var3.a(-var6, var3, (byte) 2);
+                      boolean discarded$7 = var3.a(-var6, var3, (byte) 2);
                       if (null == ((mv) this).field_k.field_l.a(-27449, ((mv) this).field_l)) {
                         break L1;
                       } else {
@@ -691,7 +692,7 @@ class mv extends at {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_m = null;
     }
 

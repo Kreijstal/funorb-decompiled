@@ -11,7 +11,7 @@ final class sh extends mh {
     static qk field_g;
     static String field_h;
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_k = null;
         field_f = null;
@@ -175,7 +175,8 @@ final class sh extends mh {
 
     private static void $cfr$clinit() {
         field_j = new byte[65536];
-        og.a(field_j, 0, 65536, (byte) -128);
+        int discarded$0 = -128;
+        og.a(field_j, 0, 65536);
         field_f = "More suggestions";
         field_k = null;
         field_h = "Return to game";

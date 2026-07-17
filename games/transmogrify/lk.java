@@ -20,14 +20,14 @@ final class lk {
         return var1 + vl.field_B;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_d = null;
         field_e = null;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -132,7 +132,8 @@ final class lk {
                         var12 = var14;
                         var7 = var12;
                         if (var4 == 1) {
-                          int discarded$1 = gf.a(var18, var6, param1, var5, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = gf.a(var7, var6, param1, var5);
                           break L5;
                         } else {
                           var8 = (Object) (Object) je.field_d;

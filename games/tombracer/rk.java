@@ -24,7 +24,8 @@ final class rk extends ae {
         if (!param0) {
             return;
         }
-        this.g((byte) 12);
+        int discarded$0 = 12;
+        this.g();
     }
 
     public static void a(int param0) {
@@ -138,10 +139,11 @@ final class rk extends ae {
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        this.g((byte) 12);
+        int discarded$0 = 12;
+        this.g();
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         ((rk) this).field_w = new iu[]{this.c(-69, ((rk) this).field_C, ((rk) this).field_x), this.c(91, ((rk) this).field_v, ((rk) this).field_G)};
         ((rk) this).field_A = this.a((byte) 78);
         ((rk) this).field_z = ((rk) this).field_A.d();
@@ -369,9 +371,6 @@ final class rk extends ae {
     }
 
     final static void b(int param0, boolean param1, int param2, int param3) {
-        if (param0 <= 83) {
-            return;
-        }
         wj.a(param3, di.field_a, wg.field_i, 2, mna.field_d, param2, param1);
     }
 

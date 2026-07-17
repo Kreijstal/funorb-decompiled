@@ -29,28 +29,26 @@ final class fi implements Runnable {
         CharSequence var10 = null;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
-        Object stackIn_12_0 = null;
-        String stackIn_26_0 = null;
+        String stackIn_24_0 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
-        String stackOut_25_0 = null;
-        Object stackOut_11_0 = null;
+        String stackOut_23_0 = null;
         String stackOut_8_0 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
         RuntimeException stackOut_27_0 = null;
         StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -60,56 +58,50 @@ final class fi implements Runnable {
               return stackIn_4_0;
             } else {
               if (param0 != 1) {
-                if (param1 <= -16) {
-                  var4_int = param2 + param0;
-                  var5 = 0;
-                  var6_int = param2;
-                  L1: while (true) {
-                    if (var4_int <= var6_int) {
-                      var6 = new StringBuilder(var5);
-                      var7 = param2;
-                      L2: while (true) {
-                        if (var7 >= var4_int) {
-                          stackOut_25_0 = var6.toString();
-                          stackIn_26_0 = stackOut_25_0;
-                          break L0;
-                        } else {
-                          L3: {
-                            var8 = param3[var7];
-                            if (var8 == null) {
-                              StringBuilder discarded$5 = var6.append("null");
-                              break L3;
-                            } else {
-                              StringBuilder discarded$6 = var6.append(var8);
-                              break L3;
-                            }
+                var4_int = param0;
+                var5 = 0;
+                var6_int = 0;
+                L1: while (true) {
+                  if (var4_int <= var6_int) {
+                    var6 = new StringBuilder(var5);
+                    var7 = 0;
+                    L2: while (true) {
+                      if (var7 >= var4_int) {
+                        stackOut_23_0 = var6.toString();
+                        stackIn_24_0 = stackOut_23_0;
+                        break L0;
+                      } else {
+                        L3: {
+                          var8 = param3[var7];
+                          if (var8 == null) {
+                            StringBuilder discarded$5 = var6.append("null");
+                            break L3;
+                          } else {
+                            StringBuilder discarded$6 = var6.append(var8);
+                            break L3;
                           }
-                          var7++;
-                          continue L2;
                         }
+                        var7++;
+                        continue L2;
                       }
-                    } else {
-                      L4: {
-                        var7_ref_CharSequence = param3[var6_int];
-                        if (var7_ref_CharSequence == null) {
-                          var5 += 4;
-                          break L4;
-                        } else {
-                          var5 = var5 + var7_ref_CharSequence.length();
-                          break L4;
-                        }
-                      }
-                      var6_int++;
-                      continue L1;
                     }
+                  } else {
+                    L4: {
+                      var7_ref_CharSequence = param3[var6_int];
+                      if (var7_ref_CharSequence == null) {
+                        var5 += 4;
+                        break L4;
+                      } else {
+                        var5 = var5 + var7_ref_CharSequence.length();
+                        break L4;
+                      }
+                    }
+                    var6_int++;
+                    continue L1;
                   }
-                } else {
-                  stackOut_11_0 = null;
-                  stackIn_12_0 = stackOut_11_0;
-                  return (String) (Object) stackIn_12_0;
                 }
               } else {
-                var10 = param3[param2];
+                var10 = param3[0];
                 var4 = var10;
                 if (var4 == null) {
                   stackOut_8_0 = "null";
@@ -125,33 +117,33 @@ final class fi implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var4_ref;
-            stackOut_27_1 = new StringBuilder().append("fi.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackOut_25_0 = (RuntimeException) var4_ref;
+            stackOut_25_1 = new StringBuilder().append("fi.D(").append(param0).append(44).append(-33).append(44).append(0).append(44);
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
             if (param3 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
               break L5;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
         }
-        return stackIn_26_0;
+        return stackIn_24_0;
     }
 
     final od a(byte param0) {
@@ -164,7 +156,7 @@ final class fi implements Runnable {
         return ((fi) this).field_j;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_h = null;
     }

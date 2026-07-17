@@ -7,7 +7,7 @@ final class bj extends pp {
     static String field_j;
     int field_l;
 
-    final static void a(byte[] param0, byte param1) {
+    final static void a(byte[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -40,7 +40,8 @@ final class bj extends pp {
               if (lka.field_E.length <= var2_int) {
                 break L0;
               } else {
-                var3 = vc.a(var2_int, 0, -16306);
+                int discarded$6 = -16306;
+                var3 = vc.a(var2_int, 0);
                 var4 = new int[15];
                 var5 = 0;
                 L2: while (true) {
@@ -89,7 +90,7 @@ final class bj extends pp {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_k = null;
         field_j = null;
     }

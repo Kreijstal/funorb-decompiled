@@ -33,7 +33,7 @@ final class lg extends dna {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            if (!ej.a(false, param0, param1)) {
+            if (!ej.a(false, false, param1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -68,7 +68,7 @@ final class lg extends dna {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3;
-            stackOut_16_1 = new StringBuilder().append("lg.VB(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("lg.VB(").append(0).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;

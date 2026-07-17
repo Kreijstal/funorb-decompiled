@@ -17,13 +17,13 @@ final class vr extends wp {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) wd.field_e);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) wd.field_e);
-            lv.field_i = param1;
+            lv.field_i = -1;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "vr.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "vr.D(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 41);
         }
     }
 
@@ -299,7 +299,7 @@ final class vr extends wp {
         return stackIn_3_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_G = null;
         field_F = null;
     }

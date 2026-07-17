@@ -24,11 +24,13 @@ final class og extends jj implements m {
         if (param0 < -18) {
           if (((og) this).field_E) {
             if (!((og) this).field_ob) {
-              var2 = dd.d((byte) 91);
+              int discarded$4 = 91;
+              var2 = dd.d();
               if (var2 == null) {
                 return super.j(-56);
               } else {
-                this.a(false, var2, 7);
+                int discarded$5 = 7;
+                this.a(false, var2);
                 return super.j(-56);
               }
             } else {
@@ -42,17 +44,18 @@ final class og extends jj implements m {
         }
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         fi.field_o = false;
         int discarded$0 = ne.field_a.h(16383);
     }
 
     final void u(int param0) {
-        this.a(true, wg.a((byte) -123, 248, pi.field_h), 7);
+        int discarded$0 = 7;
+        this.a(true, wg.a((byte) -123, 248, pi.field_h));
         int var2 = 58 % ((param0 - -61) / 57);
     }
 
-    private final void a(boolean param0, nj param1, int param2) {
+    private final void a(boolean param0, nj param1) {
         RuntimeException var4 = null;
         String var4_ref = null;
         lc var5 = null;
@@ -89,7 +92,8 @@ final class og extends jj implements m {
                   } else {
                     L2: {
                       if (!param0) {
-                        db.b(true);
+                        int discarded$3 = 1;
+                        db.b();
                         break L2;
                       } else {
                         break L2;
@@ -117,13 +121,13 @@ final class og extends jj implements m {
                   ((og) this).b((al) (Object) new ge((og) this), -115);
                   return;
                 } else {
-                  rh discarded$2 = var5.a(-14, (tg) this, hd.field_m);
+                  rh discarded$4 = var5.a(-14, (tg) this, hd.field_m);
                   break L3;
                 }
               } else {
                 L4: {
                   if (((og) this).field_lb) {
-                    rh discarded$3 = var5.a(-14, (tg) this, hd.field_m);
+                    rh discarded$5 = var5.a(-14, (tg) this, hd.field_m);
                     break L4;
                   } else {
                     if (param1.field_b == 5) {
@@ -253,7 +257,7 @@ final class og extends jj implements m {
         }
     }
 
-    public static void v(int param0) {
+    public static void v() {
         int var1 = -33;
         field_rb = null;
         field_nb = null;

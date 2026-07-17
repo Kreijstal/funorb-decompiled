@@ -11,7 +11,7 @@ abstract class mj {
 
     abstract java.net.Socket b(boolean param0) throws IOException;
 
-    final static ci[] a(fa param0, int param1, int param2, boolean param3) {
+    final static ci[] a(fa param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -30,8 +30,10 @@ abstract class mj {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          if (vh.a(param1, param2, param0, true)) {
-            return uc.l(0);
+          int discarded$9 = 1;
+          if (vh.a(param1, param2, param0)) {
+            int discarded$10 = 0;
+            return uc.l();
           } else {
             return null;
           }

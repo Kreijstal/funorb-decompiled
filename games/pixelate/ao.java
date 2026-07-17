@@ -14,7 +14,7 @@ final class ao implements Runnable {
     volatile mm[] field_h;
     static String field_b;
 
-    final static void a(pc param0, int param1) {
+    final static void a(pc param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -343,10 +343,11 @@ final class ao implements Runnable {
             cn.field_b.o(30);
         }
         int var1 = -72 % ((param0 - 48) / 43);
-        hm.a((byte) -95);
+        int discarded$0 = -95;
+        hm.a();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_i = null;
         field_e = null;
@@ -366,7 +367,8 @@ final class ao implements Runnable {
                         var2.b();
                     }
                 }
-                vg.a(10L, (byte) 23);
+                int discarded$0 = 23;
+                vg.a(10L);
                 Object var5 = null;
                 fm.a(((ao) this).field_g, (Object) null, (byte) -52);
             }
@@ -386,7 +388,7 @@ final class ao implements Runnable {
 
     final static void a(int param0, int param1) {
         pc var2 = aa.field_f;
-        int var3 = 77 % ((29 - param0) / 46);
+        int var3 = 0;
         var2.g(param1, 15514);
         var2.e(160, 1);
         var2.e(160, 0);

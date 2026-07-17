@@ -48,7 +48,7 @@ final class ng {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         int var1 = 0;
         field_b = null;

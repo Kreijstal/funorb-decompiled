@@ -138,13 +138,9 @@ final class rp {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!(null == a.field_n)) {
             a.field_n.j((byte) 73);
-        }
-        if (param0 > -33) {
-            Object var2 = null;
-            byte[] discarded$0 = rp.a((String) null, -9);
         }
         pj.field_c = new gk();
         ta.field_a.b(1, (lm) (Object) pj.field_c);
@@ -290,7 +286,7 @@ final class rp {
         return stackIn_3_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_g = null;
         field_h = null;
         field_d = null;

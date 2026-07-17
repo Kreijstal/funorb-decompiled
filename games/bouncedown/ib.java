@@ -12,7 +12,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
     static String field_j;
     static int field_k;
 
-    final static int a(int param0, byte[] param1, int param2, byte param3) {
+    final static int a(int param0, byte[] param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -86,7 +86,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_5_0;
     }
 
-    final static ph a(java.applet.Applet param0, byte param1) {
+    final static ph a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         ph[] var3 = null;
@@ -124,7 +124,8 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var3 = ge.b(27579);
+              int discarded$2 = 27579;
+              var3 = ge.b();
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -178,7 +179,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_12_0;
     }
 
-    private final synchronized void b(boolean param0) {
+    private final synchronized void b() {
         if (null == ((ib) this).field_l) {
           return;
         } else {
@@ -244,7 +245,8 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
                 L2: while (true) {
                   if (var3.field_f != 0) {
                     if (var3.field_f != 1) {
-                      wh.a(100L, 19406);
+                      int discarded$18 = 19406;
+                      wh.a(100L);
                       continue L1;
                     } else {
                       param1.setVisible(false);
@@ -252,7 +254,8 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
                       break L0;
                     }
                   } else {
-                    wh.a(10L, 19406);
+                    int discarded$19 = 19406;
+                    wh.a(10L);
                     continue L2;
                   }
                 }
@@ -379,9 +382,10 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
         try {
-            this.b(true);
+            int discarded$0 = 1;
+            this.b();
             int var5_int = 111 % ((-33 - param3) / 52);
-            boolean discarded$0 = param2.drawImage(((ib) this).field_e, param1, param0, (java.awt.image.ImageObserver) this);
+            boolean discarded$1 = param2.drawImage(((ib) this).field_e, param1, param0, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "ib.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
@@ -481,12 +485,15 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
             ((ib) this).field_p = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((ib) this).field_e = param2.createImage((java.awt.image.ImageProducer) this);
             int var5_int = -116 % ((-63 - param1) / 38);
-            this.b(true);
-            boolean discarded$0 = param2.prepareImage(((ib) this).field_e, (java.awt.image.ImageObserver) this);
-            this.b(true);
+            int discarded$0 = 1;
+            this.b();
             boolean discarded$1 = param2.prepareImage(((ib) this).field_e, (java.awt.image.ImageObserver) this);
-            this.b(true);
-            boolean discarded$2 = param2.prepareImage(((ib) this).field_e, (java.awt.image.ImageObserver) this);
+            int discarded$2 = 1;
+            this.b();
+            boolean discarded$3 = param2.prepareImage(((ib) this).field_e, (java.awt.image.ImageObserver) this);
+            int discarded$4 = 1;
+            this.b();
+            boolean discarded$5 = param2.prepareImage(((ib) this).field_e, (java.awt.image.ImageObserver) this);
             ((ib) this).c(64);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "ib.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);

@@ -18,7 +18,7 @@ final class bf {
     static int[] field_l;
     int field_m;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_g = null;
         field_l = null;
@@ -28,10 +28,7 @@ final class bf {
     }
 
     final static ka[] a(int param0, byte param1, int param2, int param3, int param4) {
-        if (param1 <= 30) {
-            return null;
-        }
-        return e.a(3, param2, 1, 1065, 1, 0, param3, param0, 1);
+        return e.a(3, 0, 1, 1065, 1, 0, 0, 65793, 1);
     }
 
     final int a(byte param0) {

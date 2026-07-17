@@ -9,7 +9,7 @@ final class bd {
     static int field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_c = null;

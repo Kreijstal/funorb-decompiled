@@ -7,7 +7,7 @@ final class q {
     static int field_d;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -17,9 +17,6 @@ final class q {
             gd.field_y = param7;
             jl.field_fb = param1;
             fb.field_a = param3;
-            if (param6 != 20) {
-                field_a = null;
-            }
             kb.field_a = param8;
             da.field_a = param5;
             ph.field_f = param2;
@@ -29,7 +26,7 @@ final class q {
             uf.field_r = new nm(param1);
             ke.field_U = new bk(aj.field_c, uf.field_r);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "q.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "q.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + 20 + 44 + param7 + 44 + param8 + 41);
         }
     }
 

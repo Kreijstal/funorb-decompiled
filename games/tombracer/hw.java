@@ -4,7 +4,7 @@
 final class hw {
     static jea field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -38,25 +38,21 @@ final class hw {
           } else {
             var9 = ql.field_k;
             var9.k(param2, -2988);
-            if (param0 == -111) {
-              var9.field_h = var9.field_h + param1;
-              var5 = var9.field_h;
-              param3.a(200, var9);
-              var6 = -var5 + var9.field_h;
-              var7 = param1;
-              if (0 != var7) {
-                if (var7 != 1) {
-                  if (var7 == 2) {
-                    var9.b(var6, (byte) -105);
-                    return;
-                  } else {
-                    return;
-                  }
+            var9.field_h = var9.field_h + param1;
+            var5 = var9.field_h;
+            param3.a(200, var9);
+            var6 = -var5 + var9.field_h;
+            var7 = param1;
+            if (0 != var7) {
+              if (var7 != 1) {
+                if (var7 == 2) {
+                  var9.b(var6, (byte) -105);
+                  return;
                 } else {
-                  var9.d(var6, (byte) -111);
                   return;
                 }
               } else {
+                var9.d(var6, (byte) -111);
                 return;
               }
             } else {
@@ -68,7 +64,7 @@ final class hw {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("hw.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_15_1 = new StringBuilder().append("hw.A(").append(-111).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

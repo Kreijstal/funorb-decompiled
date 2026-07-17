@@ -17,7 +17,7 @@ final class ea {
         field_d = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -38,7 +38,8 @@ final class ea {
               if (var2 == 0) {
                 var8 = (pg) (Object) ab.field_H.c(-3905);
                 if (var8 == null) {
-                  ec.a((byte) 27);
+                  int discarded$4 = 27;
+                  ec.a();
                   return;
                 } else {
                   L2: {
@@ -54,7 +55,8 @@ final class ea {
                   }
                   var9.field_g = var9.field_g + 4;
                   if (!var9.f(0)) {
-                    ec.a((byte) 27);
+                    int discarded$5 = 27;
+                    ec.a();
                     return;
                   } else {
                     var8.b(4);
@@ -82,13 +84,15 @@ final class ea {
                       var4_ref_of.b(4);
                       break L1;
                     } else {
-                      ec.a((byte) 27);
+                      int discarded$6 = 27;
+                      ec.a();
                       return;
                     }
                   }
                 } else {
                   hc.a((Throwable) null, "A1: " + oe.a(-121), (byte) 74);
-                  ec.a((byte) 27);
+                  int discarded$7 = 27;
+                  ec.a();
                   break L1;
                 }
               }
@@ -113,21 +117,21 @@ final class ea {
         }
     }
 
-    final static void a(byte param0, vc param1, int param2) {
+    final static void a(byte param0, vc param1) {
         ia var3 = null;
         try {
             if (param0 < 39) {
                 field_b = null;
             }
             var3 = d.field_b;
-            var3.d((byte) 74, param2);
+            var3.d((byte) 74, 3);
             var3.a(5, -70);
             var3.a(0, -120);
             var3.c(param1.field_i, -306);
             var3.a(param1.field_h, -50);
             var3.a(param1.field_l, -80);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ea.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ea.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 3 + 41);
         }
     }
 

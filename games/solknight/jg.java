@@ -36,13 +36,14 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    fi.a(var5, param0, -24045);
+                    int discarded$4 = -24045;
+                    fi.a(var5, 3);
                     var5 = (sd) (Object) r.field_b.b(-119);
                     continue L2;
                   }
                 }
               } else {
-                ah.a(false, param0, var4);
+                ah.a(false, 3, var4);
                 var4 = (qc) (Object) sb.field_c.b(-121);
                 continue L1;
               }
@@ -51,7 +52,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2, "jg.C(" + param0 + 44 + -100 + 41);
+          throw fc.a((Throwable) (Object) var2, "jg.C(" + 3 + 44 + -100 + 41);
         }
     }
 
@@ -68,19 +69,19 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(rl param0, int param1, boolean param2) {
         try {
-            int var3_int = -44 / ((param1 - 35) / 40);
+            int var3_int = -44;
             uf.a(param2, 123, 256, param0);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jg.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "jg.E(" + (param0 != null ? "{...}" : "null") + 44 + 86 + 44 + param2 + 41);
         }
     }
 
     public final void update(java.awt.Graphics param0) {
     }
 
-    final static String a(CharSequence param0, int param1) {
-        int var2_int = 0;
+    final static String a(CharSequence param0) {
         RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         StringBuilder var5 = null;
@@ -116,7 +117,8 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                 if (var2_int >= var3) {
                   break L1;
                 } else {
-                  if (!ck.a(param0.charAt(var2_int), true)) {
+                  int discarded$3 = 1;
+                  if (!ck.a(param0.charAt(var2_int))) {
                     break L1;
                   } else {
                     var2_int++;
@@ -129,7 +131,8 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                   if (var2_int >= var3) {
                     break L3;
                   } else {
-                    if (!ck.a(param0.charAt(var3 - 1), true)) {
+                    int discarded$4 = 1;
+                    if (!ck.a(param0.charAt(var3 - 1))) {
                       break L3;
                     } else {
                       var3--;
@@ -138,12 +141,12 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                   }
                 }
                 var4 = var3 - var2_int;
-                if (var4 <= param1) {
-                  if (-13 >= var4) {
+                if (var4 >= 1) {
+                  if (var4 <= 12) {
                     var5 = new StringBuilder(var4);
                     var6 = var2_int;
                     L4: while (true) {
-                      if (var3 <= var6) {
+                      if (~var3 >= ~var6) {
                         if (0 != var5.length()) {
                           return var5.toString();
                         } else {
@@ -152,12 +155,12 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                       } else {
                         L5: {
                           var7 = param0.charAt(var6);
-                          if (c.a(param1 + 2, (char) var7)) {
+                          if (c.a(0, (char) var7)) {
                             var8 = we.a(2, (char) var7);
                             if (var8 == 0) {
                               break L5;
                             } else {
-                              StringBuilder discarded$1 = var5.append(var8);
+                              StringBuilder discarded$5 = var5.append(var8);
                               break L5;
                             }
                           } else {
@@ -209,12 +212,13 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L6;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param1 + 41);
+          throw fc.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + -2 + 41);
         }
     }
 
-    final static void a(byte param0) {
-        fb.a(255);
+    final static void a() {
+        int discarded$0 = 255;
+        fb.a();
     }
 
     jg() {

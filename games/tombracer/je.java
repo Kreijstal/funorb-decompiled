@@ -116,7 +116,7 @@ final class je extends haa {
         }
     }
 
-    final static iu a(byte param0) {
+    final static iu a() {
         int var4_int = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         int var1 = mq.field_b[0] * iga.field_m[0];
@@ -125,15 +125,12 @@ final class je extends haa {
         for (var4_int = 0; var4_int < var1; var4_int++) {
             var3[var4_int] = mga.field_g[sea.c(255, (int) var2[var4_int])];
         }
-        if (param0 != 69) {
-            return null;
-        }
         iu var4 = new iu(ika.field_a, kba.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], var3);
         loa.a((byte) 113);
         return var4;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_E = null;
     }
 
@@ -165,31 +162,27 @@ final class je extends haa {
         try {
           L0: {
             ((je) this).field_H = -1;
-            if (param1 == 0) {
-              L1: {
-                ((je) this).field_I = param0;
-                ((je) this).field_G = param2;
-                if (param0 == null) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (((je) this).field_G < -1) {
-                      break L2;
+            L1: {
+              ((je) this).field_I = param0;
+              ((je) this).field_G = param2;
+              if (param0 == null) {
+                break L1;
+              } else {
+                L2: {
+                  if (((je) this).field_G < -1) {
+                    break L2;
+                  } else {
+                    if (((je) this).field_G < ((je) this).field_I.length) {
+                      break L1;
                     } else {
-                      if (((je) this).field_G < ((je) this).field_I.length) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
+                      break L2;
                     }
                   }
-                  throw new IllegalStateException();
                 }
+                throw new IllegalStateException();
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -219,7 +212,7 @@ final class je extends haa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 0 + 44 + param2 + 41);
         }
     }
 

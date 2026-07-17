@@ -6,7 +6,7 @@ final class pab extends fh {
     static int field_m;
     byte[] field_l;
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void a(int param0, int param1) {
         rda.field_p = param1;
         lva.field_p = param1;
         fua.field_p = param0;
@@ -14,7 +14,7 @@ final class pab extends fh {
         rda.field_q = true;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_k = null;
     }
 

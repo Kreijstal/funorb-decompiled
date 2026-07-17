@@ -10,7 +10,7 @@ final class rf extends dj implements uh {
     static int[][] field_eb;
     static int[] field_jb;
 
-    public static void i(byte param0) {
+    public static void i() {
         field_eb = null;
         field_jb = null;
         field_hb = null;
@@ -29,7 +29,7 @@ final class rf extends dj implements uh {
         }
     }
 
-    final static void n(int param0) {
+    final static void n() {
         ie.field_g = null;
         ul.field_n = -1;
         bk.field_p = 0;
@@ -39,10 +39,12 @@ final class rf extends dj implements uh {
 
     final static void a(lj param0, byte param1, boolean param2, lj param3, lj param4) {
         try {
-            ji.field_k = og.a("", true);
+            int discarded$0 = 1;
+            ji.field_k = og.a("");
             ji.field_k.a((byte) 56, false);
             vj.a(param4, param3, param1 + 23104, param0);
-            ul.c(-1247);
+            int discarded$17 = -1247;
+            ul.c();
             if (param1 != -23) {
                 Object var6 = null;
                 rf.a((lj) null, (byte) 35, false, (lj) null, (lj) null);
@@ -59,10 +61,12 @@ final class rf extends dj implements uh {
           if (((rf) this).field_r != null) {
             if (param0) {
               field_jb = null;
-              sl.a(((rf) this).field_p - (((rf) this).field_gb - kc.field_u), ph.field_d, -6665);
+              int discarded$4 = -6665;
+              sl.a(((rf) this).field_p - (((rf) this).field_gb - kc.field_u), ph.field_d);
               return ((rf) this).field_r;
             } else {
-              sl.a(((rf) this).field_p - (((rf) this).field_gb - kc.field_u), ph.field_d, -6665);
+              int discarded$5 = -6665;
+              sl.a(((rf) this).field_p - (((rf) this).field_gb - kc.field_u), ph.field_d);
               return ((rf) this).field_r;
             }
           } else {
@@ -165,18 +169,12 @@ final class rf extends dj implements uh {
         super(param0, param1, param2);
     }
 
-    final static void m(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        if (param0 != 62) {
-          return;
-        } else {
-          var1 = fl.f(param0 + -62);
-          var2 = o.a(18);
-          gb.field_f.a(var2 - -(mg.field_d << 1), jl.field_e + -mg.field_d, -1, -i.field_m + qe.field_R, var1 - -(i.field_m << 1));
-          m.a((byte) 118);
-          return;
-        }
+    final static void m() {
+        int var1 = fl.f(0);
+        int discarded$0 = 18;
+        int var2 = o.a();
+        gb.field_f.a(var2 - -(mg.field_d << 1), jl.field_e + -mg.field_d, -1, -i.field_m + qe.field_R, var1 - -(i.field_m << 1));
+        m.a((byte) 118);
     }
 
     static {

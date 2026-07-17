@@ -8,14 +8,15 @@ abstract class ua {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -6) {
-            int discarded$0 = ua.a(false);
+            int discarded$0 = 0;
+            int discarded$1 = ua.a();
             field_b = null;
             return;
         }
         field_b = null;
     }
 
-    final static int a(boolean param0) {
+    final static int a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -32,7 +33,8 @@ abstract class ua {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              if (!np.a((byte) -13)) {
+              int discarded$4 = -13;
+              if (!np.a()) {
                 L2: {
                   kb.field_g.a(true, qd.a(16452, n.field_t, k.field_e), qd.a(16452, wh.field_s, re.field_c));
                   if (!kb.field_g.f((byte) -60)) {
@@ -53,11 +55,13 @@ abstract class ua {
                       } else {
                         var3 = di.field_e[kb.field_g.field_g];
                         if (var3 == 2) {
-                          qo.g((byte) -68);
+                          int discarded$5 = -68;
+                          qo.g();
                           break L3;
                         } else {
                           if (var3 == 5) {
-                            qo.g((byte) -68);
+                            int discarded$6 = -68;
+                            qo.g();
                             break L3;
                           } else {
                             break L3;
@@ -72,7 +76,8 @@ abstract class ua {
                     if (go.field_x == 2) {
                       break L3;
                     } else {
-                      qo.g((byte) -68);
+                      int discarded$7 = -68;
+                      qo.g();
                       break L3;
                     }
                   }

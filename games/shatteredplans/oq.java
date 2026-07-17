@@ -14,9 +14,6 @@ final class oq {
     static ej field_g;
 
     final static int a(byte param0, int param1, int param2) {
-        if (param0 != -123) {
-            oq.a(-75, true);
-        }
         if (param2 == 1) {
             if (!(!qe.a((byte) -65, param1))) {
                 return 29;
@@ -25,7 +22,7 @@ final class oq {
         return er.field_b[param2];
     }
 
-    final static String[] a(byte[] param0, byte param1) {
+    final static String[] a(byte[] param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String[] var3 = null;
@@ -102,9 +99,6 @@ final class oq {
 
     final static void a(int param0, boolean param1) {
         sl var2 = js.field_f;
-        if (param1) {
-            return;
-        }
         var2.h(param0, 255);
         var2.c(1, (byte) -114);
         var2.c(3, (byte) -73);
@@ -281,7 +275,7 @@ final class oq {
         return stackIn_24_0;
     }
 
-    final static ro a(String param0, boolean param1) {
+    final static ro a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -367,7 +361,7 @@ final class oq {
         return stackIn_10_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         oh var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -384,13 +378,14 @@ final class oq {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    cp.a(param0, 1);
+                    cp.a(6, 1);
                     var2 = ua.field_d.a((byte) -71);
                     continue L2;
                   }
                 }
               } else {
-                dn.a(param0, var4, (byte) 13);
+                int discarded$2 = 13;
+                dn.a(6, var4);
                 var4 = (fk) (Object) tr.field_vb.a((byte) -71);
                 continue L1;
               }
@@ -399,7 +394,7 @@ final class oq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var2_ref, "oq.G(" + param0 + 44 + 37 + 41);
+          throw r.a((Throwable) (Object) var2_ref, "oq.G(" + 6 + 44 + 37 + 41);
         }
     }
 

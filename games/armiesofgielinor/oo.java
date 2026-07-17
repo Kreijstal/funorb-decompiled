@@ -109,7 +109,7 @@ final class oo {
                   if (!vv.a(-84, (CharSequence) (Object) var7)) {
                     break L2;
                   } else {
-                    ((oo) this).field_r = dq.a(param1 + 2, (CharSequence) (Object) var7);
+                    ((oo) this).field_r = dq.a(73, (CharSequence) (Object) var7);
                     break L1;
                   }
                 }
@@ -120,24 +120,20 @@ final class oo {
             ((oo) this).field_c = param0;
             ((oo) this).field_h = new dl(2);
             ((oo) this).field_k = param5;
-            if (param1 == 71) {
-              L3: {
-                ((oo) this).field_i = param2;
-                if (null == ((oo) this).field_i) {
+            L3: {
+              ((oo) this).field_i = param2;
+              if (null == ((oo) this).field_i) {
+                break L3;
+              } else {
+                if (3 > ((oo) this).field_i.length) {
                   break L3;
                 } else {
-                  if (3 > ((oo) this).field_i.length) {
-                    break L3;
-                  } else {
-                    mk.field_h = param4;
-                    break L0;
-                  }
+                  mk.field_h = true;
+                  break L0;
                 }
               }
-              throw new IllegalArgumentException("");
-            } else {
-              return;
             }
+            throw new IllegalArgumentException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,7 +165,7 @@ final class oo {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(71).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -219,7 +215,7 @@ final class oo {
           }
           L7: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param4).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(1).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -435,7 +431,9 @@ final class oo {
                     break L3;
                   } else {
                     L14: {
-                      ((oo) this).field_h.a(0, this.a(iu.field_t, ur.field_z, -387), this.a(sm.field_d, ko.field_b, -387));
+                      int discarded$4 = -387;
+                      int discarded$5 = -387;
+                      ((oo) this).field_h.a(0, this.a(iu.field_t, ur.field_z), this.a(sm.field_d, ko.field_b));
                       var4 = 0;
                       if (!((oo) this).field_h.d((byte) 96)) {
                         break L14;
@@ -562,7 +560,9 @@ final class oo {
                     break L3;
                   } else {
                     L21: {
-                      ((oo) this).field_h.a(0, this.a(iu.field_t, ur.field_z, -387), this.a(sm.field_d, ko.field_b, -387));
+                      int discarded$6 = -387;
+                      int discarded$7 = -387;
+                      ((oo) this).field_h.a(0, this.a(iu.field_t, ur.field_z), this.a(sm.field_d, ko.field_b));
                       var4 = 0;
                       if (!((oo) this).field_h.d((byte) 96)) {
                         break L21;
@@ -703,7 +703,8 @@ final class oo {
         var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            rq.a((byte) -56);
+            int discarded$4 = -56;
+            rq.a();
             var9_int = param7;
             L1: while (true) {
               if (var9_int >= param6) {
@@ -721,7 +722,7 @@ final class oo {
                 qn.f(param3, var9_int, param1, var9_int + 1);
                 var10 = var9_int * param0.length / param6;
                 var11 = param0[param0.length - var10 + -1];
-                int discarded$2 = param4.a(param2, param3, param7, param1, param6, var11, -1, 1, 1, 0);
+                int discarded$5 = param4.a(param2, param3, param7, param1, param6, var11, -1, 1, 1, 0);
                 var9_int++;
                 continue L1;
               }
@@ -834,7 +835,8 @@ final class oo {
             L2: while (true) {
               if (var2 >= 2) {
                 L3: {
-                  this.d(1439);
+                  int discarded$8 = 1439;
+                  this.d();
                   if (null == iw.field_p) {
                     break L3;
                   } else {
@@ -862,12 +864,15 @@ final class oo {
                                   if (!bh.field_H.a(28979, "pump32")) {
                                     break L3;
                                   } else {
-                                    mc.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
+                                    int discarded$9 = 24914;
+                                    mc.field_a = pv.a("members_expansion_screen", "frame", iw.field_p);
                                     mg.field_d = ic.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
                                     ll.field_Sb = gs.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
                                     kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
-                                    hr.field_b = nh.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
-                                    ar.field_D = nh.a("button_text", "members_expansion_screen", iw.field_p, false);
+                                    int discarded$10 = 0;
+                                    hr.field_b = nh.a("benefit_orbs", "members_expansion_screen", iw.field_p);
+                                    int discarded$11 = 0;
+                                    ar.field_D = nh.a("button_text", "members_expansion_screen", iw.field_p);
                                     nh.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
                                     bh.field_H = null;
                                     iw.field_p = null;
@@ -940,11 +945,11 @@ final class oo {
                   }
                   L6: {
                     ((oo) this).field_m.g(16, 302);
-                    int discarded$4 = ll.field_Sb.a(((oo) this).field_k[((oo) this).field_n], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+                    int discarded$12 = ll.field_Sb.a(((oo) this).field_k[((oo) this).field_n], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
                     hr.field_b.g(30, 330);
-                    int discarded$5 = ll.field_Sb.a(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$6 = ll.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$7 = ll.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$13 = ll.field_Sb.a(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$14 = ll.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$15 = ll.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
                     ar.field_D.g((127 - ar.field_D.field_A) / 2 + 508, 315);
                     if (0 != ((oo) this).field_h.field_h) {
                       if (((oo) this).field_h.field_h == 1) {
@@ -979,7 +984,7 @@ final class oo {
         }
     }
 
-    private final void d(int param0) {
+    private final void d() {
         ru var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1110,7 +1115,8 @@ final class oo {
               var11_int = (int)((float)param8 / param9);
               var12 = (int)((float)param7 / param9);
               var13 = new wk(var11_int, var12);
-              vn.a(var13, 3);
+              int discarded$2 = 3;
+              vn.a(var13);
               if (param6 < -108) {
                 break L1;
               } else {
@@ -1121,7 +1127,8 @@ final class oo {
             param0.c((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.field_y / param9), (int)((float)param0.field_v / param9));
             this.a(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
             rf.b(-18862);
-            vn.a(param0, 3);
+            int discarded$3 = 3;
+            vn.a(param0);
             var13.d(param2, param1, param8, param7);
             rf.b(-18862);
             break L0;
@@ -1233,7 +1240,7 @@ final class oo {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int a(int param0, int param1) {
         if (!(mc.field_a != null)) {
             return -1;
         }
@@ -1280,7 +1287,8 @@ final class oo {
             } else {
               L1: {
                 ((oo) this).field_t = new wk(622, 47);
-                vn.a(((oo) this).field_t, 3);
+                int discarded$3 = 3;
+                vn.a(((oo) this).field_t);
                 qn.a(0, 0, 622, 47, 4540749, 65793);
                 var2 = 16448250;
                 var3 = 10068666;
@@ -1303,7 +1311,8 @@ final class oo {
               }
               var10 = cj.a(526344, 526344, 126);
               var5 = new wk(121, 122);
-              vn.a(var5, 3);
+              int discarded$4 = 3;
+              vn.a(var5);
               qn.a(0, 0, var5.field_y, var5.field_v / 2, 16180917, 16306250);
               qn.a(0, var5.field_v / 2, var5.field_y, var5.field_v, 16306250, 15568919);
               var6 = rv.field_a;
@@ -1313,7 +1322,8 @@ final class oo {
               this.a(var5, 12 + -kt.field_n.field_H + var5.field_v / 2, 0, qb.field_c[((oo) this).field_r], (ka) (Object) kt.field_n, var10, -125, var5.field_v / 3, var5.field_y, 0.699999988079071f);
               rf.b(-18862);
               ((oo) this).field_b = new wk(121, 122);
-              vn.a(((oo) this).field_b, 3);
+              int discarded$5 = 3;
+              vn.a(((oo) this).field_b);
               var5.a(((oo) this).field_b.field_y / 2, ((oo) this).field_b.field_v / 2, -2048, 4096);
               rf.b(-18862);
               return;
@@ -1322,7 +1332,7 @@ final class oo {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 0;
         int var8 = 0;
         L0: {
@@ -1375,7 +1385,7 @@ final class oo {
         }
     }
 
-    final static void e(int param0) {
+    final static void e() {
         L0: {
           if (rd.field_j != null) {
             oa.a(90, rd.field_j.field_d);

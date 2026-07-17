@@ -15,7 +15,7 @@ final class rn implements el {
     private int field_d;
     static volatile int field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -126,23 +126,11 @@ final class rn implements el {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        var3 = param0 >> 16;
-        if (param1 != -18) {
-          field_b = 126;
-          var4 = param0 & 65535;
-          var5 = param2 >> 16;
-          var6 = param2 & 65535;
-          return var4 * var5 + (var3 * param2 - -(var4 * var6 >> 16));
-        } else {
-          var4 = param0 & 65535;
-          var5 = param2 >> 16;
-          var6 = param2 & 65535;
-          return var4 * var5 + (var3 * param2 - -(var4 * var6 >> 16));
-        }
+        int var3 = param0 >> 16;
+        int var4 = param0 & 65535;
+        int var5 = param2 >> 16;
+        int var6 = param2 & 65535;
+        return var4 * var5 + (var3 * param2 - -(var4 * var6 >> 16));
     }
 
     rn(uc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -161,9 +149,6 @@ final class rn implements el {
 
     final static void a(int param0) {
         oh.field_c = 0;
-        if (param0 > -3) {
-            field_j = 64;
-        }
     }
 
     static {

@@ -59,7 +59,8 @@ final class kc extends ma {
         try {
           L0: {
             L1: {
-              var3 = je.a(param0, 0);
+              int discarded$2 = 0;
+              var3 = je.a(param0);
               if (-1 != param2.indexOf(param0)) {
                 break L1;
               } else {
@@ -159,12 +160,12 @@ final class kc extends ma {
         return stackIn_21_0 != 0;
     }
 
-    final static void a(lj param0, int param1) {
+    final static void a(lj param0) {
         byte[] var2 = null;
         int var3 = 0;
-        int stackIn_461_0 = 0;
-        int stackOut_460_0 = 0;
+        int stackIn_460_0 = 0;
         int stackOut_459_0 = 0;
+        int stackOut_458_0 = 0;
         L0: {
           var3 = TorChallenge.field_F ? 1 : 0;
           dj.field_cb = param0;
@@ -179,7 +180,7 @@ final class kc extends ma {
         L1: {
           var2 = vf.a(95, "achievement_names,0");
           if (null != var2) {
-            wb.field_n[0] = re.a(param1 + 18990, var2);
+            wb.field_n[0] = re.a(18990, var2);
             break L1;
           } else {
             break L1;
@@ -377,7 +378,7 @@ final class kc extends ma {
         L23: {
           var2 = vf.a(95, "achievement_criteria,5");
           if (var2 != null) {
-            jc.field_j[5] = re.a(TorChallenge.a(param1, 18990), var2);
+            jc.field_j[5] = re.a(TorChallenge.a(0, 18990), var2);
             break L23;
           } else {
             break L23;
@@ -404,7 +405,7 @@ final class kc extends ma {
         L26: {
           var2 = vf.a(95, "achievement_criteria,8");
           if (null != var2) {
-            jc.field_j[8] = re.a(param1 + 18990, var2);
+            jc.field_j[8] = re.a(18990, var2);
             break L26;
           } else {
             break L26;
@@ -469,7 +470,7 @@ final class kc extends ma {
           if (null == var2) {
             break L33;
           } else {
-            jc.field_j[15] = re.a(TorChallenge.a(param1, 18990), var2);
+            jc.field_j[15] = re.a(TorChallenge.a(0, 18990), var2);
             break L33;
           }
         }
@@ -539,7 +540,7 @@ final class kc extends ma {
         L41: {
           var2 = vf.a(95, "instructions_pages,6");
           if (var2 != null) {
-            ol.field_b[6] = re.a(param1 + 18990, var2);
+            ol.field_b[6] = re.a(18990, var2);
             break L41;
           } else {
             break L41;
@@ -550,7 +551,7 @@ final class kc extends ma {
           if (null == var2) {
             break L42;
           } else {
-            ol.field_b[7] = re.a(TorChallenge.a(param1, 18990), var2);
+            ol.field_b[7] = re.a(TorChallenge.a(0, 18990), var2);
             break L42;
           }
         }
@@ -593,7 +594,7 @@ final class kc extends ma {
         L47: {
           var2 = vf.a(95, "instructions_titles,2");
           if (null != var2) {
-            oe.field_j[2] = re.a(TorChallenge.a(param1, 18990), var2);
+            oe.field_j[2] = re.a(TorChallenge.a(0, 18990), var2);
             break L47;
           } else {
             break L47;
@@ -622,7 +623,7 @@ final class kc extends ma {
           if (null == var2) {
             break L50;
           } else {
-            oe.field_j[5] = re.a(param1 + 18990, var2);
+            oe.field_j[5] = re.a(18990, var2);
             break L50;
           }
         }
@@ -667,7 +668,7 @@ final class kc extends ma {
           if (null == var2) {
             break L55;
           } else {
-            kl.field_f = re.a(param1 + 18990, var2);
+            kl.field_f = re.a(18990, var2);
             break L55;
           }
         }
@@ -710,7 +711,7 @@ final class kc extends ma {
         L60: {
           var2 = vf.a(95, "basic_controls,3,0");
           if (var2 != null) {
-            jf.field_ob[3][0] = re.a(TorChallenge.a(param1, 18990), var2);
+            jf.field_ob[3][0] = re.a(TorChallenge.a(0, 18990), var2);
             break L60;
           } else {
             break L60;
@@ -766,14 +767,14 @@ final class kc extends ma {
           if (var2 == null) {
             break L66;
           } else {
-            il.field_p[1] = re.a(param1 + 18990, var2);
+            il.field_p[1] = re.a(18990, var2);
             break L66;
           }
         }
         L67: {
           var2 = vf.a(95, "benefits,2");
           if (null != var2) {
-            il.field_p[2] = re.a(param1 + 18990, var2);
+            il.field_p[2] = re.a(18990, var2);
             break L67;
           } else {
             break L67;
@@ -865,7 +866,7 @@ final class kc extends ma {
           if (null == var2) {
             break L77;
           } else {
-            i.field_p[3] = re.a(param1 + 18990, var2);
+            i.field_p[3] = re.a(18990, var2);
             break L77;
           }
         }
@@ -883,7 +884,7 @@ final class kc extends ma {
           if (var2 == null) {
             break L79;
           } else {
-            i.field_p[5] = re.a(param1 + 18990, var2);
+            i.field_p[5] = re.a(18990, var2);
             break L79;
           }
         }
@@ -901,7 +902,7 @@ final class kc extends ma {
           if (var2 == null) {
             break L81;
           } else {
-            k.field_a[1] = re.a(param1 + 18990, var2);
+            k.field_a[1] = re.a(18990, var2);
             break L81;
           }
         }
@@ -919,7 +920,7 @@ final class kc extends ma {
           if (var2 == null) {
             break L83;
           } else {
-            k.field_a[3] = re.a(TorChallenge.a(param1, 18990), var2);
+            k.field_a[3] = re.a(TorChallenge.a(0, 18990), var2);
             break L83;
           }
         }
@@ -928,7 +929,7 @@ final class kc extends ma {
           if (null == var2) {
             break L84;
           } else {
-            lb.field_u[0] = re.a(param1 + 18990, var2);
+            lb.field_u[0] = re.a(18990, var2);
             break L84;
           }
         }
@@ -973,7 +974,7 @@ final class kc extends ma {
           if (null == var2) {
             break L89;
           } else {
-            kl.field_d[1] = re.a(TorChallenge.a(param1, 18990), var2);
+            kl.field_d[1] = re.a(TorChallenge.a(0, 18990), var2);
             break L89;
           }
         }
@@ -982,7 +983,7 @@ final class kc extends ma {
           if (var2 == null) {
             break L90;
           } else {
-            kl.field_d[2] = re.a(TorChallenge.a(param1, 18990), var2);
+            kl.field_d[2] = re.a(TorChallenge.a(0, 18990), var2);
             break L90;
           }
         }
@@ -1007,7 +1008,7 @@ final class kc extends ma {
         L93: {
           var2 = vf.a(95, "HELP_TEXT,0,1");
           if (var2 != null) {
-            aa.field_h[0][1] = re.a(TorChallenge.a(param1, 18990), var2);
+            aa.field_h[0][1] = re.a(TorChallenge.a(0, 18990), var2);
             break L93;
           } else {
             break L93;
@@ -1023,875 +1024,871 @@ final class kc extends ma {
           }
         }
         L95: {
-          if (param1 == 0) {
+          var2 = vf.a(95, "HELP_TEXT,0,3");
+          if (var2 != null) {
+            aa.field_h[0][3] = re.a(18990, var2);
             break L95;
           } else {
-            field_m = null;
             break L95;
           }
         }
         L96: {
-          var2 = vf.a(95, "HELP_TEXT,0,3");
-          if (var2 != null) {
-            aa.field_h[0][3] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,0,4");
+          if (var2 == null) {
             break L96;
           } else {
+            aa.field_h[0][4] = re.a(18990, var2);
             break L96;
           }
         }
         L97: {
-          var2 = vf.a(95, "HELP_TEXT,0,4");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,0,5");
+          if (null != var2) {
+            aa.field_h[0][5] = re.a(18990, var2);
             break L97;
           } else {
-            aa.field_h[0][4] = re.a(18990, var2);
             break L97;
           }
         }
         L98: {
-          var2 = vf.a(95, "HELP_TEXT,0,5");
-          if (null != var2) {
-            aa.field_h[0][5] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,0,6");
+          if (var2 == null) {
             break L98;
           } else {
+            aa.field_h[0][6] = re.a(18990, var2);
             break L98;
           }
         }
         L99: {
-          var2 = vf.a(95, "HELP_TEXT,0,6");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,0,7");
+          if (null != var2) {
+            aa.field_h[0][7] = re.a(18990, var2);
             break L99;
           } else {
-            aa.field_h[0][6] = re.a(18990, var2);
             break L99;
           }
         }
         L100: {
-          var2 = vf.a(95, "HELP_TEXT,0,7");
-          if (null != var2) {
-            aa.field_h[0][7] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,0,8");
+          if (var2 == null) {
             break L100;
           } else {
+            aa.field_h[0][8] = re.a(18990, var2);
             break L100;
           }
         }
         L101: {
-          var2 = vf.a(95, "HELP_TEXT,0,8");
+          var2 = vf.a(95, "HELP_TEXT,0,9");
           if (var2 == null) {
             break L101;
           } else {
-            aa.field_h[0][8] = re.a(18990, var2);
+            aa.field_h[0][9] = re.a(18990, var2);
             break L101;
           }
         }
         L102: {
-          var2 = vf.a(95, "HELP_TEXT,0,9");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,0,10");
+          if (null == var2) {
             break L102;
           } else {
-            aa.field_h[0][9] = re.a(18990, var2);
+            aa.field_h[0][10] = re.a(18990, var2);
             break L102;
           }
         }
         L103: {
-          var2 = vf.a(95, "HELP_TEXT,0,10");
-          if (null == var2) {
+          var2 = vf.a(95, "HELP_TEXT,0,11");
+          if (var2 == null) {
             break L103;
           } else {
-            aa.field_h[0][10] = re.a(18990, var2);
+            aa.field_h[0][11] = re.a(18990, var2);
             break L103;
           }
         }
         L104: {
-          var2 = vf.a(95, "HELP_TEXT,0,11");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,0,12");
+          if (null != var2) {
+            aa.field_h[0][12] = re.a(TorChallenge.a(0, 18990), var2);
             break L104;
           } else {
-            aa.field_h[0][11] = re.a(18990, var2);
             break L104;
           }
         }
         L105: {
-          var2 = vf.a(95, "HELP_TEXT,0,12");
+          var2 = vf.a(95, "HELP_TEXT,0,13");
           if (null != var2) {
-            aa.field_h[0][12] = re.a(TorChallenge.a(param1, 18990), var2);
+            aa.field_h[0][13] = re.a(18990, var2);
             break L105;
           } else {
             break L105;
           }
         }
         L106: {
-          var2 = vf.a(95, "HELP_TEXT,0,13");
-          if (null != var2) {
-            aa.field_h[0][13] = re.a(param1 + 18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,0,14");
+          if (var2 == null) {
             break L106;
           } else {
+            aa.field_h[0][14] = re.a(18990, var2);
             break L106;
           }
         }
         L107: {
-          var2 = vf.a(95, "HELP_TEXT,0,14");
+          var2 = vf.a(95, "HELP_TEXT,0,15");
           if (var2 == null) {
             break L107;
           } else {
-            aa.field_h[0][14] = re.a(18990, var2);
+            aa.field_h[0][15] = re.a(18990, var2);
             break L107;
           }
         }
         L108: {
-          var2 = vf.a(95, "HELP_TEXT,0,15");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,0,16");
+          if (null != var2) {
+            aa.field_h[0][16] = re.a(18990, var2);
             break L108;
           } else {
-            aa.field_h[0][15] = re.a(18990, var2);
             break L108;
           }
         }
         L109: {
-          var2 = vf.a(95, "HELP_TEXT,0,16");
-          if (null != var2) {
-            aa.field_h[0][16] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,0,17");
+          if (var2 == null) {
             break L109;
           } else {
+            aa.field_h[0][17] = re.a(TorChallenge.a(0, 18990), var2);
             break L109;
           }
         }
         L110: {
-          var2 = vf.a(95, "HELP_TEXT,0,17");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,1,0");
+          if (null != var2) {
+            aa.field_h[1][0] = re.a(TorChallenge.a(0, 18990), var2);
             break L110;
           } else {
-            aa.field_h[0][17] = re.a(TorChallenge.a(param1, 18990), var2);
             break L110;
           }
         }
         L111: {
-          var2 = vf.a(95, "HELP_TEXT,1,0");
+          var2 = vf.a(95, "HELP_TEXT,1,1");
           if (null != var2) {
-            aa.field_h[1][0] = re.a(TorChallenge.a(param1, 18990), var2);
+            aa.field_h[1][1] = re.a(18990, var2);
             break L111;
           } else {
             break L111;
           }
         }
         L112: {
-          var2 = vf.a(95, "HELP_TEXT,1,1");
-          if (null != var2) {
-            aa.field_h[1][1] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,1,2");
+          if (var2 == null) {
             break L112;
           } else {
+            aa.field_h[1][2] = re.a(18990, var2);
             break L112;
           }
         }
         L113: {
-          var2 = vf.a(95, "HELP_TEXT,1,2");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,1,3");
+          if (null != var2) {
+            aa.field_h[1][3] = re.a(18990, var2);
             break L113;
           } else {
-            aa.field_h[1][2] = re.a(18990, var2);
             break L113;
           }
         }
         L114: {
-          var2 = vf.a(95, "HELP_TEXT,1,3");
-          if (null != var2) {
-            aa.field_h[1][3] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,1,4");
+          if (var2 == null) {
             break L114;
           } else {
+            aa.field_h[1][4] = re.a(18990, var2);
             break L114;
           }
         }
         L115: {
-          var2 = vf.a(95, "HELP_TEXT,1,4");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,1,5");
+          if (var2 != null) {
+            aa.field_h[1][5] = re.a(18990, var2);
             break L115;
           } else {
-            aa.field_h[1][4] = re.a(18990, var2);
             break L115;
           }
         }
         L116: {
-          var2 = vf.a(95, "HELP_TEXT,1,5");
-          if (var2 != null) {
-            aa.field_h[1][5] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,1,6");
+          if (null != var2) {
+            aa.field_h[1][6] = re.a(18990, var2);
             break L116;
           } else {
             break L116;
           }
         }
         L117: {
-          var2 = vf.a(95, "HELP_TEXT,1,6");
-          if (null != var2) {
-            aa.field_h[1][6] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,1,7");
+          if (null == var2) {
             break L117;
           } else {
+            aa.field_h[1][7] = re.a(18990, var2);
             break L117;
           }
         }
         L118: {
-          var2 = vf.a(95, "HELP_TEXT,1,7");
-          if (null == var2) {
+          var2 = vf.a(95, "HELP_TEXT,1,8");
+          if (var2 == null) {
             break L118;
           } else {
-            aa.field_h[1][7] = re.a(18990, var2);
+            aa.field_h[1][8] = re.a(18990, var2);
             break L118;
           }
         }
         L119: {
-          var2 = vf.a(95, "HELP_TEXT,1,8");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,1,9");
+          if (null != var2) {
+            aa.field_h[1][9] = re.a(TorChallenge.a(0, 18990), var2);
             break L119;
           } else {
-            aa.field_h[1][8] = re.a(param1 + 18990, var2);
             break L119;
           }
         }
         L120: {
-          var2 = vf.a(95, "HELP_TEXT,1,9");
-          if (null != var2) {
-            aa.field_h[1][9] = re.a(TorChallenge.a(param1, 18990), var2);
+          var2 = vf.a(95, "HELP_TEXT,1,10");
+          if (var2 == null) {
             break L120;
           } else {
+            aa.field_h[1][10] = re.a(18990, var2);
             break L120;
           }
         }
         L121: {
-          var2 = vf.a(95, "HELP_TEXT,1,10");
+          var2 = vf.a(95, "HELP_TEXT,1,11");
           if (var2 == null) {
             break L121;
           } else {
-            aa.field_h[1][10] = re.a(18990, var2);
+            aa.field_h[1][11] = re.a(18990, var2);
             break L121;
           }
         }
         L122: {
-          var2 = vf.a(95, "HELP_TEXT,1,11");
+          var2 = vf.a(95, "HELP_TEXT,2,0");
           if (var2 == null) {
             break L122;
           } else {
-            aa.field_h[1][11] = re.a(param1 + 18990, var2);
+            aa.field_h[2][0] = re.a(TorChallenge.a(0, 18990), var2);
             break L122;
           }
         }
         L123: {
-          var2 = vf.a(95, "HELP_TEXT,2,0");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,2,1");
+          if (null == var2) {
             break L123;
           } else {
-            aa.field_h[2][0] = re.a(TorChallenge.a(param1, 18990), var2);
+            aa.field_h[2][1] = re.a(18990, var2);
             break L123;
           }
         }
         L124: {
-          var2 = vf.a(95, "HELP_TEXT,2,1");
-          if (null == var2) {
+          var2 = vf.a(95, "HELP_TEXT,2,2");
+          if (var2 != null) {
+            aa.field_h[2][2] = re.a(18990, var2);
             break L124;
           } else {
-            aa.field_h[2][1] = re.a(18990, var2);
             break L124;
           }
         }
         L125: {
-          var2 = vf.a(95, "HELP_TEXT,2,2");
-          if (var2 != null) {
-            aa.field_h[2][2] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,2,3");
+          if (var2 == null) {
             break L125;
           } else {
+            aa.field_h[2][3] = re.a(18990, var2);
             break L125;
           }
         }
         L126: {
-          var2 = vf.a(95, "HELP_TEXT,2,3");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,2,4");
+          if (null == var2) {
             break L126;
           } else {
-            aa.field_h[2][3] = re.a(18990, var2);
+            aa.field_h[2][4] = re.a(18990, var2);
             break L126;
           }
         }
         L127: {
-          var2 = vf.a(95, "HELP_TEXT,2,4");
-          if (null == var2) {
+          var2 = vf.a(95, "HELP_TEXT,2,5");
+          if (null != var2) {
+            aa.field_h[2][5] = re.a(18990, var2);
             break L127;
           } else {
-            aa.field_h[2][4] = re.a(18990, var2);
             break L127;
           }
         }
         L128: {
-          var2 = vf.a(95, "HELP_TEXT,2,5");
-          if (null != var2) {
-            aa.field_h[2][5] = re.a(param1 + 18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,2,6");
+          if (var2 != null) {
+            aa.field_h[2][6] = re.a(TorChallenge.a(0, 18990), var2);
             break L128;
           } else {
             break L128;
           }
         }
         L129: {
-          var2 = vf.a(95, "HELP_TEXT,2,6");
-          if (var2 != null) {
-            aa.field_h[2][6] = re.a(TorChallenge.a(param1, 18990), var2);
+          var2 = vf.a(95, "HELP_TEXT,3,0");
+          if (null == var2) {
             break L129;
           } else {
+            aa.field_h[3][0] = re.a(18990, var2);
             break L129;
           }
         }
         L130: {
-          var2 = vf.a(95, "HELP_TEXT,3,0");
-          if (null == var2) {
+          var2 = vf.a(95, "HELP_TEXT,3,1");
+          if (null != var2) {
+            aa.field_h[3][1] = re.a(18990, var2);
             break L130;
           } else {
-            aa.field_h[3][0] = re.a(18990, var2);
             break L130;
           }
         }
         L131: {
-          var2 = vf.a(95, "HELP_TEXT,3,1");
-          if (null != var2) {
-            aa.field_h[3][1] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,3,2");
+          if (var2 != null) {
+            aa.field_h[3][2] = re.a(18990, var2);
             break L131;
           } else {
             break L131;
           }
         }
         L132: {
-          var2 = vf.a(95, "HELP_TEXT,3,2");
+          var2 = vf.a(95, "HELP_TEXT,3,3");
           if (var2 != null) {
-            aa.field_h[3][2] = re.a(18990, var2);
+            aa.field_h[3][3] = re.a(TorChallenge.a(0, 18990), var2);
             break L132;
           } else {
             break L132;
           }
         }
         L133: {
-          var2 = vf.a(95, "HELP_TEXT,3,3");
-          if (var2 != null) {
-            aa.field_h[3][3] = re.a(TorChallenge.a(param1, 18990), var2);
+          var2 = vf.a(95, "HELP_TEXT,3,4");
+          if (var2 == null) {
             break L133;
           } else {
+            aa.field_h[3][4] = re.a(18990, var2);
             break L133;
           }
         }
         L134: {
-          var2 = vf.a(95, "HELP_TEXT,3,4");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,3,5");
+          if (null != var2) {
+            aa.field_h[3][5] = re.a(18990, var2);
             break L134;
           } else {
-            aa.field_h[3][4] = re.a(param1 + 18990, var2);
             break L134;
           }
         }
         L135: {
-          var2 = vf.a(95, "HELP_TEXT,3,5");
+          var2 = vf.a(95, "HELP_TEXT,3,6");
           if (null != var2) {
-            aa.field_h[3][5] = re.a(18990, var2);
+            aa.field_h[3][6] = re.a(18990, var2);
             break L135;
           } else {
             break L135;
           }
         }
         L136: {
-          var2 = vf.a(95, "HELP_TEXT,3,6");
-          if (null != var2) {
-            aa.field_h[3][6] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,3,7");
+          if (var2 == null) {
             break L136;
           } else {
+            aa.field_h[3][7] = re.a(18990, var2);
             break L136;
           }
         }
         L137: {
-          var2 = vf.a(95, "HELP_TEXT,3,7");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,3,8");
+          if (var2 != null) {
+            aa.field_h[3][8] = re.a(18990, var2);
             break L137;
           } else {
-            aa.field_h[3][7] = re.a(param1 + 18990, var2);
             break L137;
           }
         }
         L138: {
-          var2 = vf.a(95, "HELP_TEXT,3,8");
-          if (var2 != null) {
-            aa.field_h[3][8] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,3,9");
+          if (null != var2) {
+            aa.field_h[3][9] = re.a(18990, var2);
             break L138;
           } else {
             break L138;
           }
         }
         L139: {
-          var2 = vf.a(95, "HELP_TEXT,3,9");
-          if (null != var2) {
-            aa.field_h[3][9] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,3,10");
+          if (null == var2) {
             break L139;
           } else {
+            aa.field_h[3][10] = re.a(18990, var2);
             break L139;
           }
         }
         L140: {
-          var2 = vf.a(95, "HELP_TEXT,3,10");
-          if (null == var2) {
+          var2 = vf.a(95, "HELP_TEXT,3,11");
+          if (var2 != null) {
+            aa.field_h[3][11] = re.a(18990, var2);
             break L140;
           } else {
-            aa.field_h[3][10] = re.a(18990, var2);
             break L140;
           }
         }
         L141: {
-          var2 = vf.a(95, "HELP_TEXT,3,11");
-          if (var2 != null) {
-            aa.field_h[3][11] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,3,12");
+          if (null == var2) {
             break L141;
           } else {
+            aa.field_h[3][12] = re.a(18990, var2);
             break L141;
           }
         }
         L142: {
-          var2 = vf.a(95, "HELP_TEXT,3,12");
-          if (null == var2) {
+          var2 = vf.a(95, "HELP_TEXT,3,13");
+          if (var2 == null) {
             break L142;
           } else {
-            aa.field_h[3][12] = re.a(18990, var2);
+            aa.field_h[3][13] = re.a(18990, var2);
             break L142;
           }
         }
         L143: {
-          var2 = vf.a(95, "HELP_TEXT,3,13");
+          var2 = vf.a(95, "HELP_TEXT,4,0");
           if (var2 == null) {
             break L143;
           } else {
-            aa.field_h[3][13] = re.a(18990, var2);
+            aa.field_h[4][0] = re.a(18990, var2);
             break L143;
           }
         }
         L144: {
-          var2 = vf.a(95, "HELP_TEXT,4,0");
-          if (var2 == null) {
+          var2 = vf.a(95, "HELP_TEXT,4,1");
+          if (null != var2) {
+            aa.field_h[4][1] = re.a(18990, var2);
             break L144;
           } else {
-            aa.field_h[4][0] = re.a(18990, var2);
             break L144;
           }
         }
         L145: {
-          var2 = vf.a(95, "HELP_TEXT,4,1");
-          if (null != var2) {
-            aa.field_h[4][1] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,4,2");
+          if (null == var2) {
             break L145;
           } else {
+            aa.field_h[4][2] = re.a(18990, var2);
             break L145;
           }
         }
         L146: {
-          var2 = vf.a(95, "HELP_TEXT,4,2");
+          var2 = vf.a(95, "HELP_TEXT,4,3");
           if (null == var2) {
             break L146;
           } else {
-            aa.field_h[4][2] = re.a(18990, var2);
+            aa.field_h[4][3] = re.a(18990, var2);
             break L146;
           }
         }
         L147: {
-          var2 = vf.a(95, "HELP_TEXT,4,3");
-          if (null == var2) {
+          var2 = vf.a(95, "HELP_TEXT,4,4");
+          if (var2 != null) {
+            aa.field_h[4][4] = re.a(TorChallenge.a(0, 18990), var2);
             break L147;
           } else {
-            aa.field_h[4][3] = re.a(18990, var2);
             break L147;
           }
         }
         L148: {
-          var2 = vf.a(95, "HELP_TEXT,4,4");
-          if (var2 != null) {
-            aa.field_h[4][4] = re.a(TorChallenge.a(param1, 18990), var2);
+          var2 = vf.a(95, "HELP_TEXT,4,5");
+          if (null != var2) {
+            aa.field_h[4][5] = re.a(18990, var2);
             break L148;
           } else {
             break L148;
           }
         }
         L149: {
-          var2 = vf.a(95, "HELP_TEXT,4,5");
-          if (null != var2) {
-            aa.field_h[4][5] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,4,6");
+          if (var2 != null) {
+            aa.field_h[4][6] = re.a(18990, var2);
             break L149;
           } else {
             break L149;
           }
         }
         L150: {
-          var2 = vf.a(95, "HELP_TEXT,4,6");
-          if (var2 != null) {
-            aa.field_h[4][6] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT,4,7");
+          if (null == var2) {
             break L150;
           } else {
+            aa.field_h[4][7] = re.a(18990, var2);
             break L150;
           }
         }
         L151: {
-          var2 = vf.a(95, "HELP_TEXT,4,7");
+          var2 = vf.a(95, "HELP_TEXT,4,8");
           if (null == var2) {
             break L151;
           } else {
-            aa.field_h[4][7] = re.a(18990, var2);
+            aa.field_h[4][8] = re.a(18990, var2);
             break L151;
           }
         }
         L152: {
-          var2 = vf.a(95, "HELP_TEXT,4,8");
+          var2 = vf.a(95, "HELP_TEXT,5,0");
           if (null == var2) {
             break L152;
           } else {
-            aa.field_h[4][8] = re.a(18990, var2);
+            aa.field_h[5][0] = re.a(18990, var2);
             break L152;
           }
         }
         L153: {
-          var2 = vf.a(95, "HELP_TEXT,5,0");
+          var2 = vf.a(95, "HELP_TEXT_MISSING");
           if (null == var2) {
             break L153;
           } else {
-            aa.field_h[5][0] = re.a(param1 + 18990, var2);
+            wj.field_d = re.a(18990, var2);
             break L153;
           }
         }
         L154: {
-          var2 = vf.a(95, "HELP_TEXT_MISSING");
-          if (null == var2) {
+          var2 = vf.a(95, "LEVEL_EXIT_UNLOCKED");
+          if (var2 != null) {
+            lj.field_k = re.a(18990, var2);
             break L154;
           } else {
-            wj.field_d = re.a(18990, var2);
             break L154;
           }
         }
         L155: {
-          var2 = vf.a(95, "LEVEL_EXIT_UNLOCKED");
-          if (var2 != null) {
-            lj.field_k = re.a(18990, var2);
+          var2 = vf.a(95, "COLLECT_MORE_SEALS");
+          if (null == var2) {
             break L155;
           } else {
+            uf.field_p = re.a(18990, var2);
             break L155;
           }
         }
         L156: {
-          var2 = vf.a(95, "COLLECT_MORE_SEALS");
-          if (null == var2) {
+          var2 = vf.a(95, "INTRO_TEXT,0,0");
+          if (var2 == null) {
             break L156;
           } else {
-            uf.field_p = re.a(18990, var2);
+            dg.field_bb[0][0] = re.a(18990, var2);
             break L156;
           }
         }
         L157: {
-          var2 = vf.a(95, "INTRO_TEXT,0,0");
+          var2 = vf.a(95, "INTRO_TEXT,1,0");
           if (var2 == null) {
             break L157;
           } else {
-            dg.field_bb[0][0] = re.a(18990, var2);
+            dg.field_bb[1][0] = re.a(18990, var2);
             break L157;
           }
         }
         L158: {
-          var2 = vf.a(95, "INTRO_TEXT,1,0");
-          if (var2 == null) {
+          var2 = vf.a(95, "INTRO_TEXT,1,1");
+          if (var2 != null) {
+            dg.field_bb[1][1] = re.a(18990, var2);
             break L158;
           } else {
-            dg.field_bb[1][0] = re.a(18990, var2);
             break L158;
           }
         }
         L159: {
-          var2 = vf.a(95, "INTRO_TEXT,1,1");
+          var2 = vf.a(95, "INTRO_TEXT,2,0");
           if (var2 != null) {
-            dg.field_bb[1][1] = re.a(18990, var2);
+            dg.field_bb[2][0] = re.a(18990, var2);
             break L159;
           } else {
             break L159;
           }
         }
         L160: {
-          var2 = vf.a(95, "INTRO_TEXT,2,0");
-          if (var2 != null) {
-            dg.field_bb[2][0] = re.a(18990, var2);
+          var2 = vf.a(95, "INTRO_TEXT,2,1");
+          if (null != var2) {
+            dg.field_bb[2][1] = re.a(18990, var2);
             break L160;
           } else {
             break L160;
           }
         }
         L161: {
-          var2 = vf.a(95, "INTRO_TEXT,2,1");
-          if (null != var2) {
-            dg.field_bb[2][1] = re.a(18990, var2);
+          var2 = vf.a(95, "INTRO_TEXT,3,0");
+          if (var2 != null) {
+            dg.field_bb[3][0] = re.a(18990, var2);
             break L161;
           } else {
             break L161;
           }
         }
         L162: {
-          var2 = vf.a(95, "INTRO_TEXT,3,0");
-          if (var2 != null) {
-            dg.field_bb[3][0] = re.a(18990, var2);
+          var2 = vf.a(95, "INTRO_TEXT,3,1");
+          if (null == var2) {
             break L162;
           } else {
+            dg.field_bb[3][1] = re.a(18990, var2);
             break L162;
           }
         }
         L163: {
-          var2 = vf.a(95, "INTRO_TEXT,3,1");
-          if (null == var2) {
+          var2 = vf.a(95, "INTRO_TEXT,3,2");
+          if (var2 == null) {
             break L163;
           } else {
-            dg.field_bb[3][1] = re.a(18990, var2);
+            dg.field_bb[3][2] = re.a(TorChallenge.a(0, 18990), var2);
             break L163;
           }
         }
         L164: {
-          var2 = vf.a(95, "INTRO_TEXT,3,2");
-          if (var2 == null) {
+          var2 = vf.a(95, "INTRO_TEXT,4,0");
+          if (var2 != null) {
+            dg.field_bb[4][0] = re.a(18990, var2);
             break L164;
           } else {
-            dg.field_bb[3][2] = re.a(TorChallenge.a(param1, 18990), var2);
             break L164;
           }
         }
         L165: {
-          var2 = vf.a(95, "INTRO_TEXT,4,0");
+          var2 = vf.a(95, "GAME_COMPLETE_TEXT,0,0");
           if (var2 != null) {
-            dg.field_bb[4][0] = re.a(18990, var2);
+            vg.field_b[0][0] = re.a(18990, var2);
             break L165;
           } else {
             break L165;
           }
         }
         L166: {
-          var2 = vf.a(95, "GAME_COMPLETE_TEXT,0,0");
-          if (var2 != null) {
-            vg.field_b[0][0] = re.a(18990, var2);
+          var2 = vf.a(95, "GAME_COMPLETE_TEXT,0,1");
+          if (null == var2) {
             break L166;
           } else {
+            vg.field_b[0][1] = re.a(18990, var2);
             break L166;
           }
         }
         L167: {
-          var2 = vf.a(95, "GAME_COMPLETE_TEXT,0,1");
-          if (null == var2) {
+          var2 = vf.a(95, "GAME_COMPLETE_TEXT,1,0");
+          if (null != var2) {
+            vg.field_b[1][0] = re.a(18990, var2);
             break L167;
           } else {
-            vg.field_b[0][1] = re.a(param1 + 18990, var2);
             break L167;
           }
         }
         L168: {
-          var2 = vf.a(95, "GAME_COMPLETE_TEXT,1,0");
-          if (null != var2) {
-            vg.field_b[1][0] = re.a(18990, var2);
+          var2 = vf.a(95, "GAME_COMPLETE_TEXT,1,1");
+          if (var2 != null) {
+            vg.field_b[1][1] = re.a(18990, var2);
             break L168;
           } else {
             break L168;
           }
         }
         L169: {
-          var2 = vf.a(95, "GAME_COMPLETE_TEXT,1,1");
-          if (var2 != null) {
-            vg.field_b[1][1] = re.a(18990, var2);
+          var2 = vf.a(95, "HELP_TEXT_ENTER_DOOR");
+          if (var2 == null) {
             break L169;
           } else {
+            k.field_h = re.a(18990, var2);
             break L169;
           }
         }
         L170: {
-          var2 = vf.a(95, "HELP_TEXT_ENTER_DOOR");
-          if (var2 == null) {
+          var2 = vf.a(95, "OPTION_TEXT_MISSING_ERROR");
+          if (null == var2) {
             break L170;
           } else {
-            k.field_h = re.a(18990, var2);
+            oh.field_a = re.a(18990, var2);
             break L170;
           }
         }
         L171: {
-          var2 = vf.a(95, "OPTION_TEXT_MISSING_ERROR");
-          if (null == var2) {
+          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,0,0");
+          if (null != var2) {
+            p.field_c[0][0] = re.a(18990, var2);
             break L171;
           } else {
-            oh.field_a = re.a(18990, var2);
             break L171;
           }
         }
         L172: {
-          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,0,0");
-          if (null != var2) {
-            p.field_c[0][0] = re.a(18990, var2);
+          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,0,1");
+          if (null == var2) {
             break L172;
           } else {
+            p.field_c[0][1] = re.a(18990, var2);
             break L172;
           }
         }
         L173: {
-          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,0,1");
-          if (null == var2) {
+          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,1,0");
+          if (var2 != null) {
+            p.field_c[1][0] = re.a(18990, var2);
             break L173;
           } else {
-            p.field_c[0][1] = re.a(18990, var2);
             break L173;
           }
         }
         L174: {
-          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,1,0");
-          if (var2 != null) {
-            p.field_c[1][0] = re.a(18990, var2);
+          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,1,1");
+          if (var2 == null) {
             break L174;
           } else {
+            p.field_c[1][1] = re.a(18990, var2);
             break L174;
           }
         }
         L175: {
-          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,1,1");
-          if (var2 == null) {
+          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,2,0");
+          if (null != var2) {
+            p.field_c[2][0] = re.a(18990, var2);
             break L175;
           } else {
-            p.field_c[1][1] = re.a(18990, var2);
             break L175;
           }
         }
         L176: {
-          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,2,0");
-          if (null != var2) {
-            p.field_c[2][0] = re.a(18990, var2);
+          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,2,1");
+          if (var2 != null) {
+            p.field_c[2][1] = re.a(18990, var2);
             break L176;
           } else {
             break L176;
           }
         }
         L177: {
-          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,2,1");
-          if (var2 != null) {
-            p.field_c[2][1] = re.a(18990, var2);
+          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,3,0");
+          if (var2 == null) {
             break L177;
           } else {
+            p.field_c[3][0] = re.a(18990, var2);
             break L177;
           }
         }
         L178: {
-          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,3,0");
-          if (var2 == null) {
+          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,3,1");
+          if (null == var2) {
             break L178;
           } else {
-            p.field_c[3][0] = re.a(18990, var2);
+            p.field_c[3][1] = re.a(18990, var2);
             break L178;
           }
         }
         L179: {
-          var2 = vf.a(95, "PLAYER_CONTROL_INSTRUCTIONS,3,1");
-          if (null == var2) {
+          var2 = vf.a(95, "NOT_AVAILABLE");
+          if (var2 != null) {
+            di.field_B = re.a(18990, var2);
             break L179;
           } else {
-            p.field_c[3][1] = re.a(18990, var2);
             break L179;
           }
         }
         L180: {
-          var2 = vf.a(95, "NOT_AVAILABLE");
-          if (var2 != null) {
-            di.field_B = re.a(18990, var2);
+          var2 = vf.a(95, "INTERFACE_INSTRUCTIONS,0");
+          if (var2 == null) {
             break L180;
           } else {
+            sl.field_d[0] = re.a(18990, var2);
             break L180;
           }
         }
         L181: {
-          var2 = vf.a(95, "INTERFACE_INSTRUCTIONS,0");
-          if (var2 == null) {
+          var2 = vf.a(95, "INTERFACE_INSTRUCTIONS,1");
+          if (null == var2) {
             break L181;
           } else {
-            sl.field_d[0] = re.a(18990, var2);
+            sl.field_d[1] = re.a(18990, var2);
             break L181;
           }
         }
         L182: {
-          var2 = vf.a(95, "INTERFACE_INSTRUCTIONS,1");
+          var2 = vf.a(95, "INTERFACE_INSTRUCTIONS,2");
           if (null == var2) {
             break L182;
           } else {
-            sl.field_d[1] = re.a(param1 + 18990, var2);
+            sl.field_d[2] = re.a(18990, var2);
             break L182;
           }
         }
         L183: {
-          var2 = vf.a(95, "INTERFACE_INSTRUCTIONS,2");
-          if (null == var2) {
+          var2 = vf.a(95, "INTERFACE_INSTRUCTIONS,3");
+          if (var2 == null) {
             break L183;
           } else {
-            sl.field_d[2] = re.a(18990, var2);
+            sl.field_d[3] = re.a(TorChallenge.a(0, 18990), var2);
             break L183;
           }
         }
         L184: {
-          var2 = vf.a(95, "INTERFACE_INSTRUCTIONS,3");
-          if (var2 == null) {
+          var2 = vf.a(95, "HEALTH_POTION_MESSAGE");
+          if (var2 != null) {
+            df.field_P = re.a(18990, var2);
             break L184;
           } else {
-            sl.field_d[3] = re.a(TorChallenge.a(param1, 18990), var2);
             break L184;
           }
         }
         L185: {
-          var2 = vf.a(95, "HEALTH_POTION_MESSAGE");
-          if (var2 != null) {
-            df.field_P = re.a(18990, var2);
+          var2 = vf.a(95, "keycode_attack");
+          if (null == var2) {
             break L185;
           } else {
+            of.field_d = 255 & var2[0];
             break L185;
           }
         }
         L186: {
-          var2 = vf.a(95, "keycode_attack");
-          if (null == var2) {
-            break L186;
-          } else {
-            of.field_d = 255 & var2[0];
-            break L186;
-          }
-        }
-        L187: {
           var2 = vf.a(95, "keycode_jump");
           dj.field_cb = null;
           if (null != var2) {
             ll.field_a = 255 & var2[0];
-            break L187;
+            break L186;
           } else {
-            break L187;
+            break L186;
           }
         }
-        L188: {
+        L187: {
           if (ug.field_k == 0) {
-            break L188;
+            break L187;
           } else {
-            L189: {
+            L188: {
               if (var3 == 0) {
-                stackOut_460_0 = 1;
-                stackIn_461_0 = stackOut_460_0;
-                break L189;
+                stackOut_459_0 = 1;
+                stackIn_460_0 = stackOut_459_0;
+                break L188;
               } else {
-                stackOut_459_0 = 0;
-                stackIn_461_0 = stackOut_459_0;
-                break L189;
+                stackOut_458_0 = 0;
+                stackIn_460_0 = stackOut_458_0;
+                break L188;
               }
             }
-            TorChallenge.field_F = stackIn_461_0 != 0;
-            break L188;
+            TorChallenge.field_F = stackIn_460_0 != 0;
+            break L187;
           }
         }
     }
 
-    public static void d(byte param0) {
-        field_p = null;
-        field_m = null;
-        if (param0 != 102) {
-            return;
-        }
+    public static void d() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
+            field_p = null;
+            field_m = null;
             field_s = null;
             field_t = null;
             field_w = null;
-        } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "kc.E(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var1, "kc.E(" + 102 + 41);
         }
     }
 
@@ -1978,14 +1975,14 @@ final class kc extends ma {
         return stackIn_12_0;
     }
 
-    final static void f(int param0) {
+    final static void f() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             L1: {
               L2: {
-                if (gj.field_c == param0) {
+                if (gj.field_c == 10) {
                   break L2;
                 } else {
                   if (mf.a((byte) 91)) {
@@ -1995,7 +1992,8 @@ final class kc extends ma {
                   }
                 }
               }
-              vl.b((byte) 91);
+              int discarded$2 = 91;
+              vl.b();
               gj.field_c = 11;
               break L1;
             }
@@ -2005,7 +2003,7 @@ final class kc extends ma {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "kc.L(" + param0 + 41);
+          throw oj.a((Throwable) (Object) var1, "kc.L(" + 10 + 41);
         }
     }
 
@@ -2108,8 +2106,8 @@ final class kc extends ma {
     }
 
     final static void a(int param0, int[] param1, byte param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
         int[] var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2155,12 +2153,7 @@ final class kc extends ma {
                     }
                   }
                 }
-                if (param2 == -39) {
-                  break L2;
-                } else {
-                  field_p = null;
-                  break L2;
-                }
+                break L2;
               }
               break L0;
             }
@@ -2168,8 +2161,8 @@ final class kc extends ma {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            runtimeException = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) runtimeException;
+            var5_ref = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var5_ref;
             stackOut_10_1 = new StringBuilder().append("kc.G(").append(param0).append(44);
             stackIn_13_0 = stackOut_10_0;
             stackIn_13_1 = stackOut_10_1;
@@ -2193,33 +2186,26 @@ final class kc extends ma {
               break L4;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw oj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + -39 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    final static qa g(int param0) {
+    final static qa g() {
         RuntimeException var1 = null;
-        Object stackIn_2_0 = null;
         qa stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         qa stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
         try {
           L0: {
-            if (param0 == 2) {
-              stackOut_3_0 = new qa(il.f(param0 ^ -24042), ah.a((byte) -63));
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (qa) (Object) stackIn_2_0;
-            }
+            int discarded$1 = -63;
+            stackOut_3_0 = new qa(il.f(-24044), ah.a());
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "kc.A(" + param0 + 41);
+          throw oj.a((Throwable) (Object) var1, "kc.A(" + 2 + 41);
         }
         return stackIn_4_0;
     }

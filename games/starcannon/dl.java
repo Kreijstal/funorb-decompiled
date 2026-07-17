@@ -31,11 +31,8 @@ final class dl {
         }
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(boolean param0, boolean param1, boolean param2) {
         int var4 = 0;
-        if (param0) {
-            return null;
-        }
         if (!(!param2)) {
             var4 += 4;
         }
@@ -232,14 +229,11 @@ final class dl {
 
     final static String b(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
+        if (!(!param3)) {
+            var4 += 4;
+        }
         if (!(!param2)) {
             var4 += 2;
-        }
-        if (param0) {
-            var4++;
-        }
-        if (!param1) {
-            return null;
         }
         return lb.field_d[var4];
     }
@@ -272,34 +266,30 @@ final class dl {
         String stackOut_9_2 = null;
         try {
           L0: {
-            if (param0 == -12) {
-              L1: {
-                if (sb.field_g != null) {
-                  sb.field_g.field_H.a(param0 ^ -1897, param1);
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L1: {
+              if (sb.field_g != null) {
+                sb.field_g.field_H.a(1891, param1);
+                break L1;
+              } else {
+                break L1;
               }
-              L2: {
-                if (n.field_l == null) {
-                  break L2;
-                } else {
-                  n.field_l.field_z.a(1891, param1);
-                  break L2;
-                }
-              }
-              break L0;
-            } else {
-              return;
             }
+            L2: {
+              if (n.field_l == null) {
+                break L2;
+              } else {
+                n.field_l.field_z.a(1891, param1);
+                break L2;
+              }
+            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("dl.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("dl.C(").append(-12).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

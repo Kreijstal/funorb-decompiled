@@ -47,7 +47,7 @@ final class jp {
     short[] field_a;
     short[] field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_n = null;
         field_R = null;
         field_u = null;
@@ -160,14 +160,6 @@ final class jp {
             if (param1 == 402) {
               break L0;
             } else {
-              L1: {
-                if (param0) {
-                  break L1;
-                } else {
-                  char discarded$2 = jp.a(true, 'f');
-                  break L1;
-                }
-              }
               return Character.toTitleCase(param1);
             }
           }
@@ -175,7 +167,7 @@ final class jp {
         return param1;
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         ((jp) this).field_i = false;
     }
 
@@ -188,7 +180,8 @@ final class jp {
             ((jp) this).field_m[var6] = (short)(((jp) this).field_m[var6] * param3 / param4);
         }
         int var7 = -7 / ((-70 - param1) / 45);
-        this.b(true);
+        int discarded$0 = 1;
+        this.b();
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -200,7 +193,8 @@ final class jp {
             ((jp) this).field_r[var6] = (short)(((jp) this).field_r[var6] + param0);
             ((jp) this).field_m[var6] = (short)(((jp) this).field_m[var6] + param1);
         }
-        this.b(true);
+        int discarded$0 = 1;
+        this.b();
     }
 
     jp() {

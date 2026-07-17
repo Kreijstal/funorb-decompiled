@@ -19,7 +19,7 @@ final class ci {
         }
     }
 
-    final static String a(String param0, byte param1) {
+    final static String a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;

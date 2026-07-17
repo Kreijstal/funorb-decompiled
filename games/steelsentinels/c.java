@@ -10,7 +10,7 @@ final class c extends ck {
     static String[] field_s;
     static int field_u;
 
-    final static int a(boolean param0, int param1) {
+    final static int a(boolean param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -341,7 +341,7 @@ final class c extends ck {
         return stackIn_19_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
         field_r = null;

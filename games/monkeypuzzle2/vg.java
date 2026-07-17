@@ -11,6 +11,9 @@ final class vg extends jj {
     static le field_M;
 
     final static boolean c(boolean param0) {
+        if (param0) {
+            return false;
+        }
         if (k.field_g < 10) {
             return false;
         }
@@ -108,7 +111,8 @@ final class vg extends jj {
     }
 
     vg(kf param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (ml) (Object) bk.a(true));
+        super(param1, (ml) (Object) bk.a());
+        int discarded$0 = 1;
         try {
             ((vg) this).field_N = param1;
             ((vg) this).field_H = param0;
@@ -508,7 +512,7 @@ final class vg extends jj {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (ol.field_e <= 32) {
             w.a(-1, 0);
             return;

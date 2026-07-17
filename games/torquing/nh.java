@@ -12,7 +12,7 @@ final class nh extends q {
     static String field_o;
     int[] field_r;
 
-    final static void a(vh param0, int param1, fj param2, byte param3) {
+    final static void a(vh param0, int param1, fj param2) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;
@@ -85,7 +85,7 @@ final class nh extends q {
                 ((pm) var19).field_u = new rc[((pm) var19).field_l];
                 ((pm) var19).field_q = new int[((pm) var19).field_l];
                 ((pm) var19).field_o = new byte[((pm) var19).field_l][][];
-                var6 = 31 / ((param3 - -71) / 33);
+                var6 = -31;
                 var5 = 0;
                 L1: while (true) {
                   if (var5 >= ((pm) var19).field_l) {
@@ -272,7 +272,7 @@ final class nh extends q {
                   break L17;
                 }
               }
-              throw rb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + param3 + 41);
+              throw rb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + -126 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -289,7 +289,7 @@ final class nh extends q {
         field_j = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return null != ki.field_D && ki.field_D.c((byte) -19);
     }
 

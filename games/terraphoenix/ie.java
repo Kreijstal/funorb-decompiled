@@ -31,7 +31,7 @@ final class ie {
         try {
           L0: {
             var3_int = 1 / ((param0 - -10) / 62);
-            stackOut_0_0 = wl.a(true, param2, false, param1);
+            stackOut_0_0 = wl.a(true, param2, false, 16);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -40,7 +40,7 @@ final class ie {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("ie.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("ie.C(").append(param0).append(44).append(16).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -68,7 +68,7 @@ final class ie {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

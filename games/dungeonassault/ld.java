@@ -15,7 +15,7 @@ final class ld {
     static String field_h;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_h = null;
         field_d = null;

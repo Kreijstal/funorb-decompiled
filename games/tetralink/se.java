@@ -8,7 +8,7 @@ abstract class se {
 
     abstract void a(int param0, java.awt.Component param1);
 
-    final static void a(boolean param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -23,36 +23,30 @@ abstract class se {
         var6 = TetraLink.field_J;
         try {
           L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                field_c = null;
-                break L1;
-              }
-            }
             var9 = kb.field_q;
             var2 = var9.d((byte) -99);
             if (0 == var2) {
               var8 = (km) (Object) ph.field_F.c(false);
               if (var8 == null) {
-                mk.a(false);
+                int discarded$4 = 0;
+                mk.a();
                 return;
               } else {
-                L2: {
+                L1: {
                   var4 = var9.d((byte) -99);
                   if (0 == var4) {
                     var5 = null;
-                    break L2;
+                    break L1;
                   } else {
                     var13 = new byte[var4];
                     var9.b(var4, 0, var13, 126);
-                    break L2;
+                    break L1;
                   }
                 }
                 var9.field_t = var9.field_t + 4;
                 if (!var9.h(4)) {
-                  mk.a(param0);
+                  int discarded$5 = 0;
+                  mk.a();
                   return;
                 } else {
                   var8.b(false);
@@ -63,30 +57,32 @@ abstract class se {
               if (var2 == 1) {
                 var3 = var9.f(-122);
                 var4_ref_hc = (hc) (Object) nc.field_f.c(false);
-                L3: while (true) {
-                  L4: {
+                L2: while (true) {
+                  L3: {
                     if (var4_ref_hc == null) {
-                      break L4;
+                      break L3;
                     } else {
                       if (var4_ref_hc.field_t == var3) {
-                        break L4;
+                        break L3;
                       } else {
                         var4_ref_hc = (hc) (Object) nc.field_f.a((byte) -70);
-                        continue L3;
+                        continue L2;
                       }
                     }
                   }
                   if (var4_ref_hc == null) {
-                    mk.a(false);
+                    int discarded$6 = 0;
+                    mk.a();
                     return;
                   } else {
-                    var4_ref_hc.b(param0);
+                    var4_ref_hc.b(false);
                     return;
                   }
                 }
               } else {
                 fk.a(-83, (Throwable) null, "A1: " + hc.a(false));
-                mk.a(false);
+                int discarded$7 = 0;
+                mk.a();
                 return;
               }
             }
@@ -94,13 +90,13 @@ abstract class se {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "se.E(" + param0 + 41);
+          throw oi.a((Throwable) (Object) var1, "se.E(" + 0 + 41);
         }
     }
 
     abstract void b(int param0, java.awt.Component param1);
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
     }

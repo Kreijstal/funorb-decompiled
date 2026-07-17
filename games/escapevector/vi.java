@@ -10,17 +10,13 @@ final class vi {
     static int field_a;
     static hl field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
-        if (param0 < 115) {
-            Object var2 = null;
-            vi.a((gi) null, 47);
-        }
         field_c = null;
         field_e = null;
     }
 
-    final static void a(gi param0, int param1) {
+    final static void a(gi param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -45,70 +41,66 @@ final class vi {
         var5 = EscapeVector.field_A;
         try {
           L0: {
-            if (param1 == 3) {
-              var2_int = 0;
-              L1: while (true) {
-                if (var2_int >= 3) {
-                  var2_int = 0;
-                  L2: while (true) {
-                    if (var2_int >= hf.field_b) {
-                      int dupTemp$4 = param0.b(108);
-                      mf.field_l[dupTemp$4] = mf.field_l[dupTemp$4] + 1;
-                      var2_int = 0;
-                      var3 = 0;
-                      L3: while (true) {
-                        if (hf.field_b <= var3) {
-                          hf.field_b = var2_int;
-                          int fieldTemp$5 = hf.field_b;
-                          hf.field_b = hf.field_b + 1;
-                          qm.field_d[fieldTemp$5] = param0;
-                          break L0;
-                        } else {
-                          L4: {
-                            L5: {
-                              if (qm.field_d[var3].field_a == param0.field_a) {
-                                var4 = qm.field_d[var3].b(47);
-                                if (mf.field_l[var4] <= mn.field_k) {
-                                  break L5;
-                                } else {
-                                  mf.field_l[var4] = mf.field_l[var4] - 1;
-                                  break L4;
-                                }
-                              } else {
+            var2_int = 0;
+            L1: while (true) {
+              if (var2_int >= 3) {
+                var2_int = 0;
+                L2: while (true) {
+                  if (var2_int >= hf.field_b) {
+                    int dupTemp$4 = param0.b(108);
+                    mf.field_l[dupTemp$4] = mf.field_l[dupTemp$4] + 1;
+                    var2_int = 0;
+                    var3 = 0;
+                    L3: while (true) {
+                      if (hf.field_b <= var3) {
+                        hf.field_b = var2_int;
+                        int fieldTemp$5 = hf.field_b;
+                        hf.field_b = hf.field_b + 1;
+                        qm.field_d[fieldTemp$5] = param0;
+                        break L0;
+                      } else {
+                        L4: {
+                          L5: {
+                            if (qm.field_d[var3].field_a == param0.field_a) {
+                              var4 = qm.field_d[var3].b(47);
+                              if (mf.field_l[var4] <= mn.field_k) {
                                 break L5;
+                              } else {
+                                mf.field_l[var4] = mf.field_l[var4] - 1;
+                                break L4;
                               }
+                            } else {
+                              break L5;
                             }
-                            int incrementValue$6 = var2_int;
-                            var2_int++;
-                            qm.field_d[incrementValue$6] = qm.field_d[var3];
-                            break L4;
                           }
-                          var3++;
-                          continue L3;
+                          int incrementValue$6 = var2_int;
+                          var2_int++;
+                          qm.field_d[incrementValue$6] = qm.field_d[var3];
+                          break L4;
                         }
+                        var3++;
+                        continue L3;
                       }
-                    } else {
-                      L6: {
-                        if (qm.field_d[var2_int].field_a != param0.field_a) {
-                          break L6;
-                        } else {
-                          int dupTemp$7 = qm.field_d[var2_int].b(param1 ^ 83);
-                          mf.field_l[dupTemp$7] = mf.field_l[dupTemp$7] + 1;
-                          break L6;
-                        }
-                      }
-                      var2_int++;
-                      continue L2;
                     }
+                  } else {
+                    L6: {
+                      if (qm.field_d[var2_int].field_a != param0.field_a) {
+                        break L6;
+                      } else {
+                        int dupTemp$7 = qm.field_d[var2_int].b(80);
+                        mf.field_l[dupTemp$7] = mf.field_l[dupTemp$7] + 1;
+                        break L6;
+                      }
+                    }
+                    var2_int++;
+                    continue L2;
                   }
-                } else {
-                  mf.field_l[var2_int] = 0;
-                  var2_int++;
-                  continue L1;
                 }
+              } else {
+                mf.field_l[var2_int] = 0;
+                var2_int++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -139,11 +131,11 @@ final class vi {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 3 + 41);
         }
     }
 
-    final static void a(int param0, String param1, vl param2, wl param3, boolean param4) {
+    final static void a(int param0, String param1, vl param2, wl param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

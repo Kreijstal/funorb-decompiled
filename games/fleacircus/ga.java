@@ -54,7 +54,8 @@ final class ga extends r {
               }
               L2: {
                 var5 = (CharSequence) (Object) param1;
-                var3_int = pl.a(var5, -9816);
+                int discarded$2 = -9816;
+                var3_int = pl.a(var5);
                 if (var3_int <= 0) {
                   break L2;
                 } else {

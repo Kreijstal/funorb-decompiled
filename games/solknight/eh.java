@@ -16,19 +16,16 @@ final class eh {
         vg.field_P = var2_int << 15 & 2064384;
         vg.field_P = vg.field_P + (param1.j(255) << 7);
         var2_int = param1.j(255);
-        if (param0 <= 51) {
-            return;
-        }
         try {
             fh.field_a = var2_int << 16 & 65536;
             vg.field_P = vg.field_P + (var2_int >> 1);
             fh.field_a = fh.field_a + param1.i(40);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "eh.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "eh.B(" + 68 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

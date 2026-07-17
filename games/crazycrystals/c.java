@@ -132,7 +132,7 @@ final class c extends bo implements Cloneable {
             if (null != param1.field_h) {
               L1: {
                 L2: {
-                  if (~param1.field_d != param0) {
+                  if (param1.field_d != 0) {
                     break L2;
                   } else {
                     if (param1.field_l == 0) {
@@ -175,7 +175,8 @@ final class c extends bo implements Cloneable {
                   break L5;
                 }
               }
-              kj.a(param1, (byte) 36);
+              int discarded$2 = 36;
+              kj.a(param1);
               break L0;
             } else {
               return;
@@ -186,7 +187,7 @@ final class c extends bo implements Cloneable {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2;
-            stackOut_17_1 = new StringBuilder().append("c.I(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("c.I(").append(-1).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -213,17 +214,14 @@ final class c extends bo implements Cloneable {
         }
     }
 
-    final static lb b(boolean param0) {
+    final static lb b() {
         if (sa.field_lb == null) {
             sa.field_lb = new lb(ba.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, ba.field_i.field_o, -1, 2147483647, true);
         }
         return sa.field_lb;
     }
 
-    public static void g(int param0) {
-        if (param0 != -1) {
-            return;
-        }
+    public static void g() {
         field_q = null;
     }
 

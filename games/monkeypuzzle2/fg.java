@@ -10,17 +10,18 @@ abstract class fg {
         var4 = ((fg) this).a(-43);
         if (var4 <= 0L) {
           if (param1 != -128) {
-            int discarded$4 = ((fg) this).a(31L, -83);
+            int discarded$10 = ((fg) this).a(31L, -83);
             return ((fg) this).a(param0, (byte) 37);
           } else {
             return ((fg) this).a(param0, (byte) 37);
           }
         } else {
-          em.a(var4, false);
+          int discarded$11 = 0;
+          em.a(var4);
           if (param1 == -128) {
             return ((fg) this).a(param0, (byte) 37);
           } else {
-            int discarded$5 = ((fg) this).a(31L, -83);
+            int discarded$12 = ((fg) this).a(31L, -83);
             return ((fg) this).a(param0, (byte) 37);
           }
         }

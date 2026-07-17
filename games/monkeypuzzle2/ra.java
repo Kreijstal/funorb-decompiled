@@ -40,7 +40,9 @@ final class ra extends pc {
         try {
           L0: {
             var2_int = 71 % ((-67 - param1) / 44);
-            stackOut_0_0 = pd.a(65, param0, 10, true);
+            int discarded$4 = 1;
+            int discarded$5 = 10;
+            stackOut_0_0 = pd.a(65, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

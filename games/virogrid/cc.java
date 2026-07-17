@@ -7,7 +7,7 @@ class cc extends aj {
     static String[] field_v;
     static km field_w;
 
-    final static lc[] a(byte param0) {
+    final static lc[] a() {
         return new lc[]{pm.field_q, dn.field_d, db.field_z, pn.field_z, gf.field_z, na.field_Fb, af.field_l, ud.field_c, lm.field_i, ji.field_b, dk.field_s, oj.field_Xb, vl.field_f, oe.field_e};
     }
 
@@ -80,10 +80,8 @@ class cc extends aj {
     }
 
     final static int a(int param0, int param1, boolean param2, boolean param3) {
-        if (param2) {
-            return 38;
-        }
-        return sn.h(3938);
+        int discarded$0 = 3938;
+        return sn.h();
     }
 
     cc(int param0) {
@@ -342,7 +340,7 @@ class cc extends aj {
             }
             L10: {
               var5 = stackIn_26_0;
-              param3.a(0, param1.field_Pb.length, param2, param1.field_Pb);
+              param3.a(0, param1.field_Pb.length, true, param1.field_Pb);
               if ((2 & var4_int) == 0) {
                 stackOut_28_0 = 0;
                 stackIn_29_0 = stackOut_28_0;
@@ -416,7 +414,7 @@ class cc extends aj {
           }
           L14: {
             stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-            stackOut_41_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_41_2).append(44).append(param2).append(44);
+            stackOut_41_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_41_2).append(44).append(1).append(44);
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;

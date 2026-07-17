@@ -53,7 +53,7 @@ final class bhb extends ksa implements tv {
         this(param0, param1.field_h, param1.field_e);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
     }
 

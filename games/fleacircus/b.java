@@ -8,10 +8,7 @@ final class b {
     static String field_c;
     static int[] field_b;
 
-    final static int a(int param0) {
-        if (param0 != 14638) {
-            return -31;
-        }
+    final static int a() {
         return ug.field_c;
     }
 

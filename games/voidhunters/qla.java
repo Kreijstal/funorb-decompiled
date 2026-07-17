@@ -15,7 +15,7 @@ final class qla extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(faa param0, byte param1, boolean[] param2, int param3) {
+    final static void a(faa param0, byte param1, boolean[] param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -59,7 +59,7 @@ final class qla extends rqa {
                 break L1;
               } else {
                 if (param2.length != 0) {
-                  var4_int = 1 % ((81 - param1) / 33);
+                  var4_int = 1;
                   param0.a(-632, param2.length, 8);
                   var5 = 0;
                   L2: while (true) {
@@ -109,7 +109,7 @@ final class qla extends rqa {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(-15).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

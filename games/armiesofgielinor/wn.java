@@ -62,14 +62,15 @@ final class wn extends ih {
             } else {
               L1: {
                 var3_int = param0.length();
-                if (var3_int < param1) {
+                if (var3_int < 1) {
                   break L1;
                 } else {
                   if (var3_int > 12) {
                     break L1;
                   } else {
                     L2: {
-                      var4 = k.a(param0, false);
+                      int discarded$2 = 0;
+                      var4 = k.a(param0);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -172,7 +173,7 @@ final class wn extends ih {
               break L7;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + 1 + 44 + param2 + 41);
         }
         return stackIn_34_0 != 0;
     }
@@ -194,10 +195,11 @@ final class wn extends ih {
         ((wn) this).field_fb = new int[16];
         ((wn) this).field_ib = 256;
         ((wn) this).field_S = new int[16];
-        this.k(3933);
+        int discarded$0 = 3933;
+        this.k();
     }
 
-    final static void a(int param0, wk[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, wk[] param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -205,22 +207,22 @@ final class wn extends ih {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -229,32 +231,24 @@ final class wn extends ih {
                 break L1;
               } else {
                 if (param2 > 0) {
-                  L2: {
-                    var6_int = param1[0].field_A;
-                    var7 = param1[2].field_A;
-                    var8 = param1[1].field_A;
-                    param1[0].b(param3, param4, param0);
-                    param1[2].b(-var7 + param2 + param3, param4, param0);
-                    qn.b(an.field_H);
-                    qn.b(var6_int + param3, param4, param3 + param2 + -var7, param1[1].field_x + param4);
-                    if (param5 == -3225) {
-                      break L2;
-                    } else {
-                      wn.a(true);
-                      break L2;
-                    }
-                  }
+                  var6_int = param1[0].field_A;
+                  var7 = param1[2].field_A;
+                  var8 = param1[1].field_A;
+                  param1[0].b(param3, param4, param0);
+                  param1[2].b(-var7 + param2 + param3, param4, param0);
+                  qn.b(an.field_H);
+                  qn.b(var6_int + param3, param4, param3 + param2 + -var7, param1[1].field_x + param4);
                   var9 = var6_int + param3;
                   var10 = -var7 + param2 + param3;
                   param3 = var9;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (var10 <= param3) {
                       qn.a(an.field_H);
                       break L0;
                     } else {
                       param1[1].b(param3, param4, param0);
                       param3 = param3 + var8;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 } else {
@@ -266,33 +260,33 @@ final class wn extends ih {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var6;
-            stackOut_11_1 = new StringBuilder().append("wn.VA(").append(param0).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_1 = new StringBuilder().append("wn.VA(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L4;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L4;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + -3225 + 41);
         }
     }
 
@@ -453,7 +447,7 @@ final class wn extends ih {
         }
     }
 
-    private final synchronized void a(int param0, vk param1, int param2) {
+    private final synchronized void a(int param0, vk param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -526,9 +520,6 @@ final class wn extends ih {
             ((wn) this).field_hb = new vk();
         }
         ((wn) this).field_hb.field_a[param1] = param3;
-        if (param2 >= -126) {
-            ((wn) this).a(82, -42, (byte) 31);
-        }
         int var5 = ((wn) this).field_S[param1];
         int var6 = (((wn) this).field_hb.field_a[param1] << 12) + -var5;
         int var7 = 0;
@@ -549,7 +540,8 @@ final class wn extends ih {
         ((wn) this).field_ib = 256;
         ((wn) this).field_S = new int[16];
         try {
-            this.k(3933);
+            int discarded$0 = 3933;
+            this.k();
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "wn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
@@ -573,7 +565,8 @@ final class wn extends ih {
             if (param1 > -78) {
                 ((wn) this).field_hb = null;
             }
-            this.k(3933);
+            int discarded$0 = 3933;
+            this.k();
             super.a(param0, (byte) -110, param2, param3);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "wn.EA(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
@@ -585,13 +578,14 @@ final class wn extends ih {
         try {
             var4_int = param1 * rc.field_d / 1000;
             int var5 = 58 / ((9 - param0) / 36);
-            this.a(var4_int, param2, -20751);
+            int discarded$0 = -20751;
+            this.a(var4_int, param2);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "wn.BB(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void k(int param0) {
+    private final void k() {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         for (var2 = 0; var2 < 16; var2++) {

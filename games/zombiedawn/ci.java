@@ -10,12 +10,13 @@ final class ci {
     static String field_a;
     static int field_c;
 
-    final static int a(int param0) {
+    final static int a() {
         ep.field_l.a(true);
         if (tf.field_c.c(-21)) {
             return 0;
         }
-        return jo.w(79);
+        int discarded$0 = 79;
+        return jo.w();
     }
 
     public static void a(boolean param0) {

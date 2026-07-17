@@ -116,7 +116,7 @@ final class kj {
             }
             L5: {
               var7 = stackIn_12_0;
-              var9 = 72 / ((param0 - -12) / 62);
+              var9 = -72;
               if (0 == (var3 & 16)) {
                 stackOut_14_0 = 0;
                 stackIn_15_0 = stackOut_14_0;
@@ -161,7 +161,7 @@ final class kj {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("kj.A(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("kj.A(").append(-85).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;

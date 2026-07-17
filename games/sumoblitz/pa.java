@@ -31,11 +31,11 @@ final class pa {
         }
     }
 
-    final synchronized static void b(byte param0) {
+    final synchronized static void b() {
         field_a = field_a + 1;
     }
 
-    final synchronized static void a(e param0, byte param1) {
+    final synchronized static void a(e param0) {
         ui var2 = null;
         if (field_c) {
           return;
@@ -55,7 +55,7 @@ final class pa {
         }
     }
 
-    final synchronized static void a(byte param0) {
+    final synchronized static void a() {
         field_a = field_a - 1;
         if (0 != field_a) {
             return;

@@ -18,7 +18,7 @@ final class nj {
               if (b.a(0)) {
                 return true;
               } else {
-                if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
+                if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
                   return true;
                 } else {
                   return false;
@@ -29,7 +29,7 @@ final class nj {
               if (b.a(0)) {
                 return true;
               } else {
-                if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
+                if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
                   return true;
                 } else {
                   return false;
@@ -42,7 +42,7 @@ final class nj {
                 if (b.a(0)) {
                   return true;
                 } else {
-                  if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
+                  if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
                     return true;
                   } else {
                     return false;
@@ -53,7 +53,7 @@ final class nj {
                 if (b.a(0)) {
                   return true;
                 } else {
-                  if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
+                  if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
                     return true;
                   } else {
                     return false;
@@ -62,7 +62,8 @@ final class nj {
               }
             } else {
               mm.field_y = null;
-              gg.c((byte) 43);
+              int discarded$3 = 43;
+              gg.c();
               return true;
             }
           }
@@ -71,7 +72,8 @@ final class nj {
             if (mm.field_y != null) {
               if (mm.field_y.h(5)) {
                 mm.field_y = null;
-                gg.c((byte) 43);
+                int discarded$4 = 43;
+                gg.c();
                 return true;
               } else {
                 if (param0 != 15780) {
@@ -79,7 +81,7 @@ final class nj {
                   if (b.a(0)) {
                     return true;
                   } else {
-                    if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
+                    if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
                       return true;
                     } else {
                       return false;
@@ -89,7 +91,7 @@ final class nj {
                   if (b.a(0)) {
                     return true;
                   } else {
-                    if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
+                    if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
                       return true;
                     } else {
                       return false;
@@ -102,7 +104,7 @@ final class nj {
                 if (b.a(0)) {
                   return true;
                 } else {
-                  if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
+                  if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
                     return true;
                   } else {
                     return false;
@@ -113,7 +115,7 @@ final class nj {
                 if (b.a(0)) {
                   return true;
                 } else {
-                  if (!ld.b(15, param0 ^ -1885068379, param1, param2)) {
+                  if (!ld.b(param3, param0 ^ -1885068379, param1, param2)) {
                     return false;
                   } else {
                     return true;
@@ -122,7 +124,8 @@ final class nj {
               }
             }
           } else {
-            gg.c((byte) 43);
+            int discarded$5 = 43;
+            gg.c();
             return true;
           }
         }
@@ -132,10 +135,10 @@ final class nj {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
+        int stackIn_8_0 = 0;
         Throwable decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackOut_7_0 = 0;
         var1 = (Object) (Object) vi.field_a;
         synchronized (var1) {
           L0: {
@@ -144,23 +147,28 @@ final class nj {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              dg.field_e = af.field_e[dh.field_m];
-              tb.field_m = fm.field_c[dh.field_m];
+              L1: {
+                dg.field_e = af.field_e[dh.field_m];
+                tb.field_m = fm.field_c[dh.field_m];
+                if (param0 == 28) {
+                  break L1;
+                } else {
+                  field_g = -102;
+                  break L1;
+                }
+              }
               dh.field_m = dh.field_m + 1 & 127;
-              stackOut_5_0 = 1;
-              stackIn_6_0 = stackOut_5_0;
+              stackOut_7_0 = 1;
+              stackIn_8_0 = stackOut_7_0;
               break L0;
             }
           }
         }
-        return stackIn_6_0 != 0;
+        return stackIn_8_0 != 0;
     }
 
     final static void a(String param0, byte param1, String param2, int param3, int param4) {
         in.field_g.field_Hb = in.field_g.field_Hb + ba.field_L.field_Hb;
-        if (param1 != -48) {
-            return;
-        }
         try {
             in.field_g.field_N = param3;
             in.field_g.field_O = param2;
@@ -170,11 +178,11 @@ final class nj {
             in.field_g.field_Hb = in.field_g.field_Hb - ba.field_L.field_Hb;
             ba.field_L.field_M = ba.field_L.field_M - ba.field_L.field_Hb;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "nj.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "nj.B(" + (param0 != null ? "{...}" : "null") + 44 + -48 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_h = null;
         field_b = null;

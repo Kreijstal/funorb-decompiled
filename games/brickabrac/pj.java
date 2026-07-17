@@ -64,7 +64,7 @@ abstract class pj implements ia {
         }
     }
 
-    final static Class a(String param0, boolean param1) throws ClassNotFoundException {
+    final static Class a(String param0) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_4_0 = null;
         Class stackIn_9_0 = null;

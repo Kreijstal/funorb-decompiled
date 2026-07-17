@@ -24,9 +24,9 @@ final class pm {
         return (pm) this;
     }
 
-    final static void a(int param0, we param1, byte param2) {
+    final static void a(int param0, we param1) {
         md var5 = tp.field_f;
-        var5.d(8, param0);
+        var5.d(8, 5);
         var5.field_f = var5.field_f + 1;
         int var4 = var5.field_f;
         var5.a(true, 1);
@@ -40,7 +40,7 @@ final class pm {
             int discarded$0 = var5.b(var4, (byte) -58);
             var5.c((byte) 48, var5.field_f + -var4);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "pm.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 71 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "pm.L(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 71 + 41);
         }
     }
 

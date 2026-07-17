@@ -550,7 +550,7 @@ final class dc extends ji {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_L = null;
         field_K = null;
         field_P = null;
@@ -558,7 +558,7 @@ final class dc extends ji {
         field_M = null;
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         int var3 = 0;
         int var4 = Vertigo2.field_L ? 1 : 0;
         Random var5 = new Random((long)((dc) this).field_N);
@@ -815,10 +815,11 @@ final class dc extends ji {
 
     final void a(int param0) {
         ((dc) this).field_E = kk.a(((dc) this).field_N, (byte) 38);
-        this.b((byte) -111);
+        int discarded$0 = -111;
+        this.b();
         if (param0 >= -98) {
             Object var3 = null;
-            int discarded$0 = dc.a(-24, (String) null, (byte) -105, (String[]) null, (cc) null);
+            int discarded$1 = dc.a(-24, (String) null, (byte) -105, (String[]) null, (cc) null);
         }
     }
 

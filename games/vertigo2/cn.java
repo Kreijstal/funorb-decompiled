@@ -106,7 +106,7 @@ final class cn {
               if (var7 != 0) {
                 var9_int = 0;
                 L2: while (true) {
-                  var9_int = param3.indexOf((int) param2, var9_int);
+                  var9_int = param3.indexOf('_', var9_int);
                   if (0 <= var9_int) {
                     var9_int++;
                     var6 = var6 + var7;
@@ -122,7 +122,7 @@ final class cn {
             var9 = new StringBuilder(var6);
             var10 = 0;
             L3: while (true) {
-              var11 = param3.indexOf((int) param2, var10);
+              var11 = param3.indexOf('_', var10);
               if (0 > var11) {
                 StringBuilder discarded$3 = var9.append(param3.substring(var10));
                 stackOut_10_0 = var9.toString();
@@ -166,7 +166,7 @@ final class cn {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(95).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -247,7 +247,7 @@ final class cn {
         return ((cn) this).field_i;
     }
 
-    final static void a(ed param0, int param1) {
+    final static void a(ed param0) {
         try {
             RuntimeException runtimeException = null;
             byte[] var2 = null;
@@ -525,11 +525,12 @@ final class cn {
             this.a((byte) 92, 4 * ((cn) this).field_c, param3, param0, param1, ((cn) this).field_w, 4 * ((cn) this).field_z);
         }
         if (param2 != 12257) {
-            boolean discarded$0 = cn.b(false);
+            int discarded$0 = 0;
+            boolean discarded$1 = cn.b();
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean b() {
         return gd.field_j.field_hc == ao.field_N;
     }
 

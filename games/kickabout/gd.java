@@ -85,7 +85,7 @@ final class gd {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_h = null;
@@ -211,9 +211,9 @@ final class gd {
                 var5.field_g = param1;
                 var5.field_f = vs.a(-1090519040, param2);
             }
-            int var6 = 2 / ((44 - param0) / 51);
+            int var6 = -2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "gd.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "gd.F(" + 98 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

@@ -379,30 +379,26 @@ final class tb extends bi {
     }
 
     final static void a(byte param0, int param1) {
-        jb var5 = null;
+        jb var4 = null;
         int var3 = Kickabout.field_G;
         try {
-            if (param0 != 126) {
-                Object var4 = null;
-                tb.a(5, (sj) null);
-            }
             if (param1 == 28) {
                 if (!(su.field_c == null)) {
                     su.field_c.e(19910);
                 }
-                var5 = (jb) (Object) np.field_Jb.g(24009);
-                while (var5 != null) {
-                    var5.c((byte) -109);
-                    var5 = (jb) (Object) np.field_Jb.c(33);
+                var4 = (jb) (Object) np.field_Jb.g(24009);
+                while (var4 != null) {
+                    var4.c((byte) -109);
+                    var4 = (jb) (Object) np.field_Jb.c(33);
                 }
             }
             np.field_Jb.a((gn) (Object) new i(param1), 3);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "tb.I(" + param0 + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "tb.I(" + 126 + 44 + param1 + 41);
         }
     }
 
-    private final void g(int param0) {
+    private final void g() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -477,7 +473,8 @@ final class tb extends bi {
                 }
                 L4: {
                   ((tb) this).field_x = (bh) param0;
-                  this.g(0);
+                  int discarded$1 = 0;
+                  this.g();
                   if (param1 == 20) {
                     break L4;
                   } else {
@@ -759,7 +756,7 @@ final class tb extends bi {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_t = null;
         field_r = null;
         field_w = null;
@@ -767,7 +764,7 @@ final class tb extends bi {
         field_u = null;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
@@ -793,7 +790,7 @@ final class tb extends bi {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var2_int = -16 % ((param1 - -16) / 36);
+            var2_int = -1;
             if (null == vl.field_e) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
@@ -841,7 +838,7 @@ final class tb extends bi {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + -125 + 41);
         }
         return stackIn_7_0 != 0;
     }

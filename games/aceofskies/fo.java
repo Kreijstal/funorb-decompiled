@@ -17,7 +17,7 @@ final class fo {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         nl.field_o = -1;
         ht.field_g = false;
         ok.field_o = 0;

@@ -15,52 +15,27 @@ abstract class jq {
         field_c = null;
     }
 
-    final static boolean a(char param0, int param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param1 == -96) {
-          if (param0 != 160) {
-            if (32 != param0) {
-              if (param0 != 95) {
-                if (param0 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
+    final static boolean a(char param0) {
+        int stackIn_7_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param0 != 160) {
+          if (32 != param0) {
+            if (param0 != 95) {
+              if (param0 == 45) {
+                return true;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
-                return stackIn_20_0 != 0;
+                return false;
               }
             } else {
-              return true;
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              return stackIn_7_0 != 0;
             }
           } else {
             return true;
           }
         } else {
-          field_e = -12;
-          if (param0 != 160) {
-            if (32 != param0) {
-              if (param0 != 95) {
-                if (param0 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
+          return true;
         }
     }
 

@@ -33,19 +33,13 @@ final class eb extends pk {
     private int field_D;
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var11 = 0;
         wb.a(((eb) this).field_i, ((eb) this).field_k, ((eb) this).field_l, ((eb) this).field_c, -1 + (((eb) this).field_c >> 1), param8, param5);
-        var11 = ((eb) this).field_c + -(((eb) this).field_K << 1);
+        int var11 = ((eb) this).field_c + -(((eb) this).field_K << 1);
         wb.a(((eb) this).field_K + ((eb) this).field_i, ((eb) this).field_k - -((eb) this).field_K, ((eb) this).field_l + -(((eb) this).field_K << 1), var11, (var11 >> 1) + -1, param4, param3);
         wb.b(((eb) this).field_n);
-        if (param6 != 12054) {
-          return;
-        } else {
-          wb.b(((eb) this).field_i, ((eb) this).field_k, ((eb) this).field_i - -((eb) this).field_l, ((eb) this).field_k - -((eb) this).field_c);
-          int discarded$1 = ((eb) this).field_J.a(((eb) this).field_q, param0 + ((eb) this).field_i, ((eb) this).field_k - -param1, ((eb) this).field_l, ((eb) this).field_c, param9, param7, param2, ((eb) this).field_m, ((eb) this).field_L, ((eb) this).field_x);
-          wb.a(((eb) this).field_n);
-          return;
-        }
+        wb.b(((eb) this).field_i, ((eb) this).field_k, ((eb) this).field_i - -((eb) this).field_l, ((eb) this).field_k - -((eb) this).field_c);
+        int discarded$0 = ((eb) this).field_J.a(((eb) this).field_q, param0 + ((eb) this).field_i, ((eb) this).field_k - -param1, ((eb) this).field_l, ((eb) this).field_c, param9, param7, param2, ((eb) this).field_m, ((eb) this).field_L, ((eb) this).field_x);
+        wb.a(((eb) this).field_n);
     }
 
     public static void a(int param0) {
@@ -56,7 +50,7 @@ final class eb extends pk {
         field_t = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2) {
         int var5 = 0;
         var5 = Chess.field_G;
         if (0 == param0) {
@@ -344,7 +338,7 @@ final class eb extends pk {
         }
     }
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean a(CharSequence param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -366,7 +360,9 @@ final class eb extends pk {
         String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_2_0 = fh.a(param0, 5, false);
+            int discarded$4 = 0;
+            int discarded$5 = 5;
+            stackOut_2_0 = fh.a(param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

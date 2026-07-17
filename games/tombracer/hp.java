@@ -4,20 +4,14 @@
 final class hp {
     static int[][] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
     final static float a(float param0, float param1, byte param2, float param3, int param4) {
-        float[] var5 = null;
-        float[] var6 = null;
-        var6 = bs.field_f[param4];
-        var5 = var6;
-        if (param2 != 26) {
-          return -1.8763647079467773f;
-        } else {
-          return var6[0] * param3 + var6[1] * param1 + var6[2] * param0;
-        }
+        float[] var6 = bs.field_f[param4];
+        float[] var5 = var6;
+        return var6[0] * param3 + var6[1] * param1 + var6[2] * param0;
     }
 
     final static void a(int param0, int param1, int param2, ka param3, int param4, int param5, int param6) {

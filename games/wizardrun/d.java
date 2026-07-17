@@ -6,7 +6,7 @@ final class d {
     static String field_a;
     static int[] field_c;
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -192,18 +192,10 @@ final class d {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -5309) {
-          field_c = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
-          field_c = null;
-          field_b = null;
-          field_a = null;
-          return;
-        }
+    public static void a() {
+        field_c = null;
+        field_b = null;
+        field_a = null;
     }
 
     final synchronized static long a(byte param0) {
@@ -224,51 +216,26 @@ final class d {
     }
 
     final static boolean a(boolean param0, char param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param0) {
-          if (160 != param1) {
-            if (param1 != 32) {
-              if (param1 != 95) {
-                if (param1 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
+        int stackIn_7_0 = 0;
+        int stackOut_5_0 = 0;
+        if (160 != param1) {
+          if (param1 != 32) {
+            if (param1 != 95) {
+              if (param1 == 45) {
+                return true;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
-                return stackIn_20_0 != 0;
+                return false;
               }
             } else {
-              return true;
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              return stackIn_7_0 != 0;
             }
           } else {
             return true;
           }
         } else {
-          d.a(87);
-          if (160 != param1) {
-            if (param1 != 32) {
-              if (param1 != 95) {
-                if (param1 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
+          return true;
         }
     }
 

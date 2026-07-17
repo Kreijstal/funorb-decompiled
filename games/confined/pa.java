@@ -93,71 +93,67 @@ final class pa {
         String stackOut_15_2 = null;
         try {
           L0: {
-            if (param2 == -11) {
-              var14_double = -param8.field_T + param0;
-              var16 = param5 - param8.field_L;
-              var18 = -param8.field_O + param4;
-              var20 = var18 * param8.field_M + (param8.field_R * var14_double + var16 * param8.field_ab);
-              var22 = param8.field_V * var14_double + var16 * param8.field_U + param8.field_F * var18;
-              var24 = var18 * param8.field_N + (param8.field_P * var14_double + param8.field_H * var16);
-              if (var24 >= 0.15) {
-                var26 = 320 - -(int)(var20 / var24 * 640.0);
-                var27 = 188 - -(int)(640.0 * (var22 / var24));
-                var28 = (int)(param1 / var24 * 640.0);
-                var29 = (double)(2 * param3) * (1.0 - var18 / param7);
-                var31 = (int)qn.field_v.a(var29, 0, param4);
-                if (var31 > 0) {
-                  L1: {
-                    stackOut_6_0 = (nf) param6;
-                    stackOut_6_1 = var26 - var28;
-                    stackOut_6_2 = -var28 + var27;
-                    stackOut_6_3 = 2 * var28;
-                    stackOut_6_4 = 2 * var28;
-                    stackIn_8_0 = stackOut_6_0;
-                    stackIn_8_1 = stackOut_6_1;
-                    stackIn_8_2 = stackOut_6_2;
-                    stackIn_8_3 = stackOut_6_3;
-                    stackIn_8_4 = stackOut_6_4;
-                    stackIn_7_0 = stackOut_6_0;
-                    stackIn_7_1 = stackOut_6_1;
-                    stackIn_7_2 = stackOut_6_2;
-                    stackIn_7_3 = stackOut_6_3;
-                    stackIn_7_4 = stackOut_6_4;
-                    if (param3 < var31) {
-                      stackOut_8_0 = (nf) (Object) stackIn_8_0;
-                      stackOut_8_1 = stackIn_8_1;
-                      stackOut_8_2 = stackIn_8_2;
-                      stackOut_8_3 = stackIn_8_3;
-                      stackOut_8_4 = stackIn_8_4;
-                      stackOut_8_5 = param3;
-                      stackIn_9_0 = stackOut_8_0;
-                      stackIn_9_1 = stackOut_8_1;
-                      stackIn_9_2 = stackOut_8_2;
-                      stackIn_9_3 = stackOut_8_3;
-                      stackIn_9_4 = stackOut_8_4;
-                      stackIn_9_5 = stackOut_8_5;
-                      break L1;
-                    } else {
-                      stackOut_7_0 = (nf) (Object) stackIn_7_0;
-                      stackOut_7_1 = stackIn_7_1;
-                      stackOut_7_2 = stackIn_7_2;
-                      stackOut_7_3 = stackIn_7_3;
-                      stackOut_7_4 = stackIn_7_4;
-                      stackOut_7_5 = var31;
-                      stackIn_9_0 = stackOut_7_0;
-                      stackIn_9_1 = stackOut_7_1;
-                      stackIn_9_2 = stackOut_7_2;
-                      stackIn_9_3 = stackOut_7_3;
-                      stackIn_9_4 = stackOut_7_4;
-                      stackIn_9_5 = stackOut_7_5;
-                      break L1;
-                    }
+            var14_double = -param8.field_T + param0;
+            var16 = param5 - param8.field_L;
+            var18 = -param8.field_O + param4;
+            var20 = var18 * param8.field_M + (param8.field_R * var14_double + var16 * param8.field_ab);
+            var22 = param8.field_V * var14_double + var16 * param8.field_U + param8.field_F * var18;
+            var24 = var18 * param8.field_N + (param8.field_P * var14_double + param8.field_H * var16);
+            if (var24 >= 0.15) {
+              var26 = 320 - -(int)(var20 / var24 * 640.0);
+              var27 = 188 - -(int)(640.0 * (var22 / var24));
+              var28 = (int)(param1 / var24 * 640.0);
+              var29 = (double)(2 * param3) * (1.0 - var18 / param7);
+              var31 = (int)qn.field_v.a(var29, 0, param4);
+              if (var31 > 0) {
+                L1: {
+                  stackOut_6_0 = (nf) param6;
+                  stackOut_6_1 = var26 - var28;
+                  stackOut_6_2 = -var28 + var27;
+                  stackOut_6_3 = 2 * var28;
+                  stackOut_6_4 = 2 * var28;
+                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_1 = stackOut_6_1;
+                  stackIn_8_2 = stackOut_6_2;
+                  stackIn_8_3 = stackOut_6_3;
+                  stackIn_8_4 = stackOut_6_4;
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
+                  stackIn_7_3 = stackOut_6_3;
+                  stackIn_7_4 = stackOut_6_4;
+                  if (param3 < var31) {
+                    stackOut_8_0 = (nf) (Object) stackIn_8_0;
+                    stackOut_8_1 = stackIn_8_1;
+                    stackOut_8_2 = stackIn_8_2;
+                    stackOut_8_3 = stackIn_8_3;
+                    stackOut_8_4 = stackIn_8_4;
+                    stackOut_8_5 = param3;
+                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_1 = stackOut_8_1;
+                    stackIn_9_2 = stackOut_8_2;
+                    stackIn_9_3 = stackOut_8_3;
+                    stackIn_9_4 = stackOut_8_4;
+                    stackIn_9_5 = stackOut_8_5;
+                    break L1;
+                  } else {
+                    stackOut_7_0 = (nf) (Object) stackIn_7_0;
+                    stackOut_7_1 = stackIn_7_1;
+                    stackOut_7_2 = stackIn_7_2;
+                    stackOut_7_3 = stackIn_7_3;
+                    stackOut_7_4 = stackIn_7_4;
+                    stackOut_7_5 = var31;
+                    stackIn_9_0 = stackOut_7_0;
+                    stackIn_9_1 = stackOut_7_1;
+                    stackIn_9_2 = stackOut_7_2;
+                    stackIn_9_3 = stackOut_7_3;
+                    stackIn_9_4 = stackOut_7_4;
+                    stackIn_9_5 = stackOut_7_5;
+                    break L1;
                   }
-                  ((nf) (Object) stackIn_9_0).d(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_9_5);
-                  break L0;
-                } else {
-                  return;
                 }
+                ((nf) (Object) stackIn_9_0).d(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_9_5);
+                break L0;
               } else {
                 return;
               }
@@ -170,7 +166,7 @@ final class pa {
           L2: {
             var14 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var14;
-            stackOut_11_1 = new StringBuilder().append("pa.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_11_1 = new StringBuilder().append("pa.D(").append(param0).append(44).append(param1).append(44).append(-11).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -232,7 +228,7 @@ final class pa {
         return true;
     }
 
-    final static String a(java.applet.Applet param0, int param1) {
+    final static String a(java.applet.Applet param0) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -452,7 +448,7 @@ final class pa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         int var1 = -5;
         field_d = null;

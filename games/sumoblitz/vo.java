@@ -39,7 +39,8 @@ final class vo extends ao implements ai {
               }
             }
           }
-          this.f(-1840);
+          int discarded$1 = -1840;
+          this.f();
           return;
         } else {
           return;
@@ -290,7 +291,7 @@ final class vo extends ao implements ai {
         this.e((byte) 100);
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = ((vo) this).field_N == null ? ((vo) this).field_P.field_r : ((vo) this).field_N.field_r - -((vo) this).field_N.field_q;
         int var3 = null != ((vo) this).field_J ? ((vo) this).field_J.field_r - ((vo) this).field_H.field_q : ((vo) this).field_P.field_q + ((vo) this).field_P.field_r - ((vo) this).field_H.field_q;
         this.b(var3 > var2 ? (((vo) this).field_H.field_r + -var2 << 16) / (var3 + -var2) : 0, (byte) -6);
@@ -335,82 +336,74 @@ final class vo extends ao implements ai {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_21_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_9_0 = 0;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            if (param0 < -1) {
-              L1: {
-                L2: {
-                  if (param1 <= 0) {
-                    break L2;
-                  } else {
-                    if (128 > param1) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L3: {
-                  if (param1 < 160) {
-                    break L3;
-                  } else {
-                    if (255 >= param1) {
-                      break L1;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                if (param1 != 0) {
-                  var6 = uk.field_lb;
-                  var2 = var6;
-                  var3 = 0;
-                  L4: while (true) {
-                    if (var6.length <= var3) {
-                      stackOut_21_0 = 0;
-                      stackIn_22_0 = stackOut_21_0;
-                      break L0;
-                    } else {
-                      var4 = var6[var3];
-                      if (param1 == var4) {
-                        stackOut_18_0 = 1;
-                        stackIn_19_0 = stackOut_18_0;
-                        return stackIn_19_0 != 0;
-                      } else {
-                        var3++;
-                        continue L4;
-                      }
-                    }
-                  }
+            L1: {
+              L2: {
+                if (param1 <= 0) {
+                  break L2;
                 } else {
-                  return false;
+                  if (128 > param1) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
                 }
               }
-              stackOut_10_0 = 1;
-              stackIn_11_0 = stackOut_10_0;
-              return stackIn_11_0 != 0;
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              L3: {
+                if (param1 < 160) {
+                  break L3;
+                } else {
+                  if (255 >= param1) {
+                    break L1;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              if (param1 != 0) {
+                var6 = uk.field_lb;
+                var2 = var6;
+                var3 = 0;
+                L4: while (true) {
+                  if (var6.length <= var3) {
+                    stackOut_20_0 = 0;
+                    stackIn_21_0 = stackOut_20_0;
+                    break L0;
+                  } else {
+                    var4 = var6[var3];
+                    if (param1 == var4) {
+                      stackOut_17_0 = 1;
+                      stackIn_18_0 = stackOut_17_0;
+                      return stackIn_18_0 != 0;
+                    } else {
+                      var3++;
+                      continue L4;
+                    }
+                  }
+                }
+              } else {
+                return false;
+              }
             }
+            stackOut_9_0 = 1;
+            stackIn_10_0 = stackOut_9_0;
+            return stackIn_10_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2_ref, "vo.V(" + param0 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) var2_ref, "vo.V(" + -125 + 44 + param1 + 41);
         }
-        return stackIn_22_0 != 0;
+        return stackIn_21_0 != 0;
     }
 
     final boolean a(pk param0, byte param1) {
@@ -616,7 +609,7 @@ final class vo extends ao implements ai {
         }
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var2 = ((vo) this).field_F != null ? ((vo) this).field_F.field_v - -((vo) this).field_F.field_p : ((vo) this).field_P.field_v;
         int var3 = null != ((vo) this).field_M ? ((vo) this).field_M.field_v + -((vo) this).field_H.field_p : -((vo) this).field_H.field_p + ((vo) this).field_P.field_v + ((vo) this).field_P.field_p;
         ((vo) this).a(0, var3 <= var2 ? 0 : (((vo) this).field_H.field_v + -var2 << 16) / (-var2 + var3));
@@ -844,7 +837,8 @@ final class vo extends ao implements ai {
                     break L3;
                   } else {
                     var6 = ((vo) this).field_G;
-                    this.a((byte) -121);
+                    int discarded$3 = -121;
+                    this.a();
                     if (var6 == ((vo) this).field_G) {
                       break L3;
                     } else {
@@ -858,11 +852,13 @@ final class vo extends ao implements ai {
                   }
                 }
                 if (!((vo) this).field_K) {
-                  this.f(-1840);
+                  int discarded$4 = -1840;
+                  this.f();
                   break L1;
                 } else {
                   var6 = ((vo) this).field_D;
-                  this.g(-2066408880);
+                  int discarded$5 = -2066408880;
+                  this.g();
                   if (((vo) this).field_D == var6) {
                     break L1;
                   } else {
@@ -998,20 +994,20 @@ final class vo extends ao implements ai {
         wp stackIn_4_0 = null;
         wp stackIn_5_0 = null;
         int stackIn_5_1 = 0;
+        wp stackIn_8_0 = null;
+        wp stackIn_9_0 = null;
         wp stackIn_10_0 = null;
         wp stackIn_11_0 = null;
         wp stackIn_12_0 = null;
-        wp stackIn_13_0 = null;
-        wp stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
+        int stackIn_12_1 = 0;
+        wp stackIn_15_0 = null;
+        wp stackIn_16_0 = null;
         wp stackIn_17_0 = null;
-        wp stackIn_18_0 = null;
-        wp stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
+        int stackIn_17_1 = 0;
+        wp stackIn_20_0 = null;
+        wp stackIn_21_0 = null;
         wp stackIn_22_0 = null;
-        wp stackIn_23_0 = null;
-        wp stackIn_24_0 = null;
-        int stackIn_24_1 = 0;
+        int stackIn_22_1 = 0;
         wp stackOut_0_0 = null;
         wp stackOut_1_0 = null;
         wp stackOut_4_0 = null;
@@ -1019,23 +1015,23 @@ final class vo extends ao implements ai {
         wp stackOut_2_0 = null;
         wp stackOut_3_0 = null;
         int stackOut_3_1 = 0;
+        wp stackOut_7_0 = null;
+        wp stackOut_8_0 = null;
+        wp stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
         wp stackOut_9_0 = null;
         wp stackOut_10_0 = null;
-        wp stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        wp stackOut_11_0 = null;
-        wp stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
+        int stackOut_10_1 = 0;
+        wp stackOut_14_0 = null;
         wp stackOut_16_0 = null;
-        wp stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        wp stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
+        int stackOut_16_1 = 0;
+        wp stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
+        wp stackOut_19_0 = null;
         wp stackOut_21_0 = null;
-        wp stackOut_23_0 = null;
-        int stackOut_23_1 = 0;
-        wp stackOut_22_0 = null;
-        int stackOut_22_1 = 0;
+        int stackOut_21_1 = 0;
+        wp stackOut_20_0 = null;
+        int stackOut_20_1 = 0;
         L0: {
           L1: {
             stackOut_0_0 = ((vo) this).field_P;
@@ -1066,105 +1062,100 @@ final class vo extends ao implements ai {
           stackIn_5_1 = stackOut_3_1;
           break L0;
         }
-        stackIn_5_0.field_x = stackIn_5_1 != 0;
-        if (param0 == 8206) {
-          L2: {
-            if (((vo) this).field_H.field_y instanceof wp) {
-              L3: {
-                L4: {
-                  stackOut_9_0 = (wp) (Object) ((vo) this).field_H.field_y;
-                  stackIn_12_0 = stackOut_9_0;
-                  stackIn_10_0 = stackOut_9_0;
-                  if (param1) {
-                    break L4;
+        L2: {
+          stackIn_5_0.field_x = stackIn_5_1 != 0;
+          if (((vo) this).field_H.field_y instanceof wp) {
+            L3: {
+              L4: {
+                stackOut_7_0 = (wp) (Object) ((vo) this).field_H.field_y;
+                stackIn_10_0 = stackOut_7_0;
+                stackIn_8_0 = stackOut_7_0;
+                if (param1) {
+                  break L4;
+                } else {
+                  stackOut_8_0 = (wp) (Object) stackIn_8_0;
+                  stackIn_11_0 = stackOut_8_0;
+                  stackIn_9_0 = stackOut_8_0;
+                  if (!((vo) this).field_A) {
+                    stackOut_11_0 = (wp) (Object) stackIn_11_0;
+                    stackOut_11_1 = 0;
+                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_1 = stackOut_11_1;
+                    break L3;
                   } else {
-                    stackOut_10_0 = (wp) (Object) stackIn_10_0;
-                    stackIn_13_0 = stackOut_10_0;
-                    stackIn_11_0 = stackOut_10_0;
-                    if (!((vo) this).field_A) {
-                      stackOut_13_0 = (wp) (Object) stackIn_13_0;
-                      stackOut_13_1 = 0;
-                      stackIn_14_0 = stackOut_13_0;
-                      stackIn_14_1 = stackOut_13_1;
-                      break L3;
-                    } else {
-                      stackOut_11_0 = (wp) (Object) stackIn_11_0;
-                      stackIn_12_0 = stackOut_11_0;
-                      break L4;
-                    }
+                    stackOut_9_0 = (wp) (Object) stackIn_9_0;
+                    stackIn_10_0 = stackOut_9_0;
+                    break L4;
                   }
                 }
-                stackOut_12_0 = (wp) (Object) stackIn_12_0;
-                stackOut_12_1 = 1;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
-                break L3;
               }
-              stackIn_14_0.field_x = stackIn_14_1 != 0;
-              break L2;
-            } else {
-              break L2;
+              stackOut_10_0 = (wp) (Object) stackIn_10_0;
+              stackOut_10_1 = 1;
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              break L3;
             }
+            stackIn_12_0.field_x = stackIn_12_1 != 0;
+            break L2;
+          } else {
+            break L2;
           }
-          L5: {
-            if (null == ((vo) this).field_F) {
-              break L5;
-            } else {
-              L6: {
-                stackOut_16_0 = ((vo) this).field_F;
-                stackIn_18_0 = stackOut_16_0;
+        }
+        L5: {
+          if (null == ((vo) this).field_F) {
+            break L5;
+          } else {
+            L6: {
+              stackOut_14_0 = ((vo) this).field_F;
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_15_0 = stackOut_14_0;
+              if (!param1) {
+                stackOut_16_0 = (wp) (Object) stackIn_16_0;
+                stackOut_16_1 = 0;
                 stackIn_17_0 = stackOut_16_0;
-                if (!param1) {
-                  stackOut_18_0 = (wp) (Object) stackIn_18_0;
-                  stackOut_18_1 = 0;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
-                  break L6;
-                } else {
-                  stackOut_17_0 = (wp) (Object) stackIn_17_0;
-                  stackOut_17_1 = 1;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
-                  break L6;
-                }
+                stackIn_17_1 = stackOut_16_1;
+                break L6;
+              } else {
+                stackOut_15_0 = (wp) (Object) stackIn_15_0;
+                stackOut_15_1 = 1;
+                stackIn_17_0 = stackOut_15_0;
+                stackIn_17_1 = stackOut_15_1;
+                break L6;
               }
-              stackIn_19_0.field_x = stackIn_19_1 != 0;
-              break L5;
             }
+            stackIn_17_0.field_x = stackIn_17_1 != 0;
+            break L5;
           }
-          L7: {
-            if (null == ((vo) this).field_M) {
-              break L7;
-            } else {
-              L8: {
-                stackOut_21_0 = ((vo) this).field_M;
-                stackIn_23_0 = stackOut_21_0;
+        }
+        L7: {
+          if (null == ((vo) this).field_M) {
+            break L7;
+          } else {
+            L8: {
+              stackOut_19_0 = ((vo) this).field_M;
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_20_0 = stackOut_19_0;
+              if (!param1) {
+                stackOut_21_0 = (wp) (Object) stackIn_21_0;
+                stackOut_21_1 = 0;
                 stackIn_22_0 = stackOut_21_0;
-                if (!param1) {
-                  stackOut_23_0 = (wp) (Object) stackIn_23_0;
-                  stackOut_23_1 = 0;
-                  stackIn_24_0 = stackOut_23_0;
-                  stackIn_24_1 = stackOut_23_1;
-                  break L8;
-                } else {
-                  stackOut_22_0 = (wp) (Object) stackIn_22_0;
-                  stackOut_22_1 = 1;
-                  stackIn_24_0 = stackOut_22_0;
-                  stackIn_24_1 = stackOut_22_1;
-                  break L8;
-                }
+                stackIn_22_1 = stackOut_21_1;
+                break L8;
+              } else {
+                stackOut_20_0 = (wp) (Object) stackIn_20_0;
+                stackOut_20_1 = 1;
+                stackIn_22_0 = stackOut_20_0;
+                stackIn_22_1 = stackOut_20_1;
+                break L8;
               }
-              stackIn_24_0.field_x = stackIn_24_1 != 0;
-              break L7;
             }
+            stackIn_22_0.field_x = stackIn_22_1 != 0;
+            break L7;
           }
-          return;
-        } else {
-          return;
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         int var2 = null == ((vo) this).field_F ? ((vo) this).field_P.field_v : ((vo) this).field_F.field_v + ((vo) this).field_F.field_p;
         int var3 = ((vo) this).field_M != null ? -((vo) this).field_H.field_p + ((vo) this).field_M.field_v : -((vo) this).field_H.field_p + (((vo) this).field_P.field_p + ((vo) this).field_P.field_v);
         ((vo) this).field_H.field_v = ((-var2 + var3) * ((vo) this).field_D >> 16) + var2;
@@ -1219,7 +1210,8 @@ final class vo extends ao implements ai {
           }
         }
         L4: {
-          this.f(-1840);
+          int discarded$1 = -1840;
+          this.f();
           if (!((vo) this).field_K) {
             ((vo) this).field_H.field_v = 0;
             ((vo) this).field_H.field_p = ((vo) this).field_P.field_p;
@@ -1253,7 +1245,8 @@ final class vo extends ao implements ai {
             ((vo) this).field_H.a(-49, ((vo) this).field_H.field_r, ((vo) this).field_H.field_v, ((vo) this).field_P.field_p, ((vo) this).field_H.field_q);
             this.a(8206, false);
         }
-        this.f(-1840);
+        int discarded$0 = -1840;
+        this.f();
         if (param0 < 2) {
             this.e((byte) 53);
         }

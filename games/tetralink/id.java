@@ -250,9 +250,6 @@ final class id {
     }
 
     final static boolean a(boolean param0, char param1) {
-        if (param0) {
-            boolean discarded$0 = id.a(false, 'V');
-        }
         if (param1 >= 32) {
             if (126 >= param1) {
                 return true;
@@ -277,7 +274,7 @@ final class id {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_w = null;
         field_M = null;
         field_n = null;

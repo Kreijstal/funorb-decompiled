@@ -34,15 +34,10 @@ final class jk {
         return ((jk) this).field_f;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_d = null;
-        if (param0 != -63) {
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

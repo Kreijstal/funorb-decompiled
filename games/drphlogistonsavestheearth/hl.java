@@ -22,7 +22,7 @@ final class hl {
         return var2;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -55,7 +55,7 @@ final class hl {
             jc.field_i = -(hi.field_a >> 1) + rd.field_B;
             uk.field_e = var1_int + hg.field_rb;
             var2 = jc.field_i;
-            var3 = param0;
+            var3 = 0;
             L1: while (true) {
               if (var3 >= bc.field_e.length) {
                 break L0;
@@ -117,7 +117,7 @@ final class hl {
                       if (var9 == null) {
                         break L6;
                       } else {
-                        var9.a((pd.field_b << 1) + pa.field_a, var8 + -gd.field_c, var7 - -(gd.field_c << 1), var2, param0 + 7453);
+                        var9.a((pd.field_b << 1) + pa.field_a, var8 + -gd.field_c, var7 - -(gd.field_c << 1), var2, 7453);
                         break L6;
                       }
                     }
@@ -144,16 +144,16 @@ final class hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "hl.A(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var1, "hl.A(" + 0 + 41);
         }
     }
 
-    final static void a(je param0, int param1, int param2) {
+    final static void a(je param0, int param1) {
         lh var6 = null;
         int var4 = 0;
         try {
             var6 = nj.field_p;
-            var6.d(param2, -18392);
+            var6.d(4, -18392);
             var6.field_j = var6.field_j + 1;
             var4 = var6.field_j;
             var6.c(1, (byte) -108);
@@ -167,7 +167,7 @@ final class hl {
             int discarded$0 = var6.d(var4, (byte) 48);
             var6.b(var6.field_j + -var4, (byte) 87);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "hl.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "hl.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 4 + 41);
         }
     }
 
@@ -276,7 +276,7 @@ final class hl {
         ((hl) this).field_g.field_n = ((hl) this).field_g;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_c = null;
         field_e = null;
     }
@@ -295,10 +295,8 @@ final class hl {
     }
 
     final static int a(int param0, boolean param1, int param2, int param3) {
-        if (param2 != -1980693983) {
-            return 114;
-        }
-        return wi.b(-1);
+        int discarded$0 = -1;
+        return wi.b();
     }
 
     static {

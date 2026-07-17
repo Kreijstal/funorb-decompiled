@@ -9,7 +9,7 @@ final class pn implements Runnable {
     static long[] field_b;
     volatile tk[] field_c;
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -101,7 +101,8 @@ final class pn implements Runnable {
                         var10 = var12;
                         var6 = var10;
                         if (var3 == 1) {
-                          int discarded$1 = on.a(var16, var5_int, param0, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = on.a(var6, var5_int, param0, var4);
                           break L5;
                         } else {
                           var7 = (Object) (Object) vg.field_h;
@@ -158,7 +159,7 @@ final class pn implements Runnable {
         return stackIn_23_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -175,7 +176,8 @@ final class pn implements Runnable {
                         var2.h();
                     }
                 }
-                wf.a(10L, false);
+                int discarded$0 = 0;
+                wf.a(10L);
                 rb.a(5, (Object) null, ((pn) this).field_f);
             }
         } catch (Exception exception) {
@@ -197,15 +199,12 @@ final class pn implements Runnable {
         return var2;
     }
 
-    final static void a(oc param0, byte param1, int param2) {
+    final static void a(oc param0) {
         try {
             ci.field_j.a(77, (wf) (Object) param0);
-            if (param1 > -70) {
-                field_b = null;
-            }
             ac.a(4, 0, param0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "pn.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 4 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "pn.A(" + (param0 != null ? "{...}" : "null") + 44 + -117 + 44 + 4 + 41);
         }
     }
 

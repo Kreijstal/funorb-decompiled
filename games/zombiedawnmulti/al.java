@@ -17,26 +17,21 @@ abstract class al extends df {
     private int field_T;
     static int field_Z;
 
-    final static void b(boolean param0, int param1) {
+    final static void b() {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
-            if (param0) {
-              try {
-                L0: {
-                  Object discarded$1 = fo.a(jl.b(0), "resizing", (byte) 23, new Object[1]);
-                  break L0;
-                }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L1: {
-                  var2 = decompiledCaughtException;
-                  break L1;
-                }
+            try {
+              L0: {
+                Object discarded$1 = fo.a(jl.b(0), "resizing", (byte) 23, new Object[1]);
+                break L0;
               }
-              return;
-            } else {
-              return;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -76,11 +71,11 @@ abstract class al extends df {
         return super.i(-27388);
     }
 
-    final static String k(int param0) {
+    final static String k() {
         return s.field_e.f((byte) -24);
     }
 
-    final static void j(int param0) {
+    final static void j() {
         ch.field_e = false;
         nj.field_f = false;
         fb.a(-1, 99);
@@ -88,7 +83,7 @@ abstract class al extends df {
         ta.field_hb = mp.field_b;
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_U = null;
         field_cb = null;
         int var1 = 0;
@@ -275,9 +270,6 @@ abstract class al extends df {
                     }
                 }
             }
-        }
-        if (param1 != -1) {
-            field_eb = null;
         }
         return -1;
     }

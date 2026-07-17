@@ -17,11 +17,8 @@ final class mj {
     static int field_b;
 
     private final tf a(int param0, int param1, int param2) {
-        if (param0 != 1) {
-            ((mj) this).field_j = 32;
-            return this.a(false, param1, param2, 0);
-        }
-        return this.a(false, param1, param2, 0);
+        int discarded$0 = 0;
+        return this.a(false, param1, param2);
     }
 
     final static void a(int param0, int param1) {
@@ -76,7 +73,7 @@ final class mj {
         return ((mj) this).a(param1 + -param0, param3 - param0, param3 - -param0, param0 + param1, true);
     }
 
-    private final tf a(boolean param0, int param1, int param2, int param3) {
+    private final tf a(boolean param0, int param1, int param2) {
         if (~param1 <= ~((mj) this).field_m) {
             return null;
         }
@@ -395,7 +392,8 @@ final class mj {
               }
             }
             L2: {
-              var5 = this.a(true, param0, param3, 0);
+              int discarded$2 = 0;
+              var5 = this.a(true, param0, param3);
               if (var5 == null) {
                 break L2;
               } else {
@@ -437,7 +435,7 @@ final class mj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         int var1 = -6;
     }
@@ -475,12 +473,9 @@ final class mj {
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) ng.field_b);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ng.field_b);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) ng.field_b);
-            if (param0 != 3490) {
-                field_b = 29;
-            }
             le.field_c = 0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "mj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "mj.C(" + 3490 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

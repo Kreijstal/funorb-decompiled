@@ -22,10 +22,10 @@ abstract class ch {
         try {
             ig.a(param1.a((byte) 7, "", "headers.packvorbis"));
             var2 = ig.a(param1, "jagex logo2.packvorbis", "");
-            int var3 = -108 / ((param0 - -29) / 58);
+            int var3 = 108;
             ib discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ch.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ch.E(" + -114 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

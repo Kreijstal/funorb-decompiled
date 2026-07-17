@@ -5,7 +5,7 @@ final class bda {
     static String field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

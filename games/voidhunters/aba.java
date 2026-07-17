@@ -87,7 +87,7 @@ final class aba {
         var13 = VoidHunters.field_G;
         try {
           L0: {
-            var7_int = 43 / ((param4 - -6) / 39);
+            var7_int = 43;
             var8 = 0;
             if (param1.length <= var8) {
               decompiledRegionSelector0 = 0;
@@ -285,7 +285,7 @@ final class aba {
           }
           L13: {
             stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
-            stackOut_45_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_45_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(44).append(param3).append(44).append(51).append(44).append(param5).append(44);
             stackIn_47_0 = stackOut_45_0;
             stackIn_47_1 = stackOut_45_1;
             stackIn_46_0 = stackOut_45_0;
@@ -321,12 +321,12 @@ final class aba {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2) {
+    final static byte[] a(byte[] param0, int param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

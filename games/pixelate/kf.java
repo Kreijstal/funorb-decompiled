@@ -11,7 +11,7 @@ final class kf extends bg {
     static fm field_p;
     private int field_s;
 
-    final static tc a(byte[] param0, int param1) {
+    final static tc a(byte[] param0) {
         tc var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -39,7 +39,8 @@ final class kf extends bg {
           L0: {
             if (param0 != null) {
               var2 = new tc(param0, fa.field_b, e.field_b, gf.field_g, ge.field_c, wo.field_f);
-              re.b(140);
+              int discarded$2 = 140;
+              re.b();
               var3 = -1;
               stackOut_3_0 = (tc) var2;
               stackIn_4_0 = stackOut_3_0;
@@ -83,7 +84,7 @@ final class kf extends bg {
         return stackIn_4_0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_o = null;
         field_n = null;
         field_p = null;

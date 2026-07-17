@@ -62,7 +62,7 @@ final class gf {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var3_int = 0;
@@ -74,13 +74,20 @@ final class gf {
         var5 = SteelSentinels.field_G;
         try {
           L0: {
-            jk.a((byte) 6);
+            int discarded$8 = 6;
+            jk.a();
             le.field_K = 77;
-            bc.a(49, 9, 56, 0, fa.field_b, 16711680, 255);
-            bc.a(83, 1, 63, 56, fa.field_b, 16711680, 255);
+            int discarded$9 = 255;
+            int discarded$10 = 16711680;
+            bc.a(49, 9, 56, 0, fa.field_b);
+            int discarded$11 = 255;
+            int discarded$12 = 16711680;
+            bc.a(83, 1, 63, 56, fa.field_b);
             ta.field_e = pf.field_b;
             rf.a(ea.field_m, 320, 8, 8, 8, 8, hk.field_Tb, 16777215, 0, (mi) (Object) pl.field_U, 1146810, 240, 2, -94, wc.field_d);
-            im.a(hk.field_Tb, 0, 8, -13782, ea.field_m, 16777215, 8, 8, 2, 240, (mi) (Object) pl.field_U, 1146810, wc.field_d, 320, 8);
+            int discarded$13 = 8;
+            int discarded$14 = 320;
+            im.a(hk.field_Tb, 0, 8, -13782, ea.field_m, 16777215, 8, 8, 2, 240, (mi) (Object) pl.field_U, 1146810, wc.field_d);
             eb.field_s = new wk[9];
             var1_int = 0;
             L1: while (true) {
@@ -123,7 +130,8 @@ final class gf {
                                 L6: while (true) {
                                   if (20 <= var4) {
                                     sb.field_bb.b((byte) 125);
-                                    ve.a((byte) 122);
+                                    int discarded$15 = 122;
+                                    ve.a();
                                     break L0;
                                   } else {
                                     ff.field_rb[var4] = new wk(20, 20);
@@ -226,7 +234,7 @@ final class gf {
         nc.field_q = false;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
         field_d = null;

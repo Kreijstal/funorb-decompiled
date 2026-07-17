@@ -13,9 +13,6 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         ib.a(param2, db.field_b, param1, param3, 127, da.field_g, te.field_b);
-        if (param0 != -1604006872) {
-            field_g = null;
-        }
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -30,7 +27,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void a(String[] args, int param1, String param2, byte param3) {
+    final static void a(String[] args, int param1, String param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_9_0 = 0;
@@ -84,7 +81,8 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
                     break L2;
                   }
                 }
-                qf.field_d = fn.a(stackIn_9_0 != 0, (byte) 69);
+                int discarded$1 = 69;
+                qf.field_d = fn.a(stackIn_9_0 != 0);
                 break L1;
               } else {
                 L3: {
@@ -164,9 +162,6 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(boolean param0) {
         int var1 = an.field_h * an.field_h;
-        if (param0) {
-            return;
-        }
         int var2 = var1 - wa.field_p * wa.field_p;
         int var3 = var2 * (jn.field_c + -va.field_b) / var1 + va.field_b;
         qc.field_V.a(0, var3, 120, me.field_e, 640);
@@ -179,7 +174,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
     nn() {
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
         field_e = null;
         field_h = null;
@@ -199,11 +194,11 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return de.field_d;
     }
 
-    final static int a(int[] param0, byte param1) {
+    final static int a(int[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -322,7 +317,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         return stackIn_22_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, wk param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

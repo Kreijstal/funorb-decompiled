@@ -17,7 +17,7 @@ final class pb {
     static String field_n;
     static byte[] field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_h = null;
         field_n = null;
@@ -51,11 +51,7 @@ final class pb {
                     if (6 == var2) {
                       return field_b;
                     } else {
-                      if (param0 >= -107) {
-                        return null;
-                      } else {
-                        return null;
-                      }
+                      return null;
                     }
                   }
                 } else {

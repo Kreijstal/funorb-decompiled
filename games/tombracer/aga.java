@@ -155,65 +155,57 @@ final class aga {
     }
 
     private final void a(int param0, int param1, ha param2, int param3, int param4, int param5, int param6) {
-        RuntimeException runtimeException = null;
+        RuntimeException var8 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              ((aga) this).field_c = param2.a(param5, param1, param0, param3, param6, 1.0f);
-              if (param4 == 512) {
-                break L1;
-              } else {
-                nl[] discarded$2 = aga.a(-83);
-                break L1;
-              }
-            }
+            ((aga) this).field_c = param2.a(param5, param1, param0, param3, param6, 1.0f);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("aga.E(").append(param0).append(44).append(param1).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var8 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var8;
+            stackOut_2_1 = new StringBuilder().append("aga.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param3 + 44 + 512 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -284,14 +276,11 @@ final class aga {
         ((aga) this).field_c.a((byte) 105, (float)((var4 * ((aga) this).field_h >> 11) + ((aga) this).field_g) / 2048.0f);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
     final static nl[] a(int param0) {
-        if (param0 != -1025) {
-            field_a = null;
-        }
         return new nl[]{vw.field_a, ub.field_d, npa.field_f};
     }
 
@@ -305,35 +294,31 @@ final class aga {
         int var8 = 0;
         qg[] var9 = null;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (!param0) {
-          var9 = cm.field_a;
-          var2 = var9;
-          var3 = 0;
-          L0: while (true) {
-            if (var9.length > var3) {
-              var4 = var9[var3];
-              var5 = var4.field_c;
-              var6 = 0;
-              L1: while (true) {
-                if (var5.length <= var6) {
-                  var3++;
-                  continue L0;
+        var9 = cm.field_a;
+        var2 = var9;
+        var3 = 0;
+        L0: while (true) {
+          if (var9.length > var3) {
+            var4 = var9[var3];
+            var5 = var4.field_c;
+            var6 = 0;
+            L1: while (true) {
+              if (var5.length <= var6) {
+                var3++;
+                continue L0;
+              } else {
+                var7 = var5[var6];
+                if (param1 != var7.field_a) {
+                  var6++;
+                  continue L1;
                 } else {
-                  var7 = var5[var6];
-                  if (param1 != var7.field_a) {
-                    var6++;
-                    continue L1;
-                  } else {
-                    return var7;
-                  }
+                  return var7;
                 }
               }
-            } else {
-              return null;
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 
@@ -350,7 +335,8 @@ final class aga {
         int var10 = 0;
         try {
             if (ooa.field_e == null) {
-                pd.b(2);
+                int discarded$0 = 2;
+                pd.b();
             }
             this.a(param4, param3, param0, param6, 512, param2, param5);
             var9_int = (-ri.field_q + 2 * param6 >> cn.field_b) + 1;

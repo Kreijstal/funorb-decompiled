@@ -6,7 +6,7 @@ final class ql extends am {
     static qd field_s;
     static boolean field_t;
 
-    public static void b(int param0) {
+    public static void b() {
         field_s = null;
         field_u = null;
     }

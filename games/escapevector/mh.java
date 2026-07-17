@@ -20,16 +20,14 @@ final class mh {
         field_c = null;
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         String var1 = "";
         if (!(null == dd.field_d)) {
             var1 = dd.field_d.j(35);
         }
         if (var1.length() == 0) {
-            var1 = tg.i(0);
-        }
-        if (param0 <= 50) {
-            field_d = null;
+            int discarded$0 = 0;
+            var1 = tg.i();
         }
         if (var1.length() == 0) {
             var1 = fi.field_e;
@@ -39,9 +37,6 @@ final class mh {
 
     final static void a(byte param0, boolean param1) {
         wc.a(param1, 1983, true);
-        if (param0 >= -68) {
-            String discarded$0 = mh.b((byte) 6);
-        }
     }
 
     final static int a(int param0, CharSequence param1) {
@@ -119,7 +114,7 @@ final class mh {
         return stackIn_5_0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (null != bk.field_r) {
             bk.field_r.a((byte) -109);
         }

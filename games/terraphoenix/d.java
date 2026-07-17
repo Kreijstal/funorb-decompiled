@@ -136,7 +136,7 @@ final class d extends jc {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_J = null;
         field_I = null;
         field_L = null;

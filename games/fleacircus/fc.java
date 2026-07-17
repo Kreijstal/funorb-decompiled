@@ -9,7 +9,7 @@ final class fc {
     static re[] field_a;
     static String field_b;
 
-    final static dd[] b(int param0) {
+    final static dd[] b() {
         dd[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -30,15 +30,8 @@ final class fc {
         var2 = 0;
         L0: while (true) {
           if (ef.field_l <= var2) {
-            L1: {
-              if (param0 < -127) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
-            c.o(-28210);
+            int discarded$1 = -28210;
+            c.o();
             return var1;
           } else {
             var3 = ij.field_H[var2] * ob.field_a[var2];
@@ -51,7 +44,7 @@ final class fc {
               var13 = var16;
               var6 = var13;
               var7 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var3 <= var7) {
                   var1[var2] = (dd) (Object) new sj(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var24);
                   var2++;
@@ -59,14 +52,14 @@ final class fc {
                 } else {
                   var6[var7] = ne.a(rd.field_d[sc.a(255, (int) var21[var7])], sc.a((int) var23[var7], 255) << 24);
                   var7++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
               var9 = new int[var3];
               var22 = var9;
               var6_int = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var6_int >= var3) {
                   var1[var2] = new dd(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var22);
                   var2++;
@@ -74,7 +67,7 @@ final class fc {
                 } else {
                   var9[var6_int] = rd.field_d[sc.a((int) var21[var6_int], 255)];
                   var6_int++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }
@@ -82,7 +75,7 @@ final class fc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -875,7 +868,8 @@ final class fc {
                                       var16.c(var13, 35, var17 + 425 - -var16.field_H, var18, var19);
                                       var16.c(var14, 120, 425 - -var16.field_H, var18, var19);
                                       var16.c(var15, ol.field_f.field_l, 425 + var16.field_H, var18, var19);
-                                      var20 = wa.a(false);
+                                      int discarded$2 = 0;
+                                      var20 = wa.a();
                                       var21 = db.a(lf.field_b, new String[1], true);
                                       var16.c(db.a(var21, new String[1], true), 120, var16.field_H + 425 + var17, var18, var19);
                                       ol.field_f.field_l = 250;
@@ -1206,7 +1200,7 @@ final class fc {
                                             break L36;
                                           }
                                         }
-                                        int discarded$1 = ((fa) (Object) stackIn_161_0).a(stackIn_161_1, stackIn_161_2, stackIn_161_3 - -stackIn_161_4, 200, 150, 0, -1, var22, 1, 1, tl.field_p.field_H);
+                                        int discarded$3 = ((fa) (Object) stackIn_161_0).a(stackIn_161_1, stackIn_161_2, stackIn_161_3 - -stackIn_161_4, 200, 150, 0, -1, var22, 1, 1, tl.field_p.field_H);
                                         break L33;
                                       } else {
                                         break L33;
@@ -1432,7 +1426,7 @@ final class fc {
         throw new IllegalStateException();
     }
 
-    final static dd[] a(rh param0, String param1, String param2, byte param3) {
+    final static dd[] a(rh param0, String param1, String param2) {
         dd[] var4 = null;
         RuntimeException var4_ref = null;
         dd[] var5 = null;
@@ -1586,17 +1580,16 @@ final class fc {
         return stackIn_4_0;
     }
 
-    final static ad d(int param0) {
-        if (param0 != 64) {
-            dd[] discarded$0 = fc.b(-31);
-        }
-        String var1 = vi.b((byte) -55);
+    final static ad d() {
+        int discarded$0 = -55;
+        String var1 = vi.b();
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
                 var1 = "";
             }
         }
-        return new ad(vi.b((byte) -55), id.a(param0 + -5999));
+        int discarded$1 = -55;
+        return new ad(vi.b(), id.a(-5935));
     }
 
     static {

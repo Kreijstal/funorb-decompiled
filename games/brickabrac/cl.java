@@ -9,7 +9,7 @@ final class cl extends vi {
     static String field_s;
     int field_t;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_r = null;
         field_s = null;
     }

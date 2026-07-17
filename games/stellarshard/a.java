@@ -11,7 +11,7 @@ final class a {
     int field_f;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_d = null;
         field_g = null;
@@ -21,27 +21,23 @@ final class a {
     final static pb[] a(int param0, int param1, int param2, int param3, int param4) {
         pb[] var5 = null;
         pb[] var6 = null;
-        if (param3 <= -106) {
-          var6 = new pb[9];
-          var5 = var6;
-          pb dupTemp$4 = cl.a(param0, -41, param2);
-          var6[6] = dupTemp$4;
-          var5[3] = dupTemp$4;
-          var5[2] = dupTemp$4;
-          var5[1] = dupTemp$4;
-          var5[0] = dupTemp$4;
-          pb dupTemp$5 = cl.a(param1, -117, param2);
-          var6[8] = dupTemp$5;
-          var5[7] = dupTemp$5;
-          var5[5] = dupTemp$5;
-          if (param4 != 0) {
-            var6[4] = cl.a(param4, 119, 64);
-            return var5;
-          } else {
-            return var5;
-          }
+        var6 = new pb[9];
+        var5 = var6;
+        pb dupTemp$4 = cl.a(param0, -41, 1);
+        var6[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        pb dupTemp$5 = cl.a(param1, -117, 1);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[5] = dupTemp$5;
+        if (param4 != 0) {
+          var6[4] = cl.a(param4, 119, 64);
+          return var5;
         } else {
-          return null;
+          return var5;
         }
     }
 

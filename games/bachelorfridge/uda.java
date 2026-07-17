@@ -19,62 +19,38 @@ abstract class uda extends am {
     boolean a(int param0) {
         int var3 = 0;
         var3 = BachelorFridge.field_y;
-        if (null == ((uda) this).field_Y) {
-          if (param0 >= -32) {
-            return false;
-          } else {
-            return super.a(-118);
-          }
-        } else {
+        if (null != ((uda) this).field_Y) {
           if (pj.field_n == ((uda) this).field_Y) {
             int fieldTemp$2 = ((uda) this).field_Z + 1;
             ((uda) this).field_Z = ((uda) this).field_Z + 1;
-            if (fieldTemp$2 == ((uda) this).field_W) {
+            if (fieldTemp$2 != ((uda) this).field_W) {
+              ((uda) this).field_S.field_F = -((((uda) this).field_Z << 8) / ((uda) this).field_W) + 256;
+              return super.a(-118);
+            } else {
               ((uda) this).field_Y = cp.field_b;
               ((uda) this).a(((uda) this).field_db, 26012, ((uda) this).field_T.field_q + 12 + ((uda) this).field_bb, 12 - -((uda) this).field_T.field_p);
               ((uda) this).field_S.field_F = 0;
               ((uda) this).field_Z = 0;
-              if (param0 >= -32) {
-                return false;
-              } else {
-                return super.a(-118);
-              }
-            } else {
-              ((uda) this).field_S.field_F = -((((uda) this).field_Z << 8) / ((uda) this).field_W) + 256;
-              if (param0 >= -32) {
-                return false;
-              } else {
-                return super.a(-118);
-              }
+              return super.a(-118);
             }
           } else {
             if (((uda) this).field_Y == dha.field_b) {
               int fieldTemp$3 = ((uda) this).field_Z + 1;
               ((uda) this).field_Z = ((uda) this).field_Z + 1;
-              if (((uda) this).field_V != fieldTemp$3) {
-                ((uda) this).field_S.field_F = (((uda) this).field_Z << 8) / ((uda) this).field_V;
-                if (param0 >= -32) {
-                  return false;
-                } else {
-                  return super.a(-118);
-                }
-              } else {
+              if (((uda) this).field_V == fieldTemp$3) {
                 ((uda) this).field_Y = null;
                 ((uda) this).field_S.field_F = 256;
-                if (param0 >= -32) {
-                  return false;
-                } else {
-                  return super.a(-118);
-                }
-              }
-            } else {
-              if (param0 >= -32) {
-                return false;
+                return super.a(-118);
               } else {
+                ((uda) this).field_S.field_F = (((uda) this).field_Z << 8) / ((uda) this).field_V;
                 return super.a(-118);
               }
+            } else {
+              return super.a(-118);
             }
           }
+        } else {
+          return super.a(-118);
         }
     }
 
@@ -87,7 +63,9 @@ abstract class uda extends am {
     }
 
     final static void b(boolean param0, int param1, int param2, int param3) {
-        qm.a(false, param0, param1, param2);
+        int discarded$0 = 320;
+        int discarded$1 = 180;
+        qm.a(false, param0);
     }
 
     public static void n(int param0) {
@@ -133,7 +111,7 @@ abstract class uda extends am {
         String stackOut_13_2 = null;
         try {
           L0: {
-            if (super.a(param0, param1, param2, param3)) {
+            if (super.a(10, param1, param2, param3)) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -168,7 +146,7 @@ abstract class uda extends am {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("uda.I(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("uda.I(").append(10).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -204,12 +182,14 @@ abstract class uda extends am {
           if (param0) {
             var3 = null;
             ((uda) this).e((wj) null, 10);
-            this.d(((uda) this).field_T, -15084);
+            int discarded$4 = -15084;
+            this.d(((uda) this).field_T);
             ((uda) this).field_S.field_F = 0;
             ((uda) this).field_T = null;
             return;
           } else {
-            this.d(((uda) this).field_T, -15084);
+            int discarded$5 = -15084;
+            this.d(((uda) this).field_T);
             ((uda) this).field_S.field_F = 0;
             ((uda) this).field_T = null;
             return;
@@ -226,27 +206,85 @@ abstract class uda extends am {
             ((uda) this).field_bb = param2;
             ((uda) this).field_V = param3;
             ((uda) this).field_W = param3;
-            this.d(param1, -15084);
+            int discarded$0 = -15084;
+            this.d(param1);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "uda.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    private final void d(wj param0, int param1) {
+    private final void d(wj param0) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         try {
-            if (null != ((uda) this).field_S) {
+          L0: {
+            L1: {
+              if (null == ((uda) this).field_S) {
+                break L1;
+              } else {
                 ((uda) this).field_S.a(false);
+                break L1;
+              }
             }
-            if (param0 == null) {
-                ((uda) this).field_S = new hl();
-            } else {
+            L2: {
+              if (param0 != null) {
                 param0.a(6, param0.field_q, (byte) 59, param0.field_p, 6 - -((uda) this).field_bb);
                 ((uda) this).field_S = new hl(param0);
+                ((uda) this).c((wj) (Object) ((uda) this).field_S, -11);
+                break L2;
+              } else {
+                ((uda) this).field_S = new hl();
+                ((uda) this).c((wj) (Object) ((uda) this).field_S, -11);
+                break L2;
+              }
             }
-            ((uda) this).c((wj) (Object) ((uda) this).field_S, -11);
             ((uda) this).field_T = null;
-        } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uda.D(" + (param0 != null ? "{...}" : "null") + 44 + -15084 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_1 = new StringBuilder().append("uda.D(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + -15084 + 41);
         }
     }
 
@@ -325,7 +363,8 @@ abstract class uda extends am {
             L1: {
               if (((uda) this).field_Y != dha.field_b) {
                 ((uda) this).b(-41, 12 + ((uda) this).field_bb + ((uda) this).field_T.field_q, 12 + ((uda) this).field_T.field_p);
-                this.d(((uda) this).field_T, -15084);
+                int discarded$2 = -15084;
+                this.d(((uda) this).field_T);
                 break L1;
               } else {
                 break L1;

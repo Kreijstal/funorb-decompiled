@@ -122,84 +122,76 @@ final class tk extends ia {
         RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              var9_int = -param3 + (param7 + param6.field_D) - -param8;
-              var10 = param6.field_D + param7 + (param8 + param2);
-              var11 = (param6.field_F >> 1) + param0 + param6.field_H;
-              pb.h(var9_int, 0, var10, var11 + param4);
-              param6.a(-1 + param7, param0 - 1, param1);
-              param6.a(param7 - 1, 1 + param0, param1);
-              pb.a(ti.field_n);
-              pb.h(1 + var9_int, 0, 1 + var10, param4 + var11);
-              param6.a(param7 - -1, param0 + -1, param1);
-              param6.a(param7 + 1, 1 + param0, param1);
-              pb.a(ti.field_n);
-              if (param5 == -30456) {
-                break L1;
-              } else {
-                tk.f((byte) -117);
-                break L1;
-              }
-            }
-            var9_int = param6.field_A + param6.field_D + (param7 + (-param8 + -param2));
-            var10 = param6.field_A + param6.field_D + param7 - (param8 - -param3);
-            pb.h(var9_int, -param4 + var11, var10, 480);
-            param6.a(param7 - 1, param0 + -1, param1);
-            param6.a(param7 + -1, 1 + param0, param1);
+            var9_int = param7 + param6.field_D - -param8;
+            var10 = param6.field_D + param7 + (param8 + 30);
+            var11 = (param6.field_F >> 1) + param0 + param6.field_H;
+            pb.h(var9_int, 0, var10, var11);
+            param6.a(-1 + param7, param0 - 1, 80);
+            param6.a(param7 - 1, 1 + param0, 80);
             pb.a(ti.field_n);
-            pb.h(1 + var9_int, var11 - param4, 1 + var10, 480);
-            param6.a(1 + param7, -1 + param0, param1);
-            param6.a(param7 - -1, param0 - -1, param1);
+            pb.h(1 + var9_int, 0, 1 + var10, var11);
+            param6.a(param7 - -1, param0 + -1, 80);
+            param6.a(param7 + 1, 1 + param0, 80);
+            pb.a(ti.field_n);
+            var9_int = param6.field_A + param6.field_D + (param7 + (-param8 + -30));
+            var10 = param6.field_A + param6.field_D + param7 - param8;
+            pb.h(var9_int, var11, var10, 480);
+            param6.a(param7 - 1, param0 + -1, 80);
+            param6.a(param7 + -1, 1 + param0, 80);
+            pb.a(ti.field_n);
+            pb.h(1 + var9_int, var11, 1 + var10, 480);
+            param6.a(1 + param7, -1 + param0, 80);
+            param6.a(param7 - -1, param0 - -1, 80);
             pb.a(ti.field_n);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var9 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var9;
-            stackOut_4_1 = new StringBuilder().append("tk.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var9;
+            stackOut_2_1 = new StringBuilder().append("tk.A(").append(param0).append(44).append(80).append(44).append(30).append(44).append(0).append(44).append(0).append(44).append(-30456).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param6 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param7 + 44 + param8 + 41);
+          throw ci.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
@@ -234,7 +226,7 @@ final class tk extends ia {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_t = null;
         field_p = null;
         field_r = null;

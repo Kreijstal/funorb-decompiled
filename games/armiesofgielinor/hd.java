@@ -44,10 +44,7 @@ final class hd implements Runnable {
     }
 
     private final wo a(byte param0, int param1, boolean param2, String param3) {
-        if (param0 < 121) {
-            return null;
-        }
-        return this.a(0, param1, (Object) (Object) param3, (byte) -20, !param2 ? 1 : 22);
+        return this.a(0, param1, (Object) (Object) param3, (byte) -20, 1);
     }
 
     final wo a(java.awt.datatransfer.Transferable param0, int param1) {
@@ -66,10 +63,10 @@ final class hd implements Runnable {
             String var7 = null;
             Exception var8 = null;
             ei var8_ref = null;
-            ei stackIn_12_0 = null;
+            ei stackIn_13_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            ei stackOut_11_0 = null;
+            ei stackOut_12_0 = null;
             L0: {
               if (33 != param2) {
                 if (34 != param2) {
@@ -87,14 +84,7 @@ final class hd implements Runnable {
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_f, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             var6 = 0;
             L1: while (true) {
-              if (var6 >= var5_array.length) {
-                if (!param0) {
-                  field_x = null;
-                  return null;
-                } else {
-                  return null;
-                }
-              } else {
+              if (var6 < var5_array.length) {
                 L2: {
                   var7 = var5_array[var6];
                   if (var7.length() <= 0) {
@@ -111,8 +101,8 @@ final class hd implements Runnable {
                 try {
                   L3: {
                     var8_ref = new ei(new File(var7, var4), "rw", 10000L);
-                    stackOut_11_0 = (ei) var8_ref;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackOut_12_0 = (ei) var8_ref;
+                    stackIn_13_0 = stackOut_12_0;
                     decompiledRegionSelector0 = 0;
                     break L3;
                   }
@@ -126,10 +116,12 @@ final class hd implements Runnable {
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
-                  return stackIn_12_0;
+                  return stackIn_13_0;
                 } else {
                   continue L1;
                 }
+              } else {
+                return null;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

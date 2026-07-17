@@ -39,7 +39,7 @@ final class gk {
     int field_k;
     static int[] field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_e = null;
         field_r = null;
@@ -49,62 +49,31 @@ final class gk {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = 0;
         var17 = wizardrun.field_H;
-        if (param12 != -719) {
-          field_g = null;
-          if (param14 <= param1) {
-            if (param10 <= param1) {
-              if (param10 > param14) {
-                nh.a(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, ed.field_k, param9, param11, param4);
-                return;
-              } else {
-                nh.a(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, ed.field_k, param8, param0, param4);
-                return;
-              }
+        if (param14 <= param1) {
+          if (param10 <= param1) {
+            if (param10 > param14) {
+              nh.a(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, -126, ed.field_k, param9, param11, param4);
+              return;
             } else {
-              nh.a(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, ed.field_k, param9, param3, param2);
+              nh.a(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, ed.field_k, param8, param0, param4);
               return;
             }
           } else {
-            if (param14 >= param10) {
-              if (param1 < param10) {
-                nh.a(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, ed.field_k, param15, param11, param13);
-                return;
-              } else {
-                nh.a(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, ed.field_k, param8, param3, param13);
-                return;
-              }
-            } else {
-              nh.a(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, ed.field_k, param15, param0, param2);
-              return;
-            }
+            nh.a(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, -124, ed.field_k, param9, param3, param2);
+            return;
           }
         } else {
-          if (param14 <= param1) {
-            if (param10 <= param1) {
-              if (param10 > param14) {
-                nh.a(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, ed.field_k, param9, param11, param4);
-                return;
-              } else {
-                nh.a(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, ed.field_k, param8, param0, param4);
-                return;
-              }
+          if (param14 >= param10) {
+            if (param1 < param10) {
+              nh.a(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, -128, ed.field_k, param15, param11, param13);
+              return;
             } else {
-              nh.a(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, ed.field_k, param9, param3, param2);
+              nh.a(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, -128, ed.field_k, param8, param3, param13);
               return;
             }
           } else {
-            if (param14 >= param10) {
-              if (param1 < param10) {
-                nh.a(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, ed.field_k, param15, param11, param13);
-                return;
-              } else {
-                nh.a(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, ed.field_k, param8, param3, param13);
-                return;
-              }
-            } else {
-              nh.a(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, ed.field_k, param15, param0, param2);
-              return;
-            }
+            nh.a(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, ed.field_k, param15, param0, param2);
+            return;
           }
         }
     }
@@ -113,14 +82,11 @@ final class gk {
         try {
             le.field_j = param2;
             uf.field_c = param3;
-            kc.field_I = param1;
+            kc.field_I = 480;
             kj.a(1048576, ed.field_d / 2, ed.field_h / 2);
-            if (param0 <= 15) {
-                field_o = null;
-            }
             qk.a(param2.field_B + param2.field_q, param3.field_q, param2.field_q, 1882, param3.field_q + param3.field_B);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "gk.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "gk.C(" + 95 + 44 + 480 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

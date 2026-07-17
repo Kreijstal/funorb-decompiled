@@ -6,7 +6,7 @@ final class pk {
     static jb field_b;
     static ja field_c;
 
-    final static cj b(int param0) {
+    final static cj b() {
         return bf.field_n.field_Gb;
     }
 

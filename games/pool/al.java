@@ -182,7 +182,7 @@ final class al {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_k = null;
         field_v = null;
@@ -470,7 +470,9 @@ final class al {
                         L5: {
                           var6 = -((al) this).field_w[var5].field_g + param1[var4_int].field_g;
                           var7 = -((al) this).field_w[var5].field_f + param1[var4_int].field_k;
-                          if (od.a((long)var6, (long)var6, false) + od.a((long)var7, (long)var7, false) < (long)ui.a(324, (byte) 90)) {
+                          int discarded$2 = 0;
+                          int discarded$3 = 0;
+                          if (od.a((long)var6, (long)var6) + od.a((long)var7, (long)var7) < (long)ui.a(324, (byte) 90)) {
                             L6: {
                               param1[var4_int].field_s = false;
                               param1[var4_int].field_v = 0;
@@ -711,34 +713,46 @@ final class al {
         int var3 = 0;
         long var4 = 0L;
         long var6 = 0L;
+        Object var8 = null;
         hh.field_e = 0;
         var2 = 0;
         L0: while (true) {
           if (((al) this).field_l.length <= var2) {
+            L1: {
+              if (param0 == 77) {
+                break L1;
+              } else {
+                var8 = null;
+                boolean discarded$3 = ((al) this).a(true, (byte) -9, (qe) null);
+                break L1;
+              }
+            }
             return;
           } else {
             if (((al) this).field_l[var2].field_s) {
               var3 = var2 - -1;
-              L1: while (true) {
+              L2: while (true) {
                 if (((al) this).field_l.length > var3) {
                   if (((al) this).field_l[var3].field_s) {
                     var4 = (long)(-((al) this).field_l[var3].field_g + ((al) this).field_l[var2].field_g);
                     var6 = (long)(((al) this).field_l[var2].field_k + -((al) this).field_l[var3].field_k);
-                    var4 = od.a(var4, var4, false);
-                    var6 = od.a(var6, var6, false);
+                    int discarded$4 = 0;
+                    var4 = od.a(var4, var4);
+                    int discarded$5 = 0;
+                    var6 = od.a(var6, var6);
                     if (var4 + var6 < 16777216L) {
                       k.field_N[hh.field_e][0] = var2;
                       k.field_N[hh.field_e][1] = var3;
                       hh.field_e = hh.field_e + 1;
                       var3++;
-                      continue L1;
+                      continue L2;
                     } else {
                       var3++;
-                      continue L1;
+                      continue L2;
                     }
                   } else {
                     var3++;
-                    continue L1;
+                    continue L2;
                   }
                 } else {
                   var2++;
@@ -753,7 +767,7 @@ final class al {
         }
     }
 
-    private final void g(int param0) {
+    private final void g() {
         ((al) this).field_w = new dl[6];
         ((al) this).field_w[0] = new dl(((al) this).field_c[2]);
         ((al) this).field_w[1] = new dl(((al) this).field_c[6]);
@@ -825,7 +839,7 @@ final class al {
                 L2: {
                   var4 = ((al) this).j(81);
                   ((al) this).field_A = var4.field_L;
-                  if (param0 > var4.field_q) {
+                  if (2 > var4.field_q) {
                     break L2;
                   } else {
                     boolean discarded$1 = ((al) this).h(22042);
@@ -838,7 +852,7 @@ final class al {
                   var5 = new qe();
                   var5.field_v = param1.b(true);
                   var5.field_M = param1.d((byte) -86);
-                  var6 = param1.g(param0 ^ -85);
+                  var6 = param1.g(-87);
                   var5.field_q = 15 & var6 >> 4;
                   stackOut_3_0 = (qe) var5;
                   stackIn_5_0 = stackOut_3_0;
@@ -899,7 +913,7 @@ final class al {
                     var5.field_A = (short)param1.d(-1034);
                     var5.field_V = (short)param1.d(-1034);
                     var5.field_D = (byte)param1.g(-77);
-                    var5.field_H = (byte)param1.g(param0 ^ -101);
+                    var5.field_H = (byte)param1.g(-103);
                     break L6;
                   }
                 }
@@ -917,7 +931,7 @@ final class al {
                           if (var7 >= var6) {
                             break L8;
                           } else {
-                            var8 = param1.g(param0 ^ -125);
+                            var8 = param1.g(-127);
                             var5.field_m.b((byte) 97, (ma) (Object) new cr(31 & var8, var8 >> 5));
                             var7++;
                             continue L9;
@@ -934,7 +948,7 @@ final class al {
                           if (var7 <= var8) {
                             break L10;
                           } else {
-                            var9 = param1.g(param0 ^ -97);
+                            var9 = param1.g(-99);
                             var16 = new int[param1.g(-88)];
                             var15 = var16;
                             var14 = var15;
@@ -947,7 +961,7 @@ final class al {
                                 var8++;
                                 continue L11;
                               } else {
-                                var10[var11] = param1.g(cq.a(param0, -124));
+                                var10[var11] = param1.g(cq.a(2, -124));
                                 var11++;
                                 continue L12;
                               }
@@ -968,7 +982,7 @@ final class al {
                   if (var5.field_q < 3) {
                     break L13;
                   } else {
-                    var5.field_l = (byte)param1.g(param0 + -130);
+                    var5.field_l = (byte)param1.g(-128);
                     break L13;
                   }
                 }
@@ -983,7 +997,7 @@ final class al {
           L14: {
             var3 = decompiledCaughtException;
             stackOut_35_0 = (RuntimeException) var3;
-            stackOut_35_1 = new StringBuilder().append("al.KA(").append(param0).append(44);
+            stackOut_35_1 = new StringBuilder().append("al.KA(").append(2).append(44);
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -1010,7 +1024,7 @@ final class al {
         }
     }
 
-    private final boolean d(int param0) {
+    private final boolean d() {
         int var2 = 0;
         var2 = 0;
         L0: while (true) {
@@ -1086,84 +1100,80 @@ final class al {
         String stackOut_22_2 = null;
         try {
           L0: {
-            if (param3 == -30896) {
-              L1: {
-                var7_int = 0;
-                var8 = 0;
-                if (param2 != null) {
-                  var7_int = param2.a(23165, 524288);
-                  var8 = -262144 + param2.a(23165, 524288);
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L1: {
+              var7_int = 0;
+              var8 = 0;
+              if (param2 != null) {
+                var7_int = param2.a(23165, 524288);
+                var8 = -262144 + param2.a(23165, 524288);
+                break L1;
+              } else {
+                break L1;
               }
-              var9 = ((al) this).field_l[param4];
-              var9.field_o = false;
-              var9.field_s = true;
-              var9.field_j = -524288;
-              var9.d((byte) -105);
-              var9.field_p = true;
-              var9.field_x.a(false);
-              var9.field_g = var7_int + param1;
-              var9.field_k = var8 + param0;
-              this.a((byte) 77);
-              var10 = 0;
-              var11 = 0;
-              L2: while (true) {
-                L3: {
-                  if (hh.field_e <= 0) {
-                    break L3;
-                  } else {
-                    var12 = 0;
-                    var13 = 0;
-                    L4: while (true) {
-                      if (~var13 <= ~hh.field_e) {
-                        if (var12 != 0) {
-                          L5: {
-                            var10 += 2048;
-                            if (var10 >= 262144) {
-                              var11 = var11 + dn.a(67108864 / (var10 >> 8), false);
-                              break L5;
-                            } else {
-                              var11 += 256;
-                              break L5;
-                            }
+            }
+            var9 = ((al) this).field_l[param4];
+            var9.field_o = false;
+            var9.field_s = true;
+            var9.field_j = -524288;
+            var9.d((byte) -105);
+            var9.field_p = true;
+            var9.field_x.a(false);
+            var9.field_g = var7_int + param1;
+            var9.field_k = var8 + param0;
+            this.a((byte) 77);
+            var10 = 0;
+            var11 = 0;
+            L2: while (true) {
+              L3: {
+                if (hh.field_e <= 0) {
+                  break L3;
+                } else {
+                  var12 = 0;
+                  var13 = 0;
+                  L4: while (true) {
+                    if (~var13 <= ~hh.field_e) {
+                      if (var12 != 0) {
+                        L5: {
+                          var10 += 2048;
+                          if (var10 >= 262144) {
+                            var11 = var11 + dn.a(67108864 / (var10 >> 8), false);
+                            break L5;
+                          } else {
+                            var11 += 256;
+                            break L5;
                           }
-                          var11 = var11 % param5;
-                          var9.field_g = (af.c((byte) -121, var11) >> 4) * (var10 >> 12) + param1;
-                          var9.field_k = param0 - -((o.a(var11, (byte) -62) >> 4) * (var10 >> 12));
-                          this.a((byte) 77);
-                          continue L2;
-                        } else {
-                          break L3;
                         }
+                        var11 = var11 % param5;
+                        var9.field_g = (af.c((byte) -121, var11) >> 4) * (var10 >> 12) + param1;
+                        var9.field_k = param0 - -((o.a(var11, (byte) -62) >> 4) * (var10 >> 12));
+                        this.a((byte) 77);
+                        continue L2;
                       } else {
-                        L6: {
-                          L7: {
-                            if (param4 == k.field_N[var13][0]) {
-                              break L7;
+                        break L3;
+                      }
+                    } else {
+                      L6: {
+                        L7: {
+                          if (param4 == k.field_N[var13][0]) {
+                            break L7;
+                          } else {
+                            if (~param4 != ~k.field_N[var13][1]) {
+                              break L6;
                             } else {
-                              if (~param4 != ~k.field_N[var13][1]) {
-                                break L6;
-                              } else {
-                                break L7;
-                              }
+                              break L7;
                             }
                           }
-                          var12++;
-                          break L6;
                         }
-                        var13++;
-                        continue L4;
+                        var12++;
+                        break L6;
                       }
+                      var13++;
+                      continue L4;
                     }
                   }
                 }
-                break L0;
               }
-            } else {
-              return;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1194,7 +1204,7 @@ final class al {
               break L8;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wm.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -30896 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -1246,10 +1256,21 @@ final class al {
                     var10 = -s.field_e[0] + ((al) this).field_l[var9].field_g;
                     var11 = -s.field_e[1] + ((al) this).field_l[var9].field_k;
                     var12 = -s.field_e[2] + ((al) this).field_l[var9].field_j;
-                    var13 = od.a((long)s.field_e[9], (long)s.field_e[9], false) + (od.a((long)s.field_e[10], (long)s.field_e[10], false) - -od.a((long)s.field_e[11], (long)s.field_e[11], false));
-                    var15 = -2L * (od.a((long)s.field_e[9], (long)var10, false) - (-od.a((long)s.field_e[10], (long)var11, false) - od.a((long)s.field_e[11], (long)var12, false)));
-                    var17 = od.a((long)var10, (long)var10, false) + od.a((long)var11, (long)var11, false) - (-od.a((long)var12, (long)var12, false) - -(long)var8);
-                    var19 = od.a(var15, var15, false) + -(4L * od.a(var13, var17, false));
+                    int discarded$22 = 0;
+                    int discarded$23 = 0;
+                    int discarded$24 = 0;
+                    var13 = od.a((long)s.field_e[9], (long)s.field_e[9]) + (od.a((long)s.field_e[10], (long)s.field_e[10]) - -od.a((long)s.field_e[11], (long)s.field_e[11]));
+                    int discarded$25 = 0;
+                    int discarded$26 = 0;
+                    int discarded$27 = 0;
+                    var15 = -2L * (od.a((long)s.field_e[9], (long)var10) - (-od.a((long)s.field_e[10], (long)var11) - od.a((long)s.field_e[11], (long)var12)));
+                    int discarded$28 = 0;
+                    int discarded$29 = 0;
+                    int discarded$30 = 0;
+                    var17 = od.a((long)var10, (long)var10) + od.a((long)var11, (long)var11) - (-od.a((long)var12, (long)var12) - -(long)var8);
+                    int discarded$31 = 0;
+                    int discarded$32 = 0;
+                    var19 = od.a(var15, var15) + -(4L * od.a(var13, var17));
                     if (var19 >= 0L) {
                       L3: {
                         var21 = bm.a(param3 ^ -278, var19);
@@ -1273,7 +1294,8 @@ final class al {
                                       break L5;
                                     } else {
                                       if ((pd.field_i & 16L) != 0L) {
-                                        hr.a(ol.a(new int[3], (byte) 1), 16724753, 112, ba.field_ub.field_ab);
+                                        int discarded$33 = 1;
+                                        hr.a(ol.a(new int[3]), 16724753, 112, ba.field_ub.field_ab);
                                         break L5;
                                       } else {
                                         break L5;
@@ -1297,7 +1319,8 @@ final class al {
                                     break L6;
                                   } else {
                                     if ((pd.field_i & 16L) != 0L) {
-                                      hr.a(ol.a(new int[3], (byte) 1), 16724753, param3 ^ -272, ba.field_ub.field_ab);
+                                      int discarded$34 = 1;
+                                      hr.a(ol.a(new int[3]), 16724753, param3 ^ -272, ba.field_ub.field_ab);
                                       break L6;
                                     } else {
                                       break L6;
@@ -1332,7 +1355,9 @@ final class al {
                 L8: {
                   var9 = ((al) this).field_c[var8].field_j - ((al) this).field_c[var8].field_l;
                   var10 = ((al) this).field_c[var8].field_f - ((al) this).field_c[var8].field_a;
-                  var11_long = bm.a(param3 ^ -314, od.a((long)var9, (long)var9, false) - -od.a((long)var10, (long)var10, false));
+                  int discarded$35 = 0;
+                  int discarded$36 = 0;
+                  var11_long = bm.a(param3 ^ -314, od.a((long)var9, (long)var9) - -od.a((long)var10, (long)var10));
                   if (-2147483648L > var11_long) {
                     break L8;
                   } else {
@@ -1343,14 +1368,19 @@ final class al {
                     }
                   }
                 }
-                System.out.println("Wall normal overflow " + lo.a(var11_long, 7697781));
+                int discarded$37 = 7697781;
+                System.out.println("Wall normal overflow " + lo.a(var11_long));
                 break L7;
               }
               var9 = lh.a((int)var11_long, (byte) -128, (long)var9);
               var10 = lh.a((int)var11_long, (byte) -119, (long)var10);
               var11 = -aj.a(((al) this).field_c[var8].field_a, false, var9) - aj.a(((al) this).field_c[var8].field_j, false, var10);
-              var12_long = (long)var11 + (od.a((long)var9, (long)s.field_e[0], false) + od.a((long)var10, (long)s.field_e[1], false));
-              var14 = od.a((long)var9, (long)s.field_e[9], false) - -od.a((long)var10, (long)s.field_e[10], false);
+              int discarded$38 = 0;
+              int discarded$39 = 0;
+              var12_long = (long)var11 + (od.a((long)var9, (long)s.field_e[0]) + od.a((long)var10, (long)s.field_e[1]));
+              int discarded$40 = 0;
+              int discarded$41 = 0;
+              var14 = od.a((long)var9, (long)s.field_e[9]) - -od.a((long)var10, (long)s.field_e[10]);
               if (var14 != 0L) {
                 L9: {
                   var16 = -var12_long / var14;
@@ -1429,7 +1459,8 @@ final class al {
                                     break L13;
                                   } else {
                                     if (0L != (pd.field_i & 16L)) {
-                                      hr.a(ol.a(new int[3], (byte) 1), 16724753, -128, ba.field_ub.field_ab);
+                                      int discarded$42 = 1;
+                                      hr.a(ol.a(new int[3]), 16724753, -128, ba.field_ub.field_ab);
                                       break L13;
                                     } else {
                                       return false;
@@ -1442,7 +1473,8 @@ final class al {
                           }
                           if (ba.field_ub != null) {
                             if (0L != (16L & pd.field_i)) {
-                              hr.a(ol.a(new int[3], (byte) 1), 16764057, -79, ba.field_ub.field_ab);
+                              int discarded$43 = 1;
+                              hr.a(ol.a(new int[3]), 16764057, -79, ba.field_ub.field_ab);
                               var8++;
                               continue L1;
                             } else {
@@ -1989,10 +2021,13 @@ final class al {
         int var19 = var6 * var13 + var3.field_D * var11 + var3.field_H * var16 >> 9;
         int var20 = var12 * var3.field_D + (var14 * var6 - -(var3.field_H * var17)) >> 9;
         int var21 = 0 * var3.field_D + var6 * var15 - -(var18 * var3.field_H) >> 9;
-        var4.field_I = lh.a(uh.field_q, (byte) -73, (long)(int)(od.a((long)(var3.field_V * var13), (long)kj.field_f, false) / 4096L));
-        var4.field_t = lh.a(uh.field_q, (byte) -108, (long)(int)(od.a((long)(var3.field_V * var14), (long)kj.field_f, false) / 4096L));
+        int discarded$1 = 0;
+        var4.field_I = lh.a(uh.field_q, (byte) -73, (long)(int)(od.a((long)(var3.field_V * var13), (long)kj.field_f) / 4096L));
+        int discarded$2 = 0;
+        var4.field_t = lh.a(uh.field_q, (byte) -108, (long)(int)(od.a((long)(var3.field_V * var14), (long)kj.field_f) / 4096L));
         var4.field_v = 1;
-        int var22 = lh.a(uh.field_w, (byte) -116, (long)(int)(od.a((long)(var3.field_V * bl.field_g), (long)kj.field_f, false) / 4096L));
+        int discarded$3 = 0;
+        int var22 = lh.a(uh.field_w, (byte) -116, (long)(int)(od.a((long)(var3.field_V * bl.field_g), (long)kj.field_f) / 4096L));
         var4.field_n = aj.a(-aj.a(var14, false, var21), false, var22);
         var4.field_b = aj.a(aj.a(var13, false, var21), false, var22);
         var4.field_K = aj.a(aj.a(var14, false, var19) - aj.a(var13, false, var20), false, var22);
@@ -2023,8 +2058,10 @@ final class al {
             lo.field_a = false;
         }
         if (!(!l.field_a)) {
-            lq.a(true);
-            mj.b(0);
+            int discarded$0 = 1;
+            lq.a();
+            int discarded$1 = 0;
+            mj.b();
             lq.l(-121);
             l.field_a = false;
         }
@@ -2981,7 +3018,8 @@ final class al {
         int stackOut_7_1 = 0;
         qe stackOut_6_0 = null;
         int stackOut_6_1 = 0;
-        qa.a(((al) this).field_e, ((al) this).field_c, ((al) this).field_l, 0);
+        int discarded$2 = 0;
+        qa.a(((al) this).field_e, ((al) this).field_c, ((al) this).field_l);
         var7 = ((al) this).j(79);
         if (param0 <= -2) {
           L0: {
@@ -2994,10 +3032,11 @@ final class al {
           }
           L1: {
             ((al) this).a(6582, ((al) this).field_l, ((al) this).j(110));
+            int discarded$3 = 0;
             stackOut_5_0 = (qe) var7;
             stackIn_7_0 = stackOut_5_0;
             stackIn_6_0 = stackOut_5_0;
-            if (!this.d(0)) {
+            if (!this.d()) {
               stackOut_7_0 = (qe) (Object) stackIn_7_0;
               stackOut_7_1 = 1;
               stackIn_8_0 = stackOut_7_0;
@@ -3060,7 +3099,7 @@ final class al {
         }
     }
 
-    final static void m(int param0) {
+    final static void m() {
         ci.d((byte) -125);
         lf.a(4, (byte) 93);
     }
@@ -3196,7 +3235,7 @@ final class al {
         }
     }
 
-    final static void i(int param0) {
+    final static void i() {
         field_k = new vh(0L, (vh) null, qh.field_l - ff.field_e[4].field_z >> 1, -120 + qh.field_f, ff.field_e[4].field_z, qh.field_f, (String) null);
         ia.a(true, field_k);
         field_k.field_F = ff.field_e;
@@ -3317,7 +3356,7 @@ final class al {
         }
     }
 
-    private final void h(byte param0) {
+    private final void h() {
         this.a(true, new int[72]);
     }
 
@@ -3337,8 +3376,10 @@ final class al {
             ((al) this).field_h = param2;
             ((al) this).a(param1, (byte) -128);
             this.d(-14894, ((al) this).field_f.i(26840));
-            this.h((byte) -58);
-            this.g(10571);
+            int discarded$0 = -58;
+            this.h();
+            int discarded$1 = 10571;
+            this.g();
             var5 = new qe();
             ((al) this).field_u.b((byte) -60, (ma) (Object) var5);
             var5.field_L = ((al) this).field_A;

@@ -89,7 +89,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         return stackIn_1_0;
     }
 
-    private final void d(boolean param0) {
+    private final void d() {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -98,11 +98,16 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         try {
           L0: {
             we.a(qa.field_O, -106, 82.0f);
-            bd.field_P = qk.a("", kf.field_d, "weapongattlinggun", true);
-            le.field_d = qk.a("", kf.field_d, "weapongattlinggun2", true);
-            qf.field_b = qk.a("", kf.field_d, "weapongattlinggun3", param0);
-            lh.field_p = qk.a("", kf.field_d, "weaponhomingmissile", true);
-            nc.field_K = qk.a("", kf.field_d, "weaponbomb", true);
+            int discarded$5 = 1;
+            bd.field_P = qk.a("", kf.field_d, "weapongattlinggun");
+            int discarded$6 = 1;
+            le.field_d = qk.a("", kf.field_d, "weapongattlinggun2");
+            int discarded$7 = 1;
+            qf.field_b = qk.a("", kf.field_d, "weapongattlinggun3");
+            int discarded$8 = 1;
+            lh.field_p = qk.a("", kf.field_d, "weaponhomingmissile");
+            int discarded$9 = 1;
+            nc.field_K = qk.a("", kf.field_d, "weaponbomb");
             f.field_i = cl.a("", kf.field_d, -116, "weaponmegacannonshot");
             oj.field_c = ij.a("bulletspark", (byte) 96, kf.field_d, "");
             hb.field_a = new nh(15, 15);
@@ -224,13 +229,13 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.GB(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.GB(" + 1 + 41);
         }
     }
 
     private final he[] a(int param0, int param1, he param2) {
-        he[] var4 = null;
-        RuntimeException var4_ref = null;
+        RuntimeException var4 = null;
+        he[] var4_array = null;
         int var5 = 0;
         int var6 = 0;
         he[] stackIn_7_0 = null;
@@ -256,51 +261,43 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         var6 = field_D ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == -1745) {
-                break L1;
-              } else {
-                field_G = null;
-                break L1;
-              }
-            }
-            var4 = new he[param1];
+            var4_array = new he[param1];
             var5 = 0;
-            L2: while (true) {
-              L3: {
-                L4: {
+            L1: while (true) {
+              L2: {
+                L3: {
                   if (param1 <= var5) {
-                    break L4;
+                    break L3;
                   } else {
-                    stackOut_6_0 = (he[]) var4;
+                    stackOut_6_0 = (he[]) var4_array;
                     stackIn_11_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var6 != 0) {
-                      break L3;
+                      break L2;
                     } else {
                       stackIn_7_0[var5] = param2;
                       var5++;
                       if (var6 == 0) {
-                        continue L2;
+                        continue L1;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
                 }
-                stackOut_10_0 = (he[]) var4;
+                stackOut_10_0 = (he[]) var4_array;
                 stackIn_11_0 = stackOut_10_0;
-                break L3;
+                break L2;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4_ref;
-            stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.MB(").append(param0).append(44).append(param1).append(44);
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.MB(").append(-1745).append(44).append(param1).append(44);
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -312,7 +309,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L5;
+              break L4;
             } else {
               stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
               stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
@@ -320,7 +317,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
               stackIn_16_2 = stackOut_13_2;
-              break L5;
+              break L4;
             }
           }
           throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
@@ -368,7 +365,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         try {
           L0: {
             L1: {
-              ia.a((byte) 9);
+              int discarded$13 = 9;
+              ia.a();
               if (!((DrPhlogistonSavesTheEarth) this).field_C) {
                 break L1;
               } else {
@@ -388,7 +386,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   break L2;
                 } else {
                   qk.a(true);
-                  vj.b((byte) 72);
+                  int discarded$14 = 72;
+                  vj.b();
                   break L2;
                 }
               }
@@ -424,7 +423,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               if (!nd.field_Q) {
                 break L5;
               } else {
-                this.p(-119);
+                int discarded$15 = -119;
+                this.p();
                 nd.field_Q = false;
                 break L5;
               }
@@ -432,14 +432,17 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             L6: {
               ni.field_x = ni.field_x + 1;
               lf.field_b = lf.field_b + 1;
-              if (kh.a(false)) {
+              int discarded$16 = 0;
+              if (kh.a()) {
                 ((DrPhlogistonSavesTheEarth) this).m(-128);
-                if (!kh.a(false)) {
+                int discarded$17 = 0;
+                if (!kh.a()) {
                   break L6;
                 } else {
                   L7: {
-                    if (bj.a(13)) {
-                      boolean discarded$1 = this.b(false, -111);
+                    int discarded$18 = 13;
+                    if (bj.a()) {
+                      boolean discarded$19 = this.b(false, -111);
                       break L7;
                     } else {
                       break L7;
@@ -489,7 +492,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                           } else {
                             L14: {
                               L15: {
-                                var4 = qg.n((byte) 46);
+                                int discarded$20 = 46;
+                                var4 = qg.n();
                                 if (2 != var4) {
                                   break L15;
                                 } else {
@@ -623,12 +627,14 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   }
                 }
               }
-              hc.b((byte) -51);
+              int discarded$21 = -51;
+              hc.b();
               if (!a.a(-27365)) {
                 break L8;
               } else {
                 bh.b(-95);
-                gf.b((byte) 86);
+                int discarded$22 = 86;
+                gf.b();
                 if (hl.field_f != 9) {
                   break L8;
                 } else {
@@ -705,13 +711,16 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   el.a(false, 2);
                   ka.a(3, (byte) -40);
                   i.a(4, 0);
-                  dj.a(false, 5);
+                  int discarded$23 = 5;
+                  int discarded$24 = 0;
+                  dj.a();
                   break L29;
                 }
                 if (var2_int != 2) {
                   break L28;
                 } else {
-                  am.e(11);
+                  int discarded$25 = 11;
+                  am.e();
                   break L28;
                 }
               } else {
@@ -747,7 +756,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         }
     }
 
-    private final void o(int param0) {
+    private final void o() {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -792,7 +801,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                 tl.field_P = eh.a("basic", (byte) -53, ph.field_b, "unachieved");
                 ce.field_b = eh.a("basic", (byte) -39, ph.field_b, "orbcoin");
                 ge.field_d = eh.a("basic", (byte) -55, ph.field_b, "locked");
-                ol.a(false);
+                int discarded$1 = 0;
+                ol.a();
                 break L2;
               }
               var2_int = 0;
@@ -837,7 +847,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   eb.field_e[6].c();
                   wj.f(0, 0, 64, 64, 7091712, 131328);
                   vi.field_g.a(0, 0, 256, 64);
-                  var2_int = -13 % ((param0 - 56) / 56);
+                  var2_int = 0;
                   eb.field_e[7].c();
                   wj.f(0, 0, 64, 64, 27648, 512);
                   vi.field_g.a(0, 0, 256, 64);
@@ -863,7 +873,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.VA(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.VA(" + 125 + 41);
         }
     }
 
@@ -880,36 +890,53 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           L0: {
             L1: {
               DrPhlogistonSavesTheEarth.u(-16387);
-              vd.a(true);
-              dk.a(24);
-              tb.a((byte) 35);
+              int discarded$154 = 1;
+              vd.a();
+              int discarded$155 = 24;
+              dk.a();
+              int discarded$156 = 35;
+              tb.a();
               ul.a((byte) 8);
               rk.a((byte) 52);
-              gd.a(-27770);
-              ld.e((byte) 39);
+              int discarded$157 = -27770;
+              gd.a();
+              int discarded$158 = 39;
+              ld.e();
               ij.a(15596);
               sl.j(26395);
-              gl.a(false);
+              int discarded$159 = 0;
+              gl.a();
               li.c(-1);
-              fi.a(125);
-              fe.a((byte) 119);
-              aj.a(45);
-              oi.a((byte) 86);
+              int discarded$160 = 125;
+              fi.a();
+              int discarded$161 = 119;
+              fe.a();
+              int discarded$162 = 45;
+              aj.a();
+              int discarded$163 = 86;
+              oi.a();
               wj.d();
               vj.c(0);
               pc.a(13302);
-              bc.a(66);
+              int discarded$164 = 66;
+              bc.a();
               od.d(4);
-              la.a((byte) 0);
-              lf.a(-127);
+              int discarded$165 = 0;
+              la.a();
+              int discarded$166 = -127;
+              lf.a();
               le.a(param0);
-              oe.a(5);
+              int discarded$167 = 5;
+              oe.a();
               kf.a(23050);
-              th.a((byte) 111);
-              al.a(false);
+              int discarded$168 = 111;
+              th.a();
+              int discarded$169 = 0;
+              al.a();
               oh.a(false);
               bj.a(true);
-              we.a((byte) 120);
+              int discarded$170 = 120;
+              we.a();
               qh.a(1);
               ab.a(false);
               if (param0) {
@@ -925,33 +952,50 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             L2: {
               m.a(stackIn_4_0 != 0);
               na.a((byte) -33);
-              sb.a((byte) 33);
-              q.a(25270);
+              int discarded$171 = 33;
+              sb.a();
+              int discarded$172 = 25270;
+              q.a();
               wg.b(2);
-              ng.a(0);
-              cf.a(-127);
-              mk.a(0);
+              int discarded$173 = 0;
+              ng.a();
+              int discarded$174 = -127;
+              cf.a();
+              int discarded$175 = 0;
+              mk.a();
               j.h(24342);
-              nb.a((byte) 76);
-              i.a((byte) -118);
-              gb.b(6);
-              n.b(-31553);
-              df.c(110);
+              int discarded$176 = 76;
+              nb.a();
+              int discarded$177 = -118;
+              i.a();
+              int discarded$178 = 6;
+              gb.b();
+              int discarded$179 = -31553;
+              n.b();
+              int discarded$180 = 110;
+              df.c();
               ge.a(false);
               qe.c(0);
-              oj.a(false);
-              fj.d(57);
+              int discarded$181 = 0;
+              oj.a();
+              int discarded$182 = 57;
+              fj.d();
               gf.a(param0);
-              ib.a(9);
-              bf.c((byte) -114);
+              int discarded$183 = 9;
+              ib.a();
+              int discarded$184 = -114;
+              bf.c();
               td.a(869637800);
-              ck.a(7268);
+              int discarded$185 = 7268;
+              ck.a();
               gi.b(10589);
               ug.h(-921185753);
               tg.a(0);
-              cc.a((byte) -8);
+              int discarded$186 = -8;
+              cc.a();
               rl.f();
-              am.f(-112);
+              int discarded$187 = -112;
+              am.f();
               if (param0) {
                 stackOut_7_0 = 0;
                 stackIn_8_0 = stackOut_7_0;
@@ -970,184 +1014,304 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             gk.a(false);
             d.a((byte) 39);
             rf.a();
-            ui.a(-19662);
-            rg.a((byte) -20);
-            di.a((byte) 27);
-            ea.a(0);
+            int discarded$188 = -19662;
+            ui.a();
+            int discarded$189 = -20;
+            rg.a();
+            int discarded$190 = 27;
+            di.a();
+            int discarded$191 = 0;
+            ea.a();
             kh.a((byte) -63);
-            mg.a((byte) 5);
-            wd.a(99);
+            int discarded$192 = 5;
+            mg.a();
+            int discarded$193 = 99;
+            wd.a();
             eg.a(-1);
-            qj.a((byte) -126);
-            k.g((byte) 52);
-            qd.o(9791);
-            tf.c(false);
-            el.n(20);
+            int discarded$194 = -126;
+            qj.a();
+            int discarded$195 = 52;
+            k.g();
+            int discarded$196 = 9791;
+            qd.o();
+            int discarded$197 = 0;
+            tf.c();
+            int discarded$198 = 20;
+            el.n();
             ma.n(19678);
             v.j(3);
             ff.i(-1);
-            wa.j(-11179);
+            int discarded$199 = -11179;
+            wa.j();
             ah.k(-988);
-            a.b(2);
+            int discarded$200 = 2;
+            a.b();
             sf.a(param0);
-            ub.a((byte) -119);
+            int discarded$201 = -119;
+            ub.a();
             s.a(7);
-            fb.a(256);
-            cb.a((byte) 122);
-            mf.g(-62);
+            int discarded$202 = 256;
+            fb.a();
+            int discarded$203 = 122;
+            cb.a();
+            int discarded$204 = -62;
+            mf.g();
             uh.d(-24338);
-            lh.p(0);
-            jj.a(111);
+            int discarded$205 = 0;
+            lh.p();
+            int discarded$206 = 111;
+            jj.a();
             nk.a();
             sg.a((byte) -57);
             tk.b();
             gj.b();
-            ha.a((byte) 69);
+            int discarded$207 = 69;
+            ha.a();
             pe.b(0);
             be.a();
-            hi.b(109);
-            aa.a(1);
-            ee.a(1);
+            int discarded$208 = 109;
+            hi.b();
+            int discarded$209 = 1;
+            aa.a();
+            int discarded$210 = 1;
+            ee.a();
             ii.a(110);
-            db.a((byte) 89);
+            int discarded$211 = 89;
+            db.a();
             u.a((byte) 50);
-            t.a((byte) -114);
-            ta.b(1441320386);
-            cl.d(0);
-            hl.e(108);
+            int discarded$212 = -114;
+            t.a();
+            int discarded$213 = 1441320386;
+            ta.b();
+            int discarded$214 = 0;
+            cl.d();
+            int discarded$215 = 108;
+            hl.e();
             cm.a((byte) -113);
-            ik.a(0);
-            bi.a((byte) 119);
-            de.d(117);
+            int discarded$216 = 0;
+            ik.a();
+            int discarded$217 = 119;
+            bi.a();
+            int discarded$218 = 117;
+            de.d();
             pf.b(-79);
-            c.a((byte) -58);
-            lb.h(30);
-            fl.a(118);
-            qc.a(24937);
-            ae.n(1);
-            kk.a((byte) 44);
+            int discarded$219 = -58;
+            c.a();
+            int discarded$220 = 30;
+            lb.h();
+            int discarded$221 = 118;
+            fl.a();
+            int discarded$222 = 24937;
+            qc.a();
+            int discarded$223 = 1;
+            ae.n();
+            int discarded$224 = 44;
+            kk.a();
             l.a(0);
             uc.c();
-            sh.a((byte) 119);
-            ej.a(12018);
-            ja.a(93);
+            int discarded$225 = 119;
+            sh.a();
+            int discarded$226 = 12018;
+            ej.a();
+            int discarded$227 = 93;
+            ja.a();
             fc.a(-60);
             af.a(4);
-            pd.a(false);
-            mh.a((byte) -9);
-            r.a((byte) 11);
-            ce.a(-105);
-            hc.c((byte) -98);
-            hm.c(-99);
-            ua.a((byte) 50);
-            rc.a(2);
+            int discarded$228 = 0;
+            pd.a();
+            int discarded$229 = -9;
+            mh.a();
+            int discarded$230 = 11;
+            r.a();
+            int discarded$231 = -105;
+            ce.a();
+            int discarded$232 = -98;
+            hc.c();
+            int discarded$233 = -99;
+            hm.c();
+            int discarded$234 = 50;
+            ua.a();
+            int discarded$235 = 2;
+            rc.a();
             qf.a((byte) 64);
-            bh.a(67);
+            int discarded$236 = 67;
+            bh.a();
             gh.a();
-            lc.b((byte) 111);
-            sc.a(-63);
-            ki.a(true);
-            hb.a((byte) 101);
-            ch.b((byte) 94);
-            lg.a((byte) -119);
+            int discarded$237 = 111;
+            lc.b();
+            int discarded$238 = -63;
+            sc.a();
+            int discarded$239 = 1;
+            ki.a();
+            int discarded$240 = 101;
+            hb.a();
+            int discarded$241 = 94;
+            ch.b();
+            int discarded$242 = -119;
+            lg.a();
             fm.a(-109);
             vg.f((byte) -102);
             hf.f(7966);
             si.g(6714);
-            ca.m(-2110416344);
-            bd.a((byte) -120);
-            pj.f(-86);
+            int discarded$243 = -2110416344;
+            ca.m();
+            int discarded$244 = -120;
+            bd.a();
+            int discarded$245 = -86;
+            pj.f();
             rh.b(-2);
-            ob.a((byte) 52);
-            cj.a(-95);
-            ai.h(-30463);
-            p.a(-29912);
-            ac.a((byte) -91);
+            int discarded$246 = 52;
+            ob.a();
+            int discarded$247 = -95;
+            cj.a();
+            int discarded$248 = -30463;
+            ai.h();
+            int discarded$249 = -29912;
+            p.a();
+            int discarded$250 = -91;
+            ac.a();
             ol.a((byte) -116);
-            eh.a((byte) -84);
-            wi.a(2);
-            ji.a(true);
-            ph.a(1);
-            hj.a(-20385);
-            qk.b(65280);
-            bk.b(66);
-            fa.e(-57);
-            ga.a((byte) -4);
-            wb.b(34);
-            gg.b(-339514552);
-            nj.b(0);
-            ig.e(-15877);
+            int discarded$251 = -84;
+            eh.a();
+            int discarded$252 = 2;
+            wi.a();
+            int discarded$253 = 1;
+            ji.a();
+            int discarded$254 = 1;
+            ph.a();
+            int discarded$255 = -20385;
+            hj.a();
+            int discarded$256 = 65280;
+            qk.b();
+            int discarded$257 = 66;
+            bk.b();
+            int discarded$258 = -57;
+            fa.e();
+            int discarded$259 = -4;
+            ga.a();
+            int discarded$260 = 34;
+            wb.b();
+            int discarded$261 = -339514552;
+            gg.b();
+            int discarded$262 = 0;
+            nj.b();
+            int discarded$263 = -15877;
+            ig.e();
             ri.a(param0);
-            dh.j(3);
+            int discarded$264 = 3;
+            dh.j();
             qg.n(-1);
-            kl.j((byte) 78);
-            jf.h((byte) 127);
+            int discarded$265 = 78;
+            kl.j();
+            int discarded$266 = 127;
+            jf.h();
             hd.b(false);
-            jd.a((byte) 108);
+            int discarded$267 = 108;
+            jd.a();
             qa.a((byte) 122);
             gm.h(-112);
-            ci.i(-76);
-            nc.a((byte) 126);
-            ei.d(1);
-            md.a(75);
-            ih.l(288);
-            nd.b(true);
-            tl.a((byte) -39);
+            int discarded$268 = -76;
+            ci.i();
+            int discarded$269 = 126;
+            nc.a();
+            int discarded$270 = 1;
+            ei.d();
+            int discarded$271 = 75;
+            md.a();
+            int discarded$272 = 288;
+            ih.l();
+            int discarded$273 = 1;
+            nd.b();
+            int discarded$274 = -39;
+            tl.a();
             da.a();
-            hh.a(false);
+            int discarded$275 = 0;
+            hh.a();
             o.a((byte) 99);
             jc.c((byte) 56);
             rb.a(0);
-            pi.j(2147483647);
-            jk.j(7624);
-            sa.a(250);
+            int discarded$276 = 2147483647;
+            pi.j();
+            int discarded$277 = 7624;
+            jk.j();
+            int discarded$278 = 250;
+            sa.a();
             tc.a(-9292);
             dg.a(true);
-            wh.c((byte) -86);
+            int discarded$279 = -86;
+            wh.c();
             rd.g(-125);
             ka.c(26713);
-            pa.a(-1);
-            re.b(967);
-            oa.a(71);
-            vb.d(4);
-            bg.a((byte) 102);
-            sj.a(true);
-            kc.a((byte) -1);
-            ie.c(78);
+            int discarded$280 = -1;
+            pa.a();
+            int discarded$281 = 967;
+            re.b();
+            int discarded$282 = 71;
+            oa.a();
+            int discarded$283 = 4;
+            vb.d();
+            int discarded$284 = 102;
+            bg.a();
+            int discarded$285 = 1;
+            sj.a();
+            int discarded$286 = -1;
+            kc.a();
+            int discarded$287 = 78;
+            ie.c();
             uk.a(false);
             mj.c(2147483647);
             dm.d((byte) -126);
-            ue.a(117);
-            dl.j(0);
-            hg.h(-15);
-            b.d(-382);
-            uf.a((byte) -60);
-            f.d(-1);
-            je.a((byte) 19);
-            nl.a((byte) -106);
-            vc.a(0);
+            int discarded$288 = 117;
+            ue.a();
+            int discarded$289 = 0;
+            dl.j();
+            int discarded$290 = -15;
+            hg.h();
+            int discarded$291 = -382;
+            b.d();
+            int discarded$292 = -60;
+            uf.a();
+            int discarded$293 = -1;
+            f.d();
+            int discarded$294 = 19;
+            je.a();
+            int discarded$295 = -106;
+            nl.a();
+            int discarded$296 = 0;
+            vc.a();
             bb.b(param0);
-            wk.d(80);
+            int discarded$297 = 80;
+            wk.d();
             qb.a(false);
             og.a(120);
             sd.a(2);
-            lk.a(-27996);
-            ll.d((byte) 104);
+            int discarded$298 = -27996;
+            lk.a();
+            int discarded$299 = 104;
+            ll.d();
             dd.a(false);
-            ia.b(27174);
-            ek.e(-126);
-            uj.d(1);
-            jl.d(65535);
+            int discarded$300 = 27174;
+            ia.b();
+            int discarded$301 = -126;
+            ek.e();
+            int discarded$302 = 1;
+            uj.d();
+            int discarded$303 = 65535;
+            jl.d();
             kj.a(14970);
             mi.b((byte) 91);
-            ad.e(0);
+            int discarded$304 = 0;
+            ad.e();
             ni.d((byte) 125);
-            g.b(true);
+            int discarded$305 = 1;
+            g.b();
             nf.d((byte) -95);
             cd.b((byte) -47);
-            fk.a((byte) 111);
+            int discarded$306 = 111;
+            fk.a();
             vh.a(84);
-            dc.c(88);
+            int discarded$307 = 88;
+            dc.c();
             vi.a(2823);
             ((DrPhlogistonSavesTheEarth) this).field_z = null;
             break L0;
@@ -1203,7 +1367,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         return stackIn_10_0 != 0;
     }
 
-    private final void p(int param0) {
+    private final void p() {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
@@ -1211,9 +1375,11 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           L0: {
             L1: {
               if (null != df.field_m) {
-                q.a(df.field_m, 255);
+                int discarded$2 = 255;
+                q.a(df.field_m);
                 df.field_m = null;
-                tc.a((byte) 86);
+                int discarded$3 = 86;
+                tc.a();
                 break L1;
               } else {
                 break L1;
@@ -1227,14 +1393,14 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             mh.field_a = al.a(3, 6);
             ff.field_P = al.a(3, 7);
             s.c((byte) 126);
-            var2_int = -107 % ((-65 - param0) / 41);
+            var2_int = 0;
             gd.a(si.field_E, 255, ph.field_b);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.RA(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.RA(" + -119 + 41);
         }
     }
 
@@ -1267,7 +1433,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         return stackIn_4_0;
     }
 
-    private final he[] a(he[] param0, int param1) {
+    private final he[] a(he[] param0) {
         he[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -1295,49 +1461,41 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         var5 = field_D ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var3 = new he[param0.length];
-              if (param1 == 65793) {
-                break L1;
-              } else {
-                ((DrPhlogistonSavesTheEarth) this).h(-112);
-                break L1;
-              }
-            }
+            var3 = new he[param0.length];
             var4 = 0;
-            L2: while (true) {
-              L3: {
-                L4: {
+            L1: while (true) {
+              L2: {
+                L3: {
                   if (~var4 <= ~var3.length) {
-                    break L4;
+                    break L3;
                   } else {
                     var3[var4] = param0[var4].e();
                     stackOut_6_0 = (he[]) var3;
                     stackIn_11_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var5 != 0) {
-                      break L3;
+                      break L2;
                     } else {
                       ((he) (Object) stackIn_7_0[var4]).d();
                       var4++;
                       if (var5 == 0) {
-                        continue L2;
+                        continue L1;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
                 }
                 stackOut_10_0 = (he[]) var3;
                 stackIn_11_0 = stackOut_10_0;
-                break L3;
+                break L2;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
             stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.CB(");
@@ -1352,7 +1510,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L5;
+              break L4;
             } else {
               stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
               stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
@@ -1360,10 +1518,10 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
               stackIn_16_2 = stackOut_13_2;
-              break L5;
+              break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 65793 + 41);
         }
         return stackIn_11_0;
     }
@@ -1499,7 +1657,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               }
             }
             var2_ref = stackIn_5_0;
-            if (kh.a(false)) {
+            int discarded$4 = 0;
+            if (kh.a()) {
               L2: {
                 if (null == df.field_l) {
                   stackOut_11_0 = pj.field_C;
@@ -1601,7 +1760,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       if (r.field_d != 11) {
                         break L3;
                       } else {
-                        ti.a(true, 0);
+                        int discarded$5 = 0;
+                        ti.a(true);
                         break L3;
                       }
                     }
@@ -1641,7 +1801,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                           }
                         }
                       }
-                      if (!fl.b(73)) {
+                      int discarded$6 = 73;
+                      if (!fl.b()) {
                         break L14;
                       } else {
                         if (!pf.a((byte) 97)) {
@@ -1782,7 +1943,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                         if (pf.a((byte) 97)) {
                           break L9;
                         } else {
-                          cj.b(8227);
+                          int discarded$3 = 8227;
+                          cj.b();
                           if (var3 == 0) {
                             break L8;
                           } else {
@@ -1790,7 +1952,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                           }
                         }
                       }
-                      og.a((byte) 78);
+                      int discarded$4 = 78;
+                      og.a();
                       break L8;
                     }
                     ul.field_a = 2;
@@ -1839,7 +2002,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     hl.field_f = hg.field_sb;
-                    eb.a((byte) 20);
+                    int discarded$5 = 20;
+                    eb.a();
                     li.b(param0 + 8638);
                     if (hl.field_f != -2) {
                       break L12;
@@ -1870,7 +2034,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         }
     }
 
-    private final void k(byte param0) {
+    private final void k() {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -1900,90 +2064,86 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             v.field_W[2] = eh.a("", (byte) -50, kf.field_d, "act_screen_intro_7_part_3");
             ie.field_x[0] = eh.a("", (byte) -122, kf.field_d, "act_screen_intro_8");
             rg.field_c[0] = eh.a("", (byte) -84, kf.field_d, "act_screen_intro_9");
-            if (param0 == 22) {
-              l.field_f[0][0] = eh.a("", (byte) -78, kf.field_d, "act_screen_death_1");
-              l.field_f[1][0] = l.field_f[0][0];
-              l.field_f[2][0] = l.field_f[0][0];
-              l.field_f[3][0] = eh.a("", (byte) -105, kf.field_d, "act_screen_death_4");
-              l.field_f[4][0] = l.field_f[3][0];
-              l.field_f[5][0] = l.field_f[3][0];
-              l.field_f[6][0] = eh.a("", (byte) -49, kf.field_d, "act_screen_death_7");
-              l.field_f[7][0] = l.field_f[6][0];
-              l.field_f[8][0] = l.field_f[6][0];
-              l.field_f[0][1] = eh.a("", (byte) -101, kf.field_d, "act_screen_death_boss_123");
-              l.field_f[1][1] = l.field_f[0][1];
-              l.field_f[2][1] = l.field_f[0][1];
-              l.field_f[3][1] = eh.a("", (byte) -96, kf.field_d, "act_screen_death_boss_456");
-              l.field_f[4][1] = l.field_f[3][1];
-              l.field_f[5][1] = l.field_f[3][1];
-              l.field_f[6][1] = eh.a("", (byte) -34, kf.field_d, "act_screen_death_boss_789");
-              l.field_f[7][1] = l.field_f[6][1];
-              l.field_f[8][1] = l.field_f[6][1];
-              hh.field_d[2] = eh.a("", (byte) -114, kf.field_d, "act_screen_completion_1");
-              hh.field_d[5] = eh.a("", (byte) -83, kf.field_d, "act_screen_completion_2");
-              hh.field_d[8] = eh.a("", (byte) -111, kf.field_d, "act_screen_completion_3");
-              al.field_c = eh.a("", (byte) -95, kf.field_d, "act_screen_completion_4");
-              var2_int = 0;
-              L1: while (true) {
-                L2: {
-                  L3: {
-                    if (9 <= var2_int) {
-                      break L3;
+            l.field_f[0][0] = eh.a("", (byte) -78, kf.field_d, "act_screen_death_1");
+            l.field_f[1][0] = l.field_f[0][0];
+            l.field_f[2][0] = l.field_f[0][0];
+            l.field_f[3][0] = eh.a("", (byte) -105, kf.field_d, "act_screen_death_4");
+            l.field_f[4][0] = l.field_f[3][0];
+            l.field_f[5][0] = l.field_f[3][0];
+            l.field_f[6][0] = eh.a("", (byte) -49, kf.field_d, "act_screen_death_7");
+            l.field_f[7][0] = l.field_f[6][0];
+            l.field_f[8][0] = l.field_f[6][0];
+            l.field_f[0][1] = eh.a("", (byte) -101, kf.field_d, "act_screen_death_boss_123");
+            l.field_f[1][1] = l.field_f[0][1];
+            l.field_f[2][1] = l.field_f[0][1];
+            l.field_f[3][1] = eh.a("", (byte) -96, kf.field_d, "act_screen_death_boss_456");
+            l.field_f[4][1] = l.field_f[3][1];
+            l.field_f[5][1] = l.field_f[3][1];
+            l.field_f[6][1] = eh.a("", (byte) -34, kf.field_d, "act_screen_death_boss_789");
+            l.field_f[7][1] = l.field_f[6][1];
+            l.field_f[8][1] = l.field_f[6][1];
+            hh.field_d[2] = eh.a("", (byte) -114, kf.field_d, "act_screen_completion_1");
+            hh.field_d[5] = eh.a("", (byte) -83, kf.field_d, "act_screen_completion_2");
+            hh.field_d[8] = eh.a("", (byte) -111, kf.field_d, "act_screen_completion_3");
+            al.field_c = eh.a("", (byte) -95, kf.field_d, "act_screen_completion_4");
+            var2_int = 0;
+            L1: while (true) {
+              L2: {
+                L3: {
+                  if (9 <= var2_int) {
+                    break L3;
+                  } else {
+                    if (var4 != 0) {
+                      break L2;
                     } else {
-                      if (var4 != 0) {
-                        break L2;
-                      } else {
-                        var3 = 0;
-                        L4: while (true) {
-                          L5: {
-                            L6: {
-                              if (2 <= var3) {
-                                break L6;
+                      var3 = 0;
+                      L4: while (true) {
+                        L5: {
+                          L6: {
+                            if (2 <= var3) {
+                              break L6;
+                            } else {
+                              rc.field_a[var2_int][var3] = new nh(l.field_f[var2_int][var3].field_h / 4, l.field_f[var2_int][var3].field_c / 4);
+                              rc.field_a[var2_int][var3].c();
+                              l.field_f[var2_int][var3].b(0, 0);
+                              var3++;
+                              if (var4 != 0) {
+                                break L5;
                               } else {
-                                rc.field_a[var2_int][var3] = new nh(l.field_f[var2_int][var3].field_h / 4, l.field_f[var2_int][var3].field_c / 4);
-                                rc.field_a[var2_int][var3].c();
-                                l.field_f[var2_int][var3].b(0, 0);
-                                var3++;
-                                if (var4 != 0) {
-                                  break L5;
+                                if (var4 == 0) {
+                                  continue L4;
                                 } else {
-                                  if (var4 == 0) {
-                                    continue L4;
-                                  } else {
-                                    break L6;
-                                  }
+                                  break L6;
                                 }
                               }
                             }
-                            var2_int++;
-                            break L5;
                           }
-                          if (var4 == 0) {
-                            continue L1;
-                          } else {
-                            break L3;
-                          }
+                          var2_int++;
+                          break L5;
+                        }
+                        if (var4 == 0) {
+                          continue L1;
+                        } else {
+                          break L3;
                         }
                       }
                     }
                   }
-                  dc.field_a = new nh(al.field_c.field_h / 4, al.field_c.field_c / 4);
-                  dc.field_a.c();
-                  al.field_c.b(0, 0);
-                  lb.field_C.a(98);
-                  rh.field_h = hh.field_d[2];
-                  break L2;
                 }
-                break L0;
+                dc.field_a = new nh(al.field_c.field_h / 4, al.field_c.field_c / 4);
+                dc.field_a.c();
+                al.field_c.b(0, 0);
+                lb.field_C.a(98);
+                rh.field_h = hh.field_d[2];
+                break L2;
               }
-            } else {
-              return;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.TA(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.TA(" + 22 + 41);
         }
     }
 
@@ -2194,7 +2354,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         }
     }
 
-    private final void j(byte param0) {
+    private final void j() {
         kb var2 = null;
         int var3 = 0;
         L0: {
@@ -2671,7 +2831,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         }
         L50: {
           var2 = kb.a(aa.field_b, "", "DrP_32c_asteroid_dest");
-          var3 = 47 / ((param0 - 19) / 45);
+          var3 = -47;
           if (var2 == null) {
             break L50;
           } else {
@@ -2728,12 +2888,13 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       if (param1 <= -92) {
                         break L2;
                       } else {
-                        boolean discarded$2 = DrPhlogistonSavesTheEarth.t(-37);
+                        boolean discarded$4 = DrPhlogistonSavesTheEarth.t(-37);
                         break L2;
                       }
                     }
                     var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                    param0.getAppletContext().showDocument(kk.a(var2, param0, 4767999), "_top");
+                    int discarded$5 = 4767999;
+                    param0.getAppletContext().showDocument(kk.a(var2, param0), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -2783,18 +2944,22 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         }
     }
 
-    private final void h(byte param0) {
-        we.a(qa.field_O, -77, 60.0f);
-        ni.field_q = kc.a(ff.field_P, kf.field_d, "", param0 ^ -116, "font");
-        if (param0 != -83) {
-            return;
-        }
+    private final void h() {
+        RuntimeException var2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
+            we.a(qa.field_O, -77, 60.0f);
+            ni.field_q = kc.a(ff.field_P, kf.field_d, "", 33, "font");
             a.field_g = kc.a(ff.field_P, kf.field_d, "", 85, "small_font");
             ji.field_d = kc.a(ff.field_P, kf.field_d, "", -101, "bottomheavy32");
             cb.field_b = kc.a(ff.field_P, kf.field_d, "", -95, "scriptfont");
-        } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "DrPhlogistonSavesTheEarth.NB(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.NB(" + -83 + 41);
         }
     }
 
@@ -2805,18 +2970,29 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           L0: {
             L1: {
               we.a(qa.field_O, -111, 95.0f);
-              nc.field_M = qk.a("", kf.field_d, "mb_foreground", true);
-              eb.field_g = qk.a("", kf.field_d, "mb_logo", true);
-              nh discarded$3 = qk.a("", kf.field_d, "mb_transparency_layer", true);
-              nh discarded$4 = qk.a("", kf.field_d, "mb_signup_button_frame", true);
-              v.field_Y = qk.a("", kf.field_d, "mb_price_background", true);
-              nh discarded$5 = qk.a("", kf.field_d, "mb_menu_button_frame", true);
+              int discarded$17 = 1;
+              nc.field_M = qk.a("", kf.field_d, "mb_foreground");
+              int discarded$18 = 1;
+              eb.field_g = qk.a("", kf.field_d, "mb_logo");
+              int discarded$19 = 1;
+              nh discarded$20 = qk.a("", kf.field_d, "mb_transparency_layer");
+              int discarded$21 = 1;
+              nh discarded$22 = qk.a("", kf.field_d, "mb_signup_button_frame");
+              int discarded$23 = 1;
+              v.field_Y = qk.a("", kf.field_d, "mb_price_background");
+              int discarded$24 = 1;
+              nh discarded$25 = qk.a("", kf.field_d, "mb_menu_button_frame");
               cm.field_R = new nh[8];
-              cm.field_R[0] = qk.a("", kf.field_d, "mb_screenshot_1", true);
-              cm.field_R[1] = qk.a("", kf.field_d, "mb_screenshot_2", true);
-              cm.field_R[2] = qk.a("", kf.field_d, "mb_screenshot_3", true);
-              cm.field_R[3] = qk.a("", kf.field_d, "mb_screenshot_4", true);
-              cm.field_R[4] = qk.a("", kf.field_d, "mb_screenshot_5", true);
+              int discarded$26 = 1;
+              cm.field_R[0] = qk.a("", kf.field_d, "mb_screenshot_1");
+              int discarded$27 = 1;
+              cm.field_R[1] = qk.a("", kf.field_d, "mb_screenshot_2");
+              int discarded$28 = 1;
+              cm.field_R[2] = qk.a("", kf.field_d, "mb_screenshot_3");
+              int discarded$29 = 1;
+              cm.field_R[3] = qk.a("", kf.field_d, "mb_screenshot_4");
+              int discarded$30 = 1;
+              cm.field_R[4] = qk.a("", kf.field_d, "mb_screenshot_5");
               if (param0 == -23796) {
                 break L1;
               } else {
@@ -2824,9 +3000,12 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                 break L1;
               }
             }
-            cm.field_R[5] = qk.a("", kf.field_d, "mb_screenshot_6", true);
-            cm.field_R[6] = qk.a("", kf.field_d, "mb_screenshot_7", true);
-            cm.field_R[7] = qk.a("", kf.field_d, "mb_screenshot_8", true);
+            int discarded$31 = 1;
+            cm.field_R[5] = qk.a("", kf.field_d, "mb_screenshot_6");
+            int discarded$32 = 1;
+            cm.field_R[6] = qk.a("", kf.field_d, "mb_screenshot_7");
+            int discarded$33 = 1;
+            cm.field_R[7] = qk.a("", kf.field_d, "mb_screenshot_8");
             sg.field_e.h();
             uk.field_h.h();
             oi.field_f.h();
@@ -2849,7 +3028,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         try {
           L0: {
             L1: {
-              ek.d(-2);
+              int discarded$6 = -2;
+              ek.d();
               if (null != df.field_l) {
                 hb.a(-5, (java.awt.Canvas) (Object) df.field_l);
                 df.field_l.a(sb.field_d, true);
@@ -2859,7 +3039,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               }
             }
             L2: {
-              sb.b((byte) 67);
+              int discarded$7 = 67;
+              sb.b();
               if (param0 <= -120) {
                 break L2;
               } else {
@@ -2936,51 +3117,43 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         var5 = field_D ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var3 = new he[param1.length];
-              if (param0 == -105) {
-                break L1;
-              } else {
-                this.d(true);
-                break L1;
-              }
-            }
+            var3 = new he[param1.length];
             var4 = 0;
-            L2: while (true) {
-              L3: {
-                L4: {
+            L1: while (true) {
+              L2: {
+                L3: {
                   if (var4 >= param1.length) {
-                    break L4;
+                    break L3;
                   } else {
                     stackOut_6_0 = (he[]) var3;
                     stackIn_11_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var5 != 0) {
-                      break L3;
+                      break L2;
                     } else {
                       stackIn_7_0[var4] = param1[var4].a();
                       var4++;
                       if (var5 == 0) {
-                        continue L2;
+                        continue L1;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
                 }
                 stackOut_10_0 = (he[]) var3;
                 stackIn_11_0 = stackOut_10_0;
-                break L3;
+                break L2;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.AB(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.AB(").append(-105).append(44);
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -2992,7 +3165,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L5;
+              break L4;
             } else {
               stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
               stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
@@ -3000,7 +3173,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
               stackIn_16_2 = stackOut_13_2;
-              break L5;
+              break L4;
             }
           }
           throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
@@ -3023,7 +3196,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         }
     }
 
-    private final void r(int param0) {
+    private final void r() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -3071,7 +3244,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             lc.field_s.i();
             dh.field_R[0] = eh.a("", (byte) -66, kf.field_d, "game_interface_weapon_gatling_gun");
             dh.field_R[1] = eh.a("", (byte) -33, kf.field_d, "game_interface_weapon_bomb");
-            dh.field_R[param0] = eh.a("", (byte) -45, kf.field_d, "game_interface_weapon_sonic");
+            dh.field_R[2] = eh.a("", (byte) -45, kf.field_d, "game_interface_weapon_sonic");
             dh.field_R[3] = eh.a("", (byte) -25, kf.field_d, "game_interface_weapon_missile");
             al.field_a[0] = eh.a("", (byte) -48, kf.field_d, "tutorial_dp_happy");
             al.field_a[1] = eh.a("", (byte) -27, kf.field_d, "tutorial_dp_det");
@@ -3085,11 +3258,11 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.BB(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.BB(" + 2 + 41);
         }
     }
 
-    private final void i(byte param0) {
+    private final void i() {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -3176,104 +3349,96 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   this.a(99, wk.field_m);
                   break L5;
                 }
-                L7: {
-                  if (param0 < -110) {
-                    break L7;
-                  } else {
-                    ((DrPhlogistonSavesTheEarth) this).field_C = false;
-                    break L7;
-                  }
-                }
                 qb.field_a = be.a(eh.a("", (byte) -80, kf.field_d, "alienbunker_big_rubble"), wk.field_m.length);
                 this.a(85, qb.field_a);
                 uk.field_b = be.a(eh.a("", (byte) -34, kf.field_d, "alienbunker_big_fire_mask"), wk.field_m.length);
                 this.a(99, uk.field_b);
                 j.field_db = ij.a("aliencombattank", (byte) 105, kf.field_d, "");
                 var2_int = 0;
-                L8: while (true) {
-                  L9: {
-                    L10: {
+                L7: while (true) {
+                  L8: {
+                    L9: {
                       if (j.field_db.length <= var2_int) {
-                        break L10;
+                        break L9;
                       } else {
                         j.field_db[var2_int].c();
                         var2_int++;
                         if (var3 != 0) {
-                          break L9;
+                          break L8;
                         } else {
                           if (var3 == 0) {
-                            continue L8;
+                            continue L7;
                           } else {
-                            break L10;
+                            break L9;
                           }
                         }
                       }
                     }
                     jj.field_a = be.a(eh.a("", (byte) -110, kf.field_d, "aliencombattank_rubble"), j.field_db.length);
-                    break L9;
+                    break L8;
                   }
                   var2_int = 0;
-                  L11: while (true) {
-                    L12: {
-                      L13: {
+                  L10: while (true) {
+                    L11: {
+                      L12: {
                         if (var2_int >= jj.field_a.length) {
-                          break L13;
+                          break L12;
                         } else {
                           jj.field_a[var2_int].c();
                           var2_int++;
                           if (var3 != 0) {
-                            break L12;
+                            break L11;
                           } else {
                             if (var3 == 0) {
-                              continue L11;
+                              continue L10;
                             } else {
-                              break L13;
+                              break L12;
                             }
                           }
                         }
                       }
                       mk.field_e = ij.a("alienbattletank", (byte) 62, kf.field_d, "");
-                      break L12;
+                      break L11;
                     }
                     var2_int = 0;
-                    L14: while (true) {
-                      L15: {
-                        L16: {
+                    L13: while (true) {
+                      L14: {
+                        L15: {
                           if (~var2_int <= ~mk.field_e.length) {
-                            break L16;
+                            break L15;
                           } else {
                             mk.field_e[var2_int].c();
                             var2_int++;
                             if (var3 != 0) {
-                              break L15;
+                              break L14;
                             } else {
                               if (var3 == 0) {
-                                continue L14;
+                                continue L13;
                               } else {
-                                break L16;
+                                break L15;
                               }
                             }
                           }
                         }
                         nc.field_I = be.a(eh.a("", (byte) -42, kf.field_d, "alienbattletank_rubble"), mk.field_e.length);
-                        break L15;
+                        break L14;
                       }
                       var2_int = 0;
-                      L17: while (true) {
-                        L18: {
-                          L19: {
+                      L16: while (true) {
+                        L17: {
+                          L18: {
                             if (nc.field_I.length <= var2_int) {
-                              break L19;
+                              break L18;
                             } else {
                               nc.field_I[var2_int].c();
                               var2_int++;
                               if (var3 != 0) {
-                                break L18;
+                                break L17;
                               } else {
                                 if (var3 == 0) {
-                                  continue L17;
+                                  continue L16;
                                 } else {
-                                  break L19;
+                                  break L18;
                                 }
                               }
                             }
@@ -3287,8 +3452,10 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                           wa.field_O = ij.a("scenery_tile_tesla_coil", (byte) 64, kf.field_d, "");
                           u.field_a = this.a(-1745, 2, eh.a("", (byte) -55, kf.field_d, "scenery_tile_tesla_coil_broken"));
                           this.a(122, u.field_a);
-                          jk.field_H = this.a(wa.field_O, 65793);
-                          si.field_G = this.a(u.field_a, 65793);
+                          int discarded$2 = 65793;
+                          jk.field_H = this.a(wa.field_O);
+                          int discarded$3 = 65793;
+                          si.field_G = this.a(u.field_a);
                           eh.field_b = ij.a("alien_cargo_ship", (byte) 101, kf.field_d, "");
                           pj.field_B[0] = ij.a("scenery_tile_mothership_girder_1", (byte) 89, kf.field_d, "");
                           pj.field_B[1] = ij.a("scenery_tile_mothership_girder_2", (byte) 110, kf.field_d, "");
@@ -3358,7 +3525,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                           oi.field_a = ij.a("human_abductee_male", (byte) 67, kf.field_d, "");
                           cc.field_y = ij.a("human_abductee_female", (byte) 87, kf.field_d, "");
                           og.field_e = ij.a("human_abductee_baby", (byte) 95, kf.field_d, "");
-                          break L18;
+                          break L17;
                         }
                         break L0;
                       }
@@ -3371,7 +3538,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.DB(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.DB(" + -125 + 41);
         }
     }
 
@@ -3428,7 +3595,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               if (null != ua.field_b) {
                 qk.field_g = null;
                 ua.field_b = null;
-                tc.a((byte) 86);
+                int discarded$23 = 86;
+                tc.a();
                 stackOut_74_0 = 0;
                 stackIn_75_0 = stackOut_74_0;
                 return stackIn_75_0 != 0;
@@ -3437,23 +3605,24 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   we.a(ai.field_x, -83, 55.0f);
                   ((DrPhlogistonSavesTheEarth) this).h(0);
                   ad.field_q = ok.a(df.field_a, "", "Dr_Phlogiston_Title");
-                  boolean discarded$6 = s.field_a.a(0, ui.field_a, 0, ad.field_q, cf.field_c);
+                  boolean discarded$24 = s.field_a.a(0, ui.field_a, 0, ad.field_q, cf.field_c);
                   ki.field_c = ok.a(df.field_a, "", "Dr_Phlogiston_Earth");
-                  boolean discarded$7 = s.field_a.a(0, ui.field_a, 0, ki.field_c, cf.field_c);
+                  boolean discarded$25 = s.field_a.a(0, ui.field_a, 0, ki.field_c, cf.field_c);
                   hi.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_Space");
-                  boolean discarded$8 = s.field_a.a(0, ui.field_a, 0, hi.field_l, cf.field_c);
+                  boolean discarded$26 = s.field_a.a(0, ui.field_a, 0, hi.field_l, cf.field_c);
                   le.field_e = ok.a(df.field_a, "", "Dr_Phlogiston_Alien");
-                  boolean discarded$9 = s.field_a.a(0, ui.field_a, 0, le.field_e, cf.field_c);
+                  boolean discarded$27 = s.field_a.a(0, ui.field_a, 0, le.field_e, cf.field_c);
                   lh.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_Boss_Break");
                   dm.field_x = ok.a(df.field_a, "", "Dr_Phlogiston_GameOver_jingle");
-                  boolean discarded$10 = s.field_a.a(0, ui.field_a, 0, dm.field_x, cf.field_c);
+                  boolean discarded$28 = s.field_a.a(0, ui.field_a, 0, dm.field_x, cf.field_c);
                   ml.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_GameComplete_jingle");
-                  boolean discarded$11 = s.field_a.a(0, ui.field_a, 0, ml.field_l, cf.field_c);
+                  boolean discarded$29 = s.field_a.a(0, ui.field_a, 0, ml.field_l, cf.field_c);
                   s.field_a.b((byte) 47);
                   cf.field_c = null;
                   df.field_a = null;
                   ui.field_a = null;
-                  tc.a((byte) 86);
+                  int discarded$30 = 86;
+                  tc.a();
                   stackOut_79_0 = 0;
                   stackIn_80_0 = stackOut_79_0;
                   return stackIn_80_0 != 0;
@@ -3461,7 +3630,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   if (null != kf.field_d) {
                     L1: {
                       if (((DrPhlogistonSavesTheEarth) this).field_H == 0) {
-                        this.h((byte) -83);
+                        int discarded$31 = -83;
+                        this.h();
                         break L1;
                       } else {
                         break L1;
@@ -3469,7 +3639,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     }
                     L2: {
                       if (((DrPhlogistonSavesTheEarth) this).field_H == 1) {
-                        this.r(2);
+                        int discarded$32 = 2;
+                        this.r();
                         break L2;
                       } else {
                         break L2;
@@ -3479,13 +3650,15 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       if (2 != ((DrPhlogistonSavesTheEarth) this).field_H) {
                         break L3;
                       } else {
-                        this.k((byte) 22);
+                        int discarded$33 = 22;
+                        this.k();
                         break L3;
                       }
                     }
                     L4: {
                       if (((DrPhlogistonSavesTheEarth) this).field_H == 3) {
-                        this.q(-11666);
+                        int discarded$34 = -11666;
+                        this.q();
                         break L4;
                       } else {
                         break L4;
@@ -3495,13 +3668,15 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       if (((DrPhlogistonSavesTheEarth) this).field_H != 4) {
                         break L5;
                       } else {
-                        this.i((byte) -125);
+                        int discarded$35 = -125;
+                        this.i();
                         break L5;
                       }
                     }
                     L6: {
                       if (((DrPhlogistonSavesTheEarth) this).field_H == 5) {
-                        this.d(true);
+                        int discarded$36 = 1;
+                        this.d();
                         break L6;
                       } else {
                         break L6;
@@ -3509,7 +3684,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     }
                     L7: {
                       if (((DrPhlogistonSavesTheEarth) this).field_H == 6) {
-                        this.o(125);
+                        int discarded$37 = 125;
+                        this.o();
                         break L7;
                       } else {
                         break L7;
@@ -3532,7 +3708,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     ((DrPhlogistonSavesTheEarth) this).field_H = ((DrPhlogistonSavesTheEarth) this).field_H + 1;
-                    tc.a((byte) 86);
+                    int discarded$38 = 86;
+                    tc.a();
                     stackOut_118_0 = 0;
                     stackIn_119_0 = stackOut_118_0;
                     return stackIn_119_0 != 0;
@@ -3570,7 +3747,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                           var7 = -2;
                           var8 = v.field_Y.field_y - 20;
                           var9 = v.field_Y.field_w - 20;
-                          gl.a(var9, var8, (byte) -96, var5, var4, v.field_Y, var7, var6, var3_int);
+                          gl.a(var9, var8, (byte) -96, var5, var4, v.field_Y);
                           gg.a(1000, cm.field_R);
                           bi.a(ml.field_j, 121, nc.field_M);
                           if (param1 <= -91) {
@@ -3581,8 +3758,10 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                           }
                         }
                         L14: {
-                          pi.a(eb.field_g, 21914);
-                          wb.a((java.applet.Applet) this, 2, 1052688, 150, ej.field_e, 15488514);
+                          int discarded$39 = 21914;
+                          pi.a(eb.field_g);
+                          int discarded$40 = 15488514;
+                          wb.a((java.applet.Applet) this, 2, 1052688, 150, ej.field_e);
                           ah.a((byte) 109, 50);
                           k.a(0, 50);
                           if (oh.a(0)) {
@@ -3593,7 +3772,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                             break L14;
                           }
                         }
-                        tc.a((byte) 86);
+                        int discarded$41 = 86;
+                        tc.a();
                         stackOut_143_0 = 1;
                         stackIn_144_0 = stackOut_143_0;
                         break L0;
@@ -3620,7 +3800,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                             }
                           }
                           mh.field_a = null;
-                          tc.a((byte) 86);
+                          int discarded$42 = 86;
+                          tc.a();
                           break L16;
                         }
                         stackOut_128_0 = 0;
@@ -3690,7 +3871,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                                                                 bh.b(77);
                                                                 cf.field_c = new cf(aa.field_b, ua.field_b);
                                                                 qk.field_g = new ng(22050, id.field_d);
-                                                                this.j((byte) -30);
+                                                                int discarded$43 = -30;
+                                                                this.j();
                                                                 aa.field_b = null;
                                                                 stackOut_69_0 = 0;
                                                                 stackIn_70_0 = stackOut_69_0;
@@ -3738,7 +3920,9 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                               }
                             }
                           }
-                          we.a(hj.a(qd.field_Fb, ui.field_a, r.field_a, 0, 17733), -83, 10.0f);
+                          int discarded$44 = 17733;
+                          int discarded$45 = 0;
+                          we.a(hj.a(qd.field_Fb, ui.field_a, r.field_a), -83, 10.0f);
                           stackOut_24_0 = 0;
                           stackIn_25_0 = stackOut_24_0;
                           return stackIn_25_0 != 0;
@@ -3768,7 +3952,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         return stackIn_144_0 != 0;
     }
 
-    private final void q(int param0) {
+    private final void q() {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -3812,7 +3996,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                 if (var5 >= 2000) {
                   break L5;
                 } else {
-                  wj.field_l[hi.a(var4, param0 + 11670, pd.field_c)] = 65793 * (hi.a(254, 4, pd.field_c) + 1);
+                  wj.field_l[hi.a(var4, 4, pd.field_c)] = 65793 * (hi.a(254, 4, pd.field_c) + 1);
                   var5++;
                   if (var6 != 0) {
                     break L4;
@@ -3859,7 +4043,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     if (var5 >= 1500) {
                       break L11;
                     } else {
-                      wj.field_l[hi.a(wj.field_l.length, qk.a(param0, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
+                      wj.field_l[hi.a(wj.field_l.length, qk.a(-11666, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
                       var5++;
                       if (var6 != 0) {
                         break L10;
@@ -3925,142 +4109,146 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       hc.field_K[1].field_D = hc.field_K[1].field_D + 800;
                       break L16;
                     }
-                    if (param0 == -11666) {
-                      sh.field_b = qk.a("", kf.field_d, "midground_space", true);
-                      vi.field_g = eh.a("", (byte) -111, kf.field_d, "background_alien");
-                      gb.field_e = eh.a("", (byte) -79, kf.field_d, "background_alien_8");
-                      ha.field_b = eh.a("", (byte) -112, kf.field_d, "background_alien_9");
-                      q.field_e = qk.a("", kf.field_d, "scenery_earth_background_clouds_lit", true);
-                      kl.field_R[0] = qk.a("", kf.field_d, "scenery_space_background_asteroid_1", true);
-                      kl.field_R[1] = qk.a("", kf.field_d, "scenery_space_background_asteroid_2", true);
-                      kl.field_R[2] = qk.a("", kf.field_d, "scenery_space_background_asteroid_3", true);
-                      kl.field_R[3] = qk.a("", kf.field_d, "scenery_space_background_asteroid_4", true);
-                      kl.field_R[4] = qk.a("", kf.field_d, "scenery_space_background_asteroid_5", true);
-                      si.field_F = qk.a("", kf.field_d, "background_space_comet", true);
-                      cc.field_w = eh.a("", (byte) -89, kf.field_d, "midground_alien");
-                      b.field_k = eh.a("", (byte) -45, kf.field_d, "midground_alien_8");
-                      nf.field_v = eh.a("", (byte) -77, kf.field_d, "midground_alien_9");
-                      kh.field_e = eh.a("", (byte) -116, kf.field_d, "playership");
-                      kh.field_e.d(3);
-                      ri.field_e = kh.field_e.field_k;
-                      am.field_l = kh.field_e.field_d;
-                      am.field_p = am.field_l / 2;
-                      ri.field_q = ri.field_e / 2;
-                      df.field_f = this.a(eh.a("", (byte) -85, kf.field_d, "scenery_tile_earth_1"), (byte) 88);
-                      ah.field_L = this.a(eh.a("", (byte) -118, kf.field_d, "scenery_tile_earth_2"), (byte) 103);
-                      mk.field_f = this.a(eh.a("", (byte) -120, kf.field_d, "scenery_tile_earth_3"), (byte) -60);
-                      qg.field_U = this.a(eh.a("", (byte) -126, kf.field_d, "scenery_tile_earth_4"), (byte) 24);
-                      bf.field_v = this.a(eh.a("", (byte) -106, kf.field_d, "scenery_tile_earth_5"), (byte) 113);
-                      vg.field_h = this.a(eh.a("", (byte) -55, kf.field_d, "scenery_tile_earth_6"), (byte) -124);
-                      rg.field_a = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_7"), (byte) 120);
-                      fi.field_e = this.a(eh.a("", (byte) -127, kf.field_d, "scenery_tile_earth_8"), (byte) -29);
-                      jd.field_Q = this.a(eh.a("", (byte) -82, kf.field_d, "scenery_tile_earth_9"), (byte) 118);
-                      r.field_e = this.a(eh.a("", (byte) -49, kf.field_d, "scenery_tile_earth_10"), (byte) 127);
-                      nf.field_s = ij.a("scenery_tile_earth_11", (byte) 99, kf.field_d, "");
-                      nf.field_s[0].c();
-                      pc.field_c = new he[1];
-                      pc.field_c[0] = nf.field_s[0].e();
-                      pc.field_c[0].g();
-                      rh.field_f = this.a(eh.a("", (byte) -109, kf.field_d, "scenery_tile_earth_1_rubble"), (byte) -34);
-                      sd.field_d = this.a(eh.a("", (byte) -112, kf.field_d, "scenery_tile_earth_2_rubble"), (byte) 110);
-                      tb.field_b = this.a(eh.a("", (byte) -78, kf.field_d, "scenery_tile_earth_3_rubble"), (byte) -20);
-                      qf.field_e = this.a(eh.a("", (byte) -36, kf.field_d, "scenery_tile_earth_4_rubble"), (byte) -48);
-                      dm.field_z = this.a(eh.a("", (byte) -76, kf.field_d, "scenery_tile_earth_5_rubble"), (byte) -23);
-                      qd.field_Cb = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_6_rubble"), (byte) 90);
-                      gm.field_L = this.a(eh.a("", (byte) -77, kf.field_d, "scenery_tile_earth_7_rubble"), (byte) -97);
-                      rb.field_c = this.a(eh.a("", (byte) -57, kf.field_d, "scenery_tile_earth_8_rubble"), (byte) -40);
-                      sc.field_a = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_9_rubble"), (byte) 103);
-                      rd.field_A = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_10_rubble"), (byte) -77);
-                      re.field_i = ij.a("scenery_tile_earth_11_rubble", (byte) 84, kf.field_d, "");
-                      re.field_i[0].c();
-                      re.field_h = new he[1];
-                      re.field_h[0] = re.field_i[0].e();
-                      re.field_h[0].g();
-                      dm.field_y = this.a(eh.a("", (byte) -69, kf.field_d, "scenery_tile_earth_1_fire_mask"), (byte) 105);
-                      wh.field_u = this.a(eh.a("", (byte) -31, kf.field_d, "scenery_tile_earth_2_fire_mask"), (byte) -120);
-                      ng.field_b = this.a(eh.a("", (byte) -68, kf.field_d, "scenery_tile_earth_3_fire_mask"), (byte) 17);
-                      g.field_q = this.a(eh.a("", (byte) -70, kf.field_d, "scenery_tile_earth_4_fire_mask"), (byte) -124);
-                      pj.field_z = this.a(eh.a("", (byte) -123, kf.field_d, "scenery_tile_earth_5_fire_mask"), (byte) 98);
-                      tl.field_Q = this.a(eh.a("", (byte) -108, kf.field_d, "scenery_tile_earth_6_fire_mask"), (byte) -7);
-                      ld.field_d = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_7_fire_mask"), (byte) 1);
-                      eb.field_c = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_8_fire_mask"), (byte) -28);
-                      ri.field_h = this.a(eh.a("", (byte) -53, kf.field_d, "scenery_tile_earth_9_fire_mask"), (byte) 119);
-                      el.field_vb = this.a(eh.a("", (byte) -25, kf.field_d, "scenery_tile_earth_10_fire_mask"), (byte) -126);
-                      bk.field_j = ij.a("scenery_tile_earth_11_fire_mask", (byte) 73, kf.field_d, "");
-                      bk.field_j[0].c();
-                      ik.field_f = new he[1];
-                      ik.field_f[0] = bk.field_j[0].e();
-                      ik.field_f[0].g();
-                      fa.field_m = this.a(eh.a("", (byte) -30, kf.field_d, "scenery_tile_earth_bath_01"), (byte) -35);
-                      we.field_c = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_bath_02"), (byte) -7);
-                      d.field_c = ij.a("scenery_tile_earth_bath_03", (byte) 115, kf.field_d, "");
-                      d.field_c[0].c();
-                      ek.field_l = this.a(eh.a("", (byte) -89, kf.field_d, "scenery_tile_earth_bath_04"), (byte) -110);
-                      oj.field_g = this.a(eh.a("", (byte) -117, kf.field_d, "scenery_tile_earth_bath_05"), (byte) -24);
-                      mh.field_g = this.a(eh.a("", (byte) -58, kf.field_d, "scenery_tile_earth_bath_06"), (byte) 101);
-                      u.field_c = this.a(eh.a("", (byte) -93, kf.field_d, "scenery_tile_earth_bath_07"), (byte) 112);
-                      ai.field_y = this.a(eh.a("", (byte) -43, kf.field_d, "scenery_tile_earth_bath_08"), (byte) 117);
-                      bk.field_d = this.a(eh.a("", (byte) -80, kf.field_d, "scenery_tile_earth_bath_09"), (byte) 23);
-                      ek.field_t = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_10"), (byte) 103);
-                      hh.field_c = ij.a("scenery_tile_earth_bath_11", (byte) 71, kf.field_d, "");
-                      hh.field_c[0].c();
-                      lk.field_m = new he[1];
-                      lk.field_m[0] = hh.field_c[0].e();
-                      lk.field_m[0].g();
-                      gi.field_d = ij.a("scenery_tile_earth_bath_01_broken", (byte) 108, kf.field_d, "");
-                      gi.field_d[0].c();
-                      lc.field_q = ij.a("scenery_tile_earth_bath_02_broken", (byte) 92, kf.field_d, "");
-                      lc.field_q[0].c();
-                      ca.field_V = ij.a("scenery_tile_earth_bath_03_broken", (byte) 86, kf.field_d, "");
-                      ca.field_V[0].c();
-                      ac.field_g = ij.a("scenery_tile_earth_bath_04_broken", (byte) 109, kf.field_d, "");
-                      ac.field_g[0].c();
-                      df.field_k = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_05_broken"), (byte) -88);
-                      sl.field_x = ij.a("scenery_tile_earth_bath_06_broken", (byte) 80, kf.field_d, "");
-                      sl.field_x[0].c();
-                      qj.field_a = this.a(eh.a("", (byte) -81, kf.field_d, "scenery_tile_earth_bath_07_broken"), (byte) 102);
-                      og.field_c = ij.a("scenery_tile_earth_bath_08_broken", (byte) 120, kf.field_d, "");
-                      og.field_c[0].c();
-                      ck.field_d = this.a(eh.a("", (byte) -39, kf.field_d, "scenery_tile_earth_bath_09_broken"), (byte) 89);
-                      field_G = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_bath_10_broken"), (byte) 7);
-                      qa.field_S = ij.a("scenery_tile_earth_bath_11_broken", (byte) 61, kf.field_d, "");
-                      qa.field_S[0].c();
-                      nf.field_p = new he[1];
-                      nf.field_p[0] = hh.field_c[0].e();
-                      nf.field_p[0].g();
-                      eb.field_a = ij.a("scenery_tile_earth_bath_01_fire_mask", (byte) 121, kf.field_d, "");
-                      eb.field_a[0].c();
-                      wb.field_b = ij.a("scenery_tile_earth_bath_02_fire_mask", (byte) 108, kf.field_d, "");
-                      wb.field_b[0].c();
-                      cm.field_L = ij.a("scenery_tile_earth_bath_03_fire_mask", (byte) 75, kf.field_d, "");
-                      cm.field_L[0].c();
-                      ca.field_Y = ij.a("scenery_tile_earth_bath_04_fire_mask", (byte) 106, kf.field_d, "");
-                      ca.field_Y[0].c();
-                      oj.field_f = ij.a("scenery_tile_earth_bath_05_fire_mask", (byte) 114, kf.field_d, "");
-                      oj.field_f[0].c();
-                      ld.field_f = ij.a("scenery_tile_earth_bath_06_fire_mask", (byte) 60, kf.field_d, "");
-                      ld.field_f[0].c();
-                      cf.field_g = this.a(eh.a("", (byte) -48, kf.field_d, "scenery_tile_earth_bath_07_fire_mask"), (byte) 101);
-                      cf.field_g[0].c();
-                      ri.field_r = ij.a("scenery_tile_earth_bath_08_fire_mask", (byte) 62, kf.field_d, "");
-                      ri.field_r[0].c();
-                      cl.field_n = ij.a("scenery_tile_earth_bath_09_fire_mask", (byte) 102, kf.field_d, "");
-                      cl.field_n[0].c();
-                      kj.field_g = ij.a("scenery_tile_earth_bath_10_fire_mask", (byte) 120, kf.field_d, "");
-                      kj.field_g[0].c();
-                      ei.field_k = ij.a("scenery_tile_earth_bath_11_fire_mask", (byte) 125, kf.field_d, "");
-                      ei.field_k[0].c();
-                      ij.field_e = new he[1];
-                      ij.field_e[0] = ei.field_k[0].e();
-                      ij.field_e[0].g();
-                      vc.field_b = ij.a("scenery_tile_alien_1", (byte) 107, kf.field_d, "");
-                      ij.field_d = ij.a("scenery_tile_alien_2", (byte) 103, kf.field_d, "");
-                      db.field_b = ij.a("scenery_tile_alien_3", (byte) 112, kf.field_d, "");
-                      kf.field_e = ij.a("scenery_tile_alien_4", (byte) 72, kf.field_d, "");
-                      return;
-                    } else {
-                      return;
-                    }
+                    int discarded$8 = 1;
+                    sh.field_b = qk.a("", kf.field_d, "midground_space");
+                    vi.field_g = eh.a("", (byte) -111, kf.field_d, "background_alien");
+                    gb.field_e = eh.a("", (byte) -79, kf.field_d, "background_alien_8");
+                    ha.field_b = eh.a("", (byte) -112, kf.field_d, "background_alien_9");
+                    int discarded$9 = 1;
+                    q.field_e = qk.a("", kf.field_d, "scenery_earth_background_clouds_lit");
+                    int discarded$10 = 1;
+                    kl.field_R[0] = qk.a("", kf.field_d, "scenery_space_background_asteroid_1");
+                    int discarded$11 = 1;
+                    kl.field_R[1] = qk.a("", kf.field_d, "scenery_space_background_asteroid_2");
+                    int discarded$12 = 1;
+                    kl.field_R[2] = qk.a("", kf.field_d, "scenery_space_background_asteroid_3");
+                    int discarded$13 = 1;
+                    kl.field_R[3] = qk.a("", kf.field_d, "scenery_space_background_asteroid_4");
+                    int discarded$14 = 1;
+                    kl.field_R[4] = qk.a("", kf.field_d, "scenery_space_background_asteroid_5");
+                    int discarded$15 = 1;
+                    si.field_F = qk.a("", kf.field_d, "background_space_comet");
+                    cc.field_w = eh.a("", (byte) -89, kf.field_d, "midground_alien");
+                    b.field_k = eh.a("", (byte) -45, kf.field_d, "midground_alien_8");
+                    nf.field_v = eh.a("", (byte) -77, kf.field_d, "midground_alien_9");
+                    kh.field_e = eh.a("", (byte) -116, kf.field_d, "playership");
+                    kh.field_e.d(3);
+                    ri.field_e = kh.field_e.field_k;
+                    am.field_l = kh.field_e.field_d;
+                    am.field_p = am.field_l / 2;
+                    ri.field_q = ri.field_e / 2;
+                    df.field_f = this.a(eh.a("", (byte) -85, kf.field_d, "scenery_tile_earth_1"), (byte) 88);
+                    ah.field_L = this.a(eh.a("", (byte) -118, kf.field_d, "scenery_tile_earth_2"), (byte) 103);
+                    mk.field_f = this.a(eh.a("", (byte) -120, kf.field_d, "scenery_tile_earth_3"), (byte) -60);
+                    qg.field_U = this.a(eh.a("", (byte) -126, kf.field_d, "scenery_tile_earth_4"), (byte) 24);
+                    bf.field_v = this.a(eh.a("", (byte) -106, kf.field_d, "scenery_tile_earth_5"), (byte) 113);
+                    vg.field_h = this.a(eh.a("", (byte) -55, kf.field_d, "scenery_tile_earth_6"), (byte) -124);
+                    rg.field_a = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_7"), (byte) 120);
+                    fi.field_e = this.a(eh.a("", (byte) -127, kf.field_d, "scenery_tile_earth_8"), (byte) -29);
+                    jd.field_Q = this.a(eh.a("", (byte) -82, kf.field_d, "scenery_tile_earth_9"), (byte) 118);
+                    r.field_e = this.a(eh.a("", (byte) -49, kf.field_d, "scenery_tile_earth_10"), (byte) 127);
+                    nf.field_s = ij.a("scenery_tile_earth_11", (byte) 99, kf.field_d, "");
+                    nf.field_s[0].c();
+                    pc.field_c = new he[1];
+                    pc.field_c[0] = nf.field_s[0].e();
+                    pc.field_c[0].g();
+                    rh.field_f = this.a(eh.a("", (byte) -109, kf.field_d, "scenery_tile_earth_1_rubble"), (byte) -34);
+                    sd.field_d = this.a(eh.a("", (byte) -112, kf.field_d, "scenery_tile_earth_2_rubble"), (byte) 110);
+                    tb.field_b = this.a(eh.a("", (byte) -78, kf.field_d, "scenery_tile_earth_3_rubble"), (byte) -20);
+                    qf.field_e = this.a(eh.a("", (byte) -36, kf.field_d, "scenery_tile_earth_4_rubble"), (byte) -48);
+                    dm.field_z = this.a(eh.a("", (byte) -76, kf.field_d, "scenery_tile_earth_5_rubble"), (byte) -23);
+                    qd.field_Cb = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_6_rubble"), (byte) 90);
+                    gm.field_L = this.a(eh.a("", (byte) -77, kf.field_d, "scenery_tile_earth_7_rubble"), (byte) -97);
+                    rb.field_c = this.a(eh.a("", (byte) -57, kf.field_d, "scenery_tile_earth_8_rubble"), (byte) -40);
+                    sc.field_a = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_9_rubble"), (byte) 103);
+                    rd.field_A = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_10_rubble"), (byte) -77);
+                    re.field_i = ij.a("scenery_tile_earth_11_rubble", (byte) 84, kf.field_d, "");
+                    re.field_i[0].c();
+                    re.field_h = new he[1];
+                    re.field_h[0] = re.field_i[0].e();
+                    re.field_h[0].g();
+                    dm.field_y = this.a(eh.a("", (byte) -69, kf.field_d, "scenery_tile_earth_1_fire_mask"), (byte) 105);
+                    wh.field_u = this.a(eh.a("", (byte) -31, kf.field_d, "scenery_tile_earth_2_fire_mask"), (byte) -120);
+                    ng.field_b = this.a(eh.a("", (byte) -68, kf.field_d, "scenery_tile_earth_3_fire_mask"), (byte) 17);
+                    g.field_q = this.a(eh.a("", (byte) -70, kf.field_d, "scenery_tile_earth_4_fire_mask"), (byte) -124);
+                    pj.field_z = this.a(eh.a("", (byte) -123, kf.field_d, "scenery_tile_earth_5_fire_mask"), (byte) 98);
+                    tl.field_Q = this.a(eh.a("", (byte) -108, kf.field_d, "scenery_tile_earth_6_fire_mask"), (byte) -7);
+                    ld.field_d = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_7_fire_mask"), (byte) 1);
+                    eb.field_c = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_8_fire_mask"), (byte) -28);
+                    ri.field_h = this.a(eh.a("", (byte) -53, kf.field_d, "scenery_tile_earth_9_fire_mask"), (byte) 119);
+                    el.field_vb = this.a(eh.a("", (byte) -25, kf.field_d, "scenery_tile_earth_10_fire_mask"), (byte) -126);
+                    bk.field_j = ij.a("scenery_tile_earth_11_fire_mask", (byte) 73, kf.field_d, "");
+                    bk.field_j[0].c();
+                    ik.field_f = new he[1];
+                    ik.field_f[0] = bk.field_j[0].e();
+                    ik.field_f[0].g();
+                    fa.field_m = this.a(eh.a("", (byte) -30, kf.field_d, "scenery_tile_earth_bath_01"), (byte) -35);
+                    we.field_c = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_bath_02"), (byte) -7);
+                    d.field_c = ij.a("scenery_tile_earth_bath_03", (byte) 115, kf.field_d, "");
+                    d.field_c[0].c();
+                    ek.field_l = this.a(eh.a("", (byte) -89, kf.field_d, "scenery_tile_earth_bath_04"), (byte) -110);
+                    oj.field_g = this.a(eh.a("", (byte) -117, kf.field_d, "scenery_tile_earth_bath_05"), (byte) -24);
+                    mh.field_g = this.a(eh.a("", (byte) -58, kf.field_d, "scenery_tile_earth_bath_06"), (byte) 101);
+                    u.field_c = this.a(eh.a("", (byte) -93, kf.field_d, "scenery_tile_earth_bath_07"), (byte) 112);
+                    ai.field_y = this.a(eh.a("", (byte) -43, kf.field_d, "scenery_tile_earth_bath_08"), (byte) 117);
+                    bk.field_d = this.a(eh.a("", (byte) -80, kf.field_d, "scenery_tile_earth_bath_09"), (byte) 23);
+                    ek.field_t = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_10"), (byte) 103);
+                    hh.field_c = ij.a("scenery_tile_earth_bath_11", (byte) 71, kf.field_d, "");
+                    hh.field_c[0].c();
+                    lk.field_m = new he[1];
+                    lk.field_m[0] = hh.field_c[0].e();
+                    lk.field_m[0].g();
+                    gi.field_d = ij.a("scenery_tile_earth_bath_01_broken", (byte) 108, kf.field_d, "");
+                    gi.field_d[0].c();
+                    lc.field_q = ij.a("scenery_tile_earth_bath_02_broken", (byte) 92, kf.field_d, "");
+                    lc.field_q[0].c();
+                    ca.field_V = ij.a("scenery_tile_earth_bath_03_broken", (byte) 86, kf.field_d, "");
+                    ca.field_V[0].c();
+                    ac.field_g = ij.a("scenery_tile_earth_bath_04_broken", (byte) 109, kf.field_d, "");
+                    ac.field_g[0].c();
+                    df.field_k = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_05_broken"), (byte) -88);
+                    sl.field_x = ij.a("scenery_tile_earth_bath_06_broken", (byte) 80, kf.field_d, "");
+                    sl.field_x[0].c();
+                    qj.field_a = this.a(eh.a("", (byte) -81, kf.field_d, "scenery_tile_earth_bath_07_broken"), (byte) 102);
+                    og.field_c = ij.a("scenery_tile_earth_bath_08_broken", (byte) 120, kf.field_d, "");
+                    og.field_c[0].c();
+                    ck.field_d = this.a(eh.a("", (byte) -39, kf.field_d, "scenery_tile_earth_bath_09_broken"), (byte) 89);
+                    field_G = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_bath_10_broken"), (byte) 7);
+                    qa.field_S = ij.a("scenery_tile_earth_bath_11_broken", (byte) 61, kf.field_d, "");
+                    qa.field_S[0].c();
+                    nf.field_p = new he[1];
+                    nf.field_p[0] = hh.field_c[0].e();
+                    nf.field_p[0].g();
+                    eb.field_a = ij.a("scenery_tile_earth_bath_01_fire_mask", (byte) 121, kf.field_d, "");
+                    eb.field_a[0].c();
+                    wb.field_b = ij.a("scenery_tile_earth_bath_02_fire_mask", (byte) 108, kf.field_d, "");
+                    wb.field_b[0].c();
+                    cm.field_L = ij.a("scenery_tile_earth_bath_03_fire_mask", (byte) 75, kf.field_d, "");
+                    cm.field_L[0].c();
+                    ca.field_Y = ij.a("scenery_tile_earth_bath_04_fire_mask", (byte) 106, kf.field_d, "");
+                    ca.field_Y[0].c();
+                    oj.field_f = ij.a("scenery_tile_earth_bath_05_fire_mask", (byte) 114, kf.field_d, "");
+                    oj.field_f[0].c();
+                    ld.field_f = ij.a("scenery_tile_earth_bath_06_fire_mask", (byte) 60, kf.field_d, "");
+                    ld.field_f[0].c();
+                    cf.field_g = this.a(eh.a("", (byte) -48, kf.field_d, "scenery_tile_earth_bath_07_fire_mask"), (byte) 101);
+                    cf.field_g[0].c();
+                    ri.field_r = ij.a("scenery_tile_earth_bath_08_fire_mask", (byte) 62, kf.field_d, "");
+                    ri.field_r[0].c();
+                    cl.field_n = ij.a("scenery_tile_earth_bath_09_fire_mask", (byte) 102, kf.field_d, "");
+                    cl.field_n[0].c();
+                    kj.field_g = ij.a("scenery_tile_earth_bath_10_fire_mask", (byte) 120, kf.field_d, "");
+                    kj.field_g[0].c();
+                    ei.field_k = ij.a("scenery_tile_earth_bath_11_fire_mask", (byte) 125, kf.field_d, "");
+                    ei.field_k[0].c();
+                    ij.field_e = new he[1];
+                    ij.field_e[0] = ei.field_k[0].e();
+                    ij.field_e[0].g();
+                    vc.field_b = ij.a("scenery_tile_alien_1", (byte) 107, kf.field_d, "");
+                    ij.field_d = ij.a("scenery_tile_alien_2", (byte) 103, kf.field_d, "");
+                    db.field_b = ij.a("scenery_tile_alien_3", (byte) 112, kf.field_d, "");
+                    kf.field_e = ij.a("scenery_tile_alien_4", (byte) 72, kf.field_d, "");
+                    return;
                   }
                 }
               }

@@ -11,13 +11,13 @@ final class tb {
         try {
             param1.removeKeyListener((java.awt.event.KeyListener) (Object) ji.field_c);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) ji.field_c);
-            gm.field_O = param0;
+            gm.field_O = -1;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "tb.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "tb.A(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         if (hj.field_f < 2) {
           return a.field_c;
         } else {
@@ -57,7 +57,7 @@ final class tb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         int var1 = 78;

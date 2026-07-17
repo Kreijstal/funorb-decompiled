@@ -9,7 +9,7 @@ final class ra {
     static ph field_e;
     static int[][] field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_d = null;
@@ -25,7 +25,7 @@ final class ra {
         }
     }
 
-    final static void a(int param0, oi param1, int param2) {
+    final static void a(int param0, oi param1) {
         oq var5 = ej.field_j;
         var5.b(false, param0);
         var5.field_v = var5.field_v + 1;

@@ -8,14 +8,14 @@ final class lf {
     static im field_b;
     static ki field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
         int var1 = 0;
     }
 
-    final static qj a(String param0, boolean param1) {
+    final static qj a(String param0) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         qj stackIn_8_0 = null;

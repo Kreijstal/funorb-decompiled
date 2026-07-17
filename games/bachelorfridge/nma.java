@@ -12,32 +12,33 @@ final class nma extends ana {
     }
 
     final static boolean e(int param0) {
-        return paa.a(15000);
+        int discarded$0 = 15000;
+        return paa.a();
     }
 
     final static void a(vr param0, boolean param1, boolean param2, vr param3) {
         try {
-            if (!param1) {
-                nma.d(126);
-            }
-            qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, (po) (Object) hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c, param2);
+            int discarded$0 = 1;
+            qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, (po) (Object) hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c);
             gi.field_b = gw.a("lobby", "chatfilter", param3, -112);
             qo.field_a[0] = wj.field_x;
             qo.field_a[2] = cn.field_i;
             qo.field_a[1] = de.field_K;
-            gaa.a((po) (Object) ds.field_l, param0, -95);
+            int discarded$1 = -95;
+            gaa.a((po) (Object) ds.field_l, param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nma.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "nma.G(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + 1 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$2 = ((nma) this).field_l - 1;
+        int fieldTemp$4 = ((nma) this).field_l - 1;
         ((nma) this).field_l = ((nma) this).field_l - 1;
-        if (fieldTemp$2 >= 0) {
+        if (fieldTemp$4 >= 0) {
           if (25 == ((nma) this).field_l) {
-            this.e((byte) 100);
+            int discarded$5 = 100;
+            this.e();
             return false;
           } else {
             return false;
@@ -49,13 +50,13 @@ final class nma extends ana {
         }
     }
 
-    final static Boolean b(boolean param0) {
+    final static Boolean b() {
         Boolean var1 = vg.field_l;
         vg.field_l = null;
         return var1;
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         aga var2 = null;
         int var3 = 0;
         iv var4 = null;
@@ -85,12 +86,6 @@ final class nma extends ana {
     }
 
     public static void d(int param0) {
-        if (param0 != -1) {
-            Object var2 = null;
-            nma.a((vr) null, true, true, (vr) null);
-            field_v = null;
-            return;
-        }
         field_v = null;
     }
 

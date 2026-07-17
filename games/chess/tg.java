@@ -182,7 +182,7 @@ final class tg {
         }
     }
 
-    private final void a(int param0, String param1, int param2, int param3) {
+    private final void a(int param0, String param1, int param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -263,7 +263,7 @@ final class tg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_i = null;
@@ -272,7 +272,7 @@ final class tg {
         field_u = null;
     }
 
-    private final void b(String param0, int param1, int param2, int param3) {
+    private final void b(String param0, int param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -428,9 +428,11 @@ final class tg {
     final void a(String param0, int param1, int param2, int param3) {
         try {
             if (!((tg) this).field_g) {
-                this.a(param1, param0, param3, 22081);
+                int discarded$1 = 22081;
+                this.a(param1, param0, param3);
             } else {
-                this.b(param0, param3, param1, 8947848);
+                int discarded$2 = 8947848;
+                this.b(param0, param3, param1);
             }
             int var5_int = -21 / ((param2 - 41) / 62);
         } catch (RuntimeException runtimeException) {

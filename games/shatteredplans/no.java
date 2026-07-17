@@ -50,7 +50,7 @@ final class no {
             var14 = ShatteredPlansClient.field_F ? 1 : 0;
             try {
               L0: {
-                var2_int = -105 / ((-38 - param0) / 46);
+                var2_int = -105;
                 if (kb.field_x < param1) {
                   {
                     L1: {
@@ -181,7 +181,8 @@ final class no {
                               break L9;
                             }
                           }
-                          qj.a(ol.field_g, -1);
+                          int discarded$1 = -1;
+                          qj.a(ol.field_g);
                           break L0;
                         } else {
                           var22 = var21[var6];
@@ -288,7 +289,7 @@ final class no {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2 = (RuntimeException) (Object) decompiledCaughtException;
-              throw r.a((Throwable) (Object) var2, "no.C(" + param0 + 44 + param1 + 41);
+              throw r.a((Throwable) (Object) var2, "no.C(" + -92 + 44 + param1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -321,7 +322,7 @@ final class no {
         try {
           L0: {
             L1: {
-              if (param1 > ma.field_p) {
+              if (10 > ma.field_p) {
                 L2: {
                   var3_int = 0;
                   if (oq.field_e) {
@@ -332,21 +333,28 @@ final class no {
                     break L2;
                   }
                 }
-                ge.a(vj.g((byte) 120), ei.a(82), var3_int != 0, 0, po.field_h);
+                int discarded$49 = 120;
+                ge.a(vj.g(), ei.a(82), var3_int != 0, 0, po.field_h);
                 break L1;
               } else {
-                if (!or.a(250)) {
+                int discarded$50 = 250;
+                if (!or.a()) {
                   gf.b();
-                  sn.a(240, 28318, 320);
-                  mc.a(param1 ^ 37, 0, param2, 0);
+                  int discarded$51 = 320;
+                  int discarded$52 = 28318;
+                  int discarded$53 = 240;
+                  sn.a();
+                  int discarded$54 = 0;
+                  mc.a(47, 0, param2);
                   break L1;
                 } else {
                   if (gm.field_i == 0) {
-                    gr.a(false, param0, param1 ^ 10);
-                    mc.a(64, 0, param2, 0);
+                    gr.a(false, param0, 0);
+                    int discarded$55 = 0;
+                    mc.a(64, 0, param2);
                     break L1;
                   } else {
-                    pa.a(param1 ^ 9232, param2);
+                    pa.a(9242, param2);
                     break L1;
                   }
                 }
@@ -359,7 +367,7 @@ final class no {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("no.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("no.A(").append(param0).append(44).append(10).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -386,7 +394,7 @@ final class no {
         }
     }
 
-    final static void a(nf param0, int param1) {
+    final static void a(nf param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -477,7 +485,7 @@ final class no {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_a = null;

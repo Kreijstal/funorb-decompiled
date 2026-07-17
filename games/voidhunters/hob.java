@@ -14,7 +14,7 @@ final class hob extends ksa {
     int field_k;
     int field_g;
 
-    final static tv[] a(ij param0, int param1) {
+    final static tv[] a(ij param0) {
         ksa[] var2 = null;
         RuntimeException var2_ref = null;
         tv[] var3 = null;
@@ -99,9 +99,6 @@ final class hob extends ksa {
         int var3 = 0;
         int var4 = 0;
         phb var2 = new phb(param1.a("", true, "final_frame.jpg"), (java.awt.Component) (Object) igb.field_a);
-        if (param0 <= 23) {
-            return;
-        }
         try {
             var3 = var2.field_q;
             var4 = var2.field_p;
@@ -115,11 +112,11 @@ final class hob extends ksa {
             reb.field_a.field_l = cg.field_o.field_p;
             bia.a((byte) 124);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hob.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hob.D(" + 92 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_e = null;
         field_l = null;
         int var1 = 2;
@@ -185,7 +182,8 @@ final class hob extends ksa {
         try {
           L0: {
             if (0 < param1) {
-              if (bd.a(param1, (byte) -95)) {
+              int discarded$10 = -95;
+              if (bd.a(param1)) {
                 stackOut_4_0 = (int)((long)param1 * ((long)param0.nextInt() & 4294967295L) >> 32);
                 stackIn_5_0 = stackOut_4_0;
                 return stackIn_5_0;
@@ -202,7 +200,8 @@ final class hob extends ksa {
                 L2: while (true) {
                   var4 = param0.nextInt();
                   if (var3_int > var4) {
-                    stackOut_11_0 = lva.b(var4, param1, -103);
+                    int discarded$11 = -103;
+                    stackOut_11_0 = lva.b(var4, param1);
                     stackIn_12_0 = stackOut_11_0;
                     break L0;
                   } else {

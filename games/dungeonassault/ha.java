@@ -15,7 +15,7 @@ final class ha extends um {
     static lc field_k;
     static String[] field_l;
 
-    final static void d(int param0) {
+    final static void d() {
         vf.field_w = 620;
         qc.field_w = 240;
         kn.field_g = true;
@@ -33,7 +33,7 @@ final class ha extends um {
         ti.field_A.field_v = 1;
         tk.field_k = sj.a(fl.field_i, 107);
         ec.field_n = sj.a(wm.field_h, 59);
-        ec.field_n.field_v = param0;
+        ec.field_n.field_v = 1;
         pp.field_K.a((ne) (Object) ti.field_A, false);
         pp.field_K.a((ne) (Object) tk.field_k, false);
         pp.field_K.a((ne) (Object) ec.field_n, false);
@@ -108,6 +108,8 @@ final class ha extends um {
               var14 = var7.readLine();
               var8 = var14;
               if (var14 == null) {
+                var6.close();
+                var7.close();
                 break L2;
               } else {
                 L3: {
@@ -124,6 +126,8 @@ final class ha extends um {
                           if (var14.startsWith("HTTP/1.1 407")) {
                             break L4;
                           } else {
+                            var6.close();
+                            var7.close();
                             break L2;
                           }
                         }
@@ -172,16 +176,6 @@ final class ha extends um {
                 return stackIn_9_0;
               }
             }
-            L8: {
-              var6.close();
-              var7.close();
-              if (param1 >= 6) {
-                break L8;
-              } else {
-                ha.d(66);
-                break L8;
-              }
-            }
             var13.close();
             stackOut_26_0 = null;
             stackIn_27_0 = stackOut_26_0;
@@ -189,10 +183,10 @@ final class ha extends um {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var5 = decompiledCaughtException;
             stackOut_28_0 = (RuntimeException) var5;
-            stackOut_28_1 = new StringBuilder().append("ha.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_28_1 = new StringBuilder().append("ha.B(").append(param0).append(44).append(113).append(44);
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -204,7 +198,7 @@ final class ha extends um {
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
-              break L9;
+              break L8;
             } else {
               stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
               stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
@@ -212,10 +206,10 @@ final class ha extends um {
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
               stackIn_31_2 = stackOut_29_2;
-              break L9;
+              break L8;
             }
           }
-          L10: {
+          L9: {
             stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44);
             stackIn_33_0 = stackOut_31_0;
@@ -229,7 +223,7 @@ final class ha extends um {
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
-              break L10;
+              break L9;
             } else {
               stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
               stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
@@ -237,7 +231,7 @@ final class ha extends um {
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
               stackIn_34_2 = stackOut_32_2;
-              break L10;
+              break L9;
             }
           }
           throw vk.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
@@ -642,7 +636,7 @@ final class ha extends um {
         return (java.net.Socket) (Object) stackIn_22_0;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
@@ -670,11 +664,11 @@ final class ha extends um {
         return stackIn_6_0 != 0;
     }
 
-    final static double a(byte param0) {
+    final static double a() {
         return ld.field_f.nextDouble();
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_o = null;
         field_k = null;
         field_j = null;

@@ -9,7 +9,8 @@ final class dp extends de {
         if (param0 > -13) {
             return;
         }
-        la.a(!gq.d(127) ? 0 : 12, -1, false, -25528);
+        int discarded$0 = -25528;
+        la.a(!gq.d(127) ? 0 : 12, -1, false);
     }
 
     dp(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -213,7 +214,7 @@ final class dp extends de {
         field_o = null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -227,13 +228,14 @@ final class dp extends de {
             var4 = mg.field_h.field_Db.b(param0, 500);
             var5 = mg.field_h.field_Db.a(param0, 500) - -6;
             var6 = 2 + var4 * fq.field_q;
-            var7 = ui.a(12, var2_int, var5, (byte) -1);
+            int discarded$0 = -1;
+            var7 = ui.a(12, var2_int, var5);
             var8 = pj.a(var6, var3, 20, (byte) 112);
             t.a(var7, var8, var5, var6, 0);
-            t.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
-            int discarded$0 = mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 + -mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
+            t.d(1 + var7, 1 + var8, -2 + var5, var6 - 2, 16777088);
+            int discarded$1 = mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 + -mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "dp.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "dp.B(" + (param0 != null ? "{...}" : "null") + 44 + -2 + 41);
         }
     }
 

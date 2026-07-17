@@ -171,7 +171,7 @@ abstract class qe extends mi implements bo {
         return ((qe) this).a(((qe) this).field_g.field_n, true);
     }
 
-    final static int g(int param0) {
+    final static int g() {
         if (dj.field_n >= 2) {
           if (ih.field_c != 0) {
             if (sj.field_l != null) {
@@ -290,21 +290,13 @@ abstract class qe extends mi implements bo {
     }
 
     final static int b(int param0, int param1) {
-        int var2 = 0;
-        var2 = param1 >>> 1;
+        int var2 = param1 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
         var2 = var2 | var2 >>> 4;
-        if (param0 != -728240159) {
-          field_m = -87;
-          var2 = var2 | var2 >>> 8;
-          var2 = var2 | var2 >>> 16;
-          return ~var2 & param1;
-        } else {
-          var2 = var2 | var2 >>> 8;
-          var2 = var2 | var2 >>> 16;
-          return ~var2 & param1;
-        }
+        var2 = var2 | var2 >>> 8;
+        var2 = var2 | var2 >>> 16;
+        return ~var2 & param1;
     }
 
     public final boolean a(boolean param0) {

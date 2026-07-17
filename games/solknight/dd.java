@@ -7,13 +7,13 @@ final class dd {
     static o[] field_c;
     static String field_a;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_d = null;
         field_a = null;
         field_c = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         wi var3_ref_wi = null;
@@ -32,7 +32,8 @@ final class dd {
             var2 = var8.j(255);
             if (0 != var2) {
               if (var2 != 1) {
-                hi.a((Throwable) null, "A1: " + oc.a(false), 1);
+                int discarded$1 = 1;
+                hi.a((Throwable) null, "A1: " + oc.a(false));
                 je.a(false);
                 break L0;
               } else {
@@ -148,7 +149,8 @@ final class dd {
                     if (10 != param2) {
                       break L4;
                     } else {
-                      dc.d((byte) 127);
+                      int discarded$4 = 127;
+                      dc.d();
                       var4 = 0;
                       break L4;
                     }
@@ -159,7 +161,8 @@ final class dd {
                     } else {
                       L6: {
                         if (ta.field_b) {
-                          param1 = bb.a(jc.field_a, new String[1], -63);
+                          int discarded$5 = -63;
+                          param1 = bb.a(jc.field_a, new String[1]);
                           break L6;
                         } else {
                           break L6;

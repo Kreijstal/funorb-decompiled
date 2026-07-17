@@ -14,19 +14,16 @@ final class fa {
 
     final static void a(String param0, int param1, boolean param2) {
         mi.field_I = param2;
-        if (param1 != 480) {
-            return;
-        }
         try {
             va.field_d = true;
             Geoblox.field_y = new f(kd.field_e, hh.field_c, param0, cf.field_i, mi.field_I);
             kd.field_e.a(false, (el) (Object) Geoblox.field_y);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fa.B(" + (param0 != null ? "{...}" : "null") + 44 + 480 + 44 + param2 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_h = null;

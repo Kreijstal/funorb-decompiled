@@ -17,28 +17,25 @@ final class cf {
         int var4 = 0;
         sj[] var5 = null;
         var4 = CrazyCrystals.field_B;
-        var5 = rp.a(58);
+        int discarded$2 = 58;
+        var5 = rp.a();
         var2 = var5;
-        if (param1 > 117) {
-          var3 = 0;
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (param0 == var5[var3].field_e) {
-                return var5[var3];
-              } else {
-                var3++;
-                continue L0;
-              }
+        var3 = 0;
+        L0: while (true) {
+          if (var5.length > var3) {
+            if (param0 == var5[var3].field_e) {
+              return var5[var3];
             } else {
-              return null;
+              var3++;
+              continue L0;
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_g = null;
         field_e = null;

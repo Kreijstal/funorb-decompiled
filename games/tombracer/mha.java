@@ -18,7 +18,7 @@ final class mha extends rj {
         return ((mha) this).field_z.a(127);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_B = null;
         field_F = null;
     }

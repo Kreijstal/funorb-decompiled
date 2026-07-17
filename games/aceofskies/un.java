@@ -28,7 +28,7 @@ abstract class un {
         return ro.field_q;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_f = null;
         field_i = null;
         field_q = null;

@@ -14,7 +14,7 @@ final class tq extends cj {
 
     private final void a(int param0, int param1, int param2) {
         ((tq) this).field_Jb.field_zb = -param1 + (((tq) this).field_zb + -param2);
-        ((tq) this).field_Gb.field_x = param0;
+        ((tq) this).field_Gb.field_x = 0;
         ((tq) this).field_Jb.field_z = ((tq) this).field_z;
         ((tq) this).field_Gb.field_zb = -param2 + -param1 + ((tq) this).field_zb;
         ((tq) this).field_Ib.a(((tq) this).field_Gb.field_z, 0, ((tq) this).field_Jb.field_z, ((tq) this).field_z, -1, -((tq) this).field_Gb.field_Q, param1, -param1 + ((tq) this).field_zb);

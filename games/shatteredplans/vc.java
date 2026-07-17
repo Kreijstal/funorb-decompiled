@@ -13,9 +13,11 @@ final class vc {
     final static int a(byte param0, int param1) {
         if (param0 != -39) {
             vc.a(-12);
-            return hi.a(param1, tg.field_b, -11);
+            int discarded$0 = -11;
+            return hi.a(param1, tg.field_b);
         }
-        return hi.a(param1, tg.field_b, -11);
+        int discarded$1 = -11;
+        return hi.a(param1, tg.field_b);
     }
 
     public static void a(int param0) {

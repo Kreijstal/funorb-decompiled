@@ -14,13 +14,14 @@ final class jd {
                 var1 = "";
             }
         }
-        return new qj(hr.h(-104), wa.b((byte) -119));
+        int discarded$0 = -119;
+        return new qj(hr.h(-104), wa.b());
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
-        int var1 = -61 % ((param0 - -10) / 34);
+        int var1 = -1;
         field_b = null;
     }
 

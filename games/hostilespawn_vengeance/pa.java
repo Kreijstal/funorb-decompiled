@@ -227,7 +227,8 @@ final class pa extends ql {
                                 break L11;
                               } else {
                                 if (((oj) var20).field_I > 0) {
-                                  tk.a(8, jc.field_c, 1, true);
+                                  int discarded$2 = 1;
+                                  tk.a(8, jc.field_c, 1);
                                   break L11;
                                 } else {
                                   break L11;
@@ -241,9 +242,9 @@ final class pa extends ql {
                         if (((oj) var20).field_b) {
                           L13: {
                             L14: {
-                              int fieldTemp$1 = ib.field_c;
+                              int fieldTemp$3 = ib.field_c;
                               ib.field_c = ib.field_c + 1;
-                              var57 = jn.field_F[fieldTemp$1];
+                              var57 = jn.field_F[fieldTemp$3];
                               var36 = var57;
                               var36.field_i = 36;
                               var57.field_j.a((byte) 46, ((oj) var20).field_j);
@@ -641,7 +642,7 @@ final class pa extends ql {
         }
     }
 
-    final static bd[] h(int param0) {
+    final static bd[] h() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -722,7 +723,8 @@ final class pa extends ql {
               L2: while (true) {
                 if (var6 < var5.length) {
                   var7 = var5[var6];
-                  if (nj.a(mm.field_m[var4].field_j, var7, -28835) <= 1) {
+                  int discarded$1 = -28835;
+                  if (nj.a(mm.field_m[var4].field_j, var7) <= 1) {
                     mm.field_m[var4].field_N = true;
                     ((pa) this).field_m[var3] = mm.field_m[var4];
                     ((pa) this).field_g[var3] = new v(ch.field_b, 0, 0);

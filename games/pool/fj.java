@@ -123,7 +123,7 @@ final class fj extends sq {
         return 1;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_e = null;
         field_j = null;
         field_g = null;
@@ -506,7 +506,8 @@ final class fj extends sq {
 
     final boolean f(int param0) {
         if (param0 < 113) {
-            fj.b(false);
+            int discarded$0 = 0;
+            fj.b();
         }
         return true;
     }
@@ -532,7 +533,8 @@ final class fj extends sq {
             var3 = 0;
             if (((fj) this).field_d.d((byte) 118)) {
               var9.a(3, -14, new int[1]);
-              var3 = var3 | (this.d((byte) -47) | um.field_c);
+              int discarded$1 = -47;
+              var3 = var3 | (this.d() | um.field_c);
               var9.field_t = true;
               var9.field_w = (byte)(var9.field_w - 1);
               break L0;
@@ -819,7 +821,7 @@ final class fj extends sq {
         return (byte)param0;
     }
 
-    private final int d(byte param0) {
+    private final int d() {
         int var2 = -94;
         return this.q(10);
     }

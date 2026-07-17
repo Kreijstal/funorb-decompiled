@@ -8,7 +8,7 @@ final class lm {
     static int[] field_e;
     String field_b;
 
-    final static void a(byte param0) {
+    final static void a() {
         ms.field_e[44] = 71;
         ms.field_e[61] = 27;
         ms.field_e[46] = 72;

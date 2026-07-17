@@ -17,7 +17,9 @@ final class el {
                 if (param0 != 0) {
                   L1: {
                     if (param0 == 1) {
-                      mm.a(false, eg.field_p, 2, 1, true, 2);
+                      int discarded$104 = 2;
+                      int discarded$105 = 1;
+                      mm.a(false, eg.field_p, 2, 1);
                       break L1;
                     } else {
                       break L1;
@@ -26,9 +28,13 @@ final class el {
                   return;
                 } else {
                   L2: {
-                    mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
+                    int discarded$106 = 2;
+                    int discarded$107 = 1;
+                    mm.a(false, h.field_d, 2, param1 + 5630);
                     if (param0 == 1) {
-                      mm.a(false, eg.field_p, 2, 1, true, 2);
+                      int discarded$108 = 2;
+                      int discarded$109 = 1;
+                      mm.a(false, eg.field_p, 2, 1);
                       break L2;
                     } else {
                       break L2;
@@ -40,9 +46,13 @@ final class el {
                 el.a(53, -55);
                 if (param0 == 0) {
                   L3: {
-                    mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
+                    int discarded$110 = 2;
+                    int discarded$111 = 1;
+                    mm.a(false, h.field_d, 2, param1 + 5630);
                     if (param0 == 1) {
-                      mm.a(false, eg.field_p, 2, 1, true, 2);
+                      int discarded$112 = 2;
+                      int discarded$113 = 1;
+                      mm.a(false, eg.field_p, 2, 1);
                       break L3;
                     } else {
                       break L3;
@@ -52,7 +62,9 @@ final class el {
                 } else {
                   L4: {
                     if (param0 == 1) {
-                      mm.a(false, eg.field_p, 2, 1, true, 2);
+                      int discarded$114 = 2;
+                      int discarded$115 = 1;
+                      mm.a(false, eg.field_p, 2, 1);
                       break L4;
                     } else {
                       break L4;
@@ -68,7 +80,7 @@ final class el {
         }
     }
 
-    final static ea a(int param0, int param1, bj param2, int param3) {
+    final static ea a(int param0, int param1, bj param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ea stackIn_4_0 = null;
@@ -93,7 +105,8 @@ final class el {
         try {
           L0: {
             if (cn.a(param0, 258, param1, param2)) {
-              stackOut_3_0 = ti.a(0);
+              int discarded$2 = 0;
+              stackOut_3_0 = ti.a();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -135,7 +148,7 @@ final class el {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

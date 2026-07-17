@@ -72,7 +72,8 @@ final class ir {
                     }
                   }
                 }
-                this.a(false);
+                int discarded$2 = 0;
+                this.a();
                 break L2;
               }
             }
@@ -87,7 +88,8 @@ final class ir {
                   ((ir) this).field_f = ((ir) this).field_f + (long)var5_int;
                   param2 = param2 + var5_int;
                   ((ir) this).field_q = ((ir) this).field_k.length;
-                  this.a(false);
+                  int discarded$3 = 0;
+                  this.a();
                   break L4;
                 } else {
                   break L4;
@@ -243,14 +245,15 @@ final class ir {
     }
 
     final void b(byte param0) throws IOException {
-        this.a(false);
+        int discarded$0 = 0;
+        this.a();
         ((ir) this).field_l.c((byte) 101);
         if (param0 <= 34) {
             ir.a((byte) -96);
         }
     }
 
-    private final void c(byte param0) throws IOException {
+    private final void c() throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Pool.field_O;
@@ -441,7 +444,8 @@ final class ir {
                     break L5;
                   } else {
                     L6: {
-                      this.c((byte) -28);
+                      int discarded$2 = -28;
+                      this.c();
                       var9_int = param1;
                       if (var9_int <= ((ir) this).field_o) {
                         break L6;
@@ -501,9 +505,9 @@ final class ir {
                           if (param2 >= var9_int) {
                             break L9;
                           } else {
-                            int incrementValue$1 = param2;
+                            int incrementValue$3 = param2;
                             param2++;
-                            param3[incrementValue$1] = (byte) 0;
+                            param3[incrementValue$3] = (byte) 0;
                             param1--;
                             ((ir) this).field_f = ((ir) this).field_f + 1L;
                             continue L11;
@@ -652,7 +656,7 @@ final class ir {
         }
     }
 
-    private final void a(boolean param0) throws IOException {
+    private final void a() throws IOException {
         long var2 = 0L;
         long var4 = 0L;
         int var6 = 0;

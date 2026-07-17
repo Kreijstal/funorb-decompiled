@@ -8,13 +8,13 @@ final class ej {
     static int field_d;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_b = null;
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] a(int param0) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
@@ -222,54 +222,39 @@ final class ej {
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
         var4 = wizardrun.field_H;
         try {
-          L0: {
-            var3_int = 1;
-            L1: while (true) {
-              if (param2 <= 1) {
-                if (param2 == 1) {
-                  stackOut_9_0 = param0 * var3_int;
-                  stackIn_10_0 = stackOut_9_0;
-                  return stackIn_10_0;
-                } else {
-                  if (param1 == -1) {
-                    stackOut_14_0 = var3_int;
-                    stackIn_15_0 = stackOut_14_0;
-                    break L0;
-                  } else {
-                    stackOut_12_0 = -47;
-                    stackIn_13_0 = stackOut_12_0;
-                    return stackIn_13_0;
-                  }
-                }
+          var3_int = 1;
+          L0: while (true) {
+            if (param2 <= 1) {
+              if (param2 == 1) {
+                stackOut_9_0 = param0 * var3_int;
+                stackIn_10_0 = stackOut_9_0;
+                return stackIn_10_0;
               } else {
-                L2: {
-                  if ((param2 & 1) != 0) {
-                    var3_int = var3_int * param0;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                param0 = param0 * param0;
-                param2 = param2 >> 1;
-                continue L1;
+                return var3_int;
               }
+            } else {
+              L1: {
+                if ((param2 & 1) != 0) {
+                  var3_int = var3_int * param0;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              param0 = param0 * param0;
+              param2 = param2 >> 1;
+              continue L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var3, "ej.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw bd.a((Throwable) (Object) var3, "ej.A(" + param0 + 44 + -1 + 44 + param2 + 41);
         }
-        return stackIn_15_0;
     }
 
     static {

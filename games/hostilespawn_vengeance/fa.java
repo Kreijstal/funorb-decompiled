@@ -334,7 +334,7 @@ final class fa {
         field_e = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var2 = null;
         ak.a(false, (String) null, "");
     }

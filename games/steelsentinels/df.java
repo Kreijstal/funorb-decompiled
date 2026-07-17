@@ -61,17 +61,22 @@ final class df extends fe {
                     break L2;
                   }
                 }
-                kc.a(sa.b((byte) 118), fi.a(true), var3_int != 0, 300, d.field_S);
+                int discarded$11 = 118;
+                kc.a(sa.b(), fi.a(true), var3_int != 0, 300, d.field_S);
                 break L1;
               } else {
                 if (!km.a(-124)) {
                   pb.b();
-                  ff.a((byte) 17, 240, 320);
+                  int discarded$12 = 320;
+                  int discarded$13 = 240;
+                  int discarded$14 = 17;
+                  ff.a();
                   kg.a(0, 0, 28594, param1);
                   break L1;
                 } else {
                   if (0 != uj.field_d) {
-                    en.a(param1, -28003);
+                    int discarded$15 = -28003;
+                    en.a(param1);
                     break L1;
                   } else {
                     fa.a(false, (byte) 88, param2);
@@ -81,7 +86,7 @@ final class df extends fe {
                 }
               }
             }
-            var3_int = 89 % ((param0 - -66) / 44);
+            var3_int = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,7 +94,7 @@ final class df extends fe {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("df.B(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("df.B(").append(-111).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -122,34 +127,17 @@ final class df extends fe {
     }
 
     final static int a(int param0, int param1) {
-        if (param0 == -3720) {
-          if (param1 < 0) {
-            if (-65536 > param1) {
-              return vn.field_m[134217728 / -param1] + -2048;
-            } else {
-              return -vn.field_m[-param1 >> 5];
-            }
+        if (param1 < 0) {
+          if (-65536 > param1) {
+            return vn.field_m[134217728 / -param1] + -2048;
           } else {
-            if (param1 <= 65536) {
-              return vn.field_m[param1 >> 5];
-            } else {
-              return 2048 + -vn.field_m[134217728 / param1];
-            }
+            return -vn.field_m[-param1 >> 5];
           }
         } else {
-          field_J = null;
-          if (param1 < 0) {
-            if (-65536 > param1) {
-              return vn.field_m[134217728 / -param1] + -2048;
-            } else {
-              return -vn.field_m[-param1 >> 5];
-            }
+          if (param1 <= 65536) {
+            return vn.field_m[param1 >> 5];
           } else {
-            if (param1 <= 65536) {
-              return vn.field_m[param1 >> 5];
-            } else {
-              return 2048 + -vn.field_m[134217728 / param1];
-            }
+            return 2048 + -vn.field_m[134217728 / param1];
           }
         }
     }
@@ -171,7 +159,7 @@ final class df extends fe {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_J = null;
     }
 

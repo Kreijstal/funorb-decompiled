@@ -9,7 +9,7 @@ final class to {
     static String field_f;
     static String field_d;
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         j var3_ref_j = null;

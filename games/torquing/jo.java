@@ -5,22 +5,19 @@ final class jo {
     static String field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
     final static void a(boolean param0, int param1, og param2) {
         df var3 = null;
         try {
-            if (!param0) {
-                field_a = null;
-            }
             var3 = wa.field_d;
-            var3.f(-121, param1);
+            var3.f(-121, 7);
             var3.b(90, param2.field_j);
             var3.b(90, param2.field_l);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "jo.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "jo.A(" + 1 + 44 + 7 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

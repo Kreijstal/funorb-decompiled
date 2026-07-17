@@ -618,7 +618,8 @@ abstract class tj extends ug {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_v = wh.a(1, var7, 16);
+                                    int discarded$4 = 16;
+                                    field_v = wh.a(1, var7);
                                     break L1;
                                   }
                                 } else {
@@ -631,7 +632,8 @@ abstract class tj extends ug {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_w = wh.a(1, var6, 16);
+                              int discarded$5 = 16;
+                              field_w = wh.a(1, var6);
                               break L1;
                             }
                           } else {
@@ -644,7 +646,8 @@ abstract class tj extends ug {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_C = wh.a(1, var5, 16);
+                        int discarded$6 = 16;
+                        field_C = wh.a(1, var5);
                         break L1;
                       }
                     } else {
@@ -662,7 +665,8 @@ abstract class tj extends ug {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_J = wh.a(1, var3, 16);
+                int discarded$7 = 16;
+                field_J = wh.a(1, var3);
                 break L1;
               }
             }

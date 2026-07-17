@@ -233,7 +233,7 @@ final class j extends bca {
         return (at) (Object) stackIn_4_0;
     }
 
-    final static void a(String param0, int param1, int param2, boolean param3, int param4, boolean param5) {
+    final static void a(String param0, int param1, int param2, boolean param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -254,7 +254,8 @@ final class j extends bca {
         try {
           L0: {
             param4 = param4 - (lo.field_b.a(param0) >> 1);
-            ce.a(true, param2, param1, param0, param4, param3);
+            int discarded$2 = 1;
+            ce.a(true, param2, param1, param0, param4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -285,7 +286,7 @@ final class j extends bca {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 0 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + 1 + 44 + param4 + 44 + 0 + 41);
         }
     }
 

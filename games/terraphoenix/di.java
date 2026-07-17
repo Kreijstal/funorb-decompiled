@@ -142,24 +142,21 @@ abstract class di extends af implements pa {
         int var4 = 0;
         rh[] var5 = null;
         var4 = Terraphoenix.field_V;
-        var5 = ch.c(param0 ^ -71);
+        int discarded$2 = -104;
+        var5 = ch.c();
         var2 = var5;
         var3 = 0;
-        if (param0 == 33) {
-          L0: while (true) {
-            if (var3 < var5.length) {
-              if (param1 == var5[var3].field_e) {
-                return var5[var3];
-              } else {
-                var3++;
-                continue L0;
-              }
+        L0: while (true) {
+          if (var3 < var5.length) {
+            if (param1 == var5[var3].field_e) {
+              return var5[var3];
             } else {
-              return null;
+              var3++;
+              continue L0;
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 

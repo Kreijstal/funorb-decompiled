@@ -10,7 +10,7 @@ final class dn extends hb {
     static qr field_f;
     static String field_j;
 
-    final static String a(String param0, boolean param1) {
+    final static String a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -85,13 +85,13 @@ final class dn extends hb {
         return stackIn_5_0;
     }
 
-    final static void a(int param0, fk param1, byte param2) {
+    final static void a(int param0, fk param1) {
         sl var5 = null;
         int var4 = 0;
         try {
             var5 = js.field_f;
             sl var3 = var5;
-            var5.h(param0, 255);
+            var5.h(6, 255);
             var5.field_j = var5.field_j + 1;
             var4 = var5.field_j;
             var5.c(1, (byte) -60);
@@ -106,15 +106,15 @@ final class dn extends hb {
             param1.field_j = var5.a(16711680);
             var5.b(var5.field_j - var4, (byte) 119);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "dn.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 13 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "dn.D(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 44 + 13 + 41);
         }
     }
 
-    final static gq[] a(int param0) {
+    final static gq[] a() {
         return new gq[]{on.field_g, nd.field_c, td.field_O, ss.field_c, cl.field_p, kf.field_c, tf.field_j, na.field_I, ld.field_h, lc.field_b, m.field_A, mc.field_r, ks.field_a, ro.field_c};
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_f = null;
         field_k = null;
         field_j = null;

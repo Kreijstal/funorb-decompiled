@@ -13,7 +13,7 @@ final class ac extends o {
     int field_s;
     static nb field_j;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_p = null;
         int var1 = -1;
         field_l = null;
@@ -29,7 +29,7 @@ final class ac extends o {
         ((ac) this).field_s = param3;
     }
 
-    final static em a(nk param0, boolean param1) {
+    final static em a(nk param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -92,7 +92,7 @@ final class ac extends o {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$1 = param0.e(-32, 16);
+                  int discarded$2 = param0.e(-32, 16);
                   var5.field_B = ml.a(var5.field_B, 16, param0, 70);
                   var5.field_N = ml.a(var5.field_N, 16, param0, 89);
                   var5.field_o = ml.a(var5.field_o, 16, param0, 74);
@@ -113,7 +113,8 @@ final class ac extends o {
                 if (!r.a(true, param0)) {
                   break L4;
                 } else {
-                  var5.field_y = rb.a(var5.field_y, (byte) -105, param0, 16);
+                  int discarded$3 = 16;
+                  var5.field_y = rb.a(var5.field_y, (byte) -105, param0);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {

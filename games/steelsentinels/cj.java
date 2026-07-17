@@ -547,12 +547,9 @@ final class cj {
             } else {
                 ((cj) this).field_i = param0.field_e + " - " + param2 + "%";
             }
-            if (param1 != -9803) {
-                boolean discarded$0 = ((cj) this).b(-46);
-            }
             ((cj) this).field_g = var4_float * (float)((cj) this).field_e / (float)(1 + ((cj) this).field_k);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "cj.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "cj.D(" + (param0 != null ? "{...}" : "null") + 44 + -9803 + 44 + param2 + 41);
         }
     }
 
@@ -562,21 +559,23 @@ final class cj {
         }
         if (null != an.field_i) {
             if (!(!an.field_i.b((byte) 126))) {
-                rh.a(false);
+                int discarded$0 = 0;
+                rh.a();
                 return true;
             }
         }
         if (n.field_x != null) {
             if (!(!n.field_x.k(-91))) {
                 n.field_x = null;
-                rh.a(false);
+                int discarded$1 = 0;
+                rh.a();
                 return true;
             }
         }
         if (ta.a(-91)) {
             return true;
         }
-        if (vh.a(15, param2, -80, param0)) {
+        if (vh.a(param3, param2, -80, param0)) {
             return true;
         }
         return false;
@@ -586,51 +585,43 @@ final class cj {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_9_0 = 0;
         var4 = SteelSentinels.field_G;
         try {
           L0: {
             var3_int = 1;
-            if (param0 <= -15) {
-              L1: while (true) {
-                if (1 >= param1) {
-                  if (param1 == 1) {
-                    stackOut_10_0 = var3_int * param2;
-                    stackIn_11_0 = stackOut_10_0;
-                    break L0;
-                  } else {
-                    return var3_int;
-                  }
+            L1: while (true) {
+              if (1 >= param1) {
+                if (param1 == 1) {
+                  stackOut_9_0 = var3_int * param2;
+                  stackIn_10_0 = stackOut_9_0;
+                  break L0;
                 } else {
-                  L2: {
-                    if ((param1 & 1) == 0) {
-                      break L2;
-                    } else {
-                      var3_int = var3_int * param2;
-                      break L2;
-                    }
-                  }
-                  param2 = param2 * param2;
-                  param1 = param1 >> 1;
-                  continue L1;
+                  return var3_int;
                 }
+              } else {
+                L2: {
+                  if ((param1 & 1) == 0) {
+                    break L2;
+                  } else {
+                    var3_int = var3_int * param2;
+                    break L2;
+                  }
+                }
+                param2 = param2 * param2;
+                param1 = param1 >> 1;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 20;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var3, "cj.F(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) var3, "cj.F(" + -117 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_11_0;
+        return stackIn_10_0;
     }
 
     private cj() throws Throwable {

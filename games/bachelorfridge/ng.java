@@ -209,88 +209,80 @@ final class ng {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_9_0 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
-            L1: {
-              var3_int = 0;
-              if (param0 < -121) {
-                break L1;
-              } else {
-                ((ng) this).field_i = null;
-                break L1;
-              }
-            }
+            var3_int = 0;
             var4 = param1;
             var5 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var4.length <= var5) {
-                stackOut_8_0 = var3_int;
-                stackIn_9_0 = stackOut_8_0;
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var6 = var4[var5];
                   if (var6 == -1) {
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 var5++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("ng.G(").append(param0).append(44);
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("ng.G(").append(-127).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        return stackIn_9_0;
+        return stackIn_7_0;
     }
 
     final static boolean a(byte param0) {
@@ -1377,7 +1369,8 @@ final class ng {
           var3 = stackIn_3_0;
           var4 = 0;
           if (var3 == 0) {
-            var4 = this.a(var12.field_s.field_m, -3);
+            int discarded$1 = -3;
+            var4 = this.a(var12.field_s.field_m);
             break L1;
           } else {
             var4 = this.a((byte) -127, var12.field_s.field_m);
@@ -1484,7 +1477,7 @@ final class ng {
         }
     }
 
-    private final int a(int[] param0, int param1) {
+    private final int a(int[] param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int[] var4 = null;
@@ -1650,7 +1643,8 @@ final class ng {
         var6 = BachelorFridge.field_y;
         try {
           L0: {
-            var7 = gka.a(param2, 255);
+            int discarded$2 = 255;
+            var7 = gka.a(param2);
             if (var7 != null) {
               L1: {
                 var4 = new aga(var7, param0, -1, -1);
@@ -1668,7 +1662,7 @@ final class ng {
                 if (param1 == -51) {
                   break L1;
                 } else {
-                  boolean discarded$1 = ng.a((byte) 43);
+                  boolean discarded$3 = ng.a((byte) 43);
                   break L1;
                 }
               }
@@ -1782,28 +1776,28 @@ final class ng {
         int var11 = 0;
         int stackIn_39_0 = 0;
         int stackIn_44_0 = 0;
+        jj stackIn_49_0 = null;
+        jj stackIn_50_0 = null;
         jj stackIn_51_0 = null;
+        kv stackIn_51_1 = null;
         jj stackIn_52_0 = null;
         jj stackIn_53_0 = null;
-        kv stackIn_53_1 = null;
         jj stackIn_54_0 = null;
-        jj stackIn_55_0 = null;
-        jj stackIn_56_0 = null;
-        int stackIn_56_1 = 0;
+        int stackIn_54_1 = 0;
         int stackOut_43_0 = 0;
         int stackOut_42_0 = 0;
         int stackOut_38_0 = 0;
         int stackOut_37_0 = 0;
+        jj stackOut_48_0 = null;
         jj stackOut_50_0 = null;
-        jj stackOut_52_0 = null;
-        kv stackOut_52_1 = null;
+        kv stackOut_50_1 = null;
+        jj stackOut_49_0 = null;
+        kv stackOut_49_1 = null;
         jj stackOut_51_0 = null;
-        kv stackOut_51_1 = null;
         jj stackOut_53_0 = null;
-        jj stackOut_55_0 = null;
-        int stackOut_55_1 = 0;
-        jj stackOut_54_0 = null;
-        int stackOut_54_1 = 0;
+        int stackOut_53_1 = 0;
+        jj stackOut_52_0 = null;
+        int stackOut_52_1 = 0;
         L0: {
           var11 = BachelorFridge.field_y;
           ((ng) this).field_g[param5] = new jj(param4);
@@ -1910,7 +1904,7 @@ final class ng {
                       if (!((ng) this).field_m.field_P.field_s.c((byte) -10, param4)) {
                         break L4;
                       } else {
-                        if (((ng) this).field_m.field_P.field_s.f(param0 + -104, param4)) {
+                        if (((ng) this).field_m.field_P.field_s.f(0, param4)) {
                           break L4;
                         } else {
                           if (param1 != 2) {
@@ -1959,54 +1953,49 @@ final class ng {
           var10 = 0;
           break L2;
         }
-        if (param0 == 104) {
-          L7: {
-            stackOut_50_0 = ((ng) this).field_g[param5];
-            stackIn_52_0 = stackOut_50_0;
+        L7: {
+          stackOut_48_0 = ((ng) this).field_g[param5];
+          stackIn_50_0 = stackOut_48_0;
+          stackIn_49_0 = stackOut_48_0;
+          if (var10 == 0) {
+            stackOut_50_0 = (jj) (Object) stackIn_50_0;
+            stackOut_50_1 = hl.field_D[var9];
             stackIn_51_0 = stackOut_50_0;
-            if (var10 == 0) {
-              stackOut_52_0 = (jj) (Object) stackIn_52_0;
-              stackOut_52_1 = hl.field_D[var9];
-              stackIn_53_0 = stackOut_52_0;
-              stackIn_53_1 = stackOut_52_1;
-              break L7;
-            } else {
-              stackOut_51_0 = (jj) (Object) stackIn_51_0;
-              stackOut_51_1 = hh.field_b[var9];
-              stackIn_53_0 = stackOut_51_0;
-              stackIn_53_1 = stackOut_51_1;
-              break L7;
-            }
+            stackIn_51_1 = stackOut_50_1;
+            break L7;
+          } else {
+            stackOut_49_0 = (jj) (Object) stackIn_49_0;
+            stackOut_49_1 = hh.field_b[var9];
+            stackIn_51_0 = stackOut_49_0;
+            stackIn_51_1 = stackOut_49_1;
+            break L7;
           }
-          L8: {
-            stackIn_53_0.field_v = stackIn_53_1;
-            ((ng) this).field_g[param5].field_kb = gja.field_k[param2 + -1][param5][0];
-            ((ng) this).field_g[param5].field_rb = gja.field_k[-1 + param2][param5][1];
-            stackOut_53_0 = ((ng) this).field_g[param5];
-            stackIn_55_0 = stackOut_53_0;
-            stackIn_54_0 = stackOut_53_0;
-            if (var10 == 0) {
-              stackOut_55_0 = (jj) (Object) stackIn_55_0;
-              stackOut_55_1 = 0;
-              stackIn_56_0 = stackOut_55_0;
-              stackIn_56_1 = stackOut_55_1;
-              break L8;
-            } else {
-              stackOut_54_0 = (jj) (Object) stackIn_54_0;
-              stackOut_54_1 = 1;
-              stackIn_56_0 = stackOut_54_0;
-              stackIn_56_1 = stackOut_54_1;
-              break L8;
-            }
-          }
-          stackIn_56_0.field_yb = stackIn_56_1 != 0;
-          return;
-        } else {
-          return;
         }
+        L8: {
+          stackIn_51_0.field_v = stackIn_51_1;
+          ((ng) this).field_g[param5].field_kb = gja.field_k[param2 + -1][param5][0];
+          ((ng) this).field_g[param5].field_rb = gja.field_k[-1 + param2][param5][1];
+          stackOut_51_0 = ((ng) this).field_g[param5];
+          stackIn_53_0 = stackOut_51_0;
+          stackIn_52_0 = stackOut_51_0;
+          if (var10 == 0) {
+            stackOut_53_0 = (jj) (Object) stackIn_53_0;
+            stackOut_53_1 = 0;
+            stackIn_54_0 = stackOut_53_0;
+            stackIn_54_1 = stackOut_53_1;
+            break L8;
+          } else {
+            stackOut_52_0 = (jj) (Object) stackIn_52_0;
+            stackOut_52_1 = 1;
+            stackIn_54_0 = stackOut_52_0;
+            stackIn_54_1 = stackOut_52_1;
+            break L8;
+          }
+        }
+        stackIn_54_0.field_yb = stackIn_54_1 != 0;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         int var1 = 0;
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;

@@ -27,7 +27,7 @@ final class nj extends wf {
         field_m = null;
     }
 
-    final static ti[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static ti[] a() {
         int var9 = 0;
         ti[] var10 = null;
         ti[] var11_ref_ti__ = null;
@@ -36,46 +36,38 @@ final class nj extends wf {
         ti var13 = null;
         int var14 = 0;
         int var15 = 0;
-        L0: {
-          var15 = Transmogrify.field_A ? 1 : 0;
-          var9 = param4 + param7 + param0;
-          var10 = new ti[]{new ti(var9, var9), new ti(param3, var9), new ti(var9, var9), new ti(var9, param3), new ti(64, 64), new ti(var9, param3), new ti(var9, var9), new ti(param3, var9), new ti(var9, var9)};
-          var11_ref_ti__ = var10;
-          var12 = 0;
-          if (param6 >= 42) {
-            break L0;
-          } else {
-            nj.d(-32);
-            break L0;
-          }
-        }
-        L1: while (true) {
-          if (var12 >= var11_ref_ti__.length) {
+        var15 = Transmogrify.field_A ? 1 : 0;
+        var9 = 3;
+        var10 = new ti[]{new ti(var9, var9), new ti(3, var9), new ti(var9, var9), new ti(var9, 3), new ti(64, 64), new ti(var9, 3), new ti(var9, var9), new ti(3, var9), new ti(var9, var9)};
+        var11_ref_ti__ = var10;
+        var12 = 0;
+        L0: while (true) {
+          if (~var12 <= ~var11_ref_ti__.length) {
             var11 = 0;
-            L2: while (true) {
-              if (param0 <= var11) {
+            L1: while (true) {
+              if (var11 >= 1) {
                 var11 = 0;
-                L3: while (true) {
-                  if (param0 <= var11) {
+                L2: while (true) {
+                  if (var11 >= 1) {
                     var11 = 0;
-                    L4: while (true) {
-                      if (var11 >= param3) {
+                    L3: while (true) {
+                      if (var11 >= 3) {
                         var11 = 0;
-                        L5: while (true) {
-                          if (var11 >= param3 >> 1) {
+                        L4: while (true) {
+                          if (var11 >= 1) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L6: while (true) {
-                              if (param4 > var12) {
-                                var10[1].field_w[var11 + param3 * (-1 + (var9 - var12))] = param8;
-                                var10[3].field_w[var11 * var9 - var12 - -var9 + -1] = param8;
-                                var10[7].field_w[var11 + var12 * param3] = param8;
-                                var10[5].field_w[var12 + var9 * var11] = param8;
-                                var12++;
-                                continue L6;
-                              } else {
+                            L5: while (true) {
+                              if (var12 >= 1) {
                                 var11++;
+                                continue L4;
+                              } else {
+                                var10[1].field_w[var11 + 3 * (-1 + (var9 - var12))] = 65793;
+                                var10[3].field_w[var11 * var9 - var12 - -var9 + -1] = 65793;
+                                var10[7].field_w[var11 + var12 * 3] = 65793;
+                                var10[5].field_w[var12 + var9 * var11] = 65793;
+                                var12++;
                                 continue L5;
                               }
                             }
@@ -83,39 +75,41 @@ final class nj extends wf {
                         }
                       } else {
                         var12 = 0;
-                        L7: while (true) {
-                          if (var12 < param0) {
-                            var10[7].field_w[(-1 + -var12 + var9) * param3 + var11] = param2;
-                            var10[5].field_w[var9 + -1 + (-var12 + var11 * var9)] = param2;
-                            var10[1].field_w[var11 + var12 * param3] = param1;
-                            var10[3].field_w[var9 * var11 + var12] = param1;
-                            var12++;
-                            continue L7;
-                          } else {
+                        L6: while (true) {
+                          if (var12 >= 1) {
                             var11++;
-                            continue L4;
+                            continue L3;
+                          } else {
+                            var10[7].field_w[(-1 + -var12 + var9) * 3 + var11] = 0;
+                            var10[5].field_w[var9 + -1 + (-var12 + var11 * var9)] = 0;
+                            var10[1].field_w[var11 + var12 * 3] = 0;
+                            var10[3].field_w[var9 * var11 + var12] = 0;
+                            var12++;
+                            continue L6;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L8: while (true) {
-                      if (var12 >= var9) {
+                    L7: while (true) {
+                      if (~var12 <= ~var9) {
                         var11++;
-                        continue L3;
+                        continue L2;
                       } else {
-                        var10[0].field_w[var12 + var9 * var11] = param1;
-                        var10[0].field_w[var9 * var12 - -var11] = param1;
-                        if (var9 + -var11 > var12) {
-                          var10[2].field_w[var12 + var11 * var9] = param1;
-                          var10[6].field_w[var11 + var12 * var9] = param1;
-                          var12++;
-                          continue L8;
-                        } else {
-                          var12++;
-                          continue L8;
+                        L8: {
+                          var10[0].field_w[var12 + var9 * var11] = 0;
+                          var10[0].field_w[var9 * var12 - -var11] = 0;
+                          if (~(var9 + -var11) < ~var12) {
+                            var10[2].field_w[var12 + var11 * var9] = 0;
+                            var10[6].field_w[var11 + var12 * var9] = 0;
+                            break L8;
+                          } else {
+                            break L8;
+                          }
                         }
+                        var12++;
+                        continue L7;
                       }
                     }
                   }
@@ -123,14 +117,14 @@ final class nj extends wf {
               } else {
                 var12 = 0;
                 L9: while (true) {
-                  if (var9 <= var12) {
+                  if (~var9 >= ~var12) {
                     var11++;
-                    continue L2;
+                    continue L1;
                   } else {
-                    var10[6].field_w[(-1 + -var11 + var9) * var9 + var12] = param2;
-                    var10[8].field_w[var12 + (-var11 + (var9 - 1)) * var9] = param2;
-                    var10[2].field_w[var12 * var9 - -var9 + (-1 - var11)] = param2;
-                    var10[8].field_w[var12 * var9 + var9 - 1 + -var11] = param2;
+                    var10[6].field_w[(-1 + -var11 + var9) * var9 + var12] = 0;
+                    var10[8].field_w[var12 + (-var11 + (var9 - 1)) * var9] = 0;
+                    var10[2].field_w[var12 * var9 - -var9 + (-1 - var11)] = 0;
+                    var10[8].field_w[var12 * var9 + var9 - 1 + -var11] = 0;
                     var12++;
                     continue L9;
                   }
@@ -141,11 +135,11 @@ final class nj extends wf {
             var13 = var11_ref_ti__[var12];
             var14 = 0;
             L10: while (true) {
-              if (var13.field_w.length <= var14) {
+              if (~var13.field_w.length >= ~var14) {
                 var12++;
-                continue L1;
+                continue L0;
               } else {
-                var13.field_w[var14] = param5;
+                var13.field_w[var14] = 0;
                 var14++;
                 continue L10;
               }

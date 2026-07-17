@@ -5,7 +5,7 @@ final class mc {
     static int[] field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

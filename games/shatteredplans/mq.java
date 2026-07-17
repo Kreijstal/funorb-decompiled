@@ -6,7 +6,7 @@ final class mq {
     static ms field_c;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_b = null;

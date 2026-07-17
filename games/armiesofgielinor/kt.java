@@ -44,7 +44,8 @@ final class kt extends mk {
             if (((kt) this).field_q.a(param0, param1) != rn.field_e) {
               L1: {
                 if (!param1.equals((Object) (Object) ((kt) this).field_k)) {
-                  var3 = dh.a(param1, (byte) 67);
+                  int discarded$2 = 67;
+                  var3 = dh.a(param1);
                   if (var3.a((byte) -74)) {
                     ((kt) this).field_k = param1;
                     ((kt) this).field_j = var3.a(17);

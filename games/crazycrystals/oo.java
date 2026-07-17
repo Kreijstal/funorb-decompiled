@@ -212,11 +212,7 @@ final class oo extends se {
         }
     }
 
-    final static boolean b(boolean param0) {
-        if (param0) {
-            int discarded$0 = oo.e((byte) 86);
-            return ne.field_d;
-        }
+    final static boolean b() {
         return ne.field_d;
     }
 
@@ -254,7 +250,7 @@ final class oo extends se {
             break L0;
           }
         }
-        var4 = -43 % ((26 - param0) / 34);
+        var4 = -3;
         var16 = new StringWriter();
         var5 = new PrintWriter((Writer) (Object) var16);
         param1.printStackTrace(var5);

@@ -47,74 +47,56 @@ final class lf {
         field_d = null;
     }
 
-    final static qk a(boolean param0, boolean param1, int param2, int param3, byte param4, boolean param5) {
+    final static qk a(boolean param0, boolean param1, int param2, int param3) {
         try {
             Object var6 = null;
             Object var7 = null;
             uc var8 = null;
-            Object var9 = null;
-            qk stackIn_15_0 = null;
+            qk stackIn_11_0 = null;
             Throwable decompiledCaughtException = null;
-            qk stackOut_14_0 = null;
+            qk stackOut_10_0 = null;
             try {
               L0: {
                 L1: {
-                  if (param4 == -70) {
-                    break L1;
-                  } else {
-                    var9 = null;
-                    lf.a((java.math.BigInteger) null, (pb) null, (java.math.BigInteger) null, (byte) -124, (pb) null);
-                    break L1;
-                  }
-                }
-                L2: {
                   var6 = null;
                   if (null != bi.field_b.field_t) {
                     ni.field_c = new tk(bi.field_b.field_t, 5200, 0);
                     bi.field_b.field_t = null;
                     var6 = (Object) (Object) new hc(255, ni.field_c, new tk(bi.field_b.field_d, 12000, 0), 2097152);
-                    break L2;
+                    break L1;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 }
-                L3: {
+                L2: {
                   var7 = null;
                   if (ni.field_c == null) {
-                    break L3;
+                    break L2;
                   } else {
-                    L4: {
+                    L3: {
                       if (rk.field_Z != null) {
-                        break L4;
+                        break L3;
                       } else {
                         rk.field_Z = new tk[bi.field_b.field_o.length];
-                        break L4;
+                        break L3;
                       }
                     }
-                    L5: {
+                    L4: {
                       if (rk.field_Z[param3] == null) {
                         rk.field_Z[param3] = new tk(bi.field_b.field_o[param3], 12000, 0);
                         bi.field_b.field_o[param3] = null;
-                        break L5;
+                        break L4;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                     var7 = (Object) (Object) new hc(param3, ni.field_c, rk.field_Z[param3], 2097152);
-                    break L3;
+                    break L2;
                   }
                 }
-                L6: {
-                  var8 = ja.field_b.a(param3, 72, false, (hc) var6, (hc) var7);
-                  if (!param1) {
-                    break L6;
-                  } else {
-                    var8.a(param4 ^ 25408);
-                    break L6;
-                  }
-                }
-                stackOut_14_0 = new qk((pe) (Object) var8, param0, param2);
-                stackIn_15_0 = stackOut_14_0;
+                var8 = ja.field_b.a(param3, 72, false, (hc) var6, (hc) var7);
+                stackOut_10_0 = new qk((pe) (Object) var8, true, 1);
+                stackIn_11_0 = stackOut_10_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -122,7 +104,7 @@ final class lf {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_15_0;
+            return stackIn_11_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -131,13 +113,10 @@ final class lf {
     }
 
     final static void a(java.math.BigInteger param0, pb param1, java.math.BigInteger param2, byte param3, pb param4) {
-        if (param3 != -75) {
-            return;
-        }
         try {
             uc.a(param1, param2, param4.field_i, (byte) 0, 0, param0, param4.field_g);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "lf.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "lf.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + -75 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -143,7 +143,7 @@ final class nd {
         int stackOut_3_0 = 0;
         try {
           L0: {
-            var3_int = param1;
+            var3_int = 0;
             L1: while (true) {
               if (param2 <= 0) {
                 stackOut_3_0 = var3_int;
@@ -160,7 +160,7 @@ final class nd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var3, "nd.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw t.a((Throwable) (Object) var3, "nd.B(" + param0 + 44 + 0 + 44 + param2 + 41);
         }
         return stackIn_4_0;
     }

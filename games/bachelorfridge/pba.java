@@ -5,7 +5,7 @@ final class pba extends bca {
     static int field_r;
     static String field_q;
 
-    public static void d(int param0) {
+    public static void d() {
         field_q = null;
     }
 

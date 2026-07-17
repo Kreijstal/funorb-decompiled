@@ -7,7 +7,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
     static int[] field_c;
     static byte[][] field_b;
 
-    public static void c(int param0) {
+    public static void c() {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -330,7 +330,8 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var2_int = param0.getKeyChar();
                 if (var2_int != 0) {
                     if (var2_int != 65535) {
-                        if (oc.a((char) var2_int, 0)) {
+                        int discarded$4 = 0;
+                        if (oc.a((char) var2_int)) {
                             var3 = 127 & 1 + uf.field_a;
                             if (var3 != md.field_g) {
                                 g.field_g[uf.field_a] = -1;
@@ -350,7 +351,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static int[] b(int param0) {
+    final static int[] b() {
         return new int[8];
     }
 

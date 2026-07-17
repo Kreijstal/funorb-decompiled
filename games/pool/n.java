@@ -20,9 +20,6 @@ final class n extends ud {
     final static void a(int param0, String param1, int param2, boolean param3, int param4) {
         lk var5 = null;
         try {
-            if (param0 != 8) {
-                n.g((byte) 74);
-            }
             var5 = new lk();
             var5.field_s = param2;
             var5.field_v = param3 ? true : false;
@@ -30,7 +27,7 @@ final class n extends ud {
             var5.field_l = param4;
             ne.field_r.b((byte) 116, (ma) (Object) var5);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "n.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "n.A(" + 8 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -172,16 +169,13 @@ final class n extends ud {
         return var3;
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, byte param3) {
+    final static String a(boolean param0, boolean param1) {
         int var4 = 0;
         if (param0) {
             var4 += 4;
         }
         if (param1) {
             var4 += 2;
-        }
-        if (!(!param2)) {
-            var4++;
         }
         return ml.field_c[var4];
     }
@@ -385,14 +379,11 @@ final class n extends ud {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_Z = null;
         field_Y = null;
         field_Q = null;
         field_T = null;
-        if (param0 > -48) {
-            field_Z = null;
-        }
         field_W = null;
         field_N = null;
         field_R = null;

@@ -205,7 +205,7 @@ final class vh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_d = null;
         field_e = null;

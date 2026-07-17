@@ -57,7 +57,8 @@ final class ff extends aj implements fb, df {
                         break L1;
                       }
                     } else {
-                      gb.a((byte) 81);
+                      int discarded$123 = 81;
+                      gb.a();
                       break L1;
                     }
                   } else {
@@ -65,7 +66,8 @@ final class ff extends aj implements fb, df {
                   }
                 }
               } else {
-                this.d((byte) -123);
+                int discarded$124 = -123;
+                this.d();
                 break L1;
               }
             }
@@ -133,7 +135,7 @@ final class ff extends aj implements fb, df {
           L0: {
             L1: {
               if (((ff) this).field_L == param1) {
-                boolean discarded$2 = ((ff) this).field_G.a((qg) this, param0 + -1421);
+                boolean discarded$4 = ((ff) this).field_G.a((qg) this, param0 + -1421);
                 break L1;
               } else {
                 break L1;
@@ -142,7 +144,8 @@ final class ff extends aj implements fb, df {
             if (param0 == 1330) {
               L2: {
                 if (param1 == ((ff) this).field_G) {
-                  this.d((byte) -123);
+                  int discarded$5 = -123;
+                  this.d();
                   break L2;
                 } else {
                   break L2;
@@ -185,10 +188,11 @@ final class ff extends aj implements fb, df {
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         L0: {
           L1: {
-            if (bg.g(-43)) {
+            int discarded$8 = -43;
+            if (bg.g()) {
               break L1;
             } else {
               if (((ff) this).field_L.field_k.length() <= 0) {
@@ -202,7 +206,8 @@ final class ff extends aj implements fb, df {
               }
             }
           }
-          hd.a(((ff) this).field_G.field_k, ((ff) this).field_L.field_k, -4776);
+          int discarded$9 = -4776;
+          hd.a(((ff) this).field_G.field_k, ((ff) this).field_L.field_k);
           break L0;
         }
     }
@@ -648,11 +653,11 @@ final class ff extends aj implements fb, df {
         }
     }
 
-    final static void a(pl param0, boolean param1, int param2, int param3, byte param4) {
+    final static void a(pl param0, boolean param1) {
         try {
-            jj.field_a.a(param3, !param1 ? true : false, param2, 1000000, param0, 100);
+            jj.field_a.a(1048576, !param1 ? true : false, 256, 1000000, param0, 100);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "ff.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 40 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "ff.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 256 + 44 + 1048576 + 44 + 40 + 41);
         }
     }
 
@@ -848,7 +853,7 @@ final class ff extends aj implements fb, df {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 124;
         Object var2 = null;
         ec.a(hf.field_g, -126, (String) null);

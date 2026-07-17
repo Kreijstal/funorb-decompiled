@@ -7,7 +7,7 @@ final class tt {
     static vd[] field_c;
     static boolean field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -30,13 +30,15 @@ final class tt {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    hn.a(0, param0);
+                    hn.a(0, 6);
                     var2 = ep.field_z.b((byte) 103);
                     continue L2;
                   }
                 }
               } else {
-                nn.a(var4, param0, (byte) 62);
+                int discarded$4 = 62;
+                int discarded$5 = 6;
+                nn.a(var4);
                 var4 = (ds) (Object) cl.field_eb.b((byte) 103);
                 continue L1;
               }
@@ -45,11 +47,11 @@ final class tt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2_ref, "tt.C(" + param0 + 44 + 2048 + 41);
+          throw pn.a((Throwable) (Object) var2_ref, "tt.C(" + 6 + 44 + 2048 + 41);
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (null != jf.field_a) {
           pg.a((java.awt.Canvas) (Object) jf.field_a, 87);
           jf.field_a.a((byte) 87, pt.field_b);
@@ -68,40 +70,7 @@ final class tt {
     }
 
     final static boolean a(int param0, boolean param1, int param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (!param1) {
-          L0: {
-            field_d = null;
-            if (0 == (param0 & 2048)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (0 == (param0 & 2048)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return 0 != (param0 & 2048);
     }
 
     static {

@@ -129,7 +129,8 @@ final class ew extends na {
               }
             }
             L2: {
-              if (il.a(param1, (byte) 38) != null) {
+              int discarded$8 = 38;
+              if (il.a(param1) != null) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;

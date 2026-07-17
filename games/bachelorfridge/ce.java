@@ -80,7 +80,7 @@ final class ce extends vja {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_u = null;
         field_w = null;
     }
@@ -152,7 +152,7 @@ final class ce extends vja {
         return (at) (Object) stackIn_4_0;
     }
 
-    final static void a(boolean param0, int param1, int param2, String param3, int param4, boolean param5) {
+    final static void a(boolean param0, int param1, int param2, String param3, int param4) {
         int[] var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -163,25 +163,26 @@ final class ce extends vja {
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         try {
           L0: {
-            k.c(3685);
+            int discarded$2 = 3685;
+            k.c();
             var14 = dg.field_e;
             var13 = var14;
             var12 = var13;
@@ -220,13 +221,8 @@ final class ce extends vja {
                 lo.field_b.c(param3, 5, 3 + lo.field_b.field_u, 0, -1);
                 dg.a(var14, var7, var8);
                 fk.d((byte) 69);
-                if (param5) {
-                  fw.a(param4, sca.field_a, var9, param1, true, ap.field_c, param2);
-                  return;
-                } else {
-                  fn.a(param1, (byte) 11, var9, param4, param2, sca.field_a);
-                  return;
-                }
+                fw.a(param4, sca.field_a, var9, param1, true, ap.field_c, param2);
+                return;
               }
             }
           }
@@ -235,31 +231,31 @@ final class ce extends vja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6_ref;
-            stackOut_13_1 = new StringBuilder().append("ce.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_11_0 = (RuntimeException) var6_ref;
+            stackOut_11_1 = new StringBuilder().append("ce.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param3 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param4 + 44 + param5 + 41);
+          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param4 + 44 + 1 + 41);
         }
     }
 
@@ -358,7 +354,7 @@ final class ce extends vja {
         }
     }
 
-    final static void a(vr param0, int param1) {
+    final static void a(vr param0) {
         int var2_int = 0;
         ika var3 = null;
         int var4 = 0;
@@ -396,7 +392,6 @@ final class ce extends vja {
 
     final void a(byte param0, lu param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -419,8 +414,8 @@ final class ce extends vja {
               if (param0 < -12) {
                 break L1;
               } else {
-                var4 = null;
-                ce.a(false, -33, 20, (String) null, -110, true);
+                int discarded$2 = 1;
+                ce.a(false, -33, 20, (String) null, -110);
                 break L1;
               }
             }

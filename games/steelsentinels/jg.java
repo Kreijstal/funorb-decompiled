@@ -53,7 +53,7 @@ final class jg {
         }
     }
 
-    private final void c(int param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -482,6 +482,10 @@ final class jg {
     }
 
     final static int[] a(boolean param0) {
+        if (!param0) {
+            jg.a(57, -61);
+            return new int[8];
+        }
         return new int[8];
     }
 
@@ -516,7 +520,7 @@ final class jg {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_l = null;
         int var1 = 86;
@@ -578,9 +582,9 @@ final class jg {
                 }
               }
             } else {
-              int fieldTemp$2 = ((jg) this).field_m - 1;
+              int fieldTemp$4 = ((jg) this).field_m - 1;
               ((jg) this).field_m = ((jg) this).field_m - 1;
-              if (fieldTemp$2 > 0) {
+              if (fieldTemp$4 > 0) {
                 return;
               } else {
                 ((jg) this).field_m = ((jg) this).field_n;
@@ -588,7 +592,8 @@ final class jg {
                   ((jg) this).field_v = false;
                   return;
                 } else {
-                  this.c(-95);
+                  int discarded$5 = -95;
+                  this.c();
                   return;
                 }
               }
@@ -647,9 +652,9 @@ final class jg {
                 }
               }
             } else {
-              int fieldTemp$3 = ((jg) this).field_m - 1;
+              int fieldTemp$6 = ((jg) this).field_m - 1;
               ((jg) this).field_m = ((jg) this).field_m - 1;
-              if (fieldTemp$3 > 0) {
+              if (fieldTemp$6 > 0) {
                 return;
               } else {
                 ((jg) this).field_m = ((jg) this).field_n;
@@ -657,7 +662,8 @@ final class jg {
                   ((jg) this).field_v = false;
                   return;
                 } else {
-                  this.c(-95);
+                  int discarded$7 = -95;
+                  this.c();
                   return;
                 }
               }
@@ -705,29 +711,25 @@ final class jg {
         try {
           L0: {
             var6_int = param5 * pb.field_c + param2;
-            if (!param3) {
-              var7 = param5;
-              L1: while (true) {
-                if (param4 <= var7) {
-                  break L0;
-                } else {
-                  var8 = 255 * (param4 + -var7) / (-param5 + param4);
-                  var9 = 255 * (var7 + -param5) / (-param5 + param4);
-                  var10 = (var8 * param0 + var9 * param1) / 256;
-                  pb.field_g[var6_int] = 65793 * var10;
-                  var6_int = var6_int + pb.field_c;
-                  var7++;
-                  continue L1;
-                }
+            var7 = param5;
+            L1: while (true) {
+              if (var7 >= 480) {
+                break L0;
+              } else {
+                var8 = 255 * (480 + -var7) / (-param5 + 480);
+                var9 = 255 * (var7 + -param5) / (-param5 + 480);
+                var10 = (var8 * 0 + var9 * 48) / 256;
+                pb.field_g[var6_int] = 65793 * var10;
+                var6_int = var6_int + pb.field_c;
+                var7++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var6, "jg.I(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ci.a((Throwable) (Object) var6, "jg.I(" + 0 + 44 + 48 + 44 + param2 + 44 + 0 + 44 + 480 + 44 + param5 + 41);
         }
     }
 

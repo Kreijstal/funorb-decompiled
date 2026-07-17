@@ -174,7 +174,7 @@ final class oq extends ge {
         super(param0);
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_C = null;
         field_B = null;
         field_z = null;

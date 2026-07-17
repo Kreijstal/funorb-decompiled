@@ -95,7 +95,7 @@ class gha implements qda, qka {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_h = null;
         field_d = null;
@@ -162,78 +162,70 @@ class gha implements qda, qka {
         return stackIn_1_0;
     }
 
-    private final int b(wj param0, int param1) {
+    private final int b(wj param0) {
         RuntimeException var3 = null;
-        int stackIn_3_0 = 0;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
+        int stackOut_0_0 = 0;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param1 == 8) {
-                break L1;
-              } else {
-                ((gha) this).field_o = true;
-                break L1;
-              }
-            }
-            stackOut_2_0 = -((gha) this).field_r + (param0.field_q + -((gha) this).field_j);
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = -((gha) this).field_r + (param0.field_q + -((gha) this).field_j);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("gha.O(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("gha.O(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 8 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     private final void a(wj param0, int param1, int param2, int param3) {
         try {
-            this.a(0, param2, -98, param3, param0, ((gha) this).field_n, param1, ((gha) this).field_k);
+            this.a(0, 0, -98, param3, param0, ((gha) this).field_n, param1, ((gha) this).field_k);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "gha.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "gha.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 0 + 44 + param3 + 41);
         }
     }
 
@@ -346,10 +338,12 @@ class gha implements qda, qka {
             }
             L3: {
               if (((gha) this).field_o) {
-                ((tq) (Object) param0.field_j).a(((gha) this).field_l, ((gha) this).field_c, ((gha) this).field_g, 99, ((gha) this).c(param0, 1), ((gha) this).field_m, this.b(param0, 8), ((gha) this).a(param0, false));
+                int discarded$5 = 8;
+                ((tq) (Object) param0.field_j).a(((gha) this).field_l, ((gha) this).field_c, ((gha) this).field_g, 99, ((gha) this).c(param0, 1), ((gha) this).field_m, this.b(param0), ((gha) this).a(param0, false));
                 break L3;
               } else {
-                this.a(param0, 61);
+                int discarded$6 = 61;
+                this.a(param0);
                 break L3;
               }
             }
@@ -401,7 +395,7 @@ class gha implements qda, qka {
         }
     }
 
-    private final void a(wj param0, int param1) {
+    private final void a(wj param0) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -437,7 +431,8 @@ class gha implements qda, qka {
             }
             L2: {
               var3_int = ((gha) this).a(param0, false);
-              var4 = this.b(param0, 8);
+              int discarded$1 = 8;
+              var4 = this.b(param0);
               var6 = ((gha) this).field_g;
               if (var6 == 0) {
                 var5 = ((gha) this).field_l.field_u;
@@ -751,8 +746,9 @@ class gha implements qda, qka {
                   var9 = var14.a(param3, (byte) -99);
                   var10 = this.a((byte) 100, param2, param4, var9);
                   var11 = ((gha) this).a(param2, param1, (byte) -54) + Math.max(0, var8.field_c);
+                  int discarded$1 = 8;
                   stackOut_4_0 = ((gha) this).a(param2, param1, (byte) -54);
-                  stackOut_4_1 = this.b(param2, 8);
+                  stackOut_4_1 = this.b(param2);
                   stackOut_4_2 = var8.field_d;
                   stackIn_6_0 = stackOut_4_0;
                   stackIn_6_1 = stackOut_4_1;
@@ -826,7 +822,7 @@ class gha implements qda, qka {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         ru.a(0, (byte) -101, -1, false, false, 0);
         ru.a(0, (byte) 113, 2, true, true, 6);
         ru.a(0, (byte) 126, 3, true, true, 7);
@@ -903,9 +899,10 @@ class gha implements qda, qka {
               ah.a(param4.field_p + param3 + param4.field_s, (byte) 124, param6 - -param4.field_v, param4.field_s + param3, param4.field_v + (param6 - -param4.field_q));
               var9_int = 32 / ((-2 - param2) / 49);
               var10 = ((gha) this).a(param4, false);
-              var11 = this.b(param4, 8);
+              int discarded$2 = 8;
+              var11 = this.b(param4);
               if (((gha) this).field_o) {
-                int discarded$1 = ((gha) this).field_l.a(((gha) this).c(param4, 1), this.a((byte) -110, param4, param3, param1), this.a(param0, param6, param4, (byte) 110), var10, var11, param7, param5, ((gha) this).field_m, ((gha) this).field_g, ((gha) this).field_c);
+                int discarded$3 = ((gha) this).field_l.a(((gha) this).c(param4, 1), this.a((byte) -110, param4, param3, param1), this.a(param0, param6, param4, (byte) 110), var10, var11, param7, param5, ((gha) this).field_m, ((gha) this).field_g, ((gha) this).field_c);
                 break L1;
               } else {
                 L2: {

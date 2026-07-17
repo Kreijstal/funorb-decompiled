@@ -4,7 +4,7 @@
 final class bh extends nl {
     private java.nio.ByteBuffer field_d;
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         int var2_int = 0;
         RuntimeException var2 = null;
         cg var3 = null;
@@ -13,7 +13,7 @@ final class bh extends nl {
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            var2_int = -95 % ((25 - param0) / 50);
+            var2_int = 0;
             var3 = (cg) (Object) ca.field_n.a(true);
             L1: while (true) {
               if (var3 == null) {
@@ -28,7 +28,7 @@ final class bh extends nl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "bh.E(" + param0 + 44 + 2 + 41);
+          throw ld.a((Throwable) (Object) var2, "bh.E(" + 77 + 44 + 2 + 41);
         }
     }
 
@@ -62,34 +62,30 @@ final class bh extends nl {
         try {
           L0: {
             nl.a(param1, 0, true, -123, rb.field_a, r.field_D, pf.field_o);
-            if (param0 == 83) {
-              var2_int = 0;
-              L1: while (true) {
-                if (var2_int >= pf.field_o) {
-                  L2: {
-                    nl.a(param1 + param1, param1, false, -93, l.field_G, ve.field_d, pf.field_o - -param1);
-                    if (param1 < pf.field_o) {
-                      pf.field_o = param1;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
+            var2_int = 0;
+            L1: while (true) {
+              if (var2_int >= pf.field_o) {
+                L2: {
+                  nl.a(param1 + param1, param1, false, -93, l.field_G, ve.field_d, pf.field_o - -param1);
+                  if (param1 < pf.field_o) {
+                    pf.field_o = param1;
+                    break L2;
+                  } else {
+                    break L2;
                   }
-                  break L0;
-                } else {
-                  ff.field_a[var2_int - -param1] = var2_int;
-                  var2_int++;
-                  continue L1;
                 }
+                break L0;
+              } else {
+                ff.field_a[var2_int - -param1] = var2_int;
+                var2_int++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "bh.C(" + param0 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) var2, "bh.C(" + 83 + 44 + param1 + 41);
         }
     }
 
@@ -125,7 +121,8 @@ final class bh extends nl {
         try {
           L0: {
             if (param2 <= -68) {
-              if (!bb.a(param1, param0, -1)) {
+              int discarded$11 = -1;
+              if (!bb.a(param1, param0)) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;

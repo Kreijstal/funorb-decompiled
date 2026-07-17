@@ -443,7 +443,7 @@ final class rv {
         eob.field_p = li.a(91, var2 * var4, var2 * var5);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -466,42 +466,10 @@ final class rv {
         }
     }
 
-    final static tpa a(boolean param0, int param1) {
-        tpa var2 = null;
-        tpa stackIn_1_0 = null;
-        tpa stackIn_2_0 = null;
-        tpa stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        tpa stackOut_0_0 = null;
-        tpa stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        tpa stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        L0: {
-          var2 = new tpa(true);
-          stackOut_0_0 = (tpa) var2;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
-          if (!param0) {
-            stackOut_2_0 = (tpa) (Object) stackIn_2_0;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            break L0;
-          } else {
-            stackOut_1_0 = (tpa) (Object) stackIn_1_0;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            break L0;
-          }
-        }
-        stackIn_3_0.field_c = stackIn_3_1 != 0;
-        if (param1 != 1) {
-          return null;
-        } else {
-          return var2;
-        }
+    final static tpa a(boolean param0) {
+        tpa var2 = new tpa(true);
+        var2.field_c = param0 ? true : false;
+        return var2;
     }
 
     rv(boolean param0) {

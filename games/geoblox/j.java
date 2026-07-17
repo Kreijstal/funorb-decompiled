@@ -10,7 +10,7 @@ final class j extends mi {
     static rf field_ib;
     static String field_jb;
 
-    final static void e(int param0) {
+    final static void e() {
         wg.field_i.field_b = 0;
         wg.field_i.field_q = 0;
     }

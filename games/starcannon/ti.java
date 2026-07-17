@@ -13,14 +13,10 @@ abstract class ti {
     abstract byte[] b(int param0, boolean param1);
 
     final static int b(int param0, int param1) {
-        if (param1 != 2047) {
-            field_f = null;
-            return gl.field_b[param0 & 2047];
-        }
         return gl.field_b[param0 & 2047];
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
         field_g = null;
@@ -39,12 +35,7 @@ abstract class ti {
             var4 = (rh) (Object) a.field_f.c(-3905);
             L1: while (true) {
               if (var4 == null) {
-                if (param0 > 32) {
-                  break L0;
-                } else {
-                  field_d = false;
-                  return;
-                }
+                break L0;
               } else {
                 ha.a(2, 121, var4);
                 var4 = (rh) (Object) a.field_f.a(-16913);
@@ -55,7 +46,7 @@ abstract class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2, "ti.B(" + param0 + 44 + 2 + 41);
+          throw sd.a((Throwable) (Object) var2, "ti.B(" + 57 + 44 + 2 + 41);
         }
     }
 

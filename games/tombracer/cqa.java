@@ -24,7 +24,7 @@ final class cqa extends vw {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         asa var2 = null;
         jagdx.IDirect3DDevice var3 = null;
         asa var4 = null;
@@ -61,7 +61,8 @@ final class cqa extends vw {
         ((cqa) this).field_c.a(ej.field_c, 2, -6219, true, false);
         ((cqa) this).field_c.a(0, false, lja.field_j);
         ((cqa) this).field_c.e(0, false);
-        this.d(122);
+        int discarded$0 = 122;
+        this.d();
     }
 
     final void a(boolean param0, int param1) {
@@ -392,7 +393,7 @@ final class cqa extends vw {
         }
     }
 
-    private final void d(int param0) {
+    private final void d() {
         jagdx.IDirect3DVertexShader var2 = null;
         jagdx.IDirect3DDevice var3 = null;
         int var4 = 0;
@@ -440,18 +441,19 @@ final class cqa extends vw {
         if (var2 != ((cqa) this).field_j) {
           ((cqa) this).field_j = var2;
           ((cqa) this).field_i.a(var2, -1);
-          this.e(1);
+          int discarded$3 = 1;
+          this.e();
           ((cqa) this).b(125);
           ((cqa) this).c(true);
           ((cqa) this).b((byte) 107);
           ((cqa) this).b(true);
           ((cqa) this).a(true);
           var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
-          int discarded$2 = var3.a(12, field_h);
+          int discarded$4 = var3.a(12, field_h);
           return;
         } else {
           var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
-          int discarded$3 = var3.a(12, field_h);
+          int discarded$5 = var3.a(12, field_h);
           return;
         }
     }

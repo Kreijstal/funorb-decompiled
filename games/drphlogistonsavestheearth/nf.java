@@ -125,7 +125,7 @@ final class nf extends ei {
         return dk.field_c;
     }
 
-    final static String e(byte param0) {
+    final static String e() {
         if (hg.field_ub == fk.field_q) {
           return bg.field_q;
         } else {
@@ -253,21 +253,11 @@ final class nf extends ei {
         field_q = null;
     }
 
-    final static java.awt.Container b(boolean param0) {
-        if (!param0) {
-          if (null != bb.field_a) {
+    final static java.awt.Container b() {
+        if (null != bb.field_a) {
             return (java.awt.Container) (Object) bb.field_a;
-          } else {
-            return (java.awt.Container) (Object) nb.a(119);
-          }
-        } else {
-          field_v = null;
-          if (null != bb.field_a) {
-            return (java.awt.Container) (Object) bb.field_a;
-          } else {
-            return (java.awt.Container) (Object) nb.a(119);
-          }
         }
+        return (java.awt.Container) (Object) nb.a(119);
     }
 
     static {

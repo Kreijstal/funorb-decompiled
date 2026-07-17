@@ -150,13 +150,13 @@ final class ea implements cj {
 
     final static void a(java.math.BigInteger param0, dh param1, int param2, java.math.BigInteger param3, dh param4) {
         try {
-            ia.a(param2, param4, (byte) -75, param3, param0, param1.field_k, param1.field_i);
+            ia.a(0, param4, (byte) -75, param3, param0, param1.field_k, param1.field_i);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ea.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "ea.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1_int = 0;
         int var2 = Terraphoenix.field_V;
         try {

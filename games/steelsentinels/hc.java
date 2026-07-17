@@ -60,13 +60,14 @@ final class hc extends ug {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = mn.a(22230, param3, param1, param5, param2, param4);
+            int discarded$4 = 0;
+            var8 = mn.a(22230, param3, param1, param5, 0);
             var6 = var8;
             if (var8 != null) {
               var7 = new nn();
               var7.field_d = var8;
-              java.awt.Component discarded$2 = var7.field_d.add((java.awt.Component) (Object) var7);
-              var7.setBounds(0, param0, param5, param3);
+              java.awt.Component discarded$5 = var7.field_d.add((java.awt.Component) (Object) var7);
+              var7.setBounds(0, 0, param5, param3);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();
               stackOut_3_0 = (nn) var7;
@@ -83,7 +84,7 @@ final class hc extends ug {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("hc.DA(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("hc.DA(").append(0).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -106,7 +107,7 @@ final class hc extends ug {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
         }
         return stackIn_4_0;
     }

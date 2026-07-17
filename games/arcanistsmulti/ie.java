@@ -111,7 +111,8 @@ final class ie extends ed implements vb {
             return;
         }
         try {
-            mo.g(-1);
+            int discarded$0 = -1;
+            mo.g();
             ((ie) this).h(77);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ie.U(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
@@ -134,7 +135,8 @@ final class ie extends ed implements vb {
         }
         if (((ie) this).field_G) {
             if (!((ie) this).field_Ob) {
-                var2 = pe.e(false);
+                int discarded$0 = 0;
+                var2 = pe.e();
                 if (var2 != null) {
                     this.a(var2, (byte) 119, false);
                 }
@@ -197,7 +199,7 @@ final class ie extends ed implements vb {
               var3 = 0;
               L1: while (true) {
                 if (var3 >= param1.length()) {
-                  var4 = -39 / ((param0 - 77) / 37);
+                  var4 = -39;
                   Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
                   stackOut_16_0 = 1;
                   stackIn_17_0 = stackOut_16_0;
@@ -230,7 +232,7 @@ final class ie extends ed implements vb {
           L2: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2_ref2;
-            stackOut_20_1 = new StringBuilder().append("ie.VA(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("ie.VA(").append(118).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -315,7 +317,8 @@ final class ie extends ed implements vb {
                   if (param0.field_a == 248) {
                     L3: {
                       if (!param2) {
-                        na.i((byte) 105);
+                        int discarded$3 = 105;
+                        na.i();
                         break L3;
                       } else {
                         break L3;
@@ -348,7 +351,7 @@ final class ie extends ed implements vb {
                   ((ie) this).a((byte) -92, (qm) (Object) new ng((ie) this));
                   return;
                 } else {
-                  ag discarded$2 = var5.a(73, qn.field_lb, (wc) this);
+                  ag discarded$4 = var5.a(73, qn.field_lb, (wc) this);
                   break L4;
                 }
               } else {
@@ -363,7 +366,7 @@ final class ie extends ed implements vb {
                       break L5;
                     }
                   } else {
-                    ag discarded$3 = var5.a(116, qn.field_lb, (wc) this);
+                    ag discarded$5 = var5.a(116, qn.field_lb, (wc) this);
                     break L5;
                   }
                 }

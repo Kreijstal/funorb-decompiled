@@ -16,31 +16,13 @@ final class lfa extends le {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (wga.field_a != null) {
-          if (wga.field_a.a(param1, false)) {
-            wga.field_a = null;
-            if (param0 != 34) {
-              field_j = true;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (param0 != 34) {
-              field_j = true;
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          if (param0 != 34) {
-            field_j = true;
+        if (wga.field_a == null) {
             return;
-          } else {
-            return;
-          }
         }
+        if (!wga.field_a.a(param1, false)) {
+            return;
+        }
+        wga.field_a = null;
     }
 
     final int[][] a(int param0, int param1) {

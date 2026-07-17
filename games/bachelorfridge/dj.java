@@ -21,11 +21,11 @@ final class dj {
         pf.field_n = !param1 ? new lm(hfa.field_B, nu.field_f) : new lm(dea.field_l, sr.field_b);
         ela.field_i = new sna(0L, (sna) null);
         ela.field_i.a(-1, (sna) (Object) pf.field_n.field_a);
-        ela.field_i.a(param0 + -1, jj.field_wb);
+        ela.field_i.a(-1, jj.field_wb);
         qw.field_b = new sna(0L, qaa.field_d);
-        rf.field_q = new sna((long)param0, (sna) null);
+        rf.field_q = new sna(0L, (sna) null);
         qw.field_b.a(-1, saa.field_f);
-        qw.field_b.a(param0 + -1, rf.field_q);
+        qw.field_b.a(-1, rf.field_q);
         rf.field_q.a(-1, tv.field_o);
         rf.field_q.a(-1, vca.field_h);
         pv.a(param1, true);
@@ -60,18 +60,13 @@ final class dj {
         var4 = BachelorFridge.field_y;
         try {
           L0: {
-            if (sl.a(param0, (byte) 125, param2)) {
+            if (sl.a(false, (byte) 125, param2)) {
               var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param2.length()) {
-                  if (param1 == -15437) {
-                    stackOut_13_0 = 1;
-                    stackIn_14_0 = stackOut_13_0;
-                    break L0;
-                  } else {
-                    field_c = null;
-                    return true;
-                  }
+                  stackOut_13_0 = 1;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L0;
                 } else {
                   if (!vu.a((byte) 117, param2.charAt(var3_int))) {
                     stackOut_8_0 = 0;
@@ -94,7 +89,7 @@ final class dj {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3;
-            stackOut_15_1 = new StringBuilder().append("dj.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("dj.A(").append(0).append(44).append(-15437).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

@@ -10,7 +10,7 @@ final class sj {
     static char field_g;
     String field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         field_b = null;

@@ -165,14 +165,6 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var7 = 0;
               L1: while (true) {
                 if (param1.field_E <= var7) {
-                  L2: {
-                    if (param0 == -59) {
-                      break L2;
-                    } else {
-                      field_a = null;
-                      break L2;
-                    }
-                  }
                   param1.field_y = param1.field_y & -4;
                   param1.field_D = param1.field_D & -4;
                   param1.field_F = var2_int;
@@ -181,7 +173,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   break L0;
                 } else {
                   var8 = 0;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (param1.field_F <= var8) {
                       var6 = var6 + (var2_int - param1.field_F);
                       var7++;
@@ -193,7 +185,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       var5++;
                       var4[incrementValue$2] = param1.field_G[incrementValue$3];
                       var8++;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 }
@@ -202,10 +194,10 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("rp.A(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("rp.A(").append(-59).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -217,7 +209,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L4;
+              break L3;
             } else {
               stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
               stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
@@ -225,7 +217,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L4;
+              break L3;
             }
           }
           throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
@@ -294,7 +286,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -307,7 +299,8 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var2_int = param0.getKeyChar();
                 if (var2_int != 0) {
                     if (var2_int != 65535) {
-                        if (kj.a((char) var2_int, (byte) 111)) {
+                        int discarded$4 = 111;
+                        if (kj.a((char) var2_int)) {
                             var3 = 127 & 1 + jd.field_s;
                             if (qn.field_p != var3) {
                                 gn.field_z[jd.field_s] = -1;

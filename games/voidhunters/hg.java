@@ -97,13 +97,9 @@ final class hg implements ntb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
-        if (param0) {
-            Object var2 = null;
-            hg.a(-91, (java.applet.Applet) null);
-        }
     }
 
     public final void b(byte param0, tv param1) {
@@ -249,24 +245,17 @@ final class hg implements ntb {
                   break L5;
                 }
               }
-              L6: {
-                fpb.a(param1, 0);
-                if (param0 > 105) {
-                  break L6;
-                } else {
-                  hg.a(true);
-                  break L6;
-                }
-              }
+              int discarded$2 = 0;
+              fpb.a(param1);
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("hg.I(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("hg.I(").append(108).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -278,7 +267,7 @@ final class hg implements ntb {
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
-              break L7;
+              break L6;
             } else {
               stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
@@ -286,7 +275,7 @@ final class hg implements ntb {
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
               stackIn_24_2 = stackOut_22_2;
-              break L7;
+              break L6;
             }
           }
           throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);

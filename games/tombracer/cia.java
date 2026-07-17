@@ -29,7 +29,8 @@ final class cia {
     final void b(int param0, int param1, int param2) {
         ura.a(-10985);
         hp.a(2048, ((cia) this).field_f, 1900, ((cia) this).field_c.b((byte) 74), -1918106173, (((cia) this).field_e >> 16) + param1, param0 + (((cia) this).field_b >> 16));
-        se.f((byte) -6);
+        int discarded$0 = -6;
+        se.f();
         int var4 = -43 / ((param2 - 6) / 58);
     }
 

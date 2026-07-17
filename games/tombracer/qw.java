@@ -72,30 +72,13 @@ final class qw extends vg {
     }
 
     final static void a(byte param0, int param1) {
-        if (param0 == -32) {
-          if (param1 == msa.field_a) {
-            if (null == rba.field_a) {
-              return;
-            } else {
-              v.b(15, 0);
-              return;
-            }
-          } else {
+        if (param1 != msa.field_a) {
             return;
-          }
-        } else {
-          field_g = null;
-          if (param1 == msa.field_a) {
-            if (null == rba.field_a) {
-              return;
-            } else {
-              v.b(15, 0);
-              return;
-            }
-          } else {
-            return;
-          }
         }
+        if (null == rba.field_a) {
+            return;
+        }
+        v.b(15, 0);
     }
 
     static {

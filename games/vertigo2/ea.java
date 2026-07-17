@@ -11,7 +11,7 @@ final class ea {
     static String field_b;
     static er[] field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_h = null;
         field_d = null;
@@ -22,7 +22,7 @@ final class ea {
 
     final static void a(int param0, boolean param1) {
         mi var2 = uh.field_Wb;
-        var2.j(param0, 122);
+        var2.j(11, 122);
         var2.f(1, -99);
         var2.f(3, 98);
     }

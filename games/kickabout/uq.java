@@ -9,7 +9,7 @@ final class uq {
     static String field_e;
     static String field_f;
 
-    final static void a(byte param0) {
+    final static void a() {
         vg.field_Wb = true;
         ov.field_b = 0;
     }
@@ -18,9 +18,6 @@ final class uq {
         field_e = null;
         field_b = null;
         field_d = null;
-        if (param0 > -80) {
-            return;
-        }
         field_a = null;
         field_f = null;
     }

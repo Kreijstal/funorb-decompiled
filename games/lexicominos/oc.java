@@ -8,7 +8,7 @@ final class oc {
     static int field_c;
     static jb[] field_d;
 
-    final static jb[] a(sh param0, int param1, int param2, int param3) {
+    final static jb[] a(sh param0, int param1, int param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         jb[] stackIn_4_0 = null;
@@ -33,7 +33,8 @@ final class oc {
         try {
           L0: {
             if (nb.a(param2, param1, (byte) 125, param0)) {
-              stackOut_3_0 = ti.a((byte) 108);
+              int discarded$2 = 108;
+              stackOut_3_0 = ti.a();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -75,8 +76,8 @@ final class oc {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
-        int var1 = -2 % ((param0 - 11) / 49);
+    public static void a() {
+        int var1 = 0;
         field_d = null;
         field_a = null;
     }

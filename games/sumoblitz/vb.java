@@ -12,13 +12,14 @@ final class vb extends wp {
     int field_L;
     int field_H;
 
-    public static void a(int param0) {
+    public static void a() {
         field_J = null;
     }
 
     final static void a(byte param0, boolean param1) {
         int var2 = 104 / ((param0 - 78) / 36);
-        kt.b((byte) 108);
+        int discarded$0 = 108;
+        kt.b();
     }
 
     final boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {

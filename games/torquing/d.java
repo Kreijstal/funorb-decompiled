@@ -17,7 +17,7 @@ abstract class d extends ta {
         ((d) this).field_t = param0;
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         if (!(gn.field_m == null)) {
             gn.field_m.b(true);
         }
@@ -25,7 +25,7 @@ abstract class d extends ta {
         hb.field_x.c((gm) (Object) je.field_g, 33);
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         try {
             eb.field_c = param0;
             od.b(128, 12);

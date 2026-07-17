@@ -115,7 +115,7 @@ final class gea {
                 vp.a(-1, var4);
                 var12 = null;
                 oka.field_w = ow.a(1127256, 1513239, 1513239, 0, (il) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
-                uka.field_M = ow.a(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
+                uka.field_M = ow.a(0, 0, 0, 16764006, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -81);
                 tg.field_c = ow.a(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
                 var5 = bea.field_g;
                 var6 = bea.field_a;
@@ -147,7 +147,7 @@ final class gea {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("gea.F(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("gea.F(").append(0).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

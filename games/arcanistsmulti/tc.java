@@ -102,7 +102,7 @@ final class tc extends ib {
         this(ia.field_c, param0);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_w = null;
         field_C = null;
         field_x = null;
@@ -119,7 +119,7 @@ final class tc extends ib {
         super(param0, param1);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         int stackIn_2_0 = 0;
@@ -208,32 +208,16 @@ final class tc extends ib {
     }
 
     final static void b(int param0, int param1) {
-        ab var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        var2 = he.field_e;
+        ab var2 = he.field_e;
         var2.b((byte) -126, param1);
         var2.field_g = var2.field_g + 1;
-        if (param0 != 12657) {
-          field_E = null;
-          var3 = var2.field_g;
-          var2.f(5, (byte) -39);
-          var2.f(wi.field_f.field_dc, (byte) -3);
-          var4 = wi.field_f.field_Pb - -(wi.field_f.field_Fb << 6);
-          var2.f(var4, (byte) -97);
-          var2.a(wi.field_f.field_Wb, 0, (byte) -86, wi.field_f.field_Wb.length);
-          var2.b(var2.field_g + -var3, (byte) 43);
-          return;
-        } else {
-          var3 = var2.field_g;
-          var2.f(5, (byte) -39);
-          var2.f(wi.field_f.field_dc, (byte) -3);
-          var4 = wi.field_f.field_Pb - -(wi.field_f.field_Fb << 6);
-          var2.f(var4, (byte) -97);
-          var2.a(wi.field_f.field_Wb, 0, (byte) -86, wi.field_f.field_Wb.length);
-          var2.b(var2.field_g + -var3, (byte) 43);
-          return;
-        }
+        int var3 = var2.field_g;
+        var2.f(5, (byte) -39);
+        var2.f(wi.field_f.field_dc, (byte) -3);
+        int var4 = wi.field_f.field_Pb - -(wi.field_f.field_Fb << 6);
+        var2.f(var4, (byte) -97);
+        var2.a(wi.field_f.field_Wb, 0, (byte) -86, wi.field_f.field_Wb.length);
+        var2.b(var2.field_g + -var3, (byte) 43);
     }
 
     static {

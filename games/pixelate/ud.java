@@ -109,7 +109,7 @@ abstract class ud extends ch {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_L = null;
         field_O = null;
         field_I = null;
@@ -127,7 +127,8 @@ abstract class ud extends ch {
                   ((ud) this).a(0, 0, true);
                   super.a(-((ud) this).field_p + -param0, param1, -param2 - ((ud) this).field_z, (byte) -61);
                   var5 = -94 / ((param3 - 70) / 49);
-                  ia.a((byte) 92);
+                  int discarded$4 = 92;
+                  ia.a();
                   fd.field_a.a(((ud) this).field_z + param2, ((ud) this).field_p + param0, ((ud) this).field_J);
                   return;
                 } else {
@@ -137,7 +138,8 @@ abstract class ud extends ch {
                   ((ud) this).a(0, 0, true);
                   super.a(-((ud) this).field_p + -param0, param1, -param2 - ((ud) this).field_z, (byte) -61);
                   var5 = -94 / ((param3 - 70) / 49);
-                  ia.a((byte) 92);
+                  int discarded$5 = 92;
+                  ia.a();
                   fd.field_a.a(((ud) this).field_z + param2, ((ud) this).field_p + param0, ((ud) this).field_J);
                   return;
                 }
@@ -148,7 +150,8 @@ abstract class ud extends ch {
                 ((ud) this).a(0, 0, true);
                 super.a(-((ud) this).field_p + -param0, param1, -param2 - ((ud) this).field_z, (byte) -61);
                 var5 = -94 / ((param3 - 70) / 49);
-                ia.a((byte) 92);
+                int discarded$6 = 92;
+                ia.a();
                 fd.field_a.a(((ud) this).field_z + param2, ((ud) this).field_p + param0, ((ud) this).field_J);
                 return;
               }
@@ -159,7 +162,8 @@ abstract class ud extends ch {
               ((ud) this).a(0, 0, true);
               super.a(-((ud) this).field_p + -param0, param1, -param2 - ((ud) this).field_z, (byte) -61);
               var5 = -94 / ((param3 - 70) / 49);
-              ia.a((byte) 92);
+              int discarded$7 = 92;
+              ia.a();
               fd.field_a.a(((ud) this).field_z + param2, ((ud) this).field_p + param0, ((ud) this).field_J);
               return;
             }

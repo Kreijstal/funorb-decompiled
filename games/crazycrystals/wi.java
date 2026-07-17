@@ -11,7 +11,7 @@ abstract class wi {
     int field_g;
     static String field_b;
 
-    final static boolean a(int param0, int param1, CharSequence param2, boolean param3) {
+    final static boolean a(int param0, int param1, CharSequence param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -21,7 +21,6 @@ abstract class wi {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
         int stackIn_24_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_35_0 = 0;
@@ -59,8 +58,8 @@ abstract class wi {
                     if (param0 == 48) {
                       break L2;
                     } else {
-                      var12 = null;
-                      boolean discarded$1 = wi.a(-107, 91, (CharSequence) null, true);
+                      int discarded$2 = 1;
+                      boolean discarded$3 = wi.a(-107, 91, (CharSequence) null);
                       break L2;
                     }
                   }
@@ -299,7 +298,7 @@ abstract class wi {
               var20 = var25;
               var15 = var20;
               var7 = var15;
-              var8 = param0;
+              var8 = 0;
               L1: while (true) {
                 if (256 <= var8) {
                   stackOut_7_0 = new ef(param2, var26, var27, var28, var29, var30);
@@ -322,7 +321,7 @@ abstract class wi {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("wi.E(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("wi.E(").append(0).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -377,70 +376,61 @@ abstract class wi {
 
     abstract void a(int param0, int param1);
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
     final static void a(int param0, dl[] param1, int param2, int param3, byte param4, int param5) {
-        RuntimeException runtimeException = null;
+        RuntimeException var6 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
-          L0: {
-            L1: {
-              qc.a(192, param2, param3, param1, param0, param5, 2);
-              if (param4 == -71) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
-            break L0;
-          }
+          int discarded$2 = 2;
+          qc.a(192, param2, param3, param1, param0, param5);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("wi.H(").append(param0).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L0: {
+            var6 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var6;
+            stackOut_2_1 = new StringBuilder().append("wi.H(").append(param0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L0;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L0;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + param3 + 44 + -71 + 44 + param5 + 41);
         }
     }
 

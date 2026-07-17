@@ -13,10 +13,7 @@ final class fk extends qb {
     int field_i;
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 24988) {
-            return;
-        }
-        wh.field_a.a(param0 + -8477, param1);
+        wh.field_a.a(16511, param1);
     }
 
     public static void a(int param0) {

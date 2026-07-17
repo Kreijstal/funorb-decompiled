@@ -72,7 +72,7 @@ final class bg extends ua implements u, ql, sh {
         try {
           L0: {
             if (param0 > 96) {
-              stackOut_3_0 = this.a(35, param4, param3, param1, param2, 3, param5);
+              stackOut_3_0 = this.a(35, param4, param3, 170, param2, 3, param5);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -86,7 +86,7 @@ final class bg extends ua implements u, ql, sh {
           L1: {
             var7 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var7;
-            stackOut_5_1 = new StringBuilder().append("bg.BA(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("bg.BA(").append(param0).append(44).append(170).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -191,17 +191,20 @@ final class bg extends ua implements u, ql, sh {
                 if (param0 != 0) {
                   if (param0 != 1) {
                     if (2 == param0) {
-                      wc.a("conduct.ws", false);
+                      int discarded$14 = 0;
+                      wc.a("conduct.ws");
                       break L1;
                     } else {
                       break L1;
                     }
                   } else {
-                    wc.a("privacy.ws", false);
+                    int discarded$15 = 0;
+                    wc.a("privacy.ws");
                     break L1;
                   }
                 } else {
-                  wc.a("terms.ws", false);
+                  int discarded$16 = 0;
+                  wc.a("terms.ws");
                   break L1;
                 }
               }
@@ -380,7 +383,7 @@ final class bg extends ua implements u, ql, sh {
         try {
           L0: {
             if (param0 <= -96) {
-              var6 = new mh(20, param4, 120 - -param3, 25, param2, false, 120, 3, t.field_z, 16777215, param1);
+              var6 = new mh(20, param4, 290, 25, param2, false, 120, 3, t.field_z, 16777215, param1);
               ((bg) this).b((byte) -78, (we) (Object) var6);
               stackOut_3_0 = var6.field_p;
               stackIn_4_0 = stackOut_3_0;
@@ -444,7 +447,7 @@ final class bg extends ua implements u, ql, sh {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 44 + param4 + 41);
+          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 170 + 44 + param4 + 41);
         }
         return stackIn_4_0;
     }
@@ -1129,7 +1132,8 @@ final class bg extends ua implements u, ql, sh {
                 } else {
                   L2: {
                     var3 = param1.charAt(var2_int);
-                    if (uc.a((char) var3, false)) {
+                    int discarded$5 = 0;
+                    if (uc.a((char) var3)) {
                       break L2;
                     } else {
                       if (re.a(param0 ^ -4843, (char) var3)) {
@@ -1396,6 +1400,8 @@ final class bg extends ua implements u, ql, sh {
         ve dupTemp$1 = new ve(10000536);
         ((bg) this).field_J.field_h = (ml) (Object) dupTemp$1;
         ((bg) this).field_H.field_h = (ml) (Object) dupTemp$1;
+        int discarded$2 = -95;
+        int discarded$3 = 0;
         String var2 = gg.a(new String[2], uk.field_p, true);
         int var3 = 20;
         var3 = var3 + this.a(-107, be.field_e, (we) (Object) ((bg) this).field_D, 170, var3);
@@ -1463,7 +1469,8 @@ final class bg extends ua implements u, ql, sh {
             L2: {
               if (param4 != ((bg) this).field_K) {
                 if (param4 == ((bg) this).field_z) {
-                  boolean discarded$2 = this.d((byte) 104);
+                  int discarded$4 = 104;
+                  boolean discarded$5 = this.d();
                   break L2;
                 } else {
                   break L2;
@@ -1628,11 +1635,11 @@ final class bg extends ua implements u, ql, sh {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var9 = new mh(20, param0, param2 + 120, 25, param4, false, 120, 3, t.field_z, 16777215, param3);
+            var9 = new mh(20, param0, 290, 25, param4, false, 120, 3, t.field_z, 16777215, param3);
             ((bg) this).b((byte) -67, (we) (Object) var9);
             var7 = new vh(((ag) (Object) param4).a(-107));
             ((bg) this).b((byte) -82, (we) (Object) var7);
-            var8 = -12 / ((param1 - -16) / 48);
+            var8 = -6;
             var7.a(15, 13361, 3 + var9.field_l + var9.field_r, 15, (-15 + var9.field_p >> 1) + var9.field_e);
             stackOut_0_0 = var9.field_p;
             stackIn_1_0 = stackOut_0_0;
@@ -1643,7 +1650,7 @@ final class bg extends ua implements u, ql, sh {
           L1: {
             var6 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("bg.M(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_2_1 = new StringBuilder().append("bg.M(").append(param0).append(44).append(93).append(44).append(170).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -1696,20 +1703,16 @@ final class bg extends ua implements u, ql, sh {
         return stackIn_1_0;
     }
 
-    private final boolean l(int param0) {
-        if (param0 == -2706) {
-          if (this.a(-59, (ag) (Object) ((bg) this).field_N)) {
-            if (this.a(-110, (ag) (Object) ((bg) this).field_D)) {
-              if (this.a(param0 + 2684, (ag) (Object) ((bg) this).field_I)) {
-                if (this.a(param0 + 2694, (ag) (Object) ((bg) this).field_H)) {
-                  if (this.a(param0 + 2819, (ag) (Object) ((bg) this).field_J)) {
-                    if (!this.a(param0 + 2829, (ag) (Object) ((bg) this).field_F)) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
+    private final boolean l() {
+        if (this.a(-59, (ag) (Object) ((bg) this).field_N)) {
+          if (this.a(-110, (ag) (Object) ((bg) this).field_D)) {
+            if (this.a(-22, (ag) (Object) ((bg) this).field_I)) {
+              if (this.a(-12, (ag) (Object) ((bg) this).field_H)) {
+                if (this.a(113, (ag) (Object) ((bg) this).field_J)) {
+                  if (!this.a(123, (ag) (Object) ((bg) this).field_F)) {
                     return false;
+                  } else {
+                    return true;
                   }
                 } else {
                   return false;
@@ -1724,43 +1727,28 @@ final class bg extends ua implements u, ql, sh {
             return false;
           }
         } else {
-          return true;
-        }
-    }
-
-    private final boolean d(byte param0) {
-        NumberFormatException numberFormatException = null;
-        int var2 = 0;
-        Throwable decompiledCaughtException = null;
-        if (!this.l(param0 + -2810)) {
           return false;
-        } else {
-          var2 = -1;
-          try {
-            L0: {
-              var2 = Integer.parseInt(((bg) this).field_F.field_s);
-              break L0;
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            L1: {
-              numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
-              break L1;
-            }
-          }
-          if (param0 != 104) {
-            return false;
-          } else {
-            return kh.a(((bg) this).field_H.field_s, 71, ((bg) this).field_O.field_u, ((bg) this).field_N.field_s, var2, (bg) this, ((bg) this).field_D.field_s);
-          }
         }
     }
 
-    private final String b(boolean param0) {
+    private final boolean d() {
+        int discarded$0 = -2706;
+        if (!(this.l())) {
+            return false;
+        }
+        int var2 = -1;
+        try {
+            var2 = Integer.parseInt(((bg) this).field_F.field_s);
+        } catch (NumberFormatException numberFormatException) {
+        }
+        return kh.a(((bg) this).field_H.field_s, 71, ((bg) this).field_O.field_u, ((bg) this).field_N.field_s, var2, (bg) this, ((bg) this).field_D.field_s);
+    }
+
+    private final String b() {
         return "</col></u>";
     }
 
-    private final String e(byte param0) {
+    private final String e() {
         int var2 = 60;
         return "<u=2164A2><col=2164A2>";
     }
@@ -1771,7 +1759,8 @@ final class bg extends ua implements u, ql, sh {
         }
         try {
             super.a(param0, param1, param2, (byte) -23);
-            ((bg) this).field_z.field_w = this.l(-2706);
+            int discarded$0 = -2706;
+            ((bg) this).field_z.field_w = this.l();
         } catch (RuntimeException runtimeException) {
             throw la.a((Throwable) (Object) runtimeException, "bg.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }

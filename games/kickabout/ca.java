@@ -25,20 +25,10 @@ final class ca {
     }
 
     final static void a(int param0, int param1) {
-        ml var2 = null;
-        if (param0 != 3) {
-            boolean discarded$0 = ca.a(false, 'F');
-            var2 = or.field_d;
-            var2.b(param1, (byte) 119);
-            var2.a(124, 2);
-            var2.a(param0 ^ 106, 4);
-            var2.a(124, cq.a(1315216324));
-            return;
-        }
-        var2 = or.field_d;
+        ml var2 = or.field_d;
         var2.b(param1, (byte) 119);
         var2.a(124, 2);
-        var2.a(param0 ^ 106, 4);
+        var2.a(105, 4);
         var2.a(124, cq.a(1315216324));
     }
 
@@ -71,29 +61,25 @@ final class ca {
         var16 = Kickabout.field_G;
         try {
           L0: {
-            if (param5 == 545806977) {
-              L1: while (true) {
-                param6--;
-                if (0 > param6) {
-                  break L0;
-                } else {
-                  var17 = param9;
-                  var10 = var17;
-                  var11 = param2;
-                  var12 = param4;
-                  var13 = param8;
-                  var14 = param3;
-                  var15 = 8355711 & var17[var11] >> 1;
-                  var10[var11] = qj.b(var13 >> 9, 65280) - -qj.b(var12 >> 1, 16711680) + qj.b(255, var14 >> 17) + var15;
-                  param8 = param8 + param1;
-                  param3 = param3 + param7;
-                  param2++;
-                  param4 = param4 + param0;
-                  continue L1;
-                }
+            L1: while (true) {
+              param6--;
+              if (0 > param6) {
+                break L0;
+              } else {
+                var17 = param9;
+                var10 = var17;
+                var11 = param2;
+                var12 = param4;
+                var13 = param8;
+                var14 = param3;
+                var15 = 8355711 & var17[var11] >> 1;
+                var10[var11] = qj.b(var13 >> 9, 65280) - -qj.b(var12 >> 1, 16711680) + qj.b(255, var14 >> 17) + var15;
+                param8 = param8 + param1;
+                param3 = param3 + param7;
+                param2++;
+                param4 = param4 + param0;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,7 +87,7 @@ final class ca {
           L2: {
             var10_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var10_ref;
-            stackOut_6_1 = new StringBuilder().append("ca.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackOut_6_1 = new StringBuilder().append("ca.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(545806977).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -141,36 +127,32 @@ final class ca {
     }
 
     final static boolean a(boolean param0, char param1) {
-        int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_10_0 = 0;
-        if (!param0) {
-          if (param1 != 160) {
-            if (param1 != 32) {
-              L0: {
-                if (param1 == 95) {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
+        int stackIn_9_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_8_0 = 0;
+        if (param1 != 160) {
+          if (param1 != 32) {
+            L0: {
+              if (param1 == 95) {
+                stackOut_7_0 = 1;
+                stackIn_9_0 = stackOut_7_0;
+                break L0;
+              } else {
+                if (param1 != 45) {
+                  stackOut_8_0 = 0;
+                  stackIn_9_0 = stackOut_8_0;
                   break L0;
                 } else {
-                  if (param1 != 45) {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
-                    break L0;
-                  } else {
-                    return true;
-                  }
+                  return true;
                 }
               }
-              return stackIn_11_0 != 0;
-            } else {
-              return true;
             }
+            return stackIn_9_0 != 0;
           } else {
             return true;
           }
         } else {
-          return false;
+          return true;
         }
     }
 

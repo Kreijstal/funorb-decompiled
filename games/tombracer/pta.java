@@ -10,7 +10,7 @@ final class pta implements fo {
     static String field_d;
     private boolean field_a;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_d = null;
         field_g = null;
     }

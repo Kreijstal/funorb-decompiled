@@ -16,7 +16,7 @@ final class dh implements Iterator {
         field_d = null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -260,7 +260,7 @@ final class dh implements Iterator {
         ((dh) this).field_f = null;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((dh) this).field_b = ((dh) this).field_e.field_a[0].field_e;
         ((dh) this).field_c = 1;
         ((dh) this).field_f = null;
@@ -270,7 +270,8 @@ final class dh implements Iterator {
         ((dh) this).field_f = null;
         try {
             ((dh) this).field_e = param0;
-            this.a(0);
+            int discarded$0 = 0;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw rb.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

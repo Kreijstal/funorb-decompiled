@@ -14,7 +14,7 @@ final class mi extends vg {
     static String field_j;
     static int field_f;
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

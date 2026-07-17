@@ -28,7 +28,7 @@ final class hga extends am {
         }
     }
 
-    public static void o(int param0) {
+    public static void o() {
         field_U = null;
     }
 
@@ -216,47 +216,30 @@ final class hga extends am {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_8_1 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var22 = BachelorFridge.field_y;
         try {
           L0: {
-            L1: {
-              lka.field_E = qs.a(false, new lu(param1));
-              ur.field_e = new oha[lka.field_E.length + -1];
-              pe.field_m = 0;
-              var2_int = 1;
-              if (param0) {
-                break L1;
-              } else {
-                field_U = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            lka.field_E = qs.a(false, new lu(param1));
+            ur.field_e = new oha[lka.field_E.length + -1];
+            pe.field_m = 0;
+            var2_int = 1;
+            L1: while (true) {
               if (~lka.field_E.length >= ~var2_int) {
                 break L0;
               } else {
@@ -264,108 +247,102 @@ final class hga extends am {
                 var4 = lka.field_E[var2_int][1];
                 var5 = lka.field_E[var2_int][2];
                 var6 = bm.a(80, var2_int);
-                var7 = vc.a(var2_int, 3, -16306);
+                int discarded$12 = -16306;
+                var7 = vc.a(var2_int, 3);
                 var8 = dha.a((byte) -38, var2_int);
                 var9 = jfa.a(false, var2_int);
-                var10 = vc.a(var2_int, 15, -16306);
+                int discarded$13 = -16306;
+                var10 = vc.a(var2_int, 15);
                 if (1 != var6) {
                   if (2 != var6) {
                     if (var6 == 4) {
                       var11 = dna.b(var2_int, false);
                       var12 = te.a(var2_int, (byte) 65);
-                      var13 = vc.a(var2_int, 8, -16306);
-                      var14 = vc.a(var2_int, 9, -16306);
-                      var15 = vc.a(var2_int, 10, -16306);
+                      int discarded$14 = -16306;
+                      var13 = vc.a(var2_int, 8);
+                      int discarded$15 = -16306;
+                      var14 = vc.a(var2_int, 9);
+                      int discarded$16 = -16306;
+                      var15 = vc.a(var2_int, 10);
                       var16 = mq.a(13, 207, var2_int);
                       var8 = dha.a((byte) -113, var2_int);
                       bea.a(var15, var10, var12, var16, var11, var3, -52, var14, var13, var8, var9, var4, var5);
                       var2_int++;
-                      continue L2;
+                      continue L1;
                     } else {
                       if (var6 != 3) {
                         var2_int++;
-                        continue L2;
+                        continue L1;
                       } else {
-                        var11 = vc.a(var2_int, 10, -16306);
+                        int discarded$17 = -16306;
+                        var11 = vc.a(var2_int, 10);
                         var12 = te.a(var2_int, (byte) -53);
                         pm.a(var9, var3, 12635, var7, var8, var11, var4, var5, var12);
                         var2_int++;
-                        continue L2;
+                        continue L1;
                       }
                     }
                   } else {
                     mw.a((byte) -120, var9, var10, var8, var4, var5, var7, var3);
                     var2_int++;
                     var2_int++;
-                    continue L2;
+                    continue L1;
                   }
                 } else {
-                  L3: {
-                    var11 = eka.a((byte) 125, var2_int);
-                    stackOut_5_0 = var2_int;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
-                    if (param0) {
-                      stackOut_7_0 = stackIn_7_0;
-                      stackOut_7_1 = 0;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
-                      break L3;
-                    } else {
-                      stackOut_6_0 = stackIn_6_0;
-                      stackOut_6_1 = 1;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
-                      break L3;
-                    }
-                  }
-                  var12 = dna.b(stackIn_8_0, stackIn_8_1 != 0);
+                  var11 = eka.a((byte) 125, var2_int);
+                  var12 = dna.b(var2_int, false);
                   var13 = te.a(var2_int, (byte) 64);
-                  var14 = vc.a(var2_int, 8, -16306);
-                  var15 = vc.a(var2_int, 9, -16306);
-                  var16 = vc.a(var2_int, 10, -16306);
-                  var17 = vc.a(var2_int, 11, -16306);
-                  var18 = vc.a(var2_int, 12, -16306);
+                  int discarded$18 = -16306;
+                  var14 = vc.a(var2_int, 8);
+                  int discarded$19 = -16306;
+                  var15 = vc.a(var2_int, 9);
+                  int discarded$20 = -16306;
+                  var16 = vc.a(var2_int, 10);
+                  int discarded$21 = -16306;
+                  var17 = vc.a(var2_int, 11);
+                  int discarded$22 = -16306;
+                  var18 = vc.a(var2_int, 12);
                   var19 = mq.a(13, 207, var2_int);
                   var20 = oaa.a(-74, var2_int);
                   var21 = wg.a(var2_int, (byte) 83);
-                  ag.a(var7, var4, var16, var15, var5, var19, var10, var13, var20, var21, var14, var12, var6, var8, var11, var9, var17, var3, var18, -4313);
+                  int discarded$23 = -4313;
+                  ag.a(var7, var4, var16, var15, var5, var19, var10, var13, var20, var21, var14, var12, var6, var8, var11, var9, var17, var3, var18);
                   var2_int++;
                   var2_int++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("hga.D(").append(param0).append(44);
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_1 = new StringBuilder().append("hga.D(").append(1).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
-              break L4;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L2;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
-              break L4;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
         }
     }
 

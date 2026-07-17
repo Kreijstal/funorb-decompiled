@@ -13,7 +13,7 @@ final class pe {
     static String field_j;
     private int field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -20;
         field_j = null;
         field_e = null;
@@ -34,12 +34,10 @@ final class pe {
         try {
             Object var16 = null;
             aj.a(0, param9, 0, ea.field_b, param3, g.field_n, 480, param7, ec.field_c, param8, param13, param0, param5, (db[]) null, param4, true, param12, param6, param2, param10, param1);
-            if (param11 > -58) {
-                field_e = null;
-            }
-            bl.a(param14, 2);
+            int discarded$0 = 2;
+            bl.a(param14);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "pe.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 44 + param13 + 44 + param14 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "pe.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + param10 + 44 + -98 + 44 + param12 + 44 + param13 + 44 + param14 + 41);
         }
     }
 
@@ -98,7 +96,7 @@ final class pe {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -259,7 +257,8 @@ final class pe {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((pe) this).field_g[var2_int] = param0[var2_int];
             }
-            this.b(-24892);
+            int discarded$0 = -24892;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "pe.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

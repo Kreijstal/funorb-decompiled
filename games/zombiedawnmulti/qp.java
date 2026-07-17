@@ -12,7 +12,7 @@ final class qp extends un {
     static ja[] field_u;
     static ef field_w;
 
-    public static void h(int param0) {
+    public static void h() {
         field_s = null;
         field_r = null;
         field_u = null;
@@ -64,7 +64,7 @@ final class qp extends un {
     }
 
     final static void a(boolean param0, boolean param1) {
-        ec.a(param0, true, -105);
+        ec.a(true, param1, -105);
     }
 
     final re a(boolean param0, String param1) {

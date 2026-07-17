@@ -156,7 +156,7 @@ final class tg extends td {
         return (ii) (Object) stackIn_3_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_p = null;
     }
 

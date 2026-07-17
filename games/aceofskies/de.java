@@ -131,7 +131,7 @@ final class de implements ir {
         }
     }
 
-    final static void a(java.awt.Component param0, boolean param1) {
+    final static void a(java.awt.Component param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -188,7 +188,7 @@ final class de implements ir {
         }
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

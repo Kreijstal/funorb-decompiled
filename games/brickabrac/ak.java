@@ -1730,7 +1730,7 @@ final class ak {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_d = null;
         field_e = null;
     }
@@ -1741,10 +1741,10 @@ final class ak {
         on var6 = null;
         int var7 = BrickABrac.field_J ? 1 : 0;
         try {
-            hg.a(param1);
+            hg.a(-1);
             for (var4_int = -1 + param2.field_z.length; var4_int > -1; var4_int--) {
                 var5 = param2.field_z[var4_int];
-                var6 = (on) (Object) var5.f(~param1);
+                var6 = (on) (Object) var5.f(0);
                 while (var6 != null) {
                     boolean discarded$0 = var6.a((no) (Object) param0, (byte) 119);
                     var6 = (on) (Object) var5.b(-126);
@@ -1755,7 +1755,7 @@ final class ak {
             }
             boolean discarded$1 = param2.field_yb.a((no) (Object) param0, (byte) 110);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ak.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ak.J(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -2350,7 +2350,8 @@ final class ak {
             ((ak) this).a(false);
             break L1;
           } else {
-            if (!wn.a(var2, (byte) -6)) {
+            int discarded$4 = -6;
+            if (!wn.a(var2)) {
               break L1;
             } else {
               ((ak) this).field_h = ed.b(9, var2 + -1);

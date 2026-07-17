@@ -240,7 +240,7 @@ final class nh extends v implements pi {
         }
     }
 
-    final static void h(int param0) {
+    final static void h() {
         ol.field_f = 0;
         va.field_k = false;
         a.field_I = -1;

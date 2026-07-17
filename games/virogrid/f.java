@@ -15,7 +15,7 @@ final class f implements Iterator {
     static int field_b;
     static String field_h;
 
-    final static String a(int param0) {
+    final static String a() {
         if (!(pa.field_l != ao.field_Kb)) {
             return ea.field_e;
         }
@@ -66,7 +66,7 @@ final class f implements Iterator {
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var6_int = param0 - param3;
+            var6_int = param0;
             if (param2 <= -120) {
               var7 = 0;
               L1: while (true) {
@@ -78,7 +78,7 @@ final class f implements Iterator {
                   L2: {
                     L3: {
                       L4: {
-                        var8 = param5.charAt(var7 + param3);
+                        var8 = param5.charAt(var7);
                         if (var8 <= 0) {
                           break L4;
                         } else {
@@ -256,7 +256,7 @@ final class f implements Iterator {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_71_0 = (RuntimeException) var6;
-            stackOut_71_1 = new StringBuilder().append("f.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_71_1 = new StringBuilder().append("f.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44);
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
@@ -315,7 +315,8 @@ final class f implements Iterator {
             dk.field_v.h(1026);
         }
         if (!(sd.field_e == 0)) {
-            re.c((byte) 121);
+            int discarded$0 = 121;
+            re.c();
         }
         if (param0 > -26) {
             f.b((byte) -19);
@@ -393,13 +394,13 @@ final class f implements Iterator {
         }
     }
 
-    final static String a(char param0, int param1, byte param2) {
+    final static String a(char param0, int param1) {
         int var4 = 0;
         int var5 = Virogrid.field_F ? 1 : 0;
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = 0; var4 < param1; var4++) {
-            var6[var4] = param0;
+            var6[var4] = '*';
         }
         return new String(var6);
     }

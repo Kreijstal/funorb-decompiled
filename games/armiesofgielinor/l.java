@@ -328,7 +328,7 @@ final class l {
         return stackIn_28_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_a = null;
         field_e = null;

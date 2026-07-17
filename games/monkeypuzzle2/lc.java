@@ -440,7 +440,7 @@ final class lc implements ml {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_b = null;
     }

@@ -90,7 +90,8 @@ class gna extends elb {
                     break L2;
                   }
                 }
-                pa.a(var3_ref, 3);
+                int discarded$2 = 3;
+                pa.a(var3_ref);
                 var7 = sh.a("%3a", ":", var3_ref, param2 + param2);
                 var8 = sh.a("%40", "@", var7, param2);
                 var9 = sh.a("%26", "&", var8, 0);
@@ -152,7 +153,7 @@ class gna extends elb {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_d;
-                          int discarded$1 = var5.read();
+                          int discarded$3 = var5.read();
                           var5.close();
                           break L6;
                         }

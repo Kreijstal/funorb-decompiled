@@ -38,7 +38,8 @@ final class pq extends vo {
         try {
           L0: {
             L1: {
-              if (null != ai.a(param0, (byte) 12)) {
+              int discarded$12 = 12;
+              if (null != ai.a(param0)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -55,7 +56,7 @@ final class pq extends vo {
                   break L2;
                 } else {
                   var4 = null;
-                  String discarded$2 = ((pq) this).a((String) null, (byte) 9);
+                  String discarded$13 = ((pq) this).a((String) null, (byte) 9);
                   break L2;
                 }
               }

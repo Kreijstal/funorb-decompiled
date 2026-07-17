@@ -7,7 +7,7 @@ final class af {
     static String field_c;
     static hd field_d;
 
-    final static int a(up param0, int param1) {
+    final static int a(up param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
@@ -31,7 +31,8 @@ final class af {
         try {
           L0: {
             L1: {
-              var2_int = 5 * gp.a(param0, -576054046) / 3;
+              int discarded$2 = -576054046;
+              var2_int = 5 * gp.a(param0) / 3;
               if (var2_int < 30) {
                 var2_int = 30;
                 break L1;
@@ -76,7 +77,7 @@ final class af {
         return stackIn_4_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_b = null;

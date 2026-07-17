@@ -13,7 +13,8 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
     final void a(eab param0, int param1) {
         try {
             if (param1 != -32335) {
-                ufb.a(false);
+                int discarded$0 = 0;
+                ufb.a();
             }
             db.a(((ufb) this).field_b, param0, (byte) 126);
         } catch (RuntimeException runtimeException) {
@@ -38,7 +39,7 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
     public final void paint(java.awt.Graphics param0) {
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
     }

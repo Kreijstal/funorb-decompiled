@@ -7,7 +7,7 @@ final class ag {
     static k field_a;
     static String field_d;
 
-    final static long a(long param0, int param1) {
+    final static long a(long param0) {
         param0 = param0 << 32 | param0 >>> 32;
         long var3 = -281470681808896L;
         param0 = (param0 & var3) >>> 16 | (param0 & ~var3) << 16;
@@ -22,7 +22,7 @@ final class ag {
         return param0;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         wc var4 = null;
@@ -37,12 +37,7 @@ final class ag {
                 var5 = (bm) (Object) gl.field_d.b(0);
                 L2: while (true) {
                   if (var5 == null) {
-                    if (param0 == -45) {
-                      break L0;
-                    } else {
-                      field_c = null;
-                      return;
-                    }
+                    break L0;
                   } else {
                     mc.a((byte) 85, 3, var5);
                     var5 = (bm) (Object) gl.field_d.f(-24059);
@@ -50,7 +45,9 @@ final class ag {
                   }
                 }
               } else {
-                bp.a(var4, 1, 3);
+                int discarded$4 = 3;
+                int discarded$5 = 1;
+                bp.a(var4);
                 var4 = (wc) (Object) so.field_t.f(-24059);
                 continue L1;
               }
@@ -59,7 +56,7 @@ final class ag {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2, "ag.B(" + param0 + 44 + 3 + 41);
+          throw rb.a((Throwable) (Object) var2, "ag.B(" + -45 + 44 + 3 + 41);
         }
     }
 

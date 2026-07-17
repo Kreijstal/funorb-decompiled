@@ -7,7 +7,7 @@ final class ia extends rb {
     private jb field_m;
     private int field_j;
 
-    final static void a(String param0, String param1, int param2) {
+    final static void a(String param0, String param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -42,7 +42,8 @@ final class ia extends rb {
         String stackOut_6_2 = null;
         try {
           L0: {
-            ne.a(false, param1, param0, 150);
+            int discarded$2 = 150;
+            ne.a(false, param1, param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +148,7 @@ final class ia extends rb {
         ((ia) this).field_g = (((ia) this).field_j - -7) / 8;
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_l = null;
     }
 
@@ -195,7 +196,8 @@ final class ia extends rb {
               L2: {
                 var4 = 112 / ((param1 - -62) / 42);
                 param2 = s.a(param2, '_', "", (byte) -10);
-                var3 = vh.a(param0, 0);
+                int discarded$2 = 0;
+                var3 = vh.a(param0);
                 if (param2.indexOf(param0) != -1) {
                   break L2;
                 } else {

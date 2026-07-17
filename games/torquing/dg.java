@@ -104,7 +104,7 @@ final class dg extends af {
         ((dg) this).a(false, 0, 0);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_g = null;
         field_e = null;
         field_i = null;

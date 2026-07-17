@@ -237,7 +237,7 @@ final class qfa extends ha {
                     if (var10.field_d != 0) {
                       break L6;
                     } else {
-                      this.k(param2);
+                      this.k(0);
                       break L5;
                     }
                   }
@@ -271,31 +271,23 @@ final class qfa extends ha {
               var6 = var10.field_f;
               break L4;
             } else {
-              this.k(param2);
+              this.k(0);
               break L4;
             }
           }
           L9: {
-            ((qfa) this).field_d.a(param0, param1, var7, -109, var9, var8);
+            ((qfa) this).field_d.a(true, true, var7, -109, var9, var8);
             if (((qfa) this).field_d.a((pib) var5, 74, var6)) {
               break L9;
             } else {
               ((qfa) this).a(58, (pib) var5);
-              ((qfa) this).c(param2, var6);
+              ((qfa) this).c(0, var6);
               break L9;
             }
           }
           ((qfa) this).field_Yb = ((qfa) this).field_kb;
           ((qfa) this).field_o = param3;
           break L0;
-        }
-        L10: {
-          if (param2 == 0) {
-            break L10;
-          } else {
-            ((qfa) this).field_yb = null;
-            break L10;
-          }
         }
         ((qfa) this).field_x = ((qfa) this).field_x & -8;
     }
@@ -1801,9 +1793,6 @@ final class qfa extends ha {
     }
 
     private final void a(byte param0, boolean param1) {
-        if (param0 != 32) {
-            ((qfa) this).field_Lc = false;
-        }
         if (((qfa) this).field_R != param1) {
             if (param1) {
                 jaggl.OpenGL.glEnable(2929);
@@ -1973,7 +1962,7 @@ final class qfa extends ha {
     }
 
     private final void a(float param0, float param1, int param2, float param3) {
-        jaggl.OpenGL.glMatrixMode(param2);
+        jaggl.OpenGL.glMatrixMode(5890);
         if (((qfa) this).field_Vb) {
             jaggl.OpenGL.glLoadIdentity();
         }
@@ -2388,10 +2377,6 @@ final class qfa extends ha {
 
     private final void a(boolean param0, int param1, boolean param2) {
         this.a(true, true, 0, param1);
-        if (param0) {
-            Object var5 = null;
-            ((qfa) this).K((int[]) null);
-        }
     }
 
     private final void l(int param0) {
@@ -2782,8 +2767,8 @@ final class qfa extends ha {
         ((qfa) this).field_hb = new Hashtable();
         ((qfa) this).field_X = 128;
         ((qfa) this).field_Ec = new vf();
-        epb discarded$4 = new epb();
-        epb discarded$5 = new epb();
+        epb discarded$8 = new epb();
+        epb discarded$9 = new epb();
         ((qfa) this).field_m = false;
         ((qfa) this).field_D = new ij();
         ((qfa) this).field_zc = -1;
@@ -2843,19 +2828,21 @@ final class qfa extends ha {
         ((qfa) this).field_Bc = 8448;
         ((qfa) this).field_Q = 1.0f;
         ((qfa) this).field_Tb = new float[4];
-        mb discarded$6 = new mb(8192);
+        mb discarded$10 = new mb(8192);
         try {
           L0: {
             ((qfa) this).field_ib = param0;
             ((qfa) this).field_Kc = param2;
-            if (gpb.a("jaclib", (byte) 114)) {
-              if (gpb.a("jaggl", (byte) 114)) {
+            int discarded$11 = 114;
+            if (gpb.a("jaclib")) {
+              int discarded$12 = 114;
+              if (gpb.a("jaggl")) {
                 try {
                   L1: {
                     ((qfa) this).field_c = new jaggl.OpenGL();
-                    long dupTemp$7 = ((qfa) this).field_c.init(param0, 8, 8, 8, 24, 0, ((qfa) this).field_Kc);
-                    ((qfa) this).field_uc = dupTemp$7;
-                    ((qfa) this).field_ic = dupTemp$7;
+                    long dupTemp$13 = ((qfa) this).field_c.init(param0, 8, 8, 8, 24, 0, ((qfa) this).field_Kc);
+                    ((qfa) this).field_uc = dupTemp$13;
+                    ((qfa) this).field_ic = dupTemp$13;
                     if (((qfa) this).field_uc != 0L) {
                       this.w(127);
                       var4_int = this.d((byte) 109);
@@ -3067,7 +3054,9 @@ final class qfa extends ha {
                           }
                         }
                         L19: {
-                          ocb.a(false, (byte) 33, true);
+                          int discarded$14 = 1;
+                          int discarded$15 = 33;
+                          ocb.a(false);
                           ((qfa) this).field_m = true;
                           ((qfa) this).field_r = new rlb((qfa) this, ((qfa) this).field_a);
                           this.c((byte) -92);
@@ -3440,7 +3429,7 @@ final class qfa extends ha {
         jaggl.OpenGL.glClear(16384);
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var2 = 0;
         fsb var3 = null;
         int var4 = 0;
@@ -3667,7 +3656,8 @@ final class qfa extends ha {
             ((qfa) this).field_d.field_b.e(34336);
         }
         this.g((byte) 95);
-        this.g(22);
+        int discarded$0 = 22;
+        this.g();
     }
 
     final rtb a(boolean param0) {
@@ -4100,9 +4090,6 @@ final class qfa extends ha {
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glMatrixMode(5888);
             ((qfa) this).field_Vb = false;
-        }
-        if (param0 != 0) {
-            ((qfa) this).c(true);
         }
     }
 

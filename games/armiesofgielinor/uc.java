@@ -7,20 +7,18 @@ final class uc {
     static je field_b;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_d = null;
     }
 
     final static void a(int param0) {
-        if (param0 != 0) {
-            return;
-        }
-        bc.a(2858);
+        int discarded$0 = 2858;
+        bc.a();
     }
 
-    final static void a(dq param0, int param1) {
+    final static void a(dq param0) {
         try {
             ds.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -30,11 +28,6 @@ final class uc {
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
         fh.field_e = param0;
-        if (param3) {
-            uc.a(29);
-            q.field_B = param4;
-            return;
-        }
         q.field_B = param4;
     }
 

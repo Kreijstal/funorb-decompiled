@@ -42,7 +42,7 @@ final class km {
                 }
               }
               L3: {
-                if (param0 <= param1) {
+                if (4 <= param1) {
                   param1 = param1 >>> 2;
                   var2 += 2;
                   break L3;
@@ -82,7 +82,7 @@ final class km {
           }
         }
         L7: {
-          if (param0 <= param1) {
+          if (4 <= param1) {
             param1 = param1 >>> 2;
             var2 += 2;
             break L7;

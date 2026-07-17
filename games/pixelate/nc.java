@@ -8,7 +8,7 @@ abstract class nc {
     static String[] field_c;
     static int field_a;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_c = null;
         field_e = null;
     }
@@ -31,7 +31,8 @@ abstract class nc {
         var4 = -125 % ((param0 - -64) / 46);
         var5 = ((nc) this).a(-23239);
         if (var5 > 0L) {
-          vg.a(var5, (byte) 23);
+          int discarded$2 = 23;
+          vg.a(var5);
           return ((nc) this).a(false, param1);
         } else {
           return ((nc) this).a(false, param1);

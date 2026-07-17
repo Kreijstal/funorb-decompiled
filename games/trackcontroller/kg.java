@@ -9,7 +9,7 @@ final class kg {
     static int[] field_b;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_b = null;
@@ -39,7 +39,7 @@ final class kg {
         try {
           L0: {
             L1: {
-              var4_int = -101 % ((param1 - 11) / 46);
+              var4_int = -1;
               if (null == da.field_n) {
                 break L1;
               } else {
@@ -80,7 +80,7 @@ final class kg {
           L4: {
             var4 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var4;
-            stackOut_16_1 = new StringBuilder().append("kg.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_16_1 = new StringBuilder().append("kg.B(").append(param0).append(44).append(116).append(44).append(param2).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;

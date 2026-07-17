@@ -25,21 +25,12 @@ abstract class cf extends lm {
         field_v = null;
         field_I = null;
         field_w = null;
-        if (param0 > -73) {
-          field_z = null;
-          field_t = null;
-          field_C = null;
-          field_x = null;
-          return;
-        } else {
-          field_t = null;
-          field_C = null;
-          field_x = null;
-          return;
-        }
+        field_t = null;
+        field_C = null;
+        field_x = null;
     }
 
-    final static boolean a(long param0, int[] param1, String param2, int param3, int param4) {
+    final static boolean a(long param0, int[] param1, String param2, int param3) {
         RuntimeException var6 = null;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -163,34 +154,12 @@ abstract class cf extends lm {
     }
 
     final static int a(boolean param0, int param1) {
-        double var2 = 0.0;
-        int var4 = 0;
-        if (param0) {
-          L0: {
-            field_z = null;
-            var2 = (double)(param1 - 10) / 10.0;
-            var4 = (int)(Math.exp(Math.log(2.0) * var2) * 50.0);
-            if (500 >= var4) {
-              break L0;
-            } else {
-              var4 = 500;
-              break L0;
-            }
-          }
-          return var4;
-        } else {
-          L1: {
-            var2 = (double)(param1 - 10) / 10.0;
-            var4 = (int)(Math.exp(Math.log(2.0) * var2) * 50.0);
-            if (500 >= var4) {
-              break L1;
-            } else {
-              var4 = 500;
-              break L1;
-            }
-          }
-          return var4;
+        double var2 = (double)(param1 - 10) / 10.0;
+        int var4 = (int)(Math.exp(Math.log(2.0) * var2) * 50.0);
+        if (500 < var4) {
+            var4 = 500;
         }
+        return var4;
     }
 
     cf() {

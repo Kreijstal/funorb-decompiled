@@ -195,7 +195,8 @@ class kj extends pj {
               }
             }
             var3 = (CharSequence) (Object) param0;
-            stackOut_2_0 = kf.field_D.equals((Object) (Object) jg.a(var3, -2));
+            int discarded$2 = -2;
+            stackOut_2_0 = kf.field_D.equals((Object) (Object) jg.a(var3));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -341,97 +342,87 @@ class kj extends pj {
         String var11 = null;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
-        ve var15 = null;
-        StringWriter var16 = null;
+        ve var14 = null;
+        StringWriter var15 = null;
+        String var16 = null;
         String var17 = null;
         String var18 = null;
         String var19 = null;
-        String var20 = null;
         L0: {
           var13 = SolKnight.field_L ? 1 : 0;
-          if (param0 == 105) {
-            break L0;
-          } else {
-            var14 = null;
-            kj.a((java.applet.Applet) null, 117, (String) null);
-            break L0;
-          }
-        }
-        L1: {
           if (param1 instanceof ve) {
-            var15 = (ve) (Object) param1;
-            param1 = var15.field_c;
-            var2 = var15.field_d + " | ";
+            var14 = (ve) (Object) param1;
+            param1 = var14.field_c;
+            var2 = var14.field_d + " | ";
             var11 = var2;
-            break L1;
+            break L0;
           } else {
             var2 = "";
-            break L1;
+            break L0;
           }
         }
-        var16 = new StringWriter();
-        var4 = new PrintWriter((Writer) (Object) var16);
+        var15 = new StringWriter();
+        var4 = new PrintWriter((Writer) (Object) var15);
         param1.printStackTrace(var4);
         var4.close();
-        var5 = var16.toString();
+        var5 = var15.toString();
         var2 = var5;
         var11 = var5;
         var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
         var7 = var6.readLine();
         var2 = var7;
         var11 = var7;
-        L2: while (true) {
+        L1: while (true) {
           var8 = var6.readLine();
           var2 = var8;
           var11 = var8;
           var2 = var11;
           if (var8 != null) {
-            L3: {
+            L2: {
               var9 = var8.indexOf('(');
               var10 = var8.indexOf(')', 1 + var9);
               if (var9 != -1) {
                 var11 = var8.substring(0, var9);
                 var2 = var11;
                 var2 = var11;
-                break L3;
+                break L2;
               } else {
                 var11 = var8;
-                break L3;
+                break L2;
               }
             }
-            L4: {
-              var17 = var11.trim();
+            L3: {
+              var16 = var11.trim();
+              var2 = var16;
+              var2 = var16;
+              var17 = var16.substring(1 + var16.lastIndexOf(' '));
               var2 = var17;
               var2 = var17;
-              var18 = var17.substring(1 + var17.lastIndexOf(' '));
+              var18 = var17.substring(var17.lastIndexOf('\t') + 1);
               var2 = var18;
               var2 = var18;
-              var19 = var18.substring(var18.lastIndexOf('\t') + 1);
+              var19 = var2 + var18;
               var2 = var19;
               var2 = var19;
-              var20 = var2 + var19;
-              var2 = var20;
-              var2 = var20;
               if (var9 == -1) {
-                break L4;
+                break L3;
               } else {
                 if (var10 != -1) {
                   var12 = var8.indexOf(".java:", var9);
                   if (var12 < 0) {
-                    break L4;
+                    break L3;
                   } else {
-                    var2 = var20 + var8.substring(var12 - -5, var10);
-                    break L4;
+                    var2 = var19 + var8.substring(var12 - -5, var10);
+                    break L3;
                   }
                 } else {
                   var2 = var2 + 32;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
             var2 = var2 + 32;
-            continue L2;
+            continue L1;
           } else {
             var2 = var11;
             var11 = var2;
@@ -547,7 +538,7 @@ class kj extends pj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_N = null;
         field_K = null;
         field_J = null;
@@ -752,44 +743,40 @@ class kj extends pj {
         int var6 = 0;
         var6 = SolKnight.field_L ? 1 : 0;
         var4 = (li) (Object) ((kj) this).field_L.a((byte) 51);
-        if (param1 == 22) {
-          L0: while (true) {
-            if (var4 != null) {
-              var5 = var4;
-              L1: while (true) {
-                if (var5 == null) {
-                  var4 = (li) (Object) ((kj) this).field_L.b(-58);
-                  continue L0;
-                } else {
-                  L2: {
-                    if (param2 < var5.field_o) {
+        L0: while (true) {
+          if (var4 != null) {
+            var5 = var4;
+            L1: while (true) {
+              if (var5 == null) {
+                var4 = (li) (Object) ((kj) this).field_L.b(-58);
+                continue L0;
+              } else {
+                L2: {
+                  if (param2 < var5.field_o) {
+                    break L2;
+                  } else {
+                    if (param0 < var5.field_n) {
                       break L2;
                     } else {
-                      if (param0 < var5.field_n) {
+                      if (var5.field_m + var5.field_o <= param2) {
                         break L2;
                       } else {
-                        if (var5.field_m + var5.field_o <= param2) {
+                        if (var5.field_n + var5.field_i < param0) {
                           break L2;
                         } else {
-                          if (var5.field_n + var5.field_i < param0) {
-                            break L2;
-                          } else {
-                            return var4;
-                          }
+                          return var4;
                         }
                       }
                     }
                   }
-                  var5 = var5.field_k;
-                  continue L1;
                 }
+                var5 = var5.field_k;
+                continue L1;
               }
-            } else {
-              return null;
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 

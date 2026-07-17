@@ -7,7 +7,7 @@ final class ma {
     static String[] field_d;
     static int field_c;
 
-    final static kc[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
+    final static kc[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
         kc[] var10 = null;
         kc[] var11_ref_kc__ = null;
@@ -17,8 +17,8 @@ final class ma {
         int var14 = 0;
         int var15 = 0;
         var15 = Main.field_T;
-        var9 = param3 + param1 + param6;
-        var10 = new kc[]{new kc(var9, var9), new kc(param4, var9), new kc(var9, var9), new kc(var9, param4), new kc(64, 64), new kc(var9, param4), new kc(var9, var9), new kc(param4, var9), new kc(var9, var9)};
+        var9 = 3;
+        var10 = new kc[]{new kc(var9, var9), new kc(3, var9), new kc(var9, var9), new kc(var9, 3), new kc(64, 64), new kc(var9, 3), new kc(var9, var9), new kc(3, var9), new kc(var9, var9)};
         var11_ref_kc__ = var10;
         var12 = 0;
         L0: while (true) {
@@ -26,24 +26,24 @@ final class ma {
             var10 = var11_ref_kc__;
             var11 = 0;
             L1: while (true) {
-              if (param1 <= var11) {
+              if (var11 >= 1) {
                 var11 = 0;
                 L2: while (true) {
-                  if (var11 >= param1) {
+                  if (var11 >= 1) {
                     var11 = 0;
                     L3: while (true) {
-                      if (param4 <= var11) {
+                      if (3 <= var11) {
                         var11 = 0;
                         L4: while (true) {
-                          if (var11 >= param4 >> 1) {
+                          if (var11 >= 1) {
                             return var10;
                           } else {
                             var12 = 0;
                             L5: while (true) {
-                              if (param3 > var12) {
-                                var10[1].field_r[(var9 + (-var12 - 1)) * param4 - -var11] = param5;
+                              if (var12 < 1) {
+                                var10[1].field_r[(var9 + (-var12 - 1)) * 3 - -var11] = param5;
                                 var10[3].field_r[var9 * var11 - (var12 + (1 + -var9))] = param5;
-                                var10[7].field_r[var12 * param4 - -var11] = param5;
+                                var10[7].field_r[var12 * 3 - -var11] = param5;
                                 var10[5].field_r[var9 * var11 + var12] = param5;
                                 var12++;
                                 continue L5;
@@ -57,13 +57,13 @@ final class ma {
                       } else {
                         var12 = 0;
                         L6: while (true) {
-                          if (param1 <= var12) {
+                          if (var12 >= 1) {
                             var11++;
                             continue L3;
                           } else {
-                            var10[7].field_r[(-1 + (var9 - var12)) * param4 + var11] = param0;
+                            var10[7].field_r[(-1 + (var9 - var12)) * 3 + var11] = param0;
                             var10[5].field_r[-var12 - -var9 + (-1 + var11 * var9)] = param0;
-                            var10[1].field_r[var11 + var12 * param4] = param7;
+                            var10[1].field_r[var11 + var12 * 3] = param7;
                             var10[3].field_r[var12 + var11 * var9] = param7;
                             var12++;
                             continue L6;
@@ -127,7 +127,7 @@ final class ma {
         }
     }
 
-    final static qa a(java.applet.Applet param0, int param1) {
+    final static qa a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         qa[] var3 = null;
@@ -165,7 +165,8 @@ final class ma {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var3 = ff.a(-21739);
+              int discarded$2 = -21739;
+              var3 = ff.a();
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -230,7 +231,7 @@ final class ma {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -262,7 +263,7 @@ final class ma {
         L1: {
           ej.field_kb = var2;
           dg.field_H.field_b = dg.field_H.field_b + 1;
-          if (param0 > dg.field_H.field_b) {
+          if (2 > dg.field_H.field_b) {
             break L1;
           } else {
             if (51 == param1) {

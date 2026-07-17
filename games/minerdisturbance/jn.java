@@ -19,7 +19,7 @@ final class jn extends pi {
         ck.a(-30833);
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         mj var3 = null;
@@ -235,13 +235,14 @@ final class jn extends pi {
                 break L1;
               } else {
                 var6 = null;
-                ea discarded$2 = jn.a((String) null, -42, (String) null, (bj) null);
+                ea discarded$4 = jn.a((String) null, -42, (String) null, (bj) null);
                 break L1;
               }
             }
             var4_int = param3.a(-118, param2);
             var5 = param3.a(param0, var4_int, param1 ^ 29451);
-            stackOut_2_0 = el.a(var5, var4_int, param3, 2);
+            int discarded$5 = 2;
+            stackOut_2_0 = el.a(var5, var4_int, param3);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -328,7 +329,7 @@ final class jn extends pi {
         return stackIn_3_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_p = null;
         int var1 = 0;
         field_r = null;

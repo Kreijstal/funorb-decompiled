@@ -88,7 +88,7 @@ abstract class nb extends wb {
               }
             }
           } else {
-            dk.field_v.b(param1, -80, param2);
+            dk.field_v.b(13, -80, 15);
             if (var4 != 0) {
               cm.field_h.a(param0, (byte) 126);
               var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
@@ -136,13 +136,9 @@ abstract class nb extends wb {
 
     final static void a(boolean param0, oj param1) {
         try {
-            if (param0) {
-                Object var3 = null;
-                nb.a(false, (oj) null);
-            }
             cm.field_h.a(0, (km) (Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "nb.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "nb.E(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

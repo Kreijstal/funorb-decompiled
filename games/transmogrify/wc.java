@@ -15,7 +15,7 @@ final class wc {
         if (!(gk.field_f <= 2)) {
             gk.field_f = 2;
         }
-        if (!(param0 >= vc.field_O)) {
+        if (!(2 >= vc.field_O)) {
             vc.field_O = 2;
         }
         ba.field_n = 3 & param1;
@@ -184,7 +184,8 @@ final class wc {
                               tg.field_a = -1;
                               break L7;
                             } else {
-                              pc.a(1);
+                              int discarded$10 = 1;
+                              pc.a();
                               ej.field_k = false;
                               stackOut_30_0 = var7;
                               stackIn_31_0 = stackOut_30_0;
@@ -209,14 +210,15 @@ final class wc {
                       L10: {
                         ac.field_j = nf.field_l.e((byte) 117);
                         va.field_j = nf.field_l.d((byte) 58);
-                        int discarded$6 = nf.field_l.d((byte) 93);
+                        int discarded$11 = nf.field_l.d((byte) 93);
                         wj.field_o = nf.field_l.a((byte) -118);
                         var7_ref_String = nf.field_l.j(-1640531527);
                         var8 = nf.field_l.d((byte) 82);
                         if ((1 & var8) == 0) {
                           break L10;
                         } else {
-                          rb.a((byte) -114);
+                          int discarded$12 = -114;
+                          rb.a();
                           break L10;
                         }
                       }
@@ -257,9 +259,9 @@ final class wc {
                       }
                       L14: {
                         if (kc.field_D) {
-                          int discarded$7 = nf.field_l.d((byte) 63);
-                          int discarded$8 = nf.field_l.d((byte) 33);
-                          int discarded$9 = nf.field_l.c((byte) -119);
+                          int discarded$13 = nf.field_l.d((byte) 63);
+                          int discarded$14 = nf.field_l.d((byte) 33);
+                          int discarded$15 = nf.field_l.c((byte) -119);
                           ai.field_c = nf.field_l.a((byte) -119);
                           td.field_c = new byte[ai.field_c];
                           var9 = 0;
@@ -311,7 +313,7 @@ final class wc {
                             if (!el.field_g) {
                               try {
                                 L20: {
-                                  Object discarded$10 = kj.a(ha.b(87), false, "unzap");
+                                  Object discarded$16 = kj.a(ha.b(87), false, "unzap");
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -329,7 +331,7 @@ final class wc {
                         }
                         try {
                           L22: {
-                            Object discarded$11 = kj.a(22102, "zap", new Object[1], ha.b(106));
+                            Object discarded$17 = kj.a(22102, "zap", new Object[1], ha.b(106));
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -378,7 +380,8 @@ final class wc {
                       break L26;
                     } else {
                       L27: {
-                        pc.a(1);
+                        int discarded$18 = 1;
+                        pc.a();
                         if (ca.field_e != 7) {
                           break L27;
                         } else {
@@ -414,7 +417,8 @@ final class wc {
                   } else {
                     if (ej.field_k) {
                       L30: {
-                        if (mc.b(true) <= 30000L) {
+                        int discarded$19 = 1;
+                        if (mc.b() <= 30000L) {
                           Transmogrify.field_B = bd.field_s;
                           break L30;
                         } else {
@@ -511,82 +515,74 @@ final class wc {
             Class var4 = null;
             Throwable var4_ref = null;
             RuntimeException var4_ref2 = null;
-            cj var5 = null;
-            fg var5_ref = null;
-            Object stackIn_2_0 = null;
-            cj stackIn_4_0 = null;
-            fg stackIn_6_0 = null;
+            fg var5 = null;
+            cj var5_ref = null;
+            cj stackIn_3_0 = null;
+            fg stackIn_5_0 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
-            String stackIn_10_2 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            cj stackOut_3_0 = null;
-            Object stackOut_1_0 = null;
-            fg stackOut_5_0 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            String stackOut_9_2 = null;
+            cj stackOut_2_0 = null;
+            fg stackOut_4_0 = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
             RuntimeException stackOut_8_0 = null;
             StringBuilder stackOut_8_1 = null;
             String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
               try {
                 var4 = Class.forName("dd");
-                if (param0 == 4) {
-                  var5 = (cj) var4.newInstance();
-                  var5.a(param3, param2, param1, (byte) -126);
-                  stackOut_3_0 = (cj) var5;
-                  stackIn_4_0 = stackOut_3_0;
-                  return stackIn_4_0;
-                } else {
-                  stackOut_1_0 = null;
-                  stackIn_2_0 = stackOut_1_0;
-                  return (cj) (Object) stackIn_2_0;
-                }
+                var5_ref = (cj) var4.newInstance();
+                var5_ref.a(param3, param2, param1, (byte) -126);
+                stackOut_2_0 = (cj) var5_ref;
+                stackIn_3_0 = stackOut_2_0;
+                return stackIn_3_0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4_ref = decompiledCaughtException;
-                var5_ref = new fg();
-                ((cj) (Object) var5_ref).a(param3, param2, param1, (byte) -6);
-                stackOut_5_0 = (fg) var5_ref;
-                stackIn_6_0 = stackOut_5_0;
-                return (cj) (Object) stackIn_6_0;
+                var5 = new fg();
+                ((cj) (Object) var5).a(param3, param2, param1, (byte) -6);
+                stackOut_4_0 = (fg) var5;
+                stackIn_5_0 = stackOut_4_0;
+                return (cj) (Object) stackIn_5_0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L0: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_7_0 = (RuntimeException) var4_ref2;
-                stackOut_7_1 = new StringBuilder().append("wc.D(").append(param0).append(44);
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
+                stackOut_6_0 = (RuntimeException) var4_ref2;
+                stackOut_6_1 = new StringBuilder().append("wc.D(").append(4).append(44);
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-                  stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-                  stackOut_9_2 = "null";
-                  stackIn_10_0 = stackOut_9_0;
-                  stackIn_10_1 = stackOut_9_1;
-                  stackIn_10_2 = stackOut_9_2;
-                  break L0;
-                } else {
                   stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
                   stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-                  stackOut_8_2 = "{...}";
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_10_1 = stackOut_8_1;
-                  stackIn_10_2 = stackOut_8_2;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L0;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
                   break L0;
                 }
               }
-              throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
+              throw ch.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + param3 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -624,7 +620,7 @@ final class wc {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         ng var3 = null;
@@ -665,7 +661,8 @@ final class wc {
                 }
               }
               if (var3 == null) {
-                pc.a(1);
+                int discarded$4 = 1;
+                pc.a();
                 return;
               } else {
                 L3: {
@@ -677,7 +674,8 @@ final class wc {
                     var7_int = 1;
                     L4: while (true) {
                       if (var4 <= var7_int) {
-                        he.a(var6, var4, 24070);
+                        int discarded$5 = 24070;
+                        he.a(var6, var4);
                         var7_int = 0;
                         L5: while (true) {
                           if (var7_int >= var4) {
@@ -745,10 +743,12 @@ final class wc {
                             L10: {
                               th.a(101, (oa) (Object) var17);
                               if (0 != var7_int) {
-                                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_int, false);
+                                int discarded$6 = 0;
+                                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_int);
                                 break L10;
                               } else {
-                                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_int, false);
+                                int discarded$7 = 0;
+                                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_int);
                                 break L10;
                               }
                             }

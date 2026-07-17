@@ -147,7 +147,8 @@ final class wk {
               if (param1 > 11) {
                 break L1;
               } else {
-                wk.a(false);
+                int discarded$5 = 0;
+                wk.a();
                 break L1;
               }
             }
@@ -159,7 +160,7 @@ final class wk {
               } else {
                 var8_int = 0;
                 L3: while (true) {
-                  var8_int = param2.indexOf((int) param0, var8_int);
+                  var8_int = param2.indexOf('_', var8_int);
                   if (var8_int >= 0) {
                     var8_int++;
                     var6 = var6 + var7;
@@ -173,15 +174,15 @@ final class wk {
             var8 = new StringBuilder(var6);
             var9 = 0;
             L4: while (true) {
-              var10 = param2.indexOf((int) param0, var9);
+              var10 = param2.indexOf('_', var9);
               if (var10 < 0) {
-                StringBuilder discarded$3 = var8.append(param2.substring(var9));
+                StringBuilder discarded$6 = var8.append(param2.substring(var9));
                 stackOut_11_0 = var8.toString();
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
-                StringBuilder discarded$4 = var8.append(param2.substring(var9, var10));
-                StringBuilder discarded$5 = var8.append(param3);
+                StringBuilder discarded$7 = var8.append(param2.substring(var9, var10));
+                StringBuilder discarded$8 = var8.append(param3);
                 var9 = var10 - -1;
                 continue L4;
               }
@@ -192,7 +193,7 @@ final class wk {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4;
-            stackOut_13_1 = new StringBuilder().append("wk.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("wk.B(").append(95).append(44).append(param1).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -259,7 +260,7 @@ final class wk {
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         if (null == cb.field_j) {
             return false;
         }
@@ -277,14 +278,15 @@ final class wk {
         ((wk) this).field_b = param0;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Main.field_T;
         try {
           L0: {
-            if (!ia.a((byte) -79)) {
+            int discarded$18 = -79;
+            if (!ia.a()) {
               L1: {
                 if (null == gj.field_a) {
                   break L1;
@@ -300,13 +302,14 @@ final class wk {
               }
               return;
             } else {
-              boolean discarded$7 = s.field_d.a((byte) -116, hk.field_b, e.field_c, true);
+              boolean discarded$19 = s.field_d.a((byte) -116, hk.field_b, e.field_c, true);
               s.field_d.l(-2054);
               L2: while (true) {
-                if (!ge.b((byte) -114)) {
+                int discarded$20 = -114;
+                if (!ge.b()) {
                   break L0;
                 } else {
-                  boolean discarded$8 = s.field_d.a(fd.field_n, 34, tb.field_d);
+                  boolean discarded$21 = s.field_d.a(fd.field_n, 34, tb.field_d);
                   continue L2;
                 }
               }

@@ -14,7 +14,7 @@ final class h {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, int param4) {
+    final static void a(int param0, int param1, int[] param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -42,7 +42,7 @@ final class h {
         try {
           L0: {
             L1: {
-              param2[param0] = param3;
+              param2[0] = param3;
               param2[31] = param1;
               if (param3 >= param1) {
                 var6 = -1;
@@ -98,7 +98,7 @@ final class h {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("h.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("h.B(").append(0).append(44).append(param1).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

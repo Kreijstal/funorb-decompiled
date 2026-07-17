@@ -29,13 +29,15 @@ final class ld extends sp implements ai {
         ((ld) this).field_B.a(114, 0, 0, var2, ((ld) this).field_q);
         ((ld) this).field_J = new mc(0, 0, 0, 0, (mh) (Object) new tm(), (pk) (Object) ((ld) this).field_B, (mh) null);
         if (var4 != 0) {
-            ((ld) this).field_J.a(1332, true, hb.a((byte) 35));
+            int discarded$0 = 35;
+            ((ld) this).field_J.a(1332, true, hb.a());
         }
         ((ld) this).field_J.a(-126, 0, ((ld) this).field_M, ((ld) this).field_p + -((ld) this).field_M, ((ld) this).field_q);
         ((ld) this).field_A = true;
         int var5 = 32 % ((param0 - -71) / 49);
         ((ld) this).a((pk) (Object) ((ld) this).field_J, 72);
-        this.k(-1);
+        int discarded$1 = -1;
+        this.k();
     }
 
     final String c(int param0) {
@@ -267,7 +269,7 @@ final class ld extends sp implements ai {
         return stackIn_7_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_F = null;
         int var1 = 53;
         field_N = null;
@@ -295,9 +297,6 @@ final class ld extends sp implements ai {
     }
 
     private final void c(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 != 8725) {
-            ((ld) this).a(-95, -108, -69, 98, 124);
-        }
         super.a(-108, param0, param3, param4, param1);
         ((ld) this).field_O.a(98, 0, 0, ((ld) this).field_M, param1 + -20);
         ((ld) this).field_I.a(99, param1 + -20, 0, ((ld) this).field_M, 20);
@@ -315,7 +314,7 @@ final class ld extends sp implements ai {
         }
     }
 
-    private final void k(int param0) {
+    private final void k() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -389,15 +388,12 @@ final class ld extends sp implements ai {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         try {
             rj.a((byte) -94, param0);
-            if (param1 != -47) {
-                field_C = 74;
-            }
             oc.a(us.field_m, false, (byte) -89);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ld.JA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ld.JA(" + (param0 != null ? "{...}" : "null") + 44 + -47 + 41);
         }
     }
 
@@ -546,7 +542,8 @@ final class ld extends sp implements ai {
                             break L8;
                           }
                         }
-                        this.k(-1);
+                        int discarded$2 = -1;
+                        this.k();
                         stackOut_35_0 = 1;
                         stackIn_36_0 = stackOut_35_0;
                         return stackIn_36_0 != 0;
@@ -586,7 +583,8 @@ final class ld extends sp implements ai {
                       break L12;
                     }
                   }
-                  this.k(-1);
+                  int discarded$3 = -1;
+                  this.k();
                   stackOut_20_0 = 1;
                   stackIn_21_0 = stackOut_20_0;
                   return stackIn_21_0 != 0;
@@ -836,14 +834,11 @@ final class ld extends sp implements ai {
         }
         try {
             ((ld) this).field_B.field_L = var3_int;
-            if (param0) {
-                Object var4 = null;
-                ld.a((String) null, (byte) -13);
-            }
-            this.k(-1);
+            int discarded$0 = -1;
+            this.k();
             ((ld) this).field_L = param1;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ld.LA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ld.LA(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

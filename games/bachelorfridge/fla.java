@@ -23,11 +23,12 @@ final class fla extends td {
             af.field_a = false;
             return;
         }
-        aga.d(false);
+        int discarded$0 = 0;
+        aga.d();
         bf.field_h[wca.field_n].a(-123);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_t = null;
         field_p = null;
         field_s = null;

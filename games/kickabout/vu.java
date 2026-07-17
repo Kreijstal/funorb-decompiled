@@ -22,24 +22,22 @@ final class vu extends hd {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
         try {
-          L0: {
-            var1_int = 0;
-            L1: while (true) {
-              if (vb.field_j <= var1_int) {
-                vb.field_j = 0;
-                break L0;
-              } else {
-                fu.field_b[var1_int] = null;
-                var1_int++;
-                continue L1;
-              }
+          var1_int = 0;
+          L0: while (true) {
+            if (vb.field_j <= var1_int) {
+              vb.field_j = 0;
+              return;
+            } else {
+              fu.field_b[var1_int] = null;
+              var1_int++;
+              continue L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -316,49 +314,55 @@ final class vu extends hd {
           }
         }
         L1: {
-          if (param1 <= -61) {
+          var5 = -param0;
+          if (null != ((vu) this).field_yb) {
+            var5 = ((vu) this).field_yb.a(((vu) this).field_q - param2 + -var4 - (param0 + param2), 0);
             break L1;
           } else {
-            vu.a(-96);
             break L1;
           }
         }
         L2: {
-          var5 = -param0;
-          if (null != ((vu) this).field_yb) {
-            var5 = ((vu) this).field_yb.a(((vu) this).field_q - param2 + -var4 - (param0 + param2), 0);
+          var6 = param2 + (var4 - (-param0 + -var5)) + param2;
+          if (var6 <= ((vu) this).field_q) {
             break L2;
           } else {
+            var5 = var5 + (-var6 + ((vu) this).field_q);
+            var6 = ((vu) this).field_q;
             break L2;
           }
         }
         L3: {
-          var6 = param2 + (var4 - (-param0 + -var5)) + param2;
-          if (var6 <= ((vu) this).field_q) {
+          if (((vu) this).field_A == 1) {
+            param2 = param2 + (-var6 + ((vu) this).field_q) / 2;
             break L3;
           } else {
-            var5 = var5 + (-var6 + ((vu) this).field_q);
-            var6 = ((vu) this).field_q;
             break L3;
           }
         }
         L4: {
-          if (((vu) this).field_A == 1) {
-            param2 = param2 + (-var6 + ((vu) this).field_q) / 2;
-            break L4;
-          } else {
-            break L4;
-          }
-        }
-        L5: {
           if (2 == ((vu) this).field_A) {
             param2 = param2 + (((vu) this).field_q + -var6);
-            break L5;
+            break L4;
           } else {
-            break L5;
+            break L4;
           }
         }
-        if (((vu) this).field_Bb != null) {
+        if (((vu) this).field_Bb == null) {
+          if (null != ((vu) this).field_yb) {
+            ((vu) this).field_yb.a(true, var5, param0 + var4 + param2, 0, ((vu) this).field_mb);
+            ((vu) this).field_yb.field_p = ((vu) this).field_p;
+            if (((vu) this).field_Bb == null) {
+              ((vu) this).field_yb.field_A = ((vu) this).field_A;
+              return;
+            } else {
+              ((vu) this).field_yb.field_A = 0;
+              return;
+            }
+          } else {
+            return;
+          }
+        } else {
           ((vu) this).field_Bb.a(true, var4, param2, 0, ((vu) this).field_mb);
           ((vu) this).field_Bb.field_p = ((vu) this).field_p;
           if (null != ((vu) this).field_yb) {
@@ -374,23 +378,6 @@ final class vu extends hd {
           } else {
             return;
           }
-        } else {
-          L6: {
-            if (null != ((vu) this).field_yb) {
-              ((vu) this).field_yb.a(true, var5, param0 + var4 + param2, 0, ((vu) this).field_mb);
-              ((vu) this).field_yb.field_p = ((vu) this).field_p;
-              if (((vu) this).field_Bb != null) {
-                ((vu) this).field_yb.field_A = 0;
-                break L6;
-              } else {
-                ((vu) this).field_yb.field_A = ((vu) this).field_A;
-                break L6;
-              }
-            } else {
-              break L6;
-            }
-          }
-          return;
         }
     }
 
@@ -442,56 +429,18 @@ final class vu extends hd {
     }
 
     final static void a(boolean param0, boolean param1) {
-        L0: {
-          if (null != sn.field_e) {
+        if (!(null == sn.field_e)) {
             ar.a(15707, sn.field_e);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (!param0) {
-          L1: {
-            field_Db = true;
-            if (wi.field_v != null) {
-              wi.field_v.a(param1, false);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          L2: {
-            nj.a(param1, -128);
-            if (null != ck.field_b) {
-              ck.field_b.a(104, param1);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          fb.a(30521, param1);
-          return;
-        } else {
-          L3: {
-            if (wi.field_v != null) {
-              wi.field_v.a(param1, false);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            nj.a(param1, -128);
-            if (null != ck.field_b) {
-              ck.field_b.a(104, param1);
-              break L4;
-            } else {
-              break L4;
-            }
-          }
-          fb.a(30521, param1);
-          return;
+        if (!(wi.field_v == null)) {
+            wi.field_v.a(param1, false);
         }
+        int discarded$6 = -128;
+        nj.a(param1);
+        if (!(null == ck.field_b)) {
+            ck.field_b.a(104, param1);
+        }
+        fb.a(30521, param1);
     }
 
     static {

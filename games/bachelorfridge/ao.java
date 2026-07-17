@@ -8,7 +8,7 @@ class ao extends kda {
     ao() {
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         int var1 = 0;
         field_d = null;
@@ -50,27 +50,23 @@ class ao extends kda {
                 } else {
                   var5_int = param1[0].field_n;
                   var6 = param1[2].field_n;
-                  if (param3 == -128) {
-                    var7 = param1[1].field_n;
-                    param1[0].e(param0, param4);
-                    param1[2].e(param0 + param2 + -var6, param4);
-                    dg.a(eha.field_q);
-                    dg.c(param0 - -var5_int, param4, -var6 + param0 + param2, param4 + param1[1].field_o);
-                    var8 = param0 + var5_int;
-                    var9 = -var6 + param2 + param0;
-                    param0 = var8;
-                    L2: while (true) {
-                      if (var9 <= param0) {
-                        dg.b(eha.field_q);
-                        break L0;
-                      } else {
-                        param1[1].e(param0, param4);
-                        param0 = param0 + var7;
-                        continue L2;
-                      }
+                  var7 = param1[1].field_n;
+                  param1[0].e(param0, param4);
+                  param1[2].e(param0 + param2 + -var6, param4);
+                  dg.a(eha.field_q);
+                  dg.c(param0 - -var5_int, param4, -var6 + param0 + param2, param4 + param1[1].field_o);
+                  var8 = param0 + var5_int;
+                  var9 = -var6 + param2 + param0;
+                  param0 = var8;
+                  L2: while (true) {
+                    if (var9 <= param0) {
+                      dg.b(eha.field_q);
+                      break L0;
+                    } else {
+                      param1[1].e(param0, param4);
+                      param0 = param0 + var7;
+                      continue L2;
                     }
-                  } else {
-                    return;
                   }
                 }
               }
@@ -105,7 +101,7 @@ class ao extends kda {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 44 + -128 + 44 + param4 + 41);
         }
     }
 

@@ -15,7 +15,7 @@ abstract class ld extends gn {
         return (na) this;
     }
 
-    private final int a(int param0) {
+    private final int a() {
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -56,7 +56,8 @@ abstract class ld extends gn {
         int stackOut_20_0 = 0;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
-        var2 = this.a(0);
+        int discarded$1 = 0;
+        var2 = this.a();
         var3 = var2 + -((ld) this).field_N;
         if (0 >= var3) {
           L0: {
@@ -151,7 +152,7 @@ abstract class ld extends gn {
         }
     }
 
-    final static void a(String param0, java.applet.Applet param1, int param2) {
+    final static void a(String param0, java.applet.Applet param1) {
         try {
             String var3 = null;
             Throwable var3_ref = null;
@@ -357,13 +358,14 @@ abstract class ld extends gn {
         }
     }
 
-    final static boolean j(int param0) {
+    final static boolean j() {
         return !oa.field_y.c(false);
     }
 
     boolean h(int param0) {
         if (param0 == 652390224) {
-          ((ld) this).field_N = this.a(0);
+          int discarded$4 = 0;
+          ((ld) this).field_N = this.a();
           if (((ld) this).field_N == 0) {
             if (((ld) this).field_K) {
               return false;
@@ -375,7 +377,8 @@ abstract class ld extends gn {
           }
         } else {
           field_M = null;
-          ((ld) this).field_N = this.a(0);
+          int discarded$5 = 0;
+          ((ld) this).field_N = this.a();
           if (((ld) this).field_N == 0) {
             if (((ld) this).field_K) {
               return false;

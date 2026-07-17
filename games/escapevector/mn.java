@@ -15,7 +15,7 @@ final class mn extends hg {
     static int field_k;
     int[] field_j;
 
-    final static String a(int param0, char param1, int param2) {
+    final static String a(int param0, char param1) {
         int var4 = 0;
         int var6 = EscapeVector.field_A;
         char[] var7 = new char[20];
@@ -23,11 +23,11 @@ final class mn extends hg {
         for (var4 = 0; var7.length > var4; var4++) {
             var7[var4] = param1;
         }
-        int var5 = 53 / ((49 - param0) / 63);
+        int var5 = 26;
         return new String(var7);
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         int var3 = 0;
         int var1 = lh.b((byte) 71) ? 1 : 0;
         if (!(rc.field_a != null)) {
@@ -43,27 +43,8 @@ final class mn extends hg {
     }
 
     final static void a(int param0, byte param1) {
-        if (param1 != 44) {
-          L0: {
-            field_n = -42;
-            if (bk.field_r != null) {
-              bk.field_r.b(-1, param0);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
-        } else {
-          L1: {
-            if (bk.field_r != null) {
-              bk.field_r.b(-1, param0);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        if (!(bk.field_r == null)) {
+            bk.field_r.b(-1, param0);
         }
     }
 
@@ -91,40 +72,36 @@ final class mn extends hg {
                 break L1;
               }
             }
-            if (param0 == -27951) {
-              L2: {
-                if (param2 + var6 > em.field_j) {
-                  var6 = -param2 + em.field_j;
-                  break L2;
-                } else {
-                  break L2;
-                }
+            L2: {
+              if (param2 + var6 > em.field_j) {
+                var6 = -param2 + em.field_j;
+                break L2;
+              } else {
+                break L2;
               }
-              var7 = var5_int;
-              L3: while (true) {
-                if (var6 <= var7) {
-                  break L0;
-                } else {
-                  var8 = var7 * 48 / param4 + 152;
-                  var9 = var8 << 16 | var8 << 8 | var8;
-                  em.field_i[param1 + em.field_l * (var7 + param2)] = var9;
-                  em.field_i[param3 + (param1 + (param2 - -var7) * em.field_l)] = var9;
-                  var7++;
-                  continue L3;
-                }
+            }
+            var7 = var5_int;
+            L3: while (true) {
+              if (var6 <= var7) {
+                break L0;
+              } else {
+                var8 = var7 * 48 / param4 + 152;
+                var9 = var8 << 16 | var8 << 8 | var8;
+                em.field_i[param1 + em.field_l * (var7 + param2)] = var9;
+                em.field_i[param3 + (param1 + (param2 - -var7) * em.field_l)] = var9;
+                var7++;
+                continue L3;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var5, "mn.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw t.a((Throwable) (Object) var5, "mn.D(" + -27951 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_q = null;
     }

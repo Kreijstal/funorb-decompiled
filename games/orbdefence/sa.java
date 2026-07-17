@@ -509,7 +509,7 @@ final class sa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
     }
@@ -518,52 +518,20 @@ final class sa {
         int var4 = 0;
         int var5 = 0;
         var4 = 0;
-        var5 = -40 / ((param0 - 32) / 37);
+        var5 = 13;
         if (!param3) {
           if (param2) {
-            L0: {
-              var4 += 2;
-              if (param1) {
-                var4++;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
+            var4 += 2;
             return pf.field_a[var4];
           } else {
-            L1: {
-              if (param1) {
-                var4++;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
             return pf.field_a[var4];
           }
         } else {
           var4 += 4;
           if (!param2) {
-            L2: {
-              if (param1) {
-                var4++;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
             return pf.field_a[var4];
           } else {
-            L3: {
-              var4 += 2;
-              if (param1) {
-                var4++;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
+            var4 += 2;
             return pf.field_a[var4];
           }
         }

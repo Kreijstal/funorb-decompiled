@@ -39,17 +39,11 @@ final class vl {
     boolean[] field_q;
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        var3 = param2 >>> 31;
-        if (param0 != 23841) {
-          field_k = -119;
-          return (param2 + var3) / param1 + -var3;
-        } else {
-          return (param2 + var3) / param1 + -var3;
-        }
+        int var3 = param2 >>> 31;
+        return (param2 + var3) / param1 + -var3;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_A = null;
         field_G = null;
     }

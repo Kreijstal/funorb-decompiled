@@ -11,30 +11,18 @@ final class an extends rk {
     static bi field_q;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        var2 = param1 >>> 1;
+        int var2 = param1 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
-        if (param0 != -484803804) {
-          an.b(91);
-          var2 = var2 | var2 >>> 4;
-          var2 = var2 | var2 >>> 8;
-          var2 = var2 | var2 >>> 16;
-          return param1 & ~var2;
-        } else {
-          var2 = var2 | var2 >>> 4;
-          var2 = var2 | var2 >>> 8;
-          var2 = var2 | var2 >>> 16;
-          return param1 & ~var2;
-        }
+        var2 = var2 | var2 >>> 4;
+        var2 = var2 | var2 >>> 8;
+        var2 = var2 | var2 >>> 16;
+        return param1 & ~var2;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_o = null;
         field_m = null;
-        if (param0 != -22861) {
-            return;
-        }
         field_p = null;
         field_n = null;
         field_q = null;

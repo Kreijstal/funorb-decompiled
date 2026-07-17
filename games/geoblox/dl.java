@@ -15,7 +15,7 @@ final class dl {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         fb.field_l = false;
         int discarded$0 = eh.field_d.c((byte) 34);
     }

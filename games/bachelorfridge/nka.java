@@ -4,7 +4,7 @@
 final class nka {
     private static String field_z;
 
-    final static int a(byte param0) {
+    final static int a() {
         return ula.field_f;
     }
 

@@ -10,13 +10,9 @@ final class di {
     static od field_d;
     static String field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
-        if (param0 != 0) {
-            Object var2 = null;
-            di.a(100, (nf[]) null, (byte) 46, 121, -125, -36);
-        }
         field_g = null;
         field_c = null;
         field_f = null;

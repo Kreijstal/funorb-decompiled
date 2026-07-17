@@ -278,7 +278,7 @@ final class rg extends ef {
                                   break L10;
                                 } else {
                                   if (var15[-1 + var13] == 0) {
-                                    gb.f(var17, var16, param6, param4);
+                                    gb.f(var17, var16, param6, 1);
                                     break L9;
                                   } else {
                                     break L10;
@@ -290,7 +290,7 @@ final class rg extends ef {
                                   break L11;
                                 } else {
                                   if (var15[-param1.field_w + var13] == -1) {
-                                    gb.f(var17, var16, param6, param4);
+                                    gb.f(var17, var16, param6, 1);
                                     break L9;
                                   } else {
                                     break L11;
@@ -302,7 +302,7 @@ final class rg extends ef {
                                   break L12;
                                 } else {
                                   if (-1 == var15[1 + var13]) {
-                                    gb.f(var17, var16, param6, param4);
+                                    gb.f(var17, var16, param6, 1);
                                     break L9;
                                   } else {
                                     break L12;
@@ -315,7 +315,7 @@ final class rg extends ef {
                                 if (0 != var15[var13 + param1.field_w]) {
                                   break L9;
                                 } else {
-                                  gb.f(var17, var16, param6, param4);
+                                  gb.f(var17, var16, param6, 1);
                                   break L9;
                                 }
                               }
@@ -363,7 +363,7 @@ final class rg extends ef {
               break L13;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw pf.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + param2 + 44 + param3 + 44 + 1 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

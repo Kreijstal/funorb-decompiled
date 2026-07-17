@@ -7,12 +7,8 @@ final class pr {
     private static String[] field_b;
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param1 != -23611) {
-          field_b = null;
-          return uk.a(param2, (byte) -128, param0) & foa.a(param0, param2, 0);
-        } else {
-          return uk.a(param2, (byte) -128, param0) & foa.a(param0, param2, 0);
-        }
+        int discarded$0 = 0;
+        return uk.a(param2, (byte) -128, param0) & foa.a(param0, param2);
     }
 
     protected final void finalize() throws Throwable {
@@ -25,17 +21,14 @@ final class pr {
             if (!(ci.field_l == null)) {
                 ci.field_l.i((byte) 20);
             }
-            if (param0 != 0) {
-                field_b = null;
-            }
             vn.field_b = new jw(param1, param2, false, true, true);
             um.field_l.a(101, (ae) (Object) vn.field_b);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "pr.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "pr.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

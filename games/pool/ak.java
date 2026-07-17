@@ -17,7 +17,8 @@ final class ak {
         } else {
           param0.setUndecorated(true);
           param0.enableInputMethods(false);
-          this.a(param0, false);
+          int discarded$2 = 0;
+          this.a(param0);
           if (0 != param4) {
             ((ak) this).field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
             return;
@@ -80,7 +81,7 @@ final class ak {
         }
     }
 
-    private final void a(java.awt.Frame param0, boolean param1) {
+    private final void a(java.awt.Frame param0) {
         ((ak) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
@@ -89,12 +90,14 @@ final class ak {
             ((ak) this).field_b.setDisplayMode(((ak) this).field_a);
             if (((ak) this).field_b.getDisplayMode().equals(((ak) this).field_a)) {
                 ((ak) this).field_a = null;
-                this.a((java.awt.Frame) null, false);
+                int discarded$0 = 0;
+                this.a((java.awt.Frame) null);
                 return;
             }
             throw new RuntimeException("");
         }
-        this.a((java.awt.Frame) null, false);
+        int discarded$1 = 0;
+        this.a((java.awt.Frame) null);
     }
 
     public final int[] listmodes() {

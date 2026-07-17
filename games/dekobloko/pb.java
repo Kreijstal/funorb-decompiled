@@ -57,7 +57,7 @@ final class pb {
         fl.a(var1 + 454, 256, 16777215, var2, -(bb.field_f & 1023) + 642, (mm) (Object) w.field_kb);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         ck var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -566,7 +566,7 @@ final class pb {
         }
     }
 
-    final static void a(ji param0, int param1) {
+    final static void a(ji param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;

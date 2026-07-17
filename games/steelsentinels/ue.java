@@ -10,7 +10,7 @@ final class ue {
     static String field_d;
     static gh field_f;
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void a(int param0, int param1, int param2) {
         ne.field_y.field_p = 0;
         ne.field_y.a((byte) 122, 12);
         ne.field_y.b(true, rb.field_g.nextInt());
@@ -27,12 +27,12 @@ final class ue {
         mm.field_g.b((byte) 89, -var4 + mm.field_g.field_p);
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         return ej.field_B;
     }
 
     final static void a(byte param0, boolean param1, int param2, int param3) {
-        nn.a(-1604006872, param1, 180, param2);
+        nn.a(-1604006872, param1, param3, param2);
         if (param0 != 38) {
             Object var5 = null;
             String discarded$0 = ue.a((CharSequence[]) null, -124);
@@ -57,9 +57,9 @@ final class ue {
             param1.field_Lb = 0;
             param1.field_eb = 0;
             param1.field_lb = 0;
-            param1.field_gb = param0;
+            param1.field_gb = 0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ue.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ue.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -130,7 +130,7 @@ final class ue {
         return stackIn_4_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_f = null;
         field_c = null;

@@ -224,17 +224,11 @@ final class ja {
     }
 
     public static void c(boolean param0) {
-        if (param0) {
-            field_c = null;
-            field_c = null;
-            field_a = null;
-            return;
-        }
         field_c = null;
         field_a = null;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         Object var2 = null;
         oc.a(fi.field_l, (byte) 79, (String) null);
     }

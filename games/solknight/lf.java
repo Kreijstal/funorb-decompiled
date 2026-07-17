@@ -11,7 +11,7 @@ abstract class lf {
 
     abstract void a(java.awt.Component param0, int param1);
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean a(int[] param0) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         Object var4_ref = null;
@@ -205,7 +205,7 @@ abstract class lf {
         return stackIn_45_0 != 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_f = null;
         field_e = null;
@@ -250,14 +250,15 @@ abstract class lf {
         var7 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            var2_int = -56 % ((param0 - 51) / 35);
+            var2_int = 0;
             var3 = na.a("jagex-last-login-method", param1, -32574);
             if (null == var3) {
               stackOut_4_0 = SolKnight.field_D;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
             } else {
-              var4 = cl.d((byte) -30);
+              int discarded$1 = -30;
+              var4 = cl.d();
               var5 = 0;
               L1: while (true) {
                 if (var5 >= var4.length) {
@@ -283,7 +284,7 @@ abstract class lf {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("lf.F(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("lf.F(").append(120).append(44);
             stackIn_17_0 = stackOut_14_0;
             stackIn_17_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

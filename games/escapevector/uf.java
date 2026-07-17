@@ -126,7 +126,7 @@ final class uf {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         return dg.field_o == ui.field_b;
     }
 
@@ -251,19 +251,15 @@ final class uf {
             }
             em.b(var12, var13, var9 - -var5_int, var6 + var10, ((uf) this).field_h);
             em.a(1 + var12, var13 + 1, -2 + (var9 + var5_int), -2 + var6 + var10, ((uf) this).field_a);
-            if (param1 > 2) {
-              int discarded$1 = ((uf) this).field_d.a(param3, var12 - -((uf) this).field_f, ((uf) this).field_l + var13, var9, var10, ((uf) this).field_c, -1, 0, 0, var7);
-              break L0;
-            } else {
-              return;
-            }
+            int discarded$1 = ((uf) this).field_d.a(param3, var12 - -((uf) this).field_f, ((uf) this).field_l + var13, var9, var10, ((uf) this).field_c, -1, 0, 0, var7);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var5 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var5;
-            stackOut_30_1 = new StringBuilder().append("uf.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_30_1 = new StringBuilder().append("uf.E(").append(param0).append(44).append(29).append(44).append(param2).append(44);
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -511,7 +507,8 @@ final class uf {
           L0: {
             L1: {
               if (!((uf) this).field_m) {
-                this.a(param1, param3, param2, 16777215);
+                int discarded$2 = 16777215;
+                this.a(param1, param3, param2);
                 break L1;
               } else {
                 this.a(param2, 29, param3, param1);
@@ -557,7 +554,7 @@ final class uf {
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3) {
+    private final void a(String param0, int param1, int param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -638,7 +635,7 @@ final class uf {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_e = null;
         field_s = null;

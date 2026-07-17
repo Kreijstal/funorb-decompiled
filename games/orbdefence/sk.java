@@ -23,7 +23,7 @@ final class sk extends kj {
         ((sk) this).field_y = (pj) (Object) ((sk) this).k(3469);
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_I = null;
         field_E = null;
         field_C = null;
@@ -100,7 +100,7 @@ final class sk extends kj {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;

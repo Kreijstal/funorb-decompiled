@@ -17,7 +17,7 @@ final class sa {
         field_a = null;
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         if (nj.field_Q < 2) {
             return ud.field_w;
         }
@@ -49,7 +49,7 @@ final class sa {
         return lg.field_a;
     }
 
-    final static String a(int param0, String param1, byte param2) {
+    final static String a(int param0, String param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -192,7 +192,7 @@ final class sa {
         return stackIn_33_0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         kj var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

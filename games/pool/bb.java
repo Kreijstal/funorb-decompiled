@@ -166,9 +166,9 @@ abstract class bb {
                             } else {
                               L5: {
                                 ep.field_H[var11] = ep.field_H[var8];
-                                int incrementValue$1 = var8;
+                                int incrementValue$2 = var8;
                                 var8++;
-                                ep.field_H[incrementValue$1] = var12;
+                                ep.field_H[incrementValue$2] = var12;
                                 if (var9 > var13) {
                                   var9 = var13;
                                   break L5;
@@ -203,7 +203,8 @@ abstract class bb {
                         L8: {
                           var9 = ep.field_H[var8];
                           var10 = ep.field_H[var8 - -1];
-                          if (he.a(var9, param6, var10, 0)) {
+                          int discarded$3 = 0;
+                          if (he.a(var9, param6, var10)) {
                             ep.field_H[var8] = var10;
                             ep.field_H[var8 + 1] = var9;
                             break L8;
@@ -228,8 +229,8 @@ abstract class bb {
     }
 
     final static double a(byte param0, int param1, long param2) {
-        int var4 = -8 % ((param0 - -43) / 55);
-        return (double)param2 / (double)(1 << param1);
+        int var4 = 0;
+        return (double)param2 / (double)65536;
     }
 
     abstract void a(int param0, int param1, int param2);

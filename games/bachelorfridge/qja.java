@@ -6,7 +6,7 @@ import java.io.*;
 final class qja extends bf {
     nq field_i;
 
-    final static void a(int param0) {
+    final static void a() {
         fr.field_n = false;
         wba.field_a = null;
         ta.field_b = null;
@@ -43,7 +43,7 @@ final class qja extends bf {
             try {
               L0: {
                 L1: {
-                  var6 = new byte[param0];
+                  var6 = new byte[24];
                   var2 = var6;
                   if (vg.field_n != null) {
                     try {
@@ -66,7 +66,7 @@ final class qja extends bf {
                         if (24 <= var3_int) {
                           throw new IOException();
                         } else {
-                          param1.a(0, param0 + -103, 24, var2);
+                          param1.a(0, -79, 24, var2);
                           return;
                         }
                       }
@@ -91,7 +91,7 @@ final class qja extends bf {
                     break L1;
                   }
                 }
-                param1.a(0, param0 + -103, 24, var2);
+                param1.a(0, -79, 24, var2);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -99,7 +99,7 @@ final class qja extends bf {
               L6: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_16_0 = (RuntimeException) var2_ref;
-                stackOut_16_1 = new StringBuilder().append("qja.D(").append(param0).append(44);
+                stackOut_16_1 = new StringBuilder().append("qja.D(").append(24).append(44);
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;

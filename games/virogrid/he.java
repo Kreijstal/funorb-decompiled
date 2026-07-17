@@ -47,7 +47,7 @@ final class he extends km {
     km field_tc;
     int field_vc;
 
-    final static mg[] a(mg[] param0, int param1) {
+    final static mg[] a(mg[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         mg var3 = null;
@@ -73,7 +73,7 @@ final class he extends km {
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var2_int = param1;
+            var2_int = 0;
             L1: while (true) {
               if (param0.length <= var2_int) {
                 stackOut_4_0 = (mg[]) param0;
@@ -118,12 +118,12 @@ final class he extends km {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
         }
         return stackIn_5_0;
     }
 
-    final static String a(String param0, int param1, boolean param2) {
+    final static String a(String param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -266,7 +266,7 @@ final class he extends km {
         return stackIn_39_0;
     }
 
-    final static void i(int param0) {
+    final static void i() {
         wg.field_f = false;
         dh.field_n = 0 == sh.field_qb.g(11132) ? true : false;
     }
@@ -283,7 +283,7 @@ final class he extends km {
         return (int)((he) this).a((byte) 102);
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_Wb = null;
         field_Xb = null;
         field_pc = null;
@@ -296,7 +296,7 @@ final class he extends km {
         return !((he) this).a(1) ? true : false;
     }
 
-    final static boolean h(int param0) {
+    final static boolean h() {
         long var1 = 0L;
         long var3 = 0L;
         int var5 = 0;
@@ -354,33 +354,22 @@ final class he extends km {
     }
 
     final static mg[] b(int param0, int param1, int param2, byte param3, int param4) {
-        mg[] var5 = null;
-        mg[] var6 = null;
-        var6 = new mg[9];
-        var5 = var6;
-        mg dupTemp$4 = eg.a(param1, (byte) 127, param4);
-        var6[6] = dupTemp$4;
-        var5[3] = dupTemp$4;
-        var5[2] = dupTemp$4;
-        var5[1] = dupTemp$4;
-        var5[0] = dupTemp$4;
-        mg dupTemp$5 = eg.a(param1, (byte) 45, param0);
-        var6[8] = dupTemp$5;
-        var5[7] = dupTemp$5;
-        var5[5] = dupTemp$5;
-        if (param3 != 89) {
-          return null;
-        } else {
-          L0: {
-            if (0 != param2) {
-              var6[4] = eg.a(64, (byte) 24, param2);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return var5;
+        mg[] var6 = new mg[9];
+        mg[] var5 = var6;
+        mg dupTemp$0 = eg.a(1, (byte) 127, param4);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        mg dupTemp$1 = eg.a(1, (byte) 45, param0);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
+        if (!(0 == param2)) {
+            var6[4] = eg.a(64, (byte) 24, param2);
         }
+        return var5;
     }
 
     final boolean a(he param0, int param1) {

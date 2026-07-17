@@ -156,12 +156,12 @@ final class ed extends np {
         super.a(false, param1, param2);
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         ((ed) this).field_T = new pd(-8 + ((ed) this).field_t - -((ed) this).field_q, ((ed) this).field_i - -8, 5, ((ed) this).field_x + -16, 65536, 0);
         ((ed) this).field_S = 0;
     }
 
-    private final int d(boolean param0) {
+    private final int d() {
         int var5 = 0;
         int var6 = 0;
         int var7 = DungeonAssault.field_K;
@@ -195,7 +195,8 @@ final class ed extends np {
         L0: {
           L1: {
             var6 = DungeonAssault.field_K;
-            var2 = this.d(true) - -15;
+            int discarded$1 = 1;
+            var2 = this.d() - -15;
             if (((ed) this).field_S != ((ed) this).field_T.field_z) {
               break L1;
             } else {
@@ -377,21 +378,18 @@ final class ed extends np {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_W = null;
         int var1 = -100;
         field_R = null;
     }
 
     final static void a(String param0, int param1, int param2, int param3, String param4, int param5) {
-        if (param3 != 31353) {
-            return;
-        }
         try {
             Object var7 = null;
             kn.a(param5, param0, param2, param1, 125, 96, (String) null, param4);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ed.S(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "ed.S(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 31353 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
     }
 
@@ -406,7 +404,8 @@ final class ed extends np {
         if (!(((ed) this).field_T.field_w)) {
             return;
         }
-        int var3 = this.d(true) + 20;
+        int discarded$0 = 1;
+        int var3 = this.d() + 20;
         int var4 = var3 + -((ed) this).field_x;
         if (param0 <= 23) {
             ((ed) this).field_B = null;
@@ -500,7 +499,7 @@ final class ed extends np {
                         L2: while (true) {
                           if (var16.field_q <= var5) {
                             int discarded$1 = param1.c((byte) -106, var4);
-                            var16.a(param0);
+                            var16.a(false);
                             break L0;
                           } else {
                             L3: {
@@ -686,7 +685,7 @@ final class ed extends np {
               L23: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_58_0 = (RuntimeException) var2;
-                stackOut_58_1 = new StringBuilder().append("ed.H(").append(param0).append(44);
+                stackOut_58_1 = new StringBuilder().append("ed.H(").append(0).append(44);
                 stackIn_60_0 = stackOut_58_0;
                 stackIn_60_1 = stackOut_58_1;
                 stackIn_59_0 = stackOut_58_0;
@@ -759,7 +758,8 @@ final class ed extends np {
     ed(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3);
         ((ed) this).field_B = new int[4];
-        this.e((byte) -40);
+        int discarded$0 = -40;
+        this.e();
     }
 
     final void b(byte param0) {

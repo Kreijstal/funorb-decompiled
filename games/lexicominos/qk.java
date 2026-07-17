@@ -5,7 +5,7 @@ final class qk {
     static String field_b;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -94,7 +94,8 @@ final class qk {
                         var12 = var14;
                         var7 = var12;
                         if (var3 == 1) {
-                          int discarded$1 = ic.a(var18, var6, param1, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = ic.a(var7, var6, param1, var4);
                           break L5;
                         } else {
                           var8 = (Object) (Object) al.field_F;

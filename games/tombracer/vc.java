@@ -11,7 +11,7 @@ final class vc extends ci {
     static String field_s;
     private int field_t;
 
-    public static void c(int param0) {
+    public static void c() {
         field_o = null;
         field_p = null;
         field_q = null;

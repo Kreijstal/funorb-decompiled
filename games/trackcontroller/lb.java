@@ -116,7 +116,8 @@ class lb extends rh {
                           if (~((lb) this).field_N == ~((lb) this).field_Q) {
                             break L3;
                           } else {
-                            this.j(29388);
+                            int discarded$9 = 29388;
+                            this.j();
                             break L3;
                           }
                         }
@@ -140,9 +141,9 @@ class lb extends rh {
                               break L6;
                             } else {
                               ((lb) this).field_s = ((lb) this).field_s + param1;
-                              int dupTemp$1 = ((lb) this).field_s.length();
-                              ((lb) this).field_Q = dupTemp$1;
-                              ((lb) this).field_N = dupTemp$1;
+                              int dupTemp$10 = ((lb) this).field_s.length();
+                              ((lb) this).field_Q = dupTemp$10;
+                              ((lb) this).field_N = dupTemp$10;
                               break L6;
                             }
                           }
@@ -161,7 +162,8 @@ class lb extends rh {
                     if (param3 != 85) {
                       if (param3 == 101) {
                         if (~((lb) this).field_Q != ~((lb) this).field_N) {
-                          this.j(29388);
+                          int discarded$11 = 29388;
+                          this.j();
                           stackOut_60_0 = 1;
                           stackIn_61_0 = stackOut_60_0;
                           return stackIn_61_0 != 0;
@@ -170,7 +172,8 @@ class lb extends rh {
                             break L7;
                           } else {
                             ((lb) this).field_N = 1 + ((lb) this).field_Q;
-                            this.j(29388);
+                            int discarded$12 = 29388;
+                            this.j();
                             stackOut_58_0 = 1;
                             stackIn_59_0 = stackOut_58_0;
                             return stackIn_59_0 != 0;
@@ -230,7 +233,8 @@ class lb extends rh {
                                       break L7;
                                     } else {
                                       if (param3 == 67) {
-                                        this.e((byte) 82);
+                                        int discarded$13 = 82;
+                                        this.e();
                                         stackOut_46_0 = 1;
                                         stackIn_47_0 = stackOut_46_0;
                                         return stackIn_47_0 != 0;
@@ -239,7 +243,8 @@ class lb extends rh {
                                       }
                                     }
                                   } else {
-                                    this.c(false);
+                                    int discarded$14 = 0;
+                                    this.c();
                                     stackOut_34_0 = 1;
                                     stackIn_35_0 = stackOut_34_0;
                                     return stackIn_35_0 != 0;
@@ -266,9 +271,10 @@ class lb extends rh {
                                     stackIn_29_2 = stackOut_28_2;
                                     break L10;
                                   } else {
+                                    int discarded$15 = 0;
                                     stackOut_27_0 = this;
                                     stackOut_27_1 = stackIn_27_1;
-                                    stackOut_27_2 = this.r(0);
+                                    stackOut_27_2 = this.r();
                                     stackIn_29_0 = stackOut_27_0;
                                     stackIn_29_1 = stackOut_27_1;
                                     stackIn_29_2 = stackOut_27_2;
@@ -324,13 +330,15 @@ class lb extends rh {
                           break L7;
                         } else {
                           ((lb) this).field_N = -1 + ((lb) this).field_Q;
-                          this.j(29388);
+                          int discarded$16 = 29388;
+                          this.j();
                           stackOut_13_0 = 1;
                           stackIn_14_0 = stackOut_13_0;
                           return stackIn_14_0 != 0;
                         }
                       } else {
-                        this.j(29388);
+                        int discarded$17 = 29388;
+                        this.j();
                         stackOut_10_0 = 1;
                         stackIn_11_0 = stackOut_10_0;
                         return stackIn_11_0 != 0;
@@ -387,7 +395,7 @@ class lb extends rh {
         field_O = null;
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -397,7 +405,8 @@ class lb extends rh {
               L0: {
                 var3 = 0;
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                this.j(29388);
+                int discarded$1 = 29388;
+                this.j();
                 this.a(0, var2);
                 break L0;
               }
@@ -415,7 +424,7 @@ class lb extends rh {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         if (!(!(((lb) this).field_l instanceof se))) {
             ((se) (Object) ((lb) this).field_l).b(-28, (lb) this);
         }
@@ -526,7 +535,8 @@ class lb extends rh {
                   } else {
                     L4: {
                       ((lb) this).field_N = this.k(param4 + -1);
-                      ((lb) this).field_Q = this.r(0);
+                      int discarded$1 = 0;
+                      ((lb) this).field_Q = this.r();
                       if (0 >= ((lb) this).field_Q) {
                         break L4;
                       } else {
@@ -725,7 +735,8 @@ class lb extends rh {
         if (param0 != 13) {
             return;
         }
-        this.j(29388);
+        int discarded$0 = 29388;
+        this.j();
     }
 
     private final int k(int param0) {
@@ -754,7 +765,7 @@ class lb extends rh {
         }
     }
 
-    private final int r(int param0) {
+    private final int r() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -804,43 +815,39 @@ class lb extends rh {
         String stackOut_13_2 = null;
         try {
           L0: {
-            if (param0 == 0) {
-              L1: {
-                if (((lb) this).field_J == -1) {
+            L1: {
+              if (((lb) this).field_J == -1) {
+                break L1;
+              } else {
+                var3_int = ((lb) this).field_J + -((lb) this).field_s.length();
+                if (0 <= var3_int) {
+                  return;
+                } else {
+                  param1 = param1.substring(0, var3_int);
                   break L1;
-                } else {
-                  var3_int = ((lb) this).field_J + -((lb) this).field_s.length();
-                  if (0 <= var3_int) {
-                    return;
-                  } else {
-                    param1 = param1.substring(0, var3_int);
-                    break L1;
-                  }
                 }
               }
-              L2: {
-                if (((lb) this).field_Q == ((lb) this).field_s.length()) {
-                  ((lb) this).field_s = ((lb) this).field_s + param1;
-                  break L2;
-                } else {
-                  ((lb) this).field_s = ((lb) this).field_s.substring(0, ((lb) this).field_Q) + param1 + ((lb) this).field_s.substring(((lb) this).field_Q, ((lb) this).field_s.length());
-                  break L2;
-                }
-              }
-              ((lb) this).field_Q = ((lb) this).field_Q + param1.length();
-              ((lb) this).field_N = ((lb) this).field_Q;
-              ((lb) this).b(true);
-              break L0;
-            } else {
-              return;
             }
+            L2: {
+              if (((lb) this).field_Q == ((lb) this).field_s.length()) {
+                ((lb) this).field_s = ((lb) this).field_s + param1;
+                break L2;
+              } else {
+                ((lb) this).field_s = ((lb) this).field_s.substring(0, ((lb) this).field_Q) + param1 + ((lb) this).field_s.substring(((lb) this).field_Q, ((lb) this).field_s.length());
+                break L2;
+              }
+            }
+            ((lb) this).field_Q = ((lb) this).field_Q + param1.length();
+            ((lb) this).field_N = ((lb) this).field_Q;
+            ((lb) this).b(true);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("lb.K(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("lb.K(").append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -953,31 +960,31 @@ class lb extends rh {
         String stackIn_13_0 = null;
         String stackIn_18_0 = null;
         Object stackIn_21_0 = null;
-        String stackIn_31_0 = null;
-        String stackIn_36_0 = null;
+        String stackIn_29_0 = null;
+        String stackIn_34_0 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
+        String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_35_0 = null;
-        String stackOut_30_0 = null;
+        String stackOut_33_0 = null;
+        String stackOut_28_0 = null;
         Object stackOut_20_0 = null;
         String stackOut_17_0 = null;
         String stackOut_12_0 = null;
         String stackOut_7_0 = null;
         String stackOut_2_0 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
         RuntimeException stackOut_37_0 = null;
         StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
+        String stackOut_37_2 = null;
+        RuntimeException stackOut_36_0 = null;
+        StringBuilder stackOut_36_1 = null;
+        String stackOut_36_2 = null;
         var8 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -991,7 +998,8 @@ class lb extends rh {
                     break L1;
                   } else {
                     L2: {
-                      var4 = r.a(param0, -11133);
+                      int discarded$2 = -11133;
+                      var4 = r.a(param0);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -1009,8 +1017,8 @@ class lb extends rh {
                                   L4: while (true) {
                                     if (var6 >= param0.length()) {
                                       if (var5 > 0) {
-                                        stackOut_35_0 = wd.field_J;
-                                        stackIn_36_0 = stackOut_35_0;
+                                        stackOut_33_0 = wd.field_J;
+                                        stackIn_34_0 = stackOut_33_0;
                                         break L0;
                                       } else {
                                         return null;
@@ -1026,21 +1034,14 @@ class lb extends rh {
                                           break L5;
                                         }
                                       }
-                                      L6: {
-                                        if (var5 < 2) {
-                                          break L6;
-                                        } else {
-                                          if (!param1) {
-                                            stackOut_30_0 = rb.field_d;
-                                            stackIn_31_0 = stackOut_30_0;
-                                            return stackIn_31_0;
-                                          } else {
-                                            break L6;
-                                          }
-                                        }
+                                      if (var5 < 2) {
+                                        var6++;
+                                        continue L4;
+                                      } else {
+                                        stackOut_28_0 = rb.field_d;
+                                        stackIn_29_0 = stackOut_28_0;
+                                        return stackIn_29_0;
                                       }
-                                      var6++;
-                                      continue L4;
                                     }
                                   }
                                 } else {
@@ -1076,35 +1077,35 @@ class lb extends rh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var3 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) var3;
-            stackOut_37_1 = new StringBuilder().append("lb.B(");
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackOut_35_0 = (RuntimeException) var3;
+            stackOut_35_1 = new StringBuilder().append("lb.B(");
+            stackIn_37_0 = stackOut_35_0;
+            stackIn_37_1 = stackOut_35_1;
+            stackIn_36_0 = stackOut_35_0;
+            stackIn_36_1 = stackOut_35_1;
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
-              break L7;
+              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
+              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_2 = "null";
+              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_1 = stackOut_37_1;
+              stackIn_38_2 = stackOut_37_2;
+              break L6;
             } else {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
-              break L7;
+              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
+              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_2 = "{...}";
+              stackIn_38_0 = stackOut_36_0;
+              stackIn_38_1 = stackOut_36_1;
+              stackIn_38_2 = stackOut_36_2;
+              break L6;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + param1 + 44 + param2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + 0 + 44 + param2 + 41);
         }
-        return stackIn_36_0;
+        return stackIn_34_0;
     }
 
     void a(int param0, int param1, byte param2, al param3) {
@@ -1247,7 +1248,7 @@ class lb extends rh {
         }
     }
 
-    private final void j(int param0) {
+    private final void j() {
         int var2 = 0;
         int var3 = 0;
         if (((lb) this).field_N != ((lb) this).field_Q) {

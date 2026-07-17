@@ -118,7 +118,7 @@ final class ai extends ek {
         return stackIn_15_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_M = null;
         field_N = null;
         field_L = null;
@@ -139,7 +139,7 @@ final class ai extends ek {
         }
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         ck var1 = null;
         ck var2 = null;
         int var3 = 0;
@@ -217,22 +217,11 @@ final class ai extends ek {
         dl.a((byte) 91, var3 != 0, var1, 0, var6);
         hk.b(427, 320 - var5, 640, 320 + var5);
         dl.a((byte) 91, var3 != 0, var1, 0, var6);
-        if (param0 != 84) {
-          field_U = null;
-          hk.b(213, 160 + var5, 427, 320 - -var5);
-          dl.a((byte) 43, var4 != 0, var2, var5, 256);
-          hk.b(0, var5 + 320, 640, 480);
-          dl.a((byte) 121, var4 != 0, var2, var5, 256);
-          hk.d();
-          return;
-        } else {
-          hk.b(213, 160 + var5, 427, 320 - -var5);
-          dl.a((byte) 43, var4 != 0, var2, var5, 256);
-          hk.b(0, var5 + 320, 640, 480);
-          dl.a((byte) 121, var4 != 0, var2, var5, 256);
-          hk.d();
-          return;
-        }
+        hk.b(213, 160 + var5, 427, 320 - -var5);
+        dl.a((byte) 43, var4 != 0, var2, var5, 256);
+        hk.b(0, var5 + 320, 640, 480);
+        dl.a((byte) 121, var4 != 0, var2, var5, 256);
+        hk.d();
     }
 
     final static boolean f(byte param0) {
@@ -240,7 +229,7 @@ final class ai extends ek {
         return fj.field_e;
     }
 
-    final static void h(int param0) {
+    final static void h() {
         Object var2 = null;
         qf.a(te.field_q, -128, (String) null);
     }
@@ -256,22 +245,13 @@ final class ai extends ek {
         var4 = (cl) (Object) oe.field_I.c((byte) 19);
         L0: while (true) {
           if (var4 == null) {
-            if (param2 != -111) {
-              field_M = null;
-              var4 = new cl();
-              var4.field_z = param1;
-              var4.field_q = 0;
-              oe.field_I.a((bh) (Object) var4, param2 + 2888);
-              fh.a((byte) 8, var4, param0);
-              return var4;
-            } else {
-              var4 = new cl();
-              var4.field_z = param1;
-              var4.field_q = 0;
-              oe.field_I.a((bh) (Object) var4, param2 + 2888);
-              fh.a((byte) 8, var4, param0);
-              return var4;
-            }
+            var4 = new cl();
+            var4.field_z = 10;
+            var4.field_q = 0;
+            oe.field_I.a((bh) (Object) var4, 2777);
+            int discarded$1 = 7;
+            fh.a((byte) 8, var4);
+            return var4;
           } else {
             if (0 == var4.field_q) {
               return var4;

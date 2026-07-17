@@ -436,7 +436,10 @@ abstract class ta extends bf {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = od.a(field_m, 0, -118, ' ');
+          int discarded$8 = 32;
+          int discarded$9 = -118;
+          int discarded$10 = 0;
+          StringBuilder discarded$11 = od.a(field_m);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -472,9 +475,9 @@ abstract class ta extends bf {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_m.append(60);
-                        StringBuilder discarded$7 = field_m.append(var15);
-                        StringBuilder discarded$8 = field_m.append(62);
+                        StringBuilder discarded$12 = field_m.append(60);
+                        StringBuilder discarded$13 = field_m.append(var15);
+                        StringBuilder discarded$14 = field_m.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -661,7 +664,7 @@ abstract class ta extends bf {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_m.append(var14);
+                        StringBuilder discarded$15 = field_m.append(var14);
                         var14 = (char)(m.a(1, (char) var14) & 255);
                         var4 = var4 + ((ta) this).field_n[var14];
                         if (((ta) this).field_A == null) {
@@ -1321,7 +1324,8 @@ abstract class ta extends bf {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_F = wk.a(16, var7, -1);
+                                    int discarded$4 = -1;
+                                    field_F = wk.a(16, var7);
                                     break L1;
                                   }
                                 } else {
@@ -1334,7 +1338,8 @@ abstract class ta extends bf {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_o = wk.a(16, var6, -1);
+                              int discarded$5 = -1;
+                              field_o = wk.a(16, var6);
                               break L1;
                             }
                           } else {
@@ -1347,7 +1352,8 @@ abstract class ta extends bf {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_x = wk.a(16, var5, -1);
+                        int discarded$6 = -1;
+                        field_x = wk.a(16, var5);
                         break L1;
                       }
                     } else {
@@ -1365,7 +1371,8 @@ abstract class ta extends bf {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_y = wk.a(16, var3, -1);
+                int discarded$7 = -1;
+                field_y = wk.a(16, var3);
                 break L1;
               }
             }

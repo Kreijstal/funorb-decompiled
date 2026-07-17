@@ -321,7 +321,8 @@ final class ada extends k {
         int stackOut_21_1 = 0;
         int stackOut_21_2 = 0;
         L0: {
-          pm.f(199);
+          int discarded$1 = 199;
+          pm.f();
           if (wk.field_a >= 0) {
             dea.field_m.field_Z = lga.a(true, new String[1], bla.field_q);
             break L0;
@@ -547,7 +548,7 @@ final class ada extends k {
                 }
               }
             }
-            aq.a(param2, (byte) 47);
+            aq.a(11, (byte) 47);
             break L8;
           } else {
             break L8;
@@ -567,14 +568,14 @@ final class ada extends k {
                 }
               }
             }
-            dn.a(-25, mt.field_s, 0, param2, true, cla.field_a);
+            dn.a(-25, mt.field_s, 0, 11, true, cla.field_a);
             break L10;
           } else {
             break L10;
           }
         }
         L12: {
-          if (param1 == aja.field_l.field_R) {
+          if (0 == aja.field_l.field_R) {
             break L12;
           } else {
             eda.field_j = false;
@@ -900,7 +901,7 @@ final class ada extends k {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_m = null;
         field_p = null;
         field_l = null;

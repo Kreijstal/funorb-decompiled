@@ -21,57 +21,33 @@ final class pj extends mi {
         if (param7 < param0) {
           if (param0 < param4) {
             a.a(param6, param5, param0, param2, ed.field_k, param3, param4, -20476, param7);
-            if (param1 != 0) {
-              pj.g(24);
-              return;
-            } else {
-              return;
-            }
+            pj.g(24);
+            return;
           } else {
             if (param4 <= param7) {
               a.a(param3, param5, param7, param6, ed.field_k, param2, param0, -20476, param4);
-              if (param1 != 0) {
-                pj.g(24);
-                return;
-              } else {
-                return;
-              }
+              pj.g(24);
+              return;
             } else {
               a.a(param3, param5, param4, param2, ed.field_k, param6, param0, -20476, param7);
-              if (param1 != 0) {
-                pj.g(24);
-                return;
-              } else {
-                return;
-              }
+              pj.g(24);
+              return;
             }
           }
         } else {
           if (param7 < param4) {
             a.a(param6, param5, param7, param3, ed.field_k, param2, param4, -20476, param0);
-            if (param1 == 0) {
-              return;
-            } else {
-              pj.g(24);
-              return;
-            }
+            pj.g(24);
+            return;
           } else {
             if (param4 > param0) {
               a.a(param2, param5, param4, param3, ed.field_k, param6, param7, -20476, param0);
-              if (param1 == 0) {
-                return;
-              } else {
-                pj.g(24);
-                return;
-              }
+              pj.g(24);
+              return;
             } else {
               a.a(param2, param5, param0, param6, ed.field_k, param3, param7, -20476, param4);
-              if (param1 != 0) {
-                pj.g(24);
-                return;
-              } else {
-                return;
-              }
+              pj.g(24);
+              return;
             }
           }
         }
@@ -639,7 +615,8 @@ final class pj extends mi {
               }
             } else {
               if (var2 != 1) {
-                rg.a((Throwable) null, "LR1: " + ni.c(6), -562);
+                int discarded$1 = 6;
+                rg.a((Throwable) null, "LR1: " + ni.c(), -562);
                 ql.a(-66);
                 return;
               } else {

@@ -310,81 +310,8 @@ final class qe {
         }
     }
 
-    final static boolean a(String param0, int param1) {
-        RuntimeException var2 = null;
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        try {
-          L0: {
-            L1: {
-              if (param1 == 3) {
-                break L1;
-              } else {
-                field_k = null;
-                break L1;
-              }
-            }
-            L2: {
-              if (null == ed.a(param0, (byte) -108)) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L2;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L2;
-              }
-            }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("qe.D(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
-            if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L3;
-            } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L3;
-            }
-          }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
-        }
-        return stackIn_5_0 != 0;
+    final static boolean a(String param0) {
+        return null != ed.a(param0, (byte) -108);
     }
 
     final void a(int param0, int param1, byte[] param2) {
@@ -513,7 +440,8 @@ final class qe {
             var1 = dm.field_c.j(80);
         }
         if (!(var1.length() != 0)) {
-            var1 = db.b((byte) 122);
+            int discarded$0 = 122;
+            var1 = db.b();
         }
         if (var1.length() == 0) {
             var1 = wh.field_e;
@@ -521,7 +449,7 @@ final class qe {
         return var1;
     }
 
-    final static ck[] a(boolean param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static ck[] a(boolean param0, int param1, boolean param2, int param3, int param4) {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -582,7 +510,7 @@ final class qe {
         return new ck[]{null, null, null, (ck) var10, var9, (ck) var11, null, null, null};
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_h = null;
         field_e = null;

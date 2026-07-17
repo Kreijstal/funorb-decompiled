@@ -16,7 +16,7 @@ final class ii {
     static rh field_k;
     static String field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_k = null;
         field_j = null;

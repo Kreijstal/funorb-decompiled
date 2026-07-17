@@ -122,7 +122,8 @@ final class eh {
                   }
                 }
               }
-              w.a(-15);
+              int discarded$1 = -15;
+              w.a();
               break L1;
             }
             var67 = new int[param0.field_d];
@@ -404,20 +405,16 @@ final class eh {
         if (vd.field_b != null) {
             vd.field_b.a((byte) -84);
         }
-        if (!param0) {
-            Object var2 = null;
-            eh.a((jk) null, 33, -117, 56, -22, 94, 101, 77);
-        }
         ch.field_h.requestFocus();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         try {
             kg.field_j = param0;
             oh.a(-92, 12);

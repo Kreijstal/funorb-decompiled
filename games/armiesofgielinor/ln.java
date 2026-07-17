@@ -86,9 +86,11 @@ final class ln {
     final int a(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != 21930) {
           ((ln) this).a(42, -104, -118);
-          return tt.a(param0 - param3, param4 + -param2, ((ln) this).field_a, false);
+          int discarded$4 = 0;
+          return tt.a(param0 - param3, param4 + -param2, ((ln) this).field_a);
         } else {
-          return tt.a(param0 - param3, param4 + -param2, ((ln) this).field_a, false);
+          int discarded$5 = 0;
+          return tt.a(param0 - param3, param4 + -param2, ((ln) this).field_a);
         }
     }
 
@@ -103,12 +105,12 @@ final class ln {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
     }
 
-    final static void a(kl param0, kl param1, kl param2, int param3) {
+    final static void a(kl param0, kl param1, kl param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         String var5 = null;

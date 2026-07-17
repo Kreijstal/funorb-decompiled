@@ -8,7 +8,7 @@ final class jd {
     static volatile int field_e;
     static String field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_d = null;

@@ -48,9 +48,6 @@ class ul extends rg {
 
     private final void b(int param0, int param1) {
         ((ul) this).field_Q = param1;
-        if (param0 != -12521) {
-            String discarded$0 = this.j(47);
-        }
         if (!mc.field_e[81]) {
             ((ul) this).field_R = ((ul) this).field_Q;
         }
@@ -162,12 +159,12 @@ class ul extends rg {
         }
     }
 
-    private final void j(byte param0) {
+    private final void j() {
         this.h((byte) 32);
         this.m((byte) -124);
     }
 
-    private final void g(int param0) {
+    private final void g() {
         sc var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -250,7 +247,7 @@ class ul extends rg {
         }
     }
 
-    private final int f(int param0) {
+    private final int f() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -401,9 +398,9 @@ class ul extends rg {
                             break L5;
                           } else {
                             ((ul) this).field_B = ((ul) this).field_B + param3;
-                            int dupTemp$1 = ((ul) this).field_B.length();
-                            ((ul) this).field_Q = dupTemp$1;
-                            ((ul) this).field_R = dupTemp$1;
+                            int dupTemp$4 = ((ul) this).field_B.length();
+                            ((ul) this).field_Q = dupTemp$4;
+                            ((ul) this).field_R = dupTemp$4;
                             break L5;
                           }
                         }
@@ -444,7 +441,8 @@ class ul extends rg {
                             if (param2 != 102) {
                               if (103 != param2) {
                                 if (param2 == 84) {
-                                  this.i((byte) 122);
+                                  int discarded$5 = 122;
+                                  this.i();
                                   stackOut_57_0 = 1;
                                   stackIn_58_0 = stackOut_57_0;
                                   return stackIn_58_0 != 0;
@@ -456,7 +454,8 @@ class ul extends rg {
                                       if (65 != param2) {
                                         break L7;
                                       } else {
-                                        this.j((byte) -89);
+                                        int discarded$6 = -89;
+                                        this.j();
                                         stackOut_45_0 = 1;
                                         stackIn_46_0 = stackOut_45_0;
                                         return stackIn_46_0 != 0;
@@ -520,9 +519,10 @@ class ul extends rg {
                                   stackIn_34_2 = stackOut_33_2;
                                   break L9;
                                 } else {
+                                  int discarded$7 = 0;
                                   stackOut_32_0 = this;
                                   stackOut_32_1 = stackIn_32_1;
-                                  stackOut_32_2 = this.f(0);
+                                  stackOut_32_2 = this.f();
                                   stackIn_34_0 = stackOut_32_0;
                                   stackIn_34_1 = stackOut_32_1;
                                   stackIn_34_2 = stackOut_32_2;
@@ -747,7 +747,8 @@ class ul extends rg {
                   if (((ul) this).field_Z) {
                     L4: {
                       ((ul) this).field_R = this.h(param2 + -9765);
-                      ((ul) this).field_Q = this.f(0);
+                      int discarded$1 = 0;
+                      ((ul) this).field_Q = this.f();
                       if (((ul) this).field_Q <= 0) {
                         break L4;
                       } else {
@@ -871,7 +872,8 @@ class ul extends rg {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              this.g(122);
+              int discarded$3 = 122;
+              this.g();
               if (1 == ((ul) this).field_o) {
                 L2: {
                   if (((ul) this).field_n instanceof pj) {
@@ -953,7 +955,7 @@ class ul extends rg {
         }
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4) {
+    final static void a(int param0, String param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -1039,7 +1041,7 @@ class ul extends rg {
         try {
           L0: {
             L1: {
-              if (param0 == ((ul) this).field_S) {
+              if (0 == ((ul) this).field_S) {
                 break L1;
               } else {
                 var3_int = ((ul) this).field_S + -((ul) this).field_B.length();
@@ -1070,7 +1072,7 @@ class ul extends rg {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("ul.A(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("ul.A(").append(0).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -1097,7 +1099,7 @@ class ul extends rg {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_P = null;
         field_U = null;
     }
@@ -1160,13 +1162,13 @@ class ul extends rg {
         }
     }
 
-    private final void i(byte param0) {
+    private final void i() {
         if (!(!(((ul) this).field_t instanceof uj))) {
             ((uj) (Object) ((ul) this).field_t).a((ul) this, (byte) 83);
         }
     }
 
-    final static he[] a(hb param0, int param1) {
+    final static he[] a(hb param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -1211,18 +1213,19 @@ class ul extends rg {
                 } else {
                   L2: {
                     if (!sm.a(92, param0)) {
-                      var6 = param0.g(ic.a(var5 + -1, (byte) 68), 0);
+                      int discarded$14 = 68;
+                      var6 = param0.g(ic.a(var5 + -1), 0);
                       var4[var5] = var4[var6];
                       break L2;
                     } else {
                       var6_ref_he = new he();
-                      int discarded$12 = param0.g(24, 0);
-                      int discarded$13 = param0.g(24, 0);
+                      int discarded$15 = param0.g(24, 0);
+                      int discarded$16 = param0.g(24, 0);
                       var6_ref_he.field_a = param0.g(24, 0);
-                      int discarded$14 = param0.g(9, 0);
-                      int discarded$15 = param0.g(12, 0);
-                      int discarded$16 = param0.g(12, 0);
-                      int discarded$17 = param0.g(12, 0);
+                      int discarded$17 = param0.g(9, 0);
+                      int discarded$18 = param0.g(12, 0);
+                      int discarded$19 = param0.g(12, 0);
+                      int discarded$20 = param0.g(12, 0);
                       var4[var5] = var6_ref_he;
                       break L2;
                     }
@@ -1271,9 +1274,6 @@ class ul extends rg {
     }
 
     private final String j(int param0) {
-        if (param0 != 82) {
-            return null;
-        }
         int var2 = ((ul) this).field_R < ((ul) this).field_Q ? ((ul) this).field_R : ((ul) this).field_Q;
         int var3 = ((ul) this).field_Q <= ((ul) this).field_R ? ((ul) this).field_R : ((ul) this).field_Q;
         return ((ul) this).field_B.substring(var2, var3);

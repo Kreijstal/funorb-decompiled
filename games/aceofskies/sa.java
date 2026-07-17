@@ -123,12 +123,12 @@ final class sa {
         }
     }
 
-    public static void a(int param0) {
-        int var1 = 63 % ((-74 - param0) / 49);
+    public static void a() {
+        int var1 = 0;
         field_h = null;
     }
 
-    private final void b(int param0, String param1, int param2, int param3) {
+    private final void b(int param0, String param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -451,7 +451,8 @@ final class sa {
                 this.a(param1, param0 ^ -10076557, param2, param3);
                 break L1;
               } else {
-                this.b(param3, param1, param2, 27201);
+                int discarded$3 = 27201;
+                this.b(param3, param1, param2);
                 break L1;
               }
             }
@@ -569,7 +570,7 @@ final class sa {
         return stackIn_19_0 != 0;
     }
 
-    final static String b(int param0) {
+    final static String b() {
         if (!(jq.field_fb != ht.field_k)) {
             return nh.field_b;
         }

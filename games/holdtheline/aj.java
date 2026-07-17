@@ -14,7 +14,7 @@ final class aj {
         field_a = null;
     }
 
-    final static byte[] a(byte param0) {
+    final static byte[] a() {
         int var3 = 0;
         int var4 = 0;
         int var5 = HoldTheLine.field_D;
@@ -34,7 +34,8 @@ final class aj {
             }
         }
         for (var3 = 0; var3 < 4; var3++) {
-            dm.a(var6, var3, 255);
+            int discarded$0 = 255;
+            dm.a(var6, var3);
         }
         var6.h((byte) 0);
         return var6.field_i;

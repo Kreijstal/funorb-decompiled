@@ -5,12 +5,12 @@ final class wo {
     static cp field_b;
     static int field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         int var1 = -16;
         field_b = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;

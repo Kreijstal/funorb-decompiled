@@ -7,7 +7,7 @@ final class mi extends am {
     static int field_s;
     static String field_u;
 
-    final static t[] a(int param0, la param1, int param2, int param3) {
+    final static t[] a(int param0, la param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -212,7 +212,8 @@ final class mi extends am {
         if (param0 < 123) {
             int[] discarded$0 = ((mi) this).a((byte) -2, 21);
         }
-        ie.a(14837);
+        int discarded$1 = 14837;
+        ie.a();
     }
 
     final int[][] a(int param0, int param1) {
@@ -284,10 +285,7 @@ final class mi extends am {
         return var18;
     }
 
-    public static void g(byte param0) {
-        if (param0 != -39) {
-            field_v = null;
-        }
+    public static void g() {
         field_u = null;
         field_v = null;
     }

@@ -36,7 +36,7 @@ final class ov implements Iterator {
         }
     }
 
-    final static void a(tf param0, int param1) {
+    final static void a(tf param0) {
         Object var2 = null;
         gn var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -62,7 +62,8 @@ final class ov implements Iterator {
         try {
           L0: {
             L1: while (true) {
-              if (jo.a(param0, false)) {
+              int discarded$2 = 0;
+              if (jo.a(param0)) {
                 break L0;
               } else {
                 var2_ref = param0.g(24009);
@@ -123,15 +124,15 @@ final class ov implements Iterator {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }
 
     final static void a(int param0, int param1) {
         ml var2 = or.field_d;
-        int var3 = -31 / ((param0 - 40) / 56);
-        var2.b(param1, (byte) 120);
+        int var3 = 31;
+        var2.b(11, (byte) 120);
         var2.a(106, 1);
         var2.a(119, 0);
     }
@@ -173,14 +174,14 @@ final class ov implements Iterator {
         ((ov) this).field_g = null;
     }
 
-    private final void b(int param0) {
+    private final void b() {
         ((ov) this).field_e = ((ov) this).field_d.field_e[0].field_d;
         ((ov) this).field_f = 1;
         ((ov) this).field_g = null;
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (~cc.field_e == param1) {
+        if (cc.field_e == 13) {
             hq.b((byte) 124);
             return true;
         }
@@ -191,7 +192,7 @@ final class ov implements Iterator {
         if (null == dr.field_g) {
             return false;
         }
-        if (!dr.field_g.a(param0, param2, (byte) -101)) {
+        if (!dr.field_g.a(15, 13, (byte) -101)) {
             return false;
         }
         return true;
@@ -201,7 +202,8 @@ final class ov implements Iterator {
         ((ov) this).field_g = null;
         try {
             ((ov) this).field_d = param0;
-            this.b(0);
+            int discarded$0 = 0;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "ov.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

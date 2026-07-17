@@ -6,7 +6,7 @@ final class gla extends nu {
     private java.nio.ByteBuffer field_i;
     static boolean field_k;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
     }
 
@@ -96,16 +96,12 @@ final class gla extends nu {
 
     final static void a(int param0, int param1, int param2, kv[] param3) {
         try {
-            if (param0 > -97) {
-                Object var5 = null;
-                cj discarded$0 = gla.a((lu) null, (byte) 47);
-            }
             it.field_s = new lda(param3);
             fh.field_v = param2;
             lda.field_a = param1;
             oba.d(-1488922239);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "gla.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "gla.D(" + -101 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

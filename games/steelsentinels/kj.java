@@ -25,7 +25,7 @@ final class kj extends gi {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_y = null;
         field_D = null;
         field_G = null;
@@ -115,10 +115,11 @@ final class kj extends gi {
     final static int j(int param0) {
         gb.field_c.a(false);
         if (!ne.field_N.d((byte) 125)) {
-            return qh.d((byte) -107);
+            int discarded$0 = -107;
+            return qh.d();
         }
         if (param0 <= 9) {
-            int discarded$0 = kj.j(-98);
+            int discarded$1 = kj.j(-98);
             return 0;
         }
         return 0;

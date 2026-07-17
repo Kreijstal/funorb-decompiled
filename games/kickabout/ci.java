@@ -57,13 +57,14 @@ final class ci implements Iterable {
     }
 
     final static void a(boolean param0) {
-        int var1 = wq.b((byte) 46);
+        int discarded$0 = 46;
+        int var1 = wq.b();
         int var2 = gn.d((byte) 101);
         ba.field_p.a(-dq.field_f + ka.field_a, (mt.field_a << 1) + var2, uq.field_c - mt.field_a, (dq.field_f << 1) + var1, 3);
         re.a(0);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_g = null;

@@ -17,8 +17,9 @@ final class cm {
         field_c = null;
     }
 
-    final static void a(int param0) {
-        if (!(fj.a(136))) {
+    final static void a() {
+        int discarded$5 = 136;
+        if (!(fj.a())) {
             return;
         }
         a.a(112, 4, false);

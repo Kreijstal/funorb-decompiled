@@ -78,9 +78,6 @@ final class gm extends hf {
 
     final static void a(byte param0, float param1, String param2, boolean param3) {
         try {
-            if (param0 < 3) {
-                field_J = 66;
-            }
             if (!(af.field_g != null)) {
                 af.field_g = new tf(ng.field_c, mf.field_u);
                 ng.field_c.a((byte) -111, (vg) (Object) af.field_g);
@@ -89,7 +86,7 @@ final class gm extends hf {
             wj.c();
             a.a((byte) -121, true);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "gm.H(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "gm.H(" + 32 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -337,7 +334,7 @@ final class gm extends hf {
         }
     }
 
-    final static nh a(nh param0, int param1, int param2, he param3, int param4, boolean param5) {
+    final static nh a(nh param0, int param1, int param2, he param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

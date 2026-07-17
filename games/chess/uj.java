@@ -14,9 +14,9 @@ final class uj extends o {
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) bj.field_cb);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) bj.field_cb);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) bj.field_cb);
-            nd.field_l = param0;
+            nd.field_l = 0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "uj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "uj.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -530,7 +530,7 @@ final class uj extends o {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -638,7 +638,7 @@ final class uj extends o {
         throw new Error();
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_l = null;
         field_m = null;
         field_j = null;

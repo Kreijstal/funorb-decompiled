@@ -55,7 +55,7 @@ final class mi extends cj {
         ((mi) this).field_Fb.a(((mi) this).field_z, 0, ((mi) this).field_zb - var3, var3, -3344);
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_Kb = null;
         field_Ib = null;
         field_Nb = null;
@@ -105,7 +105,8 @@ final class mi extends cj {
                 tn.field_C.a((br) (Object) param0, false);
                 return;
               } else {
-                vc.a((br) (Object) var2, (br) (Object) param0, true);
+                int discarded$2 = 1;
+                vc.a((br) (Object) var2, (br) (Object) param0);
                 return;
               }
             }

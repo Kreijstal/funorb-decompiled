@@ -15,7 +15,7 @@ final class kw extends kj {
     private boolean field_o;
     static String field_n;
 
-    final static void a(boolean param0) {
+    final static void a() {
         gk.field_d = 0;
         lna.field_q = true;
     }
@@ -43,7 +43,7 @@ final class kw extends kj {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2 = new eq(param0);
+            var2 = new eq(false);
             var2.field_a = param1;
             stackOut_0_0 = (eq) var2;
             stackIn_1_0 = stackOut_0_0;
@@ -54,7 +54,7 @@ final class kw extends kj {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("kw.A(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("kw.A(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -179,7 +179,7 @@ final class kw extends kj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_k = null;
         field_g = null;
         field_j = null;

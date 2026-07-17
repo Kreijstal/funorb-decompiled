@@ -13,7 +13,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
     static String field_y;
     private java.awt.Canvas field_w;
 
-    final static Boolean c(int param0) {
+    final static Boolean c() {
         Boolean var1 = aw.field_j;
         aw.field_j = null;
         int var2 = -1;
@@ -21,17 +21,11 @@ final class li extends ce implements java.awt.image.ImageProducer {
     }
 
     private final synchronized void a(int param0, int param1, int param2, boolean param3, int param4) {
-        if (null != ((li) this).field_t) {
-          ((li) this).field_t.setPixels(param1, param0, param2, param4, ((li) this).field_s, ((li) this).field_m, ((li) this).field_n * param0 + param1, ((li) this).field_n);
-          if (!param3) {
-            field_v = null;
-            ((li) this).field_t.imageComplete(2);
-            return;
-          } else {
-            ((li) this).field_t.imageComplete(2);
-            return;
-          }
+        if (null == ((li) this).field_t) {
+          return;
         } else {
+          ((li) this).field_t.setPixels(param1, param0, param2, param4, ((li) this).field_s, ((li) this).field_m, ((li) this).field_n * param0 + param1, ((li) this).field_n);
+          ((li) this).field_t.imageComplete(2);
           return;
         }
     }
@@ -109,7 +103,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_v = null;
         field_y = null;
     }

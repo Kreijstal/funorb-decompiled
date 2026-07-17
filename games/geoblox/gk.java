@@ -15,7 +15,8 @@ final class gk {
 
     final static int a(int param0, int param1, boolean param2, byte param3) {
         int var4 = -21 / ((param3 - 8) / 34);
-        return gb.a(-1);
+        int discarded$0 = -1;
+        return gb.a();
     }
 
     public static void a(int param0) {

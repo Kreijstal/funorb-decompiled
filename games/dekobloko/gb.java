@@ -117,13 +117,10 @@ final class gb extends w {
 
     final static void a(int param0, String param1) {
         rm.a((byte) 73, param1);
-        if (param0 >= -68) {
-            return;
-        }
         try {
             wi.a(false, -106, jc.field_a);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "gb.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "gb.D(" + -103 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -225,7 +222,7 @@ final class gb extends w {
         if (!(var4 == 0)) {
             ie.field_c.a(false, param1);
         }
-        int var5 = -27 % ((param2 - -66) / 56);
+        int var5 = 0;
         int var6 = mg.field_bc.g(-108) + mg.field_bc.field_E;
         if (var6 > 640) {
             l.field_f = l.field_f + 5;
@@ -293,7 +290,7 @@ final class gb extends w {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_ac = null;
         field_Pb = null;
         field_Tb = null;

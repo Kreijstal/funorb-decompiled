@@ -9,7 +9,7 @@ final class rh extends nv implements ut {
     static String field_r;
     private jma field_p;
 
-    public static void l(int param0) {
+    public static void l() {
         field_o = null;
         field_q = null;
         field_r = null;
@@ -53,13 +53,13 @@ final class rh extends nv implements ut {
         if (param1 > -98) {
           field_r = null;
           var2 = ql.field_k;
-          var2.k(param0, -2988);
+          var2.k(4, -2988);
           var2.i(1, 0);
           var2.i(2, 0);
           return;
         } else {
           var2 = ql.field_k;
-          var2.k(param0, -2988);
+          var2.k(4, -2988);
           var2.i(1, 0);
           var2.i(2, 0);
           return;

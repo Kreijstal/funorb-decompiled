@@ -134,7 +134,8 @@ final class ma extends ka {
         try {
           L0: {
             if (param1 == 2) {
-              stackOut_3_0 = fc.a(10, param0, (byte) -108, true);
+              int discarded$2 = 1;
+              stackOut_3_0 = fc.a(10, param0, (byte) -108);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -261,7 +262,7 @@ final class ma extends ka {
         super(param0, param1, param2, 7);
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_r = null;
         field_q = null;
         field_s = null;

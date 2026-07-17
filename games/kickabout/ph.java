@@ -13,14 +13,16 @@ final class ph {
         return !kb.field_C;
     }
 
-    final static void b(boolean param0) {
-        int var1 = uc.h((byte) -118);
+    final static void b() {
+        int discarded$0 = -118;
+        int var1 = uc.h();
         int var2 = qo.e((byte) 18);
         oi.field_g.a(nb.field_k + -is.field_d, var2 + (jm.field_e << 1), hm.field_I + -jm.field_e, var1 - -(is.field_d << 1), 3);
-        na.k(0);
+        int discarded$1 = 0;
+        na.k();
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (null == cb.field_d) {
           if (null != pg.field_d) {
             pg.field_d.c();
@@ -59,7 +61,7 @@ final class ph {
             return;
         }
         ba.a(false, 6, 4);
-        int var1 = 5;
+        int var1 = -31 / ((param0 - 88) / 33);
     }
 
     static {

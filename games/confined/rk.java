@@ -104,10 +104,11 @@ class rk {
             gg.field_q = ua.a("commonui", -563, param3, "validation");
             fa.field_Q = (ok) (Object) ej.a("arezzo12", param3, param2, "commonui", 0);
             gm.field_cb = (ok) (Object) ej.a("arezzo14", param3, param2, "commonui", 0);
-            var4_int = -4 % ((68 - param1) / 50);
+            var4_int = 0;
             fd.field_k = (ok) (Object) ej.a("arezzo14bold", param3, param2, "commonui", 0);
             var5 = new nf(param0.a(110, "button.gif", ""), (java.awt.Component) (Object) fb.field_b);
-            bm discarded$1 = pm.a(param3, "commonui", "dropdown", (byte) 112);
+            int discarded$5 = 112;
+            bm discarded$6 = pm.a(param3, "commonui", "dropdown");
             var6 = ql.a("commonui", (byte) 90, "screen_options", param3);
             qm.field_B = new bm[4];
             jg.field_d = new bm[4];
@@ -130,7 +131,8 @@ class rk {
                 L2: while (true) {
                   if (var10 >= 3) {
                     var10 = var5.field_w;
-                    mk.b(128);
+                    int discarded$7 = 128;
+                    mk.b();
                     var5.d();
                     fn.c(0, 0, fn.field_g, fn.field_l);
                     var16 = new nf(var10, var10);
@@ -143,7 +145,8 @@ class rk {
                     var13 = new nf(var5.field_u - 2 * var10, var10);
                     var13.d();
                     var5.c(-var10, 0);
-                    ib.b(false);
+                    int discarded$8 = 0;
+                    ib.b();
                     em.field_d = new nf[]{var16, var13, var12};
                     break L0;
                   } else {
@@ -155,7 +158,8 @@ class rk {
                         var10++;
                         continue L2;
                       } else {
-                        var15[var12_int] = jl.a(var21[var12_int], var6[var10], 0);
+                        int discarded$9 = 0;
+                        var15[var12_int] = jl.a(var21[var12_int], var6[var10]);
                         var12_int++;
                         continue L3;
                       }
@@ -199,7 +203,7 @@ class rk {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(122).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

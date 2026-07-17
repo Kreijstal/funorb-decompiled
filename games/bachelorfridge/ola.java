@@ -44,7 +44,7 @@ final class ola {
                   if (this.a(mk.field_p, gd.field_m, false)) {
                     var5 = ((ola) this).a(mk.field_p, -4456, gd.field_m);
                     if (var5 != null) {
-                      int discarded$1 = this.b(-1, gd.field_m);
+                      int discarded$3 = this.b(-1, gd.field_m);
                       var5.a(false);
                       var5.g(0);
                       ((ola) this).field_j = new ula(mk.field_p, gd.field_m, var5, var5.field_u, var5.field_l);
@@ -103,7 +103,8 @@ final class ola {
                           break L2;
                         } else {
                           ((ola) this).field_c.field_k = ((ola) this).field_j.field_c;
-                          ((ola) this).field_c.field_s = new gaa(100, 150, 440, 160, this.f(83), ((ola) this).field_c.field_k);
+                          int discarded$4 = 83;
+                          ((ola) this).field_c.field_s = new gaa(100, 150, 440, 160, this.f(), ((ola) this).field_c.field_k);
                           break L2;
                         }
                       }
@@ -145,7 +146,8 @@ final class ola {
             break L4;
           }
         }
-        this.a(-11);
+        int discarded$5 = -11;
+        this.a();
         if (null != dc.field_y) {
           L5: {
             var2 = 0;
@@ -509,7 +511,7 @@ final class ola {
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -755,7 +757,7 @@ final class ola {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         ep.a(17, 8192);
     }
 
@@ -930,7 +932,7 @@ final class ola {
         return false;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var3 = 0;
         L0: {
           var3 = BachelorFridge.field_y;
@@ -972,7 +974,8 @@ final class ola {
                         }
                       }
                     }
-                    qa.d(123);
+                    int discarded$1 = 123;
+                    qa.d();
                     break L3;
                   }
                 }
@@ -1138,7 +1141,8 @@ final class ola {
                         if (var5 >= var4) {
                           break L0;
                         } else {
-                          var6 = gka.a(param1, 255);
+                          int discarded$5 = 255;
+                          var6 = gka.a(param1);
                           ((ola) this).field_m.a((bw) (Object) var6, true);
                           var5++;
                           continue L3;
@@ -1463,7 +1467,7 @@ final class ola {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_p = null;
         field_e = null;
         field_g = null;
@@ -1567,7 +1571,7 @@ final class ola {
         return null;
     }
 
-    private final boolean f(int param0) {
+    private final boolean f() {
         int var2 = ((ola) this).field_m.g(0) - (-((ola) this).field_k.f(62) - 1);
         int var3 = 0;
         return var2 > 4 ? true : false;

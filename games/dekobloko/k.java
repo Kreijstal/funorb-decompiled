@@ -22,7 +22,7 @@ final class k {
         field_f = null;
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
@@ -46,7 +46,8 @@ final class k {
         try {
           L0: {
             var3 = (CharSequence) (Object) param0;
-            stackOut_2_0 = h.field_c.equals((Object) (Object) kf.a(var3, (byte) 2));
+            int discarded$2 = 2;
+            stackOut_2_0 = h.field_c.equals((Object) (Object) kf.a(var3));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -83,8 +84,9 @@ final class k {
         return stackIn_3_0;
     }
 
-    final static void a(byte param0) {
-        jg.a(se.h(25144), 0);
+    final static void a() {
+        int discarded$0 = 0;
+        jg.a(se.h(25144));
     }
 
     static {

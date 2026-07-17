@@ -252,7 +252,7 @@ final class si {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_n = null;
         field_c = null;
         field_o = null;
@@ -327,9 +327,6 @@ final class si {
 
     final static void a(int param0, boolean param1) {
         gp.field_d.a(true, param1);
-        if (param0 != 7070) {
-            return;
-        }
         mo var2 = vd.field_a;
         if (var2 == null) {
             return;

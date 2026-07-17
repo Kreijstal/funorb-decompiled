@@ -8,14 +8,11 @@ final class pe extends l {
     static int field_k;
     int field_i;
 
-    final static void a(java.awt.Component param0, i param1, pd param2, boolean param3, byte param4, int param5) {
-        if (param4 >= -4) {
-            return;
-        }
+    final static void a(java.awt.Component param0, i param1, pd param2, boolean param3) {
         try {
             wl.a(param2, param1, 1024, 106, param3, param0, 22050, 22050);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "pe.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + 22050 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "pe.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + -18 + 44 + 22050 + 41);
         }
     }
 
@@ -29,26 +26,26 @@ final class pe extends l {
         try {
             var5_int = df.field_e * param0 + param2;
             var6 = param4 * df.field_e + var5_int;
-            var7 = (param1 & 16711422) >> 1;
+            var7 = 537927;
             var8 = 0;
             var9 = var5_int;
             while (var6 > var9) {
-                df.field_d[var9] = 0 == var8 % 2 ? var7 : param1;
+                df.field_d[var9] = 0 == var8 % 2 ? var7 : 1141646;
                 var8++;
                 var9 = var9 + df.field_e;
             }
             var9 = -57 / ((-54 - param3) / 53);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "pe.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "pe.D(" + param0 + 44 + 1141646 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         int var1 = -99;
     }
 
-    final static String a(String param0, String param1, eh param2, int param3, int param4) {
+    final static String a(String param0, String param1, eh param2) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -107,7 +104,7 @@ final class pe extends l {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              stackOut_4_0 = param1 + " - " + param2.b((byte) 113, param3) + "%";
+              stackOut_4_0 = param1 + " - " + param2.b((byte) 113, 0) + "%";
               stackIn_5_0 = stackOut_4_0;
               break L0;
             }
@@ -190,7 +187,7 @@ final class pe extends l {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 44 + 0 + 41);
+          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 0 + 44 + 0 + 41);
         }
         return stackIn_5_0;
     }
@@ -361,7 +358,7 @@ final class pe extends l {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         db.field_k = null;
         k.field_c = null;
         gb.field_F = null;

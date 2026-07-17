@@ -37,11 +37,12 @@ final class ua {
         var5 = DungeonAssault.field_K;
         try {
           L0: {
-            if (mk.a(param1, param2, (byte) 64)) {
+            int discarded$6 = 64;
+            if (mk.a(false, param2)) {
               var3_int = 0;
               L1: while (true) {
                 if (param2.length() <= var3_int) {
-                  var4 = 108 % ((param0 - 72) / 33);
+                  var4 = 0;
                   stackOut_10_0 = 1;
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
@@ -67,7 +68,7 @@ final class ua {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("ua.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("ua.B(").append(122).append(44).append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -106,7 +107,7 @@ final class ua {
         return (java.awt.Container) (Object) m.c(true);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_b = null;

@@ -15,7 +15,7 @@ final class gd extends um {
     static String field_A;
     hg field_r;
 
-    private final void a(int param0, int param1, int param2, cg param3, int[] param4, boolean param5) {
+    private final void a(int param0, int param1, int param2, cg param3, int[] param4) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -649,11 +649,13 @@ final class gd extends um {
                     var4_int = param1;
                     L3: while (true) {
                       if (var5 <= var6.field_M) {
-                        this.a(var4_int, var5, var4_int - -var5, var6, param0, false);
+                        int discarded$20 = 0;
+                        this.a(var4_int, var5, var4_int - -var5, var6, param0);
                         var6.field_M = var6.field_M - var5;
                         break L2;
                       } else {
-                        this.a(var4_int, var6.field_M, var4_int - -var5, var6, param0, false);
+                        int discarded$21 = 0;
+                        this.a(var4_int, var6.field_M, var4_int - -var5, var6, param0);
                         var4_int = var4_int + var6.field_M;
                         var5 = var5 - var6.field_M;
                         if (!((gd) this).field_u.a(var5, var6, 1387831944, param0, var4_int)) {
@@ -727,7 +729,7 @@ final class gd extends um {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = 104 % ((-3 - param1) / 48);
+            var3_int = 0;
             stackOut_0_0 = param2.c(param0, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -737,7 +739,7 @@ final class gd extends um {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("gd.F(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("gd.F(").append(param0).append(44).append(-61).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

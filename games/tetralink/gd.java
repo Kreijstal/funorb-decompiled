@@ -24,10 +24,7 @@ final class gd extends hl {
     static int[] field_Zb;
     String field_Yb;
 
-    public static void h(int param0) {
-        if (param0 != 11042) {
-            return;
-        }
+    public static void h() {
         field_Zb = null;
         field_ec = null;
     }
@@ -226,7 +223,7 @@ final class gd extends hl {
         }
     }
 
-    final static oh[] e(byte param0) {
+    final static oh[] e() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -251,12 +248,9 @@ final class gd extends hl {
     final static void a(String param0, int param1, String param2, int param3, rb param4, int[] param5, long param6, hl param7, int param8) {
         try {
             bi.field_d = param4;
-            if (param1 != 255) {
-                gd.h(-71);
-            }
             hd.field_s = new pf(param7, param6, param0, param2, param8, param3, param5);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "gd.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "gd.A(" + (param0 != null ? "{...}" : "null") + 44 + 255 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
         }
     }
 
@@ -334,9 +328,6 @@ final class gd extends hl {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         jj.field_b = param3;
-        if (param1) {
-            return;
-        }
         rn.field_b = param4;
         la.field_e = param2;
         bj.field_d = param0;

@@ -94,7 +94,7 @@ final class nc {
         ((nc) this).field_a = true;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         hh.field_o = 0;
         if (!(null != ug.field_o)) {
@@ -104,19 +104,14 @@ final class nc {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        if (param0 <= -79) {
-          if (ob.field_j <= param3 - param4) {
-            if (param3 - -param4 <= mt.field_o) {
-              if (-param4 + param1 >= lua.field_c) {
-                if (hab.field_i < param4 + param1) {
-                  ffb.a(param4, (byte) -89, param1, param2, param3);
-                  return;
-                } else {
-                  wlb.a(param2, param3, param1, param4, 2);
-                  return;
-                }
-              } else {
+        if (ob.field_j <= param3 - param4) {
+          if (param3 - -param4 <= mt.field_o) {
+            if (-param4 + param1 >= lua.field_c) {
+              if (hab.field_i < param4 + param1) {
                 ffb.a(param4, (byte) -89, param1, param2, param3);
+                return;
+              } else {
+                wlb.a(param2, param3, param1, param4, 2);
                 return;
               }
             } else {
@@ -128,29 +123,8 @@ final class nc {
             return;
           }
         } else {
-          nc.b(-58);
-          if (ob.field_j <= param3 - param4) {
-            if (param3 - -param4 <= mt.field_o) {
-              if (-param4 + param1 >= lua.field_c) {
-                if (hab.field_i < param4 + param1) {
-                  ffb.a(param4, (byte) -89, param1, param2, param3);
-                  return;
-                } else {
-                  wlb.a(param2, param3, param1, param4, 2);
-                  return;
-                }
-              } else {
-                ffb.a(param4, (byte) -89, param1, param2, param3);
-                return;
-              }
-            } else {
-              ffb.a(param4, (byte) -89, param1, param2, param3);
-              return;
-            }
-          } else {
-            ffb.a(param4, (byte) -89, param1, param2, param3);
-            return;
-          }
+          ffb.a(param4, (byte) -89, param1, param2, param3);
+          return;
         }
     }
 

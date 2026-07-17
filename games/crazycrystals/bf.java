@@ -6,7 +6,7 @@ final class bf {
     static int field_c;
     static int field_b;
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -140,7 +140,8 @@ final class bf {
           L0: {
             var4_int = param3.a(param2, param0);
             var5 = param3.a(param0 ^ 2861, param1, var4_int);
-            stackOut_0_0 = wl.a(var5, var4_int, param3, 100);
+            int discarded$2 = 100;
+            stackOut_0_0 = wl.a(var5, var4_int, param3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -227,7 +228,7 @@ final class bf {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

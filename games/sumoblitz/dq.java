@@ -64,7 +64,8 @@ class dq extends dp {
               if (var4 == null) {
                 break L0;
               } else {
-                k.a(var4, param1, (byte) 117);
+                int discarded$4 = 117;
+                k.a(var4, param1);
                 var4 = (pd) (Object) vu.field_g.d((byte) 18);
                 continue L2;
               }
@@ -77,7 +78,7 @@ class dq extends dp {
         }
     }
 
-    private final void a(dq param0, byte param1) {
+    private final void a(dq param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_98_0 = null;
         StringBuilder stackIn_98_1 = null;
@@ -494,7 +495,8 @@ class dq extends dp {
           L0: {
             L1: {
               ((dq) this).field_h = param0;
-              this.a(param1, (byte) -128);
+              int discarded$2 = -128;
+              this.a(param1);
               if (param6 == null) {
                 break L1;
               } else {

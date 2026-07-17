@@ -113,12 +113,6 @@ final class oi {
     }
 
     final static void a(int param0, int param1) {
-        if (param1 != 20665) {
-            Object var3 = null;
-            oe discarded$0 = oi.a((java.awt.Canvas) null, 77, -52, -1);
-            dh.field_c = param0;
-            return;
-        }
         dh.field_c = param0;
     }
 

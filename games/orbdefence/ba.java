@@ -11,41 +11,17 @@ final class ba {
     static im field_b;
 
     final static qg[] a(int param0) {
-        qg[] var1 = null;
         int var2 = 0;
-        int var3 = 0;
-        var3 = OrbDefence.field_D ? 1 : 0;
-        if (param0 == 17867) {
-          var1 = new qg[ec.field_K];
-          var2 = 0;
-          L0: while (true) {
-            if (ec.field_K <= var2) {
-              md.a((byte) -127);
-              return var1;
-            } else {
-              var1[var2] = new qg(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], fl.field_a[var2], vc.field_g);
-              var2++;
-              continue L0;
-            }
-          }
-        } else {
-          field_b = null;
-          var1 = new qg[ec.field_K];
-          var2 = 0;
-          L1: while (true) {
-            if (ec.field_K <= var2) {
-              md.a((byte) -127);
-              return var1;
-            } else {
-              var1[var2] = new qg(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], fl.field_a[var2], vc.field_g);
-              var2++;
-              continue L1;
-            }
-          }
+        int var3 = OrbDefence.field_D ? 1 : 0;
+        qg[] var1 = new qg[ec.field_K];
+        for (var2 = 0; ec.field_K > var2; var2++) {
+            var1[var2] = new qg(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], fl.field_a[var2], vc.field_g);
         }
+        md.a((byte) -127);
+        return var1;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -113,7 +89,7 @@ final class ba {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_g = null;
         field_e = null;

@@ -298,7 +298,7 @@ final class oqb extends le {
         return var12;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_k = null;
         field_n = null;
     }
@@ -410,37 +410,33 @@ final class oqb extends le {
     private final boolean c(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        var4 = (-param2 + param0) * ((oqb) this).field_q >> 12;
-        var5 = jmb.field_q[(var4 * 255 & 1047718) >> 12];
-        var5 = (var5 << 12) / ((oqb) this).field_q;
-        if (param1 == -23429) {
-          L0: {
-            L1: {
-              var5 = (var5 << 12) / ((oqb) this).field_m;
-              var5 = var5 * ((oqb) this).field_p >> 12;
-              if (var5 <= param2 - -param0) {
+        int stackIn_4_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_3_0 = 0;
+        L0: {
+          L1: {
+            var4 = (-param2 + param0) * ((oqb) this).field_q >> 12;
+            var5 = jmb.field_q[(var4 * 255 & 1047718) >> 12];
+            var5 = (var5 << 12) / ((oqb) this).field_q;
+            var5 = (var5 << 12) / ((oqb) this).field_m;
+            var5 = var5 * ((oqb) this).field_p >> 12;
+            if (var5 <= param2 - -param0) {
+              break L1;
+            } else {
+              if (-var5 >= param0 + param2) {
                 break L1;
               } else {
-                if (-var5 >= param0 + param2) {
-                  break L1;
-                } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L0;
-                }
+                stackOut_2_0 = 1;
+                stackIn_4_0 = stackOut_2_0;
+                break L0;
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L0;
           }
-          return stackIn_6_0 != 0;
-        } else {
-          return true;
+          stackOut_3_0 = 0;
+          stackIn_4_0 = stackOut_3_0;
+          break L0;
         }
+        return stackIn_4_0 != 0;
     }
 
     static {

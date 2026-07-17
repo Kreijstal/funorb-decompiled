@@ -16,25 +16,21 @@ final class hq {
         int var3 = 0;
         int var4 = 0;
         var4 = Torquing.field_u;
-        if (param0 != -6) {
-          return -92;
-        } else {
-          var3 = ((hq) this).field_f.length;
-          L0: while (true) {
-            if (var3 > param1) {
-              return var3;
+        var3 = ((hq) this).field_f.length;
+        L0: while (true) {
+          if (var3 > param1) {
+            return var3;
+          } else {
+            if (!((hq) this).field_g) {
+              var3 = var3 + ((hq) this).field_b;
+              continue L0;
             } else {
-              if (!((hq) this).field_g) {
-                var3 = var3 + ((hq) this).field_b;
+              if (var3 != 0) {
+                var3 = var3 * ((hq) this).field_b;
                 continue L0;
               } else {
-                if (var3 != 0) {
-                  var3 = var3 * ((hq) this).field_b;
-                  continue L0;
-                } else {
-                  var3 = 1;
-                  continue L0;
-                }
+                var3 = 1;
+                continue L0;
               }
             }
           }
@@ -83,38 +79,13 @@ final class hq {
     }
 
     private final void a(int param0, boolean param1, int param2) {
-        L0: {
-          if (((hq) this).field_i < param2) {
+        if (!(((hq) this).field_i >= param2)) {
             ((hq) this).field_i = param2;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (!param1) {
-          L1: {
-            ((hq) this).field_g = true;
-            if (((hq) this).field_f.length <= param2) {
-              this.a(0, param2);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          ((hq) this).field_f[param2] = param0;
-          return;
-        } else {
-          L2: {
-            if (((hq) this).field_f.length <= param2) {
-              this.a(0, param2);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          ((hq) this).field_f[param2] = param0;
-          return;
+        if (!(((hq) this).field_f.length > param2)) {
+            this.a(0, param2);
         }
+        ((hq) this).field_f[param2] = param0;
     }
 
     final void d(int param0, int param1) {
@@ -127,7 +98,7 @@ final class hq {
     private final void a(int param0, int param1) {
         int[] var4 = new int[this.a((byte) -6, param1)];
         int[] var3 = var4;
-        dk.a(((hq) this).field_f, param0, var4, 0, ((hq) this).field_f.length);
+        dk.a(((hq) this).field_f, 0, var4, 0, ((hq) this).field_f.length);
         ((hq) this).field_f = var4;
     }
 

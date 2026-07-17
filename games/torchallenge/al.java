@@ -43,22 +43,22 @@ final class al extends sh {
         field_x = null;
     }
 
-    final static void b(int param0, boolean param1) {
-        cj.field_i = 1000000000L / (long)param0;
+    final static void b() {
+        cj.field_i = 20000000L;
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         Object var2 = null;
         wk.a((String) null, -105, mj.field_d);
     }
 
-    final static Boolean d(byte param0) {
+    final static Boolean d() {
         Boolean var1 = bd.field_k;
         bd.field_k = null;
         return var1;
     }
 
-    final static nf a(lj param0, int param1, int param2, lj param3, int param4) {
+    final static nf a(lj param0, int param1, int param2, lj param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;

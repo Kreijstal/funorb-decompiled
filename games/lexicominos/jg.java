@@ -103,7 +103,7 @@ final class jg extends tj {
         return stackIn_10_0;
     }
 
-    final static mb c(boolean param0) {
+    final static mb c() {
         if (bk.field_c == c.field_m) {
             throw new IllegalStateException();
         }
@@ -167,7 +167,8 @@ final class jg extends tj {
                 if (param1.equals((Object) (Object) ((jg) this).field_n)) {
                   break L1;
                 } else {
-                  var3 = ua.a(param1, 99);
+                  int discarded$2 = 99;
+                  var3 = ua.a(param1);
                   if (var3.b(12)) {
                     ((jg) this).field_n = param1;
                     ((jg) this).field_l = var3.a(12);

@@ -62,7 +62,7 @@ final class h extends hl {
         return qf.field_I[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + nf.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         gi var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -139,21 +139,18 @@ final class h extends hl {
     final static kc[] b(int param0, int param1, int param2, int param3, int param4) {
         kc[] var6 = new kc[9];
         kc[] var5 = var6;
-        kc dupTemp$0 = te.a(param0, -127, param1);
+        kc dupTemp$0 = te.a(1, -127, param1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        kc dupTemp$1 = te.a(param0, -126, param4);
+        kc dupTemp$1 = te.a(1, -126, param4);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 != 0) {
             var6[4] = te.a(64, -126, param3);
-        }
-        if (param2 != 15762) {
-            return null;
         }
         return var5;
     }
@@ -296,7 +293,7 @@ final class h extends hl {
         return stackIn_23_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_E = null;
         field_I = null;
     }

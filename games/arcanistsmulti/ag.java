@@ -596,7 +596,7 @@ class ag extends qm {
         }
     }
 
-    final static void a(ij param0, byte param1) {
+    final static void a(ij param0) {
         if (param0 == null) {
             return;
         }
@@ -618,7 +618,7 @@ class ag extends qm {
         return ((ag) this).field_y;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_C = null;
         field_x = null;
         field_D = null;

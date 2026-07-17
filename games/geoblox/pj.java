@@ -15,7 +15,7 @@ final class pj extends hf {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_i = null;
         field_g = null;
         field_f = null;

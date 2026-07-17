@@ -35,20 +35,11 @@ abstract class gn extends b {
         return stackIn_5_0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_w = null;
-        if (param0 != 0) {
-          field_A = null;
-          field_C = null;
-          field_y = null;
-          field_A = null;
-          return;
-        } else {
-          field_C = null;
-          field_y = null;
-          field_A = null;
-          return;
-        }
+        field_C = null;
+        field_y = null;
+        field_A = null;
     }
 
     final ae g(byte param0) {
@@ -161,12 +152,7 @@ abstract class gn extends b {
     }
 
     final static iu[] b(int param0, int param1, int param2, int param3) {
-        if (param1 != 1) {
-          gn.c(91);
-          return ura.a(param2, param0, false, 1, param3);
-        } else {
-          return ura.a(param2, param0, false, 1, param3);
-        }
+        return ura.a(param2, param0, false, 1, param3);
     }
 
     gn(jta param0, int param1, int param2) {

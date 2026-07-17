@@ -7,13 +7,12 @@ final class jl extends gi {
     static sb field_k;
     static he field_h;
 
-    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(boolean param0, boolean param1, boolean param2) {
         int var4 = 0;
         var4 = 0;
         if (param0) {
           L0: {
             var4 += 4;
-            field_i = null;
             if (param2) {
               var4 += 2;
               break L0;
@@ -32,7 +31,6 @@ final class jl extends gi {
           return kk.field_d[var4];
         } else {
           L2: {
-            field_i = null;
             if (param2) {
               var4 += 2;
               break L2;
@@ -90,9 +88,6 @@ final class jl extends gi {
             param1 = param1 >> 8;
             var2 += 8;
         }
-        if (param0 < 3) {
-            return -108;
-        }
         if (!(-16 <= param1)) {
             param1 = param1 >> 4;
             var2 += 4;
@@ -108,7 +103,7 @@ final class jl extends gi {
         return var2;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
         field_i = null;
         field_h = null;

@@ -7,30 +7,26 @@ final class jm {
     static String field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (param0 == 28679) {
-          if (wk.field_h == null) {
-            return;
-          } else {
-            var1 = (Object) (Object) wk.field_h;
-            synchronized (var1) {
-              L0: {
-                wk.field_h = null;
-                break L0;
-              }
-            }
-            return;
-          }
+        if (wk.field_h == null) {
+          return;
         } else {
+          var1 = (Object) (Object) wk.field_h;
+          synchronized (var1) {
+            L0: {
+              wk.field_h = null;
+              break L0;
+            }
+          }
           return;
         }
     }

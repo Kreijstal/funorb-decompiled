@@ -613,7 +613,7 @@ class ib extends oc implements sd {
         }
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean a(int[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -697,7 +697,6 @@ class ib extends oc implements sd {
         oc var6 = null;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -736,28 +735,19 @@ class ib extends oc implements sd {
             var6 = (oc) (Object) var5.a(240);
             L1: while (true) {
               if (var6 == null) {
-                L2: {
-                  if (param2 > 52) {
-                    break L2;
-                  } else {
-                    var9 = null;
-                    boolean discarded$8 = ((ib) this).a((oc) null, (byte) -19);
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
-                StringBuilder discarded$9 = param0.append(10);
+                StringBuilder discarded$6 = param0.append(10);
                 var7 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (param1 < var7) {
-                    StringBuilder discarded$10 = var6.a(param1 + 1, param3, 24, param0);
+                    StringBuilder discarded$7 = var6.a(param1 + 1, param3, 24, param0);
                     var6 = (oc) (Object) var5.b(7);
                     continue L1;
                   } else {
-                    StringBuilder discarded$11 = param0.append(32);
+                    StringBuilder discarded$8 = param0.append(32);
                     var7++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -765,7 +755,7 @@ class ib extends oc implements sd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5_ref;
             stackOut_10_1 = new StringBuilder().append("ib.MB(");
@@ -780,7 +770,7 @@ class ib extends oc implements sd {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L4;
+              break L3;
             } else {
               stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
               stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
@@ -788,12 +778,12 @@ class ib extends oc implements sd {
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_13_2 = stackOut_11_2;
-              break L4;
+              break L3;
             }
           }
-          L5: {
+          L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44).append(104).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -805,7 +795,7 @@ class ib extends oc implements sd {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L5;
+              break L4;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -813,7 +803,7 @@ class ib extends oc implements sd {
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L5;
+              break L4;
             }
           }
           throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
@@ -842,117 +832,115 @@ class ib extends oc implements sd {
           if (param3 <= 0) {
             break L1;
           } else {
-            if (param3 > 5) {
-              break L1;
-            } else {
-              var9_int = 2048 * param3 / 5;
-              var7 = 295 - -(3 * sa.a(var9_int, -4097) >> 16);
-              var8 = -(3 * BrickABrac.c(2048, var9_int) >> 16) + 8;
-              break L1;
-            }
-          }
-        }
-        if (!param1) {
-          L2: {
-            param3 -= 5;
-            if (param3 <= 0) {
-              break L2;
-            } else {
-              if (param3 <= 413) {
-                var7 = 298;
-                var8 = param3 + 8;
+            L2: {
+              if (param3 > 5) {
                 break L2;
               } else {
+                var9_int = 2048 * param3 / 5;
+                var7 = 295 - -(3 * sa.a(var9_int, -4097) >> 16);
+                var8 = -(3 * BrickABrac.c(2048, var9_int) >> 16) + 8;
                 break L2;
               }
             }
+            break L1;
           }
-          L3: {
-            param3 -= 413;
-            if (param3 <= 0) {
+        }
+        L3: {
+          param3 -= 5;
+          if (param3 <= 0) {
+            break L3;
+          } else {
+            if (param3 <= 413) {
+              var7 = 298;
+              var8 = param3 + 8;
               break L3;
             } else {
-              if (param3 > 5) {
-                break L3;
-              } else {
-                var9_int = param3 * 2048 / 5;
-                var7 = 295 - -(3 * BrickABrac.c(2048, var9_int) >> 16);
-                var8 = (sa.a(var9_int, -4097) * 3 >> 16) + 421;
-                break L3;
-              }
+              break L3;
             }
           }
-          L4: {
-            param3 -= 5;
-            if (0 >= param3) {
+        }
+        L4: {
+          param3 -= 413;
+          if (param3 <= 0) {
+            break L4;
+          } else {
+            if (param3 > 5) {
               break L4;
             } else {
-              if (param3 > 284) {
-                break L4;
-              } else {
-                var7 = 295 + -param3;
-                var8 = 424;
-                break L4;
-              }
+              var9_int = param3 * 2048 / 5;
+              var7 = 295 - -(3 * BrickABrac.c(2048, var9_int) >> 16);
+              var8 = (sa.a(var9_int, -4097) * 3 >> 16) + 421;
+              break L4;
             }
           }
-          L5: {
-            param3 -= 284;
-            if (0 >= param3) {
+        }
+        L5: {
+          param3 -= 5;
+          if (0 >= param3) {
+            break L5;
+          } else {
+            if (param3 > 284) {
               break L5;
             } else {
-              if (param3 > 5) {
-                break L5;
-              } else {
-                var9_int = param3 * 2048 / 5;
-                var7 = -(3 * sa.a(var9_int, -4097) >> 16) + 11;
-                var8 = 421 + (BrickABrac.c(2048, var9_int) * 3 >> 16);
-                break L5;
-              }
+              var7 = 295 + -param3;
+              var8 = 424;
+              break L5;
             }
           }
-          L6: {
-            param3 -= 5;
-            if (param3 <= 0) {
+        }
+        L6: {
+          param3 -= 284;
+          if (0 >= param3) {
+            break L6;
+          } else {
+            if (param3 > 5) {
               break L6;
             } else {
-              if (param3 <= 413) {
-                var7 = 8;
-                var8 = 421 - param3;
-                break L6;
-              } else {
-                break L6;
-              }
+              var9_int = param3 * 2048 / 5;
+              var7 = -(3 * sa.a(var9_int, -4097) >> 16) + 11;
+              var8 = 421 + (BrickABrac.c(2048, var9_int) * 3 >> 16);
+              break L6;
             }
           }
-          L7: {
-            param3 -= 413;
-            if (param3 > 0) {
-              var9_int = 2048 * param3 / 5;
-              var7 = 11 - (3 * BrickABrac.c(2048, var9_int) >> 16);
-              var8 = 8 + -(sa.a(var9_int, -4097) * 3 >> 16);
-              break L7;
-            } else {
-              break L7;
-            }
-          }
-          L8: {
-            var9 = tf.field_g[param0];
-            param6 = param6 + (-(var9.field_x / 2) + var7);
-            param5 = param5 + (-(var9.field_z / 2) + var8);
-            if (param4) {
-              nb.a(-111, param5, param6, lk.field_n[param0]);
-              rn.field_a[param0].f(param6, param5, 256);
-              break L8;
-            } else {
-              break L8;
-            }
-          }
-          var9.c(param6, param5);
-          return;
-        } else {
-          return;
         }
+        L7: {
+          param3 -= 5;
+          if (param3 <= 0) {
+            break L7;
+          } else {
+            if (param3 <= 413) {
+              var7 = 8;
+              var8 = 421 - param3;
+              break L7;
+            } else {
+              break L7;
+            }
+          }
+        }
+        L8: {
+          param3 -= 413;
+          if (param3 > 0) {
+            var9_int = 2048 * param3 / 5;
+            var7 = 11 - (3 * BrickABrac.c(2048, var9_int) >> 16);
+            var8 = 8 + -(sa.a(var9_int, -4097) * 3 >> 16);
+            break L8;
+          } else {
+            break L8;
+          }
+        }
+        L9: {
+          var9 = tf.field_g[param0];
+          param6 = param6 + (-(var9.field_x / 2) + var7);
+          param5 = param5 + (-(var9.field_z / 2) + var8);
+          if (param4) {
+            nb.a(-111, param5, param6, lk.field_n[param0]);
+            rn.field_a[param0].f(param6, param5, 256);
+            break L9;
+          } else {
+            break L9;
+          }
+        }
+        var9.c(param6, param5);
     }
 
     final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {

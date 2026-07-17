@@ -324,7 +324,7 @@ final class dl extends eu {
         ((dl) this).field_m = 0.0f;
     }
 
-    final static void a(br param0, byte param1) {
+    final static void a(br param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

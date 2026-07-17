@@ -154,7 +154,8 @@ final class ea implements Runnable {
             var4.field_w = param0;
             var4.field_h = (long)param2;
             var4.field_q = false;
-            this.a(var4, -6778);
+            int discarded$2 = -6778;
+            this.a(var4);
             if (param1 <= -108) {
               stackOut_3_0 = (se) var4;
               stackIn_4_0 = stackOut_3_0;
@@ -368,7 +369,7 @@ final class ea implements Runnable {
         }
     }
 
-    private final void a(se param0, int param1) {
+    private final void a(se param0) {
         synchronized (((ea) this).field_e) {
             ((ea) this).field_e.a((eo) (Object) param0, (byte) 106);
             ((ea) this).field_b = ((ea) this).field_b + 1;
@@ -528,7 +529,8 @@ final class ea implements Runnable {
               var5.field_h = (long)param2;
               var5.field_w = param0;
               var5.field_t = param1;
-              this.a(var5, -6778);
+              int discarded$2 = -6778;
+              this.a(var5);
               if (param3 == 5) {
                 break L1;
               } else {

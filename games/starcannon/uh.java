@@ -16,7 +16,7 @@ class uh extends rf {
         int var5 = StarCannon.field_A;
         char[] var6 = new char[param0];
         char[] var3 = var6;
-        for (var4 = param1; param0 > var4; var4++) {
+        for (var4 = 0; param0 > var4; var4++) {
             var6[var4] = '*';
         }
         return new String(var6);

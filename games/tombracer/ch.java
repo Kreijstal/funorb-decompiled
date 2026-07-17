@@ -66,7 +66,7 @@ final class ch implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         int var1 = 56;
     }

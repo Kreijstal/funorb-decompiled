@@ -11,10 +11,12 @@ final class vn extends lka implements mca {
           if (null != ((vn) this).field_h) {
             if (param0 != 16) {
               ((vn) this).field_P = 104;
-              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p), false);
+              int discarded$4 = 0;
+              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p));
               return ((vn) this).field_h;
             } else {
-              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p), false);
+              int discarded$5 = 0;
+              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p));
               return ((vn) this).field_h;
             }
           } else {
@@ -156,22 +158,11 @@ final class vn extends lka implements mca {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        int var3 = 0;
-        if (param0 != -9938) {
-          return 66;
-        } else {
-          L0: {
-            var2 = 0;
-            if (0 != (param1 & 7)) {
-              var2 = 8 + -(param1 & 7);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          var3 = param1 - -var2;
-          return var3;
+        if (!(0 == (param1 & 7))) {
+            var2 = 8 + -(param1 & 7);
         }
+        int var3 = param1 - -var2;
+        return var3;
     }
 
     vn(String param0, pl param1, int param2) {

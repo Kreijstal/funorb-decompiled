@@ -7,12 +7,12 @@ final class vi {
     static String field_a;
     static String field_b;
 
-    final static void a(int param0) {
+    final static void a() {
         kg.field_m = -1;
         nd.field_i.d((byte) 66);
     }
 
-    final static byte a(char param0, boolean param1) {
+    final static byte a(char param0) {
         int var2 = 0;
         if (0 < param0) {
           if (param0 >= 128) {
@@ -478,7 +478,7 @@ final class vi {
         if (param0 <= 45) {
             return null;
         }
-        return di.a(param3, 16, false, -118, param2, param1);
+        return di.a(param3, 16, false, -118, 4, 16);
     }
 
     static {

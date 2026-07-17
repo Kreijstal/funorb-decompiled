@@ -12,7 +12,7 @@ final class wb {
     static java.security.SecureRandom field_a;
     static String field_h;
 
-    final static pb[] a(int param0, int param1, pf param2, int param3) {
+    final static pb[] a(int param0, int param1, pf param2) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         pb[] stackIn_6_0 = null;
@@ -83,7 +83,7 @@ final class wb {
         throw new IllegalStateException();
     }
 
-    final static va a(int param0, int param1, int param2, ej param3, int param4, int param5) {
+    final static va a(int param0, int param1, int param2, ej param3) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         va var7 = null;
@@ -109,16 +109,18 @@ final class wb {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var9 = oe.a(param3, param4, param2, 0, param0, -1);
+            int discarded$6 = -1;
+            int discarded$7 = 0;
+            var9 = oe.a(param3, 640, 480, 0);
             var6 = var9;
             if (var9 != null) {
               var7 = new va();
               var7.field_d = var9;
-              java.awt.Component discarded$2 = var7.field_d.add((java.awt.Component) (Object) var7);
-              var7.setBounds(0, 0, param4, param2);
+              java.awt.Component discarded$8 = var7.field_d.add((java.awt.Component) (Object) var7);
+              var7.setBounds(0, 0, 640, 480);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();
-              var8 = 120 % ((param1 - 78) / 48);
+              var8 = 0;
               stackOut_3_0 = (va) var7;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -131,7 +133,7 @@ final class wb {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("wb.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_5_1 = new StringBuilder().append("wb.A(").append(0).append(44).append(-107).append(44).append(480).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -154,7 +156,7 @@ final class wb {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param4 + 44 + 0 + 41);
+          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 640 + 44 + 0 + 41);
         }
         return stackIn_4_0;
     }

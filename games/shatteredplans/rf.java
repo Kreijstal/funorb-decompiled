@@ -10,7 +10,7 @@ final class rf extends oh {
     static wq[] field_j;
     static qr field_l;
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         sl var2 = js.field_f;
         var2.h(param0, 255);
         var2.field_j = var2.field_j + 1;
@@ -26,7 +26,7 @@ final class rf extends oh {
     rf(fs param0, fs param1) {
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_m = null;
         field_l = null;
         field_h = null;

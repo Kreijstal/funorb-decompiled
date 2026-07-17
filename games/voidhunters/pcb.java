@@ -6,7 +6,9 @@ final class pcb extends rqa {
     static int field_p;
 
     final static void a(int param0, boolean param1, boolean param2) {
-        ogb.a(param2, 62, 71, 64, hv.field_o, 66, w.field_v, 2000, 70, 65, 69, 72, ena.field_p, 68, (byte) 91);
+        int discarded$39 = 91;
+        int discarded$40 = 68;
+        ogb.a(param2, 62, 71, 64, hv.field_o, 66, w.field_v, 2000, 70, 65, 69, 72, ena.field_p);
         dra.a((byte) 125, 3);
         if (!param1) {
           qfa.a(62, true);
@@ -28,7 +30,7 @@ final class pcb extends rqa {
         }
     }
 
-    final static void a(java.applet.Applet param0, String param1, int param2) {
+    final static void a(java.applet.Applet param0, String param1) {
         try {
             String var6 = null;
             String var5 = null;

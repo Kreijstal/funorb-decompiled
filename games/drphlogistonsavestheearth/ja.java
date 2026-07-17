@@ -58,7 +58,7 @@ final class ja {
         this.c(param2 ^ 17503);
     }
 
-    final static void a(fg param0, byte param1) {
+    final static void a(fg param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -87,7 +87,7 @@ final class ja {
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= 3) {
-                var2_int = 96 / ((80 - param1) / 36);
+                var2_int = 32;
                 var3 = 0;
                 L2: while (true) {
                   if (var3 >= sf.field_e) {
@@ -175,11 +175,11 @@ final class ja {
               break L7;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -60 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_Q = null;
         field_t = null;
@@ -188,7 +188,7 @@ final class ja {
         field_n = null;
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] a(int param0, int param1) {
         int var3 = dg.a(-20870, param0);
         int var4 = u.a(param0, (byte) 74);
         int var5 = dg.a(-20870, param1);

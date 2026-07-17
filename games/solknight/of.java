@@ -12,7 +12,7 @@ final class of {
     static long field_e;
     static o field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
         field_d = null;
@@ -87,25 +87,13 @@ final class of {
             break L0;
           }
         }
-        if (((of) this).field_a.length > param0) {
-          if (param1 != 61) {
-            field_f = null;
-            ((of) this).field_a[param0] = param2;
-            return;
-          } else {
-            ((of) this).field_a[param0] = param2;
-            return;
-          }
-        } else {
+        if (((of) this).field_a.length <= param0) {
           this.b(param0, 0);
-          if (param1 == 61) {
-            ((of) this).field_a[param0] = param2;
-            return;
-          } else {
-            field_f = null;
-            ((of) this).field_a[param0] = param2;
-            return;
-          }
+          ((of) this).field_a[param0] = param2;
+          return;
+        } else {
+          ((of) this).field_a[param0] = param2;
+          return;
         }
     }
 

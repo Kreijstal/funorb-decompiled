@@ -9,15 +9,10 @@ final class ir {
     static String field_b;
     static int field_f;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_a = null;
-        if (param0) {
-            field_e = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -92,7 +87,7 @@ final class ir {
                   } else {
                     if (param1.c("commonui", 0)) {
                       L2: {
-                        var4_int = -20 % ((param0 - 12) / 63);
+                        var4_int = 0;
                         if (!param3.b(0)) {
                           break L2;
                         } else {
@@ -126,7 +121,7 @@ final class ir {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("ir.E(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ir.E(").append(-95).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -204,7 +199,7 @@ final class ir {
         return stackIn_16_0 != 0;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a(int param0) {
         L0: {
           rm.field_B = (param0 & 63) >> 4;
           oa.field_p = param0 >> 2 & 3;
@@ -235,17 +230,10 @@ final class ir {
     }
 
     final static void a(int param0, String param1) {
-        if (param0 != -8957) {
-          field_c = null;
-          System.out.println("Error: " + mr.a("%0a", (byte) -48, "\n", param1));
-          return;
-        } else {
-          System.out.println("Error: " + mr.a("%0a", (byte) -48, "\n", param1));
-          return;
-        }
+        System.out.println("Error: " + mr.a("%0a", (byte) -48, "\n", param1));
     }
 
-    final static void a(String param0, int param1, String param2, int param3, int param4) {
+    final static void a(String param0, int param1, String param2, int param3) {
         try {
             dj.field_d.field_Fb = dj.field_d.field_Fb + ui.field_b.field_Fb;
             dj.field_d.field_S = param2;

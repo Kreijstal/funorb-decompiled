@@ -28,67 +28,59 @@ final class ttb extends shb {
         int var12 = 0;
         int var13 = 0;
         phb var14 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
         int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
-        L0: {
-          var13 = VoidHunters.field_G;
-          var14 = new phb(((ttb) this).field_E * 2, ((ttb) this).field_f);
-          de.a(105, var14);
-          var5 = ((ttb) this).field_f >> 1;
-          var6 = 0;
-          if (param0) {
-            break L0;
-          } else {
-            ((ttb) this).field_G = -72;
-            break L0;
-          }
-        }
-        L1: while (true) {
+        int stackOut_6_0 = 0;
+        var13 = VoidHunters.field_G;
+        var14 = new phb(((ttb) this).field_E * 2, ((ttb) this).field_f);
+        de.a(105, var14);
+        var5 = ((ttb) this).field_f >> 1;
+        var6 = 0;
+        L0: while (true) {
           if (((ttb) this).field_f <= var6) {
             bia.a((byte) 124);
             return var14;
           } else {
-            L2: {
+            L1: {
               var7 = (var6 >> 1) * (2 * ((ttb) this).field_E - 1) % (((ttb) this).field_E * 2);
               var8 = param1 & 16711935;
               var9 = 65280 & param1;
               var10 = var6 + -var5;
               var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
               if (var11 >= 256) {
-                stackOut_5_0 = var9 | var8;
-                stackIn_6_0 = stackOut_5_0;
-                break L2;
+                stackOut_4_0 = var9 | var8;
+                stackIn_5_0 = stackOut_4_0;
+                break L1;
               } else {
-                stackOut_4_0 = (var8 * var11 & -16711936 | 16711680 & var9 * var11) >>> 8;
-                stackIn_6_0 = stackOut_4_0;
-                break L2;
+                stackOut_3_0 = (var8 * var11 & -16711936 | 16711680 & var9 * var11) >>> 8;
+                stackIn_5_0 = stackOut_3_0;
+                break L1;
               }
             }
-            L3: {
-              var12 = stackIn_6_0;
+            L2: {
+              var12 = stackIn_5_0;
               dma.h(var7, var6, ((ttb) this).field_E, var12);
               dma.h(var7 + -(2 * ((ttb) this).field_E), var6, ((ttb) this).field_E, var12);
               var8 = 16711935 & param2;
               var9 = param2 & 65280;
               if (256 > var11) {
-                stackOut_8_0 = (16711680 & var9 * var11 | var8 * var11 & -16711936) >>> 8;
-                stackIn_9_0 = stackOut_8_0;
-                break L3;
+                stackOut_7_0 = (16711680 & var9 * var11 | var8 * var11 & -16711936) >>> 8;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
               } else {
-                stackOut_7_0 = var8 | var9;
-                stackIn_9_0 = stackOut_7_0;
-                break L3;
+                stackOut_6_0 = var8 | var9;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
               }
             }
-            var12 = stackIn_9_0;
+            var12 = stackIn_8_0;
             dma.h(((ttb) this).field_E + var7, var6, ((ttb) this).field_E, var12);
             dma.h(-((ttb) this).field_E + var7, var6, ((ttb) this).field_E, var12);
             var6++;
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -179,7 +171,7 @@ final class ttb extends shb {
         }
     }
 
-    private final phb b(boolean param0) {
+    private final phb b() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -232,7 +224,8 @@ final class ttb extends shb {
             return;
         }
         ((ttb) this).field_C = new phb[]{this.a(true, ((ttb) this).field_H, ((ttb) this).field_t), this.a(true, ((ttb) this).field_G, ((ttb) this).field_A)};
-        ((ttb) this).field_y = this.b(false);
+        int discarded$0 = 0;
+        ((ttb) this).field_y = this.b();
         ((ttb) this).field_u = ((ttb) this).field_y.a();
         ((ttb) this).field_F = new phb(((ttb) this).field_f >> 1, ((ttb) this).field_f);
     }
@@ -257,69 +250,61 @@ final class ttb extends shb {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
         String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var8 = VoidHunters.field_G;
         try {
           L0: {
-            L1: {
-              var5_int = ((ttb) this).field_h + param3;
-              qca.a(var5_int - ((ttb) this).field_y.field_q, ((ttb) this).field_f + param1, param3 + ((ttb) this).field_y.field_q, true, param1);
-              var6 = param3 - ((ttb) this).field_w;
-              if (param0 == 2) {
-                break L1;
-              } else {
-                ((ttb) this).field_w = 28;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var5_int = ((ttb) this).field_h + param3;
+            qca.a(var5_int - ((ttb) this).field_y.field_q, ((ttb) this).field_f + param1, param3 + ((ttb) this).field_y.field_q, true, param1);
+            var6 = param3 - ((ttb) this).field_w;
+            L1: while (true) {
               if (var5_int <= var6) {
-                L3: {
+                L2: {
                   bia.a((byte) 124);
                   if (param3 - -((ttb) this).field_y.field_q < dma.field_d) {
-                    break L3;
+                    break L2;
                   } else {
-                    de.a(param0 ^ 66, ((ttb) this).field_F);
+                    de.a(64, ((ttb) this).field_F);
                     param2.a(-((ttb) this).field_w, 0);
                     param2.a(((ttb) this).field_E * 2 - ((ttb) this).field_w, 0);
                     ((ttb) this).field_u.b(0, 0);
                     bia.a((byte) 124);
                     ((ttb) this).field_F.a(param3, param1);
-                    break L3;
+                    break L2;
                   }
                 }
-                L4: {
+                L3: {
                   if (dma.field_a < var5_int + -((ttb) this).field_y.field_q) {
-                    break L4;
+                    break L3;
                   } else {
-                    de.a(param0 + 22, ((ttb) this).field_F);
+                    de.a(24, ((ttb) this).field_F);
                     var7 = ((ttb) this).field_h - ((ttb) this).field_y.field_q - -((ttb) this).field_w;
-                    L5: while (true) {
+                    L4: while (true) {
                       if (var7 <= 2 * ((ttb) this).field_E) {
                         param2.a(-var7, 0);
                         param2.a(((ttb) this).field_E * 2 + -var7, 0);
                         ((ttb) this).field_y.b(0, 0);
                         bia.a((byte) 124);
                         ((ttb) this).field_F.a(-((ttb) this).field_y.field_q + var5_int, param1);
-                        break L4;
+                        break L3;
                       } else {
                         var7 = var7 - ((ttb) this).field_E * 2;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   }
@@ -328,39 +313,39 @@ final class ttb extends shb {
               } else {
                 param2.a(var6, param1);
                 var6 = var6 + param2.field_q;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var5;
-            stackOut_13_1 = new StringBuilder().append("ttb.DA(").append(param0).append(44).append(param1).append(44);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_1 = new StringBuilder().append("ttb.DA(").append(2).append(44).append(param1).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L6;
-            } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L6;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L5;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 41);
         }
     }
 

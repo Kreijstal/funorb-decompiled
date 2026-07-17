@@ -505,10 +505,10 @@ final class vp extends qr {
 
     final static void a(int param0, br param1) {
         try {
-            param1.field_l = new int[]{param0};
+            param1.field_l = new int[]{-1};
             param1.field_o = new char[]{'?'};
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vp.MA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vp.MA(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

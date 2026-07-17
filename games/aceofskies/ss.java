@@ -25,6 +25,7 @@ final class ss extends ea {
     }
 
     private final ll b(int param0, int param1, int param2) {
+        ll var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -33,31 +34,24 @@ final class ss extends ea {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ll var13 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
-        var13 = new ll(((ss) this).field_y * 2, ((ss) this).field_n);
-        cm.a(var13, -14492);
+        var4 = new ll(((ss) this).field_y * 2, ((ss) this).field_n);
+        int discarded$2 = -14492;
+        cm.a(var4);
         var5 = ((ss) this).field_n >> 1;
         var6 = 0;
         L0: while (true) {
           if (var6 >= ((ss) this).field_n) {
-            L1: {
-              if (param1 == 128) {
-                break L1;
-              } else {
-                ((ss) this).a(90, 49, (byte) 110);
-                break L1;
-              }
-            }
-            sl.c(2765);
-            return var13;
+            int discarded$3 = 2765;
+            sl.c();
+            return var4;
           } else {
-            L2: {
+            L1: {
               var7 = (var6 >> 1) * (2 * ((ss) this).field_y + -1) % (((ss) this).field_y * 2);
               var8 = 16711935 & param0;
               var9 = param0 & 65280;
@@ -66,14 +60,14 @@ final class ss extends ea {
               if (var11 < 256) {
                 stackOut_4_0 = (-16711936 & var11 * var8 | var9 * var11 & 16711680) >>> 8;
                 stackIn_5_0 = stackOut_4_0;
-                break L2;
+                break L1;
               } else {
                 stackOut_3_0 = var8 | var9;
                 stackIn_5_0 = stackOut_3_0;
-                break L2;
+                break L1;
               }
             }
-            L3: {
+            L2: {
               var12 = stackIn_5_0;
               vp.b(var7, var6, ((ss) this).field_y, var12);
               var9 = param2 & 65280;
@@ -82,11 +76,11 @@ final class ss extends ea {
               if (var11 < 256) {
                 stackOut_7_0 = (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
                 stackIn_8_0 = stackOut_7_0;
-                break L3;
+                break L2;
               } else {
                 stackOut_6_0 = var9 | var8;
                 stackIn_8_0 = stackOut_6_0;
-                break L3;
+                break L2;
               }
             }
             var12 = stackIn_8_0;
@@ -101,7 +95,8 @@ final class ss extends ea {
     private final void a(int param0) {
         ((ss) this).field_w = new ll[]{this.b(((ss) this).field_v, 128, ((ss) this).field_B), this.b(((ss) this).field_x, 128, ((ss) this).field_s)};
         int var2 = 64 % ((param0 - -63) / 35);
-        ((ss) this).field_D = this.b(true);
+        int discarded$0 = 1;
+        ((ss) this).field_D = this.b();
         ((ss) this).field_C = ((ss) this).field_D.a();
         ((ss) this).field_A = new ll(((ss) this).field_n >> 1, ((ss) this).field_n);
     }
@@ -123,7 +118,8 @@ final class ss extends ea {
         if (!(((ss) this).field_z >= 65536)) {
             fp.a((byte) 77, var6, var6 + ((ss) this).field_n, ((ss) this).field_q + var5, (((ss) this).field_q * ((ss) this).field_z >> 16) + var5);
             this.a(var5, -101, var6, ((ss) this).field_w[1]);
-            sl.c(2765);
+            int discarded$0 = 2765;
+            sl.c();
         }
     }
 
@@ -136,14 +132,15 @@ final class ss extends ea {
         this.a(-116);
     }
 
-    private final ll b(boolean param0) {
+    private final ll b() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var2 = ((ss) this).field_n >> 1;
         ll var3 = new ll(var2, ((ss) this).field_n);
-        cm.a(var3, -14492);
+        int discarded$0 = -14492;
+        cm.a(var3);
         for (var4 = 0; var4 < ((ss) this).field_n; var4++) {
             for (var5 = 0; var5 < var2; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)((-var4 + ((ss) this).field_n) * var4);
@@ -155,7 +152,8 @@ final class ss extends ea {
                 vp.a(var5, var4, var8 | var8 << 8 | var8 << 16);
             }
         }
-        sl.c(2765);
+        int discarded$1 = 2765;
+        sl.c();
         return var3;
     }
 
@@ -267,13 +265,16 @@ final class ss extends ea {
             L1: while (true) {
               if (var5_int <= var7) {
                 L2: {
-                  sl.c(2765);
+                  int discarded$5 = 2765;
+                  sl.c();
                   if (((ss) this).field_D.field_r + param0 >= vp.field_b) {
-                    cm.a(((ss) this).field_A, -14492);
+                    int discarded$6 = -14492;
+                    cm.a(((ss) this).field_A);
                     param3.b(-((ss) this).field_r, 0);
                     param3.b(2 * ((ss) this).field_y - ((ss) this).field_r, 0);
                     ((ss) this).field_C.a(0, 0);
-                    sl.c(2765);
+                    int discarded$7 = 2765;
+                    sl.c();
                     ((ss) this).field_A.b(param0, param2);
                     break L2;
                   } else {
@@ -282,14 +283,16 @@ final class ss extends ea {
                 }
                 L3: {
                   if (vp.field_k >= var5_int - ((ss) this).field_D.field_r) {
-                    cm.a(((ss) this).field_A, -14492);
+                    int discarded$8 = -14492;
+                    cm.a(((ss) this).field_A);
                     var8 = ((ss) this).field_r + ((ss) this).field_q + -((ss) this).field_D.field_r;
                     L4: while (true) {
                       if (2 * ((ss) this).field_y >= var8) {
                         param3.b(-var8, 0);
                         param3.b(((ss) this).field_y * 2 - var8, 0);
                         ((ss) this).field_D.a(0, 0);
-                        sl.c(2765);
+                        int discarded$9 = 2765;
+                        sl.c();
                         ((ss) this).field_A.b(var5_int - ((ss) this).field_D.field_r, param2);
                         break L3;
                       } else {

@@ -44,14 +44,14 @@ abstract class wj extends o {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         if (!vj.a(97)) {
             cc.field_f.a(true);
             return;
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 0;
         field_k = null;
         field_o = null;

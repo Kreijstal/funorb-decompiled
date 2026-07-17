@@ -11,13 +11,10 @@ final class te extends si {
     static String field_J;
     static int field_M;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_L = null;
         field_N = null;
         field_K = null;
-        if (param0 != 45) {
-            return;
-        }
         field_J = null;
         field_I = null;
     }
@@ -44,16 +41,11 @@ final class te extends si {
     }
 
     final static int b(int param0, int param1, int param2) {
-        int var3 = 0;
-        if (param0 != 25403) {
-          return -126;
-        } else {
-          var3 = -1 + param1 & param2 >> 31;
-          return (param2 - -(param2 >>> 31)) % param1 - -var3;
-        }
+        int var3 = -1 + param1 & param2 >> 31;
+        return (param2 - -(param2 >>> 31)) % param1 - -var3;
     }
 
-    final static String d(byte param0) {
+    final static String d() {
         return vc.field_c;
     }
 

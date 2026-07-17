@@ -15,7 +15,7 @@ final class lfa extends k {
     private int field_r;
     static int field_o;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_s = null;
         field_l = null;
         field_u = null;
@@ -24,40 +24,36 @@ final class lfa extends k {
     private final boolean b(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        var4 = ((lfa) this).field_n * (param1 - param2) >> 12;
-        var5 = am.field_R[(1047373 & var4 * 255) >> 12];
-        var5 = (var5 << 12) / ((lfa) this).field_n;
-        if (param0 == 0) {
-          L0: {
-            L1: {
-              var5 = (var5 << 12) / ((lfa) this).field_p;
-              var5 = var5 * ((lfa) this).field_m >> 12;
-              if (var5 <= param1 + param2) {
+        int stackIn_4_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_3_0 = 0;
+        L0: {
+          L1: {
+            var4 = ((lfa) this).field_n * (param1 - param2) >> 12;
+            var5 = am.field_R[(1047373 & var4 * 255) >> 12];
+            var5 = (var5 << 12) / ((lfa) this).field_n;
+            var5 = (var5 << 12) / ((lfa) this).field_p;
+            var5 = var5 * ((lfa) this).field_m >> 12;
+            if (var5 <= param1 + param2) {
+              break L1;
+            } else {
+              if (param2 - -param1 <= -var5) {
                 break L1;
               } else {
-                if (param2 - -param1 <= -var5) {
-                  break L1;
-                } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L0;
-                }
+                stackOut_2_0 = 1;
+                stackIn_4_0 = stackOut_2_0;
+                break L0;
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L0;
           }
-          return stackIn_6_0 != 0;
-        } else {
-          return true;
+          stackOut_3_0 = 0;
+          stackIn_4_0 = stackOut_3_0;
+          break L0;
         }
+        return stackIn_4_0 != 0;
     }
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         Object var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -370,7 +366,8 @@ final class lfa extends k {
                 }
               }
             }
-            baa.e(17035);
+            int discarded$2 = 17035;
+            baa.e();
             hba.a(true, wha.field_a);
             gs.field_f = null;
             var1_int = ig.field_m.b(16711935);
@@ -402,7 +399,8 @@ final class lfa extends k {
                         if (~var12 <= ~var11_int) {
                           break L17;
                         } else {
-                          var15[var12] = gka.a((lu) (Object) ig.field_m, 255);
+                          int discarded$3 = 255;
+                          var15[var12] = gka.a((lu) (Object) ig.field_m);
                           var12++;
                           continue L18;
                         }
@@ -468,9 +466,9 @@ final class lfa extends k {
                 Object var7 = null;
                 lfa.a(93, (ht) null, true, (byte) 13, (jp) null, (java.awt.Component) null);
             }
-            efa.a(param0, param0, 1024, param2, param1, 19299, param5, param4);
+            efa.a(param0, param0, 1024, true, param1, 19299, param5, param4);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "lfa.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "lfa.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 

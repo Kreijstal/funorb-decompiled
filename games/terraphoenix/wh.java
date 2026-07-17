@@ -15,13 +15,10 @@ final class wh implements Runnable {
             ((wh) this).field_c.a(11152, (vh) (Object) param1);
             ((wh) this).field_b = ((wh) this).field_b + 1;
             ((Object) (Object) ((wh) this).field_c).notifyAll();
-            if (param0 != 28366) {
-                field_g = null;
-            }
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_g = null;
         field_a = null;
@@ -330,7 +327,7 @@ final class wh implements Runnable {
         ((wh) this).field_d = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         try {
             int var1 = 0;
             Exception var1_ref_Exception = null;
@@ -356,7 +353,7 @@ final class wh implements Runnable {
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
-                  var1 = -15 % ((param0 - 58) / 35);
+                  var1 = 0;
                   mk.field_j.field_k = mk.field_j.field_k + 24;
                   return;
                 } else {
@@ -364,7 +361,7 @@ final class wh implements Runnable {
                 }
               }
             }
-            var1 = -15 % ((param0 - 58) / 35);
+            var1 = 0;
             mk.field_j.field_k = mk.field_j.field_k + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -11,12 +11,9 @@ final class sn {
 
     final static void a(byte param0, String param1) {
         System.out.println("Error: " + n.a(true, "%0a", "\n", param1));
-        if (param0 <= 43) {
-            field_c = null;
-        }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_d = null;
         field_c = null;
@@ -24,7 +21,7 @@ final class sn {
         field_e = null;
     }
 
-    final static String b(int param0) {
+    final static String b() {
         return rb.field_Nb;
     }
 

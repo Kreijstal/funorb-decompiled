@@ -11,7 +11,7 @@ final class sb {
     static String field_d;
     static int field_e;
 
-    public static void c(int param0) {
+    public static void c() {
         field_b = null;
         field_h = null;
         field_c = null;
@@ -69,7 +69,7 @@ final class sb {
         }
     }
 
-    final static void a(boolean param0, byte param1, ha param2, int param3) {
+    final static void a(boolean param0, byte param1, ha param2) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -96,7 +96,7 @@ final class sb {
               if (null == gg.field_h) {
                 break L1;
               } else {
-                on.a(1048576, 256, param0, true, param2);
+                on.a(1048576, 256, true, true, param2);
                 break L1;
               }
             }
@@ -114,7 +114,7 @@ final class sb {
                         if (f.field_g == null) {
                           break L4;
                         } else {
-                          jl.field_h.a((byte) -96, param0, f.field_g);
+                          jl.field_h.a((byte) -96, true, f.field_g);
                           break L4;
                         }
                       }
@@ -129,7 +129,7 @@ final class sb {
                 break L2;
               }
             }
-            var4_int = -21 % ((-79 - param1) / 43);
+            var4_int = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,7 +137,7 @@ final class sb {
           L5: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var4_ref;
-            stackOut_16_1 = new StringBuilder().append("sb.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_16_1 = new StringBuilder().append("sb.C(").append(1).append(44).append(-33).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -164,7 +164,7 @@ final class sb {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         Object var3 = null;

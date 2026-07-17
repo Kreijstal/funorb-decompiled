@@ -9,18 +9,14 @@ final class mj {
     static boolean field_e;
 
     final static int[] a(int param0) {
-        if (param0 != -31121) {
-          return null;
-        } else {
-          return new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-        }
+        return new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
     }
 
     static long a(long param0, long param1) {
         return param0 & param1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         int var1 = 0;
@@ -29,11 +25,13 @@ final class mj {
     }
 
     final static void a(boolean param0) {
-        ld.a((byte) -120);
-        ia.h(-13953);
+        int discarded$0 = -120;
+        ld.a();
+        int discarded$1 = -13953;
+        ia.h();
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         im var3 = null;
@@ -98,22 +96,11 @@ final class mj {
     }
 
     final static void a(int param0, int param1) {
-        oq var2 = null;
-        var2 = ej.field_j;
-        if (param1 != 27712) {
-          mj.a(true);
-          var2.b(false, param0);
-          var2.a(2, false);
-          var2.a(4, false);
-          var2.a(rk.b(true), false);
-          return;
-        } else {
-          var2.b(false, param0);
-          var2.a(2, false);
-          var2.a(4, false);
-          var2.a(rk.b(true), false);
-          return;
-        }
+        oq var2 = ej.field_j;
+        var2.b(false, param0);
+        var2.a(2, false);
+        var2.a(4, false);
+        var2.a(rk.b(true), false);
     }
 
     static {

@@ -134,7 +134,8 @@ abstract class ti extends id {
         try {
           L0: {
             var2_int = -115 / ((param0 - -53) / 59);
-            stackOut_0_0 = ng.a(-49, true, param1, 10);
+            int discarded$2 = 10;
+            stackOut_0_0 = ng.a(-49, true, param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1599,7 +1600,7 @@ abstract class ti extends id {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_H = null;
         field_M = null;
         field_Z = null;

@@ -44,7 +44,7 @@ final class wf extends vg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
     }
 

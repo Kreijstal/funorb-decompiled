@@ -33,7 +33,7 @@ final class jh {
           L0: {
             var2 = new jp(param1.field_x / 2, param1.field_z / 2);
             var2.g();
-            param1.a(param0, 0, param1.field_x / 2, param1.field_z / 2);
+            param1.a(0, 0, param1.field_x / 2, param1.field_z / 2);
             kc.field_q.a((byte) 102);
             stackOut_0_0 = (jp) var2;
             stackIn_1_0 = stackOut_0_0;
@@ -44,7 +44,7 @@ final class jh {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("jh.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("jh.C(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -72,8 +72,8 @@ final class jh {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
-        int var1 = 54 / ((-65 - param0) / 48);
+    public static void a() {
+        int var1 = 54;
         field_d = null;
         field_b = null;
         field_c = null;
@@ -95,15 +95,12 @@ final class jh {
                 var5 = (mh) (Object) param1.field_bb.a((byte) 116);
                 var5 = var5;
             }
-            if (!param0) {
-                jh.a((byte) -19);
-            }
             param1.field_zb = 0;
             param1.field_Db = 0;
             param1.field_cb = 0;
             param1.field_C = 0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "jh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "jh.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

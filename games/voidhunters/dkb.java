@@ -5,7 +5,7 @@ final class dkb implements dja {
     static float field_b;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = -94;
         field_a = null;
     }

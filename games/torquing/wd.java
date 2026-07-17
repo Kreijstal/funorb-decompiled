@@ -8,16 +8,13 @@ final class wd extends ta {
     static String field_r;
     private am field_u;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         int var1 = 0;
         return bn.field_i;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_r = null;
-        if (param0 != 0) {
-            field_r = null;
-        }
     }
 
     final int[] a(boolean param0, la param1, int param2, double param3, boolean param4, int param5, si param6, int param7) {
@@ -303,37 +300,29 @@ final class wd extends ta {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
-        L0: {
-          if (param4) {
-            break L0;
-          } else {
-            wd.b(23);
-            break L0;
-          }
-        }
         if (param5 == param3) {
           lc.a(param1, param2, -123, param7, param6, param5, param0);
           return;
         } else {
-          L1: {
+          L0: {
             if (kn.field_e > -param5 + param2) {
               wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
-              break L1;
+              break L0;
             } else {
               if (qg.field_z < param2 - -param5) {
                 wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
-                break L1;
+                break L0;
               } else {
                 if (j.field_q > -param3 + param7) {
                   wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
-                  break L1;
+                  break L0;
                 } else {
                   if (param3 + param7 > qk.field_p) {
                     wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
-                    break L1;
+                    break L0;
                   } else {
                     ai.a(param6, param0, param2, param5, param7, param1, -128, param3);
-                    break L1;
+                    break L0;
                   }
                 }
               }

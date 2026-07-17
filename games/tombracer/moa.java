@@ -5,7 +5,7 @@ final class moa {
     static int field_b;
     static int field_a;
 
-    final static String a(gqa param0, int param1) {
+    final static String a(gqa param0) {
         Object var2 = null;
         String var3 = null;
         int var4 = 0;

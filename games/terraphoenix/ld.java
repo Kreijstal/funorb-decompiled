@@ -55,9 +55,9 @@ abstract class ld {
         return stackIn_10_0;
     }
 
-    final static int a(char param0, CharSequence param1, int param2) {
-        int var3_int = 0;
+    final static int a(char param0, CharSequence param1) {
         RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -84,56 +84,48 @@ abstract class ld {
         var6 = Terraphoenix.field_V;
         try {
           L0: {
-            L1: {
-              if (param2 >= 117) {
-                break L1;
-              } else {
-                ld.a((byte) 70, (String) null);
-                break L1;
-              }
-            }
             var3_int = 0;
             var4 = param1.length();
             var5 = 0;
-            L2: while (true) {
-              L3: {
-                L4: {
+            L1: while (true) {
+              L2: {
+                L3: {
                   if (var5 >= var4) {
-                    break L4;
+                    break L3;
                   } else {
                     stackOut_6_0 = ~param0;
                     stackIn_14_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var6 != 0) {
-                      break L3;
+                      break L2;
                     } else {
-                      L5: {
+                      L4: {
                         if (stackIn_7_0 != ~param1.charAt(var5)) {
-                          break L5;
+                          break L4;
                         } else {
                           var3_int++;
-                          break L5;
+                          break L4;
                         }
                       }
                       var5++;
                       if (var6 == 0) {
-                        continue L2;
+                        continue L1;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
                 }
                 stackOut_13_0 = var3_int;
                 stackIn_14_0 = stackOut_13_0;
-                break L3;
+                break L2;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var3 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3;
             stackOut_15_1 = new StringBuilder().append("ld.H(").append(param0).append(44);
@@ -148,7 +140,7 @@ abstract class ld {
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L6;
+              break L5;
             } else {
               stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
               stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
@@ -156,10 +148,10 @@ abstract class ld {
               stackIn_19_0 = stackOut_16_0;
               stackIn_19_1 = stackOut_16_1;
               stackIn_19_2 = stackOut_16_2;
-              break L6;
+              break L5;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 124 + 41);
         }
         return stackIn_14_0;
     }
@@ -388,15 +380,15 @@ abstract class ld {
         return stackIn_13_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         try {
             field_g = null;
             field_h = null;
-            int var1_int = -77 % ((param0 - -56) / 34);
+            int var1_int = 0;
             field_c = null;
             field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ld.D(" + param0 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "ld.D(" + -115 + 41);
         }
     }
 
@@ -594,13 +586,17 @@ abstract class ld {
     }
 
     final static void a(int param0) {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             hl.a((byte) -93, (String) null, "");
-            if (param0 != 1) {
-                field_d = -10;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ld.G(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var1, "ld.G(" + 1 + 41);
         }
     }
 
@@ -726,7 +722,7 @@ abstract class ld {
         return stackIn_45_0;
     }
 
-    final static void a(int param0, boolean param1, ee param2, int param3, byte param4) {
+    final static void a(int param0, boolean param1, ee param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -743,7 +739,7 @@ abstract class ld {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        boolean stackIn_11_0 = false;
+        int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_25_0 = 0;
@@ -761,7 +757,7 @@ abstract class ld {
         StringBuilder stackIn_61_1 = null;
         String stackIn_61_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_10_0 = false;
+        int stackOut_10_0 = 0;
         int stackOut_21_0 = 0;
         int stackOut_24_0 = 0;
         int stackOut_24_1 = 0;
@@ -771,7 +767,7 @@ abstract class ld {
         int stackOut_27_1 = 0;
         int stackOut_34_0 = 0;
         int stackOut_34_1 = 0;
-        byte stackOut_43_0 = 0;
+        int stackOut_43_0 = 0;
         RuntimeException stackOut_57_0 = null;
         StringBuilder stackOut_57_1 = null;
         RuntimeException stackOut_60_0 = null;
@@ -787,12 +783,14 @@ abstract class ld {
               var5_int = je.a(-101, 3 * (-param3 + param0));
               var6 = 3 * param3;
               var7 = var5_int + -10;
-              am.g((byte) -3);
+              int discarded$2 = -3;
+              am.g();
               if (param2.field_I <= 0) {
                 break L1;
               } else {
                 if (param2.field_f != null) {
-                  sd.a((byte) 87);
+                  int discarded$3 = 87;
+                  sd.a();
                   break L1;
                 } else {
                   break L1;
@@ -810,15 +808,15 @@ abstract class ld {
                     var9 = param2.field_E[var8];
                     var10 = param2.field_n[var8];
                     var11 = param2.field_p[var8];
-                    stackOut_10_0 = param1;
-                    stackIn_44_0 = stackOut_10_0 ? 1 : 0;
+                    stackOut_10_0 = 0;
+                    stackIn_44_0 = stackOut_10_0;
                     stackIn_11_0 = stackOut_10_0;
                     if (var19 != 0) {
                       break L3;
                     } else {
                       L5: {
                         L6: {
-                          if (!stackIn_11_0) {
+                          if (stackIn_11_0 == 0) {
                             break L6;
                           } else {
                             var12 = gm.field_l[var9];
@@ -948,7 +946,7 @@ abstract class ld {
                     }
                   }
                 }
-                stackOut_43_0 = param4;
+                stackOut_43_0 = 124;
                 stackIn_44_0 = stackOut_43_0;
                 break L3;
               }
@@ -998,7 +996,7 @@ abstract class ld {
           L17: {
             var5 = decompiledCaughtException;
             stackOut_57_0 = (RuntimeException) var5;
-            stackOut_57_1 = new StringBuilder().append("ld.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_57_1 = new StringBuilder().append("ld.B(").append(param0).append(44).append(0).append(44);
             stackIn_60_0 = stackOut_57_0;
             stackIn_60_1 = stackOut_57_1;
             stackIn_58_0 = stackOut_57_0;
@@ -1021,7 +1019,7 @@ abstract class ld {
               break L17;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + 44 + param3 + 44 + param4 + 41);
+          throw qk.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + 44 + param3 + 44 + 124 + 41);
         }
     }
 

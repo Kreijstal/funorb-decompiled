@@ -268,9 +268,9 @@ final class il extends no {
         }
     }
 
-    final static void a(ie param0, tg param1, int param2, int param3, int param4, int param5, java.awt.Component param6, boolean param7) {
+    final static void a(ie param0, tg param1, int param2, int param3, int param4, int param5, java.awt.Component param6) {
         try {
-            tj.a(param2, param7, 10);
+            tj.a(param2, true, 10);
             eo.field_f = tj.a(param1, param6, 0, param4);
             jk.field_w = tj.a(param1, param6, 1, param3);
             ob.field_J = new ra();
@@ -280,11 +280,11 @@ final class il extends no {
             m.field_f.a(ul.field_p, false);
             eo.field_f.b((qd) (Object) m.field_f);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "il.D(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "il.D(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_A = null;
         field_D = null;
         field_B = null;
@@ -295,12 +295,7 @@ final class il extends no {
     }
 
     final static void a(byte param0, int param1) {
-        if (param0 != 86) {
-            boolean discarded$0 = il.e((byte) -105);
-            wp.a(param0 ^ 87, param1);
-            return;
-        }
-        wp.a(param0 ^ 87, param1);
+        wp.a(1, param1);
     }
 
     final static void a(int param0, jp param1, jp param2, int param3, int param4, jp param5, int param6, int param7, int param8, int param9, jp param10, int param11) {
@@ -484,7 +479,6 @@ final class il extends no {
     final int a(int param0, StringBuilder param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
-        Object var4 = null;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -509,17 +503,17 @@ final class il extends no {
               if (param0 > 79) {
                 break L1;
               } else {
-                var4 = null;
-                il.a((ie) null, (tg) null, 83, 59, 15, -106, (java.awt.Component) null, true);
+                int discarded$4 = 1;
+                il.a((ie) null, (tg) null, 83, 59, 15, -106, (java.awt.Component) null);
                 break L1;
               }
             }
             L2: {
               var3_int = super.a(120, param1) ^ -72674834;
               if (param1 != null) {
-                StringBuilder discarded$3 = param1.append(((il) this).field_j + " " + ((il) this).field_m + " ");
-                StringBuilder discarded$4 = param1.append(((il) this).field_E + " " + ((il) this).field_l + " ");
-                StringBuilder discarded$5 = param1.append("\n");
+                StringBuilder discarded$5 = param1.append(((il) this).field_j + " " + ((il) this).field_m + " ");
+                StringBuilder discarded$6 = param1.append(((il) this).field_E + " " + ((il) this).field_l + " ");
+                StringBuilder discarded$7 = param1.append("\n");
                 break L2;
               } else {
                 break L2;

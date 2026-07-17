@@ -434,7 +434,7 @@ final class sa extends kc {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_Eb = null;
         field_Cb = null;
         field_Gb = null;

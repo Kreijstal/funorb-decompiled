@@ -7,7 +7,7 @@ final class nh {
     static int[] field_a;
     static int field_b;
 
-    final static ae c(byte param0) {
+    final static ae c() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -50,7 +50,7 @@ final class nh {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = rk.field_e.g(16711680);
         int var2 = rk.field_e.g(16777215);
         int var3 = rk.field_e.field_R[0].length;
@@ -69,7 +69,7 @@ final class nh {
         rk.field_e.field_R[3][var2] = 4473924;
     }
 
-    final static long a(CharSequence param0, int param1) {
+    final static long a(CharSequence param0) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -276,7 +276,7 @@ final class nh {
                         } else {
                           L9: {
                             var8 = t.field_k[var6_int];
-                            if ((var8 & 65280) >> 8 <= param1) {
+                            if ((var8 & 65280) >> 8 <= 64) {
                               break L9;
                             } else {
                               break L9;
@@ -299,7 +299,7 @@ final class nh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var6, "nh.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw aa.a((Throwable) (Object) var6, "nh.B(" + param0 + 44 + 64 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

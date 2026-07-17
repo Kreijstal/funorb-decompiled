@@ -13,7 +13,7 @@ final class gg {
     static String field_g;
     static io field_h;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_h = null;
         field_i = null;
@@ -24,7 +24,7 @@ final class gg {
         field_f = null;
     }
 
-    final static qb[] a(int param0) {
+    final static qb[] a() {
         qb[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -45,7 +45,8 @@ final class gg {
         var2 = 0;
         L0: while (true) {
           if (var2 >= h.field_J) {
-            dk.a(-18229);
+            int discarded$1 = -18229;
+            dk.a();
             return var1;
           } else {
             var3 = ho.field_i[var2] * jg.field_p[var2];

@@ -21,24 +21,13 @@ final class rq extends tc {
         field_n = null;
     }
 
-    final static void a(byte param0) {
-        fg var1 = null;
-        L0: {
-          var1 = (fg) (Object) vb.field_q.c((byte) -121);
-          if (var1 == null) {
+    final static void a() {
+        fg var1 = (fg) (Object) vb.field_q.c((byte) -121);
+        if (!(var1 != null)) {
             var1 = new fg();
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0 != -56) {
-          return;
-        } else {
-          var1.a(qn.field_f, qn.field_j, qn.field_e, qn.field_d, qn.field_a, qn.field_g, qn.field_l, -89);
-          md.field_y.a((byte) -119, (tc) (Object) var1);
-          return;
-        }
+        var1.a(qn.field_f, qn.field_j, qn.field_e, qn.field_d, qn.field_a, qn.field_g, qn.field_l, -89);
+        md.field_y.a((byte) -119, (tc) (Object) var1);
     }
 
     final static void a(boolean param0) {

@@ -16,7 +16,7 @@ final class cp {
     int field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_d = null;
         field_k = null;

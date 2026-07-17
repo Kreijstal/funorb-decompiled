@@ -10,14 +10,14 @@ final class pg extends java.awt.Canvas {
     static String field_c;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
         field_e = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -70,10 +70,12 @@ final class pg extends java.awt.Canvas {
                 Object var6 = null;
                 pg.a((byte) 43, (db) null, false, (db) null, (db) null);
             }
-            gk.field_e = lc.a("", (byte) 51);
+            int discarded$0 = 51;
+            gk.field_e = lc.a("");
             gk.field_e.a(106, false);
             e.a(4, param1, param4, param3);
-            hm.a(-3121);
+            int discarded$1 = -3121;
+            hm.a();
             sg.field_b = tl.field_e;
             lc.field_c = tl.field_e;
         } catch (RuntimeException runtimeException) {
@@ -160,7 +162,7 @@ final class pg extends java.awt.Canvas {
                 if (0 != var11.field_a) {
                   var7 = (java.awt.Frame) var11.field_b;
                   if (var7 != null) {
-                    var8 = 101 % ((param0 - 14) / 62);
+                    var8 = 0;
                     if (2 != var11.field_a) {
                       stackOut_25_0 = (java.awt.Frame) var7;
                       stackIn_26_0 = stackOut_25_0;
@@ -192,7 +194,7 @@ final class pg extends java.awt.Canvas {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var6;
-            stackOut_27_1 = new StringBuilder().append("pg.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_27_1 = new StringBuilder().append("pg.C(").append(112).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;

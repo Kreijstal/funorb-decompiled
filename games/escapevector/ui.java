@@ -14,7 +14,7 @@ final class ui {
         field_b = null;
     }
 
-    final static int a(sn param0, sn param1, int param2) {
+    final static int a(sn param0, sn param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object var4 = null;
@@ -181,7 +181,8 @@ final class ui {
             }
             var4_int = param1.b(-1, param2);
             var5 = param1.a(var4_int, param0, true);
-            stackOut_2_0 = gm.a(var4_int, var5, param1, 8192);
+            int discarded$2 = 8192;
+            stackOut_2_0 = gm.a(var4_int, var5, param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -268,7 +269,7 @@ final class ui {
         return stackIn_3_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         if (be.field_b != null) {
           be.field_b.o(-18861);
@@ -284,7 +285,7 @@ final class ui {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2) {
         gd.field_X = param0;
         pc.field_d = param1;
         lh.field_e = param2;

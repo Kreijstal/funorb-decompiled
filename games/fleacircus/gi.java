@@ -15,7 +15,7 @@ abstract class gi {
             return true;
           } else {
             L0: {
-              if (param1 == (char)param0) {
+              if (param1 == 45) {
                 break L0;
               } else {
                 if (160 == param1) {
@@ -202,9 +202,9 @@ abstract class gi {
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1, int param2, int param3) {
-        RuntimeException var4 = null;
+    final static boolean a(CharSequence param0) {
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -212,42 +212,42 @@ abstract class gi {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_35_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_34_0 = 0;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
+        String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_34_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_30_0 = 0;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
+        int stackOut_33_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_29_0 = 0;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
         RuntimeException stackOut_37_0 = null;
         StringBuilder stackOut_37_1 = null;
         String stackOut_37_2 = null;
+        RuntimeException stackOut_36_0 = null;
+        StringBuilder stackOut_36_1 = null;
+        String stackOut_36_2 = null;
         var11 = fleas.field_A ? 1 : 0;
         try {
           L0: {
             var4_int = 0;
             var5 = 0;
-            var6 = param2;
+            var6 = 0;
             var7 = param0.length();
             var8 = 0;
             L1: while (true) {
               if (var8 >= var7) {
-                stackOut_34_0 = var5;
-                stackIn_35_0 = stackOut_34_0;
+                stackOut_33_0 = var5;
+                stackIn_34_0 = stackOut_33_0;
                 break L0;
               } else {
                 L2: {
@@ -258,11 +258,7 @@ abstract class gi {
                         if (var9 != 43) {
                           break L3;
                         } else {
-                          if (!param1) {
-                            break L3;
-                          } else {
-                            break L2;
-                          }
+                          break L2;
                         }
                       } else {
                         var4_int = 1;
@@ -298,9 +294,9 @@ abstract class gi {
                       }
                     }
                     if (var9 < 97) {
-                      stackOut_19_0 = 0;
-                      stackIn_20_0 = stackOut_19_0;
-                      return stackIn_20_0 != 0;
+                      stackOut_18_0 = 0;
+                      stackIn_19_0 = stackOut_18_0;
+                      return stackIn_19_0 != 0;
                     } else {
                       if (var9 <= 122) {
                         var9 -= 87;
@@ -311,9 +307,9 @@ abstract class gi {
                     }
                   }
                   if (var9 >= 10) {
-                    stackOut_25_0 = 0;
-                    stackIn_26_0 = stackOut_25_0;
-                    return stackIn_26_0 != 0;
+                    stackOut_24_0 = 0;
+                    stackIn_25_0 = stackOut_24_0;
+                    return stackIn_25_0 != 0;
                   } else {
                     L7: {
                       if (var4_int == 0) {
@@ -329,9 +325,9 @@ abstract class gi {
                       var6 = var10;
                       break L2;
                     } else {
-                      stackOut_30_0 = 0;
-                      stackIn_31_0 = stackOut_30_0;
-                      return stackIn_31_0 != 0;
+                      stackOut_29_0 = 0;
+                      stackIn_30_0 = stackOut_29_0;
+                      return stackIn_30_0 != 0;
                     }
                   }
                 }
@@ -344,40 +340,40 @@ abstract class gi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) var4;
-            stackOut_36_1 = new StringBuilder().append("gi.L(");
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackOut_35_0 = (RuntimeException) var4;
+            stackOut_35_1 = new StringBuilder().append("gi.L(");
+            stackIn_37_0 = stackOut_35_0;
+            stackIn_37_1 = stackOut_35_1;
+            stackIn_36_0 = stackOut_35_0;
+            stackIn_36_1 = stackOut_35_1;
             if (param0 == null) {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
-              break L8;
-            } else {
               stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
               stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackOut_37_2 = "null";
+              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_1 = stackOut_37_1;
+              stackIn_38_2 = stackOut_37_2;
+              break L8;
+            } else {
+              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
+              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_2 = "{...}";
+              stackIn_38_0 = stackOut_36_0;
+              stackIn_38_1 = stackOut_36_1;
+              stackIn_38_2 = stackOut_36_2;
               break L8;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + param1 + 44 + param2 + 44 + 10 + 41);
+          throw pf.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + 1 + 44 + 0 + 44 + 10 + 41);
         }
-        return stackIn_35_0 != 0;
+        return stackIn_34_0 != 0;
     }
 
     abstract byte[] b(int param0, boolean param1);
 
     abstract rf a(int param0);
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;

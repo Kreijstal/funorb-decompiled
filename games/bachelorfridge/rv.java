@@ -86,7 +86,8 @@ final class rv extends cj {
         int var8 = 0;
         var8 = 15 % ((-53 - param3) / 36);
         if (param2 == param4) {
-          ur.a(param4, param7, param5, param0, param1, param6, 512);
+          int discarded$1 = 512;
+          ur.a(param4, param7, param5, param0, param1, param6);
           return;
         } else {
           if (param7 - param4 >= eo.field_l) {
@@ -227,7 +228,8 @@ final class rv extends cj {
                 var3 = param0.b(16711935);
                 if (var3 != 1) {
                   if (var3 == 2) {
-                    ((rv) this).field_m.a((bw) (Object) db.a(param0, 95), true);
+                    int discarded$2 = 95;
+                    ((rv) this).field_m.a((bw) (Object) db.a(param0), true);
                     continue L1;
                   } else {
                     if (var3 == 3) {
@@ -240,7 +242,8 @@ final class rv extends cj {
                       } else {
                         if (5 != var3) {
                           if (var3 == 6) {
-                            ((rv) this).field_m.a((bw) (Object) eo.a(param0, -4479), true);
+                            int discarded$3 = -4479;
+                            ((rv) this).field_m.a((bw) (Object) eo.a(param0), true);
                             continue L1;
                           } else {
                             if (var3 == 7) {

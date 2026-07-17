@@ -20,7 +20,7 @@ final class nd {
     int field_f;
     int field_g;
 
-    private final void a(int param0, int param1, String param2, int param3) {
+    private final void a(int param0, int param1, String param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -155,9 +155,9 @@ final class nd {
             ((nd) this).field_f = -1;
             var4.field_e = 15658734;
             ((nd) this).field_c = 15658734;
-            pm discarded$10 = var4.a((byte) -127, 0).b(15658734, -46).a(60, s.a(10066329, 7829367, 8947848, (byte) 127));
-            pm discarded$11 = var4.a((byte) 61, 1).a(33, s.a(10066329, 13421772, 11184810, (byte) 127));
-            pm discarded$12 = var4.a((byte) -13, 3).a(24, s.a(7829367, 10066329, 8947848, (byte) 127)).c(-123, 1).d(-64, 1);
+            pm discarded$15 = var4.a((byte) -127, 0).b(15658734, -46).a(60, s.a(10066329, 7829367, 8947848, (byte) 127));
+            pm discarded$16 = var4.a((byte) 61, 1).a(33, s.a(10066329, 13421772, 11184810, (byte) 127));
+            pm discarded$17 = var4.a((byte) -13, 3).a(24, s.a(7829367, 10066329, 8947848, (byte) 127)).c(-123, 1).d(-64, 1);
             var5 = new dl[9];
             var16 = new vi(32, 32);
             var18 = var16;
@@ -165,22 +165,27 @@ final class nd {
             L1: while (true) {
               if (var7_int >= var18.field_w.length) {
                 var5[4] = (dl) (Object) var18;
-                pm discarded$13 = var4.a((byte) -124, 4).a(false, true).a(46, var5);
-                pm discarded$14 = var4.a((byte) 43, 5).a(31, ci.a(0, 0, (byte) -70, 65793, 0)).a(param1, true).b(-1, -98);
+                pm discarded$18 = var4.a((byte) -124, 4).a(false, true).a(46, var5);
+                int discarded$19 = 0;
+                int discarded$20 = 65793;
+                int discarded$21 = -70;
+                int discarded$22 = 0;
+                int discarded$23 = 0;
+                pm discarded$24 = var4.a((byte) 43, 5).a(31, ci.a()).a(param1, true).b(-1, -98);
                 ((nd) this).field_p = (wo) (Object) var4;
                 var6 = new fk(var4, true);
                 var6.field_i = 0;
                 var7 = new fk(var4, true);
                 var7.field_i = 0;
                 var7.a(mi.b(127, 8947848), 0);
-                pm discarded$15 = var7.a((byte) 101, 1).a(44, mi.b(-90, 11184810)).b(2236962, -48);
+                pm discarded$25 = var7.a((byte) 101, 1).a(44, mi.b(-90, 11184810)).b(2236962, -48);
                 ((nd) this).field_i = (wo) (Object) new fl(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                gk discarded$16 = new gk(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                ip discarded$17 = new ip(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                gk discarded$26 = new gk(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                ip discarded$27 = new ip(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new fk();
                 var17.a((byte) 119, (lb) (Object) var8);
-                pm discarded$18 = var8.a((byte) 8, 0).a(105, s.a(7829367, 10066329, 15658734, (byte) 127)).b(1118481, -51).a(-1, 0);
-                pm discarded$19 = var8.a((byte) -3, 4).a(false, true).a(69, var5);
+                pm discarded$28 = var8.a((byte) 8, 0).a(105, s.a(7829367, 10066329, 15658734, (byte) 127)).b(1118481, -51).a(-1, 0);
+                pm discarded$29 = var8.a((byte) -3, 4).a(false, true).a(69, var5);
                 ((nd) this).field_q = (wo) (Object) var8;
                 var9 = new dl[9];
                 var10 = new dl[9];
@@ -278,7 +283,8 @@ final class nd {
                   this.b(param0, param2, -32, param3);
                   break L1;
                 } else {
-                  this.a(param2, param3, param0, -105);
+                  int discarded$3 = -105;
+                  this.a(param2, param3, param0);
                   break L1;
                 }
               }
@@ -428,7 +434,7 @@ final class nd {
               }
             }
             L9: {
-              var13 = -((nd) this).field_m.field_A + param3 - param2;
+              var13 = -((nd) this).field_m.field_A + param3 - -32;
               if (kh.field_d >= var6 + (var10 + var13)) {
                 break L9;
               } else {
@@ -469,7 +475,7 @@ final class nd {
               break L10;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 44 + -32 + 44 + param3 + 41);
         }
     }
 

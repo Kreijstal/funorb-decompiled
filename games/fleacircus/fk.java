@@ -53,42 +53,40 @@ final class fk extends dl {
         var5 = fleas.field_A ? 1 : 0;
         try {
           L0: {
-            if (!param2) {
-              ui.field_kb = ui.field_ob;
-              if (param1 == 255) {
-                L1: {
-                  if (ug.field_c >= 13) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
-                    break L1;
-                  } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
-                    break L1;
-                  }
+            ui.field_kb = ui.field_ob;
+            if (param1 == 255) {
+              L1: {
+                if (ug.field_c >= 13) {
+                  stackOut_11_0 = 0;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L1;
+                } else {
+                  stackOut_10_0 = 1;
+                  stackIn_12_0 = stackOut_10_0;
+                  break L1;
                 }
-                kh.field_a = ld.a(stackIn_12_0 != 0, (byte) 42);
-                var6 = null;
-                m.a(-44, (String[]) null);
-                break L0;
+              }
+              int discarded$4 = 42;
+              kh.field_a = ld.a(stackIn_12_0 != 0);
+              var6 = null;
+              m.a(-44, (String[]) null);
+              break L0;
+            } else {
+              if (param1 < 100) {
+                kh.field_a = af.a((byte) 36, param1, param0);
+                return;
               } else {
-                if (param1 < 100) {
+                if (105 < param1) {
                   kh.field_a = af.a((byte) 36, param1, param0);
                   return;
                 } else {
-                  if (105 < param1) {
-                    kh.field_a = af.a((byte) 36, param1, param0);
-                    return;
-                  } else {
-                    var4 = param3;
-                    m.a(-100, var4);
-                    kh.field_a = ha.a(param3, -21916);
-                    return;
-                  }
+                  var4 = param3;
+                  m.a(-100, var4);
+                  int discarded$5 = -21916;
+                  kh.field_a = ha.a(param3);
+                  return;
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,7 +119,7 @@ final class fk extends dl {
           }
           L3: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44).append(0).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -148,7 +146,7 @@ final class fk extends dl {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_B = null;
         field_z = null;
         field_x = null;

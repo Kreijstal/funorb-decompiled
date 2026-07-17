@@ -11,7 +11,7 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
     static int[] field_n;
     static String[] field_o;
 
-    private final synchronized void c(int param0) {
+    private final synchronized void c() {
         if (!(null != ((cg) this).field_j)) {
             return;
         }
@@ -20,19 +20,26 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static boolean c(byte param0) {
-        if (e.a(-111)) {
+        if (param0 == 54) {
+          if (!e.a(-111)) {
+            if (f.field_e) {
+              if (e.field_a) {
+                return true;
+              } else {
+                return false;
+              }
+            } else {
+              return false;
+            }
+          } else {
             return true;
+          }
+        } else {
+          return false;
         }
-        if (!f.field_e) {
-            return false;
-        }
-        if (e.field_a) {
-            return true;
-        }
-        return false;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
         field_o = null;
         field_n = null;
@@ -143,13 +150,14 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              this.c(0);
-              boolean discarded$5 = param0.drawImage(((cg) this).field_g, param2, param3, (java.awt.image.ImageObserver) this);
+              int discarded$7 = 0;
+              this.c();
+              boolean discarded$8 = param0.drawImage(((cg) this).field_g, param2, param3, (java.awt.image.ImageObserver) this);
               if (param1 == -29402) {
                 break L1;
               } else {
                 var6 = null;
-                boolean discarded$6 = ((cg) this).imageUpdate((java.awt.Image) null, -29, -34, 122, 69, 70);
+                boolean discarded$9 = ((cg) this).imageUpdate((java.awt.Image) null, -29, -34, 122, 69, 70);
                 break L1;
               }
             }
@@ -194,13 +202,16 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
             ((cg) this).field_d = param3;
             ((cg) this).field_l = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((cg) this).field_g = param2.createImage((java.awt.image.ImageProducer) this);
-            this.c(0);
-            boolean discarded$0 = param2.prepareImage(((cg) this).field_g, (java.awt.image.ImageObserver) this);
-            int var5_int = -33 / ((-53 - param0) / 36);
-            this.c(0);
+            int discarded$0 = 0;
+            this.c();
             boolean discarded$1 = param2.prepareImage(((cg) this).field_g, (java.awt.image.ImageObserver) this);
-            this.c(0);
-            boolean discarded$2 = param2.prepareImage(((cg) this).field_g, (java.awt.image.ImageObserver) this);
+            int var5_int = -33 / ((-53 - param0) / 36);
+            int discarded$2 = 0;
+            this.c();
+            boolean discarded$3 = param2.prepareImage(((cg) this).field_g, (java.awt.image.ImageObserver) this);
+            int discarded$4 = 0;
+            this.c();
+            boolean discarded$5 = param2.prepareImage(((cg) this).field_g, (java.awt.image.ImageObserver) this);
             ((cg) this).b(91);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) (Object) runtimeException, "cg.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);

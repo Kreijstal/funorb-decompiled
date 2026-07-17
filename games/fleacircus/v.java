@@ -18,7 +18,8 @@ final class v extends ja {
     }
 
     v(jb param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (ch) (Object) wi.a(17641));
+        super(param1, (ch) (Object) wi.a());
+        int discarded$0 = 17641;
         try {
             ((v) this).field_V = param1;
             ((v) this).field_S = param0;
@@ -180,13 +181,15 @@ final class v extends ja {
               if (var11 <= ((v) this).field_Q.field_w) {
                 if (((v) this).field_Q.field_t < var12) {
                   ((v) this).field_Q = new dd(var11, var12);
-                  r.a(((v) this).field_Q, 45);
+                  int discarded$16 = 45;
+                  r.a(((v) this).field_Q);
                   var39.a(112, 144, var39.field_x << 4, var39.field_r << 4, -((v) this).field_T << 10, 4096);
                   ia.a(-66);
                   ((v) this).field_Q.a(var9 + -(var39.field_x >> 1), -var39.field_r + var10, 256);
                   return;
                 } else {
-                  r.a(((v) this).field_Q, 45);
+                  int discarded$17 = 45;
+                  r.a(((v) this).field_Q);
                   gb.c();
                   var39.a(112, 144, var39.field_x << 4, var39.field_r << 4, -((v) this).field_T << 10, 4096);
                   ia.a(-66);
@@ -195,7 +198,8 @@ final class v extends ja {
                 }
               } else {
                 ((v) this).field_Q = new dd(var11, var12);
-                r.a(((v) this).field_Q, 45);
+                int discarded$18 = 45;
+                r.a(((v) this).field_Q);
                 var39.a(112, 144, var39.field_x << 4, var39.field_r << 4, -((v) this).field_T << 10, 4096);
                 ia.a(-66);
                 ((v) this).field_Q.a(var9 + -(var39.field_x >> 1), -var39.field_r + var10, 256);
@@ -203,7 +207,8 @@ final class v extends ja {
               }
             } else {
               ((v) this).field_Q = new dd(var11, var12);
-              r.a(((v) this).field_Q, 45);
+              int discarded$19 = 45;
+              r.a(((v) this).field_Q);
               var39.a(112, 144, var39.field_x << 4, var39.field_r << 4, -((v) this).field_T << 10, 4096);
               ia.a(-66);
               ((v) this).field_Q.a(var9 + -(var39.field_x >> 1), -var39.field_r + var10, 256);
@@ -226,7 +231,8 @@ final class v extends ja {
                 if (((v) this).field_Q != null) {
                   if (var11 <= ((v) this).field_Q.field_w) {
                     if (((v) this).field_Q.field_t >= var12) {
-                      r.a(((v) this).field_Q, 45);
+                      int discarded$20 = 45;
+                      r.a(((v) this).field_Q);
                       gb.c();
                       var30.a(112, 144, var30.field_x << 4, var30.field_r << 4, -((v) this).field_T << 10, 4096);
                       ia.a(-66);
@@ -234,7 +240,8 @@ final class v extends ja {
                       return;
                     } else {
                       ((v) this).field_Q = new dd(var11, var12);
-                      r.a(((v) this).field_Q, 45);
+                      int discarded$21 = 45;
+                      r.a(((v) this).field_Q);
                       var30.a(112, 144, var30.field_x << 4, var30.field_r << 4, -((v) this).field_T << 10, 4096);
                       ia.a(-66);
                       ((v) this).field_Q.a(var9 + -(var30.field_x >> 1), -var30.field_r + var10, 256);
@@ -242,7 +249,8 @@ final class v extends ja {
                     }
                   } else {
                     ((v) this).field_Q = new dd(var11, var12);
-                    r.a(((v) this).field_Q, 45);
+                    int discarded$22 = 45;
+                    r.a(((v) this).field_Q);
                     var30.a(112, 144, var30.field_x << 4, var30.field_r << 4, -((v) this).field_T << 10, 4096);
                     ia.a(-66);
                     ((v) this).field_Q.a(var9 + -(var30.field_x >> 1), -var30.field_r + var10, 256);
@@ -250,7 +258,8 @@ final class v extends ja {
                   }
                 } else {
                   ((v) this).field_Q = new dd(var11, var12);
-                  r.a(((v) this).field_Q, 45);
+                  int discarded$23 = 45;
+                  r.a(((v) this).field_Q);
                   var30.a(112, 144, var30.field_x << 4, var30.field_r << 4, -((v) this).field_T << 10, 4096);
                   ia.a(-66);
                   ((v) this).field_Q.a(var9 + -(var30.field_x >> 1), -var30.field_r + var10, 256);
@@ -286,7 +295,8 @@ final class v extends ja {
                       if (((v) this).field_Q.field_t < var12) {
                         break L3;
                       } else {
-                        r.a(((v) this).field_Q, 45);
+                        int discarded$24 = 45;
+                        r.a(((v) this).field_Q);
                         gb.c();
                         break L2;
                       }
@@ -294,7 +304,8 @@ final class v extends ja {
                   }
                 }
                 ((v) this).field_Q = new dd(var11, var12);
-                r.a(((v) this).field_Q, 45);
+                int discarded$25 = 45;
+                r.a(((v) this).field_Q);
                 break L2;
               }
               var27.a(112, 144, var27.field_x << 4, var27.field_r << 4, -((v) this).field_T << 10, 4096);
@@ -340,7 +351,8 @@ final class v extends ja {
             if (((v) this).field_Q != null) {
               if (var11 <= ((v) this).field_Q.field_w) {
                 if (((v) this).field_Q.field_t >= var12) {
-                  r.a(((v) this).field_Q, 45);
+                  int discarded$26 = 45;
+                  r.a(((v) this).field_Q);
                   gb.c();
                   var25.a(112, 144, var25.field_x << 4, var25.field_r << 4, -((v) this).field_T << 10, 4096);
                   ia.a(-66);
@@ -348,7 +360,8 @@ final class v extends ja {
                   return;
                 } else {
                   ((v) this).field_Q = new dd(var11, var12);
-                  r.a(((v) this).field_Q, 45);
+                  int discarded$27 = 45;
+                  r.a(((v) this).field_Q);
                   var25.a(112, 144, var25.field_x << 4, var25.field_r << 4, -((v) this).field_T << 10, 4096);
                   ia.a(-66);
                   ((v) this).field_Q.a(var9 + -(var25.field_x >> 1), -var25.field_r + var10, 256);
@@ -356,7 +369,8 @@ final class v extends ja {
                 }
               } else {
                 ((v) this).field_Q = new dd(var11, var12);
-                r.a(((v) this).field_Q, 45);
+                int discarded$28 = 45;
+                r.a(((v) this).field_Q);
                 var25.a(112, 144, var25.field_x << 4, var25.field_r << 4, -((v) this).field_T << 10, 4096);
                 ia.a(-66);
                 ((v) this).field_Q.a(var9 + -(var25.field_x >> 1), -var25.field_r + var10, 256);
@@ -364,7 +378,8 @@ final class v extends ja {
               }
             } else {
               ((v) this).field_Q = new dd(var11, var12);
-              r.a(((v) this).field_Q, 45);
+              int discarded$29 = 45;
+              r.a(((v) this).field_Q);
               var25.a(112, 144, var25.field_x << 4, var25.field_r << 4, -((v) this).field_T << 10, 4096);
               ia.a(-66);
               ((v) this).field_Q.a(var9 + -(var25.field_x >> 1), -var25.field_r + var10, 256);
@@ -416,7 +431,8 @@ final class v extends ja {
                       if (((v) this).field_Q.field_t < var12) {
                         break L8;
                       } else {
-                        r.a(((v) this).field_Q, 45);
+                        int discarded$30 = 45;
+                        r.a(((v) this).field_Q);
                         gb.c();
                         break L7;
                       }
@@ -424,7 +440,8 @@ final class v extends ja {
                   }
                 }
                 ((v) this).field_Q = new dd(var11, var12);
-                r.a(((v) this).field_Q, 45);
+                int discarded$31 = 45;
+                r.a(((v) this).field_Q);
                 break L7;
               }
               var21.a(112, 144, var21.field_x << 4, var21.field_r << 4, -((v) this).field_T << 10, 4096);
@@ -501,7 +518,7 @@ final class v extends ja {
         return stackIn_3_0 != 0;
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_U = null;
         field_R = null;
     }

@@ -519,7 +519,7 @@ final class ef extends mc {
         ((ef) this).field_C = ((ef) this).field_r;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_y = null;
         field_A = null;
         int var1 = 0;

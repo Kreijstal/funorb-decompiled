@@ -99,7 +99,7 @@ final class fg {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, o[] param4, byte param5) {
+    final static void a(int param0, int param1, int param2, int param3, o[] param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -192,7 +192,7 @@ final class fg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_e = null;
         field_c = null;

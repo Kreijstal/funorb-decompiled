@@ -29,7 +29,7 @@ final class ti {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = 104 % ((16 - param1) / 61);
+            var3_int = 0;
             var4 = new pc();
             ((du) (Object) var4).field_a = param0;
             ((du) (Object) var4).field_c = param2;
@@ -65,17 +65,17 @@ final class ti {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 102 + 44 + param2 + 41);
         }
         return (du) (Object) stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         int fieldTemp$0 = !ms.field_o ? 1 : 0;
         ms.field_o = !ms.field_o ? true : false;
         return new Boolean(fieldTemp$0 != 0).toString();

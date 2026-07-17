@@ -92,7 +92,7 @@ final class lb extends vj {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_w = null;
         field_t = null;
         field_u = null;
@@ -125,9 +125,15 @@ final class lb extends vj {
           L0: {
             var2 = new go[2];
             var4 = -16 / ((param1 - -14) / 63);
-            var2[0] = bi.a(false, param0, true, false, 2048);
+            int discarded$12 = 2048;
+            int discarded$13 = 0;
+            int discarded$14 = 1;
+            var2[0] = bi.a(false, param0);
             var3 = param0 + "_destroyed";
-            var2[1] = bi.a(false, var3, true, false, 2048);
+            int discarded$15 = 2048;
+            int discarded$16 = 0;
+            int discarded$17 = 1;
+            var2[1] = bi.a(false, var3);
             stackOut_0_0 = (go[]) var2;
             stackIn_1_0 = stackOut_0_0;
             break L0;

@@ -7,7 +7,7 @@ abstract class oe extends wf {
     int field_h;
     int field_g;
 
-    final static fr d(int param0) {
+    final static fr d() {
         int var1 = 0;
         if (dk.field_h == ht.field_k) {
           throw new IllegalStateException();

@@ -12,7 +12,7 @@ final class nd extends qf {
     static int field_m;
     private boolean field_o;
 
-    public static void g(int param0) {
+    public static void g() {
         field_l = null;
         field_p = null;
         field_j = null;
@@ -365,7 +365,7 @@ final class nd extends qf {
         return stackIn_7_0;
     }
 
-    final static void b(int param0, byte param1) {
+    final static void b() {
         rf var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -382,13 +382,13 @@ final class nd extends qf {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    sc.a(32395, param0);
+                    sc.a(32395, 6);
                     var2 = ab.field_H.a(-16913);
                     continue L2;
                   }
                 }
               } else {
-                bb.a(2, param0, var4);
+                bb.a(2, 6, var4);
                 var4 = (of) (Object) fi.field_c.a(-16913);
                 continue L1;
               }
@@ -397,7 +397,7 @@ final class nd extends qf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2_ref, "nd.N(" + param0 + 44 + -66 + 41);
+          throw sd.a((Throwable) (Object) var2_ref, "nd.N(" + 6 + 44 + -66 + 41);
         }
     }
 

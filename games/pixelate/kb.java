@@ -228,7 +228,7 @@ abstract class kb extends ch implements bp {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_I = null;
         field_N = null;
         field_J = null;

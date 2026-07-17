@@ -81,7 +81,7 @@ final class hk extends wc {
         return stackIn_3_0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_N = null;
         field_J = null;
         field_L = null;

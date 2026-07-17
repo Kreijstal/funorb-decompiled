@@ -27,10 +27,7 @@ final class so {
         }
     }
 
-    final static int a(int param0) {
-        if (param0 != 25213) {
-            return -16;
-        }
+    final static int a() {
         return ms.field_r;
     }
 

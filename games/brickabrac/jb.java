@@ -95,23 +95,17 @@ final class jb extends h {
         }
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_I = null;
         field_G = null;
     }
 
-    final static void b(int param0, int param1, int param2) {
-        pi var3 = null;
-        var3 = k.field_h;
+    final static void b(int param0, int param1) {
+        pi var3 = k.field_h;
         var3.e(-13413, param1);
         var3.a(-115, 3);
-        if (param2 != 11912) {
-          return;
-        } else {
-          var3.a(-113, 8);
-          var3.b((byte) 109, param0);
-          return;
-        }
+        var3.a(-113, 8);
+        var3.b((byte) 109, param0);
     }
 
     static {

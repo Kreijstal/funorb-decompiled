@@ -7,14 +7,14 @@ final class eb {
     static String field_a;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_c = null;
         field_b = null;
     }
 
-    final static o a(boolean param0, o param1, int param2) {
+    final static o a(boolean param0, o param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -54,7 +54,7 @@ final class eb {
             var8 = 0;
             L1: while (true) {
               if (var11.field_t <= var8) {
-                var8 = -54 % ((param2 - -21) / 57);
+                var8 = 0;
                 var11.f();
                 stackOut_13_0 = (o) var11;
                 stackIn_14_0 = stackOut_13_0;
@@ -78,7 +78,7 @@ final class eb {
                             var5++;
                             int incrementValue$7 = var4;
                             var4++;
-                            var7[incrementValue$6] = var7[incrementValue$6] + rf.b(20, var6[incrementValue$7], param0, 0);
+                            var7[incrementValue$6] = var7[incrementValue$6] + rf.b(20, var6[incrementValue$7], false, 0);
                             var9++;
                             continue L4;
                           }
@@ -88,7 +88,7 @@ final class eb {
                         var5++;
                         int incrementValue$9 = var4;
                         var4++;
-                        var7[incrementValue$8] = var7[incrementValue$8] + rf.b(20, var6[incrementValue$9], param0, 1);
+                        var7[incrementValue$8] = var7[incrementValue$8] + rf.b(20, var6[incrementValue$9], false, 1);
                         var9++;
                         continue L3;
                       }
@@ -98,7 +98,7 @@ final class eb {
                     var5++;
                     int incrementValue$11 = var4;
                     var4++;
-                    var7[incrementValue$10] = var7[incrementValue$10] + rf.b(20, var6[incrementValue$11], param0, 2);
+                    var7[incrementValue$10] = var7[incrementValue$10] + rf.b(20, var6[incrementValue$11], false, 2);
                     var9++;
                     continue L2;
                   }
@@ -111,7 +111,7 @@ final class eb {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3;
-            stackOut_15_1 = new StringBuilder().append("eb.B(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("eb.B(").append(0).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -134,7 +134,7 @@ final class eb {
               break L5;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 72 + 41);
         }
         return stackIn_14_0;
     }

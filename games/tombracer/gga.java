@@ -16,7 +16,7 @@ final class gga extends ofa implements tsa {
         }
     }
 
-    private final rj a(String param0, qc param1, int param2) {
+    private final rj a(String param0, qc param1) {
         rj var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -124,7 +124,7 @@ final class gga extends ofa implements tsa {
         return stackIn_1_0;
     }
 
-    final static void b(int param0, int param1, byte param2) {
+    final static void b() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -136,8 +136,8 @@ final class gga extends ofa implements tsa {
           return;
         } else {
           L0: {
-            var3 = -135 + param0;
-            var4 = -35 + param1;
+            var3 = 185;
+            var4 = 205;
             var5 = 256;
             if (tl.field_r >= 75) {
               break L0;
@@ -157,7 +157,8 @@ final class gga extends ofa implements tsa {
           nm.a(vha.field_a, (byte) 108);
           uoa.b();
           bea.a();
-          uw.a(false);
+          int discarded$1 = 0;
+          uw.a();
           if (var5 >= 256) {
             pfa.a(1);
             if (tl.field_r >= 150) {
@@ -544,7 +545,8 @@ final class gga extends ofa implements tsa {
               if (param2 != ((gga) this).field_N) {
                 break L1;
               } else {
-                this.g(256);
+                int discarded$2 = 256;
+                this.g();
                 break L1;
               }
             }
@@ -636,7 +638,8 @@ final class gga extends ofa implements tsa {
                 if (or.field_j == param1) {
                   ((gga) this).field_p = ((gga) this).field_p + 10;
                   var3 = (Object) (Object) vca.field_b;
-                  if (!sta.g((byte) 97)) {
+                  int discarded$26 = 97;
+                  if (!sta.g()) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) tj.field_h;
@@ -661,7 +664,8 @@ final class gga extends ofa implements tsa {
             var4.field_i = 0;
             var4.field_r = (isa) (Object) new vpa(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((gga) this).a(var4, -1);
-            ((gga) this).field_N = this.a(kh.field_j, (qc) this, -93);
+            int discarded$27 = -93;
+            ((gga) this).field_N = this.a(kh.field_j, (qc) this);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -721,7 +725,7 @@ final class gga extends ofa implements tsa {
         }
     }
 
-    private final void g(int param0) {
+    private final void g() {
         if (!((gga) this).field_B) {
             return;
         }

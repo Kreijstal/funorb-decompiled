@@ -11,10 +11,7 @@ final class hc extends mf {
     private boolean field_n;
     private String field_m;
 
-    final static void f(int param0) {
-        if (param0 != 92682) {
-            field_l = null;
-        }
+    final static void f() {
         de.a((byte) -52, we.field_a, sf.field_a, true);
         ga.field_a = true;
     }
@@ -35,9 +32,6 @@ final class hc extends mf {
                 return false;
             }
             int var2_int = jc.field_H.c((byte) 89);
-            if (param1 != -28266) {
-                hc.f(-28);
-            }
             if (var2_int > 0) {
                 if (-nk.field_N.field_m + param0 < var2_int) {
                     var2_int = -nk.field_N.field_m + param0;
@@ -53,7 +47,8 @@ final class hc extends mf {
             }
             {
                 if (var2_int >= 0) {
-                    if (30000L >= eh.a(2)) {
+                    int discarded$3 = 2;
+                    if (30000L >= eh.a()) {
                         return false;
                     }
                 }
@@ -142,10 +137,12 @@ final class hc extends mf {
         return stackIn_7_0;
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         if (!f.field_e) {
             if (null == ok.field_c) {
-                ok.field_c = dc.a((byte) 103, 4);
+                int discarded$0 = 4;
+                int discarded$1 = 103;
+                ok.field_c = dc.a();
             }
             if (ok.field_c.field_i) {
                 qf.field_l = qf.field_l & ~ok.field_c.field_j;
@@ -156,7 +153,11 @@ final class hc extends mf {
         }
         if (!e.field_a) {
             if (!(null != rf.field_a)) {
-                rf.field_a = ff.c(5, 1, 2, 0);
+                int discarded$2 = 0;
+                int discarded$3 = 2;
+                int discarded$4 = 1;
+                int discarded$5 = 5;
+                rf.field_a = ff.c();
             }
             if (!(!rf.field_a.field_j)) {
                 if (rf.field_a.field_n[0] > pl.field_A) {
@@ -173,12 +174,12 @@ final class hc extends mf {
         }
     }
 
-    final static void a(pg param0, boolean param1, int param2) {
+    final static void a(pg param0) {
         try {
-            sf.field_j.a((wl) (Object) param0, param1);
+            sf.field_j.a((wl) (Object) param0, false);
             pg.a(4, true, param0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "hc.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 4 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "hc.I(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + 4 + 41);
         }
     }
 
@@ -230,7 +231,8 @@ final class hc extends mf {
                 if (param1.equals((Object) (Object) ((hc) this).field_m)) {
                   break L1;
                 } else {
-                  var3 = ad.a(param1, 6);
+                  int discarded$2 = 6;
+                  var3 = ad.a(param1);
                   if (var3.a(true)) {
                     ((hc) this).field_m = param1;
                     ((hc) this).field_n = var3.b(25843);

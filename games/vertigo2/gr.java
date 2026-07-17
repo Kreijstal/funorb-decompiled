@@ -11,7 +11,8 @@ final class gr extends sp implements ij {
     public final void a(int param0, d param1, byte param2, int param3, int param4) {
         try {
             if (((gr) this).field_X == param1) {
-                this.m(19447);
+                int discarded$0 = 19447;
+                this.m();
             }
             int var6_int = -23 % ((-63 - param2) / 51);
         } catch (RuntimeException runtimeException) {
@@ -70,7 +71,8 @@ final class gr extends sp implements ij {
                 } else {
                   var3 = (Object) (Object) lh.field_a;
                   ((gr) this).field_s = ((gr) this).field_s + 10;
-                  if (!ui.c(-101)) {
+                  int discarded$3 = -101;
+                  if (!ui.c()) {
                     break L1;
                   } else {
                     ((gr) this).field_s = ((gr) this).field_s + 20;
@@ -169,7 +171,7 @@ final class gr extends sp implements ij {
           L0: {
             L1: {
               L2: {
-                if (param0 >= param1) {
+                if (0 >= param1) {
                   break L2;
                 } else {
                   if (128 > param1) {
@@ -225,7 +227,7 @@ final class gr extends sp implements ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var2_ref, "gr.A(" + param0 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) var2_ref, "gr.A(" + 0 + 44 + param1 + 41);
         }
         return stackIn_17_0 != 0;
     }
@@ -238,7 +240,7 @@ final class gr extends sp implements ij {
         }
     }
 
-    private final void m(int param0) {
+    private final void m() {
         if (!((gr) this).field_I) {
             return;
         }
@@ -286,11 +288,11 @@ final class gr extends sp implements ij {
           L0: {
             var4 = new d(param2, param1);
             var4.field_B = (ur) (Object) new vo();
-            var5 = param0 + ((gr) this).field_s;
+            var5 = -6 + ((gr) this).field_s;
             ((gr) this).field_s = ((gr) this).field_s + 38;
             var4.a(false, 15, var5, 30, -16 + (((gr) this).field_n - 14));
             ((gr) this).c((byte) -119, (iq) (Object) var4);
-            ((gr) this).g(param0 + -97);
+            ((gr) this).g(-103);
             stackOut_0_0 = (d) var4;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -300,7 +302,7 @@ final class gr extends sp implements ij {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("gr.H(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("gr.H(").append(-6).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

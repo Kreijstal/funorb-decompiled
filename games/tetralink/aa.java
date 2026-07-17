@@ -39,7 +39,8 @@ final class aa extends hl {
               var6 = var6 + 2 * ((aa) this).field_Tb;
               var7 = ((aa) this).field_Yb + ((aa) this).field_Yb + ((aa) this).field_Rb * ((aa) this).field_Xb;
               var8 = eo.a(var6, (byte) 123, param4, param0);
-              var9 = mh.a(param3, param1, var7, -8748);
+              int discarded$2 = -8748;
+              var9 = mh.a(param3, param1, var7);
               ((aa) this).a((byte) -80, var6, var9, var7, var8);
               var10 = 0;
               if (param2 < -13) {
@@ -98,7 +99,8 @@ final class aa extends hl {
           var6 = var6 + 2 * ((aa) this).field_Tb;
           var7 = ((aa) this).field_Yb + ((aa) this).field_Yb + ((aa) this).field_Rb * ((aa) this).field_Xb;
           var8 = eo.a(var6, (byte) 123, param4, param0);
-          var9 = mh.a(param3, param1, var7, -8748);
+          int discarded$3 = -8748;
+          var9 = mh.a(param3, param1, var7);
           ((aa) this).a((byte) -80, var6, var9, var7, var8);
           var10 = 0;
           if (param2 < -13) {
@@ -145,13 +147,13 @@ final class aa extends hl {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_Wb = null;
         field_Kb = null;
         field_bc = null;
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         Object var2 = null;
         ve.a(-1, (String) null, pl.field_e);
     }
@@ -281,8 +283,8 @@ final class aa extends hl {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              if (ji.field_Tb == param2) {
-                var7 = fh.a(param2 ^ -32053, param3);
+              if (ji.field_Tb == 2) {
+                var7 = fh.a(-32055, param3);
                 if (var7 != null) {
                   var7.b(false);
                   var7.e(0);
@@ -293,7 +295,7 @@ final class aa extends hl {
                   var6 = var5.field_t;
                   var5.a(3, false);
                   var5.a(param0, 0);
-                  var5.b(-var6 + var5.field_t, param2 + -4);
+                  var5.b(-var6 + var5.field_t, -2);
                   stackOut_10_0 = null;
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
@@ -339,7 +341,7 @@ final class aa extends hl {
           }
           L2: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(2).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

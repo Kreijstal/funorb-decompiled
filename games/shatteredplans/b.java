@@ -84,29 +84,25 @@ final class b extends vd {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            if (param0 == 2232) {
-              L1: {
-                var3_int = param2.length();
-                if (var3_int > 255) {
-                  var3_int = 255;
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L1: {
+              var3_int = param2.length();
+              if (var3_int > 255) {
+                var3_int = 255;
+                break L1;
+              } else {
+                break L1;
               }
-              param1.c(var3_int, (byte) -60);
-              var4 = 0;
-              L2: while (true) {
-                if (var3_int <= var4) {
-                  break L0;
-                } else {
-                  param1.c((int) param2.charAt(var4), (byte) -57);
-                  var4++;
-                  continue L2;
-                }
+            }
+            param1.c(var3_int, (byte) -60);
+            var4 = 0;
+            L2: while (true) {
+              if (var3_int <= var4) {
+                break L0;
+              } else {
+                param1.c((int) param2.charAt(var4), (byte) -57);
+                var4++;
+                continue L2;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,7 +110,7 @@ final class b extends vd {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("b.B(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("b.B(").append(2232).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -171,6 +167,8 @@ final class b extends vd {
     }
 
     private static void $cfr$clinit() {
-        ka.a(7321, 50);
+        int discarded$0 = 50;
+        int discarded$1 = 7321;
+        ka.a();
     }
 }

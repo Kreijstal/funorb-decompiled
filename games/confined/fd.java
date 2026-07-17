@@ -418,9 +418,6 @@ final class fd {
         fb.field_c = pm.field_B[param1];
         hc.field_s = ak.field_L[param1];
         b.field_k = th.field_eb[param1];
-        if (param0 != 30177) {
-            field_k = null;
-        }
     }
 
     final void b(byte param0) {

@@ -33,11 +33,7 @@ final class ih extends qe {
         var5 = 0;
         L0: while (true) {
           if (var5 >= 2) {
-            if (param0 == -1) {
-              return -1;
-            } else {
-              return 95;
-            }
+            return -1;
           } else {
             var6 = 0;
             L1: while (true) {
@@ -151,7 +147,8 @@ final class ih extends qe {
             break L0;
           }
         }
-        ho.b((byte) -36);
+        int discarded$1 = -36;
+        ho.b();
     }
 
     final void a(boolean param0) {
@@ -252,7 +249,8 @@ final class ih extends qe {
             L7: while (true) {
               if (var4 == null) {
                 L8: {
-                  this.g(0);
+                  int discarded$1 = 0;
+                  this.g();
                   ((ih) this).field_y.d();
                   ((ih) this).field_D.d();
                   if (((ih) this).field_b == null) {
@@ -529,7 +527,8 @@ final class ih extends qe {
                     }
                   }
                 }
-                uj.a(var4, 95);
+                int discarded$6 = 95;
+                uj.a(var4);
                 break L1;
               }
             }
@@ -564,7 +563,7 @@ final class ih extends qe {
                         }
                         ((ih) this).field_F = new wd(var18.field_e, var18.field_t, rf.field_M);
                         if (null != var18.field_p) {
-                          o discarded$2 = gd.a(64, var18.field_p);
+                          o discarded$7 = gd.a(64, var18.field_p);
                           break L6;
                         } else {
                           break L6;
@@ -609,7 +608,8 @@ final class ih extends qe {
                                         }
                                       }
                                     }
-                                    ho.b((byte) -36);
+                                    int discarded$8 = -36;
+                                    ho.b();
                                     break L9;
                                   } else {
                                     break L9;
@@ -636,7 +636,7 @@ final class ih extends qe {
                                         if (var21.field_u != var20.field_b.field_n) {
                                           var20.field_b.a(124, var21.field_u);
                                           if (var20.field_n.field_p != null) {
-                                            o discarded$3 = gd.a(64, var21.field_p);
+                                            o discarded$9 = gd.a(64, var21.field_p);
                                             break L6;
                                           } else {
                                             break L6;
@@ -657,7 +657,8 @@ final class ih extends qe {
                                   var19 = ((u) (Object) op.field_d.field_l).field_Q;
                                   um.field_i[var2] = new hb(var2, var19.field_w);
                                   um.field_i[var2].field_b = new wd(var19.field_e);
-                                  ho.b((byte) -36);
+                                  int discarded$10 = -36;
+                                  ho.b();
                                   op.field_d.a((byte) 80);
                                   break L6;
                                 }
@@ -690,7 +691,8 @@ final class ih extends qe {
                   if (var2_ref_hb != null) {
                     um.field_i[((ih) this).field_C] = new hb(((ih) this).field_C, var17.field_c);
                     um.field_i[((ih) this).field_C].field_b = new wd(var17.field_n.field_e);
-                    ho.b((byte) -36);
+                    int discarded$11 = -36;
+                    ho.b();
                     this.a((byte) -112, -1);
                     break L6;
                   } else {
@@ -761,19 +763,19 @@ final class ih extends qe {
     }
 
     private final void b(int param0, int param1, int param2) {
-        ih.a(param2, param0, param1, 30);
-        ih.a(param2, 40 + param0, 144, 30);
-        int var4 = 8 + param0 + la.field_b.field_H;
-        db.field_v.b(pb.field_I, param2 - -7, var4, 16777215, -1);
-        db.field_v.a(Integer.toString(gm.field_d.field_s / 10), 133 + param2, var4, 16777215, -1);
+        ih.a(476, 286, 144, 30);
+        ih.a(476, 326, 144, 30);
+        int var4 = 294 + la.field_b.field_H;
+        db.field_v.b(pb.field_I, 483, var4, 16777215, -1);
+        db.field_v.a(Integer.toString(gm.field_d.field_s / 10), 609, var4, 16777215, -1);
         var4 += 40;
         int var5 = ac.field_s > gm.field_d.field_s ? 16711680 : 16777215;
-        db.field_v.b(ef.field_f, 7 + param2, var4, var5, -1);
+        db.field_v.b(ef.field_f, 483, var4, var5, -1);
         int var6 = ac.field_s / 10;
         if (ac.field_s % 10 != 0) {
             var6++;
         }
-        db.field_v.a(Integer.toString(var6), param2 + 133, var4, var5, -1);
+        db.field_v.a(Integer.toString(var6), 609, var4, var5, -1);
     }
 
     private final void c(int param0) {
@@ -805,17 +807,22 @@ final class ih extends qe {
         this.a(0, 0);
         ((ih) this).field_q = new sa(262, 412, 280, 56);
         ((ih) this).field_q.a(true, lg.field_h, (byte) 91, a.field_m, 16777215);
-        hl.field_b.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
-        hi.field_a.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
-        kl.field_h.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
-        cd.field_d.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
-        am.field_f.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
+        int discarded$0 = 30496;
+        hl.field_b.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
+        int discarded$1 = 30496;
+        hi.field_a.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
+        int discarded$2 = 30496;
+        kl.field_h.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
+        int discarded$3 = 30496;
+        cd.field_d.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
+        int discarded$4 = 30496;
+        am.field_f.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
         nl.field_a.field_n = (en) (Object) new e((String) null, pm.field_o, nk.field_Lb);
         sn.field_b.field_n = (en) (Object) new e((String) null, ud.field_u, oi.field_M);
         this.a((byte) -112, -1);
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1141,7 +1148,7 @@ final class ih extends qe {
         }
         ud.field_t.field_J = null;
         ud.field_t.e(true);
-        var4 = param1;
+        var4 = 0;
         var5 = qm.field_r;
         var6 = 0;
         L16: while (true) {
@@ -1169,44 +1176,37 @@ final class ih extends qe {
         int var2 = 0;
         eh var3 = null;
         int var4 = 0;
-        eh stackIn_9_0 = null;
-        eh stackOut_8_0 = null;
-        eh stackOut_7_0 = null;
-        L0: {
-          var4 = DungeonAssault.field_K;
-          if (param0 == 1793) {
-            break L0;
-          } else {
-            ((ih) this).field_t = 120;
-            break L0;
-          }
-        }
+        eh stackIn_7_0 = null;
+        eh stackOut_6_0 = null;
+        eh stackOut_5_0 = null;
+        var4 = DungeonAssault.field_K;
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var2 >= 8) {
-            ho.b((byte) -36);
+            int discarded$1 = -36;
+            ho.b();
             return;
           } else {
             um.field_i[var2] = gm.field_d.field_a[var2];
             if (null != um.field_i[var2]) {
-              L2: {
+              L1: {
                 if (um.field_i[var2].field_p == 255) {
-                  stackOut_8_0 = k.field_c;
-                  stackIn_9_0 = stackOut_8_0;
-                  break L2;
+                  stackOut_6_0 = k.field_c;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L1;
                 } else {
-                  stackOut_7_0 = um.field_i[var2].field_n.field_e;
-                  stackIn_9_0 = stackOut_7_0;
-                  break L2;
+                  stackOut_5_0 = um.field_i[var2].field_n.field_e;
+                  stackIn_7_0 = stackOut_5_0;
+                  break L1;
                 }
               }
-              var3 = stackIn_9_0;
+              var3 = stackIn_7_0;
               um.field_i[var2].field_b = new wd(var3);
               var2++;
-              continue L1;
+              continue L0;
             } else {
               var2++;
-              continue L1;
+              continue L0;
             }
           }
         }
@@ -1257,62 +1257,59 @@ final class ih extends qe {
         Object var3 = null;
         h var4 = null;
         int var5 = 0;
-        var5 = DungeonAssault.field_K;
-        ((ih) this).field_C = param1;
-        if (param0 == -112) {
-          L0: {
-            var3 = null;
-            if (((ih) this).field_C == -1) {
-              break L0;
-            } else {
-              var3 = (Object) (Object) um.field_i[((ih) this).field_C];
-              break L0;
-            }
+        L0: {
+          var5 = DungeonAssault.field_K;
+          ((ih) this).field_C = param1;
+          var3 = null;
+          if (((ih) this).field_C == -1) {
+            break L0;
+          } else {
+            var3 = (Object) (Object) um.field_i[((ih) this).field_C];
+            break L0;
           }
-          L1: {
-            if (var3 == null) {
-              mi.a(in.field_y, sa.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
-              in.field_y.field_w = false;
-              break L1;
-            } else {
-              var4 = ((hb) var3).field_n;
-              if (255 != ((hb) var3).field_p) {
-                L2: {
-                  if (var4.field_m > ((hb) var3).field_e) {
+        }
+        L1: {
+          if (var3 == null) {
+            mi.a(in.field_y, sa.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
+            in.field_y.field_w = false;
+            break L1;
+          } else {
+            var4 = ((hb) var3).field_n;
+            if (255 != ((hb) var3).field_p) {
+              L2: {
+                if (var4.field_m > ((hb) var3).field_e) {
+                  break L2;
+                } else {
+                  if (((hb) var3).field_g < var4.field_r) {
                     break L2;
                   } else {
-                    if (((hb) var3).field_g < var4.field_r) {
+                    if (((hb) var3).field_f < var4.field_b) {
                       break L2;
                     } else {
-                      if (((hb) var3).field_f < var4.field_b) {
-                        break L2;
+                      if (((hb) var3).field_k >= var4.field_o) {
+                        mi.a(in.field_y, sa.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
+                        in.field_y.field_w = false;
+                        break L1;
                       } else {
-                        if (((hb) var3).field_k >= var4.field_o) {
-                          mi.a(in.field_y, sa.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
-                          in.field_y.field_w = false;
-                          break L1;
-                        } else {
-                          break L2;
-                        }
+                        break L2;
                       }
                     }
                   }
                 }
-                mi.a(in.field_y, ae.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
-                in.field_y.field_n = (en) (Object) new e((String) null, jk.a(new String[2], t.field_c, 30496), (String) null);
-                in.field_y.field_w = true;
-                break L1;
-              } else {
-                mi.a(in.field_y, sa.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
-                in.field_y.field_n = (en) (Object) new e((String) null, jk.a(new String[2], e.field_g, 30496), (String) null);
-                in.field_y.field_w = true;
-                break L1;
               }
+              mi.a(in.field_y, ae.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
+              int discarded$2 = 30496;
+              in.field_y.field_n = (en) (Object) new e((String) null, jk.a(new String[2], t.field_c), (String) null);
+              in.field_y.field_w = true;
+              break L1;
+            } else {
+              mi.a(in.field_y, sa.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
+              int discarded$3 = 30496;
+              in.field_y.field_n = (en) (Object) new e((String) null, jk.a(new String[2], e.field_g), (String) null);
+              in.field_y.field_w = true;
+              break L1;
             }
           }
-          return;
-        } else {
-          return;
         }
     }
 
@@ -1378,7 +1375,8 @@ final class ih extends qe {
             return;
           } else {
             L0: while (true) {
-              if (!ha.b((byte) 47)) {
+              int discarded$20 = 47;
+              if (!ha.b()) {
                 L1: {
                   this.f(-24900);
                   if (((ih) this).field_b == null) {
@@ -1408,7 +1406,8 @@ final class ih extends qe {
                   if (!kn.field_g) {
                     break L3;
                   } else {
-                    bl.a(0);
+                    int discarded$21 = 0;
+                    bl.a();
                     break L3;
                   }
                 }

@@ -114,7 +114,7 @@ final class t {
                 var9 = var6.e(param1 ^ 1);
                 var24 = new nc[var9];
                 var10 = var24;
-                int discarded$3 = var6.a((byte) -127, (oh[]) (Object) var10);
+                int discarded$4 = var6.a((byte) -127, (oh[]) (Object) var10);
                 var11 = 0;
                 L3: while (true) {
                   if (var9 <= var11) {
@@ -130,7 +130,7 @@ final class t {
                           } else {
                             var13_int = var25.e(0);
                             var5.field_v = new fi[var13_int];
-                            int discarded$4 = var25.a((byte) -105, (oh[]) (Object) var5.field_v);
+                            int discarded$5 = var25.a((byte) -105, (oh[]) (Object) var5.field_v);
                             ra.a(false, var13_int, (ag[]) (Object) var5.field_v);
                             break L5;
                           }
@@ -148,12 +148,13 @@ final class t {
                               var14 = var6.e(param1 + -1);
                               var26 = new nc[var14];
                               var10 = var26;
-                              int discarded$5 = var6.a((byte) 95, (oh[]) (Object) var10);
+                              int discarded$6 = var6.a((byte) 95, (oh[]) (Object) var10);
                               var15_int = 0;
                               L7: while (true) {
                                 if (var9 <= var15_int) {
                                   ad.a(var6, -24925);
-                                  hl.a(var6, true);
+                                  int discarded$7 = 1;
+                                  hl.a(var6);
                                   var15 = new dm();
                                   var16_ref = (nc) (Object) var6.d(param1 ^ 1);
                                   L8: while (true) {

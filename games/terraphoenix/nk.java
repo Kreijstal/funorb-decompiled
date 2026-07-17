@@ -37,35 +37,9 @@ class nk {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_u = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_r = stackIn_7_0 != 0;
-              field_m = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_u = 22050;
+        field_r = true;
+        field_m = 10;
     }
 
     private final void a(lj param0, int param1) {
@@ -88,12 +62,12 @@ class nk {
     }
 
     private final void a(int param0) {
-        ((nk) this).field_a = ((nk) this).field_a - 256;
+        ((nk) this).field_a = ((nk) this).field_a - param0;
         if (((nk) this).field_a < 0) {
             ((nk) this).field_a = 0;
         }
         if (((nk) this).field_i != null) {
-            ((nk) this).field_i.a(256);
+            ((nk) this).field_i.a(param0);
             return;
         }
     }
@@ -103,122 +77,111 @@ class nk {
             ul var4 = null;
             Throwable var4_ref = null;
             ul var5 = null;
-            ul stackIn_9_0 = null;
-            int stackIn_9_1 = 0;
-            ul stackIn_10_0 = null;
-            int stackIn_10_1 = 0;
-            ul stackIn_11_0 = null;
-            int stackIn_11_1 = 0;
-            int stackIn_11_2 = 0;
-            ul stackIn_21_0 = null;
+            ul stackIn_5_0 = null;
+            int stackIn_5_1 = 0;
+            ul stackIn_6_0 = null;
+            int stackIn_6_1 = 0;
+            ul stackIn_7_0 = null;
+            int stackIn_7_1 = 0;
+            int stackIn_7_2 = 0;
+            ul stackIn_17_0 = null;
             Throwable decompiledCaughtException = null;
-            ul stackOut_8_0 = null;
-            int stackOut_8_1 = 0;
-            ul stackOut_10_0 = null;
-            int stackOut_10_1 = 0;
-            int stackOut_10_2 = 0;
-            ul stackOut_9_0 = null;
-            int stackOut_9_1 = 0;
-            int stackOut_9_2 = 0;
-            ul stackOut_20_0 = null;
+            ul stackOut_4_0 = null;
+            int stackOut_4_1 = 0;
+            ul stackOut_6_0 = null;
+            int stackOut_6_1 = 0;
+            int stackOut_6_2 = 0;
+            ul stackOut_5_0 = null;
+            int stackOut_5_1 = 0;
+            int stackOut_5_2 = 0;
+            ul stackOut_16_0 = null;
             if (field_u != 0) {
               L0: {
-                if (param2 < 0) {
+                if (param3 >= 256) {
                   break L0;
                 } else {
-                  if (param2 < 2) {
-                    L1: {
-                      if (param3 >= 256) {
-                        break L1;
-                      } else {
-                        param3 = 256;
-                        break L1;
-                      }
-                    }
-                    try {
-                      L2: {
-                        L3: {
-                          var5 = new ul();
-                          var4 = var5;
-                          stackOut_8_0 = (ul) var4;
-                          stackOut_8_1 = 256;
-                          stackIn_10_0 = stackOut_8_0;
-                          stackIn_10_1 = stackOut_8_1;
-                          stackIn_9_0 = stackOut_8_0;
-                          stackIn_9_1 = stackOut_8_1;
-                          if (!field_r) {
-                            stackOut_10_0 = (ul) (Object) stackIn_10_0;
-                            stackOut_10_1 = stackIn_10_1;
-                            stackOut_10_2 = 1;
-                            stackIn_11_0 = stackOut_10_0;
-                            stackIn_11_1 = stackOut_10_1;
-                            stackIn_11_2 = stackOut_10_2;
-                            break L3;
-                          } else {
-                            stackOut_9_0 = (ul) (Object) stackIn_9_0;
-                            stackOut_9_1 = stackIn_9_1;
-                            stackOut_9_2 = 2;
-                            stackIn_11_0 = stackOut_9_0;
-                            stackIn_11_1 = stackOut_9_1;
-                            stackIn_11_2 = stackOut_9_2;
-                            break L3;
-                          }
-                        }
-                        L4: {
-                          ((nk) (Object) stackIn_11_0).field_t = new int[stackIn_11_1 * stackIn_11_2];
-                          ((nk) (Object) var4).field_s = param3;
-                          ((nk) (Object) var4).a(param1);
-                          ((nk) (Object) var4).field_b = (param3 & -1024) + 1024;
-                          if (((nk) (Object) var4).field_b <= 16384) {
-                            break L4;
-                          } else {
-                            ((nk) (Object) var4).field_b = 16384;
-                            break L4;
-                          }
-                        }
-                        L5: {
-                          ((nk) (Object) var4).b(((nk) (Object) var4).field_b);
-                          if (field_m <= 0) {
-                            break L5;
-                          } else {
-                            if (field_g != null) {
-                              break L5;
-                            } else {
-                              field_g = new nf();
-                              field_g.field_e = param0;
-                              mf discarded$2 = param0.a((Runnable) (Object) field_g, (byte) -21, field_m);
-                              break L5;
-                            }
-                          }
-                        }
-                        L6: {
-                          if (field_g == null) {
-                            break L6;
-                          } else {
-                            if (field_g.field_d[param2] == null) {
-                              field_g.field_d[param2] = (nk) (Object) var5;
-                              break L6;
-                            } else {
-                              throw new IllegalArgumentException();
-                            }
-                          }
-                        }
-                        stackOut_20_0 = (ul) var4;
-                        stackIn_21_0 = stackOut_20_0;
-                        break L2;
-                      }
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      var4_ref = decompiledCaughtException;
-                      return new nk();
-                    }
-                    return (nk) (Object) stackIn_21_0;
-                  } else {
-                    break L0;
-                  }
+                  param3 = 256;
+                  break L0;
                 }
               }
-              throw new IllegalArgumentException();
+              try {
+                L1: {
+                  L2: {
+                    var5 = new ul();
+                    var4 = var5;
+                    stackOut_4_0 = (ul) var4;
+                    stackOut_4_1 = 256;
+                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_1 = stackOut_4_1;
+                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_1 = stackOut_4_1;
+                    if (!field_r) {
+                      stackOut_6_0 = (ul) (Object) stackIn_6_0;
+                      stackOut_6_1 = stackIn_6_1;
+                      stackOut_6_2 = 1;
+                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_1 = stackOut_6_1;
+                      stackIn_7_2 = stackOut_6_2;
+                      break L2;
+                    } else {
+                      stackOut_5_0 = (ul) (Object) stackIn_5_0;
+                      stackOut_5_1 = stackIn_5_1;
+                      stackOut_5_2 = 2;
+                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_1 = stackOut_5_1;
+                      stackIn_7_2 = stackOut_5_2;
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    ((nk) (Object) stackIn_7_0).field_t = new int[stackIn_7_1 * stackIn_7_2];
+                    ((nk) (Object) var4).field_s = param3;
+                    ((nk) (Object) var4).a(param1);
+                    ((nk) (Object) var4).field_b = (param3 & -1024) + 1024;
+                    if (((nk) (Object) var4).field_b <= 16384) {
+                      break L3;
+                    } else {
+                      ((nk) (Object) var4).field_b = 16384;
+                      break L3;
+                    }
+                  }
+                  L4: {
+                    ((nk) (Object) var4).b(((nk) (Object) var4).field_b);
+                    if (field_m <= 0) {
+                      break L4;
+                    } else {
+                      if (field_g != null) {
+                        break L4;
+                      } else {
+                        field_g = new nf();
+                        field_g.field_e = param0;
+                        mf discarded$2 = param0.a((Runnable) (Object) field_g, (byte) -21, field_m);
+                        break L4;
+                      }
+                    }
+                  }
+                  L5: {
+                    if (field_g == null) {
+                      break L5;
+                    } else {
+                      if (field_g.field_d[0] == null) {
+                        field_g.field_d[0] = (nk) (Object) var5;
+                        break L5;
+                      } else {
+                        throw new IllegalArgumentException();
+                      }
+                    }
+                  }
+                  stackOut_16_0 = (ul) var4;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L1;
+                }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var4_ref = decompiledCaughtException;
+                return new nk();
+              }
+              return (nk) (Object) stackIn_17_0;
             } else {
               throw new IllegalStateException();
             }
@@ -247,7 +210,7 @@ class nk {
         lj var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_r) {
             break L0;
           } else {
@@ -257,7 +220,7 @@ class nk {
         }
         L1: {
           ka.a(param0, 0, var3);
-          ((nk) this).field_a = ((nk) this).field_a - 256;
+          ((nk) this).field_a = ((nk) this).field_a - param1;
           if (((nk) this).field_i == null) {
             break L1;
           } else {
@@ -424,7 +387,7 @@ class nk {
           if (((nk) this).field_i == null) {
             break L17;
           } else {
-            ((nk) this).field_i.a(param0, 0, 256);
+            ((nk) this).field_i.a(param0, 0, param1);
             break L17;
           }
         }

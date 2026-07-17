@@ -39,7 +39,7 @@ final class i extends ne {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
         field_A = null;
         field_u = null;

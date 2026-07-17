@@ -38,14 +38,9 @@ final class la {
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= param1.length()) {
-                if (param0 == 96) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
-                  break L0;
-                } else {
-                  field_c = -105;
-                  return false;
-                }
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
               } else {
                 L2: {
                   var3 = param1.charAt(var2_int);
@@ -71,7 +66,7 @@ final class la {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("la.A(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("la.A(").append(96).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -100,9 +95,6 @@ final class la {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param0 != 64) {
-            return 110;
-        }
         int var3 = param2 >> 31 & param1 - 1;
         return var3 + ((param2 >>> 31) + param2) % param1;
     }
@@ -110,34 +102,40 @@ final class la {
     final static void a(int param0) {
         re.a(0);
         if (kj.field_E != null) {
-            wf.a(kj.field_E, false);
+            int discarded$0 = 0;
+            wf.a(kj.field_E);
         }
-        te.a((byte) 98);
-        li.a(1392);
-        vf.a(79);
-        if (jb.b(-125)) {
+        int discarded$13 = 98;
+        te.a();
+        int discarded$29 = 1392;
+        li.a();
+        int discarded$40 = 79;
+        vf.a();
+        int discarded$46 = -125;
+        if (jb.b()) {
             d.field_b.d((byte) 76, 1);
             nf.a(0, (byte) 95);
         }
-        ec.a((byte) 27);
+        int discarded$47 = 27;
+        ec.a();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         int var1 = -33;
     }
 
-    final static void a(int param0, we param1, int param2) {
+    final static void a(int param0, we param1) {
         ia var3 = null;
         try {
             var3 = d.field_b;
-            var3.d((byte) 73, param2);
+            var3.d((byte) 73, 5);
             var3.a(2, -111);
-            var3.a(param0, -73);
+            var3.a(0, -73);
             var3.a(param1.field_g, -86);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "la.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "la.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 5 + 41);
         }
     }
 

@@ -46,7 +46,7 @@ class tk {
         rf var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_r) {
             break L0;
           } else {
@@ -56,7 +56,7 @@ class tk {
         }
         L1: {
           au.a(param0, 0, var3);
-          ((tk) this).field_o = ((tk) this).field_o - 256;
+          ((tk) this).field_o = ((tk) this).field_o - param1;
           if (((tk) this).field_n == null) {
             break L1;
           } else {
@@ -223,7 +223,7 @@ class tk {
           if (((tk) this).field_n == null) {
             break L17;
           } else {
-            ((tk) this).field_n.b(param0, 0, 256);
+            ((tk) this).field_n.b(param0, 0, param1);
             break L17;
           }
         }
@@ -403,12 +403,12 @@ class tk {
     }
 
     private final void b(int param0) {
-        ((tk) this).field_o = ((tk) this).field_o - 256;
+        ((tk) this).field_o = ((tk) this).field_o - param0;
         if (((tk) this).field_o < 0) {
             ((tk) this).field_o = 0;
         }
         if (((tk) this).field_n != null) {
-            ((tk) this).field_n.a(256);
+            ((tk) this).field_n.a(param0);
             return;
         }
     }
@@ -460,7 +460,8 @@ class tk {
                       field_s = null;
                       break L0;
                     } else {
-                      wf.a(50L, false);
+                      int discarded$1 = 0;
+                      wf.a(50L);
                       continue L2;
                     }
                   }
@@ -514,7 +515,7 @@ class tk {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;

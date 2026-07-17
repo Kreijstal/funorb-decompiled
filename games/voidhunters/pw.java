@@ -104,7 +104,8 @@ abstract class pw {
                         var18 = 0;
                         L6: while (true) {
                           if (var18 >= 3) {
-                            wl.a(var17, eob.field_p, false, true, false, uib.field_p, false);
+                            int discarded$1 = 0;
+                            wl.a(var17, eob.field_p, false, true, false, uib.field_p);
                             kt.a(var17, var13, var12, -119, var14, var8, var9, var7);
                             var15++;
                             continue L4;

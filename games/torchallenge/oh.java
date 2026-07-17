@@ -9,7 +9,7 @@ final class oh {
     static k field_d;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_b = null;
@@ -17,7 +17,7 @@ final class oh {
         field_d = null;
     }
 
-    final static void a(long param0, String param1, java.applet.Applet param2, String param3, int param4) {
+    final static void a(long param0, String param1, java.applet.Applet param2, String param3) {
         try {
             Throwable var6 = null;
             RuntimeException var6_ref = null;
@@ -81,15 +81,17 @@ final class oh {
                       var9 = param3 + "=" + param1 + "; version=1; path=/; domain=" + var8;
                       var7 = var9;
                       var7 = var9;
-                      if (param0 >= (long)param4) {
-                        var7 = var9 + "; Expires=" + td.a(param0 * 1000L + ol.a(256), (byte) -8) + "; Max-Age=" + param0;
+                      if (param0 >= 0L) {
+                        int discarded$2 = -8;
+                        var7 = var9 + "; Expires=" + td.a(param0 * 1000L + ol.a(256)) + "; Max-Age=" + param0;
                         break L2;
                       } else {
                         var7 = var9 + "; Discard;";
                         break L2;
                       }
                     }
-                    ff.a(param2, "document.cookie=\"" + var7 + "\"", (byte) 1);
+                    int discarded$3 = 1;
+                    ff.a(param2, "document.cookie=\"" + var7 + "\"");
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -179,7 +181,7 @@ final class oh {
                   break L6;
                 }
               }
-              throw oj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param4 + 41);
+              throw oj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 0 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -192,28 +194,18 @@ final class oh {
         k[] var2 = null;
         int var3 = 0;
         int var4 = 0;
-        Object var5 = null;
-        k[] var6 = null;
-        L0: {
-          var4 = TorChallenge.field_F ? 1 : 0;
-          var6 = nj.a((byte) 104);
-          var2 = var6;
-          if (param0 >= 122) {
-            break L0;
-          } else {
-            var5 = null;
-            oh.a(-4L, (String) null, (java.applet.Applet) null, (String) null, 93);
-            break L0;
-          }
-        }
+        k[] var5 = null;
+        var4 = TorChallenge.field_F ? 1 : 0;
+        var5 = nj.a((byte) 104);
+        var2 = var5;
         var3 = 0;
-        L1: while (true) {
-          if (var3 < var6.length) {
-            if (var6[var3].field_i == param1) {
-              return var6[var3];
+        L0: while (true) {
+          if (var3 < var5.length) {
+            if (var5[var3].field_i == param1) {
+              return var5[var3];
             } else {
               var3++;
-              continue L1;
+              continue L0;
             }
           } else {
             return null;

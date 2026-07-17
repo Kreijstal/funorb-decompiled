@@ -6,9 +6,6 @@ final class go extends ci {
     private int field_n;
 
     final static int e(int param0, int param1, int param2) {
-        if (param0 != -1) {
-            return 4;
-        }
         int var3 = param1 >>> 31;
         return (var3 + param1) / param2 - var3;
     }
@@ -18,14 +15,11 @@ final class go extends ci {
         ((go) this).field_n = 4096;
     }
 
-    final static boolean d(int param0, int param1, int param2) {
-        if (param2 != 26205) {
-            int discarded$0 = go.e(-33, 75, 49);
-        }
-        return (param1 & 256) != 0 ? true : false;
+    final static boolean d(int param0, int param1) {
+        return (param1 & 256) != 0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_m = null;
     }
 

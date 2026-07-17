@@ -7,7 +7,7 @@ final class pe {
     static wg[] field_d;
     static String field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -67,24 +67,20 @@ final class pe {
                     var4 = param2.getParameter("cookiehost");
                     var5 = var4;
                     var5 = var4;
-                    if (param1 == -108) {
-                      L2: {
-                        var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
-                        var5 = var7;
-                        var5 = var7;
-                        if (0 != param0.length()) {
-                          var5 = var7 + "; Expires=" + ha.a((byte) -127, pf.a(0) - -94608000000L) + "; Max-Age=" + 94608000L;
-                          break L2;
-                        } else {
-                          var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                          break L2;
-                        }
+                    L2: {
+                      var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
+                      var5 = var7;
+                      var5 = var7;
+                      if (0 != param0.length()) {
+                        var5 = var7 + "; Expires=" + ha.a((byte) -127, pf.a(0) - -94608000000L) + "; Max-Age=" + 94608000L;
+                        break L2;
+                      } else {
+                        var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        break L2;
                       }
-                      mf.a(true, param2, "document.cookie=\"" + var5 + "\"");
-                      break L1;
-                    } else {
-                      return;
                     }
+                    mf.a(true, param2, "document.cookie=\"" + var5 + "\"");
+                    break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +122,7 @@ final class pe {
               }
               L5: {
                 stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44);
+                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(-108).append(44);
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
@@ -158,7 +154,7 @@ final class pe {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = -69;
         if (!(!ok.field_e)) {
             pl.field_e.c("Clearances With Monkeys: " + dc.field_e, 635, 30, 16711680, 1);

@@ -20,13 +20,14 @@ abstract class kj {
           L0: {
             var1 = wa.field_d;
             L1: while (true) {
-              if (!jd.g((byte) -126)) {
+              int discarded$9 = -126;
+              if (!jd.g()) {
                 break L0;
               } else {
                 var1.f(73, 8);
-                int fieldTemp$5 = var1.field_n + 1;
+                int fieldTemp$10 = var1.field_n + 1;
                 var1.field_n = var1.field_n + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$10;
                 hk.a(var1, -2933);
                 wa.field_d.c((byte) 48, -var2 + var1.field_n);
                 continue L1;
@@ -449,7 +450,7 @@ abstract class kj {
 
     abstract void a(byte param0, int param1, int param2);
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         int var1 = 55;
         field_d = null;

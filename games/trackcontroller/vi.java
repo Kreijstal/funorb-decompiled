@@ -14,7 +14,7 @@ final class vi {
     private vi(int param0, int param1, int param2) {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_a = null;

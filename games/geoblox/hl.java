@@ -43,7 +43,8 @@ final class hl extends el {
         var6 = 0;
         L0: while (true) {
           if (((hl) this).field_h <= var6) {
-            id.a(param1);
+            int discarded$1 = 1;
+            id.a();
             return var14;
           } else {
             L1: {
@@ -121,11 +122,12 @@ final class hl extends el {
                 vb.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
             }
         }
-        id.a(true);
+        int discarded$0 = 1;
+        id.a();
         return var3;
     }
 
-    private final void a(dm param0, int param1, int param2, int param3) {
+    private final void a(dm param0, int param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -156,7 +158,8 @@ final class hl extends el {
             L1: while (true) {
               if (var6 >= var5_int) {
                 L2: {
-                  id.a(true);
+                  int discarded$3 = 1;
+                  id.a();
                   if (((hl) this).field_M.field_r + param2 < vb.field_e) {
                     break L2;
                   } else {
@@ -164,7 +167,8 @@ final class hl extends el {
                     param0.b(-((hl) this).field_I, 0);
                     param0.b(2 * ((hl) this).field_H - ((hl) this).field_I, 0);
                     ((hl) this).field_y.e(0, 0);
-                    id.a(true);
+                    int discarded$4 = 1;
+                    id.a();
                     ((hl) this).field_z.b(param2, param1);
                     break L2;
                   }
@@ -178,7 +182,8 @@ final class hl extends el {
                         param0.b(-var7, 0);
                         param0.b(-var7 + ((hl) this).field_H * 2, 0);
                         ((hl) this).field_M.e(0, 0);
-                        id.a(true);
+                        int discarded$5 = 1;
+                        id.a();
                         ((hl) this).field_z.b(-((hl) this).field_M.field_r + var5_int, param1);
                         break L3;
                       } else {
@@ -237,11 +242,14 @@ final class hl extends el {
         }
         int var6 = param0 - -((hl) this).field_v;
         int var7 = param1 - -((hl) this).field_m;
-        this.a(((hl) this).field_F[0], var7, var6, -12276);
+        int discarded$0 = -12276;
+        this.a(((hl) this).field_F[0], var7, var6);
         if (((hl) this).field_x < 65536) {
             uh.a(var7, var6 - -(((hl) this).field_r * ((hl) this).field_x >> 16), -14045, var7 + ((hl) this).field_h, ((hl) this).field_r + var6);
-            this.a(((hl) this).field_F[1], var7, var6, -12276);
-            id.a(true);
+            int discarded$1 = -12276;
+            this.a(((hl) this).field_F[1], var7, var6);
+            int discarded$2 = 1;
+            id.a();
         }
     }
 

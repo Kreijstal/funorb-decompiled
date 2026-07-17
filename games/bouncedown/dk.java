@@ -116,7 +116,7 @@ final class dk {
                 L5: {
                   L6: {
                     ae.field_a.field_h = 0;
-                    ae.field_a.a(param1, true, param0, param6);
+                    ae.field_a.a(0, true, param0, param6);
                     ae.field_a.a(var7_int, false);
                     ae.field_a.a(var15, 4);
                     if (null == fb.field_jb) {
@@ -134,11 +134,11 @@ final class dk {
                 }
                 fb.field_jb.field_h = 0;
                 fb.field_jb.a(10, (byte) 54);
-                var11 = param3;
+                var11 = 0;
                 var9 = var11;
                 L7: while (true) {
                   if (4 <= var11) {
-                    fb.field_jb.e(param3 ^ -750655096, param0);
+                    fb.field_jb.e(-750655096, param0);
                     fb.field_jb.a((byte) 50, param5, param4);
                     param2.a(0, true, fb.field_jb.field_h, fb.field_jb.field_i);
                     param2.a(0, true, ae.field_a.field_h, ae.field_a.field_i);
@@ -161,7 +161,7 @@ final class dk {
           L8: {
             var7 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var7;
-            stackOut_20_1 = new StringBuilder().append("dk.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_20_1 = new StringBuilder().append("dk.B(").append(param0).append(44).append(0).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -186,7 +186,7 @@ final class dk {
           }
           L9: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param3).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(0).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -263,7 +263,7 @@ final class dk {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -305,7 +305,7 @@ final class dk {
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
           } else {
-            if (~var2_int >= param0) {
+            if (var2_int <= 63) {
               var3 = 0;
               L0: while (true) {
                 if (var2_int > var3) {
@@ -353,7 +353,7 @@ final class dk {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("dk.C(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("dk.C(").append(-64).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -381,9 +381,6 @@ final class dk {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        if (param0) {
-            field_a = 1;
-        }
         int var3 = 1 << param1;
         if (0 != (ui.field_g & var3)) {
             return;

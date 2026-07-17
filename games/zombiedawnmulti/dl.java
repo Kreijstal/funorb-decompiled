@@ -15,7 +15,7 @@ abstract class dl {
 
     abstract java.net.Socket b(int param0) throws IOException;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_d = null;
@@ -23,7 +23,7 @@ abstract class dl {
         field_a = null;
     }
 
-    final static void a(jh param0, boolean param1, k param2, boolean param3) {
+    final static void a(jh param0, boolean param1, k param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -403,7 +403,7 @@ abstract class dl {
         }
     }
 
-    final static Boolean c(byte param0) {
+    final static Boolean c() {
         Boolean var1 = dd.field_d;
         dd.field_d = null;
         int var2 = 0;

@@ -16,7 +16,7 @@ final class oh extends pg {
     byte[][][] field_l;
     static kc field_h;
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_q = null;
         field_h = null;

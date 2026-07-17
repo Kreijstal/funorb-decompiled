@@ -25,13 +25,13 @@ class tk extends lg {
         }
     }
 
-    private final void j(int param0) {
+    private final void j() {
         if (((tk) this).field_t instanceof wm) {
             ((wm) (Object) ((tk) this).field_t).a((tk) this, (byte) -124);
         }
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         uj var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -582,7 +582,7 @@ class tk extends lg {
         }
     }
 
-    private final String n(int param0) {
+    private final String n() {
         int var2 = ((tk) this).field_G > ((tk) this).field_C ? ((tk) this).field_C : ((tk) this).field_G;
         int var3 = ((tk) this).field_C >= ((tk) this).field_G ? ((tk) this).field_C : ((tk) this).field_G;
         return ((tk) this).field_m.substring(var2, var3);
@@ -621,15 +621,16 @@ class tk extends lg {
     }
 
     void a(int param0, gm param1, int param2, int param3) {
-        fe var7 = null;
+        fe var5 = null;
         int var6 = 0;
         try {
             super.a(124, param1, param2, param3);
-            this.a(true);
+            int discarded$0 = 1;
+            this.a();
             if (((tk) this).field_l == 1) {
                 if (!(!(((tk) this).field_q instanceof fe))) {
-                    var7 = (fe) (Object) ((tk) this).field_q;
-                    var6 = var7.a(k.field_e, -1, (gm) this, n.field_t, param2, param3);
+                    var5 = (fe) (Object) ((tk) this).field_q;
+                    var6 = var5.a(k.field_e, -1, (gm) this, n.field_t, param2, param3);
                     if (var6 != -1) {
                         if (((tk) this).field_F) {
                             if (((tk) this).field_D > var6) {
@@ -643,9 +644,9 @@ class tk extends lg {
                 }
                 ((tk) this).field_H = km.b(-1);
             }
-            int var5_int = -127 / ((-28 - param0) / 43);
+            int var5_int = -127;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "tk.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "tk.P(" + -73 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -772,9 +773,9 @@ class tk extends lg {
                             break L5;
                           } else {
                             ((tk) this).field_m = ((tk) this).field_m + param2;
-                            int dupTemp$1 = ((tk) this).field_m.length();
-                            ((tk) this).field_G = dupTemp$1;
-                            ((tk) this).field_C = dupTemp$1;
+                            int dupTemp$2 = ((tk) this).field_m.length();
+                            ((tk) this).field_G = dupTemp$2;
+                            ((tk) this).field_C = dupTemp$2;
                             break L5;
                           }
                         }
@@ -895,7 +896,8 @@ class tk extends lg {
                                     }
                                   }
                                 } else {
-                                  this.j(123);
+                                  int discarded$3 = 123;
+                                  this.j();
                                   stackOut_32_0 = 1;
                                   stackIn_33_0 = stackOut_32_0;
                                   return stackIn_33_0 != 0;
@@ -1018,9 +1020,11 @@ class tk extends lg {
               return;
             } else {
               L0: {
-                var2 = this.n(1);
+                int discarded$4 = 1;
+                var2 = this.n();
                 if (0 < var2.length()) {
-                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.n(1)), (java.awt.datatransfer.ClipboardOwner) null);
+                  int discarded$5 = 1;
+                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.n()), (java.awt.datatransfer.ClipboardOwner) null);
                   break L0;
                 } else {
                   break L0;
@@ -1272,22 +1276,22 @@ class tk extends lg {
     private final void a(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
         String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -1312,48 +1316,40 @@ class tk extends lg {
                 break L2;
               }
             }
-            L3: {
-              ((tk) this).field_G = ((tk) this).field_G + param1.length();
-              ((tk) this).field_C = ((tk) this).field_G;
-              ((tk) this).l(param0 ^ -97);
-              if (param0 == 0) {
-                break L3;
-              } else {
-                ((tk) this).field_C = -100;
-                break L3;
-              }
-            }
+            ((tk) this).field_G = ((tk) this).field_G + param1.length();
+            ((tk) this).field_C = ((tk) this).field_G;
+            ((tk) this).l(-97);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("tk.RA(").append(param0).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_1 = new StringBuilder().append("tk.RA(").append(0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L4;
-            } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L4;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 

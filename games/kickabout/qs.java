@@ -21,7 +21,8 @@ final class qs extends ta {
     static ut field_R;
 
     final void a(boolean param0, int param1) {
-        ig.b(((qs) this).field_j, -12452);
+        int discarded$4 = -12452;
+        ig.b(((qs) this).field_j);
         if (param1 < 99) {
             ((qs) this).field_I = null;
         }
@@ -38,7 +39,8 @@ final class qs extends ta {
         int var5 = ((qs) this).field_J.h((byte) -48);
         sr var6 = ((qs) this).field_J.field_zb[((qs) this).field_J.field_Db];
         ((qs) this).field_I.a((gn) (Object) new oi(param0 | param3 << 16), 3);
-        this.c(true);
+        int discarded$0 = 1;
+        this.c();
         ((qs) this).field_J.a(var6, 94);
         ((qs) this).field_J.a(true, var5);
         ((qs) this).field_T.field_Fb = param1;
@@ -46,7 +48,8 @@ final class qs extends ta {
             ((qs) this).a(false, -54);
         }
         ((qs) this).field_T.j((byte) 21).field_Hb = true;
-        this.b(false);
+        int discarded$1 = 0;
+        this.b();
     }
 
     public static void h(byte param0) {
@@ -80,11 +83,13 @@ final class qs extends ta {
         ((qs) this).field_T.field_J = 36;
         ((qs) this).field_T.field_s = 6;
         ((qs) this).field_G.a(true, ((qs) this).field_Q.field_q, ((qs) this).field_Q.field_s, 5 + (((qs) this).field_Q.field_mb + ((qs) this).field_Q.field_J), 97);
-        this.c(true);
+        int discarded$0 = 1;
+        this.c();
         ((qs) this).field_J.field_Db = -1;
         ((qs) this).field_J.b(2, 104);
         ((qs) this).field_T.field_Fb = -1;
-        this.b(false);
+        int discarded$1 = 0;
+        this.b();
     }
 
     final void a(byte param0, boolean param1) {
@@ -133,7 +138,8 @@ final class qs extends ta {
         L2: {
           if (((qs) this).field_T.field_Fb != ((qs) this).field_N) {
             ((qs) this).field_N = ((qs) this).field_T.field_Fb;
-            this.b(false);
+            int discarded$3 = 0;
+            this.b();
             break L2;
           } else {
             break L2;
@@ -165,7 +171,7 @@ final class qs extends ta {
                   if (((qs) this).field_O != 0) {
                     break L5;
                   } else {
-                    wh discarded$2 = sp.c(60, -127);
+                    wh discarded$4 = sp.c(60, -127);
                     ((qs) this).field_O = 10;
                     break L5;
                   }
@@ -177,7 +183,7 @@ final class qs extends ta {
                   if (((qs) this).field_O != 0) {
                     break L5;
                   } else {
-                    wh discarded$3 = sp.c(60, -127);
+                    wh discarded$5 = sp.c(60, -127);
                     ((qs) this).field_O = 10;
                     break L5;
                   }
@@ -223,7 +229,7 @@ final class qs extends ta {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         ((qs) this).field_U.c((byte) -109);
         kq var2 = ((qs) this).field_T.j((byte) 21);
         if (var2 != null) {
@@ -233,7 +239,7 @@ final class qs extends ta {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         nl var2 = null;
@@ -280,7 +286,7 @@ final class qs extends ta {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         int var3 = 0;
         sp var4 = null;
         int var4_int = 0;
@@ -302,7 +308,8 @@ final class qs extends ta {
               break L1;
             } else {
               L2: {
-                if (cq.e(15137)) {
+                int discarded$1 = 15137;
+                if (cq.e()) {
                   break L2;
                 } else {
                   if (var3 != -1) {

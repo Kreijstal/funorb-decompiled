@@ -7,13 +7,13 @@ final class td {
     static w field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
     }
 
-    final static int a(CharSequence param0, byte param1) {
+    final static int a(CharSequence param0) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

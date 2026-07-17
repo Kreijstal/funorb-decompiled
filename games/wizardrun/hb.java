@@ -11,7 +11,7 @@ final class hb extends wl {
     byte[] field_l;
     int field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_i = null;
         field_o = null;
@@ -42,7 +42,7 @@ final class hb extends wl {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = da.a(param3, param1, param0, param5, param2, param4);
+            var8 = da.a(param3, param1, 0, param5, param2, 0);
             var6 = var8;
             if (var8 != null) {
               var7 = new ui();
@@ -63,7 +63,7 @@ final class hb extends wl {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("hb.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_5_1 = new StringBuilder().append("hb.A(").append(0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(0).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

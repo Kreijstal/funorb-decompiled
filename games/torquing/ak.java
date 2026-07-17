@@ -38,7 +38,7 @@ final class ak extends kj {
         ((ak) this).field_g = param1;
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         RuntimeException var1 = null;
         int var2 = 0;
         int stackIn_20_0 = 0;
@@ -143,7 +143,7 @@ final class ak extends kj {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_h = null;
     }
 

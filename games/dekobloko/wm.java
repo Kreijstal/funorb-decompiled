@@ -26,9 +26,10 @@ abstract class wm extends ba implements qh {
     final static void d(int param0) {
         oa.field_f = de.field_V.c((byte) -38);
         CharSequence var2 = (CharSequence) (Object) oa.field_f;
-        h.field_c = kf.a(var2, (byte) 2);
+        int discarded$0 = 2;
+        h.field_c = kf.a(var2);
         if (param0 != 140) {
-            java.awt.Container discarded$0 = wm.f((byte) 98);
+            java.awt.Container discarded$1 = wm.f((byte) 98);
         }
     }
 
@@ -153,7 +154,7 @@ abstract class wm extends ba implements qh {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_k = null;
         field_h = null;
         field_i = null;

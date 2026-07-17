@@ -17,9 +17,6 @@ abstract class qo extends rg {
 
     final static void a(byte param0, int param1, int param2, int param3) {
         lq.field_V = param2;
-        if (param0 != -82) {
-            return;
-        }
         bg.field_d = param1;
         hd.field_H = param3;
     }
@@ -212,19 +209,16 @@ abstract class qo extends rg {
         String stackOut_35_2 = null;
         try {
           L0: {
-            if (param0 == -72) {
-              pm.a(param13, param2, param11, param8, param14, param5, (qb[]) null, (int[]) null, param10, param7, param9, param4, param1, param12, param3, param6, param0 ^ 6033);
-              break L0;
-            } else {
-              return;
-            }
+            int discarded$1 = -6103;
+            pm.a(param13, param2, param11, param8, param14, 2, (qb[]) null, (int[]) null, param10, 4, param9, param4, true, param12, param3, param6);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var15 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var15;
-            stackOut_4_1 = new StringBuilder().append("qo.G(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("qo.G(").append(-72).append(44).append(1).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -299,7 +293,7 @@ abstract class qo extends rg {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param5).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(2).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -324,7 +318,7 @@ abstract class qo extends rg {
           }
           L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param7).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(4).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;

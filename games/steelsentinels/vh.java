@@ -123,11 +123,12 @@ final class vh {
                   break L1;
                 } else {
                   var5 = null;
-                  wk[] discarded$2 = vh.a(83, (cm) null, 117, (byte) 119);
+                  wk[] discarded$4 = vh.a(83, (cm) null, 117, (byte) 119);
                   break L1;
                 }
               }
-              stackOut_5_0 = gj.b(0);
+              int discarded$5 = 0;
+              stackOut_5_0 = gj.b();
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -167,7 +168,7 @@ final class vh {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
     }
@@ -185,7 +186,7 @@ final class vh {
         if (!(!uc.field_g)) {
             return false;
         }
-        int var4 = 10 / ((param2 - 40) / 40);
+        int var4 = -3;
         return he.a((byte) -122, param1, param3);
     }
 

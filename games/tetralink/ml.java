@@ -60,7 +60,7 @@ abstract class ml extends nb {
         String stackOut_15_2 = null;
         try {
           L0: {
-            if (super.a(param0, param1, param2, param3)) {
+            if (super.a(param0, param1, 1, param3)) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -95,7 +95,7 @@ abstract class ml extends nb {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("ml.DB(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_14_1 = new StringBuilder().append("ml.DB(").append(param0).append(44).append(param1).append(44).append(1).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -126,42 +126,38 @@ abstract class ml extends nb {
     boolean l(int param0) {
         int var3 = 0;
         var3 = TetraLink.field_J;
-        if (param0 == -1) {
-          if (((ml) this).field_lb != null) {
-            if (((ml) this).field_lb != i.field_a) {
-              if (((ml) this).field_lb == ui.field_f) {
-                int fieldTemp$2 = ((ml) this).field_X + 1;
-                ((ml) this).field_X = ((ml) this).field_X + 1;
-                if (((ml) this).field_db == fieldTemp$2) {
-                  ((ml) this).field_bb.field_N = 256;
-                  ((ml) this).field_lb = null;
-                  return super.l(-1);
-                } else {
-                  ((ml) this).field_bb.field_N = (((ml) this).field_X << 8) / ((ml) this).field_db;
-                  return super.l(-1);
-                }
+        if (((ml) this).field_lb != null) {
+          if (((ml) this).field_lb != i.field_a) {
+            if (((ml) this).field_lb == ui.field_f) {
+              int fieldTemp$2 = ((ml) this).field_X + 1;
+              ((ml) this).field_X = ((ml) this).field_X + 1;
+              if (((ml) this).field_db == fieldTemp$2) {
+                ((ml) this).field_bb.field_N = 256;
+                ((ml) this).field_lb = null;
+                return super.l(-1);
               } else {
+                ((ml) this).field_bb.field_N = (((ml) this).field_X << 8) / ((ml) this).field_db;
                 return super.l(-1);
               }
             } else {
-              int fieldTemp$3 = ((ml) this).field_X + 1;
-              ((ml) this).field_X = ((ml) this).field_X + 1;
-              if (((ml) this).field_Y == fieldTemp$3) {
-                ((ml) this).field_lb = qk.field_d;
-                ((ml) this).a(true, ((ml) this).field_gb, 12 + ((ml) this).field_eb.field_F, ((ml) this).field_Z + (12 - -((ml) this).field_eb.field_u));
-                ((ml) this).field_X = 0;
-                ((ml) this).field_bb.field_N = 0;
-                return super.l(-1);
-              } else {
-                ((ml) this).field_bb.field_N = 256 - (((ml) this).field_X << 8) / ((ml) this).field_Y;
-                return super.l(-1);
-              }
+              return super.l(-1);
             }
           } else {
-            return super.l(-1);
+            int fieldTemp$3 = ((ml) this).field_X + 1;
+            ((ml) this).field_X = ((ml) this).field_X + 1;
+            if (((ml) this).field_Y == fieldTemp$3) {
+              ((ml) this).field_lb = qk.field_d;
+              ((ml) this).a(true, ((ml) this).field_gb, 12 + ((ml) this).field_eb.field_F, ((ml) this).field_Z + (12 - -((ml) this).field_eb.field_u));
+              ((ml) this).field_X = 0;
+              ((ml) this).field_bb.field_N = 0;
+              return super.l(-1);
+            } else {
+              ((ml) this).field_bb.field_N = 256 - (((ml) this).field_X << 8) / ((ml) this).field_Y;
+              return super.l(-1);
+            }
           }
         } else {
-          return false;
+          return super.l(-1);
         }
     }
 

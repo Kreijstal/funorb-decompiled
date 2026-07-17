@@ -10,7 +10,7 @@ final class rm {
     int field_b;
     static int[] field_g;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_c = null;
     }

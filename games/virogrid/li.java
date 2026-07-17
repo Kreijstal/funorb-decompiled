@@ -38,9 +38,9 @@ final class li {
             }
           }
           if (((li) this).field_s) {
-            int fieldTemp$2 = ((li) this).field_k - 1;
+            int fieldTemp$4 = ((li) this).field_k - 1;
             ((li) this).field_k = ((li) this).field_k - 1;
-            if (fieldTemp$2 > 0) {
+            if (fieldTemp$4 > 0) {
               return;
             } else {
               ((li) this).field_k = ((li) this).field_t;
@@ -49,7 +49,8 @@ final class li {
                 return;
               } else {
                 L1: {
-                  this.c((byte) 22);
+                  int discarded$5 = 22;
+                  this.c();
                   if (param0 == -7927) {
                     break L1;
                   } else {
@@ -207,10 +208,12 @@ final class li {
           if (tg.field_x != 0) {
             break L0;
           } else {
-            if (gb.g(true)) {
+            int discarded$3 = 1;
+            if (gb.g()) {
               break L0;
             } else {
-              if (ug.a(true)) {
+              int discarded$4 = 1;
+              if (ug.a()) {
                 break L0;
               } else {
                 if (!eg.a((byte) 47)) {
@@ -535,7 +538,8 @@ final class li {
                                   if ((rn.field_c & 512) != 0) {
                                     break L20;
                                   } else {
-                                    vf.a(-64);
+                                    int discarded$5 = -64;
+                                    vf.a();
                                     break L20;
                                   }
                                 }
@@ -882,7 +886,7 @@ final class li {
         }
     }
 
-    private final void c(byte param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

@@ -27,12 +27,14 @@ final class uh extends lf {
               param0 = param0.field_e;
               continue L0;
             } else {
-              fi.a((q) (Object) param1, param0, -1240266932);
+              int discarded$4 = -1240266932;
+              fi.a((q) (Object) param1, param0);
               ((uh) this).field_o = ((sl) (Object) ((uh) this).field_q.field_b.field_e).field_k;
               return;
             }
           } else {
-            fi.a((q) (Object) param1, param0, -1240266932);
+            int discarded$5 = -1240266932;
+            fi.a((q) (Object) param1, param0);
             ((uh) this).field_o = ((sl) (Object) ((uh) this).field_q.field_b.field_e).field_k;
             return;
           }

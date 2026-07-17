@@ -9,7 +9,7 @@ final class fg {
     static String field_c;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_c = null;
@@ -54,7 +54,7 @@ final class fg {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = 9 / ((param1 - -24) / 60);
+            var3_int = 9;
             var4 = null;
             stackOut_0_0 = tb.a((String) null, param0, param2, false, 0, (byte) 96, 0);
             stackIn_1_0 = stackOut_0_0;
@@ -90,7 +90,7 @@ final class fg {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(41).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

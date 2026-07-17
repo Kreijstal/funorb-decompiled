@@ -17,9 +17,6 @@ final class a {
     }
 
     final static void a(java.applet.Applet param0, int param1, String param2) throws Throwable {
-        if (param1 != 17467) {
-            return;
-        }
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param0).eval(param2);
     }
 }

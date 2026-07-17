@@ -369,7 +369,7 @@ final class wc extends nl {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_R = null;
         field_K = null;
         field_J = null;
@@ -380,7 +380,7 @@ final class wc extends nl {
         td.a(param0, false, 108);
     }
 
-    final static qc c(boolean param0) {
+    final static qc c() {
         return (qc) (Object) new uk();
     }
 
@@ -541,7 +541,8 @@ final class wc extends nl {
         if (!(ik.field_b == null)) {
             ik.field_b.b(param0, 20);
         }
-        qh.a(param0, 0);
+        int discarded$0 = 0;
+        qh.a(param0);
     }
 
     wc(int param0, int param1, int param2, int param3, kh param4, qo param5, kb param6, boolean param7, boolean param8) {
@@ -557,7 +558,7 @@ final class wc extends nl {
         }
     }
 
-    final static long a(CharSequence param0, int param1) {
+    final static long a(CharSequence param0) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -585,7 +586,7 @@ final class wc extends nl {
         var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            var2_long = (long)param1;
+            var2_long = 0L;
             var4 = param0.length();
             var5 = 0;
             L1: while (true) {
@@ -686,7 +687,7 @@ final class wc extends nl {
               break L8;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 0 + 41);
         }
         return stackIn_22_0;
     }

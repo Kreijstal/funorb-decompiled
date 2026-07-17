@@ -7,7 +7,7 @@ final class bj extends ma {
     static int field_m;
     int field_n;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

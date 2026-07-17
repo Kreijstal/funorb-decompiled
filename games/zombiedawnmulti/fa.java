@@ -172,7 +172,7 @@ final class fa extends cj {
         }
     }
 
-    final static int d(boolean param0) {
+    final static int d() {
         return fl.field_a + -ZombieDawnMulti.field_H;
     }
 
@@ -401,11 +401,9 @@ final class fa extends cj {
                 return true;
             }
             {
-                if (param0 != 10) {
-                    field_Gb = null;
-                }
                 if (var2_int >= 0) {
-                    if (he.b((byte) -22) <= 30000L) {
+                    int discarded$3 = -22;
+                    if (he.b() <= 30000L) {
                         return false;
                     }
                 }
@@ -419,7 +417,7 @@ final class fa extends cj {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_Qb = null;
         field_Gb = null;
         int var1 = 0;
@@ -430,7 +428,7 @@ final class fa extends cj {
     }
 
     final static String a(int param0, int param1, int param2) {
-        int var3 = -124 % ((55 - param0) / 63);
+        int var3 = 0;
         return param2 + "/" + param1;
     }
 

@@ -11,7 +11,7 @@ final class d {
     static vh field_c;
     static vh field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 51;
         field_f = null;
         field_b = null;
@@ -280,7 +280,8 @@ final class d {
                   } else {
                     cp.field_c.field_pb = false;
                     cp.field_c.field_Sb.field_Sb.field_nb = o.field_A;
-                    mq.a(cp.field_c.field_Mb, (byte) 109);
+                    int discarded$1 = 109;
+                    mq.a(cp.field_c.field_Mb);
                     break L2;
                   }
                 }
@@ -444,13 +445,13 @@ final class d {
                 }
               }
             }
-            var5 = 46 / ((-55 - param1) / 44);
+            var5 = -46;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var3, "d.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw wm.a((Throwable) (Object) var3, "d.C(" + param0 + 44 + 21 + 44 + param2 + 41);
         }
     }
 

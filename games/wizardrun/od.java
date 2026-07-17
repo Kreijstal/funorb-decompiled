@@ -85,9 +85,9 @@ final class od {
             ((od) this).field_i = 3;
             var4.field_e = 15658734;
             var4.field_f = 11711154;
-            la discarded$10 = var4.a(0, 0).a(-34, 15658734).a(60, wj.b(10066329, 8947848, 7829367, 1));
-            la discarded$11 = var4.a(0, 1).a(68, wj.b(10066329, 11184810, 13421772, 1));
-            la discarded$12 = var4.a(0, 3).a(80, wj.b(7829367, 8947848, 10066329, 1)).a((byte) -85, 1).b((byte) -124, 1);
+            la discarded$17 = var4.a(0, 0).a(-34, 15658734).a(60, wj.b(10066329, 8947848, 7829367, 1));
+            la discarded$18 = var4.a(0, 1).a(68, wj.b(10066329, 11184810, 13421772, 1));
+            la discarded$19 = var4.a(0, 3).a(80, wj.b(7829367, 8947848, 10066329, 1)).a((byte) -85, 1).b((byte) -124, 1);
             var5 = new o[9];
             var16 = new be(32, 32);
             var18 = var16;
@@ -95,23 +95,30 @@ final class od {
             L1: while (true) {
               if (var7_int >= var18.field_B.length) {
                 var5[4] = (o) (Object) var18;
-                la discarded$13 = var4.a(0, 4).a(124, true).a(124, var5);
-                la discarded$14 = var4.a(0, 5).a(61, vb.c(-3, 0, 0, 0, 65793)).a(-28, true).a(-67, -1);
+                la discarded$20 = var4.a(0, 4).a(124, true).a(124, var5);
+                int discarded$21 = 65793;
+                int discarded$22 = 0;
+                int discarded$23 = 0;
+                int discarded$24 = 0;
+                int discarded$25 = -3;
+                la discarded$26 = var4.a(0, 5).a(61, vb.c()).a(-28, true).a(-67, -1);
                 ((od) this).field_c = (bf) (Object) var4;
                 var6 = new qa(var4, true);
                 if (param1 <= -109) {
                   var6.field_l = 0;
                   var7 = new qa(var4, true);
                   var7.field_l = 0;
-                  var7.a((byte) 11, wg.a(8947848, 9));
-                  la discarded$15 = var7.a(0, 1).a(83, wg.a(11184810, 9)).a(101, 2236962);
+                  int discarded$27 = 9;
+                  var7.a((byte) 11, wg.a(8947848));
+                  int discarded$28 = 9;
+                  la discarded$29 = var7.a(0, 1).a(83, wg.a(11184810)).a(101, 2236962);
                   ((od) this).field_a = (bf) (Object) new vl(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                  wb discarded$16 = new wb(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                  eh discarded$17 = new eh(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                  wb discarded$30 = new wb(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                  eh discarded$31 = new eh(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
                   var8 = new qa();
                   var17.a((ll) (Object) var8, 0);
-                  la discarded$18 = var8.a(0, 0).a(80, wj.b(7829367, 15658734, 10066329, 1)).a(123, 1118481).a(-1, (byte) 105);
-                  la discarded$19 = var8.a(0, 4).a(-119, true).a(109, var5);
+                  la discarded$32 = var8.a(0, 0).a(80, wj.b(7829367, 15658734, 10066329, 1)).a(123, 1118481).a(-1, (byte) 105);
+                  la discarded$33 = var8.a(0, 4).a(-119, true).a(109, var5);
                   ((od) this).field_b = (bf) (Object) var8;
                   var9 = new o[9];
                   var9[4] = new o(2, 1);
@@ -230,7 +237,7 @@ final class od {
             L1: {
               var5_int = ((od) this).field_i + ((od) this).field_l;
               var6 = ((od) this).field_r + ((od) this).field_h;
-              var8 = 105 % ((-35 - param2) / 43);
+              var8 = 1;
               var7 = ((od) this).field_t;
               if (-1 == var7) {
                 var7 = ((od) this).field_g.field_B + ((od) this).field_g.field_M;
@@ -323,7 +330,7 @@ final class od {
           L10: {
             var5 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var5;
-            stackOut_26_1 = new StringBuilder().append("od.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_26_1 = new StringBuilder().append("od.D(").append(param0).append(44).append(param1).append(44).append(56).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -383,7 +390,8 @@ final class od {
                 this.a(param1, param0, (byte) 56, param2);
                 break L2;
               } else {
-                this.a(param2, param0, param1, 2562);
+                int discarded$3 = 2562;
+                this.a(param2, param0, param1);
                 break L2;
               }
             }
@@ -421,7 +429,7 @@ final class od {
         }
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean a(String param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -504,7 +512,8 @@ final class od {
                         stackIn_23_0 = stackOut_22_0;
                         return stackIn_23_0 != 0;
                       } else {
-                        if (!id.a(param0, param1, 0)) {
+                        int discarded$7 = 0;
+                        if (!id.a(param0, param1)) {
                           stackOut_27_0 = 1;
                           stackIn_28_0 = stackOut_27_0;
                           break L0;
@@ -578,7 +587,7 @@ final class od {
         return stackIn_28_0 != 0;
     }
 
-    final static bh[] b(int param0) {
+    final static bh[] b() {
         return new bh[]{nh.field_p, ea.field_f, cf.field_n, jk.field_a, oa.field_b, ue.field_h, jg.field_q, pc.field_a, mi.field_A, gi.field_a, nk.field_U, rl.field_a, th.field_d, lh.field_a};
     }
 
@@ -589,7 +598,7 @@ final class od {
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3) {
+    private final void a(String param0, int param1, int param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

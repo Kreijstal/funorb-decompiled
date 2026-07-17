@@ -27,10 +27,11 @@ final class pd extends wj implements sv, vh {
         }
     }
 
-    private final void l(int param0) {
+    private final void l() {
         L0: {
           L1: {
-            if (cd.a(3)) {
+            int discarded$4 = 3;
+            if (cd.a()) {
               break L1;
             } else {
               if (((pd) this).field_N.field_q.length() <= 0) {
@@ -49,7 +50,7 @@ final class pd extends wj implements sv, vh {
         }
     }
 
-    final static void a(ut param0, int param1) {
+    final static void a(ut param0) {
         double[] var3 = null;
         if (ih.field_c == 0) {
             return;
@@ -81,7 +82,8 @@ final class pd extends wj implements sv, vh {
                 boolean discarded$0 = ((pd) this).field_J.a((fd) this, 0);
             }
             if (((pd) this).field_J == param1) {
-                this.l(60);
+                int discarded$1 = 60;
+                this.l();
             }
             int var3_int = 35 / ((param0 - 8) / 47);
         } catch (RuntimeException runtimeException) {
@@ -134,7 +136,8 @@ final class pd extends wj implements sv, vh {
                         break L1;
                       }
                     } else {
-                      uv.a(false);
+                      int discarded$6 = 0;
+                      uv.a();
                       break L1;
                     }
                   } else {
@@ -145,7 +148,8 @@ final class pd extends wj implements sv, vh {
                   break L1;
                 }
               } else {
-                this.l(60);
+                int discarded$7 = 60;
+                this.l();
                 break L1;
               }
             }
@@ -641,7 +645,8 @@ final class pd extends wj implements sv, vh {
             }
             L13: {
               var8 = ne.field_J;
-              var9 = lm.a(so.a(104), -7465);
+              int discarded$3 = -7465;
+              var9 = lm.a(so.a(104));
               if (pb.field_F == var9) {
                 var8 = uj.field_A;
                 break L13;
@@ -655,13 +660,13 @@ final class pd extends wj implements sv, vh {
               }
             }
             L14: {
-              cg dupTemp$2 = new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_N, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((pd) this).a(-120, (fd) (Object) dupTemp$2);
+              cg dupTemp$4 = new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_N, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((pd) this).a(-120, (fd) (Object) dupTemp$4);
               ((pd) this).field_g = ((pd) this).field_g + (((fd) (Object) var12).field_i - -5);
-              cg dupTemp$3 = new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_J, false, 80, 3, var7, 16777215, at.field_Ib);
-              var13 = dupTemp$3;
-              ((pd) this).a(-55, (fd) (Object) dupTemp$3);
+              cg dupTemp$5 = new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_J, false, 80, 3, var7, 16777215, at.field_Ib);
+              var13 = dupTemp$5;
+              ((pd) this).a(-55, (fd) (Object) dupTemp$5);
               ((pd) this).field_K.field_k = (jv) this;
               ((pd) this).field_g = ((pd) this).field_g + (((fd) (Object) var13).field_i + 5);
               if (((pd) this).field_L == null) {

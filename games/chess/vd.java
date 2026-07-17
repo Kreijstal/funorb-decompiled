@@ -32,14 +32,15 @@ final class vd extends vn implements mj {
             return;
         }
         try {
-            ij.a(-128);
+            int discarded$0 = -128;
+            ij.a();
             ((vd) this).k((byte) -114);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "vd.DA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    private final void a(boolean param0, aj param1, int param2) {
+    private final void a(boolean param0, aj param1) {
         RuntimeException var4 = null;
         String var4_ref = null;
         e var5 = null;
@@ -81,7 +82,8 @@ final class vd extends vn implements mj {
                   } else {
                     L2: {
                       if (!param0) {
-                        ln.f((byte) -74);
+                        int discarded$3 = -74;
+                        ln.f();
                         break L2;
                       } else {
                         break L2;
@@ -111,7 +113,7 @@ final class vd extends vn implements mj {
                       break L4;
                     }
                   } else {
-                    fb discarded$2 = var5.a((byte) -114, (rg) this, sg.field_e);
+                    fb discarded$4 = var5.a((byte) -114, (rg) this, sg.field_e);
                     break L4;
                   }
                 }
@@ -131,7 +133,7 @@ final class vd extends vn implements mj {
                   ((vd) this).c((mf) (Object) new ba((vd) this), 100);
                   return;
                 } else {
-                  fb discarded$3 = var5.a((byte) -114, (rg) this, sg.field_e);
+                  fb discarded$5 = var5.a((byte) -114, (rg) this, sg.field_e);
                   break L3;
                 }
               }
@@ -185,11 +187,13 @@ final class vd extends vn implements mj {
         if (param0 <= -4) {
           if (((vd) this).field_P) {
             if (!((vd) this).field_Hb) {
-              var2 = ik.b(6792);
+              int discarded$8 = 6792;
+              var2 = ik.b();
               if (var2 == null) {
                 return super.g((byte) -90);
               } else {
-                this.a(false, var2, -1);
+                int discarded$9 = -1;
+                this.a(false, var2);
                 return super.g((byte) -90);
               }
             } else {
@@ -202,11 +206,13 @@ final class vd extends vn implements mj {
           vd.l((byte) -32);
           if (((vd) this).field_P) {
             if (!((vd) this).field_Hb) {
-              var2 = ik.b(6792);
+              int discarded$10 = 6792;
+              var2 = ik.b();
               if (var2 == null) {
                 return super.g((byte) -90);
               } else {
-                this.a(false, var2, -1);
+                int discarded$11 = -1;
+                this.a(false, var2);
                 return super.g((byte) -90);
               }
             } else {
@@ -224,7 +230,8 @@ final class vd extends vn implements mj {
     }
 
     final void o(int param0) {
-        this.a(true, sc.a(nj.field_z, 248, (byte) -92), -1);
+        int discarded$0 = -1;
+        this.a(true, sc.a(nj.field_z, 248, (byte) -92));
         if (param0 != -10896) {
             ((vd) this).field_Jb = false;
         }

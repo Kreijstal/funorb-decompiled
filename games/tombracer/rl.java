@@ -43,7 +43,7 @@ final class rl extends pd {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_t = null;
         field_u = null;
         field_s = null;

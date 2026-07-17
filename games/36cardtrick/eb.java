@@ -87,7 +87,8 @@ final class eb {
             if (var5.length != 65) {
               throw new RuntimeException();
             } else {
-              var17 = ti.a(5, var10.field_g, var10.field_i + -var16.length + -5, 0);
+              int discarded$1 = 0;
+              var17 = ti.a(5, var10.field_g, var10.field_i + -var16.length + -5);
               var7 = 0;
               L4: while (true) {
                 if (var7 >= 64) {
@@ -274,14 +275,6 @@ final class eb {
             var3 = 0;
             L1: while (true) {
               if (var2_int <= var3) {
-                L2: {
-                  if (param0 == -3124) {
-                    break L2;
-                  } else {
-                    eb.a(false);
-                    break L2;
-                  }
-                }
                 stackOut_11_0 = ij.field_i;
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
@@ -304,10 +297,10 @@ final class eb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("eb.C(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("eb.C(").append(-3124).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -319,7 +312,7 @@ final class eb {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L3;
+              break L2;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -327,7 +320,7 @@ final class eb {
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L3;
+              break L2;
             }
           }
           throw ma.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
@@ -378,12 +371,9 @@ final class eb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
         field_l = null;
-        if (!param0) {
-            field_i = null;
-        }
         field_c = null;
     }
 
@@ -397,14 +387,11 @@ final class eb {
             ak.field_O = param8;
             pf.field_h = param6;
             ej.field_kb = param7;
-            if (param5 > -52) {
-                eb.a(true);
-            }
             dg.field_H = (ch) (Object) new a();
             sc.field_b = new gj(param0);
             ja.field_b = new eb(dg.field_H, sc.field_b);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "eb.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "eb.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + -62 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 

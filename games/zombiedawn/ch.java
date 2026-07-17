@@ -19,7 +19,7 @@ final class ch {
         ph.a((byte) 62, (wj) null);
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ac.field_m = 1426;
     }
 
@@ -36,19 +36,54 @@ final class ch {
             ff.field_c[qg.field_c] = null;
             return var2;
           } else {
-            if (param0 == -5827) {
-              if (param1 != 5000) {
-                if (param1 != 30000) {
+            if (param1 != 5000) {
+              if (param1 != 30000) {
+                if (wg.field_j != null) {
+                  var2_int = 0;
+                  L0: while (true) {
+                    if (fl.field_d.length <= var2_int) {
+                      return new byte[param1];
+                    } else {
+                      L1: {
+                        if (param1 != fl.field_d[var2_int]) {
+                          var2_int++;
+                          break L1;
+                        } else {
+                          if (ba.field_w[var2_int] > 0) {
+                            ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
+                            var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
+                            wg.field_j[var2_int][ba.field_w[var2_int]] = null;
+                            return var3;
+                          } else {
+                            break L1;
+                          }
+                        }
+                      }
+                      var2_int++;
+                      continue L0;
+                    }
+                  }
+                } else {
+                  return new byte[param1];
+                }
+              } else {
+                if (kn.field_F > 0) {
+                  int fieldTemp$84 = kn.field_F - 1;
+                  kn.field_F = kn.field_F - 1;
+                  var2 = sh.field_j[fieldTemp$84];
+                  sh.field_j[kn.field_F] = null;
+                  return var2;
+                } else {
                   if (wg.field_j != null) {
                     var2_int = 0;
-                    L0: while (true) {
+                    L2: while (true) {
                       if (fl.field_d.length <= var2_int) {
                         return new byte[param1];
                       } else {
-                        L1: {
+                        L3: {
                           if (param1 != fl.field_d[var2_int]) {
                             var2_int++;
-                            break L1;
+                            break L3;
                           } else {
                             if (ba.field_w[var2_int] > 0) {
                               ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
@@ -56,12 +91,52 @@ final class ch {
                               wg.field_j[var2_int][ba.field_w[var2_int]] = null;
                               return var3;
                             } else {
-                              break L1;
+                              break L3;
                             }
                           }
                         }
                         var2_int++;
-                        continue L0;
+                        continue L2;
+                      }
+                    }
+                  } else {
+                    return new byte[param1];
+                  }
+                }
+              }
+            } else {
+              if (re.field_e > 0) {
+                byte[][] fieldTemp$85 = ka.field_e;
+                int fieldTemp$86 = re.field_e - 1;
+                re.field_e = re.field_e - 1;
+                var2 = fieldTemp$85[fieldTemp$86];
+                ka.field_e[re.field_e] = null;
+                return var2;
+              } else {
+                if (param1 != 30000) {
+                  if (wg.field_j != null) {
+                    var2_int = 0;
+                    L4: while (true) {
+                      if (fl.field_d.length <= var2_int) {
+                        return new byte[param1];
+                      } else {
+                        L5: {
+                          if (param1 != fl.field_d[var2_int]) {
+                            var2_int++;
+                            break L5;
+                          } else {
+                            if (ba.field_w[var2_int] > 0) {
+                              ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
+                              var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
+                              wg.field_j[var2_int][ba.field_w[var2_int]] = null;
+                              return var3;
+                            } else {
+                              break L5;
+                            }
+                          }
+                        }
+                        var2_int++;
+                        continue L4;
                       }
                     }
                   } else {
@@ -69,22 +144,22 @@ final class ch {
                   }
                 } else {
                   if (kn.field_F > 0) {
-                    int fieldTemp$84 = kn.field_F - 1;
+                    int fieldTemp$87 = kn.field_F - 1;
                     kn.field_F = kn.field_F - 1;
-                    var2 = sh.field_j[fieldTemp$84];
+                    var2 = sh.field_j[fieldTemp$87];
                     sh.field_j[kn.field_F] = null;
                     return var2;
                   } else {
-                    if (wg.field_j != null) {
-                      var2_int = 0;
-                      L2: while (true) {
+                    L6: {
+                      if (wg.field_j != null) {
+                        var2_int = 0;
                         if (fl.field_d.length <= var2_int) {
-                          return new byte[param1];
+                          break L6;
                         } else {
-                          L3: {
+                          L7: {
                             if (param1 != fl.field_d[var2_int]) {
                               var2_int++;
-                              break L3;
+                              break L7;
                             } else {
                               if (ba.field_w[var2_int] > 0) {
                                 ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
@@ -92,215 +167,77 @@ final class ch {
                                 wg.field_j[var2_int][ba.field_w[var2_int]] = null;
                                 return var3;
                               } else {
-                                break L3;
-                              }
-                            }
-                          }
-                          var2_int++;
-                          continue L2;
-                        }
-                      }
-                    } else {
-                      return new byte[param1];
-                    }
-                  }
-                }
-              } else {
-                if (re.field_e > 0) {
-                  byte[][] fieldTemp$85 = ka.field_e;
-                  int fieldTemp$86 = re.field_e - 1;
-                  re.field_e = re.field_e - 1;
-                  var2 = fieldTemp$85[fieldTemp$86];
-                  ka.field_e[re.field_e] = null;
-                  return var2;
-                } else {
-                  if (param1 != 30000) {
-                    if (wg.field_j != null) {
-                      var2_int = 0;
-                      L4: while (true) {
-                        if (fl.field_d.length <= var2_int) {
-                          return new byte[param1];
-                        } else {
-                          L5: {
-                            if (param1 != fl.field_d[var2_int]) {
-                              var2_int++;
-                              break L5;
-                            } else {
-                              if (ba.field_w[var2_int] > 0) {
-                                ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
-                                var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
-                                wg.field_j[var2_int][ba.field_w[var2_int]] = null;
-                                return var3;
-                              } else {
-                                break L5;
-                              }
-                            }
-                          }
-                          var2_int++;
-                          continue L4;
-                        }
-                      }
-                    } else {
-                      return new byte[param1];
-                    }
-                  } else {
-                    if (kn.field_F > 0) {
-                      int fieldTemp$87 = kn.field_F - 1;
-                      kn.field_F = kn.field_F - 1;
-                      var2 = sh.field_j[fieldTemp$87];
-                      sh.field_j[kn.field_F] = null;
-                      return var2;
-                    } else {
-                      L6: {
-                        if (wg.field_j != null) {
-                          var2_int = 0;
-                          if (fl.field_d.length <= var2_int) {
-                            break L6;
-                          } else {
-                            L7: {
-                              if (param1 != fl.field_d[var2_int]) {
                                 var2_int++;
                                 break L7;
-                              } else {
-                                if (ba.field_w[var2_int] > 0) {
-                                  ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
-                                  var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
-                                  wg.field_j[var2_int][ba.field_w[var2_int]] = null;
-                                  return var3;
-                                } else {
-                                  var2_int++;
-                                  break L7;
-                                }
                               }
                             }
-                            var2_int++;
-                            var2_int++;
-                            break L6;
                           }
-                        } else {
+                          var2_int++;
+                          var2_int++;
                           break L6;
                         }
+                      } else {
+                        break L6;
                       }
-                      return new byte[param1];
                     }
+                    return new byte[param1];
                   }
                 }
               }
-            } else {
-              return null;
             }
           }
         } else {
-          if (param0 == -5827) {
-            if (param1 != 5000) {
-              if (param1 != 30000) {
-                if (wg.field_j != null) {
-                  L8: {
-                    var2_int = 0;
-                    if (fl.field_d.length <= var2_int) {
-                      break L8;
-                    } else {
-                      L9: {
-                        if (param1 != fl.field_d[var2_int]) {
+          if (param1 != 5000) {
+            if (param1 != 30000) {
+              if (wg.field_j != null) {
+                L8: {
+                  var2_int = 0;
+                  if (fl.field_d.length <= var2_int) {
+                    break L8;
+                  } else {
+                    L9: {
+                      if (param1 != fl.field_d[var2_int]) {
+                        var2_int++;
+                        break L9;
+                      } else {
+                        if (ba.field_w[var2_int] > 0) {
+                          ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
+                          var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
+                          wg.field_j[var2_int][ba.field_w[var2_int]] = null;
+                          return var3;
+                        } else {
                           var2_int++;
                           break L9;
-                        } else {
-                          if (ba.field_w[var2_int] > 0) {
-                            ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
-                            var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
-                            wg.field_j[var2_int][ba.field_w[var2_int]] = null;
-                            return var3;
-                          } else {
-                            var2_int++;
-                            break L9;
-                          }
                         }
                       }
-                      var2_int++;
-                      var2_int++;
-                      break L8;
                     }
+                    var2_int++;
+                    var2_int++;
+                    break L8;
                   }
-                  return new byte[param1];
-                } else {
-                  return new byte[param1];
                 }
+                return new byte[param1];
               } else {
-                if (kn.field_F > 0) {
-                  int fieldTemp$88 = kn.field_F - 1;
-                  kn.field_F = kn.field_F - 1;
-                  var2 = sh.field_j[fieldTemp$88];
-                  sh.field_j[kn.field_F] = null;
-                  return var2;
-                } else {
-                  L10: {
-                    if (wg.field_j != null) {
-                      var2_int = 0;
-                      if (fl.field_d.length <= var2_int) {
-                        break L10;
-                      } else {
-                        L11: {
-                          if (param1 != fl.field_d[var2_int]) {
-                            var2_int++;
-                            break L11;
-                          } else {
-                            if (ba.field_w[var2_int] > 0) {
-                              ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
-                              var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
-                              wg.field_j[var2_int][ba.field_w[var2_int]] = null;
-                              return var3;
-                            } else {
-                              var2_int++;
-                              break L11;
-                            }
-                          }
-                        }
-                        var2_int++;
-                        var2_int++;
-                        var2_int++;
-                        break L10;
-                      }
-                    } else {
-                      break L10;
-                    }
-                  }
-                  return new byte[param1];
-                }
+                return new byte[param1];
               }
             } else {
-              if (re.field_e > 0) {
-                byte[][] fieldTemp$89 = ka.field_e;
-                int fieldTemp$90 = re.field_e - 1;
-                re.field_e = re.field_e - 1;
-                var2 = fieldTemp$89[fieldTemp$90];
-                ka.field_e[re.field_e] = null;
+              if (kn.field_F > 0) {
+                int fieldTemp$88 = kn.field_F - 1;
+                kn.field_F = kn.field_F - 1;
+                var2 = sh.field_j[fieldTemp$88];
+                sh.field_j[kn.field_F] = null;
                 return var2;
               } else {
-                L12: {
-                  if (param1 != 30000) {
-                    break L12;
-                  } else {
-                    if (kn.field_F > 0) {
-                      int fieldTemp$91 = kn.field_F - 1;
-                      kn.field_F = kn.field_F - 1;
-                      var2 = sh.field_j[fieldTemp$91];
-                      sh.field_j[kn.field_F] = null;
-                      return var2;
-                    } else {
-                      break L12;
-                    }
-                  }
-                }
-                L13: {
+                L10: {
                   if (wg.field_j != null) {
                     var2_int = 0;
                     if (fl.field_d.length <= var2_int) {
-                      break L13;
+                      break L10;
                     } else {
-                      L14: {
+                      L11: {
                         if (param1 != fl.field_d[var2_int]) {
                           var2_int++;
-                          break L14;
+                          break L11;
                         } else {
                           if (ba.field_w[var2_int] > 0) {
                             ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
@@ -309,29 +246,84 @@ final class ch {
                             return var3;
                           } else {
                             var2_int++;
-                            break L14;
+                            break L11;
                           }
                         }
                       }
                       var2_int++;
                       var2_int++;
                       var2_int++;
-                      break L13;
+                      break L10;
                     }
                   } else {
-                    break L13;
+                    break L10;
                   }
                 }
                 return new byte[param1];
               }
             }
           } else {
-            return null;
+            if (re.field_e > 0) {
+              byte[][] fieldTemp$89 = ka.field_e;
+              int fieldTemp$90 = re.field_e - 1;
+              re.field_e = re.field_e - 1;
+              var2 = fieldTemp$89[fieldTemp$90];
+              ka.field_e[re.field_e] = null;
+              return var2;
+            } else {
+              L12: {
+                if (param1 != 30000) {
+                  break L12;
+                } else {
+                  if (kn.field_F > 0) {
+                    int fieldTemp$91 = kn.field_F - 1;
+                    kn.field_F = kn.field_F - 1;
+                    var2 = sh.field_j[fieldTemp$91];
+                    sh.field_j[kn.field_F] = null;
+                    return var2;
+                  } else {
+                    break L12;
+                  }
+                }
+              }
+              L13: {
+                if (wg.field_j != null) {
+                  var2_int = 0;
+                  if (fl.field_d.length <= var2_int) {
+                    break L13;
+                  } else {
+                    L14: {
+                      if (param1 != fl.field_d[var2_int]) {
+                        var2_int++;
+                        break L14;
+                      } else {
+                        if (ba.field_w[var2_int] > 0) {
+                          ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
+                          var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
+                          wg.field_j[var2_int][ba.field_w[var2_int]] = null;
+                          return var3;
+                        } else {
+                          var2_int++;
+                          break L14;
+                        }
+                      }
+                    }
+                    var2_int++;
+                    var2_int++;
+                    var2_int++;
+                    break L13;
+                  }
+                } else {
+                  break L13;
+                }
+              }
+              return new byte[param1];
+            }
           }
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1, int param2) {
+    final static boolean a(CharSequence param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -360,7 +352,8 @@ final class ch {
         var4 = ZombieDawn.field_J;
         try {
           L0: {
-            if (!vb.a(param2, param0, param1)) {
+            int discarded$11 = 0;
+            if (!vb.a(0, param0)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -412,7 +405,7 @@ final class ch {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 0 + 44 + 0 + 41);
         }
         return stackIn_13_0 != 0;
     }

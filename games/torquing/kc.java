@@ -109,7 +109,7 @@ final class kc extends am {
         }
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         int[] var13 = ((kc) this).field_s[0];
         int[] var11 = var13;
         int[] var9 = var11;
@@ -414,13 +414,15 @@ final class kc extends am {
             throw new RuntimeException("Curve operation requires at least two markers");
         }
         if (((kc) this).field_w == 2) {
-            this.g((byte) 69);
+            int discarded$0 = 69;
+            this.g();
         }
         if (param0 <= 123) {
             Object var3 = null;
             kc.a(76, (la) null, (la) null);
         }
-        ie.a(14837);
+        int discarded$1 = 14837;
+        ie.a();
         this.a(false);
     }
 

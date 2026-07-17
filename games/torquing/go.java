@@ -290,24 +290,18 @@ final class go extends am {
         var6 = Torquing.field_u;
         try {
           L0: {
-            var2 = nb.a("jagex-last-login-method", param1, (byte) -118);
+            int discarded$4 = -118;
+            var2 = nb.a("jagex-last-login-method", param1);
             if (var2 == null) {
               stackOut_3_0 = jf.field_c;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var3 = ji.b(21169);
+              int discarded$5 = 21169;
+              var3 = ji.b();
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
-                  L2: {
-                    if (!param0) {
-                      break L2;
-                    } else {
-                      go.b(104);
-                      break L2;
-                    }
-                  }
                   stackOut_13_0 = jf.field_c;
                   stackIn_14_0 = stackOut_13_0;
                   break L0;
@@ -327,10 +321,10 @@ final class go extends am {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2_ref = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2_ref;
-            stackOut_15_1 = new StringBuilder().append("go.L(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("go.L(").append(0).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -342,7 +336,7 @@ final class go extends am {
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
-              break L3;
+              break L2;
             } else {
               stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
               stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
@@ -350,7 +344,7 @@ final class go extends am {
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
               stackIn_18_2 = stackOut_16_2;
-              break L3;
+              break L2;
             }
           }
           throw rb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);

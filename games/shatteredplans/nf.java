@@ -77,7 +77,7 @@ final class nf {
         }
     }
 
-    final static String a(eg param0, int param1) {
+    final static String a(eg param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -245,7 +245,7 @@ final class nf {
         return stackIn_31_0;
     }
 
-    final static int[] a(int[] param0, int param1) {
+    final static int[] a(int[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int[] var3 = null;
@@ -361,7 +361,7 @@ final class nf {
         int var3 = 0;
         int var4 = 0;
         if (null == tc.field_G) {
-          var3 = 107 % ((param0 - -29) / 53);
+          var3 = 0;
           return;
         } else {
           L0: {
@@ -383,7 +383,7 @@ final class nf {
               break L0;
             }
           }
-          var3 = 107 % ((param0 - -29) / 53);
+          var3 = 0;
           return;
         }
     }
@@ -407,14 +407,8 @@ final class nf {
         ((nf) this).field_d = jc.field_s;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
-        if (param0 != -25) {
-            field_i = null;
-            field_m = null;
-            field_a = null;
-            return;
-        }
         field_m = null;
         field_a = null;
     }

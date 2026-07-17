@@ -143,10 +143,7 @@ final class ej implements Runnable {
     }
 
     private final re a(int param0, int param1, boolean param2, String param3) {
-        if (param0 != -19897) {
-            ((ej) this).field_a = null;
-        }
-        return this.a(!param2 ? 1 : 22, 0, 1, param1, (Object) (Object) param3);
+        return this.a(1, 0, 1, param1, (Object) (Object) param3);
     }
 
     final re a(Runnable param0, int param1, int param2) {

@@ -25,7 +25,7 @@ final class ql implements pa {
     private jd field_d;
     private int field_f;
 
-    private final void f(int param0) {
+    private final void f() {
         this.a(-128, ((ql) this).field_r, ((ql) this).field_f);
     }
 
@@ -235,46 +235,19 @@ final class ql implements pa {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
-        L0: {
-          var7 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (((ql) this).field_h < 40) {
-            if (((ql) this).field_h < 20) {
-              hh.field_d.d(-40 + param2, param1 - 40, 80, 80, 255 * ((ql) this).field_h / 20);
-              hh.field_d.d(param2 - 40, param1 + -40, 80, 80, ((ql) this).field_h * 255 / 20);
-              break L0;
-            } else {
-              break L0;
+        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        if (!(((ql) this).field_h >= 40)) {
+            if (!(((ql) this).field_h >= 20)) {
+                hh.field_d.d(-40 + param2, param1 - 40, 80, 80, 255 * ((ql) this).field_h / 20);
+                hh.field_d.d(param2 - 40, param1 + -40, 80, 80, ((ql) this).field_h * 255 / 20);
             }
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          if (param0 <= -124) {
-            break L1;
-          } else {
-            ((ql) this).field_d = null;
-            break L1;
-          }
-        }
-        L2: {
-          if (null != ((ql) this).field_t) {
-            var4 = 0;
-            L3: while (true) {
-              if (((ql) this).field_t.length <= var4) {
-                break L2;
-              } else {
+        if (!(null == ((ql) this).field_t)) {
+            for (var4 = 0; ((ql) this).field_t.length > var4; var4++) {
                 var5 = (((ql) this).field_h - 20) * ((ql) this).field_t[var4][0] / 20 + param2;
                 var6 = ((ql) this).field_t[var4][1] * (((ql) this).field_h + -20) / 20 + param1;
                 hh.field_d.d(var5 - 10, var6 + (((ql) this).field_h + -20) * (-20 + ((ql) this).field_h) / 10 + -10, 20, 20, 255 * (-((ql) this).field_h + 60) / 40);
-                var4++;
-                continue L3;
-              }
             }
-          } else {
-            break L2;
-          }
         }
     }
 
@@ -545,7 +518,7 @@ final class ql implements pa {
         return stackIn_58_0 != 0;
     }
 
-    private final void i(int param0) {
+    private final void i() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -649,126 +622,20 @@ final class ql implements pa {
         }
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        Object var6 = null;
-        wk stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        int stackIn_3_2 = 0;
-        int stackIn_3_3 = 0;
-        int stackIn_3_4 = 0;
-        wk stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_4_3 = 0;
-        int stackIn_4_4 = 0;
-        wk stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        int stackIn_5_3 = 0;
-        int stackIn_5_4 = 0;
-        int stackIn_5_5 = 0;
-        wk stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
-        wk stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        int stackOut_4_3 = 0;
-        int stackOut_4_4 = 0;
-        int stackOut_4_5 = 0;
-        wk stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_3_3 = 0;
-        int stackOut_3_4 = 0;
-        int stackOut_3_5 = 0;
-        L0: {
-          var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (((ql) this).field_h < 20) {
-            L1: {
-              stackOut_2_0 = hs.field_F[ns.a(false, hs.field_F.length, li.field_n)];
-              stackOut_2_1 = ((ql) this).field_b.field_m - -30;
-              stackOut_2_2 = -90 + (((ql) this).field_b.field_v - -(((ql) this).field_h * 4));
-              stackOut_2_3 = 20;
-              stackOut_2_4 = 20;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_4_2 = stackOut_2_2;
-              stackIn_4_3 = stackOut_2_3;
-              stackIn_4_4 = stackOut_2_4;
-              stackIn_3_0 = stackOut_2_0;
-              stackIn_3_1 = stackOut_2_1;
-              stackIn_3_2 = stackOut_2_2;
-              stackIn_3_3 = stackOut_2_3;
-              stackIn_3_4 = stackOut_2_4;
-              if (((ql) this).field_h <= 10) {
-                stackOut_4_0 = (wk) (Object) stackIn_4_0;
-                stackOut_4_1 = stackIn_4_1;
-                stackOut_4_2 = stackIn_4_2;
-                stackOut_4_3 = stackIn_4_3;
-                stackOut_4_4 = stackIn_4_4;
-                stackOut_4_5 = ((ql) this).field_h * 255 / 10;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
-                stackIn_5_2 = stackOut_4_2;
-                stackIn_5_3 = stackOut_4_3;
-                stackIn_5_4 = stackOut_4_4;
-                stackIn_5_5 = stackOut_4_5;
-                break L1;
-              } else {
-                stackOut_3_0 = (wk) (Object) stackIn_3_0;
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = stackIn_3_2;
-                stackOut_3_3 = stackIn_3_3;
-                stackOut_3_4 = stackIn_3_4;
-                stackOut_3_5 = 255;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
-                stackIn_5_2 = stackOut_3_2;
-                stackIn_5_3 = stackOut_3_3;
-                stackIn_5_4 = stackOut_3_4;
-                stackIn_5_5 = stackOut_3_5;
-                break L1;
-              }
-            }
-            ((wk) (Object) stackIn_5_0).d(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5);
-            break L0;
-          } else {
-            break L0;
-          }
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        if (!(((ql) this).field_h >= 20)) {
+            hs.field_F[ns.a(false, hs.field_F.length, li.field_n)].d(((ql) this).field_b.field_m - -30, -90 + (((ql) this).field_b.field_v - -(((ql) this).field_h * 4)), 20, 20, ((ql) this).field_h > 10 ? 255 : ((ql) this).field_h * 255 / 10);
         }
-        L2: {
-          if (null != ((ql) this).field_t) {
-            var2 = 0;
-            L3: while (true) {
-              if (var2 >= ((ql) this).field_t.length) {
-                break L2;
-              } else {
+        if (!(null == ((ql) this).field_t)) {
+            for (var2 = 0; var2 < ((ql) this).field_t.length; var2++) {
                 var3 = ((ql) this).field_b.field_m + (((ql) this).field_t[var2][0] * (((ql) this).field_h - 20) / 20 + 35);
                 var4 = -10 + ((ql) this).field_b.field_v + (-20 + ((ql) this).field_h) * ((ql) this).field_t[var2][1] / 20;
                 hs.field_F[ns.a(false, hs.field_F.length, li.field_n)].d(-((-20 + ((ql) this).field_h) / 4) + var3, -((-40 + ((ql) this).field_h) / 4) + (((ql) this).field_h - 20) * (((ql) this).field_h - 20) / 10 + var4, (-20 + ((ql) this).field_h) / 2 + 10, (-20 + ((ql) this).field_h) / 2 + 10, (-((ql) this).field_h + 60) * 255 / 40);
-                var2++;
-                continue L3;
-              }
             }
-          } else {
-            break L2;
-          }
-        }
-        L4: {
-          if (param0 == -117) {
-            break L4;
-          } else {
-            var6 = null;
-            boolean discarded$1 = ((ql) this).a((oj) null, (byte) -72);
-            break L4;
-          }
         }
     }
 
@@ -830,7 +697,7 @@ final class ql implements pa {
             break L0;
           } else {
             var4 = null;
-            boolean discarded$1 = ((ql) this).a(116, -87, 41, (oj) null);
+            boolean discarded$7 = ((ql) this).a(116, -87, 41, (oj) null);
             break L0;
           }
         }
@@ -845,23 +712,28 @@ final class ql implements pa {
                 if (2 != var2) {
                   if (var2 != 6) {
                     if (var2 == 7) {
-                      this.d(20);
+                      int discarded$8 = 20;
+                      this.d();
                       break L1;
                     } else {
                       if (var2 == 14) {
-                        this.a(false);
+                        int discarded$9 = 0;
+                        this.a();
                         break L1;
                       } else {
                         if (var2 == 13) {
-                          this.g(10);
+                          int discarded$10 = 10;
+                          this.g();
                           break L1;
                         } else {
                           if (var2 == 12) {
-                            this.i(10);
+                            int discarded$11 = 10;
+                            this.i();
                             break L1;
                           } else {
                             if (11 == var2) {
-                              this.e((byte) -117);
+                              int discarded$12 = -117;
+                              this.e();
                               break L1;
                             } else {
                               if (var2 == 10) {
@@ -871,7 +743,8 @@ final class ql implements pa {
                                 if (8 != var2) {
                                   break L1;
                                 } else {
-                                  this.f(3);
+                                  int discarded$13 = 3;
+                                  this.f();
                                   break L1;
                                 }
                               }
@@ -929,7 +802,7 @@ final class ql implements pa {
         field_l = null;
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -985,7 +858,7 @@ final class ql implements pa {
         return false;
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         if (40 > ((ql) this).field_h) {
             if (((ql) this).field_h >= 20) {
                 hh.field_d.d(-((ql) this).field_h + ((ql) this).field_b.field_m + 20, -((ql) this).field_h + -70 + ((ql) this).field_b.field_v, (-20 + ((ql) this).field_h) * 2 + 80, 100, (10200 - 255 * ((ql) this).field_h) / 20);
@@ -1016,7 +889,7 @@ final class ql implements pa {
         en.field_E.c(Integer.toString(((ql) this).field_m), ((ql) this).field_b.field_m - -40, ((ql) this).field_b.field_v - 15, 16777215, 0);
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var3 = 0;
         wk stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -1208,7 +1081,7 @@ final class ql implements pa {
           if (param0 == 31337) {
             break L0;
           } else {
-            boolean discarded$2 = ql.h(-19);
+            boolean discarded$4 = ql.h(-19);
             break L0;
           }
         }
@@ -1224,7 +1097,8 @@ final class ql implements pa {
                   if (vt.field_n <= 0) {
                     break L3;
                   } else {
-                    if (du.c(10)) {
+                    int discarded$5 = 10;
+                    if (du.c()) {
                       break L3;
                     } else {
                       break L2;

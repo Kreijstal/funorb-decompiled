@@ -23,7 +23,7 @@ final class sha extends oda {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_x = null;
     }
 

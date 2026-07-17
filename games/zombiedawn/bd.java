@@ -34,11 +34,13 @@ final class bd {
         field_i = null;
         field_h = null;
         field_m = null;
-        field_f = -27;
+        if (!param0) {
+            field_f = -27;
+        }
         field_q = null;
     }
 
-    final static void a(vn param0, boolean param1) {
+    final static void a(vn param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -139,7 +141,7 @@ final class bd {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ei.field_G[46] = 72;
         ei.field_G[222] = 58;
         ei.field_G[520] = 59;
@@ -291,9 +293,6 @@ final class bd {
 
     final static char a(byte param0, int param1) {
         int var3 = 0;
-        if (param1 != 9082) {
-            field_d = 87;
-        }
         int var2 = param0 & 255;
         if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));

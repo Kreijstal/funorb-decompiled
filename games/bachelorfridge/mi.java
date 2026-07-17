@@ -13,13 +13,13 @@ final class mi extends at {
     static gu[] field_l;
     private int field_p;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_n = null;
         field_l = null;
-        int var1 = 17 / ((-49 - param0) / 54);
+        int var1 = 17;
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
     }
 
     final boolean c(byte param0) {
@@ -27,19 +27,20 @@ final class mi extends at {
         int var4 = 0;
         aj var5 = null;
         aj var6 = null;
-        int fieldTemp$4 = ((mi) this).field_q - 1;
+        int fieldTemp$6 = ((mi) this).field_q - 1;
         ((mi) this).field_q = ((mi) this).field_q - 1;
-        if (0 <= fieldTemp$4) {
+        if (0 <= fieldTemp$6) {
           return false;
         } else {
           if (((mi) this).field_p <= ((mi) this).field_o) {
-            this.b(false);
+            int discarded$7 = 0;
+            this.b();
             return true;
           } else {
             L0: {
-              int fieldTemp$5 = ((mi) this).field_o;
+              int fieldTemp$8 = ((mi) this).field_o;
               ((mi) this).field_o = ((mi) this).field_o + 1;
-              var5 = ((mi) this).field_m[fieldTemp$5];
+              var5 = ((mi) this).field_m[fieldTemp$8];
               var6 = var5;
               var3 = new uea(((mi) this).field_j, var6.field_c, var6.field_a, 16777215);
               ((kj) (Object) var3).a(0);

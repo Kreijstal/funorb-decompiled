@@ -33,11 +33,7 @@ final class l {
                       } else {
                         if (var2 != 8) {
                           if (var2 != 25) {
-                            if (param0 == -28) {
-                              return 8;
-                            } else {
-                              return -56;
-                            }
+                            return 8;
                           } else {
                             return 4;
                           }
@@ -60,7 +56,7 @@ final class l {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         int var1 = -25;

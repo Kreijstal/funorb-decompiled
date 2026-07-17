@@ -10,7 +10,7 @@ final class rb extends ii {
     int field_gb;
     static String[] field_hb;
 
-    final static int c(byte param0) {
+    final static int c() {
         if (mc.field_a >= 2) {
           L0: {
             if (fe.field_h != 0) {
@@ -328,7 +328,7 @@ final class rb extends ii {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_fb = null;
         field_hb = null;
     }

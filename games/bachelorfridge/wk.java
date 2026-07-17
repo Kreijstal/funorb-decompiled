@@ -12,13 +12,7 @@ final class wk {
     static String field_i;
     private vr field_h;
 
-    public static void a(int param0) {
-        if (param0 >= -8) {
-            field_a = -25;
-            field_e = null;
-            field_i = null;
-            return;
-        }
+    public static void a() {
         field_e = null;
         field_i = null;
     }

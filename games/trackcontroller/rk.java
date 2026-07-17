@@ -37,7 +37,7 @@ final class rk extends wd {
         }
     }
 
-    final static void r(int param0) {
+    final static void r() {
         RuntimeException var1 = null;
         ra[] var2 = null;
         int var3 = 0;
@@ -72,6 +72,7 @@ final class rk extends wd {
                   var4 = var2[var3];
                   if (var4 != null) {
                     var4.c((byte) 93);
+                    var3++;
                     break L2;
                   } else {
                     var3++;
@@ -93,15 +94,9 @@ final class rk extends wd {
     final static boolean a(int param0, byte param1, int param2, boolean param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_59_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_36_0 = 0;
         if (param3) {
           if (g.field_u[param2] > g.field_u[param0]) {
             return true;
@@ -111,53 +106,27 @@ final class rk extends wd {
             } else {
               if (va.field_e[param2] <= va.field_e[param0]) {
                 if (va.field_e[param0] <= va.field_e[param2]) {
-                  if (param1 > 60) {
-                    var4 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
-                    var5 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
-                    if (var4 >= var5) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param2 <= param0) {
-                            stackOut_58_0 = 0;
-                            stackIn_59_0 = stackOut_58_0;
-                            break L0;
-                          } else {
-                            stackOut_57_0 = 1;
-                            stackIn_59_0 = stackOut_57_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_59_0 != 0;
-                      }
+                  var4 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
+                  var5 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
+                  if (var4 >= var5) {
+                    if (var4 > var5) {
+                      return false;
                     } else {
-                      return true;
+                      L0: {
+                        if (param2 <= param0) {
+                          stackOut_37_0 = 0;
+                          stackIn_38_0 = stackOut_37_0;
+                          break L0;
+                        } else {
+                          stackOut_36_0 = 1;
+                          stackIn_38_0 = stackOut_36_0;
+                          break L0;
+                        }
+                      }
+                      return stackIn_38_0 != 0;
                     }
                   } else {
-                    int discarded$2 = rk.s(-40);
-                    var4 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
-                    var5 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
-                    if (var4 >= var5) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L1: {
-                          if (param2 <= param0) {
-                            stackOut_49_0 = 0;
-                            stackIn_50_0 = stackOut_49_0;
-                            break L1;
-                          } else {
-                            stackOut_48_0 = 1;
-                            stackIn_50_0 = stackOut_48_0;
-                            break L1;
-                          }
-                        }
-                        return stackIn_50_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
+                    return true;
                   }
                 } else {
                   return false;
@@ -176,46 +145,20 @@ final class rk extends wd {
                 return true;
               } else {
                 if (g.field_u[param2] >= g.field_u[param0]) {
-                  if (param1 <= 60) {
-                    int discarded$3 = rk.s(-40);
-                    var4 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
-                    var5 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
-                    if (var4 >= var5) {
-                      if (var4 > var5) {
+                  var4 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
+                  var5 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
+                  if (var4 >= var5) {
+                    if (var4 > var5) {
+                      return false;
+                    } else {
+                      if (param2 <= param0) {
                         return false;
                       } else {
-                        if (param2 <= param0) {
-                          return false;
-                        } else {
-                          return true;
-                        }
+                        return true;
                       }
-                    } else {
-                      return true;
                     }
                   } else {
-                    var4 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
-                    var5 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
-                    if (var4 >= var5) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L2: {
-                          if (param2 <= param0) {
-                            stackOut_20_0 = 0;
-                            stackIn_21_0 = stackOut_20_0;
-                            break L2;
-                          } else {
-                            stackOut_19_0 = 1;
-                            stackIn_21_0 = stackOut_19_0;
-                            break L2;
-                          }
-                        }
-                        return stackIn_21_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
+                    return true;
                   }
                 } else {
                   return false;
@@ -228,7 +171,7 @@ final class rk extends wd {
         }
     }
 
-    public static void t(int param0) {
+    public static void t() {
         field_bb = null;
         field_Z = null;
         field_T = null;
@@ -263,7 +206,7 @@ final class rk extends wd {
         }
     }
 
-    final static int s(int param0) {
+    final static int s() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -280,9 +223,10 @@ final class rk extends wd {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              if (!mh.e(param0 + 128)) {
+              int discarded$4 = 127;
+              if (!mh.e()) {
                 L2: {
-                  vi.field_f.a(-123, mg.b(fg.field_a, param0 ^ param0, kf.field_b), mg.b(wg.field_e, 0, db.field_X));
+                  vi.field_f.a(-123, mg.b(fg.field_a, 0, kf.field_b), mg.b(wg.field_e, 0, db.field_X));
                   if (vi.field_f.d(0)) {
                     var1_int = 1;
                     break L2;
@@ -301,11 +245,13 @@ final class rk extends wd {
                       } else {
                         var3 = ac.field_c[vi.field_f.field_e];
                         if (var3 == 2) {
-                          vh.h(-2532);
+                          int discarded$5 = -2532;
+                          vh.h();
                           break L3;
                         } else {
                           if (var3 == 5) {
-                            vh.h(-2532);
+                            int discarded$6 = -2532;
+                            vh.h();
                             break L3;
                           } else {
                             break L3;
@@ -320,7 +266,8 @@ final class rk extends wd {
                     if (2 == di.field_h) {
                       break L3;
                     } else {
-                      vh.h(-2532);
+                      int discarded$7 = -2532;
+                      vh.h();
                       break L3;
                     }
                   }
@@ -369,7 +316,7 @@ final class rk extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "rk.A(" + param0 + 41);
+          throw sl.a((Throwable) (Object) var1, "rk.A(" + -1 + 41);
         }
         return stackIn_27_0;
     }

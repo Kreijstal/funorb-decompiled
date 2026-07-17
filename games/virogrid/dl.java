@@ -7,7 +7,7 @@ final class dl {
     static int field_b;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
     }

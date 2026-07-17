@@ -10,7 +10,7 @@ final class pd {
     static js field_d;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_c = null;
@@ -23,13 +23,13 @@ final class pd {
         if (param0 + param3 + param2 <= qn.field_g) {
             return param3 + param2;
         }
-        if (!(param2 + -param0 < param1)) {
+        if (!(param2 + -param0 < 0)) {
             return -param0 + param2;
         }
         return -param0 + qn.field_g;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;

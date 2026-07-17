@@ -6,7 +6,7 @@ final class on {
     static String field_c;
     static int field_b;
 
-    final static void a(int param0) {
+    final static void a() {
         dl var1 = null;
         dl var2 = null;
         int var3 = 0;
@@ -17,7 +17,8 @@ final class on {
             nb.b();
             kh.a();
             sn.field_c = 0;
-            ja.d((byte) -67);
+            int discarded$0 = -67;
+            ja.d();
             var2 = var1.d();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.g(-2, -2, 16777215);
@@ -65,9 +66,10 @@ final class on {
               L0: {
                 try {
                   L1: {
-                    var2_int = 10 % ((-8 - param0) / 55);
+                    var2_int = 0;
                     var3 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                    param1.getAppletContext().showDocument(gh.a(param1, var3, (byte) 67), "_top");
+                    int discarded$2 = 67;
+                    param1.getAppletContext().showDocument(gh.a(param1, var3), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -85,7 +87,7 @@ final class on {
               L3: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_4_0 = (RuntimeException) var2_ref;
-                stackOut_4_1 = new StringBuilder().append("on.B(").append(param0).append(44);
+                stackOut_4_1 = new StringBuilder().append("on.B(").append(95).append(44);
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;

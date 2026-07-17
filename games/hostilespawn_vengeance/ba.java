@@ -102,7 +102,8 @@ final class ba extends ag {
             ((ba) this).field_A = -88;
         }
         ((ba) this).field_C = new bd[]{this.a((byte) -38, ((ba) this).field_K, ((ba) this).field_L), this.a((byte) -38, ((ba) this).field_A, ((ba) this).field_B)};
-        ((ba) this).field_D = this.i(-1);
+        int discarded$0 = -1;
+        ((ba) this).field_D = this.i();
         ((ba) this).field_F = ((ba) this).field_D.d();
         ((ba) this).field_I = new bd(((ba) this).field_x >> 1, ((ba) this).field_x);
     }
@@ -132,7 +133,8 @@ final class ba extends ag {
           var6 = 0;
           L0: while (true) {
             if (var6 >= ((ba) this).field_x) {
-              eh.b(false);
+              int discarded$1 = 0;
+              eh.b();
               return var14;
             } else {
               L1: {
@@ -230,19 +232,22 @@ final class ba extends ag {
         try {
           L0: {
             var5_int = ((ba) this).field_s + param2;
-            sf.a(-((ba) this).field_D.field_z + var5_int, param0, ((ba) this).field_x + param0, ((ba) this).field_D.field_z + param2, true);
+            int discarded$4 = 1;
+            sf.a(-((ba) this).field_D.field_z + var5_int, param0, ((ba) this).field_x + param0, ((ba) this).field_D.field_z + param2);
             var6 = -((ba) this).field_z + param2;
             L1: while (true) {
               if (var6 >= var5_int) {
                 if (param3 < -117) {
                   L2: {
-                    eh.b(false);
+                    int discarded$5 = 0;
+                    eh.b();
                     if (((ba) this).field_D.field_z + param2 >= si.field_b) {
                       sb.a(((ba) this).field_I, -110);
                       param1.e(-((ba) this).field_z, 0);
                       param1.e(-((ba) this).field_z + ((ba) this).field_y * 2, 0);
                       ((ba) this).field_F.a(0, 0);
-                      eh.b(false);
+                      int discarded$6 = 0;
+                      eh.b();
                       ((ba) this).field_I.e(param2, param0);
                       break L2;
                     } else {
@@ -260,7 +265,8 @@ final class ba extends ag {
                           param1.e(-var7, 0);
                           param1.e(((ba) this).field_y * 2 - var7, 0);
                           ((ba) this).field_D.a(0, 0);
-                          eh.b(false);
+                          int discarded$7 = 0;
+                          eh.b();
                           ((ba) this).field_I.e(-((ba) this).field_D.field_z + var5_int, param0);
                           break L3;
                         } else {
@@ -328,9 +334,11 @@ final class ba extends ag {
         }
         this.a(var6, ((ba) this).field_C[0], var5, -119);
         if (!(((ba) this).field_G >= 65536)) {
-            sf.a(((ba) this).field_s + var5, var6, ((ba) this).field_x + var6, var5 - -(((ba) this).field_G * ((ba) this).field_s >> 16), true);
+            int discarded$1 = 1;
+            sf.a(((ba) this).field_s + var5, var6, ((ba) this).field_x + var6, var5 - -(((ba) this).field_G * ((ba) this).field_s >> 16));
             this.a(var6, ((ba) this).field_C[1], var5, -122);
-            eh.b(false);
+            int discarded$2 = 0;
+            eh.b();
         }
     }
 
@@ -359,7 +367,7 @@ final class ba extends ag {
         ((ba) this).a(param2, param1, 0, param0, param3);
     }
 
-    private final bd i(int param0) {
+    private final bd i() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -379,7 +387,8 @@ final class ba extends ag {
                 si.b(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
         }
-        eh.b(false);
+        int discarded$0 = 0;
+        eh.b();
         return var3;
     }
 

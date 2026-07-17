@@ -152,7 +152,8 @@ final class qc extends pe implements fj, qd {
     }
 
     private final void a(int param0) {
-        if (!qi.d(-1)) {
+        int discarded$2 = -1;
+        if (!qi.d()) {
             if (0 >= ((qc) this).field_K.field_k.length()) {
                 return;
             }
@@ -160,7 +161,8 @@ final class qc extends pe implements fj, qd {
                 return;
             }
         }
-        w.a(((qc) this).field_Q.field_k, ((qc) this).field_K.field_k, -124);
+        int discarded$3 = -124;
+        w.a(((qc) this).field_Q.field_k, ((qc) this).field_K.field_k);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -183,7 +185,7 @@ final class qc extends pe implements fj, qd {
         super.a(param0, param1, param2, param3);
     }
 
-    final static Class a(String param0, byte param1) throws ClassNotFoundException {
+    final static Class a(String param0) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_4_0 = null;
         Class stackIn_10_0 = null;
@@ -512,10 +514,12 @@ final class qc extends pe implements fj, qd {
                       break L2;
                     } else {
                       if (!((qc) this).field_O) {
-                        sf.a((byte) -89);
+                        int discarded$2 = -89;
+                        sf.a();
                         break L2;
                       } else {
-                        pg.a((byte) -97);
+                        int discarded$3 = -97;
+                        pg.a();
                         break L2;
                       }
                     }
@@ -842,7 +846,8 @@ final class qc extends pe implements fj, qd {
             }
             L13: {
               var8 = ai.field_j;
-              var9 = jf.a(jg.f(1), (byte) 48);
+              int discarded$3 = 48;
+              var9 = jf.a(jg.f(1));
               if (var9 == hd.field_C) {
                 var8 = dc.field_q;
                 break L13;
@@ -856,13 +861,13 @@ final class qc extends pe implements fj, qd {
               }
             }
             L14: {
-              ik dupTemp$2 = new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_K, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((qc) this).a((ub) (Object) dupTemp$2, (byte) 57);
+              ik dupTemp$4 = new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_K, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((qc) this).a((ub) (Object) dupTemp$4, (byte) 57);
               ((qc) this).field_l = ((qc) this).field_l + (5 + ((ub) (Object) var12).field_n);
-              ik dupTemp$3 = new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_Q, false, 80, 3, var7, 16777215, qk.field_d);
-              var13 = dupTemp$3;
-              ((qc) this).a((ub) (Object) dupTemp$3, (byte) 85);
+              ik dupTemp$5 = new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_Q, false, 80, 3, var7, 16777215, qk.field_d);
+              var13 = dupTemp$5;
+              ((qc) this).a((ub) (Object) dupTemp$5, (byte) 85);
               ((qc) this).field_l = ((qc) this).field_l + (5 + ((ub) (Object) var13).field_n);
               ((qc) this).field_H.field_s = (ce) this;
               if (((qc) this).field_M == null) {
@@ -1038,18 +1043,14 @@ final class qc extends pe implements fj, qd {
             ej.field_d = param8;
             fg.field_c = param4;
             pg.field_j = param7;
-            if (param6) {
-              vk.field_p = param3;
-              kj.field_a = param0;
-              nf.field_b = param2;
-              aa.field_hb = param5;
-              ii.field_f = (na) (Object) new sl();
-              ig.field_q = new cd(param3);
-              wi.field_L = new ad(ii.field_f, ig.field_q);
-              break L0;
-            } else {
-              return;
-            }
+            vk.field_p = param3;
+            kj.field_a = param0;
+            nf.field_b = param2;
+            aa.field_hb = param5;
+            ii.field_f = (na) (Object) new sl();
+            ig.field_q = new cd(param3);
+            wi.field_L = new ad(ii.field_f, ig.field_q);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1104,11 +1105,11 @@ final class qc extends pe implements fj, qd {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw bd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 1 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_N = null;
         field_E = null;
         field_I = null;

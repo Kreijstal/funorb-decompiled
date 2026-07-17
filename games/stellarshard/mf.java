@@ -6,7 +6,7 @@ final class mf {
     static pf field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -3;
         field_a = null;
         field_b = null;

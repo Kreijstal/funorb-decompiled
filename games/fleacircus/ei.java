@@ -357,15 +357,9 @@ final class ei extends sh {
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        if (param0 != -16257) {
-            ((ei) this).field_R = null;
-        }
     }
 
     private final void d(int param0, int param1, int param2) {
-        if (param1 != -24344) {
-            return;
-        }
         ((ei) this).field_y[param2] = param0;
         ((ei) this).field_p[param2] = (int)(0.5 + 2097152.0 * Math.pow(2.0, (double)param0 * 0.00054931640625));
     }
@@ -397,7 +391,7 @@ final class ei extends sh {
               var5 = (32699 & param1) >> 8;
               var6 = (8387488 & param1) >> 16;
               if (var6 <= 0) {
-                this.b(param0, var5, 64, var4);
+                this.b(-128, var5, 64, var4);
                 return;
               } else {
                 this.a(var5, var4, var6, false);
@@ -413,30 +407,26 @@ final class ei extends sh {
               } else {
                 if (var3 != 176) {
                   if (var3 != 192) {
-                    if (param0 == -128) {
-                      if (var3 == 208) {
-                        var4 = 15 & param1;
-                        var5 = (32598 & param1) >> 8;
-                        this.a(param0 ^ -16512, var5, var4);
-                        return;
-                      } else {
-                        if (224 != var3) {
-                          var3 = 255 & param1;
-                          if (var3 == 255) {
-                            this.b(-1, true);
-                            return;
-                          } else {
-                            return;
-                          }
+                    if (var3 == 208) {
+                      var4 = 15 & param1;
+                      var5 = (32598 & param1) >> 8;
+                      this.a(16384, var5, var4);
+                      return;
+                    } else {
+                      if (224 != var3) {
+                        var3 = 255 & param1;
+                        if (var3 == 255) {
+                          this.b(-1, true);
+                          return;
                         } else {
-                          var4 = param1 & 15;
-                          var5 = (param1 >> 8 & 127) + (16256 & param1 >> 9);
-                          this.c(var5, var4, 128);
                           return;
                         }
+                      } else {
+                        var4 = param1 & 15;
+                        var5 = (param1 >> 8 & 127) + (16256 & param1 >> 9);
+                        this.c(var5, var4, 128);
+                        return;
                       }
-                    } else {
-                      return;
                     }
                   } else {
                     var4 = param1 & 15;
@@ -563,7 +553,7 @@ final class ei extends sh {
                         ((ei) this).field_q[var4] = ne.a(((ei) this).field_q[var4], 2);
                         break L14;
                       } else {
-                        this.d(var4, param0 ^ -31961);
+                        this.d(var4, 31911);
                         ((ei) this).field_q[var4] = sc.a(((ei) this).field_q[var4], -3);
                         break L14;
                       }
@@ -621,7 +611,7 @@ final class ei extends sh {
                   }
                   L21: {
                     if (var5 == 123) {
-                      this.a(param0 ^ 29, var4);
+                      this.a(-99, var4);
                       break L21;
                     } else {
                       break L21;
@@ -706,7 +696,7 @@ final class ei extends sh {
           var4 = param1 & 15;
           var5 = 127 & param1 >> 8;
           var6 = 127 & param1 >> 16;
-          this.b(param0 + 36, var5, var6, var4);
+          this.b(-92, var5, var6, var4);
           return;
         }
     }
@@ -1821,7 +1811,7 @@ final class ei extends sh {
         this.b(-1, param1);
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_H = null;
         field_N = null;
         field_v = null;
@@ -2033,47 +2023,37 @@ final class ei extends sh {
     private final void d(int param0, int param1) {
         tk var3 = null;
         int var4 = 0;
-        Object var5 = null;
         L0: {
           var4 = fleas.field_A ? 1 : 0;
-          if (param1 == 31911) {
-            break L0;
-          } else {
-            var5 = null;
-            int discarded$2 = this.b(64, (tk) null);
-            break L0;
-          }
-        }
-        L1: {
           if ((((ei) this).field_q[param0] & 2) != 0) {
             var3 = (tk) (Object) ((ei) this).field_O.field_n.c((byte) 47);
-            L2: while (true) {
+            L1: while (true) {
               if (var3 == null) {
-                break L1;
+                break L0;
               } else {
-                L3: {
+                L2: {
                   if (var3.field_o != param0) {
-                    break L3;
+                    break L2;
                   } else {
                     if (null == ((ei) this).field_D[param0][var3.field_F]) {
                       if (0 <= var3.field_q) {
-                        break L3;
+                        break L2;
                       } else {
                         var3.field_q = 0;
-                        break L3;
+                        break L2;
                       }
                     } else {
                       var3 = (tk) (Object) ((ei) this).field_O.field_n.b((byte) -105);
-                      continue L2;
+                      continue L1;
                     }
                   }
                 }
                 var3 = (tk) (Object) ((ei) this).field_O.field_n.b((byte) -105);
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            break L1;
+            break L0;
           }
         }
     }
@@ -2254,9 +2234,6 @@ final class ei extends sh {
         ((ei) this).field_I[param0] = param2;
         ((ei) this).field_L[param0] = sc.a(-128, param2);
         this.e(-38, param2, param0);
-        if (param1 >= -110) {
-            field_v = null;
-        }
     }
 
     private final int a(int param0, tk param1) {
@@ -2407,9 +2384,6 @@ final class ei extends sh {
     }
 
     private final void a(int param0, int param1, int param2) {
-        if (param0 != 16384) {
-            ((ei) this).b(-127, 105, -38);
-        }
     }
 
     public ei() {

@@ -110,7 +110,8 @@ abstract class jl extends lm {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    field_O = na.a(var4, (byte) -33);
+                    int discarded$1 = -33;
+                    field_O = na.a(var4);
                     break L1;
                   }
                 } else {
@@ -775,7 +776,8 @@ abstract class jl extends lm {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            var9_int = na.a(var10, (byte) -33);
+                                            int discarded$1 = -33;
+                                            var9_int = na.a(var10);
                                             var4 = var4 + ((jl) this).field_I[var9_int].field_f;
                                             var3 = 0;
                                             var6++;
@@ -936,7 +938,7 @@ abstract class jl extends lm {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = nk.a(field_B, 0, ' ', 16736352);
+          StringBuilder discarded$6 = nk.a(field_B, 0, ' ', 16736352);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -972,9 +974,9 @@ abstract class jl extends lm {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_B.append(60);
-                        StringBuilder discarded$7 = field_B.append(var15);
-                        StringBuilder discarded$8 = field_B.append(62);
+                        StringBuilder discarded$7 = field_B.append(60);
+                        StringBuilder discarded$8 = field_B.append(var15);
+                        StringBuilder discarded$9 = field_B.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -990,7 +992,8 @@ abstract class jl extends lm {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                var16_int = na.a(var18, (byte) -33);
+                                                int discarded$10 = -33;
+                                                var16_int = na.a(var18);
                                                 var4 = var4 + ((jl) this).field_I[var16_int].field_f;
                                                 var10 = 0;
                                                 break L4;
@@ -1161,7 +1164,7 @@ abstract class jl extends lm {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_B.append(var14);
+                        StringBuilder discarded$11 = field_B.append(var14);
                         var14 = (char)(pf.a((byte) -118, (char) var14) & 255);
                         var4 = var4 + ((jl) this).field_v[var14];
                         if (((jl) this).field_P == null) {
@@ -1324,7 +1327,8 @@ abstract class jl extends lm {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            var10 = na.a(var13, (byte) -33);
+                                            int discarded$1 = -33;
+                                            var10 = na.a(var13);
                                             var11_ref_sl = ((jl) this).field_I[var10];
                                             if (((jl) this).field_N == null) {
                                               stackOut_25_0 = var11_ref_sl.field_a;

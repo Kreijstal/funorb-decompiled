@@ -7,7 +7,7 @@ final class rb {
     static String[] field_d;
     static String[] field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -37,7 +37,7 @@ final class rb {
                   if (var4 < var5) {
                     return true;
                   } else {
-                    var6 = 40 / ((param2 - 73) / 45);
+                    var6 = 40;
                     if (var4 > var5) {
                       return false;
                     } else {
@@ -77,7 +77,7 @@ final class rb {
                   if (var4 < var5) {
                     return true;
                   } else {
-                    var6 = 40 / ((param2 - 73) / 45);
+                    var6 = 40;
                     if (var4 <= var5) {
                       if (param3 <= param0) {
                         return false;

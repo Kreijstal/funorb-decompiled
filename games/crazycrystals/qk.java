@@ -14,8 +14,9 @@ final class qk extends og implements fd, vd {
     nh field_A;
     static int field_D;
 
-    private final void i(int param0) {
-        if (!(this.e((byte) -32))) {
+    private final void i() {
+        int discarded$0 = -32;
+        if (!(this.e())) {
             return;
         }
         ba.a((byte) -65, ((qk) this).field_G.field_o);
@@ -40,7 +41,8 @@ final class qk extends og implements fd, vd {
         int var5 = 200;
         var3 += 50;
         ((qk) this).b(var2, 12);
-        var3 = var3 + (5 + this.a((qm) (Object) ((qk) this).field_G, tb.field_c, var3, 170, fh.field_g, (byte) 122));
+        int discarded$0 = 122;
+        var3 = var3 + (5 + this.a((qm) (Object) ((qk) this).field_G, tb.field_c, var3, 170, fh.field_g));
         ((qk) this).field_B.a(40, 496 - var5 >> 1, var3, var5, (byte) -52);
         ((qk) this).field_C.a(40, var4 + 3, 15 + var3, 60, (byte) -52);
         ((qk) this).field_C.field_l = (bi) this;
@@ -53,7 +55,7 @@ final class qk extends og implements fd, vd {
         ((qk) this).a(var4 + (55 + var3), 0, 0, 496, (byte) -52);
     }
 
-    private final boolean a(lf param0, int param1) {
+    private final boolean a(lf param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         n var4 = null;
@@ -211,7 +213,7 @@ final class qk extends og implements fd, vd {
         }
     }
 
-    private final int a(int param0, String param1, String param2, int param3, qm param4, int param5, int param6) {
+    private final int a(int param0, String param1, String param2, int param3, qm param4) {
         RuntimeException var8 = null;
         io var9 = null;
         int var10 = 0;
@@ -266,10 +268,10 @@ final class qk extends og implements fd, vd {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var11 = new ei(20, param0, 120 - -param5, 25, param4, false, 120, 3, ai.field_h, 16777215, param2);
+            var11 = new ei(20, 70, 290, 25, param4, false, 120, 3, ai.field_h, 16777215, param2);
             ((qk) this).b((qm) (Object) var11, 29);
-            var10 = -20 / ((13 - param3) / 40);
-            var9 = new io(((lf) (Object) param4).a(-88), param1, 126, var11.field_f + param0, param5 - -25, 35);
+            var10 = 20;
+            var9 = new io(((lf) (Object) param4).a(-88), param1, 126, var11.field_f + 70, 195, 35);
             var9.field_l = (bi) this;
             ((qk) this).b((qm) (Object) var9, 112);
             stackOut_0_0 = var11.field_f + var9.field_f;
@@ -281,7 +283,7 @@ final class qk extends og implements fd, vd {
           L1: {
             var8 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var8;
-            stackOut_2_1 = new StringBuilder().append("qk.A(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("qk.A(").append(70).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -331,7 +333,7 @@ final class qk extends og implements fd, vd {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param3).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(90).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -354,44 +356,38 @@ final class qk extends og implements fd, vd {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param5 + 44 + 35 + 41);
+          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 170 + 44 + 35 + 41);
         }
         return stackIn_1_0;
     }
 
     final static wj[] a(boolean param0, int param1, db param2, int param3) {
         RuntimeException var4 = null;
-        wj[] stackIn_6_0 = null;
+        wj[] stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        wj[] stackOut_5_0 = null;
+        wj[] stackOut_3_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
             if (gm.a(param2, param3, true, param1)) {
-              L1: {
-                if (!param0) {
-                  break L1;
-                } else {
-                  field_F = 85;
-                  break L1;
-                }
-              }
-              stackOut_5_0 = wm.a(-119);
-              stackIn_6_0 = stackOut_5_0;
+              field_F = 85;
+              int discarded$2 = -119;
+              stackOut_3_0 = wm.a();
+              stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
               return null;
@@ -399,35 +395,35 @@ final class qk extends og implements fd, vd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("qk.L(").append(param0).append(44).append(param1).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("qk.L(").append(0).append(44).append(param1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 41);
         }
-        return stackIn_6_0;
+        return stackIn_4_0;
     }
 
     public final void a(byte param0, int param1, int param2, int param3, pc param4) {
@@ -459,7 +455,8 @@ final class qk extends og implements fd, vd {
                 if (((qk) this).field_B != param4) {
                   break L1;
                 } else {
-                  this.i(-25);
+                  int discarded$2 = -25;
+                  this.i();
                   break L1;
                 }
               }
@@ -760,14 +757,15 @@ final class qk extends og implements fd, vd {
         field_H = null;
     }
 
-    private final boolean e(byte param0) {
-        if (!this.a((lf) (Object) ((qk) this).field_G, -101)) {
+    private final boolean e() {
+        int discarded$0 = -101;
+        if (!this.a((lf) (Object) ((qk) this).field_G)) {
             return false;
         }
         return true;
     }
 
-    private final int a(qm param0, String param1, int param2, int param3, String param4, byte param5) {
+    private final int a(qm param0, String param1, int param2, int param3, String param4) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -819,7 +817,9 @@ final class qk extends og implements fd, vd {
         String stackOut_9_2 = null;
         try {
           L0: {
-            stackOut_0_0 = this.a(param2, param4, param1, 90, param0, param3, 35);
+            int discarded$4 = 35;
+            int discarded$5 = 170;
+            stackOut_0_0 = this.a(70, param4, param1, 90, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -878,7 +878,7 @@ final class qk extends og implements fd, vd {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(70).append(44).append(170).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -909,7 +909,8 @@ final class qk extends og implements fd, vd {
     final void a(qm param0, int param1, int param2, int param3) {
         try {
             super.a(param0, -111, param2, param3);
-            ((qk) this).field_B.field_x = this.e((byte) -32);
+            int discarded$0 = -32;
+            ((qk) this).field_B.field_x = this.e();
             int var5_int = -17 % ((-50 - param1) / 59);
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) (Object) runtimeException, "qk.N(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);

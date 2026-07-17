@@ -24,9 +24,6 @@ final class vfa extends td {
         if (!(7 != param1)) {
             return (jla) (Object) new ina(false);
         }
-        if (param0 != 19341) {
-            field_p = null;
-        }
         if (!(param1 != 8)) {
             return (jla) (Object) new ina(true);
         }

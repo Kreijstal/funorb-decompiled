@@ -6,26 +6,23 @@ final class ro {
     static int field_b;
     static int field_c;
 
-    final static void a(int param0, int param1, mf param2, mf param3, int param4, int param5) {
+    final static void a(int param0, int param1, mf param2, mf param3, int param4) {
         lb.field_Y = param0;
         qb.field_i = param4;
         dd.field_b = param2;
         nb.field_m = param1;
-        if (param5 != -386) {
-            return;
-        }
         try {
             qi.field_G = param3;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ro.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "ro.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + -386 + 41);
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
     }
 
-    final static vn[] a(byte param0) {
+    final static vn[] a() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;

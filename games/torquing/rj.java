@@ -78,7 +78,7 @@ final class rj extends am {
         }
         L1: {
           param1 = param1 & 4095;
-          var10 = param2 - param5;
+          var10 = param2 - 4096;
           var12 = var12 & 255;
           var11 = -4096 + param1;
           var15 = cf.field_a[param1];
@@ -687,22 +687,14 @@ final class rj extends am {
                 }
               }
             }
-            L16: {
-              if (param0) {
-                break L16;
-              } else {
-                ((rj) this).a((byte) -49);
-                break L16;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L17: {
+          L16: {
             var4 = decompiledCaughtException;
             stackOut_40_0 = (RuntimeException) var4;
-            stackOut_40_1 = new StringBuilder().append("rj.C(").append(param0).append(44);
+            stackOut_40_1 = new StringBuilder().append("rj.C(").append(1).append(44);
             stackIn_42_0 = stackOut_40_0;
             stackIn_42_1 = stackOut_40_1;
             stackIn_41_0 = stackOut_40_0;
@@ -714,7 +706,7 @@ final class rj extends am {
               stackIn_43_0 = stackOut_42_0;
               stackIn_43_1 = stackOut_42_1;
               stackIn_43_2 = stackOut_42_2;
-              break L17;
+              break L16;
             } else {
               stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
               stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
@@ -722,7 +714,7 @@ final class rj extends am {
               stackIn_43_0 = stackOut_41_0;
               stackIn_43_1 = stackOut_41_1;
               stackIn_43_2 = stackOut_41_2;
-              break L17;
+              break L16;
             }
           }
           throw rb.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 44 + param2 + 41);

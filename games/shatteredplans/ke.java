@@ -485,12 +485,9 @@ final class ke implements Runnable {
     final static void a(int param0, si param1) {
         try {
             param1.field_s = new char[]{'?'};
-            if (param0 >= -39) {
-                field_h = null;
-            }
             param1.field_x = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ke.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ke.C(" + -69 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

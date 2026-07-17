@@ -20,7 +20,7 @@ final class th extends nv {
         ((th) this).field_r = param1;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_o = null;
         field_u = null;
         field_n = null;
@@ -403,32 +403,29 @@ final class th extends nv {
     }
 
     final static boolean b(int param0, int param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param1 == 8) {
-          L0: {
-            L1: {
-              if (bqa.a(540800, param0, param2)) {
-                break L1;
+        int stackIn_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        L0: {
+          L1: {
+            if (bqa.a(540800, param0, param2)) {
+              break L1;
+            } else {
+              int discarded$4 = 36864;
+              if (!no.a(param2, param0)) {
+                stackOut_4_0 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
               } else {
-                if (!no.a(param2, param0, param1 ^ 36872)) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L0;
-                } else {
-                  break L1;
-                }
+                break L1;
               }
             }
-            stackOut_5_0 = 1;
-            stackIn_7_0 = stackOut_5_0;
-            break L0;
           }
-          return stackIn_7_0 != 0;
-        } else {
-          return true;
+          stackOut_3_0 = 1;
+          stackIn_5_0 = stackOut_3_0;
+          break L0;
         }
+        return stackIn_5_0 != 0;
     }
 
     final void a(boolean param0, kh param1) {

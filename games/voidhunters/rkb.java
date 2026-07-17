@@ -102,60 +102,52 @@ final class rkb extends rqa {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_6_0 = 0;
         var8 = VoidHunters.field_G;
         try {
           L0: {
-            L1: {
-              var3_int = 0;
-              var4 = nl.field_m;
-              if (param1 == 3841) {
-                break L1;
-              } else {
-                field_o = -93;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var3_int = 0;
+            var4 = nl.field_m;
+            L1: while (true) {
               if (var3_int >= db.field_o.length) {
-                stackOut_12_0 = -1;
-                stackIn_13_0 = stackOut_12_0;
+                stackOut_11_0 = -1;
+                stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = aka.field_o[var3_int];
                   if (var5 < 0) {
                     var4 = var4 + whb.field_a;
-                    break L3;
+                    break L2;
                   } else {
                     var6 = lsa.a(db.field_o[var3_int], -118, true);
                     var4 = var4 + pva.field_g;
                     var7 = -(var6 >> 1) + alb.field_b;
                     if (cta.a(var4, (ih.field_e << 1) + var6, (hwa.field_q << 1) + tba.field_o, param2, (byte) -65, -ih.field_e + var7, param0)) {
-                      stackOut_7_0 = var5;
-                      stackIn_8_0 = stackOut_7_0;
-                      return stackIn_8_0;
+                      stackOut_6_0 = var5;
+                      stackIn_7_0 = stackOut_6_0;
+                      return stackIn_7_0;
                     } else {
                       var4 = var4 + (tba.field_o + pva.field_g + (hwa.field_q << 1));
-                      break L3;
+                      break L2;
                     }
                   }
                 }
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "rkb.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) var3, "rkb.B(" + param0 + 44 + 3841 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_12_0;
     }
 
     static {

@@ -19,17 +19,20 @@ final class eh extends ma {
     static int[] field_p;
     static int[] field_w;
 
-    final static ke c(int param0) {
-        String var1 = sa.a(false);
+    final static ke c() {
+        int discarded$0 = 0;
+        String var1 = sa.a();
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        return new ke(sa.a(false), sp.h(0));
+        int discarded$1 = 0;
+        int discarded$2 = 0;
+        return new ke(sa.a(), sp.h());
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         oj var4 = null;
@@ -46,13 +49,13 @@ final class eh extends ma {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    ub.a(var5, param0, (byte) -126);
+                    ub.a(var5, 3, (byte) -126);
                     var5 = (eh) (Object) wg.field_Lb.f((byte) -5);
                     continue L2;
                   }
                 }
               } else {
-                ch.a(false, var4, param0);
+                ch.a(false, var4, 3);
                 var4 = (oj) (Object) ta.field_i.f((byte) -5);
                 continue L1;
               }
@@ -61,7 +64,7 @@ final class eh extends ma {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "eh.D(" + param0 + 44 + 1 + 41);
+          throw wm.a((Throwable) (Object) var2, "eh.D(" + 3 + 44 + 1 + 41);
         }
     }
 

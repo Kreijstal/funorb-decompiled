@@ -116,7 +116,7 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static String f(int param0) {
+    final static String f() {
         if (g.field_a == ci.field_ub) {
             return ih.field_Q;
         }
@@ -130,7 +130,7 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
         nk var2 = qn.field_U;
         var2.f(param1, -68);
         var2.field_l = var2.field_l + 1;
-        int var3 = -54 % ((param0 - 63) / 36);
+        int var3 = 0;
         int var4 = var2.field_l;
         var2.c(5, (byte) -79);
         var2.c(pd.field_Rb.field_hc, (byte) 66);

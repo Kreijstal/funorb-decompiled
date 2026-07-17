@@ -44,13 +44,9 @@ final class of extends vh {
           }
         }
         var8 = stackIn_8_0;
-        ((of) this).field_Rb.a(param6, ((of) this).field_Sb.field_Db, var8 != 0, param4 + -1);
-        if (param4 == 0) {
-          this.a(param0, true, param2, false, param5);
-          return var8 != 0;
-        } else {
-          return false;
-        }
+        ((of) this).field_Rb.a(param6, ((of) this).field_Sb.field_Db, var8 != 0, -1);
+        this.a(param0, true, param2, false, param5);
+        return var8 != 0;
     }
 
     final boolean a(boolean param0, boolean param1, int param2, byte param3, int param4, int param5) {
@@ -113,15 +109,12 @@ final class of extends vh {
         int var2_int = 0;
         int var3 = Pool.field_O;
         try {
-            if (param0 <= 16) {
-                field_Tb = null;
-            }
             for (var2_int = 0; nn.field_b.length > var2_int; var2_int++) {
                 nn.field_b[var2_int].b(5, param1);
             }
             pn.field_l = new dd(param1.a(false, "menu-framed-background.jpg", ""), (java.awt.Component) (Object) pa.field_K);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "of.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "of.A(" + 27 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -166,68 +159,60 @@ final class of extends vh {
           }
         }
         L4: {
-          if (param1) {
+          if (!((of) this).field_W) {
             break L4;
           } else {
-            ((of) this).field_Sb = null;
+            ((of) this).field_Rb.field_E = ((of) this).field_Rb.field_E - param0;
             break L4;
           }
         }
         L5: {
-          if (!((of) this).field_W) {
-            break L5;
-          } else {
-            ((of) this).field_Rb.field_E = ((of) this).field_Rb.field_E - param0;
-            break L5;
-          }
-        }
-        L6: {
           if (!param3) {
-            L7: {
+            L6: {
               if (-(((of) this).field_Rb.field_E + ((of) this).field_Rb.field_eb) > -((of) this).field_Sb.field_Db + (((of) this).field_Rb.field_Cb + ((of) this).field_Rb.field_Db)) {
                 ((of) this).field_Rb.field_E = -((of) this).field_Rb.field_eb + -(-((of) this).field_Sb.field_Db + ((of) this).field_Rb.field_Db + ((of) this).field_Rb.field_Cb);
-                break L7;
+                break L6;
               } else {
-                break L7;
+                break L6;
               }
             }
             if (-(((of) this).field_Rb.field_E + ((of) this).field_Rb.field_eb) >= 0) {
-              break L6;
+              break L5;
             } else {
               ((of) this).field_Rb.field_E = -((of) this).field_Rb.field_eb;
-              break L6;
+              break L5;
             }
           } else {
-            L8: {
+            L7: {
               if (-(((of) this).field_Rb.field_eb + ((of) this).field_Rb.field_E) < 0) {
                 ((of) this).field_Rb.field_E = -((of) this).field_Rb.field_eb;
-                break L8;
+                break L7;
               } else {
-                break L8;
+                break L7;
               }
             }
             if (-(((of) this).field_Rb.field_eb - -((of) this).field_Rb.field_E) > ((of) this).field_Rb.field_Db - -((of) this).field_Rb.field_Cb - ((of) this).field_Sb.field_Db) {
               ((of) this).field_Rb.field_E = -(((of) this).field_Rb.field_Cb + (((of) this).field_Rb.field_Db - ((of) this).field_Sb.field_Db)) - ((of) this).field_Rb.field_eb;
-              break L6;
+              break L5;
             } else {
-              break L6;
+              break L5;
             }
           }
         }
-        L9: {
+        L8: {
           if (((of) this).field_Mb.g(-92)) {
             ((of) this).field_Rb.field_eb = -((of) this).field_Mb.a(param3, ((of) this).field_Rb.field_Db, ((of) this).field_Sb.field_Db, 48);
             ((of) this).field_Rb.field_E = 0;
-            break L9;
+            break L8;
           } else {
-            break L9;
+            break L8;
           }
         }
         ((of) this).field_Mb.b(((of) this).field_Rb.field_Db, ((of) this).field_Sb.field_Db, false, -((of) this).field_Rb.field_eb);
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        RuntimeException var3 = null;
+        RuntimeException runtimeException = null;
         int var4 = 0;
         int var5 = 0;
         aa var6 = null;
@@ -245,47 +230,43 @@ final class of extends vh {
                 qh.a(kg.field_t);
                 var4 = var9.field_A;
                 param2 = param2 - (var4 >> 1);
-                qh.c(param0, param2, param0 + 230, var4 + param2);
+                qh.c(353, param2, 583, var4 + param2);
                 var5 = 0;
                 var6 = new aa(ne.field_r);
-                if (!param1) {
-                  var7 = (lk) (Object) var6.b((byte) -92);
-                  L1: while (true) {
-                    L2: {
-                      if (var7 == null) {
+                var7 = (lk) (Object) var6.b((byte) -92);
+                L1: while (true) {
+                  L2: {
+                    if (var7 == null) {
+                      break L2;
+                    } else {
+                      if (null == var7.field_n) {
                         break L2;
                       } else {
-                        if (null == var7.field_n) {
-                          break L2;
-                        } else {
-                          var5 = (int)((double)var7.field_p + 0.5);
-                          var8 = 0;
-                          L3: while (true) {
-                            L4: {
-                              if (var8 >= var7.field_l) {
+                        var5 = (int)((double)var7.field_p + 0.5);
+                        var8 = 0;
+                        L3: while (true) {
+                          L4: {
+                            if (var8 >= var7.field_l) {
+                              break L4;
+                            } else {
+                              if (var5 >= 230) {
                                 break L4;
                               } else {
-                                if (var5 >= 230) {
-                                  break L4;
-                                } else {
-                                  var7.field_n.c(var5 + param0, param2);
-                                  var5 = var5 + (4 + var7.field_n.field_z);
-                                  var8++;
-                                  continue L3;
-                                }
+                                var7.field_n.c(var5 + 353, param2);
+                                var5 = var5 + (4 + var7.field_n.field_z);
+                                var8++;
+                                continue L3;
                               }
                             }
-                            var7 = (lk) (Object) var6.b(-85);
-                            continue L1;
                           }
+                          var7 = (lk) (Object) var6.b(-85);
+                          continue L1;
                         }
                       }
                     }
-                    qh.b(kg.field_t);
-                    break L0;
                   }
-                } else {
-                  return;
+                  qh.b(kg.field_t);
+                  break L0;
                 }
               } else {
                 return;
@@ -294,8 +275,8 @@ final class of extends vh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var3, "of.W(" + param0 + 44 + param1 + 44 + param2 + 41);
+          runtimeException = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) runtimeException, "of.W(" + 353 + 44 + 0 + 44 + param2 + 41);
         }
     }
 

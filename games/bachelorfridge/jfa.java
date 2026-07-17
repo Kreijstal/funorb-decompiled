@@ -31,7 +31,7 @@ final class jfa extends bw {
         field_f = null;
     }
 
-    private final int b(int param0) {
+    private final int b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -165,7 +165,8 @@ final class jfa extends bw {
         int var2 = 0;
         L0: {
           if (((jfa) this).field_i.e(12917)) {
-            boolean discarded$2 = this.f(-4);
+            int discarded$4 = -4;
+            boolean discarded$5 = this.f();
             break L0;
           } else {
             var2_ref_pv = (pv) (Object) ((jfa) this).field_i.b((byte) 90);
@@ -336,7 +337,7 @@ final class jfa extends bw {
         return stackIn_16_0;
     }
 
-    private final boolean f(int param0) {
+    private final boolean f() {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -344,7 +345,8 @@ final class jfa extends bw {
           if (((jfa) this).field_t) {
             break L0;
           } else {
-            this.c(-1681546622);
+            int discarded$4 = -1681546622;
+            this.c();
             break L0;
           }
         }
@@ -410,7 +412,8 @@ final class jfa extends bw {
                     ((jfa) this).field_i.a((bw) (Object) new vma((jfa) this, ((jfa) this).field_m[((jfa) this).field_u][((jfa) this).field_l].field_f), true);
                     ((jfa) this).field_i.a((bw) (Object) new vu((jfa) this, true), true);
                     ((jfa) this).field_y = -1;
-                    jba.a(((jfa) this).field_m[((jfa) this).field_u][((jfa) this).field_l].field_f, (jfa) this, 89);
+                    int discarded$5 = 89;
+                    jba.a(((jfa) this).field_m[((jfa) this).field_u][((jfa) this).field_l].field_f, (jfa) this);
                     ((jfa) this).field_v = ((jfa) this).field_g.e((byte) -108);
                     ((jfa) this).field_m[((jfa) this).field_u][((jfa) this).field_l].field_f.field_a = false;
                     break L5;
@@ -557,7 +560,8 @@ final class jfa extends bw {
         }
         if (var2 >= 1200) {
           L17: {
-            this.a(102);
+            int discarded$6 = 102;
+            this.a();
             if (((jfa) this).field_g.field_f != -1) {
               ((jfa) this).field_i.a((bw) (Object) new vu((jfa) this, false), true);
               break L17;
@@ -580,7 +584,8 @@ final class jfa extends bw {
             if (var2 >= 1020) {
               break L19;
             } else {
-              ((jfa) this).field_y = this.b(124);
+              int discarded$7 = 124;
+              ((jfa) this).field_y = this.b();
               break L19;
             }
           }
@@ -593,7 +598,7 @@ final class jfa extends bw {
         }
     }
 
-    private final void c(int param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -696,7 +701,7 @@ final class jfa extends bw {
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((jfa) this).field_t = true;
         ((jfa) this).field_x = kla.a(6, ((jfa) this).field_r, -2147483648);
         ((jfa) this).field_z = kla.a(10, ((jfa) this).field_r, -2147483648);

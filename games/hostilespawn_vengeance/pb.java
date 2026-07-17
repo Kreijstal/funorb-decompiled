@@ -93,7 +93,6 @@ final class pb extends le {
         int var3 = 0;
         int var4 = 0;
         int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
         int stackIn_11_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -104,7 +103,6 @@ final class pb extends le {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
         int stackOut_4_0 = 0;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -121,15 +119,9 @@ final class pb extends le {
             var3 = 1;
             L1: while (true) {
               if (param1.length() <= var3) {
-                if (param0 == 17032) {
-                  stackOut_10_0 = 1;
-                  stackIn_11_0 = stackOut_10_0;
-                  break L0;
-                } else {
-                  stackOut_8_0 = 1;
-                  stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0 != 0;
-                }
+                stackOut_10_0 = 1;
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
               } else {
                 if (param1.charAt(var3) == var2_int) {
                   var3++;
@@ -147,7 +139,7 @@ final class pb extends le {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("pb.P(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("pb.P(").append(17032).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -185,7 +177,8 @@ final class pb extends le {
             return;
           }
         } else {
-          this.a(param2, param0, param1, true);
+          int discarded$2 = 1;
+          this.a(param2, param0, param1);
           if (!param3) {
             return;
           } else {
@@ -400,7 +393,7 @@ final class pb extends le {
         }
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3) {
+    private final void a(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1193,7 +1186,7 @@ final class pb extends le {
               L4: {
                 var12 = var8 / 2 + var11;
                 var16 = ((pb) this).field_Jb;
-                var14 = 96 / ((64 - param2) / 57);
+                var14 = 48;
                 var16.field_qb = ((pb) this).field_qb;
                 var16.field_zb = 0;
                 var16.field_tb = 0;
@@ -1275,7 +1268,7 @@ final class pb extends le {
         L6: {
           var12 = var8 / 2 + var11;
           var16 = ((pb) this).field_Jb;
-          var14 = 96 / ((64 - param2) / 57);
+          var14 = 48;
           var16.field_qb = ((pb) this).field_qb;
           var16.field_zb = 0;
           var16.field_tb = 0;

@@ -72,7 +72,7 @@ final class tra extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
     }

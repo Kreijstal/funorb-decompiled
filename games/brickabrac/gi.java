@@ -18,7 +18,8 @@ final class gi extends ki {
             return;
           }
         } else {
-          var6 = ge.a(((gi) this).field_m, param3, -20777);
+          int discarded$2 = -20777;
+          var6 = ge.a(((gi) this).field_m, param3);
           if (var6.a((byte) -84, param3, ((gi) this).field_m)) {
             sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.field_p, param1, 640, 0, param4);
             if (param0) {
@@ -75,8 +76,10 @@ final class gi extends ki {
           lq.field_d = jh.a(0, wn.field_b);
           oc.field_x = jh.a(0, lj.field_q);
           pp.field_b = jh.a(0, fp.field_B);
-          im.field_f[0] = cr.a("desert", i.field_m, "desert_caps", 2);
-          pk.field_e[0] = cr.a("desert", i.field_m, "desert_segs", 2);
+          int discarded$2 = 2;
+          im.field_f[0] = cr.a("desert", i.field_m, "desert_caps");
+          int discarded$3 = 2;
+          pk.field_e[0] = cr.a("desert", i.field_m, "desert_segs");
           um.field_l[0] = pl.a("desert", "desert_centre", (byte) 110, i.field_m);
           im.field_f[1] = ig.a(im.field_f[0], param0);
           pk.field_e[1] = ig.a(pk.field_e[0], false);
@@ -107,7 +110,7 @@ final class gi extends ki {
         return pk.field_e[param0 - 1];
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_u = null;
         field_t = null;
         field_r = null;
@@ -249,19 +252,13 @@ final class gi extends ki {
         }
     }
 
-    final static void g(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        var1 = co.a((byte) -53);
-        var2 = ba.b(true);
+    final static void g() {
+        int discarded$0 = -53;
+        int var1 = co.a();
+        int var2 = ba.b(true);
         vg.field_c.a(var1 - -(un.field_a << 1), var2 - -(vo.field_A << 1), nc.field_k + -un.field_a, false, mi.field_d + -vo.field_A);
-        jq.d(-16085);
-        if (param0 != 11184810) {
-          field_t = null;
-          return;
-        } else {
-          return;
-        }
+        int discarded$1 = -16085;
+        jq.d();
     }
 
     static {

@@ -7,7 +7,7 @@ final class ks {
     static boolean field_b;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
     }
@@ -18,7 +18,8 @@ final class ks {
         int var4 = 0;
         ej[] var5 = null;
         var4 = AceOfSkies.field_G ? 1 : 0;
-        var5 = sf.d((byte) 112);
+        int discarded$4 = 112;
+        var5 = sf.d();
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -26,7 +27,7 @@ final class ks {
             if (param1 == -28228) {
               return null;
             } else {
-              ej discarded$2 = ks.a(-73, -126);
+              ej discarded$5 = ks.a(-73, -126);
               return null;
             }
           } else {

@@ -786,7 +786,7 @@ class hl extends uk {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_gb = null;
         field_A = null;
         field_C = null;

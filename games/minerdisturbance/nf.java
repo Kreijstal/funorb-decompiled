@@ -52,7 +52,7 @@ abstract class nf {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_b = null;
@@ -279,7 +279,8 @@ abstract class nf {
           if (param0 > 63) {
             break L0;
           } else {
-            nf.a(false);
+            int discarded$2 = 0;
+            nf.a();
             break L0;
           }
         }

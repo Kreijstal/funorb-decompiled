@@ -19,7 +19,7 @@ final class rb extends ck {
         }
     }
 
-    final static int[] b(int param0, int param1, int param2) {
+    final static int[] b(int param0, int param1) {
         int var4 = 0;
         int[] var5 = new int[64];
         int[] var3 = var5;

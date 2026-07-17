@@ -29,7 +29,7 @@ final class hc {
     private String[] field_m;
     private sh field_f;
 
-    private final void e(byte param0) {
+    private final void e() {
         if (((hc) this).field_p.g(260)) {
             ((hc) this).field_x.f((byte) 126);
             ((hc) this).field_p.f((byte) 127);
@@ -39,33 +39,25 @@ final class hc {
                 ((hc) this).field_x.f((byte) 1);
             }
         }
-        if (param0 != -25) {
-            ((hc) this).field_s = 40;
-            return;
-        }
     }
 
     private final void a(int param0, byte param1) {
+        int var3 = 0;
         int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         ((hc) this).field_a = param0;
         ((hc) this).field_p.b(0, ((hc) this).field_a);
         ((hc) this).field_f.a(0, ((hc) this).field_a);
         ((hc) this).field_f.a(true);
         ((hc) this).field_m = new String[pt.field_W.length - -1];
-        int var3 = 0;
-        if (param1 != 39) {
-            int discarded$0 = this.a(-92, 45);
-        }
-        while (pt.field_W.length > var3) {
+        for (var3 = 0; pt.field_W.length > var3; var3++) {
             ((hc) this).field_m[var3] = pt.field_W[var3];
-            var3++;
         }
         ((hc) this).field_m[pt.field_W.length] = "special";
         ((hc) this).field_x.a(((hc) this).field_m, -29799);
         this.a(false, 0);
     }
 
-    private final void c(int param0) {
+    private final void c() {
         if (!(!br.field_f[96])) {
             ((hc) this).field_t = ((hc) this).field_t + 5;
         }
@@ -80,7 +72,7 @@ final class hc {
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         int var2 = ((hc) this).field_p.h(5);
         if (var2 == ((hc) this).field_a) {
             return;
@@ -99,9 +91,6 @@ final class hc {
     }
 
     private final int a(byte param0, int param1) {
-        if (param0 != -47) {
-            ((hc) this).field_s = 67;
-        }
         if (!(param1 != 0)) {
             return ((hc) this).field_n.a((byte) -50);
         }
@@ -119,38 +108,30 @@ final class hc {
 
     private final void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
         L0: {
-          this.a(param2 ^ 9, param3, param4);
-          if (param2 == 8) {
+          this.a(1, param3, param4);
+          if (!((hc) this).field_p.g(260)) {
             break L0;
           } else {
-            ((hc) this).field_g = 40;
+            ((hc) this).field_p.a(param0, -18596, param3, param4, param1, param5);
             break L0;
           }
         }
         L1: {
-          if (!((hc) this).field_p.g(param2 ^ 268)) {
+          if (!((hc) this).field_x.g(260)) {
             break L1;
           } else {
-            ((hc) this).field_p.a(param0, -18596, param3, param4, param1, param5);
+            ((hc) this).field_x.a(param0, -18596, param3, param4, param1, param5);
             break L1;
           }
         }
         L2: {
-          if (!((hc) this).field_x.g(260)) {
-            break L2;
-          } else {
-            ((hc) this).field_x.a(param0, param2 ^ -18604, param3, param4, param1, param5);
-            break L2;
-          }
-        }
-        L3: {
           if (((hc) this).field_p.a((byte) 111)) {
-            break L3;
+            break L2;
           } else {
             if (!((hc) this).field_x.a((byte) 74)) {
               return;
             } else {
-              break L3;
+              break L2;
             }
           }
         }
@@ -167,7 +148,7 @@ final class hc {
         if (!(param1 != 2)) {
             return ((hc) this).field_u.c(-29408);
         }
-        int var3 = 19 % ((39 - param0) / 62);
+        int var3 = 1;
         if (param1 != 3) {
             return 0;
         }
@@ -179,9 +160,11 @@ final class hc {
         if (param0 <= 66) {
             this.a(true);
         }
-        this.b((byte) 111);
+        int discarded$0 = 111;
+        this.b();
         this.a(125);
-        this.a((byte) -95);
+        int discarded$1 = -95;
+        this.a();
     }
 
     final static char a(int param0, char param1) {
@@ -226,27 +209,19 @@ final class hc {
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (!param1) {
-                break L1;
-              } else {
-                hc.a(-115, false);
-                break L1;
-              }
-            }
             var2_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var2_int >= vs.field_e.length) {
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var3 = vs.field_e[var2_int];
                   var4 = var3.field_c;
                   if (var4 == null) {
-                    break L3;
+                    break L2;
                   } else {
                     if (param0 != var4.field_O) {
-                      break L3;
+                      break L2;
                     } else {
                       kl.field_a.a((byte) 53, var2_int);
                       return;
@@ -254,14 +229,14 @@ final class hc {
                   }
                 }
                 var2_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "hc.N(" + param0 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) var2, "hc.N(" + param0 + 44 + 0 + 41);
         }
     }
 
@@ -272,15 +247,17 @@ final class hc {
         ((hc) this).field_l.c("shift: " + nh.field_D[((hc) this).field_a], 480, 230, 16777215, -1);
         ((hc) this).field_l.c("model ID: " + sf.field_P[((hc) this).field_a], 480, 242, 16777215, -1);
         this.a(false);
-        this.e((byte) -25);
+        int discarded$0 = -25;
+        this.e();
         ((hc) this).field_f.e((byte) 109);
         if (param0 > -52) {
             return;
         }
     }
 
-    private final void a(byte param0) {
-        this.c(127);
+    private final void a() {
+        int discarded$0 = 127;
+        this.c();
         ((hc) this).field_f.a(((hc) this).field_r, 1, ((hc) this).field_h, -29001, ((hc) this).field_t, ((hc) this).field_s);
         ((hc) this).field_f.b(-19812);
     }
@@ -313,7 +290,7 @@ final class hc {
             if (!((hc) this).field_p.g((byte) 97)) {
               break L1;
             } else {
-              if (((hc) this).field_p.c(param1, param0 + -1, param2)) {
+              if (((hc) this).field_p.c(param1, 0, param2)) {
                 ((hc) this).field_p.j(0);
                 ((hc) this).field_x.e(32);
                 break L0;
@@ -326,7 +303,7 @@ final class hc {
             if (!((hc) this).field_x.g((byte) 97)) {
               break L2;
             } else {
-              if (((hc) this).field_x.c(param1, param0 + -1, param2)) {
+              if (((hc) this).field_x.c(param1, 0, param2)) {
                 ((hc) this).field_x.j(0);
                 ((hc) this).field_p.e(32);
                 break L0;
@@ -335,9 +312,9 @@ final class hc {
               }
             }
           }
-          if (!((hc) this).field_p.a(param2, param0 + 106, param1)) {
+          if (!((hc) this).field_p.a(param2, 107, param1)) {
             if (((hc) this).field_x.a(param2, 81, param1)) {
-              ((hc) this).field_x.j(param0 + -1);
+              ((hc) this).field_x.j(0);
               ((hc) this).field_p.e(32);
               break L0;
             } else {
@@ -358,16 +335,10 @@ final class hc {
               }
             }
           } else {
-            ((hc) this).field_p.j(param0 ^ 1);
+            ((hc) this).field_p.j(0);
             ((hc) this).field_x.e(32);
-            break L0;
+            return;
           }
-        }
-        if (param0 == 1) {
-          return;
-        } else {
-          this.a(-69, (byte) 100);
-          return;
         }
     }
 
@@ -385,9 +356,6 @@ final class hc {
         ((hc) this).field_x.b(0, ((hc) this).field_g);
         ((hc) this).field_f.a(115);
         int var3 = this.b(((hc) this).field_g, -6892);
-        if (param0) {
-            return;
-        }
         ((hc) this).field_f.a(var3, ((hc) this).field_g, (byte) 63);
         ((hc) this).field_f.a(true);
     }
@@ -409,14 +377,11 @@ final class hc {
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         ((hc) this).field_n = new ia(((hc) this).field_v, ((hc) this).field_l, ((hc) this).field_j, "Model", 0, 0);
         ((hc) this).field_u = new ia(((hc) this).field_v, ((hc) this).field_l, ((hc) this).field_j, "Animation", 0, 0);
         ((hc) this).field_k = hf.field_d;
         ((hc) this).field_p = new r(((hc) this).field_v, ((hc) this).field_c, ((hc) this).field_l, ((hc) this).field_j, ((hc) this).field_k, 0, 0);
-        if (param0 >= -122) {
-            field_b = 61;
-        }
         ((hc) this).field_x = new r(((hc) this).field_v, ((hc) this).field_c, ((hc) this).field_l, ((hc) this).field_j, ((hc) this).field_m, 0, 0);
     }
 
@@ -431,13 +396,13 @@ final class hc {
         int var13 = 0;
         var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         var6 = param3 / 3;
-        var7 = param0;
+        var7 = 0;
         L0: while (true) {
           if (var7 >= 4) {
             return;
           } else {
             L1: {
-              var8 = this.a(param0 + -100, var7);
+              var8 = this.a(-100, var7);
               var9 = param2 + (-var8 + param1 >> 1);
               if (2 > var7) {
                 var11 = var6;
@@ -538,7 +503,8 @@ final class hc {
             ((hc) this).field_l = param2;
             ((hc) this).field_m = pt.field_W;
             ((hc) this).field_v = param0;
-            this.d((byte) -127);
+            int discarded$2 = -127;
+            this.d();
             this.d(3);
             this.a(param4, (byte) 39);
             this.a(0, so.field_b.field_a >> 1, so.field_b.field_a >> 1, so.field_b.field_g, 0);

@@ -3,9 +3,6 @@
  */
 final class qba extends le {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param0 != 20382) {
-            return;
-        }
         fnb.a(param4, param3, param1, false, param2, 256);
     }
 

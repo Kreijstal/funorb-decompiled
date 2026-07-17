@@ -20,163 +20,55 @@ final class nh {
     }
 
     final static boolean a(boolean param0, char param1) {
-        int stackIn_23_0 = 0;
+        int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
-        int stackIn_40_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_64_0 = 0;
-        int stackIn_67_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_38_0 = 0;
         int stackOut_26_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_21_0 = 0;
-        if (!param0) {
-          if (48 > param1) {
-            if (65 > param1) {
-              if (param1 >= 97) {
+        int stackOut_23_0 = 0;
+        int stackOut_24_0 = 0;
+        if (48 > param1) {
+          if (65 > param1) {
+            L0: {
+              if (param1 < 97) {
+                break L0;
+              } else {
                 if (param1 > 122) {
-                  return false;
+                  break L0;
                 } else {
                   return true;
                 }
-              } else {
-                return false;
-              }
-            } else {
-              if (param1 <= 90) {
-                stackOut_65_0 = 1;
-                stackIn_67_0 = stackOut_65_0;
-                return stackIn_67_0 != 0;
-              } else {
-                L0: {
-                  L1: {
-                    if (param1 < 97) {
-                      break L1;
-                    } else {
-                      if (param1 > 122) {
-                        break L1;
-                      } else {
-                        stackOut_62_0 = 1;
-                        stackIn_64_0 = stackOut_62_0;
-                        break L0;
-                      }
-                    }
-                  }
-                  stackOut_63_0 = 0;
-                  stackIn_64_0 = stackOut_63_0;
-                  break L0;
-                }
-                return stackIn_64_0 != 0;
               }
             }
+            return false;
           } else {
-            if (param1 > 57) {
-              if (65 > param1) {
-                if (param1 >= 97) {
-                  if (param1 > 122) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                if (param1 > 90) {
-                  L2: {
-                    L3: {
-                      if (param1 < 97) {
-                        break L3;
-                      } else {
-                        if (param1 > 122) {
-                          break L3;
-                        } else {
-                          stackOut_48_0 = 1;
-                          stackIn_50_0 = stackOut_48_0;
-                          break L2;
-                        }
-                      }
-                    }
-                    stackOut_49_0 = 0;
-                    stackIn_50_0 = stackOut_49_0;
-                    break L2;
-                  }
-                  return stackIn_50_0 != 0;
-                } else {
-                  stackOut_43_0 = 1;
-                  stackIn_45_0 = stackOut_43_0;
-                  return stackIn_45_0 != 0;
-                }
-              }
+            if (param1 <= 90) {
+              stackOut_26_0 = 1;
+              stackIn_28_0 = stackOut_26_0;
+              return stackIn_28_0 != 0;
             } else {
-              stackOut_38_0 = 1;
-              stackIn_40_0 = stackOut_38_0;
-              return stackIn_40_0 != 0;
+              L1: {
+                L2: {
+                  if (param1 < 97) {
+                    break L2;
+                  } else {
+                    if (param1 > 122) {
+                      break L2;
+                    } else {
+                      stackOut_23_0 = 1;
+                      stackIn_25_0 = stackOut_23_0;
+                      break L1;
+                    }
+                  }
+                }
+                stackOut_24_0 = 0;
+                stackIn_25_0 = stackOut_24_0;
+                break L1;
+              }
+              return stackIn_25_0 != 0;
             }
           }
         } else {
-          field_e = null;
-          if (48 <= param1) {
-            if (param1 > 57) {
-              if (65 > param1) {
-                if (param1 >= 97) {
-                  if (param1 <= 122) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                if (param1 > 90) {
-                  L4: {
-                    L5: {
-                      if (param1 < 97) {
-                        break L5;
-                      } else {
-                        if (param1 > 122) {
-                          break L5;
-                        } else {
-                          stackOut_26_0 = 1;
-                          stackIn_28_0 = stackOut_26_0;
-                          break L4;
-                        }
-                      }
-                    }
-                    stackOut_27_0 = 0;
-                    stackIn_28_0 = stackOut_27_0;
-                    break L4;
-                  }
-                  return stackIn_28_0 != 0;
-                } else {
-                  stackOut_21_0 = 1;
-                  stackIn_23_0 = stackOut_21_0;
-                  return stackIn_23_0 != 0;
-                }
-              }
-            } else {
-              return true;
-            }
-          } else {
-            if (65 > param1) {
-              if (param1 >= 97) {
-                if (param1 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
+          if (param1 > 57) {
+            if (65 <= param1) {
               if (param1 > 90) {
                 if (param1 >= 97) {
                   if (param1 > 122) {
@@ -190,7 +82,19 @@ final class nh {
               } else {
                 return true;
               }
+            } else {
+              if (param1 >= 97) {
+                if (param1 > 122) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
             }
+          } else {
+            return true;
           }
         }
     }
@@ -220,7 +124,7 @@ final class nh {
         return var3;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         d var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

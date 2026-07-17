@@ -136,218 +136,113 @@ final class ai {
         return stackIn_14_0 != 0;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
-        if (param1 == 6) {
-          if (uo.field_j <= 0) {
-            if (!jg.a((byte) 58)) {
-              var2 = 1;
-              if (vh.field_c == null) {
-                L0: {
-                  if (dg.field_a) {
-                    bq.a(param0, (byte) -89, var2);
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                return;
-              } else {
-                return;
-              }
+        if (uo.field_j <= 0) {
+          if (!jg.a((byte) 58)) {
+            var2 = 1;
+            if (vh.field_c != null) {
+              return;
             } else {
-              var2 = 0;
-              if (vh.field_c == null) {
-                L1: {
-                  if (dg.field_a) {
-                    bq.a(param0, (byte) -89, var2);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
+              L0: {
+                if (dg.field_a) {
+                  bq.a(param0, (byte) -89, var2);
+                  break L0;
+                } else {
+                  break L0;
                 }
-                return;
-              } else {
-                return;
               }
+              return;
             }
           } else {
-            if (vh.field_c == null) {
-              ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640, 0);
-              if (ib.field_f != null) {
-                var2 = 2;
-                he.a(0, (java.awt.Canvas) (Object) ib.field_f);
-                if (vh.field_c == null) {
-                  L2: {
-                    if (dg.field_a) {
-                      bq.a(param0, (byte) -89, var2);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                var2 = 3;
-                if (vh.field_c == null) {
-                  L3: {
-                    if (dg.field_a) {
-                      bq.a(param0, (byte) -89, var2);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  return;
-                } else {
-                  return;
-                }
-              }
+            var2 = 0;
+            if (vh.field_c != null) {
+              return;
             } else {
-              ib.field_f = vh.field_c.b(false);
-              ah.a(2, (byte) 114);
-              if (ib.field_f != null) {
-                var2 = 2;
-                he.a(0, (java.awt.Canvas) (Object) ib.field_f);
-                if (vh.field_c != null) {
-                  return;
+              L1: {
+                if (dg.field_a) {
+                  bq.a(param0, (byte) -89, var2);
+                  break L1;
                 } else {
-                  L4: {
-                    if (dg.field_a) {
-                      bq.a(param0, (byte) -89, var2);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                var2 = 3;
-                if (vh.field_c != null) {
-                  return;
-                } else {
-                  L5: {
-                    if (dg.field_a) {
-                      bq.a(param0, (byte) -89, var2);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  return;
+                  break L1;
                 }
               }
+              return;
             }
           }
         } else {
-          field_C = null;
-          if (uo.field_j <= 0) {
-            if (!jg.a((byte) 58)) {
-              var2 = 1;
+          if (vh.field_c == null) {
+            int discarded$3 = 0;
+            ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640);
+            if (ib.field_f != null) {
+              var2 = 2;
+              he.a(0, (java.awt.Canvas) (Object) ib.field_f);
               if (vh.field_c != null) {
                 return;
               } else {
-                L6: {
+                L2: {
                   if (dg.field_a) {
                     bq.a(param0, (byte) -89, var2);
-                    break L6;
+                    break L2;
                   } else {
-                    break L6;
+                    break L2;
                   }
                 }
                 return;
               }
             } else {
-              var2 = 0;
+              var2 = 3;
               if (vh.field_c != null) {
                 return;
               } else {
-                L7: {
+                L3: {
                   if (dg.field_a) {
                     bq.a(param0, (byte) -89, var2);
-                    break L7;
+                    break L3;
                   } else {
-                    break L7;
+                    break L3;
                   }
                 }
                 return;
               }
             }
           } else {
-            if (vh.field_c == null) {
-              ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640, 0);
-              if (ib.field_f != null) {
-                var2 = 2;
-                he.a(0, (java.awt.Canvas) (Object) ib.field_f);
-                if (vh.field_c != null) {
-                  return;
-                } else {
-                  L8: {
-                    if (dg.field_a) {
-                      bq.a(param0, (byte) -89, var2);
-                      break L8;
-                    } else {
-                      break L8;
-                    }
-                  }
-                  return;
-                }
+            ib.field_f = vh.field_c.b(false);
+            int discarded$4 = 114;
+            int discarded$5 = 2;
+            ah.a();
+            if (ib.field_f != null) {
+              var2 = 2;
+              he.a(0, (java.awt.Canvas) (Object) ib.field_f);
+              if (vh.field_c != null) {
+                return;
               } else {
-                var2 = 3;
-                if (vh.field_c != null) {
-                  return;
-                } else {
-                  L9: {
-                    if (dg.field_a) {
-                      bq.a(param0, (byte) -89, var2);
-                      break L9;
-                    } else {
-                      break L9;
-                    }
+                L4: {
+                  if (dg.field_a) {
+                    bq.a(param0, (byte) -89, var2);
+                    break L4;
+                  } else {
+                    break L4;
                   }
-                  return;
                 }
+                return;
               }
             } else {
-              ib.field_f = vh.field_c.b(false);
-              ah.a(2, (byte) 114);
-              if (ib.field_f != null) {
-                var2 = 2;
-                he.a(0, (java.awt.Canvas) (Object) ib.field_f);
-                if (vh.field_c != null) {
-                  return;
-                } else {
-                  L10: {
-                    if (dg.field_a) {
-                      bq.a(param0, (byte) -89, var2);
-                      break L10;
-                    } else {
-                      break L10;
-                    }
-                  }
-                  return;
-                }
+              var2 = 3;
+              if (vh.field_c != null) {
+                return;
               } else {
-                var2 = 3;
-                if (vh.field_c != null) {
-                  return;
-                } else {
-                  L11: {
-                    if (dg.field_a) {
-                      bq.a(param0, (byte) -89, var2);
-                      break L11;
-                    } else {
-                      break L11;
-                    }
+                L5: {
+                  if (dg.field_a) {
+                    bq.a(param0, (byte) -89, var2);
+                    break L5;
+                  } else {
+                    break L5;
                   }
-                  return;
                 }
+                return;
               }
             }
           }

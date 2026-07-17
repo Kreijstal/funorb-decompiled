@@ -11,22 +11,18 @@ final class ho {
         if (param2 >= 0) {
           if (vm.field_u[0].length > param2) {
             if (0 <= param0) {
-              if (param0 < vm.field_u.length) {
-                if (param1 != 54) {
-                  return;
-                } else {
-                  L0: {
-                    vm.field_u[param0][param2] = vm.field_u[param0][param2] - 1;
-                    if (vm.field_u[param0][param2] - 1 < 0) {
-                      vm.field_u[param0][param2] = 0;
-                      break L0;
-                    } else {
-                      break L0;
-                    }
-                  }
-                  return;
-                }
+              if (param0 >= vm.field_u.length) {
+                return;
               } else {
+                L0: {
+                  vm.field_u[param0][param2] = vm.field_u[param0][param2] - 1;
+                  if (vm.field_u[param0][param2] - 1 < 0) {
+                    vm.field_u[param0][param2] = 0;
+                    break L0;
+                  } else {
+                    break L0;
+                  }
+                }
                 return;
               }
             } else {
@@ -207,7 +203,7 @@ final class ho {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

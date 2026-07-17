@@ -86,7 +86,7 @@ final class od extends am {
         try {
           L0: {
             var7 = new da(param6);
-            var8 = -40 / ((param1 - 43) / 58);
+            var8 = 20;
             var9 = new da(param3);
             stackOut_0_0 = na.a(var9, param2, -25978, var7, param5, param0, param4);
             stackIn_1_0 = stackOut_0_0;
@@ -97,7 +97,7 @@ final class od extends am {
           L1: {
             var7_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var7_ref;
-            stackOut_2_1 = new StringBuilder().append("od.O(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("od.O(").append(param0).append(44).append(-124).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

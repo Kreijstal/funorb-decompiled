@@ -56,7 +56,7 @@ final class wg {
                             var3 = var2 + "settings";
                             var4 = (String) fo.b(param1, 13093, "getcookies");
                             var5 = mk.a(';', false, var4);
-                            var6 = param0;
+                            var6 = 0;
                             statePc = 2;
                             continue stateLoop;
                         } catch (Throwable stateCaught_1) {
@@ -192,7 +192,7 @@ final class wg {
                     case 15: {
                         var2_ref2 = (RuntimeException) (Object) caughtException;
                         stackOut_15_0 = (RuntimeException) var2_ref2;
-                        stackOut_15_1 = new StringBuilder().append("wg.B(").append(param0).append(44);
+                        stackOut_15_1 = new StringBuilder().append("wg.B(").append(0).append(44);
                         stackIn_17_0 = stackOut_15_0;
                         stackIn_17_1 = stackOut_15_1;
                         stackIn_16_0 = stackOut_15_0;
@@ -237,7 +237,7 @@ final class wg {
         }
     }
 
-    final static int c(byte param0) {
+    final static int c() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -300,14 +300,14 @@ final class wg {
         return stackIn_15_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_b = null;
         field_c = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         io.a(8355711, nc.field_e, kc.field_c, wa.field_a, vo.field_m);
     }
 

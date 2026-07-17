@@ -252,77 +252,73 @@ final class nq extends rqa {
               L0: {
                 var6 = new byte[24];
                 var2 = var6;
-                if (param0 <= -69) {
-                  L1: {
-                    L2: {
-                      if (vsa.field_r != null) {
-                        try {
-                          L3: {
-                            vsa.field_r.a(0, 0L);
-                            vsa.field_r.a(-112, var6);
-                            var3_int = 0;
-                            L4: while (true) {
-                              L5: {
-                                if (var3_int >= 24) {
+                L1: {
+                  L2: {
+                    if (vsa.field_r != null) {
+                      try {
+                        L3: {
+                          vsa.field_r.a(0, 0L);
+                          vsa.field_r.a(-112, var6);
+                          var3_int = 0;
+                          L4: while (true) {
+                            L5: {
+                              if (var3_int >= 24) {
+                                break L5;
+                              } else {
+                                if (0 != var6[var3_int]) {
                                   break L5;
                                 } else {
-                                  if (0 != var6[var3_int]) {
-                                    break L5;
-                                  } else {
-                                    var3_int++;
-                                    continue L4;
-                                  }
+                                  var3_int++;
+                                  continue L4;
                                 }
                               }
-                              if (var3_int >= 24) {
-                                throw new IOException();
-                              } else {
-                                param1.a(0, var2, -1, 24);
-                                decompiledRegionSelector0 = 0;
-                                break L3;
-                              }
                             }
-                          }
-                        } catch (java.lang.Exception decompiledCaughtParameter0) {
-                          decompiledCaughtException = decompiledCaughtParameter0;
-                          L6: {
-                            var3 = (Exception) (Object) decompiledCaughtException;
-                            var4 = 0;
-                            L7: while (true) {
-                              if (var4 >= 24) {
-                                decompiledRegionSelector0 = 1;
-                                break L6;
-                              } else {
-                                var2[var4] = (byte) -1;
-                                var4++;
-                                continue L7;
-                              }
+                            if (var3_int >= 24) {
+                              throw new IOException();
+                            } else {
+                              param1.a(0, var2, -1, 24);
+                              decompiledRegionSelector0 = 0;
+                              break L3;
                             }
                           }
                         }
-                        if (decompiledRegionSelector0 == 0) {
-                          break L1;
-                        } else {
-                          break L2;
+                      } catch (java.lang.Exception decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L6: {
+                          var3 = (Exception) (Object) decompiledCaughtException;
+                          var4 = 0;
+                          L7: while (true) {
+                            if (var4 >= 24) {
+                              decompiledRegionSelector0 = 1;
+                              break L6;
+                            } else {
+                              var2[var4] = (byte) -1;
+                              var4++;
+                              continue L7;
+                            }
+                          }
                         }
+                      }
+                      if (decompiledRegionSelector0 == 0) {
+                        break L1;
                       } else {
                         break L2;
                       }
+                    } else {
+                      break L2;
                     }
-                    param1.a(0, var2, -1, 24);
-                    break L1;
                   }
-                  break L0;
-                } else {
-                  return;
+                  param1.a(0, var2, -1, 24);
+                  break L1;
                 }
+                break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_18_0 = (RuntimeException) var2_ref;
-                stackOut_18_1 = new StringBuilder().append("nq.B(").append(param0).append(44);
+                stackOut_18_1 = new StringBuilder().append("nq.B(").append(-91).append(44);
                 stackIn_20_0 = stackOut_18_0;
                 stackIn_20_1 = stackOut_18_1;
                 stackIn_19_0 = stackOut_18_0;

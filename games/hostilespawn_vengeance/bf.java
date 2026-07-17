@@ -50,13 +50,14 @@ final class bf {
               } else {
                 L2: while (true) {
                   if (((bf) this).field_e >= 64) {
-                    this.b((byte) -1);
+                    int discarded$4 = -1;
+                    this.b();
                     ((bf) this).field_e = 0;
                     break L1;
                   } else {
-                    int fieldTemp$2 = ((bf) this).field_e;
+                    int fieldTemp$5 = ((bf) this).field_e;
                     ((bf) this).field_e = ((bf) this).field_e + 1;
-                    ((bf) this).field_i[fieldTemp$2] = (byte) 0;
+                    ((bf) this).field_i[fieldTemp$5] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -65,7 +66,8 @@ final class bf {
             L3: while (true) {
               if (((bf) this).field_e >= 32) {
                 kf.a(((bf) this).field_a, 0, ((bf) this).field_i, 32, 32);
-                this.b((byte) -1);
+                int discarded$6 = -1;
+                this.b();
                 if (param2 == -6) {
                   var4_int = 0;
                   var5 = param1;
@@ -91,9 +93,9 @@ final class bf {
                   return;
                 }
               } else {
-                int fieldTemp$3 = ((bf) this).field_e;
+                int fieldTemp$7 = ((bf) this).field_e;
                 ((bf) this).field_e = ((bf) this).field_e + 1;
-                ((bf) this).field_i[fieldTemp$3] = (byte) 0;
+                ((bf) this).field_i[fieldTemp$7] = (byte) 0;
                 continue L3;
               }
             }
@@ -147,7 +149,7 @@ final class bf {
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -256,13 +258,10 @@ final class bf {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_f = null;
         field_d = null;
-        if (param0 != 2107940192) {
-            field_f = null;
-        }
     }
 
     final static gb a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
@@ -271,9 +270,9 @@ final class bf {
             Object var7 = null;
             int var8 = 0;
             rb var9 = null;
-            gb stackIn_12_0 = null;
+            gb stackIn_9_0 = null;
             Throwable decompiledCaughtException = null;
-            gb stackOut_11_0 = null;
+            gb stackOut_8_0 = null;
             try {
               L0: {
                 L1: {
@@ -314,17 +313,9 @@ final class bf {
                     break L2;
                   }
                 }
-                L5: {
-                  var9 = sj.field_a.a(param0, param2, (um) var6, (um) var7, 0);
-                  if (param4) {
-                    var9.a((byte) -50);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                stackOut_11_0 = new gb((uk) (Object) var9, param1, param3);
-                stackIn_12_0 = stackOut_11_0;
+                var9 = sj.field_a.a(false, param2, (um) var6, (um) var7, 0);
+                stackOut_8_0 = new gb((uk) (Object) var9, true, 1);
+                stackIn_9_0 = stackOut_8_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -332,7 +323,7 @@ final class bf {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_12_0;
+            return stackIn_9_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -402,7 +393,8 @@ final class bf {
                             if (512 != ((bf) this).field_b) {
                               break L5;
                             } else {
-                              this.b((byte) -1);
+                              int discarded$2 = -1;
+                              this.b();
                               ((bf) this).field_e = 0;
                               ((bf) this).field_b = 0;
                               break L5;
@@ -428,7 +420,8 @@ final class bf {
                               if (((bf) this).field_b != 512) {
                                 break L7;
                               } else {
-                                this.b((byte) -1);
+                                int discarded$3 = -1;
+                                this.b();
                                 ((bf) this).field_e = 0;
                                 ((bf) this).field_b = 0;
                                 break L7;

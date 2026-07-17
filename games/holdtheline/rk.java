@@ -5,11 +5,10 @@ final class rk extends vd {
     private byte field_f;
     private bm field_g;
 
-    final static void a(byte param0) {
+    final static void a() {
         kk var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = HoldTheLine.field_D;
         try {
@@ -35,26 +34,15 @@ final class rk extends vd {
                     }
                   }
                 }
-                if (param0 >= 86) {
-                  break L2;
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
+                break L2;
               }
-              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1_ref, "rk.B(" + param0 + 41);
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw kk.a((Throwable) (Object) var1_ref, "rk.B(" + 107 + 41);
         }
     }
 
@@ -1699,236 +1687,231 @@ final class rk extends vd {
             break L174;
           }
         }
-        if (param0 >= 102) {
-          L175: {
-            var2 = ln.a("SETTING_DESCRIPTIONS,0", 0);
-            if (null == var2) {
-              break L175;
-            } else {
-              sa.field_d[0] = rk.a((byte) 69, var2);
-              break L175;
-            }
+        L175: {
+          var2 = ln.a("SETTING_DESCRIPTIONS,0", 0);
+          if (null == var2) {
+            break L175;
+          } else {
+            sa.field_d[0] = rk.a((byte) 69, var2);
+            break L175;
           }
-          L176: {
-            var2 = ln.a("SETTING_DESCRIPTIONS,1", 0);
-            if (var2 == null) {
-              break L176;
-            } else {
-              sa.field_d[1] = rk.a((byte) 53, var2);
-              break L176;
-            }
+        }
+        L176: {
+          var2 = ln.a("SETTING_DESCRIPTIONS,1", 0);
+          if (var2 == null) {
+            break L176;
+          } else {
+            sa.field_d[1] = rk.a((byte) 53, var2);
+            break L176;
           }
-          L177: {
-            var2 = ln.a("SETTING_DESCRIPTIONS,2", 0);
-            if (var2 == null) {
-              break L177;
-            } else {
-              sa.field_d[2] = rk.a((byte) -30, var2);
-              break L177;
-            }
+        }
+        L177: {
+          var2 = ln.a("SETTING_DESCRIPTIONS,2", 0);
+          if (var2 == null) {
+            break L177;
+          } else {
+            sa.field_d[2] = rk.a((byte) -30, var2);
+            break L177;
           }
-          L178: {
-            var2 = ln.a("SETTING_DESCRIPTIONS,3", 0);
-            if (null == var2) {
-              break L178;
-            } else {
-              sa.field_d[3] = rk.a((byte) 115, var2);
-              break L178;
-            }
+        }
+        L178: {
+          var2 = ln.a("SETTING_DESCRIPTIONS,3", 0);
+          if (null == var2) {
+            break L178;
+          } else {
+            sa.field_d[3] = rk.a((byte) 115, var2);
+            break L178;
           }
-          L179: {
-            var2 = ln.a("SETTING_CH_NOT_QUALIFIED,1", 0);
-            if (var2 != null) {
-              ac.field_a[1] = rk.a((byte) -106, var2);
-              break L179;
-            } else {
-              break L179;
-            }
+        }
+        L179: {
+          var2 = ln.a("SETTING_CH_NOT_QUALIFIED,1", 0);
+          if (var2 != null) {
+            ac.field_a[1] = rk.a((byte) -106, var2);
+            break L179;
+          } else {
+            break L179;
           }
-          L180: {
-            var2 = ln.a("SETTING_CH_NOT_QUALIFIED,2", 0);
-            if (var2 != null) {
-              ac.field_a[2] = rk.a((byte) -125, var2);
-              break L180;
-            } else {
-              break L180;
-            }
+        }
+        L180: {
+          var2 = ln.a("SETTING_CH_NOT_QUALIFIED,2", 0);
+          if (var2 != null) {
+            ac.field_a[2] = rk.a((byte) -125, var2);
+            break L180;
+          } else {
+            break L180;
           }
-          L181: {
-            var2 = ln.a("SETTING_CH_NOT_QUALIFIED,3", 0);
-            if (null != var2) {
-              ac.field_a[3] = rk.a((byte) 101, var2);
-              break L181;
-            } else {
-              break L181;
-            }
+        }
+        L181: {
+          var2 = ln.a("SETTING_CH_NOT_QUALIFIED,3", 0);
+          if (null != var2) {
+            ac.field_a[3] = rk.a((byte) 101, var2);
+            break L181;
+          } else {
+            break L181;
           }
-          L182: {
-            var2 = ln.a("SETTING_NOT_REACHED,1", 0);
-            if (var2 == null) {
-              break L182;
-            } else {
-              lf.field_f[1] = rk.a((byte) -80, var2);
-              break L182;
-            }
+        }
+        L182: {
+          var2 = ln.a("SETTING_NOT_REACHED,1", 0);
+          if (var2 == null) {
+            break L182;
+          } else {
+            lf.field_f[1] = rk.a((byte) -80, var2);
+            break L182;
           }
-          L183: {
-            var2 = ln.a("SETTING_NOT_REACHED,2", 0);
-            if (var2 != null) {
-              lf.field_f[2] = rk.a((byte) 108, var2);
-              break L183;
-            } else {
-              break L183;
-            }
+        }
+        L183: {
+          var2 = ln.a("SETTING_NOT_REACHED,2", 0);
+          if (var2 != null) {
+            lf.field_f[2] = rk.a((byte) 108, var2);
+            break L183;
+          } else {
+            break L183;
           }
-          L184: {
-            var2 = ln.a("SETTING_NOT_REACHED,3", 0);
-            if (var2 != null) {
-              lf.field_f[3] = rk.a((byte) -29, var2);
-              break L184;
-            } else {
-              break L184;
-            }
+        }
+        L184: {
+          var2 = ln.a("SETTING_NOT_REACHED,3", 0);
+          if (var2 != null) {
+            lf.field_f[3] = rk.a((byte) -29, var2);
+            break L184;
+          } else {
+            break L184;
           }
-          L185: {
-            var2 = ln.a("COURSE_NOT_REACHED,0", 0);
-            if (null == var2) {
-              break L185;
-            } else {
-              HoldTheLine.field_G[0] = rk.a((byte) 108, var2);
-              break L185;
-            }
+        }
+        L185: {
+          var2 = ln.a("COURSE_NOT_REACHED,0", 0);
+          if (null == var2) {
+            break L185;
+          } else {
+            HoldTheLine.field_G[0] = rk.a((byte) 108, var2);
+            break L185;
           }
-          L186: {
-            var2 = ln.a("COURSE_NOT_REACHED,1", 0);
-            if (null != var2) {
-              HoldTheLine.field_G[1] = rk.a((byte) 92, var2);
-              break L186;
-            } else {
-              break L186;
-            }
+        }
+        L186: {
+          var2 = ln.a("COURSE_NOT_REACHED,1", 0);
+          if (null != var2) {
+            HoldTheLine.field_G[1] = rk.a((byte) 92, var2);
+            break L186;
+          } else {
+            break L186;
           }
-          L187: {
-            var2 = ln.a("COURSE_NOT_REACHED,2", 0);
-            if (var2 != null) {
-              HoldTheLine.field_G[2] = rk.a((byte) 74, var2);
-              break L187;
-            } else {
-              break L187;
-            }
+        }
+        L187: {
+          var2 = ln.a("COURSE_NOT_REACHED,2", 0);
+          if (var2 != null) {
+            HoldTheLine.field_G[2] = rk.a((byte) 74, var2);
+            break L187;
+          } else {
+            break L187;
           }
-          L188: {
-            var2 = ln.a("COURSE_NOT_REACHED,3", 0);
-            if (null == var2) {
-              break L188;
-            } else {
-              HoldTheLine.field_G[3] = rk.a((byte) 82, var2);
-              break L188;
-            }
+        }
+        L188: {
+          var2 = ln.a("COURSE_NOT_REACHED,3", 0);
+          if (null == var2) {
+            break L188;
+          } else {
+            HoldTheLine.field_G[3] = rk.a((byte) 82, var2);
+            break L188;
           }
-          L189: {
-            var2 = ln.a("SETTING_SUBSCRIBER_ONLY", 0);
-            if (var2 != null) {
-              ug.field_m = rk.a((byte) 62, var2);
-              break L189;
-            } else {
-              break L189;
-            }
+        }
+        L189: {
+          var2 = ln.a("SETTING_SUBSCRIBER_ONLY", 0);
+          if (var2 != null) {
+            ug.field_m = rk.a((byte) 62, var2);
+            break L189;
+          } else {
+            break L189;
           }
-          L190: {
-            var2 = ln.a("CARNAME_F1", 0);
-            if (null == var2) {
-              break L190;
-            } else {
-              mi.field_h = rk.a((byte) -57, var2);
-              break L190;
-            }
+        }
+        L190: {
+          var2 = ln.a("CARNAME_F1", 0);
+          if (null == var2) {
+            break L190;
+          } else {
+            mi.field_h = rk.a((byte) -57, var2);
+            break L190;
           }
-          L191: {
-            var2 = ln.a("CARNAME_TOURER", 0);
-            if (null != var2) {
-              qh.field_a = rk.a((byte) -103, var2);
-              break L191;
-            } else {
-              break L191;
-            }
+        }
+        L191: {
+          var2 = ln.a("CARNAME_TOURER", 0);
+          if (null != var2) {
+            qh.field_a = rk.a((byte) -103, var2);
+            break L191;
+          } else {
+            break L191;
           }
-          L192: {
-            var2 = ln.a("CARNAME_SNOWCAT", 0);
-            if (var2 == null) {
-              break L192;
-            } else {
-              fj.field_p = rk.a((byte) -35, var2);
-              break L192;
-            }
+        }
+        L192: {
+          var2 = ln.a("CARNAME_SNOWCAT", 0);
+          if (var2 == null) {
+            break L192;
+          } else {
+            fj.field_p = rk.a((byte) -35, var2);
+            break L192;
           }
-          L193: {
-            var2 = ln.a("CARNAME_SNOWMOBILE", 0);
-            if (var2 == null) {
-              break L193;
-            } else {
-              ga.field_a = rk.a((byte) -75, var2);
-              break L193;
-            }
+        }
+        L193: {
+          var2 = ln.a("CARNAME_SNOWMOBILE", 0);
+          if (var2 == null) {
+            break L193;
+          } else {
+            ga.field_a = rk.a((byte) -75, var2);
+            break L193;
           }
-          L194: {
-            var2 = ln.a("CARNAME_DRAGSTER", 0);
-            if (null != var2) {
-              u.field_Q = rk.a((byte) 117, var2);
-              break L194;
-            } else {
-              break L194;
-            }
+        }
+        L194: {
+          var2 = ln.a("CARNAME_DRAGSTER", 0);
+          if (null != var2) {
+            u.field_Q = rk.a((byte) 117, var2);
+            break L194;
+          } else {
+            break L194;
           }
-          L195: {
-            var2 = ln.a("CARNAME_DUNEBUGGY", 0);
-            if (var2 == null) {
-              break L195;
-            } else {
-              lf.field_d = rk.a((byte) -34, var2);
-              break L195;
-            }
+        }
+        L195: {
+          var2 = ln.a("CARNAME_DUNEBUGGY", 0);
+          if (var2 == null) {
+            break L195;
+          } else {
+            lf.field_d = rk.a((byte) -34, var2);
+            break L195;
           }
-          L196: {
-            var2 = ln.a("CARNAME_HATCHBACK", 0);
-            if (var2 != null) {
-              rg.field_d = rk.a((byte) 68, var2);
-              break L196;
-            } else {
-              break L196;
-            }
+        }
+        L196: {
+          var2 = ln.a("CARNAME_HATCHBACK", 0);
+          if (var2 != null) {
+            rg.field_d = rk.a((byte) 68, var2);
+            break L196;
+          } else {
+            break L196;
           }
-          L197: {
-            var2 = ln.a("CARNAME_SUV", 0);
-            if (var2 != null) {
-              fe.field_a = rk.a((byte) -113, var2);
-              break L197;
-            } else {
-              break L197;
-            }
+        }
+        L197: {
+          var2 = ln.a("CARNAME_SUV", 0);
+          if (var2 != null) {
+            fe.field_a = rk.a((byte) -113, var2);
+            break L197;
+          } else {
+            break L197;
           }
-          L198: {
-            var2 = ln.a("CARTIP_FORMAT", 0);
-            if (null == var2) {
-              break L198;
-            } else {
-              pe.field_d = rk.a((byte) -79, var2);
-              break L198;
-            }
+        }
+        L198: {
+          var2 = ln.a("CARTIP_FORMAT", 0);
+          if (null == var2) {
+            break L198;
+          } else {
+            pe.field_d = rk.a((byte) -79, var2);
+            break L198;
           }
-          tl.field_w = null;
-          L199: {
-            if (!md.field_h) {
-              break L199;
-            } else {
-              var3++;
-              HoldTheLine.field_D = var3;
-              break L199;
-            }
+        }
+        tl.field_w = null;
+        L199: {
+          if (!md.field_h) {
+            break L199;
+          } else {
+            var3++;
+            HoldTheLine.field_D = var3;
+            break L199;
           }
-          return;
-        } else {
-          return;
         }
     }
 

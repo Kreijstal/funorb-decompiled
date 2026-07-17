@@ -7,7 +7,7 @@ final class he extends ug {
     static te field_e;
     static int[] field_g;
 
-    final static void e(int param0) {
+    final static void e() {
         int var1_int = 0;
         ki var2 = null;
         int var3 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -43,61 +43,29 @@ final class he extends ug {
         ne.a(true);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_g = null;
     }
 
     final static le[] a(byte param0, int param1, int param2, int param3, int param4) {
-        le[] var5 = null;
-        le[] var6 = null;
-        if (param0 != 67) {
-          L0: {
-            he.f(3);
-            var6 = new le[9];
-            var5 = var6;
-            le dupTemp$4 = sj.a(param1, 74, param3);
-            var6[6] = dupTemp$4;
-            var5[3] = dupTemp$4;
-            var5[2] = dupTemp$4;
-            var5[1] = dupTemp$4;
-            var5[0] = dupTemp$4;
-            le dupTemp$5 = sj.a(param1, 74, param2);
-            var6[8] = dupTemp$5;
-            var5[7] = dupTemp$5;
-            var5[5] = dupTemp$5;
-            if (0 != param4) {
-              var6[4] = sj.a(64, 74, param4);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return var5;
-        } else {
-          L1: {
-            var6 = new le[9];
-            var5 = var6;
-            le dupTemp$6 = sj.a(param1, 74, param3);
-            var6[6] = dupTemp$6;
-            var5[3] = dupTemp$6;
-            var5[2] = dupTemp$6;
-            var5[1] = dupTemp$6;
-            var5[0] = dupTemp$6;
-            le dupTemp$7 = sj.a(param1, 74, param2);
-            var6[8] = dupTemp$7;
-            var5[7] = dupTemp$7;
-            var5[5] = dupTemp$7;
-            if (0 != param4) {
-              var6[4] = sj.a(64, 74, param4);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return var5;
+        le[] var6 = new le[9];
+        le[] var5 = var6;
+        le dupTemp$0 = sj.a(1, 74, param3);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        le dupTemp$1 = sj.a(1, 74, param2);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
+        if (!(0 == param4)) {
+            var6[4] = sj.a(64, 74, param4);
         }
+        return var5;
     }
 
     static {

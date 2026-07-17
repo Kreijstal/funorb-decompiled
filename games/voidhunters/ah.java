@@ -4,7 +4,7 @@
 final class ah extends rqa {
     static int[] field_o;
 
-    final static void e(int param0) {
+    final static void e() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -50,7 +50,7 @@ final class ah extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 
@@ -129,7 +129,9 @@ final class ah extends rqa {
         if (0 < hcb.field_o) {
           if (null == efb.field_b) {
             L0: {
-              psb.field_b = ob.a(0, bm.field_o, 640, 480, 0, 0);
+              int discarded$2 = 0;
+              int discarded$3 = 0;
+              psb.field_b = ob.a(0, bm.field_o, 640, 480);
               if (psb.field_b != null) {
                 var2 = 2;
                 qa.a((byte) 77, (java.awt.Canvas) (Object) psb.field_b);
@@ -139,88 +141,66 @@ final class ah extends rqa {
                 break L0;
               }
             }
-            if (param0 == 2) {
-              if (null != efb.field_b) {
+            if (null == efb.field_b) {
+              if (!vbb.field_p) {
                 return;
               } else {
-                L1: {
-                  if (vbb.field_p) {
-                    wha.a(2, true, var2);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
+                wha.a(2, true, var2);
                 return;
               }
             } else {
               return;
             }
           } else {
-            L2: {
+            L1: {
               psb.field_b = efb.field_b.a((byte) 124);
               mb.h(2, 117);
               if (psb.field_b != null) {
                 var2 = 2;
                 qa.a((byte) 77, (java.awt.Canvas) (Object) psb.field_b);
-                break L2;
+                break L1;
               } else {
                 var2 = 3;
-                break L2;
+                break L1;
               }
             }
-            if (param0 == 2) {
-              if (null != efb.field_b) {
-                return;
-              } else {
-                L3: {
-                  if (vbb.field_p) {
-                    wha.a(2, true, var2);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                return;
-              }
+            if (null != efb.field_b) {
+              return;
             } else {
+              L2: {
+                if (vbb.field_p) {
+                  wha.a(2, true, var2);
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
               return;
             }
           }
         } else {
           if (fda.e((byte) 120)) {
             var2 = 0;
-            if (param0 == 2) {
-              if (null != efb.field_b) {
-                return;
-              } else {
-                L4: {
-                  if (vbb.field_p) {
-                    wha.a(2, true, var2);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                return;
-              }
+            if (null != efb.field_b) {
+              return;
             } else {
+              L3: {
+                if (vbb.field_p) {
+                  wha.a(2, true, var2);
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
               return;
             }
           } else {
             var2 = 1;
-            if (param0 == 2) {
-              if (null != efb.field_b) {
+            if (null == efb.field_b) {
+              if (!vbb.field_p) {
                 return;
               } else {
-                L5: {
-                  if (vbb.field_p) {
-                    wha.a(2, true, var2);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
+                wha.a(2, true, var2);
                 return;
               }
             } else {

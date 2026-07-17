@@ -158,7 +158,7 @@ final class ee extends jk {
         ((ee) this).field_H = ((ee) this).field_r;
     }
 
-    final static ai k(int param0) {
+    final static ai k() {
         ai var1 = new ai(nj.field_d, qk.field_a, qc.field_P[0], mb.field_b[0], da.field_c[0], ra.field_ab[0], cb.field_b[0], fk.field_d);
         gb.a(-45);
         return var1;
@@ -520,13 +520,8 @@ final class ee extends jk {
         return stackIn_10_0 != 0;
     }
 
-    final static te[] j(int param0) {
-        if (param0 != 44) {
-          field_F = -9;
-          return new te[]{rd.field_o, fc.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, fc.field_j, lg.field_E, o.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
-        } else {
-          return new te[]{rd.field_o, fc.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, fc.field_j, lg.field_E, o.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
-        }
+    final static te[] j() {
+        return new te[]{rd.field_o, fc.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, fc.field_j, lg.field_E, o.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
     }
 
     static {

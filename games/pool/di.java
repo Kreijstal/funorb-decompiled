@@ -95,7 +95,7 @@ final class di {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_j = null;
         field_a = null;
     }
@@ -405,7 +405,7 @@ final class di {
         return stackIn_7_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

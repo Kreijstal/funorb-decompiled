@@ -8,9 +8,6 @@ final class oc {
     private int[] field_a;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            field_d = null;
-        }
         field_d = null;
         field_b = null;
     }
@@ -42,7 +39,7 @@ final class oc {
         }
     }
 
-    final static ij[] a(byte param0) {
+    final static ij[] a() {
         return new ij[]{ah.field_f, ge.field_g, hn.field_c};
     }
 

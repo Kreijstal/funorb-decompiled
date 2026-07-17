@@ -20,12 +20,9 @@ final class nea extends sna {
     public static void f(int param0) {
         field_Bb = null;
         field_yb = null;
-        if (param0 != 18178) {
-            field_yb = null;
-        }
     }
 
-    final static eq f(byte param0) {
+    final static eq f() {
         if (tn.field_a == ola.field_p) {
             throw new IllegalStateException();
         }

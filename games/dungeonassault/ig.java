@@ -6,15 +6,10 @@ final class ig {
     static int field_a;
 
     final static void a(int param0, boolean param1) {
-        if (param0 >= -15) {
-            field_b = null;
-            im.field_b.a(param1, false);
-            return;
-        }
         im.field_b.a(param1, false);
     }
 
-    final static void a(String[] args, byte param1) {
+    final static void a(String[] args) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -56,7 +51,8 @@ final class ig {
                   if (var2_int == -1) {
                     break L2;
                   } else {
-                    args[var4] = jk.a(new String[1], "<col=<%0>>", 30496) + var5;
+                    int discarded$7 = 30496;
+                    args[var4] = jk.a(new String[1], "<col=<%0>>") + var5;
                     break L2;
                   }
                 }
@@ -69,7 +65,8 @@ final class ig {
                       break L3;
                     } else {
                       var9 = var5.substring(5 + var6, var8);
-                      var2_int = hl.a(-120, (CharSequence) (Object) var9, 16);
+                      int discarded$8 = 16;
+                      var2_int = hl.a(-120, (CharSequence) (Object) var9);
                       break L3;
                     }
                   } else {
@@ -120,7 +117,7 @@ final class ig {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int var1 = 0;
         if (oo.field_d <= 32) {
             sf.d(-110, 0);
@@ -133,33 +130,23 @@ final class ig {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         int var1 = 0;
         int var2 = 0;
         if (null != dd.field_E) {
           if (!dd.field_E.field_w) {
-            if (param0 != 31131) {
-              field_a = 4;
-              return 0;
-            } else {
-              return 0;
-            }
+            return 0;
           } else {
             var1 = of.field_l + 20;
             var2 = var1 - 452;
             return var2 * dd.field_E.field_F / dd.field_E.field_G;
           }
         } else {
-          if (param0 != 31131) {
-            field_a = 4;
-            return 0;
-          } else {
-            return 0;
-          }
+          return 0;
         }
     }
 

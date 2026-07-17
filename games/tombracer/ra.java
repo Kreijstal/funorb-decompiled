@@ -20,12 +20,12 @@ abstract class ra extends kna {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
-        tga.field_a.a(param2, param5, param3, param0, fm.a(param4, param1), (byte) -128);
+        tga.field_a.a(param2, param5, param3, param0, fm.a(false, 5242880), (byte) -128);
     }
 
     abstract boolean C(int param0);
 
-    public static void B(int param0) {
+    public static void B() {
         field_G = null;
         field_F = null;
         int var1 = 0;
@@ -327,7 +327,7 @@ abstract class ra extends kna {
         }
     }
 
-    final static String r(byte param0) {
+    final static String r() {
         if (!(fna.field_k != null)) {
             return "";
         }

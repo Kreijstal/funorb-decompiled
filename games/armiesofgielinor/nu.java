@@ -40,24 +40,24 @@ final class nu extends lk {
         byte[] var23 = null;
         byte[] var24 = null;
         byte[] var25 = null;
-        cf stackIn_24_0 = null;
+        cf stackIn_23_0 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        cf stackOut_23_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        cf stackOut_22_0 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
         RuntimeException stackOut_26_0 = null;
         StringBuilder stackOut_26_1 = null;
         String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         var16 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -69,7 +69,7 @@ final class nu extends lk {
             var3_array = var17;
             var4 = new bv(var25);
             var5 = var4.h((byte) 121);
-            var6 = var4.k(param0 + -23948);
+            var6 = var4.k(0);
             var7 = var4.h((byte) 121);
             var8 = var4.h((byte) 121);
             var9 = ev.a((vh) (Object) var4, (byte) -98);
@@ -80,7 +80,7 @@ final class nu extends lk {
             var10.field_s = var6;
             var10.field_p = var9;
             cd.field_a[param2] = var10;
-            var11 = var4.k(param0 + -23948);
+            var11 = var4.k(0);
             var10.field_q = new sd[var11];
             var12 = 0;
             L1: while (true) {
@@ -89,59 +89,52 @@ final class nu extends lk {
                 var13 = 0;
                 L2: while (true) {
                   if (var13 >= var12) {
-                    L3: {
-                      var20 = var10.field_q;
-                      var14 = 0;
-                      if (param0 == 23948) {
-                        break L3;
-                      } else {
-                        nu.a(49L, 110);
-                        break L3;
-                      }
-                    }
-                    L4: while (true) {
+                    var20 = var10.field_q;
+                    var14 = 0;
+                    L3: while (true) {
                       if (var14 >= var20.length) {
                         var13 = var4.k(0);
                         var10.field_n = new om[var13];
                         var14 = 0;
-                        L5: while (true) {
+                        L4: while (true) {
                           if (var13 <= var14) {
-                            var4.l(param0 ^ 24048);
-                            stackOut_23_0 = (cf) var10;
-                            stackIn_24_0 = stackOut_23_0;
+                            var4.l(124);
+                            stackOut_22_0 = (cf) var10;
+                            stackIn_23_0 = stackOut_22_0;
                             break L0;
                           } else {
                             try {
-                              L6: {
-                                var22 = lf.a(var10, var4, param1, (byte) -73);
+                              L5: {
+                                int discarded$1 = -73;
+                                var22 = lf.a(var10, var4, param1);
                                 var10.field_n[var22.field_v] = var22;
-                                break L6;
+                                break L5;
                               }
                             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                               decompiledCaughtException = decompiledCaughtParameter0;
-                              L7: {
+                              L6: {
                                 var15 = decompiledCaughtException;
                                 System.out.println("Error reading mission: " + var15);
                                 var15.printStackTrace();
-                                break L7;
+                                break L6;
                               }
                             }
                             var14++;
-                            continue L5;
+                            continue L4;
                           }
                         }
                       } else {
-                        L8: {
+                        L7: {
                           var21 = var20[var14];
                           if (0 == var21.field_o) {
                             var21.field_k = null;
-                            break L8;
+                            break L7;
                           } else {
-                            break L8;
+                            break L7;
                           }
                         }
                         var14++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
@@ -152,16 +145,16 @@ final class nu extends lk {
                 }
               } else {
                 try {
-                  L9: {
+                  L8: {
                     var19 = ks.a(900, var10, (vh) (Object) var4);
                     var10.field_q[var19.field_m] = var19;
-                    break L9;
+                    break L8;
                   }
                 } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
-                  L10: {
+                  L9: {
                     var13_ref_RuntimeException = decompiledCaughtException;
-                    break L10;
+                    break L9;
                   }
                 }
                 var12++;
@@ -171,35 +164,35 @@ final class nu extends lk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
-          L11: {
+          L10: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var3;
-            stackOut_25_1 = new StringBuilder().append("nu.A(").append(param0).append(44);
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackOut_24_0 = (RuntimeException) var3;
+            stackOut_24_1 = new StringBuilder().append("nu.A(").append(23948).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
-              break L11;
-            } else {
               stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
               stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
-              break L11;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L10;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L10;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param2 + 41);
         }
-        return stackIn_24_0;
+        return stackIn_23_0;
     }
 
     public nu() {
@@ -322,8 +315,9 @@ final class nu extends lk {
               }
             }
             var8 = stackIn_19_0;
-            wn.a(var7, ((nu) this).field_v, param0.field_l, param1 + param0.field_B, param0.field_p + param4 - -(-((nu) this).field_v[0].field_x + param0.field_w >> 1), -3225);
-            int discarded$1 = ((nu) this).field_q.a(param0.field_v, param0.field_B + param1, param4 - -param0.field_p - 2, param0.field_l, param0.field_w, var8, -1, 1, 1, ((nu) this).field_q.field_H);
+            int discarded$2 = -3225;
+            wn.a(var7, ((nu) this).field_v, param0.field_l, param1 + param0.field_B, param0.field_p + param4 - -(-((nu) this).field_v[0].field_x + param0.field_w >> 1));
+            int discarded$3 = ((nu) this).field_q.a(param0.field_v, param0.field_B + param1, param4 - -param0.field_p - 2, param0.field_l, param0.field_w, var8, -1, 1, 1, ((nu) this).field_q.field_H);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -371,7 +365,9 @@ final class nu extends lk {
     }
 
     private static void $cfr$clinit() {
-        bm.a((byte) -81, 50);
+        int discarded$0 = 50;
+        int discarded$1 = -81;
+        bm.a();
         field_z = new int[]{20, 10, 5};
         field_w = "Store";
     }

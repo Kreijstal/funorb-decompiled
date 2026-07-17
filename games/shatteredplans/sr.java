@@ -220,7 +220,7 @@ final class sr {
         this.a(107);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_N = null;
         field_F = null;
@@ -452,10 +452,8 @@ final class sr {
     }
 
     final static int a(int param0, byte param1, boolean param2, int param3) {
-        if (param1 != 0) {
-            field_F = null;
-        }
-        return uo.a((byte) -75);
+        int discarded$0 = -75;
+        return uo.a();
     }
 
     sr() {

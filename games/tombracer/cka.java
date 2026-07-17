@@ -301,9 +301,6 @@ final class cka extends ha {
             ((cka) this).field_y = ((cka) this).field_y & -32;
             ((cka) this).field_d = param1 ? true : false;
         }
-        if (param0 != 3742) {
-            ((cka) this).field_vb = -64;
-        }
     }
 
     final void d() {
@@ -322,7 +319,7 @@ final class cka extends ha {
               throw new RuntimeException("");
             } else {
               ((cka) this).field_Mb.b(((cka) this).field_I, 0, 0, 0, ((cka) this).field_Y, 8448, 0);
-              boolean discarded$14 = ((cka) this).field_l.setSurface(((cka) this).field_n);
+              boolean discarded$16 = ((cka) this).field_l.setSurface(((cka) this).field_n);
               break L0;
             }
           }
@@ -330,7 +327,8 @@ final class cka extends ha {
         ((cka) this).field_I = ((cka) this).field_C;
         ((cka) this).field_Mb = null;
         ((cka) this).field_Y = ((cka) this).field_R;
-        this.s(3682);
+        int discarded$17 = 3682;
+        this.s();
         this.h((byte) 114);
         ((cka) this).la();
     }
@@ -460,7 +458,7 @@ final class cka extends ha {
         return (va) (Object) stackIn_9_0;
     }
 
-    private final void m(byte param0) {
+    private final void m() {
         L0: {
           L1: {
             if (!((cka) this).field_Ac) {
@@ -649,10 +647,6 @@ final class cka extends ha {
         if (!(!((cka) this).field_U)) {
             jaggl.OpenGL.glLoadIdentity();
         }
-        if (param1 != 25380) {
-            Object var6 = null;
-            ((cka) this).a((za) null);
-        }
         jaggl.OpenGL.glTranslatef(param3, param0, param2);
         jaggl.OpenGL.glMatrixMode(5888);
         ((cka) this).field_U = true;
@@ -680,7 +674,8 @@ final class cka extends ha {
                 ((cka) this).la();
                 jaggl.OpenGL.glReadBuffer(1028);
                 jaggl.OpenGL.glDrawBuffer(1029);
-                this.s(3682);
+                int discarded$2 = 3682;
+                this.s();
                 this.b(16363, false);
                 ((cka) this).a(81, false);
                 this.c(3742, false);
@@ -789,7 +784,8 @@ final class cka extends ha {
     final void o(int param0) {
         int var2 = -116 / ((14 - param0) / 62);
         if (4 != ((cka) this).field_y) {
-            this.r(0);
+            int discarded$0 = 0;
+            this.r();
             this.b(16363, false);
             ((cka) this).a(104, false);
             this.c(3742, false);
@@ -1915,7 +1911,8 @@ final class cka extends ha {
     final void d(int param0, boolean param1) {
         if (!((!((cka) this).field_v ? 1 : 0) != (param1 ? 1 : 0))) {
             ((cka) this).field_v = param1 ? true : false;
-            this.m((byte) -52);
+            int discarded$0 = -52;
+            this.m();
         }
         if (param0 >= -48) {
             Object var4 = null;
@@ -2170,7 +2167,7 @@ final class cka extends ha {
         ((cka) this).field_rb.b((byte) -58, var4);
     }
 
-    private final void p(byte param0) {
+    private final void p() {
         L0: {
           L1: {
             if (!((cka) this).field_qc) {
@@ -2189,7 +2186,7 @@ final class cka extends ha {
         }
     }
 
-    private final void v(int param0) {
+    private final void v() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2216,7 +2213,8 @@ final class cka extends ha {
             ((cka) this).a(95, true);
             this.c(3742, true);
             this.a(true, 0);
-            this.s(3682);
+            int discarded$1 = 3682;
+            this.s();
             ((cka) this).field_l.setSwapInterval(0);
             jaggl.OpenGL.glShadeModel(7425);
             jaggl.OpenGL.glClearDepth(1.0f);
@@ -2301,7 +2299,8 @@ final class cka extends ha {
     final void a(int param0, boolean param1) {
         if (!((!param1 ? 1 : 0) == (!((cka) this).field_Ac ? 1 : 0))) {
             ((cka) this).field_Ac = param1 ? true : false;
-            this.m((byte) -52);
+            int discarded$0 = -52;
+            this.m();
             ((cka) this).field_y = ((cka) this).field_y & -8;
         }
         if (param0 < 29) {
@@ -2309,13 +2308,13 @@ final class cka extends ha {
         }
     }
 
-    final static String a(char param0, int param1, int param2) {
+    final static String a(char param0, int param1) {
         int var4 = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = 0; param1 > var4; var4++) {
-            var6[var4] = param0;
+            var6[var4] = '*';
         }
         return new String(var6);
     }
@@ -2708,14 +2707,16 @@ final class cka extends ha {
           L0: {
             ((cka) this).field_gb = param2;
             ((cka) this).field_ad = param0;
-            if (in.a("jaclib", 480)) {
-              if (in.a("jaggl", 480)) {
+            int discarded$7 = 480;
+            if (in.a("jaclib")) {
+              int discarded$8 = 480;
+              if (in.a("jaggl")) {
                 try {
                   L1: {
                     ((cka) this).field_l = new jaggl.OpenGL();
-                    long dupTemp$1 = ((cka) this).field_l.init(param0, 8, 8, 8, 24, 0, ((cka) this).field_gb);
-                    ((cka) this).field_dd = dupTemp$1;
-                    ((cka) this).field_n = dupTemp$1;
+                    long dupTemp$9 = ((cka) this).field_l.init(param0, 8, 8, 8, 24, 0, ((cka) this).field_gb);
+                    ((cka) this).field_dd = dupTemp$9;
+                    ((cka) this).field_n = dupTemp$9;
                     if (((cka) this).field_dd != 0L) {
                       this.f((byte) -68);
                       var4_int = this.k((byte) 108);
@@ -2770,7 +2771,8 @@ final class cka extends ha {
                                                 break L8;
                                               } else {
                                                 var21 = (CharSequence) (Object) var13_ref.substring(1, 3);
-                                                if (!sqa.a(var21, -3)) {
+                                                int discarded$10 = -3;
+                                                if (!sqa.a(var21)) {
                                                   break L8;
                                                 } else {
                                                   var10_ref = var13_ref.substring(1);
@@ -2797,11 +2799,13 @@ final class cka extends ha {
                                               break L7;
                                             } else {
                                               var22 = (CharSequence) (Object) var10_ref.substring(0, 4);
-                                              if (!sqa.a(var22, -3)) {
+                                              int discarded$11 = -3;
+                                              if (!sqa.a(var22)) {
                                                 break L7;
                                               } else {
                                                 var23 = (CharSequence) (Object) var10_ref.substring(0, 4);
-                                                var5_int = jb.a(var23, (byte) 70);
+                                                int discarded$12 = 70;
+                                                var5_int = jb.a(var23);
                                                 decompiledRegionSelector0 = 1;
                                                 break L6;
                                               }
@@ -2947,7 +2951,8 @@ final class cka extends ha {
                           }
                         }
                         ((cka) this).field_Hb = new uua((cka) this);
-                        this.v(-3159);
+                        int discarded$13 = -3159;
+                        this.v();
                         this.b((byte) -99);
                         ((cka) this).a();
                         break L1;
@@ -3185,7 +3190,7 @@ final class cka extends ha {
         return ((cka) this).field_Hb.a(2147483647, 3);
     }
 
-    private final void r(int param0) {
+    private final void r() {
         if (-2 != ((cka) this).field_e) {
             jaggl.OpenGL.glMatrixMode(5889);
             jaggl.OpenGL.glLoadIdentity();
@@ -3349,7 +3354,7 @@ final class cka extends ha {
             }
           }
           L8: {
-            ((cka) this).field_Hb.a(param3 ^ -71, var8, param1, param2, var7, var9);
+            ((cka) this).field_Hb.a(param3 ^ -71, var8, true, param2, var7, var9);
             if (!((cka) this).field_Hb.a(var6, 9, (kl) var5)) {
               ((cka) this).a(true, (kl) var5);
               ((cka) this).d(param3 ^ -2, var6);
@@ -3426,8 +3431,10 @@ final class cka extends ha {
           } else {
             try {
               L4: {
-                var5_int = jb.a((CharSequence) (Object) var4[0], (byte) 70);
-                var6 = jb.a((CharSequence) (Object) var4[1], (byte) 70);
+                int discarded$3 = 70;
+                var5_int = jb.a((CharSequence) (Object) var4[0]);
+                int discarded$4 = 70;
+                var6 = jb.a((CharSequence) (Object) var4[1]);
                 ((cka) this).field_fb = var6 + 10 * var5_int;
                 break L4;
               }
@@ -3504,7 +3511,7 @@ final class cka extends ha {
           ((cka) this).field_Q = ((cka) this).field_l.a("GL_ARB_vertex_buffer_object");
           ((cka) this).field_S = ((cka) this).field_l.a("GL_ARB_multisample");
           ((cka) this).field_G = ((cka) this).field_l.a("GL_ARB_vertex_program");
-          boolean discarded$1 = ((cka) this).field_l.a("GL_ARB_fragment_program");
+          boolean discarded$5 = ((cka) this).field_l.a("GL_ARB_fragment_program");
           ((cka) this).field_wb = ((cka) this).field_l.a("GL_ARB_vertex_shader");
           ((cka) this).field_Vc = ((cka) this).field_l.a("GL_ARB_fragment_shader");
           ((cka) this).field_V = ((cka) this).field_l.a("GL_EXT_texture3D");
@@ -3532,7 +3539,7 @@ final class cka extends ha {
         return stackIn_27_0;
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         gp.field_d[3] = 1.0f;
         gp.field_d[1] = ((cka) this).field_cd * ((cka) this).field_Fb;
         gp.field_d[0] = ((cka) this).field_cd * ((cka) this).field_wc;
@@ -3767,7 +3774,8 @@ final class cka extends ha {
             ((cka) this).field_l = null;
         }
         if (!(!((cka) this).field_Ob)) {
-            rpa.a(true, false, true);
+            int discarded$0 = 1;
+            rpa.a(true, false);
             ((cka) this).field_Ob = false;
         }
     }
@@ -3820,7 +3828,8 @@ final class cka extends ha {
               break L3;
             }
           }
-          this.g((byte) -30);
+          int discarded$1 = -30;
+          this.g();
           break L1;
         }
         L4: {
@@ -3973,7 +3982,8 @@ final class cka extends ha {
         }
         if (!((!param1 ? 1 : 0) == (!((cka) this).field_qc ? 1 : 0))) {
             ((cka) this).field_qc = param1 ? true : false;
-            this.p((byte) -87);
+            int discarded$0 = -87;
+            this.p();
             ((cka) this).field_y = ((cka) this).field_y & -32;
         }
     }
@@ -4377,14 +4387,15 @@ final class cka extends ha {
         jaggl.OpenGL.glEnd();
     }
 
-    public static void t(int param0) {
+    public static void t() {
         field_fd = null;
         field_Mc = null;
     }
 
     final void q(int param0) {
         if (!(param0 == ((cka) this).field_y)) {
-            this.r(0);
+            int discarded$0 = 0;
+            this.r();
             this.b(param0 ^ 16361, false);
             ((cka) this).a(109, false);
             this.c(3742, false);
@@ -4537,7 +4548,8 @@ final class cka extends ha {
             }
             ((cka) this).field_Y = param0.a();
             ((cka) this).field_I = param0.c();
-            this.s(3682);
+            int discarded$1 = 3682;
+            this.s();
             this.h((byte) 115);
             ((cka) this).la();
             break L0;
@@ -4750,10 +4762,7 @@ final class cka extends ha {
         }
     }
 
-    private final void s(int param0) {
-        if (param0 != 3682) {
-            ((cka) this).c(-29);
-        }
+    private final void s() {
         if (0 != ((cka) this).field_e) {
             ((cka) this).field_e = 0;
             ((cka) this).field_y = ((cka) this).field_y & -32;
@@ -4898,7 +4907,8 @@ final class cka extends ha {
           ((cka) this).field_Xc = param2;
           ((cka) this).field_Kb = param1;
           this.m(2916);
-          this.p((byte) -87);
+          int discarded$2 = -87;
+          this.p();
           break L0;
         }
     }
@@ -5079,7 +5089,8 @@ final class cka extends ha {
             ((cka) this).field_Y = ((cka) this).field_R;
             this.h((byte) -117);
         }
-        this.s(3682);
+        int discarded$0 = 3682;
+        this.s();
         ((cka) this).la();
     }
 
@@ -5113,14 +5124,6 @@ final class cka extends ha {
                         break L1;
                       } else {
                         if (param1 != 5126) {
-                          L2: {
-                            if (param0 == -10) {
-                              break L2;
-                            } else {
-                              ((cka) this).field_Ic = 78;
-                              break L2;
-                            }
-                          }
                           throw new IllegalArgumentException("");
                         } else {
                           break L1;
@@ -5144,7 +5147,8 @@ final class cka extends ha {
             ((cka) this).field_d = true;
         }
         if (!(1 == ((cka) this).field_y)) {
-            this.r(0);
+            int discarded$0 = 0;
+            this.r();
             this.b(16363, false);
             ((cka) this).a(36, false);
             this.c(3742, false);
@@ -5158,7 +5162,8 @@ final class cka extends ha {
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
-            this.r(0);
+            int discarded$0 = 0;
+            this.r();
             ((cka) this).a(true, (kl) null);
             ((cka) this).a((byte) 44, 0);
             jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);

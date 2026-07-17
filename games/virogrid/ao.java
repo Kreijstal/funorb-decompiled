@@ -64,7 +64,7 @@ final class ao extends km {
         this(param0, (km) (Object) param1, param1.field_Ib.field_Eb, param1.field_Ib.field_Hb, param1.field_Fb, param2, param3);
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_Jb = null;
         field_Nb = null;
         int var1 = 13;

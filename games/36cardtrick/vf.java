@@ -9,21 +9,17 @@ abstract class vf {
 
     abstract byte[] a(byte param0);
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
     }
 
-    final static String a(int param0, int param1, char param2) {
+    final static String a(int param0, int param1) {
+        int var4 = 0;
         int var5 = Main.field_T;
         char[] var6 = new char[param1];
         char[] var3 = var6;
-        int var4 = 0;
-        if (param0 != 4) {
-            return null;
-        }
-        while (var4 < param1) {
+        for (var4 = 0; var4 < param1; var4++) {
             var6[var4] = '*';
-            var4++;
         }
         return new String(var6);
     }
@@ -50,10 +46,11 @@ abstract class vf {
         var2 = Main.field_T;
         try {
           L0: {
-            boolean discarded$12 = sd.field_c.a((byte) -116, lg.field_E, te.field_a, true);
+            boolean discarded$28 = sd.field_c.a((byte) -116, lg.field_E, te.field_a, true);
             sd.field_c.l(-2054);
             L1: while (true) {
-              if (!ge.b((byte) -114)) {
+              int discarded$29 = -114;
+              if (!ge.b()) {
                 if (ml.field_a != -1) {
                   var1_int = ml.field_a;
                   gh.a(-1, 31888);
@@ -96,7 +93,7 @@ abstract class vf {
                   }
                 }
               } else {
-                boolean discarded$13 = sd.field_c.a(fd.field_n, 34, tb.field_d);
+                boolean discarded$30 = sd.field_c.a(fd.field_n, 34, tb.field_d);
                 continue L1;
               }
             }

@@ -6,7 +6,7 @@ final class ie {
     static le field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
@@ -21,7 +21,7 @@ final class ie {
         return param0 & ~var2;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         km var1 = null;
         km var2 = null;
         int var3 = 0;
@@ -32,7 +32,8 @@ final class ie {
             nh.a();
             wb.b();
             sl.field_a = 0;
-            di.k(9);
+            int discarded$0 = 9;
+            di.k();
             var2 = var1.c();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.c(-2, -2, 16777215);
@@ -40,7 +41,8 @@ final class ie {
             }
             tg.field_u.e();
             var1.c(0, 0);
-            fd.a(28773);
+            int discarded$1 = 28773;
+            fd.a();
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "ie.C(" + 540 + 41);
         }
@@ -50,43 +52,35 @@ final class ie {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_5_0 = 0;
         var4 = Chess.field_G;
         try {
           L0: {
             var3_int = 0;
-            if (param1 == -1) {
-              L1: while (true) {
-                if (param0 <= 0) {
-                  stackOut_6_0 = var3_int;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L0;
-                } else {
-                  var3_int = param2 & 1 | var3_int << 1;
-                  param2 = param2 >>> 1;
-                  param0--;
-                  continue L1;
-                }
+            L1: while (true) {
+              if (param0 <= 0) {
+                stackOut_5_0 = var3_int;
+                stackIn_6_0 = stackOut_5_0;
+                break L0;
+              } else {
+                var3_int = param2 & 1 | var3_int << 1;
+                param2 = param2 >>> 1;
+                param0--;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 77;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var3, "ie.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw fk.a((Throwable) (Object) var3, "ie.B(" + param0 + 44 + -1 + 44 + param2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_6_0;
     }
 
-    final static sa a(String param0, byte param1) {
+    final static sa a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -204,7 +198,8 @@ final class ie {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        ve var3 = ca.a(param0, param2, -128);
+        int discarded$0 = -128;
+        ve var3 = ca.a(param0, param2);
         if (!(var3 == null)) {
             pi.field_d.a(0, false);
             var4_ref_dh = pi.field_d;
@@ -215,7 +210,7 @@ final class ie {
             var6 = ag.field_f;
             var4_ref_dh.field_b.a(true, var5, 0, var6, 0);
         }
-        int var4 = 89 / ((param1 - -25) / 46);
+        int var4 = -89;
         vc.a((byte) 68, param0, param2);
     }
 

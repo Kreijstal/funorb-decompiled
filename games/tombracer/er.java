@@ -5,7 +5,7 @@ final class er extends fqa {
     static int[][] field_K;
     static String field_J;
 
-    public static void s(byte param0) {
+    public static void s() {
         field_J = null;
         field_K = null;
     }
@@ -48,34 +48,30 @@ final class er extends fqa {
                 break L2;
               }
               im.a(9, true, var2, var3);
-              if (param0 == 1) {
-                var4 = 0;
-                L4: while (true) {
-                  if (16 <= var4) {
-                    if (param1 == 1) {
-                      aoa.a(112, 1);
-                      aoa.a(45, 2);
-                      aoa.a(param0 ^ 61, 3);
-                      aoa.a(61, 4);
-                      aoa.a(59, 5);
-                      aoa.a(125, 6);
-                      aoa.a(param0 ^ 57, 7);
-                      aoa.a(122, 8);
-                      aoa.a(param0 ^ 125, 13);
-                      aoa.a(84, 14);
-                      aoa.a(105, 15);
-                      break L0;
-                    } else {
-                      return;
-                    }
+              var4 = 0;
+              L4: while (true) {
+                if (16 <= var4) {
+                  if (param1 == 1) {
+                    aoa.a(112, 1);
+                    aoa.a(45, 2);
+                    aoa.a(60, 3);
+                    aoa.a(61, 4);
+                    aoa.a(59, 5);
+                    aoa.a(125, 6);
+                    aoa.a(56, 7);
+                    aoa.a(122, 8);
+                    aoa.a(124, 13);
+                    aoa.a(84, 14);
+                    aoa.a(105, 15);
+                    break L0;
                   } else {
-                    v.b(var4, 0);
-                    var4++;
-                    continue L4;
+                    return;
                   }
+                } else {
+                  v.b(var4, 0);
+                  var4++;
+                  continue L4;
                 }
-              } else {
-                return;
               }
             } else {
               return;
@@ -84,7 +80,7 @@ final class er extends fqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2_ref, "er.TB(" + param0 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) var2_ref, "er.TB(" + 1 + 44 + param1 + 41);
         }
     }
 
@@ -208,7 +204,7 @@ final class er extends fqa {
         return 7;
     }
 
-    final static boolean c(int param0, int param1, int param2) {
+    final static boolean c(int param0, int param1) {
         return (param0 & 52) != 0;
     }
 

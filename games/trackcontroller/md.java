@@ -42,7 +42,8 @@ final class md {
               ui.field_p.b(false, pl.field_a[1]);
               ui.field_p.b(false, pl.field_a[2]);
               ui.field_p.b(false, pl.field_a[3]);
-              vd.a(ui.field_p, (byte) -69);
+              int discarded$2 = -69;
+              vd.a(ui.field_p);
               ui.field_p.b(param1, (byte) -124);
               param0.a((byte) -6, ui.field_p);
               ra.field_C.field_k = 0;
@@ -93,7 +94,8 @@ final class md {
             }
             L6: {
               ra.field_C.a(var6, (byte) -77);
-              var7 = bg.a(gd.b((byte) 77), -22004);
+              int discarded$3 = -22004;
+              var7 = bg.a(gd.b((byte) 77));
               if (var7 == null) {
                 var7 = "";
                 break L6;
@@ -110,9 +112,9 @@ final class md {
                 break L7;
               }
             }
-            ee.a(sc.field_d, (be) (Object) ra.field_C, fj.field_N, ~param3, ui.field_p);
+            ee.a(sc.field_d, (be) (Object) ra.field_C, fj.field_N, 0, ui.field_p);
             ra.field_C.c(ra.field_C.field_k - var5_int, (byte) -96);
-            me.a(param3, -1);
+            me.a(-1, -1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,7 +145,7 @@ final class md {
               break L8;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw sl.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 44 + param2 + 44 + -1 + 44 + param4 + 41);
         }
     }
 
@@ -170,7 +172,7 @@ final class md {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_b = null;

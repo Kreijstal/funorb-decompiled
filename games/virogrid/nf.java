@@ -55,7 +55,8 @@ final class nf {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                var3 = ij.a(param1.charAt(var4), 4290) + (var3 << 5) - var3;
+                int discarded$2 = 4290;
+                var3 = ij.a(param1.charAt(var4)) + (var3 << 5) - var3;
                 var4++;
                 continue L2;
               }
@@ -117,7 +118,7 @@ final class nf {
               qa.field_d.a(5, param2, param3 + (485 + param5 - -2), (byte) -48, -param2 + var7);
               di.field_n.a(param5, param2, -wa.field_I.field_K + (qa.field_d.field_K + -param5), (byte) -88, 0);
               var7 = var7 - (2 + param2);
-              var8 = -68 % ((72 - param4) / 40);
+              var8 = 0;
               wa.field_I.a(param5 - -di.field_n.field_K, param2, wa.field_I.field_K, (byte) -97, 0);
               ne.field_c.a(5, -126, 2 + (485 + param5) + param3, 2, var7 + -5, 5, param3);
               if (null != fh.field_c) {
@@ -170,7 +171,7 @@ final class nf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var6, "nf.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw kg.a((Throwable) (Object) var6, "nf.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -27 + 44 + param5 + 41);
         }
     }
 
@@ -298,7 +299,7 @@ final class nf {
         return stackIn_17_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_h = null;
@@ -308,9 +309,6 @@ final class nf {
 
     final static int a(int param0, int param1) {
         param1 = param1 & 8191;
-        if (param0 != 21855) {
-            return -30;
-        }
         if (4096 > param1) {
             return param1 >= 2048 ? -af.field_h[-2048 + param1] : af.field_h[-param1 + 2048];
         }

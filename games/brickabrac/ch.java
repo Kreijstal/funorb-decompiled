@@ -271,27 +271,19 @@ final class ch {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_j = null;
-              field_i = null;
-              field_c = null;
-              field_d = null;
-              field_e = null;
-              field_a = null;
-              field_k = null;
-              field_g = null;
-              if (param0 == 20623) {
-                break L1;
-              } else {
-                field_b = -11;
-                break L1;
-              }
-            }
+            field_j = null;
+            field_i = null;
+            field_c = null;
+            field_d = null;
+            field_e = null;
+            field_a = null;
+            field_k = null;
+            field_g = null;
             field_l = null;
             field_m = null;
             field_h = null;
@@ -301,7 +293,7 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "ch.B(" + param0 + 41);
+          throw qb.a((Throwable) (Object) var1, "ch.B(" + 20623 + 41);
         }
     }
 

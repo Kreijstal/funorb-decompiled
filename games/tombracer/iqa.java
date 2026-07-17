@@ -27,7 +27,7 @@ final class iqa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         int var1 = 0;
         field_c = null;
@@ -36,7 +36,7 @@ final class iqa {
     final static void a(int param0, int param1, int param2, boolean param3) {
         jta.a(param3, true);
         vha.a(param2, (byte) 95, param3, param1);
-        int var4 = -97 / ((param0 - 63) / 38);
+        int var4 = 24;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

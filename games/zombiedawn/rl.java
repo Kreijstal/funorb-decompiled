@@ -9,7 +9,7 @@ final class rl {
     private int field_b;
     static String field_a;
 
-    final static void c(int param0) {
+    final static void c() {
         e.field_S.j(-636330975);
         if (!(vi.field_c != null)) {
             vi.field_c = new sa(e.field_S, ed.field_c);
@@ -31,39 +31,29 @@ final class rl {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        if (param1 <= ((rl) this).field_b) {
+        if (param1 > ((rl) this).field_b) {
           L0: {
-            if (((rl) this).field_c.length <= param1) {
-              this.a(true, param1);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          ((rl) this).field_c[param1] = param2;
-          if (param0 != 93) {
-            ((rl) this).field_e = -58;
-            return;
-          } else {
-            return;
-          }
-        } else {
-          L1: {
             ((rl) this).field_b = param1;
             if (((rl) this).field_c.length <= param1) {
               this.a(true, param1);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          ((rl) this).field_c[param1] = param2;
+          return;
+        } else {
+          L1: {
+            if (((rl) this).field_c.length <= param1) {
+              this.a(true, param1);
               break L1;
             } else {
               break L1;
             }
           }
           ((rl) this).field_c[param1] = param2;
-          if (param0 == 93) {
-            return;
-          } else {
-            ((rl) this).field_e = -58;
-            return;
-          }
+          return;
         }
     }
 
@@ -250,7 +240,7 @@ final class rl {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         int var1 = -20;
     }
@@ -283,18 +273,10 @@ final class rl {
     }
 
     private final void a(boolean param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        var4 = new int[this.a(param1, -103)];
-        var3 = var4;
+        int[] var4 = new int[this.a(param1, -103)];
+        int[] var3 = var4;
         gp.a(((rl) this).field_c, 0, var4, 0, ((rl) this).field_c.length);
         ((rl) this).field_c = var4;
-        if (!param0) {
-          int discarded$2 = ((rl) this).a(9, (byte) 60);
-          return;
-        } else {
-          return;
-        }
     }
 
     final int a(int param0) {

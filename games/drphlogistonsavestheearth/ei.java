@@ -151,7 +151,7 @@ abstract class ei extends dc implements kd {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
         field_m = null;
         field_h = null;
@@ -183,13 +183,10 @@ abstract class ei extends dc implements kd {
             String stackOut_7_2 = null;
             try {
               try {
-                if (!param0) {
-                  var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                  param1.getAppletContext().showDocument(kk.a(var2, param1, 4767999), "_top");
-                  return;
-                } else {
-                  return;
-                }
+                var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
+                int discarded$2 = 4767999;
+                param1.getAppletContext().showDocument(kk.a(var2, param1), "_top");
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -201,7 +198,7 @@ abstract class ei extends dc implements kd {
               L0: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("ei.S(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("ei.S(").append(0).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;

@@ -13,7 +13,7 @@ final class rh extends ck {
     static int field_s;
     static gh field_w;
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void a(int param0, boolean param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         if (vb.field_e) {
@@ -81,38 +81,17 @@ final class rh extends ck {
         }
     }
 
-    final static void a(boolean param0) {
-        if (an.field_i != null) {
-          if (null != an.field_i.field_c) {
-            an.field_i.field_c.field_G = false;
-            if (param0) {
-              return;
-            } else {
-              an.field_i = null;
-              la.field_c = null;
-              return;
-            }
-          } else {
-            if (param0) {
-              return;
-            } else {
-              an.field_i = null;
-              la.field_c = null;
-              return;
-            }
-          }
-        } else {
-          if (param0) {
+    final static void a() {
+        if (an.field_i == null) {
             return;
-          } else {
-            an.field_i = null;
-            la.field_c = null;
-            return;
-          }
         }
+        if (null == an.field_i.field_c) {
+            return;
+        }
+        an.field_i.field_c.field_G = false;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_q = null;
         field_u = null;
         field_t = null;
@@ -124,16 +103,13 @@ final class rh extends ck {
 
     final static void a(int param0, int param1, jm param2) {
         kj var3 = null;
-        if (param1 != 0) {
-            return;
-        }
         try {
             var3 = mm.field_g;
             var3.a(param0, (byte) -117);
             var3.a((byte) 123, param2.field_q);
             var3.d(param2.field_s, 77);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "rh.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "rh.A(" + param0 + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

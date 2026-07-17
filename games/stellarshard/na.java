@@ -20,7 +20,8 @@ final class na {
             eh.field_a = new qc(param3);
             sa.field_h = param2;
             if (param1 != 256) {
-                pf discarded$0 = na.a(67, 84, 117, false, true, true);
+                int discarded$0 = 1;
+                pf discarded$1 = na.a(67, 84, 117, false, true);
             }
             ka.field_q = param0;
             tf.a(0);
@@ -245,14 +246,14 @@ final class na {
         }
     }
 
-    final static pf a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static pf a(int param0, int param1, int param2, boolean param3, boolean param4) {
         try {
             Object var6 = null;
             Object var7 = null;
             wc var8 = null;
-            pf stackIn_16_0 = null;
+            pf stackIn_15_0 = null;
             Throwable decompiledCaughtException = null;
-            pf stackOut_15_0 = null;
+            pf stackOut_14_0 = null;
             try {
               L0: {
                 L1: {
@@ -294,23 +295,16 @@ final class na {
                 }
                 L5: {
                   if (param1 == 255) {
+                    var8 = mc.field_c.a(64, (gi) var7, (gi) var6, param4, param2);
                     break L5;
                   } else {
                     field_e = null;
+                    var8 = mc.field_c.a(64, (gi) var7, (gi) var6, param4, param2);
                     break L5;
                   }
                 }
-                L6: {
-                  var8 = mc.field_c.a(64, (gi) var7, (gi) var6, param4, param2);
-                  if (param3) {
-                    var8.d(2);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                stackOut_15_0 = new pf((wf) (Object) var8, param5, param0);
-                stackIn_16_0 = stackOut_15_0;
+                stackOut_14_0 = new pf((wf) (Object) var8, true, param0);
+                stackIn_15_0 = stackOut_14_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -318,7 +312,7 @@ final class na {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_16_0;
+            return stackIn_15_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -339,7 +333,7 @@ final class na {
         return ((na) this).field_h[fieldTemp$0];
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_j = null;
         field_d = null;
         field_e = null;

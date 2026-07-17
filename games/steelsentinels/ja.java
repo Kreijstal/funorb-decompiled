@@ -13,17 +13,33 @@ final class ja {
     static gk[] field_d;
 
     final static int a(int param0, boolean param1) {
-        param0 -= 17;
-        if (param0 >= 0) {
+        if (!param1) {
+          param0 -= 17;
+          if (param0 >= 0) {
             if (param0 >= t.field_d.length) {
-                return -1;
+              return -1;
+            } else {
+              return t.field_d[param0];
             }
-            return t.field_d[param0];
+          } else {
+            return -1;
+          }
+        } else {
+          field_e = null;
+          param0 -= 17;
+          if (param0 >= 0) {
+            if (param0 < t.field_d.length) {
+              return t.field_d[param0];
+            } else {
+              return -1;
+            }
+          } else {
+            return -1;
+          }
         }
-        return -1;
     }
 
-    final static wk b(int param0, boolean param1) {
+    final static wk b(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = SteelSentinels.field_G;
@@ -123,7 +139,7 @@ final class ja {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_h = null;

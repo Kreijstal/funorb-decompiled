@@ -73,7 +73,8 @@ final class qqb implements ntb {
           L0: {
             L1: {
               var3 = (qqb) (Object) param1;
-              var3.field_a = (wna[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, lm.field_b, false);
+              int discarded$2 = 0;
+              var3.field_a = (wna[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, lm.field_b);
               if (param0 >= 54) {
                 break L1;
               } else {

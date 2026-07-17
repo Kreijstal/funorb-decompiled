@@ -114,78 +114,39 @@ abstract class fe extends bj {
 
     boolean h(int param0) {
         int var3 = 0;
-        Object var4 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (param0 == 0) {
-          if (((fe) this).field_nb != null) {
-            if (((fe) this).field_nb == bh.field_qb) {
-              int fieldTemp$5 = ((fe) this).field_fb + 1;
+        if (((fe) this).field_nb != null) {
+          if (((fe) this).field_nb == bh.field_qb) {
+            int fieldTemp$2 = ((fe) this).field_fb + 1;
+            ((fe) this).field_fb = ((fe) this).field_fb + 1;
+            if (fieldTemp$2 == ((fe) this).field_cb) {
+              ((fe) this).field_nb = dm.field_e;
+              ((fe) this).a((byte) -116, ((fe) this).field_lb, ((fe) this).field_eb.field_s + (((fe) this).field_db + 12), 12 + ((fe) this).field_eb.field_t);
+              ((fe) this).field_mb.field_K = 0;
+              ((fe) this).field_fb = 0;
+              return super.h(0);
+            } else {
+              ((fe) this).field_mb.field_K = 256 + -((((fe) this).field_fb << 8) / ((fe) this).field_cb);
+              return super.h(0);
+            }
+          } else {
+            if (((fe) this).field_nb == gq.field_Xb) {
+              int fieldTemp$3 = ((fe) this).field_fb + 1;
               ((fe) this).field_fb = ((fe) this).field_fb + 1;
-              if (fieldTemp$5 == ((fe) this).field_cb) {
-                ((fe) this).field_nb = dm.field_e;
-                ((fe) this).a((byte) -116, ((fe) this).field_lb, ((fe) this).field_eb.field_s + (((fe) this).field_db + 12), 12 + ((fe) this).field_eb.field_t);
-                ((fe) this).field_mb.field_K = 0;
-                ((fe) this).field_fb = 0;
+              if (((fe) this).field_bb != fieldTemp$3) {
+                ((fe) this).field_mb.field_K = (((fe) this).field_fb << 8) / ((fe) this).field_bb;
                 return super.h(0);
               } else {
-                ((fe) this).field_mb.field_K = 256 + -((((fe) this).field_fb << 8) / ((fe) this).field_cb);
+                ((fe) this).field_nb = null;
+                ((fe) this).field_mb.field_K = 256;
                 return super.h(0);
               }
             } else {
-              if (((fe) this).field_nb == gq.field_Xb) {
-                int fieldTemp$6 = ((fe) this).field_fb + 1;
-                ((fe) this).field_fb = ((fe) this).field_fb + 1;
-                if (((fe) this).field_bb != fieldTemp$6) {
-                  ((fe) this).field_mb.field_K = (((fe) this).field_fb << 8) / ((fe) this).field_bb;
-                  return super.h(0);
-                } else {
-                  ((fe) this).field_nb = null;
-                  ((fe) this).field_mb.field_K = 256;
-                  return super.h(0);
-                }
-              } else {
-                return super.h(0);
-              }
+              return super.h(0);
             }
-          } else {
-            return super.h(0);
           }
         } else {
-          var4 = null;
-          boolean discarded$7 = ((fe) this).a(-125, (byte) 123, (oc) null, 'ﾈ');
-          if (((fe) this).field_nb != null) {
-            if (((fe) this).field_nb == bh.field_qb) {
-              int fieldTemp$8 = ((fe) this).field_fb + 1;
-              ((fe) this).field_fb = ((fe) this).field_fb + 1;
-              if (fieldTemp$8 == ((fe) this).field_cb) {
-                ((fe) this).field_nb = dm.field_e;
-                ((fe) this).a((byte) -116, ((fe) this).field_lb, ((fe) this).field_eb.field_s + (((fe) this).field_db + 12), 12 + ((fe) this).field_eb.field_t);
-                ((fe) this).field_mb.field_K = 0;
-                ((fe) this).field_fb = 0;
-                return super.h(0);
-              } else {
-                ((fe) this).field_mb.field_K = 256 + -((((fe) this).field_fb << 8) / ((fe) this).field_cb);
-                return super.h(0);
-              }
-            } else {
-              if (((fe) this).field_nb == gq.field_Xb) {
-                int fieldTemp$9 = ((fe) this).field_fb + 1;
-                ((fe) this).field_fb = ((fe) this).field_fb + 1;
-                if (((fe) this).field_bb != fieldTemp$9) {
-                  ((fe) this).field_mb.field_K = (((fe) this).field_fb << 8) / ((fe) this).field_bb;
-                  return super.h(0);
-                } else {
-                  ((fe) this).field_nb = null;
-                  ((fe) this).field_mb.field_K = 256;
-                  return super.h(0);
-                }
-              } else {
-                return super.h(0);
-              }
-            }
-          } else {
-            return super.h(0);
-          }
+          return super.h(0);
         }
     }
 
@@ -200,13 +161,10 @@ abstract class fe extends bj {
             ((fe) this).field_mb = new sk(param1);
         }
         ((fe) this).a((oc) (Object) ((fe) this).field_mb, true);
-        if (param0 != 56) {
-            return;
-        }
         try {
             ((fe) this).field_eb = null;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "fe.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "fe.F(" + 56 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -248,7 +206,7 @@ abstract class fe extends bj {
         String stackOut_13_2 = null;
         try {
           L0: {
-            if (!super.a(param0, param1, param2, param3)) {
+            if (!super.a(param0, (byte) 110, param2, param3)) {
               if (null != ((fe) this).field_mb) {
                 L1: {
                   if (98 == param0) {
@@ -283,7 +241,7 @@ abstract class fe extends bj {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("fe.T(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("fe.T(").append(param0).append(44).append(110).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -311,7 +269,7 @@ abstract class fe extends bj {
         return stackIn_11_0 != 0;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_ib = null;
         field_hb = null;
         field_jb = null;

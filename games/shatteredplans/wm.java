@@ -11,9 +11,9 @@ final class wm {
 
     final static bi a(int param0, int param1) {
         bi var2 = new bi(dc.field_F.field_z, dc.field_F.field_w);
-        ra.a(param1 ^ -110);
+        ra.a(-110);
         var2.e();
-        dc.field_F.b(0, 0, param0 < param1 ? 2105376 : param0);
+        dc.field_F.b(0, 0, param0 < 0 ? 2105376 : param0);
         cg.i(0);
         return var2;
     }
@@ -25,7 +25,7 @@ final class wm {
         field_a = null;
     }
 
-    final static int a(CharSequence param0, int param1, byte param2) {
+    final static int a(CharSequence param0) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -47,7 +47,8 @@ final class wm {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = fc.a(param1, param0, (byte) 124, true);
+            int discarded$2 = 1;
+            stackOut_0_0 = fc.a(16, param0, (byte) 124);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -79,13 +80,14 @@ final class wm {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 11 + 41);
+          throw r.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 16 + 44 + 11 + 41);
         }
         return stackIn_1_0;
     }
 
-    final static void a(int param0) {
-        nj.b(-120);
+    final static void a() {
+        int discarded$0 = -120;
+        nj.b();
     }
 
     final static double a(int param0, byte param1, int param2) {

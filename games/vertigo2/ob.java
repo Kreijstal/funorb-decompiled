@@ -22,7 +22,8 @@ final class ob extends cj implements ih, ij {
     private final void a(int param0) {
         L0: {
           L1: {
-            if (hi.c((byte) 6)) {
+            int discarded$8 = 6;
+            if (hi.c()) {
               break L1;
             } else {
               if (((ob) this).field_H.field_w.length() <= 0) {
@@ -36,7 +37,8 @@ final class ob extends cj implements ih, ij {
               }
             }
           }
-          la.a(((ob) this).field_H.field_w, ((ob) this).field_O.field_w, 26806);
+          int discarded$9 = 26806;
+          la.a(((ob) this).field_H.field_w, ((ob) this).field_O.field_w);
           break L0;
         }
         L2: {
@@ -250,7 +252,7 @@ final class ob extends cj implements ih, ij {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_M = null;
         field_Q = null;
         field_I = null;
@@ -796,14 +798,17 @@ final class ob extends cj implements ih, ij {
                 if (param1 != ((ob) this).field_K) {
                   if (((ob) this).field_G == param1) {
                     if (((ob) this).field_N) {
-                      rk.h(-128);
+                      int discarded$385 = -128;
+                      rk.h();
                       break L1;
                     } else {
                       if (((ob) this).field_R) {
-                        sg.b((byte) 81);
+                        int discarded$386 = 81;
+                        sg.b();
                         break L1;
                       } else {
-                        oq.a(true);
+                        int discarded$387 = 1;
+                        oq.a();
                         break L1;
                       }
                     }
@@ -811,7 +816,8 @@ final class ob extends cj implements ih, ij {
                     break L1;
                   }
                 } else {
-                  ff.b((byte) -104);
+                  int discarded$388 = -104;
+                  ff.b();
                   break L1;
                 }
               }

@@ -20,7 +20,7 @@ final class tt extends aba {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_h = null;
     }
 
@@ -30,9 +30,6 @@ final class tt extends aba {
         }
         if (!(ut.field_m.a(false))) {
             return ut.field_m.b(25477);
-        }
-        if (param0 != 21240) {
-            return null;
         }
         if (!(kq.field_j != dka.field_G)) {
             return ut.field_m.b(25477);
@@ -184,7 +181,8 @@ final class tt extends aba {
         try {
           L0: {
             var5 = (CharSequence) (Object) param1;
-            var3 = hp.a(var5, 0);
+            int discarded$2 = 0;
+            var3 = hp.a(var5);
             if (var3 == null) {
               L1: {
                 if (param1.equals((Object) (Object) ((tt) this).field_g)) {

@@ -77,11 +77,8 @@ abstract class ej extends sg {
         ((ej) this).field_H = param1;
     }
 
-    public static void o(int param0) {
+    public static void o() {
         field_J = null;
-        if (param0 != -15640) {
-            field_J = null;
-        }
     }
 
     void a(int param0, int param1, int param2) {

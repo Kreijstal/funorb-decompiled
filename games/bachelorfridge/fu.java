@@ -16,7 +16,7 @@ final class fu extends at {
     private int field_n;
     private int field_j;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_s = null;
         field_l = null;
     }
@@ -28,17 +28,13 @@ final class fu extends at {
             for (var1_int = 0; var1_int < qs.field_n; var1_int++) {
                 kw.field_k[var1_int] = null;
             }
-            if (param0 != 13042) {
-                Object var3 = null;
-                fu.a((vr) null, false);
-            }
             qs.field_n = 0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "fu.B(" + param0 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "fu.B(" + 13042 + 41);
         }
     }
 
-    private final void e(byte param0) {
+    private final void e() {
     }
 
     final boolean c(byte param0) {
@@ -50,13 +46,14 @@ final class fu extends at {
         int fieldTemp$0 = ((fu) this).field_o + 1;
         ((fu) this).field_o = ((fu) this).field_o + 1;
         if (25.0 < (double)fieldTemp$0) {
-            this.e((byte) -77);
+            int discarded$1 = -77;
+            this.e();
             return true;
         }
         return false;
     }
 
-    final static void a(vr param0, boolean param1) {
+    final static void a(vr param0) {
         RuntimeException var2 = null;
         kv[] var2_array = null;
         int var3 = 0;
@@ -84,67 +81,81 @@ final class fu extends at {
           L0: {
             qs.field_l = new kv[14][50];
             wo.field_k = new kv[14][50];
-            kv[] dupTemp$16 = jfa.a(param0, 4, "left_eye");
-            pha.field_f = dupTemp$16;
-            qs.field_l[1] = dupTemp$16;
-            wo.field_k[1] = cl.a(pha.field_f, false);
-            kv[] dupTemp$17 = jfa.a(param0, 4, "hat");
-            ns.field_m = dupTemp$17;
-            qs.field_l[0] = dupTemp$17;
+            kv[] dupTemp$31 = jfa.a(param0, 4, "left_eye");
+            pha.field_f = dupTemp$31;
+            qs.field_l[1] = dupTemp$31;
+            int discarded$32 = 0;
+            wo.field_k[1] = cl.a(pha.field_f);
+            kv[] dupTemp$33 = jfa.a(param0, 4, "hat");
+            ns.field_m = dupTemp$33;
+            qs.field_l[0] = dupTemp$33;
             uba.a(0, qs.field_l[0]);
-            wo.field_k[0] = cl.a(ns.field_m, false);
-            kv[] dupTemp$18 = jfa.a(param0, 4, "right_eye");
-            pja.field_d = dupTemp$18;
-            qs.field_l[2] = dupTemp$18;
-            wo.field_k[2] = cl.a(pja.field_d, false);
-            kv[] dupTemp$19 = jfa.a(param0, 4, "head");
-            eo.field_k = dupTemp$19;
-            qs.field_l[8] = dupTemp$19;
-            wo.field_k[8] = cl.a(eo.field_k, false);
-            kv[] dupTemp$20 = jfa.a(param0, 4, "mouth");
-            mea.field_v = dupTemp$20;
-            qs.field_l[3] = dupTemp$20;
-            wo.field_k[3] = cl.a(mea.field_v, false);
-            kv[] dupTemp$21 = jfa.a(param0, 4, "left_hand");
-            fja.field_d = dupTemp$21;
-            qs.field_l[5] = dupTemp$21;
+            int discarded$34 = 0;
+            wo.field_k[0] = cl.a(ns.field_m);
+            kv[] dupTemp$35 = jfa.a(param0, 4, "right_eye");
+            pja.field_d = dupTemp$35;
+            qs.field_l[2] = dupTemp$35;
+            int discarded$36 = 0;
+            wo.field_k[2] = cl.a(pja.field_d);
+            kv[] dupTemp$37 = jfa.a(param0, 4, "head");
+            eo.field_k = dupTemp$37;
+            qs.field_l[8] = dupTemp$37;
+            int discarded$38 = 0;
+            wo.field_k[8] = cl.a(eo.field_k);
+            kv[] dupTemp$39 = jfa.a(param0, 4, "mouth");
+            mea.field_v = dupTemp$39;
+            qs.field_l[3] = dupTemp$39;
+            int discarded$40 = 0;
+            wo.field_k[3] = cl.a(mea.field_v);
+            kv[] dupTemp$41 = jfa.a(param0, 4, "left_hand");
+            fja.field_d = dupTemp$41;
+            qs.field_l[5] = dupTemp$41;
             uba.a(0, qs.field_l[5]);
-            wo.field_k[5] = cl.a(fja.field_d, false);
-            kv[] dupTemp$22 = jfa.a(param0, 4, "torso");
-            jm.field_f = dupTemp$22;
-            qs.field_l[9] = dupTemp$22;
-            wo.field_k[9] = cl.a(jm.field_f, false);
-            kv[] dupTemp$23 = jfa.a(param0, 4, "right_hand");
-            nf.field_P = dupTemp$23;
-            qs.field_l[4] = dupTemp$23;
+            int discarded$42 = 0;
+            wo.field_k[5] = cl.a(fja.field_d);
+            kv[] dupTemp$43 = jfa.a(param0, 4, "torso");
+            jm.field_f = dupTemp$43;
+            qs.field_l[9] = dupTemp$43;
+            int discarded$44 = 0;
+            wo.field_k[9] = cl.a(jm.field_f);
+            kv[] dupTemp$45 = jfa.a(param0, 4, "right_hand");
+            nf.field_P = dupTemp$45;
+            qs.field_l[4] = dupTemp$45;
             uba.a(0, qs.field_l[4]);
-            wo.field_k[4] = cl.a(nf.field_P, false);
-            kv[] dupTemp$24 = jfa.a(param0, 4, "left_foot");
-            bha.field_m = dupTemp$24;
-            qs.field_l[7] = dupTemp$24;
+            int discarded$46 = 0;
+            wo.field_k[4] = cl.a(nf.field_P);
+            kv[] dupTemp$47 = jfa.a(param0, 4, "left_foot");
+            bha.field_m = dupTemp$47;
+            qs.field_l[7] = dupTemp$47;
             uba.a(0, qs.field_l[7]);
-            wo.field_k[7] = cl.a(bha.field_m, false);
-            kv[] dupTemp$25 = jfa.a(param0, 4, "body");
-            tw.field_c = dupTemp$25;
-            qs.field_l[10] = dupTemp$25;
-            wo.field_k[10] = cl.a(tw.field_c, false);
-            kv[] dupTemp$26 = jfa.a(param0, 4, "right_foot");
-            bia.field_h = dupTemp$26;
-            qs.field_l[6] = dupTemp$26;
+            int discarded$48 = 0;
+            wo.field_k[7] = cl.a(bha.field_m);
+            kv[] dupTemp$49 = jfa.a(param0, 4, "body");
+            tw.field_c = dupTemp$49;
+            qs.field_l[10] = dupTemp$49;
+            int discarded$50 = 0;
+            wo.field_k[10] = cl.a(tw.field_c);
+            kv[] dupTemp$51 = jfa.a(param0, 4, "right_foot");
+            bia.field_h = dupTemp$51;
+            qs.field_l[6] = dupTemp$51;
             uba.a(0, qs.field_l[6]);
-            wo.field_k[6] = cl.a(bia.field_h, false);
-            kv[] dupTemp$27 = fw.a(8, (byte) -74);
-            qla.field_g = dupTemp$27;
-            qs.field_l[11] = dupTemp$27;
-            wo.field_k[11] = cl.a(qla.field_g, false);
-            kv[] dupTemp$28 = fw.a(9, (byte) -74);
-            aw.field_w = dupTemp$28;
-            qs.field_l[12] = dupTemp$28;
-            wo.field_k[12] = cl.a(aw.field_w, false);
-            kv[] dupTemp$29 = fw.a(10, (byte) -74);
-            ama.field_o = dupTemp$29;
-            qs.field_l[13] = dupTemp$29;
-            wo.field_k[13] = cl.a(ama.field_o, false);
+            int discarded$52 = 0;
+            wo.field_k[6] = cl.a(bia.field_h);
+            kv[] dupTemp$53 = fw.a(8, (byte) -74);
+            qla.field_g = dupTemp$53;
+            qs.field_l[11] = dupTemp$53;
+            int discarded$54 = 0;
+            wo.field_k[11] = cl.a(qla.field_g);
+            kv[] dupTemp$55 = fw.a(9, (byte) -74);
+            aw.field_w = dupTemp$55;
+            qs.field_l[12] = dupTemp$55;
+            int discarded$56 = 0;
+            wo.field_k[12] = cl.a(aw.field_w);
+            kv[] dupTemp$57 = fw.a(10, (byte) -74);
+            ama.field_o = dupTemp$57;
+            qs.field_l[13] = dupTemp$57;
+            int discarded$58 = 0;
+            wo.field_k[13] = cl.a(ama.field_o);
             lma.field_y = ch.a(param0, -1, "basic", "uparrow");
             gha.field_b = lma.field_y.c();
             gha.field_b.d();
@@ -165,7 +176,8 @@ final class fu extends at {
                 jt.field_g = wfa.a("lrg_button", param0, "basic", (byte) 126);
                 gj.field_F = wfa.a("med_button", param0, "basic", (byte) -68);
                 ana.field_r = wfa.a("small_button", param0, "basic", (byte) -17);
-                de.field_A = fh.a("frame_tape", param0, "basic", 7);
+                int discarded$59 = 7;
+                de.field_A = fh.a("frame_tape", param0, "basic");
                 bh.field_r = wfa.a("mag", param0, "basic", (byte) 62);
                 cba.field_a = wfa.a("bag", param0, "basic", (byte) -105);
                 gca.field_g = wfa.a("bag_full", param0, "basic", (byte) 106);
@@ -173,7 +185,7 @@ final class fu extends at {
                 ni.field_j = hca.a("basic", param0, -42, "sound_bar_full");
                 qw.field_c = wfa.a("sound_button", param0, "basic", (byte) 123);
                 wt.field_q = wfa.a("options_slime_a", param0, "basic", (byte) 57);
-                kv[] discarded$30 = pi.a(param0, -8845, "basic", "frank");
+                kv[] discarded$60 = pi.a(param0, -8845, "basic", "frank");
                 sia.field_j = wfa.a("tutorial_arrow_black", param0, "basic", (byte) -96);
                 et.field_p = wfa.a("tutorial_arrow_green", param0, "basic", (byte) 59);
                 qt.field_m = hca.a("basic", param0, -80, "close_cross");
@@ -183,7 +195,7 @@ final class fu extends at {
                 break L0;
               } else {
                 var4 = var6[var3];
-                kv discarded$31 = lp.a((byte) -62, var4);
+                kv discarded$61 = lp.a((byte) -62, var4);
                 var3++;
                 continue L1;
               }

@@ -9,7 +9,7 @@ final class ve {
     int field_d;
     static String field_c;
 
-    final static boolean a(boolean param0) {
+    final static boolean a() {
         return ed.c(true) || pb.field_G <= 0;
     }
 
@@ -17,10 +17,6 @@ final class ve {
         ((ve) this).field_d = param1;
         ((ve) this).field_f = param3;
         ((ve) this).field_b = param0;
-        if (param2 >= 72) {
-            return;
-        }
-        field_e = null;
     }
 
     final void b(boolean param0) {
@@ -32,14 +28,16 @@ final class ve {
         if (param0) {
           L0: while (true) {
             if (((Math.abs(((ve) this).field_d) | Math.abs(((ve) this).field_f) | Math.abs(((ve) this).field_b)) & -65536) == 0) {
-              var2 = this.c(false) >> 1;
+              int discarded$2 = 0;
+              var2 = this.c() >> 1;
               var3 = 15;
               L1: while (true) {
                 if (65536 > var2) {
                   ((ve) this).field_d = (((ve) this).field_d << var3) / var2;
                   ((ve) this).field_f = (((ve) this).field_f << var3) / var2;
                   ((ve) this).field_b = (((ve) this).field_b << var3) / var2;
-                  var4 = this.c(false);
+                  int discarded$3 = 0;
+                  var4 = this.c();
                   if (var4 >= 64512) {
                     if (66560 < var4) {
                       throw new RuntimeException();
@@ -77,7 +75,7 @@ final class ve {
         field_c = null;
     }
 
-    final static String a(int param0, long param1, int param2, int param3, boolean param4) {
+    final static String a(int param0, long param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -115,67 +113,47 @@ final class ve {
             break L2;
           }
         }
-        L3: {
-          var9 = new StringBuilder(26);
-          if (param0 > 0) {
+        var9 = new StringBuilder(26);
+        var10 = 0;
+        L3: while (true) {
+          if (var10 >= 1) {
+            StringBuilder discarded$57 = var9.append(var6);
             var10 = 0;
             L4: while (true) {
-              if (~param0 >= ~var10) {
-                StringBuilder discarded$6 = var9.append(var6);
-                break L3;
-              } else {
-                var11 = (int)param1;
-                param1 = param1 / 10L;
-                StringBuilder discarded$7 = var9.append((char)(-(10 * (int)param1) + (var11 + 48)));
+              var11 = (int)param1;
+              param1 = param1 / 10L;
+              StringBuilder discarded$58 = var9.append((char)(48 - (-var11 - -(10 * (int)param1))));
+              if (param1 != 0L) {
                 var10++;
-                continue L4;
+                if (0 != var10 % 3) {
+                  continue L4;
+                } else {
+                  StringBuilder discarded$59 = var9.append(var7);
+                  continue L4;
+                }
+              } else {
+                L5: {
+                  if (var8 != 0) {
+                    StringBuilder discarded$60 = var9.append(45);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                return var9.reverse().toString();
               }
             }
           } else {
-            break L3;
-          }
-        }
-        var10 = 0;
-        L5: while (true) {
-          var11 = (int)param1;
-          param1 = param1 / 10L;
-          StringBuilder discarded$8 = var9.append((char)(48 - (-var11 - -(10 * (int)param1))));
-          if (param1 != 0L) {
+            var11 = (int)param1;
+            param1 = param1 / 10L;
+            StringBuilder discarded$61 = var9.append((char)(-(10 * (int)param1) + (var11 + 48)));
             var10++;
-            if (0 != var10 % 3) {
-              continue L5;
-            } else {
-              StringBuilder discarded$9 = var9.append(var7);
-              continue L5;
-            }
-          } else {
-            if (param2 == -17311) {
-              L6: {
-                if (var8 != 0) {
-                  StringBuilder discarded$10 = var9.append(45);
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              return var9.reverse().toString();
-            } else {
-              L7: {
-                field_a = true;
-                if (var8 != 0) {
-                  StringBuilder discarded$11 = var9.append(45);
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              return var9.reverse().toString();
-            }
+            continue L3;
           }
         }
     }
 
-    private final int c(boolean param0) {
+    private final int c() {
         int var2 = 0;
         var2 = (((ve) this).field_b >> 2) * (((ve) this).field_b >> 2) + (((ve) this).field_f >> 2) * (((ve) this).field_f >> 2) + (((ve) this).field_d >> 2) * (((ve) this).field_d >> 2);
         if (var2 < 0) {

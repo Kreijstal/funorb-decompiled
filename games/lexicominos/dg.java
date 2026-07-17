@@ -5,9 +5,6 @@ import java.io.*;
 
 final class dg {
     final static String a(boolean param0) {
-        if (param0) {
-            String discarded$0 = dg.a(false);
-        }
         if (bk.field_c == ca.field_i) {
             return ce.field_d;
         }
@@ -56,7 +53,7 @@ final class dg {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var3 = 0;
         int var4 = Lexicominos.field_L ? 1 : 0;
         db var1 = new db(540, 140);
@@ -64,7 +61,8 @@ final class dg {
         k.b();
         lf.a();
         mc.field_k = 0;
-        rg.b(0);
+        int discarded$0 = 0;
+        rg.b();
         db var2 = var1.c();
         for (var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);

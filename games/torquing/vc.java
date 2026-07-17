@@ -9,7 +9,7 @@ abstract class vc {
 
     abstract int b(int param0);
 
-    final static void a(t param0, boolean param1) {
+    final static void a(t param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -65,15 +65,9 @@ abstract class vc {
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_43_0 = 0;
-        int stackIn_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackOut_35_0 = 0;
+        int stackOut_34_0 = 0;
         if (!param0) {
           if (ji.field_a[param1] > ji.field_a[param3]) {
             return true;
@@ -86,37 +80,22 @@ abstract class vc {
                   if (var5 > var4) {
                     return true;
                   } else {
-                    if (var4 <= var5) {
-                      if (param2 == 0) {
-                        L0: {
-                          if (param3 >= param1) {
-                            stackOut_46_0 = 0;
-                            stackIn_47_0 = stackOut_46_0;
-                            break L0;
-                          } else {
-                            stackOut_45_0 = 1;
-                            stackIn_47_0 = stackOut_45_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_47_0 != 0;
-                      } else {
-                        L1: {
-                          field_b = null;
-                          if (param3 >= param1) {
-                            stackOut_42_0 = 0;
-                            stackIn_43_0 = stackOut_42_0;
-                            break L1;
-                          } else {
-                            stackOut_41_0 = 1;
-                            stackIn_43_0 = stackOut_41_0;
-                            break L1;
-                          }
-                        }
-                        return stackIn_43_0 != 0;
-                      }
-                    } else {
+                    if (var4 > var5) {
                       return false;
+                    } else {
+                      L0: {
+                        field_b = null;
+                        if (param3 >= param1) {
+                          stackOut_35_0 = 0;
+                          stackIn_36_0 = stackOut_35_0;
+                          break L0;
+                        } else {
+                          stackOut_34_0 = 1;
+                          stackIn_36_0 = stackOut_34_0;
+                          break L0;
+                        }
+                      }
+                      return stackIn_36_0 != 0;
                     }
                   }
                 } else {
@@ -142,26 +121,11 @@ abstract class vc {
                     return true;
                   } else {
                     if (var4 <= var5) {
-                      if (param2 != 0) {
-                        field_b = null;
-                        if (param3 >= param1) {
-                          return false;
-                        } else {
-                          return true;
-                        }
+                      field_b = null;
+                      if (param3 >= param1) {
+                        return false;
                       } else {
-                        L2: {
-                          if (param3 >= param1) {
-                            stackOut_19_0 = 0;
-                            stackIn_20_0 = stackOut_19_0;
-                            break L2;
-                          } else {
-                            stackOut_18_0 = 1;
-                            stackIn_20_0 = stackOut_18_0;
-                            break L2;
-                          }
-                        }
-                        return stackIn_20_0 != 0;
+                        return true;
                       }
                     } else {
                       return false;
@@ -180,13 +144,13 @@ abstract class vc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
-    final static k[] c(int param0) {
+    final static k[] c() {
         return new k[]{fh.field_t, np.field_k, cc.field_a, jp.field_p, eo.field_b, mc.field_k, gp.field_L, lb.field_z, da.field_d, qk.field_r, ag.field_a, aq.field_a, ip.field_a, qd.field_f};
     }
 

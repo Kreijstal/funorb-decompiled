@@ -11,7 +11,7 @@ final class sk {
     private sb field_f;
     private java.math.BigInteger field_g;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_d = null;
     }
 

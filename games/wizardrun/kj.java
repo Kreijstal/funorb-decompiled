@@ -9,9 +9,6 @@ final class kj {
     static int field_a;
 
     final static void a(int param0, int param1, int param2) {
-        if (param0 != 1048576) {
-            return;
-        }
         id.field_c = param2;
         ii.field_a = param1;
     }
@@ -76,7 +73,7 @@ final class kj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_e = null;

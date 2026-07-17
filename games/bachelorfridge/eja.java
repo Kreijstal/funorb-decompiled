@@ -12,7 +12,8 @@ final class eja extends ana {
         ((eja) this).field_l = ((eja) this).field_l - 1;
         if (!(0 > fieldTemp$0)) {
             if (!(((eja) this).field_l != 25)) {
-                this.e((byte) 94);
+                int discarded$1 = 94;
+                this.e();
             }
             if (((eja) this).field_l != 45) {
                 return false;
@@ -28,7 +29,7 @@ final class eja extends ana {
     private final void d(int param0) {
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         aga var2 = null;
         pp var3 = null;
         int var4 = 0;
@@ -85,30 +86,22 @@ final class eja extends ana {
         int[] var31 = null;
         int[] var32 = null;
         int[] var35 = null;
-        int stackIn_22_0 = 0;
+        int stackIn_20_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_18_0 = 0;
         var25 = BachelorFridge.field_y;
         try {
           L0: {
             L1: {
-              if (param0 == -60) {
-                break L1;
-              } else {
-                field_w = null;
-                break L1;
-              }
-            }
-            L2: {
               gp.a(true, param1);
               var7_int = 0;
               var8 = -param2 + param1;
               if (var8 < 0) {
                 var8 = 0;
-                break L2;
+                break L1;
               } else {
-                break L2;
+                break L1;
               }
             }
             var9 = param1;
@@ -119,33 +112,33 @@ final class eja extends ana {
             var14 = -1;
             var35 = tj.field_b[param3];
             var16 = param6 + -var8;
-            hba.a(param4, param6 - param1, var35, param0 + 67, var16);
+            hba.a(param4, param6 - param1, var35, 7, var16);
             var17 = param6 - -var8;
             hba.a(param5, var16, var35, 7, var17);
-            hba.a(param4, var17, var35, param0 ^ -61, param1 + param6);
-            L3: while (true) {
+            hba.a(param4, var17, var35, 7, param1 + param6);
+            L2: while (true) {
               if (var9 <= var7_int) {
                 break L0;
               } else {
-                L4: {
+                L3: {
                   var13 += 2;
                   var14 += 2;
                   var12 = var12 + var14;
                   var10 = var10 + var13;
                   if (0 > var12) {
-                    break L4;
+                    break L3;
                   } else {
                     if (var11 >= 1) {
                       it.field_l[var11] = var7_int;
                       var11--;
                       var12 = var12 - (var11 << 1);
-                      break L4;
+                      break L3;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
-                L5: {
+                L4: {
                   var7_int++;
                   if (var10 >= 0) {
                     var9--;
@@ -158,13 +151,13 @@ final class eja extends ana {
                       var22 = -var7_int + param6;
                       var23 = var20 + param6;
                       var24 = -var20 + param6;
-                      hba.a(param4, var22, var29, param0 ^ -61, var24);
+                      hba.a(param4, var22, var29, 7, var24);
                       hba.a(param5, var24, var29, 7, var23);
                       hba.a(param4, var23, var29, 7, var21);
                       hba.a(param4, var22, var30, 7, var24);
                       hba.a(param5, var24, var30, 7, var23);
                       hba.a(param4, var23, var30, 7, var21);
-                      break L5;
+                      break L4;
                     } else {
                       var27 = tj.field_b[param3 + var9];
                       var28 = tj.field_b[-var9 + param3];
@@ -172,10 +165,10 @@ final class eja extends ana {
                       var21 = param6 - var7_int;
                       hba.a(param4, var21, var27, 7, var20);
                       hba.a(param4, var21, var28, 7, var20);
-                      break L5;
+                      break L4;
                     }
                   } else {
-                    break L5;
+                    break L4;
                   }
                 }
                 var31 = tj.field_b[var7_int + param3];
@@ -183,31 +176,31 @@ final class eja extends ana {
                 var20 = param6 + var9;
                 var21 = -var9 + param6;
                 if (var7_int < var8) {
-                  L6: {
+                  L5: {
                     if (var11 < var7_int) {
-                      stackOut_21_0 = it.field_l[var7_int];
-                      stackIn_22_0 = stackOut_21_0;
-                      break L6;
+                      stackOut_19_0 = it.field_l[var7_int];
+                      stackIn_20_0 = stackOut_19_0;
+                      break L5;
                     } else {
-                      stackOut_20_0 = var11;
-                      stackIn_22_0 = stackOut_20_0;
-                      break L6;
+                      stackOut_18_0 = var11;
+                      stackIn_20_0 = stackOut_18_0;
+                      break L5;
                     }
                   }
-                  var22 = stackIn_22_0;
+                  var22 = stackIn_20_0;
                   var23 = var22 + param6;
                   var24 = -var22 + param6;
-                  hba.a(param4, var21, var31, param0 + 67, var24);
-                  hba.a(param5, var24, var31, param0 + 67, var23);
+                  hba.a(param4, var21, var31, 7, var24);
+                  hba.a(param5, var24, var31, 7, var23);
                   hba.a(param4, var23, var31, 7, var20);
-                  hba.a(param4, var21, var32, param0 + 67, var24);
+                  hba.a(param4, var21, var32, 7, var24);
                   hba.a(param5, var24, var32, 7, var23);
                   hba.a(param4, var23, var32, 7, var20);
-                  continue L3;
+                  continue L2;
                 } else {
-                  hba.a(param4, var21, var31, param0 ^ -61, var20);
+                  hba.a(param4, var21, var31, 7, var20);
                   hba.a(param4, var21, var32, 7, var20);
-                  continue L3;
+                  continue L2;
                 }
               }
             }
@@ -215,7 +208,7 @@ final class eja extends ana {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var7, "eja.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw pe.a((Throwable) (Object) var7, "eja.C(" + -60 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

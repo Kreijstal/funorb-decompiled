@@ -558,7 +558,7 @@ class ph extends ag {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_F = null;
         field_z = null;
         field_B = null;

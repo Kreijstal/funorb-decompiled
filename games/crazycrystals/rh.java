@@ -21,7 +21,7 @@ final class rh {
         return ((rh) this).field_c;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -39,13 +39,13 @@ final class rh {
         try {
             param1.removeKeyListener((java.awt.event.KeyListener) (Object) uf.field_c);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) uf.field_c);
-            bo.field_n = param0;
+            bo.field_n = -1;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "rh.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "rh.E(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         RuntimeException var1 = null;
         dl var1_ref = null;
         Object var2 = null;
@@ -149,17 +149,15 @@ final class rh {
         }
     }
 
-    final static rh b(int param0) {
-        if (param0 != 365) {
-            field_e = null;
-        }
+    final static rh b() {
         String var1 = vg.b((byte) -29);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        return new rh(vg.b((byte) -29), lk.b(param0 + -359));
+        int discarded$0 = 6;
+        return new rh(vg.b((byte) -29), lk.b());
     }
 
     rh(String param0, boolean param1) {

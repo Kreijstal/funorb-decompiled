@@ -6,19 +6,16 @@ final class jc {
     static int[] field_a;
     static char field_c;
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         int var1 = 1;
         return !di.field_g.b(0) ? true : false;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
-        if (param0 != -1) {
-            field_b = true;
-        }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(bk.field_r == null)) {
             bk.field_r.a((byte) -122);
         }

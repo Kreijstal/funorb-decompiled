@@ -45,7 +45,7 @@ final class bj {
                   break L3;
                 } else {
                   if (cd.field_a) {
-                    boolean discarded$1 = bk.field_e.a(oj.field_a.field_eb, param0, oj.field_a.field_z, false);
+                    boolean discarded$3 = bk.field_e.a(oj.field_a.field_eb, param0, oj.field_a.field_z, false);
                     break L3;
                   } else {
                     bk.field_e = null;
@@ -60,12 +60,13 @@ final class bj {
                     if (nc.field_e.field_F == 0) {
                       break L5;
                     } else {
-                      mm.field_y = new om(nc.field_e.field_eb, nc.field_e.field_z, nc.field_e.field_Hb, nc.field_e.field_R, param1, sa.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, ek.field_n, (String) null, 0L);
+                      mm.field_y = new om(nc.field_e.field_eb, nc.field_e.field_z, nc.field_e.field_Hb, nc.field_e.field_R, 0, sa.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, ek.field_n, (String) null, 0L);
                       break L5;
                     }
                   }
                   L6: {
-                    var9 = r.a(fn.field_Q, param3, qe.field_d, 0);
+                    int discarded$4 = 0;
+                    var9 = r.a(fn.field_Q, param3, qe.field_d);
                     if (var9 != null) {
                       n.a((byte) 111, var9);
                       break L6;
@@ -73,20 +74,17 @@ final class bj {
                       break L6;
                     }
                   }
-                  if (!param2) {
-                    L7: {
-                      var8 = fh.b((byte) -62);
-                      if (var8 != null) {
-                        re.field_P = var8;
-                        break L7;
-                      } else {
-                        break L7;
-                      }
+                  L7: {
+                    int discarded$5 = -62;
+                    var8 = fh.b();
+                    if (var8 != null) {
+                      re.field_P = var8;
+                      break L7;
+                    } else {
+                      break L7;
                     }
-                    break L0;
-                  } else {
-                    return;
                   }
+                  break L0;
                 } else {
                   L8: {
                     var5 = nj.field_f[var4_int];
@@ -105,7 +103,7 @@ final class bj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var4, "bj.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw oi.a((Throwable) (Object) var4, "bj.B(" + param0 + 44 + 0 + 44 + 0 + 44 + param3 + 41);
         }
     }
 
@@ -114,7 +112,7 @@ final class bj {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         int var2 = 0;
         L0: {
@@ -165,24 +163,21 @@ final class bj {
 
     final static void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, int param11, boolean param12, boolean param13) {
         re.field_P = null;
-        oc.b((byte) 90);
-        param1 = qh.a(param2, param6, (byte) -30, param9, param8, param1, param10);
-        li.a(-70, param5, param0, param4, param3, param7, param13, param12, param6, param1);
-        wk.a(param4, param12, (byte) -61);
-        if (param11 != -869) {
-            field_b = -52;
-        }
-        bj.a(param1, param10, false, param4);
+        int discarded$0 = 90;
+        oc.b();
+        int discarded$1 = 0;
+        param1 = qh.a(15, 11, (byte) -30, 14, 13, param1);
+        li.a(-70, 16777215, 16777215, param4, false, param7, param13, param12, 11, param1);
+        int discarded$2 = -61;
+        wk.a(param4, param12);
+        bj.a(param1, 0, false, param4);
     }
 
     final static void a(int param0, fh param1) {
-        if (param0 != 5) {
-            return;
-        }
         try {
             ck.field_Z = param1;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "bj.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "bj.F(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -192,9 +187,10 @@ final class bj {
         int var4 = 0;
         db[] var5 = null;
         var4 = TetraLink.field_J;
-        var5 = cc.b(104);
+        int discarded$2 = 104;
+        var5 = cc.b();
         var2 = var5;
-        var3 = param0;
+        var3 = 0;
         L0: while (true) {
           if (var5.length > var3) {
             if (var5[var3].field_d != param1) {

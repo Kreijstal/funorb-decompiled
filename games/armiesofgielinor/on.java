@@ -65,63 +65,55 @@ final class on extends tc {
             var4_int = 0;
             L1: while (true) {
               if (~var4_int <= ~(param0.field_db * param0.field_v / 3)) {
-                L2: {
-                  if (!param2) {
-                    break L2;
-                  } else {
-                    field_o = null;
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = 1 + ns.a(false, param0.field_v - 2, param3);
-                  var6 = ns.a(param2, param0.field_db + -2, param3) + 1;
+                  var6 = ns.a(false, param0.field_db + -2, param3) + 1;
                   var7 = var6 * param0.field_v + var5;
                   if (param0.field_Eb[var7].field_h != 0) {
-                    break L3;
+                    break L2;
                   } else {
                     if (null != param0.field_Eb[var7].field_c) {
-                      break L3;
+                      break L2;
                     } else {
-                      L4: {
+                      L3: {
                         if (~param0.field_Eb[1 + var7].field_h == ~param1) {
-                          break L4;
+                          break L3;
                         } else {
                           if (~param1 == ~param0.field_Eb[-1 + var7].field_h) {
-                            break L4;
+                            break L3;
                           } else {
                             if (param0.field_Eb[param0.field_v + var7].field_h == param1) {
-                              break L4;
+                              break L3;
                             } else {
                               if (~param1 == ~param0.field_Eb[var7 - param0.field_v].field_h) {
-                                break L4;
+                                break L3;
                               } else {
                                 var8 = ns.a(false, 100, param3);
                                 if (var8 < 20) {
                                   param0.field_Eb[var7].field_h = 3;
-                                  break L3;
+                                  break L2;
                                 } else {
                                   if (40 <= var8) {
                                     if (50 > var8) {
                                       param0.field_Eb[var7].field_h = 2;
-                                      break L3;
+                                      break L2;
                                     } else {
                                       if (70 <= var8) {
-                                        break L3;
+                                        break L2;
                                       } else {
                                         if (param1 > -1) {
                                           param0.field_Eb[var7].field_h = param1;
-                                          break L3;
+                                          break L2;
                                         } else {
-                                          break L3;
+                                          break L2;
                                         }
                                       }
                                     }
                                   } else {
                                     param0.field_Eb[var7].field_h = 5;
-                                    break L3;
+                                    break L2;
                                   }
                                 }
                               }
@@ -130,35 +122,35 @@ final class on extends tc {
                         }
                       }
                       if (ns.a(false, 100, param3) >= 40) {
-                        var8 = ns.a(param2, 100, param3);
+                        var8 = ns.a(false, 100, param3);
                         if (var8 >= 20) {
                           if (var8 < 40) {
                             param0.field_Eb[var7].field_h = 5;
-                            break L3;
+                            break L2;
                           } else {
                             if (var8 >= 50) {
                               if (var8 >= 70) {
-                                break L3;
+                                break L2;
                               } else {
                                 if (param1 <= -1) {
-                                  break L3;
+                                  break L2;
                                 } else {
                                   param0.field_Eb[var7].field_h = param1;
-                                  break L3;
+                                  break L2;
                                 }
                               }
                             } else {
                               param0.field_Eb[var7].field_h = 2;
-                              break L3;
+                              break L2;
                             }
                           }
                         } else {
                           param0.field_Eb[var7].field_h = 3;
-                          break L3;
+                          break L2;
                         }
                       } else {
                         param0.field_Eb[var7].field_h = param1;
-                        break L3;
+                        break L2;
                       }
                     }
                   }
@@ -170,7 +162,7 @@ final class on extends tc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var4 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var4;
             stackOut_34_1 = new StringBuilder().append("on.A(");
@@ -185,7 +177,7 @@ final class on extends tc {
               stackIn_37_0 = stackOut_36_0;
               stackIn_37_1 = stackOut_36_1;
               stackIn_37_2 = stackOut_36_2;
-              break L5;
+              break L4;
             } else {
               stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
               stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
@@ -193,12 +185,12 @@ final class on extends tc {
               stackIn_37_0 = stackOut_35_0;
               stackIn_37_1 = stackOut_35_1;
               stackIn_37_2 = stackOut_35_2;
-              break L5;
+              break L4;
             }
           }
-          L6: {
+          L5: {
             stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-            stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(44).append(param1).append(44).append(0).append(44);
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
@@ -210,7 +202,7 @@ final class on extends tc {
               stackIn_40_0 = stackOut_39_0;
               stackIn_40_1 = stackOut_39_1;
               stackIn_40_2 = stackOut_39_2;
-              break L6;
+              break L5;
             } else {
               stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
               stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
@@ -218,7 +210,7 @@ final class on extends tc {
               stackIn_40_0 = stackOut_38_0;
               stackIn_40_1 = stackOut_38_1;
               stackIn_40_2 = stackOut_38_2;
-              break L6;
+              break L5;
             }
           }
           throw ig.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 41);

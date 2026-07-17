@@ -381,7 +381,7 @@ final class jba implements wwa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_b = null;
     }

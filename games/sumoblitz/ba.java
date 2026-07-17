@@ -11,7 +11,8 @@ final class ba extends r implements e {
 
     protected final void finalize() {
         if (((ba) this).field_nativeid != 0L) {
-            pa.a((e) this, (byte) -37);
+            int discarded$0 = -37;
+            pa.a((e) this);
         }
     }
 }

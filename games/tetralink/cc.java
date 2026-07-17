@@ -16,8 +16,8 @@ final class cc implements kg {
     static String field_e;
 
     final static String a(CharSequence param0, byte param1) {
-        int var2_int = 0;
         RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         StringBuilder var5 = null;
@@ -85,7 +85,7 @@ final class cc implements kg {
                           if (param1 >= 94) {
                             break L5;
                           } else {
-                            int discarded$2 = cc.a(86, (byte) -28);
+                            int discarded$3 = cc.a(86, (byte) -28);
                             break L5;
                           }
                         }
@@ -100,9 +100,10 @@ final class cc implements kg {
                           if (!sj.a(3010, (char) var7)) {
                             break L6;
                           } else {
-                            var8 = kb.a((char) var7, -122);
+                            int discarded$4 = -122;
+                            var8 = kb.a((char) var7);
                             if (var8 != 0) {
-                              StringBuilder discarded$3 = var5.append(var8);
+                              StringBuilder discarded$5 = var5.append(var8);
                               break L6;
                             } else {
                               break L6;
@@ -158,7 +159,7 @@ final class cc implements kg {
         }
     }
 
-    final static short[] a(short[] param0, bc param1, int param2, int param3) {
+    final static short[] a(short[] param0, bc param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -203,7 +204,7 @@ final class cc implements kg {
         var8 = TetraLink.field_J;
         try {
           L0: {
-            var4_int = param1.e(param2, (byte) -112);
+            var4_int = param1.e(16, (byte) -112);
             if (0 != var4_int) {
               L1: {
                 L2: {
@@ -223,7 +224,7 @@ final class cc implements kg {
               L3: {
                 var5 = param1.e(4, (byte) -112);
                 var6 = (short)param1.e(16, (byte) -112);
-                if (param3 < var5) {
+                if (0 < var5) {
                   var7 = 0;
                   L4: while (true) {
                     if (var4_int <= var7) {
@@ -309,7 +310,7 @@ final class cc implements kg {
               break L7;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + param3 + 41);
+          throw oi.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 16 + 44 + 0 + 41);
         }
         return stackIn_16_0;
     }
@@ -331,9 +332,6 @@ final class cc implements kg {
         param1 = (param1 >>> 4) + param1 & 252645135;
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);
-        if (param0 != 71) {
-            return -19;
-        }
         return 255 & param1;
     }
 
@@ -457,11 +455,11 @@ final class cc implements kg {
         }
     }
 
-    final static db[] b(int param0) {
+    final static db[] b() {
         return new db[]{rj.field_f, qj.field_c, ej.field_r, ni.field_h, e.field_e, mk.field_c, ji.field_Qb, la.field_i, dj.field_g, io.field_d, hh.field_b, uk.field_t, je.field_d, wd.field_e};
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         int stackIn_3_0 = 0;
@@ -545,7 +543,7 @@ final class cc implements kg {
         return stackIn_9_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_j = null;
         field_e = null;
@@ -571,8 +569,9 @@ final class cc implements kg {
         if (ak.a(3058)) {
             param1 = false;
         }
-        on.a(param0, param1);
-        kk.g(-1);
+        on.a(true, param1);
+        int discarded$0 = -1;
+        kk.g();
     }
 
     final static int a(int param0, byte param1) {
@@ -588,7 +587,7 @@ final class cc implements kg {
         return param0 - -1;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

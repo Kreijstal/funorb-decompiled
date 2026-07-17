@@ -78,7 +78,6 @@ final class hi extends cj {
         super(param0, (cj) null);
         RuntimeException var7 = null;
         cj var9 = null;
-        cj var10 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -151,9 +150,9 @@ final class hi extends cj {
             ((hi) this).field_Hb = new cj(0L, param3);
             ((hi) this).field_Lb = new cj(0L, param3);
             var9 = ((hi) this).field_Hb;
-            var10 = var9;
+            var9 = var9;
             ((hi) this).field_Lb.field_ib = true;
-            var10.field_ib = true;
+            var9.field_ib = true;
             ((hi) this).field_Gb.a((byte) 50, ((hi) this).field_Hb);
             ((hi) this).field_Gb.a((byte) 50, ((hi) this).field_Lb);
             ((hi) this).field_Kb = new cj(0L, param4);
@@ -286,58 +285,66 @@ final class hi extends cj {
               break L0;
             }
           }
-          L1: {
-            if (!param0) {
-              break L1;
-            } else {
-              L2: {
-                if (0 <= var5) {
-                  break L2;
-                } else {
-                  var5 = 0;
-                  break L2;
-                }
-              }
-              if (var5 > param3 + -param2) {
-                var5 = param3 + -param2;
-                if (ZombieDawnMulti.field_E) {
-                  break L1;
-                } else {
-                  return var5;
-                }
+          if (!param0) {
+            L1: {
+              if (param3 - param2 >= var5) {
+                break L1;
               } else {
-                return var5;
+                var5 = -param2 + param3;
+                break L1;
               }
             }
-          }
-          L3: {
-            if (param3 - param2 >= var5) {
-              break L3;
+            if (0 <= var5) {
+              return var5;
             } else {
-              var5 = -param2 + param3;
-              break L3;
+              var5 = 0;
+              return var5;
             }
-          }
-          if (0 <= var5) {
-            return var5;
           } else {
-            var5 = 0;
-            return var5;
+            L2: {
+              if (0 <= var5) {
+                break L2;
+              } else {
+                var5 = 0;
+                break L2;
+              }
+            }
+            if (var5 <= param3 + -param2) {
+              return var5;
+            } else {
+              var5 = param3 + -param2;
+              return var5;
+            }
           }
         } else {
-          L4: {
+          L3: {
             hi.h(-114);
             var6 = -((hi) this).field_Kb.field_z + ((hi) this).field_Gb.field_z;
             if (var6 <= 0) {
-              break L4;
+              break L3;
             } else {
               var7 = ((hi) this).field_Kb.field_Q;
               var8 = -param2 + param3;
               var5 = (var7 * var8 + var6 / 2) / var6;
-              break L4;
+              break L3;
             }
           }
-          if (param0) {
+          if (!param0) {
+            L4: {
+              if (param3 - param2 >= var5) {
+                break L4;
+              } else {
+                var5 = -param2 + param3;
+                break L4;
+              }
+            }
+            if (0 <= var5) {
+              return var5;
+            } else {
+              var5 = 0;
+              return var5;
+            }
+          } else {
             L5: {
               if (0 <= var5) {
                 break L5;
@@ -346,42 +353,10 @@ final class hi extends cj {
                 break L5;
               }
             }
-            if (var5 > param3 + -param2) {
+            if (var5 <= param3 + -param2) {
+              return var5;
+            } else {
               var5 = param3 + -param2;
-              if (ZombieDawnMulti.field_E) {
-                L6: {
-                  if (param3 - param2 >= var5) {
-                    break L6;
-                  } else {
-                    var5 = -param2 + param3;
-                    break L6;
-                  }
-                }
-                if (0 <= var5) {
-                  return var5;
-                } else {
-                  var5 = 0;
-                  return var5;
-                }
-              } else {
-                return var5;
-              }
-            } else {
-              return var5;
-            }
-          } else {
-            L7: {
-              if (param3 - param2 >= var5) {
-                break L7;
-              } else {
-                var5 = -param2 + param3;
-                break L7;
-              }
-            }
-            if (0 <= var5) {
-              return var5;
-            } else {
-              var5 = 0;
               return var5;
             }
           }
@@ -608,46 +583,39 @@ final class hi extends cj {
         cj stackOut_8_2 = null;
         int stackOut_8_3 = 0;
         L0: {
-          L1: {
-            if (2 * ((hi) this).field_zb > ((hi) this).field_z) {
-              break L1;
-            } else {
-              var6 = ((hi) this).field_z - ((hi) this).field_zb;
-              var5 = ((hi) this).field_zb;
-              if (!ZombieDawnMulti.field_E) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
+          if (2 * ((hi) this).field_zb > ((hi) this).field_z) {
+            var6 = ((hi) this).field_z / 2;
+            var5 = ((hi) this).field_z / 2;
+            break L0;
+          } else {
+            var6 = ((hi) this).field_z - ((hi) this).field_zb;
+            var5 = ((hi) this).field_zb;
+            break L0;
           }
-          var6 = ((hi) this).field_z / 2;
-          var5 = ((hi) this).field_z / 2;
-          break L0;
         }
         var7 = -var5 + var6;
         var8 = var7;
         if (param0 > 0) {
-          L2: {
+          L1: {
             var8 = var8 * param3 / param0;
             if (((hi) this).field_zb <= var8) {
-              break L2;
+              break L1;
             } else {
               var8 = ((hi) this).field_zb;
-              break L2;
+              break L1;
             }
           }
           if (var8 > var7) {
-            L3: {
+            L2: {
               var8 = var7;
               var9 = -param3 + param0;
               var10 = var7 + -var8;
               var11 = 0;
               if (var9 <= 0) {
-                break L3;
+                break L2;
               } else {
                 var11 = (param1 * var10 - -(var9 / 2)) / var9;
-                break L3;
+                break L2;
               }
             }
             var12 = var8 / 2 + var11;
@@ -670,7 +638,7 @@ final class hi extends cj {
             var17.field_z = var12;
             var17.field_zb = ((hi) this).field_zb;
             if (param2 > 109) {
-              L4: {
+              L3: {
                 var17.field_x = 0;
                 var17.field_Q = 0;
                 var18 = ((hi) this).field_Lb;
@@ -701,7 +669,7 @@ final class hi extends cj {
                   stackIn_39_1 = stackOut_38_1;
                   stackIn_39_2 = stackOut_38_2;
                   stackIn_39_3 = stackOut_38_3;
-                  break L4;
+                  break L3;
                 } else {
                   stackOut_37_0 = (cj) (Object) stackIn_37_0;
                   stackOut_37_1 = (cj) (Object) stackIn_37_1;
@@ -711,7 +679,7 @@ final class hi extends cj {
                   stackIn_39_1 = stackOut_37_1;
                   stackIn_39_2 = stackOut_37_2;
                   stackIn_39_3 = stackOut_37_3;
-                  break L4;
+                  break L3;
                 }
               }
               stackIn_39_2.field_Z = stackIn_39_3 != 0;
@@ -719,7 +687,7 @@ final class hi extends cj {
               stackIn_39_0.field_Z = stackIn_39_3 != 0;
               return;
             } else {
-              L5: {
+              L4: {
                 hi.h(27);
                 var17.field_x = 0;
                 var17.field_Q = 0;
@@ -751,7 +719,7 @@ final class hi extends cj {
                   stackIn_35_1 = stackOut_34_1;
                   stackIn_35_2 = stackOut_34_2;
                   stackIn_35_3 = stackOut_34_3;
-                  break L5;
+                  break L4;
                 } else {
                   stackOut_33_0 = (cj) (Object) stackIn_33_0;
                   stackOut_33_1 = (cj) (Object) stackIn_33_1;
@@ -761,7 +729,7 @@ final class hi extends cj {
                   stackIn_35_1 = stackOut_33_1;
                   stackIn_35_2 = stackOut_33_2;
                   stackIn_35_3 = stackOut_33_3;
-                  break L5;
+                  break L4;
                 }
               }
               stackIn_35_2.field_Z = stackIn_35_3 != 0;
@@ -770,15 +738,15 @@ final class hi extends cj {
               return;
             }
           } else {
-            L6: {
+            L5: {
               var9 = -param3 + param0;
               var10 = var7 + -var8;
               var11 = 0;
               if (var9 <= 0) {
-                break L6;
+                break L5;
               } else {
                 var11 = (param1 * var10 - -(var9 / 2)) / var9;
-                break L6;
+                break L5;
               }
             }
             var12 = var8 / 2 + var11;
@@ -801,7 +769,7 @@ final class hi extends cj {
             var17.field_z = var12;
             var17.field_zb = ((hi) this).field_zb;
             if (param2 <= 109) {
-              L7: {
+              L6: {
                 hi.h(27);
                 var17.field_x = 0;
                 var17.field_Q = 0;
@@ -833,7 +801,7 @@ final class hi extends cj {
                   stackIn_28_1 = stackOut_27_1;
                   stackIn_28_2 = stackOut_27_2;
                   stackIn_28_3 = stackOut_27_3;
-                  break L7;
+                  break L6;
                 } else {
                   stackOut_26_0 = (cj) (Object) stackIn_26_0;
                   stackOut_26_1 = (cj) (Object) stackIn_26_1;
@@ -843,7 +811,7 @@ final class hi extends cj {
                   stackIn_28_1 = stackOut_26_1;
                   stackIn_28_2 = stackOut_26_2;
                   stackIn_28_3 = stackOut_26_3;
-                  break L7;
+                  break L6;
                 }
               }
               stackIn_28_2.field_Z = stackIn_28_3 != 0;
@@ -851,7 +819,7 @@ final class hi extends cj {
               stackIn_28_0.field_Z = stackIn_28_3 != 0;
               return;
             } else {
-              L8: {
+              L7: {
                 var17.field_x = 0;
                 var17.field_Q = 0;
                 var18 = ((hi) this).field_Lb;
@@ -882,7 +850,7 @@ final class hi extends cj {
                   stackIn_24_1 = stackOut_23_1;
                   stackIn_24_2 = stackOut_23_2;
                   stackIn_24_3 = stackOut_23_3;
-                  break L8;
+                  break L7;
                 } else {
                   stackOut_22_0 = (cj) (Object) stackIn_22_0;
                   stackOut_22_1 = (cj) (Object) stackIn_22_1;
@@ -892,7 +860,7 @@ final class hi extends cj {
                   stackIn_24_1 = stackOut_22_1;
                   stackIn_24_2 = stackOut_22_2;
                   stackIn_24_3 = stackOut_22_3;
-                  break L8;
+                  break L7;
                 }
               }
               stackIn_24_2.field_Z = stackIn_24_3 != 0;
@@ -902,15 +870,15 @@ final class hi extends cj {
             }
           }
         } else {
-          L9: {
+          L8: {
             var9 = -param3 + param0;
             var10 = var7 + -var8;
             var11 = 0;
             if (var9 <= 0) {
-              break L9;
+              break L8;
             } else {
               var11 = (param1 * var10 - -(var9 / 2)) / var9;
-              break L9;
+              break L8;
             }
           }
           var12 = var8 / 2 + var11;
@@ -933,7 +901,7 @@ final class hi extends cj {
           var17.field_z = var12;
           var17.field_zb = ((hi) this).field_zb;
           if (param2 > 109) {
-            L10: {
+            L9: {
               var17.field_x = 0;
               var17.field_Q = 0;
               var18 = ((hi) this).field_Lb;
@@ -964,7 +932,7 @@ final class hi extends cj {
                 stackIn_14_1 = stackOut_13_1;
                 stackIn_14_2 = stackOut_13_2;
                 stackIn_14_3 = stackOut_13_3;
-                break L10;
+                break L9;
               } else {
                 stackOut_12_0 = (cj) (Object) stackIn_12_0;
                 stackOut_12_1 = (cj) (Object) stackIn_12_1;
@@ -974,7 +942,7 @@ final class hi extends cj {
                 stackIn_14_1 = stackOut_12_1;
                 stackIn_14_2 = stackOut_12_2;
                 stackIn_14_3 = stackOut_12_3;
-                break L10;
+                break L9;
               }
             }
             stackIn_14_2.field_Z = stackIn_14_3 != 0;
@@ -982,7 +950,7 @@ final class hi extends cj {
             stackIn_14_0.field_Z = stackIn_14_3 != 0;
             return;
           } else {
-            L11: {
+            L10: {
               hi.h(27);
               var17.field_x = 0;
               var17.field_Q = 0;
@@ -1014,7 +982,7 @@ final class hi extends cj {
                 stackIn_10_1 = stackOut_9_1;
                 stackIn_10_2 = stackOut_9_2;
                 stackIn_10_3 = stackOut_9_3;
-                break L11;
+                break L10;
               } else {
                 stackOut_8_0 = (cj) (Object) stackIn_8_0;
                 stackOut_8_1 = (cj) (Object) stackIn_8_1;
@@ -1024,7 +992,7 @@ final class hi extends cj {
                 stackIn_10_1 = stackOut_8_1;
                 stackIn_10_2 = stackOut_8_2;
                 stackIn_10_3 = stackOut_8_3;
-                break L11;
+                break L10;
               }
             }
             stackIn_10_2.field_Z = stackIn_10_3 != 0;
@@ -1056,143 +1024,92 @@ final class hi extends cj {
         dm var1_ref = null;
         jh var1_ref2 = null;
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        jh stackIn_16_0 = null;
-        Object stackIn_24_0 = null;
         RuntimeException decompiledCaughtException = null;
-        jh stackOut_15_0 = null;
-        br stackOut_23_0 = null;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
             var1_ref = (dm) (Object) cg.field_i.c(param0 ^ 120);
             L1: while (true) {
-              L2: {
-                L3: {
-                  L4: {
-                    if (var1_ref == null) {
-                      break L4;
-                    } else {
-                      var4 = var1_ref.field_bc;
-                      var3 = 0;
-                      if (var2 != 0) {
-                        if (var3 == var4) {
-                          break L2;
+              if (var1_ref == null) {
+                var1_ref2 = (jh) (Object) tn.field_C.c(97);
+                L2: while (true) {
+                  if (var1_ref2 == null) {
+                    var1_ref = (dm) (Object) nh.field_g.c(65);
+                    if (param0 == 2) {
+                      L3: while (true) {
+                        if (var1_ref == null) {
+                          break L0;
                         } else {
-                          break L3;
+                          L4: {
+                            if (0 >= var1_ref.field_bc) {
+                              break L4;
+                            } else {
+                              var1_ref.field_bc = var1_ref.field_bc - 1;
+                              if (var1_ref.field_bc != 0) {
+                                break L4;
+                              } else {
+                                var1_ref.field_Fb = 0;
+                                if (!var1_ref.c((byte) 15)) {
+                                  break L4;
+                                } else {
+                                  var1_ref.a(true);
+                                  break L4;
+                                }
+                              }
+                            }
+                          }
+                          var1_ref = (dm) (Object) nh.field_g.b(6);
+                          continue L3;
                         }
-                      } else {
-                        L5: {
-                          if (var3 >= var4) {
+                      }
+                    } else {
+                      return;
+                    }
+                  } else {
+                    L5: {
+                      if (var1_ref2.field_Jb > 0) {
+                        var1_ref2.field_Jb = var1_ref2.field_Jb - 1;
+                        if (var1_ref2.field_Jb == 0) {
+                          var1_ref2.field_Vb = 0;
+                          if (!var1_ref2.j(2)) {
                             break L5;
                           } else {
-                            var1_ref.field_bc = var1_ref.field_bc - 1;
-                            if (0 != var1_ref.field_bc) {
-                              break L5;
-                            } else {
-                              var1_ref.field_Fb = 0;
-                              if (var1_ref.c((byte) 15)) {
-                                var1_ref.a(true);
-                                break L5;
-                              } else {
-                                break L5;
-                              }
-                            }
+                            var1_ref2.a(true);
+                            break L5;
                           }
-                        }
-                        var1_ref = (dm) (Object) cg.field_i.b(6);
-                        if (var2 == 0) {
-                          continue L1;
                         } else {
-                          break L4;
+                          var1_ref2 = (jh) (Object) tn.field_C.b(6);
+                          continue L2;
                         }
-                      }
-                    }
-                  }
-                  var1_ref2 = (jh) (Object) tn.field_C.c(97);
-                  L6: while (true) {
-                    L7: {
-                      L8: {
-                        if (var1_ref2 == null) {
-                          break L8;
-                        } else {
-                          stackOut_15_0 = (jh) var1_ref2;
-                          stackIn_24_0 = (Object) (Object) stackOut_15_0;
-                          stackIn_16_0 = stackOut_15_0;
-                          if (var2 != 0) {
-                            break L7;
-                          } else {
-                            L9: {
-                              if (stackIn_16_0.field_Jb > 0) {
-                                var1_ref2.field_Jb = var1_ref2.field_Jb - 1;
-                                if (var1_ref2.field_Jb == 0) {
-                                  var1_ref2.field_Vb = 0;
-                                  if (!var1_ref2.j(2)) {
-                                    break L9;
-                                  } else {
-                                    var1_ref2.a(true);
-                                    break L9;
-                                  }
-                                } else {
-                                  break L9;
-                                }
-                              } else {
-                                break L9;
-                              }
-                            }
-                            var1_ref2 = (jh) (Object) tn.field_C.b(6);
-                            if (var2 == 0) {
-                              continue L6;
-                            } else {
-                              break L8;
-                            }
-                          }
-                        }
-                      }
-                      stackOut_23_0 = nh.field_g.c(65);
-                      stackIn_24_0 = (Object) (Object) stackOut_23_0;
-                      break L7;
-                    }
-                    var1_ref = (dm) (Object) stackIn_24_0;
-                    if (param0 == 2) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                return;
-              }
-              L10: while (true) {
-                if (var1_ref == null) {
-                  break L0;
-                } else {
-                  if (var2 == 0) {
-                    L11: {
-                      if (0 >= var1_ref.field_bc) {
-                        break L11;
                       } else {
-                        var1_ref.field_bc = var1_ref.field_bc - 1;
-                        if (var1_ref.field_bc != 0) {
-                          break L11;
-                        } else {
-                          var1_ref.field_Fb = 0;
-                          if (!var1_ref.c((byte) 15)) {
-                            break L11;
-                          } else {
-                            var1_ref.a(true);
-                            break L11;
-                          }
-                        }
+                        break L5;
                       }
                     }
-                    var1_ref = (dm) (Object) nh.field_g.b(6);
-                    continue L10;
-                  } else {
-                    return;
+                    var1_ref2 = (jh) (Object) tn.field_C.b(6);
+                    continue L2;
                   }
                 }
+              } else {
+                L6: {
+                  if (0 >= var1_ref.field_bc) {
+                    break L6;
+                  } else {
+                    var1_ref.field_bc = var1_ref.field_bc - 1;
+                    if (0 != var1_ref.field_bc) {
+                      break L6;
+                    } else {
+                      var1_ref.field_Fb = 0;
+                      if (var1_ref.c((byte) 15)) {
+                        var1_ref.a(true);
+                        break L6;
+                      } else {
+                        break L6;
+                      }
+                    }
+                  }
+                }
+                var1_ref = (dm) (Object) cg.field_i.b(6);
+                continue L1;
               }
             }
           }
@@ -1237,13 +1154,9 @@ final class hi extends cj {
         this(param0, param1.field_Jb, param1.field_Ib, param1.field_Hb, param1.field_Kb);
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_Mb = null;
         field_Nb = null;
-        if (param0 <= -23) {
-            return;
-        }
-        field_Mb = null;
     }
 
     static {

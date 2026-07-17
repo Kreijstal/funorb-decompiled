@@ -5,55 +5,29 @@ final class jp {
     static int[] field_a;
     static String field_b;
 
-    final static ak a(int param0, int param1, int param2, int param3, int param4) {
-        Object var5 = null;
-        ak var5_ref = null;
+    final static ak a(int param0) {
+        ak var5 = null;
         int var6 = 0;
-        ak var7 = null;
-        ak var8 = null;
-        var5 = null;
         var6 = CrazyCrystals.field_B;
-        if (param1 >= 114) {
-          var5_ref = (ak) (Object) hd.field_d.g(32073);
-          L0: while (true) {
-            if (var5_ref != null) {
-              if (param0 != var5_ref.field_g) {
-                var5_ref = (ak) (Object) hd.field_d.a(false);
-                continue L0;
-              } else {
-                return var5_ref;
-              }
+        var5 = (ak) (Object) hd.field_d.g(32073);
+        L0: while (true) {
+          if (var5 != null) {
+            if (param0 != var5.field_g) {
+              var5 = (ak) (Object) hd.field_d.a(false);
+              continue L0;
             } else {
-              var7 = new ak();
-              var7.field_j = 1;
-              var7.field_h = param3;
-              var7.field_g = param0;
-              hd.field_d.b(0, (jb) (Object) var7);
-              j.a(var7, param2, false);
-              return var7;
+              return var5;
             }
-          }
-        } else {
-          field_b = null;
-          var5_ref = (ak) (Object) hd.field_d.g(32073);
-          L1: while (true) {
-            if (var5_ref != null) {
-              if (param0 != var5_ref.field_g) {
-                var5_ref = (ak) (Object) hd.field_d.a(false);
-                continue L1;
-              } else {
-                return var5_ref;
-              }
-            } else {
-              var8 = new ak();
-              var5_ref = var8;
-              var8.field_j = 1;
-              var8.field_h = param3;
-              var8.field_g = param0;
-              hd.field_d.b(0, (jb) (Object) var8);
-              j.a(var8, param2, false);
-              return var8;
-            }
+          } else {
+            var5 = new ak();
+            var5.field_j = 1;
+            var5.field_h = 10;
+            var5.field_g = param0;
+            hd.field_d.b(0, (jb) (Object) var5);
+            int discarded$4 = 0;
+            int discarded$5 = 3;
+            j.a(var5);
+            return var5;
           }
         }
     }

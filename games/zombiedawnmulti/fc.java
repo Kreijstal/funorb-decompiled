@@ -92,9 +92,6 @@ class fc {
     }
 
     private final int a(boolean param0, int param1) {
-        if (!param0) {
-            ((fc) this).field_b = 72;
-        }
         if (!(((fc) this).field_b >= 4)) {
             if (param1 < 64) {
                 param1 = param1 + ((fc) this).field_b * 72;
@@ -126,7 +123,8 @@ class fc {
 
     void a(byte param0) {
         ((fc) this).a(((fc) this).field_g, 9);
-        this.b(((fc) this).field_g, -10);
+        int discarded$0 = -10;
+        this.b(((fc) this).field_g);
         ((fc) this).field_d = ((fc) this).field_g[0].length;
         if (param0 < 120) {
             return;
@@ -147,7 +145,7 @@ class fc {
         }
     }
 
-    private final void b(int[][] param0, int param1) {
+    private final void b(int[][] param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -596,7 +594,7 @@ class fc {
                               break L8;
                             } else {
                               if (var10 != 0) {
-                                var4 = var4 | this.a(param1, 9);
+                                var4 = var4 | this.a(true, 9);
                                 break L8;
                               } else {
                                 break L8;
@@ -636,7 +634,7 @@ class fc {
                               break L10;
                             } else {
                               if (var10 != 0) {
-                                var4 = var4 | this.a(param1, 11);
+                                var4 = var4 | this.a(true, 11);
                                 break L10;
                               } else {
                                 break L10;
@@ -776,7 +774,7 @@ class fc {
                               break L17;
                             } else {
                               if (var10 == 0) {
-                                var4 = var4 | this.a(param1, 16);
+                                var4 = var4 | this.a(true, 16);
                                 break L17;
                               } else {
                                 break L17;
@@ -796,7 +794,7 @@ class fc {
                               break L18;
                             } else {
                               if (var10 != 0) {
-                                var4 = var4 | this.a(param1, 17);
+                                var4 = var4 | this.a(true, 17);
                                 break L18;
                               } else {
                                 break L18;
@@ -895,7 +893,7 @@ class fc {
                             break L6;
                           } else {
                             if (var10 == 0) {
-                              var4 = var4 | this.a(param1, 24);
+                              var4 = var4 | this.a(true, 24);
                               break L6;
                             } else {
                               break L6;
@@ -1040,7 +1038,7 @@ class fc {
                         break L31;
                       } else {
                         if (this.a(param2 - 1, param0, (byte) -53)) {
-                          var4 = var4 | this.a(param1, 6);
+                          var4 = var4 | this.a(true, 6);
                           break L6;
                         } else {
                           break L31;
@@ -1056,7 +1054,7 @@ class fc {
                         break L6;
                       }
                     } else {
-                      var4 = var4 | this.a(param1, 8);
+                      var4 = var4 | this.a(true, 8);
                       break L6;
                     }
                   } else {
@@ -1080,7 +1078,7 @@ class fc {
                       var4 = var4 | this.a(true, 1);
                       break L6;
                     } else {
-                      var4 = var4 | this.a(param1, 3);
+                      var4 = var4 | this.a(true, 3);
                       break L6;
                     }
                   } else {
@@ -1091,18 +1089,10 @@ class fc {
               }
               L33: {
                 if ((65408 & var4) == 0) {
-                  var4 = var4 | this.a(param1, 24);
+                  var4 = var4 | this.a(true, 24);
                   break L33;
                 } else {
                   break L33;
-                }
-              }
-              L34: {
-                if (param1) {
-                  break L34;
-                } else {
-                  ((fc) this).a((int[][]) null, -26);
-                  break L34;
                 }
               }
               return var4;
@@ -1139,7 +1129,7 @@ class fc {
         return stackIn_4_0 != 0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         if (f.field_a != -vm.field_hb) {
             if (-vm.field_hb + 250 != f.field_a) {
             }

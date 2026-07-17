@@ -16,7 +16,7 @@ final class dn {
         ((dn) this).field_b = param0 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_i = null;
         field_f = null;

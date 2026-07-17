@@ -149,7 +149,7 @@ final class aj {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         int var1 = 74;
         return !ut.field_m.a(false) ? true : false;
     }

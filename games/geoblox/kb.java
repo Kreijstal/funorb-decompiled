@@ -8,10 +8,9 @@ final class kb {
     static int[] field_a;
 
     final static void a(int param0, int param1, String[] param2, String param3) {
-        RuntimeException var4 = null;
+        String[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
-        Object var6 = null;
-        String[] var7 = null;
         int stackIn_10_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
@@ -55,57 +54,56 @@ final class kb {
         var5 = Geoblox.field_C;
         try {
           L0: {
-            if (param1 == 6568) {
-              si.field_g = va.field_e;
-              if (param0 == 255) {
-                L1: {
-                  stackOut_9_0 = param1 ^ 6648;
-                  stackIn_11_0 = stackOut_9_0;
-                  stackIn_10_0 = stackOut_9_0;
-                  if (rd.field_u >= 13) {
-                    stackOut_11_0 = stackIn_11_0;
-                    stackOut_11_1 = 0;
-                    stackIn_12_0 = stackOut_11_0;
-                    stackIn_12_1 = stackOut_11_1;
-                    break L1;
-                  } else {
-                    stackOut_10_0 = stackIn_10_0;
-                    stackOut_10_1 = 1;
-                    stackIn_12_0 = stackOut_10_0;
-                    stackIn_12_1 = stackOut_10_1;
-                    break L1;
-                  }
-                }
-                me.field_g = hh.a(stackIn_12_0, stackIn_12_1 != 0);
-                var6 = null;
-                ci.a((String[]) null, 416577356);
-                break L0;
-              } else {
-                if (param0 < 100) {
-                  me.field_g = ig.a(param3, param0, false);
-                  return;
+            si.field_g = va.field_e;
+            if (param0 == 255) {
+              L1: {
+                stackOut_9_0 = 80;
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_10_0 = stackOut_9_0;
+                if (rd.field_u >= 13) {
+                  stackOut_11_0 = stackIn_11_0;
+                  stackOut_11_1 = 0;
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  break L1;
                 } else {
-                  if (param0 > 105) {
-                    me.field_g = ig.a(param3, param0, false);
-                    return;
-                  } else {
-                    var7 = param2;
-                    ci.a(var7, 416577356);
-                    me.field_g = ac.a(param1 + -6540, param2);
-                    return;
-                  }
+                  stackOut_10_0 = stackIn_10_0;
+                  stackOut_10_1 = 1;
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  break L1;
                 }
               }
+              me.field_g = hh.a(stackIn_12_0, stackIn_12_1 != 0);
+              int discarded$8 = 416577356;
+              ci.a((String[]) null);
+              break L0;
             } else {
-              return;
+              if (param0 < 100) {
+                int discarded$9 = 0;
+                me.field_g = ig.a(param3, param0);
+                return;
+              } else {
+                if (param0 > 105) {
+                  int discarded$10 = 0;
+                  me.field_g = ig.a(param3, param0);
+                  return;
+                } else {
+                  var4 = param2;
+                  int discarded$11 = 416577356;
+                  ci.a(var4);
+                  me.field_g = ac.a(28, param2);
+                  return;
+                }
+              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("kb.D(").append(param0).append(44).append(param1).append(44);
+            var4_ref = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var4_ref;
+            stackOut_14_1 = new StringBuilder().append("kb.D(").append(param0).append(44).append(6568).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -157,7 +155,7 @@ final class kb {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!hl.field_G) {
             throw new IllegalStateException();
         }
@@ -166,44 +164,44 @@ final class kb {
         hj.field_a = 0;
     }
 
-    final static void a(boolean param0, boolean param1) {
-        ue.a(param0, true, (byte) -102);
+    final static void a(boolean param0) {
+        int discarded$0 = -102;
+        ue.a(param0, true);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1 = 0;
         if (null == kd.field_e) {
           if (vg.field_i != null) {
             vg.field_i.m(23181);
-            eh.a((byte) -2);
+            int discarded$8 = -2;
+            eh.a();
             var1 = 0;
             return;
           } else {
-            eh.a((byte) -2);
+            int discarded$9 = -2;
+            eh.a();
             var1 = 0;
             return;
           }
         } else {
           kd.field_e.l(0);
           if (vg.field_i == null) {
-            eh.a((byte) -2);
+            int discarded$10 = -2;
+            eh.a();
             var1 = 0;
             return;
           } else {
             vg.field_i.m(23181);
-            eh.a((byte) -2);
+            int discarded$11 = -2;
+            eh.a();
             var1 = 0;
             return;
           }
         }
     }
 
-    public static void c(int param0) {
-        if (param0 != 105) {
-            field_c = 71;
-            field_a = null;
-            return;
-        }
+    public static void c() {
         field_a = null;
     }
 

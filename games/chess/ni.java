@@ -96,69 +96,65 @@ final class ni {
             var13 = var14;
             var12 = var13;
             var8 = var12;
-            if (param4 == -21105) {
-              var9 = 0;
-              L2: while (true) {
-                if (var9 >= 4) {
-                  L3: {
-                    L4: {
-                      if (n.field_g == null) {
+            var9 = 0;
+            L2: while (true) {
+              if (var9 >= 4) {
+                L3: {
+                  L4: {
+                    if (n.field_g == null) {
+                      break L4;
+                    } else {
+                      if (var7_int > n.field_g.field_o.length) {
                         break L4;
                       } else {
-                        if (var7_int > n.field_g.field_o.length) {
-                          break L4;
-                        } else {
-                          break L3;
-                        }
+                        break L3;
                       }
                     }
-                    n.field_g = new p(var7_int);
-                    break L3;
                   }
-                  L5: {
-                    L6: {
-                      n.field_g.field_l = 0;
-                      n.field_g.a(param6, (byte) -45, param0, param1);
-                      n.field_g.a((byte) -54, var7_int);
-                      n.field_g.a(var15, 12246);
-                      if (vg.field_c == null) {
+                  n.field_g = new p(var7_int);
+                  break L3;
+                }
+                L5: {
+                  L6: {
+                    n.field_g.field_l = 0;
+                    n.field_g.a(param6, (byte) -45, 0, param1);
+                    n.field_g.a((byte) -54, var7_int);
+                    n.field_g.a(var15, 12246);
+                    if (vg.field_c == null) {
+                      break L6;
+                    } else {
+                      if (vg.field_c.field_o.length < 100) {
                         break L6;
                       } else {
-                        if (vg.field_c.field_o.length < 100) {
-                          break L6;
-                        } else {
-                          break L5;
-                        }
+                        break L5;
                       }
                     }
-                    vg.field_c = new p(100);
-                    break L5;
                   }
-                  vg.field_c.field_l = 0;
-                  vg.field_c.c(10, (byte) 94);
-                  var11 = 0;
-                  var9 = var11;
-                  L7: while (true) {
-                    if (4 <= var11) {
-                      vg.field_c.b(param1, 94);
-                      vg.field_c.a(param2, param5, (byte) 76);
-                      param3.a(vg.field_c.field_o, (byte) -45, 0, vg.field_c.field_l);
-                      param3.a(n.field_g.field_o, (byte) -45, 0, n.field_g.field_l);
-                      break L0;
-                    } else {
-                      vg.field_c.d(var15[var11], (byte) -81);
-                      var11++;
-                      continue L7;
-                    }
-                  }
-                } else {
-                  var8[var9] = ae.field_j.nextInt();
-                  var9++;
-                  continue L2;
+                  vg.field_c = new p(100);
+                  break L5;
                 }
+                vg.field_c.field_l = 0;
+                vg.field_c.c(10, (byte) 94);
+                var11 = 0;
+                var9 = var11;
+                L7: while (true) {
+                  if (4 <= var11) {
+                    vg.field_c.b(param1, 94);
+                    vg.field_c.a(param2, param5, (byte) 76);
+                    param3.a(vg.field_c.field_o, (byte) -45, 0, vg.field_c.field_l);
+                    param3.a(n.field_g.field_o, (byte) -45, 0, n.field_g.field_l);
+                    break L0;
+                  } else {
+                    vg.field_c.d(var15[var11], (byte) -81);
+                    var11++;
+                    continue L7;
+                  }
+                }
+              } else {
+                var8[var9] = ae.field_j.nextInt();
+                var9++;
+                continue L2;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -166,7 +162,7 @@ final class ni {
           L8: {
             var7 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var7;
-            stackOut_22_1 = new StringBuilder().append("ni.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_22_1 = new StringBuilder().append("ni.A(").append(0).append(44).append(param1).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -216,7 +212,7 @@ final class ni {
           }
           L10: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param4).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(-21105).append(44);
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -268,7 +264,7 @@ final class ni {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (sl.field_a != -eg.field_i) {
             if (sl.field_a == -eg.field_i + 250) {
             }
@@ -276,7 +272,7 @@ final class ni {
         sl.field_a = sl.field_a + 1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

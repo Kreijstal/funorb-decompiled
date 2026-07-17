@@ -12,7 +12,7 @@ final class g extends w {
     public g() {
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_t = null;
     }
 
@@ -266,7 +266,7 @@ final class g extends w {
         int var3 = jc.a(param2, 116);
         int var4 = we.a((byte) 75, param2);
         int var5 = jc.a(param1, 117);
-        int var6 = 104 % ((53 - param0) / 58);
+        int var6 = 0;
         int var7 = we.a((byte) 101, param1);
         int var8 = (int)((long)var5 * (long)var3 >> 16);
         int var9 = (int)((long)var7 * (long)var3 >> 16);

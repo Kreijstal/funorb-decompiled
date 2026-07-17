@@ -838,8 +838,10 @@ class nl extends mo {
               ((nl) this).field_L = hq.a(22531, 8, param1, 0);
               ((nl) this).field_C = hq.a(22531, 9, param1, 0);
               ((nl) this).field_I = param1.l(3, param0 ^ -13927);
-              ((nl) this).field_O = mu.a(param1, (byte) -39);
-              ((nl) this).field_s = mu.a(param1, (byte) -39);
+              int discarded$2 = -39;
+              ((nl) this).field_O = mu.a(param1);
+              int discarded$3 = -39;
+              ((nl) this).field_s = mu.a(param1);
               ((nl) this).field_k = mk.a(param1, 30, (byte) 6, 18);
               ((nl) this).field_m = mk.a(param1, 30, (byte) 6, 18);
               ((nl) this).field_r = mk.a(param1, 30, (byte) 6, 18);
@@ -1009,7 +1011,8 @@ class nl extends mo {
         try {
           L0: {
             L1: {
-              if (!mu.a(param1, (byte) -39)) {
+              int discarded$10 = -39;
+              if (!mu.a(param1)) {
                 break L1;
               } else {
                 ((nl) this).field_M = ((nl) this).field_M + ew.a((byte) 125, 19, param1, 0, 23, 30);
@@ -1020,7 +1023,8 @@ class nl extends mo {
             }
             L2: {
               ((nl) this).field_K = mk.a(param1, 25, (byte) 6, 0);
-              if (mu.a(param1, (byte) -39)) {
+              int discarded$11 = -39;
+              if (mu.a(param1)) {
                 ((nl) this).field_G = param1.l(4, 59);
                 ((nl) this).field_n = -1 + param1.l(2, param0 ^ 50);
                 ((nl) this).field_j = param1.l(2, 59) + -1;
@@ -1030,7 +1034,8 @@ class nl extends mo {
               }
             }
             L3: {
-              if (mu.a(param1, (byte) -39)) {
+              int discarded$12 = -39;
+              if (mu.a(param1)) {
                 ((nl) this).field_u = param1.l(kb.a(14, false), 59);
                 ((nl) this).field_L = param1.l(8, param0 ^ 50);
                 break L3;
@@ -1040,7 +1045,8 @@ class nl extends mo {
             }
             L4: {
               ((nl) this).field_C = hq.a(param0 ^ 22538, param0, param1, 0);
-              if (!mu.a(param1, (byte) -39)) {
+              int discarded$13 = -39;
+              if (!mu.a(param1)) {
                 break L4;
               } else {
                 ((nl) this).field_I = param1.l(3, 59);
@@ -1048,10 +1054,12 @@ class nl extends mo {
               }
             }
             L5: {
-              if (!mu.a(param1, (byte) -39)) {
+              int discarded$14 = -39;
+              if (!mu.a(param1)) {
                 break L5;
               } else {
-                ((nl) this).field_O = mu.a(param1, (byte) -39);
+                int discarded$15 = -39;
+                ((nl) this).field_O = mu.a(param1);
                 ((nl) this).field_h = param1.l(4, 59);
                 ((nl) this).field_z = -5 + param1.l(9, 59);
                 ((nl) this).field_x = aq.a(11, -30273, param1);
@@ -1060,10 +1068,12 @@ class nl extends mo {
               }
             }
             L6: {
-              if (!mu.a(param1, (byte) -39)) {
+              int discarded$16 = -39;
+              if (!mu.a(param1)) {
                 break L6;
               } else {
-                ((nl) this).field_s = mu.a(param1, (byte) -39);
+                int discarded$17 = -39;
+                ((nl) this).field_s = mu.a(param1);
                 ((nl) this).field_k = mk.a(param1, 30, (byte) 6, 18);
                 ((nl) this).field_m = mk.a(param1, 30, (byte) 6, 18);
                 ((nl) this).field_r = mk.a(param1, 30, (byte) 6, 18);
@@ -1072,7 +1082,8 @@ class nl extends mo {
               }
             }
             L7: {
-              if (!mu.a(param1, (byte) -39)) {
+              int discarded$18 = -39;
+              if (!mu.a(param1)) {
                 break L7;
               } else {
                 ((nl) this).field_A = param1.l(32, param0 ^ 50);
@@ -1084,7 +1095,8 @@ class nl extends mo {
             }
             L8: {
               if (((nl) this).field_J == 4) {
-                if (mu.a(param1, (byte) -39)) {
+                int discarded$19 = -39;
+                if (mu.a(param1)) {
                   ((nl) this).field_o = param1.l(4, 59);
                   ((nl) this).field_t = param1.l(26, param0 + 50);
                   break L8;

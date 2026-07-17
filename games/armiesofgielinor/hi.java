@@ -21,7 +21,7 @@ final class hi implements Runnable {
     private boolean field_o;
     static int field_j;
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -39,20 +39,11 @@ final class hi implements Runnable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
-        if (param0 <= 72) {
-          field_h = null;
-          field_m = null;
-          field_i = null;
-          field_a = null;
-          return;
-        } else {
-          field_m = null;
-          field_i = null;
-          field_a = null;
-          return;
-        }
+        field_m = null;
+        field_i = null;
+        field_a = null;
     }
 
     hi(java.net.Socket param0, hd param1) throws IOException {

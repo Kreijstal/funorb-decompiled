@@ -182,9 +182,9 @@ final class pl extends al {
     private final void a(int param0, int param1, int param2, int param3, boolean param4) {
         int var6 = 0;
         int var7 = 0;
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
         L0: {
           var7 = ZombieDawn.field_J;
           if (b.field_q == param2) {
@@ -192,28 +192,37 @@ final class pl extends al {
             qn.field_g.b(-10 + (sf.field_d[param2] + param3), param1 + (-10 + gj.field_n[param2]), sn.field_f[rk.field_a]);
             break L0;
           } else {
-            bd.field_i[qd.field_e][param2].b(sf.field_d[param2] + param3, gj.field_n[param2] - -param1);
-            break L0;
+            if (param4) {
+              jo.field_Tb[qd.field_e][param2].e(param3 - -sf.field_d[param2], gj.field_n[param2] + param1, 100);
+              break L0;
+            } else {
+              bd.field_i[qd.field_e][param2].b(sf.field_d[param2] + param3, gj.field_n[param2] - -param1);
+              break L0;
+            }
           }
         }
         L1: {
-          if (n.field_k[param2] == 0) {
+          if (param4) {
             break L1;
           } else {
-            L2: {
-              if (b.field_q == param2) {
-                stackOut_6_0 = 2;
-                stackIn_7_0 = stackOut_6_0;
-                break L2;
-              } else {
-                stackOut_5_0 = 0;
-                stackIn_7_0 = stackOut_5_0;
-                break L2;
+            if (n.field_k[param2] == 0) {
+              break L1;
+            } else {
+              L2: {
+                if (b.field_q == param2) {
+                  stackOut_9_0 = 2;
+                  stackIn_10_0 = stackOut_9_0;
+                  break L2;
+                } else {
+                  stackOut_8_0 = 0;
+                  stackIn_10_0 = stackOut_8_0;
+                  break L2;
+                }
               }
+              var6 = stackIn_10_0;
+              sg.field_jb.b(cj.field_a[qd.field_e][param2], te.field_T[param2] + param3, ag.field_b[param2] + param1, var6, -1, n.field_k[param2]);
+              break L1;
             }
-            var6 = stackIn_7_0;
-            sg.field_jb.b(cj.field_a[qd.field_e][param2], te.field_T[param2] + param3, ag.field_b[param2] + param1, var6, -1, n.field_k[param2]);
-            break L1;
           }
         }
         L3: {
@@ -821,27 +830,31 @@ final class pl extends al {
 
     final static void a(String param0, byte param1, java.applet.Applet param2) {
         try {
-            String var3 = null;
+            String var6 = null;
             String var5 = null;
             String var4 = null;
+            String var7 = null;
             try {
                 g.field_H = param0;
                 try {
-                    var3 = param2.getParameter("cookieprefix");
-                    var5 = var3;
-                    var5 = var3;
+                    var6 = param2.getParameter("cookieprefix");
+                    var5 = var6;
+                    var5 = var6;
                     var4 = param2.getParameter("cookiehost");
                     var5 = var4;
                     var5 = var4;
-                    var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+                    var7 = var6 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+                    var5 = var7;
+                    var5 = var7;
                     if (param0.length() == 0) {
-                        var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     qe.a("document.cookie=\"" + var5 + "\"", param2, (byte) 116);
                 } catch (Throwable throwable) {
                 }
                 int var3_int = 60 % ((6 - param1) / 62);
-                hl.a(param2, 1);
+                int discarded$0 = 1;
+                hl.a(param2);
             } catch (RuntimeException runtimeException) {
                 throw sh.a((Throwable) (Object) runtimeException, "pl.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
@@ -1480,7 +1493,7 @@ final class pl extends al {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_t = null;
         field_p = null;
     }

@@ -428,9 +428,10 @@ final class nh extends bb {
         int var4 = 0;
         bh[] var5 = null;
         var4 = wizardrun.field_H;
-        var5 = od.b(109);
+        int discarded$2 = 109;
+        var5 = od.b();
         var2 = var5;
-        var3 = param0;
+        var3 = 0;
         L0: while (true) {
           if (var3 < var5.length) {
             if (param1 != var5[var3].field_h) {
@@ -626,24 +627,16 @@ final class nh extends bb {
                 }
               }
             }
-            L13: {
-              if (param0 == 69) {
-                break L13;
-              } else {
-                field_o = null;
-                break L13;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var5, "nh.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw bd.a((Throwable) (Object) var5, "nh.B(" + 69 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_p = null;
         field_o = null;
         field_q = null;

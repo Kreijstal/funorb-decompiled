@@ -196,7 +196,7 @@ final class b extends hi {
         return stackIn_1_0;
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_q = null;
         field_p = null;
         field_n = null;
@@ -299,42 +299,7 @@ final class b extends hi {
     }
 
     final static boolean a(byte param0, int param1) {
-        Object var3 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 <= 71) {
-          L0: {
-            var3 = null;
-            sc discarded$6 = b.a((String) null, (String) null, -123, (ki) null, (ki) null);
-            if (param1 < 0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (param1 < 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return param1 >= 0;
     }
 
     final qd a(String param0, byte param1) {

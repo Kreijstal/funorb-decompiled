@@ -16,7 +16,7 @@ final class vo extends bn {
     int field_H;
     static int field_A;
 
-    public static void e(int param0) {
+    public static void e() {
         field_C = null;
         int var1 = 6;
         field_G = null;
@@ -119,7 +119,7 @@ final class vo extends bn {
         return stackIn_6_0;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
         if (null != no.field_p) {

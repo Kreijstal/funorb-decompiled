@@ -13,18 +13,15 @@ final class wm {
         try {
             var2_int = param1[0] ? 1 : 0;
             param1[0] = param1[2];
-            if (param0 != -11825) {
-                field_a = null;
-            }
             param1[2] = param1[3];
             param1[3] = param1[1];
             param1[1] = var2_int != 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "wm.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "wm.A(" + -11825 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
     }

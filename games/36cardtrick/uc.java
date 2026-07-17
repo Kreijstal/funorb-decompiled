@@ -36,9 +36,9 @@ final class uc extends pe {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object stackIn_62_0 = null;
+        Object stackIn_60_0 = null;
         Throwable decompiledCaughtException = null;
-        Object stackOut_61_0 = null;
+        Object stackOut_59_0 = null;
         L0: {
           var10 = Main.field_T;
           var4 = (Object) (Object) (la) (Object) ((uc) this).field_n.a(false, (long)param1);
@@ -72,7 +72,7 @@ final class uc extends pe {
                       if (((uc) this).field_t[param1] != -1) {
                         throw new RuntimeException();
                       } else {
-                        if (!((uc) this).field_v.c(param0 + -170)) {
+                        if (!((uc) this).field_v.c(-46)) {
                           var4 = (Object) (Object) ((uc) this).field_v.a(false, -1640279264, param1, (byte) 2, ((uc) this).field_d);
                           break L2;
                         } else {
@@ -99,7 +99,7 @@ final class uc extends pe {
                     break L3;
                   } else {
                     if (((uc) this).field_t[param1] != -1) {
-                      var4 = (Object) (Object) ((uc) this).field_m.a(param0 ^ 125, ((uc) this).field_p, param1);
+                      var4 = (Object) (Object) ((uc) this).field_m.a(1, ((uc) this).field_p, param1);
                       break L2;
                     } else {
                       break L3;
@@ -121,21 +121,13 @@ final class uc extends pe {
           }
         }
         if (!((la) var4).field_n) {
-          L4: {
-            var5 = ((la) var4).b(true);
-            if (param0 == 124) {
-              break L4;
-            } else {
-              ((uc) this).field_f = null;
-              break L4;
-            }
-          }
+          var5 = ((la) var4).b(true);
           if (!(var4 instanceof ab)) {
             try {
-              L5: {
-                L6: {
+              L4: {
+                L5: {
                   if (var5 == null) {
-                    break L6;
+                    break L5;
                   } else {
                     if (var5.length > 2) {
                       fl.field_c.reset();
@@ -144,38 +136,39 @@ final class uc extends pe {
                       if (((uc) this).field_l.field_i[param1] != var6_int) {
                         throw new RuntimeException();
                       } else {
-                        L7: {
+                        L6: {
                           if (((uc) this).field_l.field_l == null) {
-                            break L7;
+                            break L6;
                           } else {
                             if (((uc) this).field_l.field_l[param1] != null) {
                               var7 = ((uc) this).field_l.field_l[param1];
-                              var8 = ti.a(0, var5, -2 + var5.length, 0);
+                              int discarded$3 = 0;
+                              var8 = ti.a(0, var5, -2 + var5.length);
                               var11 = 0;
                               var9 = var11;
-                              L8: while (true) {
+                              L7: while (true) {
                                 if (64 <= var11) {
-                                  break L7;
+                                  break L6;
                                 } else {
                                   if (var8[var11] != var7[var11]) {
                                     throw new RuntimeException();
                                   } else {
                                     var11++;
-                                    continue L8;
+                                    continue L7;
                                   }
                                 }
                               }
                             } else {
-                              break L7;
+                              break L6;
                             }
                           }
                         }
                         ((uc) this).field_v.field_b = 0;
                         ((uc) this).field_v.field_l = 0;
-                        break L5;
+                        break L4;
                       }
                     } else {
-                      break L6;
+                      break L5;
                     }
                   }
                 }
@@ -183,7 +176,7 @@ final class uc extends pe {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L9: {
+              L8: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 ((uc) this).field_v.c((byte) 0);
                 ((la) var4).c(82);
@@ -191,49 +184,49 @@ final class uc extends pe {
                   if (!((uc) this).field_v.a(false)) {
                     var4 = (Object) (Object) ((uc) this).field_v.a(true, -1640279264, param1, (byte) 2, ((uc) this).field_d);
                     ((uc) this).field_n.a((long)param1, (byte) 110, (qb) var4);
-                    break L9;
+                    break L8;
                   } else {
-                    break L9;
+                    break L8;
                   }
                 } else {
-                  break L9;
+                  break L8;
                 }
               }
               return null;
             }
-            L10: {
+            L9: {
               var5[-2 + var5.length] = (byte)(((uc) this).field_l.field_n[param1] >>> 8);
               var5[-1 + var5.length] = (byte)((uc) this).field_l.field_n[param1];
               if (null == ((uc) this).field_p) {
-                break L10;
+                break L9;
               } else {
-                ab discarded$1 = ((uc) this).field_m.a(((uc) this).field_p, var5, param1, param0 ^ -23043);
+                ab discarded$4 = ((uc) this).field_m.a(((uc) this).field_p, var5, param1, -23167);
                 if (((uc) this).field_t[param1] != 1) {
                   ((uc) this).field_t[param1] = (byte) 1;
-                  break L10;
+                  break L9;
                 } else {
-                  break L10;
+                  break L9;
                 }
               }
             }
-            L11: {
+            L10: {
               if (!((la) var4).field_o) {
                 ((la) var4).c(83);
-                break L11;
+                break L10;
               } else {
-                break L11;
+                break L10;
               }
             }
             return (la) var4;
           } else {
             try {
-              L12: {
-                L13: {
+              L11: {
+                L12: {
                   if (var5 == null) {
-                    break L13;
+                    break L12;
                   } else {
                     if (var5.length <= 2) {
-                      break L13;
+                      break L12;
                     } else {
                       fl.field_c.reset();
                       fl.field_c.update(var5, 0, -2 + var5.length);
@@ -241,28 +234,29 @@ final class uc extends pe {
                       if (((uc) this).field_l.field_i[param1] != var6_int) {
                         throw new RuntimeException();
                       } else {
-                        L14: {
+                        L13: {
                           if (null == ((uc) this).field_l.field_l) {
-                            break L14;
+                            break L13;
                           } else {
                             if (((uc) this).field_l.field_l[param1] != null) {
                               var7 = ((uc) this).field_l.field_l[param1];
-                              var8 = ti.a(0, var5, var5.length - 2, param0 + -124);
+                              int discarded$5 = 0;
+                              var8 = ti.a(0, var5, var5.length - 2);
                               var9 = 0;
-                              L15: while (true) {
+                              L14: while (true) {
                                 if (var9 >= 64) {
-                                  break L14;
+                                  break L13;
                                 } else {
                                   if (var8[var9] != var7[var9]) {
                                     throw new RuntimeException();
                                   } else {
                                     var9++;
-                                    continue L15;
+                                    continue L14;
                                   }
                                 }
                               }
                             } else {
-                              break L14;
+                              break L13;
                             }
                           }
                         }
@@ -270,32 +264,32 @@ final class uc extends pe {
                         if ((65535 & ((uc) this).field_l.field_n[param1]) != var7_int) {
                           throw new RuntimeException();
                         } else {
-                          L16: {
+                          L15: {
                             if (((uc) this).field_t[param1] == 1) {
-                              break L16;
+                              break L15;
                             } else {
-                              L17: {
+                              L16: {
                                 if (((uc) this).field_t[param1] == 0) {
-                                  break L17;
+                                  break L16;
                                 } else {
-                                  break L17;
+                                  break L16;
                                 }
                               }
                               ((uc) this).field_t[param1] = (byte) 1;
-                              break L16;
+                              break L15;
                             }
                           }
-                          L18: {
+                          L17: {
                             if (!((la) var4).field_o) {
-                              ((la) var4).c(param0 ^ 34);
-                              break L18;
+                              ((la) var4).c(94);
+                              break L17;
                             } else {
-                              break L18;
+                              break L17;
                             }
                           }
-                          stackOut_61_0 = var4;
-                          stackIn_62_0 = stackOut_61_0;
-                          break L12;
+                          stackOut_59_0 = var4;
+                          stackIn_60_0 = stackOut_59_0;
+                          break L11;
                         }
                       }
                     }
@@ -305,25 +299,25 @@ final class uc extends pe {
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L19: {
+              L18: {
                 var6 = (Exception) (Object) decompiledCaughtException;
                 ((uc) this).field_t[param1] = (byte) -1;
-                ((la) var4).c(param0 ^ 7);
+                ((la) var4).c(123);
                 if (((la) var4).field_o) {
                   if (!((uc) this).field_v.a(false)) {
                     var4 = (Object) (Object) ((uc) this).field_v.a(true, -1640279264, param1, (byte) 2, ((uc) this).field_d);
                     ((uc) this).field_n.a((long)param1, (byte) 79, (qb) var4);
-                    break L19;
+                    break L18;
                   } else {
-                    break L19;
+                    break L18;
                   }
                 } else {
-                  break L19;
+                  break L18;
                 }
               }
               return null;
             }
-            return (la) (Object) stackIn_62_0;
+            return (la) (Object) stackIn_60_0;
           }
         } else {
           return null;

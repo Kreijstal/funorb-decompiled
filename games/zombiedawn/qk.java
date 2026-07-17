@@ -23,16 +23,12 @@ class qk extends ah {
     private boolean field_Bb;
 
     final static vn c(int param0, byte param1, int param2) {
+        int var4 = 0;
         int var5 = ZombieDawn.field_J;
         vn var6 = new vn(param2, param2);
         vn var3 = var6;
-        int var4 = 0;
-        if (param1 != -71) {
-            return null;
-        }
-        while (var4 < var3.field_z.length) {
+        for (var4 = 0; var4 < var3.field_z.length; var4++) {
             var6.field_z[var4] = param0;
-            var4++;
         }
         return var3;
     }
@@ -53,7 +49,9 @@ class qk extends ah {
             if (!(bi.field_a == nh.field_P)) {
                 return;
             }
-            qk.v(32);
+            if (param4) {
+                qk.v(32);
+            }
             var5 = 3;
             bi.a(param3, param0, param1, param2, 0, 96);
             bi.h(var5, var5, param3, param0, param1, param2);
@@ -203,108 +201,30 @@ class qk extends ah {
     }
 
     private final boolean a(int param0, boolean param1, int param2) {
-        fb var4 = null;
         kd var5 = null;
-        int var6 = 0;
-        Object stackIn_13_0 = null;
-        Object stackIn_14_0 = null;
-        Object stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        int stackIn_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        Object stackOut_12_0 = null;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        L0: {
-          var6 = ZombieDawn.field_J;
-          ((qk) this).field_mb = 2147483647;
-          ((qk) this).field_sb = null;
-          ((qk) this).field_fb = false;
-          if (param0 == -19718) {
-            break L0;
-          } else {
-            ((qk) this).g(-115);
-            break L0;
-          }
-        }
-        var4 = ((qk) this).a((byte) -74, param2, 2);
-        L1: while (true) {
-          if (var4 == null) {
-            L2: {
-              if (((qk) this).field_sb == null) {
-                stackOut_19_0 = 0;
-                stackIn_20_0 = stackOut_19_0;
-                break L2;
-              } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
-                break L2;
-              }
-            }
-            return stackIn_20_0 != 0;
-          } else {
-            L3: {
-              var5 = (kd) (Object) var4;
-              if (var5.field_hb) {
-                break L3;
-              } else {
-                if (var5.field_F == 9) {
-                  break L3;
-                } else {
-                  if (!var5.x(param0 ^ -19794)) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (param1) {
-                        break L4;
-                      } else {
-                        if (!((qk) this).a(57, var4)) {
-                          break L3;
-                        } else {
-                          break L4;
+        int var6 = ZombieDawn.field_J;
+        ((qk) this).field_mb = 2147483647;
+        ((qk) this).field_sb = null;
+        ((qk) this).field_fb = false;
+        fb var4 = ((qk) this).a((byte) -74, param2, 2);
+        while (var4 != null) {
+            var5 = (kd) (Object) var4;
+            if (!var5.field_hb) {
+                if (var5.field_F != 9) {
+                    if (var5.x(84)) {
+                        if (((qk) this).a(57, var4)) {
+                            if (((qk) this).field_mb > ((qk) this).field_s) {
+                                ((qk) this).field_sb = var4;
+                                ((qk) this).field_mb = ((qk) this).field_s;
+                            }
+                            ((qk) this).field_fb = var5.field_bb > 0 ? true : false;
                         }
-                      }
                     }
-                    L5: {
-                      if (((qk) this).field_mb <= ((qk) this).field_s) {
-                        break L5;
-                      } else {
-                        ((qk) this).field_sb = var4;
-                        ((qk) this).field_mb = ((qk) this).field_s;
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      stackOut_12_0 = this;
-                      stackIn_14_0 = stackOut_12_0;
-                      stackIn_13_0 = stackOut_12_0;
-                      if (var5.field_bb <= 0) {
-                        stackOut_14_0 = this;
-                        stackOut_14_1 = 0;
-                        stackIn_15_0 = stackOut_14_0;
-                        stackIn_15_1 = stackOut_14_1;
-                        break L6;
-                      } else {
-                        stackOut_13_0 = this;
-                        stackOut_13_1 = 1;
-                        stackIn_15_0 = stackOut_13_0;
-                        stackIn_15_1 = stackOut_13_1;
-                        break L6;
-                      }
-                    }
-                    ((qk) this).field_fb = stackIn_15_1 != 0;
-                    break L3;
-                  }
                 }
-              }
             }
             var4 = ((qk) this).e((byte) 32);
-            continue L1;
-          }
         }
+        return ((qk) this).field_sb != null ? true : false;
     }
 
     void l(byte param0) {

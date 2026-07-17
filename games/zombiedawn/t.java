@@ -17,19 +17,12 @@ final class t implements io {
     static int field_c;
 
     final static df a(boolean param0, int param1) {
-        df var2 = null;
-        if (param0) {
-          df discarded$2 = t.a(false, 81);
-          var2 = new df();
-          jj.field_D.a(0, (le) (Object) var2);
-          p.a(0, param1);
-          return var2;
-        } else {
-          var2 = new df();
-          jj.field_D.a(0, (le) (Object) var2);
-          p.a(0, param1);
-          return var2;
-        }
+        df var2 = new df();
+        jj.field_D.a(0, (le) (Object) var2);
+        int discarded$0 = 6;
+        int discarded$1 = 0;
+        p.a();
+        return var2;
     }
 
     final static boolean a(String param0, byte param1, String param2) {
@@ -159,12 +152,12 @@ final class t implements io {
         return stackIn_8_0 != 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_i = null;
         field_m = null;
     }
 
-    final static String a(int param0) {
+    final static String a() {
         if (!(null != ce.field_r)) {
             return "";
         }

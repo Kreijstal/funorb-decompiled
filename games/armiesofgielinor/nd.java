@@ -48,7 +48,8 @@ final class nd {
 
     public final String toString() {
         if (!(!((nd) this).field_e)) {
-            return cq.a(((nd) this).field_c, (byte) -75) + "{" + ((nd) this).field_c + "}";
+            int discarded$0 = -75;
+            return cq.a(((nd) this).field_c) + "{" + ((nd) this).field_c + "}";
         }
         if (!(((nd) this).field_c != null)) {
             return "null";
@@ -72,7 +73,7 @@ final class nd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_b = null;

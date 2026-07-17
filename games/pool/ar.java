@@ -99,20 +99,17 @@ final class ar implements eb {
         try {
             param1.field_X = ln.field_s;
             param1.field_N = 16777215;
-            if (param0 != 29022) {
-                ar.a((byte) 26);
-            }
             param1.field_Gb = ln.field_s;
             param1.field_Fb = 1;
             param1.field_cb = 1;
             param1.field_I = (lr) (Object) sa.field_h;
             param1.field_F = rm.field_g;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ar.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ar.D(" + 29022 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -121,54 +118,46 @@ final class ar implements eb {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              var4 = lq.field_T;
-              var1 = var4;
-              var2 = 0;
-              var3 = var4.length;
-              if (param0 == 48) {
-                break L1;
-              } else {
-                field_g = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var4 = lq.field_T;
+            var1 = var4;
+            var2 = 0;
+            var3 = var4.length;
+            L1: while (true) {
               if (var3 <= var2) {
                 break L0;
               } else {
                 int incrementValue$40 = var2;
                 var2++;
-                var1[incrementValue$40] = 0;
+                var4[incrementValue$40] = 0;
                 int incrementValue$41 = var2;
                 var2++;
-                var1[incrementValue$41] = 0;
+                var4[incrementValue$41] = 0;
                 int incrementValue$42 = var2;
                 var2++;
-                var1[incrementValue$42] = 0;
+                var4[incrementValue$42] = 0;
                 int incrementValue$43 = var2;
                 var2++;
-                var1[incrementValue$43] = 0;
+                var4[incrementValue$43] = 0;
                 int incrementValue$44 = var2;
                 var2++;
-                var1[incrementValue$44] = 0;
+                var4[incrementValue$44] = 0;
                 int incrementValue$45 = var2;
                 var2++;
-                var1[incrementValue$45] = 0;
+                var4[incrementValue$45] = 0;
                 int incrementValue$46 = var2;
                 var2++;
-                var1[incrementValue$46] = 0;
+                var4[incrementValue$46] = 0;
                 int incrementValue$47 = var2;
                 var2++;
-                var1[incrementValue$47] = 0;
-                continue L2;
+                var4[incrementValue$47] = 0;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1_ref, "ar.E(" + param0 + 41);
+          throw wm.a((Throwable) (Object) var1_ref, "ar.E(" + 48 + 41);
         }
     }
 

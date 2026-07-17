@@ -128,9 +128,6 @@ final class nd extends ao {
         int var7 = 0;
         int var8 = Sumoblitz.field_L ? 1 : 0;
         int var3_int = null == ((nd) this).field_A ? 0 : ((nd) this).field_A.length;
-        if (param0 != 50) {
-            return;
-        }
         try {
             var4 = param1.length;
             ((nd) this).field_A = param1;
@@ -145,7 +142,7 @@ final class nd extends ao {
             this.b(-1, var4, var3_int);
             this.d(var4, 0, var3_int);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "nd.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "nd.V(" + 50 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -231,7 +228,7 @@ final class nd extends ao {
                     }
                   }
                 }
-                if (~var3 != param0) {
+                if (var3 != 0) {
                   L3: {
                     var5 = var9.c(true);
                     if (var5 < 0) {
@@ -255,7 +252,8 @@ final class nd extends ao {
                         var11 = var13;
                         var6 = var11;
                         if (var3 == 1) {
-                          int discarded$1 = w.a(var17, var5, param1, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = w.a(var6, var5, param1, var4);
                           break L5;
                         } else {
                           var7 = (Object) (Object) sb.field_b;
@@ -294,7 +292,7 @@ final class nd extends ao {
           L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("nd.M(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("nd.M(").append(-1).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -325,7 +323,7 @@ final class nd extends ao {
     private final void a(byte param0, int param1, int param2) {
         int var4 = ((nd) this).field_A == null ? 0 : ((nd) this).field_A.length;
         int[] var5 = new int[var4 * param1];
-        int var6 = -78 % (param0 / 59);
+        int var6 = 0;
         if (((nd) this).field_I != null) {
             if (((nd) this).field_I.length > 0) {
                 if (var5.length > 0) {
@@ -388,30 +386,69 @@ final class nd extends ao {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_B = null;
         field_G = null;
     }
 
     private final void d(int param0, int param1, int param2) {
+        int var4 = 0;
+        int[] var5 = null;
         int var6 = 0;
-        int var7 = Sumoblitz.field_L ? 1 : 0;
-        int var4 = null == ((nd) this).field_J ? 0 : ((nd) this).field_J.length;
-        int[] var5 = new int[param0 * var4];
-        if (null != ((nd) this).field_I) {
-            if (0 < ((nd) this).field_I.length) {
-                if (var5.length > 0) {
-                    if (!(0 >= param2)) {
-                        for (var6 = 0; var6 < var4; var6++) {
-                            la.a(((nd) this).field_I, var6 * param2, var5, param0 * var6, Math.min(param2, param0));
-                        }
-                    }
-                }
-            }
+        int var7 = 0;
+        int[] var8 = null;
+        int[] var9 = null;
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        L0: {
+          var7 = Sumoblitz.field_L ? 1 : 0;
+          if (null != ((nd) this).field_J) {
+            stackOut_2_0 = ((nd) this).field_J.length;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 0;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
         }
-        ((nd) this).field_I = var5;
-        if (param1 != 0) {
-            this.a((byte) -53, 3, -113);
+        L1: {
+          var4 = stackIn_3_0;
+          var9 = new int[param0 * var4];
+          var8 = var9;
+          var5 = var8;
+          if (null == ((nd) this).field_I) {
+            ((nd) this).field_I = var5;
+            break L1;
+          } else {
+            if (0 >= ((nd) this).field_I.length) {
+              ((nd) this).field_I = var5;
+              break L1;
+            } else {
+              if (var9.length <= 0) {
+                ((nd) this).field_I = var5;
+                break L1;
+              } else {
+                if (0 < param2) {
+                  var6 = 0;
+                  L2: while (true) {
+                    if (var6 >= var4) {
+                      ((nd) this).field_I = var5;
+                      break L1;
+                    } else {
+                      la.a(((nd) this).field_I, var6 * param2, var5, param0 * var6, Math.min(param2, param0));
+                      var6++;
+                      continue L2;
+                    }
+                  }
+                } else {
+                  ((nd) this).field_I = var5;
+                  break L1;
+                }
+              }
+            }
+          }
         }
     }
 
@@ -472,25 +509,59 @@ final class nd extends ao {
     }
 
     private final void b(int param0, int param1, int param2) {
+        int var4 = 0;
+        pk[] var5 = null;
         int var6 = 0;
-        int var7 = Sumoblitz.field_L ? 1 : 0;
-        int var4 = ((nd) this).field_J != null ? ((nd) this).field_J.length : 0;
-        pk[] var5 = new pk[param1 * var4];
-        if (null != ((nd) this).field_x) {
-            if (((nd) this).field_x.length > 0) {
-                if (var5.length > 0) {
-                    if (0 < param2) {
-                        for (var6 = 0; var6 < var4; var6++) {
-                            la.a((Object[]) (Object) ((nd) this).field_x, param2 * var6, (Object[]) (Object) var5, param1 * var6, Math.min(param2, param1));
-                        }
-                    }
-                }
-            }
+        int var7 = 0;
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        L0: {
+          var7 = Sumoblitz.field_L ? 1 : 0;
+          if (((nd) this).field_J == null) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = ((nd) this).field_J.length;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
         }
-        ((nd) this).field_x = var5;
-        if (param0 != -1) {
-            Object var8 = null;
-            ((nd) this).a(-101, 118, (pk) null);
+        L1: {
+          var4 = stackIn_3_0;
+          var5 = new pk[param1 * var4];
+          if (null == ((nd) this).field_x) {
+            ((nd) this).field_x = var5;
+            break L1;
+          } else {
+            if (((nd) this).field_x.length <= 0) {
+              ((nd) this).field_x = var5;
+              break L1;
+            } else {
+              if (var5.length <= 0) {
+                ((nd) this).field_x = var5;
+                break L1;
+              } else {
+                if (0 >= param2) {
+                  ((nd) this).field_x = var5;
+                  break L1;
+                } else {
+                  var6 = 0;
+                  L2: while (true) {
+                    if (var6 >= var4) {
+                      ((nd) this).field_x = var5;
+                      break L1;
+                    } else {
+                      la.a((Object[]) (Object) ((nd) this).field_x, param2 * var6, (Object[]) (Object) var5, param1 * var6, Math.min(param2, param1));
+                      var6++;
+                      continue L2;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
     }
 
@@ -533,10 +604,11 @@ final class nd extends ao {
                 var5[var6] = var7 + var5[var6];
                 var6++;
             }
-            this.e(var4, var3_int, param0 ^ param0);
+            int discarded$0 = 0;
+            this.e(var4, var3_int);
             this.a((byte) 87, var4, var3_int);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "nd.N(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "nd.N(" + -7170 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -609,7 +681,7 @@ final class nd extends ao {
         return stackIn_3_0;
     }
 
-    private final void e(int param0, int param1, int param2) {
+    private final void e(int param0, int param1) {
         int var4 = ((nd) this).field_A == null ? 0 : ((nd) this).field_A.length;
         pk[] var5 = new pk[param0 * var4];
         if (((nd) this).field_x != null) {
@@ -621,9 +693,7 @@ final class nd extends ao {
                 }
             }
         }
-        if (param2 != 0) {
-            this.d(-38, 89, 107);
-        }
+        this.d(-38, 89, 107);
         ((nd) this).field_x = var5;
     }
 
@@ -679,7 +749,7 @@ final class nd extends ao {
             L1: {
               var5_int = ((nd) this).field_A[((nd) this).field_A.length - 1];
               var6 = ((nd) this).field_J[((nd) this).field_J.length - 1];
-              if (param2 >= param1) {
+              if (0 >= param1) {
                 stackOut_3_0 = 0;
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
@@ -831,7 +901,7 @@ final class nd extends ao {
               break L9;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw qo.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param1 + 44 + 0 + 44 + param3 + 41);
         }
     }
 
